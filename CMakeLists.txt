@@ -16,7 +16,4 @@ FetchContent_MakeAvailable(googletest)
 # Now simply link against gtest or gtest_main as needed. Eg
 add_executable(problemscpp excel_sheet_column_title.cpp excel_sheet_column_title.h test.cpp main.cpp)
 target_link_libraries(problemscpp gtest_main)
-#add_test(NAME example_test COMMAND example)
-
-#add_library(problemscpp excel_sheet_column_title.cpp excel_sheet_column_title.h test.cpp main.cpp)
-#//add_test(NAME problemscpptest COMMAND problemscpp)
+add_test(NAME problemscpp COMMAND problemscpp)
