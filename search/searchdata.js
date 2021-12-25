@@ -2,10 +2,11 @@ var indexSectionsWithContent =
 {
   0: "cemprst",
   1: "s",
-  2: "e",
+  2: "em",
   3: "emrt",
-  4: "cmt",
-  5: "p"
+  4: "cmst",
+  5: "m",
+  6: "p"
 };
 
 var indexSectionNames =
@@ -15,7 +16,8 @@ var indexSectionNames =
   2: "namespaces",
   3: "files",
   4: "functions",
-  5: "pages"
+  5: "variables",
+  6: "pages"
 };
 
 var indexSectionLabels =
@@ -25,6 +27,7 @@ var indexSectionLabels =
   2: "命名空间",
   3: "文件",
   4: "函数",
-  5: "页"
+  5: "变量",
+  6: "页"
 };
 
