@@ -9,7 +9,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-    
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -21,6 +21,15 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+
+      - name: Setup cmake
+        uses: jwlawson/actions-setup-cmake@v1.9
+        with:
+          cmake-version: '3.16.x'
+
+      - name: Build and Test
+        uses: seanmiddleditch/gha-setup-ninja@master
+        run: cmake --build . && ./problemscpp
 
       - name: Gendoc
         uses: langroodi/doxygenize@v1.5

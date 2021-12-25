@@ -1,4 +1,3 @@
-#include<iostream>
 #include "gtest/gtest.h"
 #include "excel_sheet_column_title.h"
 #include "majority_element.h"
