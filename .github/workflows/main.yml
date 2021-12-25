@@ -29,7 +29,11 @@ jobs:
           cmake-version: '3.16.x'
 
       - name: Build and Test
-        run: cmake --build . && ./problemscpp
+      - run: |
+        mkdir build
+        cd build
+        cmake -G Ninja ..
+      - run: cmake --build build
 
       - name: Gendoc
         uses: langroodi/doxygenize@v1.5
