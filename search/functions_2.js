@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['solution_0',['Solution',['../a00856.html#a0b094540fc7d0f761ec64140324313b1',1,'majority_element::Solution']]]
+  ['solution_0',['Solution',['../a00878.html#a0b094540fc7d0f761ec64140324313b1',1,'majority_element::Solution']]]
 ];
