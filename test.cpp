@@ -1,6 +1,8 @@
+#include<iostream>
 #include "gtest/gtest.h"
 #include "excel_sheet_column_title.h"
 #include "majority_element.h"
+#include "excel_sheet_column_number.h"
 
 namespace excel_sheet_column_title {
     TEST(excel_sheet_column_title, case1) {
@@ -44,5 +46,23 @@ namespace majority_element {
         int arr[] = {3, 2, 3};
         auto vec = std::vector<int>(arr, arr + 3);
         ASSERT_EQ(3, sol.majorityElement(vec));
+    }
+}
+
+namespace excel_sheet_column_number {
+    TEST(excel_sheet_column_number, case1) {
+        ASSERT_EQ(1, Solution::titleToNumber("A"));
+    }
+
+    TEST(excel_sheet_column_number, case2) {
+        ASSERT_EQ(28, Solution::titleToNumber("AB"));
+    }
+
+    TEST(excel_sheet_column_number, case3) {
+        ASSERT_EQ(701, Solution::titleToNumber("ZY"));
+    }
+
+    TEST(excel_sheet_column_number, case4) {
+        ASSERT_EQ(2147483647, Solution::titleToNumber("FXSHRXW"));
     }
 }

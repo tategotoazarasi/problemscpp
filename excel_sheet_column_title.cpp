@@ -4,7 +4,7 @@ using namespace excel_sheet_column_title;
 using std::string;
 
 namespace excel_sheet_column_title {
-    [[maybe_unused]] string Solution::convertToTitle(int columnNumber) {
+    string Solution::convertToTitle(int columnNumber) {
         string ans = string();
         bool round = false;
         while (columnNumber != 0) {

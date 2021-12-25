@@ -12,7 +12,7 @@ namespace excel_sheet_column_title {
     //LeetCode 168
     class Solution {
     public:
-        [[maybe_unused]] static std::string convertToTitle(int columnNumber);
+        static std::string convertToTitle(int columnNumber);
     };
 }
 

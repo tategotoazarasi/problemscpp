@@ -6,8 +6,13 @@
 #include<map>
 
 using namespace std;
+using namespace majority_element;
 
 namespace majority_element {
+    Solution::Solution() {
+        this->map = std::map<int, int>();
+    }
+
     int Solution::majorityElement(vector<int> &nums) {
         for (int i: nums) {
             if (map.contains(i)) {
@@ -19,9 +24,5 @@ namespace majority_element {
                 map[i] = 1;
             }
         }
-    }
-
-    Solution::Solution() {
-        this->map = std::map<int, int>();
     }
 }
