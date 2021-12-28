@@ -28,8 +28,10 @@ var menudata={children:[
 {text:"命名空间",url:"namespaces.html",children:[
 {text:"命名空间列表",url:"namespaces.html"},
 {text:"命名空间成员",url:"namespacemembers.html",children:[
-{text:"全部",url:"namespacemembers.html"},
-{text:"函数",url:"namespacemembers_func.html"}]}]},
+{text:"全部",url:"namespacemembers.html",children:[
+{text:"t",url:"namespacemembers.html#index_t"}]},
+{text:"函数",url:"namespacemembers_func.html",children:[
+{text:"t",url:"namespacemembers_func.html#index_t"}]}]}]},
 {text:"类",url:"annotated.html",children:[
 {text:"类列表",url:"annotated.html"},
 {text:"类索引",url:"classes.html"},

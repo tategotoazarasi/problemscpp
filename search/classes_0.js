@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['solution_0',['Solution',['../a00869.html',1,'acwing4200::Solution'],['../a00873.html',1,'acwing4201::Solution'],['../a00877.html',1,'concatenated_words::Solution'],['../a00885.html',1,'excel_sheet_column_number::Solution'],['../a00889.html',1,'excel_sheet_column_title::Solution'],['../a00893.html',1,'majority_element::Solution']]]
+  ['acwing1_0',['acwing1',['../a00862.html',1,'acwing']]],
+  ['acwing4200_1',['acwing4200',['../a00866.html',1,'acwing']]],
+  ['acwing4201_2',['acwing4201',['../a00870.html',1,'acwing']]],
+  ['acwing610_3',['acwing610',['../a00874.html',1,'acwing']]]
 ];
