@@ -17,7 +17,6 @@ namespace concatenated_words {
     class TrieNode {
     public:
         bool is_end;
-        bool is_concatenated;
         char ch;
         TrieNode *nexts[26] = {nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
                                nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,

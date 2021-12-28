@@ -3,9 +3,8 @@
 #include "excel_sheet_column_title.h"
 #include "majority_element.h"
 #include "excel_sheet_column_number.h"
-#include "acwing4200.h"
-#include "acwing4201.h"
 #include "concatenated_words.h"
+#include "acwing.h"
 
 using namespace std;
 
@@ -70,44 +69,6 @@ namespace excel_sheet_column_number {
     TEST(excel_sheet_column_number, case4) {
         ASSERT_EQ(2147483647, Solution::titleToNumber("FXSHRXW"));
     }
-}
-
-namespace acwing4200 {
-    TEST(acwing4200, case1) {
-        ASSERT_EQ(0, Solution::main(2, 7, 1, 8, 2, 8));
-    }
-
-    TEST(acwing4200, case2) {
-        ASSERT_EQ(20, Solution::main(20, 30, 40, 50, 0, 100));
-    }
-
-    TEST(acwing4200, case3) {
-        ASSERT_EQ(9, Solution::main(31, 41, 59, 26, 17, 43));
-    }
-}
-
-namespace acwing4201 {
-    TEST(acwing4201, case1) { ASSERT_EQ(2, Solution::main(10)); }
-
-    TEST(acwing4201, case2) { ASSERT_EQ(3, Solution::main(20)); }
-
-    TEST(acwing4201, case3) { ASSERT_EQ(4, Solution::main(100)); }
-
-    TEST(acwing4201, case4) { ASSERT_EQ(8, Solution::main(1000)); }
-
-    TEST(acwing4201, case5) { ASSERT_EQ(16, Solution::main(10000)); }
-
-    TEST(acwing4201, case6) { ASSERT_EQ(7, Solution::main(200)); }
-
-    TEST(acwing4201, case7) { ASSERT_EQ(5, Solution::main(101)); }
-
-    TEST(acwing4201, case8) { ASSERT_EQ(1, Solution::main(1)); }
-
-    TEST(acwing4201, case9) { ASSERT_EQ(5, Solution::main(102)); }
-
-    TEST(acwing4201, case10) { ASSERT_EQ(7, Solution::main(111)); }
-
-    TEST(acwing4201, case11) { ASSERT_EQ(6, Solution::main(110)); }
 }
 
 namespace concatenated_words {
@@ -1446,5 +1407,135 @@ namespace concatenated_words {
             ASSERT_TRUE(find(ans.cbegin(), ans.cend(), str) != ans.cend());
         }
         ASSERT_EQ(ans.size(), output.size());
+    }
+}
+
+namespace acwing {
+    TEST(acwing1, case1) {
+        istringstream in("3 4");
+        ostringstream out;
+        acwing1::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("7", ans);
+    }
+
+    TEST(acwing4200, case1) {
+        istringstream in("2 7 1 8 2 8");
+        ostringstream out;
+        acwing4200::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("0", ans);
+    }
+
+    TEST(acwing4200, case2) {
+        istringstream in("20 30 40 50 0 100");
+        ostringstream out;
+        acwing4200::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("20", ans);
+    }
+
+    TEST(acwing4200, case3) {
+        istringstream in("31 41 59 26 17 43");
+        ostringstream out;
+        acwing4200::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("9", ans);
+    }
+
+    TEST(acwing4201, case1) {
+        istringstream in("10");
+        ostringstream out;
+        acwing4201::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("2", ans);
+    }
+
+    TEST(acwing4201, case2) {
+        istringstream in("20");
+        ostringstream out;
+        acwing4201::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("3", ans);
+    }
+
+    TEST(acwing4201, case3) {
+        istringstream in("100");
+        ostringstream out;
+        acwing4201::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("4", ans);
+    }
+
+    TEST(acwing4201, case4) {
+        istringstream in("1000");
+        ostringstream out;
+        acwing4201::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("8", ans);
+    }
+
+    TEST(acwing4201, case5) {
+        istringstream in("10000");
+        ostringstream out;
+        acwing4201::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("16", ans);
+    }
+
+    TEST(acwing4201, case6) {
+        istringstream in("200");
+        ostringstream out;
+        acwing4201::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("7", ans);
+    }
+
+    TEST(acwing4201, case7) {
+        istringstream in("101");
+        ostringstream out;
+        acwing4201::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("5", ans);
+    }
+
+    TEST(acwing4201, case8) {
+        istringstream in("1");
+        ostringstream out;
+        acwing4201::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("1", ans);
+    }
+
+    TEST(acwing4201, case9) {
+        istringstream in("102");
+        ostringstream out;
+        acwing4201::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("5", ans);
+    }
+
+    TEST(acwing4201, case10) {
+        istringstream in("111");
+        ostringstream out;
+        acwing4201::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("7", ans);
+    }
+
+    TEST(acwing4201, case11) {
+        istringstream in("110");
+        ostringstream out;
+        acwing4201::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("6", ans);
+    }
+
+    TEST(acwing610, case1) {
+        istringstream in("5\n6\n7\n8");
+        ostringstream out;
+        acwing610::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("DIFERENCA = -26", ans);
     }
 }

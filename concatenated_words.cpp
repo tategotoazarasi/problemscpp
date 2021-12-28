@@ -28,7 +28,6 @@ namespace concatenated_words {
 
     TrieNode::TrieNode(char ch) {
         this->ch = ch;
-        this->is_concatenated = false;
         this->is_end = false;
     }
 
