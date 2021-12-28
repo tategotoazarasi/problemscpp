@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['solution_0',['Solution',['../a00878.html#a0b094540fc7d0f761ec64140324313b1',1,'majority_element::Solution']]]
+  ['findallconcatenatedwordsinadict_0',['findAllConcatenatedWordsInADict',['../a00877.html#a4119eeef9e63108b8815ff68baba5a3f',1,'concatenated_words::Solution']]]
 ];

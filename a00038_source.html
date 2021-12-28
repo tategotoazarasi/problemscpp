@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: acwing4201.cpp 源文件</title>
+<title>problemscpp: excel_sheet_column_number.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,49 +63,33 @@ $(function() {
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">acwing4201.cpp</div></div>
+  <div class="headertitle"><div class="title">excel_sheet_column_number.cpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00038.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by tategotoazarasi on 2021/12/25.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="a00026.html">acwing4201.h</a>&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include&lt;cmath&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include&lt;vector&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="a00020.html">excel_sheet_column_number.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include&lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include&lt;cmath&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00051.html">excel_sheet_column_number</a>;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="a00043.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00043.html">acwing4201</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="a00866.html#a3d8bb03ae9b646dcf69ab620c620a547">   12</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="a00866.html#a3d8bb03ae9b646dcf69ab620c620a547">acwing4201::Solution::main</a>(<span class="keywordtype">int</span> number) {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordtype">int</span> copy = number;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordtype">int</span> len = 0;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">while</span> (copy != 0) {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            copy /= 10;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            len++;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        vector&lt;int&gt; arr = vector&lt;int&gt;(len);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        copy = number;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = len - 1; i &gt;= 0; i--) {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            arr[i] = copy % 10;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            copy /= 10;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">int</span> sum = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(pow(2, len));</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; len; i++) {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">if</span> (arr[i] &gt; 1) {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (arr[i] == 0) {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                sum -= <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(pow(2, len - i - 1));</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        sum--;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">return</span> sum;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
-<div class="ttc" id="aa00026_html"><div class="ttname"><a href="a00026.html">acwing4201.h</a></div></div>
-<div class="ttc" id="aa00043_html"><div class="ttname"><a href="a00043.html">acwing4201</a></div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00011">acwing4201.cpp:11</a></div></div>
-<div class="ttc" id="aa00866_html_a3d8bb03ae9b646dcf69ab620c620a547"><div class="ttname"><a href="a00866.html#a3d8bb03ae9b646dcf69ab620c620a547">acwing4201::Solution::main</a></div><div class="ttdeci">static int main(int number)</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00012">acwing4201.cpp:12</a></div></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="a00051.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00051.html">excel_sheet_column_number</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="a00885.html#a50ebdc28eaff896a4d290f00d0e300eb">   12</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="a00885.html#a50ebdc28eaff896a4d290f00d0e300eb">Solution::titleToNumber</a>(<span class="keyword">const</span> std::string &amp;columnTitle) {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordtype">int</span> length = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(columnTitle.length());</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">for</span> (<span class="keywordtype">char</span> c: columnTitle) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            sum += <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(c - <span class="charliteral">&#39;A&#39;</span> + 1) * pow(26, length-- - 1));</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordflow">return</span> sum;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="ttc" id="aa00020_html"><div class="ttname"><a href="a00020.html">excel_sheet_column_number.h</a></div></div>
+<div class="ttc" id="aa00051_html"><div class="ttname"><a href="a00051.html">excel_sheet_column_number</a></div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00011">excel_sheet_column_number.cpp:11</a></div></div>
+<div class="ttc" id="aa00885_html_a50ebdc28eaff896a4d290f00d0e300eb"><div class="ttname"><a href="a00885.html#a50ebdc28eaff896a4d290f00d0e300eb">excel_sheet_column_number::Solution::titleToNumber</a></div><div class="ttdeci">static int titleToNumber(const std::string &amp;columnTitle)</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00012">excel_sheet_column_number.cpp:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

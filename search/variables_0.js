@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['map_0',['map',['../a00878.html#aff5da621cd44dc01cf04b34a9fbd48d5',1,'majority_element::Solution']]]
+  ['ch_0',['ch',['../a00881.html#a521286a410e5072504f0c314a915d3df',1,'concatenated_words::TrieNode']]]
 ];
