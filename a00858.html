@@ -78,15 +78,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a41cbdee4cf77819b980feedb5f83d68d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00858.html#a41cbdee4cf77819b980feedb5f83d68d">main</a> (std::istream &amp;, std::ostream &amp;)</td></tr>
-<tr class="separator:a41cbdee4cf77819b980feedb5f83d68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa372862d6f0eca7f5ae9111cff64836f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00858.html#aa372862d6f0eca7f5ae9111cff64836f">main</a> (std::istream &amp;, std::ostream &amp;)</td></tr>
+<tr class="separator:aa372862d6f0eca7f5ae9111cff64836f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
 <p class="definition">在文件 <a class="el" href="a00017_source.html">acwing.h</a> 第 <a class="el" href="a00017_source.html#l00016">16</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a41cbdee4cf77819b980feedb5f83d68d" name="a41cbdee4cf77819b980feedb5f83d68d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41cbdee4cf77819b980feedb5f83d68d">&#9670;&nbsp;</a></span>main()</h2>
+<a id="aa372862d6f0eca7f5ae9111cff64836f" name="aa372862d6f0eca7f5ae9111cff64836f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa372862d6f0eca7f5ae9111cff64836f">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -95,7 +95,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void acwing::acwing4200::main </td>
+          <td class="memname">int acwing::acwing4200::main </td>
           <td>(</td>
           <td class="paramtype">std::istream &amp;&#160;</td>
           <td class="paramname"><em>cin</em>, </td>
@@ -119,17 +119,18 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00005_source.html">acwing.cpp</a> 第 <a class="el" href="a00005_source.html#l00019">19</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                                                     {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">int</span> p1, p2, p3, p4, a, b;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        cin &gt;&gt; p1 &gt;&gt; p2 &gt;&gt; p3 &gt;&gt; p4 &gt;&gt; a &gt;&gt; b;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordtype">int</span> min = p1;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        min = p2 &lt; min ? p2 : min;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        min = p3 &lt; min ? p3 : min;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        min = p4 &lt; min ? p4 : min;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">int</span> ans = (min - a) &lt; (b - a + 1) ? min - a : b - a + 1;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        cout &lt;&lt; (ans &lt; 0 ? 0 : ans);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<p class="definition">在文件 <a class="el" href="a00005_source.html">acwing.cpp</a> 第 <a class="el" href="a00005_source.html#l00021">21</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                                                    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordtype">int</span> p1, p2, p3, p4, a, b;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        cin &gt;&gt; p1 &gt;&gt; p2 &gt;&gt; p3 &gt;&gt; p4 &gt;&gt; a &gt;&gt; b;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordtype">int</span> min = p1;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        min = p2 &lt; min ? p2 : min;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        min = p3 &lt; min ? p3 : min;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        min = p4 &lt; min ? p4 : min;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">int</span> ans = (min - a) &lt; (b - a + 1) ? min - a : b - a + 1;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        cout &lt;&lt; (ans &lt; 0 ? 0 : ans);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="a00011_source.html#l01466">acwing::TEST()</a>.</p>
 
