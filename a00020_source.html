@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: excel_sheet_column_number.h 源文件</title>
+<title>problemscpp: lintcode.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,30 +63,63 @@ $(function() {
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">excel_sheet_column_number.h</div></div>
+  <div class="headertitle"><div class="title">lintcode.cpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00020.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by tategotoazarasi on 2021/12/25.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by tategotoazarasi on 2021/12/29.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef PROBLEMSCPP_EXCEL_SHEET_COLUMN_NUMBER_H</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define PROBLEMSCPP_EXCEL_SHEET_COLUMN_NUMBER_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include&lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="a00008.html">lintcode.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00044.html">excel_sheet_column_number</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="a00886.html">   11</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00886.html">Solution</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="a00886.html#a50ebdc28eaff896a4d290f00d0e300eb">titleToNumber</a>(<span class="keyword">const</span> std::string &amp;columnTitle);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    };</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#endif </span><span class="comment">//PROBLEMSCPP_EXCEL_SHEET_COLUMN_NUMBER_H</span></div>
-<div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">excel_sheet_column_number</a></div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00011">excel_sheet_column_number.cpp:11</a></div></div>
-<div class="ttc" id="aa00886_html"><div class="ttname"><a href="a00886.html">excel_sheet_column_number::Solution</a></div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00011">excel_sheet_column_number.h:11</a></div></div>
-<div class="ttc" id="aa00886_html_a50ebdc28eaff896a4d290f00d0e300eb"><div class="ttname"><a href="a00886.html#a50ebdc28eaff896a4d290f00d0e300eb">excel_sheet_column_number::Solution::titleToNumber</a></div><div class="ttdeci">static int titleToNumber(const std::string &amp;columnTitle)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00012">excel_sheet_column_number.cpp:12</a></div></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="a00037.html">   12</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00037.html">lintcode</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="a00038.html">   13</a></span>    <span class="keyword">namespace </span>lintcode1214 {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="a00894.html#ac4bf633bc3aceeb750d9f90566059d31">   14</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="a00894.html#ac4bf633bc3aceeb750d9f90566059d31">Solution::licenseKeyFormatting</a>(<span class="keywordtype">string</span> &amp;S, <span class="keywordtype">int</span> K) {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            ostringstream S2 = ostringstream();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            ostringstream output = ostringstream();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordtype">int</span> len = 0;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <span class="keywordflow">for</span> (<span class="keywordtype">char</span> c: S) {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                <span class="keywordflow">if</span> (isalnum(c)) {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                    len++;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                    <span class="keywordflow">if</span> (isdigit(c) || isupper(c)) {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                        S2 &lt;&lt; c;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (islower(c)) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                        S2 &lt;&lt; static_cast&lt;char&gt;(toupper(c));</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                    }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordtype">string</span> str = S2.str();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordtype">int</span> first = len % K;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="keywordtype">int</span> average = len / K;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">if</span> (first == 0) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                first = K;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordtype">string</span> str1 = str.substr(0, first);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordtype">string</span> str2 = str.substr(first);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">for</span> (<span class="keywordtype">char</span> c: str1) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                output &lt;&lt; c;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">for</span> (<span class="keywordtype">char</span> c: str2) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <span class="keywordflow">if</span> (count == 0) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                    output &lt;&lt; <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                output &lt;&lt; c;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                count++;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                count %= K;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">return</span> output.str();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
+<div class="ttc" id="aa00008_html"><div class="ttname"><a href="a00008.html">lintcode.h</a></div></div>
+<div class="ttc" id="aa00037_html"><div class="ttname"><a href="a00037.html">lintcode</a></div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00012">lintcode.cpp:12</a></div></div>
+<div class="ttc" id="aa00894_html_ac4bf633bc3aceeb750d9f90566059d31"><div class="ttname"><a href="a00894.html#ac4bf633bc3aceeb750d9f90566059d31">lintcode::lintcode1214::Solution::licenseKeyFormatting</a></div><div class="ttdeci">static std::string licenseKeyFormatting(std::string &amp;, int)</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00014">lintcode.cpp:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

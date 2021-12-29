@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dfs_0',['dfs',['../a00882.html#a02d38232728eaa50d8c2e3a43fc06fc4',1,'concatenated_words::TrieNode']]]
+  ['dfs_0',['dfs',['../a00874.html#a4feaedba325cd1ef039524c379f658fa',1,'leetcode::concatenated_words::TrieNode']]]
 ];

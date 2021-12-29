@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['map_0',['map',['../a00894.html#aff5da621cd44dc01cf04b34a9fbd48d5',1,'majority_element::Solution']]]
+  ['map_0',['map',['../a00886.html#adbbc2f0f88a6c2b52b7a4d59c4df64a9',1,'leetcode::majority_element::Solution']]]
 ];

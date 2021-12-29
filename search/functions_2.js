@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['findallconcatenatedwordsinadict_0',['findAllConcatenatedWordsInADict',['../a00878.html#a4119eeef9e63108b8815ff68baba5a3f',1,'concatenated_words::Solution']]]
+  ['findallconcatenatedwordsinadict_0',['findAllConcatenatedWordsInADict',['../a00870.html#a9a631579bfae4b18907b3fc234a01ecf',1,'leetcode::concatenated_words::Solution']]]
 ];
