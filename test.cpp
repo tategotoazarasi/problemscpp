@@ -1582,6 +1582,22 @@ namespace acwing {
         auto ans = out.str();
         ASSERT_EQ("DIFERENCA = -26", ans);
     }
+
+    TEST(acwing604, case1) {
+        istringstream in("2.00");
+        ostringstream out;
+        acwing604::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("A=12.5664", ans);
+    }
+
+    TEST(acwing606, case1) {
+        istringstream in("5.0\n7.1");
+        ostringstream out;
+        acwing606::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("MEDIA = 6.43182", ans);
+    }
 }
 
 namespace lintcode {
