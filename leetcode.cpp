@@ -4,6 +4,10 @@
 
 #include "leetcode.h"
 
+#include<cmath>
+
+using namespace std;
+
 namespace leetcode {
     namespace concatenated_words {
         vector<string> Solution::findAllConcatenatedWordsInADict(vector<string> &words) {
@@ -125,6 +129,34 @@ namespace leetcode {
                     map[i] = 1;
                 }
             }
+            return 0;
+        }
+    }
+
+    namespace count_special_quadruplets {
+        int Solution::countQuadruplets(vector<int> &nums) {
+            int sum = 0;
+            for (int i = 3; i < nums.size(); i++) {
+                for (int j = 0; j < i - 2; j++) {
+                    if (j == i) {
+                        continue;
+                    }
+                    for (int k = j + 1; k < i - 1; k++) {
+                        if (k == i) {
+                            continue;
+                        }
+                        for (int l = k + 1; l < i; l++) {
+                            if (l == i) {
+                                continue;
+                            }
+                            if (nums[k] + nums[j] + nums[l] == nums[i]) {
+                                sum++;
+                            }
+                        }
+                    }
+                }
+            }
+            return sum;
         }
     }
 }

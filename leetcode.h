@@ -60,6 +60,13 @@ namespace leetcode {
             int majorityElement(std::vector<int> &nums);
         };
     }
+
+    namespace count_special_quadruplets {
+        class Solution {
+        public:
+            static int countQuadruplets(vector<int> &);
+        };
+    }
 };
 
 

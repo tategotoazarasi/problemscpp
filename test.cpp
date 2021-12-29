@@ -1408,6 +1408,50 @@ namespace leetcode {
             ASSERT_EQ(ans.size(), output.size());
         }
     }
+
+    namespace count_special_quadruplets {
+        TEST(count_special_quadruplets, case1) {
+            vector<int> vec = vector<int>();
+            vec.push_back(1);
+            vec.push_back(2);
+            vec.push_back(3);
+            vec.push_back(6);
+            ASSERT_EQ(1, Solution::countQuadruplets(vec));
+        }
+
+        TEST(count_special_quadruplets, case2) {
+            vector<int> vec = vector<int>();
+            vec.push_back(3);
+            vec.push_back(3);
+            vec.push_back(6);
+            vec.push_back(4);
+            vec.push_back(5);
+            ASSERT_EQ(0, Solution::countQuadruplets(vec));
+        }
+
+        TEST(count_special_quadruplets, case3) {
+            vector<int> vec = vector<int>();
+            vec.push_back(1);
+            vec.push_back(1);
+            vec.push_back(1);
+            vec.push_back(3);
+            vec.push_back(5);
+            ASSERT_EQ(4, Solution::countQuadruplets(vec));
+        }
+
+        TEST(count_special_quadruplets, case4) {
+            vector<int> vec = vector<int>();
+            vec.push_back(28);
+            vec.push_back(8);
+            vec.push_back(49);
+            vec.push_back(85);
+            vec.push_back(37);
+            vec.push_back(90);
+            vec.push_back(20);
+            vec.push_back(8);
+            ASSERT_EQ(1, Solution::countQuadruplets(vec));
+        }
+    }
 }
 
 namespace acwing {
