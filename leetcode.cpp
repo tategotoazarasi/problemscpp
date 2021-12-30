@@ -5,6 +5,8 @@
 #include "leetcode.h"
 
 #include<cmath>
+#include<algorithm>
+#include<iostream>
 
 using namespace std;
 
@@ -157,6 +159,34 @@ namespace leetcode {
                 }
             }
             return sum;
+        }
+    }
+
+    namespace hand_of_straights {
+        bool Solution::isNStraightHand(vector<int> &hand, int groupSize) {
+            if (hand.size() % groupSize != 0) {
+                return false;
+            }
+            if (groupSize == 1) {
+                return true;
+            }
+            sort(hand.begin(), hand.end());
+            cout << hand.size();
+            auto len = hand.size() / groupSize;
+            for (int i = 0; i < len; i++) {
+                int current = *hand.begin();
+                hand.erase(hand.begin());
+                for (int j = 1; j < groupSize; j++) {
+                    auto next = find(hand.begin(), hand.end(), current + 1);
+                    if (next == hand.end()) {
+                        return false;
+                    } else {
+                        current = *next;
+                        hand.erase(next);
+                    }
+                }
+            }
+            return true;
         }
     }
 }

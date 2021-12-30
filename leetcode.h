@@ -67,6 +67,13 @@ namespace leetcode {
             static int countQuadruplets(vector<int> &);
         };
     }
+
+    namespace hand_of_straights {
+        class Solution {
+        public:
+            static bool isNStraightHand(vector<int> &hand, int groupSize);
+        };
+    }
 };
 
 
