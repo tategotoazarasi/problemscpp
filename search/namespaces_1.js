@@ -6,6 +6,7 @@ var searchData=
   ['excel_5fsheet_5fcolumn_5ftitle_3',['excel_sheet_column_title',['../a00034.html',1,'leetcode']]],
   ['leetcode_4',['leetcode',['../a00031.html',1,'']]],
   ['lintcode_5',['lintcode',['../a00037.html',1,'']]],
-  ['lintcode1214_6',['lintcode1214',['../a00038.html',1,'lintcode']]],
-  ['majority_5felement_7',['majority_element',['../a00035.html',1,'leetcode']]]
+  ['lintcode1163_6',['lintcode1163',['../a00039.html',1,'lintcode']]],
+  ['lintcode1214_7',['lintcode1214',['../a00038.html',1,'lintcode']]],
+  ['majority_5felement_8',['majority_element',['../a00035.html',1,'leetcode']]]
 ];
