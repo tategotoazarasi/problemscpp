@@ -115,18 +115,18 @@ namespace leetcode {
 
     namespace majority_element {
         Solution::Solution() {
-            this->map = std::map<int, int>();
+            this->m = std::map<int, int>();
         }
 
         int Solution::majorityElement(vector<int> &nums) {
             for (int i: nums) {
-                if (map.contains(i)) {
-                    map[i] = map[i] + 1;
-                    if (map[i] > nums.size() / 2) {
+                if (m.contains(i)) {
+                    m[i] = m[i] + 1;
+                    if (m[i] > nums.size() / 2) {
                         return i;
                     }
                 } else {
-                    map[i] = 1;
+                    m[i] = 1;
                 }
             }
             return 0;

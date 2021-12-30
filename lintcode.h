@@ -6,6 +6,9 @@
 #define PROBLEMSCPP_LINTCODE_H
 
 #include<string>
+#include<vector>
+
+using namespace std;
 
 namespace lintcode {
     namespace lintcode1214 {
@@ -16,7 +19,18 @@ namespace lintcode {
             * @param K: a integer
             * @return: return a string
             */
-            static std::string licenseKeyFormatting(std::string &, int);
+            static string licenseKeyFormatting(string &, int);
+        };
+    }
+
+    namespace lintcode1163 {
+        class Solution {
+        public:
+            /**
+             * @param candies: a list of integers
+             * @return: return a integer
+             */
+            static int distributeCandies(vector<int> &candies);
         };
     }
 }

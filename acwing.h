@@ -7,35 +7,37 @@
 
 #include<iostream>
 
+using namespace std;
+
 namespace acwing {
     class acwing1 {
     public:
-        static int main(std::istream &, std::ostream &);
+        static int main(istream &, ostream &);
     };
 
     class acwing4200 {
     public:
-        static int main(std::istream &, std::ostream &);
+        static int main(istream &, ostream &);
     };
 
     class acwing4201 {
     public:
-        static int main(std::istream &, std::ostream &);
+        static int main(istream &, ostream &);
     };
 
     class acwing610 {
     public:
-        static int main(std::istream &, std::ostream &);
+        static int main(istream &, ostream &);
     };
 
     class acwing604 {
     public:
-        static int main(std::istream &, std::ostream &);
+        static int main(istream &, ostream &);
     };
 
     class acwing606 {
     public:
-        static int main(std::istream &, std::ostream &);
+        static int main(istream &, ostream &);
     };
 }
 #endif //PROBLEMSCPP_ACWING_H
