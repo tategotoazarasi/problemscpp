@@ -33,6 +33,10 @@ namespace leetcode {
         return this->val == node.val;
     }
 
+    bool TreeNode::operator!=(const TreeNode &node) const {
+        return !((*this) == node);
+    }
+
     namespace concatenated_words {
         vector<string> Solution::findAllConcatenatedWordsInADict(vector<string> &words) {
             sort(words.begin(), words.end(), [&](const string &a, const string &b) {

@@ -24,6 +24,8 @@ namespace leetcode {
         TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 
         bool operator==(const TreeNode &) const;
+
+        bool operator!=(const TreeNode &) const;
     };
 
 
