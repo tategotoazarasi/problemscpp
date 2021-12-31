@@ -1,11 +1,11 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/runner/work/problemscpp/problemscpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/runner/work/problemscpp/problemscpp/ninja-build/ninja cmTC_889dd && [1/2] Building C object CMakeFiles/cmTC_889dd.dir/src.c.o
-[2/2] Linking C executable cmTC_889dd
-FAILED: cmTC_889dd 
-: && /usr/bin/cc  -rdynamic CMakeFiles/cmTC_889dd.dir/src.c.o -o cmTC_889dd   && :
-/usr/bin/ld: CMakeFiles/cmTC_889dd.dir/src.c.o: in function `main':
+Run Build Command(s):/home/runner/work/problemscpp/problemscpp/ninja-build/ninja cmTC_838a8 && [1/2] Building C object CMakeFiles/cmTC_838a8.dir/src.c.o
+[2/2] Linking C executable cmTC_838a8
+FAILED: cmTC_838a8 
+: && /usr/bin/cc  -rdynamic CMakeFiles/cmTC_838a8.dir/src.c.o -o cmTC_838a8   && :
+/usr/bin/ld: CMakeFiles/cmTC_838a8.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
@@ -38,10 +38,10 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/runner/work/problemscpp/problemscpp/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/runner/work/problemscpp/problemscpp/ninja-build/ninja cmTC_85799 && [1/2] Building C object CMakeFiles/cmTC_85799.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_85799
-FAILED: cmTC_85799 
-: && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_85799.dir/CheckFunctionExists.c.o -o cmTC_85799  -lpthreads && :
+Run Build Command(s):/home/runner/work/problemscpp/problemscpp/ninja-build/ninja cmTC_5a439 && [1/2] Building C object CMakeFiles/cmTC_5a439.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_5a439
+FAILED: cmTC_5a439 
+: && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_5a439.dir/CheckFunctionExists.c.o -o cmTC_5a439  -lpthreads && :
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
 ninja: build stopped: subcommand failed.

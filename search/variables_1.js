@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['is_5fend_0',['is_end',['../a00886.html#a141233e2e5064b034f34ee364ab573ba',1,'leetcode::concatenated_words::TrieNode']]]
+  ['friend_5fnode_0',['friend_node',['../a00927.html#a10da51d2462979b830690f49553e4979',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode']]]
 ];
