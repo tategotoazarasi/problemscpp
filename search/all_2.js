@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['dfs_0',['dfs',['../a00885.html#af24d5975f3eda0ce2d544917b9159495',1,'leetcode::concatenated_words::TrieNode']]],
-  ['distributecandies_1',['distributeCandies',['../a00917.html#a8660f14e8d872cc6909190473f995293',1,'lintcode::lintcode1163::Solution']]]
+  ['dfs_0',['dfs',['../a00886.html#af24d5975f3eda0ce2d544917b9159495',1,'leetcode::concatenated_words::TrieNode']]],
+  ['distributecandies_1',['distributeCandies',['../a00918.html#adfb5613a5114d683f053b012f8757d66',1,'lintcode::distribute_candies::Solution']]]
 ];

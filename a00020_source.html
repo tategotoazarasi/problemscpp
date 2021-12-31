@@ -80,8 +80,8 @@ $(function() {
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using namespace </span>std;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="a00039.html">   14</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00039.html">lintcode</a> {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="a00040.html">   15</a></span>    <span class="keyword">namespace </span>lintcode1214 {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="a00913.html#afe3eaf68e24bfa66049abce4489f1142">   16</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="a00913.html#afe3eaf68e24bfa66049abce4489f1142">Solution::licenseKeyFormatting</a>(<span class="keywordtype">string</span> &amp;S, <span class="keywordtype">int</span> K) {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="a00040.html">   15</a></span>    <span class="keyword">namespace </span>license_key_formatting {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="a00914.html#af1e730bea5301c335d57284f450b6510">   16</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="a00914.html#af1e730bea5301c335d57284f450b6510">Solution::licenseKeyFormatting</a>(<span class="keywordtype">string</span> &amp;S, <span class="keywordtype">int</span> K) {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            ostringstream S2 = ostringstream();</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            ostringstream output = ostringstream();</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordtype">int</span> len = 0;</div>
@@ -119,8 +119,8 @@ $(function() {
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="a00041.html">   54</a></span>    <span class="keyword">namespace </span>lintcode1163 {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="a00917.html#a8660f14e8d872cc6909190473f995293">   55</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="a00917.html#a8660f14e8d872cc6909190473f995293">Solution::distributeCandies</a>(vector&lt;int&gt; &amp;candies) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="a00041.html">   54</a></span>    <span class="keyword">namespace </span>distribute_candies {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="a00918.html#adfb5613a5114d683f053b012f8757d66">   55</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="a00918.html#adfb5613a5114d683f053b012f8757d66">Solution::distributeCandies</a>(vector&lt;int&gt; &amp;candies) {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            map&lt;long, int&gt; m = map&lt;long, int&gt;();</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            set&lt;int&gt; ans = set&lt;int&gt;();</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordtype">int</span> n = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(candies.size()) / 2;</div>
@@ -148,11 +148,33 @@ $(function() {
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(ans.size());</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="a00042.html">   84</a></span>    <span class="keyword">namespace </span>remove_extra {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="a00922.html#aa0e49e4d04ff089fe090aaf88dd3a96a">   85</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="a00922.html#aa0e49e4d04ff089fe090aaf88dd3a96a">Solution::removeExtra</a>(<span class="keywordtype">string</span> &amp;s) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            ostringstream output = ostringstream();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="keywordtype">bool</span> start = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">for</span> (<span class="keywordtype">char</span> c: s) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                <span class="keywordflow">if</span> (c != <span class="charliteral">&#39; &#39;</span>) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    <span class="keywordflow">if</span> (flag &amp;&amp; !start) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                        output &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    output &lt;&lt; c;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                    start = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keywordflow">return</span> output.str();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
 <div class="ttc" id="aa00008_html"><div class="ttname"><a href="a00008.html">lintcode.h</a></div></div>
 <div class="ttc" id="aa00039_html"><div class="ttname"><a href="a00039.html">lintcode</a></div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00014">lintcode.cpp:14</a></div></div>
-<div class="ttc" id="aa00913_html_afe3eaf68e24bfa66049abce4489f1142"><div class="ttname"><a href="a00913.html#afe3eaf68e24bfa66049abce4489f1142">lintcode::lintcode1214::Solution::licenseKeyFormatting</a></div><div class="ttdeci">static string licenseKeyFormatting(string &amp;, int)</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00016">lintcode.cpp:16</a></div></div>
-<div class="ttc" id="aa00917_html_a8660f14e8d872cc6909190473f995293"><div class="ttname"><a href="a00917.html#a8660f14e8d872cc6909190473f995293">lintcode::lintcode1163::Solution::distributeCandies</a></div><div class="ttdeci">static int distributeCandies(vector&lt; int &gt; &amp;candies)</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00055">lintcode.cpp:55</a></div></div>
+<div class="ttc" id="aa00914_html_af1e730bea5301c335d57284f450b6510"><div class="ttname"><a href="a00914.html#af1e730bea5301c335d57284f450b6510">lintcode::license_key_formatting::Solution::licenseKeyFormatting</a></div><div class="ttdeci">static string licenseKeyFormatting(string &amp;, int)</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00016">lintcode.cpp:16</a></div></div>
+<div class="ttc" id="aa00918_html_adfb5613a5114d683f053b012f8757d66"><div class="ttname"><a href="a00918.html#adfb5613a5114d683f053b012f8757d66">lintcode::distribute_candies::Solution::distributeCandies</a></div><div class="ttdeci">static int distributeCandies(vector&lt; int &gt; &amp;candies)</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00055">lintcode.cpp:55</a></div></div>
+<div class="ttc" id="aa00922_html_aa0e49e4d04ff089fe090aaf88dd3a96a"><div class="ttname"><a href="a00922.html#aa0e49e4d04ff089fe090aaf88dd3a96a">lintcode::remove_extra::Solution::removeExtra</a></div><div class="ttdeci">static string removeExtra(string &amp;s)</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00085">lintcode.cpp:85</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
