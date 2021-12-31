@@ -11,6 +11,28 @@
 using namespace std;
 
 namespace leetcode {
+    bool TreeNode::operator==(const TreeNode &node) const {
+        if (this->left != nullptr && node.left == nullptr) {
+            return false;
+        }
+        if (this->left == nullptr && node.left != nullptr) {
+            return false;
+        }
+        if (this->right != nullptr && node.right == nullptr) {
+            return false;
+        }
+        if (this->right == nullptr && node.right != nullptr) {
+            return false;
+        }
+        if (this->left != nullptr && node.left != nullptr && (*this->left) != (*node.left)) {
+            return false;
+        }
+        if (this->right != nullptr && node.right != nullptr && (*this->right) != (*node.right)) {
+            return false;
+        }
+        return this->val == node.val;
+    }
+
     namespace concatenated_words {
         vector<string> Solution::findAllConcatenatedWordsInADict(vector<string> &words) {
             sort(words.begin(), words.end(), [&](const string &a, const string &b) {
@@ -204,6 +226,55 @@ namespace leetcode {
                 }
             }
             return sum == num;
+        }
+    }
+
+    namespace convert_bst_to_greater_tree {
+        TreeNode *Solution::convertBST(TreeNode *root) {
+            if (root == nullptr) {
+                return nullptr;
+            }
+            FriendTreeNode *sum = Solution::copy(root);
+            get_sum(sum);
+            sum->val = sum->sum - (sum->left == nullptr ? 0 : sum->left->sum);
+            Solution::convert(sum);
+            return root;
+        }
+
+        FriendTreeNode *Solution::copy(TreeNode *node) {
+            auto *ret = new FriendTreeNode(node->val, node);
+            if (node->left != nullptr) {
+                ret->left = Solution::copy(node->left);
+            }
+            if (node->right != nullptr) {
+                ret->right = Solution::copy(node->right);
+            }
+            return ret;
+        }
+
+        void Solution::get_sum(FriendTreeNode *node) {
+            if (node->left != nullptr) {
+                get_sum(node->left);
+                node->sum += node->left->sum;
+            }
+            if (node->right != nullptr) {
+                get_sum(node->right);
+                node->sum += node->right->sum;
+            }
+        }
+
+        void Solution::convert(FriendTreeNode *sum_node) {
+            if (sum_node->right != nullptr) {
+                sum_node->right->val = sum_node->val - sum_node->friend_node->val -
+                                       (sum_node->right->left == nullptr ? 0 : sum_node->right->left->sum);
+                Solution::convert(sum_node->right);
+            }
+            if (sum_node->left != nullptr) {
+                sum_node->left->val = sum_node->val + sum_node->left->friend_node->val +
+                                      (sum_node->left->right == nullptr ? 0 : sum_node->left->right->sum);
+                Solution::convert(sum_node->left);
+            }
+            sum_node->friend_node->val = sum_node->val;
         }
     }
 }

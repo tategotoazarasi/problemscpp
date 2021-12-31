@@ -12,6 +12,21 @@
 using namespace std;
 
 namespace leetcode {
+    struct TreeNode {
+        int val;
+        TreeNode *left;
+        TreeNode *right;
+
+        TreeNode() : val(0), left(nullptr), right(nullptr) {}
+
+        explicit TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+
+        TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+
+        bool operator==(const TreeNode &) const;
+    };
+
+
     namespace concatenated_words {
         class Solution {
         public:
@@ -79,6 +94,30 @@ namespace leetcode {
         class Solution {
         public:
             static bool checkPerfectNumber(int num);
+        };
+    }
+
+    namespace convert_bst_to_greater_tree {
+        struct FriendTreeNode {
+            int sum;
+            int val;
+            FriendTreeNode *left;
+            FriendTreeNode *right;
+            TreeNode *friend_node;
+
+            explicit FriendTreeNode(int x, TreeNode *friend_node) : sum(x), val(0), left(nullptr), right(nullptr),
+                                                                    friend_node(friend_node) {}
+        };
+
+        class Solution {
+        public:
+            static TreeNode *convertBST(TreeNode *root);
+
+            static FriendTreeNode *copy(TreeNode *);
+
+            static void get_sum(FriendTreeNode *);
+
+            static void convert(FriendTreeNode *);
         };
     }
 };
