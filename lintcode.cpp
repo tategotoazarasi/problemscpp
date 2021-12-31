@@ -12,7 +12,7 @@
 using namespace std;
 
 namespace lintcode {
-    namespace lintcode1214 {
+    namespace license_key_formatting {
         string Solution::licenseKeyFormatting(string &S, int K) {
             ostringstream S2 = ostringstream();
             ostringstream output = ostringstream();
@@ -51,7 +51,7 @@ namespace lintcode {
         }
     }
 
-    namespace lintcode1163 {
+    namespace distribute_candies {
         int Solution::distributeCandies(vector<int> &candies) {
             map<long, int> m = map<long, int>();
             set<int> ans = set<int>();
@@ -78,6 +78,27 @@ namespace lintcode {
                 }
             }
             return static_cast<int>(ans.size());
+        }
+    }
+
+    namespace remove_extra {
+        string Solution::removeExtra(string &s) {
+            ostringstream output = ostringstream();
+            bool start = true;
+            bool flag = false;
+            for (char c: s) {
+                if (c != ' ') {
+                    if (flag && !start) {
+                        output << ' ';
+                    }
+                    output << c;
+                    start = false;
+                    flag = false;
+                } else {
+                    flag = true;
+                }
+            }
+            return output.str();
         }
     }
 }

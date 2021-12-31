@@ -327,29 +327,41 @@ namespace acwing {
 }
 
 namespace lintcode {
-    namespace lintcode1214 {
-        TEST(lintcode1214, case1) {
+    namespace license_key_formatting {
+        TEST(license_key_formatting, case1) {
             string s = string("5F3Z-2e-9-w");
             ASSERT_EQ("5F3Z-2E9W", Solution::licenseKeyFormatting(s, 4));
         }
 
-        TEST(lintcode1214, case2) {
+        TEST(license_key_formatting, case2) {
             string s = string("2-5g-3-J");
             ASSERT_EQ("2-5G-3J", Solution::licenseKeyFormatting(s, 2));
         }
     }
 
-    namespace lintcode1163 {
-        TEST(lintcode1163, case1) {
+    namespace distribute_candies {
+        TEST(distribute_candies, case1) {
             int input[] = {1, 1, 2, 2, 3, 3,};
             vector<int> vec = vector<int>(begin(input), end(input));
             ASSERT_EQ(3, Solution::distributeCandies(vec));
         }
 
-        TEST(lintcode1163, case2) {
+        TEST(distribute_candies, case2) {
             int input[] = {1, 1, 2, 2, 3, 3, 4, 5, 6, 6, 7, 8};
             vector<int> vec = vector<int>(begin(input), end(input));
             ASSERT_EQ(6, Solution::distributeCandies(vec));
+        }
+    }
+
+    namespace remove_extra {
+        TEST(remove_extra, case1) {
+            string input = "The  sky   is blue";
+            ASSERT_EQ("The sky is blue", Solution::removeExtra(input));
+        }
+
+        TEST(remove_extra, case2) {
+            string input = "  low               ercase  ";
+            ASSERT_EQ("low ercase", Solution::removeExtra(input));
         }
     }
 }

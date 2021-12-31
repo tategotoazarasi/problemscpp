@@ -11,7 +11,7 @@
 using namespace std;
 
 namespace lintcode {
-    namespace lintcode1214 {
+    namespace license_key_formatting {
         class Solution {
         public:
             /**
@@ -23,7 +23,7 @@ namespace lintcode {
         };
     }
 
-    namespace lintcode1163 {
+    namespace distribute_candies {
         class Solution {
         public:
             /**
@@ -31,6 +31,17 @@ namespace lintcode {
              * @return: return a integer
              */
             static int distributeCandies(vector<int> &candies);
+        };
+    }
+
+    namespace remove_extra {
+        class Solution {
+        public:
+            /**
+             * @param s: the original string
+             * @return: the string without arbitrary spaces
+             */
+            static string removeExtra(string &s);
         };
     }
 }
