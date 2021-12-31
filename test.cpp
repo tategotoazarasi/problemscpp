@@ -56,20 +56,12 @@ namespace leetcode {
 
     namespace concatenated_words {
         TEST(concatenated_words, case1) {
-            vector<basic_string<char>> input = vector<basic_string<char >>();
-            input.emplace_back("cat");
-            input.emplace_back("cats");
-            input.emplace_back("catsdogcats");
-            input.emplace_back("dog");
-            input.emplace_back("dogcatsdog");
-            input.emplace_back("hippopotamuses");
-            input.emplace_back("rat");
-            input.emplace_back("ratcatdogcat");
-            auto ans = Solution::findAllConcatenatedWordsInADict(input);
-            vector<string> output = vector<string>();
-            output.emplace_back("catsdogcats");
-            output.emplace_back("dogcatsdog");
-            output.emplace_back("ratcatdogcat");
+            basic_string<char> input[] = {"cat", "cats", "catsdogcats", "dog", "dogcatsdog", "hippopotamuses", "rat",
+                                          "ratcatdogcat"};
+            vector<basic_string<char>> vec = vector<basic_string<char >>(begin(input), end(input));
+            auto ans = Solution::findAllConcatenatedWordsInADict(vec);
+            string outputstr[] = {"catsdogcats", "dogcatsdog", "ratcatdogcat"};
+            vector<string> output = vector<string>(begin(outputstr), end(outputstr));
             for (const string &str: ans) {
                 ASSERT_TRUE(find(output.cbegin(), output.cend(), str) != output.cend());
             }
@@ -80,13 +72,11 @@ namespace leetcode {
         }
 
         TEST(concatenated_words, case2) {
-            vector<basic_string<char>> input = vector<basic_string<char >>();
-            input.emplace_back("cat");
-            input.emplace_back("dog");
-            input.emplace_back("catdog");
-            auto ans = Solution::findAllConcatenatedWordsInADict(input);
-            vector<string> output = vector<string>();
-            output.emplace_back("catdog");
+            basic_string<char> input[] = {"cat", "dog", "catdog"};
+            vector<basic_string<char>> vec = vector<basic_string<char >>(begin(input), end(input));
+            auto ans = Solution::findAllConcatenatedWordsInADict(vec);
+            string outputstr[] = {"catdog"};
+            vector<string> output = vector<string>(begin(outputstr), end(outputstr));
             for (const string &str: ans) {
                 ASSERT_TRUE(find(output.cbegin(), output.cend(), str) != output.cend());
             }
@@ -97,15 +87,9 @@ namespace leetcode {
         }
 
         TEST(concatenated_words, case4) {
-            vector<basic_string<char>> input = vector<basic_string<char >>();
-            input.emplace_back("nuqhmfj");
-            input.emplace_back("mf");
-            input.emplace_back("jf");
-            input.emplace_back("n");
-            input.emplace_back("u");
-            input.emplace_back("q");
-            input.emplace_back("h");
-            auto ans = Solution::findAllConcatenatedWordsInADict(input);
+            basic_string<char> input[] = {"nuqhmfj", "mf", "jf", "n", "u", "q", "h"};
+            vector<basic_string<char>> vec = vector<basic_string<char >>(begin(input), end(input));
+            auto ans = Solution::findAllConcatenatedWordsInADict(vec);
             vector<string> output = vector<string>();
             for (const string &str: ans) {
                 ASSERT_TRUE(find(output.cbegin(), output.cend(), str) != output.cend());
@@ -119,44 +103,26 @@ namespace leetcode {
 
     namespace count_special_quadruplets {
         TEST(count_special_quadruplets, case1) {
-            vector<int> vec = vector<int>();
-            vec.push_back(1);
-            vec.push_back(2);
-            vec.push_back(3);
-            vec.push_back(6);
+            int input[] = {1, 2, 3, 6};
+            vector<int> vec = vector<int>(begin(input), end(input));
             ASSERT_EQ(1, Solution::countQuadruplets(vec));
         }
 
         TEST(count_special_quadruplets, case2) {
-            vector<int> vec = vector<int>();
-            vec.push_back(3);
-            vec.push_back(3);
-            vec.push_back(6);
-            vec.push_back(4);
-            vec.push_back(5);
+            int input[] = {3, 3, 6, 4, 5};
+            vector<int> vec = vector<int>(begin(input), end(input));
             ASSERT_EQ(0, Solution::countQuadruplets(vec));
         }
 
         TEST(count_special_quadruplets, case3) {
-            vector<int> vec = vector<int>();
-            vec.push_back(1);
-            vec.push_back(1);
-            vec.push_back(1);
-            vec.push_back(3);
-            vec.push_back(5);
+            int input[] = {1, 1, 1, 3, 5};
+            vector<int> vec = vector<int>(begin(input), end(input));
             ASSERT_EQ(4, Solution::countQuadruplets(vec));
         }
 
         TEST(count_special_quadruplets, case4) {
-            vector<int> vec = vector<int>();
-            vec.push_back(28);
-            vec.push_back(8);
-            vec.push_back(49);
-            vec.push_back(85);
-            vec.push_back(37);
-            vec.push_back(90);
-            vec.push_back(20);
-            vec.push_back(8);
+            int input[] = {28, 8, 49, 85, 37, 90, 20, 8};
+            vector<int> vec = vector<int>(begin(input), end(input));
             ASSERT_EQ(1, Solution::countQuadruplets(vec));
         }
     }
@@ -188,6 +154,28 @@ namespace leetcode {
                            17, 21, 11};
             vector<int> vec = vector<int>(begin(input), end(input));
             ASSERT_FALSE(Solution::isNStraightHand(vec, 10));
+        }
+    }
+
+    namespace perfect_number {
+        TEST(perfect_number, case1) {
+            ASSERT_TRUE(Solution::checkPerfectNumber(28));
+        }
+
+        TEST(perfect_number, case2) {
+            ASSERT_TRUE(Solution::checkPerfectNumber(6));
+        }
+
+        TEST(perfect_number, case3) {
+            ASSERT_TRUE(Solution::checkPerfectNumber(496));
+        }
+
+        TEST(perfect_number, case4) {
+            ASSERT_TRUE(Solution::checkPerfectNumber(8128));
+        }
+
+        TEST(perfect_number, case5) {
+            ASSERT_FALSE(Solution::checkPerfectNumber(2));
         }
     }
 }
@@ -353,31 +341,15 @@ namespace lintcode {
 
     namespace lintcode1163 {
         TEST(lintcode1163, case1) {
-            vector<int> input = vector<int>();
-            input.push_back(1);
-            input.push_back(1);
-            input.push_back(2);
-            input.push_back(2);
-            input.push_back(3);
-            input.push_back(3);
-            ASSERT_EQ(3, Solution::distributeCandies(input));
+            int input[] = {1, 1, 2, 2, 3, 3,};
+            vector<int> vec = vector<int>(begin(input), end(input));
+            ASSERT_EQ(3, Solution::distributeCandies(vec));
         }
 
         TEST(lintcode1163, case2) {
-            vector<int> input = vector<int>();
-            input.push_back(1);
-            input.push_back(1);
-            input.push_back(2);
-            input.push_back(2);
-            input.push_back(3);
-            input.push_back(3);
-            input.push_back(4);
-            input.push_back(5);
-            input.push_back(6);
-            input.push_back(6);
-            input.push_back(7);
-            input.push_back(8);
-            ASSERT_EQ(6, Solution::distributeCandies(input));
+            int input[] = {1, 1, 2, 2, 3, 3, 4, 5, 6, 6, 7, 8};
+            vector<int> vec = vector<int>(begin(input), end(input));
+            ASSERT_EQ(6, Solution::distributeCandies(vec));
         }
     }
 }

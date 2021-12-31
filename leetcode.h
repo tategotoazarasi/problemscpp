@@ -74,6 +74,13 @@ namespace leetcode {
             static bool isNStraightHand(vector<int> &hand, int groupSize);
         };
     }
+
+    namespace perfect_number {
+        class Solution {
+        public:
+            static bool checkPerfectNumber(int num);
+        };
+    }
 };
 
 

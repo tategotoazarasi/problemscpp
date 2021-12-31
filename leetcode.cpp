@@ -189,4 +189,21 @@ namespace leetcode {
             return true;
         }
     }
+
+    namespace perfect_number {
+        bool Solution::checkPerfectNumber(int num) {
+            int sum = 0;
+            int max = num;
+            for (int i = 1; i < max; i++) {
+                if (num % i == 0) {
+                    sum += i;
+                    if (i != 1) {
+                        sum += num / i;
+                    }
+                    max = num / i;
+                }
+            }
+            return sum == num;
+        }
+    }
 }
