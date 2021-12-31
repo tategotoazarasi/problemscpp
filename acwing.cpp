@@ -6,7 +6,7 @@
 #include<iostream>
 #include<vector>
 #include<cmath>
-#include <iomanip>
+#include<iomanip>
 
 using namespace std;
 
@@ -77,6 +77,22 @@ namespace acwing {
         double a, b;
         cin >> a >> b;
         cout << "MEDIA = " << setiosflags(ios::fixed) << setprecision(5) << (a * 3.5 + b * 7.5) / 11;
+        return 0;
+    }
+
+    int acwing609::main(istream &cin, ostream &cout) {
+        int a;
+        double b, c;
+        cin >> a >> b >> c;
+        cout << "NUMBER = " << a << endl << "SALARY = U$ " << setiosflags(ios::fixed) << setprecision(2) << b * c;
+        return 0;
+    }
+
+    int acwing615::main(istream &cin, ostream &cout) {
+        int x;
+        float y;
+        cin >> x >> y;
+        cout << setiosflags(ios::fixed) << setprecision(3) << x / y << " km/l";
         return 0;
     }
 }

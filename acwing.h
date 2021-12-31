@@ -39,5 +39,15 @@ namespace acwing {
     public:
         static int main(istream &, ostream &);
     };
+
+    class acwing609 {
+    public:
+        static int main(istream &, ostream &);
+    };
+
+    class acwing615 {
+    public:
+        static int main(istream &, ostream &);
+    };
 }
 #endif //PROBLEMSCPP_ACWING_H

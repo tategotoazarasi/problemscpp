@@ -335,6 +335,23 @@ namespace acwing {
         auto ans = out.str();
         ASSERT_EQ("MEDIA = 6.43182", ans);
     }
+
+    TEST(acwing609, case1) {
+        istringstream in("25\n100\n5.50");
+        ostringstream out;
+        acwing609::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("NUMBER = 25\n"
+                  "SALARY = U$ 550.00", ans);
+    }
+
+    TEST(acwing615, case1) {
+        istringstream in("500\n35.0");
+        ostringstream out;
+        acwing615::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("14.286 km/l", ans);
+    }
 }
 
 namespace lintcode {
