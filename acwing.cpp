@@ -92,7 +92,18 @@ namespace acwing {
         int x;
         float y;
         cin >> x >> y;
-        cout << setiosflags(ios::fixed) << setprecision(3) << x / y << " km/l";
+        cout << setiosflags(ios::fixed) << setprecision(3) << static_cast<float>(x) / y << " km/l";
+        return 0;
+    }
+
+    int acwing616::main(istream &cin, ostream &cout) {
+        double x1, y1, x2, y2;
+        cin >> x1 >> y1 >> x2 >> y2;
+        cout << setiosflags(ios::fixed) << setprecision(4) << sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
+        return 0;
+    }
+
+    int acwing653::main(istream &cin, ostream &cout) {
         return 0;
     }
 }

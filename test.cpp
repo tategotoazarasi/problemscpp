@@ -368,6 +368,14 @@ namespace acwing {
         auto ans = out.str();
         ASSERT_EQ("14.286 km/l", ans);
     }
+
+    TEST(acwing616, case1) {
+        istringstream in("1.0 7.0\n5.0 9.0");
+        ostringstream out;
+        acwing616::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("4.4721", ans);
+    }
 }
 
 namespace lintcode {
