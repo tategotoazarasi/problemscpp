@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::perfect_number::Solution类 参考</title>
+<title>problemscpp: leetcode::count_special_quadruplets::Solution类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,14 +63,14 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00031.html">leetcode</a></li><li class="navelem"><a class="el" href="a00038.html">perfect_number</a></li><li class="navelem"><a class="el" href="a00924.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00031.html">leetcode</a></li><li class="navelem"><a class="el" href="a00036.html">count_special_quadruplets</a></li><li class="navelem"><a class="el" href="a00924.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="a00921.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::perfect_number::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::count_special_quadruplets::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -78,15 +78,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a522b7fa3e9a211955b718fdd02e6fc36"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00924.html#a522b7fa3e9a211955b718fdd02e6fc36">checkPerfectNumber</a> (int num)</td></tr>
-<tr class="separator:a522b7fa3e9a211955b718fdd02e6fc36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a0305ed7bf8817d862f9daab9d519f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00924.html#a54a0305ed7bf8817d862f9daab9d519f">countQuadruplets</a> (vector&lt; int &gt; &amp;)</td></tr>
+<tr class="separator:a54a0305ed7bf8817d862f9daab9d519f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="a00014_source.html">leetcode.h</a> 第 <a class="el" href="a00014_source.html#l00096">96</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00014_source.html">leetcode.h</a> 第 <a class="el" href="a00014_source.html#l00082">82</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a522b7fa3e9a211955b718fdd02e6fc36" name="a522b7fa3e9a211955b718fdd02e6fc36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a522b7fa3e9a211955b718fdd02e6fc36">&#9670;&nbsp;</a></span>checkPerfectNumber()</h2>
+<a id="a54a0305ed7bf8817d862f9daab9d519f" name="a54a0305ed7bf8817d862f9daab9d519f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a0305ed7bf8817d862f9daab9d519f">&#9670;&nbsp;</a></span>countQuadruplets()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -95,10 +95,10 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool leetcode::perfect_number::Solution::checkPerfectNumber </td>
+          <td class="memname">int leetcode::count_special_quadruplets::Solution::countQuadruplets </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>num</em></td><td>)</td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nums</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -109,23 +109,33 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00023_source.html">leetcode.cpp</a> 第 <a class="el" href="a00023_source.html#l00220">220</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                                                 {</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            <span class="keywordtype">int</span> max = num;</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; max; i++) {</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                <span class="keywordflow">if</span> (num % i == 0) {</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                    sum += i;</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                    <span class="keywordflow">if</span> (i != 1) {</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                        sum += num / i;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                    }</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                    max = num / i;</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                }</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            }</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            <span class="keywordflow">return</span> sum == num;</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00023_source.html">leetcode.cpp</a> 第 <a class="el" href="a00023_source.html#l00164">164</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                                                        {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 3; i &lt; nums.size(); i++) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; i - 2; j++) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                    <span class="keywordflow">if</span> (j == i) {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                    }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = j + 1; k &lt; i - 1; k++) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                        <span class="keywordflow">if</span> (k == i) {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                        }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = k + 1; l &lt; i; l++) {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                            <span class="keywordflow">if</span> (l == i) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                            }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                            <span class="keywordflow">if</span> (nums[k] + nums[j] + nums[l] == nums[i]) {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                                sum++;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                            }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                        }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                    }</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                }</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <span class="keywordflow">return</span> sum;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="a00011_source.html#l00161">leetcode::perfect_number::TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="a00011_source.html#l00105">leetcode::count_special_quadruplets::TEST()</a>.</p>
 
 </div>
 </div>

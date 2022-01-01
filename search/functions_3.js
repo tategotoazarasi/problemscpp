@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['get_5fsum_0',['get_sum',['../a00932.html#a0b5b1537d7c97dc523a3de2c8eb04426',1,'leetcode::convert_bst_to_greater_tree::Solution']]]
+  ['get_5fsum_0',['get_sum',['../a00940.html#a0b5b1537d7c97dc523a3de2c8eb04426',1,'leetcode::convert_bst_to_greater_tree::Solution']]]
 ];

@@ -160,10 +160,32 @@ $(function() {
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordtype">int</span> x;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordtype">float</span> y;</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        cin &gt;&gt; x &gt;&gt; y;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        cout &lt;&lt; setiosflags(ios::fixed) &lt;&lt; setprecision(3) &lt;&lt; x / y &lt;&lt; <span class="stringliteral">&quot; km/l&quot;</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        cout &lt;&lt; setiosflags(ios::fixed) &lt;&lt; setprecision(3) &lt;&lt; static_cast&lt;float&gt;(x) / y &lt;&lt; <span class="stringliteral">&quot; km/l&quot;</span>;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="a00892.html#adc76828df40cf78a76d3b385636efae4">   99</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="a00892.html#adc76828df40cf78a76d3b385636efae4">acwing616::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordtype">double</span> x1, y1, x2, y2;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        cout &lt;&lt; setiosflags(ios::fixed) &lt;&lt; setprecision(4) &lt;&lt; sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="a00896.html#ac6919e36d17a429a67ac03bd1cf696d4">  106</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="a00896.html#ac6919e36d17a429a67ac03bd1cf696d4">acwing653::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        cout &lt;&lt; n &lt;&lt; endl;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordtype">int</span> arr[] = {100, 50, 20, 10, 5, 2, 1};</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i: arr) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            cout &lt;&lt; n / i &lt;&lt; <span class="stringliteral">&quot; nota(s) de R$ &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;,00&quot;</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">if</span> (i != 1) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                cout &lt;&lt; endl;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            n %= i;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
 <div class="ttc" id="aa00017_html"><div class="ttname"><a href="a00017.html">acwing.h</a></div></div>
 <div class="ttc" id="aa00030_html"><div class="ttname"><a href="a00030.html">acwing</a></div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00013">acwing.cpp:13</a></div></div>
 <div class="ttc" id="aa00860_html_a03de3190c7b5be0f165eceab6a5a5f85"><div class="ttname"><a href="a00860.html#a03de3190c7b5be0f165eceab6a5a5f85">acwing::acwing1::main</a></div><div class="ttdeci">static int main(istream &amp;, ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00014">acwing.cpp:14</a></div></div>
@@ -174,6 +196,8 @@ $(function() {
 <div class="ttc" id="aa00880_html_a235788e6e05306f578d91c73b54673dd"><div class="ttname"><a href="a00880.html#a235788e6e05306f578d91c73b54673dd">acwing::acwing606::main</a></div><div class="ttdeci">static int main(istream &amp;, ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00076">acwing.cpp:76</a></div></div>
 <div class="ttc" id="aa00884_html_aa7cd0b4a158fd94c6264defe899c6a9b"><div class="ttname"><a href="a00884.html#aa7cd0b4a158fd94c6264defe899c6a9b">acwing::acwing609::main</a></div><div class="ttdeci">static int main(istream &amp;, ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00083">acwing.cpp:83</a></div></div>
 <div class="ttc" id="aa00888_html_ae5efa3fa396ba2e3e874f2946691c0f2"><div class="ttname"><a href="a00888.html#ae5efa3fa396ba2e3e874f2946691c0f2">acwing::acwing615::main</a></div><div class="ttdeci">static int main(istream &amp;, ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00091">acwing.cpp:91</a></div></div>
+<div class="ttc" id="aa00892_html_adc76828df40cf78a76d3b385636efae4"><div class="ttname"><a href="a00892.html#adc76828df40cf78a76d3b385636efae4">acwing::acwing616::main</a></div><div class="ttdeci">static int main(istream &amp;, ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00099">acwing.cpp:99</a></div></div>
+<div class="ttc" id="aa00896_html_ac6919e36d17a429a67ac03bd1cf696d4"><div class="ttname"><a href="a00896.html#ac6919e36d17a429a67ac03bd1cf696d4">acwing::acwing653::main</a></div><div class="ttdeci">static int main(istream &amp;, ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00106">acwing.cpp:106</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
