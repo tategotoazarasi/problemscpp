@@ -376,6 +376,21 @@ namespace acwing {
         auto ans = out.str();
         ASSERT_EQ("4.4721", ans);
     }
+
+    TEST(acwing653, case1) {
+        istringstream in("576");
+        ostringstream out;
+        acwing653::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("576\n"
+                  "5 nota(s) de R$ 100,00\n"
+                  "1 nota(s) de R$ 50,00\n"
+                  "1 nota(s) de R$ 20,00\n"
+                  "0 nota(s) de R$ 10,00\n"
+                  "1 nota(s) de R$ 5,00\n"
+                  "0 nota(s) de R$ 2,00\n"
+                  "1 nota(s) de R$ 1,00", ans);
+    }
 }
 
 namespace lintcode {

@@ -2,19 +2,10 @@
 // Created by tategotoazarasi on 2021/12/29.
 //
 
-#include
-
-"leetcode.h"
-
-#include
-
-<cmath>
-
-#include
-<algorithm>
-
-#include
-<iostream>
+#include"leetcode.h"
+#include<cmath>
+#include<algorithm>
+#include<iostream>
 
 using namespace std;
 
@@ -46,7 +37,7 @@ namespace leetcode {
     }
 
     namespace concatenated_words {
-        vector <string> Solution::findAllConcatenatedWordsInADict(vector <string> &words) {
+        vector<string> Solution::findAllConcatenatedWordsInADict(vector<string> &words) {
             sort(words.begin(), words.end(), [&](const string &a, const string &b) {
                 return a.size() < b.size();
             });
@@ -291,12 +282,12 @@ namespace leetcode {
     }
 
     namespace convert_1d_array_into_2d_array {
-        vector <vector<int>> Solution::construct2DArray(vector<int> &original, int m, int n) {
+        vector<vector<int>> Solution::construct2DArray(vector<int> &original, int m, int n) {
             if (original.size() != m * n) {
                 return {
                 };
             }
-            auto ans = vector < vector < int >> ();
+            auto ans = vector<vector<int >>();
             int count = 0;
             for (int i = 0; i < m; i++) {
                 auto row = vector<int>();

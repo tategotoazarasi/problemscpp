@@ -104,6 +104,17 @@ namespace acwing {
     }
 
     int acwing653::main(istream &cin, ostream &cout) {
+        int n;
+        cin >> n;
+        cout << n << endl;
+        int arr[] = {100, 50, 20, 10, 5, 2, 1};
+        for (int i: arr) {
+            cout << n / i << " nota(s) de R$ " << i << ",00";
+            if (i != 1) {
+                cout << endl;
+            }
+            n %= i;
+        }
         return 0;
     }
 }
