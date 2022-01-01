@@ -6,6 +6,7 @@
 #define PROBLEMSCPP_ACWING_H
 
 #include<iostream>
+#include<vector>
 
 using namespace std;
 
@@ -56,6 +57,16 @@ namespace acwing {
     };
 
     class acwing653 {
+    public:
+        static int main(istream &, ostream &);
+    };
+
+    class acwing4203 {
+    public:
+        static int main(istream &, ostream &);
+    };
+
+    class acwing4204 {
     public:
         static int main(istream &, ostream &);
     };

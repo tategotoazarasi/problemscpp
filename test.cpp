@@ -391,6 +391,82 @@ namespace acwing {
                   "0 nota(s) de R$ 2,00\n"
                   "1 nota(s) de R$ 1,00", ans);
     }
+
+    TEST(acwing4203, case1) {
+        istringstream in("001001");
+        ostringstream out;
+        acwing4203::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("NO", ans);
+    }
+
+    TEST(acwing4203, case2) {
+        istringstream in("1000000001");
+        ostringstream out;
+        acwing4203::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("YES", ans);
+    }
+
+    TEST(acwing4204, case1) {
+        istringstream in("2");
+        ostringstream out;
+        acwing4204::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("0 1\n"
+                  "1 0", ans);
+    }
+
+    TEST(acwing4204, case2) {
+        istringstream in("4");
+        ostringstream out;
+        acwing4204::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("0 1 2 3\n"
+                  "1 0 3 2\n"
+                  "2 3 0 1\n"
+                  "3 2 1 0", ans);
+    }
+
+    TEST(acwing4204, case3) {
+        istringstream in("6");
+        ostringstream out;
+        acwing4204::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("0 1 2 3 4 5\n"
+                  "1 0 3 4 5 2\n"
+                  "2 3 0 5 1 4\n"
+                  "3 4 5 0 2 1\n"
+                  "4 5 1 2 0 3\n"
+                  "5 2 4 1 3 0", ans);
+    }
+
+    TEST(acwing4204, case4) {
+        istringstream in("20");
+        ostringstream out;
+        acwing4204::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19\n"
+                  "1 0 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 2\n"
+                  "2 3 0 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 1 4\n"
+                  "3 4 5 0 7 8 9 10 11 12 13 14 15 16 17 18 19 1 2 6\n"
+                  "4 5 6 7 0 9 10 11 12 13 14 15 16 17 18 19 1 2 3 8\n"
+                  "5 6 7 8 9 0 11 12 13 14 15 16 17 18 19 1 2 3 4 10\n"
+                  "6 7 8 9 10 11 0 13 14 15 16 17 18 19 1 2 3 4 5 12\n"
+                  "7 8 9 10 11 12 13 0 15 16 17 18 19 1 2 3 4 5 6 14\n"
+                  "8 9 10 11 12 13 14 15 0 17 18 19 1 2 3 4 5 6 7 16\n"
+                  "9 10 11 12 13 14 15 16 17 0 19 1 2 3 4 5 6 7 8 18\n"
+                  "10 11 12 13 14 15 16 17 18 19 0 2 3 4 5 6 7 8 9 1\n"
+                  "11 12 13 14 15 16 17 18 19 1 2 0 4 5 6 7 8 9 10 3\n"
+                  "12 13 14 15 16 17 18 19 1 2 3 4 0 6 7 8 9 10 11 5\n"
+                  "13 14 15 16 17 18 19 1 2 3 4 5 6 0 8 9 10 11 12 7\n"
+                  "14 15 16 17 18 19 1 2 3 4 5 6 7 8 0 10 11 12 13 9\n"
+                  "15 16 17 18 19 1 2 3 4 5 6 7 8 9 10 0 12 13 14 11\n"
+                  "16 17 18 19 1 2 3 4 5 6 7 8 9 10 11 12 0 14 15 13\n"
+                  "17 18 19 1 2 3 4 5 6 7 8 9 10 11 12 13 14 0 16 15\n"
+                  "18 19 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 0 17\n"
+                  "19 2 4 6 8 10 12 14 16 18 1 3 5 7 9 11 13 15 17 0", ans);
+    }
 }
 
 namespace lintcode {

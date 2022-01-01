@@ -7,6 +7,7 @@
 #include<vector>
 #include<cmath>
 #include<iomanip>
+#include<set>
 
 using namespace std;
 
@@ -114,6 +115,80 @@ namespace acwing {
                 cout << endl;
             }
             n %= i;
+        }
+        return 0;
+    }
+
+    int acwing4203::main(istream &cin, ostream &cout) {
+        string str;
+        cin >> str;
+        int count0 = 0;
+        int count1 = 0;
+        for (char c: str) {
+            if (c == '1') {
+                count1++;
+                count0 = 0;
+            } else {
+                count0++;
+                count1 = 0;
+            }
+            if (count1 == 7 || count0 == 7) {
+                cout << "YES";
+                return 0;
+            }
+        }
+        cout << "NO";
+        return 0;
+    }
+
+    int acwing4204::main(istream &cin, ostream &cout) {
+        int n;
+        const int N = 1000;
+        int g[N][N];
+        cin >> n;
+        for (int i = 1; i <= n; i++) {
+            g[1][i] = i - 1;
+            g[i][1] = i - 1;
+        }
+        for (int i = 2; i < n; i++) {
+            for (int j = 2; j < n; j++) {
+                if (i == j) {
+                    g[i][j] = 0;//对角线为0
+                } else {
+                    if (g[i][j - 1] == 0) {//在0后面一格
+                        g[i][j] = g[i - 1][j] + 1;//上面一格的值+1
+                    } else {//否则
+                        g[i][j] = g[i][j - 1] + 1;  //前面一格的值+1
+                    }
+                    if (g[i][j] == n) {//达到上限
+                        g[i][j] = 1;//回归到1
+                    }
+                }
+            }
+        }
+        for (int i = 1; i < n; i++) {
+            set<int> s;
+            for (int j = 1; j < n; j++) {
+                s.insert(g[i][j]);
+            }
+            for (int j = 0; j < n; j++) {
+                if (!s.count(j)) {
+                    g[i][n] = g[n][i] = j;  //补最后一列和最后一行的值
+                }
+            }
+        }
+
+        //输出
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                cout << g[i][j];
+                if (j != n) {
+                    cout << " ";
+                }
+            }
+            if (i != n) {
+                cout << endl;
+            }
         }
         return 0;
     }

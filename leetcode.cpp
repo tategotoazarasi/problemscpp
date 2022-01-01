@@ -196,7 +196,6 @@ namespace leetcode {
                 return true;
             }
             sort(hand.begin(), hand.end());
-            cout << hand.size();
             auto len = hand.size() / groupSize;
             for (int i = 0; i < len; i++) {
                 int current = *hand.begin();
