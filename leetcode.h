@@ -122,6 +122,13 @@ namespace leetcode {
             static void convert(FriendTreeNode *);
         };
     }
+
+    namespace convert_1d_array_into_2d_array {
+        class Solution {
+        public:
+            static vector<vector<int>> construct2DArray(vector<int> &original, int m, int n);
+        };
+    }
 };
 
 

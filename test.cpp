@@ -189,6 +189,22 @@ namespace leetcode {
             ASSERT_TRUE((*ans) == (*output));
         }
     }
+
+    namespace convert_1d_array_into_2d_array {
+        TEST(convert_1d_array_into_2d_array, case1) {
+            int input[4] = {1, 2, 3, 4};
+            auto vec = vector<int>(begin(input), end(input));
+            auto ans = Solution::construct2DArray(vec, 2, 2);
+            int output1[] = {1, 2};
+            int output2[] = {3, 4};
+            auto vec1 = vector<int>(begin(output1), end(output1));
+            auto vec2 = vector<int>(begin(output2), end(output2));
+            auto vec_output = vector<vector<int>>();
+            vec_output.push_back(vec1);
+            vec_output.push_back(vec2);
+            ASSERT_EQ(vec_output, ans);
+        }
+    }
 }
 
 namespace acwing {

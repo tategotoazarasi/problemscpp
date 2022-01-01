@@ -281,4 +281,22 @@ namespace leetcode {
             sum_node->friend_node->val = sum_node->val;
         }
     }
+
+    namespace convert_1d_array_into_2d_array {
+        vector<vector<int>> Solution::construct2DArray(vector<int> &original, int m, int n) {
+            if (original.size() != m * n) {
+                return {};
+            }
+            auto ans = vector<vector<int>>();
+            int count = 0;
+            for (int i = 0; i < m; i++) {
+                auto row = vector<int>();
+                for (int j = 0; j < n; j++) {
+                    row.push_back(original[count++]);
+                }
+                ans.push_back(row);
+            }
+            return ans;
+        }
+    }
 }
