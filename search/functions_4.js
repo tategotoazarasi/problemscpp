@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['insert_0',['insert',['../a00916.html#a10978111888599187c5340e0b34938dc',1,'leetcode::concatenated_words::TrieNode']]],
-  ['isnstraighthand_1',['isNStraightHand',['../a00936.html#aaa9e63f5e810760226b4921275ae8869',1,'leetcode::hand_of_straights::Solution']]]
+  ['get_5fsum_0',['get_sum',['../a00953.html#a0b5b1537d7c97dc523a3de2c8eb04426',1,'leetcode::convert_bst_to_greater_tree::Solution']]]
 ];
