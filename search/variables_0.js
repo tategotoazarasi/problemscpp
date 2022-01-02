@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ch_0',['ch',['../a00932.html#ab41c3836f95142d0485d34e22a25e780',1,'leetcode::concatenated_words::TrieNode']]]
+  ['ch_0',['ch',['../a00940.html#ab41c3836f95142d0485d34e22a25e780',1,'leetcode::concatenated_words::TrieNode']]]
 ];
