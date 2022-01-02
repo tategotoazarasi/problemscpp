@@ -6,6 +6,7 @@
 #include<cmath>
 #include<algorithm>
 #include<iostream>
+#include<queue>
 
 using namespace std;
 
@@ -296,6 +297,128 @@ namespace leetcode {
                 ans.push_back(row);
             }
             return ans;
+        }
+    }
+
+    namespace elimination_game {
+        int Solution::lastRemaining(int n) {
+            if (n == 1) {
+                return 1;
+            }
+            return 2 * (n / 2 + 1 - lastRemaining(n / 2));
+        }
+    }
+
+    namespace check_if_all_as_appears_before_all_bs {
+        bool Solution::checkString(string s) {
+            bool flag = true;
+            for (char ch: s) {
+                if (ch == 'a') {
+                    if (!flag) {
+                        return false;
+                    }
+                } else if (ch == 'b') {
+                    flag = false;
+                }
+            }
+            return true;
+        }
+    }
+    namespace number_of_laser_beams_in_a_bank {
+        int Solution::numberOfBeams(vector<string> &bank) {
+            if (bank.size() == 1) {
+                return 0;
+            }
+            int count = 0;
+            int i = 0;
+            int count_i = deviceCount(bank[i]);
+            int j = 1;
+            int count_j = 0;
+            while (i < j && i < bank.size() && j < bank.size()) {
+                if (deviceCount(bank[j]) == 0) {
+                    j++;
+                    continue;
+                }
+                count_j = deviceCount(bank[j]);
+                count += count_i * count_j;
+                count_i = count_j;
+                i = j;
+                j++;
+            }
+            return count;
+        }
+
+        int Solution::deviceCount(const string &str) {
+            int count = 0;
+            for (char c: str) {
+                if (c == '1') {
+                    count++;
+                }
+            }
+            return count;
+        }
+    }
+
+    namespace destroying_asteroids {
+        bool Solution::asteroidsDestroyed(int mass, vector<int> &asteroids) {
+            long long m = mass;
+            sort(asteroids.begin(), asteroids.end());
+            for (int i: asteroids) {
+                if (m < i) {
+                    return false;
+                } else {
+                    m += i;
+                }
+            }
+            return true;
+        }
+    }
+
+    namespace maximum_employees_to_be_invited_to_a_meeting {
+        int Solution::maximumInvitations(vector<int> &favourite) {
+            int n = static_cast<int>(favourite.size());
+            int ans = 0;
+            vector<int> v(n), d(n), dp(n, 1);
+            for (int i = 0; i < n; i += 1) {
+                if (not v[i]) {
+                    vector<int> w;
+                    int x = i;
+                    while (not v[x]) {
+                        w.push_back(x);
+                        v[x] = 1;
+                        x = favourite[x];
+                    }
+                    for (int j = 0; j < w.size(); j += 1) {
+                        if (w[j] == x) {
+                            ans = max((int) w.size() - j, ans);
+                        }
+                    }
+                }
+            }
+            queue<int> q;
+            for (int i = 0; i < n; i += 1) {
+                d[favourite[i]] += 1;
+            }
+            for (int i = 0; i < n; i += 1) {
+                if (d[i] == 0) {
+                    q.push(i);
+                }
+            }
+            while (not q.empty()) {
+                int u = q.front();
+                q.pop();
+                dp[favourite[u]] = max(dp[favourite[u]], dp[u] + 1);
+                if (not(d[favourite[u]] -= 1)) {
+                    q.push(favourite[u]);
+                }
+            }
+            int sum = 0;
+            for (int i = 0; i < n; i += 1) {
+                if (favourite[favourite[i]] == i and favourite[i] > i) {
+                    sum += dp[i] + dp[favourite[i]];
+                }
+            }
+            return max(ans, sum);
         }
     }
 }

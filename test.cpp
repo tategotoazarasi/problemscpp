@@ -205,6 +205,88 @@ namespace leetcode {
             ASSERT_EQ(vec_output, ans);
         }
     }
+
+    namespace elimination_game {
+        TEST(elimination_game, case1) {
+            ASSERT_EQ(1, Solution::lastRemaining(1));
+            ASSERT_EQ(2, Solution::lastRemaining(2));
+            ASSERT_EQ(2, Solution::lastRemaining(3));
+            ASSERT_EQ(2, Solution::lastRemaining(4));
+            ASSERT_EQ(2, Solution::lastRemaining(5));
+            ASSERT_EQ(4, Solution::lastRemaining(6));
+            ASSERT_EQ(4, Solution::lastRemaining(7));
+            ASSERT_EQ(6, Solution::lastRemaining(8));
+            ASSERT_EQ(6, Solution::lastRemaining(9));
+        }
+    }
+
+    namespace check_if_all_as_appears_before_all_bs {
+        TEST(check_if_all_as_appears_before_all_bs, case1) {
+            ASSERT_TRUE(Solution::checkString("aaabbb"));
+        }
+
+        TEST(check_if_all_as_appears_before_all_bs, case2) {
+            ASSERT_FALSE(Solution::checkString("abab"));
+        }
+
+        TEST(check_if_all_as_appears_before_all_bs, case3) {
+            ASSERT_TRUE(Solution::checkString("bbb"));
+        }
+    }
+
+    namespace number_of_laser_beams_in_a_bank {
+        TEST(number_of_laser_beams_in_a_bank, case1) {
+            string input[] = {"011001", "000000", "010100", "001000"};
+            auto vec = vector<string>(begin(input), end(input));
+            ASSERT_EQ(8, Solution::numberOfBeams(vec));
+        }
+
+        TEST(number_of_laser_beams_in_a_bank, case2) {
+            string input[] = {"000", "111", "000"};
+            auto vec = vector<string>(begin(input), end(input));
+            ASSERT_EQ(0, Solution::numberOfBeams(vec));
+        }
+    }
+
+    namespace destroying_asteroids {
+        TEST(destroying_asteroids, case1) {
+            int input[] = {3, 9, 19, 5, 21};
+            auto vec = vector<int>(begin(input), end(input));
+            ASSERT_TRUE(Solution::asteroidsDestroyed(10, vec));
+        }
+
+        TEST(destroying_asteroids, case2) {
+            int input[] = {4, 9, 23, 4};
+            auto vec = vector<int>(begin(input), end(input));
+            ASSERT_FALSE(Solution::asteroidsDestroyed(5, vec));
+        }
+    }
+
+    namespace maximum_employees_to_be_invited_to_a_meeting {
+        TEST(maximum_employees_to_be_invited_to_a_meeting, case1) {
+            int input[] = {2, 2, 1, 2};
+            auto vec = vector<int>(begin(input), end(input));
+            ASSERT_EQ(3, Solution::maximumInvitations(vec));
+        }
+
+        TEST(maximum_employees_to_be_invited_to_a_meeting, case2) {
+            int input[] = {1, 2, 0};
+            auto vec = vector<int>(begin(input), end(input));
+            ASSERT_EQ(3, Solution::maximumInvitations(vec));
+        }
+
+        TEST(maximum_employees_to_be_invited_to_a_meeting, case3) {
+            int input[] = {1, 2, 0};
+            auto vec = vector<int>(begin(input), end(input));
+            ASSERT_EQ(3, Solution::maximumInvitations(vec));
+        }
+
+        TEST(maximum_employees_to_be_invited_to_a_meeting, case4) {
+            int input[] = {1, 0, 0, 2, 1, 4, 7, 8, 9, 6, 7, 10, 8};
+            auto vec = vector<int>(begin(input), end(input));
+            ASSERT_EQ(6, Solution::maximumInvitations(vec));
+        }
+    }
 }
 
 namespace acwing {

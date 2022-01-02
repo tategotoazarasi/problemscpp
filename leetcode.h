@@ -129,6 +129,44 @@ namespace leetcode {
             static vector<vector<int>> construct2DArray(vector<int> &original, int m, int n);
         };
     }
+
+    namespace elimination_game {
+        class Solution {
+        public:
+            static int lastRemaining(int);
+        };
+    }
+
+    namespace check_if_all_as_appears_before_all_bs {
+        class Solution {
+        public:
+            static bool checkString(string);
+        };
+    }
+
+    namespace number_of_laser_beams_in_a_bank {
+        class Solution {
+        public:
+            static int numberOfBeams(vector<string> &);
+
+            static int deviceCount(const string &);
+        };
+    }
+
+    namespace destroying_asteroids {
+        class Solution {
+        public:
+            static bool asteroidsDestroyed(int mass, vector<int> &asteroids);
+        };
+    }
+
+    namespace maximum_employees_to_be_invited_to_a_meeting {
+        class Solution {
+        public:
+            static int maximumInvitations(vector<int> &);
+        };
+    }
+
 };
 
 

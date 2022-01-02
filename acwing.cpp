@@ -143,7 +143,7 @@ namespace acwing {
 
     int acwing4204::main(istream &cin, ostream &cout) {
         int n;
-        const int N = 1000;
+        const int N = 1010;
         int g[N][N];
         cin >> n;
         for (int i = 1; i <= n; i++) {
