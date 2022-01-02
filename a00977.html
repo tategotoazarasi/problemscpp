@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::maximum_employees_to_be_invited_to_a_meeting::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,108 +63,18 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00031.html">leetcode</a></li><li class="navelem"><a class="el" href="a00045.html">maximum_employees_to_be_invited_to_a_meeting</a></li><li class="navelem"><a class="el" href="a00977.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00037.html">leetcode</a></li><li class="navelem"><a class="el" href="a00050.html">destroying_asteroids</a></li><li class="navelem"><a class="el" href="a00980.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="a00974.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::maximum_employees_to_be_invited_to_a_meeting::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::destroying_asteroids::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00014_source.html">leetcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:afe87d302005b0b03b2eaa5c4240e1bde"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00977.html#afe87d302005b0b03b2eaa5c4240e1bde">maximumInvitations</a> (vector&lt; int &gt; &amp;)</td></tr>
-<tr class="separator:afe87d302005b0b03b2eaa5c4240e1bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="a00014_source.html">leetcode.h</a> 第 <a class="el" href="a00014_source.html#l00164">164</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="afe87d302005b0b03b2eaa5c4240e1bde" name="afe87d302005b0b03b2eaa5c4240e1bde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe87d302005b0b03b2eaa5c4240e1bde">&#9670;&nbsp;</a></span>maximumInvitations()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int leetcode::maximum_employees_to_be_invited_to_a_meeting::Solution::maximumInvitations </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>favourite</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="a00023_source.html">leetcode.cpp</a> 第 <a class="el" href="a00023_source.html#l00378">378</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                                                               {</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>            <span class="keywordtype">int</span> n = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(favourite.size());</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>            vector&lt;int&gt; v(n), d(n), dp(n, 1);</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                <span class="keywordflow">if</span> (not v[i]) {</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                    vector&lt;int&gt; w;</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                    <span class="keywordtype">int</span> x = i;</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>                    <span class="keywordflow">while</span> (not v[x]) {</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>                        w.push_back(x);</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>                        v[x] = 1;</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>                        x = favourite[x];</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                    }</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; w.size(); j += 1) {</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>                        <span class="keywordflow">if</span> (w[j] == x) {</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                            ans = max((<span class="keywordtype">int</span>) w.size() - j, ans);</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>                        }</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>                    }</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>                }</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>            }</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>            queue&lt;int&gt; q;</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                d[favourite[i]] += 1;</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>            }</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>                <span class="keywordflow">if</span> (d[i] == 0) {</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>                    q.push(i);</div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>                }</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>            }</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>            <span class="keywordflow">while</span> (not q.empty()) {</div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                <span class="keywordtype">int</span> u = q.front();</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>                q.pop();</div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                dp[favourite[u]] = max(dp[favourite[u]], dp[u] + 1);</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                <span class="keywordflow">if</span> (not(d[favourite[u]] -= 1)) {</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                    q.push(favourite[u]);</div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                }</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>            }</div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>            <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                <span class="keywordflow">if</span> (favourite[favourite[i]] == i and favourite[i] &gt; i) {</div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>                    sum += dp[i] + dp[favourite[i]];</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>                }</div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>            }</div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>            <span class="keywordflow">return</span> max(ans, sum);</div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="a00011_source.html#l00266">leetcode::maximum_employees_to_be_invited_to_a_meeting::TEST()</a>.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="a00014_source.html">leetcode.h</a></li>
-<li><a class="el" href="a00023_source.html">leetcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="a00980.html">leetcode::destroying_asteroids::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="a00980.html#afb9382d1c309a7974aea07a0cd04f637">asteroidsDestroyed</a>(int mass, vector&lt; int &gt; &amp;asteroids)</td><td class="entry"><a class="el" href="a00980.html">leetcode::destroying_asteroids::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2

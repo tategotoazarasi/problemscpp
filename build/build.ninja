@@ -89,6 +89,15 @@ build CMakeFiles/problemscpp.dir/leetcode.cpp.o: CXX_COMPILER__problemscpp_ /hom
   TARGET_COMPILE_PDB = CMakeFiles/problemscpp.dir/
   TARGET_PDB = problemscpp.pdb
 
+build CMakeFiles/problemscpp.dir/luogu.cpp.o: CXX_COMPILER__problemscpp_ /home/runner/work/problemscpp/problemscpp/luogu.cpp || cmake_object_order_depends_target_problemscpp
+  DEP_FILE = CMakeFiles/problemscpp.dir/luogu.cpp.o.d
+  FLAGS = -std=gnu++2a
+  INCLUDES = -isystem /home/runner/work/problemscpp/problemscpp/build/_deps/googletest-src/googletest/include -isystem /home/runner/work/problemscpp/problemscpp/build/_deps/googletest-src/googletest
+  OBJECT_DIR = CMakeFiles/problemscpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/problemscpp.dir
+  TARGET_COMPILE_PDB = CMakeFiles/problemscpp.dir/
+  TARGET_PDB = problemscpp.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target problemscpp
@@ -97,7 +106,7 @@ build CMakeFiles/problemscpp.dir/leetcode.cpp.o: CXX_COMPILER__problemscpp_ /hom
 #############################################
 # Link the executable problemscpp
 
-build problemscpp: CXX_EXECUTABLE_LINKER__problemscpp_ CMakeFiles/problemscpp.dir/test.cpp.o CMakeFiles/problemscpp.dir/main.cpp.o CMakeFiles/problemscpp.dir/acwing.cpp.o CMakeFiles/problemscpp.dir/lintcode.cpp.o CMakeFiles/problemscpp.dir/leetcode.cpp.o | lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
+build problemscpp: CXX_EXECUTABLE_LINKER__problemscpp_ CMakeFiles/problemscpp.dir/test.cpp.o CMakeFiles/problemscpp.dir/main.cpp.o CMakeFiles/problemscpp.dir/acwing.cpp.o CMakeFiles/problemscpp.dir/lintcode.cpp.o CMakeFiles/problemscpp.dir/leetcode.cpp.o CMakeFiles/problemscpp.dir/luogu.cpp.o | lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
   LINK_LIBRARIES = lib/libgtest_main.a  lib/libgtest.a  -lpthread
   OBJECT_DIR = CMakeFiles/problemscpp.dir
   POST_BUILD = :
