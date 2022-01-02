@@ -304,14 +304,12 @@ namespace leetcode {
         int Solution::lastRemaining(int n) {
             int num_amount = n;
             int loop_cnt = 0;
-            int a0 = 1, d = 1;
-            while (num_amount != 1) {
-                // 奇数个数字
-                if (num_amount % 2 == 1) {
+            int a0 = 1; //初项
+            int d = 1;  //差
+            while (num_amount != 1) {//剩下的数目不为1时
+                if (num_amount % 2 == 1) {// 奇数个数字
                     a0 = a0 + d;
-                }
-                    // 偶数个数字
-                else if (num_amount % 2 == 0) {
+                } else if (num_amount % 2 == 0) {// 偶数个数字
                     bool left_to_right = (loop_cnt % 2 == 0);
                     if (left_to_right) {
                         a0 = a0 + d;
@@ -392,50 +390,80 @@ namespace leetcode {
     }
 
     namespace maximum_employees_to_be_invited_to_a_meeting {
-        int Solution::maximumInvitations(vector<int> &favourite) {
-            int n = static_cast<int>(favourite.size());
-            int ans = 0;
-            vector<int> v(n), d(n), dp(n, 1);
-            for (int i = 0; i < n; i += 1) {
-                if (not v[i]) {
-                    vector<int> w;
-                    int x = i;
-                    while (not v[x]) {
-                        w.push_back(x);
-                        v[x] = 1;
-                        x = favourite[x];
-                    }
-                    for (int j = 0; j < w.size(); j += 1) {
-                        if (w[j] == x) {
-                            ans = max((int) w.size() - j, ans);
-                        }
-                    }
-                }
+        int Solution::maximumInvitations(vector<int> &favorite) {
+            int n = static_cast<int>(favorite.size());
+            vector<vector<int >> g(n), rg(n); // rg 为图 g 的反图
+            vector<int> deg(n); // 图 g 上每个节点的入度
+            for (int v = 0; v < n; ++v) {
+                int w = favorite[v];
+                g[v].emplace_back(w);
+                rg[w].emplace_back(v);
+                ++deg[w];
             }
+
+            // 拓扑排序，剪掉图 g 上的所有树枝
             queue<int> q;
-            for (int i = 0; i < n; i += 1) {
-                d[favourite[i]] += 1;
-            }
-            for (int i = 0; i < n; i += 1) {
-                if (d[i] == 0) {
-                    q.push(i);
+            for (int i = 0; i < n; ++i) {
+                if (deg[i] == 0) {
+                    q.emplace(i);
                 }
             }
-            while (not q.empty()) {
-                int u = q.front();
+            while (!q.empty()) {
+                int v = q.front();
                 q.pop();
-                dp[favourite[u]] = max(dp[favourite[u]], dp[u] + 1);
-                if (not(d[favourite[u]] -= 1)) {
-                    q.push(favourite[u]);
+                for (int w: g[v]) {
+                    if (--deg[w] == 0) {
+                        q.emplace(w);
+                    }
                 }
             }
-            int sum = 0;
-            for (int i = 0; i < n; i += 1) {
-                if (favourite[favourite[i]] == i and favourite[i] > i) {
-                    sum += dp[i] + dp[favourite[i]];
+
+            // 寻找图 g 上的基环
+            vector<int> ring;
+            vector<int> vis(n);
+
+            function<void(int)> dfs = [&](int v) {
+                vis[v] = true;
+                ring.emplace_back(v);
+                for (int w: g[v]) {
+                    if (!vis[w]) {
+                        dfs(w);
+                    }
+                }
+            };
+
+            // 通过反图 rg 寻找树枝上最深的链
+            int max_depth = 0;
+
+            function<void(int, int, int)> rdfs = [&](int v, int fa, int depth) {
+                max_depth = max(max_depth, depth);
+                for (int w: rg[v]) {
+                    if (w != fa) {
+                        rdfs(w, v, depth + 1);
+                    }
+                }
+            };
+
+            int max_ring_size = 0, sum_chian_size = 0;
+            for (int i = 0; i < n; ++i) {
+                if (!vis[i] && deg[i]) { // 遍历基环上的点（拓扑排序后入度不为 0）
+                    ring.resize(0);
+                    dfs(i);
+                    int sz = static_cast<int>(ring.size());
+                    if (sz == 2) { // 基环大小为 2
+                        int v = ring[0], w = ring[1];
+                        max_depth = 0;
+                        rdfs(v, w, 1);
+                        sum_chian_size += max_depth; // 累加 v 这一侧的最长链的长度
+                        max_depth = 0;
+                        rdfs(w, v, 1);
+                        sum_chian_size += max_depth; // 累加 w 这一侧的最长链的长度
+                    } else {
+                        max_ring_size = max(max_ring_size, sz); // 取所有基环的最大值
+                    }
                 }
             }
-            return max(ans, sum);
+            return max(max_ring_size, sum_chian_size);
         }
     }
 }

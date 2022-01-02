@@ -192,4 +192,44 @@ namespace acwing {
         }
         return 0;
     }
+
+    int acwing2058::main(istream &cin, ostream &cout) {
+        string n2, n3;
+        cin >> n2 >> n3;
+        auto s = set<long long>();
+
+        for (int i = 0; i < n2.length(); i++) {
+            long long val = 0;
+            for (int j = 0; j < n2.length(); j++) {
+                bool bit = n2[j] != '0';
+                if (j == i) {
+                    bit = !bit;
+                }
+                if (bit) {
+                    val += static_cast<long long>(pow(2, n2.size() - j - 1));
+                }
+            }
+            s.insert(val);
+        }
+
+        for (int n = 1; n <= 2; n++) {
+            for (int i = 0; i < n3.length(); i++) {
+                long long val = 0;
+                for (int j = 0; j < n3.length(); j++) {
+                    int v = n3[j] - '0';
+                    if (i == j) {
+                        v += n;
+                        v %= 3;
+                    }
+                    val += static_cast<long long>(v * pow(3, n3.size() - j - 1));
+                }
+                if (s.find(val) != s.end()) {
+                    cout << val;
+                    return 0;
+                }
+                s.insert(val);
+            }
+        }
+        return 0;
+    }
 }
