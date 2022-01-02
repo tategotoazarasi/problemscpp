@@ -302,10 +302,27 @@ namespace leetcode {
 
     namespace elimination_game {
         int Solution::lastRemaining(int n) {
-            if (n == 1) {
-                return 1;
+            int num_amount = n;
+            int loop_cnt = 0;
+            int a0 = 1, d = 1;
+            while (num_amount != 1) {
+                // 奇数个数字
+                if (num_amount % 2 == 1) {
+                    a0 = a0 + d;
+                }
+                    // 偶数个数字
+                else if (num_amount % 2 == 0) {
+                    bool left_to_right = (loop_cnt % 2 == 0);
+                    if (left_to_right) {
+                        a0 = a0 + d;
+                    } else
+                        a0 = a0;
+                }
+                loop_cnt++;
+                d *= 2;
+                num_amount /= 2;
             }
-            return 2 * (n / 2 + 1 - lastRemaining(n / 2));
+            return a0;
         }
     }
 
