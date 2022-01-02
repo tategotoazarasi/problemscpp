@@ -109,52 +109,52 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="a00026_source.html#l00378">378</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                                                               {</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>            <span class="keywordtype">int</span> n = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(favourite.size());</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>            vector&lt;int&gt; v(n), d(n), dp(n, 1);</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                <span class="keywordflow">if</span> (not v[i]) {</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                    vector&lt;int&gt; w;</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                    <span class="keywordtype">int</span> x = i;</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>                    <span class="keywordflow">while</span> (not v[x]) {</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>                        w.push_back(x);</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>                        v[x] = 1;</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>                        x = favourite[x];</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                    }</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; w.size(); j += 1) {</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>                        <span class="keywordflow">if</span> (w[j] == x) {</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                            ans = max((<span class="keywordtype">int</span>) w.size() - j, ans);</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>                        }</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>                    }</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>                }</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>            }</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>            queue&lt;int&gt; q;</div>
+<p class="definition">在文件 <a class="el" href="a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="a00026_source.html#l00395">395</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>                                                               {</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>            <span class="keywordtype">int</span> n = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(favourite.size());</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>            <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>            vector&lt;int&gt; v(n), d(n), dp(n, 1);</div>
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                d[favourite[i]] += 1;</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>            }</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>                <span class="keywordflow">if</span> (d[i] == 0) {</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>                    q.push(i);</div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>                }</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>            }</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>            <span class="keywordflow">while</span> (not q.empty()) {</div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                <span class="keywordtype">int</span> u = q.front();</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>                q.pop();</div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                dp[favourite[u]] = max(dp[favourite[u]], dp[u] + 1);</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                <span class="keywordflow">if</span> (not(d[favourite[u]] -= 1)) {</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                    q.push(favourite[u]);</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                <span class="keywordflow">if</span> (not v[i]) {</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>                    vector&lt;int&gt; w;</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>                    <span class="keywordtype">int</span> x = i;</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>                    <span class="keywordflow">while</span> (not v[x]) {</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>                        w.push_back(x);</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>                        v[x] = 1;</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>                        x = favourite[x];</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>                    }</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; w.size(); j += 1) {</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>                        <span class="keywordflow">if</span> (w[j] == x) {</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                            ans = max((<span class="keywordtype">int</span>) w.size() - j, ans);</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                        }</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                    }</div>
 <div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                }</div>
 <div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>            }</div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>            <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>            queue&lt;int&gt; q;</div>
 <div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                <span class="keywordflow">if</span> (favourite[favourite[i]] == i and favourite[i] &gt; i) {</div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>                    sum += dp[i] + dp[favourite[i]];</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>                }</div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>            }</div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>            <span class="keywordflow">return</span> max(ans, sum);</div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        }</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                d[favourite[i]] += 1;</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>            }</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>                <span class="keywordflow">if</span> (d[i] == 0) {</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>                    q.push(i);</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>                }</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>            }</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>            <span class="keywordflow">while</span> (not q.empty()) {</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>                <span class="keywordtype">int</span> u = q.front();</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>                q.pop();</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>                dp[favourite[u]] = max(dp[favourite[u]], dp[u] + 1);</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>                <span class="keywordflow">if</span> (not(d[favourite[u]] -= 1)) {</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>                    q.push(favourite[u]);</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>                }</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>            }</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>            <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>                <span class="keywordflow">if</span> (favourite[favourite[i]] == i and favourite[i] &gt; i) {</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>                    sum += dp[i] + dp[favourite[i]];</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>                }</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>            }</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>            <span class="keywordflow">return</span> max(ans, sum);</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="a00011_source.html#l00267">leetcode::maximum_employees_to_be_invited_to_a_meeting::TEST()</a>.</p>
 

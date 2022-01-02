@@ -370,126 +370,143 @@ $(function() {
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno"><a class="line" href="a00047.html">  303</a></span>    <span class="keyword">namespace </span>elimination_game {</div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno"><a class="line" href="a00968.html#a42381099f9e059b07b8dcc1ed68d1f1c">  304</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="a00968.html#a42381099f9e059b07b8dcc1ed68d1f1c">Solution::lastRemaining</a>(<span class="keywordtype">int</span> n) {</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            <span class="keywordflow">if</span> (n == 1) {</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            }</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            <span class="keywordflow">return</span> 2 * (n / 2 + 1 - <a class="code hl_function" href="a00968.html#a42381099f9e059b07b8dcc1ed68d1f1c">lastRemaining</a>(n / 2));</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        }</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    }</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno"><a class="line" href="a00048.html">  312</a></span>    <span class="keyword">namespace </span>check_if_all_as_appears_before_all_bs {</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno"><a class="line" href="a00972.html#adbb16c48e353542fb4ccb64ab25a31f7">  313</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="a00972.html#adbb16c48e353542fb4ccb64ab25a31f7">Solution::checkString</a>(<span class="keywordtype">string</span> s) {</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            <span class="keywordflow">for</span> (<span class="keywordtype">char</span> ch: s) {</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39;a&#39;</span>) {</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                    <span class="keywordflow">if</span> (!flag) {</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                    }</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39;b&#39;</span>) {</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                    flag = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                }</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>            }</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        }</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    }</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno"><a class="line" href="a00049.html">  327</a></span>    <span class="keyword">namespace </span>number_of_laser_beams_in_a_bank {</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno"><a class="line" href="a00976.html#a3c2c37ad0e13b180a6873bbcdb9a4de3">  328</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="a00976.html#a3c2c37ad0e13b180a6873bbcdb9a4de3">Solution::numberOfBeams</a>(vector&lt;string&gt; &amp;bank) {</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            <span class="keywordflow">if</span> (bank.size() == 1) {</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            }</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            <span class="keywordtype">int</span> count_i = <a class="code hl_function" href="a00976.html#afc11076e93a1fab56a8f902788a32c75">deviceCount</a>(bank[i]);</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            <span class="keywordtype">int</span> j = 1;</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            <span class="keywordtype">int</span> count_j = 0;</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            <span class="keywordflow">while</span> (i &lt; j &amp;&amp; i &lt; bank.size() &amp;&amp; j &lt; bank.size()) {</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="a00976.html#afc11076e93a1fab56a8f902788a32c75">deviceCount</a>(bank[j]) == 0) {</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                    j++;</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                }</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                count_j = <a class="code hl_function" href="a00976.html#afc11076e93a1fab56a8f902788a32c75">deviceCount</a>(bank[j]);</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                count += count_i * count_j;</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                count_i = count_j;</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                i = j;</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                j++;</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>            }</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            <span class="keywordflow">return</span> count;</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        }</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno"><a class="line" href="a00976.html#afc11076e93a1fab56a8f902788a32c75">  351</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="a00976.html#afc11076e93a1fab56a8f902788a32c75">Solution::deviceCount</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;str) {</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>            <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>            <span class="keywordflow">for</span> (<span class="keywordtype">char</span> c: str) {</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;1&#39;</span>) {</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                    count++;</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                }</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>            }</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            <span class="keywordflow">return</span> count;</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        }</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    }</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno"><a class="line" href="a00050.html">  362</a></span>    <span class="keyword">namespace </span>destroying_asteroids {</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno"><a class="line" href="a00980.html#afb9382d1c309a7974aea07a0cd04f637">  363</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="a00980.html#afb9382d1c309a7974aea07a0cd04f637">Solution::asteroidsDestroyed</a>(<span class="keywordtype">int</span> mass, vector&lt;int&gt; &amp;asteroids) {</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> m = mass;</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            sort(asteroids.begin(), asteroids.end());</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i: asteroids) {</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                <span class="keywordflow">if</span> (m &lt; i) {</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                    m += i;</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                }</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>            }</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        }</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>    }</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span> </div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno"><a class="line" href="a00051.html">  377</a></span>    <span class="keyword">namespace </span>maximum_employees_to_be_invited_to_a_meeting {</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno"><a class="line" href="a00984.html#afe87d302005b0b03b2eaa5c4240e1bde">  378</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="a00984.html#afe87d302005b0b03b2eaa5c4240e1bde">Solution::maximumInvitations</a>(vector&lt;int&gt; &amp;favourite) {</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>            <span class="keywordtype">int</span> n = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(favourite.size());</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>            vector&lt;int&gt; v(n), d(n), dp(n, 1);</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                <span class="keywordflow">if</span> (not v[i]) {</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                    vector&lt;int&gt; w;</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                    <span class="keywordtype">int</span> x = i;</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>                    <span class="keywordflow">while</span> (not v[x]) {</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>                        w.push_back(x);</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>                        v[x] = 1;</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>                        x = favourite[x];</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                    }</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; w.size(); j += 1) {</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>                        <span class="keywordflow">if</span> (w[j] == x) {</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                            ans = max((<span class="keywordtype">int</span>) w.size() - j, ans);</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>                        }</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>                    }</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>                }</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>            }</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>            queue&lt;int&gt; q;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            <span class="keywordtype">int</span> num_amount = n;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>            <span class="keywordtype">int</span> loop_cnt = 0;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            <span class="keywordtype">int</span> a0 = 1, d = 1;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            <span class="keywordflow">while</span> (num_amount != 1) {</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                <span class="comment">// 奇数个数字</span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                <span class="keywordflow">if</span> (num_amount % 2 == 1) {</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                    a0 = a0 + d;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                }</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                    <span class="comment">// 偶数个数字</span></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num_amount % 2 == 0) {</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                    <span class="keywordtype">bool</span> left_to_right = (loop_cnt % 2 == 0);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                    <span class="keywordflow">if</span> (left_to_right) {</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                        a0 = a0 + d;</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                    } <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                        a0 = a0;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                }</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                loop_cnt++;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                d *= 2;</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                num_amount /= 2;</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            }</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            <span class="keywordflow">return</span> a0;</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        }</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    }</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno"><a class="line" href="a00048.html">  329</a></span>    <span class="keyword">namespace </span>check_if_all_as_appears_before_all_bs {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="a00972.html#adbb16c48e353542fb4ccb64ab25a31f7">  330</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="a00972.html#adbb16c48e353542fb4ccb64ab25a31f7">Solution::checkString</a>(<span class="keywordtype">string</span> s) {</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            <span class="keywordflow">for</span> (<span class="keywordtype">char</span> ch: s) {</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39;a&#39;</span>) {</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                    <span class="keywordflow">if</span> (!flag) {</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                    }</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39;b&#39;</span>) {</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                }</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            }</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        }</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    }</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno"><a class="line" href="a00049.html">  344</a></span>    <span class="keyword">namespace </span>number_of_laser_beams_in_a_bank {</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno"><a class="line" href="a00976.html#a3c2c37ad0e13b180a6873bbcdb9a4de3">  345</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="a00976.html#a3c2c37ad0e13b180a6873bbcdb9a4de3">Solution::numberOfBeams</a>(vector&lt;string&gt; &amp;bank) {</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            <span class="keywordflow">if</span> (bank.size() == 1) {</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            }</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>            <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>            <span class="keywordtype">int</span> count_i = <a class="code hl_function" href="a00976.html#afc11076e93a1fab56a8f902788a32c75">deviceCount</a>(bank[i]);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>            <span class="keywordtype">int</span> j = 1;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>            <span class="keywordtype">int</span> count_j = 0;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            <span class="keywordflow">while</span> (i &lt; j &amp;&amp; i &lt; bank.size() &amp;&amp; j &lt; bank.size()) {</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="a00976.html#afc11076e93a1fab56a8f902788a32c75">deviceCount</a>(bank[j]) == 0) {</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                    j++;</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                }</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                count_j = <a class="code hl_function" href="a00976.html#afc11076e93a1fab56a8f902788a32c75">deviceCount</a>(bank[j]);</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                count += count_i * count_j;</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>                count_i = count_j;</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>                i = j;</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                j++;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            }</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            <span class="keywordflow">return</span> count;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>        }</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno"><a class="line" href="a00976.html#afc11076e93a1fab56a8f902788a32c75">  368</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="a00976.html#afc11076e93a1fab56a8f902788a32c75">Solution::deviceCount</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;str) {</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>            <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>            <span class="keywordflow">for</span> (<span class="keywordtype">char</span> c: str) {</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;1&#39;</span>) {</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>                    count++;</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>                }</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>            }</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>            <span class="keywordflow">return</span> count;</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        }</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    }</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span> </div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno"><a class="line" href="a00050.html">  379</a></span>    <span class="keyword">namespace </span>destroying_asteroids {</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno"><a class="line" href="a00980.html#afb9382d1c309a7974aea07a0cd04f637">  380</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="a00980.html#afb9382d1c309a7974aea07a0cd04f637">Solution::asteroidsDestroyed</a>(<span class="keywordtype">int</span> mass, vector&lt;int&gt; &amp;asteroids) {</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> m = mass;</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>            sort(asteroids.begin(), asteroids.end());</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i: asteroids) {</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                <span class="keywordflow">if</span> (m &lt; i) {</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>                    m += i;</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>                }</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>            }</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>        }</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    }</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span> </div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno"><a class="line" href="a00051.html">  394</a></span>    <span class="keyword">namespace </span>maximum_employees_to_be_invited_to_a_meeting {</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno"><a class="line" href="a00984.html#afe87d302005b0b03b2eaa5c4240e1bde">  395</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="a00984.html#afe87d302005b0b03b2eaa5c4240e1bde">Solution::maximumInvitations</a>(vector&lt;int&gt; &amp;favourite) {</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>            <span class="keywordtype">int</span> n = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(favourite.size());</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>            <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>            vector&lt;int&gt; v(n), d(n), dp(n, 1);</div>
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                d[favourite[i]] += 1;</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>            }</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>                <span class="keywordflow">if</span> (d[i] == 0) {</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>                    q.push(i);</div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>                }</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>            }</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>            <span class="keywordflow">while</span> (not q.empty()) {</div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                <span class="keywordtype">int</span> u = q.front();</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>                q.pop();</div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                dp[favourite[u]] = max(dp[favourite[u]], dp[u] + 1);</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                <span class="keywordflow">if</span> (not(d[favourite[u]] -= 1)) {</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                    q.push(favourite[u]);</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                <span class="keywordflow">if</span> (not v[i]) {</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>                    vector&lt;int&gt; w;</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>                    <span class="keywordtype">int</span> x = i;</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>                    <span class="keywordflow">while</span> (not v[x]) {</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>                        w.push_back(x);</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>                        v[x] = 1;</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>                        x = favourite[x];</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>                    }</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; w.size(); j += 1) {</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>                        <span class="keywordflow">if</span> (w[j] == x) {</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                            ans = max((<span class="keywordtype">int</span>) w.size() - j, ans);</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                        }</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                    }</div>
 <div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                }</div>
 <div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>            }</div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>            <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>            queue&lt;int&gt; q;</div>
 <div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                <span class="keywordflow">if</span> (favourite[favourite[i]] == i and favourite[i] &gt; i) {</div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>                    sum += dp[i] + dp[favourite[i]];</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>                }</div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>            }</div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>            <span class="keywordflow">return</span> max(ans, sum);</div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        }</div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>    }</div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>}</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                d[favourite[i]] += 1;</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>            }</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>                <span class="keywordflow">if</span> (d[i] == 0) {</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>                    q.push(i);</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>                }</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>            }</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>            <span class="keywordflow">while</span> (not q.empty()) {</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>                <span class="keywordtype">int</span> u = q.front();</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>                q.pop();</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>                dp[favourite[u]] = max(dp[favourite[u]], dp[u] + 1);</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>                <span class="keywordflow">if</span> (not(d[favourite[u]] -= 1)) {</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>                    q.push(favourite[u]);</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>                }</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>            }</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>            <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += 1) {</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>                <span class="keywordflow">if</span> (favourite[favourite[i]] == i and favourite[i] &gt; i) {</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>                    sum += dp[i] + dp[favourite[i]];</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>                }</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>            }</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>            <span class="keywordflow">return</span> max(ans, sum);</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>        }</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>    }</div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>}</div>
 <div class="ttc" id="aa00017_html"><div class="ttname"><a href="a00017.html">leetcode.h</a></div></div>
 <div class="ttc" id="aa00037_html"><div class="ttname"><a href="a00037.html">leetcode</a></div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00013">leetcode.cpp:13</a></div></div>
 <div class="ttc" id="aa00920_html"><div class="ttname"><a href="a00920.html">leetcode::TreeNode</a></div><div class="ttdef"><b>Definition:</b> <a href="a00017_source.html#l00015">leetcode.h:15</a></div></div>
@@ -526,11 +543,11 @@ $(function() {
 <div class="ttc" id="aa00960_html_ae0377bd65e2f722c06fc36aee466833a"><div class="ttname"><a href="a00960.html#ae0377bd65e2f722c06fc36aee466833a">leetcode::convert_bst_to_greater_tree::Solution::copy</a></div><div class="ttdeci">static FriendTreeNode * copy(TreeNode *)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00247">leetcode.cpp:247</a></div></div>
 <div class="ttc" id="aa00964_html_a7a2a832500ba73b9fa1ad75a40c91ade"><div class="ttname"><a href="a00964.html#a7a2a832500ba73b9fa1ad75a40c91ade">leetcode::convert_1d_array_into_2d_array::Solution::construct2DArray</a></div><div class="ttdeci">static vector&lt; vector&lt; int &gt; &gt; construct2DArray(vector&lt; int &gt; &amp;original, int m, int n)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00285">leetcode.cpp:285</a></div></div>
 <div class="ttc" id="aa00968_html_a42381099f9e059b07b8dcc1ed68d1f1c"><div class="ttname"><a href="a00968.html#a42381099f9e059b07b8dcc1ed68d1f1c">leetcode::elimination_game::Solution::lastRemaining</a></div><div class="ttdeci">static int lastRemaining(int)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00304">leetcode.cpp:304</a></div></div>
-<div class="ttc" id="aa00972_html_adbb16c48e353542fb4ccb64ab25a31f7"><div class="ttname"><a href="a00972.html#adbb16c48e353542fb4ccb64ab25a31f7">leetcode::check_if_all_as_appears_before_all_bs::Solution::checkString</a></div><div class="ttdeci">static bool checkString(string)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00313">leetcode.cpp:313</a></div></div>
-<div class="ttc" id="aa00976_html_a3c2c37ad0e13b180a6873bbcdb9a4de3"><div class="ttname"><a href="a00976.html#a3c2c37ad0e13b180a6873bbcdb9a4de3">leetcode::number_of_laser_beams_in_a_bank::Solution::numberOfBeams</a></div><div class="ttdeci">static int numberOfBeams(vector&lt; string &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00328">leetcode.cpp:328</a></div></div>
-<div class="ttc" id="aa00976_html_afc11076e93a1fab56a8f902788a32c75"><div class="ttname"><a href="a00976.html#afc11076e93a1fab56a8f902788a32c75">leetcode::number_of_laser_beams_in_a_bank::Solution::deviceCount</a></div><div class="ttdeci">static int deviceCount(const string &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00351">leetcode.cpp:351</a></div></div>
-<div class="ttc" id="aa00980_html_afb9382d1c309a7974aea07a0cd04f637"><div class="ttname"><a href="a00980.html#afb9382d1c309a7974aea07a0cd04f637">leetcode::destroying_asteroids::Solution::asteroidsDestroyed</a></div><div class="ttdeci">static bool asteroidsDestroyed(int mass, vector&lt; int &gt; &amp;asteroids)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00363">leetcode.cpp:363</a></div></div>
-<div class="ttc" id="aa00984_html_afe87d302005b0b03b2eaa5c4240e1bde"><div class="ttname"><a href="a00984.html#afe87d302005b0b03b2eaa5c4240e1bde">leetcode::maximum_employees_to_be_invited_to_a_meeting::Solution::maximumInvitations</a></div><div class="ttdeci">static int maximumInvitations(vector&lt; int &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00378">leetcode.cpp:378</a></div></div>
+<div class="ttc" id="aa00972_html_adbb16c48e353542fb4ccb64ab25a31f7"><div class="ttname"><a href="a00972.html#adbb16c48e353542fb4ccb64ab25a31f7">leetcode::check_if_all_as_appears_before_all_bs::Solution::checkString</a></div><div class="ttdeci">static bool checkString(string)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00330">leetcode.cpp:330</a></div></div>
+<div class="ttc" id="aa00976_html_a3c2c37ad0e13b180a6873bbcdb9a4de3"><div class="ttname"><a href="a00976.html#a3c2c37ad0e13b180a6873bbcdb9a4de3">leetcode::number_of_laser_beams_in_a_bank::Solution::numberOfBeams</a></div><div class="ttdeci">static int numberOfBeams(vector&lt; string &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00345">leetcode.cpp:345</a></div></div>
+<div class="ttc" id="aa00976_html_afc11076e93a1fab56a8f902788a32c75"><div class="ttname"><a href="a00976.html#afc11076e93a1fab56a8f902788a32c75">leetcode::number_of_laser_beams_in_a_bank::Solution::deviceCount</a></div><div class="ttdeci">static int deviceCount(const string &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00368">leetcode.cpp:368</a></div></div>
+<div class="ttc" id="aa00980_html_afb9382d1c309a7974aea07a0cd04f637"><div class="ttname"><a href="a00980.html#afb9382d1c309a7974aea07a0cd04f637">leetcode::destroying_asteroids::Solution::asteroidsDestroyed</a></div><div class="ttdeci">static bool asteroidsDestroyed(int mass, vector&lt; int &gt; &amp;asteroids)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00380">leetcode.cpp:380</a></div></div>
+<div class="ttc" id="aa00984_html_afe87d302005b0b03b2eaa5c4240e1bde"><div class="ttname"><a href="a00984.html#afe87d302005b0b03b2eaa5c4240e1bde">leetcode::maximum_employees_to_be_invited_to_a_meeting::Solution::maximumInvitations</a></div><div class="ttdeci">static int maximumInvitations(vector&lt; int &gt; &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00395">leetcode.cpp:395</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
