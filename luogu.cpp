@@ -5,7 +5,6 @@
 #include "luogu.h"
 #include<iostream>
 #include<cmath>
-#include<cstdio>
 
 using namespace std;
 

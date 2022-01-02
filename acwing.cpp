@@ -232,4 +232,24 @@ namespace acwing {
         }
         return 0;
     }
+
+    int acwing654::main(istream &cin, ostream &cout) {
+        int n;
+        int h, m, s;
+        cin >> n;
+        s = n % 60;
+        n /= 60;
+        m = n % 60;
+        n /= 60;
+        h = n;
+        cout << h << ":" << m << ":" << s;
+        return 0;
+    }
+
+    int acwing605::main(istream &cin, ostream &cout) {
+        int a, b;
+        cin >> a >> b;
+        cout << "PROD = " << a * b;
+        return 0;
+    }
 }

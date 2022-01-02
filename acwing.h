@@ -75,5 +75,19 @@ namespace acwing {
     public:
         static int main(istream &, ostream &);
     };
+
+    /**
+     * 时间转换
+     */
+    class acwing654 {
+    public:
+        static int main(istream &, ostream &);
+    };
+
+    ///简单乘积
+    class acwing605 {
+    public:
+        static int main(istream &, ostream &);
+    };
 }
 #endif //PROBLEMSCPP_ACWING_H

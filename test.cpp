@@ -559,6 +559,23 @@ namespace acwing {
         auto ans = out.str();
         ASSERT_EQ("14", ans);
     }
+
+    TEST(acwing654, case1) {
+        istringstream in("556");
+        ostringstream out;
+        acwing654::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("0:9:16", ans);
+    }
+
+    TEST(acwing605, case1) {
+        istringstream in("3\n"
+                         "9");
+        ostringstream out;
+        acwing605::main(in, out);
+        auto ans = out.str();
+        ASSERT_EQ("PROD = 27", ans);
+    }
 }
 
 namespace lintcode {
