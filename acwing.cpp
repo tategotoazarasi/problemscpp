@@ -4,8 +4,8 @@
 
 #include "acwing.h"
 
-#include <algorithm>
-#include<iostream>
+#include<algorithm>
+#include<cstring>
 #include<vector>
 #include<cmath>
 #include<iomanip>
