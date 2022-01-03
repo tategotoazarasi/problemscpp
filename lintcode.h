@@ -11,39 +11,39 @@
 using namespace std;
 
 namespace lintcode {
-    namespace license_key_formatting {
-        class Solution {
-        public:
-            /**
-            * @param S: a string
-            * @param K: a integer
-            * @return: return a string
-            */
-            static string licenseKeyFormatting(string &, int);
-        };
-    }
+	namespace license_key_formatting {
+		class Solution {
+		public:
+			/**
+			* @param S: a string
+			* @param K: a integer
+			* @return: return a string
+			*/
+			static string licenseKeyFormatting(string&, int);
+		};
+	}
 
-    namespace distribute_candies {
-        class Solution {
-        public:
-            /**
-             * @param candies: a list of integers
-             * @return: return a integer
-             */
-            static int distributeCandies(vector<int> &candies);
-        };
-    }
+	namespace distribute_candies {
+		class Solution {
+		public:
+			/**
+			 * @param candies: a list of integers
+			 * @return: return a integer
+			 */
+			static int distributeCandies(vector<int>& candies);
+		};
+	}
 
-    namespace remove_extra {
-        class Solution {
-        public:
-            /**
-             * @param s: the original string
-             * @return: the string without arbitrary spaces
-             */
-            static string removeExtra(string &s);
-        };
-    }
+	namespace remove_extra {
+		class Solution {
+		public:
+			/**
+			 * @param s: the original string
+			 * @return: the string without arbitrary spaces
+			 */
+			static string removeExtra(string& s);
+		};
+	}
 }
 
 
