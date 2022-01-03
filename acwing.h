@@ -91,5 +91,14 @@ namespace acwing {
 	public:
 		static int main(istream&, ostream&);
 	};
+
+	/**
+	 * \brief AcWing 2041. 干草堆
+	 */
+	class acwing2041
+	{
+	public:
+		static int main(istream&, ostream&);
+	};
 }
 #endif //PROBLEMSCPP_ACWING_H

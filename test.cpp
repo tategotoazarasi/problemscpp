@@ -577,6 +577,40 @@ namespace acwing {
 		auto ans = out.str();
 		ASSERT_EQ("PROD = 27", ans);
 	}
+
+	TEST(acwing2041, case1) {
+		istringstream in("7 4\n5 5\n2 4\n4 6\n3 5");
+		ostringstream out = ostringstream();
+		acwing2041::main(in, out);
+		auto ans = out.str();
+		ASSERT_EQ("1", ans);
+	}
+
+	TEST(acwing2041, case2) {
+		istringstream in("9 10\n"
+			"5 5\n"
+			"3 6\n"
+			"6 6\n"
+			"3 9\n"
+			"1 7\n"
+			"5 6\n"
+			"6 8\n"
+			"7 9\n"
+			"4 6\n"
+			"5 9");
+		ostringstream out = ostringstream();
+		acwing2041::main(in, out);
+		auto ans = out.str();
+		ASSERT_EQ("4", ans);
+	}
+
+	TEST(acwing2041, case3) {
+		istringstream in("23 100\n8 9\n2 14\n6 12\n13 18\n13 18\n5 17\n10 14\n1 13\n8 12\n17 19\n2 6\n4 19\n16 20\n4 15\n9 9\n13 19\n1 14\n4 17\n16 21\n7 15\n3 14\n7 19\n13 17\n3 8\n7 19\n6 8\n8 23\n5 19\n17 20\n10 20\n9 18\n20 23\n16 23\n7 7\n4 22\n4 23\n19 23\n10 18\n14 16\n2 7\n3 7\n4 18\n20 21\n13 17\n10 13\n5 17\n8 20\n21 22\n14 22\n4 21\n4 18\n4 10\n4 5\n19 20\n6 22\n3 15\n7 9\n3 22\n20 21\n3 12\n3 16\n8 18\n5 12\n9 23\n10 14\n5 10\n3 21\n18 22\n10 15\n2 17\n19 23\n9 12\n2 19\n3 15\n12 14\n3 3\n9 18\n9 22\n7 9\n1 21\n4 15\n2 6\n18 20\n3 17\n4 18\n8 15\n2 15\n9 19\n6 9\n5 21\n2 16\n1 20\n2 20\n13 20");
+		ostringstream out = ostringstream();
+		acwing2041::main(in, out);
+		auto ans = out.str();
+		ASSERT_EQ("46", ans);
+	}
 }
 
 namespace lintcode {

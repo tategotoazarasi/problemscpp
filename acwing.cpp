@@ -3,6 +3,8 @@
 //
 
 #include "acwing.h"
+
+#include <algorithm>
 #include<iostream>
 #include<vector>
 #include<cmath>
@@ -262,6 +264,25 @@ namespace acwing {
 		int a, b;
 		cin >> a >> b;
 		cout << "PROD = " << a * b;
+		return 0;
+	}
+
+	int acwing2041::main(istream& cin, ostream& cout) {
+		int* haystack = new int[1000010];
+		memset(haystack, 0, 1000010 * sizeof * haystack);
+		int n, k;
+		cin >> n >> k;
+		for (int i = 0; i < k; i++) {
+			int a, b;
+			cin >> a >> b;
+			haystack[a] ++;
+			haystack[b + 1] --;
+		}
+		for (int i = 1; i <= n; i++) {
+			haystack[i] += haystack[i - 1];
+		}
+		sort(haystack + 1, haystack + n + 1);
+		cout << haystack[(n + 1) / 2];
 		return 0;
 	}
 }
