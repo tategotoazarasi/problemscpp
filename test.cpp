@@ -611,6 +611,23 @@ namespace acwing {
 		auto ans = out.str();
 		ASSERT_EQ("46", ans);
 	}
+
+	namespace acwing2060 {
+		TEST(acwing2060, case1)
+		{
+			istringstream in("6 16\n"
+				"................\n"
+				"..XXXX....XXX...\n"
+				"...XXXX....XX...\n"
+				".XXXX......XXX..\n"
+				"........XXXXX...\n"
+				".........XXX....");
+			ostringstream out = ostringstream();
+			acwing2060::main(in, out);
+			auto ans = out.str();
+			ASSERT_EQ("3", ans);
+		}
+	}
 }
 
 namespace lintcode {
@@ -649,6 +666,19 @@ namespace lintcode {
 		TEST(remove_extra, case2) {
 			string input = "  low               ercase  ";
 			ASSERT_EQ("low ercase", Solution::removeExtra(input));
+		}
+	}
+
+	namespace fibonacci
+	{
+		TEST(fibonacci, case1)
+		{
+			ASSERT_EQ(0, Solution::fibonacci(1));
+		}
+
+		TEST(fibonacci, case2)
+		{
+			ASSERT_EQ(1, Solution::fibonacci(2));
 		}
 	}
 }

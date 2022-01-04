@@ -9,7 +9,9 @@
 #include<vector>
 #include<cmath>
 #include<iomanip>
+#include<queue>
 #include<set>
+#include<unordered_set>
 
 using namespace std;
 
@@ -284,5 +286,174 @@ namespace acwing {
 		sort(haystack + 1, haystack + n + 1);
 		cout << haystack[(n + 1) / 2];
 		return 0;
+	}
+
+	namespace acwing2060 {
+		int acwing2060::main(istream& cin, ostream& cout) {
+			char cowhide[50][50]{};
+			auto g = unordered_set<point, pointhash, pointequal>();
+			auto edge = unordered_set<point, pointhash, pointequal>();
+			auto que = queue<point>();
+			int n, m;
+			cin >> n >> m;
+			bool flag = true;
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = 0; j < m; j++)
+				{
+					cin >> cowhide[i][j];
+					if (flag && cowhide[i][j] == 'X')
+					{
+						g.insert(point(i, j));
+						flag = false;
+					}
+				}
+			}
+			que.push(*g.begin());
+			while (!que.empty())
+			{
+				auto p = que.front();
+				g.insert(p);
+				if (0 <= p.x + 1 && p.x + 1 < n)
+				{
+					if (cowhide[p.x + 1][p.y] == 'X') {
+						auto next = point(p.x + 1, p.y);
+						if (g.count(next) == 0) {
+							que.push(next);
+						}
+					}
+					else {
+						edge.insert(p);
+					}
+				}
+				if (0 <= p.x - 1 && p.x - 1 < n)
+				{
+					if (cowhide[p.x - 1][p.y] == 'X') {
+						auto next = point(p.x - 1, p.y);
+						if (g.count(next) == 0) {
+							que.push(next);
+						}
+					}
+					else {
+						edge.insert(p);
+					}
+				}
+				if (0 <= p.y + 1 && p.y + 1 < m)
+				{
+					if (cowhide[p.x][p.y + 1] == 'X') {
+						auto next = point(p.x, p.y + 1);
+						if (g.count(next) == 0) {
+							que.push(next);
+						}
+					}
+					else {
+						edge.insert(p);
+					}
+				}
+				if (0 <= p.y - 1 && p.y - 1 < m)
+				{
+					if (cowhide[p.x][p.y - 1] == 'X') {
+						auto next = point(p.x, p.y - 1);
+						if (g.count(next) == 0) {
+							que.push(next);
+						}
+					}
+					else {
+						edge.insert(p);
+					}
+				}
+				que.pop();
+			}
+			int count = 0;
+			auto nextedge = unordered_set<point, pointhash, pointequal>();
+			while (true) {
+				for (auto p : edge)
+				{
+					if (0 <= p.x + 1 && p.x + 1 <= n)
+					{
+						auto next = point(p.x + 1, p.y);
+						if (g.count(next) == 0)
+						{
+							if (cowhide[p.x + 1][p.y] == 'X') {
+								cout << count;
+								return 0;
+							}
+							else
+							{
+								cowhide[p.x + 1][p.y] = 'X';
+								g.insert(next);
+								nextedge.insert(next);
+							}
+						}
+					}
+					if (0 <= p.x - 1 && p.x - 1 <= n)
+					{
+						auto next = point(p.x - 1, p.y);
+						if (g.count(next) == 0)
+						{
+							if (cowhide[p.x - 1][p.y] == 'X') {
+								cout << count;
+								return 0;
+							}
+							else
+							{
+								cowhide[p.x - 1][p.y] = 'X';
+								g.insert(next);
+								nextedge.insert(next);
+							}
+						}
+					}
+					if (0 <= p.y + 1 && p.y + 1 <= m)
+					{
+						auto next = point(p.x, p.y + 1);
+						if (g.count(next) == 0)
+						{
+							if (cowhide[p.x][p.y + 1] == 'X') {
+								cout << count;
+								return 0;
+							}
+							else
+							{
+								cowhide[p.x][p.y + 1] = 'X';
+								g.insert(next);
+								nextedge.insert(next);
+							}
+						}
+					}
+					if (0 <= p.y - 1 && p.y - 1 <= m)
+					{
+						auto next = point(p.x, p.y - 1);
+						if (g.count(next) == 0)
+						{
+							if (cowhide[p.x][p.y - 1] == 'X') {
+								cout << count;
+								return 0;
+							}
+							else
+							{
+								cowhide[p.x][p.y - 1] = 'X';
+								g.insert(next);
+								nextedge.insert(next);
+							}
+						}
+					}
+				}
+				count++;
+				edge = nextedge;
+				nextedge = unordered_set<point, pointhash, pointequal>();
+			}
+			return 0;
+		}
+
+		size_t pointhash::operator()(const point& p)const
+		{
+			return p.x * 50 + p.y;
+		}
+
+		bool pointequal::operator()(const point& p1, const point& p2)const
+		{
+			return p1.x == p2.x && p1.y == p2.y;
+		}
+
 	}
 }

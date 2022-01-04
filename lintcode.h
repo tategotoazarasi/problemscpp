@@ -44,6 +44,21 @@ namespace lintcode {
 			static string removeExtra(string& s);
 		};
 	}
+
+	/**
+	 * \brief lintcode 1807. ì³²¨ÄÉÆõÊıÁĞ¼òµ¥
+	 */
+	namespace fibonacci
+	{
+		class Solution {
+		public:
+			/**
+			 * @param n: an integer
+			 * @return: an ineger f(n)
+			 */
+			static int fibonacci(int);
+		};
+	}
 }
 
 

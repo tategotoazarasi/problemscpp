@@ -6,6 +6,7 @@
 #define PROBLEMSCPP_ACWING_H
 
 #include<iostream>
+#include <set>
 #include<vector>
 
 using namespace std;
@@ -100,5 +101,30 @@ namespace acwing {
 	public:
 		static int main(istream&, ostream&);
 	};
+
+	namespace acwing2060 {
+		class acwing2060
+		{
+		public:
+			static int main(istream&, ostream&);
+		};
+
+		struct point
+		{
+			int x;
+			int y;
+			point(int x, int y) :x(x), y(y) {};
+		};
+
+		struct pointhash
+		{
+			size_t operator()(const point&)const;
+		};
+
+		struct pointequal
+		{
+			bool operator()(const point&, const point&)const;
+		};
+	}
 }
 #endif //PROBLEMSCPP_ACWING_H
