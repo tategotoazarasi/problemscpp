@@ -103,6 +103,9 @@ namespace acwing {
 		static int main(istream&, ostream&);
 	};
 
+	/**
+	 * \brief AcWing 2060. 奶牛选美
+	 */
 	namespace acwing2060 {
 		class acwing2060
 		{
@@ -110,11 +113,12 @@ namespace acwing {
 			static int main(istream&, ostream&);
 		};
 
-		
+
 		struct point
 		{
 			int x;
 			int y;
+			point() = default;
 			point(int x, int y) :x(x), y(y) {};
 		};
 
@@ -128,7 +132,7 @@ namespace acwing {
 			bool operator()(const point&, const point&)const;
 		};
 
-		void flood(point, unordered_set<point, pointhash, pointequal>*, unordered_set<point, pointhash, pointequal>*, char[50][50],int,int);
+		void flood(point, bool[55][55], unordered_set<point, pointhash, pointequal>*, char[55][55], int, int);
 	}
 }
 #endif //PROBLEMSCPP_ACWING_H

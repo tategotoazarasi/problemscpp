@@ -290,12 +290,13 @@ namespace acwing {
 
 	namespace acwing2060 {
 		int acwing2060::main(istream& cin, ostream& cout) {
-			char cowhide[50][50]{};
-			auto g = unordered_set<point, pointhash, pointequal>();
+			char cowhide[55][55]{};
+			bool occupy[55][55]{};
 			auto edge = unordered_set<point, pointhash, pointequal>();
 			int n, m;
 			cin >> n >> m;
 			bool flag = true;
+			point first;
 			for (int i = 0; i < n; i++)
 			{
 				for (int j = 0; j < m; j++)
@@ -303,13 +304,18 @@ namespace acwing {
 					cin >> cowhide[i][j];
 					if (flag && cowhide[i][j] == 'X')
 					{
-						g.insert(point(i, j));
+						occupy[i][j] = true;
+						first = point(i, j);
 						flag = false;
+					}
+					else
+					{
+						occupy[i][j] = false;
 					}
 				}
 			}
 
-			flood(*g.begin(), &g, &edge, cowhide, n, m);
+			flood(first, occupy, &edge, cowhide, n, m);
 
 			int count = 0;
 			auto nextedge = unordered_set<point, pointhash, pointequal>();
@@ -319,19 +325,16 @@ namespace acwing {
 					point nexts[] = { point(p.x + 1,p.y),point(p.x - 1,p.y),point(p.x,p.y + 1),point(p.x,p.y - 1) };
 					for (auto next : nexts)
 					{
-						if (0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && g.count(next) == 0)
+						if (0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && !occupy[next.x][next.y])
 						{
 							if (cowhide[next.x][next.y] == 'X')
 							{
 								cout << count;
 								return 0;
 							}
-							else
-							{
-								cowhide[next.x][next.y] = 'X';
-								g.insert(next);
-								nextedge.insert(next);
-							}
+							cowhide[next.x][next.y] = 'X';
+							occupy[next.x][next.y] = true;
+							nextedge.insert(next);
 						}
 					}
 				}
@@ -352,60 +355,31 @@ namespace acwing {
 			return p1.x == p2.x && p1.y == p2.y;
 		}
 
-		void flood(point p, unordered_set<point, pointhash, pointequal>* g, unordered_set<point, pointhash, pointequal>* edge, char cowhide[50][50], int n, int m)
+		void flood(point first, bool occupy[55][55], unordered_set<point, pointhash, pointequal>* edge, char cowhide[55][55], int n, int m)
 		{
 			auto que = queue<point>();
-			que.push(p);
+			auto eq = pointequal();
+			que.push(first);
 			while (!que.empty())
 			{
 				auto p = que.front();
-				g->insert(p);
-				if (0 <= p.x + 1 && p.x + 1 < n)
+				if (!eq(p, first) && occupy[p.x][p.y])
 				{
-					if (cowhide[p.x + 1][p.y] == 'X') {
-						auto next = point(p.x + 1, p.y);
-						if (g->count(next) == 0) {
-							que.push(next);
-						}
-					}
-					else {
-						edge->insert(p);
-					}
+					que.pop();
+					continue;
 				}
-				if (0 <= p.x - 1 && p.x - 1 < n)
+				occupy[p.x][p.y] = true;
+				point nexts[] = { point(p.x + 1,p.y),point(p.x - 1,p.y),point(p.x,p.y + 1),point(p.x,p.y - 1) };
+				for (auto next : nexts)
 				{
-					if (cowhide[p.x - 1][p.y] == 'X') {
-						auto next = point(p.x - 1, p.y);
-						if (g->count(next) == 0) {
+					if (0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && !occupy[next.x][next.y])
+					{
+						if (cowhide[next.x][next.y] == 'X') {
 							que.push(next);
 						}
-					}
-					else {
-						edge->insert(p);
-					}
-				}
-				if (0 <= p.y + 1 && p.y + 1 < m)
-				{
-					if (cowhide[p.x][p.y + 1] == 'X') {
-						auto next = point(p.x, p.y + 1);
-						if (g->count(next) == 0) {
-							que.push(next);
+						else {
+							edge->insert(p);
 						}
-					}
-					else {
-						edge->insert(p);
-					}
-				}
-				if (0 <= p.y - 1 && p.y - 1 < m)
-				{
-					if (cowhide[p.x][p.y - 1] == 'X') {
-						auto next = point(p.x, p.y - 1);
-						if (g->count(next) == 0) {
-							que.push(next);
-						}
-					}
-					else {
-						edge->insert(p);
 					}
 				}
 				que.pop();
