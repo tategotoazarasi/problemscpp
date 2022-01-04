@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['solution_0',['Solution',['../a00989.html',1,'leetcode::check_if_all_as_appears_before_all_bs::Solution'],['../a00941.html',1,'leetcode::concatenated_words::Solution'],['../a00981.html',1,'leetcode::convert_1d_array_into_2d_array::Solution'],['../a00977.html',1,'leetcode::convert_bst_to_greater_tree::Solution'],['../a00961.html',1,'leetcode::count_special_quadruplets::Solution'],['../a01005.html',1,'leetcode::day_of_the_week::Solution'],['../a00997.html',1,'leetcode::destroying_asteroids::Solution'],['../a00985.html',1,'leetcode::elimination_game::Solution'],['../a00949.html',1,'leetcode::excel_sheet_column_number::Solution'],['../a00953.html',1,'leetcode::excel_sheet_column_title::Solution'],['../a00965.html',1,'leetcode::hand_of_straights::Solution'],['../a00957.html',1,'leetcode::majority_element::Solution'],['../a01001.html',1,'leetcode::maximum_employees_to_be_invited_to_a_meeting::Solution'],['../a00993.html',1,'leetcode::number_of_laser_beams_in_a_bank::Solution'],['../a00969.html',1,'leetcode::perfect_number::Solution'],['../a01013.html',1,'lintcode::distribute_candies::Solution'],['../a01009.html',1,'lintcode::license_key_formatting::Solution'],['../a01017.html',1,'lintcode::remove_extra::Solution']]]
+  ['point_0',['point',['../a00943.html',1,'acwing::acwing2060']]],
+  ['pointequal_1',['pointequal',['../a00951.html',1,'acwing::acwing2060']]],
+  ['pointhash_2',['pointhash',['../a00947.html',1,'acwing::acwing2060']]]
 ];

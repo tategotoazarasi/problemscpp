@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['solution_0',['Solution',['../a00957.html#a79e75864eba3b92653318e8c6fb1526d',1,'leetcode::majority_element::Solution']]]
+  ['removeextra_0',['removeExtra',['../a01035.html#aa0e49e4d04ff089fe090aaf88dd3a96a',1,'lintcode::remove_extra::Solution']]]
 ];

@@ -29,8 +29,10 @@ var menudata={children:[
 {text:"命名空间列表",url:"namespaces.html"},
 {text:"命名空间成员",url:"namespacemembers.html",children:[
 {text:"全部",url:"namespacemembers.html",children:[
+{text:"f",url:"namespacemembers.html#index_f"},
 {text:"t",url:"namespacemembers.html#index_t"}]},
 {text:"函数",url:"namespacemembers_func.html",children:[
+{text:"f",url:"namespacemembers_func.html#index_f"},
 {text:"t",url:"namespacemembers_func.html#index_t"}]}]}]},
 {text:"类",url:"annotated.html",children:[
 {text:"类列表",url:"annotated.html"},
@@ -47,10 +49,13 @@ var menudata={children:[
 {text:"m",url:"functions.html#index_m"},
 {text:"n",url:"functions.html#index_n"},
 {text:"o",url:"functions.html#index_o"},
+{text:"p",url:"functions.html#index_p"},
 {text:"r",url:"functions.html#index_r"},
 {text:"s",url:"functions.html#index_s"},
 {text:"t",url:"functions.html#index_t"},
-{text:"v",url:"functions.html#index_v"}]},
+{text:"v",url:"functions.html#index_v"},
+{text:"x",url:"functions.html#index_x"},
+{text:"y",url:"functions.html#index_y"}]},
 {text:"函数",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
 {text:"c",url:"functions_func.html#index_c"},
@@ -62,6 +67,7 @@ var menudata={children:[
 {text:"m",url:"functions_func.html#index_m"},
 {text:"n",url:"functions_func.html#index_n"},
 {text:"o",url:"functions_func.html#index_o"},
+{text:"p",url:"functions_func.html#index_p"},
 {text:"r",url:"functions_func.html#index_r"},
 {text:"s",url:"functions_func.html#index_s"},
 {text:"t",url:"functions_func.html#index_t"}]},

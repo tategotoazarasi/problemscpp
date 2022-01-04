@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['t210229_0',['T210229',['../a01021.html',1,'luogu']]],
-  ['treenode_1',['TreeNode',['../a00937.html',1,'leetcode']]],
-  ['trienode_2',['TrieNode',['../a00945.html',1,'leetcode::concatenated_words']]]
+  ['solution_0',['Solution',['../a01007.html',1,'leetcode::check_if_all_as_appears_before_all_bs::Solution'],['../a00959.html',1,'leetcode::concatenated_words::Solution'],['../a00999.html',1,'leetcode::convert_1d_array_into_2d_array::Solution'],['../a00995.html',1,'leetcode::convert_bst_to_greater_tree::Solution'],['../a00979.html',1,'leetcode::count_special_quadruplets::Solution'],['../a01023.html',1,'leetcode::day_of_the_week::Solution'],['../a01015.html',1,'leetcode::destroying_asteroids::Solution'],['../a01003.html',1,'leetcode::elimination_game::Solution'],['../a00967.html',1,'leetcode::excel_sheet_column_number::Solution'],['../a00971.html',1,'leetcode::excel_sheet_column_title::Solution'],['../a00983.html',1,'leetcode::hand_of_straights::Solution'],['../a00975.html',1,'leetcode::majority_element::Solution'],['../a01019.html',1,'leetcode::maximum_employees_to_be_invited_to_a_meeting::Solution'],['../a01011.html',1,'leetcode::number_of_laser_beams_in_a_bank::Solution'],['../a00987.html',1,'leetcode::perfect_number::Solution'],['../a01031.html',1,'lintcode::distribute_candies::Solution'],['../a01039.html',1,'lintcode::fibonacci::Solution'],['../a01027.html',1,'lintcode::license_key_formatting::Solution'],['../a01035.html',1,'lintcode::remove_extra::Solution']]]
 ];
