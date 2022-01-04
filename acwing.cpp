@@ -293,7 +293,6 @@ namespace acwing {
 			char cowhide[50][50]{};
 			auto g = unordered_set<point, pointhash, pointequal>();
 			auto edge = unordered_set<point, pointhash, pointequal>();
-			auto que = queue<point>();
 			int n, m;
 			cin >> n >> m;
 			bool flag = true;
@@ -309,129 +308,27 @@ namespace acwing {
 					}
 				}
 			}
-			que.push(*g.begin());
-			while (!que.empty())
-			{
-				auto p = que.front();
-				g.insert(p);
-				if (0 <= p.x + 1 && p.x + 1 < n)
-				{
-					if (cowhide[p.x + 1][p.y] == 'X') {
-						auto next = point(p.x + 1, p.y);
-						if (g.count(next) == 0) {
-							que.push(next);
-						}
-					}
-					else {
-						edge.insert(p);
-					}
-				}
-				if (0 <= p.x - 1 && p.x - 1 < n)
-				{
-					if (cowhide[p.x - 1][p.y] == 'X') {
-						auto next = point(p.x - 1, p.y);
-						if (g.count(next) == 0) {
-							que.push(next);
-						}
-					}
-					else {
-						edge.insert(p);
-					}
-				}
-				if (0 <= p.y + 1 && p.y + 1 < m)
-				{
-					if (cowhide[p.x][p.y + 1] == 'X') {
-						auto next = point(p.x, p.y + 1);
-						if (g.count(next) == 0) {
-							que.push(next);
-						}
-					}
-					else {
-						edge.insert(p);
-					}
-				}
-				if (0 <= p.y - 1 && p.y - 1 < m)
-				{
-					if (cowhide[p.x][p.y - 1] == 'X') {
-						auto next = point(p.x, p.y - 1);
-						if (g.count(next) == 0) {
-							que.push(next);
-						}
-					}
-					else {
-						edge.insert(p);
-					}
-				}
-				que.pop();
-			}
+
+			flood(*g.begin(), &g, &edge, cowhide, n, m);
+
 			int count = 0;
 			auto nextedge = unordered_set<point, pointhash, pointequal>();
 			while (true) {
 				for (auto p : edge)
 				{
-					if (0 <= p.x + 1 && p.x + 1 <= n)
+					point nexts[] = { point(p.x + 1,p.y),point(p.x - 1,p.y),point(p.x,p.y + 1),point(p.x,p.y - 1) };
+					for (auto next : nexts)
 					{
-						auto next = point(p.x + 1, p.y);
-						if (g.count(next) == 0)
+						if (0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && g.count(next) == 0)
 						{
-							if (cowhide[p.x + 1][p.y] == 'X') {
+							if (cowhide[next.x][next.y] == 'X')
+							{
 								cout << count;
 								return 0;
 							}
 							else
 							{
-								cowhide[p.x + 1][p.y] = 'X';
-								g.insert(next);
-								nextedge.insert(next);
-							}
-						}
-					}
-					if (0 <= p.x - 1 && p.x - 1 <= n)
-					{
-						auto next = point(p.x - 1, p.y);
-						if (g.count(next) == 0)
-						{
-							if (cowhide[p.x - 1][p.y] == 'X') {
-								cout << count;
-								return 0;
-							}
-							else
-							{
-								cowhide[p.x - 1][p.y] = 'X';
-								g.insert(next);
-								nextedge.insert(next);
-							}
-						}
-					}
-					if (0 <= p.y + 1 && p.y + 1 <= m)
-					{
-						auto next = point(p.x, p.y + 1);
-						if (g.count(next) == 0)
-						{
-							if (cowhide[p.x][p.y + 1] == 'X') {
-								cout << count;
-								return 0;
-							}
-							else
-							{
-								cowhide[p.x][p.y + 1] = 'X';
-								g.insert(next);
-								nextedge.insert(next);
-							}
-						}
-					}
-					if (0 <= p.y - 1 && p.y - 1 <= m)
-					{
-						auto next = point(p.x, p.y - 1);
-						if (g.count(next) == 0)
-						{
-							if (cowhide[p.x][p.y - 1] == 'X') {
-								cout << count;
-								return 0;
-							}
-							else
-							{
-								cowhide[p.x][p.y - 1] = 'X';
+								cowhide[next.x][next.y] = 'X';
 								g.insert(next);
 								nextedge.insert(next);
 							}
@@ -453,6 +350,66 @@ namespace acwing {
 		bool pointequal::operator()(const point& p1, const point& p2)const
 		{
 			return p1.x == p2.x && p1.y == p2.y;
+		}
+
+		void flood(point p, unordered_set<point, pointhash, pointequal>* g, unordered_set<point, pointhash, pointequal>* edge, char cowhide[50][50], int n, int m)
+		{
+			auto que = queue<point>();
+			que.push(p);
+			while (!que.empty())
+			{
+				auto p = que.front();
+				g->insert(p);
+				if (0 <= p.x + 1 && p.x + 1 < n)
+				{
+					if (cowhide[p.x + 1][p.y] == 'X') {
+						auto next = point(p.x + 1, p.y);
+						if (g->count(next) == 0) {
+							que.push(next);
+						}
+					}
+					else {
+						edge->insert(p);
+					}
+				}
+				if (0 <= p.x - 1 && p.x - 1 < n)
+				{
+					if (cowhide[p.x - 1][p.y] == 'X') {
+						auto next = point(p.x - 1, p.y);
+						if (g->count(next) == 0) {
+							que.push(next);
+						}
+					}
+					else {
+						edge->insert(p);
+					}
+				}
+				if (0 <= p.y + 1 && p.y + 1 < m)
+				{
+					if (cowhide[p.x][p.y + 1] == 'X') {
+						auto next = point(p.x, p.y + 1);
+						if (g->count(next) == 0) {
+							que.push(next);
+						}
+					}
+					else {
+						edge->insert(p);
+					}
+				}
+				if (0 <= p.y - 1 && p.y - 1 < m)
+				{
+					if (cowhide[p.x][p.y - 1] == 'X') {
+						auto next = point(p.x, p.y - 1);
+						if (g->count(next) == 0) {
+							que.push(next);
+						}
+					}
+					else {
+						edge->insert(p);
+					}
+				}
+				que.pop();
+			}
 		}
 
 	}

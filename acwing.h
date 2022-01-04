@@ -7,6 +7,7 @@
 
 #include<iostream>
 #include <set>
+#include <unordered_set>
 #include<vector>
 
 using namespace std;
@@ -109,6 +110,7 @@ namespace acwing {
 			static int main(istream&, ostream&);
 		};
 
+		
 		struct point
 		{
 			int x;
@@ -125,6 +127,8 @@ namespace acwing {
 		{
 			bool operator()(const point&, const point&)const;
 		};
+
+		void flood(point, unordered_set<point, pointhash, pointequal>*, unordered_set<point, pointhash, pointequal>*, char[50][50],int,int);
 	}
 }
 #endif //PROBLEMSCPP_ACWING_H
