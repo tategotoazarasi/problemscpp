@@ -174,6 +174,26 @@ namespace leetcode {
 		};
 	}
 
+	/**
+	 * \brief LeetCode 913. √®∫Õ¿œ Û
+	 */
+	namespace cat_and_mouse
+	{
+		const int MOUSE_WIN = 1;
+		const int CAT_WIN = 2;
+		const int DRAW = 0;
+		const int MAXN = 51;
+
+		class Solution {
+		public:
+			int n;
+			int dp[MAXN][MAXN][MAXN * 2];
+			vector<vector<int>> graph;
+			int catMouseGame(vector<vector<int>>& graph);
+			int getResult(int mouse, int cat, int turns);
+			void getNextResult(int mouse, int cat, int turns);
+		};
+	}
 };
 
 
