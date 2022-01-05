@@ -17,9 +17,11 @@ var searchData=
   ['acwing606_14',['acwing606',['../a00899.html',1,'acwing']]],
   ['acwing609_15',['acwing609',['../a00903.html',1,'acwing']]],
   ['acwing610_16',['acwing610',['../a00891.html',1,'acwing']]],
-  ['acwing615_17',['acwing615',['../a00907.html',1,'acwing']]],
-  ['acwing616_18',['acwing616',['../a00911.html',1,'acwing']]],
-  ['acwing653_19',['acwing653',['../a00915.html',1,'acwing']]],
-  ['acwing654_20',['acwing654',['../a00931.html',1,'acwing']]],
-  ['asteroidsdestroyed_21',['asteroidsDestroyed',['../a01027.html#afb9382d1c309a7974aea07a0cd04f637',1,'leetcode::destroying_asteroids::Solution']]]
+  ['acwing611_17',['acwing611',['../a00967.html',1,'acwing']]],
+  ['acwing612_18',['acwing612',['../a00971.html',1,'acwing']]],
+  ['acwing615_19',['acwing615',['../a00907.html',1,'acwing']]],
+  ['acwing616_20',['acwing616',['../a00911.html',1,'acwing']]],
+  ['acwing653_21',['acwing653',['../a00915.html',1,'acwing']]],
+  ['acwing654_22',['acwing654',['../a00931.html',1,'acwing']]],
+  ['asteroidsdestroyed_23',['asteroidsDestroyed',['../a01035.html#afb9382d1c309a7974aea07a0cd04f637',1,'leetcode::destroying_asteroids::Solution']]]
 ];

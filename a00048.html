@@ -76,7 +76,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01011.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01019.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -111,22 +111,22 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00011_source.html">test.cpp</a> 第 <a class="el" href="a00011_source.html#l00195">195</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                                                    {</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <span class="keywordtype">int</span> input[4] = {1, 2, 3, 4};</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            <span class="keyword">auto</span> vec = vector&lt;int&gt;(begin(input), end(input));</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            <span class="keyword">auto</span> ans = Solution::construct2DArray(vec, 2, 2);</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            <span class="keywordtype">int</span> output1[] = {1, 2};</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <span class="keywordtype">int</span> output2[] = {3, 4};</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            <span class="keyword">auto</span> vec1 = vector&lt;int&gt;(begin(output1), end(output1));</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            <span class="keyword">auto</span> vec2 = vector&lt;int&gt;(begin(output2), end(output2));</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            <span class="keyword">auto</span> vec_output = vector&lt;vector&lt;int&gt;&gt;();</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            vec_output.push_back(vec1);</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            vec_output.push_back(vec2);</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            ASSERT_EQ(vec_output, ans);</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00011_source.html">test.cpp</a> 第 <a class="el" href="a00011_source.html#l00260">260</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        {</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            <span class="keywordtype">int</span> input[4] = { 1, 2, 3, 4 };</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            <span class="keyword">auto</span> vec = vector&lt;int&gt;(begin(input), end(input));</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            <span class="keyword">auto</span> ans = Solution::construct2DArray(vec, 2, 2);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            <span class="keywordtype">int</span> output1[] = { 1, 2 };</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            <span class="keywordtype">int</span> output2[] = { 3, 4 };</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            <span class="keyword">auto</span> vec1 = vector&lt;int&gt;(begin(output1), end(output1));</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            <span class="keyword">auto</span> vec2 = vector&lt;int&gt;(begin(output2), end(output2));</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            <span class="keyword">auto</span> vec_output = vector&lt;vector&lt;int&gt;&gt;();</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            vec_output.push_back(vec1);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            vec_output.push_back(vec2);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            ASSERT_EQ(vec_output, ans);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="a00026_source.html#l00286">leetcode::convert_1d_array_into_2d_array::Solution::construct2DArray()</a>.</p>
+<p class="reference">引用了 <a class="el" href="a00026_source.html#l00371">leetcode::convert_1d_array_into_2d_array::Solution::construct2DArray()</a>.</p>
 
 </div>
 </div>
