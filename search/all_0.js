@@ -4,7 +4,7 @@ var searchData=
   ['acwing_2ecpp_1',['acwing.cpp',['../a00005.html',1,'']]],
   ['acwing_2eh_2',['acwing.h',['../a00020.html',1,'']]],
   ['acwing1_3',['acwing1',['../a00879.html',1,'acwing']]],
-  ['acwing2021_4',['acwing2021',['../a00038.html',1,'acwing::acwing2021'],['../a00963.html',1,'acwing::acwing2021::acwing2021']]],
+  ['acwing2019_4',['acwing2019',['../a00038.html',1,'acwing::acwing2019'],['../a00963.html',1,'acwing::acwing2019::acwing2019']]],
   ['acwing2041_5',['acwing2041',['../a00939.html',1,'acwing']]],
   ['acwing2058_6',['acwing2058',['../a00927.html',1,'acwing']]],
   ['acwing2060_7',['acwing2060',['../a00037.html',1,'acwing::acwing2060'],['../a00943.html',1,'acwing::acwing2060::acwing2060']]],

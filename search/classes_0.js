@@ -1,7 +1,7 @@
 var searchData=
 [
   ['acwing1_0',['acwing1',['../a00879.html',1,'acwing']]],
-  ['acwing2021_1',['acwing2021',['../a00963.html',1,'acwing::acwing2021']]],
+  ['acwing2019_1',['acwing2019',['../a00963.html',1,'acwing::acwing2019']]],
   ['acwing2041_2',['acwing2041',['../a00939.html',1,'acwing']]],
   ['acwing2058_3',['acwing2058',['../a00927.html',1,'acwing']]],
   ['acwing2060_4',['acwing2060',['../a00943.html',1,'acwing::acwing2060']]],
