@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lastremaining_0',['lastRemaining',['../a01003.html#a42381099f9e059b07b8dcc1ed68d1f1c',1,'leetcode::elimination_game::Solution']]],
-  ['licensekeyformatting_1',['licenseKeyFormatting',['../a01027.html#af1e730bea5301c335d57284f450b6510',1,'lintcode::license_key_formatting::Solution']]]
+  ['insert_0',['insert',['../a00975.html#a10978111888599187c5340e0b34938dc',1,'leetcode::concatenated_words::TrieNode']]],
+  ['isnstraighthand_1',['isNStraightHand',['../a00995.html#aaa9e63f5e810760226b4921275ae8869',1,'leetcode::hand_of_straights::Solution']]]
 ];

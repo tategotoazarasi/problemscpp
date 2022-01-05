@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['sum_0',['sum',['../a00991.html#a8d4ce27ae9f2b5865f1ed413b376caef',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode']]]
+  ['n_0',['n',['../a01039.html#ac720663a373d3d40ce2f2f14ce43d139',1,'leetcode::cat_and_mouse::Solution']]],
+  ['n_1',['N',['../a00038.html#a5d2ab3496fb69d1e8773409b31e23ce2',1,'acwing::acwing2021']]],
+  ['nexts_2',['nexts',['../a00975.html#a5c786bb189d8d537910a1b33db5ecb46',1,'leetcode::concatenated_words::TrieNode']]]
 ];

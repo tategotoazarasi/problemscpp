@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_0',['x',['../a00943.html#a858de27a9ad7db2ce745e880b56299a6',1,'acwing::acwing2060::point']]]
+  ['val_0',['val',['../a00967.html#abfb4bc8fa2027ea8d339d1d5e91120bd',1,'leetcode::TreeNode::val()'],['../a01003.html#a22dc2dd935e1fceb6743a002463246dc',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::val()']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['m_0',['m',['../a00975.html#ad5f954429d13b3ae0e324807dc3f1523',1,'leetcode::majority_element::Solution']]]
+  ['is_5fend_0',['is_end',['../a00975.html#a141233e2e5064b034f34ee364ab573ba',1,'leetcode::concatenated_words::TrieNode']]]
 ];
