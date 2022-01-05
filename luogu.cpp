@@ -10,78 +10,24 @@ using namespace std;
 
 namespace luogu {
     int T210229::main(istream &cin, ostream &cout) {
-        int n;
-        int counta = 0;
+        int n, len = 0;
+        string s[1000010];
         cin >> n;
-        auto strs = new string[n];
-        auto indexes = new int[n];
-
-        for (int i = 0; i < n; i++) {
-            cin >> strs[i];
-            indexes[i] = 0;
-        }
-        char current = strs[0][0];
-        indexes[0] = 1;
-        bool end = false;
-        while (!end) {
-            end = true;
-            bool change = true;
-            for (int i = 0; i < n; i++) {
-                if (indexes[i] < strs[i].size()) {
-                    if (strs[i][indexes[i]] == current) {
-                        counta++;
-                        indexes[i]++;
-                        change = false;
-                    }
-                    end = false;
-                }
-            }
-            if (change && !end) {
-                counta--;
-                current = (current == '0') ? '1' : '0';
+        int _max = 0, max_cnt = 0, k = 0;
+        for(int i = 1; i <= n; ++i){
+            cin >> s[i];
+            len += s[i].size();
+            int cnt = 1;
+            for(int j = 1; j < s[i].size(); ++j) if(s[i][j] != s[i][j - 1]) ++cnt;
+            if(cnt == _max && s[i] != s[k]) ++max_cnt;
+            else if(_max < cnt){
+                _max = cnt;
+                max_cnt = 0;
+                k = i;
             }
         }
-
-        int countb = 0;
-        for (int i = 0; i < n; i++) {
-            indexes[i] = 0;
-        }
-        current = '0';
-        if (strs[0][0] == '0') {
-            current = '1';
-        }
-        bool flag = false;
-        for (int i = 0; i < n; i++) {
-            if (strs[i][0] == current) {
-                indexes[i] = 1;
-                flag = true;
-                break;
-            }
-        }
-        if (flag) {
-            end = false;
-            while (!end) {
-                end = true;
-                bool change = true;
-                for (int i = 0; i < n; i++) {
-                    if (indexes[i] < strs[i].size()) {
-                        if (strs[i][indexes[i]] == current) {
-                            countb++;
-                            indexes[i]++;
-                            change = false;
-                        }
-                        end = false;
-                    }
-                }
-                if (change && !end) {
-                    countb--;
-                    current = (current == '0') ? '1' : '0';
-                }
-            }
-        }
-
-        cout << max(counta, countb);
-
+        if(max_cnt) ++_max;
+        cout << len - _max << endl;
         return 0;
     }
 }
