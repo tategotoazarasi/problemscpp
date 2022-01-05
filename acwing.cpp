@@ -368,8 +368,8 @@ namespace acwing {
 
     }
 
-    namespace acwing2021 {
-        int acwing2021::main(istream &cin, ostream &cout) {
+    namespace acwing2019 {
+        int acwing2019::main(istream &cin, ostream &cout) {
             int n, start_x, start_y;
             int field[N + 10][N + 10];   //记录状态。0=没有 1=墙 2=已经被搜索过
 

@@ -175,7 +175,7 @@ namespace leetcode {
     }
 
     /**
-     * \brief LeetCode 913. è������
+     * \brief LeetCode 913. 猫和老鼠
      */
     namespace cat_and_mouse {
         const int MOUSE_WIN = 1;

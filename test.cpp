@@ -641,8 +641,8 @@ namespace acwing {
         }
     }
 
-    namespace acwing2021 {
-        TEST(acwing2021, case1) {
+    namespace acwing2019 {
+        TEST(acwing2019, case1) {
             istringstream in("7 6 3\n"
                              "6 2\n"
                              "5 2\n"
@@ -652,19 +652,19 @@ namespace acwing {
                              "5 4\n"
                              "6 4");
             ostringstream out = ostringstream();
-            acwing2021::main(in, out);
+            acwing2019::main(in, out);
             auto ans = out.str();
             ASSERT_EQ("1", ans);
         }
 
-        TEST(acwing2021, case2) {
+        TEST(acwing2019, case2) {
             istringstream in("4 2 2\n"
                              "2 1\n"
                              "1 2\n"
                              "2 3\n"
                              "4 2");
             ostringstream out = ostringstream();
-            acwing2021::main(in, out);
+            acwing2019::main(in, out);
             auto ans = out.str();
             ASSERT_EQ("0", ans);
         }

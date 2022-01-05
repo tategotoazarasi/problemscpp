@@ -132,7 +132,10 @@ namespace acwing {
         void flood(point, bool[55][55], unordered_set<point, pointhash, pointequal> *, char[55][55], int, int);
     }
 
-    namespace acwing2021 {
+    /**
+     * \brief AcWing 2019. 拖拉机
+     */
+    namespace acwing2019 {
         const int N = 1000;
 
         struct point {
@@ -145,7 +148,7 @@ namespace acwing {
 
         int bfs(point, int[1010][1010], int, int);
 
-        class acwing2021 {
+        class acwing2019 {
         public:
             static int main(istream &, ostream &);
         };
