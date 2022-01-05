@@ -11,54 +11,68 @@
 using namespace std;
 
 namespace lintcode {
-	namespace license_key_formatting {
-		class Solution {
-		public:
-			/**
-			* @param S: a string
-			* @param K: a integer
-			* @return: return a string
-			*/
-			static string licenseKeyFormatting(string&, int);
-		};
-	}
+    namespace license_key_formatting {
+        class Solution {
+        public:
+            /**
+            * @param S: a string
+            * @param K: a integer
+            * @return: return a string
+            */
+            static string licenseKeyFormatting(string &, int);
+        };
+    }
 
-	namespace distribute_candies {
-		class Solution {
-		public:
-			/**
-			 * @param candies: a list of integers
-			 * @return: return a integer
-			 */
-			static int distributeCandies(vector<int>& candies);
-		};
-	}
+    namespace distribute_candies {
+        class Solution {
+        public:
+            /**
+             * @param candies: a list of integers
+             * @return: return a integer
+             */
+            static int distributeCandies(vector<int> &candies);
+        };
+    }
 
-	namespace remove_extra {
-		class Solution {
-		public:
-			/**
-			 * @param s: the original string
-			 * @return: the string without arbitrary spaces
-			 */
-			static string removeExtra(string& s);
-		};
-	}
+    namespace remove_extra {
+        class Solution {
+        public:
+            /**
+             * @param s: the original string
+             * @return: the string without arbitrary spaces
+             */
+            static string removeExtra(string &s);
+        };
+    }
 
-	/**
-	 * \brief lintcode 1807. ì³²¨ÄÉÆõÊıÁĞ¼òµ¥
-	 */
-	namespace fibonacci
-	{
-		class Solution {
-		public:
-			/**
-			 * @param n: an integer
-			 * @return: an ineger f(n)
-			 */
-			static int fibonacci(int);
-		};
-	}
+    /**
+     * \brief lintcode 1807. æ–æ³¢çº³å¥‘æ•°åˆ—ç®€å•
+     */
+    namespace fibonacci {
+        class Solution {
+        public:
+            /**
+             * @param n: an integer
+             * @return: an ineger f(n)
+             */
+            static int fibonacci(int);
+        };
+    }
+
+    /**
+     * \brief lintcode 1905. å­—ç¬¦åˆ é™¤
+     */
+    namespace character_deletion {
+        class Solution {
+        public:
+            /**
+             * @param str: The first string given
+             * @param sub: The given second string
+             * @return: Returns the deleted string
+             */
+            static string CharacterDeletion(string &str, string &sub);
+        };
+    }
 }
 
 

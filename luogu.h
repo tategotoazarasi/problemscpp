@@ -10,10 +10,10 @@
 using namespace std;
 
 namespace luogu {
-	class T210229 {
-	public:
-		static int main(istream&, ostream&);
-	};
+    class T210229 {
+    public:
+        static int main(istream &, ostream &);
+    };
 }
 
 
