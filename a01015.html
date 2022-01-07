@@ -83,7 +83,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="a00020_source.html">leetcode.h</a> 第 <a class="el" href="a00020_source.html#l00036">36</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00020_source.html">leetcode.h</a> 第 <a class="el" href="a00020_source.html#l00041">41</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="abc4a1f1d44dd6a23c92323bffb759cf8" name="abc4a1f1d44dd6a23c92323bffb759cf8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc4a1f1d44dd6a23c92323bffb759cf8">&#9670;&nbsp;</a></span>findAllConcatenatedWordsInADict()</h2>
@@ -109,27 +109,33 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00029_source.html">leetcode.cpp</a> 第 <a class="el" href="a00029_source.html#l00044">44</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                                                                                      {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            sort(words.begin(), words.end(), [&amp;](<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;a, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;b) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                return a.size() &lt; b.size();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            });</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keyword">auto</span> ans = vector&lt;string&gt;();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keyword">auto</span> node = TrieNode(0);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;word: words) {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="keywordflow">if</span> (word.length() == 0) {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                }</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <span class="keywordflow">if</span> (node.dfs(&amp;node, word, 0, <span class="keyword">false</span>)) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    ans.push_back(word);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    node.insert(word);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00029_source.html">leetcode.cpp</a> 第 <a class="el" href="a00029_source.html#l00054">54</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            sort(words.begin(), words.end(), [&amp;](<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; a, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; b)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>              return a.size() &lt; b.size();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            });</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keyword">auto</span> ans = vector&lt;string&gt;();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keyword">auto</span> node = TrieNode(0);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; word : words)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <span class="keywordflow">if</span> (word.length() == 0)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="keywordflow">if</span> (node.dfs(&amp;node, word, 0, <span class="keyword">false</span>))</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    ans.push_back(word);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    node.insert(word);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="a00032_source.html#l00072">leetcode::concatenated_words::TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="a00032_source.html#l00089">leetcode::concatenated_words::TEST()</a>.</p>
 
 </div>
 </div>
