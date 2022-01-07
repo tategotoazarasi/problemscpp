@@ -610,43 +610,43 @@ $(function() {
 <div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>    }</div>
 <div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span> </div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno"><a class="line" href="a01007.html#a5748d94a13640c30b5a936d42c940120">  555</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="a01007.html#a5748d94a13640c30b5a936d42c940120">acwing2005::dfs</a>(<span class="keywordtype">bool</span> stage, <span class="keywordtype">char</span> horseshoes[5][5], <span class="keyword">const</span> <span class="keywordtype">bool</span> picked[5][5], <span class="keywordtype">int</span> count, <span class="keywordtype">int</span> level, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y,</div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>                        <span class="keywordtype">int</span> n) {</div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>        <span class="keywordflow">if</span> (level == 0 &amp;&amp; !stage) {</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>            <span class="keywordflow">if</span> (count == 13) {</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>                printf(<span class="stringliteral">&quot;13&quot;</span>);</div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>            }</div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>            <span class="keywordflow">return</span> count;</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>        }</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span> </div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>        pair&lt;int, int&gt; nexts[4] = {pair&lt;int, int&gt;(x - 1, y), pair&lt;int, int&gt;(x + 1, y), pair&lt;int, int&gt;(x, y - 1),</div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>                                   pair&lt;int, int&gt;(x, y + 1)};</div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>        <span class="comment">//复制状态</span></div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>        <span class="keywordtype">bool</span> picked_cpy[5][5];</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>        memcpy(picked_cpy, picked, <span class="keyword">sizeof</span> picked_cpy);</div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span> </div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>        <span class="keywordtype">int</span> max = 0;</div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>        picked_cpy[x][y] = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span> </div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> next: nexts) {</div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>            <span class="keywordflow">if</span> (0 &lt;= next.first &amp;&amp; next.first &lt; n &amp;&amp; 0 &lt;= next.second &amp;&amp; next.second &lt; n &amp;&amp;</div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>                !picked_cpy[next.first][next.second]) {</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>                <span class="keywordtype">int</span> res = 0;</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>                <span class="keywordflow">if</span> (stage &amp;&amp; horseshoes[next.first][next.second] == <span class="charliteral">&#39;(&#39;</span>) {</div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>                    res = <a class="code hl_function" href="a01007.html#a5748d94a13640c30b5a936d42c940120">dfs</a>(<span class="keyword">true</span>, horseshoes, picked_cpy, count + 1, level + 1, next.first, next.second, n);</div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stage &amp;&amp; horseshoes[next.first][next.second] == <span class="charliteral">&#39;)&#39;</span>) {</div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>                    res = <a class="code hl_function" href="a01007.html#a5748d94a13640c30b5a936d42c940120">dfs</a>(<span class="keyword">false</span>, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n);</div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!stage &amp;&amp; horseshoes[next.first][next.second] == <span class="charliteral">&#39;)&#39;</span>) {</div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>                    res = <a class="code hl_function" href="a01007.html#a5748d94a13640c30b5a936d42c940120">dfs</a>(<span class="keyword">false</span>, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n);</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>                }</div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>                <span class="keywordflow">if</span> (max &lt; res) {</div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>                    max = res;</div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>                }</div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>            }</div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>        }</div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>        <span class="keywordflow">return</span> max;</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>    }</div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>}</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno"><a class="line" href="a01007.html#a5748d94a13640c30b5a936d42c940120">  545</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="a01007.html#a5748d94a13640c30b5a936d42c940120">acwing2005::dfs</a>(<span class="keywordtype">bool</span> stage, <span class="keywordtype">char</span> horseshoes[5][5], <span class="keyword">const</span> <span class="keywordtype">bool</span> picked[5][5], <span class="keywordtype">int</span> count, <span class="keywordtype">int</span> level, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y,</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>                        <span class="keywordtype">int</span> n) {</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>        <span class="keywordflow">if</span> (level == 0 &amp;&amp; !stage) {</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>            <span class="keywordflow">if</span> (count == 13) {</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>                printf(<span class="stringliteral">&quot;13&quot;</span>);</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>            }</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>            <span class="keywordflow">return</span> count;</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>        }</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span> </div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>        pair&lt;int, int&gt; nexts[4] = {pair&lt;int, int&gt;(x - 1, y), pair&lt;int, int&gt;(x + 1, y), pair&lt;int, int&gt;(x, y - 1),</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>                                   pair&lt;int, int&gt;(x, y + 1)};</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>        <span class="comment">//复制状态</span></div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>        <span class="keywordtype">bool</span> picked_cpy[5][5];</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>        memcpy(picked_cpy, picked, <span class="keyword">sizeof</span> picked_cpy);</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span> </div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>        <span class="keywordtype">int</span> max = 0;</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>        picked_cpy[x][y] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span> </div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> next: nexts) {</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>            <span class="keywordflow">if</span> (0 &lt;= next.first &amp;&amp; next.first &lt; n &amp;&amp; 0 &lt;= next.second &amp;&amp; next.second &lt; n &amp;&amp;</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>                !picked_cpy[next.first][next.second]) {</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>                <span class="keywordtype">int</span> res = 0;</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>                <span class="keywordflow">if</span> (stage &amp;&amp; horseshoes[next.first][next.second] == <span class="charliteral">&#39;(&#39;</span>) {</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>                    res = <a class="code hl_function" href="a01007.html#a5748d94a13640c30b5a936d42c940120">dfs</a>(<span class="keyword">true</span>, horseshoes, picked_cpy, count + 1, level + 1, next.first, next.second, n);</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stage &amp;&amp; horseshoes[next.first][next.second] == <span class="charliteral">&#39;)&#39;</span>) {</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>                    res = <a class="code hl_function" href="a01007.html#a5748d94a13640c30b5a936d42c940120">dfs</a>(<span class="keyword">false</span>, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n);</div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!stage &amp;&amp; horseshoes[next.first][next.second] == <span class="charliteral">&#39;)&#39;</span>) {</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>                    res = <a class="code hl_function" href="a01007.html#a5748d94a13640c30b5a936d42c940120">dfs</a>(<span class="keyword">false</span>, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n);</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>                }</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>                <span class="keywordflow">if</span> (max &lt; res) {</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>                    max = res;</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>                }</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>            }</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>        }</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>        <span class="keywordflow">return</span> max;</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>    }</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>}</div>
 <div class="ttc" id="aa00002_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="a00002.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00003">main.cpp:3</a></div></div>
 <div class="ttc" id="aa00023_html"><div class="ttname"><a href="a00023.html">acwing.h</a></div></div>
 <div class="ttc" id="aa00045_html"><div class="ttname"><a href="a00045.html">acwing</a></div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00019">acwing.cpp:19</a></div></div>
@@ -687,7 +687,7 @@ $(function() {
 <div class="ttc" id="aa00999_html_a0fc1cdab5be2ea9f184ad3de24d075b7"><div class="ttname"><a href="a00999.html#a0fc1cdab5be2ea9f184ad3de24d075b7">acwing::acwing610::main</a></div><div class="ttdeci">static int main(istream &amp;, ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00510">acwing.cpp:510</a></div></div>
 <div class="ttc" id="aa01003_html_a85bb6054651c83c3586e538268e430cd"><div class="ttname"><a href="a01003.html#a85bb6054651c83c3586e538268e430cd">acwing::acwing614::main</a></div><div class="ttdeci">static int main(istream &amp;, ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00518">acwing.cpp:518</a></div></div>
 <div class="ttc" id="aa01007_html_a3d254e5b7da2e7faae7770c4c3fdf6de"><div class="ttname"><a href="a01007.html#a3d254e5b7da2e7faae7770c4c3fdf6de">acwing::acwing2005::main</a></div><div class="ttdeci">static int main(istream &amp;, ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00526">acwing.cpp:526</a></div></div>
-<div class="ttc" id="aa01007_html_a5748d94a13640c30b5a936d42c940120"><div class="ttname"><a href="a01007.html#a5748d94a13640c30b5a936d42c940120">acwing::acwing2005::dfs</a></div><div class="ttdeci">static int dfs(bool stage, char horseshoes[5][5], const bool picked[5][5], int count, int level, int x, int y, int n)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00555">acwing.cpp:555</a></div></div>
+<div class="ttc" id="aa01007_html_a5748d94a13640c30b5a936d42c940120"><div class="ttname"><a href="a01007.html#a5748d94a13640c30b5a936d42c940120">acwing::acwing2005::dfs</a></div><div class="ttdeci">static int dfs(bool stage, char horseshoes[5][5], const bool picked[5][5], int count, int level, int x, int y, int n)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00545">acwing.cpp:545</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
