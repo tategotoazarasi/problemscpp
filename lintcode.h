@@ -14,8 +14,7 @@ namespace lintcode
 {
 	namespace license_key_formatting
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			/**
 			* @param S: a string
@@ -28,8 +27,7 @@ namespace lintcode
 
 	namespace distribute_candies
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			/**
 			 * @param candies: a list of integers
@@ -41,8 +39,7 @@ namespace lintcode
 
 	namespace remove_extra
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			/**
 			 * @param s: the original string
@@ -57,8 +54,7 @@ namespace lintcode
 	 */
 	namespace fibonacci
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			/**
 			 * @param n: an integer
@@ -73,8 +69,7 @@ namespace lintcode
 	 */
 	namespace character_deletion
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			/**
 			 * @param str: The first string given
@@ -90,8 +85,7 @@ namespace lintcode
 	 */
 	namespace judge_circle
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			/**
 			 * @param moves: a sequence of its moves

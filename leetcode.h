@@ -13,21 +13,23 @@ using namespace std;
 
 namespace leetcode
 {
-	struct TreeNode
-	{
+	struct TreeNode {
 		int val;
 		TreeNode* left;
 		TreeNode* right;
 
-		TreeNode() : val(0), left(nullptr), right(nullptr)
+		TreeNode()
+			: val(0), left(nullptr), right(nullptr)
 		{
 		}
 
-		explicit TreeNode(int x) : val(x), left(nullptr), right(nullptr)
+		explicit TreeNode(int x)
+			: val(x), left(nullptr), right(nullptr)
 		{
 		}
 
-		TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right)
+		TreeNode(int x, TreeNode* left, TreeNode* right)
+			: val(x), left(left), right(right)
 		{
 		}
 
@@ -38,14 +40,12 @@ namespace leetcode
 
 	namespace concatenated_words
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static vector<string> findAllConcatenatedWordsInADict(vector<string>&);
 		};
 
-		class TrieNode
-		{
+		class TrieNode {
 		public:
 			bool is_end;
 			char ch;
@@ -67,8 +67,7 @@ namespace leetcode
 
 	namespace excel_sheet_column_number
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static int titleToNumber(const string& columnTitle);
 		};
@@ -76,8 +75,7 @@ namespace leetcode
 
 	namespace excel_sheet_column_title
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static string convertToTitle(int columnNumber);
 		};
@@ -85,8 +83,7 @@ namespace leetcode
 
 	namespace majority_element
 	{
-		class Solution
-		{
+		class Solution {
 		private:
 			map<int, int> m;
 		public:
@@ -98,8 +95,7 @@ namespace leetcode
 
 	namespace count_special_quadruplets
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static int countQuadruplets(vector<int>&);
 		};
@@ -107,8 +103,7 @@ namespace leetcode
 
 	namespace hand_of_straights
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static bool isNStraightHand(vector<int>& hand, int groupSize);
 		};
@@ -116,8 +111,7 @@ namespace leetcode
 
 	namespace perfect_number
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static bool checkPerfectNumber(int num);
 		};
@@ -125,22 +119,21 @@ namespace leetcode
 
 	namespace convert_bst_to_greater_tree
 	{
-		struct FriendTreeNode
-		{
+		struct FriendTreeNode {
 			int sum;
 			int val;
 			FriendTreeNode* left;
 			FriendTreeNode* right;
 			TreeNode* friend_node;
 
-			explicit FriendTreeNode(int x, TreeNode* friend_node) : sum(x), val(0), left(nullptr), right(nullptr),
-																	friend_node(friend_node)
+			explicit FriendTreeNode(int x, TreeNode* friend_node)
+				: sum(x), val(0), left(nullptr), right(nullptr),
+				  friend_node(friend_node)
 			{
 			}
 		};
 
-		class Solution
-		{
+		class Solution {
 		public:
 			static TreeNode* convertBST(TreeNode* root);
 
@@ -154,8 +147,7 @@ namespace leetcode
 
 	namespace convert_1d_array_into_2d_array
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static vector<vector<int>> construct2DArray(vector<int>& original, int m, int n);
 		};
@@ -163,8 +155,7 @@ namespace leetcode
 
 	namespace elimination_game
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static int lastRemaining(int);
 		};
@@ -172,8 +163,7 @@ namespace leetcode
 
 	namespace check_if_all_as_appears_before_all_bs
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static bool checkString(string);
 		};
@@ -181,8 +171,7 @@ namespace leetcode
 
 	namespace number_of_laser_beams_in_a_bank
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static int numberOfBeams(vector<string>&);
 
@@ -192,8 +181,7 @@ namespace leetcode
 
 	namespace destroying_asteroids
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static bool asteroidsDestroyed(int mass, vector<int>& asteroids);
 		};
@@ -201,8 +189,7 @@ namespace leetcode
 
 	namespace maximum_employees_to_be_invited_to_a_meeting
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static int maximumInvitations(vector<int>&);
 		};
@@ -210,8 +197,7 @@ namespace leetcode
 
 	namespace day_of_the_week
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static string dayOfTheWeek(int day, int month, int year);
 		};
@@ -227,8 +213,7 @@ namespace leetcode
 		const int DRAW = 0;
 		const int MAXN = 51;
 
-		class Solution
-		{
+		class Solution {
 		public:
 			int n;
 			int dp[MAXN][MAXN][MAXN * 2];
@@ -244,8 +229,7 @@ namespace leetcode
 
 	namespace replace_all_s_to_avoid_consecutive_repeating_characters
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static string modifyString(string s);
 		};
@@ -256,8 +240,7 @@ namespace leetcode
 	 */
 	namespace simplify_path
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static string simplifyPath(string path);
 		};
@@ -268,8 +251,7 @@ namespace leetcode
 	 */
 	namespace maximum_nesting_depth_of_the_parentheses
 	{
-		class Solution
-		{
+		class Solution {
 		public:
 			static int maxDepth(string s);
 		};

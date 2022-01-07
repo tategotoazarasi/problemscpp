@@ -130,7 +130,7 @@ namespace acwing
 		int n;
 		cin >> n;
 		cout << n << endl;
-		int arr[] = { 100, 50, 20, 10, 5, 2, 1 };
+		int arr[] = {100, 50, 20, 10, 5, 2, 1};
 		for (int i : arr)
 		{
 			cout << n / i << " nota(s) de R$ " << i << ",00";
@@ -175,7 +175,7 @@ namespace acwing
 	{
 		int n;
 		const int N = 1010;
-		auto g = new int* [N];
+		auto g = new int*[N];
 		for (int i = 0; i < N; i++)
 		{
 			g[i] = new int[N];
@@ -196,24 +196,24 @@ namespace acwing
 			{
 				if (i == j)
 				{
-					g[i][j] = 0; //对角线为0
+					g[i][j] = 0;//对角线为0
 				}
 				else
 				{
 					if (g[i][j - 1] == 0)
 					{
 						//在0后面一格
-						g[i][j] = g[i - 1][j] + 1; //上面一格的值+1
+						g[i][j] = g[i - 1][j] + 1;//上面一格的值+1
 					}
 					else
 					{
 						//否则
-						g[i][j] = g[i][j - 1] + 1; //前面一格的值+1
+						g[i][j] = g[i][j - 1] + 1;//前面一格的值+1
 					}
 					if (g[i][j] == n)
 					{
 						//达到上限
-						g[i][j] = 1; //回归到1
+						g[i][j] = 1;//回归到1
 					}
 				}
 			}
@@ -229,7 +229,7 @@ namespace acwing
 			{
 				if (!s.contains(j))
 				{
-					g[i][n] = g[n][i] = j; //补最后一列和最后一行的值
+					g[i][n] = g[n][i] = j;//补最后一列和最后一行的值
 				}
 			}
 		}
@@ -422,7 +422,7 @@ namespace acwing
 
 		void
 		flood(point first, bool occupy[55][55], unordered_set<point, pointhash, pointequal>* edge, char cowhide[55][55],
-			int n, int m)
+		      int n, int m)
 		{
 			auto que = queue<point>();
 			auto eq = pointequal();
@@ -436,7 +436,7 @@ namespace acwing
 					continue;
 				}
 				occupy[p.x][p.y] = true;
-				point nexts[] = { point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1), point(p.x, p.y - 1) };
+				point nexts[] = {point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1), point(p.x, p.y - 1)};
 				for (auto next : nexts)
 				{
 					if (0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && !occupy[next.x][next.y])
@@ -461,7 +461,7 @@ namespace acwing
 		int acwing2019::main(istream& cin, ostream& cout)
 		{
 			int n, start_x, start_y;
-			auto field = new int* [N + 10];
+			auto field = new int*[N + 10];
 			for (int i = 0; i < N + 10; i++)
 			{
 				field[i] = new int[N + 10];
@@ -560,8 +560,8 @@ namespace acwing
 			int height;
 			cin >> height;
 			heights.insert(height);
-			above[i] = true; //露出水面
-			if (m.count(height) == 0)
+			above[i] = true;//露出水面
+			if (!m.contains(height))
 			{
 				m[height] = vector<unsigned int>();
 			}
@@ -661,7 +661,7 @@ namespace acwing
 	}
 
 	int acwing2005::dfs(bool stage, char horseshoes[5][5], const bool picked[5][5], int count, int level, int x, int y,
-		int n)
+	                    int n)
 	{
 		if (level == 0 && !stage)
 		{
@@ -672,8 +672,8 @@ namespace acwing
 			return count;
 		}
 
-		pair<int, int> nexts[4] = { pair<int, int>(x - 1, y), pair<int, int>(x + 1, y), pair<int, int>(x, y - 1),
-									pair<int, int>(x, y + 1) };
+		pair<int, int> nexts[4] = {pair<int, int>(x - 1, y), pair<int, int>(x + 1, y), pair<int, int>(x, y - 1),
+		                           pair<int, int>(x, y + 1)};
 		//复制状态
 		bool picked_cpy[5][5];
 		memcpy(picked_cpy, picked, sizeof picked_cpy);

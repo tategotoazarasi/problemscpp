@@ -53,9 +53,8 @@ namespace leetcode
 	{
 		vector<string> Solution::findAllConcatenatedWordsInADict(vector<string>& words)
 		{
-			sort(words.begin(), words.end(), [&](const string& a, const string& b)
-			{
-			  return a.size() < b.size();
+			sort(words.begin(), words.end(), [&](const string& a, const string& b) {
+				return a.size() < b.size();
 			});
 			auto ans = vector<string>();
 			auto node = TrieNode(0);
@@ -398,7 +397,7 @@ namespace leetcode
 		{
 			int num_amount = n;
 			int loop_cnt = 0;
-			int a0 = 1; //初项
+			int a0 = 1;//初项
 			int d = 1; //差
 			while (num_amount != 1)
 			{
@@ -416,8 +415,7 @@ namespace leetcode
 					{
 						a0 = a0 + d;
 					}
-					else
-						a0 = a0;
+					else a0 = a0;
 				}
 				loop_cnt++;
 				d *= 2;
@@ -596,8 +594,8 @@ namespace leetcode
 	{
 		string Solution::dayOfTheWeek(int day, int month, int year)
 		{
-			const string output[] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-			const int dayofmonths[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+			const string output[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+			const int dayofmonths[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 			int count = 5;
 			count += (year - 1971) * 365;
 			count += (year - 1) / 4 - 1970 / 4;
@@ -705,9 +703,9 @@ namespace leetcode
 
 	namespace simplify_path
 	{
-		string simplify_path::Solution::simplifyPath(string path)
+		string Solution::simplifyPath(string path)
 		{
-			char* str_cpy = new char[path.size() + 1];
+			auto str_cpy = new char[path.size() + 1];
 			memcpy(str_cpy, path.c_str(), path.size() + 1);
 			auto next = strtok(str_cpy, "/");
 			auto stck = deque<string>();
