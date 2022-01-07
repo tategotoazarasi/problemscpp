@@ -162,7 +162,7 @@ $(function() {
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>                    <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>                }</div>
 <div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>                occupy[p.x][p.y] = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>                point nexts[] = { point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1), point(p.x, p.y - 1) };</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>                point nexts[] = {point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1), point(p.x, p.y - 1)};</div>
 <div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> next : nexts)</div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>                {</div>
 <div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>                    <span class="keywordflow">if</span> (0 &lt;= next.x &amp;&amp; next.x &lt;= n &amp;&amp; 0 &lt;= next.y &amp;&amp; next.y &lt;= m &amp;&amp; !occupy[next.x][next.y])</div>
@@ -180,7 +180,7 @@ $(function() {
 <div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>                que.pop();</div>
 <div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>            }</div>
 <div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>        }</div>
-<div class="ttc" id="aa00967_html"><div class="ttname"><a href="a00967.html">acwing::acwing2060::pointequal</a></div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00150">acwing.h:151</a></div></div>
+<div class="ttc" id="aa00967_html"><div class="ttname"><a href="a00967.html">acwing::acwing2060::pointequal</a></div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00132">acwing.h:132</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="a00005_source.html#l00352">acwing::acwing2060::acwing2060::main()</a>.</p>
 
@@ -215,12 +215,12 @@ $(function() {
 <p class="definition">在文件 <a class="el" href="a00035_source.html">acwing_test.cpp</a> 第 <a class="el" href="a00035_source.html#l00339">339</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        {</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            istringstream in(<span class="stringliteral">&quot;6 16\n&quot;</span></div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                             <span class="stringliteral">&quot;................\n&quot;</span></div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                             <span class="stringliteral">&quot;..XXXX....XXX...\n&quot;</span></div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                             <span class="stringliteral">&quot;...XXXX....XX...\n&quot;</span></div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                             <span class="stringliteral">&quot;.XXXX......XXX..\n&quot;</span></div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                             <span class="stringliteral">&quot;........XXXXX...\n&quot;</span></div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                             <span class="stringliteral">&quot;.........XXX....&quot;</span>);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                <span class="stringliteral">&quot;................\n&quot;</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                <span class="stringliteral">&quot;..XXXX....XXX...\n&quot;</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                <span class="stringliteral">&quot;...XXXX....XX...\n&quot;</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                <span class="stringliteral">&quot;.XXXX......XXX..\n&quot;</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                <span class="stringliteral">&quot;........XXXXX...\n&quot;</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                <span class="stringliteral">&quot;.........XXX....&quot;</span>);</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            <span class="keyword">auto</span> out = ostringstream();</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            <a class="code hl_function" href="a00002.html#a3c04138a5bfe5d72780bb7e82a18e627">acwing2060::main</a>(in, out);</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>            <span class="keyword">auto</span> ans = out.str();</div>

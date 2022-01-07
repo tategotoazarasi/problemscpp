@@ -83,7 +83,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="a00020_source.html">leetcode.h</a> 第 <a class="el" href="a00020_source.html#l00213">213</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00020_source.html">leetcode.h</a> 第 <a class="el" href="a00020_source.html#l00200">200</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="ac8fd4394da2121983b84922b7b7d9c9c" name="ac8fd4394da2121983b84922b7b7d9c9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac8fd4394da2121983b84922b7b7d9c9c">&#9670;&nbsp;</a></span>dayOfTheWeek()</h2>
@@ -125,25 +125,25 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00029_source.html">leetcode.cpp</a> 第 <a class="el" href="a00029_source.html#l00597">597</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>        {</div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> output[] = { <span class="stringliteral">&quot;Sunday&quot;</span>, <span class="stringliteral">&quot;Monday&quot;</span>, <span class="stringliteral">&quot;Tuesday&quot;</span>, <span class="stringliteral">&quot;Wednesday&quot;</span>, <span class="stringliteral">&quot;Thursday&quot;</span>, <span class="stringliteral">&quot;Friday&quot;</span>, <span class="stringliteral">&quot;Saturday&quot;</span> };</div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> dayofmonths[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };</div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>            <span class="keywordtype">int</span> count = 5;</div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>            count += (year - 1971) * 365;</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>            count += (year - 1) / 4 - 1970 / 4;</div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; month - 1; m++)</div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>            {</div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>                count += dayofmonths[m];</div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>            }</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>            <span class="keywordflow">if</span> (month &gt; 2 &amp;&amp; year % 4 == 0 &amp;&amp; year % 100 != 0)</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>            {</div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>                count++;</div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>            }</div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>            count += day - 1;</div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>            count %= 7;</div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>            <span class="keywordflow">return</span> output[count];</div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00029_source.html">leetcode.cpp</a> 第 <a class="el" href="a00029_source.html#l00595">595</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>        {</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> output[] = {<span class="stringliteral">&quot;Sunday&quot;</span>, <span class="stringliteral">&quot;Monday&quot;</span>, <span class="stringliteral">&quot;Tuesday&quot;</span>, <span class="stringliteral">&quot;Wednesday&quot;</span>, <span class="stringliteral">&quot;Thursday&quot;</span>, <span class="stringliteral">&quot;Friday&quot;</span>, <span class="stringliteral">&quot;Saturday&quot;</span>};</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> dayofmonths[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};</div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>            <span class="keywordtype">int</span> count = 5;</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>            count += (year - 1971) * 365;</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>            count += (year - 1) / 4 - 1970 / 4;</div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; month - 1; m++)</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>            {</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>                count += dayofmonths[m];</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>            }</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>            <span class="keywordflow">if</span> (month &gt; 2 &amp;&amp; year % 4 == 0 &amp;&amp; year % 100 != 0)</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>            {</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>                count++;</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>            }</div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>            count += day - 1;</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>            count %= 7;</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>            <span class="keywordflow">return</span> output[count];</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="a00032_source.html#l00369">leetcode::day_of_the_week::TEST()</a>.</p>
 
