@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['readme_2emd_0',['README.md',['../a00029.html',1,'']]],
-  ['removeextra_1',['removeExtra',['../a01080.html#aa0e49e4d04ff089fe090aaf88dd3a96a',1,'lintcode::remove_extra::Solution']]],
-  ['right_2',['right',['../a00988.html#abcbe083eb7641aa4da7828a436df894e',1,'leetcode::TreeNode::right()'],['../a01024.html#ae6029fbc477ee047c7314ba25424b184',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::right()']]]
+  ['point_0',['point',['../a00971.html',1,'acwing::acwing2019::point'],['../a00959.html',1,'acwing::acwing2060::point'],['../a00959.html#a0bdc73ba807198aaf3c73fad38062ead',1,'acwing::acwing2060::point::point()=default'],['../a00959.html#a8a485ee86f02c0185f3bae9fdcabd775',1,'acwing::acwing2060::point::point(int x, int y)'],['../a00971.html#aff8940a787854dd0acaf7490b1d0d895',1,'acwing::acwing2019::point::point()']]],
+  ['pointequal_1',['pointequal',['../a00967.html',1,'acwing::acwing2060']]],
+  ['pointhash_2',['pointhash',['../a00963.html',1,'acwing::acwing2060']]],
+  ['problemscpp_3',['problemscpp',['../a01404.html',1,'']]]
 ];

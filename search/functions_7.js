@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['lastremaining_0',['lastRemaining',['../a01036.html#a42381099f9e059b07b8dcc1ed68d1f1c',1,'leetcode::elimination_game::Solution']]],
-  ['licensekeyformatting_1',['licenseKeyFormatting',['../a01072.html#af1e730bea5301c335d57284f450b6510',1,'lintcode::license_key_formatting::Solution']]]
+  ['judgecircle_0',['judgeCircle',['../a01119.html#a9ef53a28bd3fe0b90d3eed6fd9ad125d',1,'lintcode::judge_circle::Solution']]]
 ];
