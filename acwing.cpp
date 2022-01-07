@@ -542,16 +542,6 @@ namespace acwing {
         return 0;
     }
 
-    ///
-    /// \param stage 当前阶段 ture为寻找左括号 false为寻找右括号
-    /// \param horseshoes 马蹄铁方格
-    /// \param picked 已经走过的区域
-    /// \param count 当前括号字符串长度
-    /// \param level 括号平衡情况(当前左括号的数量-右括号的数量)
-    /// \param x 当前横座标
-    /// \param y 当前纵座标
-    /// \param n 座标上限
-    /// \return 当前状态下最长完全平衡括号字符串的长度
     int acwing2005::dfs(bool stage, char horseshoes[5][5], const bool picked[5][5], int count, int level, int x, int y,
                         int n) {
         if (level == 0 && !stage) {
