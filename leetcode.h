@@ -219,6 +219,16 @@ namespace leetcode {
             static string simplifyPath(string path);
         };
     }
+
+    /**
+     * \brief LeetCode 1614. 括号的最大嵌套深度
+     */
+    namespace maximum_nesting_depth_of_the_parentheses {
+        class Solution {
+        public:
+            static int maxDepth(string s);
+        };
+    }
 };
 
 

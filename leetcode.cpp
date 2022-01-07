@@ -598,4 +598,22 @@ namespace leetcode {
             return oss.str();
         }
     }
+
+    namespace maximum_nesting_depth_of_the_parentheses {
+        int Solution::maxDepth(string s) {
+            int max = 0;
+            int current = 0;
+            for (char ch: s) {
+                if (ch == '(') {
+                    current++;
+                } else if (ch == ')') {
+                    current--;
+                }
+                if (max < current) {
+                    max = current;
+                }
+            }
+            return max;
+        }
+    }
 }

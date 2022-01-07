@@ -65,7 +65,7 @@ namespace acwing {
         return 0;
     }
 
-    int acwing610::main(istream &cin, ostream &cout) {
+    int acwing608::main(istream &cin, ostream &cout) {
         int a, b, c, d;
         cin >> a >> b >> c >> d;
         cout << "DIFERENCA = " << a * b - c * d;
@@ -505,5 +505,87 @@ namespace acwing {
         cout << "QUADRADO: " << setiosflags(ios::fixed) << setprecision(3) << b * b << endl;
         cout << "RETANGULO: " << setiosflags(ios::fixed) << setprecision(3) << a * b;
         return 0;
+    }
+
+    int acwing610::main(istream &cin, ostream &cout) {
+        string name;
+        double b, m;
+        cin >> name >> b >> m;
+        cout << "TOTAL = R$ " << setiosflags(ios::fixed) << setprecision(2) << b + 0.15 * m;
+        return 0;
+    }
+
+    int acwing614::main(istream &cin, ostream &cout) {
+        int a, b, c;
+        cin >> a >> b >> c;
+        int maxab = (a + b + abs(a - b)) / 2;
+        cout << (maxab + c + abs(maxab - c)) / 2 << " eh o maior";
+        return 0;
+    }
+
+    int acwing2005::main(istream &cin, ostream &cout) {
+        char horseshoes[5][5];
+        bool picked[5][5];
+        int n;
+        cin >> n;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                cin >> horseshoes[i][j];
+            }
+        }
+        memset(picked, false, sizeof picked);
+        if (horseshoes[0][0] == ')') {
+            cout << 0;
+            return 0;
+        }
+        cout << dfs(true, horseshoes, picked, 1, 1, 0, 0, n);
+        return 0;
+    }
+
+    ///
+    /// \param stage 当前阶段 ture为寻找左括号 false为寻找右括号
+    /// \param horseshoes 马蹄铁方格
+    /// \param picked 已经走过的区域
+    /// \param count 当前括号字符串长度
+    /// \param level 括号平衡情况(当前左括号的数量-右括号的数量)
+    /// \param x 当前横座标
+    /// \param y 当前纵座标
+    /// \param n 座标上限
+    /// \return 当前状态下最长完全平衡括号字符串的长度
+    int acwing2005::dfs(bool stage, char horseshoes[5][5], const bool picked[5][5], int count, int level, int x, int y,
+                        int n) {
+        if (level == 0 && !stage) {
+            if (count == 13) {
+                printf("13");
+            }
+            return count;
+        }
+
+        pair<int, int> nexts[4] = {pair<int, int>(x - 1, y), pair<int, int>(x + 1, y), pair<int, int>(x, y - 1),
+                                   pair<int, int>(x, y + 1)};
+        //复制状态
+        bool picked_cpy[5][5];
+        memcpy(picked_cpy, picked, sizeof picked_cpy);
+
+        int max = 0;
+        picked_cpy[x][y] = true;
+
+        for (auto next: nexts) {
+            if (0 <= next.first && next.first < n && 0 <= next.second && next.second < n &&
+                !picked_cpy[next.first][next.second]) {
+                int res = 0;
+                if (stage && horseshoes[next.first][next.second] == '(') {
+                    res = dfs(true, horseshoes, picked_cpy, count + 1, level + 1, next.first, next.second, n);
+                } else if (stage && horseshoes[next.first][next.second] == ')') {
+                    res = dfs(false, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n);
+                } else if (!stage && horseshoes[next.first][next.second] == ')') {
+                    res = dfs(false, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n);
+                }
+                if (max < res) {
+                    max = res;
+                }
+            }
+        }
+        return max;
     }
 }

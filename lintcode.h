@@ -73,6 +73,20 @@ namespace lintcode {
             static string CharacterDeletion(string &str, string &sub);
         };
     }
+
+    /**
+     * \brief lintcode 1104. 机器人能否返回原点
+     */
+    namespace judge_circle {
+        class Solution {
+        public:
+            /**
+             * @param moves: a sequence of its moves
+             * @return: if this robot makes a circle
+             */
+            static bool judgeCircle(string &moves);
+        };
+    }
 }
 
 

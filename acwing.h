@@ -28,7 +28,7 @@ namespace acwing {
         static int main(istream &, ostream &);
     };
 
-    class acwing610 {
+    class acwing608 {
     public:
         static int main(istream &, ostream &);
     };
@@ -194,6 +194,33 @@ namespace acwing {
     class acwing613 {
     public:
         static int main(istream &, ostream &);
+    };
+
+    /**
+     * \brief AcWing 610. 工资和奖金
+     */
+    class acwing610 {
+    public:
+        static int main(istream &, ostream &);
+    };
+
+    /**
+     * \brief AcWing 614. 最大值
+     */
+    class acwing614 {
+    public:
+        static int main(istream &, ostream &);
+    };
+
+    /**
+     * \brief AcWing 2005. 马蹄铁
+     */
+    class acwing2005 {
+    public:
+        static int main(istream &, ostream &);
+
+        static int
+        dfs(bool stage, char horseshoes[5][5], const bool picked[5][5], int count, int level, int x, int y, int n);
     };
 }
 #endif //PROBLEMSCPP_ACWING_H
