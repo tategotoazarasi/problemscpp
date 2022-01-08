@@ -423,7 +423,7 @@ namespace acwing {
 						if(field[next.x][next.y] == 0) {
 							que.push_front(next);
 						} else {
-							//field[next.first][next.second]==1
+							//field[nexts.first][nexts.second]==1
 							next.step++;
 							que.push_back(next);
 						}
@@ -591,5 +591,138 @@ namespace acwing {
 		cin >> t >> s;
 		cout << setiosflags(ios::fixed) << setprecision(3) << double(t * s) / 12;
 		return 0;
+	}
+
+	int acwing4206::main(istream &cin, ostream &cout) {
+		string str;
+		cin >> str;
+		int count = 0;
+		for(char ch: str) {
+			if(ch == '4' || ch == '7') {
+				count++;
+			}
+		}
+		if(count == 4 || count == 7) {
+			cout << "YES";
+		} else {
+			cout << "NO";
+		}
+		return 0;
+	}
+
+	int acwing4207::main(istream &cin, ostream &cout) {
+		string str;
+		cin >> str;
+		bool *in_sub = new bool[str.length()];
+		int count = 0;
+		memset(in_sub, false, str.length() * sizeof(bool));
+
+		int prev_left = -1;
+		for(int i = 0; i < str.length(); i++) {
+			if(str[i] == '(') {
+				prev_left = i;
+				break;
+			}
+		}
+		for(int i = prev_left; i < str.length(); i++) {
+			if(str[i] == ')' && prev_left != -1) {
+				count += 2;
+				in_sub[prev_left] = true;
+				in_sub[i] = true;
+				for(int j = prev_left + 1; j < i; j++) {
+					if(str[j] == '(') {
+						prev_left = j;
+						break;
+					}
+				}
+				if(in_sub[prev_left]) {
+					prev_left = -1;
+				}
+			} else if(prev_left == -1 && str[i] == '(') {
+				prev_left = i;
+			}
+		}
+		cout << count;
+		return 0;
+	}
+
+	namespace acwing4208 {
+		int acwing4208::main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			map<string, trie_node *> records = map<string, trie_node *>();
+			for(int i = 0; i < n; i++) {
+				string name;
+				cin >> name;
+				if(records.find(name) == records.end()) {//不存在记录
+					records[name] = new trie_node(-1, nullptr);
+				}
+				int n2;
+				cin >> n2;
+				for(int j = 0; j < n2; j++) {
+					string phone_number;
+					cin >> phone_number;
+					string phone_number_trim_left;
+					for(int k = 0; k < phone_number.length(); k++) {
+						if(phone_number[k] != '0') {
+							phone_number_trim_left = phone_number.substr(k);
+							break;
+						}
+					}
+					reverse(phone_number_trim_left.begin(), phone_number_trim_left.end());
+					records[name]->insert(phone_number_trim_left);
+				}
+			}
+			cout << records.size();
+			for(auto it: records) {
+				cout << it.first << " ";
+				cout << it.second->count() << " ";
+				it.second->display();
+			}
+			return 0;
+		}
+
+		void trie_node::insert(string str) {
+			if(str.length() == 0) {
+				return;
+			}
+			if(this->nexts[str[0] - '0'] == nullptr) {
+				this->nexts[str[0] - '0'] = new trie_node(str[0] - '0', this);
+			}
+			this->nexts[str[0] - '0']->insert(str.substr(1));
+		}
+
+		void trie_node::display() {
+			bool flag = true;
+			for(auto next: this->nexts) {
+				if(next != nullptr) {
+					flag = false;
+					next->display();
+				}
+			}
+			if(flag) {
+				auto current = this;
+				while(current->val != -1) {
+					cout << char(current->val + '0');
+					current = current->father;
+				}
+				cout << " ";
+			}
+		}
+
+		int trie_node::count() {
+			int count = 0;
+			bool flag = true;
+			for(auto next: this->nexts) {
+				if(next != nullptr) {
+					flag = false;
+					count += next->count();
+				}
+			}
+			if(flag) {
+				return 1;
+			}
+			return count;
+		}
 	}
 }

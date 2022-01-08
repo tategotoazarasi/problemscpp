@@ -472,4 +472,36 @@ namespace acwing {
 		auto ans = out.str();
 		ASSERT_EQ("70.833", ans);
 	}
+
+	TEST(acwing4206, case1) {
+		istringstream in("40047");
+		auto out = ostringstream();
+		acwing4206::main(in, out);
+		auto ans = out.str();
+		ASSERT_EQ("NO", ans);
+	}
+
+	TEST(acwing4206, case2) {
+		istringstream in("7747774");
+		auto out = ostringstream();
+		acwing4206::main(in, out);
+		auto ans = out.str();
+		ASSERT_EQ("YES", ans);
+	}
+
+	TEST(acwing4207, case1) {
+		istringstream in("(()))(");
+		auto out = ostringstream();
+		acwing4207::main(in, out);
+		auto ans = out.str();
+		ASSERT_EQ("4", ans);
+	}
+
+	TEST(acwing4207, case2) {
+		istringstream in("()()(()(((");
+		auto out = ostringstream();
+		acwing4207::main(in, out);
+		auto ans = out.str();
+		ASSERT_EQ("6", ans);
+	}
 }

@@ -249,5 +249,39 @@ namespace acwing {
 	public:
 		static int main(istream &, ostream &);
 	};
+
+	/// \brief AcWing 4206. 判断数字
+	class acwing4206 {
+	public:
+		static int main(istream &, ostream &);
+	};
+
+	/// \brief AcWing 4207. 最长合法括号子序列
+	class acwing4207 {
+	public:
+		static int main(istream &, ostream &);
+	};
+
+	/// \brief AcWing 4208. 电话号码
+	namespace acwing4208 {
+		struct trie_node {
+			int val;
+			trie_node *father;
+			trie_node *nexts[10]{};
+
+			trie_node(int val, trie_node *father): val(val), father(father) {};
+
+			void insert(string str);
+
+			void display();
+
+			int count();
+		};
+
+		class acwing4208 {
+		public:
+			static int main(istream &, ostream &);
+		};
+	}
 }
 #endif //PROBLEMSCPP_ACWING_H
