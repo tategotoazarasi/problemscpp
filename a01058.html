@@ -91,7 +91,7 @@ Private 属性</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="a00020_source.html">leetcode.h</a> 第 <a class="el" href="a00020_source.html#l00078">78</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00020_source.html">leetcode.h</a> 第 <a class="el" href="a00020_source.html#l00075">75</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a79e75864eba3b92653318e8c6fb1526d" name="a79e75864eba3b92653318e8c6fb1526d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a79e75864eba3b92653318e8c6fb1526d">&#9670;&nbsp;</a></span>Solution()</h2>
@@ -108,13 +108,11 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00029_source.html">leetcode.cpp</a> 第 <a class="el" href="a00029_source.html#l00151">151</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                           {</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            this-&gt;<a class="code hl_variable" href="a01058.html#ad5f954429d13b3ae0e324807dc3f1523">m</a> = std::map&lt;int, int&gt;();</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        }</div>
-<div class="ttc" id="aa01058_html_ad5f954429d13b3ae0e324807dc3f1523"><div class="ttname"><a href="a01058.html#ad5f954429d13b3ae0e324807dc3f1523">leetcode::majority_element::Solution::m</a></div><div class="ttdeci">map&lt; int, int &gt; m</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00080">leetcode.h:80</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00029_source.html">leetcode.cpp</a> 第 <a class="el" href="a00029_source.html#l00115">115</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>{ this-&gt;<a class="code hl_variable" href="a01058.html#ad5f954429d13b3ae0e324807dc3f1523">m</a> = std::map&lt;int, int&gt;(); }</div>
+<div class="ttc" id="aa01058_html_ad5f954429d13b3ae0e324807dc3f1523"><div class="ttname"><a href="a01058.html#ad5f954429d13b3ae0e324807dc3f1523">leetcode::majority_element::Solution::m</a></div><div class="ttdeci">map&lt; int, int &gt; m</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00077">leetcode.h:77</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="a00020_source.html#l00080">m</a>.</p>
+<p class="reference">引用了 <a class="el" href="a00020_source.html#l00077">m</a>.</p>
 
 </div>
 </div>
@@ -135,22 +133,18 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00029_source.html">leetcode.cpp</a> 第 <a class="el" href="a00029_source.html#l00155">155</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                                                       {</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i: nums) {</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                <span class="keywordflow">if</span>(<a class="code hl_variable" href="a01058.html#ad5f954429d13b3ae0e324807dc3f1523">m</a>.contains(i)) {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                    <a class="code hl_variable" href="a01058.html#ad5f954429d13b3ae0e324807dc3f1523">m</a>[i] = <a class="code hl_variable" href="a01058.html#ad5f954429d13b3ae0e324807dc3f1523">m</a>[i] + 1;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                    <span class="keywordflow">if</span>(<a class="code hl_variable" href="a01058.html#ad5f954429d13b3ae0e324807dc3f1523">m</a>[i] &gt; nums.size() / 2) {</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                        <span class="keywordflow">return</span> i;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                    }</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                    <a class="code hl_variable" href="a01058.html#ad5f954429d13b3ae0e324807dc3f1523">m</a>[i] = 1;</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                }</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            }</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00029_source.html">leetcode.cpp</a> 第 <a class="el" href="a00029_source.html#l00117">117</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                                                       {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i: nums) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                <span class="keywordflow">if</span>(<a class="code hl_variable" href="a01058.html#ad5f954429d13b3ae0e324807dc3f1523">m</a>.contains(i)) {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                    <a class="code hl_variable" href="a01058.html#ad5f954429d13b3ae0e324807dc3f1523">m</a>[i] = <a class="code hl_variable" href="a01058.html#ad5f954429d13b3ae0e324807dc3f1523">m</a>[i] + 1;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                    <span class="keywordflow">if</span>(<a class="code hl_variable" href="a01058.html#ad5f954429d13b3ae0e324807dc3f1523">m</a>[i] &gt; nums.size() / 2) { <span class="keywordflow">return</span> i; }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                } <span class="keywordflow">else</span> { <a class="code hl_variable" href="a01058.html#ad5f954429d13b3ae0e324807dc3f1523">m</a>[i] = 1; }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="a00020_source.html#l00080">m</a>.</p>
+<p class="reference">引用了 <a class="el" href="a00020_source.html#l00077">m</a>.</p>
 
 </div>
 </div>
@@ -175,9 +169,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00020_source.html">leetcode.h</a> 第 <a class="el" href="a00020_source.html#l00080">80</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00020_source.html">leetcode.h</a> 第 <a class="el" href="a00020_source.html#l00077">77</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="a00029_source.html#l00151">Solution()</a> , 以及 <a class="el" href="a00029_source.html#l00155">majorityElement()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="a00029_source.html#l00115">Solution()</a> , 以及 <a class="el" href="a00029_source.html#l00117">majorityElement()</a>.</p>
 
 </div>
 </div>

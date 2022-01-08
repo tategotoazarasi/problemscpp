@@ -140,42 +140,39 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00005_source.html">acwing.cpp</a> 第 <a class="el" href="a00005_source.html#l00407">407</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>                                                                {</div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>            <span class="keyword">auto</span> que = deque&lt;point&gt;();</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>            que.push_front(start);</div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>            <span class="keywordflow">while</span>(!que.empty()) {</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                <span class="keyword">auto</span> p = que.front();</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                que.pop_front();</div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                <a class="code hl_struct" href="a00974.html">point</a> nexts[] = {</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>                        <a class="code hl_struct" href="a00974.html">point</a>(p.x + 1, p.y, p.step), <a class="code hl_struct" href="a00974.html">point</a>(p.x - 1, p.y, p.step),</div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>                        <a class="code hl_struct" href="a00974.html">point</a>(p.x, p.y + 1, p.step), <a class="code hl_struct" href="a00974.html">point</a>(p.x, p.y - 1, p.step)</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>                };</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> next: nexts) {</div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>                    <span class="keywordflow">if</span>(next.x == 0 &amp;&amp; next.y == 0) {</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>                        <span class="keywordflow">return</span> next.<a class="code hl_variable" href="a00974.html#a3a1e018caae3a20a5849a5fedb72e9c0">step</a>;</div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>                    }</div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>                    <span class="keywordflow">if</span>(0 &lt;= next.x &amp;&amp; next.x &lt;= max_x + 2 &amp;&amp; 0 &lt;= next.y &amp;&amp; next.y &lt;= max_y + 2 &amp;&amp;</div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>                       field[next.x][next.y] != 2) {</div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>                        <span class="keywordflow">if</span>(field[next.x][next.y] == 0) {</div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>                            que.push_front(next);</div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>                            <span class="comment">//field[nexts.first][nexts.second]==1</span></div>
-<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>                            next.step++;</div>
-<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>                            que.push_back(next);</div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>                        }</div>
-<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>                        field[next.x][next.y] = 2;</div>
-<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>                    }</div>
-<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>                }</div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>            }</div>
-<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>            <span class="keywordflow">return</span> start.<a class="code hl_variable" href="a00974.html#a3a1e018caae3a20a5849a5fedb72e9c0">step</a>;</div>
-<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>        }</div>
-<div class="ttc" id="aa00974_html"><div class="ttname"><a href="a00974.html">acwing::acwing2019::point</a></div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00142">acwing.h:142</a></div></div>
-<div class="ttc" id="aa00974_html_a3a1e018caae3a20a5849a5fedb72e9c0"><div class="ttname"><a href="a00974.html#a3a1e018caae3a20a5849a5fedb72e9c0">acwing::acwing2019::point::step</a></div><div class="ttdeci">int step</div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00145">acwing.h:145</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00005_source.html">acwing.cpp</a> 第 <a class="el" href="a00005_source.html#l00379">379</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                                                                {</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>            <span class="keyword">auto</span> que = deque&lt;point&gt;();</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>            que.push_front(start);</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>            <span class="keywordflow">while</span>(!que.empty()) {</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                <span class="keyword">auto</span> p = que.front();</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                que.pop_front();</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                <a class="code hl_struct" href="a00974.html">point</a> nexts[] = {</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>                        <a class="code hl_struct" href="a00974.html">point</a>(p.x + 1, p.y, p.step), <a class="code hl_struct" href="a00974.html">point</a>(p.x - 1, p.y, p.step),</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>                        <a class="code hl_struct" href="a00974.html">point</a>(p.x, p.y + 1, p.step), <a class="code hl_struct" href="a00974.html">point</a>(p.x, p.y - 1, p.step)};</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> next: nexts) {</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>                    <span class="keywordflow">if</span>(next.x == 0 &amp;&amp; next.y == 0) { <span class="keywordflow">return</span> next.<a class="code hl_variable" href="a00974.html#a3a1e018caae3a20a5849a5fedb72e9c0">step</a>; }</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                    <span class="keywordflow">if</span>(0 &lt;= next.x &amp;&amp; next.x &lt;= max_x + 2 &amp;&amp; 0 &lt;= next.y &amp;&amp; next.y &lt;= max_y + 2 &amp;&amp;</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                       field[next.x][next.y] != 2) {</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>                        <span class="keywordflow">if</span>(field[next.x][next.y] == 0) {</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                            que.push_front(next);</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>                            <span class="comment">//field[nexts.first][nexts.second]==1</span></div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>                            next.step++;</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>                            que.push_back(next);</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>                        }</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>                        field[next.x][next.y] = 2;</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                    }</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>                }</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>            }</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>            <span class="keywordflow">return</span> start.<a class="code hl_variable" href="a00974.html#a3a1e018caae3a20a5849a5fedb72e9c0">step</a>;</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>        }</div>
+<div class="ttc" id="aa00974_html"><div class="ttname"><a href="a00974.html">acwing::acwing2019::point</a></div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00141">acwing.h:141</a></div></div>
+<div class="ttc" id="aa00974_html_a3a1e018caae3a20a5849a5fedb72e9c0"><div class="ttname"><a href="a00974.html#a3a1e018caae3a20a5849a5fedb72e9c0">acwing::acwing2019::point::step</a></div><div class="ttdeci">int step</div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00144">acwing.h:144</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="a00023_source.html#l00145">acwing::acwing2019::point::step</a>.</p>
+<p class="reference">引用了 <a class="el" href="a00023_source.html#l00144">acwing::acwing2019::point::step</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="a00005_source.html#l00378">acwing::acwing2019::acwing2019::main()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="a00005_source.html#l00354">acwing::acwing2019::acwing2019::main()</a>.</p>
 
 </div>
 </div>
@@ -208,13 +205,13 @@ $(function() {
 <p class="definition">在文件 <a class="el" href="a00035_source.html">acwing_test.cpp</a> 第 <a class="el" href="a00035_source.html#l00320">320</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                                {</div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            istringstream in(<span class="stringliteral">&quot;7 6 3\n&quot;</span></div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                             <span class="stringliteral">&quot;6 2\n&quot;</span></div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                             <span class="stringliteral">&quot;5 2\n&quot;</span></div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                             <span class="stringliteral">&quot;4 3\n&quot;</span></div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                             <span class="stringliteral">&quot;2 1\n&quot;</span></div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                             <span class="stringliteral">&quot;7 3\n&quot;</span></div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                             <span class="stringliteral">&quot;5 4\n&quot;</span></div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                             <span class="stringliteral">&quot;6 4&quot;</span>);</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                    <span class="stringliteral">&quot;6 2\n&quot;</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                    <span class="stringliteral">&quot;5 2\n&quot;</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                    <span class="stringliteral">&quot;4 3\n&quot;</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                    <span class="stringliteral">&quot;2 1\n&quot;</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                    <span class="stringliteral">&quot;7 3\n&quot;</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                    <span class="stringliteral">&quot;5 4\n&quot;</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                    <span class="stringliteral">&quot;6 4&quot;</span>);</div>
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            <span class="keyword">auto</span> out = ostringstream();</div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>            <a class="code hl_function" href="a00002.html#a3c04138a5bfe5d72780bb7e82a18e627">acwing2019::main</a>(in, out);</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            <span class="keyword">auto</span> ans = out.str();</div>
@@ -255,10 +252,10 @@ $(function() {
 <p class="definition">在文件 <a class="el" href="a00035_source.html">acwing_test.cpp</a> 第 <a class="el" href="a00035_source.html#l00335">335</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                                {</div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            istringstream in(<span class="stringliteral">&quot;4 2 2\n&quot;</span></div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                             <span class="stringliteral">&quot;2 1\n&quot;</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                             <span class="stringliteral">&quot;1 2\n&quot;</span></div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                             <span class="stringliteral">&quot;2 3\n&quot;</span></div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                             <span class="stringliteral">&quot;4 2&quot;</span>);</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                    <span class="stringliteral">&quot;2 1\n&quot;</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                    <span class="stringliteral">&quot;1 2\n&quot;</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                    <span class="stringliteral">&quot;2 3\n&quot;</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                    <span class="stringliteral">&quot;4 2&quot;</span>);</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            <span class="keyword">auto</span> out = ostringstream();</div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            <a class="code hl_function" href="a00002.html#a3c04138a5bfe5d72780bb7e82a18e627">acwing2019::main</a>(in, out);</div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>            <span class="keyword">auto</span> ans = out.str();</div>
@@ -282,9 +279,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00023_source.html">acwing.h</a> 第 <a class="el" href="a00023_source.html#l00140">140</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00023_source.html">acwing.h</a> 第 <a class="el" href="a00023_source.html#l00139">139</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="a00005_source.html#l00150">acwing::acwing4204::main()</a> , 以及 <a class="el" href="a00005_source.html#l00378">acwing::acwing2019::acwing2019::main()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="a00005_source.html#l00145">acwing::acwing4204::main()</a> , 以及 <a class="el" href="a00005_source.html#l00354">acwing::acwing2019::acwing2019::main()</a>.</p>
 
 </div>
 </div>
