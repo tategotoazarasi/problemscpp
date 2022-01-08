@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['simplifypath_0',['simplifyPath',['../a01091.html#a331155465cf3f743bb3f14dacf784263',1,'leetcode::simplify_path::Solution']]],
-  ['solution_1',['Solution',['../a01031.html#a79e75864eba3b92653318e8c6fb1526d',1,'leetcode::majority_element::Solution']]]
+  ['simplifypath_0',['simplifyPath',['../a01101.html#a331155465cf3f743bb3f14dacf784263',1,'leetcode::simplify_path::Solution']]],
+  ['solution_1',['Solution',['../a01041.html#a79e75864eba3b92653318e8c6fb1526d',1,'leetcode::majority_element::Solution']]]
 ];
