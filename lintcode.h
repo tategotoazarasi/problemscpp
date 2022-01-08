@@ -10,10 +10,8 @@
 
 using namespace std;
 
-namespace lintcode
-{
-	namespace license_key_formatting
-	{
+namespace lintcode {
+	namespace license_key_formatting {
 		class Solution {
 		public:
 			/**
@@ -21,39 +19,36 @@ namespace lintcode
 			* @param K: a integer
 			* @return: return a string
 			*/
-			static string licenseKeyFormatting(string&, int);
+			static string licenseKeyFormatting(string &, int);
 		};
 	}
 
-	namespace distribute_candies
-	{
+	namespace distribute_candies {
 		class Solution {
 		public:
 			/**
 			 * @param candies: a list of integers
 			 * @return: return a integer
 			 */
-			static int distributeCandies(vector<int>& candies);
+			static int distributeCandies(vector<int> &candies);
 		};
 	}
 
-	namespace remove_extra
-	{
+	namespace remove_extra {
 		class Solution {
 		public:
 			/**
 			 * @param s: the original string
 			 * @return: the string without arbitrary spaces
 			 */
-			static string removeExtra(string& s);
+			static string removeExtra(string &s);
 		};
 	}
 
 	/**
 	 * \brief lintcode 1807. 斐波纳契数列简单
 	 */
-	namespace fibonacci
-	{
+	namespace fibonacci {
 		class Solution {
 		public:
 			/**
@@ -67,8 +62,7 @@ namespace lintcode
 	/**
 	 * \brief lintcode 1905. 字符删除
 	 */
-	namespace character_deletion
-	{
+	namespace character_deletion {
 		class Solution {
 		public:
 			/**
@@ -76,22 +70,38 @@ namespace lintcode
 			 * @param sub: The given second string
 			 * @return: Returns the deleted string
 			 */
-			static string CharacterDeletion(string& str, string& sub);
+			static string CharacterDeletion(string &str, string &sub);
 		};
 	}
 
 	/**
 	 * \brief lintcode 1104. 机器人能否返回原点
 	 */
-	namespace judge_circle
-	{
+	namespace judge_circle {
 		class Solution {
 		public:
 			/**
 			 * @param moves: a sequence of its moves
 			 * @return: if this robot makes a circle
 			 */
-			static bool judgeCircle(string& moves);
+			static bool judgeCircle(string &moves);
+		};
+	}
+
+	/**
+	 * \brief lintcode 295. 交集
+	 */
+	namespace intersection {
+		class Solution {
+		public:
+			/**
+			 * @param a: first sequence
+			 * @param b: second sequence
+			 * @return: return ans
+			 */
+			static vector<vector<int>> Intersection(vector<vector<int>> &a, vector<vector<int>> &b);
+
+			static bool is_intersected(const vector<int> &l, const vector<int> &r);
 		};
 	}
 }
