@@ -4,15 +4,15 @@
 
 #include "acwing.h"
 
-#include<algorithm>
-#include<cstring>
-#include<vector>
-#include<cmath>
-#include<iomanip>
-#include<queue>
-#include<set>
-#include<unordered_set>
-#include<map>
+#include <algorithm>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
+#include <map>
+#include <queue>
+#include <set>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
@@ -54,12 +54,8 @@ namespace acwing {
 
 		int sum = static_cast<int>(pow(2, len));
 		for(int i = 0; i < len; i++) {
-			if(arr[i] > 1) {
-				break;
-			}
-			if(arr[i] == 0) {
-				sum -= static_cast<int>(pow(2, len - i - 1));
-			}
+			if(arr[i] > 1) { break; }
+			if(arr[i] == 0) { sum -= static_cast<int>(pow(2, len - i - 1)); }
 		}
 		cout << --sum;
 		return 0;
@@ -91,7 +87,8 @@ namespace acwing {
 		int a;
 		double b, c;
 		cin >> a >> b >> c;
-		cout << "NUMBER = " << a << endl << "SALARY = U$ " << setiosflags(ios::fixed) << setprecision(2) << b * c;
+		cout << "NUMBER = " << a << endl
+		     << "SALARY = U$ " << setiosflags(ios::fixed) << setprecision(2) << b * c;
 		return 0;
 	}
 
@@ -114,12 +111,10 @@ namespace acwing {
 		int n;
 		cin >> n;
 		cout << n << endl;
-		int arr[] = { 100, 50, 20, 10, 5, 2, 1 };
+		int arr[] = {100, 50, 20, 10, 5, 2, 1};
 		for(int i: arr) {
 			cout << n / i << " nota(s) de R$ " << i << ",00";
-			if(i != 1) {
-				cout << endl;
-			}
+			if(i != 1) { cout << endl; }
 			n %= i;
 		}
 		return 0;
@@ -153,9 +148,7 @@ namespace acwing {
 		auto g = new int *[N];
 		for(int i = 0; i < N; i++) {
 			g[i] = new int[N];
-			for(int j = 0; j < N; j++) {
-				g[i][j] = 0;
-			}
+			for(int j = 0; j < N; j++) { g[i][j] = 0; }
 		}
 		cin >> n;
 		for(int i = 1; i <= n; i++) {
@@ -183,9 +176,7 @@ namespace acwing {
 		}
 		for(int i = 1; i < n; i++) {
 			set<int> s;
-			for(int j = 1; j < n; j++) {
-				s.insert(g[i][j]);
-			}
+			for(int j = 1; j < n; j++) { s.insert(g[i][j]); }
 			for(int j = 0; j < n; j++) {
 				if(!s.contains(j)) {
 					g[i][n] = g[n][i] = j;//补最后一列和最后一行的值
@@ -197,13 +188,9 @@ namespace acwing {
 		for(int i = 1; i <= n; i++) {
 			for(int j = 1; j <= n; j++) {
 				cout << g[i][j];
-				if(j != n) {
-					cout << " ";
-				}
+				if(j != n) { cout << " "; }
 			}
-			if(i != n) {
-				cout << endl;
-			}
+			if(i != n) { cout << endl; }
 		}
 		return 0;
 	}
@@ -217,12 +204,8 @@ namespace acwing {
 			long long val = 0;
 			for(int j = 0; j < n2.length(); j++) {
 				bool bit = n2[j] != '0';
-				if(j == i) {
-					bit = !bit;
-				}
-				if(bit) {
-					val += static_cast<long long>(pow(2, n2.size() - j - 1));
-				}
+				if(j == i) { bit = !bit; }
+				if(bit) { val += static_cast<long long>(pow(2, n2.size() - j - 1)); }
 			}
 			s.insert(val);
 		}
@@ -279,9 +262,7 @@ namespace acwing {
 			haystack[a]++;
 			haystack[b + 1]--;
 		}
-		for(int i = 1; i <= n; i++) {
-			haystack[i] += haystack[i - 1];
-		}
+		for(int i = 1; i <= n; i++) { haystack[i] += haystack[i - 1]; }
 		sort(haystack + 1, haystack + n + 1);
 		cout << haystack[(n + 1) / 2];
 		return 0;
@@ -316,9 +297,8 @@ namespace acwing {
 			while(true) {
 				for(auto p: edge) {
 					point nexts[] = {
-							point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1),
-							point(p.x, p.y - 1)
-					};
+					        point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1),
+					        point(p.x, p.y - 1)};
 					for(auto next: nexts) {
 						if(0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && !occupy[next.x][next.y]) {
 							if(cowhide[next.x][next.y] == 'X') {
@@ -338,13 +318,9 @@ namespace acwing {
 			return 0;
 		}
 
-		size_t pointhash::operator()(const point &p) const {
-			return p.x * 50 + p.y;
-		}
+		size_t pointhash::operator()(const point &p) const { return p.x * 50 + p.y; }
 
-		bool pointequal::operator()(const point &p1, const point &p2) const {
-			return p1.x == p2.x && p1.y == p2.y;
-		}
+		bool pointequal::operator()(const point &p1, const point &p2) const { return p1.x == p2.x && p1.y == p2.y; }
 
 		void
 		flood(point first, bool occupy[55][55], unordered_set<point, pointhash, pointequal> *edge, char cowhide[55][55],
@@ -359,7 +335,7 @@ namespace acwing {
 					continue;
 				}
 				occupy[p.x][p.y] = true;
-				point nexts[] = { point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1), point(p.x, p.y - 1) };
+				point nexts[] = {point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1), point(p.x, p.y - 1)};
 				for(auto next: nexts) {
 					if(0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && !occupy[next.x][next.y]) {
 						if(cowhide[next.x][next.y] == 'X') {
@@ -372,7 +348,7 @@ namespace acwing {
 				que.pop();
 			}
 		}
-	}
+	}// namespace acwing2060
 
 	namespace acwing2019 {
 		int acwing2019::main(istream &cin, ostream &cout) {
@@ -391,12 +367,8 @@ namespace acwing {
 			for(int i = 0; i < n; i++) {
 				int x, y;
 				cin >> x >> y;
-				if(max_x < x) {
-					max_x = x;
-				}
-				if(max_y < y) {
-					max_y = y;
-				}
+				if(max_x < x) { max_x = x; }
+				if(max_y < y) { max_y = y; }
 				field[x][y] = 1;
 			}
 
@@ -411,13 +383,10 @@ namespace acwing {
 				auto p = que.front();
 				que.pop_front();
 				point nexts[] = {
-						point(p.x + 1, p.y, p.step), point(p.x - 1, p.y, p.step),
-						point(p.x, p.y + 1, p.step), point(p.x, p.y - 1, p.step)
-				};
+				        point(p.x + 1, p.y, p.step), point(p.x - 1, p.y, p.step),
+				        point(p.x, p.y + 1, p.step), point(p.x, p.y - 1, p.step)};
 				for(auto next: nexts) {
-					if(next.x == 0 && next.y == 0) {
-						return next.step;
-					}
+					if(next.x == 0 && next.y == 0) { return next.step; }
 					if(0 <= next.x && next.x <= max_x + 2 && 0 <= next.y && next.y <= max_y + 2 &&
 					   field[next.x][next.y] != 2) {
 						if(field[next.x][next.y] == 0) {
@@ -433,7 +402,7 @@ namespace acwing {
 			}
 			return start.step;
 		}
-	}
+	}// namespace acwing2019
 
 	int acwing611::main(istream &cin, ostream &cout) {
 		int a1, b1, a2, b2;
@@ -461,9 +430,7 @@ namespace acwing {
 			cin >> height;
 			heights.insert(height);
 			above[i] = true;//露出水面
-			if(!m.contains(height)) {
-				m[height] = vector<unsigned int>();
-			}
+			if(!m.contains(height)) { m[height] = vector<unsigned int>(); }
 			m[height].push_back(i);
 		}
 		int count = 1;
@@ -481,9 +448,7 @@ namespace acwing {
 					count--;
 				}
 			}
-			if(max < count) {
-				max = count;
-			}
+			if(max < count) { max = count; }
 		}
 		cout << max;
 		return 0;
@@ -529,9 +494,7 @@ namespace acwing {
 		int n;
 		cin >> n;
 		for(int i = 0; i < n; i++) {
-			for(int j = 0; j < n; j++) {
-				cin >> horseshoes[i][j];
-			}
+			for(int j = 0; j < n; j++) { cin >> horseshoes[i][j]; }
 		}
 		memset(picked, false, sizeof picked);
 		if(horseshoes[0][0] == ')') {
@@ -545,14 +508,12 @@ namespace acwing {
 	int acwing2005::dfs(bool stage, char horseshoes[5][5], const bool picked[5][5], int count, int level, int x, int y,
 	                    int n) {
 		if(level == 0 && !stage) {
-			if(count == 13) {
-				printf("13");
-			}
+			if(count == 13) { printf("13"); }
 			return count;
 		}
 
-		pair<int, int> nexts[4] = { pair<int, int>(x - 1, y), pair<int, int>(x + 1, y), pair<int, int>(x, y - 1),
-		                            pair<int, int>(x, y + 1) };
+		pair<int, int> nexts[4] = {pair<int, int>(x - 1, y), pair<int, int>(x + 1, y), pair<int, int>(x, y - 1),
+		                           pair<int, int>(x, y + 1)};
 		//复制状态
 		bool picked_cpy[5][5];
 		memcpy(picked_cpy, picked, sizeof picked_cpy);
@@ -571,9 +532,7 @@ namespace acwing {
 				} else if(!stage && horseshoes[next.first][next.second] == ')') {
 					res = dfs(false, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n);
 				}
-				if(max < res) {
-					max = res;
-				}
+				if(max < res) { max = res; }
 			}
 		}
 		return max;
@@ -589,7 +548,7 @@ namespace acwing {
 	int acwing618::main(istream &cin, ostream &cout) {
 		long t, s;
 		cin >> t >> s;
-		cout << setiosflags(ios::fixed) << setprecision(3) << double(t * s) / 12;
+		cout << setiosflags(ios::fixed) << setprecision(3) << static_cast<double>(t * s) / 12;
 		return 0;
 	}
 
@@ -598,9 +557,7 @@ namespace acwing {
 		cin >> str;
 		int count = 0;
 		for(char ch: str) {
-			if(ch == '4' || ch == '7') {
-				count++;
-			}
+			if(ch == '4' || ch == '7') { count++; }
 		}
 		if(count == 4 || count == 7) {
 			cout << "YES";
@@ -613,7 +570,7 @@ namespace acwing {
 	int acwing4207::main(istream &cin, ostream &cout) {
 		string str;
 		cin >> str;
-		bool *in_sub = new bool[str.length()];
+		auto in_sub = new bool[str.length()];
 		int count = 0;
 		memset(in_sub, false, str.length() * sizeof(bool));
 
@@ -635,9 +592,7 @@ namespace acwing {
 						break;
 					}
 				}
-				if(in_sub[prev_left]) {
-					prev_left = -1;
-				}
+				if(in_sub[prev_left]) { prev_left = -1; }
 			} else if(prev_left == -1 && str[i] == '(') {
 				prev_left = i;
 			}
@@ -650,11 +605,12 @@ namespace acwing {
 		int acwing4208::main(istream &cin, ostream &cout) {
 			int n;
 			cin >> n;
-			map<string, trie_node *> records = map<string, trie_node *>();
+			auto records = map<string, trie_node *>();
 			for(int i = 0; i < n; i++) {
 				string name;
 				cin >> name;
-				if(records.find(name) == records.end()) {//不存在记录
+				if(!records.contains(name)) {
+					//不存在记录
 					records[name] = new trie_node(-1, nullptr);
 				}
 				int n2;
@@ -683,12 +639,8 @@ namespace acwing {
 		}
 
 		void trie_node::insert(string str) {
-			if(str.length() == 0) {
-				return;
-			}
-			if(this->nexts[str[0] - '0'] == nullptr) {
-				this->nexts[str[0] - '0'] = new trie_node(str[0] - '0', this);
-			}
+			if(str.length() == 0) { return; }
+			if(this->nexts[str[0] - '0'] == nullptr) { this->nexts[str[0] - '0'] = new trie_node(str[0] - '0', this); }
 			this->nexts[str[0] - '0']->insert(str.substr(1));
 		}
 
@@ -703,7 +655,7 @@ namespace acwing {
 			if(flag) {
 				auto current = this;
 				while(current->val != -1) {
-					cout << char(current->val + '0');
+					cout << static_cast<char>(current->val + '0');
 					current = current->father;
 				}
 				cout << " ";
@@ -719,10 +671,8 @@ namespace acwing {
 					count += next->count();
 				}
 			}
-			if(flag) {
-				return 1;
-			}
+			if(flag) { return 1; }
 			return count;
 		}
-	}
-}
+	}// namespace acwing4208
+}// namespace acwing

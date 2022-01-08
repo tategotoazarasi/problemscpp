@@ -5,8 +5,8 @@
 #ifndef PROBLEMSCPP_LINTCODE_H
 #define PROBLEMSCPP_LINTCODE_H
 
-#include<string>
-#include<vector>
+#include <string>
+#include <vector>
 
 using namespace std;
 
@@ -21,7 +21,7 @@ namespace lintcode {
 			*/
 			static string licenseKeyFormatting(string &, int);
 		};
-	}
+	}// namespace license_key_formatting
 
 	namespace distribute_candies {
 		class Solution {
@@ -32,7 +32,7 @@ namespace lintcode {
 			 */
 			static int distributeCandies(vector<int> &candies);
 		};
-	}
+	}// namespace distribute_candies
 
 	namespace remove_extra {
 		class Solution {
@@ -43,7 +43,7 @@ namespace lintcode {
 			 */
 			static string removeExtra(string &s);
 		};
-	}
+	}// namespace remove_extra
 
 	/**
 	 * \brief lintcode 1807. 斐波纳契数列简单
@@ -57,7 +57,7 @@ namespace lintcode {
 			 */
 			static int fibonacci(int);
 		};
-	}
+	}// namespace fibonacci
 
 	/**
 	 * \brief lintcode 1905. 字符删除
@@ -72,7 +72,7 @@ namespace lintcode {
 			 */
 			static string CharacterDeletion(string &str, string &sub);
 		};
-	}
+	}// namespace character_deletion
 
 	/**
 	 * \brief lintcode 1104. 机器人能否返回原点
@@ -86,7 +86,7 @@ namespace lintcode {
 			 */
 			static bool judgeCircle(string &moves);
 		};
-	}
+	}// namespace judge_circle
 
 	/**
 	 * \brief lintcode 295. 交集
@@ -103,7 +103,7 @@ namespace lintcode {
 
 			static bool is_intersected(const vector<int> &l, const vector<int> &r);
 		};
-	}
-}
+	}// namespace intersection
+}    // namespace lintcode
 
-#endif //PROBLEMSCPP_LINTCODE_H
+#endif//PROBLEMSCPP_LINTCODE_H

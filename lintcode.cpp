@@ -21,29 +21,19 @@ namespace lintcode {
 			for(char c: S) {
 				if(isalnum(c)) {
 					len++;
-					if(isdigit(c) || isupper(c)) {
-						S2 << c;
-					} else if(islower(c)) {
-						S2 << static_cast<char>(toupper(c));
-					}
+					if(isdigit(c) || isupper(c)) { S2 << c; } else if(islower(c)) { S2 << static_cast<char>(toupper(c)); }
 				}
 			}
 			string str = S2.str();
 			int first = len % K;
 			int average = len / K;
-			if(first == 0) {
-				first = K;
-			}
+			if(first == 0) { first = K; }
 			string str1 = str.substr(0, first);
 			string str2 = str.substr(first);
-			for(char c: str1) {
-				output << c;
-			}
+			for(char c: str1) { output << c; }
 			int count = 0;
 			for(char c: str2) {
-				if(count == 0) {
-					output << '-';
-				}
+				if(count == 0) { output << '-'; }
 				output << c;
 				count++;
 				count %= K;
@@ -58,24 +48,18 @@ namespace lintcode {
 			auto ans = set<int>();
 			int n = static_cast<int>(candies.size()) / 2;
 			int sum = 0;
-			for(auto candy: candies) {
-				m[candy]++;
-			}
+			for(auto candy: candies) { m[candy]++; }
 			while(sum < n) {
 				for(auto candy: m) {
 					if(candy.second != 0) {
 						if(!ans.contains(static_cast<int>(candy.first))) {
 							ans.insert(static_cast<int>(candy.first));
-							if(ans.size() == m.size()) {
-								return static_cast<int>(ans.size());
-							}
+							if(ans.size() == m.size()) { return static_cast<int>(ans.size()); }
 						}
 						candy.second--;
 						sum++;
 					}
-					if(sum >= n) {
-						break;
-					}
+					if(sum >= n) { break; }
 				}
 			}
 			return static_cast<int>(ans.size());
@@ -89,15 +73,11 @@ namespace lintcode {
 			bool flag = false;
 			for(char c: s) {
 				if(c != ' ') {
-					if(flag && !start) {
-						output << ' ';
-					}
+					if(flag && !start) { output << ' '; }
 					output << c;
 					start = false;
 					flag = false;
-				} else {
-					flag = true;
-				}
+				} else { flag = true; }
 			}
 			return output.str();
 		}
@@ -108,9 +88,7 @@ namespace lintcode {
 			auto arr = new int[n];
 			arr[0] = 0;
 			arr[1] = 1;
-			for(int i = 2; i < n; i++) {
-				arr[i] = arr[i - 1] + arr[i - 2];
-			}
+			for(int i = 2; i < n; i++) { arr[i] = arr[i - 1] + arr[i - 2]; }
 			return arr[n - 1];
 		}
 	}
@@ -119,14 +97,8 @@ namespace lintcode {
 		string Solution::CharacterDeletion(string &str, string &sub) {
 			auto oss = ostringstream();
 			auto us = unordered_set<char>();
-			for(auto ch: sub) {
-				us.insert(ch);
-			}
-			for(auto ch: str) {
-				if(!us.contains(ch)) {
-					oss << ch;
-				}
-			}
+			for(auto ch: sub) { us.insert(ch); }
+			for(auto ch: str) { if(!us.contains(ch)) { oss << ch; } }
 			return oss.str();
 		}
 	}
@@ -155,29 +127,22 @@ namespace lintcode {
 	namespace intersection {
 		vector<vector<int>> Solution::Intersection(vector<vector<int>> &a, vector<vector<int>> &b) {
 			vector<vector<int>> res;
-			if(a.empty() || b.empty())
-				return res;
+			if(a.empty() || b.empty()) return res;
 			for(int i = 0, j = 0; i < a.size() && j < b.size();) {
-				if(is_intersected(a[i], b[j]))
-					res.emplace_back(vector<int>({ i, j }));
+				if(is_intersected(a[i], b[j])) res.emplace_back(vector<int>({i, j}));
 				if(a[i][1] == b[j][1]) {
 					++i;
 					++j;
-				} else if(a[i][1] > b[j][1])
-					++j;
-				else
-					++i;
+				} else if(a[i][1] > b[j][1]) ++j;
+				else ++i;
 			}
 			return res;
 		}
 
 		bool Solution::is_intersected(const vector<int> &l, const vector<int> &r) {
-			if(l[0] == r[0])
-				return true;
-			else if(l[0] < r[0])
-				return r[0] <= l[1];
-			else
-				return l[0] <= r[1];
+			if(l[0] == r[0]) return true;
+			if(l[0] < r[0]) return r[0] <= l[1];
+			return l[0] <= r[1];
 		}
 	}
 }

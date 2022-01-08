@@ -2,60 +2,39 @@
 // Created by tategotoazarasi on 2021/12/29.
 //
 
-#include"leetcode.h"
-#include<cmath>
-#include<cstring>
-#include<algorithm>
-#include<iostream>
-#include<queue>
-#include <stack>
+#include "leetcode.h"
+#include <algorithm>
+#include <cmath>
+#include <cstring>
+#include <iostream>
+#include <queue>
 #include <sstream>
+#include <stack>
+#include <unordered_set>
 
 using namespace std;
 
 namespace leetcode {
 	bool TreeNode::operator==(const TreeNode &node) const {
-		if(this->left != nullptr && node.left == nullptr) {
-			return false;
-		}
-		if(this->left == nullptr && node.left != nullptr) {
-			return false;
-		}
-		if(this->right != nullptr && node.right == nullptr) {
-			return false;
-		}
-		if(this->right == nullptr && node.right != nullptr) {
-			return false;
-		}
-		if(this->left != nullptr && node.left != nullptr && (*this->left) != (*node.left)) {
-			return false;
-		}
-		if(this->right != nullptr && node.right != nullptr && (*this->right) != (*node.right)) {
-			return false;
-		}
+		if(this->left != nullptr && node.left == nullptr) { return false; }
+		if(this->left == nullptr && node.left != nullptr) { return false; }
+		if(this->right != nullptr && node.right == nullptr) { return false; }
+		if(this->right == nullptr && node.right != nullptr) { return false; }
+		if(this->left != nullptr && node.left != nullptr && (*this->left) != (*node.left)) { return false; }
+		if(this->right != nullptr && node.right != nullptr && (*this->right) != (*node.right)) { return false; }
 		return this->val == node.val;
 	}
 
-	bool TreeNode::operator!=(const TreeNode &node) const {
-		return !((*this) == node);
-	}
+	bool TreeNode::operator!=(const TreeNode &node) const { return !((*this) == node); }
 
 	namespace concatenated_words {
 		vector<string> Solution::findAllConcatenatedWordsInADict(vector<string> &words) {
-			sort(words.begin(), words.end(), [&](const string &a, const string &b) {
-				return a.size() < b.size();
-			});
+			sort(words.begin(), words.end(), [&](const string &a, const string &b) { return a.size() < b.size(); });
 			auto ans = vector<string>();
 			auto node = TrieNode(0);
 			for(const string &word: words) {
-				if(word.length() == 0) {
-					continue;
-				}
-				if(node.dfs(&node, word, 0, false)) {
-					ans.push_back(word);
-				} else {
-					node.insert(word);
-				}
+				if(word.length() == 0) { continue; }
+				if(node.dfs(&node, word, 0, false)) { ans.push_back(word); } else { node.insert(word); }
 			}
 			return ans;
 		}
@@ -82,43 +61,31 @@ namespace leetcode {
 			if(this->ch == 0) {
 				//根节点
 				auto node = this->nexts[str[start] - 'a'];
-				if(node == nullptr) {
-					return false;
-				}
-				if(node->dfs(root, str, start, flag)) {
-					return true;
-				}
+				if(node == nullptr) { return false; }
+				if(node->dfs(root, str, start, flag)) { return true; }
 				return false;
 			}
 			//非根节点
 			//到一个单词结束处
 			if(this->is_end) {
-				if(start == str.length() - 1) {
-					return flag;
-				}
+				if(start == str.length() - 1) { return flag; }
 				auto res = root->dfs(root, str, start + 1, true);
-				if(res) {
-					return true;
-				}
+				if(res) { return true; }
 			}
 			TrieNode *node = nullptr;
-			if(str[start + 1] - 'a' >= 0) {
-				node = this->nexts[str[start + 1] - 'a'];
-			}
+			if(str[start + 1] - 'a' >= 0) { node = this->nexts[str[start + 1] - 'a']; }
 			return node != nullptr && node->dfs(root, str, start + 1, flag);
 		}
-	}
+	}// namespace concatenated_words
 
 	namespace excel_sheet_column_number {
 		int Solution::titleToNumber(const std::string &columnTitle) {
 			int sum = 0;
 			int length = static_cast<int>(columnTitle.length());
-			for(char c: columnTitle) {
-				sum += static_cast<int>(static_cast<double>(c - 'A' + 1) * pow(26, length-- - 1));
-			}
+			for(char c: columnTitle) { sum += static_cast<int>(static_cast<double>(c - 'A' + 1) * pow(26, length-- - 1)); }
 			return sum;
 		}
-	}
+	}// namespace excel_sheet_column_number
 
 	namespace excel_sheet_column_title {
 		string Solution::convertToTitle(int columnNumber) {
@@ -129,8 +96,7 @@ namespace leetcode {
 				if(round) {
 					ch = static_cast<char>(columnNumber % 26 + 63);
 					round = false;
-				} else
-					ch = static_cast<char>(columnNumber % 26 + 64);
+				} else ch = static_cast<char>(columnNumber % 26 + 64);
 				if(ch == '@' && columnNumber >= 26) {
 					ch = 'Z';
 					round = true;
@@ -138,70 +104,50 @@ namespace leetcode {
 					ch = 'Y';
 					round = true;
 				}
-				if('A' <= ch && ch <= 'Z') {
-					ans.insert(0, 1, ch);
-				}
+				if('A' <= ch && ch <= 'Z') { ans.insert(0, 1, ch); }
 				columnNumber /= 26;
 			}
 			return ans;
 		}
-	}
+	}// namespace excel_sheet_column_title
 
 	namespace majority_element {
-		Solution::Solution() {
-			this->m = std::map<int, int>();
-		}
+		Solution::Solution() { this->m = std::map<int, int>(); }
 
 		int Solution::majorityElement(vector<int> &nums) {
 			for(int i: nums) {
 				if(m.contains(i)) {
 					m[i] = m[i] + 1;
-					if(m[i] > nums.size() / 2) {
-						return i;
-					}
-				} else {
-					m[i] = 1;
-				}
+					if(m[i] > nums.size() / 2) { return i; }
+				} else { m[i] = 1; }
 			}
 			return 0;
 		}
-	}
+	}// namespace majority_element
 
 	namespace count_special_quadruplets {
 		int Solution::countQuadruplets(vector<int> &nums) {
 			int sum = 0;
 			for(int i = 3; i < nums.size(); i++) {
 				for(int j = 0; j < i - 2; j++) {
-					if(j == i) {
-						continue;
-					}
+					if(j == i) { continue; }
 					for(int k = j + 1; k < i - 1; k++) {
-						if(k == i) {
-							continue;
-						}
+						if(k == i) { continue; }
 						for(int l = k + 1; l < i; l++) {
-							if(l == i) {
-								continue;
-							}
-							if(nums[k] + nums[j] + nums[l] == nums[i]) {
-								sum++;
-							}
+							if(l == i) { continue; }
+							if(nums[k] + nums[j] + nums[l] == nums[i]) { sum++; }
 						}
 					}
 				}
 			}
 			return sum;
 		}
-	}
+	}// namespace count_special_quadruplets
 
 	namespace hand_of_straights {
 		bool Solution::isNStraightHand(vector<int> &hand, int groupSize) {
-			if(hand.size() % groupSize != 0) {
-				return false;
-			}
-			if(groupSize == 1) {
-				return true;
-			}
+			if(hand.size() % groupSize != 0) { return false; }
+			if(groupSize == 1) { return true; }
 			sort(hand.begin(), hand.end());
 			auto len = hand.size() / groupSize;
 			for(int i = 0; i < len; i++) {
@@ -209,16 +155,14 @@ namespace leetcode {
 				hand.erase(hand.begin());
 				for(int j = 1; j < groupSize; j++) {
 					auto next = find(hand.begin(), hand.end(), current + 1);
-					if(next == hand.end()) {
-						return false;
-					}
+					if(next == hand.end()) { return false; }
 					current = *next;
 					hand.erase(next);
 				}
 			}
 			return true;
 		}
-	}
+	}// namespace hand_of_straights
 
 	namespace perfect_number {
 		bool Solution::checkPerfectNumber(int num) {
@@ -227,21 +171,17 @@ namespace leetcode {
 			for(int i = 1; i < max; i++) {
 				if(num % i == 0) {
 					sum += i;
-					if(i != 1) {
-						sum += num / i;
-					}
+					if(i != 1) { sum += num / i; }
 					max = num / i;
 				}
 			}
 			return sum == num;
 		}
-	}
+	}// namespace perfect_number
 
 	namespace convert_bst_to_greater_tree {
 		TreeNode *Solution::convertBST(TreeNode *root) {
-			if(root == nullptr) {
-				return nullptr;
-			}
+			if(root == nullptr) { return nullptr; }
 			FriendTreeNode *sum = copy(root);
 			get_sum(sum);
 			sum->val = sum->sum - (sum->left == nullptr ? 0 : sum->left->sum);
@@ -251,12 +191,8 @@ namespace leetcode {
 
 		FriendTreeNode *Solution::copy(TreeNode *node) {
 			auto *ret = new FriendTreeNode(node->val, node);
-			if(node->left != nullptr) {
-				ret->left = copy(node->left);
-			}
-			if(node->right != nullptr) {
-				ret->right = copy(node->right);
-			}
+			if(node->left != nullptr) { ret->left = copy(node->left); }
+			if(node->right != nullptr) { ret->right = copy(node->right); }
 			return ret;
 		}
 
@@ -284,26 +220,21 @@ namespace leetcode {
 			}
 			sum_node->friend_node->val = sum_node->val;
 		}
-	}
+	}// namespace convert_bst_to_greater_tree
 
 	namespace convert_1d_array_into_2d_array {
 		vector<vector<int>> Solution::construct2DArray(vector<int> &original, int m, int n) {
-			if(original.size() != m * n) {
-				return {
-				};
-			}
+			if(original.size() != m * n) { return {}; }
 			auto ans = vector<vector<int>>();
 			int count = 0;
 			for(int i = 0; i < m; i++) {
 				auto row = vector<int>();
-				for(int j = 0; j < n; j++) {
-					row.push_back(original[count++]);
-				}
+				for(int j = 0; j < n; j++) { row.push_back(original[count++]); }
 				ans.push_back(row);
 			}
 			return ans;
 		}
-	}
+	}// namespace convert_1d_array_into_2d_array
 
 	namespace elimination_game {
 		int Solution::lastRemaining(int n) {
@@ -319,10 +250,7 @@ namespace leetcode {
 				} else if(num_amount % 2 == 0) {
 					// 偶数个数字
 					bool left_to_right = (loop_cnt % 2 == 0);
-					if(left_to_right) {
-						a0 = a0 + d;
-					} else
-						a0 = a0;
+					if(left_to_right) { a0 = a0 + d; } else a0 = a0;
 				}
 				loop_cnt++;
 				d *= 2;
@@ -330,29 +258,19 @@ namespace leetcode {
 			}
 			return a0;
 		}
-	}
+	}// namespace elimination_game
 
 	namespace check_if_all_as_appears_before_all_bs {
 		bool Solution::checkString(string s) {
 			bool flag = true;
-			for(char ch: s) {
-				if(ch == 'a') {
-					if(!flag) {
-						return false;
-					}
-				} else if(ch == 'b') {
-					flag = false;
-				}
-			}
+			for(char ch: s) { if(ch == 'a') { if(!flag) { return false; } } else if(ch == 'b') { flag = false; } }
 			return true;
 		}
-	}
+	}// namespace check_if_all_as_appears_before_all_bs
 
 	namespace number_of_laser_beams_in_a_bank {
 		int Solution::numberOfBeams(vector<string> &bank) {
-			if(bank.size() == 1) {
-				return 0;
-			}
+			if(bank.size() == 1) { return 0; }
 			int count = 0;
 			int i = 0;
 			int count_i = deviceCount(bank[i]);
@@ -374,28 +292,22 @@ namespace leetcode {
 
 		int Solution::deviceCount(const string &str) {
 			int count = 0;
-			for(char c: str) {
-				if(c == '1') {
-					count++;
-				}
-			}
+			for(char c: str) { if(c == '1') { count++; } }
 			return count;
 		}
-	}
+	}// namespace number_of_laser_beams_in_a_bank
 
 	namespace destroying_asteroids {
 		bool Solution::asteroidsDestroyed(int mass, vector<int> &asteroids) {
 			long long m = mass;
 			sort(asteroids.begin(), asteroids.end());
 			for(int i: asteroids) {
-				if(m < i) {
-					return false;
-				}
+				if(m < i) { return false; }
 				m += i;
 			}
 			return true;
 		}
-	}
+	}// namespace destroying_asteroids
 
 	/*namespace maximum_employees_to_be_invited_to_a_meeting {
 		int Solution::maximumInvitations(vector<int>& favorite) {
@@ -480,22 +392,18 @@ namespace leetcode {
 	 */
 	namespace day_of_the_week {
 		string Solution::dayOfTheWeek(int day, int month, int year) {
-			const string output[] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-			const int dayofmonths[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+			const string output[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+			const int dayofmonths[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 			int count = 5;
 			count += (year - 1971) * 365;
 			count += (year - 1) / 4 - 1970 / 4;
-			for(int m = 0; m < month - 1; m++) {
-				count += dayofmonths[m];
-			}
-			if(month > 2 && year % 4 == 0 && year % 100 != 0) {
-				count++;
-			}
+			for(int m = 0; m < month - 1; m++) { count += dayofmonths[m]; }
+			if(month > 2 && year % 4 == 0 && year % 100 != 0) { count++; }
 			count += day - 1;
 			count %= 7;
 			return output[count];
 		}
-	}
+	}// namespace day_of_the_week
 
 	namespace cat_and_mouse {
 		int Solution::catMouseGame(vector<vector<int>> &graph) {
@@ -506,18 +414,8 @@ namespace leetcode {
 		}
 
 		int Solution::getResult(int mouse, int cat, int turns) {
-			if(turns == n * 2) {
-				return DRAW;
-			}
-			if(dp[mouse][cat][turns] < 0) {
-				if(mouse == 0) {
-					dp[mouse][cat][turns] = MOUSE_WIN;
-				} else if(cat == mouse) {
-					dp[mouse][cat][turns] = CAT_WIN;
-				} else {
-					getNextResult(mouse, cat, turns);
-				}
-			}
+			if(turns == n * 2) { return DRAW; }
+			if(dp[mouse][cat][turns] < 0) { if(mouse == 0) { dp[mouse][cat][turns] = MOUSE_WIN; } else if(cat == mouse) { dp[mouse][cat][turns] = CAT_WIN; } else { getNextResult(mouse, cat, turns); } }
 			return dp[mouse][cat][turns];
 		}
 
@@ -526,34 +424,26 @@ namespace leetcode {
 			int defaultResult = curMove == mouse ? CAT_WIN : MOUSE_WIN;
 			int result = defaultResult;
 			for(int next: graph[curMove]) {
-				if(curMove == cat && next == 0) {
-					continue;
-				}
+				if(curMove == cat && next == 0) { continue; }
 				int nextMouse = curMove == mouse ? next : mouse;
 				int nextCat = curMove == cat ? next : cat;
 				int nextResult = getResult(nextMouse, nextCat, turns + 1);
 				if(nextResult != defaultResult) {
 					result = nextResult;
-					if(result != DRAW) {
-						break;
-					}
+					if(result != DRAW) { break; }
 				}
 			}
 			dp[mouse][cat][turns] = result;
 		}
-	}
+	}// namespace cat_and_mouse
 
 	namespace replace_all_s_to_avoid_consecutive_repeating_characters {
 		string Solution::modifyString(string s) {
 			for(int i = 0; i < s.size(); i++) {
 				if(s[i] == '?') {
 					for(char ch = 'a'; ch < 'z' + 1; ch++) {
-						if(0 <= i - 1 && s[i - 1] == ch) {
-							continue;
-						}
-						if(i + 1 < s.size() && s[i + 1] == ch) {
-							continue;
-						}
+						if(0 <= i - 1 && s[i - 1] == ch) { continue; }
+						if(i + 1 < s.size() && s[i + 1] == ch) { continue; }
 						s[i] = ch;
 						break;
 					}
@@ -561,7 +451,7 @@ namespace leetcode {
 			}
 			return s;
 		}
-	}
+	}// namespace replace_all_s_to_avoid_consecutive_repeating_characters
 
 	namespace simplify_path {
 		string Solution::simplifyPath(string path) {
@@ -572,9 +462,7 @@ namespace leetcode {
 			while(next != nullptr) {
 				auto nextstr = string(next);
 				if(nextstr == "..") {
-					if(!stck.empty()) {
-						stck.pop_back();
-					}
+					if(!stck.empty()) { stck.pop_back(); }
 					next = strtok(nullptr, "/");
 					continue;
 				}
@@ -586,9 +474,7 @@ namespace leetcode {
 				next = strtok(nullptr, "/");
 			}
 			auto oss = ostringstream();
-			if(stck.empty()) {
-				oss << '/';
-			} else {
+			if(stck.empty()) { oss << '/'; } else {
 				while(!stck.empty()) {
 					auto pname = stck.front();
 					oss << '/' << pname;
@@ -598,33 +484,25 @@ namespace leetcode {
 
 			return oss.str();
 		}
-	}
+	}// namespace simplify_path
 
 	namespace maximum_nesting_depth_of_the_parentheses {
 		int Solution::maxDepth(string s) {
 			int max = 0;
 			int current = 0;
 			for(char ch: s) {
-				if(ch == '(') {
-					current++;
-				} else if(ch == ')') {
-					current--;
-				}
-				if(max < current) {
-					max = current;
-				}
+				if(ch == '(') { current++; } else if(ch == ')') { current--; }
+				if(max < current) { max = current; }
 			}
 			return max;
 		}
-	}
+	}// namespace maximum_nesting_depth_of_the_parentheses
 
 	namespace gray_code {
 		vector<int> Solution::grayCode(int n) {
 			vector<int> ret(1 << n);
-			for(int i = 0; i < ret.size(); i++) {
-				ret[i] = (i >> 1) ^ i;
-			}
+			for(int i = 0; i < ret.size(); i++) { ret[i] = (i >> 1) ^ i; }
 			return ret;
 		}
-	}
-}
+	}// namespace gray_code
+}    // namespace leetcode

@@ -5,10 +5,10 @@
 #ifndef PROBLEMSCPP_ACWING_H
 #define PROBLEMSCPP_ACWING_H
 
-#include<iostream>
+#include <iostream>
 #include <set>
 #include <unordered_set>
-#include<vector>
+#include <vector>
 
 using namespace std;
 
@@ -118,8 +118,7 @@ namespace acwing {
 			point() = default;
 
 			point(int x, int y)
-					: x(x), y(y) {
-			};
+			    : x(x), y(y){};
 		};
 
 		struct pointhash {
@@ -130,8 +129,8 @@ namespace acwing {
 			bool operator()(const point &, const point &) const;
 		};
 
-		void flood(point, bool [55][55], unordered_set<point, pointhash, pointequal> *, char [55][55], int, int);
-	}
+		void flood(point, bool[55][55], unordered_set<point, pointhash, pointequal> *, char[55][55], int, int);
+	}// namespace acwing2060
 
 	/**
 	 * \brief AcWing 2019. 拖拉机
@@ -145,8 +144,7 @@ namespace acwing {
 			int step;
 
 			point(int x, int y, int step)
-					: x(x), y(y), step(step) {
-			};
+			    : x(x), y(y), step(step){};
 		};
 
 		int bfs(point, int **, int, int);
@@ -155,7 +153,7 @@ namespace acwing {
 		public:
 			static int main(istream &, ostream &);
 		};
-	}
+	}// namespace acwing2019
 
 	/**
 	 * \brief AcWing 611. 简单计算
@@ -264,17 +262,41 @@ namespace acwing {
 
 	/// \brief AcWing 4208. 电话号码
 	namespace acwing4208 {
+		/**
+		 * \brief 字典树
+		 */
 		struct trie_node {
+			/**
+			 * \brief 值
+			 */
 			int val;
+			/**
+			 * \brief 父节点
+			 */
 			trie_node *father;
+			/**
+			 * \brief 子节点
+			 */
 			trie_node *nexts[10]{};
 
-			trie_node(int val, trie_node *father): val(val), father(father) {};
+			trie_node(int val, trie_node *father)
+			    : val(val), father(father){};
 
+			/**
+			 * \brief 反向插入
+			 * \param str 插入的字符串
+			 */
 			void insert(string str);
 
+			/**
+			 * \brief 显示
+			 */
 			void display();
 
+			/**
+			 * \brief 分支计数
+			 * \return 分支计数
+			 */
 			int count();
 		};
 
@@ -282,6 +304,6 @@ namespace acwing {
 		public:
 			static int main(istream &, ostream &);
 		};
-	}
-}
-#endif //PROBLEMSCPP_ACWING_H
+	}// namespace acwing4208
+}// namespace acwing
+#endif//PROBLEMSCPP_ACWING_H

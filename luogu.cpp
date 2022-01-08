@@ -19,18 +19,15 @@ namespace luogu {
 			len += s[i].size();
 			int cnt = 1;
 			for(int j = 1; j < s[i].size(); ++j)
-				if(s[i][j] != s[i][j - 1])
-					++cnt;
-			if(cnt == _max && s[i] != s[k])
-				++max_cnt;
+				if(s[i][j] != s[i][j - 1]) ++cnt;
+			if(cnt == _max && s[i] != s[k]) ++max_cnt;
 			else if(_max < cnt) {
 				_max = cnt;
 				max_cnt = 0;
 				k = i;
 			}
 		}
-		if(max_cnt)
-			++_max;
+		if(max_cnt) ++_max;
 		cout << len - _max << endl;
 		return 0;
 	}
