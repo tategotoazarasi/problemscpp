@@ -31,8 +31,8 @@
 // This file contains purely Google Test's internal implementation.  Please
 // DO NOT #INCLUDE IT IN A USER PROGRAM.
 
-#ifndef GTEST_SRC_GTEST_INTERNAL_INL_H_
-#define GTEST_SRC_GTEST_INTERNAL_INL_H_
+#ifndef GOOGLETEST_SRC_GTEST_INTERNAL_INL_H_
+#define GOOGLETEST_SRC_GTEST_INTERNAL_INL_H_
 
 #ifndef _WIN32_WCE
 # include <errno.h>
@@ -1164,13 +1164,13 @@ class StreamingListener : public EmptyTestEventListener {
   }
 
   // Note that "event=TestCaseStart" is a wire format and has to remain
-  // "case" for compatibilty
+  // "case" for compatibility
   void OnTestCaseStart(const TestCase& test_case) override {
     SendLn(std::string("event=TestCaseStart&name=") + test_case.name());
   }
 
   // Note that "event=TestCaseEnd" is a wire format and has to remain
-  // "case" for compatibilty
+  // "case" for compatibility
   void OnTestCaseEnd(const TestCase& test_case) override {
     SendLn("event=TestCaseEnd&passed=" + FormatBool(test_case.Passed()) +
            "&elapsed_time=" + StreamableToString(test_case.elapsed_time()) +
@@ -1218,4 +1218,4 @@ class StreamingListener : public EmptyTestEventListener {
 
 GTEST_DISABLE_MSC_WARNINGS_POP_()  //  4251
 
-#endif  // GTEST_SRC_GTEST_INTERNAL_INL_H_
+#endif  // GOOGLETEST_SRC_GTEST_INTERNAL_INL_H_

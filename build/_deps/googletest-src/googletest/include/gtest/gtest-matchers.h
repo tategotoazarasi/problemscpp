@@ -32,8 +32,8 @@
 // This file implements just enough of the matcher interface to allow
 // EXPECT_DEATH and friends to accept a matcher argument.
 
-#ifndef GTEST_INCLUDE_GTEST_GTEST_MATCHERS_H_
-#define GTEST_INCLUDE_GTEST_GTEST_MATCHERS_H_
+#ifndef GOOGLETEST_INCLUDE_GTEST_GTEST_MATCHERS_H_
+#define GOOGLETEST_INCLUDE_GTEST_GTEST_MATCHERS_H_
 
 #include <atomic>
 #include <memory>
@@ -106,7 +106,7 @@ inline MatchResultListener::~MatchResultListener() {
 
 // An instance of a subclass of this knows how to describe itself as a
 // matcher.
-class MatcherDescriberInterface {
+class GTEST_API_ MatcherDescriberInterface {
  public:
   virtual ~MatcherDescriberInterface() {}
 
@@ -927,4 +927,4 @@ inline internal::NeMatcher<Rhs> Ne(Rhs x) {
 
 GTEST_DISABLE_MSC_WARNINGS_POP_()  //  4251 5046
 
-#endif  // GTEST_INCLUDE_GTEST_GTEST_MATCHERS_H_
+#endif  // GOOGLETEST_INCLUDE_GTEST_GTEST_MATCHERS_H_

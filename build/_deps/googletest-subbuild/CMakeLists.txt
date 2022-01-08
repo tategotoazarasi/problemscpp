@@ -13,7 +13,7 @@ project(googletest-populate NONE)
 
 include(ExternalProject)
 ExternalProject_Add(googletest-populate
-                     "UPDATE_DISCONNECTED" "False" "URL" "https://github.com.cnpmjs.org/google/googletest/archive/609281088cfefc76f9d0ce82e1ff6c30cc3591e5.zip"
+                     "UPDATE_DISCONNECTED" "False" "URL" "https://github.com.cnpmjs.org/google/googletest/archive/release-1.11.0.zip"
                     SOURCE_DIR          "/home/runner/work/problemscpp/problemscpp/build/_deps/googletest-src"
                     BINARY_DIR          "/home/runner/work/problemscpp/problemscpp/build/_deps/googletest-build"
                     CONFIGURE_COMMAND   ""
