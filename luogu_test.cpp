@@ -8,8 +8,7 @@
 
 using namespace std;
 
-namespace luogu
-{
+namespace luogu {
 	/*TEST(T210229, case1) {
 		istringstream in("3\n"
 						 "0011\n"
