@@ -432,4 +432,18 @@ namespace leetcode {
 			ASSERT_EQ(2, Solution::wordCount(vec1, vec2));
 		}
 	}
+
+	namespace slowest_key {
+		TEST(slowest_key, case1) {
+			int input[] = { 9, 29, 49, 50 };
+			auto vec = vector<int>(begin(input), end(input));
+			ASSERT_EQ('c', Solution::slowestKey(vec, "cbcd"));
+		}
+
+		TEST(slowest_key, case2) {
+			int input[] = { 12, 23, 36, 46, 62 };
+			auto vec = vector<int>(begin(input), end(input));
+			ASSERT_EQ('a', Solution::slowestKey(vec, "spuda"));
+		}
+	}
 }    // namespace leetcode

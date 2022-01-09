@@ -265,6 +265,14 @@ namespace leetcode {
 			static unsigned int str2bin(const string &);
 		};
 	}
+
+	/// \brief LeetCode 1629. 按键持续时间最长的键
+	namespace slowest_key {
+		class Solution {
+		public:
+			static char slowestKey(vector<int> &releaseTimes, string keysPressed);
+		};
+	}
 };
 
 #endif //PROBLEMSCPP_LEETCODE_H

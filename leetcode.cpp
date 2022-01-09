@@ -606,4 +606,24 @@ namespace leetcode {
 			return ret;
 		}
 	}
+
+
+	namespace slowest_key {
+		char Solution::slowestKey(vector<int> &releaseTimes, string keysPressed) {
+			int max = releaseTimes[0];
+			int maxi = 0;
+			for(int i = 1; i < releaseTimes.size(); i++) {
+				int time = releaseTimes[i] - releaseTimes[i - 1];
+				if(max < time) {
+					max = time;
+					maxi = i;
+				} else if(max == time) {
+					if(keysPressed[i] > keysPressed[maxi]) {
+						maxi = i;
+					}
+				}
+			}
+			return keysPressed[maxi];
+		}
+	}
 }    // namespace leetcode
