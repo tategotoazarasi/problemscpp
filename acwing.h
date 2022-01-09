@@ -319,5 +319,11 @@ namespace acwing {
 	public:
 		static int main(istream &, ostream &);
 	};
+
+	/// \brief AcWing 655. 天数转换
+	class acwing655 {
+	public:
+		static int main(istream &, ostream &);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

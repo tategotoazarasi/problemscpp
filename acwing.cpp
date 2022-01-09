@@ -748,4 +748,15 @@ namespace acwing {
 		     << count[11] << " moeda(s) de R$ 0.01";
 		return 0;
 	}
+
+	int acwing655::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		cout << n / 365 << " ano(s)" << endl;
+		n %= 365;
+		cout << n / 30 << " mes(es)" << endl;
+		n %= 30;
+		cout << n << " dia(s)";
+		return 0;
+	}
 }// namespace acwing

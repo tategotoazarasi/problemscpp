@@ -540,4 +540,14 @@ namespace acwing {
 		          "0 moeda(s) de R$ 0.05\n"
 		          "3 moeda(s) de R$ 0.01", ans);
 	}
+
+	TEST(acwing655, case1) {
+		istringstream in("400");
+		auto out = ostringstream();
+		acwing655::main(in, out);
+		auto ans = out.str();
+		ASSERT_EQ("1 ano(s)\n"
+		          "1 mes(es)\n"
+		          "5 dia(s)", ans);
+	}
 }
