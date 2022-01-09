@@ -11,7 +11,6 @@
 #include <sstream>
 #include <stack>
 #include <unordered_set>
-#include <set>
 
 using namespace std;
 
@@ -581,29 +580,30 @@ namespace leetcode {
 	namespace count_words_obtained_after_adding_a_letter {
 		int Solution::wordCount(vector<string> &startWords,
 		                        vector<string> &targetWords) {
-			set<int> c = set<int>();
-			int n = startWords.size();
-			for(int i = 0; i < n; i++) {
-				int m = startWords[i].size(), s = 0;
-				for(int j = 0; j < m; j++)
-					s |= (1 << (startWords[i][j] - 'a'));
-				c.insert(s);
+			int count = 0;
+			unordered_set<unsigned int> start = unordered_set<unsigned int>();
+			for(const string &word: startWords) {
+				auto bin = str2bin(word);
+				start.insert(bin);
 			}
-			n = targetWords.size();
-			int ans = 0;
-			for(int i = 0; i < n; i++) {
-				int m = targetWords[i].size(), s = 0;
-				for(int j = 0; j < m; j++)
-					s |= (1 << (targetWords[i][j] - 'a'));
-				bool ok = false;
-				for(int i = 0; i < 26 && !ok; i++)
-					if(s & (1 << i))
-						if(c.find(s - (1 << i)) != c.end())
-							ok = true;
-				if(ok)
-					++ans;
+			for(const string &word: targetWords) {
+				auto bin = str2bin(word);
+				for(int i = 0; i < 26; i++) {
+					if((bin & (1 << i)) != 0 && start.count(bin - (1 << i)) != 0) {//bin有第i个字母且bin去掉第i个字母在start中仍然存在
+						count++;
+						break;
+					}
+				}
 			}
-			return ans;
+			return count;
+		}
+
+		unsigned int Solution::str2bin(const string &str) {
+			unsigned int ret = 0;
+			for(char ch: str) {
+				ret |= 1 << (ch - 'a');
+			}
+			return ret;
 		}
 	}
 }    // namespace leetcode

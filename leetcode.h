@@ -261,6 +261,8 @@ namespace leetcode {
 		class Solution {
 		public:
 			static int wordCount(vector<string> &startWords, vector<string> &targetWords);
+
+			static unsigned int str2bin(const string &);
 		};
 	}
 };
