@@ -675,4 +675,50 @@ namespace acwing {
 			return count;
 		}
 	}// namespace acwing4208
+
+	int acwing1996::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		auto names = vector<string>();
+		names.resize(n);
+		auto min_names = vector<string>();
+		auto max_names = vector<string>();
+		min_names.resize(n);
+		max_names.resize(n);
+		for(int i = 0; i < n; i++) {
+			cin >> names[i];
+			auto min_name_const_c_str = names[i].c_str();
+			auto max_name_const_c_str = names[i].c_str();
+			char *min_name_c_str = new char[names[i].length() + 1];
+			char *max_name_c_str = new char[names[i].length() + 1];
+			strcpy(min_name_c_str, min_name_const_c_str);
+			strcpy(max_name_c_str, max_name_const_c_str);
+			sort(min_name_c_str, min_name_c_str + names[i].length() * sizeof(char));
+			sort(max_name_c_str, max_name_c_str + names[i].length() * sizeof(char), cmp);
+			auto min_name = string(min_name_c_str);
+			auto max_name = string(max_name_c_str);
+			min_names[i] = min_name;
+			max_names[i] = max_name;
+			delete[]min_name_c_str;
+			delete[]max_name_c_str;
+		}
+		auto min_names_sorted = vector<string>(min_names);
+		auto max_names_sorted = vector<string>(max_names);
+		sort(min_names_sorted.begin(), min_names_sorted.end());
+		sort(max_names_sorted.begin(), max_names_sorted.end());
+		for(int i = 0; i < n; i++) {
+			auto min_name = min_names[i];
+			auto max_name = max_names[i];
+			cout << lower_bound(max_names_sorted.begin(), max_names_sorted.end(), min_name) - max_names_sorted.begin() +
+			        1
+			     << " "
+			     << upper_bound(min_names_sorted.begin(), min_names_sorted.end(), max_name) - min_names_sorted.begin()
+			     << endl;
+		}
+		return 0;
+	}
+
+	bool acwing1996::cmp(char x, char y) {
+		return x > y;
+	}
 }// namespace acwing

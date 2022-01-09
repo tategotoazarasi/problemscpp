@@ -607,7 +607,6 @@ namespace leetcode {
 		}
 	}
 
-
 	namespace slowest_key {
 		char Solution::slowestKey(vector<int> &releaseTimes, string keysPressed) {
 			int max = releaseTimes[0];

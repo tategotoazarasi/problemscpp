@@ -504,4 +504,19 @@ namespace acwing {
 		auto ans = out.str();
 		ASSERT_EQ("6", ans);
 	}
+
+	TEST(acwing1996, case1) {
+		istringstream in("4\n"
+		                 "essieb\n"
+		                 "a\n"
+		                 "xzy\n"
+		                 "elsie");
+		auto out = ostringstream();
+		acwing1996::main(in, out);
+		auto ans = out.str();
+		ASSERT_EQ("2 3\n"
+		          "1 1\n"
+		          "4 4\n"
+		          "2 3\n", ans);
+	}
 }

@@ -305,5 +305,13 @@ namespace acwing {
 			static int main(istream &, ostream &);
 		};
 	}// namespace acwing4208
+
+	/// \brief AcWing 1996. 打乱字母
+	class acwing1996 {
+	public:
+		static int main(istream &, ostream &);
+
+		static bool cmp(char x, char y);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
