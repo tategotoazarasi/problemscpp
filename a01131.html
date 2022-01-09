@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::maximum_nesting_depth_of_the_parentheses::Solution类 参考</title>
+<title>problemscpp: leetcode::replace_all_s_to_avoid_consecutive_repeating_characters::Solution类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,14 +63,14 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00049.html">leetcode</a></li><li class="navelem"><a class="el" href="a00067.html">maximum_nesting_depth_of_the_parentheses</a></li><li class="navelem"><a class="el" href="a01131.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00049.html">leetcode</a></li><li class="navelem"><a class="el" href="a00065.html">replace_all_s_to_avoid_consecutive_repeating_characters</a></li><li class="navelem"><a class="el" href="a01131.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="a01128.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::maximum_nesting_depth_of_the_parentheses::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::replace_all_s_to_avoid_consecutive_repeating_characters::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -78,15 +78,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a4a84cb8df632d38a1f86a6b62cf7c313"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01131.html#a4a84cb8df632d38a1f86a6b62cf7c313">maxDepth</a> (string s)</td></tr>
-<tr class="separator:a4a84cb8df632d38a1f86a6b62cf7c313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a905edc751425d10aa97d32f05de32de3"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01131.html#a905edc751425d10aa97d32f05de32de3">modifyString</a> (string s)</td></tr>
+<tr class="separator:a905edc751425d10aa97d32f05de32de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="a00020_source.html">leetcode.h</a> 第 <a class="el" href="a00020_source.html#l00229">229</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00020_source.html">leetcode.h</a> 第 <a class="el" href="a00020_source.html#l00209">209</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a4a84cb8df632d38a1f86a6b62cf7c313" name="a4a84cb8df632d38a1f86a6b62cf7c313"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a84cb8df632d38a1f86a6b62cf7c313">&#9670;&nbsp;</a></span>maxDepth()</h2>
+<a id="a905edc751425d10aa97d32f05de32de3" name="a905edc751425d10aa97d32f05de32de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a905edc751425d10aa97d32f05de32de3">&#9670;&nbsp;</a></span>modifyString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -95,7 +95,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int leetcode::maximum_nesting_depth_of_the_parentheses::Solution::maxDepth </td>
+          <td class="memname">string leetcode::replace_all_s_to_avoid_consecutive_repeating_characters::Solution::modifyString </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>s</em></td><td>)</td>
@@ -109,18 +109,22 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00029_source.html">leetcode.cpp</a> 第 <a class="el" href="a00029_source.html#l00496">496</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>                                       {</div>
-<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>            <span class="keywordtype">int</span> max = 0;</div>
-<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span>            <span class="keywordtype">int</span> current = 0;</div>
-<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>            <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: s) {</div>
-<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span>                <span class="keywordflow">if</span>(ch == <span class="charliteral">&#39;(&#39;</span>) { current++; } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ch == <span class="charliteral">&#39;)&#39;</span>) { current--; }</div>
-<div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>                <span class="keywordflow">if</span>(max &lt; current) { max = current; }</div>
-<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>            }</div>
-<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>            <span class="keywordflow">return</span> max;</div>
-<div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00029_source.html">leetcode.cpp</a> 第 <a class="el" href="a00029_source.html#l00446">446</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>                                              {</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; s.size(); i++) {</div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>                <span class="keywordflow">if</span>(s[i] == <span class="charliteral">&#39;?&#39;</span>) {</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch = <span class="charliteral">&#39;a&#39;</span>; ch &lt; <span class="charliteral">&#39;z&#39;</span> + 1; ch++) {</div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>                        <span class="keywordflow">if</span>(0 &lt;= i - 1 &amp;&amp; s[i - 1] == ch) { <span class="keywordflow">continue</span>; }</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>                        <span class="keywordflow">if</span>(i + 1 &lt; s.size() &amp;&amp; s[i + 1] == ch) { <span class="keywordflow">continue</span>; }</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>                        s[i] = ch;</div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>                    }</div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>                }</div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>            }</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>            <span class="keywordflow">return</span> s;</div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="a00032_source.html#l00358">leetcode::maximum_nesting_depth_of_the_parentheses::TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="a00032_source.html#l00318">leetcode::replace_all_s_to_avoid_consecutive_repeating_characters::TEST()</a>.</p>
 
 </div>
 </div>

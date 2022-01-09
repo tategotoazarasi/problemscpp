@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: lintcode::flatten::Solution类 参考</title>
+<title>problemscpp: lintcode::judge_circle::Solution类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,14 +63,14 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00074.html">lintcode</a></li><li class="navelem"><a class="el" href="a00082.html">flatten</a></li><li class="navelem"><a class="el" href="a01187.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00074.html">lintcode</a></li><li class="navelem"><a class="el" href="a00080.html">judge_circle</a></li><li class="navelem"><a class="el" href="a01187.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="a01184.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">lintcode::flatten::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">lintcode::judge_circle::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -78,17 +78,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:aedc263192dcb5c383893c3a93646cbb6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01187.html#aedc263192dcb5c383893c3a93646cbb6">flatten</a> (<a class="el" href="a01155.html">TreeNode</a> *root)</td></tr>
-<tr class="separator:aedc263192dcb5c383893c3a93646cbb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47f082993860ad08aacec0864e34cf80"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a01155.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01187.html#a47f082993860ad08aacec0864e34cf80">vlr</a> (<a class="el" href="a01155.html">TreeNode</a> *)</td></tr>
-<tr class="separator:a47f082993860ad08aacec0864e34cf80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ef53a28bd3fe0b90d3eed6fd9ad125d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01187.html#a9ef53a28bd3fe0b90d3eed6fd9ad125d">judgeCircle</a> (string &amp;moves)</td></tr>
+<tr class="separator:a9ef53a28bd3fe0b90d3eed6fd9ad125d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="a00008_source.html">lintcode.h</a> 第 <a class="el" href="a00008_source.html#l00118">118</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00008_source.html">lintcode.h</a> 第 <a class="el" href="a00008_source.html#l00089">89</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="aedc263192dcb5c383893c3a93646cbb6" name="aedc263192dcb5c383893c3a93646cbb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedc263192dcb5c383893c3a93646cbb6">&#9670;&nbsp;</a></span>flatten()</h2>
+<a id="a9ef53a28bd3fe0b90d3eed6fd9ad125d" name="a9ef53a28bd3fe0b90d3eed6fd9ad125d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ef53a28bd3fe0b90d3eed6fd9ad125d">&#9670;&nbsp;</a></span>judgeCircle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -97,10 +95,10 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void lintcode::flatten::Solution::flatten </td>
+          <td class="memname">bool lintcode::judge_circle::Solution::judgeCircle </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a01155.html">TreeNode</a> *&#160;</td>
-          <td class="paramname"><em>root</em></td><td>)</td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>moves</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -112,76 +110,33 @@ $(function() {
 </div><div class="memdoc">
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">root</td><td>a <a class="el" href="a01155.html">TreeNode</a>, the root of the binary tree </td></tr>
+    <tr><td class="paramname">moves</td><td>a sequence of its moves </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>: nothing </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>: if this robot makes a circle </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="a00026_source.html">lintcode.cpp</a> 第 <a class="el" href="a00026_source.html#l00153">153</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                                             {</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            <span class="keywordflow">if</span>(root == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            }</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            root = <a class="code hl_function" href="a01187.html#a47f082993860ad08aacec0864e34cf80">vlr</a>(root);</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        }</div>
-<div class="ttc" id="aa01187_html_a47f082993860ad08aacec0864e34cf80"><div class="ttname"><a href="a01187.html#a47f082993860ad08aacec0864e34cf80">lintcode::flatten::Solution::vlr</a></div><div class="ttdeci">static TreeNode * vlr(TreeNode *)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00160">lintcode.cpp:160</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00026_source.html">lintcode.cpp</a> 第 <a class="el" href="a00026_source.html#l00110">110</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                                                {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordtype">int</span> x = 0;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordtype">int</span> y = 0;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: moves) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                <span class="keywordflow">switch</span>(ch) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;R&#39;</span>: x--;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;L&#39;</span>: x++;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;U&#39;</span>: y--;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>: y++;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                    <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keywordflow">return</span> x == 0 &amp;&amp; y == 0;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="a00026_source.html#l00160">vlr()</a>.</p>
-
-</div>
-</div>
-<a id="a47f082993860ad08aacec0864e34cf80" name="a47f082993860ad08aacec0864e34cf80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47f082993860ad08aacec0864e34cf80">&#9670;&nbsp;</a></span>vlr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01155.html">TreeNode</a> * lintcode::flatten::Solution::vlr </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01155.html">TreeNode</a> *&#160;</td>
-          <td class="paramname"><em>node</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="a00026_source.html">lintcode.cpp</a> 第 <a class="el" href="a00026_source.html#l00160">160</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                                              {</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <span class="keywordflow">if</span>(node-&gt;left != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                <span class="keywordflow">if</span>(node-&gt;right != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                    <span class="keyword">auto</span> tmp = node-&gt;right;</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                    node-&gt;right = <a class="code hl_function" href="a01187.html#a47f082993860ad08aacec0864e34cf80">vlr</a>(node-&gt;left);</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                    <span class="keyword">auto</span> current = node-&gt;right;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                    <span class="keywordflow">while</span>(current-&gt;right != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                        current = current-&gt;right;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                    }</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                    current-&gt;right = <a class="code hl_function" href="a01187.html#a47f082993860ad08aacec0864e34cf80">vlr</a>(tmp);</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                    node-&gt;left = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                    node-&gt;right = <a class="code hl_function" href="a01187.html#a47f082993860ad08aacec0864e34cf80">vlr</a>(node-&gt;left);</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                    node-&gt;left = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                }</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                <span class="keywordflow">if</span>(node-&gt;right != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                    node-&gt;right = <a class="code hl_function" href="a01187.html#a47f082993860ad08aacec0864e34cf80">vlr</a>(node-&gt;right);</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                }</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            }</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            <span class="keywordflow">return</span> node;</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="a00008_source.html#l00017">lintcode::TreeNode::left</a>, <a class="el" href="a00008_source.html#l00017">lintcode::TreeNode::right</a> , 以及 <a class="el" href="a00026_source.html#l00160">vlr()</a>.</p>
-
-<p class="reference">被这些函数引用 <a class="el" href="a00026_source.html#l00153">flatten()</a> , 以及 <a class="el" href="a00026_source.html#l00160">vlr()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="a00017_source.html#l00068">lintcode::judge_circle::TEST()</a>.</p>
 
 </div>
 </div>

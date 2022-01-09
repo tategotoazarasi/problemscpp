@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['removeextra_0',['removeExtra',['../a01167.html#aa0e49e4d04ff089fe090aaf88dd3a96a',1,'lintcode::remove_extra::Solution']]]
+  ['removeextra_0',['removeExtra',['../a01175.html#aa0e49e4d04ff089fe090aaf88dd3a96a',1,'lintcode::remove_extra::Solution']]]
 ];

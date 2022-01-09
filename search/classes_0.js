@@ -31,5 +31,7 @@ var searchData=
   ['acwing617_28',['acwing617',['../a01019.html',1,'acwing']]],
   ['acwing618_29',['acwing618',['../a01023.html',1,'acwing']]],
   ['acwing653_30',['acwing653',['../a00935.html',1,'acwing']]],
-  ['acwing654_31',['acwing654',['../a00951.html',1,'acwing']]]
+  ['acwing654_31',['acwing654',['../a00951.html',1,'acwing']]],
+  ['acwing655_32',['acwing655',['../a01051.html',1,'acwing']]],
+  ['acwing656_33',['acwing656',['../a01047.html',1,'acwing']]]
 ];

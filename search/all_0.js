@@ -35,6 +35,8 @@ var searchData=
   ['acwing618_32',['acwing618',['../a01023.html',1,'acwing']]],
   ['acwing653_33',['acwing653',['../a00935.html',1,'acwing']]],
   ['acwing654_34',['acwing654',['../a00951.html',1,'acwing']]],
-  ['acwing_5ftest_2ecpp_35',['acwing_test.cpp',['../a00035.html',1,'']]],
-  ['asteroidsdestroyed_36',['asteroidsDestroyed',['../a01107.html#afb9382d1c309a7974aea07a0cd04f637',1,'leetcode::destroying_asteroids::Solution']]]
+  ['acwing655_35',['acwing655',['../a01051.html',1,'acwing']]],
+  ['acwing656_36',['acwing656',['../a01047.html',1,'acwing']]],
+  ['acwing_5ftest_2ecpp_37',['acwing_test.cpp',['../a00035.html',1,'']]],
+  ['asteroidsdestroyed_38',['asteroidsDestroyed',['../a01115.html#afb9382d1c309a7974aea07a0cd04f637',1,'leetcode::destroying_asteroids::Solution']]]
 ];
