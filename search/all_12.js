@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_0',['y',['../a00962.html#a7cc1ae7bbad61542a27009eea419fecf',1,'acwing::acwing2060::point::y()'],['../a00974.html#a907203fb6ce188e3e52f7d22b989f832',1,'acwing::acwing2019::point::y()']]]
+  ['x_0',['x',['../a00965.html#a858de27a9ad7db2ce745e880b56299a6',1,'acwing::acwing2060::point::x()'],['../a00977.html#acaa459e164175cdbde974462ea6cf4a8',1,'acwing::acwing2019::point::x()']]]
 ];

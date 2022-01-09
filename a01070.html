@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::perfect_number::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,75 +63,18 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00049.html">leetcode</a></li><li class="navelem"><a class="el" href="a00056.html">perfect_number</a></li><li class="navelem"><a class="el" href="a01070.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00049.html">leetcode</a></li><li class="navelem"><a class="el" href="a00056.html">perfect_number</a></li><li class="navelem"><a class="el" href="a01073.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="a01067.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::perfect_number::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::perfect_number::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00020_source.html">leetcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a522b7fa3e9a211955b718fdd02e6fc36"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01070.html#a522b7fa3e9a211955b718fdd02e6fc36">checkPerfectNumber</a> (int num)</td></tr>
-<tr class="separator:a522b7fa3e9a211955b718fdd02e6fc36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="a00020_source.html">leetcode.h</a> 第 <a class="el" href="a00020_source.html#l00100">100</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="a522b7fa3e9a211955b718fdd02e6fc36" name="a522b7fa3e9a211955b718fdd02e6fc36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a522b7fa3e9a211955b718fdd02e6fc36">&#9670;&nbsp;</a></span>checkPerfectNumber()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool leetcode::perfect_number::Solution::checkPerfectNumber </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>num</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="a00029_source.html">leetcode.cpp</a> 第 <a class="el" href="a00029_source.html#l00168">168</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                                                 {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <span class="keywordtype">int</span> max = num;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; max; i++) {</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                <span class="keywordflow">if</span>(num % i == 0) {</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                    sum += i;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                    <span class="keywordflow">if</span>(i != 1) { sum += num / i; }</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                    max = num / i;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                }</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            }</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <span class="keywordflow">return</span> sum == num;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="a00032_source.html#l00165">leetcode::perfect_number::TEST()</a>.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="a00020_source.html">leetcode.h</a></li>
-<li><a class="el" href="a00029_source.html">leetcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="a01073.html">leetcode::perfect_number::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="a01073.html#a522b7fa3e9a211955b718fdd02e6fc36">checkPerfectNumber</a>(int num)</td><td class="entry"><a class="el" href="a01073.html">leetcode::perfect_number::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
