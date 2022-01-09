@@ -11,6 +11,7 @@
 #include <sstream>
 #include <stack>
 #include <unordered_set>
+#include <set>
 
 using namespace std;
 
@@ -82,7 +83,9 @@ namespace leetcode {
 		int Solution::titleToNumber(const std::string &columnTitle) {
 			int sum = 0;
 			int length = static_cast<int>(columnTitle.length());
-			for(char c: columnTitle) { sum += static_cast<int>(static_cast<double>(c - 'A' + 1) * pow(26, length-- - 1)); }
+			for(char c: columnTitle) {
+				sum += static_cast<int>(static_cast<double>(c - 'A' + 1) * pow(26, length-- - 1));
+			}
 			return sum;
 		}
 	}// namespace excel_sheet_column_number
@@ -392,8 +395,8 @@ namespace leetcode {
 	 */
 	namespace day_of_the_week {
 		string Solution::dayOfTheWeek(int day, int month, int year) {
-			const string output[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-			const int dayofmonths[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+			const string output[] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+			const int dayofmonths[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 			int count = 5;
 			count += (year - 1971) * 365;
 			count += (year - 1) / 4 - 1970 / 4;
@@ -415,7 +418,10 @@ namespace leetcode {
 
 		int Solution::getResult(int mouse, int cat, int turns) {
 			if(turns == n * 2) { return DRAW; }
-			if(dp[mouse][cat][turns] < 0) { if(mouse == 0) { dp[mouse][cat][turns] = MOUSE_WIN; } else if(cat == mouse) { dp[mouse][cat][turns] = CAT_WIN; } else { getNextResult(mouse, cat, turns); } }
+			if(dp[mouse][cat][turns] < 0) {
+				if(mouse == 0) { dp[mouse][cat][turns] = MOUSE_WIN; }
+				else if(cat == mouse) { dp[mouse][cat][turns] = CAT_WIN; } else { getNextResult(mouse, cat, turns); }
+			}
 			return dp[mouse][cat][turns];
 		}
 
@@ -474,7 +480,8 @@ namespace leetcode {
 				next = strtok(nullptr, "/");
 			}
 			auto oss = ostringstream();
-			if(stck.empty()) { oss << '/'; } else {
+			if(stck.empty()) { oss << '/'; }
+			else {
 				while(!stck.empty()) {
 					auto pname = stck.front();
 					oss << '/' << pname;
@@ -505,4 +512,98 @@ namespace leetcode {
 			return ret;
 		}
 	}// namespace gray_code
+
+	namespace check_if_every_row_and_column_contains_all_numbers {
+		bool Solution::checkValid(vector<vector<int>> &matrix) {
+			unsigned int n = matrix.size();
+			for(int i = 0; i < n; i++) {
+				bool *row = new bool[n + 1];
+				memset(row, true, (n + 1) * sizeof(bool));
+				for(int j = 0; j < n; j++) {
+					if(!row[matrix[i][j]]) {
+						return false;
+					}
+					row[matrix[i][j]] = false;
+				}
+				delete[] row;
+			}
+
+			for(int j = 0; j < n; j++) {
+				bool *column = new bool[n + 1];
+				memset(column, true, (n + 1) * sizeof(bool));
+				for(int i = 0; i < n; i++) {
+					if(!column[matrix[i][j]]) {
+						return false;
+					}
+					column[matrix[i][j]] = false;
+				}
+				delete[] column;
+			}
+			return true;
+		}
+	}
+
+	namespace minimum_swaps_to_group_all_1s_together_ii {
+		int Solution::minSwaps(vector<int> &nums) {
+			int onecount = 0;
+			for(int i = 0; i < nums.size(); i++) {
+				if(nums[i] == 1) {
+					onecount++;
+				}
+			}
+			if(onecount == 0) {
+				return 0;
+			}
+
+			int zerocount = 0;
+			for(int i = 0; i < onecount; i++) {
+				if(nums[i] == 0) {
+					zerocount++;
+				}
+			}
+			int min = zerocount;
+
+			for(int i = 0; i < nums.size(); i++) {
+				if(nums[i] == 0) {
+					zerocount--;
+				}
+				if(nums[(onecount + i) % nums.size()] == 0) {
+					zerocount++;
+				}
+				if(zerocount < min) {
+					min = zerocount;
+				}
+			}
+			return min;
+		}
+	}
+
+	namespace count_words_obtained_after_adding_a_letter {
+		int Solution::wordCount(vector<string> &startWords,
+		                        vector<string> &targetWords) {
+			set<int> c = set<int>();
+			int n = startWords.size();
+			for(int i = 0; i < n; i++) {
+				int m = startWords[i].size(), s = 0;
+				for(int j = 0; j < m; j++)
+					s |= (1 << (startWords[i][j] - 'a'));
+				c.insert(s);
+			}
+			n = targetWords.size();
+			int ans = 0;
+			for(int i = 0; i < n; i++) {
+				int m = targetWords[i].size(), s = 0;
+				for(int j = 0; j < m; j++)
+					s |= (1 << (targetWords[i][j] - 'a'));
+				bool ok = false;
+				for(int i = 0; i < 26 && !ok; i++)
+					if(s & (1 << i))
+						if(c.find(s - (1 << i)) != c.end())
+							ok = true;
+				if(ok)
+					++ans;
+			}
+			return ans;
+		}
+	}
 }    // namespace leetcode

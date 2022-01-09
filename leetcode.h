@@ -18,13 +18,13 @@ namespace leetcode {
 		TreeNode *right;
 
 		TreeNode()
-			: val(0), left(nullptr), right(nullptr) { }
+				: val(0), left(nullptr), right(nullptr) {}
 
 		explicit TreeNode(int x)
-			: val(x), left(nullptr), right(nullptr) { }
+				: val(x), left(nullptr), right(nullptr) {}
 
 		TreeNode(int x, TreeNode *left, TreeNode *right)
-			: val(x), left(left), right(right) { }
+				: val(x), left(left), right(right) {}
 
 		bool operator==(const TreeNode &) const;
 
@@ -112,8 +112,8 @@ namespace leetcode {
 			TreeNode *friend_node;
 
 			explicit FriendTreeNode(int x, TreeNode *friend_node)
-				: sum(x), val(0), left(nullptr), right(nullptr),
-				  friend_node(friend_node) { }
+					: sum(x), val(0), left(nullptr), right(nullptr),
+					  friend_node(friend_node) {}
 		};
 
 		class Solution {
@@ -237,6 +237,30 @@ namespace leetcode {
 		class Solution {
 		public:
 			static vector<int> grayCode(int n);
+		};
+	}
+
+	/// \brief LeetCode 5976. 检查是否每一行每一列都包含全部整数
+	namespace check_if_every_row_and_column_contains_all_numbers {
+		class Solution {
+		public:
+			static bool checkValid(vector<vector<int>> &matrix);
+		};
+	}
+
+	/// \brief LeetCode 5977. 最少交换次数来组合所有的 1 II
+	namespace minimum_swaps_to_group_all_1s_together_ii {
+		class Solution {
+		public:
+			static int minSwaps(vector<int> &nums);
+		};
+	}
+
+	/// \brief LeetCode 5978. 统计追加字母可以获得的单词数
+	namespace count_words_obtained_after_adding_a_letter {
+		class Solution {
+		public:
+			static int wordCount(vector<string> &startWords, vector<string> &targetWords);
 		};
 	}
 };

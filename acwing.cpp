@@ -111,7 +111,7 @@ namespace acwing {
 		int n;
 		cin >> n;
 		cout << n << endl;
-		int arr[] = {100, 50, 20, 10, 5, 2, 1};
+		int arr[] = { 100, 50, 20, 10, 5, 2, 1 };
 		for(int i: arr) {
 			cout << n / i << " nota(s) de R$ " << i << ",00";
 			if(i != 1) { cout << endl; }
@@ -297,8 +297,8 @@ namespace acwing {
 			while(true) {
 				for(auto p: edge) {
 					point nexts[] = {
-					        point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1),
-					        point(p.x, p.y - 1)};
+							point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1),
+							point(p.x, p.y - 1) };
 					for(auto next: nexts) {
 						if(0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && !occupy[next.x][next.y]) {
 							if(cowhide[next.x][next.y] == 'X') {
@@ -335,7 +335,7 @@ namespace acwing {
 					continue;
 				}
 				occupy[p.x][p.y] = true;
-				point nexts[] = {point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1), point(p.x, p.y - 1)};
+				point nexts[] = { point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1), point(p.x, p.y - 1) };
 				for(auto next: nexts) {
 					if(0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && !occupy[next.x][next.y]) {
 						if(cowhide[next.x][next.y] == 'X') {
@@ -383,8 +383,8 @@ namespace acwing {
 				auto p = que.front();
 				que.pop_front();
 				point nexts[] = {
-				        point(p.x + 1, p.y, p.step), point(p.x - 1, p.y, p.step),
-				        point(p.x, p.y + 1, p.step), point(p.x, p.y - 1, p.step)};
+						point(p.x + 1, p.y, p.step), point(p.x - 1, p.y, p.step),
+						point(p.x, p.y + 1, p.step), point(p.x, p.y - 1, p.step) };
 				for(auto next: nexts) {
 					if(next.x == 0 && next.y == 0) { return next.step; }
 					if(0 <= next.x && next.x <= max_x + 2 && 0 <= next.y && next.y <= max_y + 2 &&
@@ -512,8 +512,8 @@ namespace acwing {
 			return count;
 		}
 
-		pair<int, int> nexts[4] = {pair<int, int>(x - 1, y), pair<int, int>(x + 1, y), pair<int, int>(x, y - 1),
-		                           pair<int, int>(x, y + 1)};
+		pair<int, int> nexts[4] = { pair<int, int>(x - 1, y), pair<int, int>(x + 1, y), pair<int, int>(x, y - 1),
+		                            pair<int, int>(x, y + 1) };
 		//复制状态
 		bool picked_cpy[5][5];
 		memcpy(picked_cpy, picked, sizeof picked_cpy);

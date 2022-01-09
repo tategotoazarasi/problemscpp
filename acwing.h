@@ -118,7 +118,7 @@ namespace acwing {
 			point() = default;
 
 			point(int x, int y)
-			    : x(x), y(y){};
+					: x(x), y(y) {};
 		};
 
 		struct pointhash {
@@ -144,7 +144,7 @@ namespace acwing {
 			int step;
 
 			point(int x, int y, int step)
-			    : x(x), y(y), step(step){};
+					: x(x), y(y), step(step) {};
 		};
 
 		int bfs(point, int **, int, int);
@@ -280,7 +280,7 @@ namespace acwing {
 			trie_node *nexts[10]{};
 
 			trie_node(int val, trie_node *father)
-			    : val(val), father(father){};
+					: val(val), father(father) {};
 
 			/**
 			 * \brief 反向插入

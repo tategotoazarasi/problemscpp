@@ -21,7 +21,10 @@ namespace lintcode {
 			for(char c: S) {
 				if(isalnum(c)) {
 					len++;
-					if(isdigit(c) || isupper(c)) { S2 << c; } else if(islower(c)) { S2 << static_cast<char>(toupper(c)); }
+					if(isdigit(c) || isupper(c)) { S2 << c; }
+					else if(islower(c)) {
+						S2 << static_cast<char>(toupper(c));
+					}
 				}
 			}
 			string str = S2.str();
@@ -129,7 +132,7 @@ namespace lintcode {
 			vector<vector<int>> res;
 			if(a.empty() || b.empty()) return res;
 			for(int i = 0, j = 0; i < a.size() && j < b.size();) {
-				if(is_intersected(a[i], b[j])) res.emplace_back(vector<int>({i, j}));
+				if(is_intersected(a[i], b[j])) res.emplace_back(vector<int>({ i, j }));
 				if(a[i][1] == b[j][1]) {
 					++i;
 					++j;
