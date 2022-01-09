@@ -148,4 +148,36 @@ namespace lintcode {
 			return l[0] <= r[1];
 		}
 	}
+
+	namespace flatten {
+		void Solution::flatten(TreeNode *root) {
+			if(root == nullptr) {
+				return;
+			}
+			root = vlr(root);
+		}
+
+		TreeNode *Solution::vlr(TreeNode *node) {
+			if(node->left != nullptr) {
+				if(node->right != nullptr) {
+					auto tmp = node->right;
+					node->right = vlr(node->left);
+					auto current = node->right;
+					while(current->right != nullptr) {
+						current = current->right;
+					}
+					current->right = vlr(tmp);
+					node->left = nullptr;
+				} else {
+					node->right = vlr(node->left);
+					node->left = nullptr;
+				}
+			} else {
+				if(node->right != nullptr) {
+					node->right = vlr(node->right);
+				}
+			}
+			return node;
+		}
+	}
 }

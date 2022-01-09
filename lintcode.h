@@ -11,6 +11,14 @@
 using namespace std;
 
 namespace lintcode {
+	class TreeNode {
+	public:
+		int val;
+		TreeNode *left, *right;
+
+		explicit TreeNode(int val): val(val), left(nullptr), right(nullptr) {};
+	};
+
 	namespace license_key_formatting {
 		class Solution {
 		public:
@@ -104,6 +112,20 @@ namespace lintcode {
 			static bool is_intersected(const vector<int> &l, const vector<int> &r);
 		};
 	}// namespace intersection
+
+	/// \brief LintCode 453. 将二叉树拆成链表
+	namespace flatten {
+		class Solution {
+		public:
+			/**
+			 * @param root: a TreeNode, the root of the binary tree
+			 * @return: nothing
+			 */
+			static void flatten(TreeNode *root);
+
+			static TreeNode *vlr(TreeNode *);
+		};
+	}
 }    // namespace lintcode
 
 #endif//PROBLEMSCPP_LINTCODE_H
