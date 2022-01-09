@@ -313,5 +313,11 @@ namespace acwing {
 
 		static bool cmp(char x, char y);
 	};
+
+	/// \brief AcWing 656. 钞票和硬币
+	class acwing656 {
+	public:
+		static int main(istream &, ostream &);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

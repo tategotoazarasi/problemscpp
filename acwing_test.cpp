@@ -519,4 +519,25 @@ namespace acwing {
 		          "4 4\n"
 		          "2 3\n", ans);
 	}
+
+	TEST(acwing656, case1) {
+		istringstream in("576.73");
+		auto out = ostringstream();
+		acwing656::main(in, out);
+		auto ans = out.str();
+		ASSERT_EQ("NOTAS:\n"
+		          "5 nota(s) de R$ 100.00\n"
+		          "1 nota(s) de R$ 50.00\n"
+		          "1 nota(s) de R$ 20.00\n"
+		          "0 nota(s) de R$ 10.00\n"
+		          "1 nota(s) de R$ 5.00\n"
+		          "0 nota(s) de R$ 2.00\n"
+		          "MOEDAS:\n"
+		          "1 moeda(s) de R$ 1.00\n"
+		          "1 moeda(s) de R$ 0.50\n"
+		          "0 moeda(s) de R$ 0.25\n"
+		          "2 moeda(s) de R$ 0.10\n"
+		          "0 moeda(s) de R$ 0.05\n"
+		          "3 moeda(s) de R$ 0.01", ans);
+	}
 }

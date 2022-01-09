@@ -721,4 +721,31 @@ namespace acwing {
 	bool acwing1996::cmp(char x, char y) {
 		return x > y;
 	}
+
+	int acwing656::main(istream &cin, ostream &cout) {
+		double n;
+		cin >> n;
+		int total = int(n * double(100));
+		int denominations[] = { 10000, 5000, 2000, 1000, 500, 200, 100, 50, 25, 10, 5, 1 };
+		int count[12];
+		for(int i = 0; i < 12; i++) {
+			count[i] = total / denominations[i];
+			total %= denominations[i];
+		}
+		cout << "NOTAS:" << endl
+		     << count[0] << " nota(s) de R$ 100.00" << endl
+		     << count[1] << " nota(s) de R$ 50.00" << endl
+		     << count[2] << " nota(s) de R$ 20.00" << endl
+		     << count[3] << " nota(s) de R$ 10.00" << endl
+		     << count[4] << " nota(s) de R$ 5.00" << endl
+		     << count[5] << " nota(s) de R$ 2.00" << endl
+		     << "MOEDAS:" << endl
+		     << count[6] << " moeda(s) de R$ 1.00" << endl
+		     << count[7] << " moeda(s) de R$ 0.50" << endl
+		     << count[8] << " moeda(s) de R$ 0.25" << endl
+		     << count[9] << " moeda(s) de R$ 0.10" << endl
+		     << count[10] << " moeda(s) de R$ 0.05" << endl
+		     << count[11] << " moeda(s) de R$ 0.01";
+		return 0;
+	}
 }// namespace acwing
