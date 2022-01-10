@@ -567,4 +567,12 @@ namespace acwing {
 		auto ans = out.str();
 		ASSERT_EQ("Sao Multiplos", ans);
 	}
+
+	TEST(acwing657,case1) {
+		istringstream in("5 6 7 8");
+		auto out = ostringstream();
+		acwing657::main(in, out);
+		auto ans = out.str();
+		ASSERT_EQ("Valores nao aceitos", ans);
+	}
 }// namespace acwing

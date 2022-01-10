@@ -333,5 +333,13 @@ namespace acwing {
 	public:
 		static int main(istream &, ostream &);
 	};
+
+	/**
+	 * \brief AcWing 657. 选择练习1
+	 */
+	class acwing657 {
+	public:
+		static int main(istream &, ostream &);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

@@ -88,7 +88,7 @@ namespace acwing {
 		double b, c;
 		cin >> a >> b >> c;
 		cout << "NUMBER = " << a << endl
-				<< "SALARY = U$ " << setiosflags(ios::fixed) << setprecision(2) << b * c;
+		     << "SALARY = U$ " << setiosflags(ios::fixed) << setprecision(2) << b * c;
 		return 0;
 	}
 
@@ -284,7 +284,9 @@ namespace acwing {
 						occupy[i][j] = true;
 						first = point(i, j);
 						flag = false;
-					} else { occupy[i][j] = false; }
+					} else {
+						occupy[i][j] = false;
+					}
 				}
 			}
 
@@ -295,8 +297,8 @@ namespace acwing {
 			while(true) {
 				for(auto p: edge) {
 					point nexts[] = {
-							point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1),
-							point(p.x, p.y - 1)};
+					        point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1),
+					        point(p.x, p.y - 1)};
 					for(auto next: nexts) {
 						if(0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && !occupy[next.x][next.y]) {
 							if(cowhide[next.x][next.y] == 'X') {
@@ -334,7 +336,15 @@ namespace acwing {
 				}
 				occupy[p.x][p.y] = true;
 				point nexts[] = {point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1), point(p.x, p.y - 1)};
-				for(auto next: nexts) { if(0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && !occupy[next.x][next.y]) { if(cowhide[next.x][next.y] == 'X') { que.push(next); } else { edge->insert(p); } } }
+				for(auto next: nexts) {
+					if(0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && !occupy[next.x][next.y]) {
+						if(cowhide[next.x][next.y] == 'X') {
+							que.push(next);
+						} else {
+							edge->insert(p);
+						}
+					}
+				}
 				que.pop();
 			}
 		}
@@ -373,13 +383,15 @@ namespace acwing {
 				auto p = que.front();
 				que.pop_front();
 				point nexts[] = {
-						point(p.x + 1, p.y, p.step), point(p.x - 1, p.y, p.step),
-						point(p.x, p.y + 1, p.step), point(p.x, p.y - 1, p.step)};
+				        point(p.x + 1, p.y, p.step), point(p.x - 1, p.y, p.step),
+				        point(p.x, p.y + 1, p.step), point(p.x, p.y - 1, p.step)};
 				for(auto next: nexts) {
 					if(next.x == 0 && next.y == 0) { return next.step; }
 					if(0 <= next.x && next.x <= max_x + 2 && 0 <= next.y && next.y <= max_y + 2 &&
 					   field[next.x][next.y] != 2) {
-						if(field[next.x][next.y] == 0) { que.push_front(next); } else {
+						if(field[next.x][next.y] == 0) {
+							que.push_front(next);
+						} else {
 							//field[nexts.first][nexts.second]==1
 							next.step++;
 							que.push_back(next);
@@ -426,7 +438,15 @@ namespace acwing {
 		for(auto height: heights) {
 			for(auto index: m[height]) {
 				above[index] = false;
-				if(0 < index && index + 1 < n) { if(above[index - 1] && above[index + 1]) { count++; } else if(!above[index - 1] && !above[index + 1]) { count--; } } else if((index == 0 && !above[1]) || (index == n - 1 && !above[n - 2])) { count--; }
+				if(0 < index && index + 1 < n) {
+					if(above[index - 1] && above[index + 1]) {
+						count++;
+					} else if(!above[index - 1] && !above[index + 1]) {
+						count--;
+					}
+				} else if((index == 0 && !above[1]) || (index == n - 1 && !above[n - 2])) {
+					count--;
+				}
 			}
 			if(max < count) { max = count; }
 		}
@@ -473,7 +493,9 @@ namespace acwing {
 		bool picked[5][5];
 		int n;
 		cin >> n;
-		for(int i = 0; i < n; i++) { for(int j = 0; j < n; j++) { cin >> horseshoes[i][j]; } }
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < n; j++) { cin >> horseshoes[i][j]; }
+		}
 		memset(picked, false, sizeof picked);
 		if(horseshoes[0][0] == ')') {
 			cout << 0;
@@ -503,7 +525,13 @@ namespace acwing {
 			if(0 <= next.first && next.first < n && 0 <= next.second && next.second < n &&
 			   !picked_cpy[next.first][next.second]) {
 				int res = 0;
-				if(stage && horseshoes[next.first][next.second] == '(') { res = dfs(true, horseshoes, picked_cpy, count + 1, level + 1, next.first, next.second, n); } else if(stage && horseshoes[next.first][next.second] == ')') { res = dfs(false, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n); } else if(!stage && horseshoes[next.first][next.second] == ')') { res = dfs(false, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n); }
+				if(stage && horseshoes[next.first][next.second] == '(') {
+					res = dfs(true, horseshoes, picked_cpy, count + 1, level + 1, next.first, next.second, n);
+				} else if(stage && horseshoes[next.first][next.second] == ')') {
+					res = dfs(false, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n);
+				} else if(!stage && horseshoes[next.first][next.second] == ')') {
+					res = dfs(false, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n);
+				}
 				if(max < res) { max = res; }
 			}
 		}
@@ -528,8 +556,14 @@ namespace acwing {
 		string str;
 		cin >> str;
 		int count = 0;
-		for(char ch: str) { if(ch == '4' || ch == '7') { count++; } }
-		if(count == 4 || count == 7) { cout << "YES"; } else { cout << "NO"; }
+		for(char ch: str) {
+			if(ch == '4' || ch == '7') { count++; }
+		}
+		if(count == 4 || count == 7) {
+			cout << "YES";
+		} else {
+			cout << "NO";
+		}
 		return 0;
 	}
 
@@ -559,7 +593,9 @@ namespace acwing {
 					}
 				}
 				if(in_sub[prev_left]) { prev_left = -1; }
-			} else if(prev_left == -1 && str[i] == '(') { prev_left = i; }
+			} else if(prev_left == -1 && str[i] == '(') {
+				prev_left = i;
+			}
 		}
 		cout << count;
 		return 0;
@@ -674,10 +710,10 @@ namespace acwing {
 			auto min_name = min_names[i];
 			auto max_name = max_names[i];
 			cout << lower_bound(max_names_sorted.begin(), max_names_sorted.end(), min_name) - max_names_sorted.begin() +
-					1
-					<< " "
-					<< upper_bound(min_names_sorted.begin(), min_names_sorted.end(), max_name) - min_names_sorted.begin()
-					<< endl;
+			                1
+			     << " "
+			     << upper_bound(min_names_sorted.begin(), min_names_sorted.end(), max_name) - min_names_sorted.begin()
+			     << endl;
 		}
 		return 0;
 	}
@@ -695,19 +731,19 @@ namespace acwing {
 			total %= denominations[i];
 		}
 		cout << "NOTAS:" << endl
-				<< count[0] << " nota(s) de R$ 100.00" << endl
-				<< count[1] << " nota(s) de R$ 50.00" << endl
-				<< count[2] << " nota(s) de R$ 20.00" << endl
-				<< count[3] << " nota(s) de R$ 10.00" << endl
-				<< count[4] << " nota(s) de R$ 5.00" << endl
-				<< count[5] << " nota(s) de R$ 2.00" << endl
-				<< "MOEDAS:" << endl
-				<< count[6] << " moeda(s) de R$ 1.00" << endl
-				<< count[7] << " moeda(s) de R$ 0.50" << endl
-				<< count[8] << " moeda(s) de R$ 0.25" << endl
-				<< count[9] << " moeda(s) de R$ 0.10" << endl
-				<< count[10] << " moeda(s) de R$ 0.05" << endl
-				<< count[11] << " moeda(s) de R$ 0.01";
+		     << count[0] << " nota(s) de R$ 100.00" << endl
+		     << count[1] << " nota(s) de R$ 50.00" << endl
+		     << count[2] << " nota(s) de R$ 20.00" << endl
+		     << count[3] << " nota(s) de R$ 10.00" << endl
+		     << count[4] << " nota(s) de R$ 5.00" << endl
+		     << count[5] << " nota(s) de R$ 2.00" << endl
+		     << "MOEDAS:" << endl
+		     << count[6] << " moeda(s) de R$ 1.00" << endl
+		     << count[7] << " moeda(s) de R$ 0.50" << endl
+		     << count[8] << " moeda(s) de R$ 0.25" << endl
+		     << count[9] << " moeda(s) de R$ 0.10" << endl
+		     << count[10] << " moeda(s) de R$ 0.05" << endl
+		     << count[11] << " moeda(s) de R$ 0.01";
 		return 0;
 	}
 
@@ -725,10 +761,21 @@ namespace acwing {
 	int acwing665::main(istream &cin, ostream &cout) {
 		int a, b;
 		cin >> a >> b;
-		if(a%b==0 || b%a==0) {
+		if(a % b == 0 || b % a == 0) {
 			cout << "Sao Multiplos";
-		}else {
+		} else {
 			cout << "Nao sao Multiplos";
+		}
+		return 0;
+	}
+
+	int acwing657::main(istream &cin, ostream &cout) {
+		int a, b, c, d;
+		cin >> a >> b >> c >> d;
+		if(b > c && d > a && c + d > a + b && c > 0 && d > 0 && a % 2 == 0) {
+			cout << "Valores aceitos";
+		} else {
+			cout << "Valores nao aceitos";
 		}
 		return 0;
 	}
