@@ -4,10 +4,10 @@
 
 #include "lintcode.h"
 
-#include <string>
-#include <sstream>
 #include <map>
 #include <set>
+#include <sstream>
+#include <string>
 #include <unordered_set>
 
 using namespace std;
@@ -21,10 +21,7 @@ namespace lintcode {
 			for(char c: S) {
 				if(isalnum(c)) {
 					len++;
-					if(isdigit(c) || isupper(c)) { S2 << c; }
-					else if(islower(c)) {
-						S2 << static_cast<char>(toupper(c));
-					}
+					if(isdigit(c) || isupper(c)) { S2 << c; } else if(islower(c)) { S2 << static_cast<char>(toupper(c)); }
 				}
 			}
 			string str = S2.str();
@@ -43,7 +40,7 @@ namespace lintcode {
 			}
 			return output.str();
 		}
-	}
+	}// namespace license_key_formatting
 
 	namespace distribute_candies {
 		int Solution::distributeCandies(vector<int> &candies) {
@@ -67,7 +64,7 @@ namespace lintcode {
 			}
 			return static_cast<int>(ans.size());
 		}
-	}
+	}// namespace distribute_candies
 
 	namespace remove_extra {
 		string Solution::removeExtra(string &s) {
@@ -84,7 +81,7 @@ namespace lintcode {
 			}
 			return output.str();
 		}
-	}
+	}// namespace remove_extra
 
 	namespace fibonacci {
 		int Solution::fibonacci(int n) {
@@ -94,7 +91,7 @@ namespace lintcode {
 			for(int i = 2; i < n; i++) { arr[i] = arr[i - 1] + arr[i - 2]; }
 			return arr[n - 1];
 		}
-	}
+	}// namespace fibonacci
 
 	namespace character_deletion {
 		string Solution::CharacterDeletion(string &str, string &sub) {
@@ -104,7 +101,7 @@ namespace lintcode {
 			for(auto ch: str) { if(!us.contains(ch)) { oss << ch; } }
 			return oss.str();
 		}
-	}
+	}// namespace character_deletion
 
 	namespace judge_circle {
 		bool Solution::judgeCircle(string &moves) {
@@ -125,14 +122,14 @@ namespace lintcode {
 			}
 			return x == 0 && y == 0;
 		}
-	}
+	}// namespace judge_circle
 
 	namespace intersection {
 		vector<vector<int>> Solution::Intersection(vector<vector<int>> &a, vector<vector<int>> &b) {
 			vector<vector<int>> res;
 			if(a.empty() || b.empty()) return res;
 			for(int i = 0, j = 0; i < a.size() && j < b.size();) {
-				if(is_intersected(a[i], b[j])) res.emplace_back(vector<int>({ i, j }));
+				if(is_intersected(a[i], b[j])) res.emplace_back(vector<int>({i, j}));
 				if(a[i][1] == b[j][1]) {
 					++i;
 					++j;
@@ -147,13 +144,11 @@ namespace lintcode {
 			if(l[0] < r[0]) return r[0] <= l[1];
 			return l[0] <= r[1];
 		}
-	}
+	}// namespace intersection
 
 	namespace flatten {
 		void Solution::flatten(TreeNode *root) {
-			if(root == nullptr) {
-				return;
-			}
+			if(root == nullptr) { return; }
 			root = vlr(root);
 		}
 
@@ -163,21 +158,15 @@ namespace lintcode {
 					auto tmp = node->right;
 					node->right = vlr(node->left);
 					auto current = node->right;
-					while(current->right != nullptr) {
-						current = current->right;
-					}
+					while(current->right != nullptr) { current = current->right; }
 					current->right = vlr(tmp);
 					node->left = nullptr;
 				} else {
 					node->right = vlr(node->left);
 					node->left = nullptr;
 				}
-			} else {
-				if(node->right != nullptr) {
-					node->right = vlr(node->right);
-				}
-			}
+			} else { if(node->right != nullptr) { node->right = vlr(node->right); } }
 			return node;
 		}
-	}
-}
+	}// namespace flatten
+}    // namespace lintcode

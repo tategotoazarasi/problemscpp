@@ -5,9 +5,9 @@
 #ifndef PROBLEMSCPP_LEETCODE_H
 #define PROBLEMSCPP_LEETCODE_H
 
-#include<string>
-#include<vector>
-#include<map>
+#include <map>
+#include <string>
+#include <vector>
 
 using namespace std;
 
@@ -18,13 +18,13 @@ namespace leetcode {
 		TreeNode *right;
 
 		TreeNode()
-				: val(0), left(nullptr), right(nullptr) {}
+			: val(0), left(nullptr), right(nullptr) {}
 
 		explicit TreeNode(int x)
-				: val(x), left(nullptr), right(nullptr) {}
+			: val(x), left(nullptr), right(nullptr) {}
 
 		TreeNode(int x, TreeNode *left, TreeNode *right)
-				: val(x), left(left), right(right) {}
+			: val(x), left(left), right(right) {}
 
 		bool operator==(const TreeNode &) const;
 
@@ -46,8 +46,7 @@ namespace leetcode {
 					nullptr,
 					nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
 					nullptr,
-					nullptr, nullptr, nullptr, nullptr, nullptr, nullptr
-			};
+					nullptr, nullptr, nullptr, nullptr, nullptr, nullptr};
 
 			explicit TrieNode(char);
 
@@ -55,53 +54,54 @@ namespace leetcode {
 
 			bool dfs(TrieNode *, const string &, int, bool);
 		};
-	}
+	}// namespace concatenated_words
 
 	namespace excel_sheet_column_number {
 		class Solution {
 		public:
 			static int titleToNumber(const string &columnTitle);
 		};
-	}
+	}// namespace excel_sheet_column_number
 
 	namespace excel_sheet_column_title {
 		class Solution {
 		public:
 			static string convertToTitle(int columnNumber);
 		};
-	}
+	}// namespace excel_sheet_column_title
 
 	namespace majority_element {
 		class Solution {
 		private:
 			map<int, int> m;
+
 		public:
 			Solution();
 
 			int majorityElement(vector<int> &nums);
 		};
-	}
+	}// namespace majority_element
 
 	namespace count_special_quadruplets {
 		class Solution {
 		public:
 			static int countQuadruplets(vector<int> &);
 		};
-	}
+	}// namespace count_special_quadruplets
 
 	namespace hand_of_straights {
 		class Solution {
 		public:
 			static bool isNStraightHand(vector<int> &hand, int groupSize);
 		};
-	}
+	}// namespace hand_of_straights
 
 	namespace perfect_number {
 		class Solution {
 		public:
 			static bool checkPerfectNumber(int num);
 		};
-	}
+	}// namespace perfect_number
 
 	namespace convert_bst_to_greater_tree {
 		struct FriendTreeNode {
@@ -112,8 +112,8 @@ namespace leetcode {
 			TreeNode *friend_node;
 
 			explicit FriendTreeNode(int x, TreeNode *friend_node)
-					: sum(x), val(0), left(nullptr), right(nullptr),
-					  friend_node(friend_node) {}
+				: sum(x), val(0), left(nullptr), right(nullptr),
+				  friend_node(friend_node) {}
 		};
 
 		class Solution {
@@ -126,28 +126,28 @@ namespace leetcode {
 
 			static void convert(FriendTreeNode *);
 		};
-	}
+	}// namespace convert_bst_to_greater_tree
 
 	namespace convert_1d_array_into_2d_array {
 		class Solution {
 		public:
 			static vector<vector<int>> construct2DArray(vector<int> &original, int m, int n);
 		};
-	}
+	}// namespace convert_1d_array_into_2d_array
 
 	namespace elimination_game {
 		class Solution {
 		public:
 			static int lastRemaining(int);
 		};
-	}
+	}// namespace elimination_game
 
 	namespace check_if_all_as_appears_before_all_bs {
 		class Solution {
 		public:
 			static bool checkString(string);
 		};
-	}
+	}// namespace check_if_all_as_appears_before_all_bs
 
 	namespace number_of_laser_beams_in_a_bank {
 		class Solution {
@@ -156,28 +156,28 @@ namespace leetcode {
 
 			static int deviceCount(const string &);
 		};
-	}
+	}// namespace number_of_laser_beams_in_a_bank
 
 	namespace destroying_asteroids {
 		class Solution {
 		public:
 			static bool asteroidsDestroyed(int mass, vector<int> &asteroids);
 		};
-	}
+	}// namespace destroying_asteroids
 
 	namespace maximum_employees_to_be_invited_to_a_meeting {
 		class Solution {
 		public:
 			static int maximumInvitations(vector<int> &);
 		};
-	}
+	}// namespace maximum_employees_to_be_invited_to_a_meeting
 
 	namespace day_of_the_week {
 		class Solution {
 		public:
 			static string dayOfTheWeek(int day, int month, int year);
 		};
-	}
+	}// namespace day_of_the_week
 
 	/**
 	 * \brief LeetCode 913. 猫和老鼠
@@ -203,14 +203,14 @@ namespace leetcode {
 
 			void getNextResult(int mouse, int cat, int turns);
 		};
-	}
+	}// namespace cat_and_mouse
 
 	namespace replace_all_s_to_avoid_consecutive_repeating_characters {
 		class Solution {
 		public:
 			static string modifyString(string s);
 		};
-	}
+	}// namespace replace_all_s_to_avoid_consecutive_repeating_characters
 
 	/**
 	 * \brief LeetCode 71. 简化路径
@@ -220,7 +220,7 @@ namespace leetcode {
 		public:
 			static string simplifyPath(string path);
 		};
-	}
+	}// namespace simplify_path
 
 	/**
 	 * \brief LeetCode 1614. 括号的最大嵌套深度
@@ -230,7 +230,7 @@ namespace leetcode {
 		public:
 			static int maxDepth(string s);
 		};
-	}
+	}// namespace maximum_nesting_depth_of_the_parentheses
 
 	/// \brief LeetCode 89. 格雷编码
 	namespace gray_code {
@@ -238,7 +238,7 @@ namespace leetcode {
 		public:
 			static vector<int> grayCode(int n);
 		};
-	}
+	}// namespace gray_code
 
 	/// \brief LeetCode 5976. 检查是否每一行每一列都包含全部整数
 	namespace check_if_every_row_and_column_contains_all_numbers {
@@ -246,7 +246,7 @@ namespace leetcode {
 		public:
 			static bool checkValid(vector<vector<int>> &matrix);
 		};
-	}
+	}// namespace check_if_every_row_and_column_contains_all_numbers
 
 	/// \brief LeetCode 5977. 最少交换次数来组合所有的 1 II
 	namespace minimum_swaps_to_group_all_1s_together_ii {
@@ -254,7 +254,7 @@ namespace leetcode {
 		public:
 			static int minSwaps(vector<int> &nums);
 		};
-	}
+	}// namespace minimum_swaps_to_group_all_1s_together_ii
 
 	/// \brief LeetCode 5978. 统计追加字母可以获得的单词数
 	namespace count_words_obtained_after_adding_a_letter {
@@ -264,7 +264,7 @@ namespace leetcode {
 
 			static unsigned int str2bin(const string &);
 		};
-	}
+	}// namespace count_words_obtained_after_adding_a_letter
 
 	/// \brief LeetCode 1629. 按键持续时间最长的键
 	namespace slowest_key {
@@ -272,7 +272,7 @@ namespace leetcode {
 		public:
 			static char slowestKey(vector<int> &releaseTimes, string keysPressed);
 		};
-	}
-};
+	}// namespace slowest_key
+};   // namespace leetcode
 
-#endif //PROBLEMSCPP_LEETCODE_H
+#endif//PROBLEMSCPP_LEETCODE_H

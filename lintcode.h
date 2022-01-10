@@ -16,7 +16,8 @@ namespace lintcode {
 		int val;
 		TreeNode *left, *right;
 
-		explicit TreeNode(int val): val(val), left(nullptr), right(nullptr) {};
+		explicit TreeNode(int val)
+			: val(val), left(nullptr), right(nullptr) {};
 	};
 
 	namespace license_key_formatting {
@@ -125,7 +126,7 @@ namespace lintcode {
 
 			static TreeNode *vlr(TreeNode *);
 		};
-	}
+	}// namespace flatten
 }    // namespace lintcode
 
 #endif//PROBLEMSCPP_LINTCODE_H

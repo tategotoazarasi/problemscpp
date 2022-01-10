@@ -82,9 +82,7 @@ namespace leetcode {
 		int Solution::titleToNumber(const std::string &columnTitle) {
 			int sum = 0;
 			int length = static_cast<int>(columnTitle.length());
-			for(char c: columnTitle) {
-				sum += static_cast<int>(static_cast<double>(c - 'A' + 1) * pow(26, length-- - 1));
-			}
+			for(char c: columnTitle) { sum += static_cast<int>(static_cast<double>(c - 'A' + 1) * pow(26, length-- - 1)); }
 			return sum;
 		}
 	}// namespace excel_sheet_column_number
@@ -394,8 +392,8 @@ namespace leetcode {
 	 */
 	namespace day_of_the_week {
 		string Solution::dayOfTheWeek(int day, int month, int year) {
-			const string output[] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-			const int dayofmonths[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+			const string output[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+			const int dayofmonths[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 			int count = 5;
 			count += (year - 1971) * 365;
 			count += (year - 1) / 4 - 1970 / 4;
@@ -417,10 +415,7 @@ namespace leetcode {
 
 		int Solution::getResult(int mouse, int cat, int turns) {
 			if(turns == n * 2) { return DRAW; }
-			if(dp[mouse][cat][turns] < 0) {
-				if(mouse == 0) { dp[mouse][cat][turns] = MOUSE_WIN; }
-				else if(cat == mouse) { dp[mouse][cat][turns] = CAT_WIN; } else { getNextResult(mouse, cat, turns); }
-			}
+			if(dp[mouse][cat][turns] < 0) { if(mouse == 0) { dp[mouse][cat][turns] = MOUSE_WIN; } else if(cat == mouse) { dp[mouse][cat][turns] = CAT_WIN; } else { getNextResult(mouse, cat, turns); } }
 			return dp[mouse][cat][turns];
 		}
 
@@ -479,8 +474,7 @@ namespace leetcode {
 				next = strtok(nullptr, "/");
 			}
 			auto oss = ostringstream();
-			if(stck.empty()) { oss << '/'; }
-			else {
+			if(stck.empty()) { oss << '/'; } else {
 				while(!stck.empty()) {
 					auto pname = stck.front();
 					oss << '/' << pname;
@@ -516,72 +510,52 @@ namespace leetcode {
 		bool Solution::checkValid(vector<vector<int>> &matrix) {
 			unsigned int n = matrix.size();
 			for(int i = 0; i < n; i++) {
-				bool *row = new bool[n + 1];
+				auto row = new bool[n + 1];
 				memset(row, true, (n + 1) * sizeof(bool));
 				for(int j = 0; j < n; j++) {
-					if(!row[matrix[i][j]]) {
-						return false;
-					}
+					if(!row[matrix[i][j]]) { return false; }
 					row[matrix[i][j]] = false;
 				}
 				delete[] row;
 			}
 
 			for(int j = 0; j < n; j++) {
-				bool *column = new bool[n + 1];
+				auto column = new bool[n + 1];
 				memset(column, true, (n + 1) * sizeof(bool));
 				for(int i = 0; i < n; i++) {
-					if(!column[matrix[i][j]]) {
-						return false;
-					}
+					if(!column[matrix[i][j]]) { return false; }
 					column[matrix[i][j]] = false;
 				}
 				delete[] column;
 			}
 			return true;
 		}
-	}
+	}// namespace check_if_every_row_and_column_contains_all_numbers
 
 	namespace minimum_swaps_to_group_all_1s_together_ii {
 		int Solution::minSwaps(vector<int> &nums) {
 			int onecount = 0;
-			for(int i = 0; i < nums.size(); i++) {
-				if(nums[i] == 1) {
-					onecount++;
-				}
-			}
-			if(onecount == 0) {
-				return 0;
-			}
+			for(int i = 0; i < nums.size(); i++) { if(nums[i] == 1) { onecount++; } }
+			if(onecount == 0) { return 0; }
 
 			int zerocount = 0;
-			for(int i = 0; i < onecount; i++) {
-				if(nums[i] == 0) {
-					zerocount++;
-				}
-			}
+			for(int i = 0; i < onecount; i++) { if(nums[i] == 0) { zerocount++; } }
 			int min = zerocount;
 
 			for(int i = 0; i < nums.size(); i++) {
-				if(nums[i] == 0) {
-					zerocount--;
-				}
-				if(nums[(onecount + i) % nums.size()] == 0) {
-					zerocount++;
-				}
-				if(zerocount < min) {
-					min = zerocount;
-				}
+				if(nums[i] == 0) { zerocount--; }
+				if(nums[(onecount + i) % nums.size()] == 0) { zerocount++; }
+				if(zerocount < min) { min = zerocount; }
 			}
 			return min;
 		}
-	}
+	}// namespace minimum_swaps_to_group_all_1s_together_ii
 
 	namespace count_words_obtained_after_adding_a_letter {
 		int Solution::wordCount(vector<string> &startWords,
 		                        vector<string> &targetWords) {
 			int count = 0;
-			unordered_set<unsigned int> start = unordered_set<unsigned int>();
+			auto start = unordered_set<unsigned int>();
 			for(const string &word: startWords) {
 				auto bin = str2bin(word);
 				start.insert(bin);
@@ -589,7 +563,8 @@ namespace leetcode {
 			for(const string &word: targetWords) {
 				auto bin = str2bin(word);
 				for(int i = 0; i < 26; i++) {
-					if((bin & (1 << i)) != 0 && start.count(bin - (1 << i)) != 0) {//bin有第i个字母且bin去掉第i个字母在start中仍然存在
+					if((bin & (1 << i)) != 0 && start.contains(bin - (1 << i))) {
+						//bin有第i个字母且bin去掉第i个字母在start中仍然存在
 						count++;
 						break;
 					}
@@ -600,12 +575,10 @@ namespace leetcode {
 
 		unsigned int Solution::str2bin(const string &str) {
 			unsigned int ret = 0;
-			for(char ch: str) {
-				ret |= 1 << (ch - 'a');
-			}
+			for(char ch: str) { ret |= 1 << (ch - 'a'); }
 			return ret;
 		}
-	}
+	}// namespace count_words_obtained_after_adding_a_letter
 
 	namespace slowest_key {
 		char Solution::slowestKey(vector<int> &releaseTimes, string keysPressed) {
@@ -616,13 +589,9 @@ namespace leetcode {
 				if(max < time) {
 					max = time;
 					maxi = i;
-				} else if(max == time) {
-					if(keysPressed[i] > keysPressed[maxi]) {
-						maxi = i;
-					}
-				}
+				} else if(max == time) { if(keysPressed[i] > keysPressed[maxi]) { maxi = i; } }
 			}
 			return keysPressed[maxi];
 		}
-	}
+	}// namespace slowest_key
 }    // namespace leetcode

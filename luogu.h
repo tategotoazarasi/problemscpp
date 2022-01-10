@@ -5,7 +5,7 @@
 #ifndef PROBLEMSCPP_LUOGU_H
 #define PROBLEMSCPP_LUOGU_H
 
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -14,6 +14,6 @@ namespace luogu {
 	public:
 		static int main(istream &, ostream &);
 	};
-}
+}// namespace luogu
 
-#endif //PROBLEMSCPP_LUOGU_H
+#endif//PROBLEMSCPP_LUOGU_H

@@ -118,7 +118,7 @@ namespace acwing {
 			point() = default;
 
 			point(int x, int y)
-					: x(x), y(y) {};
+				: x(x), y(y) {};
 		};
 
 		struct pointhash {
@@ -129,7 +129,7 @@ namespace acwing {
 			bool operator()(const point &, const point &) const;
 		};
 
-		void flood(point, bool[55][55], unordered_set<point, pointhash, pointequal> *, char[55][55], int, int);
+		void flood(point, bool [55][55], unordered_set<point, pointhash, pointequal> *, char [55][55], int, int);
 	}// namespace acwing2060
 
 	/**
@@ -144,7 +144,7 @@ namespace acwing {
 			int step;
 
 			point(int x, int y, int step)
-					: x(x), y(y), step(step) {};
+				: x(x), y(y), step(step) {};
 		};
 
 		int bfs(point, int **, int, int);
@@ -280,7 +280,7 @@ namespace acwing {
 			trie_node *nexts[10]{};
 
 			trie_node(int val, trie_node *father)
-					: val(val), father(father) {};
+				: val(val), father(father) {};
 
 			/**
 			 * \brief 反向插入
@@ -322,6 +322,14 @@ namespace acwing {
 
 	/// \brief AcWing 655. 天数转换
 	class acwing655 {
+	public:
+		static int main(istream &, ostream &);
+	};
+
+	/**
+	 * \brief AcWing 665. 倍数
+	 */
+	class acwing665 {
 	public:
 		static int main(istream &, ostream &);
 	};

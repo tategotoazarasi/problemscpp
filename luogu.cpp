@@ -3,8 +3,8 @@
 //
 
 #include "luogu.h"
-#include<iostream>
-#include<cmath>
+#include <cmath>
+#include <iostream>
 
 using namespace std;
 
@@ -18,8 +18,7 @@ namespace luogu {
 			cin >> s[i];
 			len += s[i].size();
 			int cnt = 1;
-			for(int j = 1; j < s[i].size(); ++j)
-				if(s[i][j] != s[i][j - 1]) ++cnt;
+			for(int j = 1; j < s[i].size(); ++j) if(s[i][j] != s[i][j - 1]) ++cnt;
 			if(cnt == _max && s[i] != s[k]) ++max_cnt;
 			else if(_max < cnt) {
 				_max = cnt;
@@ -31,4 +30,4 @@ namespace luogu {
 		cout << len - _max << endl;
 		return 0;
 	}
-}
+}// namespace luogu

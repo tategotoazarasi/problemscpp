@@ -1,9 +1,9 @@
 //
 // Created by tategotoazarasi on 2022/1/7.
 //
-#include<vector>
-#include "gtest/gtest.h"
 #include "lintcode.h"
+#include "gtest/gtest.h"
+#include <vector>
 
 using namespace std;
 
@@ -18,21 +18,28 @@ namespace lintcode {
 			auto s = string("2-5g-3-J");
 			ASSERT_EQ("2-5G-3J", Solution::licenseKeyFormatting(s, 2));
 		}
-	}
+	}// namespace license_key_formatting
 
 	namespace distribute_candies {
 		TEST(distribute_candies, case1) {
-			int input[] = { 1, 1, 2, 2, 3, 3, };
+			int input[] = {
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+			};
 			auto vec = vector<int>(begin(input), end(input));
 			ASSERT_EQ(3, Solution::distributeCandies(vec));
 		}
 
 		TEST(distribute_candies, case2) {
-			int input[] = { 1, 1, 2, 2, 3, 3, 4, 5, 6, 6, 7, 8 };
+			int input[] = {1, 1, 2, 2, 3, 3, 4, 5, 6, 6, 7, 8};
 			auto vec = vector<int>(begin(input), end(input));
 			ASSERT_EQ(6, Solution::distributeCandies(vec));
 		}
-	}
+	}// namespace distribute_candies
 
 	namespace remove_extra {
 		TEST(remove_extra, case1) {
@@ -44,7 +51,7 @@ namespace lintcode {
 			string input = "  low               ercase  ";
 			ASSERT_EQ("low ercase", Solution::removeExtra(input));
 		}
-	}
+	}// namespace remove_extra
 
 	namespace fibonacci {
 		TEST(fibonacci, case1) {
@@ -54,7 +61,7 @@ namespace lintcode {
 		TEST(fibonacci, case2) {
 			ASSERT_EQ(1, Solution::fibonacci(2));
 		}
-	}
+	}// namespace fibonacci
 
 	namespace character_deletion {
 		TEST(character_deletion, case1) {
@@ -62,7 +69,7 @@ namespace lintcode {
 			auto sub = string("aeiou");
 			ASSERT_EQ("Thy r stdnts", Solution::CharacterDeletion(str, sub));
 		}
-	}
+	}// namespace character_deletion
 
 	namespace judge_circle {
 		TEST(judge_circle, case1) {
@@ -74,5 +81,5 @@ namespace lintcode {
 			auto str = string("LL");
 			ASSERT_FALSE(Solution::judgeCircle(str));
 		}
-	}
-}
+	}// namespace judge_circle
+}    // namespace lintcode
