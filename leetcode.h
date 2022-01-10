@@ -5,7 +5,9 @@
 #ifndef PROBLEMSCPP_LEETCODE_H
 #define PROBLEMSCPP_LEETCODE_H
 
+#include <functional>
 #include <map>
+#include <mutex>
 #include <string>
 #include <vector>
 
