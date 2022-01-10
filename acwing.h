@@ -341,5 +341,13 @@ namespace acwing {
 	public:
 		static int main(istream &, ostream &);
 	};
+
+	/**
+	 * \brief AcWing 1987. 粉刷栅栏
+	 */
+	class acwing1987 {
+	public:
+		static int main(istream &, ostream &);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

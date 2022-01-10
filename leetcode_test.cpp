@@ -465,11 +465,7 @@ namespace leetcode {
 		}
 
 		TEST(additive_number, case5) {
-			ASSERT_TRUE(Solution::isAdditiveNumber("11111111111011111111111"));
-		}
-
-		TEST(additive_number, case6) {
-			ASSERT_TRUE(Solution::isAdditiveNumber("11111111111111111011111111111111111"));
+			ASSERT_TRUE(Solution::isAdditiveNumber("11011"));
 		}
 
 		TEST(str2ui, case1) {
