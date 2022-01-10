@@ -273,6 +273,40 @@ namespace leetcode {
 			static char slowestKey(vector<int> &releaseTimes, string keysPressed);
 		};
 	}// namespace slowest_key
+
+	/**
+	 * \brief LeetCode 306. 累加数
+	 */
+	namespace additive_number {
+		class Solution {
+		public:
+			static bool isAdditiveNumber(string num);
+			/**
+			 * \brief 
+			 * \param n1 第一个数字
+			 * \param n2 第二个数字
+			 * \param length 总长度
+			 * \param current 现在的位置
+			 * \return 
+			 */
+			static bool dfs(unsigned long long n1, unsigned long long n2, const char *, unsigned short length, unsigned short current);
+			/**
+			 * \brief 将字符串的一个子串转换为整数
+			 * \param start 起始位置
+			 * \param length 转换长度
+			 * \return 从字符串转换来的整数
+			 */
+			static unsigned long long str2ui(const char *, unsigned short start, unsigned short length);
+
+			/**
+			 * \brief 判断一个字符串与另一个字符串的子串是否相等
+			 * \param start 另一个字符串的子串起始位置
+			 * \param length 另一个字符串的总长度
+			 * \return 一个字符串与另一个字符串的子串是否相等
+			 */
+			static bool equal(string, const char *, unsigned short start, unsigned short length);
+		};
+	}// namespace additive_number
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -446,4 +446,95 @@ namespace leetcode {
 			ASSERT_EQ('a', Solution::slowestKey(vec, "spuda"));
 		}
 	}// namespace slowest_key
+
+	namespace additive_number {
+		TEST(additive_number, case1) {
+			ASSERT_TRUE(Solution::isAdditiveNumber("112358"));
+		}
+
+		TEST(additive_number, case2) {
+			ASSERT_TRUE(Solution::isAdditiveNumber("199100199"));
+		}
+
+		TEST(additive_number, case3) {
+			ASSERT_FALSE(Solution::isAdditiveNumber("0235813"));
+		}
+
+		TEST(additive_number, case4) {
+			ASSERT_TRUE(Solution::isAdditiveNumber("000000"));
+		}
+
+		TEST(additive_number, case5) {
+			ASSERT_TRUE(Solution::isAdditiveNumber("11111111111011111111111"));
+		}
+
+		TEST(additive_number, case6) {
+			ASSERT_TRUE(Solution::isAdditiveNumber("11111111111111111011111111111111111"));
+		}
+
+		TEST(str2ui, case1) {
+			char input[] = {'2'};
+			ASSERT_EQ(2, Solution::str2ui(input, 0, 1));
+		}
+
+		TEST(str2ui, case2) {
+			char input[] = {'2', '3', '4'};
+			ASSERT_EQ(234, Solution::str2ui(input, 0, 3));
+		}
+
+		TEST(str2ui, case3) {
+			char input[] = {'2', '3', '4'};
+			ASSERT_EQ(23, Solution::str2ui(input, 0, 2));
+		}
+
+		TEST(str2ui, case4) {
+			char input[] = {'2', '3', '4'};
+			ASSERT_EQ(34, Solution::str2ui(input, 1, 2));
+		}
+
+		TEST(equal, case1) {
+			char input[] = {'1', '2'};
+			ASSERT_TRUE(Solution::equal(string("12"), input, 0, 2));
+		}
+
+		TEST(equal, case2) {
+			char input[] = {'1', '2', '4'};
+			ASSERT_TRUE(Solution::equal(string("12"), input, 0, 3));
+		}
+
+		TEST(equal, case3) {
+			char input[] = {'3', '2', '4'};
+			ASSERT_FALSE(Solution::equal(string("12"), input, 0, 3));
+		}
+
+		TEST(equal, case4) {
+			char input[] = {'3', '2', '4', '5'};
+			ASSERT_TRUE(Solution::equal(string("24"), input, 1, 4));
+		}
+
+		TEST(equal, case5) {
+			char input[] = {'3', '2', '4', '5'};
+			ASSERT_FALSE(Solution::equal(string("2456"), input, 1, 4));
+		}
+
+		TEST(dfs, case1) {
+			char input[] = {'1', '1', '2'};
+			ASSERT_TRUE(Solution::dfs(1, 1, input, 3, 2));
+		}
+
+		TEST(dfs, case2) {
+			char input[] = {'1', '1', '2', '3'};
+			ASSERT_TRUE(Solution::dfs(1, 1, input, 4, 2));
+		}
+
+		TEST(dfs, case3) {
+			char input[] = {'1', '1', '2', '4'};
+			ASSERT_FALSE(Solution::dfs(1, 1, input, 4, 2));
+		}
+
+		TEST(dfs, case4) {
+			char input[] = {'1', '1', '2', '3', '3', '4'};
+			ASSERT_TRUE(Solution::dfs(11, 23, input, 6, 4));
+		}
+	}// namespace additive_number
 }    // namespace leetcode

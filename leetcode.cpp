@@ -594,4 +594,57 @@ namespace leetcode {
 			return keysPressed[maxi];
 		}
 	}// namespace slowest_key
+
+	namespace additive_number {
+		bool Solution::isAdditiveNumber(string num) {
+			if(num.length() < 3) { return false; }
+			auto nums = new char[num.length()];
+			for(int i = 0; i < num.length(); i++) { nums[i] = num[i]; }
+			for(int i = 1; i <= num.length() - i; i++) {
+				auto n1 = str2ui(nums, 0, i);
+				for(int j = i + 1; j - i <= num.length() - j; j++) {
+					auto n2 = str2ui(nums, i, j - i);
+					if(dfs(n1, n2, nums, num.length(), j)) { return true; }
+					if(n2 == 0) { break; }
+				}
+				if(n1 == 0) { break; }
+			}
+			return false;
+		}
+
+		bool Solution::dfs(unsigned long long n1, unsigned long long n2, const char *nums, unsigned short length, unsigned short current) {
+			auto sum = to_string(n1 + n2);
+			if(sum.length() > length - current) {
+				//前两位和的位数超过剩余的位数
+				return false;
+			}
+			if(!equal(sum, nums, current, length)) {
+				//不包含下一个数字
+				return false;
+			}
+			if(current + sum.length() == length) {
+				//终止条件
+				return true;
+			}
+			auto n3 = str2ui(nums, current, sum.length());
+			if(dfs(n2, n3, nums, length, current + sum.length())) { return true; }
+			return false;
+		}
+
+		unsigned long long Solution::str2ui(const char *str, unsigned short start, unsigned short length) {
+			unsigned long long ans = 0;
+			for(int i = start; i < start + length; i++) {
+				ans *= 10;
+				ans += str[i] - '0';
+			}
+			return ans;
+		}
+
+		bool Solution::equal(string sum, const char *nums, unsigned short start, unsigned short length) {
+			int j = 0;
+			for(int i = start; j < sum.length() && i < length; i++, j++) { if(sum[j] != nums[i]) { return false; } }
+			if(j != sum.length()) { return false; }
+			return true;
+		}
+	}// namespace additive_number
 }    // namespace leetcode
