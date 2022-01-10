@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['insert_0',['insert',['../a01035.html#ab176070847d05b5002e3a6972566328e',1,'acwing::acwing4208::trie_node::insert()'],['../a01063.html#a10978111888599187c5340e0b34938dc',1,'leetcode::concatenated_words::TrieNode::insert()']]],
-  ['intersection_1',['Intersection',['../a01191.html#a6fb29e5dd6576917ca992e6130d6dda5',1,'lintcode::intersection::Solution']]],
-  ['is_5fintersected_2',['is_intersected',['../a01191.html#ac8369c191887848eae248a1e80b4ac0e',1,'lintcode::intersection::Solution']]],
-  ['isnstraighthand_3',['isNStraightHand',['../a01083.html#aaa9e63f5e810760226b4921275ae8869',1,'leetcode::hand_of_straights::Solution']]]
+  ['get_5fsum_0',['get_sum',['../a01108.html#a0b5b1537d7c97dc523a3de2c8eb04426',1,'leetcode::convert_bst_to_greater_tree::Solution']]],
+  ['getnextresult_1',['getNextResult',['../a01140.html#abac19e18e96b6d4cee44b83dd111fc77',1,'leetcode::cat_and_mouse::Solution']]],
+  ['getresult_2',['getResult',['../a01140.html#a184a09044a562eff07bf2b9a68727576',1,'leetcode::cat_and_mouse::Solution']]],
+  ['graycode_3',['grayCode',['../a01156.html#a37b7872f768f932bdd8dfa0992f43952',1,'leetcode::gray_code::Solution']]]
 ];
