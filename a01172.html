@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::slowest_key::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,85 +63,18 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00049.html">leetcode</a></li><li class="navelem"><a class="el" href="a00072.html">slowest_key</a></li><li class="navelem"><a class="el" href="a01172.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00050.html">leetcode</a></li><li class="navelem"><a class="el" href="a00069.html">gray_code</a></li><li class="navelem"><a class="el" href="a01175.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="a01169.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::slowest_key::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::gray_code::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00020_source.html">leetcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:ab7976dc380cf88058bb93aeac322ebbb"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01172.html#ab7976dc380cf88058bb93aeac322ebbb">slowestKey</a> (vector&lt; int &gt; &amp;releaseTimes, string keysPressed)</td></tr>
-<tr class="separator:ab7976dc380cf88058bb93aeac322ebbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="a00020_source.html">leetcode.h</a> 第 <a class="el" href="a00020_source.html#l00273">273</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="ab7976dc380cf88058bb93aeac322ebbb" name="ab7976dc380cf88058bb93aeac322ebbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7976dc380cf88058bb93aeac322ebbb">&#9670;&nbsp;</a></span>slowestKey()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char leetcode::slowest_key::Solution::slowestKey </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>releaseTimes</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>keysPressed</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="a00029_source.html">leetcode.cpp</a> 第 <a class="el" href="a00029_source.html#l00584">584</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>                                                                               {</div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>            <span class="keywordtype">int</span> max = releaseTimes[0];</div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>            <span class="keywordtype">int</span> maxi = 0;</div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; releaseTimes.size(); i++) {</div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>                <span class="keywordtype">int</span> time = releaseTimes[i] - releaseTimes[i - 1];</div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>                <span class="keywordflow">if</span>(max &lt; time) {</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>                    max = time;</div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>                    maxi = i;</div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(max == time) { <span class="keywordflow">if</span>(keysPressed[i] &gt; keysPressed[maxi]) { maxi = i; } }</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>            }</div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>            <span class="keywordflow">return</span> keysPressed[maxi];</div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="a00032_source.html#l00437">leetcode::slowest_key::TEST()</a>.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="a00020_source.html">leetcode.h</a></li>
-<li><a class="el" href="a00029_source.html">leetcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="a01175.html">leetcode::gray_code::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="a01175.html#a37b7872f768f932bdd8dfa0992f43952">grayCode</a>(int n)</td><td class="entry"><a class="el" href="a01175.html">leetcode::gray_code::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2

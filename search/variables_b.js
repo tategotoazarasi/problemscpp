@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x_0',['x',['../a00968.html#a858de27a9ad7db2ce745e880b56299a6',1,'acwing::acwing2060::point::x()'],['../a00980.html#acaa459e164175cdbde974462ea6cf4a8',1,'acwing::acwing2019::point::x()']]]
+  ['step_0',['step',['../a00983.html#a3a1e018caae3a20a5849a5fedb72e9c0',1,'acwing::acwing2019::point']]],
+  ['sum_1',['sum',['../a01123.html#a8d4ce27ae9f2b5865f1ed413b376caef',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode']]]
 ];

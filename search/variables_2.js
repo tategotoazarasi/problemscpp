@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['father_0',['father',['../a01036.html#aa1ec945aaa9478b81b279ef2f4af0020',1,'acwing::acwing4208::trie_node']]],
-  ['friend_5fnode_1',['friend_node',['../a01104.html#a10da51d2462979b830690f49553e4979',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode']]]
+  ['cat_5fwin_0',['CAT_WIN',['../a00065.html#affa4958d0e6b2c6a54a333de3e6b5387',1,'leetcode::cat_and_mouse']]],
+  ['ch_1',['ch',['../a01095.html#ab41c3836f95142d0485d34e22a25e780',1,'leetcode::concatenated_words::TrieNode']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['dp_0',['dp',['../a01140.html#a271ac4951a9bae83045b907d0f8ac9fa',1,'leetcode::cat_and_mouse::Solution']]],
-  ['draw_1',['DRAW',['../a00064.html#afbb37e8f376cda021e541e6d79a7b101',1,'leetcode::cat_and_mouse']]]
+  ['b_0',['b',['../a01079.html#a567a53696628ec73eb65cabd484946a3',1,'acwing::acwing1978::path']]]
 ];

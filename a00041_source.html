@@ -76,8 +76,8 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using namespace </span>std;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="a00084.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00084.html">luogu</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="a01216.html#a80d56a8765f7ee51ff6d425cb5ae02c4">   12</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="a01216.html#a80d56a8765f7ee51ff6d425cb5ae02c4">T210229::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="a00087.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00087.html">luogu</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="a01251.html#a80d56a8765f7ee51ff6d425cb5ae02c4">   12</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="a01251.html#a80d56a8765f7ee51ff6d425cb5ae02c4">T210229::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordtype">int</span> n, len = 0;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordtype">string</span> s[1000010];</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        cin &gt;&gt; n;</div>
@@ -86,22 +86,26 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            cin &gt;&gt; s[i];</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            len += s[i].size();</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <span class="keywordtype">int</span> cnt = 1;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt; s[i].size(); ++j) <span class="keywordflow">if</span>(s[i][j] != s[i][j - 1]) ++cnt;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordflow">if</span>(cnt == _max &amp;&amp; s[i] != s[k]) ++max_cnt;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(_max &lt; cnt) {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                _max = cnt;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                max_cnt = 0;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                k = i;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            }</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">if</span>(max_cnt) ++_max;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        cout &lt;&lt; len - _max &lt;&lt; endl;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}<span class="comment">// namespace luogu</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt; s[i].size(); ++j)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                <span class="keywordflow">if</span>(s[i][j] != s[i][j - 1])</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                    ++cnt;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">if</span>(cnt == _max &amp;&amp; s[i] != s[k])</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                ++max_cnt;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(_max &lt; cnt) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                _max    = cnt;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                max_cnt = 0;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                k       = i;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span>(max_cnt)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            ++_max;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        cout &lt;&lt; len - _max &lt;&lt; endl;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}<span class="comment">// namespace luogu</span></div>
 <div class="ttc" id="aa00014_html"><div class="ttname"><a href="a00014.html">luogu.h</a></div></div>
-<div class="ttc" id="aa00084_html"><div class="ttname"><a href="a00084.html">luogu</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00011">luogu.cpp:11</a></div></div>
-<div class="ttc" id="aa01216_html_a80d56a8765f7ee51ff6d425cb5ae02c4"><div class="ttname"><a href="a01216.html#a80d56a8765f7ee51ff6d425cb5ae02c4">luogu::T210229::main</a></div><div class="ttdeci">static int main(istream &amp;, ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00012">luogu.cpp:12</a></div></div>
+<div class="ttc" id="aa00087_html"><div class="ttname"><a href="a00087.html">luogu</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00011">luogu.cpp:11</a></div></div>
+<div class="ttc" id="aa01251_html_a80d56a8765f7ee51ff6d425cb5ae02c4"><div class="ttname"><a href="a01251.html#a80d56a8765f7ee51ff6d425cb5ae02c4">luogu::T210229::main</a></div><div class="ttdeci">static int main(istream &amp;, ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00012">luogu.cpp:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
