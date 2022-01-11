@@ -9,6 +9,7 @@
 #include <map>
 #include <mutex>
 #include <string>
+#include <unordered_set>
 #include <vector>
 
 using namespace std;
@@ -323,6 +324,37 @@ namespace leetcode {
 			static inline std::string &rtrim(std::string &s);
 		};
 	}// namespace decode_the_slanted_ciphertext
+
+	/// \brief LeetCode 1036. 逃离大迷宫
+	namespace escape_a_large_maze {
+		struct point {
+			unsigned int x;
+			unsigned int y;
+			unsigned int distance;
+			point *target;
+			point(): x(0), y(0), distance(0), target(nullptr){};
+			point(unsigned int x, unsigned int y, int distance, point *target): x(x), y(y), distance(distance), target(target){};
+			bool operator<(const point &p) const;
+			bool operator==(const point &p) const;
+		};
+
+		struct point_hash {
+			size_t operator()(const point &p) const;
+		};
+
+		class Solution {
+		public:
+			static bool isEscapePossible(vector<vector<int>> &blocked, vector<int> &source, vector<int> &target);
+
+			/// \brief 在迷宫中以source为起点搜索
+			/// \param block_set 阻塞点集
+			/// \param source 起点
+			/// \param target 终点
+			/// \param limit 搜索步数上限
+			/// \return 0表示无法抵达 1表示可以抵达 2表示达到搜索步数上限
+			static unsigned int search(unordered_set<point, point_hash> &block_set, point *source, point *target, unsigned int limit);
+		};
+	}// namespace escape_a_large_maze
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -840,4 +840,70 @@ namespace leetcode {
 			return s;
 		}
 	}// namespace decode_the_slanted_ciphertext
+
+	namespace escape_a_large_maze {
+		bool Solution::isEscapePossible(vector<vector<int>> &blocked, vector<int> &source, vector<int> &target) {
+			int limit = blocked.size() * (blocked.size() - 1) / 2;
+			if(blocked.empty()) {
+				return true;
+			}
+			auto *p_source                                      = new point(source[0], source[1], 0, nullptr);
+			auto *p_target                                      = new point(target[0], target[1], 0, nullptr);
+			unordered_set<point, point_hash> blocked_set_source = unordered_set<point, point_hash>();
+			unordered_set<point, point_hash> blocked_set_target = unordered_set<point, point_hash>();
+			for(auto block: blocked) {
+				blocked_set_source.insert(point(block[0], block[1], 0, nullptr));
+				blocked_set_target.insert(point(block[0], block[1], 0, nullptr));
+			}
+			unsigned int source_status = search(blocked_set_source, p_source, p_target, limit);
+			if(source_status == 0) {
+				return false;
+			} else if(source_status == 1) {
+				return true;
+			} else {
+				unsigned int target_status = search(blocked_set_target, p_target, p_source, limit);
+				if(target_status == 0) {
+					return false;
+				} else {
+					return true;
+				}
+			}
+		}
+
+		unsigned int Solution::search(unordered_set<point, point_hash> &block_set, point *source, point *target, unsigned int limit) {
+			priority_queue<point> pq = priority_queue<point>();
+			pq.push(point(source->x, source->y, 0, target));
+			int count = 0;
+			while(!pq.empty()) {
+				if(count > limit || pq.size() > limit) {
+					return 2;//不包围
+				}
+				count++;
+				auto p = pq.top();
+				pq.pop();
+				point nexts[] = {point(p.x + 1, p.y, p.distance + 1, target), point(p.x - 1, p.y, p.distance + 1, target), point(p.x, p.y + 1, p.distance + 1, target), point(p.x, p.y - 1, p.distance + 1, target)};
+				for(auto next: nexts) {
+					if(0 <= next.x && next.x < 1000000 && 0 <= next.y && next.y < 1000000 && block_set.count(next) == 0) {
+						if(next.x == target->x && next.y == target->y) {
+							return 1;//连通
+						}
+						pq.push(next);
+						block_set.insert(next);
+					}
+				}
+			}
+			return 0;//不连通
+		}
+
+		bool point::operator<(const point &p) const {
+			return ((this->distance + (abs(int(this->x - target->x)) + abs(int(this->y - target->y)))) < (p.distance + (abs(int(p.x - target->x)) + abs(int(p.y - target->y)))));
+		}
+		bool point::operator==(const point &p) const {
+			return this->x == p.x && this->y == p.y;
+		}
+
+		size_t point_hash::operator()(const point &p) const {
+			return p.x * 1000000 + p.y;
+		}
+	}// namespace escape_a_large_maze
 }// namespace leetcode
