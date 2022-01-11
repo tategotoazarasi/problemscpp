@@ -545,4 +545,22 @@ namespace leetcode {
 			ASSERT_TRUE(Solution::dfs(11, 23, input, 6, 4));
 		}
 	}// namespace additive_number
+
+	namespace decode_the_slanted_ciphertext {
+		TEST(decode_the_slanted_ciphertext, case1) {
+			ASSERT_EQ("cipher", Solution::decodeCiphertext("ch   ie   pr", 3));
+		}
+
+		TEST(decode_the_slanted_ciphertext, case2) {
+			ASSERT_EQ("i love leetcode", Solution::decodeCiphertext("iveo    eed   l te   olc", 4));
+		}
+
+		TEST(decode_the_slanted_ciphertext, case3) {
+			ASSERT_EQ("coding", Solution::decodeCiphertext("coding", 1));
+		}
+
+		TEST(decode_the_slanted_ciphertext, case4) {
+			ASSERT_EQ(" abc", Solution::decodeCiphertext(" b  ac", 2));
+		}
+	}// namespace decode_the_slanted_ciphertext
 }// namespace leetcode

@@ -309,6 +309,20 @@ namespace leetcode {
 			static bool equal(string, const char *, unsigned short start, unsigned short length);
 		};
 	}// namespace additive_number
+
+	/// \brief LeetCode 2075. 解码斜向换位密码
+	namespace decode_the_slanted_ciphertext {
+		class Solution {
+		public:
+			static string decodeCiphertext(string encodedText, int rows);
+			/// \brief 去除字符串右边的空白符
+			/// \cite https://blog.csdn.net/tiandyoin/article/details/81508445
+			/// \author tiandyoin
+			/// \param s 要去除右边空白符的字符串
+			/// \return  去除了右边空白符的字符串
+			static inline std::string &rtrim(std::string &s);
+		};
+	}// namespace decode_the_slanted_ciphertext
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

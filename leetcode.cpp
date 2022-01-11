@@ -807,4 +807,37 @@ namespace leetcode {
 			return true;
 		}
 	}// namespace additive_number
+
+	namespace decode_the_slanted_ciphertext {
+		string Solution::decodeCiphertext(string encodedText, int rows) {
+			if(encodedText.empty()) {
+				return "";
+			}
+			int columns  = encodedText.length() / rows;
+			char **table = new char *[rows];
+			for(int i = 0; i < rows; i++) {
+				table[i] = new char[columns - rows + 2];
+				for(int j = i; j - i < columns - rows + 2; j++) {
+					if(i * columns + j < encodedText.length()) {
+						table[i][j - i] = encodedText[i * columns + j];
+					} else {
+						table[i][j - i] = ' ';
+					}
+				}
+			}
+			ostringstream oss = ostringstream();
+			for(int j = 0; j < columns - rows + 2; j++) {
+				for(int i = 0; i < rows; i++) {
+					oss << table[i][j];
+				}
+			}
+			string ans = oss.str();
+			return rtrim(ans);
+		}
+
+		inline string &Solution::rtrim(string &s) {
+			s.erase(find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(), s.end());
+			return s;
+		}
+	}// namespace decode_the_slanted_ciphertext
 }// namespace leetcode
