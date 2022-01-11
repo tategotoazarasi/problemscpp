@@ -362,5 +362,21 @@ namespace acwing {
 	public:
 		static int main(istream &, ostream &);
 	};
+
+	/// \brief AcWing 1978. 奶牛过马路
+	namespace acwing1978 {
+		struct path {
+			int a;
+			int b;
+			path(): a(0), b(0){};
+			path(int a, int b): a(a), b(b){};
+			bool operator<(const path &p) const;
+		};
+
+		class acwing1978 {
+		public:
+			static int main(istream &, ostream &);
+		};
+	}// namespace acwing1978
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

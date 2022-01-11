@@ -599,4 +599,18 @@ namespace acwing {
 		auto ans = out.str();
 		ASSERT_EQ("Sao Paulo", ans);
 	}
+
+	namespace acwing1978 {
+		TEST(acwing1978, case1) {
+			istringstream in("4\n"
+			                 "-3 4\n"
+			                 "7 8\n"
+			                 "10 16\n"
+			                 "3 9");
+			auto out = ostringstream();
+			acwing1978::main(in, out);
+			auto ans = out.str();
+			ASSERT_EQ("2", ans);
+		}
+	}// namespace acwing1978
 }// namespace acwing
