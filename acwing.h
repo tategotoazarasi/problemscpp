@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <set>
+#include <unordered_map>
 #include <unordered_set>
 #include <vector>
 
@@ -118,7 +119,7 @@ namespace acwing {
 			point() = default;
 
 			point(int x, int y)
-				: x(x), y(y) {};
+			    : x(x), y(y){};
 		};
 
 		struct pointhash {
@@ -129,7 +130,7 @@ namespace acwing {
 			bool operator()(const point &, const point &) const;
 		};
 
-		void flood(point, bool [55][55], unordered_set<point, pointhash, pointequal> *, char [55][55], int, int);
+		void flood(point, bool[55][55], unordered_set<point, pointhash, pointequal> *, char[55][55], int, int);
 	}// namespace acwing2060
 
 	/**
@@ -144,7 +145,7 @@ namespace acwing {
 			int step;
 
 			point(int x, int y, int step)
-				: x(x), y(y), step(step) {};
+			    : x(x), y(y), step(step){};
 		};
 
 		int bfs(point, int **, int, int);
@@ -280,7 +281,7 @@ namespace acwing {
 			trie_node *nexts[10]{};
 
 			trie_node(int val, trie_node *father)
-				: val(val), father(father) {};
+			    : val(val), father(father){};
 
 			/**
 			 * \brief 反向插入
@@ -346,6 +347,18 @@ namespace acwing {
 	 * \brief AcWing 1987. 粉刷栅栏
 	 */
 	class acwing1987 {
+	public:
+		static int main(istream &, ostream &);
+	};
+
+	/// \brief AcWing 660. 零食
+	class acwing660 {
+	public:
+		static int main(istream &, ostream &);
+	};
+
+	/// \brief AcWing 671. DDD
+	class acwing671 {
 	public:
 		static int main(istream &, ostream &);
 	};

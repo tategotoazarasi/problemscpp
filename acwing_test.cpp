@@ -246,7 +246,7 @@ namespace acwing {
 
 	TEST(acwing2058, case1) {
 		istringstream in("1010\n"
-				"212");
+		                 "212");
 		auto out = ostringstream();
 		acwing2058::main(in, out);
 		auto ans = out.str();
@@ -263,7 +263,7 @@ namespace acwing {
 
 	TEST(acwing605, case1) {
 		istringstream in("3\n"
-				"9");
+		                 "9");
 		auto out = ostringstream();
 		acwing605::main(in, out);
 		auto ans = out.str();
@@ -280,16 +280,16 @@ namespace acwing {
 
 	TEST(acwing2041, case2) {
 		istringstream in("9 10\n"
-				"5 5\n"
-				"3 6\n"
-				"6 6\n"
-				"3 9\n"
-				"1 7\n"
-				"5 6\n"
-				"6 8\n"
-				"7 9\n"
-				"4 6\n"
-				"5 9");
+		                 "5 5\n"
+		                 "3 6\n"
+		                 "6 6\n"
+		                 "3 9\n"
+		                 "1 7\n"
+		                 "5 6\n"
+		                 "6 8\n"
+		                 "7 9\n"
+		                 "4 6\n"
+		                 "5 9");
 		auto out = ostringstream();
 		acwing2041::main(in, out);
 		auto ans = out.str();
@@ -298,7 +298,7 @@ namespace acwing {
 
 	TEST(acwing2041, case3) {
 		istringstream in(
-				"23 100\n8 9\n2 14\n6 12\n13 18\n13 18\n5 17\n10 14\n1 13\n8 12\n17 19\n2 6\n4 19\n16 20\n4 15\n9 9\n13 19\n1 14\n4 17\n16 21\n7 15\n3 14\n7 19\n13 17\n3 8\n7 19\n6 8\n8 23\n5 19\n17 20\n10 20\n9 18\n20 23\n16 23\n7 7\n4 22\n4 23\n19 23\n10 18\n14 16\n2 7\n3 7\n4 18\n20 21\n13 17\n10 13\n5 17\n8 20\n21 22\n14 22\n4 21\n4 18\n4 10\n4 5\n19 20\n6 22\n3 15\n7 9\n3 22\n20 21\n3 12\n3 16\n8 18\n5 12\n9 23\n10 14\n5 10\n3 21\n18 22\n10 15\n2 17\n19 23\n9 12\n2 19\n3 15\n12 14\n3 3\n9 18\n9 22\n7 9\n1 21\n4 15\n2 6\n18 20\n3 17\n4 18\n8 15\n2 15\n9 19\n6 9\n5 21\n2 16\n1 20\n2 20\n13 20");
+		        "23 100\n8 9\n2 14\n6 12\n13 18\n13 18\n5 17\n10 14\n1 13\n8 12\n17 19\n2 6\n4 19\n16 20\n4 15\n9 9\n13 19\n1 14\n4 17\n16 21\n7 15\n3 14\n7 19\n13 17\n3 8\n7 19\n6 8\n8 23\n5 19\n17 20\n10 20\n9 18\n20 23\n16 23\n7 7\n4 22\n4 23\n19 23\n10 18\n14 16\n2 7\n3 7\n4 18\n20 21\n13 17\n10 13\n5 17\n8 20\n21 22\n14 22\n4 21\n4 18\n4 10\n4 5\n19 20\n6 22\n3 15\n7 9\n3 22\n20 21\n3 12\n3 16\n8 18\n5 12\n9 23\n10 14\n5 10\n3 21\n18 22\n10 15\n2 17\n19 23\n9 12\n2 19\n3 15\n12 14\n3 3\n9 18\n9 22\n7 9\n1 21\n4 15\n2 6\n18 20\n3 17\n4 18\n8 15\n2 15\n9 19\n6 9\n5 21\n2 16\n1 20\n2 20\n13 20");
 		auto out = ostringstream();
 		acwing2041::main(in, out);
 		auto ans = out.str();
@@ -308,12 +308,12 @@ namespace acwing {
 	namespace acwing2060 {
 		TEST(acwing2060, case1) {
 			istringstream in("6 16\n"
-					"................\n"
-					"..XXXX....XXX...\n"
-					"...XXXX....XX...\n"
-					".XXXX......XXX..\n"
-					"........XXXXX...\n"
-					".........XXX....");
+			                 "................\n"
+			                 "..XXXX....XXX...\n"
+			                 "...XXXX....XX...\n"
+			                 ".XXXX......XXX..\n"
+			                 "........XXXXX...\n"
+			                 ".........XXX....");
 			auto out = ostringstream();
 			acwing2060::main(in, out);
 			auto ans = out.str();
@@ -324,13 +324,13 @@ namespace acwing {
 	namespace acwing2019 {
 		TEST(acwing2019, case1) {
 			istringstream in("7 6 3\n"
-					"6 2\n"
-					"5 2\n"
-					"4 3\n"
-					"2 1\n"
-					"7 3\n"
-					"5 4\n"
-					"6 4");
+			                 "6 2\n"
+			                 "5 2\n"
+			                 "4 3\n"
+			                 "2 1\n"
+			                 "7 3\n"
+			                 "5 4\n"
+			                 "6 4");
 			auto out = ostringstream();
 			acwing2019::main(in, out);
 			auto ans = out.str();
@@ -339,10 +339,10 @@ namespace acwing {
 
 		TEST(acwing2019, case2) {
 			istringstream in("4 2 2\n"
-					"2 1\n"
-					"1 2\n"
-					"2 3\n"
-					"4 2");
+			                 "2 1\n"
+			                 "1 2\n"
+			                 "2 3\n"
+			                 "4 2");
 			auto out = ostringstream();
 			acwing2019::main(in, out);
 			auto ans = out.str();
@@ -352,7 +352,7 @@ namespace acwing {
 
 	TEST(acwing611, case1) {
 		istringstream in("12 1 5.30\n"
-				"16 2 5.10");
+		                 "16 2 5.10");
 		auto out = ostringstream();
 		acwing611::main(in, out);
 		auto ans = out.str();
@@ -369,14 +369,14 @@ namespace acwing {
 
 	TEST(acwing2014, case1) {
 		istringstream in("8\n"
-				"3\n"
-				"5\n"
-				"2\n"
-				"3\n"
-				"1\n"
-				"4\n"
-				"2\n"
-				"3");
+		                 "3\n"
+		                 "5\n"
+		                 "2\n"
+		                 "3\n"
+		                 "1\n"
+		                 "4\n"
+		                 "2\n"
+		                 "3");
 		auto out = ostringstream();
 		acwing2014::main(in, out);
 		auto ans = out.str();
@@ -385,11 +385,11 @@ namespace acwing {
 
 	TEST(acwing2014, case2) {
 		istringstream in("5\n"
-				"3\n"
-				"2\n"
-				"2\n"
-				"1\n"
-				"3");
+		                 "3\n"
+		                 "2\n"
+		                 "2\n"
+		                 "1\n"
+		                 "3");
 		auto out = ostringstream();
 		acwing2014::main(in, out);
 		auto ans = out.str();
@@ -398,8 +398,8 @@ namespace acwing {
 
 	TEST(acwing607, case1) {
 		istringstream in("5.0\n"
-				"6.0\n"
-				"7.0");
+		                 "6.0\n"
+		                 "7.0");
 		auto out = ostringstream();
 		acwing607::main(in, out);
 		auto ans = out.str();
@@ -421,8 +421,8 @@ namespace acwing {
 
 	TEST(acwing610, case1) {
 		istringstream in("JOAO\n"
-				"500.00\n"
-				"1000.00");
+		                 "500.00\n"
+		                 "1000.00");
 		auto out = ostringstream();
 		acwing610::main(in, out);
 		auto ans = out.str();
@@ -439,10 +439,10 @@ namespace acwing {
 
 	TEST(acwing2005, case1) {
 		istringstream in("4\n"
-				"(())\n"
-				"()((\n"
-				"(()(\n"
-				"))))");
+		                 "(())\n"
+		                 "()((\n"
+		                 "(()(\n"
+		                 "))))");
 		auto out = ostringstream();
 		acwing2005::main(in, out);
 		auto ans = out.str();
@@ -451,11 +451,11 @@ namespace acwing {
 
 	TEST(acwing2005, case2) {
 		istringstream in("5\n"
-				"(((()\n"
-				"())((\n"
-				"(((()\n"
-				")((((\n"
-				")))))");
+		                 "(((()\n"
+		                 "())((\n"
+		                 "(((()\n"
+		                 ")((((\n"
+		                 ")))))");
 		auto out = ostringstream();
 		acwing2005::main(in, out);
 		auto ans = out.str();
@@ -472,7 +472,7 @@ namespace acwing {
 
 	TEST(acwing618, case1) {
 		istringstream in("10\n"
-				"85");
+		                 "85");
 		auto out = ostringstream();
 		acwing618::main(in, out);
 		auto ans = out.str();
@@ -513,10 +513,10 @@ namespace acwing {
 
 	TEST(acwing1996, case1) {
 		istringstream in("4\n"
-				"essieb\n"
-				"a\n"
-				"xzy\n"
-				"elsie");
+		                 "essieb\n"
+		                 "a\n"
+		                 "xzy\n"
+		                 "elsie");
 		auto out = ostringstream();
 		acwing1996::main(in, out);
 		auto ans = out.str();
@@ -582,5 +582,21 @@ namespace acwing {
 		acwing1987::main(in, out);
 		auto ans = out.str();
 		ASSERT_EQ("6", ans);
+	}
+
+	TEST(acwing660, case1) {
+		istringstream in("3 2");
+		auto out = ostringstream();
+		acwing660::main(in, out);
+		auto ans = out.str();
+		ASSERT_EQ("Total: R$ 10.00", ans);
+	}
+
+	TEST(acwing671, case1) {
+		istringstream in("11");
+		auto out = ostringstream();
+		acwing671::main(in, out);
+		auto ans = out.str();
+		ASSERT_EQ("Sao Paulo", ans);
 	}
 }// namespace acwing

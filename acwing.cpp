@@ -28,9 +28,9 @@ namespace acwing {
 		int p1, p2, p3, p4, a, b;
 		cin >> p1 >> p2 >> p3 >> p4 >> a >> b;
 		int min = p1;
-		min = p2 < min ? p2 : min;
-		min = p3 < min ? p3 : min;
-		min = p4 < min ? p4 : min;
+		min     = p2 < min ? p2 : min;
+		min     = p3 < min ? p3 : min;
+		min     = p4 < min ? p4 : min;
 		int ans = (min - a) < (b - a + 1) ? min - a : b - a + 1;
 		cout << (ans < 0 ? 0 : ans);
 		return 0;
@@ -40,13 +40,13 @@ namespace acwing {
 		int number;
 		cin >> number;
 		int copy = number;
-		int len = 0;
+		int len  = 0;
 		while(copy != 0) {
 			copy /= 10;
 			len++;
 		}
 		auto arr = vector<int>(len);
-		copy = number;
+		copy     = number;
 		for(int i = len - 1; i >= 0; i--) {
 			arr[i] = copy % 10;
 			copy /= 10;
@@ -54,8 +54,12 @@ namespace acwing {
 
 		int sum = static_cast<int>(pow(2, len));
 		for(int i = 0; i < len; i++) {
-			if(arr[i] > 1) { break; }
-			if(arr[i] == 0) { sum -= static_cast<int>(pow(2, len - i - 1)); }
+			if(arr[i] > 1) {
+				break;
+			}
+			if(arr[i] == 0) {
+				sum -= static_cast<int>(pow(2, len - i - 1));
+			}
 		}
 		cout << --sum;
 		return 0;
@@ -88,7 +92,7 @@ namespace acwing {
 		double b, c;
 		cin >> a >> b >> c;
 		cout << "NUMBER = " << a << endl
-				<< "SALARY = U$ " << setiosflags(ios::fixed) << setprecision(2) << b * c;
+		     << "SALARY = U$ " << setiosflags(ios::fixed) << setprecision(2) << b * c;
 		return 0;
 	}
 
@@ -114,7 +118,9 @@ namespace acwing {
 		int arr[] = {100, 50, 20, 10, 5, 2, 1};
 		for(int i: arr) {
 			cout << n / i << " nota(s) de R$ " << i << ",00";
-			if(i != 1) { cout << endl; }
+			if(i != 1) {
+				cout << endl;
+			}
 			n %= i;
 		}
 		return 0;
@@ -145,10 +151,12 @@ namespace acwing {
 	int acwing4204::main(istream &cin, ostream &cout) {
 		int n;
 		const int N = 1010;
-		auto g = new int *[N];
+		auto g      = new int *[N];
 		for(int i = 0; i < N; i++) {
 			g[i] = new int[N];
-			for(int j = 0; j < N; j++) { g[i][j] = 0; }
+			for(int j = 0; j < N; j++) {
+				g[i][j] = 0;
+			}
 		}
 		cin >> n;
 		for(int i = 1; i <= n; i++) {
@@ -176,7 +184,9 @@ namespace acwing {
 		}
 		for(int i = 1; i < n; i++) {
 			set<int> s;
-			for(int j = 1; j < n; j++) { s.insert(g[i][j]); }
+			for(int j = 1; j < n; j++) {
+				s.insert(g[i][j]);
+			}
 			for(int j = 0; j < n; j++) {
 				if(!s.contains(j)) {
 					g[i][n] = g[n][i] = j;//补最后一列和最后一行的值
@@ -188,9 +198,13 @@ namespace acwing {
 		for(int i = 1; i <= n; i++) {
 			for(int j = 1; j <= n; j++) {
 				cout << g[i][j];
-				if(j != n) { cout << " "; }
+				if(j != n) {
+					cout << " ";
+				}
 			}
-			if(i != n) { cout << endl; }
+			if(i != n) {
+				cout << endl;
+			}
 		}
 		return 0;
 	}
@@ -204,8 +218,12 @@ namespace acwing {
 			long long val = 0;
 			for(int j = 0; j < n2.length(); j++) {
 				bool bit = n2[j] != '0';
-				if(j == i) { bit = !bit; }
-				if(bit) { val += static_cast<long long>(pow(2, n2.size() - j - 1)); }
+				if(j == i) {
+					bit = !bit;
+				}
+				if(bit) {
+					val += static_cast<long long>(pow(2, n2.size() - j - 1));
+				}
 			}
 			s.insert(val);
 		}
@@ -262,7 +280,9 @@ namespace acwing {
 			haystack[a]++;
 			haystack[b + 1]--;
 		}
-		for(int i = 1; i <= n; i++) { haystack[i] += haystack[i - 1]; }
+		for(int i = 1; i <= n; i++) {
+			haystack[i] += haystack[i - 1];
+		}
 		sort(haystack + 1, haystack + n + 1);
 		cout << haystack[(n + 1) / 2];
 		return 0;
@@ -282,21 +302,23 @@ namespace acwing {
 					cin >> cowhide[i][j];
 					if(flag && cowhide[i][j] == 'X') {
 						occupy[i][j] = true;
-						first = point(i, j);
-						flag = false;
-					} else { occupy[i][j] = false; }
+						first        = point(i, j);
+						flag         = false;
+					} else {
+						occupy[i][j] = false;
+					}
 				}
 			}
 
 			flood(first, occupy, &edge, cowhide, n, m);
 
-			int count = 0;
+			int count     = 0;
 			auto nextedge = unordered_set<point, pointhash, pointequal>();
 			while(true) {
 				for(auto p: edge) {
 					point nexts[] = {
-							point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1),
-							point(p.x, p.y - 1)};
+					        point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1),
+					        point(p.x, p.y - 1)};
 					for(auto next: nexts) {
 						if(0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && !occupy[next.x][next.y]) {
 							if(cowhide[next.x][next.y] == 'X') {
@@ -304,13 +326,13 @@ namespace acwing {
 								return 0;
 							}
 							cowhide[next.x][next.y] = 'X';
-							occupy[next.x][next.y] = true;
+							occupy[next.x][next.y]  = true;
 							nextedge.insert(next);
 						}
 					}
 				}
 				count++;
-				edge = nextedge;
+				edge     = nextedge;
 				nextedge = unordered_set<point, pointhash, pointequal>();
 			}
 			return 0;
@@ -324,7 +346,7 @@ namespace acwing {
 		flood(point first, bool occupy[55][55], unordered_set<point, pointhash, pointequal> *edge, char cowhide[55][55],
 		      int n, int m) {
 			auto que = queue<point>();
-			auto eq = pointequal();
+			auto eq  = pointequal();
 			que.push(first);
 			while(!que.empty()) {
 				auto p = que.front();
@@ -333,8 +355,16 @@ namespace acwing {
 					continue;
 				}
 				occupy[p.x][p.y] = true;
-				point nexts[] = {point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1), point(p.x, p.y - 1)};
-				for(auto next: nexts) { if(0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && !occupy[next.x][next.y]) { if(cowhide[next.x][next.y] == 'X') { que.push(next); } else { edge->insert(p); } } }
+				point nexts[]    = {point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1), point(p.x, p.y - 1)};
+				for(auto next: nexts) {
+					if(0 <= next.x && next.x <= n && 0 <= next.y && next.y <= m && !occupy[next.x][next.y]) {
+						if(cowhide[next.x][next.y] == 'X') {
+							que.push(next);
+						} else {
+							edge->insert(p);
+						}
+					}
+				}
 				que.pop();
 			}
 		}
@@ -357,8 +387,12 @@ namespace acwing {
 			for(int i = 0; i < n; i++) {
 				int x, y;
 				cin >> x >> y;
-				if(max_x < x) { max_x = x; }
-				if(max_y < y) { max_y = y; }
+				if(max_x < x) {
+					max_x = x;
+				}
+				if(max_y < y) {
+					max_y = y;
+				}
 				field[x][y] = 1;
 			}
 
@@ -373,13 +407,17 @@ namespace acwing {
 				auto p = que.front();
 				que.pop_front();
 				point nexts[] = {
-						point(p.x + 1, p.y, p.step), point(p.x - 1, p.y, p.step),
-						point(p.x, p.y + 1, p.step), point(p.x, p.y - 1, p.step)};
+				        point(p.x + 1, p.y, p.step), point(p.x - 1, p.y, p.step),
+				        point(p.x, p.y + 1, p.step), point(p.x, p.y - 1, p.step)};
 				for(auto next: nexts) {
-					if(next.x == 0 && next.y == 0) { return next.step; }
+					if(next.x == 0 && next.y == 0) {
+						return next.step;
+					}
 					if(0 <= next.x && next.x <= max_x + 2 && 0 <= next.y && next.y <= max_y + 2 &&
 					   field[next.x][next.y] != 2) {
-						if(field[next.x][next.y] == 0) { que.push_front(next); } else {
+						if(field[next.x][next.y] == 0) {
+							que.push_front(next);
+						} else {
 							//field[nexts.first][nexts.second]==1
 							next.step++;
 							que.push_back(next);
@@ -410,25 +448,37 @@ namespace acwing {
 	int acwing2014::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		auto above = new bool[n];
+		auto above   = new bool[n];
 		auto heights = set<unsigned int>();
-		auto m = map<unsigned int, vector<unsigned int>>();
+		auto m       = map<unsigned int, vector<unsigned int>>();
 		for(int i = 0; i < n; i++) {
 			int height;
 			cin >> height;
 			heights.insert(height);
 			above[i] = true;//露出水面
-			if(!m.contains(height)) { m[height] = vector<unsigned int>(); }
+			if(!m.contains(height)) {
+				m[height] = vector<unsigned int>();
+			}
 			m[height].push_back(i);
 		}
 		int count = 1;
-		int max = count;
+		int max   = count;
 		for(auto height: heights) {
 			for(auto index: m[height]) {
 				above[index] = false;
-				if(0 < index && index + 1 < n) { if(above[index - 1] && above[index + 1]) { count++; } else if(!above[index - 1] && !above[index + 1]) { count--; } } else if((index == 0 && !above[1]) || (index == n - 1 && !above[n - 2])) { count--; }
+				if(0 < index && index + 1 < n) {
+					if(above[index - 1] && above[index + 1]) {
+						count++;
+					} else if(!above[index - 1] && !above[index + 1]) {
+						count--;
+					}
+				} else if((index == 0 && !above[1]) || (index == n - 1 && !above[n - 2])) {
+					count--;
+				}
 			}
-			if(max < count) { max = count; }
+			if(max < count) {
+				max = count;
+			}
 		}
 		cout << max;
 		return 0;
@@ -473,7 +523,11 @@ namespace acwing {
 		bool picked[5][5];
 		int n;
 		cin >> n;
-		for(int i = 0; i < n; i++) { for(int j = 0; j < n; j++) { cin >> horseshoes[i][j]; } }
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < n; j++) {
+				cin >> horseshoes[i][j];
+			}
+		}
 		memset(picked, false, sizeof picked);
 		if(horseshoes[0][0] == ')') {
 			cout << 0;
@@ -486,7 +540,9 @@ namespace acwing {
 	int acwing2005::dfs(bool stage, char horseshoes[5][5], const bool picked[5][5], int count, int level, int x, int y,
 	                    int n) {
 		if(level == 0 && !stage) {
-			if(count == 13) { printf("13"); }
+			if(count == 13) {
+				printf("13");
+			}
 			return count;
 		}
 
@@ -496,15 +552,23 @@ namespace acwing {
 		bool picked_cpy[5][5];
 		memcpy(picked_cpy, picked, sizeof picked_cpy);
 
-		int max = 0;
+		int max          = 0;
 		picked_cpy[x][y] = true;
 
 		for(auto next: nexts) {
 			if(0 <= next.first && next.first < n && 0 <= next.second && next.second < n &&
 			   !picked_cpy[next.first][next.second]) {
 				int res = 0;
-				if(stage && horseshoes[next.first][next.second] == '(') { res = dfs(true, horseshoes, picked_cpy, count + 1, level + 1, next.first, next.second, n); } else if(stage && horseshoes[next.first][next.second] == ')') { res = dfs(false, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n); } else if(!stage && horseshoes[next.first][next.second] == ')') { res = dfs(false, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n); }
-				if(max < res) { max = res; }
+				if(stage && horseshoes[next.first][next.second] == '(') {
+					res = dfs(true, horseshoes, picked_cpy, count + 1, level + 1, next.first, next.second, n);
+				} else if(stage && horseshoes[next.first][next.second] == ')') {
+					res = dfs(false, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n);
+				} else if(!stage && horseshoes[next.first][next.second] == ')') {
+					res = dfs(false, horseshoes, picked_cpy, count + 1, level - 1, next.first, next.second, n);
+				}
+				if(max < res) {
+					max = res;
+				}
 			}
 		}
 		return max;
@@ -528,8 +592,16 @@ namespace acwing {
 		string str;
 		cin >> str;
 		int count = 0;
-		for(char ch: str) { if(ch == '4' || ch == '7') { count++; } }
-		if(count == 4 || count == 7) { cout << "YES"; } else { cout << "NO"; }
+		for(char ch: str) {
+			if(ch == '4' || ch == '7') {
+				count++;
+			}
+		}
+		if(count == 4 || count == 7) {
+			cout << "YES";
+		} else {
+			cout << "NO";
+		}
 		return 0;
 	}
 
@@ -537,7 +609,7 @@ namespace acwing {
 		string str;
 		cin >> str;
 		auto in_sub = new bool[str.length()];
-		int count = 0;
+		int count   = 0;
 		memset(in_sub, false, str.length() * sizeof(bool));
 
 		int prev_left = -1;
@@ -551,15 +623,19 @@ namespace acwing {
 			if(str[i] == ')' && prev_left != -1) {
 				count += 2;
 				in_sub[prev_left] = true;
-				in_sub[i] = true;
+				in_sub[i]         = true;
 				for(int j = prev_left + 1; j < i; j++) {
 					if(str[j] == '(') {
 						prev_left = j;
 						break;
 					}
 				}
-				if(in_sub[prev_left]) { prev_left = -1; }
-			} else if(prev_left == -1 && str[i] == '(') { prev_left = i; }
+				if(in_sub[prev_left]) {
+					prev_left = -1;
+				}
+			} else if(prev_left == -1 && str[i] == '(') {
+				prev_left = i;
+			}
 		}
 		cout << count;
 		return 0;
@@ -603,8 +679,12 @@ namespace acwing {
 		}
 
 		void trie_node::insert(string str) {
-			if(str.length() == 0) { return; }
-			if(this->nexts[str[0] - '0'] == nullptr) { this->nexts[str[0] - '0'] = new trie_node(str[0] - '0', this); }
+			if(str.length() == 0) {
+				return;
+			}
+			if(this->nexts[str[0] - '0'] == nullptr) {
+				this->nexts[str[0] - '0'] = new trie_node(str[0] - '0', this);
+			}
 			this->nexts[str[0] - '0']->insert(str.substr(1));
 		}
 
@@ -635,7 +715,9 @@ namespace acwing {
 					count += next->count();
 				}
 			}
-			if(flag) { return 1; }
+			if(flag) {
+				return 1;
+			}
 			return count;
 		}
 	}// namespace acwing4208
@@ -653,16 +735,16 @@ namespace acwing {
 			cin >> names[i];
 			auto min_name_const_c_str = names[i].c_str();
 			auto max_name_const_c_str = names[i].c_str();
-			auto min_name_c_str = new char[names[i].length() + 1];
-			auto max_name_c_str = new char[names[i].length() + 1];
+			auto min_name_c_str       = new char[names[i].length() + 1];
+			auto max_name_c_str       = new char[names[i].length() + 1];
 			strcpy(min_name_c_str, min_name_const_c_str);
 			strcpy(max_name_c_str, max_name_const_c_str);
 			sort(min_name_c_str, min_name_c_str + names[i].length() * sizeof(char));
 			sort(max_name_c_str, max_name_c_str + names[i].length() * sizeof(char), cmp);
 			auto min_name = string(min_name_c_str);
 			auto max_name = string(max_name_c_str);
-			min_names[i] = min_name;
-			max_names[i] = max_name;
+			min_names[i]  = min_name;
+			max_names[i]  = max_name;
 			delete[] min_name_c_str;
 			delete[] max_name_c_str;
 		}
@@ -674,10 +756,10 @@ namespace acwing {
 			auto min_name = min_names[i];
 			auto max_name = max_names[i];
 			cout << lower_bound(max_names_sorted.begin(), max_names_sorted.end(), min_name) - max_names_sorted.begin() +
-					1
-					<< " "
-					<< upper_bound(min_names_sorted.begin(), min_names_sorted.end(), max_name) - min_names_sorted.begin()
-					<< endl;
+			                1
+			     << " "
+			     << upper_bound(min_names_sorted.begin(), min_names_sorted.end(), max_name) - min_names_sorted.begin()
+			     << endl;
 		}
 		return 0;
 	}
@@ -687,7 +769,7 @@ namespace acwing {
 	int acwing656::main(istream &cin, ostream &cout) {
 		double n;
 		cin >> n;
-		int total = static_cast<int>(n * static_cast<double>(100));
+		int total           = static_cast<int>(n * static_cast<double>(100));
 		int denominations[] = {10000, 5000, 2000, 1000, 500, 200, 100, 50, 25, 10, 5, 1};
 		int count[12];
 		for(int i = 0; i < 12; i++) {
@@ -695,19 +777,19 @@ namespace acwing {
 			total %= denominations[i];
 		}
 		cout << "NOTAS:" << endl
-				<< count[0] << " nota(s) de R$ 100.00" << endl
-				<< count[1] << " nota(s) de R$ 50.00" << endl
-				<< count[2] << " nota(s) de R$ 20.00" << endl
-				<< count[3] << " nota(s) de R$ 10.00" << endl
-				<< count[4] << " nota(s) de R$ 5.00" << endl
-				<< count[5] << " nota(s) de R$ 2.00" << endl
-				<< "MOEDAS:" << endl
-				<< count[6] << " moeda(s) de R$ 1.00" << endl
-				<< count[7] << " moeda(s) de R$ 0.50" << endl
-				<< count[8] << " moeda(s) de R$ 0.25" << endl
-				<< count[9] << " moeda(s) de R$ 0.10" << endl
-				<< count[10] << " moeda(s) de R$ 0.05" << endl
-				<< count[11] << " moeda(s) de R$ 0.01";
+		     << count[0] << " nota(s) de R$ 100.00" << endl
+		     << count[1] << " nota(s) de R$ 50.00" << endl
+		     << count[2] << " nota(s) de R$ 20.00" << endl
+		     << count[3] << " nota(s) de R$ 10.00" << endl
+		     << count[4] << " nota(s) de R$ 5.00" << endl
+		     << count[5] << " nota(s) de R$ 2.00" << endl
+		     << "MOEDAS:" << endl
+		     << count[6] << " moeda(s) de R$ 1.00" << endl
+		     << count[7] << " moeda(s) de R$ 0.50" << endl
+		     << count[8] << " moeda(s) de R$ 0.25" << endl
+		     << count[9] << " moeda(s) de R$ 0.10" << endl
+		     << count[10] << " moeda(s) de R$ 0.05" << endl
+		     << count[11] << " moeda(s) de R$ 0.01";
 		return 0;
 	}
 
@@ -725,52 +807,108 @@ namespace acwing {
 	int acwing665::main(istream &cin, ostream &cout) {
 		int a, b;
 		cin >> a >> b;
-		if(a % b == 0 || b % a == 0) { cout << "Sao Multiplos"; } else { cout << "Nao sao Multiplos"; }
+		if(a % b == 0 || b % a == 0) {
+			cout << "Sao Multiplos";
+		} else {
+			cout << "Nao sao Multiplos";
+		}
 		return 0;
 	}
 
 	int acwing657::main(istream &cin, ostream &cout) {
 		int a, b, c, d;
 		cin >> a >> b >> c >> d;
-		if(b > c && d > a && c + d > a + b && c > 0 && d > 0 && a % 2 == 0) { cout << "Valores aceitos"; } else { cout << "Valores nao aceitos"; }
+		if(b > c && d > a && c + d > a + b && c > 0 && d > 0 && a % 2 == 0) {
+			cout << "Valores aceitos";
+		} else {
+			cout << "Valores nao aceitos";
+		}
 		return 0;
 	}
 
 	int acwing1987::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		auto m = map<int, int>();
+		auto m      = map<int, int>();
 		int current = 0;
 		for(int i = 0; i < n; i++) {
 			int length;
 			char direction;
 			cin >> length >> direction;
 			if(direction == 'R') {
-				if(!m.contains(current)) { m.insert(pair(current, 1)); } else { m[current]++; }
-				if(!m.contains(current + length)) { m.insert(pair(current + length, -1)); } else { m[current + length]--; }
+				if(!m.contains(current)) {
+					m.insert(pair(current, 1));
+				} else {
+					m[current]++;
+				}
+				if(!m.contains(current + length)) {
+					m.insert(pair(current + length, -1));
+				} else {
+					m[current + length]--;
+				}
 				current += length;
 			} else {
-				if(!m.contains(current)) { m.insert(pair(current, -1)); } else { m[current]--; }
-				if(!m.contains(current - length)) { m.insert(pair(current - length, 1)); } else { m[current - length]++; }
+				if(!m.contains(current)) {
+					m.insert(pair(current, -1));
+				} else {
+					m[current]--;
+				}
+				if(!m.contains(current - length)) {
+					m.insert(pair(current - length, 1));
+				} else {
+					m[current - length]++;
+				}
 				current -= length;
 			}
 		}
 		unsigned int layer_count = 0;
-		unsigned int count = 0;
-		bool above2 = false;
+		unsigned int count       = 0;
+		bool above2              = false;
 		int prev;
 		for(auto p: m) {
 			layer_count += p.second;
 			if(layer_count >= 2) {
-				if(above2) { count += p.first - prev; }
+				if(above2) {
+					count += p.first - prev;
+				}
 				above2 = true;
-				prev = p.first;
+				prev   = p.first;
 			} else {
-				if(above2) { count += p.first - prev; }
+				if(above2) {
+					count += p.first - prev;
+				}
 				above2 = false;
 			}
 		}
 		cout << count;
+		return 0;
+	}
+
+	int acwing660::main(istream &cin, ostream &cout) {
+		double snacks[] = {4, 4.5, 5, 2, 1.5};
+		int x, y;
+		cin >> x >> y;
+		cout << "Total: R$ " << setiosflags(ios::fixed) << setprecision(2) << snacks[x - 1] * y;
+		return 0;
+	}
+
+	int acwing671::main(istream &cin, ostream &cout) {
+		auto cities = unordered_map<unsigned int, string>();
+		cities[61]  = "Brasilia";
+		cities[71]  = "Salvador";
+		cities[11]  = "Sao Paulo";
+		cities[21]  = "Rio de Janeiro";
+		cities[32]  = "Juiz de Fora";
+		cities[19]  = "Campinas";
+		cities[27]  = "Vitoria";
+		cities[31]  = "Belo Horizonte";
+		int number;
+		cin >> number;
+		if(cities.count(number) != 0) {
+			cout << cities[number];
+		} else {
+			cout << "DDD nao cadastrado";
+		}
 		return 0;
 	}
 }// namespace acwing

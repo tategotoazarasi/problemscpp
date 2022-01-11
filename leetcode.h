@@ -20,13 +20,13 @@ namespace leetcode {
 		TreeNode *right;
 
 		TreeNode()
-			: val(0), left(nullptr), right(nullptr) {}
+		    : val(0), left(nullptr), right(nullptr) {}
 
 		explicit TreeNode(int x)
-			: val(x), left(nullptr), right(nullptr) {}
+		    : val(x), left(nullptr), right(nullptr) {}
 
 		TreeNode(int x, TreeNode *left, TreeNode *right)
-			: val(x), left(left), right(right) {}
+		    : val(x), left(left), right(right) {}
 
 		bool operator==(const TreeNode &) const;
 
@@ -44,11 +44,11 @@ namespace leetcode {
 			bool is_end;
 			char ch;
 			TrieNode *nexts[26] = {
-					nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
-					nullptr,
-					nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
-					nullptr,
-					nullptr, nullptr, nullptr, nullptr, nullptr, nullptr};
+			        nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
+			        nullptr,
+			        nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
+			        nullptr,
+			        nullptr, nullptr, nullptr, nullptr, nullptr, nullptr};
 
 			explicit TrieNode(char);
 
@@ -114,8 +114,8 @@ namespace leetcode {
 			TreeNode *friend_node;
 
 			explicit FriendTreeNode(int x, TreeNode *friend_node)
-				: sum(x), val(0), left(nullptr), right(nullptr),
-				  friend_node(friend_node) {}
+			    : sum(x), val(0), left(nullptr), right(nullptr),
+			      friend_node(friend_node) {}
 		};
 
 		class Solution {
