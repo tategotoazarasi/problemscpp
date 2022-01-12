@@ -888,4 +888,35 @@ namespace leetcode {
 
 		size_t point_hash::operator()(const point &p) const { return p.x * 1000000 + p.y; }
 	}// namespace escape_a_large_maze
+
+	namespace increasing_triplet_subsequence {
+		bool Solution::increasingTriplet(vector<int> &nums) {
+			if(nums.size() < 3) {
+				return false;
+			}
+			auto *min            = new int[nums.size()];
+			auto *max            = new int[nums.size()];
+			min[0]               = nums[0];
+			max[nums.size() - 1] = nums[nums.size() - 1];
+			for(int i = 1, j = nums.size() - 2; i < nums.size() && j >= 0; i++, j--) {
+				if(min[i - 1] > nums[i]) {
+					min[i] = nums[i];
+				} else {
+					min[i] = min[i - 1];
+				}
+
+				if(max[j + 1] < nums[j]) {
+					max[j] = nums[j];
+				} else {
+					max[j] = max[j + 1];
+				}
+			}
+			for(int i = 0; i < nums.size(); i++) {
+				if(nums[i] > min[i] && nums[i] < max[i]) {
+					return true;
+				}
+			}
+			return false;
+		}
+	}// namespace increasing_triplet_subsequence
 }// namespace leetcode

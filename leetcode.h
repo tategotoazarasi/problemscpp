@@ -354,6 +354,16 @@ namespace leetcode {
 			static unsigned int search(unordered_set<point, point_hash> &block_set, point *source, point *target, unsigned int limit);
 		};
 	}// namespace escape_a_large_maze
+
+	/**
+	 * \brief LeetCode 334. 递增的三元子序列
+	 */
+	namespace increasing_triplet_subsequence {
+		class Solution {
+		public:
+			static bool increasingTriplet(vector<int> &nums);
+		};
+	}// namespace increasing_triplet_subsequence
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

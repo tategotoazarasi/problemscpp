@@ -563,4 +563,30 @@ namespace leetcode {
 			ASSERT_EQ(" abc", Solution::decodeCiphertext(" b  ac", 2));
 		}
 	}// namespace decode_the_slanted_ciphertext
+
+	namespace increasing_triplet_subsequence {
+		TEST(increasing_triplet_subsequence, case1) {
+			int input[] = {1, 2, 3, 4, 5};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_TRUE(Solution::increasingTriplet(vec));
+		}
+
+		TEST(increasing_triplet_subsequence, case2) {
+			int input[] = {5, 4, 3, 2, 1};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_FALSE(Solution::increasingTriplet(vec));
+		}
+
+		TEST(increasing_triplet_subsequence, case3) {
+			int input[] = {2, 1, 5, 0, 4, 6};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_TRUE(Solution::increasingTriplet(vec));
+		}
+
+		TEST(increasing_triplet_subsequence, case4) {
+			int input[] = {20, 100, 10, 12, 5, 13};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_TRUE(Solution::increasingTriplet(vec));
+		}
+	}// namespace increasing_triplet_subsequence
 }// namespace leetcode
