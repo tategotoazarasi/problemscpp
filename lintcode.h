@@ -13,7 +13,7 @@ namespace lintcode {
 		TreeNode *left, *right;
 
 		explicit TreeNode(int val)
-			: val(val), left(nullptr), right(nullptr) {};
+		    : val(val), left(nullptr), right(nullptr){};
 	};
 
 	namespace license_key_formatting {
@@ -137,6 +137,6 @@ namespace lintcode {
 			static string convert(long long index);
 		};
 	}// namespace convert
-}    // namespace lintcode
+}// namespace lintcode
 
 #endif//PROBLEMSCPP_LINTCODE_H

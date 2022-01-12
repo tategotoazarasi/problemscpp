@@ -20,12 +20,12 @@ namespace lintcode {
 	namespace distribute_candies {
 		TEST(distribute_candies, case1) {
 			int input[] = {
-					1,
-					1,
-					2,
-					2,
-					3,
-					3,
+			        1,
+			        1,
+			        2,
+			        2,
+			        3,
+			        3,
 			};
 			auto vec = vector(begin(input), end(input));
 			ASSERT_EQ(3, Solution::distributeCandies(vec));
@@ -33,7 +33,7 @@ namespace lintcode {
 
 		TEST(distribute_candies, case2) {
 			int input[] = {1, 1, 2, 2, 3, 3, 4, 5, 6, 6, 7, 8};
-			auto vec = vector(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_EQ(6, Solution::distributeCandies(vec));
 		}
 	}// namespace distribute_candies
@@ -97,4 +97,4 @@ namespace lintcode {
 			ASSERT_EQ("1ZZ", Solution::convert(702));
 		}
 	}// namespace convert
-}    // namespace lintcode
+}// namespace lintcode
