@@ -1,13 +1,8 @@
-//
-// Created by tategotoazarasi on 2021/12/29.
-//
-
 #ifndef PROBLEMSCPP_LEETCODE_H
 #define PROBLEMSCPP_LEETCODE_H
 
 #include <functional>
 #include <map>
-#include <mutex>
 #include <string>
 #include <unordered_set>
 #include <vector>
@@ -332,8 +327,12 @@ namespace leetcode {
 			unsigned int y;
 			unsigned int distance;
 			point *target;
-			point(): x(0), y(0), distance(0), target(nullptr){};
-			point(unsigned int x, unsigned int y, int distance, point *target): x(x), y(y), distance(distance), target(target){};
+
+			point()
+			    : x(0), y(0), distance(0), target(nullptr){};
+
+			point(unsigned int x, unsigned int y, int distance, point *target)
+			    : x(x), y(y), distance(distance), target(target){};
 			bool operator<(const point &p) const;
 			bool operator==(const point &p) const;
 		};

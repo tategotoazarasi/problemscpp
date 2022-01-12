@@ -115,7 +115,7 @@ namespace leetcode {
 			auto ans   = string();
 			bool round = false;
 			while(columnNumber != 0) {
-				char ch;
+				char ch = 0;
 				if(round) {
 					ch    = static_cast<char>(columnNumber % 26 + 63);
 					round = false;
