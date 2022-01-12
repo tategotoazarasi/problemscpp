@@ -1,6 +1,3 @@
-//
-// Created by tategotoazarasi on 2022/1/7.
-//
 #include "lintcode.h"
 #include "gtest/gtest.h"
 #include <vector>
@@ -30,13 +27,13 @@ namespace lintcode {
 			        3,
 			        3,
 			};
-			auto vec = vector<int>(begin(input), end(input));
+			auto vec = vector(begin(input), end(input));
 			ASSERT_EQ(3, Solution::distributeCandies(vec));
 		}
 
 		TEST(distribute_candies, case2) {
 			int input[] = {1, 1, 2, 2, 3, 3, 4, 5, 6, 6, 7, 8};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_EQ(6, Solution::distributeCandies(vec));
 		}
 	}// namespace distribute_candies

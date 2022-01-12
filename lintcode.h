@@ -1,7 +1,3 @@
-//
-// Created by tategotoazarasi on 2021/12/29.
-//
-
 #ifndef PROBLEMSCPP_LINTCODE_H
 #define PROBLEMSCPP_LINTCODE_H
 
@@ -28,7 +24,7 @@ namespace lintcode {
 			* @param K: a integer
 			* @return: return a string
 			*/
-			static string licenseKeyFormatting(string &, int);
+			static string licenseKeyFormatting(string & /*S*/, int /*K*/);
 		};
 	}// namespace license_key_formatting
 
@@ -64,7 +60,7 @@ namespace lintcode {
 			 * @param n: an integer
 			 * @return: an ineger f(n)
 			 */
-			static int fibonacci(int);
+			static int fibonacci(int /*n*/);
 		};
 	}// namespace fibonacci
 
@@ -124,7 +120,7 @@ namespace lintcode {
 			 */
 			static void flatten(TreeNode *root);
 
-			static TreeNode *vlr(TreeNode *);
+			static TreeNode *vlr(TreeNode * /*node*/);
 		};
 	}// namespace flatten
 }// namespace lintcode

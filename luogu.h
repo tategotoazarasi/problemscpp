@@ -1,7 +1,3 @@
-//
-// Created by tategotoazarasi on 2022/1/2.
-//
-
 #ifndef PROBLEMSCPP_LUOGU_H
 #define PROBLEMSCPP_LUOGU_H
 
@@ -12,7 +8,7 @@ using namespace std;
 namespace luogu {
 	class T210229 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 }// namespace luogu
 

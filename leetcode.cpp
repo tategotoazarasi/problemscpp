@@ -648,8 +648,8 @@ namespace leetcode {
 	namespace minimum_swaps_to_group_all_1s_together_ii {
 		int Solution::minSwaps(vector<int> &nums) {
 			int onecount = 0;
-			for(int i = 0; i < nums.size(); i++) {
-				if(nums[i] == 1) {
+			for(const int num: nums) {
+				if(num == 1) {
 					onecount++;
 				}
 			}

@@ -1,7 +1,3 @@
-//
-// Created by tategotoazarasi on 2021/12/28.
-//
-
 #include "acwing.h"
 
 #include <algorithm>
@@ -11,6 +7,7 @@
 #include <map>
 #include <queue>
 #include <set>
+#include <unordered_map>
 #include <unordered_set>
 #include <vector>
 
@@ -18,20 +15,26 @@ using namespace std;
 
 namespace acwing {
 	int acwing1::main(istream &cin, ostream &cout) {
-		int a, b;
+		int a;
+		int b;
 		cin >> a >> b;
 		cout << a + b;
 		return 0;
 	}
 
 	int acwing4200::main(istream &cin, ostream &cout) {
-		int p1, p2, p3, p4, a, b;
+		int p1;
+		int p2;
+		int p3;
+		int p4;
+		int a;
+		int b;
 		cin >> p1 >> p2 >> p3 >> p4 >> a >> b;
-		int min = p1;
-		min     = p2 < min ? p2 : min;
-		min     = p3 < min ? p3 : min;
-		min     = p4 < min ? p4 : min;
-		int ans = (min - a) < (b - a + 1) ? min - a : b - a + 1;
+		int min       = p1;
+		min           = p2 < min ? p2 : min;
+		min           = p3 < min ? p3 : min;
+		min           = p4 < min ? p4 : min;
+		const int ans = min - a < b - a + 1 ? min - a : b - a + 1;
 		cout << (ans < 0 ? 0 : ans);
 		return 0;
 	}
@@ -66,7 +69,10 @@ namespace acwing {
 	}
 
 	int acwing608::main(istream &cin, ostream &cout) {
-		int a, b, c, d;
+		int a;
+		int b;
+		int c;
+		int d;
 		cin >> a >> b >> c >> d;
 		cout << "DIFERENCA = " << a * b - c * d;
 		return 0;
@@ -81,7 +87,8 @@ namespace acwing {
 	}
 
 	int acwing606::main(istream &cin, ostream &cout) {
-		double a, b;
+		double a;
+		double b;
 		cin >> a >> b;
 		cout << "MEDIA = " << setiosflags(ios::fixed) << setprecision(5) << (a * 3.5 + b * 7.5) / 11;
 		return 0;
@@ -89,7 +96,8 @@ namespace acwing {
 
 	int acwing609::main(istream &cin, ostream &cout) {
 		int a;
-		double b, c;
+		double b;
+		double c;
 		cin >> a >> b >> c;
 		cout << "NUMBER = " << a << endl
 		     << "SALARY = U$ " << setiosflags(ios::fixed) << setprecision(2) << b * c;
@@ -105,7 +113,10 @@ namespace acwing {
 	}
 
 	int acwing616::main(istream &cin, ostream &cout) {
-		double x1, y1, x2, y2;
+		double x1;
+		double y1;
+		double x2;
+		double y2;
 		cin >> x1 >> y1 >> x2 >> y2;
 		cout << setiosflags(ios::fixed) << setprecision(4) << sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
 		return 0;
@@ -116,7 +127,7 @@ namespace acwing {
 		cin >> n;
 		cout << n << endl;
 		int arr[] = {100, 50, 20, 10, 5, 2, 1};
-		for(int i: arr) {
+		for(const int i: arr) {
 			cout << n / i << " nota(s) de R$ " << i << ",00";
 			if(i != 1) {
 				cout << endl;
@@ -131,7 +142,7 @@ namespace acwing {
 		cin >> str;
 		int count0 = 0;
 		int count1 = 0;
-		for(char c: str) {
+		for(const char c: str) {
 			if(c == '1') {
 				count1++;
 				count0 = 0;
@@ -151,7 +162,7 @@ namespace acwing {
 	int acwing4204::main(istream &cin, ostream &cout) {
 		int n;
 		const int N = 1010;
-		auto g      = new int *[N];
+		auto *g     = new int *[N];
 		for(int i = 0; i < N; i++) {
 			g[i] = new int[N];
 			for(int j = 0; j < N; j++) {
@@ -210,7 +221,8 @@ namespace acwing {
 	}
 
 	int acwing2058::main(istream &cin, ostream &cout) {
-		string n2, n3;
+		string n2;
+		string n3;
 		cin >> n2 >> n3;
 		auto s = set<long long>();
 
@@ -251,31 +263,33 @@ namespace acwing {
 
 	int acwing654::main(istream &cin, ostream &cout) {
 		int n;
-		int h, m, s;
 		cin >> n;
-		s = n % 60;
+		int s = n % 60;
 		n /= 60;
-		m = n % 60;
+		int m = n % 60;
 		n /= 60;
-		h = n;
+		int h = n;
 		cout << h << ":" << m << ":" << s;
 		return 0;
 	}
 
 	int acwing605::main(istream &cin, ostream &cout) {
-		int a, b;
+		int a;
+		int b;
 		cin >> a >> b;
 		cout << "PROD = " << a * b;
 		return 0;
 	}
 
 	int acwing2041::main(istream &cin, ostream &cout) {
-		auto haystack = new int[1000010];
+		auto *haystack = new int[1000010];
 		memset(haystack, 0, 1000010 * sizeof *haystack);
-		int n, k;
+		int n;
+		int k;
 		cin >> n >> k;
 		for(int i = 0; i < k; i++) {
-			int a, b;
+			int a;
+			int b;
 			cin >> a >> b;
 			haystack[a]++;
 			haystack[b + 1]--;
@@ -293,10 +307,11 @@ namespace acwing {
 			char cowhide[55][55]{};
 			bool occupy[55][55]{};
 			auto edge = unordered_set<point, pointhash, pointequal>();
-			int n, m;
+			int n;
+			int m;
 			cin >> n >> m;
 			bool flag = true;
-			point first;
+			point first{};
 			for(int i = 0; i < n; i++) {
 				for(int j = 0; j < m; j++) {
 					cin >> cowhide[i][j];
@@ -315,7 +330,7 @@ namespace acwing {
 			int count     = 0;
 			auto nextedge = unordered_set<point, pointhash, pointequal>();
 			while(true) {
-				for(auto p: edge) {
+				for(const auto p: edge) {
 					point nexts[] = {
 					        point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1),
 					        point(p.x, p.y - 1)};
@@ -335,7 +350,6 @@ namespace acwing {
 				edge     = nextedge;
 				nextedge = unordered_set<point, pointhash, pointequal>();
 			}
-			return 0;
 		}
 
 		size_t pointhash::operator()(const point &p) const { return p.x * 50 + p.y; }
@@ -345,8 +359,8 @@ namespace acwing {
 		void
 		flood(point first, bool occupy[55][55], unordered_set<point, pointhash, pointequal> *edge, char cowhide[55][55],
 		      int n, int m) {
-			auto que = queue<point>();
-			auto eq  = pointequal();
+			auto que      = queue<point>();
+			const auto eq = pointequal();
 			que.push(first);
 			while(!que.empty()) {
 				auto p = que.front();
@@ -372,8 +386,10 @@ namespace acwing {
 
 	namespace acwing2019 {
 		int acwing2019::main(istream &cin, ostream &cout) {
-			int n, start_x, start_y;
-			auto field = new int *[N + 10];
+			int n;
+			int start_x;
+			int start_y;
+			auto *field = new int *[N + 10];
 			for(int i = 0; i < N + 10; i++) {
 				field[i] = new int[N + 10];
 				memset(field[i], 0, (N + 10) * sizeof(int));
@@ -385,7 +401,8 @@ namespace acwing {
 			int max_x = 0;
 			int max_y = 0;
 			for(int i = 0; i < n; i++) {
-				int x, y;
+				int x;
+				int y;
 				cin >> x >> y;
 				if(max_x < x) {
 					max_x = x;
@@ -404,7 +421,7 @@ namespace acwing {
 			auto que = deque<point>();
 			que.push_front(start);
 			while(!que.empty()) {
-				auto p = que.front();
+				const auto p = que.front();
 				que.pop_front();
 				point nexts[] = {
 				        point(p.x + 1, p.y, p.step), point(p.x - 1, p.y, p.step),
@@ -431,8 +448,12 @@ namespace acwing {
 	}// namespace acwing2019
 
 	int acwing611::main(istream &cin, ostream &cout) {
-		int a1, b1, a2, b2;
-		double c1, c2;
+		int a1;
+		int b1;
+		int a2;
+		int b2;
+		double c1;
+		double c2;
 		cin >> a1 >> b1 >> c1 >> a2 >> b2 >> c2;
 		cout << "VALOR A PAGAR: R$ " << setiosflags(ios::fixed) << setprecision(2) << b1 * c1 + b2 * c2;
 		return 0;
@@ -448,7 +469,7 @@ namespace acwing {
 	int acwing2014::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		auto above   = new bool[n];
+		auto *above  = new bool[n];
 		auto heights = set<unsigned int>();
 		auto m       = map<unsigned int, vector<unsigned int>>();
 		for(int i = 0; i < n; i++) {
@@ -464,7 +485,7 @@ namespace acwing {
 		int count = 1;
 		int max   = count;
 		for(auto height: heights) {
-			for(auto index: m[height]) {
+			for(const auto index: m[height]) {
 				above[index] = false;
 				if(0 < index && index + 1 < n) {
 					if(above[index - 1] && above[index + 1]) {
@@ -472,7 +493,7 @@ namespace acwing {
 					} else if(!above[index - 1] && !above[index + 1]) {
 						count--;
 					}
-				} else if((index == 0 && !above[1]) || (index == n - 1 && !above[n - 2])) {
+				} else if(index == 0 && !above[1] || index == n - 1 && !above[n - 2]) {
 					count--;
 				}
 			}
@@ -485,14 +506,18 @@ namespace acwing {
 	}
 
 	int acwing607::main(istream &cin, ostream &cout) {
-		double a, b, c;
+		double a;
+		double b;
+		double c;
 		cin >> a >> b >> c;
 		cout << "MEDIA = " << setiosflags(ios::fixed) << setprecision(1) << (a * 2 + b * 3 + c * 5) / 10;
 		return 0;
 	}
 
 	int acwing613::main(istream &cin, ostream &cout) {
-		double a, b, c;
+		double a;
+		double b;
+		double c;
 		cin >> a >> b >> c;
 		cout << "TRIANGULO: " << setiosflags(ios::fixed) << setprecision(3) << a * c / 2 << endl;
 		cout << "CIRCULO: " << setiosflags(ios::fixed) << setprecision(3) << c * c * 3.14159 << endl;
@@ -504,16 +529,19 @@ namespace acwing {
 
 	int acwing610::main(istream &cin, ostream &cout) {
 		string name;
-		double b, m;
+		double b;
+		double m;
 		cin >> name >> b >> m;
 		cout << "TOTAL = R$ " << setiosflags(ios::fixed) << setprecision(2) << b + 0.15 * m;
 		return 0;
 	}
 
 	int acwing614::main(istream &cin, ostream &cout) {
-		int a, b, c;
+		int a;
+		int b;
+		int c;
 		cin >> a >> b >> c;
-		int maxab = (a + b + abs(a - b)) / 2;
+		const int maxab = (a + b + abs(a - b)) / 2;
 		cout << (maxab + c + abs(maxab - c)) / 2 << " eh o maior";
 		return 0;
 	}
@@ -528,7 +556,7 @@ namespace acwing {
 				cin >> horseshoes[i][j];
 			}
 		}
-		memset(picked, false, sizeof picked);
+		memset(picked, 0, sizeof picked);
 		if(horseshoes[0][0] == ')') {
 			cout << 0;
 			return 0;
@@ -546,8 +574,8 @@ namespace acwing {
 			return count;
 		}
 
-		pair<int, int> nexts[4] = {pair<int, int>(x - 1, y), pair<int, int>(x + 1, y), pair<int, int>(x, y - 1),
-		                           pair<int, int>(x, y + 1)};
+		pair<int, int> nexts[4] = {pair(x - 1, y), pair(x + 1, y), pair(x, y - 1),
+		                           pair(x, y + 1)};
 		//复制状态
 		bool picked_cpy[5][5];
 		memcpy(picked_cpy, picked, sizeof picked_cpy);
@@ -555,7 +583,7 @@ namespace acwing {
 		int max          = 0;
 		picked_cpy[x][y] = true;
 
-		for(auto next: nexts) {
+		for(const auto next: nexts) {
 			if(0 <= next.first && next.first < n && 0 <= next.second && next.second < n &&
 			   !picked_cpy[next.first][next.second]) {
 				int res = 0;
@@ -582,7 +610,8 @@ namespace acwing {
 	}
 
 	int acwing618::main(istream &cin, ostream &cout) {
-		long t, s;
+		long t;
+		long s;
 		cin >> t >> s;
 		cout << setiosflags(ios::fixed) << setprecision(3) << static_cast<double>(t * s) / 12;
 		return 0;
@@ -592,7 +621,7 @@ namespace acwing {
 		string str;
 		cin >> str;
 		int count = 0;
-		for(char ch: str) {
+		for(const char ch: str) {
 			if(ch == '4' || ch == '7') {
 				count++;
 			}
@@ -608,9 +637,9 @@ namespace acwing {
 	int acwing4207::main(istream &cin, ostream &cout) {
 		string str;
 		cin >> str;
-		auto in_sub = new bool[str.length()];
-		int count   = 0;
-		memset(in_sub, false, str.length() * sizeof(bool));
+		auto *in_sub = new bool[str.length()];
+		int count    = 0;
+		memset(in_sub, 0, str.length() * sizeof(bool));
 
 		int prev_left = -1;
 		for(int i = 0; i < str.length(); i++) {
@@ -690,14 +719,14 @@ namespace acwing {
 
 		void trie_node::display() {
 			bool flag = true;
-			for(auto next: this->nexts) {
+			for(auto *next: this->nexts) {
 				if(next != nullptr) {
 					flag = false;
 					next->display();
 				}
 			}
 			if(flag) {
-				auto current = this;
+				const auto *current = this;
 				while(current->val != -1) {
 					cout << static_cast<char>(current->val + '0');
 					current = current->father;
@@ -709,7 +738,7 @@ namespace acwing {
 		int trie_node::count() {
 			int count = 0;
 			bool flag = true;
-			for(auto next: this->nexts) {
+			for(auto *next: this->nexts) {
 				if(next != nullptr) {
 					flag = false;
 					count += next->count();
@@ -733,23 +762,23 @@ namespace acwing {
 		max_names.resize(n);
 		for(int i = 0; i < n; i++) {
 			cin >> names[i];
-			auto min_name_const_c_str = names[i].c_str();
-			auto max_name_const_c_str = names[i].c_str();
-			auto min_name_c_str       = new char[names[i].length() + 1];
-			auto max_name_c_str       = new char[names[i].length() + 1];
+			const auto *min_name_const_c_str = names[i].c_str();
+			const auto *max_name_const_c_str = names[i].c_str();
+			auto *min_name_c_str             = new char[names[i].length() + 1];
+			auto *max_name_c_str             = new char[names[i].length() + 1];
 			strcpy(min_name_c_str, min_name_const_c_str);
 			strcpy(max_name_c_str, max_name_const_c_str);
 			sort(min_name_c_str, min_name_c_str + names[i].length() * sizeof(char));
 			sort(max_name_c_str, max_name_c_str + names[i].length() * sizeof(char), cmp);
-			auto min_name = string(min_name_c_str);
-			auto max_name = string(max_name_c_str);
-			min_names[i]  = min_name;
-			max_names[i]  = max_name;
+			const auto min_name = string(min_name_c_str);
+			const auto max_name = string(max_name_c_str);
+			min_names[i]        = min_name;
+			max_names[i]        = max_name;
 			delete[] min_name_c_str;
 			delete[] max_name_c_str;
 		}
-		auto min_names_sorted = vector<string>(min_names);
-		auto max_names_sorted = vector<string>(max_names);
+		auto min_names_sorted = vector(min_names);
+		auto max_names_sorted = vector(max_names);
 		sort(min_names_sorted.begin(), min_names_sorted.end());
 		sort(max_names_sorted.begin(), max_names_sorted.end());
 		for(int i = 0; i < n; i++) {
@@ -769,8 +798,8 @@ namespace acwing {
 	int acwing656::main(istream &cin, ostream &cout) {
 		double n;
 		cin >> n;
-		int total           = static_cast<int>(n * static_cast<double>(100));
-		int denominations[] = {10000, 5000, 2000, 1000, 500, 200, 100, 50, 25, 10, 5, 1};
+		int total                 = static_cast<int>(n * static_cast<double>(100));
+		const int denominations[] = {10000, 5000, 2000, 1000, 500, 200, 100, 50, 25, 10, 5, 1};
 		int count[12];
 		for(int i = 0; i < 12; i++) {
 			count[i] = total / denominations[i];
@@ -805,7 +834,8 @@ namespace acwing {
 	}
 
 	int acwing665::main(istream &cin, ostream &cout) {
-		int a, b;
+		int a;
+		int b;
 		cin >> a >> b;
 		if(a % b == 0 || b % a == 0) {
 			cout << "Sao Multiplos";
@@ -816,7 +846,10 @@ namespace acwing {
 	}
 
 	int acwing657::main(istream &cin, ostream &cout) {
-		int a, b, c, d;
+		int a;
+		int b;
+		int c;
+		int d;
 		cin >> a >> b >> c >> d;
 		if(b > c && d > a && c + d > a + b && c > 0 && d > 0 && a % 2 == 0) {
 			cout << "Valores aceitos";
@@ -865,7 +898,7 @@ namespace acwing {
 		unsigned int count       = 0;
 		bool above2              = false;
 		int prev;
-		for(auto p: m) {
+		for(const auto p: m) {
 			layer_count += p.second;
 			if(layer_count >= 2) {
 				if(above2) {
@@ -885,8 +918,9 @@ namespace acwing {
 	}
 
 	int acwing660::main(istream &cin, ostream &cout) {
-		double snacks[] = {4, 4.5, 5, 2, 1.5};
-		int x, y;
+		const double snacks[] = {4, 4.5, 5, 2, 1.5};
+		int x;
+		int y;
 		cin >> x >> y;
 		cout << "Total: R$ " << setiosflags(ios::fixed) << setprecision(2) << snacks[x - 1] * y;
 		return 0;
@@ -904,7 +938,7 @@ namespace acwing {
 		cities[31]  = "Belo Horizonte";
 		int number;
 		cin >> number;
-		if(cities.count(number) != 0) {
+		if(cities.contains(number)) {
 			cout << cities[number];
 		} else {
 			cout << "DDD nao cadastrado";
@@ -916,13 +950,14 @@ namespace acwing {
 		int acwing1978::main(istream &cin, ostream &cout) {
 			int n;
 			cin >> n;
-			int *maximum = new int[n];
-			int *minimum = new int[n];
+			auto *maximum = new int[n];
+			auto *minimum = new int[n];
 			memset(maximum, 0, n * sizeof(int));
 			memset(minimum, 0, n * sizeof(int));
-			path *paths = new path[n];
+			auto *paths = new path[n];
 			for(int i = 0; i < n; i++) {
-				int a, b;
+				int a;
+				int b;
 				cin >> a >> b;
 				paths[i] = path(a, b);
 			}
@@ -949,8 +984,6 @@ namespace acwing {
 		}
 
 
-		bool path::operator<(const path &p) const {
-			return this->a < p.a;
-		}
+		bool path::operator<(const path &p) const { return this->a < p.a; }
 	}// namespace acwing1978
 }// namespace acwing

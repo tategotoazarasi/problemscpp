@@ -1,82 +1,75 @@
-//
-// Created by tategotoazarasi on 2021/12/28.
-//
-
 #ifndef PROBLEMSCPP_ACWING_H
 #define PROBLEMSCPP_ACWING_H
 
 #include <iostream>
-#include <set>
-#include <unordered_map>
 #include <unordered_set>
-#include <vector>
 
 using namespace std;
 
 namespace acwing {
 	class acwing1 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	class acwing4200 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	class acwing4201 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	class acwing608 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	class acwing604 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	class acwing606 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	class acwing609 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	class acwing615 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	class acwing616 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	class acwing653 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	class acwing4203 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	class acwing4204 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	class acwing2058 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -84,7 +77,7 @@ namespace acwing {
 	 */
 	class acwing654 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -92,7 +85,7 @@ namespace acwing {
 	 */
 	class acwing605 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -100,7 +93,7 @@ namespace acwing {
 	 */
 	class acwing2041 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -109,7 +102,7 @@ namespace acwing {
 	namespace acwing2060 {
 		class acwing2060 {
 		public:
-			static int main(istream &, ostream &);
+			static int main(istream & /*cin*/, ostream & /*cout*/);
 		};
 
 		struct point {
@@ -123,14 +116,14 @@ namespace acwing {
 		};
 
 		struct pointhash {
-			size_t operator()(const point &) const;
+			size_t operator()(const point & /*p*/) const;
 		};
 
 		struct pointequal {
-			bool operator()(const point &, const point &) const;
+			bool operator()(const point & /*p1*/, const point & /*p2*/) const;
 		};
 
-		void flood(point, bool[55][55], unordered_set<point, pointhash, pointequal> *, char[55][55], int, int);
+		void flood(point /*first*/, bool /*occupy*/[55][55], unordered_set<point, pointhash, pointequal> * /*edge*/, char /*cowhide*/[55][55], int /*n*/, int /*m*/);
 	}// namespace acwing2060
 
 	/**
@@ -148,11 +141,11 @@ namespace acwing {
 			    : x(x), y(y), step(step){};
 		};
 
-		int bfs(point, int **, int, int);
+		int bfs(point /*start*/, int ** /*field*/, int /*max_x*/, int /*max_y*/);
 
 		class acwing2019 {
 		public:
-			static int main(istream &, ostream &);
+			static int main(istream & /*cin*/, ostream & /*cout*/);
 		};
 	}// namespace acwing2019
 
@@ -161,7 +154,7 @@ namespace acwing {
 	 */
 	class acwing611 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -169,7 +162,7 @@ namespace acwing {
 	 */
 	class acwing612 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -177,7 +170,7 @@ namespace acwing {
 	 */
 	class acwing2014 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -185,7 +178,7 @@ namespace acwing {
 	 */
 	class acwing607 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -193,7 +186,7 @@ namespace acwing {
 	 */
 	class acwing613 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -201,7 +194,7 @@ namespace acwing {
 	 */
 	class acwing610 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -209,7 +202,7 @@ namespace acwing {
 	 */
 	class acwing614 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -217,7 +210,7 @@ namespace acwing {
 	 */
 	class acwing2005 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 
 		///
 		/// \param stage 当前阶段 ture为寻找左括号 false为寻找右括号
@@ -238,7 +231,7 @@ namespace acwing {
 	 */
 	class acwing617 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -246,19 +239,19 @@ namespace acwing {
 	 */
 	class acwing618 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/// \brief AcWing 4206. 判断数字
 	class acwing4206 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/// \brief AcWing 4207. 最长合法括号子序列
 	class acwing4207 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/// \brief AcWing 4208. 电话号码
@@ -303,14 +296,14 @@ namespace acwing {
 
 		class acwing4208 {
 		public:
-			static int main(istream &, ostream &);
+			static int main(istream & /*cin*/, ostream & /*cout*/);
 		};
 	}// namespace acwing4208
 
 	/// \brief AcWing 1996. 打乱字母
 	class acwing1996 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 
 		static bool cmp(char x, char y);
 	};
@@ -318,13 +311,13 @@ namespace acwing {
 	/// \brief AcWing 656. 钞票和硬币
 	class acwing656 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/// \brief AcWing 655. 天数转换
 	class acwing655 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -332,7 +325,7 @@ namespace acwing {
 	 */
 	class acwing665 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -340,7 +333,7 @@ namespace acwing {
 	 */
 	class acwing657 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
@@ -348,19 +341,19 @@ namespace acwing {
 	 */
 	class acwing1987 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/// \brief AcWing 660. 零食
 	class acwing660 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/// \brief AcWing 671. DDD
 	class acwing671 {
 	public:
-		static int main(istream &, ostream &);
+		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/// \brief AcWing 1978. 奶牛过马路
@@ -368,14 +361,18 @@ namespace acwing {
 		struct path {
 			int a;
 			int b;
-			path(): a(0), b(0){};
-			path(int a, int b): a(a), b(b){};
+
+			path()
+			    : a(0), b(0){};
+
+			path(int a, int b)
+			    : a(a), b(b){};
 			bool operator<(const path &p) const;
 		};
 
 		class acwing1978 {
 		public:
-			static int main(istream &, ostream &);
+			static int main(istream & /*cin*/, ostream & /*cout*/);
 		};
 	}// namespace acwing1978
 }// namespace acwing

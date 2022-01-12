@@ -1,7 +1,3 @@
-//
-// Created by tategotoazarasi on 2021/12/29.
-//
-
 #include "lintcode.h"
 
 #include <map>
@@ -19,11 +15,11 @@ namespace lintcode {
 			auto output = ostringstream();
 			int len     = 0;
 			for(char c: S) {
-				if(isalnum(c)) {
+				if(isalnum(c) != 0) {
 					len++;
-					if(isdigit(c) || isupper(c)) {
+					if((isdigit(c) != 0) || (isupper(c) != 0)) {
 						S2 << c;
-					} else if(islower(c)) {
+					} else if(islower(c) != 0) {
 						S2 << static_cast<char>(toupper(c));
 					}
 				}
@@ -54,11 +50,11 @@ namespace lintcode {
 
 	namespace distribute_candies {
 		int Solution::distributeCandies(vector<int> &candies) {
-			auto m   = map<long, int>();
-			auto ans = set<int>();
-			int n    = static_cast<int>(candies.size()) / 2;
-			int sum  = 0;
-			for(auto candy: candies) {
+			auto m      = map<long, int>();
+			auto ans    = set<int>();
+			const int n = static_cast<int>(candies.size()) / 2;
+			int sum     = 0;
+			for(const auto candy: candies) {
 				m[candy]++;
 			}
 			while(sum < n) {
@@ -87,7 +83,7 @@ namespace lintcode {
 			auto output = ostringstream();
 			bool start  = true;
 			bool flag   = false;
-			for(char c: s) {
+			for(const char c: s) {
 				if(c != ' ') {
 					if(flag && !start) {
 						output << ' ';
@@ -105,9 +101,9 @@ namespace lintcode {
 
 	namespace fibonacci {
 		int Solution::fibonacci(int n) {
-			auto arr = new int[n];
-			arr[0]   = 0;
-			arr[1]   = 1;
+			auto *arr = new int[n];
+			arr[0]    = 0;
+			arr[1]    = 1;
 			for(int i = 2; i < n; i++) {
 				arr[i] = arr[i - 1] + arr[i - 2];
 			}
@@ -135,7 +131,7 @@ namespace lintcode {
 		bool Solution::judgeCircle(string &moves) {
 			int x = 0;
 			int y = 0;
-			for(char ch: moves) {
+			for(const char ch: moves) {
 				switch(ch) {
 					case 'R':
 						x--;
@@ -159,27 +155,32 @@ namespace lintcode {
 	namespace intersection {
 		vector<vector<int>> Solution::Intersection(vector<vector<int>> &a, vector<vector<int>> &b) {
 			vector<vector<int>> res;
-			if(a.empty() || b.empty())
+			if(a.empty() || b.empty()) {
 				return res;
+			}
 			for(int i = 0, j = 0; i < a.size() && j < b.size();) {
-				if(is_intersected(a[i], b[j]))
-					res.emplace_back(vector<int>({i, j}));
+				if(is_intersected(a[i], b[j])) {
+					res.emplace_back(vector({i, j}));
+				}
 				if(a[i][1] == b[j][1]) {
 					++i;
 					++j;
-				} else if(a[i][1] > b[j][1])
+				} else if(a[i][1] > b[j][1]) {
 					++j;
-				else
+				} else {
 					++i;
+				}
 			}
 			return res;
 		}
 
 		bool Solution::is_intersected(const vector<int> &l, const vector<int> &r) {
-			if(l[0] == r[0])
+			if(l[0] == r[0]) {
 				return true;
-			if(l[0] < r[0])
+			}
+			if(l[0] < r[0]) {
 				return r[0] <= l[1];
+			}
 			return l[0] <= r[1];
 		}
 	}// namespace intersection
@@ -195,9 +196,9 @@ namespace lintcode {
 		TreeNode *Solution::vlr(TreeNode *node) {
 			if(node->left != nullptr) {
 				if(node->right != nullptr) {
-					auto tmp     = node->right;
-					node->right  = vlr(node->left);
-					auto current = node->right;
+					auto *tmp     = node->right;
+					node->right   = vlr(node->left);
+					auto *current = node->right;
 					while(current->right != nullptr) {
 						current = current->right;
 					}

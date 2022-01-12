@@ -1,10 +1,4 @@
-//
-// Created by tategotoazarasi on 2022/1/7.
-//
-
-#include "luogu.h"
 #include "gtest/gtest.h"
-#include <vector>
 
 using namespace std;
 

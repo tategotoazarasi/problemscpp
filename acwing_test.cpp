@@ -1,16 +1,12 @@
-//
-// Created by tategotoazarasi on 2022/1/7.
-//
 #include "acwing.h"
 #include "gtest/gtest.h"
-#include <vector>
 
 namespace acwing {
 	TEST(acwing1, case1) {
 		istringstream in("3 4");
 		auto out = ostringstream();
 		acwing1::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("7", ans);
 	}
 
@@ -18,7 +14,7 @@ namespace acwing {
 		istringstream in("2 7 1 8 2 8");
 		auto out = ostringstream();
 		acwing4200::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("0", ans);
 	}
 
@@ -26,7 +22,7 @@ namespace acwing {
 		istringstream in("20 30 40 50 0 100");
 		auto out = ostringstream();
 		acwing4200::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("20", ans);
 	}
 
@@ -34,7 +30,7 @@ namespace acwing {
 		istringstream in("31 41 59 26 17 43");
 		auto out = ostringstream();
 		acwing4200::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("9", ans);
 	}
 
@@ -42,7 +38,7 @@ namespace acwing {
 		istringstream in("10");
 		auto out = ostringstream();
 		acwing4201::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("2", ans);
 	}
 
@@ -50,7 +46,7 @@ namespace acwing {
 		istringstream in("20");
 		auto out = ostringstream();
 		acwing4201::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("3", ans);
 	}
 
@@ -58,7 +54,7 @@ namespace acwing {
 		istringstream in("100");
 		auto out = ostringstream();
 		acwing4201::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("4", ans);
 	}
 
@@ -66,7 +62,7 @@ namespace acwing {
 		istringstream in("1000");
 		auto out = ostringstream();
 		acwing4201::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("8", ans);
 	}
 
@@ -74,7 +70,7 @@ namespace acwing {
 		istringstream in("10000");
 		auto out = ostringstream();
 		acwing4201::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("16", ans);
 	}
 
@@ -82,7 +78,7 @@ namespace acwing {
 		istringstream in("200");
 		auto out = ostringstream();
 		acwing4201::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("7", ans);
 	}
 
@@ -90,7 +86,7 @@ namespace acwing {
 		istringstream in("101");
 		auto out = ostringstream();
 		acwing4201::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("5", ans);
 	}
 
@@ -98,7 +94,7 @@ namespace acwing {
 		istringstream in("1");
 		auto out = ostringstream();
 		acwing4201::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("1", ans);
 	}
 
@@ -106,7 +102,7 @@ namespace acwing {
 		istringstream in("102");
 		auto out = ostringstream();
 		acwing4201::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("5", ans);
 	}
 
@@ -114,7 +110,7 @@ namespace acwing {
 		istringstream in("111");
 		auto out = ostringstream();
 		acwing4201::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("7", ans);
 	}
 
@@ -122,7 +118,7 @@ namespace acwing {
 		istringstream in("110");
 		auto out = ostringstream();
 		acwing4201::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("6", ans);
 	}
 
@@ -130,7 +126,7 @@ namespace acwing {
 		istringstream in("5\n6\n7\n8");
 		auto out = ostringstream();
 		acwing608::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("DIFERENCA = -26", ans);
 	}
 
@@ -138,7 +134,7 @@ namespace acwing {
 		istringstream in("2.00");
 		auto out = ostringstream();
 		acwing604::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("A=12.5664", ans);
 	}
 
@@ -146,7 +142,7 @@ namespace acwing {
 		istringstream in("5.0\n7.1");
 		auto out = ostringstream();
 		acwing606::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("MEDIA = 6.43182", ans);
 	}
 
@@ -154,7 +150,7 @@ namespace acwing {
 		istringstream in("25\n100\n5.50");
 		auto out = ostringstream();
 		acwing609::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("NUMBER = 25\n"
 		          "SALARY = U$ 550.00",
 		          ans);
@@ -164,7 +160,7 @@ namespace acwing {
 		istringstream in("500\n35.0");
 		auto out = ostringstream();
 		acwing615::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("14.286 km/l", ans);
 	}
 
@@ -172,7 +168,7 @@ namespace acwing {
 		istringstream in("1.0 7.0\n5.0 9.0");
 		auto out = ostringstream();
 		acwing616::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("4.4721", ans);
 	}
 
@@ -180,7 +176,7 @@ namespace acwing {
 		istringstream in("576");
 		auto out = ostringstream();
 		acwing653::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("576\n"
 		          "5 nota(s) de R$ 100,00\n"
 		          "1 nota(s) de R$ 50,00\n"
@@ -196,7 +192,7 @@ namespace acwing {
 		istringstream in("001001");
 		auto out = ostringstream();
 		acwing4203::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("NO", ans);
 	}
 
@@ -204,7 +200,7 @@ namespace acwing {
 		istringstream in("1000000001");
 		auto out = ostringstream();
 		acwing4203::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("YES", ans);
 	}
 
@@ -212,7 +208,7 @@ namespace acwing {
 		istringstream in("2");
 		auto out = ostringstream();
 		acwing4204::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("0 1\n"
 		          "1 0",
 		          ans);
@@ -222,7 +218,7 @@ namespace acwing {
 		istringstream in("4");
 		auto out = ostringstream();
 		acwing4204::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("0 1 2 3\n"
 		          "1 0 3 2\n"
 		          "2 3 0 1\n"
@@ -234,7 +230,7 @@ namespace acwing {
 		istringstream in("6");
 		auto out = ostringstream();
 		acwing4204::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("0 1 2 3 4 5\n"
 		          "1 0 3 4 5 2\n"
 		          "2 3 0 5 1 4\n"
@@ -249,7 +245,7 @@ namespace acwing {
 		                 "212");
 		auto out = ostringstream();
 		acwing2058::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("14", ans);
 	}
 
@@ -257,7 +253,7 @@ namespace acwing {
 		istringstream in("556");
 		auto out = ostringstream();
 		acwing654::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("0:9:16", ans);
 	}
 
@@ -266,7 +262,7 @@ namespace acwing {
 		                 "9");
 		auto out = ostringstream();
 		acwing605::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("PROD = 27", ans);
 	}
 
@@ -274,7 +270,7 @@ namespace acwing {
 		istringstream in("7 4\n5 5\n2 4\n4 6\n3 5");
 		auto out = ostringstream();
 		acwing2041::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("1", ans);
 	}
 
@@ -292,7 +288,7 @@ namespace acwing {
 		                 "5 9");
 		auto out = ostringstream();
 		acwing2041::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("4", ans);
 	}
 
@@ -301,7 +297,7 @@ namespace acwing {
 		        "23 100\n8 9\n2 14\n6 12\n13 18\n13 18\n5 17\n10 14\n1 13\n8 12\n17 19\n2 6\n4 19\n16 20\n4 15\n9 9\n13 19\n1 14\n4 17\n16 21\n7 15\n3 14\n7 19\n13 17\n3 8\n7 19\n6 8\n8 23\n5 19\n17 20\n10 20\n9 18\n20 23\n16 23\n7 7\n4 22\n4 23\n19 23\n10 18\n14 16\n2 7\n3 7\n4 18\n20 21\n13 17\n10 13\n5 17\n8 20\n21 22\n14 22\n4 21\n4 18\n4 10\n4 5\n19 20\n6 22\n3 15\n7 9\n3 22\n20 21\n3 12\n3 16\n8 18\n5 12\n9 23\n10 14\n5 10\n3 21\n18 22\n10 15\n2 17\n19 23\n9 12\n2 19\n3 15\n12 14\n3 3\n9 18\n9 22\n7 9\n1 21\n4 15\n2 6\n18 20\n3 17\n4 18\n8 15\n2 15\n9 19\n6 9\n5 21\n2 16\n1 20\n2 20\n13 20");
 		auto out = ostringstream();
 		acwing2041::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("46", ans);
 	}
 
@@ -316,7 +312,7 @@ namespace acwing {
 			                 ".........XXX....");
 			auto out = ostringstream();
 			acwing2060::main(in, out);
-			auto ans = out.str();
+			const auto ans = out.str();
 			ASSERT_EQ("3", ans);
 		}
 	}// namespace acwing2060
@@ -333,7 +329,7 @@ namespace acwing {
 			                 "6 4");
 			auto out = ostringstream();
 			acwing2019::main(in, out);
-			auto ans = out.str();
+			const auto ans = out.str();
 			ASSERT_EQ("1", ans);
 		}
 
@@ -345,7 +341,7 @@ namespace acwing {
 			                 "4 2");
 			auto out = ostringstream();
 			acwing2019::main(in, out);
-			auto ans = out.str();
+			const auto ans = out.str();
 			ASSERT_EQ("0", ans);
 		}
 	}// namespace acwing2019
@@ -355,7 +351,7 @@ namespace acwing {
 		                 "16 2 5.10");
 		auto out = ostringstream();
 		acwing611::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("VALOR A PAGAR: R$ 15.50", ans);
 	}
 
@@ -363,7 +359,7 @@ namespace acwing {
 		istringstream in("3");
 		auto out = ostringstream();
 		acwing612::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("VOLUME = 113.097", ans);
 	}
 
@@ -379,7 +375,7 @@ namespace acwing {
 		                 "3");
 		auto out = ostringstream();
 		acwing2014::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("4", ans);
 	}
 
@@ -392,7 +388,7 @@ namespace acwing {
 		                 "3");
 		auto out = ostringstream();
 		acwing2014::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("2", ans);
 	}
 
@@ -402,7 +398,7 @@ namespace acwing {
 		                 "7.0");
 		auto out = ostringstream();
 		acwing607::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("MEDIA = 6.3", ans);
 	}
 
@@ -410,7 +406,7 @@ namespace acwing {
 		istringstream in("3.0 4.0 5.2");
 		auto out = ostringstream();
 		acwing613::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("TRIANGULO: 7.800\n"
 		          "CIRCULO: 84.949\n"
 		          "TRAPEZIO: 18.200\n"
@@ -425,7 +421,7 @@ namespace acwing {
 		                 "1000.00");
 		auto out = ostringstream();
 		acwing610::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("TOTAL = R$ 650.00", ans);
 	}
 
@@ -433,7 +429,7 @@ namespace acwing {
 		istringstream in("7 14 106");
 		auto out = ostringstream();
 		acwing614::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("106 eh o maior", ans);
 	}
 
@@ -445,7 +441,7 @@ namespace acwing {
 		                 "))))");
 		auto out = ostringstream();
 		acwing2005::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("8", ans);
 	}
 
@@ -458,7 +454,7 @@ namespace acwing {
 		                 ")))))");
 		auto out = ostringstream();
 		acwing2005::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("10", ans);
 	}
 
@@ -466,7 +462,7 @@ namespace acwing {
 		istringstream in("30");
 		auto out = ostringstream();
 		acwing617::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("60 minutos", ans);
 	}
 
@@ -475,7 +471,7 @@ namespace acwing {
 		                 "85");
 		auto out = ostringstream();
 		acwing618::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("70.833", ans);
 	}
 
@@ -483,7 +479,7 @@ namespace acwing {
 		istringstream in("40047");
 		auto out = ostringstream();
 		acwing4206::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("NO", ans);
 	}
 
@@ -491,7 +487,7 @@ namespace acwing {
 		istringstream in("7747774");
 		auto out = ostringstream();
 		acwing4206::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("YES", ans);
 	}
 
@@ -499,7 +495,7 @@ namespace acwing {
 		istringstream in("(()))(");
 		auto out = ostringstream();
 		acwing4207::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("4", ans);
 	}
 
@@ -507,7 +503,7 @@ namespace acwing {
 		istringstream in("()()(()(((");
 		auto out = ostringstream();
 		acwing4207::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("6", ans);
 	}
 
@@ -519,7 +515,7 @@ namespace acwing {
 		                 "elsie");
 		auto out = ostringstream();
 		acwing1996::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("2 3\n"
 		          "1 1\n"
 		          "4 4\n"
@@ -531,7 +527,7 @@ namespace acwing {
 		istringstream in("576.73");
 		auto out = ostringstream();
 		acwing656::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("NOTAS:\n"
 		          "5 nota(s) de R$ 100.00\n"
 		          "1 nota(s) de R$ 50.00\n"
@@ -553,7 +549,7 @@ namespace acwing {
 		istringstream in("400");
 		auto out = ostringstream();
 		acwing655::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("1 ano(s)\n"
 		          "1 mes(es)\n"
 		          "5 dia(s)",
@@ -564,7 +560,7 @@ namespace acwing {
 		istringstream in("6 24");
 		auto out = ostringstream();
 		acwing665::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("Sao Multiplos", ans);
 	}
 
@@ -572,7 +568,7 @@ namespace acwing {
 		istringstream in("5 6 7 8");
 		auto out = ostringstream();
 		acwing657::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("Valores nao aceitos", ans);
 	}
 
@@ -580,7 +576,7 @@ namespace acwing {
 		istringstream in("6\n2 R\n6 L\n1 R\n8 L\n1 R\n2 R");
 		auto out = ostringstream();
 		acwing1987::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("6", ans);
 	}
 
@@ -588,7 +584,7 @@ namespace acwing {
 		istringstream in("3 2");
 		auto out = ostringstream();
 		acwing660::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("Total: R$ 10.00", ans);
 	}
 
@@ -596,7 +592,7 @@ namespace acwing {
 		istringstream in("11");
 		auto out = ostringstream();
 		acwing671::main(in, out);
-		auto ans = out.str();
+		const auto ans = out.str();
 		ASSERT_EQ("Sao Paulo", ans);
 	}
 
@@ -609,7 +605,7 @@ namespace acwing {
 			                 "3 9");
 			auto out = ostringstream();
 			acwing1978::main(in, out);
-			auto ans = out.str();
+			const auto ans = out.str();
 			ASSERT_EQ("2", ans);
 		}
 	}// namespace acwing1978
