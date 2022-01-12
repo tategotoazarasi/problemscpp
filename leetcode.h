@@ -24,15 +24,15 @@ namespace leetcode {
 		TreeNode(int x, TreeNode *left, TreeNode *right)
 		    : val(x), left(left), right(right) {}
 
-		bool operator==(const TreeNode &) const;
+		bool operator==(const TreeNode & /*node*/) const;
 
-		bool operator!=(const TreeNode &) const;
+		bool operator!=(const TreeNode & /*node*/) const;
 	};
 
 	namespace concatenated_words {
 		class Solution {
 		public:
-			static vector<string> findAllConcatenatedWordsInADict(vector<string> &);
+			static vector<string> findAllConcatenatedWordsInADict(vector<string> & /*words*/);
 		};
 
 		class TrieNode {
@@ -46,11 +46,11 @@ namespace leetcode {
 			        nullptr,
 			        nullptr, nullptr, nullptr, nullptr, nullptr, nullptr};
 
-			explicit TrieNode(char);
+			explicit TrieNode(char /*ch*/);
 
 			void insert(const string &str);
 
-			bool dfs(TrieNode *, const string &, int, bool) const;
+			bool dfs(TrieNode * /*root*/, const string & /*str*/, int /*start*/, bool /*flag*/) const;
 		};
 	}// namespace concatenated_words
 
@@ -83,7 +83,7 @@ namespace leetcode {
 	namespace count_special_quadruplets {
 		class Solution {
 		public:
-			static int countQuadruplets(vector<int> &);
+			static int countQuadruplets(vector<int> & /*nums*/);
 		};
 	}// namespace count_special_quadruplets
 
@@ -118,11 +118,11 @@ namespace leetcode {
 		public:
 			static TreeNode *convertBST(TreeNode *root);
 
-			static FriendTreeNode *copy(TreeNode *);
+			static FriendTreeNode *copy(TreeNode * /*node*/);
 
-			static void get_sum(FriendTreeNode *);
+			static void get_sum(FriendTreeNode * /*node*/);
 
-			static void convert(FriendTreeNode *);
+			static void convert(FriendTreeNode * /*sum_node*/);
 		};
 	}// namespace convert_bst_to_greater_tree
 
@@ -136,23 +136,23 @@ namespace leetcode {
 	namespace elimination_game {
 		class Solution {
 		public:
-			static int lastRemaining(int);
+			static int lastRemaining(int /*n*/);
 		};
 	}// namespace elimination_game
 
 	namespace check_if_all_as_appears_before_all_bs {
 		class Solution {
 		public:
-			static bool checkString(const string &);
+			static bool checkString(const string & /*s*/);
 		};
 	}// namespace check_if_all_as_appears_before_all_bs
 
 	namespace number_of_laser_beams_in_a_bank {
 		class Solution {
 		public:
-			static int numberOfBeams(vector<string> &);
+			static int numberOfBeams(vector<string> & /*bank*/);
 
-			static int deviceCount(const string &);
+			static int deviceCount(const string & /*str*/);
 		};
 	}// namespace number_of_laser_beams_in_a_bank
 
@@ -260,7 +260,7 @@ namespace leetcode {
 		public:
 			static int wordCount(vector<string> &startWords, vector<string> &targetWords);
 
-			static unsigned int str2bin(const string &);
+			static unsigned int str2bin(const string & /*str*/);
 		};
 	}// namespace count_words_obtained_after_adding_a_letter
 
@@ -287,14 +287,14 @@ namespace leetcode {
 			 * \param current 现在的位置
 			 * \return 
 			 */
-			static bool dfs(unsigned long long n1, unsigned long long n2, const char *, unsigned short length, unsigned short current);
+			static bool dfs(unsigned long long n1, unsigned long long n2, const char * /*nums*/, unsigned short length, unsigned short current);
 			/**
 			 * \brief 将字符串的一个子串转换为整数
 			 * \param start 起始位置
 			 * \param length 转换长度
 			 * \return 从字符串转换来的整数
 			 */
-			static unsigned long long str2ui(const char *, unsigned short start, unsigned short length);
+			static unsigned long long str2ui(const char * /*str*/, unsigned short start, unsigned short length);
 
 			/**
 			 * \brief 判断一个字符串与另一个字符串的子串是否相等
@@ -302,7 +302,7 @@ namespace leetcode {
 			 * \param length 另一个字符串的总长度
 			 * \return 一个字符串与另一个字符串的子串是否相等
 			 */
-			static bool equal(string, const char *, unsigned short start, unsigned short length);
+			static bool equal(string /*sum*/, const char * /*nums*/, unsigned short start, unsigned short length);
 		};
 	}// namespace additive_number
 
