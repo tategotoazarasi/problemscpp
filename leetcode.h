@@ -148,7 +148,7 @@ namespace leetcode {
 	namespace check_if_all_as_appears_before_all_bs {
 		class Solution {
 		public:
-			static bool checkString(string);
+			static bool checkString(const string &);
 		};
 	}// namespace check_if_all_as_appears_before_all_bs
 
@@ -221,7 +221,7 @@ namespace leetcode {
 	namespace simplify_path {
 		class Solution {
 		public:
-			static string simplifyPath(string path);
+			static string simplifyPath(const string &path);
 		};
 	}// namespace simplify_path
 
@@ -231,7 +231,7 @@ namespace leetcode {
 	namespace maximum_nesting_depth_of_the_parentheses {
 		class Solution {
 		public:
-			static int maxDepth(string s);
+			static int maxDepth(const string &s);
 		};
 	}// namespace maximum_nesting_depth_of_the_parentheses
 

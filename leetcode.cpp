@@ -78,10 +78,7 @@ namespace leetcode {
 				if(node == nullptr) {
 					return false;
 				}
-				if(node->dfs(root, str, start, flag)) {
-					return true;
-				}
-				return false;
+				return node->dfs(root, str, start, flag);
 			}
 			//非根节点
 			//到一个单词结束处
@@ -325,7 +322,7 @@ namespace leetcode {
 	}// namespace elimination_game
 
 	namespace check_if_all_as_appears_before_all_bs {
-		bool Solution::checkString(string s) {
+		bool Solution::checkString(const string &s) {
 			bool flag = true;
 			for(const char ch: s) {
 				if(ch == 'a') {
@@ -555,7 +552,7 @@ namespace leetcode {
 	}// namespace replace_all_s_to_avoid_consecutive_repeating_characters
 
 	namespace simplify_path {
-		string Solution::simplifyPath(string path) {
+		string Solution::simplifyPath(const string &path) {
 			auto *const str_cpy = new char[path.size() + 1];
 			memcpy(str_cpy, path.c_str(), path.size() + 1);
 			auto *next = strtok(str_cpy, "/");
@@ -592,7 +589,7 @@ namespace leetcode {
 	}// namespace simplify_path
 
 	namespace maximum_nesting_depth_of_the_parentheses {
-		int Solution::maxDepth(string s) {
+		int Solution::maxDepth(const string &s) {
 			int max     = 0;
 			int current = 0;
 			for(const char ch: s) {
@@ -624,7 +621,7 @@ namespace leetcode {
 			const unsigned int n = matrix.size();
 			for(int i = 0; i < n; i++) {
 				auto *const row = new bool[n + 1];
-				memset(row, true, (n + 1) * sizeof(bool));
+				memset(row, 1, (n + 1) * sizeof(bool));
 				for(int j = 0; j < n; j++) {
 					if(!row[matrix[i][j]]) {
 						return false;
@@ -636,7 +633,7 @@ namespace leetcode {
 
 			for(int j = 0; j < n; j++) {
 				auto *const column = new bool[n + 1];
-				memset(column, true, (n + 1) * sizeof(bool));
+				memset(column, 1, (n + 1) * sizeof(bool));
 				for(int i = 0; i < n; i++) {
 					if(!column[matrix[i][j]]) {
 						return false;
@@ -776,10 +773,7 @@ namespace leetcode {
 				return true;
 			}
 			const auto n3 = str2ui(nums, current, sum.length());
-			if(dfs(n2, n3, nums, length, current + sum.length())) {
-				return true;
-			}
-			return false;
+			return dfs(n2, n3, nums, length, current + sum.length());
 		}
 
 		unsigned long long Solution::str2ui(const char *str, unsigned short start, unsigned short length) {
@@ -798,10 +792,7 @@ namespace leetcode {
 					return false;
 				}
 			}
-			if(j != sum.length()) {
-				return false;
-			}
-			return true;
+			return j == sum.length();
 		}
 	}// namespace additive_number
 
@@ -865,12 +856,7 @@ namespace leetcode {
 				return true;
 			}
 			const unsigned int target_status = search(blocked_set_target, p_target, p_source, limit);
-			if(target_status == 0) {
-				return false;
-			}
-			return true;
-
-			return true;
+			return target_status != 0;
 		}
 
 		unsigned int Solution::search(unordered_set<point, point_hash> &block_set, point *source, point *target, unsigned int limit) {
