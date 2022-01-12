@@ -613,4 +613,20 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("Intervalo (25,50]", ans);
 	}
+
+	TEST(acwing662, case1) {
+		istringstream in("4.5 -2.2");
+		auto out = ostringstream();
+		acwing662::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Q4", ans);
+	}
+
+	TEST(acwing662, case2) {
+		istringstream in("0.0 0.0");
+		auto out = ostringstream();
+		acwing662::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Origem", ans);
+	}
 }// namespace acwing

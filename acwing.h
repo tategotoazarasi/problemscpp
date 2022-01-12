@@ -383,5 +383,13 @@ namespace acwing {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
+
+	/**
+	 * \brief AcWing 662. 点的坐标
+	 */
+	class acwing662 {
+	public:
+		static int main(istream & /*cin*/, ostream & /*cout*/);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
