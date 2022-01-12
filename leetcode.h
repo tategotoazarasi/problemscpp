@@ -321,7 +321,7 @@ namespace leetcode {
 			/// \author tiandyoin
 			/// \param s 要去除右边空白符的字符串
 			/// \return  去除了右边空白符的字符串
-			static inline std::string &rtrim(std::string &s);
+			static string rtrim(string &s);
 		};
 	}// namespace decode_the_slanted_ciphertext
 

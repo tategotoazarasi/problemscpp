@@ -835,8 +835,13 @@ namespace leetcode {
 			return rtrim(ans);
 		}
 
-		inline string &Solution::rtrim(string &s) {
-			s.erase(find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(), s.end());
+		string Solution::rtrim(string &s) {
+			for(int i=s.length();i>=0;i--) {
+				if(s[i] !=' ') {
+					string ans = s.substr(0, i + 1);
+					return ans;
+				}
+			}
 			return s;
 		}
 	}// namespace decode_the_slanted_ciphertext
