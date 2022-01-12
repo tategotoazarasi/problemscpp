@@ -1,7 +1,3 @@
-//
-// Created by tategotoazarasi on 2021/12/29.
-//
-
 #include "leetcode.h"
 #include <algorithm>
 #include <cmath>
@@ -28,16 +24,16 @@ namespace leetcode {
 		if(this->right == nullptr && node.right != nullptr) {
 			return false;
 		}
-		if(this->left != nullptr && node.left != nullptr && (*this->left) != (*node.left)) {
+		if(this->left != nullptr && node.left != nullptr && *this->left != *node.left) {
 			return false;
 		}
-		if(this->right != nullptr && node.right != nullptr && (*this->right) != (*node.right)) {
+		if(this->right != nullptr && node.right != nullptr && *this->right != *node.right) {
 			return false;
 		}
 		return this->val == node.val;
 	}
 
-	bool TreeNode::operator!=(const TreeNode &node) const { return !((*this) == node); }
+	bool TreeNode::operator!=(const TreeNode &node) const { return !(*this == node); }
 
 	namespace concatenated_words {
 		vector<string> Solution::findAllConcatenatedWordsInADict(vector<string> &words) {
@@ -63,8 +59,8 @@ namespace leetcode {
 		}
 
 		void TrieNode::insert(const string &str) {
-			auto node = this->nexts[str[0] - 'a'];
-			if((node) == nullptr) {
+			auto *node = this->nexts[str[0] - 'a'];
+			if(node == nullptr) {
 				node                      = new TrieNode(str[0]);
 				this->nexts[str[0] - 'a'] = node;
 			}
@@ -75,10 +71,10 @@ namespace leetcode {
 			return node->insert(str.substr(1));
 		}
 
-		bool TrieNode::dfs(TrieNode *root, const string &str, int start, bool flag) {
+		bool TrieNode::dfs(TrieNode *root, const string &str, int start, bool flag) const {
 			if(this->ch == 0) {
 				//根节点
-				auto node = this->nexts[str[start] - 'a'];
+				auto *const node = this->nexts[str[start] - 'a'];
 				if(node == nullptr) {
 					return false;
 				}
@@ -93,7 +89,7 @@ namespace leetcode {
 				if(start == str.length() - 1) {
 					return flag;
 				}
-				auto res = root->dfs(root, str, start + 1, true);
+				const auto res = root->dfs(root, str, start + 1, true);
 				if(res) {
 					return true;
 				}
@@ -110,7 +106,7 @@ namespace leetcode {
 		int Solution::titleToNumber(const std::string &columnTitle) {
 			int sum    = 0;
 			int length = static_cast<int>(columnTitle.length());
-			for(char c: columnTitle) {
+			for(const char c: columnTitle) {
 				sum += static_cast<int>(static_cast<double>(c - 'A' + 1) * pow(26, length-- - 1));
 			}
 			return sum;
@@ -126,8 +122,9 @@ namespace leetcode {
 				if(round) {
 					ch    = static_cast<char>(columnNumber % 26 + 63);
 					round = false;
-				} else
+				} else {
 					ch = static_cast<char>(columnNumber % 26 + 64);
+				}
 				if(ch == '@' && columnNumber >= 26) {
 					ch    = 'Z';
 					round = true;
@@ -198,7 +195,7 @@ namespace leetcode {
 				return true;
 			}
 			sort(hand.begin(), hand.end());
-			auto len = hand.size() / groupSize;
+			const auto len = hand.size() / groupSize;
 			for(int i = 0; i < len; i++) {
 				int current = *hand.begin();
 				hand.erase(hand.begin());
@@ -312,11 +309,12 @@ namespace leetcode {
 					a0 = a0 + d;
 				} else if(num_amount % 2 == 0) {
 					// 偶数个数字
-					bool left_to_right = (loop_cnt % 2 == 0);
+					const bool left_to_right = loop_cnt % 2 == 0;
 					if(left_to_right) {
 						a0 = a0 + d;
-					} else
+					} else {
 						a0 = a0;
+					}
 				}
 				loop_cnt++;
 				d *= 2;
@@ -329,7 +327,7 @@ namespace leetcode {
 	namespace check_if_all_as_appears_before_all_bs {
 		bool Solution::checkString(string s) {
 			bool flag = true;
-			for(char ch: s) {
+			for(const char ch: s) {
 				if(ch == 'a') {
 					if(!flag) {
 						return false;
@@ -351,13 +349,12 @@ namespace leetcode {
 			int i       = 0;
 			int count_i = deviceCount(bank[i]);
 			int j       = 1;
-			int count_j = 0;
 			while(i < j && i < bank.size() && j < bank.size()) {
 				if(deviceCount(bank[j]) == 0) {
 					j++;
 					continue;
 				}
-				count_j = deviceCount(bank[j]);
+				const int count_j = deviceCount(bank[j]);
 				count += count_i * count_j;
 				count_i = count_j;
 				i       = j;
@@ -368,7 +365,7 @@ namespace leetcode {
 
 		int Solution::deviceCount(const string &str) {
 			int count = 0;
-			for(char c: str) {
+			for(const char c: str) {
 				if(c == '1') {
 					count++;
 				}
@@ -381,7 +378,7 @@ namespace leetcode {
 		bool Solution::asteroidsDestroyed(int mass, vector<int> &asteroids) {
 			long long m = mass;
 			sort(asteroids.begin(), asteroids.end());
-			for(int i: asteroids) {
+			for(const int i: asteroids) {
 				if(m < i) {
 					return false;
 				}
@@ -495,7 +492,7 @@ namespace leetcode {
 		int Solution::catMouseGame(vector<vector<int>> &graph) {
 			this->n     = graph.size();
 			this->graph = graph;
-			memset(dp, -1, sizeof(dp));
+			memset(dp, -1, sizeof dp);
 			return getResult(1, 2, 0);
 		}
 
@@ -516,16 +513,16 @@ namespace leetcode {
 		}
 
 		void Solution::getNextResult(int mouse, int cat, int turns) {
-			int curMove       = turns % 2 == 0 ? mouse : cat;
-			int defaultResult = curMove == mouse ? CAT_WIN : MOUSE_WIN;
-			int result        = defaultResult;
+			const int curMove       = turns % 2 == 0 ? mouse : cat;
+			const int defaultResult = curMove == mouse ? CAT_WIN : MOUSE_WIN;
+			int result              = defaultResult;
 			for(int next: graph[curMove]) {
 				if(curMove == cat && next == 0) {
 					continue;
 				}
-				int nextMouse  = curMove == mouse ? next : mouse;
-				int nextCat    = curMove == cat ? next : cat;
-				int nextResult = getResult(nextMouse, nextCat, turns + 1);
+				const int nextMouse  = curMove == mouse ? next : mouse;
+				const int nextCat    = curMove == cat ? next : cat;
+				const int nextResult = getResult(nextMouse, nextCat, turns + 1);
 				if(nextResult != defaultResult) {
 					result = nextResult;
 					if(result != DRAW) {
@@ -559,10 +556,10 @@ namespace leetcode {
 
 	namespace simplify_path {
 		string Solution::simplifyPath(string path) {
-			auto str_cpy = new char[path.size() + 1];
+			auto *const str_cpy = new char[path.size() + 1];
 			memcpy(str_cpy, path.c_str(), path.size() + 1);
-			auto next = strtok(str_cpy, "/");
-			auto stck = deque<string>();
+			auto *next = strtok(str_cpy, "/");
+			auto stck  = deque<string>();
 			while(next != nullptr) {
 				auto nextstr = string(next);
 				if(nextstr == "..") {
@@ -598,7 +595,7 @@ namespace leetcode {
 		int Solution::maxDepth(string s) {
 			int max     = 0;
 			int current = 0;
-			for(char ch: s) {
+			for(const char ch: s) {
 				if(ch == '(') {
 					current++;
 				} else if(ch == ')') {
@@ -616,7 +613,7 @@ namespace leetcode {
 		vector<int> Solution::grayCode(int n) {
 			vector<int> ret(1 << n);
 			for(int i = 0; i < ret.size(); i++) {
-				ret[i] = (i >> 1) ^ i;
+				ret[i] = i >> 1 ^ i;
 			}
 			return ret;
 		}
@@ -624,9 +621,9 @@ namespace leetcode {
 
 	namespace check_if_every_row_and_column_contains_all_numbers {
 		bool Solution::checkValid(vector<vector<int>> &matrix) {
-			unsigned int n = matrix.size();
+			const unsigned int n = matrix.size();
 			for(int i = 0; i < n; i++) {
-				auto row = new bool[n + 1];
+				auto *const row = new bool[n + 1];
 				memset(row, true, (n + 1) * sizeof(bool));
 				for(int j = 0; j < n; j++) {
 					if(!row[matrix[i][j]]) {
@@ -638,7 +635,7 @@ namespace leetcode {
 			}
 
 			for(int j = 0; j < n; j++) {
-				auto column = new bool[n + 1];
+				auto *const column = new bool[n + 1];
 				memset(column, true, (n + 1) * sizeof(bool));
 				for(int i = 0; i < n; i++) {
 					if(!column[matrix[i][j]]) {
@@ -699,7 +696,7 @@ namespace leetcode {
 			for(const string &word: targetWords) {
 				auto bin = str2bin(word);
 				for(int i = 0; i < 26; i++) {
-					if((bin & (1 << i)) != 0 && start.contains(bin - (1 << i))) {
+					if((bin & 1 << i) != 0 && start.contains(bin - (1 << i))) {
 						//bin有第i个字母且bin去掉第i个字母在start中仍然存在
 						count++;
 						break;
@@ -711,8 +708,8 @@ namespace leetcode {
 
 		unsigned int Solution::str2bin(const string &str) {
 			unsigned int ret = 0;
-			for(char ch: str) {
-				ret |= 1 << (ch - 'a');
+			for(const char ch: str) {
+				ret |= 1 << ch - 'a';
 			}
 			return ret;
 		}
@@ -723,7 +720,7 @@ namespace leetcode {
 			int max  = releaseTimes[0];
 			int maxi = 0;
 			for(int i = 1; i < releaseTimes.size(); i++) {
-				int time = releaseTimes[i] - releaseTimes[i - 1];
+				const int time = releaseTimes[i] - releaseTimes[i - 1];
 				if(max < time) {
 					max  = time;
 					maxi = i;
@@ -742,14 +739,14 @@ namespace leetcode {
 			if(num.length() < 3) {
 				return false;
 			}
-			auto nums = new char[num.length()];
+			auto *const nums = new char[num.length()];
 			for(int i = 0; i < num.length(); i++) {
 				nums[i] = num[i];
 			}
 			for(int i = 1; i <= num.length() - i; i++) {
-				auto n1 = str2ui(nums, 0, i);
+				const auto n1 = str2ui(nums, 0, i);
 				for(int j = i + 1; j - i <= num.length() - j; j++) {
-					auto n2 = str2ui(nums, i, j - i);
+					const auto n2 = str2ui(nums, i, j - i);
 					if(dfs(n1, n2, nums, num.length(), j)) {
 						return true;
 					}
@@ -765,7 +762,7 @@ namespace leetcode {
 		}
 
 		bool Solution::dfs(unsigned long long n1, unsigned long long n2, const char *nums, unsigned short length, unsigned short current) {
-			auto sum = to_string(n1 + n2);
+			const auto sum = to_string(n1 + n2);
 			if(sum.length() > length - current) {
 				//前两位和的位数超过剩余的位数
 				return false;
@@ -778,7 +775,7 @@ namespace leetcode {
 				//终止条件
 				return true;
 			}
-			auto n3 = str2ui(nums, current, sum.length());
+			const auto n3 = str2ui(nums, current, sum.length());
 			if(dfs(n2, n3, nums, length, current + sum.length())) {
 				return true;
 			}
@@ -813,8 +810,8 @@ namespace leetcode {
 			if(encodedText.empty()) {
 				return "";
 			}
-			int columns  = encodedText.length() / rows;
-			char **table = new char *[rows];
+			const int columns = encodedText.length() / rows;
+			auto *const table = new char *[rows];
 			for(int i = 0; i < rows; i++) {
 				table[i] = new char[columns - rows + 2];
 				for(int j = i; j - i < columns - rows + 2; j++) {
@@ -825,7 +822,7 @@ namespace leetcode {
 					}
 				}
 			}
-			ostringstream oss = ostringstream();
+			auto oss = ostringstream();
 			for(int j = 0; j < columns - rows + 2; j++) {
 				for(int i = 0; i < rows; i++) {
 					oss << table[i][j];
@@ -836,8 +833,8 @@ namespace leetcode {
 		}
 
 		string Solution::rtrim(string &s) {
-			for(int i=s.length();i>=0;i--) {
-				if(s[i] !=' ') {
+			for(int i = s.length() - 1; i >= 0; i--) {
+				if(s[i] != ' ') {
 					string ans = s.substr(0, i + 1);
 					return ans;
 				}
@@ -848,35 +845,36 @@ namespace leetcode {
 
 	namespace escape_a_large_maze {
 		bool Solution::isEscapePossible(vector<vector<int>> &blocked, vector<int> &source, vector<int> &target) {
-			int limit = blocked.size() * (blocked.size() - 1) / 2;
+			const int limit = blocked.size() * (blocked.size() - 1) / 2;
 			if(blocked.empty()) {
 				return true;
 			}
-			auto *p_source                                      = new point(source[0], source[1], 0, nullptr);
-			auto *p_target                                      = new point(target[0], target[1], 0, nullptr);
-			unordered_set<point, point_hash> blocked_set_source = unordered_set<point, point_hash>();
-			unordered_set<point, point_hash> blocked_set_target = unordered_set<point, point_hash>();
+			auto *p_source          = new point(source[0], source[1], 0, nullptr);
+			auto *p_target          = new point(target[0], target[1], 0, nullptr);
+			auto blocked_set_source = unordered_set<point, point_hash>();
+			auto blocked_set_target = unordered_set<point, point_hash>();
 			for(auto block: blocked) {
 				blocked_set_source.insert(point(block[0], block[1], 0, nullptr));
 				blocked_set_target.insert(point(block[0], block[1], 0, nullptr));
 			}
-			unsigned int source_status = search(blocked_set_source, p_source, p_target, limit);
+			const unsigned int source_status = search(blocked_set_source, p_source, p_target, limit);
 			if(source_status == 0) {
 				return false;
-			} else if(source_status == 1) {
-				return true;
-			} else {
-				unsigned int target_status = search(blocked_set_target, p_target, p_source, limit);
-				if(target_status == 0) {
-					return false;
-				} else {
-					return true;
-				}
 			}
+			if(source_status == 1) {
+				return true;
+			}
+			const unsigned int target_status = search(blocked_set_target, p_target, p_source, limit);
+			if(target_status == 0) {
+				return false;
+			}
+			return true;
+
+			return true;
 		}
 
 		unsigned int Solution::search(unordered_set<point, point_hash> &block_set, point *source, point *target, unsigned int limit) {
-			priority_queue<point> pq = priority_queue<point>();
+			auto pq = priority_queue<point>();
 			pq.push(point(source->x, source->y, 0, target));
 			int count = 0;
 			while(!pq.empty()) {
@@ -884,11 +882,11 @@ namespace leetcode {
 					return 2;//不包围
 				}
 				count++;
-				auto p = pq.top();
+				const auto p = pq.top();
 				pq.pop();
 				point nexts[] = {point(p.x + 1, p.y, p.distance + 1, target), point(p.x - 1, p.y, p.distance + 1, target), point(p.x, p.y + 1, p.distance + 1, target), point(p.x, p.y - 1, p.distance + 1, target)};
 				for(auto next: nexts) {
-					if(0 <= next.x && next.x < 1000000 && 0 <= next.y && next.y < 1000000 && block_set.count(next) == 0) {
+					if(0 <= next.x && next.x < 1000000 && 0 <= next.y && next.y < 1000000 && !block_set.contains(next)) {
 						if(next.x == target->x && next.y == target->y) {
 							return 1;//连通
 						}
@@ -900,15 +898,9 @@ namespace leetcode {
 			return 0;//不连通
 		}
 
-		bool point::operator<(const point &p) const {
-			return ((this->distance + (abs(int(this->x - target->x)) + abs(int(this->y - target->y)))) < (p.distance + (abs(int(p.x - target->x)) + abs(int(p.y - target->y)))));
-		}
-		bool point::operator==(const point &p) const {
-			return this->x == p.x && this->y == p.y;
-		}
+		bool point::operator<(const point &p) const { return this->distance + (abs(static_cast<int>(this->x - target->x)) + abs(static_cast<int>(this->y - target->y))) < p.distance + (abs(static_cast<int>(p.x - target->x)) + abs(static_cast<int>(p.y - target->y))); }
+		bool point::operator==(const point &p) const { return this->x == p.x && this->y == p.y; }
 
-		size_t point_hash::operator()(const point &p) const {
-			return p.x * 1000000 + p.y;
-		}
+		size_t point_hash::operator()(const point &p) const { return p.x * 1000000 + p.y; }
 	}// namespace escape_a_large_maze
 }// namespace leetcode

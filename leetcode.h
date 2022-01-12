@@ -55,7 +55,7 @@ namespace leetcode {
 
 			void insert(const string &str);
 
-			bool dfs(TrieNode *, const string &, int, bool);
+			bool dfs(TrieNode *, const string &, int, bool) const;
 		};
 	}// namespace concatenated_words
 
