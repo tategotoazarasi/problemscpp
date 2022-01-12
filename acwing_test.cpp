@@ -598,15 +598,19 @@ namespace acwing {
 
 	namespace acwing1978 {
 		TEST(acwing1978, case1) {
-			istringstream in("4\n"
-			                 "-3 4\n"
-			                 "7 8\n"
-			                 "10 16\n"
-			                 "3 9");
+			istringstream in("4\n-3 4\n7 8\n10 16\n3 9");
 			auto out = ostringstream();
 			acwing1978::main(in, out);
 			const auto ans = out.str();
 			ASSERT_EQ("2", ans);
 		}
 	}// namespace acwing1978
+
+	TEST(acwing659, case1) {
+		istringstream in("25.01");
+		auto out = ostringstream();
+		acwing659::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Intervalo (25,50]", ans);
+	}
 }// namespace acwing

@@ -264,11 +264,11 @@ namespace acwing {
 	int acwing654::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		int s = n % 60;
+		const int s = n % 60;
 		n /= 60;
-		int m = n % 60;
+		const int m = n % 60;
 		n /= 60;
-		int h = n;
+		const int h = n;
 		cout << h << ":" << m << ":" << s;
 		return 0;
 	}
@@ -983,7 +983,24 @@ namespace acwing {
 			return 0;
 		}
 
-
 		bool path::operator<(const path &p) const { return this->a < p.a; }
 	}// namespace acwing1978
+
+	int acwing659::main(istream &cin, ostream &cout) {
+		double x;
+		const string output[] = {"[0,25]", "(25,50]", "(50,75]", "(75,100]"};
+		cin >> x;
+		if(x < 0.0 || x > 100.0) {
+			cout << "Fora de intervalo";
+		} else if(x > 75.0) {
+			cout << "Intervalo " << output[3];
+		} else if(x > 50.0) {
+			cout << "Intervalo " << output[2];
+		} else if(x > 25.0) {
+			cout << "Intervalo " << output[1];
+		} else {
+			cout << "Intervalo " << output[0];
+		}
+		return 0;
+	}
 }// namespace acwing
