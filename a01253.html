@@ -127,14 +127,20 @@ $(function() {
 </dl>
 <dl class="section return"><dt>返回</dt><dd>: Returns the deleted string </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="a00026_source.html">lintcode.cpp</a> 第 <a class="el" href="a00026_source.html#l00094">94</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                                                                   {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keyword">auto</span> oss = ostringstream();</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <span class="keyword">auto</span> us = unordered_set&lt;char&gt;();</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> ch: sub) { us.insert(ch); }</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> ch: str) { <span class="keywordflow">if</span>(!us.contains(ch)) { oss &lt;&lt; ch; } }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keywordflow">return</span> oss.str();</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00026_source.html">lintcode.cpp</a> 第 <a class="el" href="a00026_source.html#l00115">115</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                                                                   {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keyword">auto</span> oss = ostringstream();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keyword">auto</span> us  = unordered_set&lt;char&gt;();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> ch: sub) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                us.insert(ch);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> ch: str) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                <span class="keywordflow">if</span>(!us.contains(ch)) {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                    oss &lt;&lt; ch;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keywordflow">return</span> oss.str();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="a00017_source.html#l00064">lintcode::character_deletion::TEST()</a>.</p>
 

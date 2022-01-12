@@ -116,14 +116,16 @@ $(function() {
 </dl>
 <dl class="section return"><dt>返回</dt><dd>: an ineger f(n) </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="a00026_source.html">lintcode.cpp</a> 第 <a class="el" href="a00026_source.html#l00084">84</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                                     {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keyword">auto</span> *arr = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            arr[0] = 0;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            arr[1] = 1;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2; i &lt; n; i++) { arr[i] = arr[i - 1] + arr[i - 2]; }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">return</span> arr[n - 1];</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00026_source.html">lintcode.cpp</a> 第 <a class="el" href="a00026_source.html#l00103">103</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                                     {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keyword">auto</span> *arr = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            arr[0]    = 0;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            arr[1]    = 1;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2; i &lt; n; i++) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                arr[i] = arr[i - 1] + arr[i - 2];</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keywordflow">return</span> arr[n - 1];</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="a00017_source.html#l00054">lintcode::fibonacci::TEST()</a>.</p>
 
