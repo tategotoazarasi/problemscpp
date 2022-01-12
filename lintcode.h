@@ -13,7 +13,7 @@ namespace lintcode {
 		TreeNode *left, *right;
 
 		explicit TreeNode(int val)
-		    : val(val), left(nullptr), right(nullptr){};
+			: val(val), left(nullptr), right(nullptr) {};
 	};
 
 	namespace license_key_formatting {
@@ -123,6 +123,20 @@ namespace lintcode {
 			static TreeNode *vlr(TreeNode * /*node*/);
 		};
 	}// namespace flatten
-}// namespace lintcode
+
+	/**
+	 * \brief LintCode 1730. 电子表格符号转换
+	 */
+	namespace convert {
+		class Solution {
+		public:
+			/**
+			 * @param index: the index to be converted
+			 * @return: return the string after convert.
+			 */
+			static string convert(long long index);
+		};
+	}// namespace convert
+}    // namespace lintcode
 
 #endif//PROBLEMSCPP_LINTCODE_H
