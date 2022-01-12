@@ -1025,4 +1025,31 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing1969::main(istream &cin, ostream &cout) {
+		unsigned int n;
+		unsigned int k;
+		cin >> n >> k;
+		auto um           = unordered_map<unsigned int, unsigned int>();
+		auto overcrowding = set<unsigned int>();
+		for(unsigned int i = 0; i < n; i++) {
+			unsigned int id;
+			cin >> id;
+			if(!um.contains(id)) {
+				um.insert(pair(id, i));
+			} else if(!overcrowding.contains(id)) {
+				if(i - um[id] > k) {
+					um[id] = i;
+				} else {
+					overcrowding.insert(id);
+				}
+			}
+		}
+		if(overcrowding.empty()) {
+			cout << -1;
+		} else {
+			cout << *--overcrowding.end();
+		}
+		return 0;
+	}
 }// namespace acwing

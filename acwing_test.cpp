@@ -629,4 +629,12 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("Origem", ans);
 	}
+
+	TEST(acwing1969, case1) {
+		istringstream in("6 3\n7\n3\n4\n2\n3\n4");
+		auto out = ostringstream();
+		acwing1969::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("4", ans);
+	}
 }// namespace acwing

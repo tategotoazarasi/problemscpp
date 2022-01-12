@@ -391,5 +391,13 @@ namespace acwing {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
+
+	/**
+	 * \brief AcWing 1969. 品种邻近
+	 */
+	class acwing1969 {
+	public:
+		static int main(istream & /*cin*/, ostream & /*cout*/);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
