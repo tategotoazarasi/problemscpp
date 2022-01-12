@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vlr_0',['vlr',['../a01247.html#a47f082993860ad08aacec0864e34cf80',1,'lintcode::flatten::Solution']]]
+  ['vlr_0',['vlr',['../a01265.html#a47f082993860ad08aacec0864e34cf80',1,'lintcode::flatten::Solution']]]
 ];
