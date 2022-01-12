@@ -31,21 +31,21 @@ namespace leetcode {
 		TEST(majority_element, case1) {
 			auto sol  = Solution();
 			int arr[] = {3, 2, 3};
-			auto vec  = std::vector<int>(arr, arr + 3);
+			auto vec  = std::vector(arr, arr + 3);
 			ASSERT_EQ(3, sol.majorityElement(vec));
 		}
 
 		TEST(majority_element, case2) {
 			auto sol  = Solution();
 			int arr[] = {2, 2, 1, 1, 1, 2, 2};
-			auto vec  = std::vector<int>(arr, arr + 7);
+			auto vec  = std::vector(arr, arr + 7);
 			ASSERT_EQ(2, sol.majorityElement(vec));
 		}
 
 		TEST(majority_element, case3) {
 			auto sol  = Solution();
 			int arr[] = {3, 2, 3};
-			auto vec  = std::vector<int>(arr, arr + 3);
+			auto vec  = std::vector(arr, arr + 3);
 			ASSERT_EQ(3, sol.majorityElement(vec));
 		}
 	}// namespace majority_element
@@ -73,10 +73,10 @@ namespace leetcode {
 			basic_string<char> input[] = {
 			        "cat", "cats", "catsdogcats", "dog", "dogcatsdog", "hippopotamuses", "rat",
 			        "ratcatdogcat"};
-			auto vec           = vector<basic_string<char>>(begin(input), end(input));
-			auto ans           = Solution::findAllConcatenatedWordsInADict(vec);
+			auto vec           = vector(begin(input), end(input));
+			const auto ans     = Solution::findAllConcatenatedWordsInADict(vec);
 			string outputstr[] = {"catsdogcats", "dogcatsdog", "ratcatdogcat"};
-			auto output        = vector<string>(begin(outputstr), end(outputstr));
+			const auto output  = vector(begin(outputstr), end(outputstr));
 			for(const string &str: ans) {
 				ASSERT_TRUE(find(output.cbegin(), output.cend(), str) != output.cend());
 			}
@@ -88,10 +88,10 @@ namespace leetcode {
 
 		TEST(concatenated_words, case2) {
 			basic_string<char> input[] = {"cat", "dog", "catdog"};
-			auto vec                   = vector<basic_string<char>>(begin(input), end(input));
-			auto ans                   = Solution::findAllConcatenatedWordsInADict(vec);
+			auto vec                   = vector(begin(input), end(input));
+			const auto ans             = Solution::findAllConcatenatedWordsInADict(vec);
 			string outputstr[]         = {"catdog"};
-			auto output                = vector<string>(begin(outputstr), end(outputstr));
+			const auto output          = vector(begin(outputstr), end(outputstr));
 			for(const string &str: ans) {
 				ASSERT_TRUE(find(output.cbegin(), output.cend(), str) != output.cend());
 			}
@@ -103,9 +103,9 @@ namespace leetcode {
 
 		TEST(concatenated_words, case4) {
 			basic_string<char> input[] = {"nuqhmfj", "mf", "jf", "n", "u", "q", "h"};
-			auto vec                   = vector<basic_string<char>>(begin(input), end(input));
-			auto ans                   = Solution::findAllConcatenatedWordsInADict(vec);
-			auto output                = vector<string>();
+			auto vec                   = vector(begin(input), end(input));
+			const auto ans             = Solution::findAllConcatenatedWordsInADict(vec);
+			const auto output          = vector<string>();
 			for(const string &str: ans) {
 				ASSERT_TRUE(find(output.cbegin(), output.cend(), str) != output.cend());
 			}
@@ -119,25 +119,25 @@ namespace leetcode {
 	namespace count_special_quadruplets {
 		TEST(count_special_quadruplets, case1) {
 			int input[] = {1, 2, 3, 6};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_EQ(1, Solution::countQuadruplets(vec));
 		}
 
 		TEST(count_special_quadruplets, case2) {
 			int input[] = {3, 3, 6, 4, 5};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_EQ(0, Solution::countQuadruplets(vec));
 		}
 
 		TEST(count_special_quadruplets, case3) {
 			int input[] = {1, 1, 1, 3, 5};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_EQ(4, Solution::countQuadruplets(vec));
 		}
 
 		TEST(count_special_quadruplets, case4) {
 			int input[] = {28, 8, 49, 85, 37, 90, 20, 8};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_EQ(1, Solution::countQuadruplets(vec));
 		}
 	}// namespace count_special_quadruplets
@@ -145,19 +145,19 @@ namespace leetcode {
 	namespace hand_of_straights {
 		TEST(hand_of_straights, case1) {
 			int input[] = {1, 2, 3, 6, 2, 3, 4, 7, 8};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_TRUE(Solution::isNStraightHand(vec, 3));
 		}
 
 		TEST(hand_of_straights, case2) {
 			int input[] = {1, 2, 3, 4, 5};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_FALSE(Solution::isNStraightHand(vec, 4));
 		}
 
 		TEST(hand_of_straights, case3) {
 			int input[] = {1, 2, 3, 4, 5, 6};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_TRUE(Solution::isNStraightHand(vec, 2));
 		}
 
@@ -168,7 +168,7 @@ namespace leetcode {
 			        15, 20, 27, 8, 13, 25, 23, 22, 15, 9, 14, 20, 10, 6, 5, 14, 12, 7, 16, 21, 18, 21, 24, 23,
 			        10, 21, 16, 18, 16, 18, 5, 20, 19, 20, 10, 14, 26, 2, 9, 19, 12, 28, 17, 5, 7, 25, 22, 16,
 			        17, 21, 11};
-			auto vec = vector<int>(begin(input), end(input));
+			auto vec = vector(begin(input), end(input));
 			ASSERT_FALSE(Solution::isNStraightHand(vec, 10));
 		}
 	}// namespace hand_of_straights
@@ -197,24 +197,24 @@ namespace leetcode {
 
 	namespace convert_bst_to_greater_tree {
 		TEST(convert_bst_to_greater_tree, case1) {
-			auto input  = new TreeNode(4, new TreeNode(1, new TreeNode(0), new TreeNode(2, nullptr, new TreeNode(3))),
-			                           new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
-			auto ans    = new TreeNode(30, new TreeNode(36, new TreeNode(36), new TreeNode(35, nullptr, new TreeNode(33))),
-			                           new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
-			auto output = Solution::convertBST(input);
-			ASSERT_TRUE((*ans) == (*output));
+			auto *input  = new TreeNode(4, new TreeNode(1, new TreeNode(0), new TreeNode(2, nullptr, new TreeNode(3))),
+                                       new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
+			auto *ans    = new TreeNode(30, new TreeNode(36, new TreeNode(36), new TreeNode(35, nullptr, new TreeNode(33))),
+                                     new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
+			auto *output = Solution::convertBST(input);
+			ASSERT_TRUE(*ans == *output);
 		}
 	}// namespace convert_bst_to_greater_tree
 
 	namespace convert_1d_array_into_2d_array {
 		TEST(convert_1d_array_into_2d_array, case1) {
 			int input[4]    = {1, 2, 3, 4};
-			auto vec        = vector<int>(begin(input), end(input));
-			auto ans        = Solution::construct2DArray(vec, 2, 2);
+			auto vec        = vector(begin(input), end(input));
+			const auto ans  = Solution::construct2DArray(vec, 2, 2);
 			int output1[]   = {1, 2};
 			int output2[]   = {3, 4};
-			auto vec1       = vector<int>(begin(output1), end(output1));
-			auto vec2       = vector<int>(begin(output2), end(output2));
+			const auto vec1 = vector(begin(output1), end(output1));
+			const auto vec2 = vector(begin(output2), end(output2));
 			auto vec_output = vector<vector<int>>();
 			vec_output.push_back(vec1);
 			vec_output.push_back(vec2);
@@ -253,13 +253,13 @@ namespace leetcode {
 	namespace number_of_laser_beams_in_a_bank {
 		TEST(number_of_laser_beams_in_a_bank, case1) {
 			string input[] = {"011001", "000000", "010100", "001000"};
-			auto vec       = vector<string>(begin(input), end(input));
+			auto vec       = vector(begin(input), end(input));
 			ASSERT_EQ(8, Solution::numberOfBeams(vec));
 		}
 
 		TEST(number_of_laser_beams_in_a_bank, case2) {
 			string input[] = {"000", "111", "000"};
-			auto vec       = vector<string>(begin(input), end(input));
+			auto vec       = vector(begin(input), end(input));
 			ASSERT_EQ(0, Solution::numberOfBeams(vec));
 		}
 	}// namespace number_of_laser_beams_in_a_bank
@@ -267,13 +267,13 @@ namespace leetcode {
 	namespace destroying_asteroids {
 		TEST(destroying_asteroids, case1) {
 			int input[] = {3, 9, 19, 5, 21};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_TRUE(Solution::asteroidsDestroyed(10, vec));
 		}
 
 		TEST(destroying_asteroids, case2) {
 			int input[] = {4, 9, 23, 4};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_FALSE(Solution::asteroidsDestroyed(5, vec));
 		}
 	}// namespace destroying_asteroids
@@ -386,8 +386,8 @@ namespace leetcode {
 
 	namespace gray_code {
 		TEST(gray_code, case1) {
-			int output[] = {0, 1, 3, 2};
-			auto vec     = vector<int>(begin(output), end(output));
+			int output[]   = {0, 1, 3, 2};
+			const auto vec = vector(begin(output), end(output));
 			ASSERT_EQ(vec, Solution::grayCode(2));
 		}
 	}// namespace gray_code
@@ -395,26 +395,26 @@ namespace leetcode {
 	namespace minimum_swaps_to_group_all_1s_together_ii {
 		TEST(minimum_swaps_to_group_all_1s_together_ii, case1) {
 			int input[] = {0, 1, 0, 1, 1, 0, 0};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_EQ(1, Solution::minSwaps(vec));
 		}
 
 		TEST(minimum_swaps_to_group_all_1s_together_ii, case2) {
 			int input[] = {0, 1, 1, 1, 0, 0, 1, 1, 0};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_EQ(2, Solution::minSwaps(vec));
 		}
 
 		TEST(minimum_swaps_to_group_all_1s_together_ii, case3) {
 			int input[] = {1, 1, 0, 0, 1};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_EQ(0, Solution::minSwaps(vec));
 		}
 
 		TEST(minimum_swaps_to_group_all_1s_together_ii, case4) {
 			int input[] = {1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0,
 			               1, 0, 0};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_EQ(7, Solution::minSwaps(vec));
 		}
 	}// namespace minimum_swaps_to_group_all_1s_together_ii
@@ -422,25 +422,25 @@ namespace leetcode {
 	namespace count_words_obtained_after_adding_a_letter {
 		TEST(count_words_obtained_after_adding_a_letter, case1) {
 			string input1[] = {"ant", "act", "tack"};
-			auto vec1       = vector<string>(begin(input1), end(input1));
+			auto vec1       = vector(begin(input1), end(input1));
 			string input2[] = {"tack", "act", "acti"};
-			auto vec2       = vector<string>(begin(input2), end(input2));
+			auto vec2       = vector(begin(input2), end(input2));
 			ASSERT_EQ(2, Solution::wordCount(vec1, vec2));
 		}
 
 		TEST(count_words_obtained_after_adding_a_letter, case2) {
 			string input1[] = {"ab", "a"};
-			auto vec1       = vector<string>(begin(input1), end(input1));
+			auto vec1       = vector(begin(input1), end(input1));
 			string input2[] = {"abc", "abcd"};
-			auto vec2       = vector<string>(begin(input2), end(input2));
+			auto vec2       = vector(begin(input2), end(input2));
 			ASSERT_EQ(1, Solution::wordCount(vec1, vec2));
 		}
 
 		TEST(count_words_obtained_after_adding_a_letter, case3) {
 			string input1[] = {"g", "vf", "ylpuk", "nyf", "gdj", "j", "fyqzg", "sizec"};
-			auto vec1       = vector<string>(begin(input1), end(input1));
+			auto vec1       = vector(begin(input1), end(input1));
 			string input2[] = {"r", "am", "jg", "umhjo", "fov", "lujy", "b", "uz", "y"};
-			auto vec2       = vector<string>(begin(input2), end(input2));
+			auto vec2       = vector(begin(input2), end(input2));
 			ASSERT_EQ(2, Solution::wordCount(vec1, vec2));
 		}
 	}// namespace count_words_obtained_after_adding_a_letter
@@ -448,13 +448,13 @@ namespace leetcode {
 	namespace slowest_key {
 		TEST(slowest_key, case1) {
 			int input[] = {9, 29, 49, 50};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_EQ('c', Solution::slowestKey(vec, "cbcd"));
 		}
 
 		TEST(slowest_key, case2) {
 			int input[] = {12, 23, 36, 46, 62};
-			auto vec    = vector<int>(begin(input), end(input));
+			auto vec    = vector(begin(input), end(input));
 			ASSERT_EQ('a', Solution::slowestKey(vec, "spuda"));
 		}
 	}// namespace slowest_key
@@ -481,67 +481,67 @@ namespace leetcode {
 		}
 
 		TEST(str2ui, case1) {
-			char input[] = {'2'};
+			const char input[] = {'2'};
 			ASSERT_EQ(2, Solution::str2ui(input, 0, 1));
 		}
 
 		TEST(str2ui, case2) {
-			char input[] = {'2', '3', '4'};
+			const char input[] = {'2', '3', '4'};
 			ASSERT_EQ(234, Solution::str2ui(input, 0, 3));
 		}
 
 		TEST(str2ui, case3) {
-			char input[] = {'2', '3', '4'};
+			const char input[] = {'2', '3', '4'};
 			ASSERT_EQ(23, Solution::str2ui(input, 0, 2));
 		}
 
 		TEST(str2ui, case4) {
-			char input[] = {'2', '3', '4'};
+			const char input[] = {'2', '3', '4'};
 			ASSERT_EQ(34, Solution::str2ui(input, 1, 2));
 		}
 
 		TEST(equal, case1) {
-			char input[] = {'1', '2'};
+			const char input[] = {'1', '2'};
 			ASSERT_TRUE(Solution::equal(string("12"), input, 0, 2));
 		}
 
 		TEST(equal, case2) {
-			char input[] = {'1', '2', '4'};
+			const char input[] = {'1', '2', '4'};
 			ASSERT_TRUE(Solution::equal(string("12"), input, 0, 3));
 		}
 
 		TEST(equal, case3) {
-			char input[] = {'3', '2', '4'};
+			const char input[] = {'3', '2', '4'};
 			ASSERT_FALSE(Solution::equal(string("12"), input, 0, 3));
 		}
 
 		TEST(equal, case4) {
-			char input[] = {'3', '2', '4', '5'};
+			const char input[] = {'3', '2', '4', '5'};
 			ASSERT_TRUE(Solution::equal(string("24"), input, 1, 4));
 		}
 
 		TEST(equal, case5) {
-			char input[] = {'3', '2', '4', '5'};
+			const char input[] = {'3', '2', '4', '5'};
 			ASSERT_FALSE(Solution::equal(string("2456"), input, 1, 4));
 		}
 
 		TEST(dfs, case1) {
-			char input[] = {'1', '1', '2'};
+			const char input[] = {'1', '1', '2'};
 			ASSERT_TRUE(Solution::dfs(1, 1, input, 3, 2));
 		}
 
 		TEST(dfs, case2) {
-			char input[] = {'1', '1', '2', '3'};
+			const char input[] = {'1', '1', '2', '3'};
 			ASSERT_TRUE(Solution::dfs(1, 1, input, 4, 2));
 		}
 
 		TEST(dfs, case3) {
-			char input[] = {'1', '1', '2', '4'};
+			const char input[] = {'1', '1', '2', '4'};
 			ASSERT_FALSE(Solution::dfs(1, 1, input, 4, 2));
 		}
 
 		TEST(dfs, case4) {
-			char input[] = {'1', '1', '2', '3', '3', '4'};
+			const char input[] = {'1', '1', '2', '3', '3', '4'};
 			ASSERT_TRUE(Solution::dfs(11, 23, input, 6, 4));
 		}
 	}// namespace additive_number
