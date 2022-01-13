@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lastremaining_0',['lastRemaining',['../a01149.html#a42381099f9e059b07b8dcc1ed68d1f1c',1,'leetcode::elimination_game::Solution']]],
-  ['licensekeyformatting_1',['licenseKeyFormatting',['../a01237.html#af1e730bea5301c335d57284f450b6510',1,'lintcode::license_key_formatting::Solution']]]
+  ['lastremaining_0',['lastRemaining',['../a01162.html#a42381099f9e059b07b8dcc1ed68d1f1c',1,'leetcode::elimination_game::Solution']]],
+  ['licensekeyformatting_1',['licenseKeyFormatting',['../a01254.html#af1e730bea5301c335d57284f450b6510',1,'lintcode::license_key_formatting::Solution']]]
 ];
