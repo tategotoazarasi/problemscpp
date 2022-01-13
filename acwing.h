@@ -399,5 +399,21 @@ namespace acwing {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
+
+	/**
+	 * \brief AcWing 664. 三角形
+	 */
+	class acwing664 {
+	public:
+		static int main(istream & /*cin*/, ostream & /*cout*/);
+	};
+
+	/**
+	 * \brief AcWing 666. 三角形类型
+	 */
+	class acwing666 {
+	public:
+		static int main(istream & /*cin*/, ostream & /*cout*/);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

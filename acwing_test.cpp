@@ -637,4 +637,36 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("4", ans);
 	}
+
+	TEST(acwing664, case1) {
+		istringstream in("6.0 4.0 2.0");
+		auto out = ostringstream();
+		acwing664::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Area = 10.0", ans);
+	}
+
+	TEST(acwing664, case2) {
+		istringstream in("6.0 4.0 2.1");
+		auto out = ostringstream();
+		acwing664::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Perimetro = 12.1", ans);
+	}
+
+	TEST(acwing666, case1) {
+		istringstream in("7.0 5.0 7.0");
+		auto out = ostringstream();
+		acwing666::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("TRIANGULO ACUTANGULO\nTRIANGULO ISOSCELES\n", ans);
+	}
+
+	TEST(acwing666, case2) {
+		istringstream in("1.6 9.3 9.9");
+		auto out = ostringstream();
+		acwing666::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("TRIANGULO OBTUSANGULO\n", ans);
+	}
 }// namespace acwing

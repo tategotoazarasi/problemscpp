@@ -1052,4 +1052,47 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing664::main(istream &cin, ostream &cout) {
+		double a;
+		double b;
+		double c;
+		cin >> a >> b >> c;
+		cout << setiosflags(ios::fixed) << setprecision(1);
+		if(a + b <= c || a + c <= b || b + c <= a) {
+			cout << "Area = " << (a + b) * c / 2;
+		} else {
+			cout << "Perimetro = " << a + b + c;
+		}
+		return 0;
+	}
+
+	int acwing666::main(istream &cin, ostream &cout) {
+		double arr[3];
+		cin >> arr[0] >> arr[1] >> arr[2];
+		sort(arr, arr + 3);
+		const double a = arr[2];
+		const double b = arr[1];
+		const double c = arr[0];
+		if(a >= b + c) {
+			cout << "NAO FORMA TRIANGULO";
+		} else {
+			if(a * a == b * b + c * c) {
+				cout << "TRIANGULO RETANGULO" << endl;
+			}
+			if(a * a > b * b + c * c) {
+				cout << "TRIANGULO OBTUSANGULO" << endl;
+			}
+			if(a * a < b * b + c * c) {
+				cout << "TRIANGULO ACUTANGULO" << endl;
+			}
+			if(a == b && b == c) {
+				cout << "TRIANGULO EQUILATERO" << endl;
+			}
+			if(a == b && b != c || b == c && a != b || a == c && a != b) {
+				cout << "TRIANGULO ISOSCELES" << endl;
+			}
+		}
+		return 0;
+	}
 }// namespace acwing
