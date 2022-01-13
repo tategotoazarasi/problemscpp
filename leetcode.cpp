@@ -919,4 +919,37 @@ namespace leetcode {
 			return false;
 		}
 	}// namespace increasing_triplet_subsequence
+
+	namespace largest_number_at_least_twice_of_others {
+		int Solution::dominantIndex(vector<int> &nums) {
+			if(nums.size() < 2) {
+				return 0;
+			}
+			unsigned int max;
+			unsigned int index;
+			unsigned int second;
+			if(nums[0] < nums[1]) {
+				max    = nums[1];
+				index  = 1;
+				second = nums[0];
+			} else {
+				max    = nums[0];
+				index  = 0;
+				second = nums[1];
+			}
+			for(int i = 2; i < nums.size(); i++) {
+				if(nums[i] > max) {
+					second = max;
+					index  = i;
+					max    = nums[i];
+				} else if(nums[i] > second) {
+					second = nums[i];
+				}
+			}
+			if(max >= 2 * second) {
+				return index;
+			}
+			return -1;
+		}
+	}// namespace largest_number_at_least_twice_of_others
 }// namespace leetcode

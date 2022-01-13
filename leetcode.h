@@ -364,6 +364,16 @@ namespace leetcode {
 			static bool increasingTriplet(vector<int> &nums);
 		};
 	}// namespace increasing_triplet_subsequence
+
+	/**
+	 * \brief LeetCode 747. 至少是其他数字两倍的最大数
+	 */
+	namespace largest_number_at_least_twice_of_others {
+		class Solution {
+		public:
+			static int dominantIndex(vector<int> &nums);
+		};
+	}// namespace largest_number_at_least_twice_of_others
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

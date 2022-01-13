@@ -589,4 +589,36 @@ namespace leetcode {
 			ASSERT_TRUE(Solution::increasingTriplet(vec));
 		}
 	}// namespace increasing_triplet_subsequence
+
+	namespace largest_number_at_least_twice_of_others {
+		TEST(largest_number_at_least_twice_of_others, case1) {
+			int input[] = {3, 6, 1, 0};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(1, Solution::dominantIndex(vec));
+		}
+
+		TEST(largest_number_at_least_twice_of_others, case2) {
+			int input[] = {1, 2, 3, 4};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(-1, Solution::dominantIndex(vec));
+		}
+
+		TEST(largest_number_at_least_twice_of_others, case3) {
+			int input[] = {1};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(0, Solution::dominantIndex(vec));
+		}
+
+		TEST(largest_number_at_least_twice_of_others, case4) {
+			int input[] = {0, 0, 0, 1};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(3, Solution::dominantIndex(vec));
+		}
+
+		TEST(largest_number_at_least_twice_of_others, case5) {
+			int input[] = {0, 0, 3, 2};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(-1, Solution::dominantIndex(vec));
+		}
+	}// namespace largest_number_at_least_twice_of_others
 }// namespace leetcode
