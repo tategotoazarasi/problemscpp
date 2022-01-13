@@ -669,4 +669,22 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("TRIANGULO OBTUSANGULO\n", ans);
 	}
+
+	TEST(acwing1960, case1) {
+		auto sol = acwing1960();
+		istringstream in("5 6\n1\n0\n0\n0\n0");
+		auto out = ostringstream();
+		sol.main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1\n1\n1\n0\n1\n", ans);
+	}
+
+	TEST(acwing1960, case2) {
+		auto sol = acwing1960();
+		istringstream in("11 731657697430757\n1\n1\n0\n0\n1\n0\n1\n1\n0\n1\n0");
+		auto out = ostringstream();
+		sol.main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1\n1\n0\n1\n0\n1\n0\n0\n0\n1\n1\n", ans);
+	}
 }// namespace acwing

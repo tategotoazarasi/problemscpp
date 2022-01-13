@@ -1095,4 +1095,83 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing1960::main(istream &cin, ostream &cout) {
+		memset(fsm, -2, sizeof fsm);
+		unsigned long long b;
+		cin >> n >> b;
+		unsigned int status = 0;
+		for(int i = 0; i < n; i++) {
+			unsigned int bulb;
+			cin >> bulb;
+			status += bulb;
+			status <<= 1;
+		}
+		status >>= 1;
+		fsm[status] = -1;
+
+		int count          = 0;
+		int round          = 0;
+		unsigned int index = 0;
+		for(int i = 0; i < b; i++) {
+			if(fsm[status] >= 0) {
+				if(round == 0) {
+					round = 1;
+					index = status;
+				} else if(round == 1 && status == index) {
+					b     = (b - i) % count + i;
+					round = 2;
+				}
+			}
+			if(round == 1) {
+				count++;
+			}
+			status = get_next(status);
+		}
+		const auto *const ans = decompress(status);
+		for(int i = 0; i < n; i++) {
+			cout << static_cast<int>(ans[i]) << endl;
+		}
+		delete[] ans;
+		return 0;
+	}
+
+	unsigned int acwing1960::get_next(unsigned int status) {
+		if(fsm[status] >= 0) {
+			return fsm[status];
+		}
+		const bool *bulbs      = decompress(status);
+		auto *const next_bulbs = new bool[n];
+		for(int i = 0; i < n; i++) {
+			if(bulbs[(i - 1 + n) % n]) {
+				next_bulbs[i] = !bulbs[i];
+			} else {
+				next_bulbs[i] = bulbs[i];
+			}
+		}
+		const int next_status = compress(next_bulbs);
+		fsm[status]           = next_status;
+		delete[] next_bulbs;
+		delete[] bulbs;
+		return next_status;
+	}
+
+	bool *acwing1960::decompress(unsigned int status) const {
+		auto *const bulbs = new bool[n];
+		for(int i = n - 1; i >= 0; i--) {
+			bulbs[i] = (status & 1) != 0U;
+			status >>= 1;
+		}
+		return bulbs;
+	}
+
+	unsigned int acwing1960::compress(const bool *bulbs) const {
+		int status = 0;
+		for(int i = 0; i < n; i++) {
+			status += static_cast<int>(bulbs[i]);
+			status <<= 1;
+		}
+		status >>= 1;
+		return status;
+	}
 }// namespace acwing

@@ -415,5 +415,20 @@ namespace acwing {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
+
+	/**
+	 * \brief AcWing 1960. 闪烁
+	 */
+	class acwing1960 {
+	private:
+		int fsm[1 << 16] = {};
+		unsigned int n{};
+
+	public:
+		int main(istream & /*cin*/, ostream & /*cout*/);
+		unsigned int get_next(unsigned int status);
+		[[nodiscard]] bool *decompress(unsigned int status) const;
+		unsigned int compress(const bool * /*bulbs*/) const;
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
