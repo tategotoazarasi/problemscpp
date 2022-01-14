@@ -391,6 +391,16 @@ namespace leetcode {
 			static vector<vector<int>> kSmallestPairs(vector<int> &nums1, vector<int> &nums2, int k);
 		};
 	}// namespace find_k_pairs_with_smallest_sums
+
+	/**
+	 * \brief LeetCode 46. 全排列
+	 */
+	namespace permutations {
+		class Solution {
+		public:
+			static vector<vector<int>> permute(vector<int> &nums);
+		};
+	}// namespace permutations
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

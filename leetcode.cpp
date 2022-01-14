@@ -976,4 +976,29 @@ namespace leetcode {
 
 		bool pair::operator<(const pair &p) const { return this->u + this->v > p.u + p.v; }
 	}// namespace find_k_pairs_with_smallest_sums
+
+	namespace permutations {
+		vector<vector<int>> Solution::permute(vector<int> &nums) {
+			auto ans = vector<vector<int>>();
+			if(nums.size() == 1) {
+				auto next_ans = vector<int>();
+				next_ans.push_back(nums[0]);
+				ans.push_back(next_ans);
+				return ans;
+			}
+			for(auto num: nums) {
+				auto next = vector(nums);
+				next.erase(find(next.begin(), next.end(), num));
+				auto next_permutations = permute(next);
+				auto new_ans           = vector<int>();
+				new_ans.push_back(num);
+				for(auto next_permutation: next_permutations) {
+					auto next_ans = vector(new_ans);
+					next_ans.insert(next_ans.end(), next_permutation.begin(), next_permutation.end());
+					ans.push_back(next_ans);
+				}
+			}
+			return ans;
+		}
+	}// namespace permutations
 }// namespace leetcode

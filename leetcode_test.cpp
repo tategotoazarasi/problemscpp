@@ -621,4 +621,42 @@ namespace leetcode {
 			ASSERT_EQ(-1, Solution::dominantIndex(vec));
 		}
 	}// namespace largest_number_at_least_twice_of_others
+
+	namespace permutations {
+		TEST(permutations, case1) {
+			int input[] = {1};
+			auto vec    = vector(begin(input), end(input));
+			auto ans    = vector<vector<int>>();
+			auto ans1   = vector<int>();
+			ans1.push_back(1);
+			ans.push_back(ans1);
+			ASSERT_EQ(ans, Solution::permute(vec));
+		}
+
+		TEST(permutations, case2) {
+			int input[] = {0, 1};
+			auto vec    = vector(begin(input), end(input));
+			auto ans    = vector<vector<int>>();
+			auto ans1   = vector<int>();
+			ans1.push_back(0);
+			ans1.push_back(1);
+			ans.push_back(ans1);
+			auto ans2 = vector<int>();
+			ans2.push_back(1);
+			ans2.push_back(0);
+			ans.push_back(ans2);
+			ASSERT_EQ(ans, Solution::permute(vec));
+		}
+
+		TEST(permutations, case3) {
+			int input[]       = {1, 2, 3};
+			auto vec          = vector(begin(input), end(input));
+			auto ans          = vector<vector<int>>();
+			int outputs[6][3] = {{1, 2, 3}, {1, 3, 2}, {2, 1, 3}, {2, 3, 1}, {3, 1, 2}, {3, 2, 1}};
+			for(auto &output: outputs) {
+				ans.emplace_back(begin(output), end(output));
+			}
+			ASSERT_EQ(ans, Solution::permute(vec));
+		}
+	}// namespace permutations
 }// namespace leetcode
