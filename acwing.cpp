@@ -1174,4 +1174,15 @@ namespace acwing {
 		status >>= 1;
 		return status;
 	}
+
+	int acwing667::main(istream &cin, ostream &cout) {
+		unsigned int a, b;
+		cin >> a >> b;
+		int t = (b - a + 24) % 24;
+		if(t == 0) {
+			t = 24;
+		}
+		cout << "O JOGO DUROU " << t << " HORA(S)";
+		return 0;
+	}
 }// namespace acwing

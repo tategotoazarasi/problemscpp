@@ -430,5 +430,11 @@ namespace acwing {
 		[[nodiscard]] bool *decompress(unsigned int status) const;
 		unsigned int compress(const bool * /*bulbs*/) const;
 	};
+
+	/// \brief AcWing 667. 游戏时间
+	class acwing667 {
+	public:
+		static int main(istream & /*cin*/, ostream & /*cout*/);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
