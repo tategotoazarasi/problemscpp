@@ -1,6 +1,9 @@
 #include "lintcode.h"
 
+#include <climits>
+#include <cstring>
 #include <map>
+#include <queue>
 #include <set>
 #include <sstream>
 #include <string>
@@ -251,4 +254,30 @@ namespace lintcode {
 			return to_string(prefix) + ans;
 		}
 	}// namespace convert
+
+	namespace min_path_sum {
+		int Solution::minPathSum(vector<vector<int>> &grid) {
+			unsigned int m = grid.size();
+			unsigned int n = grid[0].size();
+			int **dp       = new int *[m + 1];
+			for(int i = 0; i <= m; i++) {
+				dp[i] = new int[n + 1];
+				memset(dp[i], INT_MAX, (n + 1) * sizeof(int));
+			}
+			dp[1][1] = grid[0][0];
+			for(int i = 1; i <= m; i++) {
+				for(int j = 1; j <= n; j++) {
+					if(i == 1 && j == 1) {
+						continue;
+					}
+					unsigned int min = dp[i - 1][j];
+					if(dp[i][j - 1] < min) {
+						min = dp[i][j - 1];
+					}
+					dp[i][j] = grid[i - 1][j - 1] + min;
+				}
+			}
+			return dp[m][n];
+		}
+	}// namespace min_path_sum
 }// namespace lintcode

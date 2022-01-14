@@ -137,6 +137,18 @@ namespace lintcode {
 			static string convert(long long index);
 		};
 	}// namespace convert
+
+	/// \brief LintCode 110. 最小路径和
+	namespace min_path_sum {
+		class Solution {
+		public:
+			/**
+     		 * @param grid: a list of lists of integers
+     		 * @return: An integer, minimizes the sum of all numbers along its path
+     		 */
+			int minPathSum(vector<vector<int>> &grid);
+		};
+	}// namespace min_path_sum
 }// namespace lintcode
 
 #endif//PROBLEMSCPP_LINTCODE_H
