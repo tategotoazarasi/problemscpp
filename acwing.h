@@ -436,5 +436,11 @@ namespace acwing {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
+
+	/// \brief AcWing 668. 游戏时间2
+	class acwing668 {
+	public:
+		static int main(istream & /*cin*/, ostream & /*cout*/);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

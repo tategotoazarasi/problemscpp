@@ -1185,4 +1185,15 @@ namespace acwing {
 		cout << "O JOGO DUROU " << t << " HORA(S)";
 		return 0;
 	}
+
+	int acwing668::main(istream &cin, ostream &cout) {
+		unsigned int a, b, c, d;
+		cin >> a >> b >> c >> d;
+		unsigned int t = ((c * 60 + d) - (a * 60 + b) + 24 * 60) % (24 * 60);
+		if(t == 0) {
+			t = 24 * 60;
+		}
+		cout << "O JOGO DUROU " << t / 60 << " HORA(S) E " << t % 60 << " MINUTO(S)";
+		return 0;
+	}
 }// namespace acwing
