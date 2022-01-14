@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wordcount_0',['wordCount',['../a01214.html#a7f1751f84964dffec1cb5db46bef2816',1,'leetcode::count_words_obtained_after_adding_a_letter::Solution']]]
+  ['u_0',['u',['../a01264.html#a0fe022ca955920947e43e36545b039da',1,'leetcode::find_k_pairs_with_smallest_sums::pair']]]
 ];

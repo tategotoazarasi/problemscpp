@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['lastremaining_0',['lastRemaining',['../a01162.html#a42381099f9e059b07b8dcc1ed68d1f1c',1,'leetcode::elimination_game::Solution']]],
-  ['licensekeyformatting_1',['licenseKeyFormatting',['../a01254.html#af1e730bea5301c335d57284f450b6510',1,'lintcode::license_key_formatting::Solution']]]
+  ['ksmallestpairs_0',['kSmallestPairs',['../a01268.html#ad10110d7c72b7b6e5c5fc388d87c02be',1,'leetcode::find_k_pairs_with_smallest_sums::Solution']]]
 ];

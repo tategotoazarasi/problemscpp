@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['operator_21_3d_0',['operator!=',['../a01114.html#ae4f53fc0e10e63669689b46eddf5793e',1,'leetcode::TreeNode']]],
-  ['operator_28_29_1',['operator()',['../a00978.html#a877b41ff422d96dfa2482198d8103d79',1,'acwing::acwing2060::pointhash::operator()()'],['../a00982.html#aaf242b20a81231792bc54556222c342b',1,'acwing::acwing2060::pointequal::operator()()'],['../a01234.html#ae0e0e15dc33253db4eb6718713097322',1,'leetcode::escape_a_large_maze::point_hash::operator()()']]],
-  ['operator_3c_2',['operator&lt;',['../a01082.html#a30592f9976485df75d0fb248acfaba7e',1,'acwing::acwing1978::path::operator&lt;()'],['../a01230.html#a3330815b508b46c2534deaef3e470d96',1,'leetcode::escape_a_large_maze::point::operator&lt;()']]],
-  ['operator_3d_3d_3',['operator==',['../a01114.html#a99e32f5e6efb97eb4d36b43987363a83',1,'leetcode::TreeNode::operator==()'],['../a01230.html#a16593671bee299f7a280880c9a740342',1,'leetcode::escape_a_large_maze::point::operator==()']]]
+  ['n_0',['n',['../a01112.html#a1bf9235b72d60539ff2d79a50a84f192',1,'acwing::acwing1960::n()'],['../a01200.html#ac720663a373d3d40ce2f2f14ce43d139',1,'leetcode::cat_and_mouse::Solution::n()']]],
+  ['n_1',['N',['../a00047.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8',1,'acwing::acwing2019']]],
+  ['nexts_2',['nexts',['../a01044.html#ae01415ca9922c08ac9ece9f26f0ca5f7',1,'acwing::acwing4208::trie_node::nexts()'],['../a01136.html#a5c786bb189d8d537910a1b33db5ecb46',1,'leetcode::concatenated_words::TrieNode::nexts()']]],
+  ['numberofbeams_3',['numberOfBeams',['../a01184.html#a3c2c37ad0e13b180a6873bbcdb9a4de3',1,'leetcode::number_of_laser_beams_in_a_bank::Solution']]]
 ];
