@@ -1196,4 +1196,43 @@ namespace acwing {
 		cout << "O JOGO DUROU " << t / 60 << " HORA(S) E " << t % 60 << " MINUTO(S)";
 		return 0;
 	}
+
+	int acwing1952::main(istream &cin, ostream &cout) {
+		unsigned short n, x, y, z;
+		cin >> n >> x >> y >> z;
+		unordered_map<unsigned int, unsigned int> as = unordered_map<unsigned int, unsigned int>();
+		unordered_map<unsigned int, unsigned int> bs = unordered_map<unsigned int, unsigned int>();
+		set<unsigned int> edges                      = set<unsigned int>();
+		for(unsigned short i = 0; i < n; i++) {
+			unsigned int a, b;
+			cin >> a >> b;
+			if(as.count(a) == 0) {
+				as.insert(pair<unsigned int, unsigned int>(a, 1));
+				edges.insert(a);
+			} else {
+				as[a]++;
+			}
+			if(bs.count(b) == 0) {
+				bs.insert(pair<unsigned int, unsigned int>(b, 1));
+				edges.insert(b);
+			} else {
+				bs[b]++;
+			}
+		}
+		unsigned int count = x * n;
+		unsigned int max   = count;
+		for(unsigned int edge: edges) {
+			if(as.count(edge) != 0) {
+				count += (y - x) * as[edge];
+			}
+			if(max < count) {
+				max = count;
+			}
+			if(bs.count(edge) != 0) {
+				count -= (y - z) * bs[edge];
+			}
+		}
+		cout << max;
+		return 0;
+	}
 }// namespace acwing

@@ -743,4 +743,24 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("O JOGO DUROU 6 HORA(S) E 52 MINUTO(S)", ans);
 	}
+
+	TEST(acwing1952, case1) {
+		istringstream in("4 7 9 6\n"
+		                 "5 8\n"
+		                 "3 4\n"
+		                 "13 20\n"
+		                 "7 10");
+		auto out = ostringstream();
+		acwing1952::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("31", ans);
+	}
+
+	TEST(acwing1952, case2) {
+		istringstream in("25 5 7 3\n3 6\n5 7\n3 5\n2 6\n1 9\n2 7\n0 9\n3 6\n0 6\n2 6\n1 8\n7 9\n0 2\n2 3\n5 7\n2 9\n2 8\n7 9\n3 6\n1 2\n3 9\n1 9\n4 7\n4 8\n0 5");
+		auto out = ostringstream();
+		acwing1952::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("159", ans);
+	}
 }// namespace acwing
