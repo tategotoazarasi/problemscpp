@@ -100,38 +100,38 @@ namespace lintcode {
 
 	namespace min_path_sum {
 		TEST(min_path_sum, case1) {
-			int input[3][3]         = {{1, 3, 1}, {1, 5, 1}, {4, 2, 1}};
-			vector<vector<int>> vec = vector<vector<int>>();
+			int input[3][3] = {{1, 3, 1}, {1, 5, 1}, {4, 2, 1}};
+			auto vec        = vector<vector<int>>();
 			vec.resize(3);
 			for(int i = 0; i < 3; i++) {
-				vector<int> to_add = vector<int>(begin(input[i]), end(input[i]));
-				vec[i]             = to_add;
+				const auto to_add = vector(begin(input[i]), end(input[i]));
+				vec[i]            = to_add;
 			}
-			Solution sol = Solution();
+			auto sol = Solution();
 			ASSERT_EQ(7, sol.minPathSum(vec));
 		}
 
 		TEST(min_path_sum, case2) {
-			int input[1][3]         = {{1, 3, 2}};
-			vector<vector<int>> vec = vector<vector<int>>();
+			int input[1][3] = {{1, 3, 2}};
+			auto vec        = vector<vector<int>>();
 			vec.resize(1);
 			for(int i = 0; i < 1; i++) {
-				vector<int> to_add = vector<int>(begin(input[i]), end(input[i]));
-				vec[i]             = to_add;
+				const auto to_add = vector(begin(input[i]), end(input[i]));
+				vec[i]            = to_add;
 			}
-			Solution sol = Solution();
+			auto sol = Solution();
 			ASSERT_EQ(6, sol.minPathSum(vec));
 		}
 
 		TEST(min_path_sum, case3) {
-			int input[8][8]         = {{1, 4, 8, 6, 2, 2, 1, 7}, {4, 7, 3, 1, 4, 5, 5, 1}, {8, 8, 2, 1, 1, 8, 0, 1}, {8, 9, 2, 9, 8, 0, 8, 9}, {5, 7, 5, 7, 1, 8, 5, 5}, {7, 0, 9, 4, 5, 6, 5, 6}, {4, 9, 9, 7, 9, 1, 9, 0}};
-			vector<vector<int>> vec = vector<vector<int>>();
+			int input[8][8] = {{1, 4, 8, 6, 2, 2, 1, 7}, {4, 7, 3, 1, 4, 5, 5, 1}, {8, 8, 2, 1, 1, 8, 0, 1}, {8, 9, 2, 9, 8, 0, 8, 9}, {5, 7, 5, 7, 1, 8, 5, 5}, {7, 0, 9, 4, 5, 6, 5, 6}, {4, 9, 9, 7, 9, 1, 9, 0}};
+			auto vec        = vector<vector<int>>();
 			vec.resize(8);
 			for(int i = 0; i < 8; i++) {
-				vector<int> to_add = vector<int>(begin(input[i]), end(input[i]));
-				vec[i]             = to_add;
+				const auto to_add = vector(begin(input[i]), end(input[i]));
+				vec[i]            = to_add;
 			}
-			Solution sol = Solution();
+			auto sol = Solution();
 			ASSERT_EQ(37, sol.minPathSum(vec));
 		}
 	}// namespace min_path_sum

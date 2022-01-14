@@ -146,7 +146,7 @@ namespace lintcode {
      		 * @param grid: a list of lists of integers
      		 * @return: An integer, minimizes the sum of all numbers along its path
      		 */
-			int minPathSum(vector<vector<int>> &grid);
+			static int minPathSum(vector<vector<int>> &grid);
 		};
 	}// namespace min_path_sum
 }// namespace lintcode

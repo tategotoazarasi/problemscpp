@@ -380,9 +380,12 @@ namespace leetcode {
 		struct pair {
 			int u;
 			int v;
-			pair(int u, int v): u(u), v(v){};
-			bool operator<(const pair &) const;
+
+			pair(int u, int v)
+			    : u(u), v(v){};
+			bool operator<(const pair & /*p*/) const;
 		};
+
 		class Solution {
 		public:
 			static vector<vector<int>> kSmallestPairs(vector<int> &nums1, vector<int> &nums2, int k);

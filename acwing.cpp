@@ -1176,7 +1176,8 @@ namespace acwing {
 	}
 
 	int acwing667::main(istream &cin, ostream &cout) {
-		unsigned int a, b;
+		unsigned int a;
+		unsigned int b;
 		cin >> a >> b;
 		int t = (b - a + 24) % 24;
 		if(t == 0) {
@@ -1187,9 +1188,12 @@ namespace acwing {
 	}
 
 	int acwing668::main(istream &cin, ostream &cout) {
-		unsigned int a, b, c, d;
+		unsigned int a;
+		unsigned int b;
+		unsigned int c;
+		unsigned int d;
 		cin >> a >> b >> c >> d;
-		unsigned int t = ((c * 60 + d) - (a * 60 + b) + 24 * 60) % (24 * 60);
+		unsigned int t = (c * 60 + d - (a * 60 + b) + 24 * 60) % (24 * 60);
 		if(t == 0) {
 			t = 24 * 60;
 		}
@@ -1198,21 +1202,25 @@ namespace acwing {
 	}
 
 	int acwing1952::main(istream &cin, ostream &cout) {
-		unsigned short n, x, y, z;
+		unsigned short n;
+		unsigned short x;
+		unsigned short y;
+		unsigned short z;
 		cin >> n >> x >> y >> z;
-		unordered_map<unsigned int, unsigned int> as = unordered_map<unsigned int, unsigned int>();
-		unordered_map<unsigned int, unsigned int> bs = unordered_map<unsigned int, unsigned int>();
-		set<unsigned int> edges                      = set<unsigned int>();
+		auto as    = unordered_map<unsigned int, unsigned int>();
+		auto bs    = unordered_map<unsigned int, unsigned int>();
+		auto edges = set<unsigned int>();
 		for(unsigned short i = 0; i < n; i++) {
-			unsigned int a, b;
+			unsigned int a;
+			unsigned int b;
 			cin >> a >> b;
-			if(as.count(a) == 0) {
+			if(!as.contains(a)) {
 				as.insert(pair<unsigned int, unsigned int>(a, 1));
 				edges.insert(a);
 			} else {
 				as[a]++;
 			}
-			if(bs.count(b) == 0) {
+			if(!bs.contains(b)) {
 				bs.insert(pair<unsigned int, unsigned int>(b, 1));
 				edges.insert(b);
 			} else {
@@ -1222,13 +1230,13 @@ namespace acwing {
 		unsigned int count = x * n;
 		unsigned int max   = count;
 		for(unsigned int edge: edges) {
-			if(as.count(edge) != 0) {
+			if(as.contains(edge)) {
 				count += (y - x) * as[edge];
 			}
 			if(max < count) {
 				max = count;
 			}
-			if(bs.count(edge) != 0) {
+			if(bs.contains(edge)) {
 				count -= (y - z) * bs[edge];
 			}
 		}

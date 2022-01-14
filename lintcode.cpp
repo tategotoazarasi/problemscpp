@@ -257,9 +257,9 @@ namespace lintcode {
 
 	namespace min_path_sum {
 		int Solution::minPathSum(vector<vector<int>> &grid) {
-			unsigned int m = grid.size();
-			unsigned int n = grid[0].size();
-			int **dp       = new int *[m + 1];
+			const unsigned int m = grid.size();
+			const unsigned int n = grid[0].size();
+			auto dp              = new int *[m + 1];
 			for(int i = 0; i <= m; i++) {
 				dp[i] = new int[n + 1];
 				memset(dp[i], INT_MAX, (n + 1) * sizeof(int));

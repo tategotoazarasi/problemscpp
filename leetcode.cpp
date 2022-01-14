@@ -955,17 +955,17 @@ namespace leetcode {
 
 	namespace find_k_pairs_with_smallest_sums {
 		vector<vector<int>> Solution::kSmallestPairs(vector<int> &nums1, vector<int> &nums2, int k) {
-			vector<vector<int>> ans = vector<vector<int>>();
-			priority_queue<pair> pq = priority_queue<pair>();
+			auto ans = vector<vector<int>>();
+			auto pq  = priority_queue<pair>();
 			for(int i = 0; i < k && i < nums1.size(); i++) {
 				for(int j = 0; j < k && j < nums2.size(); j++) {
 					pq.push(pair(nums1[i], nums2[j]));
 				}
 			}
 			for(int i = 0; i < k && i < nums1.size() * nums2.size(); i++) {
-				pair p = pq.top();
+				const pair p = pq.top();
 				pq.pop();
-				vector<int> to_add = vector<int>();
+				auto to_add = vector<int>();
 				to_add.resize(2);
 				to_add[0] = p.u;
 				to_add[1] = p.v;
@@ -974,8 +974,6 @@ namespace leetcode {
 			return ans;
 		}
 
-		bool pair::operator<(const pair &p) const {
-			return this->u + this->v > p.u + p.v;
-		}
+		bool pair::operator<(const pair &p) const { return this->u + this->v > p.u + p.v; }
 	}// namespace find_k_pairs_with_smallest_sums
 }// namespace leetcode
