@@ -374,6 +374,20 @@ namespace leetcode {
 			static int dominantIndex(vector<int> &nums);
 		};
 	}// namespace largest_number_at_least_twice_of_others
+
+	/// \brief LeetCode 373. 查找和最小的K对数字
+	namespace find_k_pairs_with_smallest_sums {
+		struct pair {
+			int u;
+			int v;
+			pair(int u, int v): u(u), v(v){};
+			bool operator<(const pair &) const;
+		};
+		class Solution {
+		public:
+			static vector<vector<int>> kSmallestPairs(vector<int> &nums1, vector<int> &nums2, int k);
+		};
+	}// namespace find_k_pairs_with_smallest_sums
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

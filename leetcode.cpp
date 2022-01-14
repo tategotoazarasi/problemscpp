@@ -952,4 +952,30 @@ namespace leetcode {
 			return -1;
 		}
 	}// namespace largest_number_at_least_twice_of_others
+
+	namespace find_k_pairs_with_smallest_sums {
+		vector<vector<int>> Solution::kSmallestPairs(vector<int> &nums1, vector<int> &nums2, int k) {
+			vector<vector<int>> ans = vector<vector<int>>();
+			priority_queue<pair> pq = priority_queue<pair>();
+			for(int i = 0; i < k && i < nums1.size(); i++) {
+				for(int j = 0; j < k && j < nums2.size(); j++) {
+					pq.push(pair(nums1[i], nums2[j]));
+				}
+			}
+			for(int i = 0; i < k && i < nums1.size() * nums2.size(); i++) {
+				pair p = pq.top();
+				pq.pop();
+				vector<int> to_add = vector<int>();
+				to_add.resize(2);
+				to_add[0] = p.u;
+				to_add[1] = p.v;
+				ans.push_back(to_add);
+			}
+			return ans;
+		}
+
+		bool pair::operator<(const pair &p) const {
+			return this->u + this->v > p.u + p.v;
+		}
+	}// namespace find_k_pairs_with_smallest_sums
 }// namespace leetcode
