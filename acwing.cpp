@@ -1259,7 +1259,7 @@ namespace acwing {
 		} else {
 			percentual = 4;
 		}
-		double new_salary = salary * (100 + percentual) / 100;
+		const double new_salary = salary * (100 + percentual) / 100;
 		cout << setiosflags(ios::fixed) << setprecision(2);
 		cout << "Novo salario: " << new_salary << endl;
 		cout << "Reajuste ganho: " << new_salary - salary << endl;
@@ -1297,7 +1297,7 @@ namespace acwing {
 		unsigned int count = 0;
 		unsigned short n;
 		cin >> n;
-		vector<unsigned int> cows = vector<unsigned int>();
+		auto cows = vector<unsigned int>();
 		cows.resize(n);
 		for(int i = 0; i < n; i++) {
 			unsigned int cow;
@@ -1305,11 +1305,11 @@ namespace acwing {
 			cows[i] = cow;
 		}
 		sort(cows.begin(), cows.end());
-		for(auto i = cows.begin(); i != cows.end(); i++) {
-			for(auto j = i + 1; j != cows.end(); j++) {
-				unsigned int xy = *j - *i;
-				auto min        = lower_bound(j, cows.end(), *j + xy);
-				auto max        = upper_bound(j, cows.end(), *j + 2 * xy);
+		for(auto i = cows.begin(); i != cows.end(); ++i) {
+			for(auto j = i + 1; j != cows.end(); ++j) {
+				const unsigned int xy = *j - *i;
+				auto min              = lower_bound(j, cows.end(), *j + xy);
+				auto max              = upper_bound(j, cows.end(), *j + 2 * xy);
 				count += max - min;
 			}
 		}
