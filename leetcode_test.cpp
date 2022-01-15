@@ -659,4 +659,18 @@ namespace leetcode {
 			ASSERT_EQ(ans, Solution::permute(vec));
 		}
 	}// namespace permutations
+
+	namespace calculate_money_in_leetcode_bank {
+		TEST(calculate_money_in_leetcode_bank, case1) {
+			ASSERT_EQ(10, Solution::totalMoney(4));
+		}
+
+		TEST(calculate_money_in_leetcode_bank, case2) {
+			ASSERT_EQ(37, Solution::totalMoney(10));
+		}
+
+		TEST(calculate_money_in_leetcode_bank, case3) {
+			ASSERT_EQ(96, Solution::totalMoney(20));
+		}
+	}// namespace calculate_money_in_leetcode_bank
 }// namespace leetcode

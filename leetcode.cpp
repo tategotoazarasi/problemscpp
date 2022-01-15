@@ -1001,4 +1001,14 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace permutations
+
+	namespace calculate_money_in_leetcode_bank {
+		int Solution::totalMoney(int n) {
+			int sum = n / 7 * (28 + 7 * (n / 7 + 3)) / 2;
+			for(int i = 0; i < n % 7; i++) {
+				sum += n / 7 + 1 + i;
+			}
+			return sum;
+		}
+	}// namespace calculate_money_in_leetcode_bank
 }// namespace leetcode

@@ -401,6 +401,14 @@ namespace leetcode {
 			static vector<vector<int>> permute(vector<int> &nums);
 		};
 	}// namespace permutations
+
+	/// \brief LeetCode 1716. 计算力扣银行的钱
+	namespace calculate_money_in_leetcode_bank {
+		class Solution {
+		public:
+			static int totalMoney(int n);
+		};
+	}// namespace calculate_money_in_leetcode_bank
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
