@@ -466,5 +466,13 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/**
+	 * \brief 三元组
+	 */
+	class acwing4209 {
+	public:
+		static int main(istream &cin, ostream &cout);	
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

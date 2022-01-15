@@ -1316,4 +1316,25 @@ namespace acwing {
 		cout << count;
 		return 0;
 	}
+
+	int acwing4209::main(istream &cin, ostream &cout) {
+		unsigned int n;
+		cin >> n;
+		int x = 0;
+		int y = 0;
+		int z = 0;
+		for(int i = 0; i < n; i++) {
+			int xi, yi, zi;
+			cin >> xi >> yi >> zi;
+			x += xi;
+			y+=yi;
+			z += zi;
+		}
+		if(x==0 && y==0 && z==0) {
+			cout << "YES";
+		}else {
+			cout << "NO";
+		}
+		return 0;
+	}
 }// namespace acwing

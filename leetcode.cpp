@@ -276,7 +276,7 @@ namespace leetcode {
 
 	namespace convert_1d_array_into_2d_array {
 		vector<vector<int>> Solution::construct2DArray(vector<int> &original, int m, int n) {
-			if(original.size() != m * n) {
+			if(original.size() != static_cast<unsigned long long>(m) * static_cast<unsigned long long>(n)) {
 				return {};
 			}
 			auto ans  = vector<vector<int>>();
