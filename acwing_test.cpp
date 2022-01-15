@@ -763,4 +763,15 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("159", ans);
 	}
+
+	TEST(acwing669, case1) {
+		istringstream in("400.00");
+		auto out = ostringstream();
+		acwing669::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Novo salario: 460.00\n"
+		          "Reajuste ganho: 60.00\n"
+		          "Em percentual: 15 %",
+		          ans);
+	}
 }// namespace acwing

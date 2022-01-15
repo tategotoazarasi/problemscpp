@@ -1243,4 +1243,27 @@ namespace acwing {
 		cout << max;
 		return 0;
 	}
+
+	int acwing669::main(istream &cin, ostream &cout) {
+		double salary;
+		cin >> salary;
+		unsigned short percentual = 0;
+		if(salary <= 400) {
+			percentual = 15;
+		} else if(salary <= 800) {
+			percentual = 12;
+		} else if(salary <= 1200) {
+			percentual = 10;
+		} else if(salary <= 2000) {
+			percentual = 7;
+		} else {
+			percentual = 4;
+		}
+		double new_salary = salary * (100 + percentual) / 100;
+		cout << setiosflags(ios::fixed) << setprecision(2);
+		cout << "Novo salario: " << new_salary << endl;
+		cout << "Reajuste ganho: " << new_salary - salary << endl;
+		cout << "Em percentual: " << percentual << " %";
+		return 0;
+	}
 }// namespace acwing
