@@ -774,4 +774,28 @@ namespace acwing {
 		          "Em percentual: 15 %",
 		          ans);
 	}
+
+	TEST(acwing672, case1) {
+		istringstream in("3002.00");
+		auto out = ostringstream();
+		acwing672::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("R$ 80.36", ans);
+	}
+
+	TEST(acwing672, case2) {
+		istringstream in("1700.00");
+		auto out = ostringstream();
+		acwing672::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Isento", ans);
+	}
+
+	TEST(acwing672, case3) {
+		istringstream in("4520.00");
+		auto out = ostringstream();
+		acwing672::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("R$ 355.60", ans);
+	}
 }// namespace acwing

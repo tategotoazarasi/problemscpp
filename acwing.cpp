@@ -1266,4 +1266,30 @@ namespace acwing {
 		cout << "Em percentual: " << percentual << " %";
 		return 0;
 	}
+
+	int acwing672::main(istream &cin, ostream &cout) {
+		double income;
+		cin >> income;
+		double tax = 0;
+		if(income <= 2000) {
+			tax = 0;
+		} else if(2000 < income && income <= 3000) {
+			income -= 2000;
+			tax += income * 0.08;
+		} else if(income <= 4500) {
+			tax = 80;
+			income -= 3000;
+			tax += income * 0.18;
+		} else {
+			tax = 350;
+			income -= 4500;
+			tax += income * 0.28;
+		}
+		if(tax == 0) {
+			cout << "Isento";
+		} else {
+			cout << setiosflags(ios::fixed) << setprecision(2) << "R$ " << tax;
+		}
+		return 0;
+	}
 }// namespace acwing
