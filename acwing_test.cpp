@@ -811,4 +811,68 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("4", ans);
 	}
+
+	TEST(acwing4210, case1) {
+		istringstream in("5");
+		auto out = ostringstream();
+		acwing4210::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("7/3", ans);
+	}
+
+	TEST(acwing4210, case2) {
+		istringstream in("3");
+		auto out = ostringstream();
+		acwing4210::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2/1", ans);
+	}
+
+	TEST(acwing4211, case1) {
+		istringstream in("6\n4 8 6 3 12 9");
+		auto out = ostringstream();
+		acwing4211::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("9 3 6 12 4 8 ", ans);
+	}
+
+	TEST(acwing4211, case2) {
+		istringstream in("4\n42 28 84 126");
+		auto out = ostringstream();
+		acwing4211::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("126 42 84 28 ", ans);
+	}
+
+	TEST(acwing4211, case3) {
+		istringstream in("2\n1000000000000000000 3000000000000000000");
+		auto out = ostringstream();
+		acwing4211::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("3000000000000000000 1000000000000000000 ", ans);
+	}
+
+	TEST(acwing4211, case4) {
+		istringstream in("2\n1 3");
+		auto out = ostringstream();
+		acwing4211::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("3 1 ", ans);
+	}
+
+	TEST(acwing4211, case5) {
+		istringstream in("19\n46875000000000000 732421875000000 5859375000000000 11444091796875 2929687500000000 187500000000000000 91552734375000 11718750000000000 3000000000000000000 22888183593750 1464843750000000 375000000000000000 45776367187500 183105468750000 93750000000000000 366210937500000 23437500000000000 750000000000000000 1500000000000000000");
+		auto out = ostringstream();
+		acwing4211::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("11444091796875 22888183593750 45776367187500 91552734375000 183105468750000 366210937500000 732421875000000 1464843750000000 2929687500000000 5859375000000000 11718750000000000 23437500000000000 46875000000000000 93750000000000000 187500000000000000 375000000000000000 750000000000000000 1500000000000000000 3000000000000000000 ", ans);
+	}
+
+	TEST(acwing4211, case6) {
+		istringstream in("3\n4 1 2");
+		auto out = ostringstream();
+		acwing4211::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1 2 4 ", ans);
+	}
 }// namespace acwing

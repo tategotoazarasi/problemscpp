@@ -468,11 +468,30 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief 三元组
+	 * \brief AcWing 4209. 三元组
 	 */
 	class acwing4209 {
 	public:
-		static int main(istream &cin, ostream &cout);	
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4210. 数字
+	 */
+	class acwing4210 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4211. 序列重排
+	 */
+	class acwing4211 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static unsigned int no2(unsigned long long a);
+		static unsigned int no3(unsigned long long a);
+		static bool cmp(unsigned long long a, unsigned long long b);
 	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

@@ -1324,17 +1324,86 @@ namespace acwing {
 		int y = 0;
 		int z = 0;
 		for(int i = 0; i < n; i++) {
-			int xi, yi, zi;
+			int xi;
+			int yi;
+			int zi;
 			cin >> xi >> yi >> zi;
 			x += xi;
-			y+=yi;
+			y += yi;
 			z += zi;
 		}
-		if(x==0 && y==0 && z==0) {
+		if(x == 0 && y == 0 && z == 0) {
 			cout << "YES";
-		}else {
+		} else {
 			cout << "NO";
 		}
 		return 0;
+	}
+
+	int acwing4210::main(istream &cin, ostream &cout) {
+		unsigned short a;
+		cin >> a;
+		unsigned int count = 0;
+		for(int i = 2; i <= a - 1; i++) {
+			unsigned short cpy = a;
+			while(cpy != 0) {
+				count += cpy % i;
+				cpy /= i;
+			}
+		}
+		unsigned int denominator = a - 2;
+		unsigned int molecular   = count;
+		while(denominator % molecular != 0) {
+			const unsigned int temp = denominator;
+			denominator             = molecular;
+			molecular               = temp % molecular;
+		}
+		cout << count / molecular << "/" << (a - 2) / molecular;
+		return 0;
+	}
+
+	int acwing4211::main(istream &cin, ostream &cout) {
+		unsigned short n;
+		cin >> n;
+		auto vec = vector<unsigned long long>();
+		for(unsigned short i = 0; i < n; i++) {
+			unsigned long long a;
+			cin >> a;
+			vec.push_back(a);
+		}
+		sort(vec.begin(), vec.end(), cmp);
+		for(const auto i: vec) {
+			cout << i << " ";
+		}
+		return 0;
+	}
+
+	unsigned int acwing4211::no2(unsigned long long a) {
+		unsigned int count = 0;
+		while(a % 2 == 0) {
+			count++;
+			a /= 2;
+		}
+		return count;
+	}
+
+	unsigned int acwing4211::no3(unsigned long long a) {
+		unsigned int count = 0;
+		while(a % 3 == 0) {
+			count++;
+			a /= 3;
+		}
+		return count;
+	}
+
+	bool acwing4211::cmp(unsigned long long a, unsigned long long b) {
+		const unsigned a3 = no3(a);
+		const unsigned b3 = no3(b);
+		if(a3 == b3) {
+			const unsigned a2 = no2(a);
+			const unsigned b2 = no2(b);
+			return a2 < b2;
+		}
+		return a3 > b3;
 	}
 }// namespace acwing
