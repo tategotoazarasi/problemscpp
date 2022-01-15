@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['right_0',['right',['../a01129.html#abcbe083eb7641aa4da7828a436df894e',1,'leetcode::TreeNode::right()'],['../a01165.html#ae6029fbc477ee047c7314ba25424b184',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::right()'],['../a01277.html#a3ca397f8a619792a257be03edc43c9dd',1,'lintcode::TreeNode::right()']]]
+  ['right_0',['right',['../a01142.html#abcbe083eb7641aa4da7828a436df894e',1,'leetcode::TreeNode::right()'],['../a01178.html#ae6029fbc477ee047c7314ba25424b184',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::right()'],['../a01294.html#a3ca397f8a619792a257be03edc43c9dd',1,'lintcode::TreeNode::right()']]]
 ];

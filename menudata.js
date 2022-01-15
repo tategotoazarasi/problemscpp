@@ -38,8 +38,8 @@ var menudata={children:[
 {text:"t",url:"namespacemembers_t.html#index_t"}]},
 {text:"函数",url:"namespacemembers_func.html",children:[
 {text:"b",url:"namespacemembers_func.html#index_b"},
-{text:"f",url:"namespacemembers_func.html#index_f"},
-{text:"t",url:"namespacemembers_func.html#index_t"}]},
+{text:"f",url:"namespacemembers_func_f.html#index_f"},
+{text:"t",url:"namespacemembers_func_t.html#index_t"}]},
 {text:"变量",url:"namespacemembers_vars.html"}]}]},
 {text:"类",url:"annotated.html",children:[
 {text:"类列表",url:"annotated.html"},
