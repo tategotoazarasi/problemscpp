@@ -798,4 +798,17 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("R$ 355.60", ans);
 	}
+
+	TEST(acwing1945, case1) {
+		istringstream in("5\n"
+		                 "3\n"
+		                 "1\n"
+		                 "10\n"
+		                 "7\n"
+		                 "4");
+		auto out = ostringstream();
+		acwing1945::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("4", ans);
+	}
 }// namespace acwing

@@ -460,5 +460,11 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief AcWing 1945. 奶牛棒球
+	class acwing1945 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

@@ -1292,4 +1292,28 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing1945::main(istream &cin, ostream &cout) {
+		unsigned int count = 0;
+		unsigned short n;
+		cin >> n;
+		vector<unsigned int> cows = vector<unsigned int>();
+		cows.resize(n);
+		for(int i = 0; i < n; i++) {
+			unsigned int cow;
+			cin >> cow;
+			cows[i] = cow;
+		}
+		sort(cows.begin(), cows.end());
+		for(auto i = cows.begin(); i != cows.end(); i++) {
+			for(auto j = i + 1; j != cows.end(); j++) {
+				unsigned int xy = *j - *i;
+				auto min        = lower_bound(j, cows.end(), *j + xy);
+				auto max        = upper_bound(j, cows.end(), *j + 2 * xy);
+				count += max - min;
+			}
+		}
+		cout << count;
+		return 0;
+	}
 }// namespace acwing
