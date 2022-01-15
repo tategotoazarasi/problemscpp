@@ -10,10 +10,31 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  # Path to the CMake build directory.
+  build: '${{ github.workspace }}/build'
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  analyze:
-    name: Analyze
+  gendoc_and_publish:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Gendoc
+        uses: langroodi/doxygenize@v1.5
+        with:
+          doxygenconf: './Doxyfile'
+          htmloutput: './'
+          ghpagesbranch: 'gh-pages'
+          ghpagesdir: './'
+
+  codeql-analysis:
+    name: CodeQL Analysis
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -60,29 +81,74 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
 
-  # This workflow contains a single job called "build"
-  gendoc_and_publish:
+  flawfinder:
+    name: Flawfinder
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: flawfinder_scan
+        uses: david-a-wheeler/flawfinder@8e4a779ad59dbfaee5da586aa9210853b701959c
+        with:
+          arguments: '--sarif ./'
+          output: 'flawfinder_results.sarif'
+
+      - name: Upload analysis results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: ${{github.workspace}}/flawfinder_results.sarif
+     
+  lint:
+    name: DevSkim
+    runs-on: ubuntu-20.04
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run DevSkim scanner
+        uses: microsoft/DevSkim-Action@v1
+        
+      - name: Upload DevSkim scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: devskim-results.sarif
+
+  build-and-pipeline-scan:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - uses: seanmiddleditch/gha-setup-ninja@master
 
-      - name: Setup cmake
-        uses: jwlawson/actions-setup-cmake@v1.9
-        #with:
-        #  cmake-version: '3.21.x'
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it and copies all sources into ZIP file for submitting for analysis. Replace this section with your applications build steps
+    - uses: actions/checkout@v2
+      with:
+        repository: ''
 
-      - name: Build and Test
-        run: mkdir build && cd build && cmake -G Ninja .. && cmake --build . && ./problemscpp
+    - run: zip -r veracode-scan-target.zip ./
 
-      - name: Gendoc
-        uses: langroodi/doxygenize@v1.5
-        with:
-          doxygenconf: './Doxyfile'
-          htmloutput: './'
-          ghpagesbranch: 'gh-pages'
-          ghpagesdir: './'
+    # download the Veracode Static Analysis Pipeline scan jar
+    - run: curl --silent --show-error --fail -O https://downloads.veracode.com/securityscan/pipeline-scan-LATEST.zip
+    - run: unzip -o pipeline-scan-LATEST.zip
+
+    - uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - run: java -jar pipeline-scan.jar --veracode_api_id "${{secrets.VERACODE_API_ID}}" --veracode_api_key "${{secrets.VERACODE_API_KEY}}" --fail_on_severity="Very High, High" --file veracode-scan-target.zip
+      continue-on-error: true
+    - name: Convert pipeline scan output to SARIF format
+      id: convert
+      uses: veracode/veracode-pipeline-scan-results-to-sarif@ff08ae5b45d5384cb4679932f184c013d34da9be
+      with:
+        pipeline-results-json: results.json
+    - uses: github/codeql-action/upload-sarif@v1
+      with:
+        # Path to SARIF file relative to the root of the repository
+        sarif_file: veracode-results.sarif
