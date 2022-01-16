@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_0',['y',['../a00978.html#a7cc1ae7bbad61542a27009eea419fecf',1,'acwing::acwing2060::point::y()'],['../a00990.html#a907203fb6ce188e3e52f7d22b989f832',1,'acwing::acwing2019::point::y()'],['../a01270.html#a8bceaeb02a938e820304bec2b44a770b',1,'leetcode::escape_a_large_maze::point::y()']]]
+  ['x_0',['x',['../a00983.html#a858de27a9ad7db2ce745e880b56299a6',1,'acwing::acwing2060::point::x()'],['../a00995.html#acaa459e164175cdbde974462ea6cf4a8',1,'acwing::acwing2019::point::x()'],['../a01279.html#ab29729c4bc9255f281c6c238c61ca01d',1,'leetcode::escape_a_large_maze::point::x()']]]
 ];

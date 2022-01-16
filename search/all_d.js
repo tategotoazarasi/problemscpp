@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['operator_21_3d_0',['operator!=',['../a01154.html#ae4f53fc0e10e63669689b46eddf5793e',1,'leetcode::TreeNode']]],
-  ['operator_28_29_1',['operator()',['../a00982.html#a877b41ff422d96dfa2482198d8103d79',1,'acwing::acwing2060::pointhash::operator()()'],['../a00986.html#aaf242b20a81231792bc54556222c342b',1,'acwing::acwing2060::pointequal::operator()()'],['../a01274.html#ae0e0e15dc33253db4eb6718713097322',1,'leetcode::escape_a_large_maze::point_hash::operator()()']]],
-  ['operator_3c_2',['operator&lt;',['../a01086.html#a30592f9976485df75d0fb248acfaba7e',1,'acwing::acwing1978::path::operator&lt;()'],['../a01270.html#a3330815b508b46c2534deaef3e470d96',1,'leetcode::escape_a_large_maze::point::operator&lt;()'],['../a01290.html#af0cc0145a40e4669fe1c081c3aeb149c',1,'leetcode::find_k_pairs_with_smallest_sums::pair::operator&lt;()']]],
-  ['operator_3d_3d_3',['operator==',['../a01154.html#a99e32f5e6efb97eb4d36b43987363a83',1,'leetcode::TreeNode::operator==()'],['../a01270.html#a16593671bee299f7a280880c9a740342',1,'leetcode::escape_a_large_maze::point::operator==()']]]
+  ['n_0',['n',['../a01119.html#a1bf9235b72d60539ff2d79a50a84f192',1,'acwing::acwing1960::n()'],['../a01235.html#ac720663a373d3d40ce2f2f14ce43d139',1,'leetcode::cat_and_mouse::Solution::n()']]],
+  ['n_1',['N',['../a00047.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8',1,'acwing::acwing2019']]],
+  ['next_2',['next',['../a01163.html#a5faec59514f8e67aae6f6d5d5436bf7d',1,'leetcode::ListNode']]],
+  ['nexts_3',['nexts',['../a01051.html#ae01415ca9922c08ac9ece9f26f0ca5f7',1,'acwing::acwing4208::trie_node::nexts()'],['../a01171.html#a5c786bb189d8d537910a1b33db5ecb46',1,'leetcode::concatenated_words::TrieNode::nexts()']]],
+  ['no2_4',['no2',['../a01155.html#aa804223b2bac5e209415b34dc5e8d550',1,'acwing::acwing4211']]],
+  ['no3_5',['no3',['../a01155.html#aab5d5df106b2b1946fe87985a4b94015',1,'acwing::acwing4211']]],
+  ['numberofbeams_6',['numberOfBeams',['../a01219.html#a3c2c37ad0e13b180a6873bbcdb9a4de3',1,'leetcode::number_of_laser_beams_in_a_bank::Solution']]]
 ];

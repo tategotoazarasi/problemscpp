@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['step_0',['step',['../a00990.html#a3a1e018caae3a20a5849a5fedb72e9c0',1,'acwing::acwing2019::point']]],
-  ['sum_1',['sum',['../a01190.html#a8d4ce27ae9f2b5865f1ed413b376caef',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode']]]
+  ['right_0',['right',['../a01159.html#abcbe083eb7641aa4da7828a436df894e',1,'leetcode::TreeNode::right()'],['../a01199.html#ae6029fbc477ee047c7314ba25424b184',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::right()'],['../a01335.html#a3ca397f8a619792a257be03edc43c9dd',1,'lintcode::TreeNode::right()']]]
 ];
