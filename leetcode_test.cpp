@@ -673,4 +673,52 @@ namespace leetcode {
 			ASSERT_EQ(96, Solution::totalMoney(20));
 		}
 	}// namespace calculate_money_in_leetcode_bank
+
+	namespace divide_a_string_into_groups_of_size_k {
+		TEST(divide_a_string_into_groups_of_size_k, case1) {
+			string output[] = {"abc", "def", "ghi"};
+			const auto vec  = vector(begin(output), end(output));
+			ASSERT_EQ(vec, Solution::divideString("abcdefghi", 3, 'x'));
+		}
+
+		TEST(divide_a_string_into_groups_of_size_k, case2) {
+			string output[] = {"abc", "def", "ghi", "jxx"};
+			const auto vec  = vector(begin(output), end(output));
+			ASSERT_EQ(vec, Solution::divideString("abcdefghij", 3, 'x'));
+		}
+
+		TEST(divide_a_string_into_groups_of_size_k, case3) {
+			string output[] = {"ctoyjrwt", "ngqwtnnn"};
+			const auto vec  = vector(begin(output), end(output));
+			ASSERT_EQ(vec, Solution::divideString("ctoyjrwtngqwt", 8, 'n'));
+		}
+	}// namespace divide_a_string_into_groups_of_size_k
+
+	namespace minimum_moves_to_reach_target_score {
+		TEST(minimum_moves_to_reach_target_score, case1) {
+			ASSERT_EQ(4, Solution::minMoves(5, 0));
+		}
+
+		TEST(minimum_moves_to_reach_target_score, case2) {
+			ASSERT_EQ(7, Solution::minMoves(19, 2));
+		}
+
+		TEST(minimum_moves_to_reach_target_score, case3) {
+			ASSERT_EQ(4, Solution::minMoves(10, 4));
+		}
+	}// namespace minimum_moves_to_reach_target_score
+
+	namespace maximum_running_time_of_n_computers {
+		TEST(maximum_running_time_of_n_computers, case1) {
+			int input[] = {3, 3, 3};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(4, Solution::maxRunTime(2, vec));
+		}
+
+		TEST(maximum_running_time_of_n_computers, case2) {
+			int input[] = {1, 1, 1, 1};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(2, Solution::maxRunTime(2, vec));
+		}
+	}// namespace maximum_running_time_of_n_computers
 }// namespace leetcode

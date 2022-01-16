@@ -1025,4 +1025,73 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace linked_list_random_node
+
+	namespace divide_a_string_into_groups_of_size_k {
+		vector<string> Solution::divideString(const string &s, int k, char fill) {
+			auto ans = vector<string>();
+			int i    = 0;
+			for(; i * k + k < s.length(); i++) {
+				ans.push_back(s.substr(i * k, k));
+			}
+			if(i * k != s.length()) {
+				string last = s.substr(i * k);
+				for(int j = last.length(); j < k; j++) {
+					last += fill;
+				}
+				ans.push_back(last);
+			}
+			return ans;
+		}
+	}// namespace divide_a_string_into_groups_of_size_k
+
+	namespace minimum_moves_to_reach_target_score {
+		int Solution::minMoves(int target, int maxDoubles) {
+			int count = 0;
+			while(target != 1) {
+				if(maxDoubles == 0) {
+					return count + target - 1;
+				}
+				if(target % 2 == 0 && maxDoubles != 0) {
+					target /= 2;
+					maxDoubles--;
+				} else {
+					target--;
+				}
+				count++;
+			}
+			return count;
+		}
+	}// namespace minimum_moves_to_reach_target_score
+
+	namespace solving_questions_with_brainpower {
+		long long Solution::mostPoints(vector<vector<int>> &questions) {
+			for(int i = questions.size() - 1; i >= 0; i--) {
+				f[i] = max(f[i + 1], questions[i][0] + f[i + questions[i][1] + 1]);
+			}
+			return f[0];
+		}
+	}// namespace solving_questions_with_brainpower
+
+	namespace maximum_running_time_of_n_computers {
+		long long Solution::maxRunTime(int n, vector<int> &batteries) {
+			sort(batteries.begin(), batteries.end());
+			long long ret = 0;
+			long long l   = 0;
+			long long r   = 1ll * 1e9 * 100000;
+			while(l <= r) {
+				long long mid = (l + r) / 2;
+				long long sum = 0;
+				for(int batterie: batteries) {
+					sum += min(1LL * batterie, mid);
+				}
+				if(sum >= n * mid) {
+					l   = mid + 1;
+					ret = mid;
+				} else {
+					r = mid - 1;
+				}
+			}
+			return ret;
+		}
+	}// namespace maximum_running_time_of_n_computers
 }// namespace leetcode

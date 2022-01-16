@@ -439,6 +439,49 @@ namespace leetcode {
 		};
 
 	}// namespace linked_list_random_node
+
+	/**
+	 * \brief LeetCode 5980. 将字符串拆分为若干长度为 k 的组
+	 */
+	namespace divide_a_string_into_groups_of_size_k {
+		class Solution {
+		public:
+			static vector<string> divideString(const string &s, int k, char fill);
+		};
+	}// namespace divide_a_string_into_groups_of_size_k
+
+	/**
+	 * \brief LeetCode 5194. 得到目标值的最少行动次数
+	 */
+	namespace minimum_moves_to_reach_target_score {
+		class Solution {
+		public:
+			static int minMoves(int target, int maxDoubles);
+		};
+	}// namespace minimum_moves_to_reach_target_score
+
+	/**
+	 * \brief LeetCode 5982. 解决智力问题
+	 */
+	namespace solving_questions_with_brainpower {
+		class Solution {
+		private:
+			long long f[200005];
+
+		public:
+			long long mostPoints(vector<vector<int>> &questions);
+		};
+	}// namespace solving_questions_with_brainpower
+
+	/**
+	 * \brief LeetCode 5983. 同时运行 N 台电脑的最长时间
+	 */
+	namespace maximum_running_time_of_n_computers {
+		class Solution {
+		public:
+			static long long maxRunTime(int n, vector<int> &batteries);
+		};
+	}// namespace maximum_running_time_of_n_computers
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
