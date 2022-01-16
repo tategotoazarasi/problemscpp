@@ -465,11 +465,8 @@ namespace leetcode {
 	 */
 	namespace solving_questions_with_brainpower {
 		class Solution {
-		private:
-			long long f[200005];
-
 		public:
-			long long mostPoints(vector<vector<int>> &questions);
+			static long long mostPoints(vector<vector<int>> &questions);
 		};
 	}// namespace solving_questions_with_brainpower
 

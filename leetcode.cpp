@@ -1065,8 +1065,11 @@ namespace leetcode {
 
 	namespace solving_questions_with_brainpower {
 		long long Solution::mostPoints(vector<vector<int>> &questions) {
-			for(int i = questions.size() - 1; i >= 0; i--) {
-				f[i] = max(f[i + 1], questions[i][0] + f[i + questions[i][1] + 1]);
+			vector<long long> f(questions.size() + 1);
+			for(int i = questions.size() - 1; i >= 0; --i) {
+				auto &q     = questions[i];
+				const int j = i + q[1] + 1;
+				f[i]        = max(f[i + 1], q[0] + (j < questions.size() ? f[j] : 0));
 			}
 			return f[0];
 		}
@@ -1074,24 +1077,25 @@ namespace leetcode {
 
 	namespace maximum_running_time_of_n_computers {
 		long long Solution::maxRunTime(int n, vector<int> &batteries) {
-			sort(batteries.begin(), batteries.end());
-			long long ret = 0;
-			long long l   = 0;
-			long long r   = 1ll * 1e9 * 100000;
-			while(l <= r) {
-				long long mid = (l + r) / 2;
+			auto check = [&](long long t) {
 				long long sum = 0;
-				for(int batterie: batteries) {
-					sum += min(1LL * batterie, mid);
+				for(const int i: batteries) {
+					sum += min(t, static_cast<long long>(i));
 				}
-				if(sum >= n * mid) {
-					l   = mid + 1;
-					ret = mid;
+				return sum / t >= n;
+			};
+
+			long long l = 1;
+			long long r = 1e16;
+			while(l < r) {
+				const long long m = (l + r) / 2;
+				if(check(m)) {
+					l = m + 1;
 				} else {
-					r = mid - 1;
+					r = m;
 				}
 			}
-			return ret;
+			return l - 1;
 		}
 	}// namespace maximum_running_time_of_n_computers
 }// namespace leetcode
