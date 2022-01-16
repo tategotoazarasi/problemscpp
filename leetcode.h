@@ -29,6 +29,20 @@ namespace leetcode {
 		bool operator!=(const TreeNode & /*node*/) const;
 	};
 
+	struct ListNode {
+		int val;
+		ListNode *next;
+
+		ListNode()
+		    : val(0), next(nullptr){};
+
+		explicit ListNode(int x)
+		    : val(x), next(nullptr){};
+
+		ListNode(int x, ListNode *next)
+		    : val(x), next(next){};
+	};
+
 	namespace concatenated_words {
 		class Solution {
 		public:
@@ -409,6 +423,22 @@ namespace leetcode {
 			static int totalMoney(int n);
 		};
 	}// namespace calculate_money_in_leetcode_bank
+
+	/**
+	 * \brief LeetCode 382. 链表随机节点
+	 */
+	namespace linked_list_random_node {
+		class Solution {
+		private:
+			ListNode *head;
+
+		public:
+			explicit Solution(ListNode *head)
+			    : head(head){};
+			[[nodiscard]] int getRandom() const;
+		};
+
+	}// namespace linked_list_random_node
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

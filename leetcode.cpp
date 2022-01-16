@@ -1011,4 +1011,18 @@ namespace leetcode {
 			return sum;
 		}
 	}// namespace calculate_money_in_leetcode_bank
+
+	namespace linked_list_random_node {
+		int Solution::getRandom() const {
+			int i   = 1;
+			int ans = 0;
+			for(auto *node = head; node != nullptr; node = node->next, i++) {
+				if(rand() % i == 0) {
+					// 1/i 的概率选中（替换为答案）
+					ans = node->val;
+				}
+			}
+			return ans;
+		}
+	}// namespace linked_list_random_node
 }// namespace leetcode
