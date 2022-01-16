@@ -1130,36 +1130,40 @@ $(function() {
 <div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span> </div>
 <div class="line"><a id="l01066" name="l01066"></a><span class="lineno"><a class="line" href="a00085.html"> 1066</a></span>    <span class="keyword">namespace </span>solving_questions_with_brainpower {</div>
 <div class="line"><a id="l01067" name="l01067"></a><span class="lineno"><a class="line" href="a01327.html#a3d78f60928c0a94e479b1f8a15d19a6c"> 1067</a></span>        <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_function" href="a01327.html#a3d78f60928c0a94e479b1f8a15d19a6c">Solution::mostPoints</a>(vector&lt;vector&lt;int&gt;&gt; &amp;questions) {</div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = questions.size() - 1; i &gt;= 0; i--) {</div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>                <a class="code hl_variable" href="a01327.html#af1b576fce8a76d05a72fdba3ad6bfeb6">f</a>[i] = max(<a class="code hl_variable" href="a01327.html#af1b576fce8a76d05a72fdba3ad6bfeb6">f</a>[i + 1], questions[i][0] + <a class="code hl_variable" href="a01327.html#af1b576fce8a76d05a72fdba3ad6bfeb6">f</a>[i + questions[i][1] + 1]);</div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>            }</div>
-<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="a01327.html#af1b576fce8a76d05a72fdba3ad6bfeb6">f</a>[0];</div>
-<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>        }</div>
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>    }<span class="comment">// namespace solving_questions_with_brainpower</span></div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span> </div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"><a class="line" href="a00086.html"> 1075</a></span>    <span class="keyword">namespace </span>maximum_running_time_of_n_computers {</div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"><a class="line" href="a01331.html#aeaab340c377cc08de68ee6927d2cfce6"> 1076</a></span>        <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_function" href="a01331.html#aeaab340c377cc08de68ee6927d2cfce6">Solution::maxRunTime</a>(<span class="keywordtype">int</span> n, vector&lt;int&gt; &amp;batteries) {</div>
-<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>            sort(batteries.begin(), batteries.end());</div>
-<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> ret = 0;</div>
-<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> l   = 0;</div>
-<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> r   = 1ll * 1e9 * 100000;</div>
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>            <span class="keywordflow">while</span>(l &lt;= r) {</div>
-<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> mid = (l + r) / 2;</div>
-<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> sum = 0;</div>
-<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> batterie: batteries) {</div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>                    sum += min(1LL * batterie, mid);</div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>                }</div>
-<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>                <span class="keywordflow">if</span>(sum &gt;= n * mid) {</div>
-<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>                    l   = mid + 1;</div>
-<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>                    ret = mid;</div>
-<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>                    r = mid - 1;</div>
-<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>                }</div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>            }</div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>            <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>        }</div>
-<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>    }<span class="comment">// namespace maximum_running_time_of_n_computers</span></div>
-<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>}<span class="comment">// namespace leetcode</span></div>
+<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>            vector&lt;long long&gt; f(questions.size() + 1);</div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = questions.size() - 1; i &gt;= 0; --i) {</div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>                <span class="keyword">auto</span> &amp;q     = questions[i];</div>
+<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> j = i + q[1] + 1;</div>
+<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>                f[i]        = max(f[i + 1], q[0] + (j &lt; questions.size() ? f[j] : 0));</div>
+<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>            }</div>
+<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>            <span class="keywordflow">return</span> f[0];</div>
+<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>        }</div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>    }<span class="comment">// namespace solving_questions_with_brainpower</span></div>
+<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span> </div>
+<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"><a class="line" href="a00086.html"> 1078</a></span>    <span class="keyword">namespace </span>maximum_running_time_of_n_computers {</div>
+<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"><a class="line" href="a01331.html#aeaab340c377cc08de68ee6927d2cfce6"> 1079</a></span>        <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_function" href="a01331.html#aeaab340c377cc08de68ee6927d2cfce6">Solution::maxRunTime</a>(<span class="keywordtype">int</span> n, vector&lt;int&gt; &amp;batteries) {</div>
+<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>            <span class="keyword">auto</span> check = [&amp;](<span class="keywordtype">long</span> <span class="keywordtype">long</span> t) {</div>
+<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> sum = 0;</div>
+<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">int</span> i: batteries) {</div>
+<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>                    sum += min(t, <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(i));</div>
+<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>                }</div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>                <span class="keywordflow">return</span> sum / t &gt;= n;</div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>            };</div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span> </div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> l = 1;</div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> r = 1e16;</div>
+<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>            <span class="keywordflow">while</span>(l &lt; r) {</div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>                <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> m = (l + r) / 2;</div>
+<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>                <span class="keywordflow">if</span>(check(m)) {</div>
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>                    l = m + 1;</div>
+<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>                    r = m;</div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>                }</div>
+<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>            }</div>
+<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>            <span class="keywordflow">return</span> l - 1;</div>
+<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>        }</div>
+<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>    }<span class="comment">// namespace maximum_running_time_of_n_computers</span></div>
+<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>}<span class="comment">// namespace leetcode</span></div>
 <div class="ttc" id="aa00032_html"><div class="ttname"><a href="a00032.html">leetcode.h</a></div></div>
 <div class="ttc" id="aa00050_html"><div class="ttname"><a href="a00050.html">leetcode</a></div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00012">leetcode.cpp:12</a></div></div>
 <div class="ttc" id="aa00065_html_ae68fb24f26d1729119604748b3b20490"><div class="ttname"><a href="a00065.html#ae68fb24f26d1729119604748b3b20490">leetcode::cat_and_mouse::MOUSE_WIN</a></div><div class="ttdeci">const int MOUSE_WIN</div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00198">leetcode.h:198</a></div></div>
@@ -1249,9 +1253,8 @@ $(function() {
 <div class="ttc" id="aa01315_html_ae9380d08f2a79381a4a7b2ee2dc59eb4"><div class="ttname"><a href="a01315.html#ae9380d08f2a79381a4a7b2ee2dc59eb4">leetcode::linked_list_random_node::Solution::getRandom</a></div><div class="ttdeci">int getRandom() const</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l01016">leetcode.cpp:1016</a></div></div>
 <div class="ttc" id="aa01319_html_acf96624da9a5cfcef11059ba8a842f40"><div class="ttname"><a href="a01319.html#acf96624da9a5cfcef11059ba8a842f40">leetcode::divide_a_string_into_groups_of_size_k::Solution::divideString</a></div><div class="ttdeci">static vector&lt; string &gt; divideString(const string &amp;s, int k, char fill)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l01030">leetcode.cpp:1030</a></div></div>
 <div class="ttc" id="aa01323_html_a9da1624b9e71d7d03047bfc3bf4ab691"><div class="ttname"><a href="a01323.html#a9da1624b9e71d7d03047bfc3bf4ab691">leetcode::minimum_moves_to_reach_target_score::Solution::minMoves</a></div><div class="ttdeci">static int minMoves(int target, int maxDoubles)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l01048">leetcode.cpp:1048</a></div></div>
-<div class="ttc" id="aa01327_html_a3d78f60928c0a94e479b1f8a15d19a6c"><div class="ttname"><a href="a01327.html#a3d78f60928c0a94e479b1f8a15d19a6c">leetcode::solving_questions_with_brainpower::Solution::mostPoints</a></div><div class="ttdeci">long long mostPoints(vector&lt; vector&lt; int &gt; &gt; &amp;questions)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l01067">leetcode.cpp:1067</a></div></div>
-<div class="ttc" id="aa01327_html_af1b576fce8a76d05a72fdba3ad6bfeb6"><div class="ttname"><a href="a01327.html#af1b576fce8a76d05a72fdba3ad6bfeb6">leetcode::solving_questions_with_brainpower::Solution::f</a></div><div class="ttdeci">long long f[200005]</div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00469">leetcode.h:469</a></div></div>
-<div class="ttc" id="aa01331_html_aeaab340c377cc08de68ee6927d2cfce6"><div class="ttname"><a href="a01331.html#aeaab340c377cc08de68ee6927d2cfce6">leetcode::maximum_running_time_of_n_computers::Solution::maxRunTime</a></div><div class="ttdeci">static long long maxRunTime(int n, vector&lt; int &gt; &amp;batteries)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l01076">leetcode.cpp:1076</a></div></div>
+<div class="ttc" id="aa01327_html_a3d78f60928c0a94e479b1f8a15d19a6c"><div class="ttname"><a href="a01327.html#a3d78f60928c0a94e479b1f8a15d19a6c">leetcode::solving_questions_with_brainpower::Solution::mostPoints</a></div><div class="ttdeci">static long long mostPoints(vector&lt; vector&lt; int &gt; &gt; &amp;questions)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l01067">leetcode.cpp:1067</a></div></div>
+<div class="ttc" id="aa01331_html_aeaab340c377cc08de68ee6927d2cfce6"><div class="ttname"><a href="a01331.html#aeaab340c377cc08de68ee6927d2cfce6">leetcode::maximum_running_time_of_n_computers::Solution::maxRunTime</a></div><div class="ttdeci">static long long maxRunTime(int n, vector&lt; int &gt; &amp;batteries)</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l01079">leetcode.cpp:1079</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
