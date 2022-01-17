@@ -41,4 +41,12 @@ namespace luogu {
 		          "##########################################    ############",
 		          ans);
 	}
+
+	TEST(P1008, case1) {
+		istringstream in("");
+		ostringstream out = ostringstream();
+		P1008::main(in, out);
+		auto ans = out.str();
+		ASSERT_EQ("192 384 576\n219 438 657\n273 546 819\n327 654 981\n", ans);
+	}
 }// namespace luogu
