@@ -875,4 +875,14 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("1 2 4 ", ans);
 	}
+
+	TEST(acwing670, case1) {
+		istringstream in("vertebrado\n"
+		                 "mamifero\n"
+		                 "onivoro");
+		auto out = ostringstream();
+		acwing670::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("homem", ans);
+	}
 }// namespace acwing

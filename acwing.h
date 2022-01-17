@@ -493,5 +493,11 @@ namespace acwing {
 		static unsigned int no3(unsigned long long a);
 		static bool cmp(unsigned long long a, unsigned long long b);
 	};
+
+	/// \brief AcWing 670. 动物
+	class acwing670 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
