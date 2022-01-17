@@ -6,9 +6,10 @@
 using namespace std;
 
 namespace luogu {
-	class T210229 {
+	/// \brief 洛谷 P1001 A+B Problem
+	class P1001 {
 	public:
-		static int main(istream & /*cin*/, ostream & /*cout*/);
+		static int main(istream &cin, ostream &cout);
 	};
 }// namespace luogu
 
