@@ -885,4 +885,19 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("homem", ans);
 	}
+
+	TEST(acwing633, case1) {
+		istringstream in("7 21 -14");
+		auto out = ostringstream();
+		acwing633::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("-14\n"
+		          "7\n"
+		          "21\n"
+		          "\n"
+		          "7\n"
+		          "21\n"
+		          "-14\n",
+		          ans);
+	}
 }// namespace acwing

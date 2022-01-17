@@ -1441,4 +1441,22 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing633::main(istream &cin, ostream &cout) {
+		vector<short> vec = vector<short>();
+		vec.resize(3);
+		cin >> vec[0];
+		cin >> vec[1];
+		cin >> vec[2];
+		vector<short> sorted = vector<short>(vec);
+		sort(sorted.begin(), sorted.end());
+		for(auto num: sorted) {
+			cout << num << endl;
+		}
+		cout << endl;
+		for(auto num: vec) {
+			cout << num << endl;
+		}
+		return 0;
+	}
 }// namespace acwing
