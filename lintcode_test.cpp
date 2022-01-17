@@ -135,4 +135,18 @@ namespace lintcode {
 			ASSERT_EQ(37, sol.minPathSum(vec));
 		}
 	}// namespace min_path_sum
+
+	namespace digit_counts {
+		TEST(digit_counts, case1) {
+			ASSERT_EQ(1, Solution::digitCounts(1, 1));
+		}
+
+		TEST(digit_counts, case2) {
+			ASSERT_EQ(5, Solution::digitCounts(1, 12));
+		}
+
+		TEST(digit_counts, case3) {
+			ASSERT_EQ(2, Solution::digitCounts(0, 10));
+		}
+	}// namespace digit_counts
 }// namespace lintcode

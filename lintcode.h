@@ -149,6 +149,19 @@ namespace lintcode {
 			static int minPathSum(vector<vector<int>> &grid);
 		};
 	}// namespace min_path_sum
+
+	/// \brief LintCode 3. 统计数字
+	namespace digit_counts {
+		class Solution {
+		public:
+			/**
+     		 * @param k: An integer
+     		 * @param n: An integer
+     		 * @return: An integer denote the count of digit k in 1..n
+     		 */
+			static int digitCounts(int k, int n);
+		};
+	}// namespace digit_counts
 }// namespace lintcode
 
 #endif//PROBLEMSCPP_LINTCODE_H

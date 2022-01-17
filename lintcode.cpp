@@ -1,6 +1,7 @@
 #include "lintcode.h"
 
 #include <climits>
+#include <cmath>
 #include <cstring>
 #include <map>
 #include <queue>
@@ -280,4 +281,23 @@ namespace lintcode {
 			return dp[m][n];
 		}
 	}// namespace min_path_sum
+
+	namespace digit_counts {
+		int Solution::digitCounts(int k, int n) {
+			int count = 0;
+			for(int i = 0; i <= n; i++) {
+				int cpy = i;
+				while(cpy != 0) {
+					if(cpy % 10 == k) {
+						count++;
+					}
+					cpy /= 10;
+				}
+			}
+			if(k == 0) {
+				count++;
+			}
+			return count;
+		}
+	}// namespace digit_counts
 }// namespace lintcode
