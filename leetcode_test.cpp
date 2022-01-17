@@ -721,4 +721,18 @@ namespace leetcode {
 			ASSERT_EQ(2, Solution::maxRunTime(2, vec));
 		}
 	}// namespace maximum_running_time_of_n_computers
+
+	namespace coun_vowels_permutation {
+		TEST(coun_vowels_permutation, case1) {
+			ASSERT_EQ(5, Solution::countVowelPermutation(1));
+		}
+
+		TEST(coun_vowels_permutation, case2) {
+			ASSERT_EQ(10, Solution::countVowelPermutation(2));
+		}
+
+		TEST(coun_vowels_permutation, case3) {
+			ASSERT_EQ(68, Solution::countVowelPermutation(5));
+		}
+	}// namespace coun_vowels_permutation
 }// namespace leetcode

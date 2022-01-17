@@ -479,6 +479,14 @@ namespace leetcode {
 			static long long maxRunTime(int n, vector<int> &batteries);
 		};
 	}// namespace maximum_running_time_of_n_computers
+
+	/// \brief LeetCode 1220. 统计元音字母序列的数目
+	namespace coun_vowels_permutation {
+		class Solution {
+		public:
+			static int countVowelPermutation(int n);
+		};
+	}// namespace coun_vowels_permutation
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
