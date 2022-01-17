@@ -1104,18 +1104,18 @@ namespace leetcode {
 			/// \brief a-0 e-1 i-2 o-3 u-4
 			unsigned long long end[5] = {1, 1, 1, 1, 1};
 			for(int _i = 1; _i < n; _i++) {
-				unsigned long long a = (end[1] + end[2] + end[4]) % 1000000007;
-				unsigned long long e = (end[0] + end[2]) % 1000000007;
-				unsigned long long i = (end[1] + end[3]) % 1000000007;
-				unsigned long long o = (end[2]) % 1000000007;
-				unsigned long long u = (end[2] + end[3]) % 1000000007;
-				end[0]               = a;
-				end[1]               = e;
-				end[2]               = i;
-				end[3]               = o;
-				end[4]               = u;
+				const unsigned long long a = (end[1] + end[2] + end[4]) % 1000000007;
+				const unsigned long long e = (end[0] + end[2]) % 1000000007;
+				const unsigned long long i = (end[1] + end[3]) % 1000000007;
+				const unsigned long long o = end[2] % 1000000007;
+				const unsigned long long u = (end[2] + end[3]) % 1000000007;
+				end[0]                     = a;
+				end[1]                     = e;
+				end[2]                     = i;
+				end[3]                     = o;
+				end[4]                     = u;
 			}
-			return ((end[0] + end[1] + end[2] + end[3] + end[4]) % 1000000007);
+			return (end[0] + end[1] + end[2] + end[3] + end[4]) % 1000000007;
 		}
 	}// namespace coun_vowels_permutation
 }// namespace leetcode

@@ -1408,7 +1408,9 @@ namespace acwing {
 	}
 
 	int acwing670::main(istream &cin, ostream &cout) {
-		string str1, str2, str3;
+		string str1;
+		string str2;
+		string str3;
 		cin >> str1 >> str2 >> str3;
 		if(str1 == "vertebrado") {
 			if(str2 == "ave") {
@@ -1443,18 +1445,18 @@ namespace acwing {
 	}
 
 	int acwing633::main(istream &cin, ostream &cout) {
-		vector<short> vec = vector<short>();
+		auto vec = vector<short>();
 		vec.resize(3);
 		cin >> vec[0];
 		cin >> vec[1];
 		cin >> vec[2];
-		vector<short> sorted = vector<short>(vec);
+		auto sorted = vector(vec);
 		sort(sorted.begin(), sorted.end());
-		for(auto num: sorted) {
+		for(const auto num: sorted) {
 			cout << num << endl;
 		}
 		cout << endl;
-		for(auto num: vec) {
+		for(const auto num: vec) {
 			cout << num << endl;
 		}
 		return 0;
@@ -1462,8 +1464,10 @@ namespace acwing {
 
 	int acwing1934::main(istream &cin, ostream &cout) {
 		const int N = 10010;
-		int T[N], D[N];
-		int ct = 0, cd = 0;
+		int T[N];
+		int D[N];
+		int ct = 0;
+		int cd = 0;
 		int n;
 		cin >> n;
 		for(int i = 0; i < n; i++) {
@@ -1479,12 +1483,15 @@ namespace acwing {
 		sort(T, T + ct);
 		sort(D, D + cd);
 
-		double alldis = 0, alltime = 0;
-		int l = 0, r = 0, v = 1;
+		double alldis  = 0;
+		double alltime = 0;
+		int l          = 0;
+		int r          = 0;
+		int v          = 1;
 
 		while(l < ct && r < cd) {
-			double td = (D[r] - alldis) * v;
-			double tl = T[l] - alltime;
+			const double td = (D[r] - alldis) * v;
+			const double tl = T[l] - alltime;
 			if(td <= tl) {
 				v++;
 				alltime += td;
@@ -1500,11 +1507,11 @@ namespace acwing {
 			alltime = T[l++];
 		}
 		while(r < cd) {
-			double td = (double) (D[r] - alldis) * v++;
+			const double td = (D[r] - alldis) * v++;
 			alltime += td;
 			alldis = D[r++];
 		}
-		cout << int(round(alltime + (1000.0 - alldis) * v));
+		cout << static_cast<int>(round(alltime + (1000.0 - alldis) * v));
 		return 0;
 	}
 }// namespace acwing
