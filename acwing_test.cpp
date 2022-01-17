@@ -900,4 +900,14 @@ namespace acwing {
 		          "-14\n",
 		          ans);
 	}
+
+	TEST(acwing1934, case1) {
+		istringstream in("2\n"
+		                 "T 30\n"
+		                 "D 10");
+		auto out = ostringstream();
+		acwing1934::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2970", ans);
+	}
 }// namespace acwing

@@ -1459,4 +1459,52 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing1934::main(istream &cin, ostream &cout) {
+		const int N = 10010;
+		int T[N], D[N];
+		int ct = 0, cd = 0;
+		int n;
+		cin >> n;
+		for(int i = 0; i < n; i++) {
+			char c;
+			int t;
+			cin >> c >> t;
+			if(c == 'T') {
+				T[ct++] = t;
+			} else {
+				D[cd++] = t;
+			}
+		}
+		sort(T, T + ct);
+		sort(D, D + cd);
+
+		double alldis = 0, alltime = 0;
+		int l = 0, r = 0, v = 1;
+
+		while(l < ct && r < cd) {
+			double td = (D[r] - alldis) * v;
+			double tl = T[l] - alltime;
+			if(td <= tl) {
+				v++;
+				alltime += td;
+				alldis = D[r++];
+			}
+			if(td >= tl) {
+				alldis += tl / v++;
+				alltime = T[l++];
+			}
+		}
+		while(l < ct) {
+			alldis += (T[l] - alltime) / v++;
+			alltime = T[l++];
+		}
+		while(r < cd) {
+			double td = (double) (D[r] - alldis) * v++;
+			alltime += td;
+			alldis = D[r++];
+		}
+		cout << int(round(alltime + (1000.0 - alldis) * v));
+		return 0;
+	}
 }// namespace acwing

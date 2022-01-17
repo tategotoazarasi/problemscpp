@@ -505,5 +505,14 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief AcWing 1934. 贝茜放慢脚步
+	class acwing1934 {
+	public:
+		/// \author 喵喵喵喵子
+		/// \cite AcWing
+		/// \link https://www.acwing.com/solution/content/84758/
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
