@@ -1463,55 +1463,55 @@ namespace acwing {
 	}
 
 	int acwing1934::main(istream &cin, ostream &cout) {
-		const int N = 10010;
-		int T[N];
-		int D[N];
-		int ct = 0;
-		int cd = 0;
 		int n;
 		cin >> n;
+		auto t = vector<int>();
+		auto d = vector<int>();
 		for(int i = 0; i < n; i++) {
-			char c;
-			int t;
-			cin >> c >> t;
-			if(c == 'T') {
-				T[ct++] = t;
+			char op;
+			int x;
+			cin >> op >> x;
+			if(op == 'T') {
+				t.push_back(x);
 			} else {
-				D[cd++] = t;
+				d.push_back(x);
 			}
 		}
-		sort(T, T + ct);
-		sort(D, D + cd);
-
-		double alldis  = 0;
-		double alltime = 0;
-		int l          = 0;
-		int r          = 0;
-		int v          = 1;
-
-		while(l < ct && r < cd) {
-			const double td = (D[r] - alldis) * v;
-			const double tl = T[l] - alltime;
-			if(td <= tl) {
-				v++;
-				alltime += td;
-				alldis = D[r++];
+		sort(t.begin(), t.end());
+		sort(d.begin(), d.end());
+		double current_d     = 0;
+		double current_t     = 0;
+		double decelerations = 1;
+		auto it_d            = d.begin();
+		auto it_t            = t.begin();
+		while(true) {
+			int next_d = 1000;
+			if(it_d != d.end()) {
+				next_d = *it_d;
 			}
-			if(td >= tl) {
-				alldis += tl / v++;
-				alltime = T[l++];
+			const auto t_for_next_d = (next_d - current_d) * decelerations;//到下一个D的时间
+			bool next_is_d          = true;
+			if(it_t != t.end()) {
+				next_is_d = t_for_next_d < *it_t - current_t;
+			}
+			if(next_is_d) {
+				//先到D
+				current_d = next_d;
+				++it_d;
+				current_t += t_for_next_d;
+			} else if(it_t != t.end()) {
+				//先到T
+				current_d += (*it_t - current_t) * (1.0 / decelerations);
+				current_t = *it_t;
+				++it_t;
+			}
+			decelerations++;
+			if(it_d == d.end() && it_t == t.end()) {
+				current_t += (1000 - current_d) * decelerations;
+				break;
 			}
 		}
-		while(l < ct) {
-			alldis += (T[l] - alltime) / v++;
-			alltime = T[l++];
-		}
-		while(r < cd) {
-			const double td = (D[r] - alldis) * v++;
-			alltime += td;
-			alldis = D[r++];
-		}
-		cout << static_cast<int>(round(alltime + (1000.0 - alldis) * v));
+		cout << lround(current_t);
 		return 0;
 	}
 }// namespace acwing
