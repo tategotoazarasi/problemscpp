@@ -31,6 +31,14 @@ namespace luogu {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/**
+	 * \brief 洛谷 P1003 [NOIP2011 提高组] 铺地毯
+	 */
+	class P1003 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H

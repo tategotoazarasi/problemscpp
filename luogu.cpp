@@ -127,4 +127,35 @@ namespace luogu {
 		cout << board[n][m];
 		return 0;
 	}
+
+	int P1003::main(istream &cin, ostream &cout) {
+		auto as = vector<unsigned int>();
+		auto bs = vector<unsigned int>();
+		auto gs = vector<unsigned int>();
+		auto ks = vector<unsigned int>();
+		int n;
+		cin >> n;
+		for(int i = 0; i < n; i++) {
+			unsigned int a;
+			unsigned int b;
+			unsigned int g;
+			unsigned int k;
+			cin >> a >> b >> g >> k;
+			as.push_back(a);
+			bs.push_back(b);
+			gs.push_back(g);
+			ks.push_back(k);
+		}
+		unsigned int x;
+		unsigned int y;
+		cin >> x >> y;
+		for(int i = n - 1; i >= 0; i--) {
+			if(as[i] <= x && x <= as[i] + gs[i] && bs[i] <= y && y <= bs[i] + ks[i]) {
+				cout << i + 1;
+				return 0;
+			}
+		}
+		cout << -1;
+		return 0;
+	}
 }// namespace luogu

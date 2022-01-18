@@ -57,4 +57,20 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("6", ans);
 	}
+
+	TEST(P1003, case1) {
+		istringstream in("3\n1 0 2 3\n0 2 3 3\n2 1 3 3\n2 2");
+		auto out = ostringstream();
+		P1003::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("3", ans);
+	}
+
+	TEST(P1003, case2) {
+		istringstream in("3\n1 0 2 3\n0 2 3 3\n2 1 3 3\n4 5");
+		auto out = ostringstream();
+		P1003::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("-1", ans);
+	}
 }// namespace luogu
