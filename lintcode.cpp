@@ -300,4 +300,29 @@ namespace lintcode {
 			return count;
 		}
 	}// namespace digit_counts
+
+	namespace min_diff_in_BST {
+		int Solution::minDiffInBST(TreeNode *root) {
+			auto vals = vector<int>();
+			auto que  = queue<TreeNode *>();
+			que.push(root);
+			while(!que.empty()) {
+				auto *node = que.front();
+				que.pop();
+				vals.push_back(node->val);
+				if(node->left != nullptr) {
+					que.push(node->left);
+				}
+				if(node->right != nullptr) {
+					que.push(node->right);
+				}
+			}
+			sort(vals.begin(), vals.end());
+			int minimum = INT_MAX;
+			for(int i = 0; i + 1 < vals.size(); i++) {
+				minimum = min(vals[i + 1] - vals[i], minimum);
+			}
+			return minimum;
+		}
+	}// namespace min_diff_in_BST
 }// namespace lintcode

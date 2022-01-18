@@ -162,6 +162,22 @@ namespace lintcode {
 			static int digitCounts(int k, int n);
 		};
 	}// namespace digit_counts
+
+	/**
+	 * \brief LintCode 1746. 二叉搜索树结点最小距离
+	 * \date 2022-1-18
+	 * \link https://www.lintcode.com/problem/1746/
+	 */
+	namespace min_diff_in_BST {
+		class Solution {
+		public:
+			/**
+			 * @param root:  a Binary Search Tree (BST) with the root node
+			 * @return: the minimum difference
+			 */
+			static int minDiffInBST(TreeNode *root);
+		};
+	}// namespace min_diff_in_BST
 }// namespace lintcode
 
 #endif//PROBLEMSCPP_LINTCODE_H
