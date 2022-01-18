@@ -735,4 +735,24 @@ namespace leetcode {
 			ASSERT_EQ(68, Solution::countVowelPermutation(5));
 		}
 	}// namespace coun_vowels_permutation
+
+	namespace minimum_time_difference {
+		TEST(minimum_time_difference, case1) {
+			string input[] = {"23:59", "00:00"};
+			auto vec       = vector(begin(input), end(input));
+			ASSERT_EQ(1, Solution::findMinDifference(vec));
+		}
+
+		TEST(minimum_time_difference, case2) {
+			string input[] = {"00:00", "23:59", "00:00"};
+			auto vec       = vector(begin(input), end(input));
+			ASSERT_EQ(0, Solution::findMinDifference(vec));
+		}
+
+		TEST(minimum_time_difference, case3) {
+			string input[] = {"00:00", "04:00", "22:00"};
+			auto vec       = vector(begin(input), end(input));
+			ASSERT_EQ(120, Solution::findMinDifference(vec));
+		}
+	}// namespace minimum_time_difference
 }// namespace leetcode

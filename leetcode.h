@@ -487,6 +487,18 @@ namespace leetcode {
 			static int countVowelPermutation(int n);
 		};
 	}// namespace coun_vowels_permutation
+
+	/**
+	 * \brief LeetCode 539. 最小时间差
+	 * \date 2022-1-18
+	 * \link https://leetcode-cn.com/problems/minimum-time-difference/
+	 */
+	namespace minimum_time_difference {
+		class Solution {
+		public:
+			static int findMinDifference(vector<string> &timePoints);
+		};
+	}// namespace minimum_time_difference
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

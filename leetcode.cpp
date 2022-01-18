@@ -1118,4 +1118,20 @@ namespace leetcode {
 			return (end[0] + end[1] + end[2] + end[3] + end[4]) % 1000000007;
 		}
 	}// namespace coun_vowels_permutation
+
+	namespace minimum_time_difference {
+		int Solution::findMinDifference(vector<string> &timePoints) {
+			auto vec = vector<int>();
+			for(string timePoint: timePoints) {
+				vec.push_back(((timePoint[0] - '0') * 10 + (timePoint[1] - '0')) * 60 + (timePoint[3] - '0') * 10 + (timePoint[4] - '0'));
+			}
+			sort(vec.begin(), vec.end());
+			int minimum = INT_MAX;
+			for(int i = 0; i + 1 < vec.size(); i++) {
+				minimum = min(minimum, vec[i + 1] - vec[i]);
+			}
+			minimum = min(minimum, vec[0] + 24 * 60 - vec[vec.size() - 1]);
+			return minimum;
+		}
+	}// namespace minimum_time_difference
 }// namespace leetcode
