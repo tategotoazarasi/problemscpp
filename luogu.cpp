@@ -101,4 +101,30 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P1002::main(istream &cin, ostream &cout) {
+		int n;
+		int m;
+		int cx;
+		int cy;
+		cin >> n >> m >> cx >> cy;
+		unsigned long long board[21][21] = {};
+		board[0][0]                      = 1;
+		for(int i = 0; i <= n; i++) {
+			for(int j = 0; j <= m; j++) {
+				if(abs(cx - i) * abs(cy - j) == 2 || i == cx && j == cy) {
+					board[i][j] = 0;
+					continue;
+				}
+				if(i - 1 >= 0) {
+					board[i][j] += board[i - 1][j];
+				}
+				if(j - 1 >= 0) {
+					board[i][j] += board[i][j - 1];
+				}
+			}
+		}
+		cout << board[n][m];
+		return 0;
+	}
 }// namespace luogu

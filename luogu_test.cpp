@@ -49,4 +49,12 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("192 384 576\n219 438 657\n273 546 819\n327 654 981\n", ans);
 	}
+
+	TEST(P1002, case1) {
+		istringstream in("6 6 3 3");
+		auto out = ostringstream();
+		P1002::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("6", ans);
+	}
 }// namespace luogu
