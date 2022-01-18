@@ -1,6 +1,7 @@
 #ifndef PROBLEMSCPP_LEETCODE_H
 #define PROBLEMSCPP_LEETCODE_H
 
+#include <climits>
 #include <functional>
 #include <map>
 #include <string>
