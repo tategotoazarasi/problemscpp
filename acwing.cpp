@@ -1531,4 +1531,33 @@ namespace acwing {
 		     << "R2 = " << r2;
 		return 0;
 	}
+
+	int acwing661::main(istream &cin, ostream &cout) {
+		double n1;
+		double n2;
+		double n3;
+		double n4;
+		cin >> n1 >> n2 >> n3 >> n4;
+		const double x = (2 * n1 + 3 * n2 + 4 * n3 + n4) / 10;
+		cout << setiosflags(ios::fixed) << setprecision(1);
+		cout << "Media: " << x << endl;
+		if(x >= 7.0) {
+			cout << "Aluno aprovado.";
+		} else if(x <= 5.0) {
+			cout << "Aluno reprovado.";
+		} else {
+			cout << "Aluno em exame." << endl;
+			double y;
+			cin >> y;
+			cout << "Nota do exame: " << y << endl;
+			const double z = (x + y) / 2;
+			if(z >= 5.0) {
+				cout << "Aluno aprovado." << endl;
+			} else {
+				cout << "Aluno reprovado." << endl;
+			}
+			cout << "Media final: " << z;
+		}
+		return 0;
+	}
 }// namespace acwing

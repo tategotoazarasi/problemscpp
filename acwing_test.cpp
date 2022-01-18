@@ -926,4 +926,28 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("Impossivel calcular", ans);
 	}
+
+	TEST(acwing661, case1) {
+		istringstream in("2.0 4.0 7.5 8.0 6.4");
+		auto out = ostringstream();
+		acwing661::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Media: 5.4\nAluno em exame.\nNota do exame: 6.4\nAluno aprovado.\nMedia final: 5.9", ans);
+	}
+
+	TEST(acwing661, case2) {
+		istringstream in("2.0 6.6 4.0 9.0");
+		auto out = ostringstream();
+		acwing661::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Media: 4.9\nAluno reprovado.", ans);
+	}
+
+	TEST(acwing661, case3) {
+		istringstream in("9.0 4.0 8.5 9.0");
+		auto out = ostringstream();
+		acwing661::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Media: 7.3\nAluno aprovado.", ans);
+	}
 }// namespace acwing
