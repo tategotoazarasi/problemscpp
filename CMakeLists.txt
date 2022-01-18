@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.21)
 project(problemscpp)
 
 set(CMAKE_CXX_STANDARD 23)
-if(MSVC)
+if (MSVC)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /STACK:67108864")
-endif()
+endif ()
 
 include(FetchContent)
 FetchContent_Declare(
