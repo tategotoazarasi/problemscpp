@@ -1560,4 +1560,158 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	namespace acwing1929 {
+		int Solution::main(istream &cin, ostream &cout) {
+			cin >> n >> m;
+			for(unsigned short i = 0; i < n; i++) {
+				for(unsigned short j = 0; j < m; j++) {
+					cin >> mirrors[i][j];
+				}
+			}
+			int maximum = -1;
+			for(unsigned short j = 0; j < m; j++) {
+				maximum = max(maximum, static_cast<int>(count_reflect(down, 0, j)));
+			}
+			for(unsigned short j = 0; j < m; j++) {
+				maximum = max(maximum, static_cast<int>(count_reflect(up, n - 1, j)));
+			}
+			for(unsigned short i = 0; i < n; i++) {
+				maximum = max(maximum, static_cast<int>(count_reflect(right, i, 0)));
+			}
+			for(unsigned short i = 0; i < n; i++) {
+				maximum = max(maximum, static_cast<int>(count_reflect(left, i, m - 1)));
+			}
+			cout << maximum;
+			return 0;
+		}
+
+		unsigned int Solution::count_reflect(direction d, unsigned int x, unsigned int y) {
+			if(x == 0 || y == 0 || x == n - 1 || y == m - 1) {
+				unsigned int count  = 0;
+				int current_x       = x;
+				int current_y       = y;
+				direction current_d = d;
+				auto path           = unordered_set<step, step_hash, step_equal>();
+				while(0 <= current_x && current_x < n && 0 <= current_y && current_y < m) {
+					auto s = step(current_d, current_x, current_y);
+					if(!path.contains(s)) {
+						path.insert(s);
+					} else {
+						return -1;
+					}
+
+					const auto *record = get_record(d);
+					if((*record)[x][y] != 0) {
+						return count + (*record)[x][y];
+					}
+					current_d = reflect(current_d, mirrors[current_x][current_y]);
+					count++;
+					(*get_record(!current_d))[current_x][current_y] = count;
+					switch(current_d) {
+						case left: {
+							current_y--;
+							break;
+						}
+						case right: {
+							current_y++;
+							break;
+						}
+						case up: {
+							current_x--;
+							break;
+						}
+						case down: {
+							current_x++;
+							break;
+						}
+					}
+				}
+				return count;
+			}
+			return -1;
+		}
+
+		unsigned int (*Solution::get_record(direction d))[1000][1000] {
+			switch(d) {
+				case left: {
+					return &left_map;
+				}
+				case right: {
+					return &right_map;
+				}
+				case up: {
+					return &up_map;
+				}
+				case down: {
+					return &down_map;
+				}
+			}
+			return nullptr;
+		}
+
+		direction reflect(direction d, char mirror) {
+			switch(d) {
+				case left: {
+					if(mirror == '/') {
+						return down;
+					}
+					if(mirror == '\\') {
+						return up;
+					}
+					break;
+				}
+				case right: {
+					if(mirror == '/') {
+						return up;
+					}
+					if(mirror == '\\') {
+						return down;
+					}
+					break;
+				}
+				case up: {
+					if(mirror == '/') {
+						return right;
+					}
+					if(mirror == '\\') {
+						return left;
+					}
+					break;
+				}
+				case down: {
+					if(mirror == '/') {
+						return left;
+					}
+					if(mirror == '\\') {
+						return right;
+					}
+					break;
+				}
+			}
+			return {};
+		}
+
+		direction operator!(const direction &d) {
+			switch(d) {
+				case left: {
+					return right;
+				}
+				case right: {
+					return left;
+				}
+				case up: {
+					return down;
+				}
+				case down: {
+					return up;
+				}
+			}
+			return {};
+		}
+
+		unsigned long step_hash::operator()(const step &s) const { return s.d * 1000 * 1000 + s.x * 1000 + s.y; }
+
+		bool step_equal::operator()(const step &s1, const step &s2) const { return s1.d == s2.d && s1.x == s2.x && s1.y == s2.y; }
+	}// namespace acwing1929
 }// namespace acwing

@@ -950,4 +950,18 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("Media: 7.3\nAluno aprovado.", ans);
 	}
+
+	namespace acwing1929 {
+		TEST(acwing1929, case1) {
+			istringstream in("3 3\n"
+			                 "/ \\ \\ \n"
+			                 "\\ \\ \\ \n"
+			                 "/ \\ / \n");
+			auto out = ostringstream();
+			auto sol = Solution();
+			sol.main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3", ans);
+		}
+	}// namespace acwing1929
 }// namespace acwing

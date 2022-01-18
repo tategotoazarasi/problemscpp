@@ -527,5 +527,115 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/**
+	 * \brief AcWing 1929. 镜子田地
+	 * \date 2022-01-18
+	 * \link https://www.acwing.com/problem/content/1931/
+	 * \par
+	 * 农夫约翰在屋子外面放了一些旧镜子，他的奶牛们像往常一样调皮地偷走了它们！
+	 * 奶牛们将镜子放置在了一个矩形田地中，该田地可被划分为 N×M个方格区域。
+	 * 在每个方格区域中，奶牛在其某对对角之间放置一个双面镜，因此，共有两种放法，一种为 / 放置（镜子连接方格左下角和右上角），另一种为 \ 放置（镜子连接方格左上角和右下角）。
+	 * 一天晚上，奶牛贝茜将激光发射器带到了该田地中。
+	 * 她站在田地外面，沿着田地的行或列水平或垂直照射光束，使光束反射一定数量的镜子。
+	 * 由于镜子都是沿对角线摆放，因此经反射镜反射的水平光束最终将垂直传播，反之亦然。
+	 * 贝茜想知道从田地之外射入的水平或垂直光束最多可以在田地中被反射多少次。
+	 * 给定镜子田地的布局，请帮助贝茜计算这个数字。
+	 * \par 输入格式
+	 * 第一行包含 N 和 M。
+	 * 接下来 N行，每行包含 M 个 / 或 \ 字符，表示田地中镜子的具体摆放方式。
+	 * \par 输出格式
+	 * 输出田地之外的水平或垂直光束能够被反射的最大次数。
+	 * 如果可以无限反射，则输出 −1。
+	 * \par 数据范围
+	 * 1≤N,M≤1000
+	 */
+	namespace acwing1929 {
+		/**
+		 * \brief 方向
+		 */
+		enum direction {
+			/// @brief 左
+			left,
+			/// @brief 右
+			right,
+			/// @brief 上
+			up,
+			/// @brief 下
+			down
+		};
+
+		/**
+		 * \brief 行动
+		 */
+		struct step {
+			/// @brief 方向
+			direction d;
+			/// @brief 横坐标
+			unsigned int x;
+			/// @brief 纵坐标
+			unsigned int y;
+
+			step(direction d, unsigned int x, unsigned int y)
+			    : d(d), x(x), y(y){};
+		};
+
+		struct step_hash {
+			unsigned long operator()(const step & /*s*/) const;
+		};
+
+		struct step_equal {
+			bool operator()(const step & /*s1*/, const step & /*s2*/) const;
+		};
+
+		class Solution {
+		private:
+			/// @brief 镜子
+			char mirrors[1000][1000] = {0};
+			/// @brief 在每格向左时可以被反射的次数
+			unsigned int left_map[1000][1000] = {0};
+			/// @brief 在每格向右时可以被反射的次数
+			unsigned int right_map[1000][1000] = {0};
+			/// @brief 在每格向上时可以被反射的次数
+			unsigned int up_map[1000][1000] = {0};
+			/// @brief 在每格向下时可以被反射的次数
+			unsigned int down_map[1000][1000] = {0};
+			/// @brief 行数
+			unsigned short n{};
+			/// @brief 列数
+			unsigned short m{};
+
+		public:
+			int main(istream &cin, ostream &cout);
+			/**
+			 * \brief 获取反射的次数
+			 * \param d 方向
+			 * \param x 横坐标
+			 * \param y 纵坐标
+			 * \return 在(x,y)以d方向前进的光距离离开剩下的反射次数
+			 */
+			unsigned int count_reflect(direction d, unsigned int x, unsigned int y);
+			/**
+			 * \brief 获取记录类型
+			 * \param d 方向
+			 * \return 方向对应的记录
+			 */
+			unsigned (*get_record(direction d))[1000][1000];
+		};
+
+		/**
+		 * \brief 方向经过镜子反射后的变化
+		 * \param d 方向
+		 * \param mirror 镜子 
+		 * \return 方向经过镜子反射后的变化
+		 */
+		direction reflect(direction d, char mirror);
+		/**
+		 * \brief 取反方向
+		 * \param d 方向
+		 * \return d的反方向
+		 */
+		direction operator!(const direction &d);
+	}// namespace acwing1929
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
