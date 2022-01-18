@@ -492,7 +492,6 @@ namespace leetcode {
 	/**
 	 * \brief LeetCode 539. 最小时间差
 	 * \date 2022-1-18
-	 * \link https://leetcode-cn.com/problems/minimum-time-difference/
 	 */
 	namespace minimum_time_difference {
 		class Solution {

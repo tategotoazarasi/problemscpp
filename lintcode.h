@@ -166,7 +166,6 @@ namespace lintcode {
 	/**
 	 * \brief LintCode 1746. 二叉搜索树结点最小距离
 	 * \date 2022-1-18
-	 * \link https://www.lintcode.com/problem/1746/
 	 */
 	namespace min_diff_in_BST {
 		class Solution {
