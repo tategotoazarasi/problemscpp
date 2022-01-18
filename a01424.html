@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: lintcode::min_path_sum::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,91 +63,18 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00091.html">lintcode</a></li><li class="navelem"><a class="el" href="a00101.html">min_path_sum</a></li><li class="navelem"><a class="el" href="a01424.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00094.html">lintcode</a></li><li class="navelem"><a class="el" href="a00104.html">min_path_sum</a></li><li class="navelem"><a class="el" href="a01427.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="a01421.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">lintcode::min_path_sum::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">lintcode::min_path_sum::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00023_source.html">lintcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:aab27671062c2c40e337e7a072f7e68bd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01424.html#aab27671062c2c40e337e7a072f7e68bd">minPathSum</a> (vector&lt; vector&lt; int &gt; &gt; &amp;grid)</td></tr>
-<tr class="separator:aab27671062c2c40e337e7a072f7e68bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="a00023_source.html">lintcode.h</a> 第 <a class="el" href="a00023_source.html#l00143">143</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="aab27671062c2c40e337e7a072f7e68bd" name="aab27671062c2c40e337e7a072f7e68bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab27671062c2c40e337e7a072f7e68bd">&#9670;&nbsp;</a></span>minPathSum()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int lintcode::min_path_sum::Solution::minPathSum </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; vector&lt; int &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>grid</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">grid</td><td>a list of lists of integers </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>: An integer, minimizes the sum of all numbers along its path </dd></dl>
-
-<p class="definition">在文件 <a class="el" href="a00026_source.html">lintcode.cpp</a> 第 <a class="el" href="a00026_source.html#l00260">260</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                                                          {</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m = grid.size();</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n = grid[0].size();</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            <span class="keyword">auto</span> *dp             = <span class="keyword">new</span> <span class="keywordtype">int</span> *[m + 1];</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt;= m; i++) {</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                dp[i] = <span class="keyword">new</span> <span class="keywordtype">int</span>[n + 1];</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                memset(dp[i], INT_MAX, (n + 1) * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            }</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            dp[1][1] = grid[0][0];</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= m; i++) {</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= n; j++) {</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                    <span class="keywordflow">if</span>(i == 1 &amp;&amp; j == 1) {</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                    }</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> min = dp[i - 1][j];</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                    <span class="keywordflow">if</span>(dp[i][j - 1] &lt; min) {</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                        min = dp[i][j - 1];</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                    }</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                    dp[i][j] = grid[i - 1][j - 1] + min;</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                }</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            }</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            <span class="keywordflow">return</span> dp[m][n];</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="a00023_source.html">lintcode.h</a></li>
-<li><a class="el" href="a00026_source.html">lintcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="a01427.html">lintcode::min_path_sum::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="a01427.html#aab27671062c2c40e337e7a072f7e68bd">minPathSum</a>(vector&lt; vector&lt; int &gt; &gt; &amp;grid)</td><td class="entry"><a class="el" href="a01427.html">lintcode::min_path_sum::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
