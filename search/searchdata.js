@@ -6,7 +6,9 @@ var indexSectionsWithContent =
   3: "almr",
   4: "abcdefgijklmnoprstvw",
   5: "abcdfghilmnrstuvxy",
-  6: "p"
+  6: "d",
+  7: "dlru",
+  8: "p"
 };
 
 var indexSectionNames =
@@ -17,7 +19,9 @@ var indexSectionNames =
   3: "files",
   4: "functions",
   5: "variables",
-  6: "pages"
+  6: "enums",
+  7: "enumvalues",
+  8: "pages"
 };
 
 var indexSectionLabels =
@@ -28,6 +32,8 @@ var indexSectionLabels =
   3: "文件",
   4: "函数",
   5: "变量",
-  6: "页"
+  6: "枚举",
+  7: "枚举值",
+  8: "页"
 };
 
