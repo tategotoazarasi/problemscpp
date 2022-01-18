@@ -83,7 +83,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="a00032_source.html">leetcode.h</a> 第 <a class="el" href="a00032_source.html#l00467">467</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00032_source.html">leetcode.h</a> 第 <a class="el" href="a00032_source.html#l00468">468</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a3d78f60928c0a94e479b1f8a15d19a6c" name="a3d78f60928c0a94e479b1f8a15d19a6c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d78f60928c0a94e479b1f8a15d19a6c">&#9670;&nbsp;</a></span>mostPoints()</h2>
@@ -109,16 +109,16 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00005_source.html">leetcode.cpp</a> 第 <a class="el" href="a00005_source.html#l01067">1067</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>                                                                     {</div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>            vector&lt;long long&gt; f(questions.size() + 1);</div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = questions.size() - 1; i &gt;= 0; --i) {</div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>                <span class="keyword">auto</span> &amp;q     = questions[i];</div>
-<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> j = i + q[1] + 1;</div>
-<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>                f[i]        = max(f[i + 1], q[0] + (j &lt; questions.size() ? f[j] : 0));</div>
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>            }</div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>            <span class="keywordflow">return</span> f[0];</div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00005_source.html">leetcode.cpp</a> 第 <a class="el" href="a00005_source.html#l01068">1068</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>                                                                     {</div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>            vector&lt;long long&gt; f(questions.size() + 1);</div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = questions.size() - 1; i &gt;= 0; --i) {</div>
+<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>                <span class="keyword">auto</span> &amp;q     = questions[i];</div>
+<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> j = i + q[1] + 1;</div>
+<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>                f[i]        = max(f[i + 1], q[0] + (j &lt; questions.size() ? f[j] : 0));</div>
+<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>            }</div>
+<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>            <span class="keywordflow">return</span> f[0];</div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
