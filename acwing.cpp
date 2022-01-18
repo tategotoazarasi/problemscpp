@@ -1514,4 +1514,21 @@ namespace acwing {
 		cout << lround(current_t);
 		return 0;
 	}
+
+	int acwing658::main(istream &cin, ostream &cout) {
+		double a;
+		double b;
+		double c;
+		cin >> a >> b >> c;
+		if(b * b - 4 * a * c < 0 || a == 0) {
+			cout << "Impossivel calcular";
+			return 0;
+		}
+		const auto r1 = (-b + sqrt(b * b - 4 * a * c)) / (2 * a);
+		const auto r2 = (-b - sqrt(b * b - 4 * a * c)) / (2 * a);
+		cout << setiosflags(ios::fixed) << setprecision(5)
+		     << "R1 = " << r1 << endl
+		     << "R2 = " << r2;
+		return 0;
+	}
 }// namespace acwing

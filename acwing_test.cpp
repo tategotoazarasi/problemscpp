@@ -910,4 +910,20 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("2970", ans);
 	}
+
+	TEST(acwing658, case1) {
+		istringstream in("10.0 20.1 5.1");
+		auto out = ostringstream();
+		acwing658::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("R1 = -0.29788\nR2 = -1.71212", ans);
+	}
+
+	TEST(acwing658, case2) {
+		istringstream in("0 -77.9 -113.4");
+		auto out = ostringstream();
+		acwing658::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Impossivel calcular", ans);
+	}
 }// namespace acwing
