@@ -159,4 +159,11 @@ namespace luogu {
 		cout << -1;
 		return 0;
 	}
+
+	int P5703::main(istream &cin, ostream &cout) {
+		unsigned long a, b;
+		cin >> a >> b;
+		cout << a * b;
+		return 0;
+	}
 }// namespace luogu

@@ -39,6 +39,13 @@ namespace luogu {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief 洛谷 P5703 【深基2.例5】苹果采购
+	/// \link https://www.luogu.com.cn/problem/P5703
+	class P5703 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H
