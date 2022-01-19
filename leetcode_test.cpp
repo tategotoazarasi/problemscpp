@@ -755,4 +755,24 @@ namespace leetcode {
 			ASSERT_EQ(120, Solution::findMinDifference(vec));
 		}
 	}// namespace minimum_time_difference
+
+	namespace contains_duplicate_ii {
+		TEST(contains_duplicate_ii, case1) {
+			int input[] = {1, 2, 3, 1};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_TRUE(Solution::containsNearbyDuplicate(vec, 3));
+		}
+
+		TEST(contains_duplicate_ii, case2) {
+			int input[] = {1, 0, 1, 1};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_TRUE(Solution::containsNearbyDuplicate(vec, 3));
+		}
+
+		TEST(contains_duplicate_ii, case3) {
+			int input[] = {1, 2, 3, 1, 2, 3};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_FALSE(Solution::containsNearbyDuplicate(vec, 2));
+		}
+	}// namespace contains_duplicate_ii
 }// namespace leetcode

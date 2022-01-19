@@ -1135,4 +1135,24 @@ namespace leetcode {
 			return minimum;
 		}
 	}// namespace minimum_time_difference
+
+	namespace contains_duplicate_ii {
+		bool Solution::containsNearbyDuplicate(vector<int> &nums, int k) {
+			unordered_map<int, vector<int>> um = unordered_map<int, vector<int>>();
+			for(int i = 0; i < nums.size(); i++) {
+				if(um.count(nums[i]) == 0) {
+					um.insert(pair(nums[i], vector<int>()));
+				}
+				auto pos = lower_bound(um[nums[i]].begin(), um[nums[i]].end(), i);
+				if((pos != um[nums[i]].end() && abs(*pos - i) <= k) || (pos != um[nums[i]].begin() && abs(*(pos - 1) - i) <= k)) {
+					return true;
+				}
+				um[nums[i]].insert(pos, i);
+			}
+			for(auto i: um) {
+				sort(i.second.begin(), i.second.end());
+			}
+			return false;
+		}
+	}// namespace contains_duplicate_ii
 }// namespace leetcode

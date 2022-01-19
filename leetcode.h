@@ -499,6 +499,15 @@ namespace leetcode {
 			static int findMinDifference(vector<string> &timePoints);
 		};
 	}// namespace minimum_time_difference
+
+	/// \brief LeetCode 219. 存在重复元素 II
+	/// \link https://leetcode-cn.com/problems/contains-duplicate-ii/
+	namespace contains_duplicate_ii {
+		class Solution {
+		public:
+			static bool containsNearbyDuplicate(vector<int> &nums, int k);
+		};
+	}// namespace contains_duplicate_ii
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
