@@ -14,5 +14,5 @@ var searchData=
   ['point_5fhash_11',['point_hash',['../d5/d81/a00528.html',1,'leetcode::escape_a_large_maze']]],
   ['pointequal_12',['pointequal',['../da/d15/a00188.html',1,'acwing::acwing2060']]],
   ['pointhash_13',['pointhash',['../d2/d94/a00184.html',1,'acwing::acwing2060']]],
-  ['problemscpp_14',['problemscpp',['../d8/d7a/a00669.html',1,'']]]
+  ['problemscpp_14',['problemscpp',['../dd/d57/a00701.html',1,'']]]
 ];
