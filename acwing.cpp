@@ -1714,4 +1714,13 @@ namespace acwing {
 
 		bool step_equal::operator()(const step &s1, const step &s2) const { return s1.d == s2.d && s1.x == s2.x && s1.y == s2.y; }
 	}// namespace acwing1929
+
+	int acwing708::main(istream &cin, ostream &cout) {
+		for(int i = 1; i <= 100; i++) {
+			if(i % 2 == 0) {
+				cout << i << endl;
+			}
+		}
+		return 0;
+	}
 }// namespace acwing

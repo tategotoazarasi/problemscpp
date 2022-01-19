@@ -619,5 +619,12 @@ namespace acwing {
 		 */
 		direction operator!(const direction &d);
 	}// namespace acwing1929
+
+	/// \brief AcWing 708. 偶数
+	/// \link https://www.acwing.com/problem/content/710/
+	class acwing708 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

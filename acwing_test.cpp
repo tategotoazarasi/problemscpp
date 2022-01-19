@@ -958,13 +958,9 @@ namespace acwing {
 			                 "/ \\ \\ \n"
 			                 "\\ \\ \\ \n"
 			                 "/ \\ / \n");
-			auto out        = ostringstream();
-			auto sol        = Solution();
-			auto start_time = chrono::high_resolution_clock::now();
+			auto out = ostringstream();
+			auto sol = Solution();
 			sol.main(in, out);
-			auto end_time = chrono::high_resolution_clock::now();
-			auto duration = chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();
-			ASSERT_LE(duration, 1000);
 			const auto ans = out.str();
 			ASSERT_EQ("3", ans);
 		}
