@@ -161,7 +161,8 @@ namespace luogu {
 	}
 
 	int P5703::main(istream &cin, ostream &cout) {
-		unsigned long a, b;
+		unsigned long a;
+		unsigned long b;
 		cin >> a >> b;
 		cout << a * b;
 		return 0;
@@ -170,7 +171,7 @@ namespace luogu {
 	int P5704::main(istream &cin, ostream &cout) {
 		char ch;
 		cin >> ch;
-		cout << char(toupper(ch));
+		cout << static_cast<char>(toupper(ch));
 		return 0;
 	}
 }// namespace luogu

@@ -1715,7 +1715,7 @@ namespace acwing {
 		bool step_equal::operator()(const step &s1, const step &s2) const { return s1.d == s2.d && s1.x == s2.x && s1.y == s2.y; }
 	}// namespace acwing1929
 
-	int acwing708::main(istream &cin, ostream &cout) {
+	int acwing708::main(istream & /*cin*/, ostream &cout) {
 		for(int i = 1; i <= 100; i++) {
 			if(i % 2 == 0) {
 				cout << i << endl;
@@ -1734,28 +1734,30 @@ namespace acwing {
 	}
 
 	int acwing1922::main(istream &cin, ostream &cout) {
-		unsigned int n, k;
+		unsigned int n;
+		unsigned int k;
 		cin >> n >> k;
-		unordered_map<unsigned int, unsigned int> um = unordered_map<unsigned int, unsigned int>();
-		unsigned int max_x                           = 0;
+		auto um            = unordered_map<unsigned int, unsigned int>();
+		unsigned int max_x = 0;
 		for(unsigned int i = 0; i < n; i++) {
-			unsigned int g, x;
+			unsigned int g;
+			unsigned int x;
 			cin >> g >> x;
 			max_x = max(max_x, x);
 			um.insert(pair(x, g));
 		}
 		unsigned int count = 0;
 		for(int i = 0; i < 2 * k; i++) {
-			if(um.count(i) != 0) {
+			if(um.contains(i)) {
 				count += um[i];
 			}
 		}
 		unsigned int maximum = count;
 		for(int i = 1; i + 2 * k <= max_x; i++) {
-			if(um.count(i - 1) != 0) {
+			if(um.contains(i - 1)) {
 				count -= um[i - 1];
 			}
-			if(um.count(i + 2 * k) != 0) {
+			if(um.contains(i + 2 * k)) {
 				count += um[i + 2 * k];
 			}
 			maximum = max(maximum, count);

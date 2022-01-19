@@ -307,7 +307,7 @@ namespace lintcode {
 			auto que  = queue<TreeNode *>();
 			que.push(root);
 			while(!que.empty()) {
-				auto *node = que.front();
+				const auto *node = que.front();
 				que.pop();
 				vals.push_back(node->val);
 				if(node->left != nullptr) {

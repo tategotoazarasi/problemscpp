@@ -1138,13 +1138,13 @@ namespace leetcode {
 
 	namespace contains_duplicate_ii {
 		bool Solution::containsNearbyDuplicate(vector<int> &nums, int k) {
-			unordered_map<int, vector<int>> um = unordered_map<int, vector<int>>();
+			auto um = unordered_map<int, vector<int>>();
 			for(int i = 0; i < nums.size(); i++) {
-				if(um.count(nums[i]) == 0) {
+				if(!um.contains(nums[i])) {
 					um.insert(pair(nums[i], vector<int>()));
 				}
 				auto pos = lower_bound(um[nums[i]].begin(), um[nums[i]].end(), i);
-				if((pos != um[nums[i]].end() && abs(*pos - i) <= k) || (pos != um[nums[i]].begin() && abs(*(pos - 1) - i) <= k)) {
+				if(pos != um[nums[i]].end() && abs(*pos - i) <= k || pos != um[nums[i]].begin() && abs(*(pos - 1) - i) <= k) {
 					return true;
 				}
 				um[nums[i]].insert(pos, i);

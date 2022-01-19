@@ -1,6 +1,3 @@
-//
-// Created by tategotoazarasi on 2022/1/18.
-//
 #if defined(linux)
 #include <iostream>
 #include <sys/resource.h>
@@ -19,8 +16,6 @@ int set_stack_limit(int stack_size) {
 	}
 	return result;
 }
-#elif
-int set_stack_limit() {
-	return 0;
-}
+#else
+int set_stack_limit(int /*stack_size*/) { return 0; }
 #endif
