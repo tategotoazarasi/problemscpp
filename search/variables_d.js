@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['target_0',['target',['../a01336.html#a2dd17627992e17331faefb6e05791baa',1,'leetcode::escape_a_large_maze::point']]]
+  ['target_0',['target',['../d9/d24/a00524.html#a2dd17627992e17331faefb6e05791baa',1,'leetcode::escape_a_large_maze::point']]]
 ];
