@@ -1723,4 +1723,13 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing715::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		for(int i = 2; i < 10000; i += n) {
+			cout << i << endl;
+		}
+		return 0;
+	}
 }// namespace acwing
