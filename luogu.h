@@ -46,6 +46,13 @@ namespace luogu {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief 洛谷 P5704 【深基2.例6】字母转换
+	/// \link https://www.luogu.com.cn/problem/P5704
+	class P5704 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H

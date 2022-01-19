@@ -166,4 +166,11 @@ namespace luogu {
 		cout << a * b;
 		return 0;
 	}
+
+	int P5704::main(istream &cin, ostream &cout) {
+		char ch;
+		cin >> ch;
+		cout << char(toupper(ch));
+		return 0;
+	}
 }// namespace luogu
