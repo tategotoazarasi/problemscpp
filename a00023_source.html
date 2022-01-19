@@ -66,33 +66,28 @@ $(function() {
   <div class="headertitle"><div class="title">set_stack_limit.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00023.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by tategotoazarasi on 2022/1/18.</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#if defined(linux)</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;sys/resource.h&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keywordtype">int</span> <a class="code hl_function" href="a00002.html#a4d5e31141ea8d871e02a1520af4cbb69">set_stack_limit</a>(<span class="keywordtype">int</span> stack_size) {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    rlim_t kStackSize = stack_size;<span class="comment">// min stack size = 16 MB</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">struct </span>rlimit rl {};</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">int</span> result = getrlimit(RLIMIT_STACK, &amp;rl);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">if</span>(result == 0 &amp;&amp; rl.rlim_cur &lt; kStackSize) {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        rl.rlim_cur = kStackSize;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        result      = setrlimit(RLIMIT_STACK, &amp;rl);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">if</span>(result != 0) {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;setrlimit returned result = &quot;</span> &lt;&lt; result &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#elif</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">int</span> <a class="code hl_function" href="a00002.html#a4d5e31141ea8d871e02a1520af4cbb69">set_stack_limit</a>() {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aa00002_html_a4d5e31141ea8d871e02a1520af4cbb69"><div class="ttname"><a href="a00002.html#a4d5e31141ea8d871e02a1520af4cbb69">set_stack_limit</a></div><div class="ttdeci">int set_stack_limit(int stack_size)</div></div>
+<a href="a00023.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if defined(linux)</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;sys/resource.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keywordtype">int</span> <a class="code hl_function" href="a00023.html#a90d105b4f65d447ebdd2269060a02d32">set_stack_limit</a>(<span class="keywordtype">int</span> stack_size) {</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    rlim_t kStackSize = stack_size;<span class="comment">// min stack size = 16 MB</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">struct </span>rlimit rl {};</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordtype">int</span> result = getrlimit(RLIMIT_STACK, &amp;rl);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordflow">if</span>(result == 0 &amp;&amp; rl.rlim_cur &lt; kStackSize) {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        rl.rlim_cur = kStackSize;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        result      = setrlimit(RLIMIT_STACK, &amp;rl);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">if</span>(result != 0) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;setrlimit returned result = &quot;</span> &lt;&lt; result &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="a00002.html#a4d5e31141ea8d871e02a1520af4cbb69">   20</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="a00023.html#a90d105b4f65d447ebdd2269060a02d32">set_stack_limit</a>(<span class="keywordtype">int</span> <span class="comment">/*stack_size*/</span>) { <span class="keywordflow">return</span> 0; }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aa00023_html_a90d105b4f65d447ebdd2269060a02d32"><div class="ttname"><a href="a00023.html#a90d105b4f65d447ebdd2269060a02d32">set_stack_limit</a></div><div class="ttdeci">int set_stack_limit(int)</div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00020">set_stack_limit.cpp:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

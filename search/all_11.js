@@ -1,7 +1,7 @@
 var searchData=
 [
   ['search_0',['search',['../a01344.html#aa7c228a1c6b22a07281eae6a14c2e72f',1,'leetcode::escape_a_large_maze::Solution']]],
-  ['set_5fstack_5flimit_1',['set_stack_limit',['../a00002.html#a4d5e31141ea8d871e02a1520af4cbb69',1,'main.cpp']]],
+  ['set_5fstack_5flimit_1',['set_stack_limit',['../a00023.html#a90d105b4f65d447ebdd2269060a02d32',1,'set_stack_limit(int):&#160;set_stack_limit.cpp'],['../a00002.html#a4d5e31141ea8d871e02a1520af4cbb69',1,'set_stack_limit(int stack_size):&#160;set_stack_limit.cpp']]],
   ['set_5fstack_5flimit_2ecpp_2',['set_stack_limit.cpp',['../a00023.html',1,'']]],
   ['simplifypath_3',['simplifyPath',['../a01300.html#a3997d52996bb978fe668ebfa788ba0fe',1,'leetcode::simplify_path::Solution']]],
   ['slowestkey_4',['slowestKey',['../a01324.html#ab7976dc380cf88058bb93aeac322ebbb',1,'leetcode::slowest_key::Solution']]],
