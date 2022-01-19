@@ -1732,4 +1732,35 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing1922::main(istream &cin, ostream &cout) {
+		unsigned int n, k;
+		cin >> n >> k;
+		unordered_map<unsigned int, unsigned int> um = unordered_map<unsigned int, unsigned int>();
+		unsigned int max_x                           = 0;
+		for(unsigned int i = 0; i < n; i++) {
+			unsigned int g, x;
+			cin >> g >> x;
+			max_x = max(max_x, x);
+			um.insert(pair(x, g));
+		}
+		unsigned int count = 0;
+		for(int i = 0; i < 2 * k; i++) {
+			if(um.count(i) != 0) {
+				count += um[i];
+			}
+		}
+		unsigned int maximum = count;
+		for(int i = 1; i + 2 * k <= max_x; i++) {
+			if(um.count(i - 1) != 0) {
+				count -= um[i - 1];
+			}
+			if(um.count(i + 2 * k) != 0) {
+				count += um[i + 2 * k];
+			}
+			maximum = max(maximum, count);
+		}
+		cout << maximum;
+		return 0;
+	}
 }// namespace acwing

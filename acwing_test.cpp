@@ -965,4 +965,16 @@ namespace acwing {
 			ASSERT_EQ("3", ans);
 		}
 	}// namespace acwing1929
+
+	TEST(acwing1922, case1) {
+		istringstream in("4 3\n"
+		                 "4 7\n"
+		                 "10 15\n"
+		                 "2 2\n"
+		                 "5 1");
+		auto out = ostringstream();
+		acwing1922::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("11", ans);
+	}
 }// namespace acwing

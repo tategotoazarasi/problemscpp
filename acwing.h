@@ -633,5 +633,12 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief AcWing 1922. 懒惰的牛
+	/// \link https://www.acwing.com/problem/content/1924/
+	class acwing1922 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
