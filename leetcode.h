@@ -507,6 +507,14 @@ namespace leetcode {
 			static bool containsNearbyDuplicate(vector<int> &nums, int k);
 		};
 	}// namespace contains_duplicate_ii
+
+	/// \brief LeetCode 2029. 石子游戏 IX
+	namespace stone_game_ix {
+		class Solution {
+		public:
+			static bool stoneGameIX(vector<int> &stones);
+		};
+	}// namespace stone_game_ix
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -198,9 +198,9 @@ namespace leetcode {
 	namespace convert_bst_to_greater_tree {
 		TEST(convert_bst_to_greater_tree, case1) {
 			auto *input        = new TreeNode(4, new TreeNode(1, new TreeNode(0), new TreeNode(2, nullptr, new TreeNode(3))),
-                                       new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
+			                                  new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
 			const auto *ans    = new TreeNode(30, new TreeNode(36, new TreeNode(36), new TreeNode(35, nullptr, new TreeNode(33))),
-                                           new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
+			                                  new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
 			const auto *output = Solution::convertBST(input);
 			ASSERT_TRUE(*ans == *output);
 		}
@@ -775,4 +775,42 @@ namespace leetcode {
 			ASSERT_FALSE(Solution::containsNearbyDuplicate(vec, 2));
 		}
 	}// namespace contains_duplicate_ii
+
+	namespace stone_game_ix {
+		TEST(stone_game_ix, case1) {
+			int input[] = {2, 1};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_TRUE(Solution::stoneGameIX(vec));
+		}
+
+		TEST(stone_game_ix, case2) {
+			int input[] = {2};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_FALSE(Solution::stoneGameIX(vec));
+		}
+
+		TEST(stone_game_ix, case3) {
+			int input[] = {5, 1, 2, 4, 3};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_FALSE(Solution::stoneGameIX(vec));
+		}
+
+		TEST(stone_game_ix, case4) {
+			int input[] = {3, 4, 6, 6, 8, 9, 2, 4, 5};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_TRUE(Solution::stoneGameIX(vec));
+		}
+
+		TEST(stone_game_ix, case5) {
+			int input[] = {2, 3, 7, 9, 4, 32, 2, 5, 8, 2, 6, 8, 3, 2, 6, 8, 3, 2, 5, 7, 8, 3, 5, 67, 8};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_TRUE(Solution::stoneGameIX(vec));
+		}
+
+		TEST(stone_game_ix, case6) {
+			int input[] = {15, 20, 10, 13, 14, 15, 5, 2, 3};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_FALSE(Solution::stoneGameIX(vec));
+		}
+	}// namespace stone_game_ix
 }// namespace leetcode

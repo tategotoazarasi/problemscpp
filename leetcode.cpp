@@ -1155,4 +1155,30 @@ namespace leetcode {
 			return false;
 		}
 	}// namespace contains_duplicate_ii
+
+	namespace stone_game_ix {
+		bool Solution::stoneGameIX(vector<int> &stones) {
+			unsigned int remove    = 0;
+			unsigned int counts[3] = {0, 0, 0};
+			for(auto stone: stones) {
+				stone %= 3;
+				counts[stone]++;
+			}
+			if(stones.size() == 1) {
+				return false;
+			}
+			if(counts[1] + counts[2] == 2) {
+				if(counts[1] == 2 || counts[2] == 2) {
+					return false;
+				}
+			}
+			if(counts[1] == 0 && counts[2] == 0) {
+				return false;
+			}
+			if(abs(int(counts[1]) - int(counts[2])) <= 2) {
+				return counts[0] % 2 == 0;
+			}
+			return true;
+		}
+	}// namespace stone_game_ix
 }// namespace leetcode
