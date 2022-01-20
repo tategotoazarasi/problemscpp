@@ -1810,8 +1810,8 @@ namespace acwing {
 		unsigned int h_count = 0;
 		unsigned int g_max   = 0;
 		unsigned int h_max   = 0;
-		unsigned int g_start = -1;
-		unsigned int h_start = -1;
+		int g_start          = -1;
+		int h_start          = -1;
 		int count            = 0;
 		for(auto &cow: cows) {
 			if(cow.second == 1) {//G
