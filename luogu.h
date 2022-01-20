@@ -41,15 +41,19 @@ namespace luogu {
 	};
 
 	/// \brief 洛谷 P5703 【深基2.例5】苹果采购
-	/// \link https://www.luogu.com.cn/problem/P5703
 	class P5703 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/// \brief 洛谷 P5704 【深基2.例6】字母转换
-	/// \link https://www.luogu.com.cn/problem/P5704
 	class P5704 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/// \brief 洛谷 P5705 【深基2.例7】数字反转
+	class P5705 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};

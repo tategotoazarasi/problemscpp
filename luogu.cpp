@@ -1,5 +1,7 @@
 #include "luogu.h"
+#include <cstring>
 #include <iostream>
+#include <ranges>
 #include <unordered_set>
 #include <vector>
 
@@ -172,6 +174,15 @@ namespace luogu {
 		char ch;
 		cin >> ch;
 		cout << static_cast<char>(toupper(ch));
+		return 0;
+	}
+
+	int P5705::main(istream &cin, ostream &cout) {
+		string s;
+		cin >> s;
+		for(auto ch = s.rbegin(); ch != s.rend(); ch++) {
+			cout << *ch;
+		}
 		return 0;
 	}
 }// namespace luogu

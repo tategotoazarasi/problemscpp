@@ -621,21 +621,18 @@ namespace acwing {
 	}// namespace acwing1929
 
 	/// \brief AcWing 708. 偶数
-	/// \link https://www.acwing.com/problem/content/710/
 	class acwing708 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/// \brief AcWing 715. 余数
-	/// \link https://www.acwing.com/problem/content/717/
 	class acwing715 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/// \brief AcWing 1922. 懒惰的牛
-	/// \link https://www.acwing.com/problem/content/1924/
 	class acwing1922 {
 	public:
 		static int main(istream &cin, ostream &cout);
