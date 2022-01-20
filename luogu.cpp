@@ -1,5 +1,6 @@
 #include "luogu.h"
 #include <cstring>
+#include <iomanip>
 #include <iostream>
 #include <ranges>
 #include <unordered_set>
@@ -183,6 +184,15 @@ namespace luogu {
 		for(auto ch = s.rbegin(); ch != s.rend(); ch++) {
 			cout << *ch;
 		}
+		return 0;
+	}
+
+	int P5706::main(istream &cin, ostream &cout) {
+		double t;
+		int n;
+		cin >> t >> n;
+		cout << setiosflags(ios::fixed) << setprecision(3) << t / n << endl
+		     << n * 2;
 		return 0;
 	}
 }// namespace luogu
