@@ -1,8 +1,6 @@
 #include "luogu.h"
-#include <cstring>
 #include <iomanip>
 #include <iostream>
-#include <ranges>
 #include <unordered_set>
 #include <vector>
 
