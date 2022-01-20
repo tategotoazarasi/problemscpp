@@ -1765,4 +1765,13 @@ namespace acwing {
 		cout << maximum;
 		return 0;
 	}
+
+	int acwing709::main(istream &cin, ostream &cout) {
+		int x;
+		cin >> x;
+		for(int i = 1; i <= x; i += 2) {
+			cout << i << endl;
+		}
+		return 0;
+	}
 }// namespace acwing

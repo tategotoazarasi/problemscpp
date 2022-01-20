@@ -977,4 +977,16 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("11", ans);
 	}
+
+	TEST(acwing709, case1) {
+		istringstream in("8");
+		auto out = ostringstream();
+		acwing709::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1\n"
+		          "3\n"
+		          "5\n"
+		          "7\n",
+		          ans);
+	}
 }// namespace acwing
