@@ -1790,9 +1790,9 @@ namespace acwing {
 	int acwing1913::main(istream &cin, ostream &cout) {
 		unsigned int n;
 		cin >> n;
-		map<unsigned int, int> cows               = map<unsigned int, int>();
-		vector<unsigned int> indexes              = vector<unsigned int>();
-		unordered_map<int, set<unsigned int>> sum = unordered_map<int, set<unsigned int>>();
+		auto cows    = map<unsigned int, int>();
+		auto indexes = vector<unsigned int>();
+		auto sum     = unordered_map<int, set<unsigned int>>();
 		for(unsigned int i = 0; i < n; i++) {
 			unsigned int x;
 			char b;
@@ -1814,7 +1814,8 @@ namespace acwing {
 		int h_start          = -1;
 		int count            = 0;
 		for(auto &cow: cows) {
-			if(cow.second == 1) {//G
+			if(cow.second == 1) {
+				//G
 				h_count = 0;
 				h_start = -1;
 				if(g_start == -1) {
@@ -1823,7 +1824,8 @@ namespace acwing {
 					g_count = cow.first - g_start;
 				}
 				g_max = max(g_max, g_count);
-			} else {//H
+			} else {
+				//H
 				g_count = 0;
 				g_start = -1;
 				if(h_start == -1) {
@@ -1835,8 +1837,8 @@ namespace acwing {
 			}
 			count += cow.second;
 			cow.second = count;
-			if(sum.count(cow.second) == 0) {
-				set<unsigned int> s = set<unsigned int>();
+			if(!sum.contains(cow.second)) {
+				auto s = set<unsigned int>();
 				s.insert(cow.first);
 				sum.insert(pair(cow.second, s));
 			} else {
@@ -1848,7 +1850,7 @@ namespace acwing {
 			if(i.first == 0) {
 				maximum = max(maximum, *i.second.rbegin() - indexes[0]);
 			} else if(i.second.size() >= 2) {
-				maximum = max(maximum, *i.second.rbegin() - *(upper_bound(indexes.begin(), indexes.end(), *i.second.begin())));
+				maximum = max(maximum, *i.second.rbegin() - *upper_bound(indexes.begin(), indexes.end(), *i.second.begin()));
 			}
 		}
 		cout << max(maximum, max(g_max, h_max));

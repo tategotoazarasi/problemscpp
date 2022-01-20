@@ -1,6 +1,5 @@
 #include "luogu.h"
 #include <iomanip>
-#include <iostream>
 #include <unordered_set>
 #include <vector>
 
@@ -179,8 +178,8 @@ namespace luogu {
 	int P5705::main(istream &cin, ostream &cout) {
 		string s;
 		cin >> s;
-		for(auto ch = s.rbegin(); ch != s.rend(); ch++) {
-			cout << *ch;
+		for(int i = s.length() - 1; i >= 0; i--) {
+			cout << s[i];
 		}
 		return 0;
 	}

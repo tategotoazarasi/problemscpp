@@ -1175,7 +1175,7 @@ namespace leetcode {
 			if(counts[1] == 0 && counts[2] == 0) {
 				return false;
 			}
-			if(abs(int(counts[1]) - int(counts[2])) <= 2) {
+			if(abs(static_cast<int>(counts[1]) - static_cast<int>(counts[2])) <= 2) {
 				return counts[0] % 2 == 0;
 			}
 			return true;
