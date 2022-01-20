@@ -1786,4 +1786,72 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing1913::main(istream &cin, ostream &cout) {
+		unsigned int n;
+		cin >> n;
+		map<unsigned int, int> cows               = map<unsigned int, int>();
+		vector<unsigned int> indexes              = vector<unsigned int>();
+		unordered_map<int, set<unsigned int>> sum = unordered_map<int, set<unsigned int>>();
+		for(unsigned int i = 0; i < n; i++) {
+			unsigned int x;
+			char b;
+			cin >> x >> b;
+			indexes.push_back(x);
+			if(b == 'G') {
+				cows.insert(pair(x, 1));
+			} else {
+				cows.insert(pair(x, -1));
+			}
+		}
+		sort(indexes.begin(), indexes.end());
+
+		unsigned int g_count = 0;
+		unsigned int h_count = 0;
+		unsigned int g_max   = 0;
+		unsigned int h_max   = 0;
+		unsigned int g_start = -1;
+		unsigned int h_start = -1;
+		int count            = 0;
+		for(auto &cow: cows) {
+			if(cow.second == 1) {//G
+				h_count = 0;
+				h_start = -1;
+				if(g_start == -1) {
+					g_start = cow.first;
+				} else {
+					g_count = cow.first - g_start;
+				}
+				g_max = max(g_max, g_count);
+			} else {//H
+				g_count = 0;
+				g_start = -1;
+				if(h_start == -1) {
+					h_start = cow.first;
+				} else {
+					h_count = cow.first - h_start;
+				}
+				h_max = max(h_max, h_count);
+			}
+			count += cow.second;
+			cow.second = count;
+			if(sum.count(cow.second) == 0) {
+				set<unsigned int> s = set<unsigned int>();
+				s.insert(cow.first);
+				sum.insert(pair(cow.second, s));
+			} else {
+				sum[cow.second].insert(cow.first);
+			}
+		}
+		unsigned int maximum = 0;
+		for(const auto &i: sum) {
+			if(i.first == 0) {
+				maximum = max(maximum, *i.second.rbegin() - indexes[0]);
+			} else if(i.second.size() >= 2) {
+				maximum = max(maximum, *i.second.rbegin() - *(upper_bound(indexes.begin(), indexes.end(), *i.second.begin())));
+			}
+		}
+		cout << max(maximum, max(g_max, h_max));
+		return 0;
+	}
 }// namespace acwing
