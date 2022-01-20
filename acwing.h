@@ -643,5 +643,11 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief AcWing 710. 六个奇数
+	class acwing710 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

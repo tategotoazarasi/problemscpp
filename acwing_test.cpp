@@ -989,4 +989,18 @@ namespace acwing {
 		          "7\n",
 		          ans);
 	}
+
+	TEST(acwing710, case1) {
+		istringstream in("9");
+		auto out = ostringstream();
+		acwing710::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("9\n"
+		          "11\n"
+		          "13\n"
+		          "15\n"
+		          "17\n"
+		          "19\n",
+		          ans);
+	}
 }// namespace acwing
