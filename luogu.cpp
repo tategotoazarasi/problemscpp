@@ -257,17 +257,20 @@ namespace luogu {
 	}
 
 	int P5708::main(istream &cin, ostream &cout) {
-		double a, b, c;
+		double a;
+		double b;
+		double c;
 		cin >> a >> b >> c;
-		double p = (a + b + c) / 2;
+		const double p = (a + b + c) / 2;
 		cout << setiosflags(ios::fixed) << setprecision(1) << sqrt(p * (p - a) * (p - b) * (p - c));
 		return 0;
 	}
 
 	int P1421::main(istream &cin, ostream &cout) {
-		int a, b;
+		int a;
+		int b;
 		cin >> a >> b;
-		cout << (10 * a + b) / (19);
+		cout << (10 * a + b) / 19;
 		return 0;
 	}
 }// namespace luogu

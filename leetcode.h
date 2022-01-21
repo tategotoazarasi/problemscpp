@@ -540,15 +540,19 @@ namespace leetcode {
 			char ch;
 			TrieNode *next[26] = {};
 			bool endroot;
-			TrieNode(): ch(0), endroot(false){};
-			TrieNode(char ch): ch(ch), endroot(false){};
+
+			TrieNode()
+			    : ch(0), endroot(false){};
+
+			explicit TrieNode(char ch)
+			    : ch(ch), endroot(false){};
 			void insert(const string &str);
-			string get_prefix(string root, const string &str);
+			[[nodiscard]] string get_prefix(string root, const string &str) const;
 		};
 
 		class Solution {
 		public:
-			static string replaceWords(vector<string> &dictionary, string sentence);
+			static string replaceWords(vector<string> &dictionary, const string &sentence);
 		};
 	}// namespace UhWRSj
 };   // namespace leetcode

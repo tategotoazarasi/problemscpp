@@ -1242,10 +1242,10 @@ namespace leetcode {
 	}// namespace remove_palindromic_subsequences
 
 	namespace UhWRSj {
-		string Solution::replaceWords(vector<string> &dictionary, string sentence) {
-			ostringstream oss = ostringstream();
-			char *nstr        = new char[sentence.length() + 1];
-			TrieNode tn       = TrieNode();
+		string Solution::replaceWords(vector<string> &dictionary, const string &sentence) {
+			auto oss         = ostringstream();
+			auto *const nstr = new char[sentence.length() + 1];
+			auto tn          = TrieNode();
 			for(const auto &root: dictionary) {
 				tn.insert(root);
 			}
@@ -1255,7 +1255,7 @@ namespace leetcode {
 				oss << tn.get_prefix("", string(word)) << " ";
 				word = strtok(nullptr, " ");
 			}
-			string ans = oss.str();
+			const string ans = oss.str();
 			return ans.substr(0, ans.length() - 1);
 		}
 
@@ -1270,7 +1270,7 @@ namespace leetcode {
 			this->next[str[0] - 'a']->insert(str.substr(1));
 		}
 
-		string TrieNode::get_prefix(string root, const string &str) {
+		string TrieNode::get_prefix(string root, const string &str) const {
 			if(this->endroot || str.empty()) {
 				return root;
 			}

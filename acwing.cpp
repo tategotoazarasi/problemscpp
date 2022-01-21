@@ -1906,12 +1906,13 @@ namespace acwing {
 	}
 
 	int acwing714::main(istream &cin, ostream &cout) {
-		short x, y;
+		short x;
+		short y;
 		cin >> x >> y;
 		if(y < x) {
-			auto temp = x;
-			x         = y;
-			y         = temp;
+			const auto temp = x;
+			x               = y;
+			y               = temp;
 		}
 		int count = 0;
 		for(int i = x + 1; i < y; i++) {
@@ -1945,16 +1946,16 @@ namespace acwing {
 					break;
 			}
 		}
-		unsigned int count = c_count + r_count + f_count;
+		const unsigned int count = c_count + r_count + f_count;
 		cout << setiosflags(ios::fixed) << setprecision(2) << "Total: " << count << " animals" << endl
 		     << "Total coneys: " << c_count << endl
 		     << "Total rats: " << r_count << endl
 		     << "Total frogs: " << f_count << endl
-		     << "Percentage of coneys: " << double(c_count) / double(count) * 100
+		     << "Percentage of coneys: " << static_cast<double>(c_count) / static_cast<double>(count) * 100
 		     << " %" << endl
-		     << "Percentage of rats: " << double(r_count) / double(count) * 100
+		     << "Percentage of rats: " << static_cast<double>(r_count) / static_cast<double>(count) * 100
 		     << " %" << endl
-		     << "Percentage of frogs: " << double(f_count) / double(count) * 100
+		     << "Percentage of frogs: " << static_cast<double>(f_count) / static_cast<double>(count) * 100
 		     << " %";
 		return 0;
 	}
@@ -1962,7 +1963,7 @@ namespace acwing {
 	int acwing1884::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		char *cow = new char[n];
+		auto *cow = new char[n];
 		auto *c   = new int[n];//当前项左边有多少个C
 		auto *w   = new int[n];//当前项右边有多少个W
 		c[0]      = 0;
