@@ -7,6 +7,7 @@
 #include <map>
 #include <queue>
 #include <set>
+#include <stack>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
@@ -1876,6 +1877,28 @@ namespace acwing {
 		for(int i = 1; i <= 10; i++) {
 			cout << i << " x " << n << " = " << i * n << endl;
 		}
+		return 0;
+	}
+
+	int acwing1904::main(istream &cin, ostream &cout) {
+		unsigned int n;
+		cin >> n;
+		auto speeds = map<unsigned int, unsigned int>();
+		for(unsigned int i = 0; i < n; i++) {
+			unsigned int pos;
+			unsigned int speed;
+			cin >> pos >> speed;
+			speeds.insert(pair(pos, speed));
+		}
+		unsigned int current_min = 1000000000;
+		unsigned int count       = 0;
+		for(auto i = speeds.rbegin(); i != speeds.rend(); ++i) {
+			if((*i).second <= current_min) {
+				current_min = (*i).second;
+				count++;
+			}
+		}
+		cout << count;
 		return 0;
 	}
 }// namespace acwing

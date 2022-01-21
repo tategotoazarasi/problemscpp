@@ -1051,4 +1051,12 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("1 x 140 = 140\n2 x 140 = 280\n3 x 140 = 420\n4 x 140 = 560\n5 x 140 = 700\n6 x 140 = 840\n7 x 140 = 980\n8 x 140 = 1120\n9 x 140 = 1260\n10 x 140 = 1400\n", ans);
 	}
+
+	TEST(acwing1904, case1) {
+		istringstream in("5\n0 1\n1 2\n2 3\n3 2\n6 1");
+		auto out = ostringstream();
+		acwing1904::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2", ans);
+	}
 }// namespace acwing
