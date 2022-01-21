@@ -813,4 +813,54 @@ namespace leetcode {
 			ASSERT_FALSE(Solution::stoneGameIX(vec));
 		}
 	}// namespace stone_game_ix
+
+	namespace jump_game_iv {
+		TEST(jump_game_iv, case1) {
+			int input[] = {100, -23, -23, 404, 100, 23, 23, 23, 3, 404};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(3, Solution::minJumps(vec));
+		}
+
+		TEST(jump_game_iv, case2) {
+			int input[] = {7};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(0, Solution::minJumps(vec));
+		}
+
+		TEST(jump_game_iv, case3) {
+			int input[] = {7, 6, 9, 6, 9, 6, 9, 7};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(1, Solution::minJumps(vec));
+		}
+
+		TEST(jump_game_iv, case4) {
+			int input[] = {6, 1, 9};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(2, Solution::minJumps(vec));
+		}
+
+		TEST(jump_game_iv, case5) {
+			int input[] = {100, -23, -23, 404, 100, 23, 23, 23, 3, 404};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(3, Solution::minJumps(vec));
+		}
+
+		TEST(jump_game_iv, case6) {
+			int input[] = {-76, 3, 66, -32, 64, 2, -19, -8, -5, -93, 80, -5, -76, -78, 64, 2, 16};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(5, Solution::minJumps(vec));
+		}
+
+		TEST(jump_game_iv, case7) {
+			int input[] = {-10, -25, 58, -67, 28, 86, 58, -29, -10, -10, 45, -80, 86, 35, -10, 58, -10, -98, -9, -98, -10, -67, -29, -6, 74, 46, -29, -5, 58, 58, -17, 28, -4, -67, 28, -98, -4, 86, -29, -92, -67, 58, -76, -27, -9, 58, -92, -42, -27, -41, 58, -25, 74, -98, -92, -10, -67, -6, -17, -5, -29, -17, -4, 28, -17, -80, 35, -9, 32, -29, -76, 46, -29, -5, -27, 35, 74, -92, -4, -98, -9, -10, -4, -27, -92, 74, -98, -29, -42, -9, 45, -10, -98, 28};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(3, Solution::minJumps(vec));
+		}
+
+		TEST(jump_game_iv, case8) {
+			int input[] = {7};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(0, Solution::minJumps(vec));
+		}
+	}// namespace jump_game_iv
 }// namespace leetcode

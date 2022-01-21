@@ -515,6 +515,16 @@ namespace leetcode {
 			static bool stoneGameIX(vector<int> &stones);
 		};
 	}// namespace stone_game_ix
+
+	/**
+	 * \brief LeetCode 1345. 跳跃游戏 IV
+	 */
+	namespace jump_game_iv {
+		class Solution {
+		public:
+			static int minJumps(vector<int> &arr);
+		};
+	}// namespace jump_game_iv
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

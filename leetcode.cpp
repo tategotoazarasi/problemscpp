@@ -1181,4 +1181,52 @@ namespace leetcode {
 			return true;
 		}
 	}// namespace stone_game_ix
+
+	namespace jump_game_iv {
+		int Solution::minJumps(vector<int> &arr) {
+			if(arr.size() == 1) {
+				return 0;
+			}
+			auto pq    = queue<pair<int, int>>();//<下标,step>
+			auto *flag = new bool[arr.size()];
+			memset(flag, 0, arr.size() * sizeof(bool));
+			auto um = unordered_map<int, vector<int>>();//<值,下标>
+			for(int i = 0; i < arr.size(); i++) {
+				if(!um.contains(arr[i])) {
+					auto vec = vector<int>();
+					vec.push_back(i);
+					um.insert(pair(arr[i], vec));
+				} else {
+					um[arr[i]].push_back(i);
+				}
+			}
+			pq.push(pair(0, 0));
+			flag[0] = true;
+			while(!pq.empty()) {
+				auto [current_i, current_count] = pq.front();
+				pq.pop();
+				if(current_i == arr.size() - 1) {
+					return current_count;
+				}
+				if(um.contains(arr[current_i])) {
+					for(auto i: um[arr[current_i]]) {
+						if(i != current_i && !flag[i]) {
+							pq.push(pair(i, current_count + 1));
+							flag[i] = true;
+						}
+					}
+				}
+				um.erase(arr[current_i]);
+				if(current_i - 1 >= 0 && !flag[current_i - 1]) {
+					pq.push(pair(current_i - 1, current_count + 1));
+					flag[current_i - 1] = true;
+				}
+				if(current_i + 1 < arr.size() && !flag[current_i + 1]) {
+					pq.push(pair(current_i + 1, current_count + 1));
+					flag[current_i + 1] = true;
+				}
+			}
+			return 0;
+		}
+	}// namespace jump_game_iv
 }// namespace leetcode
