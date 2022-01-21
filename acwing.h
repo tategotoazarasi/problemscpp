@@ -663,5 +663,13 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/**
+	 * \brief AcWing 711. 乘法表
+	 */
+	class acwing711 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

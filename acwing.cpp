@@ -1870,4 +1870,12 @@ namespace acwing {
 		return 0;
 	}
 
+	int acwing711::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		for(int i = 1; i <= 10; i++) {
+			cout << i << " x " << n << " = " << i * n << endl;
+		}
+		return 0;
+	}
 }// namespace acwing
