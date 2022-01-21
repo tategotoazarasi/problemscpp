@@ -1035,4 +1035,12 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("2", ans);
 	}
+
+	TEST(acwing712, case1) {
+		istringstream in("7\n-5\n6\n-3.4\n4.6\n12");
+		auto out = ostringstream();
+		acwing712::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("4 positive numbers", ans);
+	}
 }// namespace acwing

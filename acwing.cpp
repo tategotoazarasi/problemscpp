@@ -1856,4 +1856,18 @@ namespace acwing {
 		cout << max(maximum, max(g_max, h_max));
 		return 0;
 	}
+
+	int acwing712::main(istream &cin, ostream &cout) {
+		int count = 0;
+		for(int i = 0; i < 6; i++) {
+			double x;
+			cin >> x;
+			if(x > 0) {
+				count++;
+			}
+		}
+		cout << count << " positive numbers";
+		return 0;
+	}
+
 }// namespace acwing
