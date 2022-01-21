@@ -203,4 +203,55 @@ namespace luogu {
 		cout << diff / 60 << " " << diff % 60;
 		return 0;
 	}
+
+	int P2433::main(istream &cin, ostream &cout) {
+		int T;
+		cin >> T;
+		if(T == 1) {
+			cout << "I love Luogu!";
+		} else if(T == 2) {
+			cout << 2 + 4 << " " << 10 - 2 - 4;
+		} else if(T == 3) {
+			cout << 14 / 4 << endl
+			     << 14 / 4 * 4 << endl
+			     << 14 % 4;
+		} else if(T == 4) {
+			cout << setiosflags(ios::fixed) << setprecision(3) << 500.0 / 3.0;
+		} else if(T == 5) {
+			cout << (260 + 220) / (12 + 20);
+		} else if(T == 6) {
+			cout << sqrt(6 * 6 + 9 * 9);
+		} else if(T == 7) {
+			int deposit = 100;
+			deposit += 10;
+			cout << deposit << endl;
+			deposit -= 20;
+			cout << deposit << endl;
+			deposit = 0;
+			cout << deposit << endl;
+		} else if(T == 8) {
+			cout << 2 * 5 * 3.141593 << endl;
+			cout << 5 * 5 * 3.141593 << endl;
+			cout << 4 * 5 * 5 * 5 * 3.141593 / 3 << endl;
+		} else if(T == 9) {
+			const int peach = 1;
+			cout << (((peach + 1) * 2 + 1) * 2 + 1) * 2;
+		} else if(T == 10) {
+			cout << 90 / 10;
+		} else if(T == 11) {
+			cout << 100.0 / 3.0;
+		} else if(T == 12) {
+			cout << 'M' - 'A' + 1 << endl;
+			cout << static_cast<char>('A' - 1 + 18);
+		} else if(T == 13) {
+			const double r1 = 4;
+			const double r2 = 10;
+			const double v1 = 4 * r1 * r1 * r1 * 3.141593 / 3;
+			const double v2 = 4 * r2 * r2 * r2 * 3.141593 / 3;
+			cout << static_cast<int>(pow(v1 + v2, 1.0 / 3.0));
+		} else if(T == 14) {
+			cout << 50;
+		}
+		return 0;
+	}
 }// namespace luogu
