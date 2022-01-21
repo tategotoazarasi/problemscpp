@@ -192,4 +192,15 @@ namespace luogu {
 		     << n * 2;
 		return 0;
 	}
+
+	int P1425::main(istream &cin, ostream &cout) {
+		int a;
+		int b;
+		int c;
+		int d;
+		cin >> a >> b >> c >> d;
+		const int diff = (c - a) * 60 + d - b;
+		cout << diff / 60 << " " << diff % 60;
+		return 0;
+	}
 }// namespace luogu

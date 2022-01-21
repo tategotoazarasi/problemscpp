@@ -107,4 +107,12 @@ namespace luogu {
 		          "6",
 		          ans);
 	}
+
+	TEST(P1425, case1) {
+		istringstream in("12 50 19 10");
+		auto out = ostringstream();
+		P1425::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("6 20", ans);
+	}
 }// namespace luogu
