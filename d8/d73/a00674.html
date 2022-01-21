@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: lintcode::min_diff_in_BST::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,18 +63,90 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d1/dd6/a00108.html">luogu</a></li><li class="navelem"><a class="el" href="../../dc/de4/a00677.html">P1003</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d9/df8/a00096.html">lintcode</a></li><li class="navelem"><a class="el" href="../../d1/dd6/a00108.html">min_diff_in_BST</a></li><li class="navelem"><a class="el" href="../../d8/d73/a00674.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">luogu::P1003 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d8/d13/a00671.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">lintcode::min_diff_in_BST::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../dc/de4/a00677.html">luogu::P1003</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../dc/de4/a00677.html#a114c413a3774eb3fb62e61f386b48dab">main</a>(istream &amp;cin, ostream &amp;cout)</td><td class="entry"><a class="el" href="../../dc/de4/a00677.html">luogu::P1003</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../d6/d5b/a00026_source.html">lintcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a9be648f179d413e04e25eb5a88e278bb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d73/a00674.html#a9be648f179d413e04e25eb5a88e278bb">minDiffInBST</a> (<a class="el" href="../../d6/dfa/a00626.html">TreeNode</a> *root)</td></tr>
+<tr class="separator:a9be648f179d413e04e25eb5a88e278bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">lintcode.h</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l00171">171</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a9be648f179d413e04e25eb5a88e278bb" name="a9be648f179d413e04e25eb5a88e278bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be648f179d413e04e25eb5a88e278bb">&#9670;&nbsp;</a></span>minDiffInBST()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lintcode::min_diff_in_BST::Solution::minDiffInBST </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dfa/a00626.html">TreeNode</a> *&#160;</td>
+          <td class="paramname"><em>root</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>a Binary Search Tree (BST) with the root node </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>: the minimum difference </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">lintcode.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l00305">305</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                                                 {</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>            <span class="keyword">auto</span> vals = vector&lt;int&gt;();</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            <span class="keyword">auto</span> que  = queue&lt;TreeNode *&gt;();</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            que.push(root);</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            <span class="keywordflow">while</span>(!que.empty()) {</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                <span class="keyword">const</span> <span class="keyword">auto</span> *node = que.front();</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                que.pop();</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                vals.push_back(node-&gt;val);</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                <span class="keywordflow">if</span>(node-&gt;left != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                    que.push(node-&gt;left);</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                }</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                <span class="keywordflow">if</span>(node-&gt;right != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                    que.push(node-&gt;right);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                }</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            }</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            sort(vals.begin(), vals.end());</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            <span class="keywordtype">int</span> minimum = INT_MAX;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i + 1 &lt; vals.size(); i++) {</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                minimum = min(vals[i + 1] - vals[i], minimum);</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            }</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            <span class="keywordflow">return</span> minimum;</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../d6/d5b/a00026_source.html">lintcode.h</a></li>
+<li><a class="el" href="../../d5/d16/a00029_source.html">lintcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
