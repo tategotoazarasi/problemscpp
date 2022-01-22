@@ -325,20 +325,23 @@ $(function() {
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    }</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="../../de/d3d/a00748.html#a67dbb732adc630a8842c166ed1da33f9">  259</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d3d/a00748.html#a67dbb732adc630a8842c166ed1da33f9">P5708::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        <span class="keywordtype">double</span> a, b, c;</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <span class="keywordtype">double</span> p = (a + b + c) / 2;</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        cout &lt;&lt; setiosflags(ios::fixed) &lt;&lt; setprecision(1) &lt;&lt; sqrt(p * (p - a) * (p - b) * (p - c));</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    }</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="../../dd/d5c/a00752.html#a36b3468dc46e0eba1397a9f96de003c1">  267</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../dd/d5c/a00752.html#a36b3468dc46e0eba1397a9f96de003c1">P1421::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keywordtype">int</span> a, b;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        cin &gt;&gt; a &gt;&gt; b;</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        cout &lt;&lt; (10 * a + b) / (19);</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    }</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>}<span class="comment">// namespace luogu</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        <span class="keywordtype">double</span> a;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keywordtype">double</span> b;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <span class="keywordtype">double</span> c;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> p = (a + b + c) / 2;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        cout &lt;&lt; setiosflags(ios::fixed) &lt;&lt; setprecision(1) &lt;&lt; sqrt(p * (p - a) * (p - b) * (p - c));</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    }</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="../../dd/d5c/a00752.html#a36b3468dc46e0eba1397a9f96de003c1">  269</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../dd/d5c/a00752.html#a36b3468dc46e0eba1397a9f96de003c1">P1421::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        <span class="keywordtype">int</span> a;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordtype">int</span> b;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        cin &gt;&gt; a &gt;&gt; b;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        cout &lt;&lt; (10 * a + b) / 19;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    }</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>}<span class="comment">// namespace luogu</span></div>
 <div class="ttc" id="aa00032_html"><div class="ttname"><a href="../../dc/d87/a00032.html">luogu.h</a></div></div>
 <div class="ttc" id="aa00111_html"><div class="ttname"><a href="../../dd/d6d/a00111.html">luogu</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00009">luogu.cpp:9</a></div></div>
 <div class="ttc" id="aa00704_html_aafbc8703d7ed8ddba91bea69ea72fc4c"><div class="ttname"><a href="../../d4/d6a/a00704.html#aafbc8703d7ed8ddba91bea69ea72fc4c">luogu::P1001::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00010">luogu.cpp:10</a></div></div>
@@ -353,7 +356,7 @@ $(function() {
 <div class="ttc" id="aa00740_html_ab8b1ea5eb1baa641963c6446570cdb2a"><div class="ttname"><a href="../../dc/dce/a00740.html#ab8b1ea5eb1baa641963c6446570cdb2a">luogu::P1425::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00197">luogu.cpp:197</a></div></div>
 <div class="ttc" id="aa00744_html_a29bde391fa94b704a9d170acfb74aaaa"><div class="ttname"><a href="../../d5/db3/a00744.html#a29bde391fa94b704a9d170acfb74aaaa">luogu::P2433::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00208">luogu.cpp:208</a></div></div>
 <div class="ttc" id="aa00748_html_a67dbb732adc630a8842c166ed1da33f9"><div class="ttname"><a href="../../de/d3d/a00748.html#a67dbb732adc630a8842c166ed1da33f9">luogu::P5708::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00259">luogu.cpp:259</a></div></div>
-<div class="ttc" id="aa00752_html_a36b3468dc46e0eba1397a9f96de003c1"><div class="ttname"><a href="../../dd/d5c/a00752.html#a36b3468dc46e0eba1397a9f96de003c1">luogu::P1421::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00267">luogu.cpp:267</a></div></div>
+<div class="ttc" id="aa00752_html_a36b3468dc46e0eba1397a9f96de003c1"><div class="ttname"><a href="../../dd/d5c/a00752.html#a36b3468dc46e0eba1397a9f96de003c1">luogu::P1421::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00269">luogu.cpp:269</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
