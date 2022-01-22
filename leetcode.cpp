@@ -1240,4 +1240,44 @@ namespace leetcode {
 			return 1;
 		}
 	}// namespace remove_palindromic_subsequences
+
+	namespace UhWRSj {
+		string Solution::replaceWords(vector<string> &dictionary, string sentence) {
+			ostringstream oss = ostringstream();
+			char *nstr        = new char[sentence.length() + 1];
+			TrieNode tn       = TrieNode();
+			for(const auto &root: dictionary) {
+				tn.insert(root);
+			}
+			strcpy(nstr, sentence.c_str());
+			char *word = strtok(nstr, " ");
+			while(word != nullptr) {
+				oss << tn.get_prefix("", string(word)) << " ";
+				word = strtok(nullptr, " ");
+			}
+			string ans = oss.str();
+			return ans.substr(0, ans.length() - 1);
+		}
+
+		void TrieNode::insert(const string &str) {
+			if(str.empty()) {
+				this->endroot = true;
+				return;
+			}
+			if(this->next[str[0] - 'a'] == nullptr) {
+				this->next[str[0] - 'a'] = new TrieNode(str[0]);
+			}
+			this->next[str[0] - 'a']->insert(str.substr(1));
+		}
+
+		string TrieNode::get_prefix(string root, const string &str) {
+			if(this->endroot || str.empty()) {
+				return root;
+			}
+			if(this->next[str[0] - 'a'] == nullptr) {
+				return root + str;
+			}
+			return this->next[str[0] - 'a']->get_prefix(root + str[0], str.substr(1));
+		}
+	}// namespace UhWRSj
 }// namespace leetcode

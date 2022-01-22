@@ -877,4 +877,36 @@ namespace leetcode {
 			ASSERT_EQ(2, Solution::removePalindromeSub("baabb"));
 		}
 	}// namespace remove_palindromic_subsequences
+
+	namespace UhWRSj {
+		TEST(UhWRSj, case1) {
+			string input[] = {"cat", "bat", "rat"};
+			auto vec       = vector(begin(input), end(input));
+			ASSERT_EQ("the cat was rat by the bat", Solution::replaceWords(vec, "the cattle was rattled by the battery"));
+		}
+
+		TEST(UhWRSj, case2) {
+			string input[] = {"a", "b", "c"};
+			auto vec       = vector(begin(input), end(input));
+			ASSERT_EQ("a a b c", Solution::replaceWords(vec, "aadsfasf absbs bbab cadsfafs"));
+		}
+
+		TEST(UhWRSj, case3) {
+			string input[] = {"a", "aa", "aaa", "aaaa"};
+			auto vec       = vector(begin(input), end(input));
+			ASSERT_EQ("a a a a a a a a bbb baba a", Solution::replaceWords(vec, "a aa a aaaa aaa aaa aaa aaaaaa bbb baba ababa"));
+		}
+
+		TEST(UhWRSj, case4) {
+			string input[] = {"catt", "cat", "bat", "rat"};
+			auto vec       = vector(begin(input), end(input));
+			ASSERT_EQ("the cat was rat by the bat", Solution::replaceWords(vec, "the cattle was rattled by the battery"));
+		}
+
+		TEST(UhWRSj, case5) {
+			string input[] = {"ac", "ab"};
+			auto vec       = vector(begin(input), end(input));
+			ASSERT_EQ("it is ab that this solution is ac", Solution::replaceWords(vec, "it is abnormal that this solution is accepted"));
+		}
+	}// namespace UhWRSj
 }// namespace leetcode

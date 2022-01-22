@@ -533,6 +533,24 @@ namespace leetcode {
 			static int removePalindromeSub(string s);
 		};
 	}// namespace remove_palindromic_subsequences
+
+	/// \brief 剑指 Offer II 063. 替换单词
+	namespace UhWRSj {
+		struct TrieNode {
+			char ch;
+			TrieNode *next[26] = {};
+			bool endroot;
+			TrieNode(): ch(0), endroot(false){};
+			TrieNode(char ch): ch(ch), endroot(false){};
+			void insert(const string &str);
+			string get_prefix(string root, const string &str);
+		};
+
+		class Solution {
+		public:
+			static string replaceWords(vector<string> &dictionary, string sentence);
+		};
+	}// namespace UhWRSj
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
