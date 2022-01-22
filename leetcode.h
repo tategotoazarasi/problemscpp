@@ -555,6 +555,54 @@ namespace leetcode {
 			static string replaceWords(vector<string> &dictionary, const string &sentence);
 		};
 	}// namespace UhWRSj
+
+	/**
+	 * \brief LeetCode 5971. 打折购买糖果的最小开销
+	 */
+	namespace minimum_cost_of_buying_candies_with_discount {
+		class Solution {
+		public:
+			static int minimumCost(vector<int> &cost);
+		};
+	}// namespace minimum_cost_of_buying_candies_with_discount
+
+	/**
+	 * \brief LeetCode 5972. 统计隐藏数组数目
+	 */
+	namespace count_the_hidden_sequences {
+		class Solution {
+		public:
+			static int numberOfArrays(vector<int> &differences, int lower, int upper);
+		};
+	}// namespace count_the_hidden_sequences
+
+	/**
+	 * \brief LeetCode 5973. 价格范围内最高排名的 K 样物品
+	 */
+	namespace k_highest_ranked_items_within_a_price_range {
+		struct item {
+			int distance;
+			int price;
+			int row;
+			int col;
+
+			item(int distance, int price, int row, int col)
+			    : distance(distance), price(price), row(row), col(col){};
+			bool operator<(const item & /*i*/) const;
+		};
+
+		class Solution {
+		public:
+			static vector<vector<int>> highestRankedKItems(vector<vector<int>> &grid, vector<int> &pricing, vector<int> &start, int k);
+		};
+	}// namespace k_highest_ranked_items_within_a_price_range
+
+	namespace number_of_ways_to_divide_a_long_corridor {
+		class Solution {
+		public:
+			static int numberOfWays(string corridor);
+		};
+	}// namespace number_of_ways_to_divide_a_long_corridor
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

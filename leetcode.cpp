@@ -1280,4 +1280,145 @@ namespace leetcode {
 			return this->next[str[0] - 'a']->get_prefix(root + str[0], str.substr(1));
 		}
 	}// namespace UhWRSj
+
+	namespace minimum_cost_of_buying_candies_with_discount {
+		int Solution::minimumCost(vector<int> &cost) {
+			if(cost.size() == 1) {
+				return cost[0];
+			}
+			if(cost.size() == 2) {
+				return cost[0] + cost[1];
+			}
+			int count = 0;
+			sort(cost.rbegin(), cost.rend());
+			for(int i = 0; i < cost.size(); i++) {
+				if(i % 3 != 2) {
+					count += cost[i];
+				}
+			}
+			return count;
+		}
+	}// namespace minimum_cost_of_buying_candies_with_discount
+
+	namespace count_the_hidden_sequences {
+		int Solution::numberOfArrays(vector<int> &differences, int lower, int upper) {
+			long long current = 0;
+			long long maximum = 0;
+			long long minimum = 0;
+			for(const auto difference: differences) {
+				current += difference;
+				maximum = max(maximum, current);
+				minimum = min(minimum, current);
+			}
+			return max(static_cast<long long>(0), upper - lower - (maximum - minimum) + 1);
+		}
+	}// namespace count_the_hidden_sequences
+
+	namespace k_highest_ranked_items_within_a_price_range {
+		vector<vector<int>> Solution::highestRankedKItems(vector<vector<int>> &grid, vector<int> &pricing, vector<int> &start, int k) {
+			const auto m    = grid.size();
+			const auto n    = grid[0].size();
+			auto ans        = vector<vector<int>>();
+			const auto low  = pricing[0];
+			const auto high = pricing[1];
+			const auto row  = start[0];
+			const auto col  = start[1];
+			auto pq         = priority_queue<item>();
+			pq.push(item(0, grid[row][col], row, col));
+			grid[row][col] = 0;
+			while(pq.empty() && k != 0) {
+				auto current = pq.top();
+				pq.pop();
+				if(current.price != 1 && current.price >= low && current.price <= high) {
+					k--;
+					auto vec = vector<int>();
+					vec.push_back(current.row);
+					vec.push_back(current.col);
+					ans.push_back(vec);
+				}
+				pair<int, int> nexts[4] = {pair(current.row + 1, current.col),
+				                           pair(current.row - 1, current.col),
+				                           pair(current.row, current.col + 1),
+				                           pair(current.row, current.col - 1)};
+				for(const pair<int, int> next: nexts) {
+					if(0 <= next.first && next.first < m && 0 <= next.second && next.second < n && grid[next.first][next.second] != 0) {
+						pq.push(item(current.distance + 1, grid[next.first][next.second], next.first, next.second));
+						grid[next.first][next.second] = 0;
+					}
+				}
+			}
+			return ans;
+		}
+
+		bool item::operator<(const item &i) const {
+			if(this->distance != i.distance) {
+				return this->distance > i.distance;
+			}
+			if(this->price != i.price) {
+				return this->price > i.price;
+			}
+			if(this->row != i.row) {
+				return this->row > i.row;
+			}
+			return this->col > i.col;
+		}
+	}// namespace k_highest_ranked_items_within_a_price_range
+
+	namespace number_of_ways_to_divide_a_long_corridor {
+		int Solution::numberOfWays(string corridor) {
+			unsigned int s_count = 0;
+			auto p               = vector<unsigned int>();
+			for(const char ch: corridor) {
+				if(ch == 'S') {
+					s_count++;
+				}
+			}
+			if(s_count == 0 || s_count % 2 != 0) {
+				return 0;
+			}
+			if(s_count == 2) {
+				return 1;
+			}
+			unsigned int start = 0;
+			unsigned int end   = corridor.length() - 1;
+			for(; start < end; start++) {
+				if(corridor[start] == 'S') {
+					break;
+				}
+			}
+			for(; end > start; end--) {
+				if(corridor[end] == 'S') {
+					break;
+				}
+			}
+			s_count              = 1;
+			unsigned int p_count = 0;
+			bool flag            = false;//是否在边界
+			for(unsigned int i = start + 1; i <= end; i++) {
+				if(corridor[i] == 'S') {
+					s_count++;
+				} else {
+					if(s_count == 0) {
+						p_count++;
+					}
+				}
+				s_count %= 2;
+				if(s_count == 0) {
+					flag = true;
+				} else if(s_count == 1) {
+					if(flag) {
+						p.push_back(p_count + 1);
+						p_count = 0;
+					}
+					flag = false;
+				}
+			}
+			unsigned long long ans = 1;
+			for(const auto i: p) {
+				ans *= i;
+				ans %= 1000000007;
+			}
+			return ans;
+		}
+	}// namespace number_of_ways_to_divide_a_long_corridor
 }// namespace leetcode

@@ -909,4 +909,66 @@ namespace leetcode {
 			ASSERT_EQ("it is ab that this solution is ac", Solution::replaceWords(vec, "it is abnormal that this solution is accepted"));
 		}
 	}// namespace UhWRSj
+
+	namespace minimum_cost_of_buying_candies_with_discount {
+		TEST(minimum_cost_of_buying_candies_with_discount, case1) {
+			int input[] = {1, 2, 3};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(5, Solution::minimumCost(vec));
+		}
+
+		TEST(minimum_cost_of_buying_candies_with_discount, case2) {
+			int input[] = {6, 5, 7, 9, 2, 2};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(23, Solution::minimumCost(vec));
+		}
+
+		TEST(minimum_cost_of_buying_candies_with_discount, case3) {
+			int input[] = {5, 5};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(10, Solution::minimumCost(vec));
+		}
+	}// namespace minimum_cost_of_buying_candies_with_discount
+
+	namespace count_the_hidden_sequences {
+		TEST(count_the_hidden_sequences, case1) {
+			int input[] = {1, -3, 4};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(2, Solution::numberOfArrays(vec, 1, 6));
+		}
+
+		TEST(count_the_hidden_sequences, case2) {
+			int input[] = {3, -4, 5, 1, -2};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(4, Solution::numberOfArrays(vec, -4, 5));
+		}
+
+		TEST(count_the_hidden_sequences, case3) {
+			int input[] = {4, -7, 2};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(0, Solution::numberOfArrays(vec, 3, 6));
+		}
+	}// namespace count_the_hidden_sequences
+
+	namespace number_of_ways_to_divide_a_long_corridor {
+		TEST(number_of_ways_to_divide_a_long_corridor, case1) {
+			ASSERT_EQ(3, Solution::numberOfWays("SSPPSPS"));
+		}
+
+		TEST(number_of_ways_to_divide_a_long_corridor, case2) {
+			ASSERT_EQ(1, Solution::numberOfWays("PPSPSP"));
+		}
+
+		TEST(number_of_ways_to_divide_a_long_corridor, case3) {
+			ASSERT_EQ(0, Solution::numberOfWays("S"));
+		}
+
+		TEST(number_of_ways_to_divide_a_long_corridor, case4) {
+			ASSERT_EQ(0, Solution::numberOfWays("P"));
+		}
+
+		TEST(number_of_ways_to_divide_a_long_corridor, case6) {
+			ASSERT_EQ(1, Solution::numberOfWays("PSSSSP"));
+		}
+	}// namespace number_of_ways_to_divide_a_long_corridor
 }// namespace leetcode
