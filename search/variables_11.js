@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x_0',['x',['../d2/d94/a00184.html#a858de27a9ad7db2ce745e880b56299a6',1,'acwing::acwing2060::point::x()'],['../d7/ded/a00196.html#acaa459e164175cdbde974462ea6cf4a8',1,'acwing::acwing2019::point::x()'],['../d8/ddd/a00380.html#a1a66c3669ad5d5a8e768b745d216cdec',1,'acwing::acwing1929::step::x()'],['../de/d7c/a00576.html#ab29729c4bc9255f281c6c238c61ca01d',1,'leetcode::escape_a_large_maze::point::x()']]]
+  ['v_0',['v',['../d1/d8c/a00600.html#a123d775b06a7fa0a9780fa5c725be069',1,'leetcode::find_k_pairs_with_smallest_sums::pair']]],
+  ['val_1',['val',['../d0/def/a00256.html#ae0d1fe80bfe08a47d510c9763d3d5080',1,'acwing::acwing4208::trie_node::val()'],['../db/db1/a00460.html#abfb4bc8fa2027ea8d339d1d5e91120bd',1,'leetcode::TreeNode::val()'],['../d2/d9d/a00464.html#ac0338d422b312c4699c4952b611bc2db',1,'leetcode::ListNode::val()'],['../de/d4e/a00500.html#a22dc2dd935e1fceb6743a002463246dc',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::val()'],['../d6/dd3/a00688.html#a5383e5b775ac390c4a6721036a070f08',1,'lintcode::TreeNode::val()']]]
 ];

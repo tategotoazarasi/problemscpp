@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['b_0',['b',['../d8/d0a/a00292.html#a567a53696628ec73eb65cabd484946a3',1,'acwing::acwing1978::path']]]
+  ['b_0',['b',['../db/d7b/a00296.html#a567a53696628ec73eb65cabd484946a3',1,'acwing::acwing1978::path']]]
 ];

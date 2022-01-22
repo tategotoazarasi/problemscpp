@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wordcount_0',['wordCount',['../d9/d19/a00560.html#a7f1751f84964dffec1cb5db46bef2816',1,'leetcode::count_words_obtained_after_adding_a_letter::Solution']]]
+  ['vlr_0',['vlr',['../dc/d14/a00720.html#a47f082993860ad08aacec0864e34cf80',1,'lintcode::flatten::Solution']]]
 ];
