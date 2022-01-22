@@ -1086,4 +1086,29 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("0", ans);
 	}
+
+	TEST(acwing718, case1) {
+		istringstream in("10\n"
+		                 "10 C\n"
+		                 "6 R\n"
+		                 "15 F\n"
+		                 "5 C\n"
+		                 "14 R\n"
+		                 "9 C\n"
+		                 "6 R\n"
+		                 "8 F\n"
+		                 "5 C\n"
+		                 "14 R");
+		auto out = ostringstream();
+		acwing718::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Total: 92 animals\n"
+		          "Total coneys: 29\n"
+		          "Total rats: 40\n"
+		          "Total frogs: 23\n"
+		          "Percentage of coneys: 31.52 %\n"
+		          "Percentage of rats: 43.48 %\n"
+		          "Percentage of frogs: 25.00 %",
+		          ans);
+	}
 }// namespace acwing

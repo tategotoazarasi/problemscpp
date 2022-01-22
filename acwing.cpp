@@ -1922,4 +1922,40 @@ namespace acwing {
 		cout << count;
 		return 0;
 	}
+
+	int acwing718::main(istream &cin, ostream &cout) {
+		unsigned short n;
+		cin >> n;
+		unsigned int c_count = 0;
+		unsigned int r_count = 0;
+		unsigned int f_count = 0;
+		for(unsigned short i = 0; i < n; i++) {
+			unsigned short a;
+			char t;
+			cin >> a >> t;
+			switch(t) {
+				case 'C':
+					c_count += a;
+					break;
+				case 'R':
+					r_count += a;
+					break;
+				case 'F':
+					f_count += a;
+					break;
+			}
+		}
+		unsigned int count = c_count + r_count + f_count;
+		cout << setiosflags(ios::fixed) << setprecision(2) << "Total: " << count << " animals" << endl
+		     << "Total coneys: " << c_count << endl
+		     << "Total rats: " << r_count << endl
+		     << "Total frogs: " << f_count << endl
+		     << "Percentage of coneys: " << double(c_count) / double(count) * 100
+		     << " %" << endl
+		     << "Percentage of rats: " << double(r_count) / double(count) * 100
+		     << " %" << endl
+		     << "Percentage of frogs: " << double(f_count) / double(count) * 100
+		     << " %";
+		return 0;
+	}
 }// namespace acwing
