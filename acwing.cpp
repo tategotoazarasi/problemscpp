@@ -300,6 +300,7 @@ namespace acwing {
 		}
 		sort(haystack + 1, haystack + n + 1);
 		cout << haystack[(n + 1) / 2];
+		delete[] haystack;
 		return 0;
 	}
 
@@ -503,6 +504,7 @@ namespace acwing {
 			}
 		}
 		cout << max;
+		delete[] above;
 		return 0;
 	}
 
@@ -668,6 +670,7 @@ namespace acwing {
 			}
 		}
 		cout << count;
+		delete[] in_sub;
 		return 0;
 	}
 
@@ -1896,6 +1899,24 @@ namespace acwing {
 			if((*i).second <= current_min) {
 				current_min = (*i).second;
 				count++;
+			}
+		}
+		cout << count;
+		return 0;
+	}
+
+	int acwing714::main(istream &cin, ostream &cout) {
+		short x, y;
+		cin >> x >> y;
+		if(y < x) {
+			auto temp = x;
+			x         = y;
+			y         = temp;
+		}
+		int count = 0;
+		for(int i = x + 1; i < y; i++) {
+			if(i % 2 != 0) {
+				count += i;
 			}
 		}
 		cout << count;

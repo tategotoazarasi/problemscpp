@@ -1059,4 +1059,31 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("2", ans);
 	}
+
+	TEST(acwing714, case1) {
+		istringstream in("6\n"
+		                 "-5");
+		auto out = ostringstream();
+		acwing714::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("5", ans);
+	}
+
+	TEST(acwing714, case2) {
+		istringstream in("15\n"
+		                 "12");
+		auto out = ostringstream();
+		acwing714::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("13", ans);
+	}
+
+	TEST(acwing714, case3) {
+		istringstream in("12\n"
+		                 "12");
+		auto out = ostringstream();
+		acwing714::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("0", ans);
+	}
 }// namespace acwing
