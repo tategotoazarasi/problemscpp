@@ -119,42 +119,42 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">acwing.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00390">390</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                                                        {</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>            <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>            <span class="keywordtype">int</span> start_x;</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>            <span class="keywordtype">int</span> start_y;</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>            <span class="keyword">auto</span> *field = <span class="keyword">new</span> <span class="keywordtype">int</span> *[<a class="code hl_variable" href="../../d2/dee/a00049.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a> + 10];</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d2/dee/a00049.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a> + 10; i++) {</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>                field[i] = <span class="keyword">new</span> <span class="keywordtype">int</span>[<a class="code hl_variable" href="../../d2/dee/a00049.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a> + 10];</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>                memset(field[i], 0, (<a class="code hl_variable" href="../../d2/dee/a00049.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a> + 10) * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>            }</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>            <span class="comment">//int field[N + 10][N + 10];   //记录状态。0=没有 1=墙 2=已经被搜索过</span></div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span> </div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>            cin &gt;&gt; n &gt;&gt; start_x &gt;&gt; start_y;</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>            <span class="comment">//memset(field, 0, sizeof field);</span></div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>            <span class="keywordtype">int</span> max_x = 0;</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>            <span class="keywordtype">int</span> max_y = 0;</div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>                <span class="keywordtype">int</span> x;</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>                <span class="keywordtype">int</span> y;</div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                cin &gt;&gt; x &gt;&gt; y;</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>                <span class="keywordflow">if</span>(max_x &lt; x) {</div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                    max_x = x;</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                }</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                <span class="keywordflow">if</span>(max_y &lt; y) {</div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                    max_y = y;</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>                }</div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>                field[x][y] = 1;</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>            }</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span> </div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>            cout &lt;&lt; <a class="code hl_function" href="../../d2/dee/a00049.html#aebbe246b1823b0e047716abf2ebc661e">bfs</a>(point(start_x, start_y, 0), field, max_x, max_y);</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">acwing.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00391">391</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                                                        {</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>            <span class="keywordtype">int</span> start_x;</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>            <span class="keywordtype">int</span> start_y;</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>            <span class="keyword">auto</span> *field = <span class="keyword">new</span> <span class="keywordtype">int</span> *[<a class="code hl_variable" href="../../d2/dee/a00049.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a> + 10];</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d2/dee/a00049.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a> + 10; i++) {</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>                field[i] = <span class="keyword">new</span> <span class="keywordtype">int</span>[<a class="code hl_variable" href="../../d2/dee/a00049.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a> + 10];</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>                memset(field[i], 0, (<a class="code hl_variable" href="../../d2/dee/a00049.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a> + 10) * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>            }</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>            <span class="comment">//int field[N + 10][N + 10];   //记录状态。0=没有 1=墙 2=已经被搜索过</span></div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span> </div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>            cin &gt;&gt; n &gt;&gt; start_x &gt;&gt; start_y;</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>            <span class="comment">//memset(field, 0, sizeof field);</span></div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>            <span class="keywordtype">int</span> max_x = 0;</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>            <span class="keywordtype">int</span> max_y = 0;</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>                <span class="keywordtype">int</span> x;</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                <span class="keywordtype">int</span> y;</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>                cin &gt;&gt; x &gt;&gt; y;</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                <span class="keywordflow">if</span>(max_x &lt; x) {</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                    max_x = x;</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                }</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                <span class="keywordflow">if</span>(max_y &lt; y) {</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>                    max_y = y;</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>                }</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>                field[x][y] = 1;</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>            }</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span> </div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>            cout &lt;&lt; <a class="code hl_function" href="../../d2/dee/a00049.html#aebbe246b1823b0e047716abf2ebc661e">bfs</a>(point(start_x, start_y, 0), field, max_x, max_y);</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        }</div>
 <div class="ttc" id="aa00049_html_ab0d0f3a698d2eb3fdc6107c07ccfdbe8"><div class="ttname"><a href="../../d2/dee/a00049.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">acwing::acwing2019::N</a></div><div class="ttdeci">const int N</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00133">acwing.h:133</a></div></div>
-<div class="ttc" id="aa00049_html_aebbe246b1823b0e047716abf2ebc661e"><div class="ttname"><a href="../../d2/dee/a00049.html#aebbe246b1823b0e047716abf2ebc661e">acwing::acwing2019::bfs</a></div><div class="ttdeci">int bfs(point start, int **field, int max_x, int max_y)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l00422">acwing.cpp:422</a></div></div>
+<div class="ttc" id="aa00049_html_aebbe246b1823b0e047716abf2ebc661e"><div class="ttname"><a href="../../d2/dee/a00049.html#aebbe246b1823b0e047716abf2ebc661e">acwing::acwing2019::bfs</a></div><div class="ttdeci">int bfs(point start, int **field, int max_x, int max_y)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l00423">acwing.cpp:423</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../db/db2/a00020_source.html#l00422">acwing::acwing2019::bfs()</a> , 以及 <a class="el" href="../../d2/de7/a00014_source.html#l00133">acwing::acwing2019::N</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../db/db2/a00020_source.html#l00423">acwing::acwing2019::bfs()</a> , 以及 <a class="el" href="../../d2/de7/a00014_source.html#l00133">acwing::acwing2019::N</a>.</p>
 
 </div>
 </div>

@@ -148,34 +148,34 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">acwing.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00362">362</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                            {</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            <span class="keyword">auto</span> que      = queue&lt;point&gt;();</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            <span class="keyword">const</span> <span class="keyword">auto</span> eq = <a class="code hl_struct" href="../../dd/da2/a00192.html">pointequal</a>();</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>            que.push(first);</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>            <span class="keywordflow">while</span>(!que.empty()) {</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                <span class="keyword">auto</span> p = que.front();</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                <span class="keywordflow">if</span>(!eq(p, first) &amp;&amp; occupy[p.x][p.y]) {</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                    que.pop();</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>                }</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>                occupy[p.x][p.y] = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>                point nexts[]    = {point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1), point(p.x, p.y - 1)};</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> next: nexts) {</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>                    <span class="keywordflow">if</span>(0 &lt;= next.x &amp;&amp; next.x &lt;= n &amp;&amp; 0 &lt;= next.y &amp;&amp; next.y &lt;= m &amp;&amp; !occupy[next.x][next.y]) {</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                        <span class="keywordflow">if</span>(cowhide[next.x][next.y] == <span class="charliteral">&#39;X&#39;</span>) {</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                            que.push(next);</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                            edge-&gt;insert(p);</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>                        }</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                    }</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                }</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                que.pop();</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>            }</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">acwing.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00363">363</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                            {</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            <span class="keyword">auto</span> que      = queue&lt;point&gt;();</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>            <span class="keyword">const</span> <span class="keyword">auto</span> eq = <a class="code hl_struct" href="../../dd/da2/a00192.html">pointequal</a>();</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>            que.push(first);</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>            <span class="keywordflow">while</span>(!que.empty()) {</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                <span class="keyword">auto</span> p = que.front();</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                <span class="keywordflow">if</span>(!eq(p, first) &amp;&amp; occupy[p.x][p.y]) {</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                    que.pop();</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>                }</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>                occupy[p.x][p.y] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>                point nexts[]    = {point(p.x + 1, p.y), point(p.x - 1, p.y), point(p.x, p.y + 1), point(p.x, p.y - 1)};</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> next: nexts) {</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                    <span class="keywordflow">if</span>(0 &lt;= next.x &amp;&amp; next.x &lt;= n &amp;&amp; 0 &lt;= next.y &amp;&amp; next.y &lt;= m &amp;&amp; !occupy[next.x][next.y]) {</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                        <span class="keywordflow">if</span>(cowhide[next.x][next.y] == <span class="charliteral">&#39;X&#39;</span>) {</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                            que.push(next);</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>                            edge-&gt;insert(p);</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                        }</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                    }</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                }</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                que.pop();</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>            }</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        }</div>
 <div class="ttc" id="aa00192_html"><div class="ttname"><a href="../../dd/da2/a00192.html">acwing::acwing2060::pointequal</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00122">acwing.h:122</a></div></div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00308">acwing::acwing2060::acwing2060::main()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00309">acwing::acwing2060::acwing2060::main()</a>.</p>
 
 </div>
 </div>

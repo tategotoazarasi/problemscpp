@@ -123,33 +123,33 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">acwing.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00802">802</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>                                                   {</div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>        <span class="keywordtype">double</span> n;</div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>        <span class="keywordtype">int</span> total                 = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(n * <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(100));</div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> denominations[] = {10000, 5000, 2000, 1000, 500, 200, 100, 50, 25, 10, 5, 1};</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>        <span class="keywordtype">int</span> count[12];</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 12; i++) {</div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>            count[i] = total / denominations[i];</div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>            total %= denominations[i];</div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>        }</div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>        cout &lt;&lt; <span class="stringliteral">&quot;NOTAS:&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>             &lt;&lt; count[0] &lt;&lt; <span class="stringliteral">&quot; nota(s) de R$ 100.00&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>             &lt;&lt; count[1] &lt;&lt; <span class="stringliteral">&quot; nota(s) de R$ 50.00&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>             &lt;&lt; count[2] &lt;&lt; <span class="stringliteral">&quot; nota(s) de R$ 20.00&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>             &lt;&lt; count[3] &lt;&lt; <span class="stringliteral">&quot; nota(s) de R$ 10.00&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>             &lt;&lt; count[4] &lt;&lt; <span class="stringliteral">&quot; nota(s) de R$ 5.00&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>             &lt;&lt; count[5] &lt;&lt; <span class="stringliteral">&quot; nota(s) de R$ 2.00&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>             &lt;&lt; <span class="stringliteral">&quot;MOEDAS:&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>             &lt;&lt; count[6] &lt;&lt; <span class="stringliteral">&quot; moeda(s) de R$ 1.00&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>             &lt;&lt; count[7] &lt;&lt; <span class="stringliteral">&quot; moeda(s) de R$ 0.50&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>             &lt;&lt; count[8] &lt;&lt; <span class="stringliteral">&quot; moeda(s) de R$ 0.25&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>             &lt;&lt; count[9] &lt;&lt; <span class="stringliteral">&quot; moeda(s) de R$ 0.10&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>             &lt;&lt; count[10] &lt;&lt; <span class="stringliteral">&quot; moeda(s) de R$ 0.05&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>             &lt;&lt; count[11] &lt;&lt; <span class="stringliteral">&quot; moeda(s) de R$ 0.01&quot;</span>;</div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">acwing.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00803">803</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>                                                   {</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>        <span class="keywordtype">double</span> n;</div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>        <span class="keywordtype">int</span> total                 = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(n * <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(100));</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> denominations[] = {10000, 5000, 2000, 1000, 500, 200, 100, 50, 25, 10, 5, 1};</div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>        <span class="keywordtype">int</span> count[12];</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 12; i++) {</div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>            count[i] = total / denominations[i];</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>            total %= denominations[i];</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>        }</div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>        cout &lt;&lt; <span class="stringliteral">&quot;NOTAS:&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>             &lt;&lt; count[0] &lt;&lt; <span class="stringliteral">&quot; nota(s) de R$ 100.00&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>             &lt;&lt; count[1] &lt;&lt; <span class="stringliteral">&quot; nota(s) de R$ 50.00&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>             &lt;&lt; count[2] &lt;&lt; <span class="stringliteral">&quot; nota(s) de R$ 20.00&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>             &lt;&lt; count[3] &lt;&lt; <span class="stringliteral">&quot; nota(s) de R$ 10.00&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>             &lt;&lt; count[4] &lt;&lt; <span class="stringliteral">&quot; nota(s) de R$ 5.00&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>             &lt;&lt; count[5] &lt;&lt; <span class="stringliteral">&quot; nota(s) de R$ 2.00&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>             &lt;&lt; <span class="stringliteral">&quot;MOEDAS:&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>             &lt;&lt; count[6] &lt;&lt; <span class="stringliteral">&quot; moeda(s) de R$ 1.00&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>             &lt;&lt; count[7] &lt;&lt; <span class="stringliteral">&quot; moeda(s) de R$ 0.50&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>             &lt;&lt; count[8] &lt;&lt; <span class="stringliteral">&quot; moeda(s) de R$ 0.25&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>             &lt;&lt; count[9] &lt;&lt; <span class="stringliteral">&quot; moeda(s) de R$ 0.10&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>             &lt;&lt; count[10] &lt;&lt; <span class="stringliteral">&quot; moeda(s) de R$ 0.05&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>             &lt;&lt; count[11] &lt;&lt; <span class="stringliteral">&quot; moeda(s) de R$ 0.01&quot;</span>;</div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d5/df9/a00044_source.html#l00527">acwing::TEST()</a>.</p>
 

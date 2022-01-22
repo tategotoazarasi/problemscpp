@@ -123,30 +123,30 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">acwing.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l01886">1886</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01886" name="l01886"></a><span class="lineno"> 1886</span>                                                    {</div>
-<div class="line"><a id="l01887" name="l01887"></a><span class="lineno"> 1887</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l01888" name="l01888"></a><span class="lineno"> 1888</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l01889" name="l01889"></a><span class="lineno"> 1889</span>        <span class="keyword">auto</span> speeds = map&lt;unsigned int, unsigned int&gt;();</div>
-<div class="line"><a id="l01890" name="l01890"></a><span class="lineno"> 1890</span>        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l01891" name="l01891"></a><span class="lineno"> 1891</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos;</div>
-<div class="line"><a id="l01892" name="l01892"></a><span class="lineno"> 1892</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> speed;</div>
-<div class="line"><a id="l01893" name="l01893"></a><span class="lineno"> 1893</span>            cin &gt;&gt; pos &gt;&gt; speed;</div>
-<div class="line"><a id="l01894" name="l01894"></a><span class="lineno"> 1894</span>            speeds.insert(pair(pos, speed));</div>
-<div class="line"><a id="l01895" name="l01895"></a><span class="lineno"> 1895</span>        }</div>
-<div class="line"><a id="l01896" name="l01896"></a><span class="lineno"> 1896</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> current_min = 1000000000;</div>
-<div class="line"><a id="l01897" name="l01897"></a><span class="lineno"> 1897</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count       = 0;</div>
-<div class="line"><a id="l01898" name="l01898"></a><span class="lineno"> 1898</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = speeds.rbegin(); i != speeds.rend(); ++i) {</div>
-<div class="line"><a id="l01899" name="l01899"></a><span class="lineno"> 1899</span>            <span class="keywordflow">if</span>((*i).second &lt;= current_min) {</div>
-<div class="line"><a id="l01900" name="l01900"></a><span class="lineno"> 1900</span>                current_min = (*i).second;</div>
-<div class="line"><a id="l01901" name="l01901"></a><span class="lineno"> 1901</span>                count++;</div>
-<div class="line"><a id="l01902" name="l01902"></a><span class="lineno"> 1902</span>            }</div>
-<div class="line"><a id="l01903" name="l01903"></a><span class="lineno"> 1903</span>        }</div>
-<div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span>        cout &lt;&lt; count;</div>
-<div class="line"><a id="l01905" name="l01905"></a><span class="lineno"> 1905</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01906" name="l01906"></a><span class="lineno"> 1906</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">acwing.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l01887">1887</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01887" name="l01887"></a><span class="lineno"> 1887</span>                                                    {</div>
+<div class="line"><a id="l01888" name="l01888"></a><span class="lineno"> 1888</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l01889" name="l01889"></a><span class="lineno"> 1889</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l01890" name="l01890"></a><span class="lineno"> 1890</span>        <span class="keyword">auto</span> speeds = map&lt;unsigned int, unsigned int&gt;();</div>
+<div class="line"><a id="l01891" name="l01891"></a><span class="lineno"> 1891</span>        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l01892" name="l01892"></a><span class="lineno"> 1892</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos;</div>
+<div class="line"><a id="l01893" name="l01893"></a><span class="lineno"> 1893</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> speed;</div>
+<div class="line"><a id="l01894" name="l01894"></a><span class="lineno"> 1894</span>            cin &gt;&gt; pos &gt;&gt; speed;</div>
+<div class="line"><a id="l01895" name="l01895"></a><span class="lineno"> 1895</span>            speeds.insert(pair(pos, speed));</div>
+<div class="line"><a id="l01896" name="l01896"></a><span class="lineno"> 1896</span>        }</div>
+<div class="line"><a id="l01897" name="l01897"></a><span class="lineno"> 1897</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> current_min = 1000000000;</div>
+<div class="line"><a id="l01898" name="l01898"></a><span class="lineno"> 1898</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count       = 0;</div>
+<div class="line"><a id="l01899" name="l01899"></a><span class="lineno"> 1899</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = speeds.rbegin(); i != speeds.rend(); ++i) {</div>
+<div class="line"><a id="l01900" name="l01900"></a><span class="lineno"> 1900</span>            <span class="keywordflow">if</span>((*i).second &lt;= current_min) {</div>
+<div class="line"><a id="l01901" name="l01901"></a><span class="lineno"> 1901</span>                current_min = (*i).second;</div>
+<div class="line"><a id="l01902" name="l01902"></a><span class="lineno"> 1902</span>                count++;</div>
+<div class="line"><a id="l01903" name="l01903"></a><span class="lineno"> 1903</span>            }</div>
+<div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span>        }</div>
+<div class="line"><a id="l01905" name="l01905"></a><span class="lineno"> 1905</span>        cout &lt;&lt; count;</div>
+<div class="line"><a id="l01906" name="l01906"></a><span class="lineno"> 1906</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01907" name="l01907"></a><span class="lineno"> 1907</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d5/df9/a00044_source.html#l01055">acwing::TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d5/df9/a00044_source.html#l01047">acwing::TEST()</a>.</p>
 
 </div>
 </div>
