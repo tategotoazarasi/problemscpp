@@ -123,4 +123,12 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("6 4", ans);
 	}
+
+	TEST(P5708, case1) {
+		istringstream in("3 4 5");
+		auto out = ostringstream();
+		P5708::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("6.0", ans);
+	}
 }// namespace luogu

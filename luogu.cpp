@@ -1,8 +1,8 @@
 #include "luogu.h"
+#include <cmath>
 #include <iomanip>
 #include <unordered_set>
 #include <vector>
-#include <cmath>
 
 using namespace std;
 
@@ -253,6 +253,14 @@ namespace luogu {
 		} else if(T == 14) {
 			cout << 50;
 		}
+		return 0;
+	}
+
+	int P5708::main(istream &cin, ostream &cout) {
+		double a, b, c;
+		cin >> a >> b >> c;
+		double p = (a + b + c) / 2;
+		cout << setiosflags(ios::fixed) << setprecision(1) << sqrt(p * (p - a) * (p - b) * (p - c));
 		return 0;
 	}
 }// namespace luogu

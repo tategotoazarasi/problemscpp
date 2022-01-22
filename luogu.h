@@ -79,6 +79,12 @@ namespace luogu {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief 洛谷 P5708 【深基2.习2】三角形面积
+	class P5708 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H
