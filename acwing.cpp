@@ -7,6 +7,7 @@
 #include <map>
 #include <queue>
 #include <set>
+#include <sstream>
 #include <stack>
 #include <unordered_map>
 #include <unordered_set>
@@ -1993,6 +1994,124 @@ namespace acwing {
 		delete[] w;
 		delete[] c;
 		delete[] cow;
+		return 0;
+	}
+
+	int acwing4212::main(istream &cin, ostream &cout) {
+		string a;
+		string b;
+		cin >> a >> b;
+		auto ossa = ostringstream();
+		auto ossb = ostringstream();
+		for(char ch: a) {
+			if(isupper(ch) != 0) {
+				ch = tolower(ch);
+			}
+			ossa << ch;
+		}
+		for(char ch: b) {
+			if(isupper(ch) != 0) {
+				ch = tolower(ch);
+			}
+			ossb << ch;
+		}
+		a = ossa.str();
+		b = ossb.str();
+		if(a > b) {
+			cout << 1;
+		} else if(a < b) {
+			cout << -1;
+		} else {
+			cout << 0;
+		}
+		return 0;
+	}
+
+	int acwing4213::main(istream &cin, ostream &cout) {
+		unsigned int num[4];
+		cin >> num[0] >> num[1] >> num[2] >> num[3];
+		vector<char> ops;
+		char op;
+		for(int i = 0; i < 3; i++) {
+			cin >> op;
+			ops.push_back(op);
+		}
+		cout << get_min(ops, vector<unsigned long long>(begin(num), end(num)));
+		return 0;
+	}
+
+	unsigned long long acwing4213::get_min(vector<char> ops, vector<unsigned long long> vec) {
+		const char op = ops[0];
+		if(vec.size() == 2) {
+			if(op == '+') {
+				return vec[0] + vec[1];
+			}
+			return vec[0] * vec[1];
+		}
+		const auto next_ops        = vector(ops.begin() + 1, ops.end());
+		unsigned long long minimum = 1000000000000;
+		for(int i = 0; i < vec.size() - 1; i++) {
+			for(int j = i + 1; j < vec.size(); j++) {
+				unsigned long long new_num;
+				if(op == '+') {
+					new_num = vec[i] + vec[j];
+				} else {
+					new_num = vec[i] * vec[j];
+				}
+				auto new_vec = vector<unsigned long long>();
+				new_vec.push_back(new_num);
+				for(int k = 0; k < vec.size(); k++) {
+					if(k != i && k != j) {
+						new_vec.push_back(vec[k]);
+					}
+				}
+				const auto ret = get_min(next_ops, new_vec);
+				if(minimum > ret) {
+					minimum = ret;
+				}
+			}
+		}
+		return minimum;
+	}
+
+	int acwing4214::main(istream &cin, ostream &cout) {
+		unsigned short n;
+		cin >> n;
+		auto *s = new unsigned int[n];
+		auto *c = new unsigned int[n];
+		for(unsigned short i = 0; i < n; i++) {
+			cin >> s[i];
+		}
+		for(unsigned short i = 0; i < n; i++) {
+			cin >> c[i];
+		}
+		unsigned int minimum = 300000001;
+		for(int j = 1; j < n - 1; j++) {
+			unsigned int min_left  = 100000001;
+			unsigned int min_right = 100000001;
+			for(int i = 0; i < j; i++) {
+				if(s[i] < s[j]) {
+					if(c[i] < min_left) {
+						min_left = c[i];
+					}
+				}
+			}
+			for(int k = j + 1; k < n; k++) {
+				if(s[j] < s[k]) {
+					if(c[k] < min_right) {
+						min_right = c[k];
+					}
+				}
+			}
+			if(min_left != 100000001 && min_right != 100000001 && minimum > min_left + c[j] + min_right) {
+				minimum = min_left + c[j] + min_right;
+			}
+		}
+		if(minimum != 300000001) {
+			cout << minimum;
+		} else {
+			cout << -1;
+		}
 		return 0;
 	}
 }// namespace acwing

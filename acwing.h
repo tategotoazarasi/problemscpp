@@ -697,5 +697,30 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/**
+	 * \brief AcWing 4212. 字符串比较
+	 */
+	class acwing4212 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4213. 最小结果
+	 */
+	class acwing4213 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static unsigned long long get_min(vector<char> ops, vector<unsigned long long> vec);
+	};
+
+	/**
+	 * \brief AcWing 4214. 三元组
+	 */
+	class acwing4214 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

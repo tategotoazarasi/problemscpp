@@ -792,14 +792,6 @@ namespace acwing {
 		ASSERT_EQ("Isento", ans);
 	}
 
-	TEST(acwing672, case3) {
-		istringstream in("4520.00");
-		auto out = ostringstream();
-		acwing672::main(in, out);
-		const auto ans = out.str();
-		ASSERT_EQ("R$ 355.60", ans);
-	}
-
 	TEST(acwing1945, case1) {
 		istringstream in("5\n"
 		                 "3\n"
@@ -1119,5 +1111,69 @@ namespace acwing {
 		acwing1884::main(in, out);
 		const auto ans = out.str();
 		ASSERT_EQ("6", ans);
+	}
+
+	TEST(acwing4212, case1) {
+		istringstream in("aaaa\naaaA");
+		auto out = ostringstream();
+		acwing4212::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("0", ans);
+	}
+
+	TEST(acwing4212, case2) {
+		istringstream in("abs\nAbz");
+		auto out = ostringstream();
+		acwing4212::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("-1", ans);
+	}
+
+	TEST(acwing4213, case1) {
+		istringstream in("1 1 1 1\n+ + *");
+		auto out = ostringstream();
+		acwing4213::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("3", ans);
+	}
+
+	TEST(acwing4213, case2) {
+		istringstream in("2 2 2 2\n* * +");
+		auto out = ostringstream();
+		acwing4213::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("8", ans);
+	}
+
+	TEST(acwing4213, case3) {
+		istringstream in("1 2 3 4\n* + +");
+		auto out = ostringstream();
+		acwing4213::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("9", ans);
+	}
+
+	TEST(acwing4214, case1) {
+		istringstream in("5\n2 4 5 4 10\n40 30 20 10 40");
+		auto out = ostringstream();
+		acwing4214::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("90", ans);
+	}
+
+	TEST(acwing4214, case2) {
+		istringstream in("3\n100 101 100\n2 4 5");
+		auto out = ostringstream();
+		acwing4214::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("-1", ans);
+	}
+
+	TEST(acwing4214, case3) {
+		istringstream in("10\n1 2 3 4 5 6 7 8 9 10\n10 13 11 14 15 12 13 13 18 13");
+		auto out = ostringstream();
+		acwing4214::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("33", ans);
 	}
 }// namespace acwing
