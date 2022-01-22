@@ -1229,4 +1229,15 @@ namespace leetcode {
 			return 0;
 		}
 	}// namespace jump_game_iv
+
+	namespace remove_palindromic_subsequences {
+		int Solution::removePalindromeSub(string s) {
+			for(int i = 0, j = s.length() - 1; i < j; i++, j--) {
+				if(s[i] != s[j]) {
+					return 2;
+				}
+			}
+			return 1;
+		}
+	}// namespace remove_palindromic_subsequences
 }// namespace leetcode

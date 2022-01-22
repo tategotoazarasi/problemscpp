@@ -525,6 +525,14 @@ namespace leetcode {
 			static int minJumps(vector<int> &arr);
 		};
 	}// namespace jump_game_iv
+
+	/// \brief LeetCode 1332. 删除回文子序列
+	namespace remove_palindromic_subsequences {
+		class Solution {
+		public:
+			static int removePalindromeSub(string s);
+		};
+	}// namespace remove_palindromic_subsequences
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
