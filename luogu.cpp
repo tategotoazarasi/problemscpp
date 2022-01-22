@@ -263,4 +263,11 @@ namespace luogu {
 		cout << setiosflags(ios::fixed) << setprecision(1) << sqrt(p * (p - a) * (p - b) * (p - c));
 		return 0;
 	}
+
+	int P1421::main(istream &cin, ostream &cout) {
+		int a, b;
+		cin >> a >> b;
+		cout << (10 * a + b) / (19);
+		return 0;
+	}
 }// namespace luogu
