@@ -1111,4 +1111,13 @@ namespace acwing {
 		          "Percentage of frogs: 25.00 %",
 		          ans);
 	}
+
+	TEST(acwing1884, case1) {
+		istringstream in("6\n"
+		                 "COOWWW");
+		auto out = ostringstream();
+		acwing1884::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("6", ans);
+	}
 }// namespace acwing

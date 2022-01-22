@@ -1958,4 +1958,40 @@ namespace acwing {
 		     << " %";
 		return 0;
 	}
+
+	int acwing1884::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		char *cow = new char[n];
+		auto *c   = new int[n];//当前项左边有多少个C
+		auto *w   = new int[n];//当前项右边有多少个W
+		c[0]      = 0;
+		w[n - 1]  = 0;
+		for(int i = 0; i < n; i++) {
+			cin >> cow[i];
+			if(i >= 1) {
+				c[i] = c[i - 1];
+				if(cow[i - 1] == 'C') {
+					c[i]++;
+				}
+			}
+		}
+		for(int i = n - 2; i >= 0; i--) {
+			w[i] = w[i + 1];
+			if(cow[i + 1] == 'W') {
+				w[i]++;
+			}
+		}
+		unsigned long count = 0;
+		for(int i = 0; i < n; i++) {
+			if(cow[i] == 'O') {
+				count += c[i] * w[i];
+			}
+		}
+		cout << count;
+		delete[] w;
+		delete[] c;
+		delete[] cow;
+		return 0;
+	}
 }// namespace acwing
