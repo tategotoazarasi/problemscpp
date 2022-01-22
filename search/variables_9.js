@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['m_0',['m',['../d9/d0a/a00390.html#ad727aadba3ae32c473dffc35008bf5bd',1,'acwing::acwing1929::Solution::m()'],['../d7/d9f/a00454.html#ad5f954429d13b3ae0e324807dc3f1523',1,'leetcode::majority_element::Solution::m()']]],
-  ['maxn_1',['MAXN',['../da/d24/a00068.html#a0a71b7e2a5c82a9ab3444d10a7fa5c91',1,'leetcode::cat_and_mouse']]],
-  ['mirrors_2',['mirrors',['../d9/d0a/a00390.html#a07e6f6810fb7e332c12b3b40c1779c23',1,'acwing::acwing1929::Solution']]],
-  ['mouse_5fwin_3',['MOUSE_WIN',['../da/d24/a00068.html#ae68fb24f26d1729119604748b3b20490',1,'leetcode::cat_and_mouse']]]
+  ['left_0',['left',['../d3/dea/a00444.html#a03bca16cb19c3e93d15266a039523d4e',1,'leetcode::TreeNode::left()'],['../d8/d89/a00484.html#a527dd1073e87fbd3a0406ac26e038996',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::left()'],['../df/d37/a00652.html#ac24be0ef8a477f2baac82561b3a906e0',1,'lintcode::TreeNode::left()']]],
+  ['left_5fmap_1',['left_map',['../d4/d27/a00392.html#ae0ed96db182459f5342f080095ad9723',1,'acwing::acwing1929::Solution']]]
 ];
