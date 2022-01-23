@@ -2130,4 +2130,23 @@ namespace acwing {
 		     << max_i;
 		return 0;
 	}
+
+	int acwing713::main(istream &cin, ostream &cout) {
+		int n;
+		unsigned int in  = 0;
+		unsigned int out = 0;
+		cin >> n;
+		for(int i = 0; i < n; i++) {
+			int num;
+			cin >> num;
+			if(10 <= num && num <= 20) {
+				in++;
+			} else {
+				out++;
+			}
+		}
+		cout << in << " in" << endl
+		     << out << " out";
+		return 0;
+	}
 }// namespace acwing
