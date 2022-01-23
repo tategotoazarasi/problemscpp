@@ -1581,4 +1581,27 @@ namespace leetcode {
 			return pair(maximum, um);
 		}
 	}// namespace maximum_good_people_based_on_statements
+
+	namespace stock_price_fluctuation {
+		StockPrice::StockPrice() {
+			ms = multiset<int>();
+			m  = map<int, int>();
+		}
+
+		void StockPrice::update(int timestamp, int price) {
+			if(!m.contains(timestamp)) {
+				m.insert(pair(timestamp, price));
+			} else {
+				ms.erase(ms.find(m[timestamp]));
+				m[timestamp] = price;
+			}
+			ms.insert(price);
+		}
+
+		int StockPrice::current() const { return (*m.rbegin()).second; }
+
+		int StockPrice::maximum() const { return *ms.rbegin(); }
+
+		int StockPrice::minimum() const { return *ms.begin(); }
+	}// namespace stock_price_fluctuation
 }// namespace leetcode

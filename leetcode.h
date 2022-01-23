@@ -5,6 +5,7 @@
 #include <functional>
 #include <map>
 #include <queue>
+#include <set>
 #include <string>
 #include <unordered_set>
 #include <vector>
@@ -656,6 +657,29 @@ namespace leetcode {
 			static pair<int, unordered_map<int, bool>> dfs(vector<vector<int>> &statements, unordered_map<int, bool> um, queue<msg> que);
 		};
 	}// namespace maximum_good_people_based_on_statements
+
+	/**
+	 * \brief LeetCode 2034. 股票价格波动
+	 */
+	namespace stock_price_fluctuation {
+		/// \details
+		/// Your StockPrice object will be instantiated and called as such:
+		/// StockPrice* obj = new StockPrice();
+		/// int param_2 = obj->current();
+		/// int param_3 = obj->maximum();
+		/// int param_4 = obj->minimum();
+		class StockPrice {
+			multiset<int> ms;
+			map<int, int> m;
+
+		public:
+			StockPrice();
+			void update(int timestamp, int price);
+			int current() const;
+			int maximum() const;
+			int minimum() const;
+		};
+	}// namespace stock_price_fluctuation
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
