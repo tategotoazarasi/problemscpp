@@ -290,4 +290,18 @@ namespace luogu {
 		cout << max(0, m - eaten);
 		return 0;
 	}
+
+	int P2181::main(istream &cin, ostream &cout) {
+		unsigned long long n;
+		unsigned long long count = 0;
+		cin >> n;
+		for(unsigned long long i = 1; i <= n - 2; i++) {
+			count += i * (n - 2 - i);
+		}
+		count /= 2;
+		count *= n;
+		count /= 2;
+		cout << count;
+		return 0;
+	}
 }// namespace luogu
