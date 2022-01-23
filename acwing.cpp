@@ -2114,4 +2114,20 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing716::main(istream &cin, ostream &cout) {
+		int maximum = 0;
+		int max_i   = 0;
+		for(int i = 1; i <= 100; i++) {
+			int num;
+			cin >> num;
+			if(num > maximum) {
+				maximum = num;
+				max_i   = i;
+			}
+		}
+		cout << maximum << endl
+		     << max_i;
+		return 0;
+	}
 }// namespace acwing
