@@ -273,4 +273,21 @@ namespace luogu {
 		cout << (10 * a + b) / 19;
 		return 0;
 	}
+
+	int P5709::main(istream &cin, ostream &cout) {
+		int m;
+		int t;
+		int s;
+		cin >> m >> t >> s;
+		if(t == 0) {
+			cout << 0;
+			return 0;
+		}
+		int eaten = s / t;
+		if(t * eaten != s) {
+			eaten++;
+		}
+		cout << max(0, m - eaten);
+		return 0;
+	}
 }// namespace luogu

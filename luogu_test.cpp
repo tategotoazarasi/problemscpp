@@ -139,4 +139,12 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("5", ans);
 	}
+
+	TEST(P5709, case1) {
+		istringstream in("50 10 200");
+		auto out = ostringstream();
+		P5709::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("30", ans);
+	}
 }// namespace luogu
