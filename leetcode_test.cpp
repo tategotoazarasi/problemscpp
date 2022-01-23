@@ -971,4 +971,73 @@ namespace leetcode {
 			ASSERT_EQ(1, Solution::numberOfWays("PSSSSP"));
 		}
 	}// namespace number_of_ways_to_divide_a_long_corridor
+
+	namespace count_elements_with_strictly_smaller_and_greater_elements {
+		TEST(count_elements_with_strictly_smaller_and_greater_elements, case1) {
+			int input[] = {11, 7, 2, 15};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(2, Solution::countElements(vec));
+		}
+
+		TEST(count_elements_with_strictly_smaller_and_greater_elements, case2) {
+			int input[] = {-3, 3, 3, 90};
+			auto vec    = vector(begin(input), end(input));
+			ASSERT_EQ(2, Solution::countElements(vec));
+		}
+	}// namespace count_elements_with_strictly_smaller_and_greater_elements
+
+	namespace rearrange_array_elements_by_sign {
+		TEST(rearrange_array_elements_by_sign, case1) {
+			int input[]           = {3, 1, -2, -5, 2, -4};
+			auto vec_input        = vector(begin(input), end(input));
+			int output[]          = {3, -2, 1, -5, 2, -4};
+			const auto vec_output = vector(begin(output), end(output));
+			ASSERT_EQ(vec_output, Solution::rearrangeArray(vec_input));
+		}
+
+		TEST(rearrange_array_elements_by_sign, case2) {
+			int input[]           = {-1, 1};
+			auto vec_input        = vector(begin(input), end(input));
+			int output[]          = {1, -1};
+			const auto vec_output = vector(begin(output), end(output));
+			ASSERT_EQ(vec_output, Solution::rearrangeArray(vec_input));
+		}
+	}// namespace rearrange_array_elements_by_sign
+
+	namespace find_all_lonely_numbers_in_the_array {
+		TEST(find_all_lonely_numbers_in_the_array, case1) {
+			int input[]           = {10, 6, 5, 8};
+			auto vec_input        = vector(begin(input), end(input));
+			int output[]          = {10, 8};
+			const auto vec_output = vector(begin(output), end(output));
+			ASSERT_EQ(vec_output, Solution::findLonely(vec_input));
+		}
+
+		TEST(find_all_lonely_numbers_in_the_array, case2) {
+			int input[]           = {1, 3, 5, 3};
+			auto vec_input        = vector(begin(input), end(input));
+			int output[]          = {1, 5};
+			const auto vec_output = vector(begin(output), end(output));
+			ASSERT_EQ(vec_output, Solution::findLonely(vec_input));
+		}
+	}// namespace find_all_lonely_numbers_in_the_array
+
+	namespace maximum_good_people_based_on_statements {
+		TEST(maximum_good_people_based_on_statements, case1) {
+			int input1[]        = {2, 1, 2};
+			int input2[]        = {1, 2, 2};
+			int input3[]        = {2, 0, 2};
+			vector<int> input[] = {vector(begin(input1), end(input1)), vector(begin(input2), end(input2)), vector(begin(input3), end(input3))};
+			auto vec_input      = vector(begin(input), end(input));
+			ASSERT_EQ(2, Solution::maximumGood(vec_input));
+		}
+
+		TEST(maximum_good_people_based_on_statements, case2) {
+			int input1[]        = {2, 0};
+			int input2[]        = {0, 2};
+			vector<int> input[] = {vector(begin(input1), end(input1)), vector(begin(input2), end(input2))};
+			auto vec_input      = vector(begin(input), end(input));
+			ASSERT_EQ(1, Solution::maximumGood(vec_input));
+		}
+	}// namespace maximum_good_people_based_on_statements
 }// namespace leetcode

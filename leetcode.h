@@ -4,6 +4,7 @@
 #include <climits>
 #include <functional>
 #include <map>
+#include <queue>
 #include <string>
 #include <unordered_set>
 #include <vector>
@@ -597,12 +598,64 @@ namespace leetcode {
 		};
 	}// namespace k_highest_ranked_items_within_a_price_range
 
+	/**
+	 * \brief LeetCode 5974. 分隔长廊的方案数
+	 */
 	namespace number_of_ways_to_divide_a_long_corridor {
 		class Solution {
 		public:
 			static int numberOfWays(string corridor);
 		};
 	}// namespace number_of_ways_to_divide_a_long_corridor
+
+	/**
+	 * \brief LeetCode 5989. 元素计数
+	 */
+	namespace count_elements_with_strictly_smaller_and_greater_elements {
+		class Solution {
+		public:
+			static int countElements(vector<int> &nums);
+		};
+	}// namespace count_elements_with_strictly_smaller_and_greater_elements
+
+	/**
+	 * \brief LeetCode 5991. 按符号重排数组
+	 */
+	namespace rearrange_array_elements_by_sign {
+		class Solution {
+		public:
+			static vector<int> rearrangeArray(vector<int> &nums);
+		};
+	}// namespace rearrange_array_elements_by_sign
+
+	/**
+	 * \brief LeetCode 5990. 找出数组中的所有孤独数字
+	 */
+	namespace find_all_lonely_numbers_in_the_array {
+		class Solution {
+		public:
+			static vector<int> findLonely(vector<int> &nums);
+		};
+	}// namespace find_all_lonely_numbers_in_the_array
+
+	/**
+	 * \brief LeetCode 5992. 基于陈述统计最多好人数
+	 */
+	namespace maximum_good_people_based_on_statements {
+		struct msg {
+			int person;
+			bool good;
+
+			msg(int person, bool good)
+			    : person(person), good(good){};
+		};
+
+		class Solution {
+		public:
+			static int maximumGood(vector<vector<int>> &statements);
+			static pair<int, unordered_map<int, bool>> dfs(vector<vector<int>> &statements, unordered_map<int, bool> um, queue<msg> que);
+		};
+	}// namespace maximum_good_people_based_on_statements
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

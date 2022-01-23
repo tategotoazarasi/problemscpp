@@ -1421,4 +1421,164 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace number_of_ways_to_divide_a_long_corridor
+
+	namespace count_elements_with_strictly_smaller_and_greater_elements {
+		int Solution::countElements(vector<int> &nums) {
+			int maximum = nums[0];
+			int minimum = nums[0];
+			for(auto num: nums) {
+				maximum = max(maximum, num);
+				minimum = min(minimum, num);
+			}
+			unsigned int count = 0;
+			for(const auto num: nums) {
+				if(maximum != num && minimum != num) {
+					count++;
+				}
+			}
+			return count;
+		}
+	}// namespace count_elements_with_strictly_smaller_and_greater_elements
+
+	namespace rearrange_array_elements_by_sign {
+		vector<int> Solution::rearrangeArray(vector<int> &nums) {
+			const auto size = nums.size();
+			auto ans        = vector<int>();
+			auto positive   = vector<int>();
+			auto negative   = vector<int>();
+			for(auto num: nums) {
+				if(num > 0) {
+					positive.push_back(num);
+				} else {
+					negative.push_back(num);
+				}
+			}
+			for(int i = 0; i < size / 2; i++) {
+				ans.push_back(positive[i]);
+				ans.push_back(negative[i]);
+			}
+			return ans;
+		}
+	}// namespace rearrange_array_elements_by_sign
+
+	namespace find_all_lonely_numbers_in_the_array {
+		vector<int> Solution::findLonely(vector<int> &nums) {
+			if(nums.size() == 1) {
+				return nums;
+			}
+			sort(nums.begin(), nums.end());
+			auto ans = vector<int>();
+			if(nums[1] - nums[0] > 1) {
+				ans.push_back(nums[0]);
+			}
+			if(nums[nums.size() - 1] - nums[nums.size() - 2] > 1) {
+				ans.push_back(nums[nums.size() - 1]);
+			}
+			for(int i = 1; i < nums.size() - 1; i++) {
+				if(nums[i] - nums[i - 1] > 1 && nums[i + 1] - nums[i] > 1) {
+					ans.push_back(nums[i]);
+				}
+			}
+			return ans;
+		}
+	}// namespace find_all_lonely_numbers_in_the_array
+
+	namespace maximum_good_people_based_on_statements {
+		int Solution::maximumGood(vector<vector<int>> &statements) {
+			int maximum = 0;
+			auto dup    = unordered_map<int, bool>();
+			for(int i = 0; i < statements.size(); i++) {
+				if(dup[i]) {
+					continue;
+				}
+				const auto um = unordered_map<int, bool>();
+				auto que      = queue<msg>();
+				que.push(msg(i, true));
+				auto ans = dfs(statements, um, que);
+				maximum  = max(maximum, ans.first);
+				for(auto it: ans.second) {
+					if(it.second) {
+						dup.insert(it);
+					}
+				}
+			}
+			return maximum;
+		}
+
+		pair<int, unordered_map<int, bool>> Solution::dfs(vector<vector<int>> &statements, unordered_map<int, bool> um, queue<msg> que) {
+			int maximum     = 0;
+			bool contradict = false;
+			while(!que.empty()) {
+				auto current = que.front();
+				que.pop();
+				if(um.contains(current.person)) {
+					//已经存在
+					if(um[current.person] != current.good) {
+						//矛盾
+						return pair<int, unordered_map<int, bool>>(0, {});
+					}
+				} else {
+					um.insert(pair(current.person, current.good));
+				}
+				if(current.good) {
+					//是好人
+					for(int j = 0; j < statements.size(); j++) {
+						if(statements[current.person][j] != 2 && j != current.person) {
+							auto nmsg = msg(j, statements[current.person][j] == 1);
+							if(um.contains(nmsg.person)) {
+								//已经有了
+								if(um[nmsg.person] != nmsg.good) {
+									//矛盾
+									contradict = true;
+									return pair<int, unordered_map<int, bool>>(0, {});
+								}
+							} else {
+								//还没有
+								que.push(nmsg);
+							}
+						}
+					}
+				}
+			}
+			if(!contradict) {
+				//不矛盾
+				auto dup = unordered_map<int, bool>();
+				for(int i = 0; i < statements.size(); i++) {
+					if(dup[i]) {
+						continue;
+					}
+					if(!um.contains(i)) {
+						bool all2 = true;
+						for(auto v: statements[i]) {
+							if(v != 2) {
+								all2 = false;
+							}
+						}
+						if(all2) {
+							um.insert(pair(i, true));
+							continue;
+						}
+						auto nque = queue<msg>();
+						nque.push(msg(i, true));
+						auto ans = dfs(statements, um, nque);
+						maximum  = max(maximum, ans.first);
+						for(auto it: ans.second) {
+							if(it.second) {
+								dup.insert(it);
+							}
+						}
+					}
+				}
+
+				int good_count = 0;
+				for(auto i: um) {
+					if(i.second) {
+						good_count++;
+					}
+				}
+				maximum = max(maximum, good_count);
+			}
+			return pair(maximum, um);
+		}
+	}// namespace maximum_good_people_based_on_statements
 }// namespace leetcode
