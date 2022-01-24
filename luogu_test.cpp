@@ -187,4 +187,20 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("07:48", ans);
 	}
+
+	TEST(P3954, case1) {
+		istringstream in("100 100 80");
+		auto out = ostringstream();
+		P3954::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("90", ans);
+	}
+
+	TEST(P3954, case2) {
+		istringstream in("60 90 80");
+		auto out = ostringstream();
+		P3954::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("79", ans);
+	}
 }// namespace luogu

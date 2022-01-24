@@ -324,4 +324,13 @@ namespace luogu {
 		cout << m;
 		return 0;
 	}
+
+	int P3954::main(istream &cin, ostream &cout) {
+		unsigned short a;
+		unsigned short b;
+		unsigned short c;
+		cin >> a >> b >> c;
+		cout << (a * 2 + b * 3 + c * 5) / 10;
+		return 0;
+	}
 }// namespace luogu
