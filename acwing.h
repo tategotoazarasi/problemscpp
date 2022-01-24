@@ -739,5 +739,21 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/**
+	 * \brief AcWing 721. 递增序列
+	 */
+	class acwing721 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 719. 连续奇数的和 2
+	 */
+	class acwing719 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

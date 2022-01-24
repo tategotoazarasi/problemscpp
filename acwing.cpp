@@ -2149,4 +2149,44 @@ namespace acwing {
 		     << out << " out";
 		return 0;
 	}
+
+	int acwing721::main(istream &cin, ostream &cout) {
+		unsigned short x;
+		while(cin >> x) {
+			if(x == 0) {
+				return 0;
+			}
+			for(int i = 1; i <= x; i++) {
+				cout << i << " ";
+			}
+			cout << endl;
+		}
+		return 0;
+	}
+
+	int acwing719::main(istream &cin, ostream &cout) {
+		unsigned short n;
+		cin >> n;
+		for(unsigned short i = 0; i < n; i++) {
+			int count = 0;
+			int x;
+			int y;
+			cin >> x >> y;
+			if(x > y) {
+				const int temp = y;
+				y              = x;
+				x              = temp;
+			}
+			if(x % 2 == 0) {
+				x++;
+			} else {
+				x += 2;
+			}
+			for(int j = x; j < y; j += 2) {
+				count += j;
+			}
+			cout << count << endl;
+		}
+		return 0;
+	}
 }// namespace acwing
