@@ -2189,4 +2189,74 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing1875::main(istream &cin, ostream &cout) {
+		auto b = vector<int>();
+		auto e = vector<int>();
+		auto s = vector<int>();
+		auto i = vector<int>();
+		auto g = vector<int>();
+		auto o = vector<int>();
+		auto m = vector<int>();
+		unsigned short n;
+		cin >> n;
+		for(unsigned short j = 0; j < n; j++) {
+			char ch;
+			int val;
+			cin >> ch >> val;
+			switch(ch) {
+				case 'B':
+					b.push_back(val);
+					break;
+				case 'E':
+					e.push_back(val);
+					break;
+				case 'S':
+					s.push_back(val);
+					break;
+				case 'I':
+					i.push_back(val);
+					break;
+				case 'G':
+					g.push_back(val);
+					break;
+				case 'O':
+					o.push_back(val);
+					break;
+				case 'M':
+					m.push_back(val);
+					break;
+				default: return 1;
+			}
+		}
+		unsigned int count_a = 0;
+		for(const auto ms: m) {
+			if(ms % 2 != 0) {
+				count_a++;
+			}
+		}
+		unsigned int count_b = 0;
+		for(const auto bs: b) {
+			for(const auto is: i) {
+				if((bs + is) % 2 != 0) {
+					count_b++;
+				}
+			}
+		}
+		unsigned int count_c = 0;
+		for(const auto gs: g) {
+			for(const auto os: o) {
+				for(const auto es: e) {
+					for(const auto ss: s) {
+						if((gs + os + es + ss) % 2 != 0) {
+							count_c++;
+						}
+					}
+				}
+			}
+		}
+		const unsigned long long count = b.size() * e.size() * s.size() * i.size() * g.size() * o.size() * m.size();
+		cout << count - count_a * count_b * count_c;
+		return 0;
+	}
 }// namespace acwing
