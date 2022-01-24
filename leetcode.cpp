@@ -1604,4 +1604,73 @@ namespace leetcode {
 
 		int StockPrice::minimum() const { return *ms.begin(); }
 	}// namespace stock_price_fluctuation
+
+	namespace second_minimum_time_to_reach_destination {
+		int Solution::secondMinimum(int n, vector<vector<int>> &edges, int time, int change) {
+			auto record = unordered_map<int, vector<int>>();
+			for(int i = 1; i <= n; i++) {
+				record.insert(pair(i, vector<int>()));
+			}
+			auto um = unordered_map<int, unordered_set<int>>();
+			for(auto edge: edges) {
+				if(!um.contains(edge[0])) {
+					auto us = unordered_set<int>();
+					us.insert(edge[1]);
+					um.insert(pair(edge[0], us));
+				} else {
+					um[edge[0]].insert(edge[1]);
+				}
+				if(!um.contains(edge[1])) {
+					auto us = unordered_set<int>();
+					us.insert(edge[0]);
+					um.insert(pair(edge[1], us));
+				} else {
+					um[edge[1]].insert(edge[0]);
+				}
+			}
+			auto pq = priority_queue<status>();
+			pq.push(status(1, 0));
+			bool flag = false;//已经到达一次终点
+			int prev  = 0;
+			while(!pq.empty()) {
+				status current = pq.top();
+				pq.pop();
+				if(current.position == n) {
+					if(!flag) {
+						flag = true;
+						prev = current.time;
+					} else {
+						if(current.time != prev) {
+							return current.time;
+						}
+					}
+				}
+
+				if(record[current.position].empty() || record[current.position].size() == 1 && current.time != *record[current.position].rbegin()) {
+					//可以继续
+					record[current.position].push_back(current.time);
+				} else {
+					continue;
+				}
+
+				for(int next: um[current.position]) {
+					int next_time;
+					if(current.time / change % 2 == 1) {
+						//当前为红灯
+						next_time = (current.time / change + 1) * change + time;
+					} else {
+						next_time = current.time + time;
+					}
+					auto next_status = status(next, next_time);
+					if(record[next_status.position].empty() || record[next_status.position].size() == 1 && next_status.time != *record[next_status.position].rbegin()) {
+						//可以继续
+						pq.push(next_status);
+					}
+				}
+			}
+			return 0;
+		}
+
+		bool status::operator<(const status &s) const { return this->time > s.time; }
+	}// namespace second_minimum_time_to_reach_destination
 }// namespace leetcode

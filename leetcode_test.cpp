@@ -1040,4 +1040,32 @@ namespace leetcode {
 			ASSERT_EQ(1, Solution::maximumGood(vec_input));
 		}
 	}// namespace maximum_good_people_based_on_statements
+
+	namespace second_minimum_time_to_reach_destination {
+		TEST(second_minimum_time_to_reach_destination, case1) {
+			int inputs[][2] = {{1, 2}, {1, 3}, {1, 4}, {3, 4}, {4, 5}};
+			auto vec        = vector<vector<int>>();
+			for(auto *input: inputs) {
+				auto n_vec = vector<int>();
+				n_vec.resize(2);
+				n_vec[0] = input[0];
+				n_vec[1] = input[1];
+				vec.push_back(n_vec);
+			}
+			ASSERT_EQ(13, Solution::secondMinimum(5, vec, 3, 5));
+		}
+
+		TEST(second_minimum_time_to_reach_destination, case2) {
+			int inputs[][2] = {{1, 2}};
+			auto vec        = vector<vector<int>>();
+			for(auto *input: inputs) {
+				auto n_vec = vector<int>();
+				n_vec.resize(2);
+				n_vec[0] = input[0];
+				n_vec[1] = input[1];
+				vec.push_back(n_vec);
+			}
+			ASSERT_EQ(11, Solution::secondMinimum(2, vec, 3, 2));
+		}
+	}// namespace second_minimum_time_to_reach_destination
 }// namespace leetcode

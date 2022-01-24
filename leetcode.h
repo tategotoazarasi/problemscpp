@@ -675,11 +675,30 @@ namespace leetcode {
 		public:
 			StockPrice();
 			void update(int timestamp, int price);
-			int current() const;
-			int maximum() const;
-			int minimum() const;
+			[[nodiscard]] int current() const;
+			[[nodiscard]] int maximum() const;
+			[[nodiscard]] int minimum() const;
 		};
 	}// namespace stock_price_fluctuation
+
+	/**
+	 * \brief LeetCode 2045. 到达目的地的第二短时间
+	 */
+	namespace second_minimum_time_to_reach_destination {
+		struct status {
+			int position;
+			int time;
+
+			status(int position, int time)
+			    : position(position), time(time){};
+			bool operator<(const status &s) const;
+		};
+
+		class Solution {
+		public:
+			static int secondMinimum(int n, vector<vector<int>> &edges, int time, int change);
+		};
+	}// namespace second_minimum_time_to_reach_destination
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
