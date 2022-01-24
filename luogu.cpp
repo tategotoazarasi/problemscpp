@@ -303,4 +303,25 @@ namespace luogu {
 		cout << count;
 		return 0;
 	}
+
+	int P5707::main(istream &cin, ostream &cout) {
+		unsigned int s;
+		unsigned int v;
+		cin >> s >> v;
+		double t = 8 * 60 - (static_cast<double>(s) / static_cast<double>(v) + 10);
+		if(t < 0) {
+			t += 24 * 60;
+		}
+		const int h = static_cast<int>(t / 60);
+		const int m = static_cast<int>(t) % 60;
+		if(h < 10) {
+			cout << 0;
+		}
+		cout << h << ":";
+		if(m < 10) {
+			cout << 0;
+		}
+		cout << m;
+		return 0;
+	}
 }// namespace luogu
