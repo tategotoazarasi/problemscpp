@@ -2,7 +2,7 @@ var searchData=
 [
   ['search_0',['search',['../d7/d80/a00614.html#aa7c228a1c6b22a07281eae6a14c2e72f',1,'leetcode::escape_a_large_maze::Solution']]],
   ['secondminimum_1',['secondMinimum',['../d4/d8f/a00742.html#ac5c774924a4831a756486a1718a7b82b',1,'leetcode::second_minimum_time_to_reach_destination::Solution']]],
-  ['set_5fstack_5flimit_2',['set_stack_limit',['../d7/d46/a00002.html#a4d5e31141ea8d871e02a1520af4cbb69',1,'set_stack_limit(int stack_size):&#160;set_stack_limit.cpp'],['../d3/d52/a00023.html#a90d105b4f65d447ebdd2269060a02d32',1,'set_stack_limit(int):&#160;set_stack_limit.cpp']]],
+  ['set_5fstack_5flimit_2',['set_stack_limit',['../d6/d5b/a00026.html#a4d5e31141ea8d871e02a1520af4cbb69',1,'set_stack_limit(int stack_size):&#160;set_stack_limit.cpp'],['../d4/dee/a00008.html#a90d105b4f65d447ebdd2269060a02d32',1,'set_stack_limit(int):&#160;set_stack_limit.cpp']]],
   ['simplifypath_3',['simplifyPath',['../d8/da5/a00570.html#a3997d52996bb978fe668ebfa788ba0fe',1,'leetcode::simplify_path::Solution']]],
   ['slowestkey_4',['slowestKey',['../da/de4/a00594.html#ab7976dc380cf88058bb93aeac322ebbb',1,'leetcode::slowest_key::Solution']]],
   ['solution_5',['Solution',['../d6/d52/a00510.html#a79e75864eba3b92653318e8c6fb1526d',1,'leetcode::majority_element::Solution::Solution()'],['../df/dcf/a00642.html#aa2570d9c021df1471fdd2037218adb19',1,'leetcode::linked_list_random_node::Solution::Solution()']]],
