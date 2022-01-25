@@ -203,4 +203,12 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("79", ans);
 	}
+
+	TEST(P5710, case1) {
+		istringstream in("12");
+		auto out = ostringstream();
+		P5710::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1 1 0 0", ans);
+	}
 }// namespace luogu

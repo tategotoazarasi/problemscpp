@@ -333,4 +333,13 @@ namespace luogu {
 		cout << (a * 2 + b * 3 + c * 5) / 10;
 		return 0;
 	}
+
+	int P5710::main(istream &cin, ostream &cout) {
+		unsigned short x;
+		cin >> x;
+		bool b1 = x % 2 == 0;
+		bool b2 = x > 4 && x <= 12;
+		cout << int(b1 && b2) << " " << int(b1 || b2) << " " << int(b1 xor b2) << " " << int(!b1 && !b2);
+		return 0;
+	}
 }// namespace luogu
