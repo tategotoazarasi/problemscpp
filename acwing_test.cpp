@@ -1208,4 +1208,20 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("6", ans);
 	}
+
+	TEST(acwing720, case1) {
+		istringstream in("3 2");
+		auto out = ostringstream();
+		acwing720::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("7", ans);
+	}
+
+	TEST(acwing720, case2) {
+		istringstream in("3 -1 0 -2 2");
+		auto out = ostringstream();
+		acwing720::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("7", ans);
+	}
 }// namespace acwing

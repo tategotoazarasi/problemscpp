@@ -363,6 +363,5 @@ namespace luogu {
 			cout << "0";
 			return 0;
 		}
-		return 0;
 	}
 }// namespace luogu

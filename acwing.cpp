@@ -2259,4 +2259,19 @@ namespace acwing {
 		cout << count - count_a * count_b * count_c;
 		return 0;
 	}
+
+	int acwing720::main(istream &cin, ostream &cout) {
+		int a;
+		int count = 0;
+		cin >> a;
+		int n;
+		do {
+			cin >> n;
+		} while(n <= 0);
+		for(int i = 0; i < n; i++) {
+			count += a + i;
+		}
+		cout << count;
+		return 0;
+	}
 }// namespace acwing
