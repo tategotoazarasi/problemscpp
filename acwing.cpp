@@ -2274,4 +2274,20 @@ namespace acwing {
 		cout << count;
 		return 0;
 	}
+
+	int acwing717::main(istream &cin, ostream &cout) {
+		unsigned short n;
+		cin >> n;
+		vector<unsigned int> fibb = vector<unsigned int>();
+		fibb.resize(n);
+		fibb[0] = 0;
+		fibb[1] = 1;
+		for(unsigned short i = 2; i < n; i++) {
+			fibb[i] = fibb[i - 1] + fibb[i - 2];
+		}
+		for(auto num: fibb) {
+			cout << num << " ";
+		}
+		return 0;
+	}
 }// namespace acwing
