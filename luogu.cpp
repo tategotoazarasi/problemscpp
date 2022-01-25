@@ -342,4 +342,27 @@ namespace luogu {
 		cout << int(b1 && b2) << " " << int(b1 || b2) << " " << int(b1 xor b2) << " " << int(!b1 && !b2);
 		return 0;
 	}
+
+	int P5711::main(istream &cin, ostream &cout) {
+		unsigned int year;
+		cin >> year;
+		if(year % 4 == 0) {          //是4的倍数
+			if(year % 100 == 0) {    //是100的倍数
+				if(year % 400 == 0) {//是400的倍数
+					cout << "1";
+					return 0;
+				} else {//不是400的倍数
+					cout << "0";
+					return 0;
+				}
+			} else {//不是100的倍数
+				cout << "1";
+				return 0;
+			}
+		} else {//不是4的倍数
+			cout << "0";
+			return 0;
+		}
+		return 0;
+	}
 }// namespace luogu

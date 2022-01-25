@@ -211,4 +211,36 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("1 1 0 0", ans);
 	}
+
+	TEST(P5711, case1) {
+		istringstream in("1926");
+		auto out = ostringstream();
+		P5711::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("0", ans);
+	}
+
+	TEST(P5711, case2) {
+		istringstream in("1900");
+		auto out = ostringstream();
+		P5711::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("0", ans);
+	}
+
+	TEST(P5711, case3) {
+		istringstream in("2000");
+		auto out = ostringstream();
+		P5711::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1", ans);
+	}
+
+	TEST(P5711, case4) {
+		istringstream in("1996");
+		auto out = ostringstream();
+		P5711::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1", ans);
+	}
 }// namespace luogu
