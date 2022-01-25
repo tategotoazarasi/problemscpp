@@ -2290,4 +2290,47 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing1855::main(istream &cin, ostream &cout) {
+		unsigned short n;
+		cin >> n;
+		vector<unsigned int> hay = vector<unsigned int>();
+		for(unsigned short i = 0; i < n; i++) {
+			unsigned int x;
+			cin >> x;
+			hay.push_back(x);
+		}
+		sort(hay.begin(), hay.end());
+		unsigned int maximum = 0;
+		for(auto start = hay.begin(); start != hay.end(); ++start) {
+			bool left_end  = false;
+			bool right_end = false;
+			auto left      = start;
+			auto right     = start;
+			for(int i = 1;; i++) {
+				if(!left_end) {
+					auto l = lower_bound(hay.begin(), hay.end(), *left - i);
+					if(l == hay.end() || l == left) {
+						left_end = true;
+					} else {
+						left = l;
+					}
+				}
+				if(!right_end) {
+					auto r = upper_bound(hay.begin(), hay.end(), *right + i) - 1;
+					if(r == hay.end() || r == right) {
+						right_end = true;
+					} else {
+						right = r;
+					}
+				}
+				if(left_end && right_end) {
+					maximum = max(maximum, static_cast<unsigned int>(right - left) + 1);
+					break;
+				}
+			}
+		}
+		cout << maximum;
+		return 0;
+	}
 }// namespace acwing
