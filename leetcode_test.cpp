@@ -1068,4 +1068,14 @@ namespace leetcode {
 			ASSERT_EQ(11, Solution::secondMinimum(2, vec, 3, 2));
 		}
 	}// namespace second_minimum_time_to_reach_destination
+
+	namespace count_of_matches_in_tournament {
+		TEST(count_of_matches_in_tournament, case1) {
+			ASSERT_EQ(6, Solution::numberOfMatches(7));
+		}
+
+		TEST(count_of_matches_in_tournament, case2) {
+			ASSERT_EQ(13, Solution::numberOfMatches(14));
+		}
+	}// namespace count_of_matches_in_tournament
 }// namespace leetcode

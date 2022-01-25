@@ -1673,4 +1673,10 @@ namespace leetcode {
 
 		bool status::operator<(const status &s) const { return this->time > s.time; }
 	}// namespace second_minimum_time_to_reach_destination
+
+	namespace count_of_matches_in_tournament {
+		int Solution::numberOfMatches(int n) {
+			return n - 1;
+		}
+	}// namespace count_of_matches_in_tournament
 }// namespace leetcode

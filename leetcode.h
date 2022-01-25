@@ -699,6 +699,14 @@ namespace leetcode {
 			static int secondMinimum(int n, vector<vector<int>> &edges, int time, int change);
 		};
 	}// namespace second_minimum_time_to_reach_destination
+
+	/// \brief LeetCode 1688. 比赛中的配对次数
+	namespace count_of_matches_in_tournament {
+		class Solution {
+		public:
+			static int numberOfMatches(int n);
+		};
+	}// namespace count_of_matches_in_tournament
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
