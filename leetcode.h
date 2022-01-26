@@ -721,7 +721,7 @@ namespace leetcode {
 		public:
 			DetectSquares();
 			void add(vector<int> point);
-			int count(vector<int> point);
+			[[nodiscard]] int count(vector<int> point) const;
 		};
 	}// namespace detect_squares
 };   // namespace leetcode

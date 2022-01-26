@@ -337,32 +337,35 @@ namespace luogu {
 	int P5710::main(istream &cin, ostream &cout) {
 		unsigned short x;
 		cin >> x;
-		bool b1 = x % 2 == 0;
-		bool b2 = x > 4 && x <= 12;
-		cout << int(b1 && b2) << " " << int(b1 || b2) << " " << int(b1 xor b2) << " " << int(!b1 && !b2);
+		const bool b1 = x % 2 == 0;
+		const bool b2 = x > 4 && x <= 12;
+		cout << static_cast<int>(b1 && b2) << " " << static_cast<int>(b1 || b2) << " " << (b1 xor b2) << " " << static_cast<int>(!b1 && !b2);
 		return 0;
 	}
 
 	int P5711::main(istream &cin, ostream &cout) {
 		unsigned int year;
 		cin >> year;
-		if(year % 4 == 0) {          //是4的倍数
-			if(year % 100 == 0) {    //是100的倍数
-				if(year % 400 == 0) {//是400的倍数
+		if(year % 4 == 0) {
+			//是4的倍数
+			if(year % 100 == 0) {
+				//是100的倍数
+				if(year % 400 == 0) {
+					//是400的倍数
 					cout << "1";
 					return 0;
-				} else {//不是400的倍数
-					cout << "0";
-					return 0;
 				}
-			} else {//不是100的倍数
-				cout << "1";
+				//不是400的倍数
+				cout << "0";
 				return 0;
 			}
-		} else {//不是4的倍数
-			cout << "0";
+			//不是100的倍数
+			cout << "1";
 			return 0;
 		}
+		//不是4的倍数
+		cout << "0";
+		return 0;
 	}
 
 	int P5712::main(istream &cin, ostream &cout) {
@@ -379,8 +382,8 @@ namespace luogu {
 	int P5713::main(istream &cin, ostream &cout) {
 		unsigned int n;
 		cin >> n;
-		unsigned int local = n * 5;
-		unsigned int luogu = 11 + 3 * n;
+		const unsigned int local = n * 5;
+		const unsigned int luogu = 11 + 3 * n;
 		if(local < luogu) {
 			cout << "Local";
 		} else {

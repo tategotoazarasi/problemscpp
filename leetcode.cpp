@@ -1675,21 +1675,15 @@ namespace leetcode {
 	}// namespace second_minimum_time_to_reach_destination
 
 	namespace count_of_matches_in_tournament {
-		int Solution::numberOfMatches(int n) {
-			return n - 1;
-		}
+		int Solution::numberOfMatches(int n) { return n - 1; }
 	}// namespace count_of_matches_in_tournament
 
 	namespace detect_squares {
-		DetectSquares::DetectSquares() {
-			ms = multiset<pair<int, int>>();
-		}
+		DetectSquares::DetectSquares() { ms = multiset<pair<int, int>>(); }
 
-		void DetectSquares::add(vector<int> point) {
-			ms.insert(pair(point[0], point[1]));
-		}
+		void DetectSquares::add(vector<int> point) { ms.insert(pair(point[0], point[1])); }
 
-		int DetectSquares::count(vector<int> point) {
+		int DetectSquares::count(vector<int> point) const {
 			int count = 0;
 			for(auto p: ms) {
 				if(p.first != point[0] && p.second != point[1] && abs(p.first - point[0]) == abs(p.second - point[1])) {

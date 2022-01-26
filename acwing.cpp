@@ -2278,14 +2278,14 @@ namespace acwing {
 	int acwing717::main(istream &cin, ostream &cout) {
 		unsigned short n;
 		cin >> n;
-		vector<unsigned int> fibb = vector<unsigned int>();
+		auto fibb = vector<unsigned int>();
 		fibb.resize(n);
 		fibb[0] = 0;
 		fibb[1] = 1;
 		for(unsigned short i = 2; i < n; i++) {
 			fibb[i] = fibb[i - 1] + fibb[i - 2];
 		}
-		for(auto num: fibb) {
+		for(const auto num: fibb) {
 			cout << num << " ";
 		}
 		return 0;
@@ -2294,7 +2294,7 @@ namespace acwing {
 	int acwing1855::main(istream &cin, ostream &cout) {
 		unsigned short n;
 		cin >> n;
-		vector<unsigned int> hay = vector<unsigned int>();
+		auto hay = vector<unsigned int>();
 		for(unsigned short i = 0; i < n; i++) {
 			unsigned int x;
 			cin >> x;
@@ -2351,7 +2351,8 @@ namespace acwing {
 
 	int acwing722::main(istream &cin, ostream &cout) {
 		int count = 0;
-		int m, n;
+		int m;
+		int n;
 		cin >> m >> n;
 		while(n > 0 && m > 0) {
 			if(m > n) {
@@ -2361,7 +2362,7 @@ namespace acwing {
 				cout << i << " ";
 			}
 			count += 2 * (m + n);
-			cout << "Sum=" << (((n - m) + 1) * (m + n)) / 2 << endl;
+			cout << "Sum=" << (n - m + 1) * (m + n) / 2 << endl;
 			cin >> m >> n;
 		}
 		return 0;
