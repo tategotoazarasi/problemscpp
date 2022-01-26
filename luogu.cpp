@@ -375,4 +375,17 @@ namespace luogu {
 		cout << ".";
 		return 0;
 	}
+
+	int P5713::main(istream &cin, ostream &cout) {
+		unsigned int n;
+		cin >> n;
+		unsigned int local = n * 5;
+		unsigned int luogu = 11 + 3 * n;
+		if(local < luogu) {
+			cout << "Local";
+		} else {
+			cout << "Luogu";
+		}
+		return 0;
+	}
 }// namespace luogu

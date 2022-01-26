@@ -259,4 +259,20 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("Today, I ate 3 apples.", ans);
 	}
+
+	TEST(P5713, case1) {
+		istringstream in("2");
+		auto out = ostringstream();
+		P5713::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Local", ans);
+	}
+
+	TEST(P5713, case2) {
+		istringstream in("50");
+		auto out = ostringstream();
+		P5713::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Luogu", ans);
+	}
 }// namespace luogu
