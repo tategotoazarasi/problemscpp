@@ -2333,4 +2333,19 @@ namespace acwing {
 		cout << maximum;
 		return 0;
 	}
+
+	int acwing724::main(istream &cin, ostream &cout) {
+		unsigned short n;
+		cin >> n;
+		cout << 1 << endl;
+		for(unsigned short i = 2; i < n; i++) {
+			if(n % i == 0) {
+				cout << i << endl;
+			}
+		}
+		if(n != 1) {
+			cout << n;
+		}
+		return 0;
+	}
 }// namespace acwing
