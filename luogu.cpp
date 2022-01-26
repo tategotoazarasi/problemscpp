@@ -364,4 +364,15 @@ namespace luogu {
 			return 0;
 		}
 	}
+
+	int P5712::main(istream &cin, ostream &cout) {
+		unsigned short x;
+		cin >> x;
+		cout << "Today, I ate " << x << " apple";
+		if(x > 1) {
+			cout << "s";
+		}
+		cout << ".";
+		return 0;
+	}
 }// namespace luogu
