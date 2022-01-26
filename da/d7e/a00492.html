@@ -127,14 +127,14 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l02278" name="l02278"></a><span class="lineno"> 2278</span>                                                   {</div>
 <div class="line"><a id="l02279" name="l02279"></a><span class="lineno"> 2279</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> n;</div>
 <div class="line"><a id="l02280" name="l02280"></a><span class="lineno"> 2280</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l02281" name="l02281"></a><span class="lineno"> 2281</span>        vector&lt;unsigned int&gt; fibb = vector&lt;unsigned int&gt;();</div>
+<div class="line"><a id="l02281" name="l02281"></a><span class="lineno"> 2281</span>        <span class="keyword">auto</span> fibb = vector&lt;unsigned int&gt;();</div>
 <div class="line"><a id="l02282" name="l02282"></a><span class="lineno"> 2282</span>        fibb.resize(n);</div>
 <div class="line"><a id="l02283" name="l02283"></a><span class="lineno"> 2283</span>        fibb[0] = 0;</div>
 <div class="line"><a id="l02284" name="l02284"></a><span class="lineno"> 2284</span>        fibb[1] = 1;</div>
 <div class="line"><a id="l02285" name="l02285"></a><span class="lineno"> 2285</span>        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> i = 2; i &lt; n; i++) {</div>
 <div class="line"><a id="l02286" name="l02286"></a><span class="lineno"> 2286</span>            fibb[i] = fibb[i - 1] + fibb[i - 2];</div>
 <div class="line"><a id="l02287" name="l02287"></a><span class="lineno"> 2287</span>        }</div>
-<div class="line"><a id="l02288" name="l02288"></a><span class="lineno"> 2288</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> num: fibb) {</div>
+<div class="line"><a id="l02288" name="l02288"></a><span class="lineno"> 2288</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> num: fibb) {</div>
 <div class="line"><a id="l02289" name="l02289"></a><span class="lineno"> 2289</span>            cout &lt;&lt; num &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
 <div class="line"><a id="l02290" name="l02290"></a><span class="lineno"> 2290</span>        }</div>
 <div class="line"><a id="l02291" name="l02291"></a><span class="lineno"> 2291</span>        <span class="keywordflow">return</span> 0;</div>

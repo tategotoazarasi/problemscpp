@@ -13,7 +13,7 @@ var searchData=
   ['convertbst_10',['convertBST',['../d6/d95/a00556.html#a86ee4a151bf5d4194336a9a7a1270fff',1,'leetcode::convert_bst_to_greater_tree::Solution']]],
   ['converttotitle_11',['convertToTitle',['../d7/d41/a00532.html#a4e948b9886c358fe8ec6df3e6338e5f2',1,'leetcode::excel_sheet_column_title::Solution']]],
   ['copy_12',['copy',['../d6/d95/a00556.html#ae0377bd65e2f722c06fc36aee466833a',1,'leetcode::convert_bst_to_greater_tree::Solution']]],
-  ['count_13',['count',['../d3/dcc/a00264.html#a1ab033a8dcc290181eb3921471386852',1,'acwing::acwing4208::trie_node::count()'],['../d9/dd4/a00776.html#a609ccd112910c38f70d8d46d78e7e883',1,'leetcode::detect_squares::DetectSquares::count()']]],
+  ['count_13',['count',['../d3/dcc/a00264.html#a1ab033a8dcc290181eb3921471386852',1,'acwing::acwing4208::trie_node::count()'],['../d9/dd4/a00776.html#a6e0c92d9f16eb22be1d8c1b15b72864b',1,'leetcode::detect_squares::DetectSquares::count()']]],
   ['count_5freflect_14',['count_reflect',['../d9/de6/a00404.html#a0aed35881c3c121fa8fb196928dfbd44',1,'acwing::acwing1929::Solution']]],
   ['countelements_15',['countElements',['../dc/dce/a00740.html#a03fdd9d746931f7f0624c60ed329c0c0',1,'leetcode::count_elements_with_strictly_smaller_and_greater_elements::Solution']]],
   ['countquadruplets_16',['countQuadruplets',['../d4/d79/a00540.html#a54a0305ed7bf8817d862f9daab9d519f',1,'leetcode::count_special_quadruplets::Solution']]],

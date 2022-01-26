@@ -123,28 +123,28 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">acwing.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l02370">2370</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02370" name="l02370"></a><span class="lineno"> 2370</span>                                                    {</div>
-<div class="line"><a id="l02371" name="l02371"></a><span class="lineno"> 2371</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> n;</div>
-<div class="line"><a id="l02372" name="l02372"></a><span class="lineno"> 2372</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> min = 0;</div>
-<div class="line"><a id="l02373" name="l02373"></a><span class="lineno"> 2373</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l02374" name="l02374"></a><span class="lineno"> 2374</span>        <span class="keyword">auto</span> *r = <span class="keyword">new</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>[n];</div>
-<div class="line"><a id="l02375" name="l02375"></a><span class="lineno"> 2375</span>        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l02376" name="l02376"></a><span class="lineno"> 2376</span>            cin &gt;&gt; r[i];</div>
-<div class="line"><a id="l02377" name="l02377"></a><span class="lineno"> 2377</span>        }</div>
-<div class="line"><a id="l02378" name="l02378"></a><span class="lineno"> 2378</span>        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l02379" name="l02379"></a><span class="lineno"> 2379</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><a id="l02380" name="l02380"></a><span class="lineno"> 2380</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> j = 0; j &lt; n - 1; j++) {</div>
-<div class="line"><a id="l02381" name="l02381"></a><span class="lineno"> 2381</span>                count += r[(i - j + n) % n] * (n - j - 1);</div>
-<div class="line"><a id="l02382" name="l02382"></a><span class="lineno"> 2382</span>            }</div>
-<div class="line"><a id="l02383" name="l02383"></a><span class="lineno"> 2383</span>            <span class="keywordflow">if</span>(min == 0 || min &gt; count) {</div>
-<div class="line"><a id="l02384" name="l02384"></a><span class="lineno"> 2384</span>                min = count;</div>
-<div class="line"><a id="l02385" name="l02385"></a><span class="lineno"> 2385</span>            }</div>
-<div class="line"><a id="l02386" name="l02386"></a><span class="lineno"> 2386</span>        }</div>
-<div class="line"><a id="l02387" name="l02387"></a><span class="lineno"> 2387</span>        cout &lt;&lt; min;</div>
-<div class="line"><a id="l02388" name="l02388"></a><span class="lineno"> 2388</span>        <span class="keyword">delete</span>[] r;</div>
-<div class="line"><a id="l02389" name="l02389"></a><span class="lineno"> 2389</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02390" name="l02390"></a><span class="lineno"> 2390</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">acwing.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l02371">2371</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02371" name="l02371"></a><span class="lineno"> 2371</span>                                                    {</div>
+<div class="line"><a id="l02372" name="l02372"></a><span class="lineno"> 2372</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> n;</div>
+<div class="line"><a id="l02373" name="l02373"></a><span class="lineno"> 2373</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> min = 0;</div>
+<div class="line"><a id="l02374" name="l02374"></a><span class="lineno"> 2374</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l02375" name="l02375"></a><span class="lineno"> 2375</span>        <span class="keyword">auto</span> *r = <span class="keyword">new</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>[n];</div>
+<div class="line"><a id="l02376" name="l02376"></a><span class="lineno"> 2376</span>        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l02377" name="l02377"></a><span class="lineno"> 2377</span>            cin &gt;&gt; r[i];</div>
+<div class="line"><a id="l02378" name="l02378"></a><span class="lineno"> 2378</span>        }</div>
+<div class="line"><a id="l02379" name="l02379"></a><span class="lineno"> 2379</span>        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l02380" name="l02380"></a><span class="lineno"> 2380</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l02381" name="l02381"></a><span class="lineno"> 2381</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> j = 0; j &lt; n - 1; j++) {</div>
+<div class="line"><a id="l02382" name="l02382"></a><span class="lineno"> 2382</span>                count += r[(i - j + n) % n] * (n - j - 1);</div>
+<div class="line"><a id="l02383" name="l02383"></a><span class="lineno"> 2383</span>            }</div>
+<div class="line"><a id="l02384" name="l02384"></a><span class="lineno"> 2384</span>            <span class="keywordflow">if</span>(min == 0 || min &gt; count) {</div>
+<div class="line"><a id="l02385" name="l02385"></a><span class="lineno"> 2385</span>                min = count;</div>
+<div class="line"><a id="l02386" name="l02386"></a><span class="lineno"> 2386</span>            }</div>
+<div class="line"><a id="l02387" name="l02387"></a><span class="lineno"> 2387</span>        }</div>
+<div class="line"><a id="l02388" name="l02388"></a><span class="lineno"> 2388</span>        cout &lt;&lt; min;</div>
+<div class="line"><a id="l02389" name="l02389"></a><span class="lineno"> 2389</span>        <span class="keyword">delete</span>[] r;</div>
+<div class="line"><a id="l02390" name="l02390"></a><span class="lineno"> 2390</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02391" name="l02391"></a><span class="lineno"> 2391</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l01292">acwing::TEST()</a>.</p>
 

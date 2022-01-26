@@ -127,24 +127,27 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                                               {</div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> year;</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        cin &gt;&gt; year;</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        <span class="keywordflow">if</span>(year % 4 == 0) {          <span class="comment">//是4的倍数</span></div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>            <span class="keywordflow">if</span>(year % 100 == 0) {    <span class="comment">//是100的倍数</span></div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                <span class="keywordflow">if</span>(year % 400 == 0) {<span class="comment">//是400的倍数</span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                    cout &lt;&lt; <span class="stringliteral">&quot;1&quot;</span>;</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                } <span class="keywordflow">else</span> {<span class="comment">//不是400的倍数</span></div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                    cout &lt;&lt; <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        <span class="keywordflow">if</span>(year % 4 == 0) {</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>            <span class="comment">//是4的倍数</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>            <span class="keywordflow">if</span>(year % 100 == 0) {</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                <span class="comment">//是100的倍数</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                <span class="keywordflow">if</span>(year % 400 == 0) {</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                    <span class="comment">//是400的倍数</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                    cout &lt;&lt; <span class="stringliteral">&quot;1&quot;</span>;</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                }</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            } <span class="keywordflow">else</span> {<span class="comment">//不是100的倍数</span></div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                cout &lt;&lt; <span class="stringliteral">&quot;1&quot;</span>;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                <span class="comment">//不是400的倍数</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                cout &lt;&lt; <span class="stringliteral">&quot;0&quot;</span>;</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            }</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        } <span class="keywordflow">else</span> {<span class="comment">//不是4的倍数</span></div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            cout &lt;&lt; <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>            <span class="comment">//不是100的倍数</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            cout &lt;&lt; <span class="stringliteral">&quot;1&quot;</span>;</div>
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>        }</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    }</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>        <span class="comment">//不是4的倍数</span></div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        cout &lt;&lt; <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dd/d32/a00041_source.html#l00215">luogu::TEST()</a>.</p>
 
