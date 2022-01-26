@@ -1,28 +1,4 @@
 var searchData=
 [
-  ['p1000_0',['P1000',['../d7/d4f/a00819.html',1,'luogu']]],
-  ['p1001_1',['P1001',['../d8/d2d/a00815.html',1,'luogu']]],
-  ['p1002_2',['P1002',['../dc/d1b/a00827.html',1,'luogu']]],
-  ['p1003_3',['P1003',['../d7/d5f/a00831.html',1,'luogu']]],
-  ['p1008_4',['P1008',['../d3/db4/a00823.html',1,'luogu']]],
-  ['p1421_5',['P1421',['../d7/d49/a00863.html',1,'luogu']]],
-  ['p1425_6',['P1425',['../df/d4c/a00851.html',1,'luogu']]],
-  ['p2181_7',['P2181',['../dd/de1/a00871.html',1,'luogu']]],
-  ['p2433_8',['P2433',['../da/de6/a00855.html',1,'luogu']]],
-  ['p3954_9',['P3954',['../d2/da1/a00879.html',1,'luogu']]],
-  ['p5703_10',['P5703',['../dd/d70/a00835.html',1,'luogu']]],
-  ['p5704_11',['P5704',['../df/de8/a00839.html',1,'luogu']]],
-  ['p5705_12',['P5705',['../dc/d22/a00843.html',1,'luogu']]],
-  ['p5706_13',['P5706',['../d4/d60/a00847.html',1,'luogu']]],
-  ['p5707_14',['P5707',['../d1/d93/a00875.html',1,'luogu']]],
-  ['p5708_15',['P5708',['../dc/d8c/a00859.html',1,'luogu']]],
-  ['p5709_16',['P5709',['../d2/db8/a00867.html',1,'luogu']]],
-  ['p5710_17',['P5710',['../d7/d34/a00883.html',1,'luogu']]],
-  ['p5711_18',['P5711',['../d7/d92/a00887.html',1,'luogu']]],
-  ['pair_19',['pair',['../dd/db6/a00639.html',1,'leetcode::find_k_pairs_with_smallest_sums']]],
-  ['path_20',['path',['../dc/d0f/a00303.html',1,'acwing::acwing1978']]],
-  ['point_21',['point',['../de/dd2/a00207.html',1,'acwing::acwing2019::point'],['../d3/d2a/a00195.html',1,'acwing::acwing2060::point'],['../d6/d6a/a00619.html',1,'leetcode::escape_a_large_maze::point']]],
-  ['point_5fhash_22',['point_hash',['../df/d6f/a00623.html',1,'leetcode::escape_a_large_maze']]],
-  ['pointequal_23',['pointequal',['../de/d79/a00203.html',1,'acwing::acwing2060']]],
-  ['pointhash_24',['pointhash',['../d8/d72/a00199.html',1,'acwing::acwing2060']]]
+  ['msg_0',['msg',['../dd/d5c/a00752.html',1,'leetcode::maximum_good_people_based_on_statements']]]
 ];

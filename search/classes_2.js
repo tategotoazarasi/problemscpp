@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['item_0',['item',['../d3/d3b/a00715.html',1,'leetcode::k_highest_ranked_items_within_a_price_range']]]
+  ['friendtreenode_0',['FriendTreeNode',['../dd/de9/a00552.html',1,'leetcode::convert_bst_to_greater_tree']]]
 ];

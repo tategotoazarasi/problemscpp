@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['u_0',['u',['../dd/db6/a00639.html#a0fe022ca955920947e43e36545b039da',1,'leetcode::find_k_pairs_with_smallest_sums::pair']]],
-  ['up_5fmap_1',['up_map',['../d0/da0/a00403.html#abe667ade1897a4f28346557eb0cef949',1,'acwing::acwing1929::Solution']]]
+  ['u_0',['u',['../df/d37/a00652.html#a0fe022ca955920947e43e36545b039da',1,'leetcode::find_k_pairs_with_smallest_sums::pair']]],
+  ['up_5fmap_1',['up_map',['../d9/de6/a00404.html#abe667ade1897a4f28346557eb0cef949',1,'acwing::acwing1929::Solution']]]
 ];
