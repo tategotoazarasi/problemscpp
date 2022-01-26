@@ -1276,4 +1276,16 @@ namespace acwing {
 		          "6",
 		          ans);
 	}
+
+	TEST(acwing722, case1) {
+		istringstream in("2 5\n"
+		                 "6 3\n"
+		                 "5 0");
+		auto out = ostringstream();
+		acwing722::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2 3 4 5 Sum=14\n"
+		          "3 4 5 6 Sum=18\n",
+		          ans);
+	}
 }// namespace acwing

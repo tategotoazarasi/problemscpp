@@ -2348,4 +2348,22 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing722::main(istream &cin, ostream &cout) {
+		int count = 0;
+		int m, n;
+		cin >> m >> n;
+		while(n > 0 && m > 0) {
+			if(m > n) {
+				swap(m, n);
+			}
+			for(int i = m; i <= n; i++) {
+				cout << i << " ";
+			}
+			count += 2 * (m + n);
+			cout << "Sum=" << (((n - m) + 1) * (m + n)) / 2 << endl;
+			cin >> m >> n;
+		}
+		return 0;
+	}
 }// namespace acwing
