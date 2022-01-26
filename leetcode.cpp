@@ -1679,4 +1679,24 @@ namespace leetcode {
 			return n - 1;
 		}
 	}// namespace count_of_matches_in_tournament
+
+	namespace detect_squares {
+		DetectSquares::DetectSquares() {
+			ms = multiset<pair<int, int>>();
+		}
+
+		void DetectSquares::add(vector<int> point) {
+			ms.insert(pair(point[0], point[1]));
+		}
+
+		int DetectSquares::count(vector<int> point) {
+			int count = 0;
+			for(auto p: ms) {
+				if(p.first != point[0] && p.second != point[1] && abs(p.first - point[0]) == abs(p.second - point[1])) {
+					count += ms.count(pair(p.first, point[1])) * ms.count(pair(point[0], p.second));
+				}
+			}
+			return count;
+		}
+	}// namespace detect_squares
 }// namespace leetcode

@@ -707,6 +707,23 @@ namespace leetcode {
 			static int numberOfMatches(int n);
 		};
 	}// namespace count_of_matches_in_tournament
+
+	/// \brief LeetCode 2013. 检测正方形
+	/// \details
+	/// Your DetectSquares object will be instantiated and called as such:
+	/// DetectSquares* obj = new DetectSquares();
+	/// obj->add(point);
+	/// int param_2 = obj->count(point);
+	namespace detect_squares {
+		class DetectSquares {
+			multiset<pair<int, int>> ms;
+
+		public:
+			DetectSquares();
+			void add(vector<int> point);
+			int count(vector<int> point);
+		};
+	}// namespace detect_squares
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
