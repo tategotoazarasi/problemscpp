@@ -1288,4 +1288,17 @@ namespace acwing {
 		          "3 4 5 6 Sum=18\n",
 		          ans);
 	}
+
+	TEST(acwing1843, case1) {
+		istringstream in("5\n"
+		                 "4\n"
+		                 "7\n"
+		                 "8\n"
+		                 "6\n"
+		                 "4");
+		auto out = ostringstream();
+		acwing1843::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("48", ans);
+	}
 }// namespace acwing

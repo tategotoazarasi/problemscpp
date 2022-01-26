@@ -2366,4 +2366,26 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing1843::main(istream &cin, ostream &cout) {
+		unsigned short n;
+		unsigned int min = 0;
+		cin >> n;
+		auto *r = new unsigned short[n];
+		for(unsigned short i = 0; i < n; i++) {
+			cin >> r[i];
+		}
+		for(unsigned short i = 0; i < n; i++) {
+			unsigned int count = 0;
+			for(unsigned short j = 0; j < n - 1; j++) {
+				count += r[(i - j + n) % n] * (n - j - 1);
+			}
+			if(min == 0 || min > count) {
+				min = count;
+			}
+		}
+		cout << min;
+		delete[] r;
+		return 0;
+	}
 }// namespace acwing
