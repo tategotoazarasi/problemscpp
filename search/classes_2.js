@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['friendtreenode_0',['FriendTreeNode',['../dd/de9/a00552.html',1,'leetcode::convert_bst_to_greater_tree']]]
+  ['detectsquares_0',['DetectSquares',['../de/d79/a00798.html',1,'leetcode::detect_squares']]]
 ];

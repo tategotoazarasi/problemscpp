@@ -1,30 +1,4 @@
 var searchData=
 [
-  ['p1000_0',['P1000',['../d3/d13/a00836.html',1,'luogu']]],
-  ['p1001_1',['P1001',['../d0/d08/a00832.html',1,'luogu']]],
-  ['p1002_2',['P1002',['../d3/d69/a00844.html',1,'luogu']]],
-  ['p1003_3',['P1003',['../d9/d30/a00848.html',1,'luogu']]],
-  ['p1008_4',['P1008',['../d9/d61/a00840.html',1,'luogu']]],
-  ['p1421_5',['P1421',['../d1/d8f/a00880.html',1,'luogu']]],
-  ['p1425_6',['P1425',['../da/d5b/a00868.html',1,'luogu']]],
-  ['p2181_7',['P2181',['../dd/d94/a00888.html',1,'luogu']]],
-  ['p2433_8',['P2433',['../dc/d17/a00872.html',1,'luogu']]],
-  ['p3954_9',['P3954',['../da/dd6/a00896.html',1,'luogu']]],
-  ['p5703_10',['P5703',['../d9/dbb/a00852.html',1,'luogu']]],
-  ['p5704_11',['P5704',['../da/de3/a00856.html',1,'luogu']]],
-  ['p5705_12',['P5705',['../d2/d5e/a00860.html',1,'luogu']]],
-  ['p5706_13',['P5706',['../d7/d1b/a00864.html',1,'luogu']]],
-  ['p5707_14',['P5707',['../d0/de2/a00892.html',1,'luogu']]],
-  ['p5708_15',['P5708',['../d2/dac/a00876.html',1,'luogu']]],
-  ['p5709_16',['P5709',['../dd/d08/a00884.html',1,'luogu']]],
-  ['p5710_17',['P5710',['../d9/db0/a00900.html',1,'luogu']]],
-  ['p5711_18',['P5711',['../d8/d0a/a00904.html',1,'luogu']]],
-  ['p5712_19',['P5712',['../d0/d85/a00908.html',1,'luogu']]],
-  ['p5713_20',['P5713',['../df/da5/a00912.html',1,'luogu']]],
-  ['pair_21',['pair',['../df/d37/a00652.html',1,'leetcode::find_k_pairs_with_smallest_sums']]],
-  ['path_22',['path',['../d8/d17/a00304.html',1,'acwing::acwing1978']]],
-  ['point_23',['point',['../dc/d31/a00208.html',1,'acwing::acwing2019::point'],['../d7/ded/a00196.html',1,'acwing::acwing2060::point'],['../d4/d2a/a00632.html',1,'leetcode::escape_a_large_maze::point']]],
-  ['point_5fhash_24',['point_hash',['../db/ddc/a00636.html',1,'leetcode::escape_a_large_maze']]],
-  ['pointequal_25',['pointequal',['../d1/d72/a00204.html',1,'acwing::acwing2060']]],
-  ['pointhash_26',['pointhash',['../d3/db1/a00200.html',1,'acwing::acwing2060']]]
+  ['msg_0',['msg',['../d3/dee/a00774.html',1,'leetcode::maximum_good_people_based_on_statements']]]
 ];
