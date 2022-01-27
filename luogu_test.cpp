@@ -291,4 +291,12 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("2 2 2 ", ans);
 	}
+
+	TEST(P5714, case1) {
+		istringstream in("70 1.72");
+		auto out = ostringstream();
+		P5714::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Normal", ans);
+	}
 }// namespace luogu
