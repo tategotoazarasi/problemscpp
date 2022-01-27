@@ -729,7 +729,7 @@ namespace leetcode {
 	namespace number_of_valid_words_in_a_sentence {
 		class Solution {
 		public:
-			static int countValidWords(string sentence);
+			static int countValidWords(const string &sentence);
 		};
 	}// namespace number_of_valid_words_in_a_sentence
 };   // namespace leetcode

@@ -2391,7 +2391,8 @@ namespace acwing {
 	}
 
 	int acwing723::main(istream &cin, ostream &cout) {
-		unsigned short n, m;
+		unsigned short n;
+		unsigned short m;
 		cin >> n >> m;
 		for(int i = 0; i < n; i++) {
 			for(int j = 0; j < m; j++) {
@@ -2412,7 +2413,7 @@ namespace acwing {
 		for(unsigned short i = 0; i < n; i++) {
 			cin >> x;
 			unsigned int count = 1;
-			unsigned int max   = static_cast<unsigned int>(sqrt(double(x)));
+			auto max           = static_cast<unsigned int>(sqrt(static_cast<double>(x)));
 			for(unsigned int j = 2; j <= max; j++) {
 				if(x % j == 0) {
 					count += j;
@@ -2435,7 +2436,9 @@ namespace acwing {
 
 	namespace acwing1826 {
 		int acwing1826::main(istream &cin, ostream &cout) {
-			unsigned int n, x, y;
+			unsigned int n;
+			unsigned int x;
+			unsigned int y;
 			cin >> n;
 			multiset<pair<unsigned int, unsigned int>, cmprow> row;
 			multiset<pair<unsigned int, unsigned int>, cmpcol> col;
@@ -2446,29 +2449,29 @@ namespace acwing {
 			}
 			unsigned int minimum = ((*row.rbegin()).first - (*row.begin()).first) * ((*col.rbegin()).second - (*col.begin()).second);
 
-			auto row_cpy = multiset<pair<unsigned int, unsigned int>, cmprow>(row);
-			auto col_cpy = multiset<pair<unsigned int, unsigned int>, cmpcol>(col);
+			auto row_cpy = multiset(row);
+			auto col_cpy = multiset(col);
 			auto r_pair  = *row_cpy.begin();
 			row_cpy.erase(row_cpy.find(r_pair));
 			col_cpy.erase(col_cpy.find(r_pair));
 			minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));
 
-			row_cpy = multiset<pair<unsigned int, unsigned int>, cmprow>(row);
-			col_cpy = multiset<pair<unsigned int, unsigned int>, cmpcol>(col);
+			row_cpy = multiset(row);
+			col_cpy = multiset(col);
 			r_pair  = *row_cpy.rbegin();
 			row_cpy.erase(row_cpy.find(r_pair));
 			col_cpy.erase(col_cpy.find(r_pair));
 			minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));
 
-			row_cpy     = multiset<pair<unsigned int, unsigned int>, cmprow>(row);
-			col_cpy     = multiset<pair<unsigned int, unsigned int>, cmpcol>(col);
+			row_cpy     = multiset(row);
+			col_cpy     = multiset(col);
 			auto c_pair = *col_cpy.begin();
 			row_cpy.erase(row_cpy.find(c_pair));
 			col_cpy.erase(col_cpy.find(c_pair));
 			minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));
 
-			row_cpy = multiset<pair<unsigned int, unsigned int>, cmprow>(row);
-			col_cpy = multiset<pair<unsigned int, unsigned int>, cmpcol>(col);
+			row_cpy = multiset(row);
+			col_cpy = multiset(col);
 			c_pair  = *col_cpy.rbegin();
 			row_cpy.erase(row_cpy.find(c_pair));
 			col_cpy.erase(col_cpy.find(c_pair));
@@ -2478,12 +2481,8 @@ namespace acwing {
 			return 0;
 		}
 
-		bool cmprow::operator()(const pair<unsigned int, unsigned int> &left, const pair<unsigned int, unsigned int> &right) const {
-			return left.first < right.first;
-		}
+		bool cmprow::operator()(const pair<unsigned int, unsigned int> &left, const pair<unsigned int, unsigned int> &right) const { return left.first < right.first; }
 
-		bool cmpcol::operator()(const pair<unsigned int, unsigned int> &left, const pair<unsigned int, unsigned int> &right) const {
-			return left.second < right.second;
-		}
+		bool cmpcol::operator()(const pair<unsigned int, unsigned int> &left, const pair<unsigned int, unsigned int> &right) const { return left.second < right.second; }
 	}// namespace acwing1826
 }// namespace acwing

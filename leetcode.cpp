@@ -1695,33 +1695,39 @@ namespace leetcode {
 	}// namespace detect_squares
 
 	namespace number_of_valid_words_in_a_sentence {
-		int Solution::countValidWords(string sentence) {
-			char *str = new char[sentence.length() + 1];
+		int Solution::countValidWords(const string &sentence) {
+			auto *str = new char[sentence.length() + 1];
 			strcpy(str, sentence.c_str());
-			int count = 0;
+			int count = 0;///< 有效单词数
 			for(char *token = strtok(str, " "); token != nullptr; token = strtok(nullptr, " ")) {
-				bool is_valid = true;
-				bool hyphen   = false;
+				bool is_valid = true; ///< 是否是有效单词
+				bool hyphen   = false;///< 是否已经存在连接符'-'
 				for(int i = 0; token[i] != '\0'; i++) {
-					char ch = token[i];
+					const char ch = token[i];///当前字符
 					if(ch == '-') {
+						//当前字符是连接符'-'
 						if(hyphen) {
+							//已经存在过连接符'-'
 							is_valid = false;
 							break;
 						}
 						hyphen = true;
 						if(i == 0 || token[i + 1] == '\0') {
-							is_valid = false;
-							break;
-						} else if(!isalpha(token[i - 1]) || !isalpha(token[i + 1])) {
+							//是否在字符串的开头或结尾
 							is_valid = false;
 							break;
 						}
-					} else if(token[i + 1] != '\0' && !isalpha(ch)) {
+						if(isalpha(token[i - 1]) == 0 || isalpha(token[i + 1]) == 0) {
+							//前后是否是字母
+							is_valid = false;
+							break;
+						}
+					} else if(token[i + 1] != '\0' && isalpha(ch) == 0) {
+						//不是最后一个字符是否不是字母
 						is_valid = false;
 						break;
-					}
-					if(isdigit(ch)) {
+					} else if(isdigit(ch) != 0) {
+						//是否是数字
 						is_valid = false;
 						break;
 					}

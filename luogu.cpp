@@ -1,4 +1,6 @@
 #include "luogu.h"
+
+#include <algorithm>
 #include <cmath>
 #include <iomanip>
 #include <unordered_set>
@@ -396,16 +398,17 @@ namespace luogu {
 		unsigned int abc[3];
 		cin >> abc[0] >> abc[1] >> abc[2];
 		sort(abc, abc + 3);
-		for(auto i: abc) {
+		for(const auto i: abc) {
 			cout << i << " ";
 		}
 		return 0;
 	}
 
 	int P5714::main(istream &cin, ostream &cout) {
-		double m, n;
+		double m;
+		double n;
 		cin >> m >> n;
-		double bmi = m / (n * n);
+		const double bmi = m / (n * n);
 		if(bmi < 18.5) {
 			cout << "Underweight";
 		} else if(bmi >= 18.5 && bmi < 24) {
