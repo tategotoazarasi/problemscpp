@@ -198,9 +198,9 @@ namespace leetcode {
 	namespace convert_bst_to_greater_tree {
 		TEST(convert_bst_to_greater_tree, case1) {
 			auto *input        = new TreeNode(4, new TreeNode(1, new TreeNode(0), new TreeNode(2, nullptr, new TreeNode(3))),
-			                                  new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
+                                       new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
 			const auto *ans    = new TreeNode(30, new TreeNode(36, new TreeNode(36), new TreeNode(35, nullptr, new TreeNode(33))),
-			                                  new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
+                                           new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
 			const auto *output = Solution::convertBST(input);
 			ASSERT_TRUE(*ans == *output);
 		}
@@ -1045,7 +1045,7 @@ namespace leetcode {
 		TEST(second_minimum_time_to_reach_destination, case1) {
 			int inputs[][2] = {{1, 2}, {1, 3}, {1, 4}, {3, 4}, {4, 5}};
 			auto vec        = vector<vector<int>>();
-			for(auto *input: inputs) {
+			for(const auto *input: inputs) {
 				auto n_vec = vector<int>();
 				n_vec.resize(2);
 				n_vec[0] = input[0];
@@ -1058,7 +1058,7 @@ namespace leetcode {
 		TEST(second_minimum_time_to_reach_destination, case2) {
 			int inputs[][2] = {{1, 2}};
 			auto vec        = vector<vector<int>>();
-			for(auto *input: inputs) {
+			for(const auto *input: inputs) {
 				auto n_vec = vector<int>();
 				n_vec.resize(2);
 				n_vec[0] = input[0];
