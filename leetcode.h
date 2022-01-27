@@ -724,6 +724,14 @@ namespace leetcode {
 			[[nodiscard]] int count(vector<int> point) const;
 		};
 	}// namespace detect_squares
+
+	/// \brief LeetCode 2047. 句子中的有效单词数
+	namespace number_of_valid_words_in_a_sentence {
+		class Solution {
+		public:
+			static int countValidWords(string sentence);
+		};
+	}// namespace number_of_valid_words_in_a_sentence
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

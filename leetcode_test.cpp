@@ -1078,4 +1078,22 @@ namespace leetcode {
 			ASSERT_EQ(13, Solution::numberOfMatches(14));
 		}
 	}// namespace count_of_matches_in_tournament
+
+	namespace number_of_valid_words_in_a_sentence {
+		TEST(number_of_valid_words_in_a_sentence, case1) {
+			ASSERT_EQ(3, Solution::countValidWords("cat and  dog"));
+		}
+
+		TEST(number_of_valid_words_in_a_sentence, case2) {
+			ASSERT_EQ(0, Solution::countValidWords("!this  1-s b8d!"));
+		}
+
+		TEST(number_of_valid_words_in_a_sentence, case3) {
+			ASSERT_EQ(5, Solution::countValidWords("alice and  bob are playing stone-game10"));
+		}
+
+		TEST(number_of_valid_words_in_a_sentence, case4) {
+			ASSERT_EQ(6, Solution::countValidWords("he bought 2 pencils, 3 erasers, and 1  pencil-sharpener."));
+		}
+	}// namespace number_of_valid_words_in_a_sentence
 }// namespace leetcode

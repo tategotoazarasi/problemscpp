@@ -1693,4 +1693,44 @@ namespace leetcode {
 			return count;
 		}
 	}// namespace detect_squares
+
+	namespace number_of_valid_words_in_a_sentence {
+		int Solution::countValidWords(string sentence) {
+			char *str = new char[sentence.length() + 1];
+			strcpy(str, sentence.c_str());
+			int count = 0;
+			for(char *token = strtok(str, " "); token != nullptr; token = strtok(nullptr, " ")) {
+				bool is_valid = true;
+				bool hyphen   = false;
+				for(int i = 0; token[i] != '\0'; i++) {
+					char ch = token[i];
+					if(ch == '-') {
+						if(hyphen) {
+							is_valid = false;
+							break;
+						}
+						hyphen = true;
+						if(i == 0 || token[i + 1] == '\0') {
+							is_valid = false;
+							break;
+						} else if(!isalpha(token[i - 1]) || !isalpha(token[i + 1])) {
+							is_valid = false;
+							break;
+						}
+					} else if(token[i + 1] != '\0' && !isalpha(ch)) {
+						is_valid = false;
+						break;
+					}
+					if(isdigit(ch)) {
+						is_valid = false;
+						break;
+					}
+				}
+				if(is_valid) {
+					count++;
+				}
+			}
+			return count;
+		}
+	}// namespace number_of_valid_words_in_a_sentence
 }// namespace leetcode
