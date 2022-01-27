@@ -2459,102 +2459,101 @@ $(function() {
 <div class="line"><a id="l02391" name="l02391"></a><span class="lineno"> 2391</span>    }</div>
 <div class="line"><a id="l02392" name="l02392"></a><span class="lineno"> 2392</span> </div>
 <div class="line"><a id="l02393" name="l02393"></a><span class="lineno"><a class="line" href="../../d6/d90/a00514.html#ad8affec66337c1e2d7b6fff39d0bde55"> 2393</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d6/d90/a00514.html#ad8affec66337c1e2d7b6fff39d0bde55">acwing723::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l02394" name="l02394"></a><span class="lineno"> 2394</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> n, m;</div>
-<div class="line"><a id="l02395" name="l02395"></a><span class="lineno"> 2395</span>        cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l02396" name="l02396"></a><span class="lineno"> 2396</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l02397" name="l02397"></a><span class="lineno"> 2397</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; m; j++) {</div>
-<div class="line"><a id="l02398" name="l02398"></a><span class="lineno"> 2398</span>                <span class="keywordflow">if</span>(j != m - 1) {</div>
-<div class="line"><a id="l02399" name="l02399"></a><span class="lineno"> 2399</span>                    cout &lt;&lt; i * m + j + 1 &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a id="l02400" name="l02400"></a><span class="lineno"> 2400</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02401" name="l02401"></a><span class="lineno"> 2401</span>                    cout &lt;&lt; <span class="stringliteral">&quot;PUM&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l02402" name="l02402"></a><span class="lineno"> 2402</span>                }</div>
-<div class="line"><a id="l02403" name="l02403"></a><span class="lineno"> 2403</span>            }</div>
-<div class="line"><a id="l02404" name="l02404"></a><span class="lineno"> 2404</span>        }</div>
-<div class="line"><a id="l02405" name="l02405"></a><span class="lineno"> 2405</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02406" name="l02406"></a><span class="lineno"> 2406</span>    }</div>
-<div class="line"><a id="l02407" name="l02407"></a><span class="lineno"> 2407</span> </div>
-<div class="line"><a id="l02408" name="l02408"></a><span class="lineno"><a class="line" href="../../d5/dee/a00518.html#afdc0a4910ba845ab3a550102d70d0b69"> 2408</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d5/dee/a00518.html#afdc0a4910ba845ab3a550102d70d0b69">acwing725::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l02409" name="l02409"></a><span class="lineno"> 2409</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> n;</div>
-<div class="line"><a id="l02410" name="l02410"></a><span class="lineno"> 2410</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l02411" name="l02411"></a><span class="lineno"> 2411</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x;</div>
-<div class="line"><a id="l02412" name="l02412"></a><span class="lineno"> 2412</span>        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l02413" name="l02413"></a><span class="lineno"> 2413</span>            cin &gt;&gt; x;</div>
-<div class="line"><a id="l02414" name="l02414"></a><span class="lineno"> 2414</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count = 1;</div>
-<div class="line"><a id="l02415" name="l02415"></a><span class="lineno"> 2415</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> max   = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(sqrt(<span class="keywordtype">double</span>(x)));</div>
-<div class="line"><a id="l02416" name="l02416"></a><span class="lineno"> 2416</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 2; j &lt;= max; j++) {</div>
-<div class="line"><a id="l02417" name="l02417"></a><span class="lineno"> 2417</span>                <span class="keywordflow">if</span>(x % j == 0) {</div>
-<div class="line"><a id="l02418" name="l02418"></a><span class="lineno"> 2418</span>                    count += j;</div>
-<div class="line"><a id="l02419" name="l02419"></a><span class="lineno"> 2419</span>                    count += x / j;</div>
-<div class="line"><a id="l02420" name="l02420"></a><span class="lineno"> 2420</span>                    <span class="keywordflow">if</span>(j == x / j) {</div>
-<div class="line"><a id="l02421" name="l02421"></a><span class="lineno"> 2421</span>                        count -= j;</div>
-<div class="line"><a id="l02422" name="l02422"></a><span class="lineno"> 2422</span>                    }</div>
-<div class="line"><a id="l02423" name="l02423"></a><span class="lineno"> 2423</span>                }</div>
-<div class="line"><a id="l02424" name="l02424"></a><span class="lineno"> 2424</span>            }</div>
-<div class="line"><a id="l02425" name="l02425"></a><span class="lineno"> 2425</span>            cout &lt;&lt; x;</div>
-<div class="line"><a id="l02426" name="l02426"></a><span class="lineno"> 2426</span>            <span class="keywordflow">if</span>(x == 1 || count != x) {</div>
-<div class="line"><a id="l02427" name="l02427"></a><span class="lineno"> 2427</span>                cout &lt;&lt; <span class="stringliteral">&quot; is not perfect&quot;</span>;</div>
-<div class="line"><a id="l02428" name="l02428"></a><span class="lineno"> 2428</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02429" name="l02429"></a><span class="lineno"> 2429</span>                cout &lt;&lt; <span class="stringliteral">&quot; is perfect&quot;</span>;</div>
-<div class="line"><a id="l02430" name="l02430"></a><span class="lineno"> 2430</span>            }</div>
-<div class="line"><a id="l02431" name="l02431"></a><span class="lineno"> 2431</span>            cout &lt;&lt; endl;</div>
-<div class="line"><a id="l02432" name="l02432"></a><span class="lineno"> 2432</span>        }</div>
-<div class="line"><a id="l02433" name="l02433"></a><span class="lineno"> 2433</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02434" name="l02434"></a><span class="lineno"> 2434</span>    }</div>
-<div class="line"><a id="l02435" name="l02435"></a><span class="lineno"> 2435</span> </div>
-<div class="line"><a id="l02436" name="l02436"></a><span class="lineno"><a class="line" href="../../dc/dee/a00053.html"> 2436</a></span>    <span class="keyword">namespace </span><a class="code hl_class" href="../../da/d7e/a00530.html">acwing1826</a> {</div>
-<div class="line"><a id="l02437" name="l02437"></a><span class="lineno"><a class="line" href="../../da/d7e/a00530.html#a5a52193d1573ab0413580e1a44cb0c33"> 2437</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">acwing1826::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l02438" name="l02438"></a><span class="lineno"> 2438</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, x, y;</div>
-<div class="line"><a id="l02439" name="l02439"></a><span class="lineno"> 2439</span>            cin &gt;&gt; n;</div>
-<div class="line"><a id="l02440" name="l02440"></a><span class="lineno"> 2440</span>            multiset&lt;pair&lt;unsigned int, unsigned int&gt;, <a class="code hl_struct" href="../../d8/d14/a00522.html">cmprow</a>&gt; row;</div>
-<div class="line"><a id="l02441" name="l02441"></a><span class="lineno"> 2441</span>            multiset&lt;pair&lt;unsigned int, unsigned int&gt;, <a class="code hl_struct" href="../../d0/d35/a00526.html">cmpcol</a>&gt; col;</div>
-<div class="line"><a id="l02442" name="l02442"></a><span class="lineno"> 2442</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l02443" name="l02443"></a><span class="lineno"> 2443</span>                cin &gt;&gt; x &gt;&gt; y;</div>
-<div class="line"><a id="l02444" name="l02444"></a><span class="lineno"> 2444</span>                row.insert(pair(x, y));</div>
-<div class="line"><a id="l02445" name="l02445"></a><span class="lineno"> 2445</span>                col.insert(pair(x, y));</div>
-<div class="line"><a id="l02446" name="l02446"></a><span class="lineno"> 2446</span>            }</div>
-<div class="line"><a id="l02447" name="l02447"></a><span class="lineno"> 2447</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> minimum = ((*row.rbegin()).first - (*row.begin()).first) * ((*col.rbegin()).second - (*col.begin()).second);</div>
-<div class="line"><a id="l02448" name="l02448"></a><span class="lineno"> 2448</span> </div>
-<div class="line"><a id="l02449" name="l02449"></a><span class="lineno"> 2449</span>            <span class="keyword">auto</span> row_cpy = multiset&lt;pair&lt;unsigned int, unsigned int&gt;, <a class="code hl_struct" href="../../d8/d14/a00522.html">cmprow</a>&gt;(row);</div>
-<div class="line"><a id="l02450" name="l02450"></a><span class="lineno"> 2450</span>            <span class="keyword">auto</span> col_cpy = multiset&lt;pair&lt;unsigned int, unsigned int&gt;, <a class="code hl_struct" href="../../d0/d35/a00526.html">cmpcol</a>&gt;(col);</div>
-<div class="line"><a id="l02451" name="l02451"></a><span class="lineno"> 2451</span>            <span class="keyword">auto</span> r_pair  = *row_cpy.begin();</div>
-<div class="line"><a id="l02452" name="l02452"></a><span class="lineno"> 2452</span>            row_cpy.erase(row_cpy.find(r_pair));</div>
-<div class="line"><a id="l02453" name="l02453"></a><span class="lineno"> 2453</span>            col_cpy.erase(col_cpy.find(r_pair));</div>
-<div class="line"><a id="l02454" name="l02454"></a><span class="lineno"> 2454</span>            minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));</div>
-<div class="line"><a id="l02455" name="l02455"></a><span class="lineno"> 2455</span> </div>
-<div class="line"><a id="l02456" name="l02456"></a><span class="lineno"> 2456</span>            row_cpy = multiset&lt;pair&lt;unsigned int, unsigned int&gt;, <a class="code hl_struct" href="../../d8/d14/a00522.html">cmprow</a>&gt;(row);</div>
-<div class="line"><a id="l02457" name="l02457"></a><span class="lineno"> 2457</span>            col_cpy = multiset&lt;pair&lt;unsigned int, unsigned int&gt;, <a class="code hl_struct" href="../../d0/d35/a00526.html">cmpcol</a>&gt;(col);</div>
-<div class="line"><a id="l02458" name="l02458"></a><span class="lineno"> 2458</span>            r_pair  = *row_cpy.rbegin();</div>
-<div class="line"><a id="l02459" name="l02459"></a><span class="lineno"> 2459</span>            row_cpy.erase(row_cpy.find(r_pair));</div>
-<div class="line"><a id="l02460" name="l02460"></a><span class="lineno"> 2460</span>            col_cpy.erase(col_cpy.find(r_pair));</div>
-<div class="line"><a id="l02461" name="l02461"></a><span class="lineno"> 2461</span>            minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));</div>
-<div class="line"><a id="l02462" name="l02462"></a><span class="lineno"> 2462</span> </div>
-<div class="line"><a id="l02463" name="l02463"></a><span class="lineno"> 2463</span>            row_cpy     = multiset&lt;pair&lt;unsigned int, unsigned int&gt;, <a class="code hl_struct" href="../../d8/d14/a00522.html">cmprow</a>&gt;(row);</div>
-<div class="line"><a id="l02464" name="l02464"></a><span class="lineno"> 2464</span>            col_cpy     = multiset&lt;pair&lt;unsigned int, unsigned int&gt;, <a class="code hl_struct" href="../../d0/d35/a00526.html">cmpcol</a>&gt;(col);</div>
-<div class="line"><a id="l02465" name="l02465"></a><span class="lineno"> 2465</span>            <span class="keyword">auto</span> c_pair = *col_cpy.begin();</div>
-<div class="line"><a id="l02466" name="l02466"></a><span class="lineno"> 2466</span>            row_cpy.erase(row_cpy.find(c_pair));</div>
-<div class="line"><a id="l02467" name="l02467"></a><span class="lineno"> 2467</span>            col_cpy.erase(col_cpy.find(c_pair));</div>
-<div class="line"><a id="l02468" name="l02468"></a><span class="lineno"> 2468</span>            minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));</div>
-<div class="line"><a id="l02469" name="l02469"></a><span class="lineno"> 2469</span> </div>
-<div class="line"><a id="l02470" name="l02470"></a><span class="lineno"> 2470</span>            row_cpy = multiset&lt;pair&lt;unsigned int, unsigned int&gt;, <a class="code hl_struct" href="../../d8/d14/a00522.html">cmprow</a>&gt;(row);</div>
-<div class="line"><a id="l02471" name="l02471"></a><span class="lineno"> 2471</span>            col_cpy = multiset&lt;pair&lt;unsigned int, unsigned int&gt;, <a class="code hl_struct" href="../../d0/d35/a00526.html">cmpcol</a>&gt;(col);</div>
-<div class="line"><a id="l02472" name="l02472"></a><span class="lineno"> 2472</span>            c_pair  = *col_cpy.rbegin();</div>
-<div class="line"><a id="l02473" name="l02473"></a><span class="lineno"> 2473</span>            row_cpy.erase(row_cpy.find(c_pair));</div>
-<div class="line"><a id="l02474" name="l02474"></a><span class="lineno"> 2474</span>            col_cpy.erase(col_cpy.find(c_pair));</div>
-<div class="line"><a id="l02475" name="l02475"></a><span class="lineno"> 2475</span>            minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));</div>
-<div class="line"><a id="l02476" name="l02476"></a><span class="lineno"> 2476</span> </div>
-<div class="line"><a id="l02477" name="l02477"></a><span class="lineno"> 2477</span>            cout &lt;&lt; minimum;</div>
-<div class="line"><a id="l02478" name="l02478"></a><span class="lineno"> 2478</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02479" name="l02479"></a><span class="lineno"> 2479</span>        }</div>
-<div class="line"><a id="l02480" name="l02480"></a><span class="lineno"> 2480</span> </div>
-<div class="line"><a id="l02481" name="l02481"></a><span class="lineno"><a class="line" href="../../d8/d14/a00522.html#aa2087cd5ee3b6d88dbf7e8a25bbe9769"> 2481</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d8/d14/a00522.html#aa2087cd5ee3b6d88dbf7e8a25bbe9769">cmprow::operator()</a>(<span class="keyword">const</span> pair&lt;unsigned int, unsigned int&gt; &amp;<a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>, <span class="keyword">const</span> pair&lt;unsigned int, unsigned int&gt; &amp;<a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l02482" name="l02482"></a><span class="lineno"> 2482</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>.first &lt; <a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>.first;</div>
-<div class="line"><a id="l02483" name="l02483"></a><span class="lineno"> 2483</span>        }</div>
-<div class="line"><a id="l02484" name="l02484"></a><span class="lineno"> 2484</span> </div>
-<div class="line"><a id="l02485" name="l02485"></a><span class="lineno"><a class="line" href="../../d0/d35/a00526.html#aa7477e2faa36b16a5c3f6bff8a897c3f"> 2485</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d0/d35/a00526.html#aa7477e2faa36b16a5c3f6bff8a897c3f">cmpcol::operator()</a>(<span class="keyword">const</span> pair&lt;unsigned int, unsigned int&gt; &amp;<a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>, <span class="keyword">const</span> pair&lt;unsigned int, unsigned int&gt; &amp;<a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l02486" name="l02486"></a><span class="lineno"> 2486</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>.second &lt; <a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>.second;</div>
-<div class="line"><a id="l02487" name="l02487"></a><span class="lineno"> 2487</span>        }</div>
-<div class="line"><a id="l02488" name="l02488"></a><span class="lineno"> 2488</span>    }<span class="comment">// namespace acwing1826</span></div>
-<div class="line"><a id="l02489" name="l02489"></a><span class="lineno"> 2489</span>}<span class="comment">// namespace acwing</span></div>
+<div class="line"><a id="l02394" name="l02394"></a><span class="lineno"> 2394</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> n;</div>
+<div class="line"><a id="l02395" name="l02395"></a><span class="lineno"> 2395</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> m;</div>
+<div class="line"><a id="l02396" name="l02396"></a><span class="lineno"> 2396</span>        cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l02397" name="l02397"></a><span class="lineno"> 2397</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l02398" name="l02398"></a><span class="lineno"> 2398</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; m; j++) {</div>
+<div class="line"><a id="l02399" name="l02399"></a><span class="lineno"> 2399</span>                <span class="keywordflow">if</span>(j != m - 1) {</div>
+<div class="line"><a id="l02400" name="l02400"></a><span class="lineno"> 2400</span>                    cout &lt;&lt; i * m + j + 1 &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l02401" name="l02401"></a><span class="lineno"> 2401</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02402" name="l02402"></a><span class="lineno"> 2402</span>                    cout &lt;&lt; <span class="stringliteral">&quot;PUM&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l02403" name="l02403"></a><span class="lineno"> 2403</span>                }</div>
+<div class="line"><a id="l02404" name="l02404"></a><span class="lineno"> 2404</span>            }</div>
+<div class="line"><a id="l02405" name="l02405"></a><span class="lineno"> 2405</span>        }</div>
+<div class="line"><a id="l02406" name="l02406"></a><span class="lineno"> 2406</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02407" name="l02407"></a><span class="lineno"> 2407</span>    }</div>
+<div class="line"><a id="l02408" name="l02408"></a><span class="lineno"> 2408</span> </div>
+<div class="line"><a id="l02409" name="l02409"></a><span class="lineno"><a class="line" href="../../d5/dee/a00518.html#afdc0a4910ba845ab3a550102d70d0b69"> 2409</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d5/dee/a00518.html#afdc0a4910ba845ab3a550102d70d0b69">acwing725::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l02410" name="l02410"></a><span class="lineno"> 2410</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> n;</div>
+<div class="line"><a id="l02411" name="l02411"></a><span class="lineno"> 2411</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l02412" name="l02412"></a><span class="lineno"> 2412</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x;</div>
+<div class="line"><a id="l02413" name="l02413"></a><span class="lineno"> 2413</span>        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l02414" name="l02414"></a><span class="lineno"> 2414</span>            cin &gt;&gt; x;</div>
+<div class="line"><a id="l02415" name="l02415"></a><span class="lineno"> 2415</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count = 1;</div>
+<div class="line"><a id="l02416" name="l02416"></a><span class="lineno"> 2416</span>            <span class="keyword">auto</span> max           = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(sqrt(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(x)));</div>
+<div class="line"><a id="l02417" name="l02417"></a><span class="lineno"> 2417</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 2; j &lt;= max; j++) {</div>
+<div class="line"><a id="l02418" name="l02418"></a><span class="lineno"> 2418</span>                <span class="keywordflow">if</span>(x % j == 0) {</div>
+<div class="line"><a id="l02419" name="l02419"></a><span class="lineno"> 2419</span>                    count += j;</div>
+<div class="line"><a id="l02420" name="l02420"></a><span class="lineno"> 2420</span>                    count += x / j;</div>
+<div class="line"><a id="l02421" name="l02421"></a><span class="lineno"> 2421</span>                    <span class="keywordflow">if</span>(j == x / j) {</div>
+<div class="line"><a id="l02422" name="l02422"></a><span class="lineno"> 2422</span>                        count -= j;</div>
+<div class="line"><a id="l02423" name="l02423"></a><span class="lineno"> 2423</span>                    }</div>
+<div class="line"><a id="l02424" name="l02424"></a><span class="lineno"> 2424</span>                }</div>
+<div class="line"><a id="l02425" name="l02425"></a><span class="lineno"> 2425</span>            }</div>
+<div class="line"><a id="l02426" name="l02426"></a><span class="lineno"> 2426</span>            cout &lt;&lt; x;</div>
+<div class="line"><a id="l02427" name="l02427"></a><span class="lineno"> 2427</span>            <span class="keywordflow">if</span>(x == 1 || count != x) {</div>
+<div class="line"><a id="l02428" name="l02428"></a><span class="lineno"> 2428</span>                cout &lt;&lt; <span class="stringliteral">&quot; is not perfect&quot;</span>;</div>
+<div class="line"><a id="l02429" name="l02429"></a><span class="lineno"> 2429</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02430" name="l02430"></a><span class="lineno"> 2430</span>                cout &lt;&lt; <span class="stringliteral">&quot; is perfect&quot;</span>;</div>
+<div class="line"><a id="l02431" name="l02431"></a><span class="lineno"> 2431</span>            }</div>
+<div class="line"><a id="l02432" name="l02432"></a><span class="lineno"> 2432</span>            cout &lt;&lt; endl;</div>
+<div class="line"><a id="l02433" name="l02433"></a><span class="lineno"> 2433</span>        }</div>
+<div class="line"><a id="l02434" name="l02434"></a><span class="lineno"> 2434</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02435" name="l02435"></a><span class="lineno"> 2435</span>    }</div>
+<div class="line"><a id="l02436" name="l02436"></a><span class="lineno"> 2436</span> </div>
+<div class="line"><a id="l02437" name="l02437"></a><span class="lineno"><a class="line" href="../../dc/dee/a00053.html"> 2437</a></span>    <span class="keyword">namespace </span><a class="code hl_class" href="../../da/d7e/a00530.html">acwing1826</a> {</div>
+<div class="line"><a id="l02438" name="l02438"></a><span class="lineno"><a class="line" href="../../da/d7e/a00530.html#a5a52193d1573ab0413580e1a44cb0c33"> 2438</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">acwing1826::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l02439" name="l02439"></a><span class="lineno"> 2439</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l02440" name="l02440"></a><span class="lineno"> 2440</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x;</div>
+<div class="line"><a id="l02441" name="l02441"></a><span class="lineno"> 2441</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y;</div>
+<div class="line"><a id="l02442" name="l02442"></a><span class="lineno"> 2442</span>            cin &gt;&gt; n;</div>
+<div class="line"><a id="l02443" name="l02443"></a><span class="lineno"> 2443</span>            multiset&lt;pair&lt;unsigned int, unsigned int&gt;, <a class="code hl_struct" href="../../d8/d14/a00522.html">cmprow</a>&gt; row;</div>
+<div class="line"><a id="l02444" name="l02444"></a><span class="lineno"> 2444</span>            multiset&lt;pair&lt;unsigned int, unsigned int&gt;, <a class="code hl_struct" href="../../d0/d35/a00526.html">cmpcol</a>&gt; col;</div>
+<div class="line"><a id="l02445" name="l02445"></a><span class="lineno"> 2445</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l02446" name="l02446"></a><span class="lineno"> 2446</span>                cin &gt;&gt; x &gt;&gt; y;</div>
+<div class="line"><a id="l02447" name="l02447"></a><span class="lineno"> 2447</span>                row.insert(pair(x, y));</div>
+<div class="line"><a id="l02448" name="l02448"></a><span class="lineno"> 2448</span>                col.insert(pair(x, y));</div>
+<div class="line"><a id="l02449" name="l02449"></a><span class="lineno"> 2449</span>            }</div>
+<div class="line"><a id="l02450" name="l02450"></a><span class="lineno"> 2450</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> minimum = ((*row.rbegin()).first - (*row.begin()).first) * ((*col.rbegin()).second - (*col.begin()).second);</div>
+<div class="line"><a id="l02451" name="l02451"></a><span class="lineno"> 2451</span> </div>
+<div class="line"><a id="l02452" name="l02452"></a><span class="lineno"> 2452</span>            <span class="keyword">auto</span> row_cpy = multiset(row);</div>
+<div class="line"><a id="l02453" name="l02453"></a><span class="lineno"> 2453</span>            <span class="keyword">auto</span> col_cpy = multiset(col);</div>
+<div class="line"><a id="l02454" name="l02454"></a><span class="lineno"> 2454</span>            <span class="keyword">auto</span> r_pair  = *row_cpy.begin();</div>
+<div class="line"><a id="l02455" name="l02455"></a><span class="lineno"> 2455</span>            row_cpy.erase(row_cpy.find(r_pair));</div>
+<div class="line"><a id="l02456" name="l02456"></a><span class="lineno"> 2456</span>            col_cpy.erase(col_cpy.find(r_pair));</div>
+<div class="line"><a id="l02457" name="l02457"></a><span class="lineno"> 2457</span>            minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));</div>
+<div class="line"><a id="l02458" name="l02458"></a><span class="lineno"> 2458</span> </div>
+<div class="line"><a id="l02459" name="l02459"></a><span class="lineno"> 2459</span>            row_cpy = multiset(row);</div>
+<div class="line"><a id="l02460" name="l02460"></a><span class="lineno"> 2460</span>            col_cpy = multiset(col);</div>
+<div class="line"><a id="l02461" name="l02461"></a><span class="lineno"> 2461</span>            r_pair  = *row_cpy.rbegin();</div>
+<div class="line"><a id="l02462" name="l02462"></a><span class="lineno"> 2462</span>            row_cpy.erase(row_cpy.find(r_pair));</div>
+<div class="line"><a id="l02463" name="l02463"></a><span class="lineno"> 2463</span>            col_cpy.erase(col_cpy.find(r_pair));</div>
+<div class="line"><a id="l02464" name="l02464"></a><span class="lineno"> 2464</span>            minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));</div>
+<div class="line"><a id="l02465" name="l02465"></a><span class="lineno"> 2465</span> </div>
+<div class="line"><a id="l02466" name="l02466"></a><span class="lineno"> 2466</span>            row_cpy     = multiset(row);</div>
+<div class="line"><a id="l02467" name="l02467"></a><span class="lineno"> 2467</span>            col_cpy     = multiset(col);</div>
+<div class="line"><a id="l02468" name="l02468"></a><span class="lineno"> 2468</span>            <span class="keyword">auto</span> c_pair = *col_cpy.begin();</div>
+<div class="line"><a id="l02469" name="l02469"></a><span class="lineno"> 2469</span>            row_cpy.erase(row_cpy.find(c_pair));</div>
+<div class="line"><a id="l02470" name="l02470"></a><span class="lineno"> 2470</span>            col_cpy.erase(col_cpy.find(c_pair));</div>
+<div class="line"><a id="l02471" name="l02471"></a><span class="lineno"> 2471</span>            minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));</div>
+<div class="line"><a id="l02472" name="l02472"></a><span class="lineno"> 2472</span> </div>
+<div class="line"><a id="l02473" name="l02473"></a><span class="lineno"> 2473</span>            row_cpy = multiset(row);</div>
+<div class="line"><a id="l02474" name="l02474"></a><span class="lineno"> 2474</span>            col_cpy = multiset(col);</div>
+<div class="line"><a id="l02475" name="l02475"></a><span class="lineno"> 2475</span>            c_pair  = *col_cpy.rbegin();</div>
+<div class="line"><a id="l02476" name="l02476"></a><span class="lineno"> 2476</span>            row_cpy.erase(row_cpy.find(c_pair));</div>
+<div class="line"><a id="l02477" name="l02477"></a><span class="lineno"> 2477</span>            col_cpy.erase(col_cpy.find(c_pair));</div>
+<div class="line"><a id="l02478" name="l02478"></a><span class="lineno"> 2478</span>            minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));</div>
+<div class="line"><a id="l02479" name="l02479"></a><span class="lineno"> 2479</span> </div>
+<div class="line"><a id="l02480" name="l02480"></a><span class="lineno"> 2480</span>            cout &lt;&lt; minimum;</div>
+<div class="line"><a id="l02481" name="l02481"></a><span class="lineno"> 2481</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02482" name="l02482"></a><span class="lineno"> 2482</span>        }</div>
+<div class="line"><a id="l02483" name="l02483"></a><span class="lineno"> 2483</span> </div>
+<div class="line"><a id="l02484" name="l02484"></a><span class="lineno"><a class="line" href="../../d8/d14/a00522.html#aa2087cd5ee3b6d88dbf7e8a25bbe9769"> 2484</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d8/d14/a00522.html#aa2087cd5ee3b6d88dbf7e8a25bbe9769">cmprow::operator()</a>(<span class="keyword">const</span> pair&lt;unsigned int, unsigned int&gt; &amp;<a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>, <span class="keyword">const</span> pair&lt;unsigned int, unsigned int&gt; &amp;<a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>.first &lt; <a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>.first; }</div>
+<div class="line"><a id="l02485" name="l02485"></a><span class="lineno"> 2485</span> </div>
+<div class="line"><a id="l02486" name="l02486"></a><span class="lineno"><a class="line" href="../../d0/d35/a00526.html#aa7477e2faa36b16a5c3f6bff8a897c3f"> 2486</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d0/d35/a00526.html#aa7477e2faa36b16a5c3f6bff8a897c3f">cmpcol::operator()</a>(<span class="keyword">const</span> pair&lt;unsigned int, unsigned int&gt; &amp;<a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>, <span class="keyword">const</span> pair&lt;unsigned int, unsigned int&gt; &amp;<a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>.second &lt; <a class="code hl_enumvalue" href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>.second; }</div>
+<div class="line"><a id="l02487" name="l02487"></a><span class="lineno"> 2487</span>    }<span class="comment">// namespace acwing1826</span></div>
+<div class="line"><a id="l02488" name="l02488"></a><span class="lineno"> 2488</span>}<span class="comment">// namespace acwing</span></div>
 <div class="ttc" id="aa00026_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00005">main.cpp:5</a></div></div>
 <div class="ttc" id="aa00035_html"><div class="ttname"><a href="../../d4/d8c/a00035.html">acwing.h</a></div></div>
 <div class="ttc" id="aa00047_html"><div class="ttname"><a href="../../d6/d2d/a00047.html">acwing</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l00018">acwing.cpp:18</a></div></div>
@@ -2695,11 +2694,11 @@ $(function() {
 <div class="ttc" id="aa00506_html_aab8a33f4ed90d4a5998dd449cf9289de"><div class="ttname"><a href="../../d4/d1f/a00506.html#aab8a33f4ed90d4a5998dd449cf9289de">acwing::acwing722::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l02352">acwing.cpp:2352</a></div></div>
 <div class="ttc" id="aa00510_html_a128383558f1eb66d877ba904f25ed45c"><div class="ttname"><a href="../../d6/d52/a00510.html#a128383558f1eb66d877ba904f25ed45c">acwing::acwing1843::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l02371">acwing.cpp:2371</a></div></div>
 <div class="ttc" id="aa00514_html_ad8affec66337c1e2d7b6fff39d0bde55"><div class="ttname"><a href="../../d6/d90/a00514.html#ad8affec66337c1e2d7b6fff39d0bde55">acwing::acwing723::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l02393">acwing.cpp:2393</a></div></div>
-<div class="ttc" id="aa00518_html_afdc0a4910ba845ab3a550102d70d0b69"><div class="ttname"><a href="../../d5/dee/a00518.html#afdc0a4910ba845ab3a550102d70d0b69">acwing::acwing725::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l02408">acwing.cpp:2408</a></div></div>
+<div class="ttc" id="aa00518_html_afdc0a4910ba845ab3a550102d70d0b69"><div class="ttname"><a href="../../d5/dee/a00518.html#afdc0a4910ba845ab3a550102d70d0b69">acwing::acwing725::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l02409">acwing.cpp:2409</a></div></div>
 <div class="ttc" id="aa00522_html"><div class="ttname"><a href="../../d8/d14/a00522.html">acwing::acwing1826::cmprow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8c/a00035_source.html#l00817">acwing.h:817</a></div></div>
-<div class="ttc" id="aa00522_html_aa2087cd5ee3b6d88dbf7e8a25bbe9769"><div class="ttname"><a href="../../d8/d14/a00522.html#aa2087cd5ee3b6d88dbf7e8a25bbe9769">acwing::acwing1826::cmprow::operator()</a></div><div class="ttdeci">bool operator()(const pair&lt; unsigned int, unsigned int &gt; &amp;left, const pair&lt; unsigned int, unsigned int &gt; &amp;right) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l02481">acwing.cpp:2481</a></div></div>
+<div class="ttc" id="aa00522_html_aa2087cd5ee3b6d88dbf7e8a25bbe9769"><div class="ttname"><a href="../../d8/d14/a00522.html#aa2087cd5ee3b6d88dbf7e8a25bbe9769">acwing::acwing1826::cmprow::operator()</a></div><div class="ttdeci">bool operator()(const pair&lt; unsigned int, unsigned int &gt; &amp;left, const pair&lt; unsigned int, unsigned int &gt; &amp;right) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l02484">acwing.cpp:2484</a></div></div>
 <div class="ttc" id="aa00526_html"><div class="ttname"><a href="../../d0/d35/a00526.html">acwing::acwing1826::cmpcol</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8c/a00035_source.html#l00821">acwing.h:821</a></div></div>
-<div class="ttc" id="aa00526_html_aa7477e2faa36b16a5c3f6bff8a897c3f"><div class="ttname"><a href="../../d0/d35/a00526.html#aa7477e2faa36b16a5c3f6bff8a897c3f">acwing::acwing1826::cmpcol::operator()</a></div><div class="ttdeci">bool operator()(const pair&lt; unsigned int, unsigned int &gt; &amp;left, const pair&lt; unsigned int, unsigned int &gt; &amp;right) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l02485">acwing.cpp:2485</a></div></div>
+<div class="ttc" id="aa00526_html_aa7477e2faa36b16a5c3f6bff8a897c3f"><div class="ttname"><a href="../../d0/d35/a00526.html#aa7477e2faa36b16a5c3f6bff8a897c3f">acwing::acwing1826::cmpcol::operator()</a></div><div class="ttdeci">bool operator()(const pair&lt; unsigned int, unsigned int &gt; &amp;left, const pair&lt; unsigned int, unsigned int &gt; &amp;right) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l02486">acwing.cpp:2486</a></div></div>
 <div class="ttc" id="aa00530_html"><div class="ttname"><a href="../../da/d7e/a00530.html">acwing::acwing1826::acwing1826</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8c/a00035_source.html#l00825">acwing.h:825</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

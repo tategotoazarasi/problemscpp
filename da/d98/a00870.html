@@ -123,32 +123,32 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">luogu.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00107">107</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                                               {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordtype">int</span> m;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordtype">int</span> cx;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordtype">int</span> cy;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        cin &gt;&gt; n &gt;&gt; m &gt;&gt; cx &gt;&gt; cy;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> board[21][21] = {};</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        board[0][0]                      = 1;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt;= n; i++) {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt;= m; j++) {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                <span class="keywordflow">if</span>(abs(cx - i) * abs(cy - j) == 2 || i == cx &amp;&amp; j == cy) {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                    board[i][j] = 0;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                }</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                <span class="keywordflow">if</span>(i - 1 &gt;= 0) {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                    board[i][j] += board[i - 1][j];</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                }</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                <span class="keywordflow">if</span>(j - 1 &gt;= 0) {</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                    board[i][j] += board[i][j - 1];</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                }</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            }</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        cout &lt;&lt; board[n][m];</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">luogu.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00109">109</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                                               {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordtype">int</span> m;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordtype">int</span> cx;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordtype">int</span> cy;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        cin &gt;&gt; n &gt;&gt; m &gt;&gt; cx &gt;&gt; cy;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> board[21][21] = {};</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        board[0][0]                      = 1;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt;= n; i++) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt;= m; j++) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                <span class="keywordflow">if</span>(abs(cx - i) * abs(cy - j) == 2 || i == cx &amp;&amp; j == cy) {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                    board[i][j] = 0;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                <span class="keywordflow">if</span>(i - 1 &gt;= 0) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                    board[i][j] += board[i - 1][j];</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <span class="keywordflow">if</span>(j - 1 &gt;= 0) {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                    board[i][j] += board[i][j - 1];</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        cout &lt;&lt; board[n][m];</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dd/d32/a00041_source.html#l00053">luogu::TEST()</a>.</p>
 

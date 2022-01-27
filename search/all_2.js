@@ -22,7 +22,7 @@ var searchData=
   ['count_5freflect_19',['count_reflect',['../d1/d8b/a00406.html#a0aed35881c3c121fa8fb196928dfbd44',1,'acwing::acwing1929::Solution']]],
   ['countelements_20',['countElements',['../df/d5f/a00762.html#a03fdd9d746931f7f0624c60ed329c0c0',1,'leetcode::count_elements_with_strictly_smaller_and_greater_elements::Solution']]],
   ['countquadruplets_21',['countQuadruplets',['../d3/d2f/a00562.html#a54a0305ed7bf8817d862f9daab9d519f',1,'leetcode::count_special_quadruplets::Solution']]],
-  ['countvalidwords_22',['countValidWords',['../d5/dcd/a00802.html#a739fdd215249dcac7b824cc5f0b2f534',1,'leetcode::number_of_valid_words_in_a_sentence::Solution']]],
+  ['countvalidwords_22',['countValidWords',['../d5/dcd/a00802.html#a97afc98b37e6edcb15fbb0fd68325175',1,'leetcode::number_of_valid_words_in_a_sentence::Solution']]],
   ['countvowelpermutation_23',['countVowelPermutation',['../d4/deb/a00710.html#a9b6bc6612550c3ac30db801844b5f143',1,'leetcode::coun_vowels_permutation::Solution']]],
   ['current_24',['current',['../da/d96/a00782.html#aaa9a6e798d726f76bee05ff59a886ad8',1,'leetcode::stock_price_fluctuation::StockPrice']]]
 ];
