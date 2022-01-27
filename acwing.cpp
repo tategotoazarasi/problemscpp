@@ -2389,4 +2389,19 @@ namespace acwing {
 		delete[] r;
 		return 0;
 	}
+
+	int acwing723::main(istream &cin, ostream &cout) {
+		unsigned short n, m;
+		cin >> n >> m;
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < m; j++) {
+				if(j != m - 1) {
+					cout << i * m + j + 1 << " ";
+				} else {
+					cout << "PUM" << endl;
+				}
+			}
+		}
+		return 0;
+	}
 }// namespace acwing
