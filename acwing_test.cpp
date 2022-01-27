@@ -1316,4 +1316,28 @@ namespace acwing {
 		          "25 26 27 PUM\n",
 		          ans);
 	}
+
+	TEST(acwing725, case1) {
+		istringstream in("3\n"
+		                 "6\n"
+		                 "5\n"
+		                 "28");
+		auto out = ostringstream();
+		acwing725::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("6 is perfect\n"
+		          "5 is not perfect\n"
+		          "28 is perfect\n",
+		          ans);
+	}
+
+	TEST(acwing725, case2) {
+		istringstream in("1\n"
+		                 "28");
+		auto out = ostringstream();
+		acwing725::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("28 is perfect\n",
+		          ans);
+	}
 }// namespace acwing

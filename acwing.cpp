@@ -2404,4 +2404,32 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing725::main(istream &cin, ostream &cout) {
+		unsigned short n;
+		cin >> n;
+		unsigned int x;
+		for(unsigned short i = 0; i < n; i++) {
+			cin >> x;
+			unsigned int count = 1;
+			unsigned int max   = static_cast<unsigned int>(sqrt(double(x)));
+			for(unsigned int j = 2; j <= max; j++) {
+				if(x % j == 0) {
+					count += j;
+					count += x / j;
+					if(j == x / j) {
+						count -= j;
+					}
+				}
+			}
+			cout << x;
+			if(x == 1 || count != x) {
+				cout << " is not perfect";
+			} else {
+				cout << " is perfect";
+			}
+			cout << endl;
+		}
+		return 0;
+	}
 }// namespace acwing
