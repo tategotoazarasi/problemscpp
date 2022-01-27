@@ -388,4 +388,14 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P5715::main(istream &cin, ostream &cout) {
+		unsigned int abc[3];
+		cin >> abc[0] >> abc[1] >> abc[2];
+		sort(abc, abc + 3);
+		for(auto i: abc) {
+			cout << i << " ";
+		}
+		return 0;
+	}
 }// namespace luogu
