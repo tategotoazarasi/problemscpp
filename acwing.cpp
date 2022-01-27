@@ -2432,4 +2432,58 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	namespace acwing1826 {
+		int acwing1826::main(istream &cin, ostream &cout) {
+			unsigned int n, x, y;
+			cin >> n;
+			multiset<pair<unsigned int, unsigned int>, cmprow> row;
+			multiset<pair<unsigned int, unsigned int>, cmpcol> col;
+			for(unsigned int i = 0; i < n; i++) {
+				cin >> x >> y;
+				row.insert(pair(x, y));
+				col.insert(pair(x, y));
+			}
+			unsigned int minimum = ((*row.rbegin()).first - (*row.begin()).first) * ((*col.rbegin()).second - (*col.begin()).second);
+
+			auto row_cpy = multiset<pair<unsigned int, unsigned int>, cmprow>(row);
+			auto col_cpy = multiset<pair<unsigned int, unsigned int>, cmpcol>(col);
+			auto r_pair  = *row_cpy.begin();
+			row_cpy.erase(row_cpy.find(r_pair));
+			col_cpy.erase(col_cpy.find(r_pair));
+			minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));
+
+			row_cpy = multiset<pair<unsigned int, unsigned int>, cmprow>(row);
+			col_cpy = multiset<pair<unsigned int, unsigned int>, cmpcol>(col);
+			r_pair  = *row_cpy.rbegin();
+			row_cpy.erase(row_cpy.find(r_pair));
+			col_cpy.erase(col_cpy.find(r_pair));
+			minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));
+
+			row_cpy     = multiset<pair<unsigned int, unsigned int>, cmprow>(row);
+			col_cpy     = multiset<pair<unsigned int, unsigned int>, cmpcol>(col);
+			auto c_pair = *col_cpy.begin();
+			row_cpy.erase(row_cpy.find(c_pair));
+			col_cpy.erase(col_cpy.find(c_pair));
+			minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));
+
+			row_cpy = multiset<pair<unsigned int, unsigned int>, cmprow>(row);
+			col_cpy = multiset<pair<unsigned int, unsigned int>, cmpcol>(col);
+			c_pair  = *col_cpy.rbegin();
+			row_cpy.erase(row_cpy.find(c_pair));
+			col_cpy.erase(col_cpy.find(c_pair));
+			minimum = min(minimum, ((*row_cpy.rbegin()).first - (*row_cpy.begin()).first) * ((*col_cpy.rbegin()).second - (*col_cpy.begin()).second));
+
+			cout << minimum;
+			return 0;
+		}
+
+		bool cmprow::operator()(const pair<unsigned int, unsigned int> &left, const pair<unsigned int, unsigned int> &right) const {
+			return left.first < right.first;
+		}
+
+		bool cmpcol::operator()(const pair<unsigned int, unsigned int> &left, const pair<unsigned int, unsigned int> &right) const {
+			return left.second < right.second;
+		}
+	}// namespace acwing1826
 }// namespace acwing

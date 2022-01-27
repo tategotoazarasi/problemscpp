@@ -1340,4 +1340,18 @@ namespace acwing {
 		ASSERT_EQ("28 is perfect\n",
 		          ans);
 	}
+
+	namespace acwing1826 {
+		TEST(acwing1826, case1) {
+			istringstream in("4\n"
+			                 "2 4\n"
+			                 "1 1\n"
+			                 "5 2\n"
+			                 "17 25");
+			auto out = ostringstream();
+			acwing1826::main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("12", ans);
+		}
+	}// namespace acwing1826
 }// namespace acwing

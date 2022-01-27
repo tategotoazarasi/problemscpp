@@ -811,5 +811,21 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief AcWing 1826. 农田缩减
+	namespace acwing1826 {
+		struct cmprow {
+			bool operator()(const pair<unsigned int, unsigned int> &left, const pair<unsigned int, unsigned int> &right) const;
+		};
+
+		struct cmpcol {
+			bool operator()(const pair<unsigned int, unsigned int> &left, const pair<unsigned int, unsigned int> &right) const;
+		};
+
+		class acwing1826 {
+		public:
+			static int main(istream &cin, ostream &cout);
+		};
+	}// namespace acwing1826
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
