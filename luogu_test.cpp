@@ -315,4 +315,18 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("29", ans);
 	}
+
+	TEST(P1085, case1) {
+		istringstream in("5 3\n"
+		                 "6 2\n"
+		                 "7 2\n"
+		                 "5 3\n"
+		                 "5 4\n"
+		                 "0 4\n"
+		                 "0 6");
+		auto out = ostringstream();
+		P1085::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("3", ans);
+	}
 }// namespace luogu

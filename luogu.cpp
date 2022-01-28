@@ -435,4 +435,20 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P1085::main(istream &cin, ostream &cout) {
+		unsigned short a, b;
+		unsigned int maximum   = 0;
+		unsigned int maximum_i = 0;
+		unsigned int i         = 0;
+		while(cin >> a && cin >> b) {
+			i++;
+			if(a + b > 8 && a + b > maximum) {
+				maximum_i = i;
+				maximum   = a + b;
+			}
+		}
+		cout << maximum_i;
+		return 0;
+	}
 }// namespace luogu
