@@ -2485,4 +2485,29 @@ namespace acwing {
 
 		bool cmpcol::operator()(const pair<unsigned int, unsigned int> &left, const pair<unsigned int, unsigned int> &right) const { return left.second < right.second; }
 	}// namespace acwing1826
+
+	int acwing1813::main(istream &cin, ostream &cout) {
+		int n;
+		int charmap[26] = {};
+		cin >> n;
+		for(int i = 0; i < n; i++) {
+			int charmap_a[26] = {};
+			int charmap_b[26] = {};
+			string a, b;
+			cin >> a >> b;
+			for(char ch: a) {
+				charmap_a[ch - 'a']++;
+			}
+			for(char ch: b) {
+				charmap_b[ch - 'a']++;
+			}
+			for(int j = 0; j < 26; j++) {
+				charmap[j] += max(charmap_a[j], charmap_b[j]);
+			}
+		}
+		for(int i: charmap) {
+			cout << i << endl;
+		}
+		return 0;
+	}
 }// namespace acwing

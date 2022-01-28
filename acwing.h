@@ -827,5 +827,11 @@ namespace acwing {
 			static int main(istream &cin, ostream &cout);
 		};
 	}// namespace acwing1826
+
+	/// \brief AcWing 1813. 方块游戏
+	class acwing1813 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

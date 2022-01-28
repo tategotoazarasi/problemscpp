@@ -1354,4 +1354,15 @@ namespace acwing {
 			ASSERT_EQ("12", ans);
 		}
 	}// namespace acwing1826
+
+	TEST(acwing1813, case1) {
+		istringstream in("3\n"
+		                 "fox box\n"
+		                 "dog cat\n"
+		                 "car bus");
+		auto out = ostringstream();
+		acwing1813::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2\n2\n2\n1\n0\n1\n1\n0\n0\n0\n0\n0\n0\n0\n2\n0\n0\n1\n1\n1\n1\n0\n0\n1\n0\n0\n", ans);
+	}
 }// namespace acwing
