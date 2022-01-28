@@ -419,4 +419,20 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P5716::main(istream &cin, ostream &cout) {
+		int year, month;
+		cin >> year >> month;
+		bool bissextile = year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
+		if(month == 4 || month == 6 || month == 9 || month == 11) {
+			cout << 30;
+		} else if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+			cout << 31;
+		} else if(bissextile) {
+			cout << 29;
+		} else {
+			cout << 28;
+		}
+		return 0;
+	}
 }// namespace luogu
