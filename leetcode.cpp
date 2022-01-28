@@ -1739,4 +1739,24 @@ namespace leetcode {
 			return count;
 		}
 	}// namespace number_of_valid_words_in_a_sentence
+
+	namespace the_number_of_weak_characters_in_the_game {
+		int Solution::numberOfWeakCharacters(vector<vector<int>> &properties) {
+			//按攻击值从大到小排序。攻击值相同时，按照其防御值从小到大排序
+			sort(properties.begin(), properties.end(), [](const vector<int> &a, const vector<int> &b) {
+				return a[0] == b[0] ? (a[1] < b[1]) : (a[0] > b[0]);
+			});
+
+			int maxDef = 0;///< 最大防御值
+			int count  = 0;
+			for(auto const &p: properties) {
+				if(p[1] < maxDef) {
+					count++;
+				} else {
+					maxDef = p[1];
+				}
+			}
+			return count;
+		}
+	}// namespace the_number_of_weak_characters_in_the_game
 }// namespace leetcode

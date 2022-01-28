@@ -732,6 +732,14 @@ namespace leetcode {
 			static int countValidWords(const string &sentence);
 		};
 	}// namespace number_of_valid_words_in_a_sentence
+
+	/// \brief LeetCode 1996. 游戏中弱角色的数量
+	namespace the_number_of_weak_characters_in_the_game {
+		class Solution {
+		public:
+			static int numberOfWeakCharacters(vector<vector<int>> &properties);
+		};
+	}// namespace the_number_of_weak_characters_in_the_game
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
