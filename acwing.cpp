@@ -2527,4 +2527,28 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing727::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		for(int i = 0; i <= n / 2; i++) {
+			for(int j = 0; j < n / 2 - i; j++) {
+				cout << ' ';
+			}
+			for(int k = 0; k < 1 + 2 * i; k++) {
+				cout << '*';
+			}
+			cout << endl;
+		}
+		for(int i = n / 2 + 1; i < n; i++) {
+			for(int j = 0; j < i - (n / 2); j++) {
+				cout << ' ';
+			}
+			for(int k = 0; k < 1 + 2 * (n - i - 1); k++) {
+				cout << '*';
+			}
+			cout << endl;
+		}
+		return 0;
+	}
 }// namespace acwing
