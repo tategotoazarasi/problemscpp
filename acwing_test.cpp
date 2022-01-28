@@ -1365,4 +1365,18 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("2\n2\n2\n1\n0\n1\n1\n0\n0\n0\n0\n0\n0\n0\n2\n0\n0\n1\n1\n1\n1\n0\n0\n1\n0\n0\n", ans);
 	}
+
+	TEST(acwing726, case1) {
+		istringstream in("3\n"
+		                 "8\n"
+		                 "51\n"
+		                 "7");
+		auto out = ostringstream();
+		acwing726::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("8 is not prime\n"
+		          "51 is not prime\n"
+		          "7 is prime\n",
+		          ans);
+	}
 }// namespace acwing

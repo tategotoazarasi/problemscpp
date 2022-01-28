@@ -2510,4 +2510,21 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing726::main(istream &cin, ostream &cout) {
+		int n, x;
+		cin >> n;
+		for(int i = 0; i < n; i++) {
+			cin >> x;
+			for(int j = 2; j <= sqrt(x); j++) {
+				if(x % j == 0) {
+					cout << x << " is not prime" << endl;
+					goto next;
+				}
+			}
+			cout << x << " is prime" << endl;
+		next:;
+		}
+		return 0;
+	}
 }// namespace acwing
