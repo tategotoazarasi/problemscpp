@@ -421,9 +421,10 @@ namespace luogu {
 	}
 
 	int P5716::main(istream &cin, ostream &cout) {
-		int year, month;
+		int year;
+		int month;
 		cin >> year >> month;
-		bool bissextile = year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
+		const bool bissextile = year % 400 == 0 || year % 4 == 0 && year % 100 != 0;
 		if(month == 4 || month == 6 || month == 9 || month == 11) {
 			cout << 30;
 		} else if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
@@ -437,7 +438,8 @@ namespace luogu {
 	}
 
 	int P1085::main(istream &cin, ostream &cout) {
-		unsigned short a, b;
+		unsigned short a;
+		unsigned short b;
 		unsigned int maximum   = 0;
 		unsigned int maximum_i = 0;
 		unsigned int i         = 0;

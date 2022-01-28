@@ -745,7 +745,7 @@ namespace leetcode {
 	namespace pattern_matching_lcci {
 		class Solution {
 		public:
-			static bool patternMatching(string pattern, string value);
+			static bool patternMatching(const string &pattern, const string &value);
 		};
 	}// namespace pattern_matching_lcci
 };   // namespace leetcode

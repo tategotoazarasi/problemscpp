@@ -2413,7 +2413,7 @@ namespace acwing {
 		for(unsigned short i = 0; i < n; i++) {
 			cin >> x;
 			unsigned int count = 1;
-			auto max           = static_cast<unsigned int>(sqrt(static_cast<double>(x)));
+			const auto max     = static_cast<unsigned int>(sqrt(static_cast<double>(x)));
 			for(unsigned int j = 2; j <= max; j++) {
 				if(x % j == 0) {
 					count += j;
@@ -2493,26 +2493,28 @@ namespace acwing {
 		for(int i = 0; i < n; i++) {
 			int charmap_a[26] = {};
 			int charmap_b[26] = {};
-			string a, b;
+			string a;
+			string b;
 			cin >> a >> b;
-			for(char ch: a) {
+			for(const char ch: a) {
 				charmap_a[ch - 'a']++;
 			}
-			for(char ch: b) {
+			for(const char ch: b) {
 				charmap_b[ch - 'a']++;
 			}
 			for(int j = 0; j < 26; j++) {
 				charmap[j] += max(charmap_a[j], charmap_b[j]);
 			}
 		}
-		for(int i: charmap) {
+		for(const int i: charmap) {
 			cout << i << endl;
 		}
 		return 0;
 	}
 
 	int acwing726::main(istream &cin, ostream &cout) {
-		int n, x;
+		int n;
+		int x;
 		cin >> n;
 		for(int i = 0; i < n; i++) {
 			cin >> x;
@@ -2541,7 +2543,7 @@ namespace acwing {
 			cout << endl;
 		}
 		for(int i = n / 2 + 1; i < n; i++) {
-			for(int j = 0; j < i - (n / 2); j++) {
+			for(int j = 0; j < i - n / 2; j++) {
 				cout << ' ';
 			}
 			for(int k = 0; k < 1 + 2 * (n - i - 1); k++) {
