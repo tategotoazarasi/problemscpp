@@ -131,23 +131,24 @@ $(function() {
 <div class="line"><a id="l02493" name="l02493"></a><span class="lineno"> 2493</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l02494" name="l02494"></a><span class="lineno"> 2494</span>            <span class="keywordtype">int</span> charmap_a[26] = {};</div>
 <div class="line"><a id="l02495" name="l02495"></a><span class="lineno"> 2495</span>            <span class="keywordtype">int</span> charmap_b[26] = {};</div>
-<div class="line"><a id="l02496" name="l02496"></a><span class="lineno"> 2496</span>            <span class="keywordtype">string</span> a, b;</div>
-<div class="line"><a id="l02497" name="l02497"></a><span class="lineno"> 2497</span>            cin &gt;&gt; a &gt;&gt; b;</div>
-<div class="line"><a id="l02498" name="l02498"></a><span class="lineno"> 2498</span>            <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: a) {</div>
-<div class="line"><a id="l02499" name="l02499"></a><span class="lineno"> 2499</span>                charmap_a[ch - <span class="charliteral">&#39;a&#39;</span>]++;</div>
-<div class="line"><a id="l02500" name="l02500"></a><span class="lineno"> 2500</span>            }</div>
-<div class="line"><a id="l02501" name="l02501"></a><span class="lineno"> 2501</span>            <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: b) {</div>
-<div class="line"><a id="l02502" name="l02502"></a><span class="lineno"> 2502</span>                charmap_b[ch - <span class="charliteral">&#39;a&#39;</span>]++;</div>
-<div class="line"><a id="l02503" name="l02503"></a><span class="lineno"> 2503</span>            }</div>
-<div class="line"><a id="l02504" name="l02504"></a><span class="lineno"> 2504</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 26; j++) {</div>
-<div class="line"><a id="l02505" name="l02505"></a><span class="lineno"> 2505</span>                charmap[j] += max(charmap_a[j], charmap_b[j]);</div>
-<div class="line"><a id="l02506" name="l02506"></a><span class="lineno"> 2506</span>            }</div>
-<div class="line"><a id="l02507" name="l02507"></a><span class="lineno"> 2507</span>        }</div>
-<div class="line"><a id="l02508" name="l02508"></a><span class="lineno"> 2508</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i: charmap) {</div>
-<div class="line"><a id="l02509" name="l02509"></a><span class="lineno"> 2509</span>            cout &lt;&lt; i &lt;&lt; endl;</div>
-<div class="line"><a id="l02510" name="l02510"></a><span class="lineno"> 2510</span>        }</div>
-<div class="line"><a id="l02511" name="l02511"></a><span class="lineno"> 2511</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02512" name="l02512"></a><span class="lineno"> 2512</span>    }</div>
+<div class="line"><a id="l02496" name="l02496"></a><span class="lineno"> 2496</span>            <span class="keywordtype">string</span> a;</div>
+<div class="line"><a id="l02497" name="l02497"></a><span class="lineno"> 2497</span>            <span class="keywordtype">string</span> b;</div>
+<div class="line"><a id="l02498" name="l02498"></a><span class="lineno"> 2498</span>            cin &gt;&gt; a &gt;&gt; b;</div>
+<div class="line"><a id="l02499" name="l02499"></a><span class="lineno"> 2499</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: a) {</div>
+<div class="line"><a id="l02500" name="l02500"></a><span class="lineno"> 2500</span>                charmap_a[ch - <span class="charliteral">&#39;a&#39;</span>]++;</div>
+<div class="line"><a id="l02501" name="l02501"></a><span class="lineno"> 2501</span>            }</div>
+<div class="line"><a id="l02502" name="l02502"></a><span class="lineno"> 2502</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: b) {</div>
+<div class="line"><a id="l02503" name="l02503"></a><span class="lineno"> 2503</span>                charmap_b[ch - <span class="charliteral">&#39;a&#39;</span>]++;</div>
+<div class="line"><a id="l02504" name="l02504"></a><span class="lineno"> 2504</span>            }</div>
+<div class="line"><a id="l02505" name="l02505"></a><span class="lineno"> 2505</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 26; j++) {</div>
+<div class="line"><a id="l02506" name="l02506"></a><span class="lineno"> 2506</span>                charmap[j] += max(charmap_a[j], charmap_b[j]);</div>
+<div class="line"><a id="l02507" name="l02507"></a><span class="lineno"> 2507</span>            }</div>
+<div class="line"><a id="l02508" name="l02508"></a><span class="lineno"> 2508</span>        }</div>
+<div class="line"><a id="l02509" name="l02509"></a><span class="lineno"> 2509</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">int</span> i: charmap) {</div>
+<div class="line"><a id="l02510" name="l02510"></a><span class="lineno"> 2510</span>            cout &lt;&lt; i &lt;&lt; endl;</div>
+<div class="line"><a id="l02511" name="l02511"></a><span class="lineno"> 2511</span>        }</div>
+<div class="line"><a id="l02512" name="l02512"></a><span class="lineno"> 2512</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02513" name="l02513"></a><span class="lineno"> 2513</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l01358">acwing::TEST()</a>.</p>
 
