@@ -1759,4 +1759,76 @@ namespace leetcode {
 			return count;
 		}
 	}// namespace the_number_of_weak_characters_in_the_game
+
+	namespace pattern_matching_lcci {
+		bool Solution::patternMatching(string pattern, string value) {
+			int a_count = 0;
+			int b_count = 0;
+			for(char ch: pattern) {
+				if(ch == 'a') {
+					a_count++;
+				} else {
+					b_count++;
+				}
+			}
+			if(a_count == 0 || b_count == 0) {
+				int size  = 0;
+				int count = 0;
+				if(b_count == 0) {
+					if(value.length() % a_count != 0) {
+						return false;
+					}
+					size  = value.length() / a_count;
+					count = a_count;
+				} else {
+					if(value.length() % b_count != 0) {
+						return false;
+					}
+					size  = value.length() / b_count;
+					count = b_count;
+				}
+				string str = value.substr(0, size);
+				for(int i = 0; i < count; i++) {
+					auto s = value.substr(i * size, size);
+					if(s != str) {
+						return false;
+					}
+				}
+				return true;
+			}
+			for(int a_size = 0; a_size <= value.length() / a_count; a_size++) {
+				string a;
+				string b;
+				if((value.length() - a_size * a_count) % b_count == 0) {
+					int b_size         = (value.length() - a_size * a_count) / b_count;
+					string value_local = value;
+					for(char ch: pattern) {
+						if(ch == 'a') {
+							string a_local = value_local.substr(0, a_size);
+							if(a.empty()) {
+								a = a_local;
+							} else if(a_local != a) {
+								goto next_loop;
+							}
+							value_local = value_local.substr(a_size);
+						} else {
+							string b_local = value_local.substr(0, b_size);
+							if(b.empty()) {
+								b = b_local;
+							} else if(b_local != b) {
+								goto next_loop;
+							}
+							value_local = value_local.substr(b_size);
+						}
+					}
+					if(a == b) {
+						goto next_loop;
+					}
+					return true;
+				}
+			next_loop:;
+			}
+			return false;
+		}
+	}// namespace pattern_matching_lcci
 }// namespace leetcode

@@ -740,6 +740,14 @@ namespace leetcode {
 			static int numberOfWeakCharacters(vector<vector<int>> &properties);
 		};
 	}// namespace the_number_of_weak_characters_in_the_game
+
+	/// \brief LeetCode 面试题 16.18. 模式匹配
+	namespace pattern_matching_lcci {
+		class Solution {
+		public:
+			static bool patternMatching(string pattern, string value);
+		};
+	}// namespace pattern_matching_lcci
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
