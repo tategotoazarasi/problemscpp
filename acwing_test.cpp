@@ -1387,4 +1387,12 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("X[0] = 10\nX[1] = 1\nX[2] = 1\nX[3] = 1\nX[4] = 1\nX[5] = 1\nX[6] = 1\nX[7] = 1\nX[8] = 7\nX[9] = 4\n", ans);
 	}
+
+	TEST(acwing1801, case1) {
+		istringstream in("5\n1 2\n2 2\n1 3\n1 1\n3 2");
+		auto out = ostringstream();
+		acwing1801::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2", ans);
+	}
 }// namespace acwing

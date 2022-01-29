@@ -2576,4 +2576,53 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing1801::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		int count_123 = 0;///< 1剪刀 2石头 3布
+		int count_132 = 0;///< 1剪刀 2布   3石头
+		int count_213 = 0;///< 1石头 2剪刀 3布
+		int count_231 = 0;///< 1布   2剪刀 3石头
+		int count_312 = 0;///< 1石头 2布   3剪刀
+		int count_321 = 0;///< 1布   2石头 3剪刀
+		for(int i = 0; i < n; i++) {
+			int a;
+			int b;
+			cin >> a >> b;
+			if(a == 1 && b == 2) {
+				count_132++;
+				count_213++;
+				count_321++;
+			} else if(a == 1 && b == 3) {
+				count_123++;
+				count_231++;
+				count_312++;
+			} else if(a == 2 && b == 1) {
+				count_123++;
+				count_231++;
+				count_312++;
+			} else if(a == 2 && b == 3) {
+				count_132++;
+				count_213++;
+				count_321++;
+			} else if(a == 3 && b == 1) {
+				count_132++;
+				count_213++;
+				count_321++;
+			} else if(a == 3 && b == 2) {
+				count_123++;
+				count_231++;
+				count_312++;
+			}
+		}
+		int maximum = count_123;
+		maximum     = max(maximum, count_132);
+		maximum     = max(maximum, count_213);
+		maximum     = max(maximum, count_231);
+		maximum     = max(maximum, count_312);
+		maximum     = max(maximum, count_321);
+		cout << maximum;
+		return 0;
+	}
 }// namespace acwing

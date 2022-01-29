@@ -113,7 +113,7 @@ namespace acwing {
 			point() = default;
 
 			point(int x, int y)
-				: x(x), y(y) {};
+			    : x(x), y(y){};
 		};
 
 		struct pointhash {
@@ -139,7 +139,7 @@ namespace acwing {
 			int step;
 
 			point(int x, int y, int step)
-				: x(x), y(y), step(step) {};
+			    : x(x), y(y), step(step){};
 		};
 
 		int bfs(point /*start*/, int ** /*field*/, int /*max_x*/, int /*max_y*/);
@@ -275,7 +275,7 @@ namespace acwing {
 			trie_node *nexts[10]{};
 
 			trie_node(int val, trie_node *father)
-				: val(val), father(father) {};
+			    : val(val), father(father){};
 
 			/**
 			 * \brief 反向插入
@@ -364,10 +364,10 @@ namespace acwing {
 			int b;
 
 			path()
-				: a(0), b(0) {};
+			    : a(0), b(0){};
 
 			path(int a, int b)
-				: a(a), b(b) {};
+			    : a(a), b(b){};
 			bool operator<(const path &p) const;
 		};
 
@@ -560,7 +560,7 @@ namespace acwing {
 			unsigned int y;
 
 			step(direction d, unsigned int x, unsigned int y)
-				: d(d), x(x), y(y) {};
+			    : d(d), x(x), y(y){};
 		};
 
 		struct step_hash {
@@ -858,6 +858,14 @@ namespace acwing {
 	 * \brief AcWing 740. 数组变换
 	 */
 	class acwing740 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 1801. 蹄子剪刀布
+	 */
+	class acwing1801 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
