@@ -179,6 +179,14 @@ namespace luogu {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/**
+	 * \brief 洛谷 P1055 [NOIP2008 普及组] ISBN 号码
+	 */
+	class P1055 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H

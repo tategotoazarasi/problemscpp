@@ -353,4 +353,20 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("89991", ans);
 	}
+
+	TEST(P1055, case1) {
+		istringstream in("0-670-82162-4");
+		auto out = ostringstream();
+		P1055::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Right", ans);
+	}
+
+	TEST(P1055, case2) {
+		istringstream in("0-670-82162-0");
+		auto out = ostringstream();
+		P1055::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("0-670-82162-4", ans);
+	}
 }// namespace luogu

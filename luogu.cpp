@@ -472,4 +472,33 @@ namespace luogu {
 		cout << minimum;
 		return 0;
 	}
+
+	int P1055::main(istream &cin, ostream &cout) {
+		string isbn;
+		cin >> isbn;
+		const string isbn_prefix = isbn.substr(0, isbn.length() - 1);
+		int sum                  = 0;
+		int count                = 1;
+		for(const char ch: isbn_prefix) {
+			if(isdigit(ch) != 0) {
+				sum += (ch - '0') * count++;
+				sum %= 11;
+			}
+		}
+		sum %= 11;
+		int end = *isbn.rbegin() - '0';
+		if(end == 'X' - '0') {
+			end = 10;
+		}
+		if(sum == end) {
+			cout << "Right";
+		} else {
+			end = sum;
+			if(sum == 10) {
+				end = 'X' - '0';
+			}
+			cout << isbn_prefix << static_cast<char>(end + '0');
+		}
+		return 0;
+	}
 }// namespace luogu
