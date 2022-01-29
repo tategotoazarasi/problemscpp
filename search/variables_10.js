@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['u_0',['u',['../dd/d57/a00701.html#a0fe022ca955920947e43e36545b039da',1,'leetcode::find_k_pairs_with_smallest_sums::pair']]],
-  ['up_5fmap_1',['up_map',['../de/d3d/a00409.html#abe667ade1897a4f28346557eb0cef949',1,'acwing::acwing1929::Solution']]]
+  ['target_0',['target',['../d3/dd2/a00693.html#a2dd17627992e17331faefb6e05791baa',1,'leetcode::escape_a_large_maze::point']]],
+  ['time_1',['time',['../dd/d5f/a00825.html#a1c4fd1711dd871723b696b2a5d033781',1,'leetcode::second_minimum_time_to_reach_destination::status']]]
 ];

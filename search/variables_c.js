@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['person_0',['person',['../d7/d0a/a00801.html#a4c36bc87b6ea871fc4e662922972bf06',1,'leetcode::maximum_good_people_based_on_statements::msg']]],
-  ['position_1',['position',['../de/d9d/a00813.html#a4d6ee48ca18dd104c6bed2c37d2a057a',1,'leetcode::second_minimum_time_to_reach_destination::status']]],
-  ['price_2',['price',['../d2/d02/a00777.html#aee320f3f7b4364d6dd47ac22541a48ad',1,'leetcode::k_highest_ranked_items_within_a_price_range::item']]]
+  ['ops_0',['ops',['../d4/d9e/a00569.html#ac20e1ee1042d8657c8812fc0bffdfc9a',1,'acwing::acwing4217']]]
 ];

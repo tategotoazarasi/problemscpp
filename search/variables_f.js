@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['target_0',['target',['../d8/dba/a00681.html#a2dd17627992e17331faefb6e05791baa',1,'leetcode::escape_a_large_maze::point']]],
-  ['time_1',['time',['../de/d9d/a00813.html#a1c4fd1711dd871723b696b2a5d033781',1,'leetcode::second_minimum_time_to_reach_destination::status']]]
+  ['step_0',['step',['../d1/de1/a00213.html#a3a1e018caae3a20a5849a5fedb72e9c0',1,'acwing::acwing2019::point']]],
+  ['sum_1',['sum',['../d1/d6e/a00613.html#a8d4ce27ae9f2b5865f1ed413b376caef',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode']]]
 ];
