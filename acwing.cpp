@@ -2565,4 +2565,15 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing740::main(istream &cin, ostream &cout) {
+		short n[20];
+		for(int i = 0; i < 20; i++) {
+			cin >> n[20 - i - 1];
+		}
+		for(int i = 0; i < 20; i++) {
+			cout << "N[" << i << "] = " << n[i] << endl;
+		}
+		return 0;
+	}
 }// namespace acwing

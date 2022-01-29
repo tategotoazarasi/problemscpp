@@ -748,6 +748,16 @@ namespace leetcode {
 			static bool patternMatching(const string &pattern, const string &value);
 		};
 	}// namespace pattern_matching_lcci
+
+	/**
+	 * \brief LeetCode 1765. 地图中的最高点
+	 */
+	namespace map_of_highest_peak {
+		class Solution {
+		public:
+			static vector<vector<int>> highestPeak(vector<vector<int>> &isWater);
+		};
+	}// namespace map_of_highest_peak
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -1762,7 +1762,7 @@ namespace leetcode {
 		bool Solution::patternMatching(const string &pattern, const string &value) {
 			int a_count = 0;
 			int b_count = 0;
-			for(char ch: pattern) {
+			for(const char ch: pattern) {
 				if(ch == 'a') {
 					a_count++;
 				} else {
@@ -1785,7 +1785,7 @@ namespace leetcode {
 					size  = value.length() / b_count;
 					count = b_count;
 				}
-				string str = value.substr(0, size);
+				const string str = value.substr(0, size);
 				for(int i = 0; i < count; i++) {
 					auto s = value.substr(i * size, size);
 					if(s != str) {
@@ -1798,9 +1798,9 @@ namespace leetcode {
 				string a;
 				string b;
 				if((value.length() - a_size * a_count) % b_count == 0) {
-					int b_size         = (value.length() - a_size * a_count) / b_count;
+					const int b_size   = (value.length() - a_size * a_count) / b_count;
 					string value_local = value;
-					for(char ch: pattern) {
+					for(const char ch: pattern) {
 						if(ch == 'a') {
 							string a_local = value_local.substr(0, a_size);
 							if(a.empty()) {
@@ -1829,4 +1829,44 @@ namespace leetcode {
 			return false;
 		}
 	}// namespace pattern_matching_lcci
+
+	namespace map_of_highest_peak {
+		vector<vector<int>> Solution::highestPeak(vector<vector<int>> &isWater) {
+			const int m   = isWater.size();
+			const int n   = isWater[0].size();
+			auto occupied = new bool *[m];
+			for(int i = 0; i < m; i++) {
+				occupied[i] = new bool[n];
+				memset(occupied[i], 0, n * sizeof(bool));
+			}
+			auto que = queue<pair<int, int>>();
+			for(int i = 0; i < m; i++) {
+				for(int j = 0; j < n; j++) {
+					if(isWater[i][j] == 1) {
+						que.push(pair(i, j));
+						isWater[i][j]  = 0;
+						occupied[i][j] = true;
+					} else {
+						isWater[i][j] = 1;
+					}
+				}
+			}
+			while(!que.empty()) {
+				pair<int, int> current = que.front();
+				que.pop();
+				pair<int, int> nexts[4] = {pair(current.first + 1, current.second),
+				                           pair(current.first - 1, current.second),
+				                           pair(current.first, current.second + 1),
+				                           pair(current.first, current.second - 1)};
+				for(auto next: nexts) {
+					if(0 <= next.first && next.first < m && 0 <= next.second && next.second < n && !occupied[next.first][next.second]) {
+						isWater[next.first][next.second]  = isWater[current.first][current.second] + 1;
+						occupied[next.first][next.second] = true;
+						que.push(next);
+					}
+				}
+			}
+			return isWater;
+		}
+	}// namespace map_of_highest_peak
 }// namespace leetcode

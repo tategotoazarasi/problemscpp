@@ -1122,4 +1122,38 @@ namespace leetcode {
 			ASSERT_TRUE(Solution::patternMatching("aaaaab", "xahnxdxyaahnxdxyaahnxdxyaahnxdxyaauxuhuo"));
 		}
 	}// namespace pattern_matching_lcci
+
+	namespace map_of_highest_peak {
+		TEST(map_of_highest_peak, case1) {
+			int input[2][2] = {{0, 1}, {0, 0}};
+			auto vec_in     = vector<vector<int>>();
+			vec_in.resize(2);
+			for(int i = 0; i < 2; i++) {
+				vec_in[i] = vector(begin(input[i]), end(input[i]));
+			}
+			int output[2][2] = {{1, 0}, {2, 1}};
+			auto vec_out     = vector<vector<int>>();
+			vec_out.resize(2);
+			for(int i = 0; i < 2; i++) {
+				vec_out[i] = vector(begin(output[i]), end(output[i]));
+			}
+			ASSERT_EQ(vec_out, Solution::highestPeak(vec_in));
+		}
+
+		TEST(map_of_highest_peak, case2) {
+			int input[3][3] = {{0, 0, 1}, {1, 0, 0}, {0, 0, 0}};
+			auto vec_in     = vector<vector<int>>();
+			vec_in.resize(3);
+			for(int i = 0; i < 3; i++) {
+				vec_in[i] = vector(begin(input[i]), end(input[i]));
+			}
+			int output[3][3] = {{1, 1, 0}, {0, 1, 1}, {1, 2, 2}};
+			auto vec_out     = vector<vector<int>>();
+			vec_out.resize(3);
+			for(int i = 0; i < 3; i++) {
+				vec_out[i] = vector(begin(output[i]), end(output[i]));
+			}
+			ASSERT_EQ(vec_out, Solution::highestPeak(vec_in));
+		}
+	}// namespace map_of_highest_peak
 }// namespace leetcode
