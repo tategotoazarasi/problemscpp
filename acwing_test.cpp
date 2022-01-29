@@ -1379,4 +1379,12 @@ namespace acwing {
 		          "7 is prime\n",
 		          ans);
 	}
+
+	TEST(acwing737, case1) {
+		istringstream in("10\n-9\n0\n-4\n-10\n0\n-2\n-7\n7\n4");
+		auto out = ostringstream();
+		acwing737::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("X[0] = 10\nX[1] = 1\nX[2] = 1\nX[3] = 1\nX[4] = 1\nX[5] = 1\nX[6] = 1\nX[7] = 1\nX[8] = 7\nX[9] = 4\n", ans);
+	}
 }// namespace acwing
