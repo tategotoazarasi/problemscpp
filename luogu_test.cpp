@@ -329,4 +329,28 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("3", ans);
 	}
+
+	TEST(P1909, case1) {
+		istringstream in("57\n2 2\n50 30\n30 27");
+		auto out = ostringstream();
+		P1909::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("54", ans);
+	}
+
+	TEST(P1909, case2) {
+		istringstream in("9998\n128 233\n128 2333\n128 666");
+		auto out = ostringstream();
+		P1909::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("18407", ans);
+	}
+
+	TEST(P1909, case3) {
+		istringstream in("9999\n101 1111\n1 9999\n1111 9999");
+		auto out = ostringstream();
+		P1909::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("89991", ans);
+	}
 }// namespace luogu

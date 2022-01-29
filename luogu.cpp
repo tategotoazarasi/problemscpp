@@ -453,4 +453,23 @@ namespace luogu {
 		cout << maximum_i;
 		return 0;
 	}
+
+	int P1909::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		int num;
+		int price;
+		int minimum = -1;
+		for(int i = 0; i < 3; i++) {
+			cin >> num >> price;
+			int count = n / num;
+			if(n % num != 0) {
+				count++;
+			}
+			int sum = count * price;
+			minimum = minimum == -1 ? sum : min(minimum, sum);
+		}
+		cout << minimum;
+		return 0;
+	}
 }// namespace luogu
