@@ -2625,4 +2625,152 @@ namespace acwing {
 		cout << maximum;
 		return 0;
 	}
+
+	int acwing4215::main(istream &cin, ostream &cout) {
+		char ch;
+		while(cin >> ch) {
+			if(isupper(ch) != 0) {
+				ch = tolower(ch);
+			}
+			if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'y') {
+				continue;
+			}
+			cout << '.' << ch;
+		}
+		return 0;
+	}
+
+	int acwing4216::main(istream &cin, ostream &cout) {
+		unsigned short n;
+		unsigned short m;
+		unsigned short a;
+		unsigned short b;
+		cin >> n >> m;
+		auto flag = vector(n, false);
+		auto edge = vector(n, unordered_set<unsigned short>());
+		for(unsigned short i = 0; i < m; i++) {
+			cin >> a >> b;
+			edge[a - 1].insert(b - 1);
+			edge[b - 1].insert(a - 1);
+		}
+		int circle = 0;
+		auto que   = queue<pair<unsigned short, unsigned short>>();
+		que.push(pair(0, 0));
+		flag[0] = true;
+		while(!que.empty()) {
+			auto [prev, current] = que.front();
+			que.pop();
+			for(auto next: edge[current]) {
+				if(next != prev) {
+					if(flag[next]) {
+						if(circle == 2) {
+							cout << "NO";
+							return 0;
+						}
+						circle += 1;
+					} else {
+						que.push(pair(current, next));
+						flag[next] = true;
+					}
+				}
+			}
+		}
+		for(unsigned short i = 0; i < n; i++) {
+			if(!flag[i]) {
+				cout << "NO";
+				return 0;
+			}
+		}
+		if(circle != 2) {
+			cout << "NO";
+			return 0;
+		}
+		cout << "YES";
+		return 0;
+	}
+
+	int acwing4217::main(istream &cin, ostream &cout) {
+		cin >> n;
+		ops   = vector<char>();
+		forth = vector<pair<int, int>>();
+		back  = vector<pair<int, int>>();
+		ops.resize(n);
+		forth.emplace_back(0, 0);
+		for(int i = 0; i < n; i++) {
+			cin >> ops[i];
+			switch(ops[i]) {
+				case 'U': {
+					forth.emplace_back(forth.back().first, forth.back().second + 1);
+					break;
+				}
+				case 'D': {
+					forth.emplace_back(forth.back().first, forth.back().second - 1);
+					break;
+				}
+				case 'L': {
+					forth.emplace_back(forth.back().first - 1, forth.back().second);
+					break;
+				}
+				case 'R': {
+					forth.emplace_back(forth.back().first + 1, forth.back().second);
+					break;
+				}
+			}
+		}
+		cin >> a >> b;
+		if(forth.back().first == a && forth.back().second == b) {
+			cout << 0;
+			return 0;
+		}
+		if(forth.back().first == a && forth.back().second == b) {
+			cout << -1;
+			return 0;
+		}
+		back.emplace_back(a, b);
+		for(int i = n - 1; i >= 0; i--) {
+			switch(ops[i]) {
+				case 'U': {
+					back.emplace_back(back.back().first, back.back().second - 1);
+					break;
+				}
+				case 'D': {
+					back.emplace_back(back.back().first, back.back().second + 1);
+					break;
+				}
+				case 'L': {
+					back.emplace_back(back.back().first + 1, back.back().second);
+					break;
+				}
+				case 'R': {
+					back.emplace_back(back.back().first - 1, back.back().second);
+					break;
+				}
+			}
+		}
+		back  = vector(back.rbegin(), back.rend());
+		int l = 1;
+		int r = n;
+		while(l < r) {
+			const int mid = (l + r) / 2;
+			if(check(mid)) {
+				r = mid;
+			} else {
+				l = mid + 1;
+			}
+		}
+		cout << l;
+		return 0;
+	}
+
+	bool acwing4217::check(int len) const {
+		for(int i = 0; i + len < n + 1; i++) {
+			const auto s    = forth[i];
+			const auto e    = back[i + len];
+			const auto dist = abs(s.first - e.first) + abs(s.second - e.second);
+			if(len - dist >= 0 && (len - dist) % 2 == 0) {
+				return true;
+			}
+		}
+		return false;
+	}
 }// namespace acwing

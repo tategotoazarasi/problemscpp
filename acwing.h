@@ -869,5 +869,37 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/**
+	 * \brief AcWing 4215. 处理字符串
+	 */
+	class acwing4215 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4216. 图中的环
+	 */
+	class acwing4216 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4217. 机器人移动
+	 */
+	class acwing4217 {
+		vector<char> ops;
+		vector<pair<int, int>> forth;
+		vector<pair<int, int>> back;
+		unsigned int n;
+		int a;
+		int b;
+
+	public:
+		int main(istream &cin, ostream &cout);
+		[[nodiscard]] bool check(int len) const;
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

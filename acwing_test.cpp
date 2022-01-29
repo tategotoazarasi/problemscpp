@@ -1395,4 +1395,72 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("2", ans);
 	}
+
+	TEST(acwing4215, case1) {
+		istringstream in("tour");
+		auto out = ostringstream();
+		acwing4215::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ(".t.r", ans);
+	}
+
+	TEST(acwing4215, case2) {
+		istringstream in("aBAcAba");
+		auto out = ostringstream();
+		acwing4215::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ(".b.c.b", ans);
+	}
+
+	TEST(acwing4216, case1) {
+		istringstream in("6 6\n6 3\n6 4\n5 1\n2 5\n1 4\n5 4");
+		auto out = ostringstream();
+		acwing4216::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("YES", ans);
+	}
+
+	TEST(acwing4216, case2) {
+		istringstream in("6 5\n5 6\n4 6\n3 1\n5 1\n1 2");
+		auto out = ostringstream();
+		acwing4216::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("NO", ans);
+	}
+
+	TEST(acwing4217, case1) {
+		istringstream in("5\nRURUU\n-2 3");
+		auto out = ostringstream();
+		auto sol = acwing4217();
+		sol.main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("3", ans);
+	}
+
+	TEST(acwing4217, case2) {
+		istringstream in("4\nRULR\n1 1");
+		auto out = ostringstream();
+		auto sol = acwing4217();
+		sol.main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("0", ans);
+	}
+
+	TEST(acwing4217, case3) {
+		istringstream in("3\nUUU\n100 100");
+		auto out = ostringstream();
+		auto sol = acwing4217();
+		sol.main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("-1", ans);
+	}
+
+	TEST(acwing4217, case4) {
+		istringstream in("100\nURDLDDLLDDLDDDRRLLRRRLULLRRLUDUUDUULURRRDRRLLDRLLUUDLDRDLDDLDLLLULRURRUUDDLDRULRDRUDDDDDDULRDDRLRDDL\n-59 -1");
+		auto out = ostringstream();
+		auto sol = acwing4217();
+		sol.main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("58", ans);
+	}
 }// namespace acwing
