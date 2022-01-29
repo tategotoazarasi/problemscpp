@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['u_0',['u',['../d6/dd3/a00688.html#a0fe022ca955920947e43e36545b039da',1,'leetcode::find_k_pairs_with_smallest_sums::pair']]],
+  ['u_0',['u',['../dd/d57/a00701.html#a0fe022ca955920947e43e36545b039da',1,'leetcode::find_k_pairs_with_smallest_sums::pair']]],
   ['up_1',['up',['../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a6e3e0fd26e5ab4dfae535f544a428b00',1,'acwing::acwing1929']]],
-  ['up_5fmap_2',['up_map',['../dd/dea/a00408.html#abe667ade1897a4f28346557eb0cef949',1,'acwing::acwing1929::Solution']]],
-  ['update_3',['update',['../d0/da2/a00796.html#a1feba060722fd95e34620fbb73e31417',1,'leetcode::stock_price_fluctuation::StockPrice']]]
+  ['up_5fmap_2',['up_map',['../de/d3d/a00409.html#abe667ade1897a4f28346557eb0cef949',1,'acwing::acwing1929::Solution']]],
+  ['update_3',['update',['../dd/d7e/a00809.html#a1feba060722fd95e34620fbb73e31417',1,'leetcode::stock_price_fluctuation::StockPrice']]]
 ];
