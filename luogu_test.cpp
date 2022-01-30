@@ -377,4 +377,12 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("121.5", ans);
 	}
+
+	TEST(P1424, case1) {
+		istringstream in("3 10");
+		auto out = ostringstream();
+		P1424::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2000", ans);
+	}
 }// namespace luogu

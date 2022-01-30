@@ -517,4 +517,20 @@ namespace luogu {
 		cout << floor(fee * 10 + 0.5) / 10;
 		return 0;
 	}
+
+	int P1424::main(istream &cin, ostream &cout) {
+		unsigned short x;
+		unsigned int n;
+		cin >> x >> n;
+		x--;
+		unsigned int count = n / 7 * 5 * 250;
+		n %= 7;
+		for(unsigned int i = 0; i < n; i++) {
+			if((x + i) % 7 < 5) {
+				count += 250;
+			}
+		}
+		cout << count;
+		return 0;
+	}
 }// namespace luogu
