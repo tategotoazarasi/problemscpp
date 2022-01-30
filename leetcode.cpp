@@ -1832,9 +1832,9 @@ namespace leetcode {
 
 	namespace map_of_highest_peak {
 		vector<vector<int>> Solution::highestPeak(vector<vector<int>> &isWater) {
-			const int m   = isWater.size();
-			const int n   = isWater[0].size();
-			auto occupied = new bool *[m];
+			const int m    = isWater.size();
+			const int n    = isWater[0].size();
+			auto *occupied = new bool *[m];
 			for(int i = 0; i < m; i++) {
 				occupied[i] = new bool[n];
 				memset(occupied[i], 0, n * sizeof(bool));
@@ -1869,4 +1869,37 @@ namespace leetcode {
 			return isWater;
 		}
 	}// namespace map_of_highest_peak
+
+	namespace uncommon_words_from_two_sentences {
+		vector<string> Solution::uncommonFromSentences(const string &s1, const string &s2) {
+			auto ans    = vector<string>();
+			auto um     = unordered_map<string, unsigned int>();
+			auto s1_str = new char[s1.length() + 1];
+			auto s2_str = new char[s2.length() + 1];
+			strcpy(s1_str, s1.c_str());
+			strcpy(s2_str, s2.c_str());
+			for(char *word = strtok(s1_str, " "); word != nullptr; word = strtok(nullptr, " ")) {
+				auto word_str = string(word);
+				if(!um.contains(word_str)) {
+					um.insert(pair(word_str, 1));
+				} else {
+					um[word_str]++;
+				}
+			}
+			for(char *word = strtok(s2_str, " "); word != nullptr; word = strtok(nullptr, " ")) {
+				auto word_str = string(word);
+				if(!um.contains(word_str)) {
+					um.insert(pair(word_str, 1));
+				} else {
+					um[word_str]++;
+				}
+			}
+			for(const auto &p: um) {
+				if(p.second == 1) {
+					ans.push_back(p.first);
+				}
+			}
+			return ans;
+		}
+	}// namespace uncommon_words_from_two_sentences
 }// namespace leetcode

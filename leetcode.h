@@ -758,6 +758,16 @@ namespace leetcode {
 			static vector<vector<int>> highestPeak(vector<vector<int>> &isWater);
 		};
 	}// namespace map_of_highest_peak
+
+	/**
+	 * \brief LeetCode 884. 两句话中的不常见单词
+	 */
+	namespace uncommon_words_from_two_sentences {
+		class Solution {
+		public:
+			static vector<string> uncommonFromSentences(const string &s1, const string &s2);
+		};
+	}// namespace uncommon_words_from_two_sentences
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
