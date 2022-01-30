@@ -1156,4 +1156,61 @@ namespace leetcode {
 			ASSERT_EQ(vec_out, Solution::highestPeak(vec_in));
 		}
 	}// namespace map_of_highest_peak
+
+	namespace find_substring_with_given_hash_value {
+		TEST(find_substring_with_given_hash_value, case1) {
+			ASSERT_EQ("ee", Solution::subStrHash("leetcode", 7, 20, 2, 0));
+		}
+
+		TEST(find_substring_with_given_hash_value, case2) {
+			ASSERT_EQ("fbx", Solution::subStrHash("fbxzaad", 31, 100, 3, 32));
+		}
+	}// namespace find_substring_with_given_hash_value
+
+	namespace groups_of_strings {
+		TEST(groups_of_strings, case1) {
+			string input[]        = {"a", "b", "ab", "cde"};
+			auto input_vec        = vector(begin(input), end(input));
+			int output[]          = {2, 3};
+			const auto output_vec = vector(begin(output), end(output));
+			auto sol              = Solution();
+			ASSERT_EQ(output_vec, sol.groupStrings(input_vec));
+		}
+
+		TEST(groups_of_strings, case2) {
+			string input[]        = {"a", "ab", "abc"};
+			auto input_vec        = vector(begin(input), end(input));
+			int output[]          = {1, 3};
+			const auto output_vec = vector(begin(output), end(output));
+			auto sol              = Solution();
+			ASSERT_EQ(output_vec, sol.groupStrings(input_vec));
+		}
+
+		TEST(groups_of_strings, case3) {
+			string input[]        = {"qamp", "am", "khdrn"};
+			auto input_vec        = vector(begin(input), end(input));
+			int output[]          = {3, 1};
+			const auto output_vec = vector(begin(output), end(output));
+			auto sol              = Solution();
+			ASSERT_EQ(output_vec, sol.groupStrings(input_vec));
+		}
+
+		TEST(groups_of_strings, case4) {
+			string input[]        = {"ghnv", "uip", "tenv", "hvepx", "e", "ktc", "byjdt", "ulm", "cae", "ea"};
+			auto input_vec        = vector(begin(input), end(input));
+			int output[]          = {8, 3};
+			const auto output_vec = vector(begin(output), end(output));
+			auto sol              = Solution();
+			ASSERT_EQ(output_vec, sol.groupStrings(input_vec));
+		}
+
+		TEST(groups_of_strings, case5) {
+			string input[]        = {"web", "a", "te", "hsx", "v", "k", "a", "roh"};
+			auto input_vec        = vector(begin(input), end(input));
+			int output[]          = {5, 4};
+			const auto output_vec = vector(begin(output), end(output));
+			auto sol              = Solution();
+			ASSERT_EQ(output_vec, sol.groupStrings(input_vec));
+		}
+	}// namespace groups_of_strings
 }// namespace leetcode

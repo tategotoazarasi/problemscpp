@@ -1872,10 +1872,10 @@ namespace leetcode {
 
 	namespace uncommon_words_from_two_sentences {
 		vector<string> Solution::uncommonFromSentences(const string &s1, const string &s2) {
-			auto ans    = vector<string>();
-			auto um     = unordered_map<string, unsigned int>();
-			auto s1_str = new char[s1.length() + 1];
-			auto s2_str = new char[s2.length() + 1];
+			auto ans           = vector<string>();
+			auto um            = unordered_map<string, unsigned int>();
+			auto *const s1_str = new char[s1.length() + 1];
+			auto *const s2_str = new char[s2.length() + 1];
 			strcpy(s1_str, s1.c_str());
 			strcpy(s2_str, s2.c_str());
 			for(char *word = strtok(s1_str, " "); word != nullptr; word = strtok(nullptr, " ")) {
@@ -1902,4 +1902,154 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace uncommon_words_from_two_sentences
+
+	namespace keep_multiplying_found_values_by_two {
+		int Solution::findFinalValue(vector<int> &nums, int original) {
+		restart:;
+			for(const auto num: nums) {
+				if(num == original) {
+					original *= 2;
+					goto restart;
+				}
+			}
+			return original;
+		}
+	}// namespace keep_multiplying_found_values_by_two
+
+	namespace all_divisions_with_the_highest_score_of_a_binary_array {
+		vector<int> Solution::maxScoreIndices(vector<int> &nums) {
+			const auto n       = nums.size();
+			auto left_0_count  = vector<int>();
+			auto right_1_count = vector<int>();
+			left_0_count.push_back(0);
+			right_1_count.push_back(0);
+			int count = 0;
+			for(int i = 0; i < n; i++) {
+				if(nums[i] == 0) {
+					count++;
+				}
+				left_0_count.push_back(count);
+			}
+			count = 0;
+			for(int i = n - 1; i >= 0; i--) {
+				if(nums[i] == 1) {
+					count++;
+				}
+				right_1_count.push_back(count);
+			}
+			right_1_count = vector(right_1_count.rbegin(), right_1_count.rend());
+			int maximum   = 0;
+			for(int i = 0; i <= n; i++) {
+				maximum = max(maximum, left_0_count[i] + right_1_count[i]);
+			}
+			auto ans = vector<int>();
+			for(int i = 0; i <= n; i++) {
+				if(maximum == left_0_count[i] + right_1_count[i]) {
+					ans.push_back(i);
+				}
+			}
+			return ans;
+		}
+	}// namespace all_divisions_with_the_highest_score_of_a_binary_array
+
+	namespace find_substring_with_given_hash_value {
+		string Solution::subStrHash(string s, int power, int modulo, int k, int hashValue) {
+			power %= modulo;
+			auto *const pn = new int[k];
+			pn[0]          = 1;
+			for(int i = 1; i < k; i++) {
+				pn[i] = static_cast<unsigned long long>(pn[i - 1]) * static_cast<unsigned long long>(power) % modulo;
+			}
+
+			for(int i = 0; i < s.length(); i++) {
+				unsigned long long hash = 0;
+				for(int j = 0; j < k; j++) {
+					hash += static_cast<unsigned long long>((s[i + j] - 'a' + 1) % modulo) * pn[j];
+					hash %= modulo;
+				}
+				if(hash == hashValue) {
+					return s.substr(i, k);
+				}
+			}
+			return "";
+		}
+	}// namespace find_substring_with_given_hash_value
+
+	namespace groups_of_strings {
+		vector<int> Solution::groupStrings(vector<string> &words) {
+			auto ans  = vector<int>();
+			auto nums = vector<unsigned int>();
+			for(const auto &word: words) {
+				auto num = compress(word);
+				nums.push_back(num);
+				insert(num);
+			}
+			for(const auto num: nums) {
+				for(int i = 0; i < 26; i++) {
+					auto next = num ^ 1 << i;//添加或删除字符 i
+					if(parent.contains(next)) {
+						to_union(num, next);
+					}
+					if((num >> i & 1) == 1) {
+						//存在字符i
+						for(int j = 0; j < 26; j++) {
+							if((num >> j & 1) == 0) {
+								//不存在字符j
+								auto next = num ^ 1 << i | 1 << j;
+								if(parent.contains(next)) {
+									to_union(num, num ^ 1 << i | 1 << j);// 替换字符 i 为 j
+								}
+							}
+						}
+					}
+				}
+			}
+			ans.push_back(groups);
+			ans.push_back(max_size);
+			return ans;
+		}
+
+		unsigned int Solution::compress(const string &word) {
+			unsigned int ans = 0;
+			for(const char ch: word) {
+				ans |= 1 << ch - 'a';
+			}
+			return ans;
+		}
+
+		void Solution::insert(unsigned int num) {
+			parent.insert(pair(num, num));
+			rank.insert(pair(num, 0));
+			if(!size.contains(num)) {
+				size.insert(pair(num, 1));
+				groups++;
+			} else {
+				size[num]++;
+				max_size = size[num];
+			}
+		}
+
+		unsigned int Solution::find(unsigned int x) { return x == parent[x] ? x : parent[x] = find(parent[x]); }
+
+		void Solution::to_union(unsigned int x1, unsigned int x2) {
+			const int f1 = find(x1);
+			const int f2 = find(x2);
+			if(f1 == f2) {
+				return;
+			}
+			groups--;
+			if(rank[f1] > rank[f2]) {
+				parent[f2] = f1;
+				size[f1] += size[f2];
+				max_size = max(max_size, size[f1]);
+			} else {
+				parent[f1] = f2;
+				size[f2] += size[f1];
+				max_size = max(max_size, size[f2]);
+				if(rank[f1] == rank[f2]) {
+					++rank[f2];
+				}
+			}
+		}
+	}// namespace groups_of_strings
 }// namespace leetcode

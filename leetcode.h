@@ -768,6 +768,56 @@ namespace leetcode {
 			static vector<string> uncommonFromSentences(const string &s1, const string &s2);
 		};
 	}// namespace uncommon_words_from_two_sentences
+
+	/**
+	 * \brief LeetCode 5993. 将找到的值乘以 2
+	 */
+	namespace keep_multiplying_found_values_by_two {
+		class Solution {
+		public:
+			static int findFinalValue(vector<int> &nums, int original);
+		};
+	}// namespace keep_multiplying_found_values_by_two
+
+	/**
+	 * \brief LeetCode 5981. 分组得分最高的所有下标
+	 */
+	namespace all_divisions_with_the_highest_score_of_a_binary_array {
+		class Solution {
+		public:
+			static vector<int> maxScoreIndices(vector<int> &nums);
+		};
+	}// namespace all_divisions_with_the_highest_score_of_a_binary_array
+
+	/**
+	 * \brief LeetCode 5994. 查找给定哈希值的子串
+	 */
+	namespace find_substring_with_given_hash_value {
+		class Solution {
+		public:
+			static string subStrHash(string s, int power, int modulo, int k, int hashValue);
+		};
+	}// namespace find_substring_with_given_hash_value
+
+	/**
+	 * \brief LeetCode 5995. 字符串分组
+	 */
+	namespace groups_of_strings {
+		class Solution {
+			int groups                                       = 0;
+			unsigned int max_size                            = 1;
+			unordered_map<unsigned int, unsigned int> parent = unordered_map<unsigned int, unsigned int>();
+			unordered_map<unsigned int, unsigned int> rank   = unordered_map<unsigned int, unsigned int>();
+			unordered_map<unsigned int, unsigned int> size   = unordered_map<unsigned int, unsigned int>();
+
+		public:
+			vector<int> groupStrings(vector<string> &words);
+			static unsigned int compress(const string &word);
+			void insert(unsigned int num);
+			unsigned int find(unsigned int x);
+			void to_union(unsigned int x1, unsigned int x2);
+		};
+	}// namespace groups_of_strings
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
