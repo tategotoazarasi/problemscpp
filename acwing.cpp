@@ -2782,4 +2782,21 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing741::main(istream &cin, ostream &cout) {
+		unsigned int t;
+		unsigned short n;
+		cin >> t;
+		unsigned int fib[60];
+		fib[0] = 0;
+		fib[1] = 1;
+		for(int i = 2; i < 60; i++) {
+			fib[i] = fib[i - 1] + fib[i - 2];
+		}
+		for(unsigned i = 0; i < t; i++) {
+			cin >> n;
+			cout << "Fib(" << n << ") = " << fib[n] << endl;
+		}
+		return 0;
+	}
 }// namespace acwing
