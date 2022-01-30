@@ -501,4 +501,20 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P1422::main(istream &cin, ostream &cout) {
+		double fee = 0;
+		int power;
+		cin >> power;
+		cout << setiosflags(ios::fixed) << setprecision(1);
+		if(power <= 150) {
+			fee = power * 0.4463;
+		} else if(power <= 400) {
+			fee = 150 * 0.4463 + (power - 150) * 0.4663;
+		} else {
+			fee = 150 * 0.4463 + (400 - 150) * 0.4663 + (power - 400) * 0.5663;
+		}
+		cout << floor(fee * 10 + 0.5) / 10;
+		return 0;
+	}
 }// namespace luogu

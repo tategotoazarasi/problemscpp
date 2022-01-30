@@ -369,4 +369,12 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("0-670-82162-4", ans);
 	}
+
+	TEST(P1422, case1) {
+		istringstream in("267");
+		auto out = ostringstream();
+		P1422::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("121.5", ans);
+	}
 }// namespace luogu

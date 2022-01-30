@@ -2722,7 +2722,7 @@ namespace acwing {
 			cout << 0;
 			return 0;
 		}
-		if(forth.back().first == a && forth.back().second == b) {
+		if(n < abs(a) + abs(b) || (n - (abs(a) + abs(b))) % 2 != 0) {
 			cout << -1;
 			return 0;
 		}
