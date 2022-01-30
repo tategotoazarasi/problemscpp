@@ -901,5 +901,13 @@ namespace acwing {
 		int main(istream &cin, ostream &cout);
 		[[nodiscard]] bool check(int len) const;
 	};
+
+	/**
+	 * \brief AcWing 738. 数组填充
+	 */
+	class acwing738 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

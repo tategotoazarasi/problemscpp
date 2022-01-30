@@ -2773,4 +2773,13 @@ namespace acwing {
 		}
 		return false;
 	}
+
+	int acwing738::main(istream &cin, ostream &cout) {
+		unsigned int v;
+		cin >> v;
+		for(int i = 0; i < 10; i++) {
+			cout << "N[" << i << "] = " << v * static_cast<unsigned int>(pow(2, i)) << endl;
+		}
+		return 0;
+	}
 }// namespace acwing
