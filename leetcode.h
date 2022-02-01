@@ -826,6 +826,15 @@ namespace leetcode {
 			static int numberOfSteps(int num);
 		};
 	}// namespace number_of_steps_to_reduce_a_number_to_zero
+
+	/// \brief LeetCode 1763. 最长的美好子字符串
+	namespace longest_nice_substring {
+		class Solution {
+		public:
+			static string longestNiceSubstring(string s);
+			static pair<int, int> dfs(string s, int start, int end);
+		};
+	}// namespace longest_nice_substring
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -1222,9 +1222,27 @@ namespace leetcode {
 		TEST(number_of_steps_to_reduce_a_number_to_zero, case2) {
 			ASSERT_EQ(4, Solution::numberOfSteps(8));
 		}
-		
+
 		TEST(number_of_steps_to_reduce_a_number_to_zero, case3) {
 			ASSERT_EQ(12, Solution::numberOfSteps(123));
 		}
 	}// namespace number_of_steps_to_reduce_a_number_to_zero
+
+	namespace longest_nice_substring {
+		TEST(longest_nice_substring, case1) {
+			ASSERT_EQ("aAa", Solution::longestNiceSubstring("YazaAay"));
+		}
+
+		TEST(longest_nice_substring, case2) {
+			ASSERT_EQ("Bb", Solution::longestNiceSubstring("Bb"));
+		}
+
+		TEST(longest_nice_substring, case3) {
+			ASSERT_EQ("", Solution::longestNiceSubstring("c"));
+		}
+
+		TEST(longest_nice_substring, case4) {
+			ASSERT_EQ("dD", Solution::longestNiceSubstring("dDzeE"));
+		}
+	}// namespace longest_nice_substring
 }// namespace leetcode

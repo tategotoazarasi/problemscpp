@@ -2071,4 +2071,54 @@ namespace leetcode {
 		}
 	}// namespace number_of_steps_to_reduce_a_number_to_zero
 
+	namespace longest_nice_substring {
+		string Solution::longestNiceSubstring(string s) {
+			auto [max_start, max_len] = dfs(s, 0, s.length() - 1);
+			if(max_len == 0) {
+				return "";
+			}
+			return s.substr(max_start, max_len);
+		}
+
+		pair<int, int> Solution::dfs(string s, int start, int end) {
+			if(start == end) {
+				return {start, 0};
+			}
+			int lower     = 0;
+			int upper     = 0;
+			int max_start = 0;
+			int max_len   = 0;
+			for(int i = start; i <= end; i++) {
+				char ch = s[i];
+				if(islower(ch)) {
+					lower |= 1 << (ch - 'a');
+				} else {//isupper
+					upper |= 1 << (ch - 'A');
+				}
+			}
+			if(lower == upper) {//是美好字符串
+				return {start, end - start + 1};
+			}
+			//不是美好字符串
+			int not_nice = lower ^ upper;//无法构成美好字符串的字符
+			int i        = start;
+			while(i <= end) {
+				if(((not_nice >> (tolower(s[i]) - 'a')) & 1) == 1) {//在not_nice中
+					i++;
+					continue;
+				}
+				int j = i + 1;
+				while(j <= end && (((not_nice >> (tolower(s[j]) - 'a')) & 1) != 1)) {
+					j++;
+				}
+				auto [next_start, next_len] = dfs(s, i, j - 1);
+				if(max_len < next_len) {
+					max_len   = next_len;
+					max_start = next_start;
+				}
+				i = j;
+			}
+			return {max_start, max_len};
+		}
+	}// namespace longest_nice_substring
 }// namespace leetcode
