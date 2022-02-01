@@ -2052,4 +2052,23 @@ namespace leetcode {
 			}
 		}
 	}// namespace groups_of_strings
+
+	namespace number_of_steps_to_reduce_a_number_to_zero {
+		int Solution::numberOfSteps(int num) {
+			if(num == 0) {
+				return 0;
+			}
+			int count = 0;
+			while(num != 0) {
+				if((num & 1) == 0) {
+					count += 1;
+				} else {
+					count += 2;
+				}
+				num >>= 1;
+			}
+			return count - 1;
+		}
+	}// namespace number_of_steps_to_reduce_a_number_to_zero
+
 }// namespace leetcode

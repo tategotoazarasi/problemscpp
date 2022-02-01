@@ -818,6 +818,14 @@ namespace leetcode {
 			void to_union(unsigned int x1, unsigned int x2);
 		};
 	}// namespace groups_of_strings
+
+	/// \brief LeetCode 1342. 将数字变成 0 的操作次数
+	namespace number_of_steps_to_reduce_a_number_to_zero {
+		class Solution {
+		public:
+			static int numberOfSteps(int num);
+		};
+	}// namespace number_of_steps_to_reduce_a_number_to_zero
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
