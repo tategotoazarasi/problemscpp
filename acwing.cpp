@@ -2799,4 +2799,47 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing1789::main(istream &cin, ostream &cout) {
+		char str[52];
+		int count                 = 0;
+		vector<vector<int>> poses = vector<vector<int>>(26, vector<int>());
+		for(int i = 0; i < 52; i++) {
+			char ch;
+			cin >> ch;
+			str[i] = ch;
+			poses[ch - 'A'].push_back(i);
+		}
+		unordered_map<int, int> um;
+		for(auto pos: poses) {
+			um = unordered_map<int, int>();
+			for(int i = pos[0] + 1; i < pos[1]; i++) {
+				if(um.count(str[i]) == 0) {
+					um.insert(pair(str[i], 1));
+				} else {
+					um[str[i]] = 0;
+				}
+			}
+			for(auto p: um) {
+				if(p.second == 1) {
+					count++;
+				}
+			}
+			um = unordered_map<int, int>();
+			for(int i = pos[1] + 1; i < pos[0] + 52; i++) {
+				if(um.count(str[i % 52]) == 0) {
+					um.insert(pair(str[i % 52], 1));
+				} else {
+					um[str[i % 52]] = 0;
+				}
+			}
+			for(auto p: um) {
+				if(p.second == 1) {
+					count++;
+				}
+			}
+		}
+		cout << count / 4;
+		return 0;
+	}
 }// namespace acwing

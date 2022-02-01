@@ -1479,4 +1479,12 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("Fib(0) = 0\nFib(4) = 3\nFib(2) = 1\n", ans);
 	}
+
+	TEST(acwing1789, case1) {
+		istringstream in("ABCCABDDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTUUVVWWXXYYZZ");
+		auto out = ostringstream();
+		acwing1789::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1", ans);
+	}
 }// namespace acwing
