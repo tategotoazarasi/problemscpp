@@ -1,16 +1,17 @@
 var searchData=
 [
-  ['get_5fmin_0',['get_min',['../d7/db5/a00472.html#a8c68b98980f7b1a97f5cb5a134921973',1,'acwing::acwing4213']]],
-  ['get_5fnext_1',['get_next',['../d8/d8e/a00344.html#a4cdd620d7cc50badd6d387f0c7ec6cb9',1,'acwing::acwing1960']]],
-  ['get_5fprefix_2',['get_prefix',['../d2/d5a/a00792.html#ac180bb16d235d389bfeea1e085d0fc07',1,'leetcode::UhWRSj::TrieNode']]],
-  ['get_5frecord_3',['get_record',['../df/d15/a00416.html#ac1b6d59f72a71b44175656e631088dac',1,'acwing::acwing1929::Solution']]],
-  ['get_5fsum_4',['get_sum',['../db/ddc/a00636.html#a0b5b1537d7c97dc523a3de2c8eb04426',1,'leetcode::convert_bst_to_greater_tree::Solution']]],
-  ['getnextresult_5',['getNextResult',['../d0/d5c/a00668.html#abac19e18e96b6d4cee44b83dd111fc77',1,'leetcode::cat_and_mouse::Solution']]],
-  ['getrandom_6',['getRandom',['../de/d3d/a00748.html#ae9380d08f2a79381a4a7b2ee2dc59eb4',1,'leetcode::linked_list_random_node::Solution']]],
-  ['getresult_7',['getResult',['../d0/d5c/a00668.html#a184a09044a562eff07bf2b9a68727576',1,'leetcode::cat_and_mouse::Solution']]],
-  ['good_8',['good',['../d0/d08/a00832.html#aeb5619fa6dbb84e9525409af9dd24662',1,'leetcode::maximum_good_people_based_on_statements::msg']]],
-  ['graph_9',['graph',['../d0/d5c/a00668.html#afb0c157317f0b85af1067f4dcd6d7903',1,'leetcode::cat_and_mouse::Solution']]],
-  ['graycode_10',['grayCode',['../d3/db4/a00684.html#a37b7872f768f932bdd8dfa0992f43952',1,'leetcode::gray_code::Solution']]],
-  ['groups_11',['groups',['../d0/de2/a00892.html#ad3c22fb629f5dc7fba28d5575d3d7d57',1,'leetcode::groups_of_strings::Solution']]],
-  ['groupstrings_12',['groupStrings',['../d0/de2/a00892.html#ae13aad40f9adfe811bedfa1a0824b8e0',1,'leetcode::groups_of_strings::Solution']]]
+  ['gcd_0',['gcd',['../d3/dc4/a01089.html#a301a800653e37eb8974e6849eadcf829',1,'luogu::P1888']]],
+  ['get_5fmin_1',['get_min',['../dc/d8e/a00473.html#a8c68b98980f7b1a97f5cb5a134921973',1,'acwing::acwing4213']]],
+  ['get_5fnext_2',['get_next',['../d9/d48/a00345.html#a4cdd620d7cc50badd6d387f0c7ec6cb9',1,'acwing::acwing1960']]],
+  ['get_5fprefix_3',['get_prefix',['../d7/dff/a00805.html#ac180bb16d235d389bfeea1e085d0fc07',1,'leetcode::UhWRSj::TrieNode']]],
+  ['get_5frecord_4',['get_record',['../d8/de7/a00417.html#ac1b6d59f72a71b44175656e631088dac',1,'acwing::acwing1929::Solution']]],
+  ['get_5fsum_5',['get_sum',['../dd/d6b/a00649.html#a0b5b1537d7c97dc523a3de2c8eb04426',1,'leetcode::convert_bst_to_greater_tree::Solution']]],
+  ['getnextresult_6',['getNextResult',['../d8/dba/a00681.html#abac19e18e96b6d4cee44b83dd111fc77',1,'leetcode::cat_and_mouse::Solution']]],
+  ['getrandom_7',['getRandom',['../d3/d4f/a00761.html#ae9380d08f2a79381a4a7b2ee2dc59eb4',1,'leetcode::linked_list_random_node::Solution']]],
+  ['getresult_8',['getResult',['../d8/dba/a00681.html#a184a09044a562eff07bf2b9a68727576',1,'leetcode::cat_and_mouse::Solution']]],
+  ['good_9',['good',['../d7/dcf/a00845.html#aeb5619fa6dbb84e9525409af9dd24662',1,'leetcode::maximum_good_people_based_on_statements::msg']]],
+  ['graph_10',['graph',['../d8/dba/a00681.html#afb0c157317f0b85af1067f4dcd6d7903',1,'leetcode::cat_and_mouse::Solution']]],
+  ['graycode_11',['grayCode',['../d2/d74/a00697.html#a37b7872f768f932bdd8dfa0992f43952',1,'leetcode::gray_code::Solution']]],
+  ['groups_12',['groups',['../da/d5b/a00905.html#ad3c22fb629f5dc7fba28d5575d3d7d57',1,'leetcode::groups_of_strings::Solution']]],
+  ['groupstrings_13',['groupStrings',['../da/d5b/a00905.html#ae13aad40f9adfe811bedfa1a0824b8e0',1,'leetcode::groups_of_strings::Solution']]]
 ];
