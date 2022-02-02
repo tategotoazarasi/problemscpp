@@ -1498,4 +1498,18 @@ namespace acwing {
 		          "Position: 4",
 		          ans);
 	}
+
+	TEST(acwing1776, case1) {
+		istringstream in("3 8\n"
+		                 "AATCCCAT\n"
+		                 "GATTGCAA\n"
+		                 "GGTCGCAA\n"
+		                 "ACTCCCAG\n"
+		                 "ACTCGCAT\n"
+		                 "ACTTCCAT");
+		auto out = ostringstream();
+		acwing1776::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1", ans);
+	}
 }// namespace acwing

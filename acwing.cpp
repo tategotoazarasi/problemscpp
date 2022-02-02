@@ -2872,4 +2872,36 @@ namespace acwing {
 		     << "Position: " << minimum_i;
 		return 0;
 	}
+
+	int acwing1776::main(istream &cin, ostream &cout) {
+		int n, m;
+		cin >> n >> m;
+		char ch;
+		int *dot = new int[m];
+		memset(dot, 0, m * sizeof(int));
+		int *normal = new int[m];
+		memset(normal, 0, m * sizeof(int));
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < m; j++) {
+				cin >> ch;
+				dot[j] |= 1 << (ch - 'A');
+			}
+		}
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < m; j++) {
+				cin >> ch;
+				normal[j] |= 1 << (ch - 'A');
+			}
+		}
+		int count = 0;
+		for(int i = 0; i < m; i++) {
+			if((dot[i] & normal[i]) == 0) {
+				count++;
+			}
+		}
+		cout << count;
+		delete[] normal;
+		delete[] dot;
+		return 0;
+	}
 }// namespace acwing
