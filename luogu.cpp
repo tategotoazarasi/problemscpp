@@ -533,4 +533,27 @@ namespace luogu {
 		cout << count;
 		return 0;
 	}
+
+	int P1888::main(istream &cin, ostream &cout) {
+		int a, b, c;
+		cin >> a >> b >> c;
+		int maximum = a, minimum = a;
+		maximum = max(maximum, b);
+		maximum = max(maximum, c);
+		minimum = min(minimum, b);
+		minimum = min(minimum, c);
+		int g   = gcd(maximum, minimum);
+		cout << minimum / g << "/" << maximum / g;
+		return 0;
+	}
+
+	int P1888::gcd(int m, int n) {
+		int r = m;
+		while(r != 0) {
+			r = m % n;
+			m = n;
+			n = r;
+		}
+		return m;
+	}
 }// namespace luogu

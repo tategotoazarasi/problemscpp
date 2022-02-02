@@ -203,6 +203,13 @@ namespace luogu {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief 洛谷 P1888 三角函数
+	class P1888 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static int gcd(int m, int n);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H

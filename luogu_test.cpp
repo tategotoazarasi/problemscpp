@@ -385,4 +385,12 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("2000", ans);
 	}
+
+	TEST(P1888, case1) {
+		istringstream in("3 5 4");
+		auto out = ostringstream();
+		P1888::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("3/5", ans);
+	}
 }// namespace luogu
