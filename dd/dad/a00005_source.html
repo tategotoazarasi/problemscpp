@@ -603,46 +603,49 @@ $(function() {
 <div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>    }</div>
 <div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span> </div>
 <div class="line"><a id="l00537" name="l00537"></a><span class="lineno"><a class="line" href="../../d3/dc4/a01089.html#a6eafb054bf42cc2e3ddbe3be6ff33b04">  537</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d3/dc4/a01089.html#a6eafb054bf42cc2e3ddbe3be6ff33b04">P1888::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>        <span class="keywordtype">int</span> a, b, c;</div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>        cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>        <span class="keywordtype">int</span> maximum = a, minimum = a;</div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>        maximum = max(maximum, b);</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>        maximum = max(maximum, c);</div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>        minimum = min(minimum, b);</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>        minimum = min(minimum, c);</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>        <span class="keywordtype">int</span> g   = <a class="code hl_function" href="../../d3/dc4/a01089.html#a301a800653e37eb8974e6849eadcf829">gcd</a>(maximum, minimum);</div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>        cout &lt;&lt; minimum / g &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; maximum / g;</div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>    }</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span> </div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno"><a class="line" href="../../d3/dc4/a01089.html#a301a800653e37eb8974e6849eadcf829">  550</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d3/dc4/a01089.html#a301a800653e37eb8974e6849eadcf829">P1888::gcd</a>(<span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n) {</div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>        <span class="keywordtype">int</span> r = m;</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>        <span class="keywordflow">while</span>(r != 0) {</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>            r = m % n;</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>            m = n;</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>            n = r;</div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>        }</div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>        <span class="keywordflow">return</span> m;</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>    }</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span> </div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno"><a class="line" href="../../de/d1c/a01093.html#a0219027cbeb23fba2b9c2d035da3e045">  560</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d1c/a01093.html#a0219027cbeb23fba2b9c2d035da3e045">P1046::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>        <span class="keywordtype">int</span> h[10];</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> &amp;i: h) {</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>            cin &gt;&gt; i;</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>        }</div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>        <span class="keywordtype">int</span> t;</div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>        cin &gt;&gt; t;</div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>        t += 30;</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>        <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i: h) {</div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>            <span class="keywordflow">if</span>(t &gt;= i) {</div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>                count++;</div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>            }</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>        }</div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>        cout &lt;&lt; count;</div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>    }</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>}<span class="comment">// namespace luogu</span></div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>        <span class="keywordtype">int</span> a;</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>        <span class="keywordtype">int</span> b;</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>        <span class="keywordtype">int</span> c;</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>        cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>        <span class="keywordtype">int</span> maximum = a;</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>        <span class="keywordtype">int</span> minimum = a;</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>        maximum     = max(maximum, b);</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>        maximum     = max(maximum, c);</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>        minimum     = min(minimum, b);</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>        minimum     = min(minimum, c);</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> g = <a class="code hl_function" href="../../d3/dc4/a01089.html#a301a800653e37eb8974e6849eadcf829">gcd</a>(maximum, minimum);</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>        cout &lt;&lt; minimum / g &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; maximum / g;</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>    }</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span> </div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno"><a class="line" href="../../d3/dc4/a01089.html#a301a800653e37eb8974e6849eadcf829">  553</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d3/dc4/a01089.html#a301a800653e37eb8974e6849eadcf829">P1888::gcd</a>(<span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n) {</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>        <span class="keywordtype">int</span> r = m;</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>        <span class="keywordflow">while</span>(r != 0) {</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>            r = m % n;</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>            m = n;</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>            n = r;</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>        }</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>        <span class="keywordflow">return</span> m;</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    }</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span> </div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno"><a class="line" href="../../de/d1c/a01093.html#a0219027cbeb23fba2b9c2d035da3e045">  563</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d1c/a01093.html#a0219027cbeb23fba2b9c2d035da3e045">P1046::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>        <span class="keywordtype">int</span> h[10];</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> &amp;i: h) {</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>            cin &gt;&gt; i;</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>        }</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>        <span class="keywordtype">int</span> t;</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>        cin &gt;&gt; t;</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>        t += 30;</div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>        <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">int</span> i: h) {</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>            <span class="keywordflow">if</span>(t &gt;= i) {</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>                count++;</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>            }</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>        }</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>        cout &lt;&lt; count;</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>    }</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>}<span class="comment">// namespace luogu</span></div>
 <div class="ttc" id="aa00038_html"><div class="ttname"><a href="../../d8/d41/a00038.html">luogu.h</a></div></div>
 <div class="ttc" id="aa00136_html"><div class="ttname"><a href="../../d0/d5e/a00136.html">luogu</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00011">luogu.cpp:11</a></div></div>
 <div class="ttc" id="aa00973_html_aafbc8703d7ed8ddba91bea69ea72fc4c"><div class="ttname"><a href="../../d3/da5/a00973.html#aafbc8703d7ed8ddba91bea69ea72fc4c">luogu::P1001::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00012">luogu.cpp:12</a></div></div>
@@ -674,9 +677,9 @@ $(function() {
 <div class="ttc" id="aa01077_html_a6cf7bdf037f08b00f7ee5579e78708b8"><div class="ttname"><a href="../../d0/dd3/a01077.html#a6cf7bdf037f08b00f7ee5579e78708b8">luogu::P1055::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00476">luogu.cpp:476</a></div></div>
 <div class="ttc" id="aa01081_html_a415be8d5e7b4e01810585fc1482e5d20"><div class="ttname"><a href="../../dd/dee/a01081.html#a415be8d5e7b4e01810585fc1482e5d20">luogu::P1422::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00505">luogu.cpp:505</a></div></div>
 <div class="ttc" id="aa01085_html_a8c806ed8fad49badec4e8368558e5baa"><div class="ttname"><a href="../../d2/df3/a01085.html#a8c806ed8fad49badec4e8368558e5baa">luogu::P1424::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00521">luogu.cpp:521</a></div></div>
-<div class="ttc" id="aa01089_html_a301a800653e37eb8974e6849eadcf829"><div class="ttname"><a href="../../d3/dc4/a01089.html#a301a800653e37eb8974e6849eadcf829">luogu::P1888::gcd</a></div><div class="ttdeci">static int gcd(int m, int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00550">luogu.cpp:550</a></div></div>
+<div class="ttc" id="aa01089_html_a301a800653e37eb8974e6849eadcf829"><div class="ttname"><a href="../../d3/dc4/a01089.html#a301a800653e37eb8974e6849eadcf829">luogu::P1888::gcd</a></div><div class="ttdeci">static int gcd(int m, int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00553">luogu.cpp:553</a></div></div>
 <div class="ttc" id="aa01089_html_a6eafb054bf42cc2e3ddbe3be6ff33b04"><div class="ttname"><a href="../../d3/dc4/a01089.html#a6eafb054bf42cc2e3ddbe3be6ff33b04">luogu::P1888::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00537">luogu.cpp:537</a></div></div>
-<div class="ttc" id="aa01093_html_a0219027cbeb23fba2b9c2d035da3e045"><div class="ttname"><a href="../../de/d1c/a01093.html#a0219027cbeb23fba2b9c2d035da3e045">luogu::P1046::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00560">luogu.cpp:560</a></div></div>
+<div class="ttc" id="aa01093_html_a0219027cbeb23fba2b9c2d035da3e045"><div class="ttname"><a href="../../de/d1c/a01093.html#a0219027cbeb23fba2b9c2d035da3e045">luogu::P1046::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00563">luogu.cpp:563</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

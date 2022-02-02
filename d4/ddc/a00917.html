@@ -119,22 +119,22 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/df9/a00044_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d5/df9/a00044_source.html#l02126">2126</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02126" name="l02126"></a><span class="lineno"> 2126</span>                                                           {</div>
-<div class="line"><a id="l02127" name="l02127"></a><span class="lineno"> 2127</span>            <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><a id="l02128" name="l02128"></a><span class="lineno"> 2128</span>            <span class="keywordflow">for</span>(; i &lt; word.length(); i++) {</div>
-<div class="line"><a id="l02129" name="l02129"></a><span class="lineno"> 2129</span>                <span class="keywordflow">if</span>(ch == word[i]) {</div>
-<div class="line"><a id="l02130" name="l02130"></a><span class="lineno"> 2130</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l02131" name="l02131"></a><span class="lineno"> 2131</span>                }</div>
-<div class="line"><a id="l02132" name="l02132"></a><span class="lineno"> 2132</span>            }</div>
-<div class="line"><a id="l02133" name="l02133"></a><span class="lineno"> 2133</span>            <span class="keywordflow">if</span>(i == word.length()) {</div>
-<div class="line"><a id="l02134" name="l02134"></a><span class="lineno"> 2134</span>                <span class="keywordflow">return</span> word;</div>
+<p class="definition">在文件 <a class="el" href="../../d5/df9/a00044_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d5/df9/a00044_source.html#l02129">2129</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02129" name="l02129"></a><span class="lineno"> 2129</span>                                                           {</div>
+<div class="line"><a id="l02130" name="l02130"></a><span class="lineno"> 2130</span>            <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a id="l02131" name="l02131"></a><span class="lineno"> 2131</span>            <span class="keywordflow">for</span>(; i &lt; word.length(); i++) {</div>
+<div class="line"><a id="l02132" name="l02132"></a><span class="lineno"> 2132</span>                <span class="keywordflow">if</span>(ch == word[i]) {</div>
+<div class="line"><a id="l02133" name="l02133"></a><span class="lineno"> 2133</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l02134" name="l02134"></a><span class="lineno"> 2134</span>                }</div>
 <div class="line"><a id="l02135" name="l02135"></a><span class="lineno"> 2135</span>            }</div>
-<div class="line"><a id="l02136" name="l02136"></a><span class="lineno"> 2136</span>            <span class="keywordtype">string</span> prefix = word.substr(0, i + 1);</div>
-<div class="line"><a id="l02137" name="l02137"></a><span class="lineno"> 2137</span>            <span class="keywordtype">string</span> suffix = word.substr(i + 1);</div>
-<div class="line"><a id="l02138" name="l02138"></a><span class="lineno"> 2138</span>            <span class="keywordtype">string</span> xiferp = string(prefix.rbegin(), prefix.rend());</div>
-<div class="line"><a id="l02139" name="l02139"></a><span class="lineno"> 2139</span>            <span class="keywordflow">return</span> xiferp + suffix;</div>
-<div class="line"><a id="l02140" name="l02140"></a><span class="lineno"> 2140</span>        }</div>
+<div class="line"><a id="l02136" name="l02136"></a><span class="lineno"> 2136</span>            <span class="keywordflow">if</span>(i == word.length()) {</div>
+<div class="line"><a id="l02137" name="l02137"></a><span class="lineno"> 2137</span>                <span class="keywordflow">return</span> word;</div>
+<div class="line"><a id="l02138" name="l02138"></a><span class="lineno"> 2138</span>            }</div>
+<div class="line"><a id="l02139" name="l02139"></a><span class="lineno"> 2139</span>            <span class="keywordtype">string</span> prefix       = word.substr(0, i + 1);</div>
+<div class="line"><a id="l02140" name="l02140"></a><span class="lineno"> 2140</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> suffix = word.substr(i + 1);</div>
+<div class="line"><a id="l02141" name="l02141"></a><span class="lineno"> 2141</span>            <span class="keyword">const</span> <span class="keyword">auto</span> xiferp   = string(prefix.rbegin(), prefix.rend());</div>
+<div class="line"><a id="l02142" name="l02142"></a><span class="lineno"> 2142</span>            <span class="keywordflow">return</span> xiferp + suffix;</div>
+<div class="line"><a id="l02143" name="l02143"></a><span class="lineno"> 2143</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l01250">leetcode::reverse_prefix_of_word::TEST()</a>.</p>
 
