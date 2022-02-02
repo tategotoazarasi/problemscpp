@@ -835,6 +835,14 @@ namespace leetcode {
 			static pair<int, int> dfs(string s, int start, int end);
 		};
 	}// namespace longest_nice_substring
+
+	/// \brief LeetCode 2000. 反转单词前缀
+	namespace reverse_prefix_of_word {
+		class Solution {
+		public:
+			static string reversePrefix(string word, char ch);
+		};
+	}// namespace reverse_prefix_of_word
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

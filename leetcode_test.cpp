@@ -1245,4 +1245,18 @@ namespace leetcode {
 			ASSERT_EQ("dD", Solution::longestNiceSubstring("dDzeE"));
 		}
 	}// namespace longest_nice_substring
+
+	namespace reverse_prefix_of_word {
+		TEST(reverse_prefix_of_word, case1) {
+			ASSERT_EQ("dcbaefd", Solution::reversePrefix("abcdefd", 'd'));
+		}
+
+		TEST(reverse_prefix_of_word, case2) {
+			ASSERT_EQ("zxyxxe", Solution::reversePrefix("xyxzxe", 'z'));
+		}
+
+		TEST(reverse_prefix_of_word, case3) {
+			ASSERT_EQ("abcd", Solution::reversePrefix("abcd", 'z'));
+		}
+	}// namespace reverse_prefix_of_word
 }// namespace leetcode

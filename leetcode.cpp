@@ -2121,4 +2121,23 @@ namespace leetcode {
 			return {max_start, max_len};
 		}
 	}// namespace longest_nice_substring
+
+	namespace reverse_prefix_of_word {
+		string Solution::reversePrefix(string word, char ch) {
+			int i = 0;
+			for(; i < word.length(); i++) {
+				if(ch == word[i]) {
+					break;
+				}
+			}
+			if(i == word.length()) {
+				return word;
+			}
+			string prefix = word.substr(0, i + 1);
+			string suffix = word.substr(i + 1);
+			string xiferp = string(prefix.rbegin(), prefix.rend());
+			return xiferp + suffix;
+		}
+	}// namespace reverse_prefix_of_word
+
 }// namespace leetcode
