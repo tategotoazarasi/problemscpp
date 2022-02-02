@@ -2842,4 +2842,16 @@ namespace acwing {
 		cout << count / 4;
 		return 0;
 	}
+
+	int acwing739::main(istream &cin, ostream &cout) {
+		double a;
+		cout << setiosflags(ios::fixed) << setprecision(1);
+		for(int i = 0; i < 100; i++) {
+			cin >> a;
+			if(a <= 10) {
+				cout << "A[" << i << "] = " << a << endl;
+			}
+		}
+		return 0;
+	}
 }// namespace acwing
