@@ -2854,4 +2854,22 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing742::main(istream &cin, ostream &cout) {
+		unsigned short n;
+		cin >> n;
+		unsigned short minimum_i = 0;
+		short minimum            = 1000;
+		short x;
+		for(unsigned short i = 0; i < n; i++) {
+			cin >> x;
+			if(minimum > x) {
+				minimum   = x;
+				minimum_i = i;
+			}
+		}
+		cout << "Minimum value: " << minimum << endl
+		     << "Position: " << minimum_i;
+		return 0;
+	}
 }// namespace acwing

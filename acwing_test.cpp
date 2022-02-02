@@ -1487,4 +1487,15 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("1", ans);
 	}
+
+	TEST(acwing742, case1) {
+		istringstream in("10\n"
+		                 "1 2 3 4 -5 6 7 8 9 10");
+		auto out = ostringstream();
+		acwing742::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Minimum value: -5\n"
+		          "Position: 4",
+		          ans);
+	}
 }// namespace acwing
