@@ -556,4 +556,22 @@ namespace luogu {
 		}
 		return m;
 	}
+
+	int P1046::main(istream &cin, ostream &cout) {
+		int h[10];
+		for(int &i: h) {
+			cin >> i;
+		}
+		int t;
+		cin >> t;
+		t += 30;
+		int count = 0;
+		for(int i: h) {
+			if(t >= i) {
+				count++;
+			}
+		}
+		cout << count;
+		return 0;
+	}
 }// namespace luogu

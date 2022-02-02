@@ -210,6 +210,12 @@ namespace luogu {
 		static int main(istream &cin, ostream &cout);
 		static int gcd(int m, int n);
 	};
+
+	/// \brief 洛谷 P1046 [NOIP2005 普及组] 陶陶摘苹果
+	class P1046 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H

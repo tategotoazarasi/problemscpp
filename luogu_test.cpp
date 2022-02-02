@@ -393,4 +393,13 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("3/5", ans);
 	}
+
+	TEST(P1046, case1) {
+		istringstream in("100 200 150 140 129 134 167 198 200 111\n"
+		                 "110");
+		auto out = ostringstream();
+		P1046::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("5", ans);
+	}
 }// namespace luogu
