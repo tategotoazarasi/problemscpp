@@ -2072,7 +2072,7 @@ namespace leetcode {
 	}// namespace number_of_steps_to_reduce_a_number_to_zero
 
 	namespace longest_nice_substring {
-		string Solution::longestNiceSubstring(string s) {
+		string Solution::longestNiceSubstring(const string &s) {
 			auto [max_start, max_len] = dfs(s, 0, s.length() - 1);
 			if(max_len == 0) {
 				return "";
@@ -2089,26 +2089,29 @@ namespace leetcode {
 			int max_start = 0;
 			int max_len   = 0;
 			for(int i = start; i <= end; i++) {
-				char ch = s[i];
-				if(islower(ch)) {
-					lower |= 1 << (ch - 'a');
-				} else {//isupper
-					upper |= 1 << (ch - 'A');
+				const char ch = s[i];
+				if(islower(ch) != 0) {
+					lower |= 1 << ch - 'a';
+				} else {
+					//isupper
+					upper |= 1 << ch - 'A';
 				}
 			}
-			if(lower == upper) {//是美好字符串
+			if(lower == upper) {
+				//是美好字符串
 				return {start, end - start + 1};
 			}
 			//不是美好字符串
-			int not_nice = lower ^ upper;//无法构成美好字符串的字符
-			int i        = start;
+			const int not_nice = lower ^ upper;//无法构成美好字符串的字符
+			int i              = start;
 			while(i <= end) {
-				if(((not_nice >> (tolower(s[i]) - 'a')) & 1) == 1) {//在not_nice中
+				if((not_nice >> tolower(s[i]) - 'a' & 1) == 1) {
+					//在not_nice中
 					i++;
 					continue;
 				}
 				int j = i + 1;
-				while(j <= end && (((not_nice >> (tolower(s[j]) - 'a')) & 1) != 1)) {
+				while(j <= end && (not_nice >> tolower(s[j]) - 'a' & 1) != 1) {
 					j++;
 				}
 				auto [next_start, next_len] = dfs(s, i, j - 1);
@@ -2133,9 +2136,9 @@ namespace leetcode {
 			if(i == word.length()) {
 				return word;
 			}
-			string prefix = word.substr(0, i + 1);
-			string suffix = word.substr(i + 1);
-			string xiferp = string(prefix.rbegin(), prefix.rend());
+			string prefix       = word.substr(0, i + 1);
+			const string suffix = word.substr(i + 1);
+			const auto xiferp   = string(prefix.rbegin(), prefix.rend());
 			return xiferp + suffix;
 		}
 	}// namespace reverse_prefix_of_word

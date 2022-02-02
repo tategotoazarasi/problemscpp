@@ -2802,38 +2802,37 @@ namespace acwing {
 
 	int acwing1789::main(istream &cin, ostream &cout) {
 		char str[52];
-		int count                 = 0;
-		vector<vector<int>> poses = vector<vector<int>>(26, vector<int>());
+		int count  = 0;
+		auto poses = vector(26, vector<int>());
 		for(int i = 0; i < 52; i++) {
 			char ch;
 			cin >> ch;
 			str[i] = ch;
 			poses[ch - 'A'].push_back(i);
 		}
-		unordered_map<int, int> um;
 		for(auto pos: poses) {
-			um = unordered_map<int, int>();
+			unordered_map<int, int> um = unordered_map<int, int>();
 			for(int i = pos[0] + 1; i < pos[1]; i++) {
-				if(um.count(str[i]) == 0) {
+				if(!um.contains(str[i])) {
 					um.insert(pair(str[i], 1));
 				} else {
 					um[str[i]] = 0;
 				}
 			}
-			for(auto p: um) {
+			for(const auto p: um) {
 				if(p.second == 1) {
 					count++;
 				}
 			}
 			um = unordered_map<int, int>();
 			for(int i = pos[1] + 1; i < pos[0] + 52; i++) {
-				if(um.count(str[i % 52]) == 0) {
+				if(!um.contains(str[i % 52])) {
 					um.insert(pair(str[i % 52], 1));
 				} else {
 					um[str[i % 52]] = 0;
 				}
 			}
-			for(auto p: um) {
+			for(const auto p: um) {
 				if(p.second == 1) {
 					count++;
 				}
@@ -2874,23 +2873,24 @@ namespace acwing {
 	}
 
 	int acwing1776::main(istream &cin, ostream &cout) {
-		int n, m;
+		int n;
+		int m;
 		cin >> n >> m;
 		char ch;
-		int *dot = new int[m];
+		auto dot = new int[m];
 		memset(dot, 0, m * sizeof(int));
-		int *normal = new int[m];
+		auto normal = new int[m];
 		memset(normal, 0, m * sizeof(int));
 		for(int i = 0; i < n; i++) {
 			for(int j = 0; j < m; j++) {
 				cin >> ch;
-				dot[j] |= 1 << (ch - 'A');
+				dot[j] |= 1 << ch - 'A';
 			}
 		}
 		for(int i = 0; i < n; i++) {
 			for(int j = 0; j < m; j++) {
 				cin >> ch;
-				normal[j] |= 1 << (ch - 'A');
+				normal[j] |= 1 << ch - 'A';
 			}
 		}
 		int count = 0;
