@@ -217,8 +217,14 @@ namespace luogu {
 		static int main(istream &cin, ostream &cout);
 	};
 
-	/// \brief 洛谷 【深基3.习8】三角形分类
+	/// \brief 洛谷 P5717 【深基3.习8】三角形分类
 	class P5717 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/// \brief 洛谷 P4414 [COCI2006-2007#2] ABC
+	class P4414 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};

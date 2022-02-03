@@ -402,4 +402,22 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("5", ans);
 	}
+
+	TEST(P4414, case1) {
+		istringstream in("1 5 3\n"
+		                 "ABC");
+		auto out = ostringstream();
+		P4414::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1 3 5 ", ans);
+	}
+
+	TEST(P4414, case2) {
+		istringstream in("6 4 2\n"
+		                 "CAB");
+		auto out = ostringstream();
+		P4414::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("6 2 4 ", ans);
+	}
 }// namespace luogu

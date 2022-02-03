@@ -601,4 +601,35 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P4414::main(istream &cin, ostream &cout) {
+		unsigned int num[3];
+		cin >> num[0] >> num[1] >> num[2];
+		unsigned a = 100, b, c = 0;
+		for(unsigned int i: num) {
+			if(a > i) {
+				a = i;
+			}
+			if(c < i) {
+				c = i;
+			}
+		}
+		for(unsigned int i: num) {
+			if(i != a && i != c) {
+				b = i;
+			}
+		}
+		char ch;
+		for(int i = 0; i < 3; i++) {
+			cin >> ch;
+			if(ch == 'A') {
+				cout << a << " ";
+			} else if(ch == 'B') {
+				cout << b << " ";
+			} else {
+				cout << c << " ";
+			}
+		}
+		return 0;
+	}
 }// namespace luogu
