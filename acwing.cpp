@@ -2950,8 +2950,8 @@ namespace acwing {
 	int acwing1762::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		auto a  = new int[n + 1];
-		auto id = new string[n + 1];
+		auto *a  = new int[n + 1];
+		auto *id = new string[n + 1];
 		for(int i = 1; i <= n; i++) {
 			cin >> a[i];
 		}
@@ -2963,6 +2963,50 @@ namespace acwing {
 		}
 		delete[] a;
 		delete[] id;
+		return 0;
+	}
+
+	int acwing1750::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		auto start  = unordered_set<int>();
+		auto end    = unordered_set<int>();
+		auto t      = vector<pair<int, int>>();
+		auto levels = vector<int>();
+		levels.resize(1000);
+		for(int i = 0; i < n; i++) {
+			int t1;
+			int t2;
+			cin >> t1 >> t2;
+			start.insert(t1);
+			end.insert(t2);
+			t.emplace_back(make_pair(t1, t2));
+		}
+		int level   = 0;
+		int maximum = 0;
+		for(int i = 0; i < 1000; i++) {
+			if(start.count(i) == 1) {
+				level++;
+			}
+			if(end.count(i) == 1) {
+				level--;
+			}
+			levels[i] = level;
+			if(level > 0) {
+				maximum++;
+			}
+		}
+		int ans = 0;
+		for(auto [t1, t2]: t) {
+			int len = maximum;
+			for(int i = t1; i < t2; i++) {
+				if(levels[i] == 1) {
+					len--;
+				}
+			}
+			ans = max(ans, len);
+		}
+		cout << ans;
 		return 0;
 	}
 }// namespace acwing
