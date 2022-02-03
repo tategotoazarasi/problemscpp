@@ -2972,7 +2972,49 @@ $(function() {
 <div class="line"><a id="l02904" name="l02904"></a><span class="lineno"> 2904</span>        <span class="keyword">delete</span>[] dot;</div>
 <div class="line"><a id="l02905" name="l02905"></a><span class="lineno"> 2905</span>        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l02906" name="l02906"></a><span class="lineno"> 2906</span>    }</div>
-<div class="line"><a id="l02907" name="l02907"></a><span class="lineno"> 2907</span>}<span class="comment">// namespace acwing</span></div>
+<div class="line"><a id="l02907" name="l02907"></a><span class="lineno"> 2907</span> </div>
+<div class="line"><a id="l02908" name="l02908"></a><span class="lineno"><a class="line" href="../../d0/d1c/a00605.html#ad2602ce2161645c4ed9e0eea7e42438a"> 2908</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d0/d1c/a00605.html#ad2602ce2161645c4ed9e0eea7e42438a">acwing743::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l02909" name="l02909"></a><span class="lineno"> 2909</span>        <span class="keywordtype">int</span> l;</div>
+<div class="line"><a id="l02910" name="l02910"></a><span class="lineno"> 2910</span>        <span class="keywordtype">char</span> op;</div>
+<div class="line"><a id="l02911" name="l02911"></a><span class="lineno"> 2911</span>        <span class="keywordtype">double</span> m[12][12];</div>
+<div class="line"><a id="l02912" name="l02912"></a><span class="lineno"> 2912</span>        cin &gt;&gt; l &gt;&gt; op;</div>
+<div class="line"><a id="l02913" name="l02913"></a><span class="lineno"> 2913</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;i: m) {</div>
+<div class="line"><a id="l02914" name="l02914"></a><span class="lineno"> 2914</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;j: i) {</div>
+<div class="line"><a id="l02915" name="l02915"></a><span class="lineno"> 2915</span>                cin &gt;&gt; j;</div>
+<div class="line"><a id="l02916" name="l02916"></a><span class="lineno"> 2916</span>            }</div>
+<div class="line"><a id="l02917" name="l02917"></a><span class="lineno"> 2917</span>        }</div>
+<div class="line"><a id="l02918" name="l02918"></a><span class="lineno"> 2918</span>        <span class="keywordtype">double</span> ans = 0;</div>
+<div class="line"><a id="l02919" name="l02919"></a><span class="lineno"> 2919</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 12; j++) {</div>
+<div class="line"><a id="l02920" name="l02920"></a><span class="lineno"> 2920</span>            ans += m[l][j];</div>
+<div class="line"><a id="l02921" name="l02921"></a><span class="lineno"> 2921</span>        }</div>
+<div class="line"><a id="l02922" name="l02922"></a><span class="lineno"> 2922</span>        <span class="keywordflow">if</span>(op == <span class="charliteral">&#39;M&#39;</span>) {</div>
+<div class="line"><a id="l02923" name="l02923"></a><span class="lineno"> 2923</span>            ans /= 12;</div>
+<div class="line"><a id="l02924" name="l02924"></a><span class="lineno"> 2924</span>        }</div>
+<div class="line"><a id="l02925" name="l02925"></a><span class="lineno"> 2925</span>        cout &lt;&lt; fixed &lt;&lt; setprecision(1) &lt;&lt; ans;</div>
+<div class="line"><a id="l02926" name="l02926"></a><span class="lineno"> 2926</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02927" name="l02927"></a><span class="lineno"> 2927</span>    }</div>
+<div class="line"><a id="l02928" name="l02928"></a><span class="lineno"> 2928</span> </div>
+<div class="line"><a id="l02929" name="l02929"></a><span class="lineno"><a class="line" href="../../db/d3f/a00609.html#ac5356060c2d6587bb3f633e06e75ac7e"> 2929</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../db/d3f/a00609.html#ac5356060c2d6587bb3f633e06e75ac7e">acwing744::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l02930" name="l02930"></a><span class="lineno"> 2930</span>        <span class="keywordtype">int</span> l;</div>
+<div class="line"><a id="l02931" name="l02931"></a><span class="lineno"> 2931</span>        <span class="keywordtype">char</span> op;</div>
+<div class="line"><a id="l02932" name="l02932"></a><span class="lineno"> 2932</span>        <span class="keywordtype">double</span> m[12][12];</div>
+<div class="line"><a id="l02933" name="l02933"></a><span class="lineno"> 2933</span>        cin &gt;&gt; l &gt;&gt; op;</div>
+<div class="line"><a id="l02934" name="l02934"></a><span class="lineno"> 2934</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;i: m) {</div>
+<div class="line"><a id="l02935" name="l02935"></a><span class="lineno"> 2935</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;j: i) {</div>
+<div class="line"><a id="l02936" name="l02936"></a><span class="lineno"> 2936</span>                cin &gt;&gt; j;</div>
+<div class="line"><a id="l02937" name="l02937"></a><span class="lineno"> 2937</span>            }</div>
+<div class="line"><a id="l02938" name="l02938"></a><span class="lineno"> 2938</span>        }</div>
+<div class="line"><a id="l02939" name="l02939"></a><span class="lineno"> 2939</span>        <span class="keywordtype">double</span> ans = 0;</div>
+<div class="line"><a id="l02940" name="l02940"></a><span class="lineno"> 2940</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;j: m) {</div>
+<div class="line"><a id="l02941" name="l02941"></a><span class="lineno"> 2941</span>            ans += j[l];</div>
+<div class="line"><a id="l02942" name="l02942"></a><span class="lineno"> 2942</span>        }</div>
+<div class="line"><a id="l02943" name="l02943"></a><span class="lineno"> 2943</span>        <span class="keywordflow">if</span>(op == <span class="charliteral">&#39;M&#39;</span>) {</div>
+<div class="line"><a id="l02944" name="l02944"></a><span class="lineno"> 2944</span>            ans /= 12;</div>
+<div class="line"><a id="l02945" name="l02945"></a><span class="lineno"> 2945</span>        }</div>
+<div class="line"><a id="l02946" name="l02946"></a><span class="lineno"> 2946</span>        cout &lt;&lt; fixed &lt;&lt; setprecision(1) &lt;&lt; ans;</div>
+<div class="line"><a id="l02947" name="l02947"></a><span class="lineno"> 2947</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02948" name="l02948"></a><span class="lineno"> 2948</span>    }</div>
+<div class="line"><a id="l02949" name="l02949"></a><span class="lineno"> 2949</span>}<span class="comment">// namespace acwing</span></div>
 <div class="ttc" id="aa00026_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00005">main.cpp:5</a></div></div>
 <div class="ttc" id="aa00035_html"><div class="ttname"><a href="../../d4/d8c/a00035.html">acwing.h</a></div></div>
 <div class="ttc" id="aa00047_html"><div class="ttname"><a href="../../d6/d2d/a00047.html">acwing</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l00018">acwing.cpp:18</a></div></div>
@@ -3141,6 +3183,8 @@ $(function() {
 <div class="ttc" id="aa00593_html_a87a6e29ab4ac49bcc4488920155c9cc2"><div class="ttname"><a href="../../d2/da3/a00593.html#a87a6e29ab4ac49bcc4488920155c9cc2">acwing::acwing739::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l02845">acwing.cpp:2845</a></div></div>
 <div class="ttc" id="aa00597_html_a7280769ea9c416b5d472c60c867b7332"><div class="ttname"><a href="../../d8/dbd/a00597.html#a7280769ea9c416b5d472c60c867b7332">acwing::acwing742::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l02857">acwing.cpp:2857</a></div></div>
 <div class="ttc" id="aa00601_html_ae09815d432c2f5c7cfe4ebf723518c25"><div class="ttname"><a href="../../d6/db2/a00601.html#ae09815d432c2f5c7cfe4ebf723518c25">acwing::acwing1776::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l02875">acwing.cpp:2875</a></div></div>
+<div class="ttc" id="aa00605_html_ad2602ce2161645c4ed9e0eea7e42438a"><div class="ttname"><a href="../../d0/d1c/a00605.html#ad2602ce2161645c4ed9e0eea7e42438a">acwing::acwing743::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l02908">acwing.cpp:2908</a></div></div>
+<div class="ttc" id="aa00609_html_ac5356060c2d6587bb3f633e06e75ac7e"><div class="ttname"><a href="../../db/d3f/a00609.html#ac5356060c2d6587bb3f633e06e75ac7e">acwing::acwing744::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l02929">acwing.cpp:2929</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
