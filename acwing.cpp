@@ -2904,4 +2904,25 @@ namespace acwing {
 		delete[] dot;
 		return 0;
 	}
+
+	int acwing743::main(istream &cin, ostream &cout) {
+		int l;
+		char op;
+		double m[12][12];
+		cin >> l >> op;
+		for(auto &i: m) {
+			for(auto &j: i) {
+				cin >> j;
+			}
+		}
+		double ans = 0;
+		for(int j = 0; j < 12; j++) {
+			ans += m[l][j];
+		}
+		if(op == 'M') {
+			ans /= 12;
+		}
+		cout << fixed << setprecision(1) << ans;
+		return 0;
+	}
 }// namespace acwing
