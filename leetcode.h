@@ -831,7 +831,7 @@ namespace leetcode {
 	namespace longest_nice_substring {
 		class Solution {
 		public:
-			static string longestNiceSubstring(string s);
+			static string longestNiceSubstring(const string &s);
 			static pair<int, int> dfs(string s, int start, int end);
 		};
 	}// namespace longest_nice_substring

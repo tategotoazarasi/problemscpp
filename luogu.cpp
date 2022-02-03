@@ -535,14 +535,17 @@ namespace luogu {
 	}
 
 	int P1888::main(istream &cin, ostream &cout) {
-		int a, b, c;
+		int a;
+		int b;
+		int c;
 		cin >> a >> b >> c;
-		int maximum = a, minimum = a;
-		maximum = max(maximum, b);
-		maximum = max(maximum, c);
-		minimum = min(minimum, b);
-		minimum = min(minimum, c);
-		int g   = gcd(maximum, minimum);
+		int maximum = a;
+		int minimum = a;
+		maximum     = max(maximum, b);
+		maximum     = max(maximum, c);
+		minimum     = min(minimum, b);
+		minimum     = min(minimum, c);
+		const int g = gcd(maximum, minimum);
 		cout << minimum / g << "/" << maximum / g;
 		return 0;
 	}
@@ -566,7 +569,7 @@ namespace luogu {
 		cin >> t;
 		t += 30;
 		int count = 0;
-		for(int i: h) {
+		for(const int i: h) {
 			if(t >= i) {
 				count++;
 			}
