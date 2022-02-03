@@ -585,9 +585,9 @@ namespace luogu {
 		if(e[0] + e[1] <= e[2]) {
 			cout << "Not triangle" << endl;
 		} else {
-			unsigned int e02 = e[0] * e[0];
-			unsigned int e12 = e[1] * e[1];
-			unsigned int e22 = e[2] * e[2];
+			const unsigned int e02 = e[0] * e[0];
+			const unsigned int e12 = e[1] * e[1];
+			const unsigned int e22 = e[2] * e[2];
 			if(e02 + e12 == e[2] * e[2]) {
 				cout << "Right triangle" << endl;
 			} else if(e02 + e12 > e22) {
@@ -608,8 +608,10 @@ namespace luogu {
 	int P4414::main(istream &cin, ostream &cout) {
 		unsigned int num[3];
 		cin >> num[0] >> num[1] >> num[2];
-		unsigned a = 100, b, c = 0;
-		for(unsigned int i: num) {
+		unsigned a = 100;
+		unsigned b;
+		unsigned c = 0;
+		for(const unsigned int i: num) {
 			if(a > i) {
 				a = i;
 			}
@@ -617,7 +619,7 @@ namespace luogu {
 				c = i;
 			}
 		}
-		for(unsigned int i: num) {
+		for(const unsigned int i: num) {
 			if(i != a && i != c) {
 				b = i;
 			}

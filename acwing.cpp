@@ -2811,7 +2811,7 @@ namespace acwing {
 			poses[ch - 'A'].push_back(i);
 		}
 		for(auto pos: poses) {
-			unordered_map<int, int> um = unordered_map<int, int>();
+			auto um = unordered_map<int, int>();
 			for(int i = pos[0] + 1; i < pos[1]; i++) {
 				if(!um.contains(str[i])) {
 					um.insert(pair(str[i], 1));
@@ -2877,9 +2877,9 @@ namespace acwing {
 		int m;
 		cin >> n >> m;
 		char ch;
-		auto dot = new int[m];
+		auto *dot = new int[m];
 		memset(dot, 0, m * sizeof(int));
-		auto normal = new int[m];
+		auto *normal = new int[m];
 		memset(normal, 0, m * sizeof(int));
 		for(int i = 0; i < n; i++) {
 			for(int j = 0; j < m; j++) {
@@ -2937,7 +2937,7 @@ namespace acwing {
 			}
 		}
 		double ans = 0;
-		for(auto &j: m) {
+		for(const auto &j: m) {
 			ans += j[l];
 		}
 		if(op == 'M') {
