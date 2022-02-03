@@ -2946,4 +2946,23 @@ namespace acwing {
 		cout << fixed << setprecision(1) << ans;
 		return 0;
 	}
+
+	int acwing1762::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		auto a  = new int[n + 1];
+		auto id = new string[n + 1];
+		for(int i = 1; i <= n; i++) {
+			cin >> a[i];
+		}
+		for(int i = 1; i <= n; i++) {
+			cin >> id[i];
+		}
+		for(int i = 1; i <= n; i++) {
+			cout << id[a[a[a[i]]]] << endl;
+		}
+		delete[] a;
+		delete[] id;
+		return 0;
+	}
 }// namespace acwing
