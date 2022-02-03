@@ -2143,4 +2143,27 @@ namespace leetcode {
 		}
 	}// namespace reverse_prefix_of_word
 
+	namespace find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k {
+		int Solution::findMinFibonacciNumbers(int k) {
+			auto fibb = set<int, greater<>>();
+			fibb.insert(1);
+			int prev_1 = 1;
+			int next   = 2;
+			while(next <= k) {
+				fibb.insert(next);
+				const int prev_2 = prev_1;
+				prev_1           = next;
+				next             = prev_1 + prev_2;
+			}
+			return find_min(fibb, k, fibb.begin());
+		}
+
+		int Solution::find_min(set<int, greater<>> &fibb, int k, set<int, greater<>>::iterator begin) {
+			const auto i = lower_bound(begin, fibb.end(), k, greater<int>());
+			if(k == *i) {
+				return 1;
+			}
+			return 1 + find_min(fibb, k - *i, i);
+		}
+	}// namespace find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k
 }// namespace leetcode
