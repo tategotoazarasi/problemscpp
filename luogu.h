@@ -216,6 +216,12 @@ namespace luogu {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief 洛谷 【深基3.习8】三角形分类
+	class P5717 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H

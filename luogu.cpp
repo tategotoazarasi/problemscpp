@@ -574,4 +574,31 @@ namespace luogu {
 		cout << count;
 		return 0;
 	}
+
+	int P5717::main(istream &cin, ostream &cout) {
+		unsigned int e[3];
+		cin >> e[0] >> e[1] >> e[2];
+		sort(e, e + 3);
+		if(e[0] + e[1] <= e[2]) {
+			cout << "Not triangle" << endl;
+		} else {
+			unsigned int e02 = e[0] * e[0];
+			unsigned int e12 = e[1] * e[1];
+			unsigned int e22 = e[2] * e[2];
+			if(e02 + e12 == e[2] * e[2]) {
+				cout << "Right triangle" << endl;
+			} else if(e02 + e12 > e22) {
+				cout << "Acute triangle" << endl;
+			} else if(e02 + e12 < e22) {
+				cout << "Obtuse triangle" << endl;
+			}
+			if(e[0] == e[1]) {
+				cout << "Isosceles triangle" << endl;
+				if(e[1] == e[2]) {
+					cout << "Equilateral triangle" << endl;
+				}
+			}
+		}
+		return 0;
+	}
 }// namespace luogu
