@@ -198,9 +198,9 @@ namespace leetcode {
 	namespace convert_bst_to_greater_tree {
 		TEST(convert_bst_to_greater_tree, case1) {
 			auto *input        = new TreeNode(4, new TreeNode(1, new TreeNode(0), new TreeNode(2, nullptr, new TreeNode(3))),
-                                       new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
+			                                  new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
 			const auto *ans    = new TreeNode(30, new TreeNode(36, new TreeNode(36), new TreeNode(35, nullptr, new TreeNode(33))),
-                                           new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
+			                                  new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
 			const auto *output = Solution::convertBST(input);
 			ASSERT_TRUE(*ans == *output);
 		}
@@ -1259,4 +1259,16 @@ namespace leetcode {
 			ASSERT_EQ("abcd", Solution::reversePrefix("abcd", 'z'));
 		}
 	}// namespace reverse_prefix_of_word
+
+	namespace number_of_rectangles_that_can_form_the_largest_square {
+		TEST(number_of_rectangles_that_can_form_the_largest_square, case1) {
+			vector<vector<int>> input = {{5, 8}, {3, 9}, {5, 12}, {16, 5}};
+			ASSERT_EQ(3, Solution::countGoodRectangles(input));
+		}
+
+		TEST(number_of_rectangles_that_can_form_the_largest_square, case2) {
+			vector<vector<int>> input = {{2, 3}, {3, 7}, {4, 3}, {3, 7}};
+			ASSERT_EQ(3, Solution::countGoodRectangles(input));
+		}
+	}// namespace number_of_rectangles_that_can_form_the_largest_square
 }// namespace leetcode

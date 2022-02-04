@@ -843,6 +843,14 @@ namespace leetcode {
 			static string reversePrefix(string word, char ch);
 		};
 	}// namespace reverse_prefix_of_word
+
+	/// \brief LeetCode 1725. 可以形成最大正方形的矩形数目
+	namespace number_of_rectangles_that_can_form_the_largest_square {
+		class Solution {
+		public:
+			static int countGoodRectangles(vector<vector<int>> &rectangles);
+		};
+	}// namespace number_of_rectangles_that_can_form_the_largest_square
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
