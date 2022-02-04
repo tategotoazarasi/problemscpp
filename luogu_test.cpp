@@ -420,4 +420,13 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("6 2 4 ", ans);
 	}
+
+	TEST(P5718, case1) {
+		istringstream in("8\n"
+		                 "1 9 2 6 0 8 1 7");
+		auto out = ostringstream();
+		P5718::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("0", ans);
+	}
 }// namespace luogu

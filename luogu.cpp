@@ -635,4 +635,17 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P5718::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		int minimum = 1000;
+		int a;
+		for(int i = 0; i < n; i++) {
+			cin >> a;
+			minimum = min(minimum, a);
+		}
+		cout << minimum;
+		return 0;
+	}
 }// namespace luogu
