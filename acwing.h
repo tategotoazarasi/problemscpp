@@ -954,6 +954,22 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 	};
 
+	/**
+	 * \brief AcWing 1762. 牛的洗牌
+	 */
+	class acwing1762 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 1750. 救生员
+	 */
+	class acwing1750 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
 	/// \brief AcWing 745. 数组的右上半部分
 	class acwing745 {
 	public:

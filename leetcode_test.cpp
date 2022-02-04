@@ -1260,6 +1260,20 @@ namespace leetcode {
 		}
 	}// namespace reverse_prefix_of_word
 
+	namespace find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k {
+		TEST(find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k, case1) {
+			ASSERT_EQ(2, Solution::findMinFibonacciNumbers(7));
+		}
+
+		TEST(find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k, case2) {
+			ASSERT_EQ(2, Solution::findMinFibonacciNumbers(10));
+		}
+
+		TEST(find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k, case3) {
+			ASSERT_EQ(3, Solution::findMinFibonacciNumbers(19));
+		}
+	}// namespace find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k
+
 	namespace number_of_rectangles_that_can_form_the_largest_square {
 		TEST(number_of_rectangles_that_can_form_the_largest_square, case1) {
 			vector<vector<int>> input = {{5, 8}, {3, 9}, {5, 12}, {16, 5}};

@@ -844,6 +844,17 @@ namespace leetcode {
 		};
 	}// namespace reverse_prefix_of_word
 
+	/**
+	 * \brief LeetCode 1414. 和为 K 的最少斐波那契数字数目
+	 */
+	namespace find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k {
+		class Solution {
+		public:
+			static int findMinFibonacciNumbers(int k);
+			static int find_min(set<int, greater<>> &fibb, int k, set<int, greater<>>::iterator begin);
+		};
+	}// namespace find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k
+
 	/// \brief LeetCode 1725. 可以形成最大正方形的矩形数目
 	namespace number_of_rectangles_that_can_form_the_largest_square {
 		class Solution {
