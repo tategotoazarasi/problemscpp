@@ -652,7 +652,8 @@ namespace luogu {
 	}
 
 	int P5719::main(istream &cin, ostream &cout) {
-		int n, k;
+		int n;
+		int k;
 		cin >> n >> k;
 		int sum_a   = 0;
 		int count_a = 0;
@@ -667,7 +668,7 @@ namespace luogu {
 				count_b++;
 			}
 		}
-		cout << fixed << setprecision(1) << (double) sum_a / (double) count_a << " " << (double) sum_b / (double) count_b;
+		cout << fixed << setprecision(1) << static_cast<double>(sum_a) / static_cast<double>(count_a) << " " << static_cast<double>(sum_b) / static_cast<double>(count_b);
 		return 0;
 	}
 }// namespace luogu

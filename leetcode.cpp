@@ -2169,7 +2169,7 @@ namespace leetcode {
 
 	namespace number_of_rectangles_that_can_form_the_largest_square {
 		int Solution::countGoodRectangles(vector<vector<int>> &rectangles) {
-			map<int, int> m = map<int, int>();
+			auto m = map<int, int>();
 			for(auto rectangle: rectangles) {
 				int k = min(rectangle[0], rectangle[1]);
 				m[k]++;
