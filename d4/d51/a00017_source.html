@@ -2233,7 +2233,7 @@ $(function() {
 <div class="line"><a id="l02169" name="l02169"></a><span class="lineno"> 2169</span> </div>
 <div class="line"><a id="l02170" name="l02170"></a><span class="lineno"><a class="line" href="../../de/d36/a00123.html"> 2170</a></span>    <span class="keyword">namespace </span>number_of_rectangles_that_can_form_the_largest_square {</div>
 <div class="line"><a id="l02171" name="l02171"></a><span class="lineno"><a class="line" href="../../dc/da0/a00951.html#a86cecc2d964b6f932739ae5c97f0cf8a"> 2171</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../dc/da0/a00951.html#a86cecc2d964b6f932739ae5c97f0cf8a">Solution::countGoodRectangles</a>(vector&lt;vector&lt;int&gt;&gt; &amp;rectangles) {</div>
-<div class="line"><a id="l02172" name="l02172"></a><span class="lineno"> 2172</span>            map&lt;int, int&gt; m = map&lt;int, int&gt;();</div>
+<div class="line"><a id="l02172" name="l02172"></a><span class="lineno"> 2172</span>            <span class="keyword">auto</span> m = map&lt;int, int&gt;();</div>
 <div class="line"><a id="l02173" name="l02173"></a><span class="lineno"> 2173</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> rectangle: rectangles) {</div>
 <div class="line"><a id="l02174" name="l02174"></a><span class="lineno"> 2174</span>                <span class="keywordtype">int</span> k = min(rectangle[0], rectangle[1]);</div>
 <div class="line"><a id="l02175" name="l02175"></a><span class="lineno"> 2175</span>                m[k]++;</div>
