@@ -670,4 +670,16 @@ namespace luogu {
 		cout << fixed << setprecision(1) << (double) sum_a / (double) count_a << " " << (double) sum_b / (double) count_b;
 		return 0;
 	}
+
+	int P5720::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		int i = 1;
+		while(n != 1) {
+			n >>= 1;
+			i++;
+		}
+		cout << i;
+		return 0;
+	}
 }// namespace luogu
