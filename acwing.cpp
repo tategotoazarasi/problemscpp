@@ -3108,7 +3108,7 @@ namespace acwing {
 		int *x   = new int[n];
 		int *jmp = new int[n];
 		int *in  = new int[n];
-		memset(in, 0, n * sizeof(bool));
+		memset(in, 0, n * sizeof(int));
 		for(int i = 0; i < n; i++) {
 			cin >> x[i];
 		}
