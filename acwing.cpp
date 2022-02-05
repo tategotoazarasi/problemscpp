@@ -3097,4 +3097,50 @@ namespace acwing {
 		cout << fixed << setprecision(1) << sum;
 		return 0;
 	}
+
+	int acwing1738::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		if(n == 1 || n == 2) {
+			cout << 1;
+			return 0;
+		}
+		int *x   = new int[n];
+		int *jmp = new int[n];
+		int *in  = new int[n];
+		memset(in, 0, n * sizeof(bool));
+		for(int i = 0; i < n; i++) {
+			cin >> x[i];
+		}
+		sort(x, x + n);
+		in[1]      = true;
+		in[n - 2]  = true;
+		jmp[0]     = 1;
+		jmp[n - 1] = n - 2;
+		for(int i = 1; i < n - 1; i++) {
+			if(x[i + 1] - x[i] < x[i] - x[i - 1]) {
+				in[i + 1]++;
+				jmp[i] = i + 1;
+			} else {
+				in[i - 1]++;
+				jmp[i] = i - 1;
+			}
+		}
+		int circle_count = 0;
+		int ans          = 0;
+		for(int i = 0; i < n; i++) {
+			if(in[i] == 0) {
+				ans++;
+			}
+			if(jmp[jmp[i]] == i && in[i] == 1 && in[jmp[i]] == 1) {
+				circle_count++;
+			}
+		}
+		circle_count /= 2;
+		cout << ans + circle_count;
+		delete[] x;
+		delete[] in;
+		delete[] jmp;
+		return 0;
+	}
 }// namespace acwing
