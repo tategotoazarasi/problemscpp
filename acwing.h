@@ -981,5 +981,11 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief AcWing 747. 数组的左上半部分
+	class acwing747 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
