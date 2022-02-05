@@ -3195,38 +3195,60 @@ namespace acwing {
 
 	int acwing4298::main(istream &cin, ostream &cout) {
 		cin >> n;
-		for(int i = 1; i <= n; i++) {
+		a = new int[n];
+		memset(a, 0, n * sizeof(int));
+		for(int i = 0; i < n; i++) {
 			cin >> a[i];
 		}
 		cin >> m;
-		for(int i = 1; i <= m; i++) {
+		b     = new int[m];
+		found = new bool[m];
+		match = new int[m];
+		memset(b, 0, m * sizeof(int));
+		memset(found, 0, m * sizeof(bool));
+		memset(match, -1, m * sizeof(int));
+		for(int i = 0; i < m; i++) {
 			cin >> b[i];
 		}
-		for(int i = 1; i <= n; i++) {
-			for(int j = 1; j <= m; j++) {
+		connected = new bool *[n];
+		for(int i = 0; i < n; i++) {
+			connected[i] = new bool[m];
+			for(int j = 0; j < m; j++) {
 				if(abs(a[i] - b[j]) <= 1) {
-					g[i][j] = 1;
+					connected[i][j] = true;
+				} else {
+					connected[i][j] = false;
 				}
 			}
 		}
 
-		int cnt = 0;
-		for(int i = 1; i <= n; ++i) {
-			memset(vis, 0, sizeof vis);
-			if(match(i)) {
-				cnt++;
+		int ans = 0;
+		for(int i = 0; i < n; i++) {
+			memset(found, 0, m * sizeof(bool));
+			if(find(i)) {
+				ans++;
 			}
 		}
-		cout << cnt;
+		cout << ans;
+		for(int i = 0; i < n; i++) {
+			delete[] connected[i];
+		}
+		delete[] connected;
+		delete[] a;
+		delete[] b;
+		delete[] found;
+		delete[] match;
 		return 0;
 	}
 
-	bool acwing4298::match(int i) {
-		for(int j = 1; j <= m; ++j) {
-			if((g[i][j] != 0) && !vis[j]) {
-				vis[j] = true;
-				if(p[j] == 0 || match(p[j])) {
-					p[j] = i;
+	bool acwing4298::find(int i) {
+		for(int j = 0; j < m; j++) {
+			if(connected[i][j] && !found[j]) {
+				//可以配对且女孩未被找到
+				found[j] = true;
+				if(match[j] == -1 || find(match[j])) {
+					//女孩没有配对的对象或女孩配对的对象可以找到其他对象去配对
+					match[j] = i;//设置女孩j和男孩i配对
 					return true;
 				}
 			}

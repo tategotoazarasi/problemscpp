@@ -1020,17 +1020,17 @@ namespace acwing {
 	 * \brief AcWing 4298. 搭档
 	 */
 	class acwing4298 {
-		int n           = 0;
-		int m           = 0;
-		int a[110]      = {};
-		int b[110]      = {};
-		bool vis[110]   = {};
-		int g[110][110] = {};
-		int p[110]      = {};
+		int n            = 0;      ///< 男孩数量
+		int m            = 0;      ///< 女孩数量
+		int *a           = nullptr;///< 男孩魅力值
+		int *b           = nullptr;///< 女孩魅力值
+		bool *found      = nullptr;///< 记录女孩是否已经被找到
+		bool **connected = nullptr;///< 邻接矩阵存图
+		int *match       = nullptr;///< 记录当前女孩所对应的男孩
 
 	public:
 		int main(istream &cin, ostream &cout);
-		bool match(int i);
+		bool find(int i);
 	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
