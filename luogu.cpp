@@ -683,4 +683,17 @@ namespace luogu {
 		cout << i;
 		return 0;
 	}
+
+	int P5721::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		int count = 1;
+		for(int i = n; i >= 1; i--) {
+			for(int j = 0; j < i; j++) {
+				cout << setw(2) << setfill('0') << right << count++;
+			}
+			cout << endl;
+		}
+		return 0;
+	}
 }// namespace luogu
