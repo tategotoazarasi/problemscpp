@@ -999,5 +999,38 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/**
+	 * \brief AcWing 4296. 合适数对
+	 */
+	class acwing4296 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4297. 截断数组
+	 */
+	class acwing4297 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4298. 搭档
+	 */
+	class acwing4298 {
+		int n           = 0;
+		int m           = 0;
+		int a[110]      = {};
+		int b[110]      = {};
+		bool vis[110]   = {};
+		int g[110][110] = {};
+		int p[110]      = {};
+
+	public:
+		int main(istream &cin, ostream &cout);
+		bool match(int i);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

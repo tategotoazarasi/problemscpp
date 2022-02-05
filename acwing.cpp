@@ -3105,9 +3105,9 @@ namespace acwing {
 			cout << 1;
 			return 0;
 		}
-		auto x   = new int[n];
-		auto jmp = new int[n];
-		auto in  = new int[n];
+		auto *x   = new int[n];
+		auto *jmp = new int[n];
+		auto *in  = new int[n];
 		memset(in, 0, n * sizeof(int));
 		for(int i = 0; i < n; i++) {
 			cin >> x[i];
@@ -3142,5 +3142,95 @@ namespace acwing {
 		delete[] in;
 		delete[] jmp;
 		return 0;
+	}
+
+	int acwing4296::main(istream &cin, ostream &cout) {
+		int n;
+		int a;
+		int b;
+		cin >> n >> a >> b;
+		for(int i = 0; a * i <= n; i++) {
+			for(int j = 0; a * i + b * j <= n; j++) {
+				if(a * i + b * j == n) {
+					cout << "YES" << endl
+					     << i << endl
+					     << j;
+					return 0;
+				}
+			}
+		}
+		cout << "NO";
+		return 0;
+	}
+
+	int acwing4297::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		unsigned int d[200000];
+		unsigned long long left[200001];
+		unsigned long long right[200001];
+		for(int i = 0; i < n; i++) {
+			cin >> d[i];
+		}
+		left[0] = 0;
+		auto us = unordered_map<unsigned long long, unsigned int>();
+		us.insert(make_pair(0, 0));
+		for(int i = 1; i <= n; i++) {
+			left[i] = left[i - 1] + d[i - 1];
+			us.insert(make_pair(left[i], i));
+		}
+		right[n]               = 0;
+		unsigned long long ans = 0;
+		for(int i = n - 1; i >= 0; i--) {
+			right[i] = right[i + 1] + d[i];
+			if(us.count(right[i]) == 1) {
+				if(us[right[i]] <= i) {
+					ans = max(ans, right[i]);
+				}
+			}
+		}
+		cout << ans;
+		return 0;
+	}
+
+	int acwing4298::main(istream &cin, ostream &cout) {
+		cin >> n;
+		for(int i = 1; i <= n; i++) {
+			cin >> a[i];
+		}
+		cin >> m;
+		for(int i = 1; i <= m; i++) {
+			cin >> b[i];
+		}
+		for(int i = 1; i <= n; i++) {
+			for(int j = 1; j <= m; j++) {
+				if(abs(a[i] - b[j]) <= 1) {
+					g[i][j] = 1;
+				}
+			}
+		}
+
+		int cnt = 0;
+		for(int i = 1; i <= n; ++i) {
+			memset(vis, 0, sizeof vis);
+			if(match(i)) {
+				cnt++;
+			}
+		}
+		cout << cnt;
+		return 0;
+	}
+
+	bool acwing4298::match(int i) {
+		for(int j = 1; j <= m; ++j) {
+			if((g[i][j] != 0) && !vis[j]) {
+				vis[j] = true;
+				if(p[j] == 0 || match(p[j])) {
+					p[j] = i;
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 }// namespace acwing
