@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['cmpcol_0',['cmpcol',['../d3/d87/a00539.html',1,'acwing::acwing1826']]],
-  ['cmprow_1',['cmprow',['../d7/d84/a00535.html',1,'acwing::acwing1826']]]
+  ['cmpcol_0',['cmpcol',['../d4/d79/a00540.html',1,'acwing::acwing1826']]],
+  ['cmprow_1',['cmprow',['../d4/d33/a00536.html',1,'acwing::acwing1826']]]
 ];
