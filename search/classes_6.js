@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['msg_0',['msg',['../da/dd6/a00896.html',1,'leetcode::maximum_good_people_based_on_statements']]]
+  ['msg_0',['msg',['../d9/db0/a00900.html',1,'leetcode::maximum_good_people_based_on_statements']]]
 ];
