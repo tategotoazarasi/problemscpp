@@ -198,9 +198,9 @@ namespace leetcode {
 	namespace convert_bst_to_greater_tree {
 		TEST(convert_bst_to_greater_tree, case1) {
 			auto *input        = new TreeNode(4, new TreeNode(1, new TreeNode(0), new TreeNode(2, nullptr, new TreeNode(3))),
-                                       new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
+			                                  new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
 			const auto *ans    = new TreeNode(30, new TreeNode(36, new TreeNode(36), new TreeNode(35, nullptr, new TreeNode(33))),
-                                           new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
+			                                  new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
 			const auto *output = Solution::convertBST(input);
 			ASSERT_TRUE(*ans == *output);
 		}
@@ -1285,4 +1285,16 @@ namespace leetcode {
 			ASSERT_EQ(3, Solution::countGoodRectangles(input));
 		}
 	}// namespace number_of_rectangles_that_can_form_the_largest_square
+
+	namespace path_with_maximum_gold {
+		TEST(path_with_maximum_gold, case1) {
+			vector<vector<int>> input = {{0, 6, 0}, {5, 8, 7}, {0, 9, 0}};
+			ASSERT_EQ(24, Solution::getMaximumGold(input));
+		}
+
+		TEST(path_with_maximum_gold, case2) {
+			vector<vector<int>> input = {{1, 0, 7}, {2, 0, 6}, {3, 4, 5}, {0, 3, 0}, {9, 0, 20}};
+			ASSERT_EQ(28, Solution::getMaximumGold(input));
+		}
+	}// namespace path_with_maximum_gold
 }// namespace leetcode

@@ -862,6 +862,15 @@ namespace leetcode {
 			static int countGoodRectangles(vector<vector<int>> &rectangles);
 		};
 	}// namespace number_of_rectangles_that_can_form_the_largest_square
+
+	/// \brief LeetCode 1219. Path with Maximum Gold
+	namespace path_with_maximum_gold {
+		class Solution {
+		public:
+			static int getMaximumGold(vector<vector<int>> &grid);
+			static int get_sum(int current, int x, int y, int m, int n, vector<vector<int>> &grid, bool **occupied);
+		};
+	}// namespace path_with_maximum_gold
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

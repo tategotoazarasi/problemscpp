@@ -2177,4 +2177,51 @@ namespace leetcode {
 			return (*m.rbegin()).second;
 		}
 	}// namespace number_of_rectangles_that_can_form_the_largest_square
+
+	namespace path_with_maximum_gold {
+		int Solution::getMaximumGold(vector<vector<int>> &grid) {
+			int m   = grid.size();
+			int n   = grid[0].size();
+			int ans = 0;
+			for(int i = 0; i < m; i++) {
+				for(int j = 0; j < n; j++) {
+					if(grid[i][j] != 0) {
+						bool **occupied = new bool *[m];
+						for(int k = 0; k < m; k++) {
+							occupied[k] = new bool[n];
+							memset(occupied[k], false, n * sizeof(bool));
+						}
+						occupied[i][j] = true;
+						ans            = max(ans, get_sum(grid[i][j], i, j, m, n, grid, occupied));
+						for(int k = 0; k < m; k++) {
+							delete[] occupied[k];
+						}
+						delete[] occupied;
+					}
+				}
+			}
+			return ans;
+		}
+
+		int Solution::get_sum(int current, int x, int y, int m, int n, vector<vector<int>> &grid, bool **occupied) {
+			pair<int, int> nexts[] = {make_pair(x + 1, y), make_pair(x - 1, y), make_pair(x, y + 1), make_pair(x, y - 1)};
+			int maximum            = current;
+			for(auto [next_x, next_y]: nexts) {
+				if(0 <= next_x && next_x < m && 0 <= next_y && next_y < n && grid[next_x][next_y] != 0 && !occupied[next_x][next_y]) {
+					bool **occupied_cpy = new bool *[m];
+					for(int i = 0; i < m; i++) {
+						occupied_cpy[i] = new bool[n];
+						memcpy(occupied_cpy[i], occupied[i], n * sizeof(bool));
+					}
+					occupied_cpy[next_x][next_y] = true;
+					maximum                      = max(maximum, get_sum(current + grid[next_x][next_y], next_x, next_y, m, n, grid, occupied_cpy));
+					for(int i = 0; i < m; i++) {
+						delete[] occupied_cpy[i];
+					}
+					delete[] occupied_cpy;
+				}
+			}
+			return maximum;
+		}
+	}// namespace path_with_maximum_gold
 }// namespace leetcode
