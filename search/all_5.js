@@ -1,18 +1,19 @@
 var searchData=
 [
   ['father_0',['father',['../d0/dcd/a00280.html#aa1ec945aaa9478b81b279ef2f4af0020',1,'acwing::acwing4208::trie_node']]],
-  ['fibonacci_1',['fibonacci',['../d6/d48/a00988.html#a860636417dc0fd24432ab28b301396a7',1,'lintcode::fibonacci::Solution']]],
-  ['find_2',['find',['../d9/dce/a00944.html#af5c1854299a7a7fcde716d79ee1f15e5',1,'leetcode::groups_of_strings::Solution']]],
-  ['find_5fmin_3',['find_min',['../dd/d11/a00960.html#a4cbcece135869e527ec24b3e5751ab3c',1,'leetcode::find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k::Solution']]],
-  ['findallconcatenatedwordsinadict_4',['findAllConcatenatedWordsInADict',['../df/d37/a00652.html#abc4a1f1d44dd6a23c92323bffb759cf8',1,'leetcode::concatenated_words::Solution']]],
-  ['findfinalvalue_5',['findFinalValue',['../d8/dbb/a00932.html#a31ba7c262c5671d82aaad8bd227a1207',1,'leetcode::keep_multiplying_found_values_by_two::Solution']]],
-  ['findlonely_6',['findLonely',['../d1/d8f/a00880.html#a5833e0b6bceca58f11e122cd11f4cc2f',1,'leetcode::find_all_lonely_numbers_in_the_array::Solution']]],
-  ['findmindifference_7',['findMinDifference',['../d8/d1c/a00824.html#a8805c8c3d69f62c88a3ab0bc1f22bdc1',1,'leetcode::minimum_time_difference::Solution']]],
-  ['findminfibonaccinumbers_8',['findMinFibonacciNumbers',['../dd/d11/a00960.html#a2c2c057331382fa8576425a0a775d975',1,'leetcode::find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k::Solution']]],
-  ['flatten_9',['flatten',['../df/dbc/a01004.html#aedc263192dcb5c383893c3a93646cbb6',1,'lintcode::flatten::Solution']]],
+  ['fibonacci_1',['fibonacci',['../d7/df2/a01000.html#a860636417dc0fd24432ab28b301396a7',1,'lintcode::fibonacci::Solution']]],
+  ['find_2',['find',['../df/d37/a00652.html#a644eb4f85eca906a3bc3e6bca51124b4',1,'acwing::acwing4298::find()'],['../d3/de5/a00956.html#af5c1854299a7a7fcde716d79ee1f15e5',1,'leetcode::groups_of_strings::Solution::find()']]],
+  ['find_5fmin_3',['find_min',['../de/d4e/a00972.html#a4cbcece135869e527ec24b3e5751ab3c',1,'leetcode::find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k::Solution']]],
+  ['findallconcatenatedwordsinadict_4',['findAllConcatenatedWordsInADict',['../df/d46/a00664.html#abc4a1f1d44dd6a23c92323bffb759cf8',1,'leetcode::concatenated_words::Solution']]],
+  ['findfinalvalue_5',['findFinalValue',['../d9/dce/a00944.html#a31ba7c262c5671d82aaad8bd227a1207',1,'leetcode::keep_multiplying_found_values_by_two::Solution']]],
+  ['findlonely_6',['findLonely',['../d0/de2/a00892.html#a5833e0b6bceca58f11e122cd11f4cc2f',1,'leetcode::find_all_lonely_numbers_in_the_array::Solution']]],
+  ['findmindifference_7',['findMinDifference',['../d3/d13/a00836.html#a8805c8c3d69f62c88a3ab0bc1f22bdc1',1,'leetcode::minimum_time_difference::Solution']]],
+  ['findminfibonaccinumbers_8',['findMinFibonacciNumbers',['../de/d4e/a00972.html#a2c2c057331382fa8576425a0a775d975',1,'leetcode::find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k::Solution']]],
+  ['flatten_9',['flatten',['../de/def/a01016.html#aedc263192dcb5c383893c3a93646cbb6',1,'lintcode::flatten::Solution']]],
   ['flood_10',['flood',['../d4/dca/a00048.html#a1c0a9d8c32b5d7e3a18f3f32159618fb',1,'acwing::acwing2060']]],
   ['forth_11',['forth',['../d3/de2/a00580.html#aff7b68300d1c6d7f50cd30c7a2ea28b8',1,'acwing::acwing4217']]],
-  ['friend_5fnode_12',['friend_node',['../d3/db4/a00684.html#a10da51d2462979b830690f49553e4979',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode']]],
-  ['friendtreenode_13',['FriendTreeNode',['../d3/db4/a00684.html#a4ea4a18ff862df01b9ca9cf4c61a3314',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::FriendTreeNode()'],['../d3/db4/a00684.html',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode']]],
-  ['fsm_14',['fsm',['../df/d03/a00348.html#aea35b3240d6bb6783526d769baa196ab',1,'acwing::acwing1960']]]
+  ['found_12',['found',['../df/d37/a00652.html#a7bd539722a10ee8c7f5b245a5ba05c41',1,'acwing::acwing4298']]],
+  ['friend_5fnode_13',['friend_node',['../df/d7d/a00696.html#a10da51d2462979b830690f49553e4979',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode']]],
+  ['friendtreenode_14',['FriendTreeNode',['../df/d7d/a00696.html#a4ea4a18ff862df01b9ca9cf4c61a3314',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::FriendTreeNode()'],['../df/d7d/a00696.html',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode']]],
+  ['fsm_15',['fsm',['../df/d03/a00348.html#aea35b3240d6bb6783526d769baa196ab',1,'acwing::acwing1960']]]
 ];
