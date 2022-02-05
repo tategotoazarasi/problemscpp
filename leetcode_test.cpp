@@ -1297,4 +1297,16 @@ namespace leetcode {
 			ASSERT_EQ(28, Solution::getMaximumGold(input));
 		}
 	}// namespace path_with_maximum_gold
+
+	namespace minimum_difference_in_sums_after_removal_of_elements {
+		TEST(minimum_difference_in_sums_after_removal_of_elements, case1) {
+			vector input = {3, 1, 2};
+			ASSERT_EQ(-1, Solution::minimumDifference(input));
+		}
+
+		TEST(minimum_difference_in_sums_after_removal_of_elements, case2) {
+			vector input = {7, 9, 5, 8, 1, 3};
+			ASSERT_EQ(1, Solution::minimumDifference(input));
+		}
+	}// namespace minimum_difference_in_sums_after_removal_of_elements
 }// namespace leetcode

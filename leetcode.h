@@ -871,6 +871,47 @@ namespace leetcode {
 			static int get_sum(int current, int x, int y, int m, int n, vector<vector<int>> &grid, bool **occupied);
 		};
 	}// namespace path_with_maximum_gold
+
+	/**
+	 * \brief LeetCode 5984. 拆分数位后四位数字的最小和
+	 */
+	namespace minimum_sum_of_four_digit_number_after_splitting_digits {
+		class Solution {
+		public:
+			static int minimumSum(int num);
+		};
+	}// namespace minimum_sum_of_four_digit_number_after_splitting_digits
+
+	/**
+	 * \brief LeetCode 5985. 根据给定数字划分数组
+	 */
+	namespace partition_array_according_to_given_pivot {
+		class Solution {
+		public:
+			static vector<int> pivotArray(vector<int> &nums, int pivot);
+		};
+	}// namespace partition_array_according_to_given_pivot
+
+	/**
+	 * \brief LeetCode 5986. 设置时间的最少代价
+	 */
+	namespace minimum_cost_to_set_cooking_time {
+		class Solution {
+		public:
+			static int minCostSetTime(int startAt, int moveCost, int pushCost, int targetSeconds);
+			static int get_cost(int startAt, int moveCost, int pushCost, const int num[4]);
+		};
+	}// namespace minimum_cost_to_set_cooking_time
+
+	/**
+	 * \brief LeetCode 5987. 删除元素后和的最小差值
+	 */
+	namespace minimum_difference_in_sums_after_removal_of_elements {
+		class Solution {
+		public:
+			static long long minimumDifference(vector<int> &nums);
+		};
+	}// namespace minimum_difference_in_sums_after_removal_of_elements
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

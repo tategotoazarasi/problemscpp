@@ -2186,7 +2186,7 @@ namespace leetcode {
 			for(int i = 0; i < m; i++) {
 				for(int j = 0; j < n; j++) {
 					if(grid[i][j] != 0) {
-						auto occupied = new bool *[m];
+						auto *occupied = new bool *[m];
 						for(int k = 0; k < m; k++) {
 							occupied[k] = new bool[n];
 							memset(occupied[k], 0, n * sizeof(bool));
@@ -2208,7 +2208,7 @@ namespace leetcode {
 			int maximum            = current;
 			for(auto [next_x, next_y]: nexts) {
 				if(0 <= next_x && next_x < m && 0 <= next_y && next_y < n && grid[next_x][next_y] != 0 && !occupied[next_x][next_y]) {
-					auto occupied_cpy = new bool *[m];
+					auto *occupied_cpy = new bool *[m];
 					for(int i = 0; i < m; i++) {
 						occupied_cpy[i] = new bool[n];
 						memcpy(occupied_cpy[i], occupied[i], n * sizeof(bool));
@@ -2224,4 +2224,123 @@ namespace leetcode {
 			return maximum;
 		}
 	}// namespace path_with_maximum_gold
+
+	namespace minimum_sum_of_four_digit_number_after_splitting_digits {
+		int Solution::minimumSum(int num) {
+			auto oss = ostringstream();
+			oss << num;
+			const string str = oss.str();
+			int nums[4];
+			for(int i = 0; i < 4; i++) {
+				nums[i] = str[i] - '0';
+			}
+			sort(nums, nums + 4);
+			return nums[0] * 10 + nums[1] * 10 + nums[2] + nums[3];
+		}
+	}// namespace minimum_sum_of_four_digit_number_after_splitting_digits
+
+	namespace partition_array_according_to_given_pivot {
+		vector<int> Solution::pivotArray(vector<int> &nums, int pivot) {
+			auto less    = vector<int>();
+			auto equal   = vector<int>();
+			auto greater = vector<int>();
+			for(auto num: nums) {
+				if(num < pivot) {
+					less.push_back(num);
+				} else if(num == pivot) {
+					equal.push_back(num);
+				} else {
+					greater.push_back(num);
+				}
+			}
+			less.insert(less.end(), equal.begin(), equal.end());
+			less.insert(less.end(), greater.begin(), greater.end());
+			return less;
+		}
+	}// namespace partition_array_according_to_given_pivot
+
+	namespace minimum_cost_to_set_cooking_time {
+		int Solution::minCostSetTime(int startAt, int moveCost, int pushCost, int targetSeconds) {
+			int ans    = (moveCost + pushCost) * 4;
+			int minute = targetSeconds / 60;
+			int second = targetSeconds % 60;
+			while(minute > 99) {
+				minute -= 1;
+				second += 60;
+			}
+			int num[4] = {minute / 10, minute % 10, second / 10, second % 10};
+			ans        = min(ans, get_cost(startAt, moveCost, pushCost, num));
+			if(second + 60 < 100 && minute - 1 >= 0) {
+				second += 60;
+				minute -= 1;
+				int num[4] = {minute / 10, minute % 10, second / 10, second % 10};
+				ans        = min(ans, get_cost(startAt, moveCost, pushCost, num));
+			}
+			return ans;
+		}
+
+		int Solution::get_cost(int startAt, int moveCost, int pushCost, const int num[4]) {
+			int cost    = 0;
+			int current = startAt;
+			bool flag   = true;
+			for(int i = 0; i < 4; i++) {
+				if(num[i] == 0 && flag) {
+					continue;
+				}
+				flag = false;
+				if(num[i] != current) {
+					cost += moveCost;
+					current = num[i];
+				}
+				cost += pushCost;
+			}
+			return cost;
+		}
+	}// namespace minimum_cost_to_set_cooking_time
+
+	namespace minimum_difference_in_sums_after_removal_of_elements {
+		long long Solution::minimumDifference(vector<int> &nums) {
+			const int n         = nums.size() / 3;
+			auto left_sum       = new long long[n];
+			auto right_sum      = new long long[n];
+			long long left_min  = 0;
+			long long right_max = 0;
+			auto left_n         = priority_queue<int>();
+			auto right_n        = priority_queue<int, vector<int>, greater<int>>();
+			for(int i = 0; i < n; i++) {
+				left_n.push(nums[i]);
+				left_min += nums[i];
+			}
+			for(int i = 3 * n - 1; i >= 2 * n; i--) {
+				right_n.push(nums[i]);
+				right_max += nums[i];
+			}
+			const long long left_min_preserve  = left_min;
+			const long long right_max_preserve = right_max;
+			left_sum[0]                        = left_min;
+			right_sum[n - 1]                   = right_max;
+			for(int i = n; i < 2 * n; i++) {
+				if(nums[i] < left_n.top()) {
+					left_min += nums[i] - left_n.top();
+					left_n.pop();
+					left_n.push(nums[i]);
+				}
+				left_sum[i - n] = left_min;
+			}
+			for(int i = 2 * n - 1; i >= n; i--) {
+				if(nums[i] > right_n.top()) {
+					right_max += nums[i] - right_n.top();
+					right_n.pop();
+					right_n.push(nums[i]);
+				}
+				right_sum[i - n] = right_max;
+			}
+			long long ans = left_min_preserve - right_sum[0];
+			for(int i = 0; i < n - 1; i++) {
+				ans = min(ans, left_sum[i] - right_sum[i + 1]);
+			}
+			ans = min(ans, left_sum[n - 1] - right_max_preserve);
+			return ans;
+		}
+	}// namespace minimum_difference_in_sums_after_removal_of_elements
 }// namespace leetcode
