@@ -2180,16 +2180,16 @@ namespace leetcode {
 
 	namespace path_with_maximum_gold {
 		int Solution::getMaximumGold(vector<vector<int>> &grid) {
-			int m   = grid.size();
-			int n   = grid[0].size();
-			int ans = 0;
+			const int m = grid.size();
+			const int n = grid[0].size();
+			int ans     = 0;
 			for(int i = 0; i < m; i++) {
 				for(int j = 0; j < n; j++) {
 					if(grid[i][j] != 0) {
-						bool **occupied = new bool *[m];
+						auto occupied = new bool *[m];
 						for(int k = 0; k < m; k++) {
 							occupied[k] = new bool[n];
-							memset(occupied[k], false, n * sizeof(bool));
+							memset(occupied[k], 0, n * sizeof(bool));
 						}
 						occupied[i][j] = true;
 						ans            = max(ans, get_sum(grid[i][j], i, j, m, n, grid, occupied));
@@ -2208,7 +2208,7 @@ namespace leetcode {
 			int maximum            = current;
 			for(auto [next_x, next_y]: nexts) {
 				if(0 <= next_x && next_x < m && 0 <= next_y && next_y < n && grid[next_x][next_y] != 0 && !occupied[next_x][next_y]) {
-					bool **occupied_cpy = new bool *[m];
+					auto occupied_cpy = new bool *[m];
 					for(int i = 0; i < m; i++) {
 						occupied_cpy[i] = new bool[n];
 						memcpy(occupied_cpy[i], occupied[i], n * sizeof(bool));

@@ -3105,16 +3105,16 @@ namespace acwing {
 			cout << 1;
 			return 0;
 		}
-		int *x   = new int[n];
-		int *jmp = new int[n];
-		int *in  = new int[n];
+		auto x   = new int[n];
+		auto jmp = new int[n];
+		auto in  = new int[n];
 		memset(in, 0, n * sizeof(int));
 		for(int i = 0; i < n; i++) {
 			cin >> x[i];
 		}
 		sort(x, x + n);
-		in[1]      = true;
-		in[n - 2]  = true;
+		in[1]      = 1;
+		in[n - 2]  = 1;
 		jmp[0]     = 1;
 		jmp[n - 1] = n - 2;
 		for(int i = 1; i < n - 1; i++) {
