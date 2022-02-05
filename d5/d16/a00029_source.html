@@ -3173,16 +3173,16 @@ $(function() {
 <div class="line"><a id="l03105" name="l03105"></a><span class="lineno"> 3105</span>            cout &lt;&lt; 1;</div>
 <div class="line"><a id="l03106" name="l03106"></a><span class="lineno"> 3106</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l03107" name="l03107"></a><span class="lineno"> 3107</span>        }</div>
-<div class="line"><a id="l03108" name="l03108"></a><span class="lineno"> 3108</span>        <span class="keywordtype">int</span> *x   = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
-<div class="line"><a id="l03109" name="l03109"></a><span class="lineno"> 3109</span>        <span class="keywordtype">int</span> *jmp = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
-<div class="line"><a id="l03110" name="l03110"></a><span class="lineno"> 3110</span>        <span class="keywordtype">int</span> *in  = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l03108" name="l03108"></a><span class="lineno"> 3108</span>        <span class="keyword">auto</span> x   = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l03109" name="l03109"></a><span class="lineno"> 3109</span>        <span class="keyword">auto</span> jmp = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l03110" name="l03110"></a><span class="lineno"> 3110</span>        <span class="keyword">auto</span> in  = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
 <div class="line"><a id="l03111" name="l03111"></a><span class="lineno"> 3111</span>        memset(in, 0, n * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
 <div class="line"><a id="l03112" name="l03112"></a><span class="lineno"> 3112</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l03113" name="l03113"></a><span class="lineno"> 3113</span>            cin &gt;&gt; x[i];</div>
 <div class="line"><a id="l03114" name="l03114"></a><span class="lineno"> 3114</span>        }</div>
 <div class="line"><a id="l03115" name="l03115"></a><span class="lineno"> 3115</span>        sort(x, x + n);</div>
-<div class="line"><a id="l03116" name="l03116"></a><span class="lineno"> 3116</span>        in[1]      = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l03117" name="l03117"></a><span class="lineno"> 3117</span>        in[n - 2]  = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l03116" name="l03116"></a><span class="lineno"> 3116</span>        in[1]      = 1;</div>
+<div class="line"><a id="l03117" name="l03117"></a><span class="lineno"> 3117</span>        in[n - 2]  = 1;</div>
 <div class="line"><a id="l03118" name="l03118"></a><span class="lineno"> 3118</span>        jmp[0]     = 1;</div>
 <div class="line"><a id="l03119" name="l03119"></a><span class="lineno"> 3119</span>        jmp[n - 1] = n - 2;</div>
 <div class="line"><a id="l03120" name="l03120"></a><span class="lineno"> 3120</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; n - 1; i++) {</div>
