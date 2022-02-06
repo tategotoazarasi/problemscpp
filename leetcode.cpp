@@ -2268,13 +2268,13 @@ namespace leetcode {
 				minute -= 1;
 				second += 60;
 			}
-			int num[4] = {minute / 10, minute % 10, second / 10, second % 10};
-			ans        = min(ans, get_cost(startAt, moveCost, pushCost, num));
+			const int num[4] = {minute / 10, minute % 10, second / 10, second % 10};
+			ans              = min(ans, get_cost(startAt, moveCost, pushCost, num));
 			if(second + 60 < 100 && minute - 1 >= 0) {
 				second += 60;
 				minute -= 1;
-				int num[4] = {minute / 10, minute % 10, second / 10, second % 10};
-				ans        = min(ans, get_cost(startAt, moveCost, pushCost, num));
+				const int num[4] = {minute / 10, minute % 10, second / 10, second % 10};
+				ans              = min(ans, get_cost(startAt, moveCost, pushCost, num));
 			}
 			return ans;
 		}
@@ -2301,12 +2301,12 @@ namespace leetcode {
 	namespace minimum_difference_in_sums_after_removal_of_elements {
 		long long Solution::minimumDifference(vector<int> &nums) {
 			const int n         = nums.size() / 3;
-			auto left_sum       = new long long[n];
-			auto right_sum      = new long long[n];
+			auto *left_sum      = new long long[n];
+			auto *right_sum     = new long long[n];
 			long long left_min  = 0;
 			long long right_max = 0;
 			auto left_n         = priority_queue<int>();
-			auto right_n        = priority_queue<int, vector<int>, greater<int>>();
+			auto right_n        = priority_queue<int, vector<int>, greater<>>();
 			for(int i = 0; i < n; i++) {
 				left_n.push(nums[i]);
 				left_min += nums[i];

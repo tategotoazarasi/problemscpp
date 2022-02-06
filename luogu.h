@@ -252,6 +252,14 @@ namespace luogu {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/**
+	 * \brief 洛谷 P1009 [NOIP1998 普及组] 阶乘之和
+	 */
+	class P1009 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H

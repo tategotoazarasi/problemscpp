@@ -458,4 +458,12 @@ namespace luogu {
 		          "15\n",
 		          ans);
 	}
+
+	TEST(P1009, case1) {
+		istringstream in("3");
+		auto out = ostringstream();
+		P1009::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("9", ans);
+	}
 }// namespace luogu
