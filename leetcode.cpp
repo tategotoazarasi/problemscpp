@@ -2359,4 +2359,120 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace sum_of_unique_elements
+
+	namespace sort_even_and_odd_indices_independently {
+		vector<int> Solution::sortEvenOdd(vector<int> &nums) {
+			vector<int> even;///< 偶数
+			vector<int> odd; ///< 奇数
+			vector<int> ans;
+			for(int i = 0; i < nums.size(); i++) {
+				if(i % 2 == 0) {
+					even.push_back(nums[i]);
+				} else {
+					odd.push_back(nums[i]);
+				}
+			}
+			sort(even.begin(), even.end());
+			sort(odd.begin(), odd.end(), greater<int>());
+			for(int i = 0; i < odd.size(); i++) {
+				ans.push_back(even[i]);
+				ans.push_back(odd[i]);
+			}
+			if(even.size() > odd.size()) {
+				ans.push_back(even.back());
+			}
+			return ans;
+		}
+	}// namespace sort_even_and_odd_indices_independently
+
+	namespace smallest_value_of_the_rearranged_number {
+		long long Solution::smallestNumber(long long num) {
+			bool positive = num > 0;
+			auto oss      = ostringstream();
+			num           = abs(num);
+			oss << num;
+			vector<int> n;
+			for(char ch: oss.str()) {
+				n.push_back(ch - '0');
+			}
+			sort(n.begin(), n.end());
+			vector<int> ans;
+			if(positive) {
+				for(auto i: n) {
+					if(i != 0) {
+						ans.push_back(i);
+					}
+				}
+				for(auto i: n) {
+					if(i == 0) {
+						ans.insert(ans.begin() + 1, i);
+					}
+				}
+			} else {
+				for(int i = n.size() - 1; i >= 0; i--) {
+					ans.push_back(n[i]);
+				}
+			}
+			oss = ostringstream();
+			if(!positive) {
+				oss << '-';
+			}
+			for(auto i: ans) {
+				oss << i;
+			}
+			auto iss = istringstream(oss.str());
+			long long a;
+			iss >> a;
+			return a;
+		}
+	}// namespace smallest_value_of_the_rearranged_number
+
+	namespace design_bitset {
+		Bitset::Bitset(int size) {
+			this->size = size;
+			one1       = new set<unsigned int>();
+			zero0      = new set<unsigned int>();
+			for(int i = 0; i < size; i++) {
+				zero0->insert(i);
+			}
+		}
+
+		void Bitset::fix(int idx) const {
+			zero0->erase(idx);
+			one1->insert(idx);
+		}
+
+		void Bitset::unfix(int idx) const {
+			zero0->insert(idx);
+			one1->erase(idx);
+		}
+
+		void Bitset::flip() {
+			auto *const tmp = one1;
+			one1            = zero0;
+			zero0           = tmp;
+		}
+
+		bool Bitset::all() const { return zero0->empty(); }
+
+		bool Bitset::one() const { return !one1->empty(); }
+
+		int Bitset::count() const { return one1->size(); }
+
+		string Bitset::toString() const {
+			auto oss = ostringstream();
+			auto c1  = one1->begin();
+			auto c0  = zero0->begin();
+			for(int i = 0; i < size; i++) {
+				if(c1 != one1->end() && *c1 == i) {
+					oss << 1;
+					++c1;
+				} else if(c0 != zero0->end() && *c0 == i) {
+					oss << 0;
+					++c0;
+				}
+			}
+			return oss.str();
+		}
+	}// namespace design_bitset
 }// namespace leetcode

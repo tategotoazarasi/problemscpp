@@ -922,6 +922,71 @@ namespace leetcode {
 			static int sumOfUnique(vector<int> &nums);
 		};
 	}// namespace sum_of_unique_elements
+
+	/**
+	 * \brief LeetCode 6000. 对奇偶下标分别排序
+	 */
+	namespace sort_even_and_odd_indices_independently {
+		class Solution {
+		public:
+			static vector<int> sortEvenOdd(vector<int> &nums);
+		};
+	}// namespace sort_even_and_odd_indices_independently
+
+	/**
+	 * \brief LeetCode 6001. 重排数字的最小值
+	 */
+	namespace smallest_value_of_the_rearranged_number {
+		class Solution {
+		public:
+			static long long smallestNumber(long long num);
+		};
+	}// namespace smallest_value_of_the_rearranged_number
+
+	/**
+	 * \brief LeetCode 6002. 设计位集
+	 */
+	namespace design_bitset {
+		class Bitset {
+			int size = 0;
+			set<unsigned int> *one1;
+			set<unsigned int> *zero0;
+
+		public:
+			/**
+			 * \brief 用 size 个位初始化 Bitset ，所有位都是 0 。
+			 */
+			explicit Bitset(int size);
+			/**
+			 * \brief 将下标为 idx 的位上的值更新为 1 。如果值已经是 1 ，则不会发生任何改变。
+			 */
+			void fix(int idx) const;
+			/**
+			 * \brief 将下标为 idx 的位上的值更新为 0 。如果值已经是 0 ，则不会发生任何改变。
+			 */
+			void unfix(int idx) const;
+			/**
+			 * \brief 翻转 Bitset 中每一位上的值。换句话说，所有值为 0 的位将会变成 1 ，反之亦然。
+			 */
+			void flip();
+			/**
+			 * \brief 检查 Bitset 中 每一位 的值是否都是 1 。如果满足此条件，返回 true ；否则，返回 false 。
+			 */
+			[[nodiscard]] bool all() const;
+			/**
+			 * \brief 检查 Bitset 中 是否 至少一位 的值是 1 。如果满足此条件，返回 true ；否则，返回 false 。
+			 */
+			[[nodiscard]] bool one() const;
+			/**
+			 * \brief 返回 Bitset 中值为 1 的位的 总数 。
+			 */
+			[[nodiscard]] int count() const;
+			/**
+			 * \brief 返回 Bitset 的当前组成情况。注意，在结果字符串中，第 i 个下标处的字符应该与 Bitset 中的第 i 位一致。
+			 */
+			[[nodiscard]] string toString() const;
+		};
+	}// namespace design_bitset
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

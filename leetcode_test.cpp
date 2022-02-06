@@ -1326,4 +1326,34 @@ namespace leetcode {
 			ASSERT_EQ(15, Solution::sumOfUnique(input));
 		}
 	}// namespace sum_of_unique_elements
+
+	namespace smallest_value_of_the_rearranged_number {
+		TEST(smallest_value_of_the_rearranged_number, case1) {
+			ASSERT_EQ(103, Solution::smallestNumber(310));
+		}
+
+		TEST(smallest_value_of_the_rearranged_number, case2) {
+			ASSERT_EQ(-7650, Solution::smallestNumber(-7605));
+		}
+
+		TEST(smallest_value_of_the_rearranged_number, case3) {
+			ASSERT_EQ(-6333221000, Solution::smallestNumber(-2230363001));
+		}
+	}// namespace smallest_value_of_the_rearranged_number
+
+	namespace design_bitset {
+		TEST(design_bitset, case1) {
+			auto bt = Bitset(5);
+			bt.fix(3);
+			bt.fix(1);
+			bt.flip();
+			ASSERT_FALSE(bt.all());
+			bt.unfix(0);
+			bt.flip();
+			ASSERT_TRUE(bt.one());
+			bt.unfix(0);
+			ASSERT_EQ(2, bt.count());
+			ASSERT_EQ("01010", bt.toString());
+		}
+	}// namespace design_bitset
 }// namespace leetcode
