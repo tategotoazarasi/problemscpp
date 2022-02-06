@@ -1032,5 +1032,13 @@ namespace acwing {
 		int main(istream &cin, ostream &cout);
 		bool find(int i);
 	};
+
+	/**
+	 * \brief AcWing 749. 数组的上方区域
+	 */
+	class acwing749 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

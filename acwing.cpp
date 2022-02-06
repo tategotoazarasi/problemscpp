@@ -3255,4 +3255,26 @@ namespace acwing {
 		}
 		return false;
 	}
+
+	int acwing749::main(istream &cin, ostream &cout) {
+		char op;
+		cin >> op;
+		double sum = 0;
+		int count  = 0;
+		double m[12][12];
+		for(int i = 0; i < 12; i++) {
+			for(int j = 0; j < 12; j++) {
+				cin >> m[i][j];
+				if(j > i && i + j < 11) {
+					sum += m[i][j];
+					count++;
+				}
+			}
+		}
+		if(op == 'M') {
+			sum /= count;
+		}
+		cout << fixed << setprecision(1) << sum;
+		return 0;
+	}
 }// namespace acwing
