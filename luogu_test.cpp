@@ -466,4 +466,12 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("9", ans);
 	}
+
+	TEST(P1980, case1) {
+		istringstream in("11 1");
+		auto out = ostringstream();
+		P1980::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("4", ans);
+	}
 }// namespace luogu
