@@ -1309,4 +1309,21 @@ namespace leetcode {
 			ASSERT_EQ(1, Solution::minimumDifference(input));
 		}
 	}// namespace minimum_difference_in_sums_after_removal_of_elements
+
+	namespace sum_of_unique_elements {
+		TEST(sum_of_unique_elements, case1) {
+			vector input = {1, 2, 3, 2};
+			ASSERT_EQ(4, Solution::sumOfUnique(input));
+		}
+
+		TEST(sum_of_unique_elements, case2) {
+			vector input = {1, 1, 1, 1, 1};
+			ASSERT_EQ(0, Solution::sumOfUnique(input));
+		}
+
+		TEST(sum_of_unique_elements, case3) {
+			vector input = {1, 2, 3, 4, 5};
+			ASSERT_EQ(15, Solution::sumOfUnique(input));
+		}
+	}// namespace sum_of_unique_elements
 }// namespace leetcode

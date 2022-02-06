@@ -2343,4 +2343,20 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace minimum_difference_in_sums_after_removal_of_elements
+
+	namespace sum_of_unique_elements {
+		int Solution::sumOfUnique(vector<int> &nums) {
+			auto um = unordered_map<int, int>();
+			for(auto num: nums) {
+				um[num]++;
+			}
+			int ans = 0;
+			for(auto [k, v]: um) {
+				if(v == 1) {
+					ans += k;
+				}
+			}
+			return ans;
+		}
+	}// namespace sum_of_unique_elements
 }// namespace leetcode

@@ -912,6 +912,16 @@ namespace leetcode {
 			static long long minimumDifference(vector<int> &nums);
 		};
 	}// namespace minimum_difference_in_sums_after_removal_of_elements
+
+	/**
+	 * \brief LeetCode 1748. 唯一元素的和
+	 */
+	namespace sum_of_unique_elements {
+		class Solution {
+		public:
+			static int sumOfUnique(vector<int> &nums);
+		};
+	}// namespace sum_of_unique_elements
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
