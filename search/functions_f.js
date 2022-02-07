@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['pair_0',['pair',['../d8/db7/a00812.html#a15260b5d76587b9c85f09ab4901cbef4',1,'leetcode::find_k_pairs_with_smallest_sums::pair']]],
-  ['path_1',['path',['../d4/db5/a00328.html#a2b62663bd1765ca7789ef1f44afc6e4e',1,'acwing::acwing1978::path::path()'],['../d4/db5/a00328.html#a069767bd73730be1b36058badc9090cf',1,'acwing::acwing1978::path::path(int a, int b)']]],
-  ['patternmatching_2',['patternMatching',['../d8/d18/a00948.html#abdf1800f6354d4c2fad0390aae1d65f5',1,'leetcode::pattern_matching_lcci::Solution']]],
-  ['permute_3',['permute',['../dc/d00/a00820.html#ae54a80dae9d7299763890e8e69811324',1,'leetcode::permutations::Solution']]],
-  ['pivotarray_4',['pivotArray',['../df/dbc/a01004.html#a2e75c44232b31fb84d1d07bb966e2f34',1,'leetcode::partition_array_according_to_given_pivot::Solution']]],
-  ['point_5',['point',['../d5/d0b/a00220.html#a0bdc73ba807198aaf3c73fad38062ead',1,'acwing::acwing2060::point::point()=default'],['../d5/d0b/a00220.html#a8a485ee86f02c0185f3bae9fdcabd775',1,'acwing::acwing2060::point::point(int x, int y)'],['../d0/d53/a00232.html#aff8940a787854dd0acaf7490b1d0d895',1,'acwing::acwing2019::point::point()'],['../d2/d5a/a00792.html#adcae51e568f4a6a25c4b6501ba0470c4',1,'leetcode::escape_a_large_maze::point::point()'],['../d2/d5a/a00792.html#a5af535a72aacaeb4dc59aa25a8663016',1,'leetcode::escape_a_large_maze::point::point(unsigned int x, unsigned int y, int distance, point *target)']]]
+  ['pair_0',['pair',['../dd/d5f/a00825.html#a15260b5d76587b9c85f09ab4901cbef4',1,'leetcode::find_k_pairs_with_smallest_sums::pair']]],
+  ['path_1',['path',['../dd/d4e/a00329.html#a2b62663bd1765ca7789ef1f44afc6e4e',1,'acwing::acwing1978::path::path()'],['../dd/d4e/a00329.html#a069767bd73730be1b36058badc9090cf',1,'acwing::acwing1978::path::path(int a, int b)']]],
+  ['patternmatching_2',['patternMatching',['../da/d45/a00961.html#abdf1800f6354d4c2fad0390aae1d65f5',1,'leetcode::pattern_matching_lcci::Solution']]],
+  ['permute_3',['permute',['../dc/d6e/a00833.html#ae54a80dae9d7299763890e8e69811324',1,'leetcode::permutations::Solution']]],
+  ['pivotarray_4',['pivotArray',['../d3/ded/a01017.html#a2e75c44232b31fb84d1d07bb966e2f34',1,'leetcode::partition_array_according_to_given_pivot::Solution']]],
+  ['point_5',['point',['../dd/d52/a00221.html#a0bdc73ba807198aaf3c73fad38062ead',1,'acwing::acwing2060::point::point()=default'],['../dd/d52/a00221.html#a8a485ee86f02c0185f3bae9fdcabd775',1,'acwing::acwing2060::point::point(int x, int y)'],['../d6/de1/a00233.html#aff8940a787854dd0acaf7490b1d0d895',1,'acwing::acwing2019::point::point()'],['../d7/dff/a00805.html#adcae51e568f4a6a25c4b6501ba0470c4',1,'leetcode::escape_a_large_maze::point::point()'],['../d7/dff/a00805.html#a5af535a72aacaeb4dc59aa25a8663016',1,'leetcode::escape_a_large_maze::point::point(unsigned int x, unsigned int y, int distance, point *target)']]]
 ];
