@@ -724,4 +724,16 @@ namespace luogu {
 		cout << ans;
 		return 0;
 	}
+
+	int P1035::main(istream &cin, ostream &cout) {
+		int k;
+		cin >> k;
+		int n    = 1;
+		double s = 0;
+		while(s <= k) {
+			s += 1.0 / double(n++);
+		}
+		cout << n - 1;
+		return 0;
+	}
 }// namespace luogu
