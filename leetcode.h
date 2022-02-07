@@ -987,6 +987,16 @@ namespace leetcode {
 			[[nodiscard]] string toString() const;
 		};
 	}// namespace design_bitset
+
+	/// \brief LeetCode 1405. Longest Happy String
+	namespace longest_happy_string {
+		class Solution {
+		public:
+			static string longestDiverseString(int a, int b, int c);
+			static void sort(char ch[3], int a, int b, int c);
+			static int *get_p(char ch, int *a, int *b, int *c);
+		};
+	}// namespace longest_happy_string
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

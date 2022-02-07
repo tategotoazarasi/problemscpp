@@ -2475,4 +2475,86 @@ namespace leetcode {
 			return oss.str();
 		}
 	}// namespace design_bitset
+
+	namespace longest_happy_string {
+		string Solution::longestDiverseString(int a, int b, int c) {
+			ostringstream oss = ostringstream();
+			int count         = 0;
+			char prev         = '0';
+			char ch[3]        = {};
+			sort(ch, a, b, c);
+			while(a != 0 || b != 0 || c != 0) {
+				if(!(count == 2 && prev == ch[2] && (*get_p(ch[2], &a, &b, &c)) > 0)) {
+					oss << ch[2];
+					(*get_p(ch[2], &a, &b, &c))--;
+					if(prev == ch[2]) {
+						count++;
+					} else {
+						prev  = ch[2];
+						count = 1;
+					}
+				} else if(!(count == 2 && prev == ch[1]) && (*get_p(ch[1], &a, &b, &c)) > 0) {
+					oss << ch[1];
+					(*get_p(ch[1], &a, &b, &c))--;
+					if(prev == ch[1]) {
+						count++;
+					} else {
+						prev  = ch[1];
+						count = 1;
+					}
+				} else if(!(count == 2 && prev == ch[0]) && (*get_p(ch[0], &a, &b, &c)) > 0) {
+					oss << ch[0];
+					(*get_p(ch[0], &a, &b, &c))--;
+					if(prev == ch[0]) {
+						count++;
+					} else {
+						prev  = ch[0];
+						count = 1;
+					}
+				} else {
+					return oss.str();
+				}
+				sort(ch, a, b, c);
+			}
+			return oss.str();
+		}
+
+		void Solution::sort(char *ch, int a, int b, int c) {
+			int minimum = a;
+			ch[0]       = 'a';
+			int maximum = b;
+			ch[2]       = 'b';
+			if(minimum > b) {
+				minimum = b;
+				ch[0]   = 'b';
+			}
+			if(minimum > c) {
+				minimum = c;
+				ch[0]   = 'c';
+			}
+			if(maximum < a) {
+				maximum = a;
+				ch[2]   = 'a';
+			}
+			if(maximum < c) {
+				maximum = c;
+				ch[2]   = 'c';
+			}
+			ch[1] = 'a' + 'b' + 'c' - ch[0] - ch[2];
+		}
+
+		int *Solution::get_p(char ch, int *a, int *b, int *c) {
+			switch(ch) {
+				case 'a':
+					return a;
+				case 'b':
+					return b;
+				case 'c':
+					return c;
+				default:
+					return nullptr;
+			}
+			return nullptr;
+		}
+	}// namespace longest_happy_string
 }// namespace leetcode
