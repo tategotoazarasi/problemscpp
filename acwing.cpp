@@ -3343,4 +3343,72 @@ namespace acwing {
 		cout << fixed << setprecision(1) << sum;
 		return 0;
 	}
+
+	int acwing1726::main(istream &cin, ostream &cout) {
+		int N, M, K;
+		cin >> N >> M >> K;
+		unordered_set<int> ms;
+		int *m = new int[M];
+		int *n = new int[N + 1];
+		memset(n, -1, (N + 1) * sizeof(int));
+		for(int i = 0; i < M; i++) {
+			cin >> m[i];
+			ms.insert(m[i]);
+		}
+		unordered_map<int, int> cp = unordered_map<int, int>();
+		for(int i = 0; i < K; i++) {
+			int c, p;
+			cin >> c >> p;
+			n[p] = c;
+			cp.insert(make_pair(c, p));
+		}
+		if(cp.count(1) != 0) {//固定
+			cout << cp[1];
+			delete[] n;
+			delete[] m;
+			return 0;
+		}
+		if(ms.count(1) != 0) {//在阶级中
+			int current = 1;
+			for(int i = 0; i < M; i++) { //对所有阶级
+				if(cp.count(m[i]) != 0) {//是固定的
+					current = cp[m[i]];
+					continue;
+				} else {//不是固定的
+					while(n[current] != -1) {
+						current++;
+					}
+					n[current] = m[i];
+					if(m[i] == 1) {
+						cout << current;
+						delete[] n;
+						delete[] m;
+						return 0;
+					}
+				}
+			}
+		}
+		//不在阶级中
+		int current = N;
+		for(int i = M - 1; i >= 0; i--) {
+			if(cp.count(m[i]) != 0) {//是固定的
+				current = cp[m[i]];
+				continue;
+			} else {//不是固定的
+				while(n[current] != -1) {
+					current--;
+				}
+				n[current] = m[i];
+			}
+		}
+		for(int i = 1; i <= N; i++) {
+			if(n[i] == -1) {
+				cout << i;
+				break;
+			}
+		}
+		delete[] n;
+		delete[] m;
+		return 0;
+	}
 }// namespace acwing

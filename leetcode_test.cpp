@@ -1359,7 +1359,7 @@ namespace leetcode {
 
 	namespace longest_happy_string {
 		TEST(longest_happy_string, case1) {
-			ASSERT_EQ("ccaccbcc", Solution::longestDiverseString(1, 1, 7));
+			ASSERT_EQ("ccbccacc", Solution::longestDiverseString(1, 1, 7));
 		}
 
 		TEST(longest_happy_string, case2) {
