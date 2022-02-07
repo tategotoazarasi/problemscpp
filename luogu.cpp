@@ -736,4 +736,22 @@ namespace luogu {
 		cout << n - 1;
 		return 0;
 	}
+
+	int P2669::main(istream &cin, ostream &cout) {
+		unsigned int k;
+		unsigned int coin = 0;
+		unsigned current  = 1;
+		unsigned rest     = 1;
+		cin >> k;
+		for(unsigned int i = 0; i < k; i++) {
+			if(rest == 0) {
+				current++;
+				rest = current;
+			}
+			coin += current;
+			rest--;
+		}
+		cout << coin;
+		return 0;
+	}
 }// namespace luogu
