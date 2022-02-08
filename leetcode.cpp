@@ -2557,4 +2557,55 @@ namespace leetcode {
 			return nullptr;
 		}
 	}// namespace longest_happy_string
+
+	namespace grid_illumination {
+		vector<int> Solution::gridIllumination(int n, vector<vector<int>> &lamps, vector<vector<int>> &queries) {
+			unordered_set<pair<int, int>, pair_hash> ls = unordered_set<pair<int, int>, pair_hash>();
+			unordered_map<int, int> row                 = unordered_map<int, int>();
+			unordered_map<int, int> col                 = unordered_map<int, int>();
+			unordered_map<int, int> diag_down           = unordered_map<int, int>();///< 从左上到右下的对角线
+			unordered_map<int, int> diag_up             = unordered_map<int, int>();///< 从右上到左下的对角线
+			for(auto lamp: lamps) {
+				int x  = lamp[0];
+				int y  = lamp[1];
+				auto p = make_pair(x, y);
+				if(ls.count(p) == 0) {
+					ls.insert(p);
+					row[x]++;
+					col[y]++;
+					diag_down[n - x + y]++;
+					diag_up[x + y]++;
+				}
+			}
+			vector<int> ans = vector<int>();
+			for(auto query: queries) {
+				int query_x = query[0];
+				int query_y = query[1];
+				if(row[query_x] > 0 || col[query_y] > 0 || diag_down[n - query_x + query_y] > 0 || diag_up[query_x + query_y] > 0) {
+					ans.push_back(1);
+				} else {
+					ans.push_back(0);
+				}
+				pair<int, int> adjacents[9] = {make_pair(query_x + 1, query_y + 1), make_pair(query_x + 1, query_y), make_pair(query_x + 1, query_y - 1),
+				                               make_pair(query_x, query_y + 1), make_pair(query_x, query_y), make_pair(query_x, query_y - 1),
+				                               make_pair(query_x - 1, query_y + 1), make_pair(query_x - 1, query_y), make_pair(query_x - 1, query_y - 1)};
+				for(auto adjacent: adjacents) {
+					if(ls.count(adjacent) != 0) {
+						ls.erase(adjacent);
+						auto [x, y] = adjacent;
+						row[x]--;
+						col[y]--;
+						diag_down[n - x + y]--;
+						diag_up[x + y]--;
+					}
+				}
+			}
+			return ans;
+		}
+
+		unsigned long long pair_hash::operator()(const pair<int, int> &p) const {
+			return static_cast<unsigned long long>(p.first) * 1000000000 + p.second;
+		}
+	}// namespace grid_illumination
+
 }// namespace leetcode

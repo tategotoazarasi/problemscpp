@@ -1366,4 +1366,41 @@ namespace leetcode {
 			ASSERT_EQ("aabaa", Solution::longestDiverseString(7, 1, 0));
 		}
 	}// namespace longest_happy_string
+
+	namespace grid_illumination {
+		TEST(grid_illumination, case1) {
+			vector<vector<int>> lamps   = {{0, 0}, {4, 4}};
+			vector<vector<int>> queries = {{1, 1}, {1, 0}};
+			vector<int> output          = {1, 0};
+			ASSERT_EQ(output, Solution::gridIllumination(5, lamps, queries));
+		}
+
+		TEST(grid_illumination, case2) {
+			vector<vector<int>> lamps   = {{0, 0}, {4, 4}};
+			vector<vector<int>> queries = {{1, 1}, {1, 1}};
+			vector<int> output          = {1, 1};
+			ASSERT_EQ(output, Solution::gridIllumination(5, lamps, queries));
+		}
+
+		TEST(grid_illumination, case3) {
+			vector<vector<int>> lamps   = {{0, 0}, {0, 4}};
+			vector<vector<int>> queries = {{0, 4}, {0, 1}, {1, 4}};
+			vector<int> output          = {1, 1, 0};
+			ASSERT_EQ(output, Solution::gridIllumination(5, lamps, queries));
+		}
+
+		TEST(grid_illumination, case4) {
+			vector<vector<int>> lamps   = {{1, 1}};
+			vector<vector<int>> queries = {{2, 0}, {1, 0}};
+			vector<int> output          = {1, 0};
+			ASSERT_EQ(output, Solution::gridIllumination(6, lamps, queries));
+		}
+
+		TEST(grid_illumination, case5) {
+			vector<vector<int>> lamps   = {{2, 5}, {4, 2}, {0, 3}, {0, 5}, {1, 4}, {4, 2}, {3, 3}, {1, 0}};
+			vector<vector<int>> queries = {{4, 3}, {3, 1}, {5, 3}, {0, 5}, {4, 4}, {3, 3}};
+			vector<int> output          = {1, 0, 1, 1, 0, 1};
+			ASSERT_EQ(output, Solution::gridIllumination(6, lamps, queries));
+		}
+	}// namespace grid_illumination
 }// namespace leetcode

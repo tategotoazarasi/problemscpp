@@ -997,6 +997,18 @@ namespace leetcode {
 			static int *get_p(char ch, int *a, int *b, int *c);
 		};
 	}// namespace longest_happy_string
+
+	/// \brief LeetCode 1001. Grid Illumination
+	namespace grid_illumination {
+		struct pair_hash {
+			unsigned long long operator()(const pair<int, int> &) const;
+		};
+
+		class Solution {
+		public:
+			static vector<int> gridIllumination(int n, vector<vector<int>> &lamps, vector<vector<int>> &queries);
+		};
+	}// namespace grid_illumination
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
