@@ -3447,4 +3447,29 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing1715::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		unordered_map<int, int> sb = unordered_map<int, int>();
+		unordered_map<int, int> tb = unordered_map<int, int>();
+		for(int i = 0; i < n; i++) {
+			int s, t, b;
+			cin >> s >> t >> b;
+			sb.insert(make_pair(s, b));
+			tb.insert(make_pair(t, b));
+		}
+		int ans     = 0;
+		int current = 0;
+		for(int i = 1; i <= 1000; i++) {
+			if(sb.count(i) == 1) {
+				current += sb[i];
+			} else if(tb.count(i) == 1) {
+				current -= tb[i];
+			}
+			ans = max(ans, current);
+		}
+		cout << ans;
+		return 0;
+	}
 }// namespace acwing
