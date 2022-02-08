@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bitset_0',['Bitset',['../d1/d83/a01041.html',1,'leetcode::design_bitset']]]
+  ['bitset_0',['Bitset',['../dd/d57/a01054.html',1,'leetcode::design_bitset']]]
 ];
