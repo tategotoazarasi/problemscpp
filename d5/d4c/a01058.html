@@ -138,17 +138,12 @@ $(function() {
 <p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02546">2546</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l02546" name="l02546"></a><span class="lineno"> 2546</span>                                                            {</div>
 <div class="line"><a id="l02547" name="l02547"></a><span class="lineno"> 2547</span>            <span class="keywordflow">switch</span>(ch) {</div>
-<div class="line"><a id="l02548" name="l02548"></a><span class="lineno"> 2548</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;a&#39;</span>:</div>
-<div class="line"><a id="l02549" name="l02549"></a><span class="lineno"> 2549</span>                    <span class="keywordflow">return</span> a;</div>
-<div class="line"><a id="l02550" name="l02550"></a><span class="lineno"> 2550</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;b&#39;</span>:</div>
-<div class="line"><a id="l02551" name="l02551"></a><span class="lineno"> 2551</span>                    <span class="keywordflow">return</span> b;</div>
-<div class="line"><a id="l02552" name="l02552"></a><span class="lineno"> 2552</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;c&#39;</span>:</div>
-<div class="line"><a id="l02553" name="l02553"></a><span class="lineno"> 2553</span>                    <span class="keywordflow">return</span> c;</div>
-<div class="line"><a id="l02554" name="l02554"></a><span class="lineno"> 2554</span>                <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l02555" name="l02555"></a><span class="lineno"> 2555</span>                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l02556" name="l02556"></a><span class="lineno"> 2556</span>            }</div>
-<div class="line"><a id="l02557" name="l02557"></a><span class="lineno"> 2557</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l02558" name="l02558"></a><span class="lineno"> 2558</span>        }</div>
+<div class="line"><a id="l02548" name="l02548"></a><span class="lineno"> 2548</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;a&#39;</span>: <span class="keywordflow">return</span> a;</div>
+<div class="line"><a id="l02549" name="l02549"></a><span class="lineno"> 2549</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;b&#39;</span>: <span class="keywordflow">return</span> b;</div>
+<div class="line"><a id="l02550" name="l02550"></a><span class="lineno"> 2550</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;c&#39;</span>: <span class="keywordflow">return</span> c;</div>
+<div class="line"><a id="l02551" name="l02551"></a><span class="lineno"> 2551</span>                <span class="keywordflow">default</span>: <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l02552" name="l02552"></a><span class="lineno"> 2552</span>            }</div>
+<div class="line"><a id="l02553" name="l02553"></a><span class="lineno"> 2553</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l02480">longestDiverseString()</a>.</p>
 
@@ -196,13 +191,13 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02480">2480</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l02480" name="l02480"></a><span class="lineno"> 2480</span>                                                                 {</div>
-<div class="line"><a id="l02481" name="l02481"></a><span class="lineno"> 2481</span>            ostringstream oss = ostringstream();</div>
-<div class="line"><a id="l02482" name="l02482"></a><span class="lineno"> 2482</span>            <span class="keywordtype">int</span> count         = 0;</div>
-<div class="line"><a id="l02483" name="l02483"></a><span class="lineno"> 2483</span>            <span class="keywordtype">char</span> prev         = <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l02484" name="l02484"></a><span class="lineno"> 2484</span>            <span class="keywordtype">char</span> ch[3]        = {};</div>
+<div class="line"><a id="l02481" name="l02481"></a><span class="lineno"> 2481</span>            <span class="keyword">auto</span> oss   = ostringstream();</div>
+<div class="line"><a id="l02482" name="l02482"></a><span class="lineno"> 2482</span>            <span class="keywordtype">int</span> count  = 0;</div>
+<div class="line"><a id="l02483" name="l02483"></a><span class="lineno"> 2483</span>            <span class="keywordtype">char</span> prev  = <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l02484" name="l02484"></a><span class="lineno"> 2484</span>            <span class="keywordtype">char</span> ch[3] = {};</div>
 <div class="line"><a id="l02485" name="l02485"></a><span class="lineno"> 2485</span>            <a class="code hl_function" href="../../d5/d4c/a01058.html#a07cde23ba60129e45023a01a8c0fa6cb">sort</a>(ch, a, b, c);</div>
 <div class="line"><a id="l02486" name="l02486"></a><span class="lineno"> 2486</span>            <span class="keywordflow">while</span>(a != 0 || b != 0 || c != 0) {</div>
-<div class="line"><a id="l02487" name="l02487"></a><span class="lineno"> 2487</span>                <span class="keywordflow">if</span>(!(count == 2 &amp;&amp; prev == ch[2] &amp;&amp; (*<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[2], &amp;a, &amp;b, &amp;c)) &gt; 0)) {</div>
+<div class="line"><a id="l02487" name="l02487"></a><span class="lineno"> 2487</span>                <span class="keywordflow">if</span>(!(count == 2 &amp;&amp; prev == ch[2] &amp;&amp; *<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[2], &amp;a, &amp;b, &amp;c) &gt; 0)) {</div>
 <div class="line"><a id="l02488" name="l02488"></a><span class="lineno"> 2488</span>                    oss &lt;&lt; ch[2];</div>
 <div class="line"><a id="l02489" name="l02489"></a><span class="lineno"> 2489</span>                    (*<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[2], &amp;a, &amp;b, &amp;c))--;</div>
 <div class="line"><a id="l02490" name="l02490"></a><span class="lineno"> 2490</span>                    <span class="keywordflow">if</span>(prev == ch[2]) {</div>
@@ -211,7 +206,7 @@ $(function() {
 <div class="line"><a id="l02493" name="l02493"></a><span class="lineno"> 2493</span>                        prev  = ch[2];</div>
 <div class="line"><a id="l02494" name="l02494"></a><span class="lineno"> 2494</span>                        count = 1;</div>
 <div class="line"><a id="l02495" name="l02495"></a><span class="lineno"> 2495</span>                    }</div>
-<div class="line"><a id="l02496" name="l02496"></a><span class="lineno"> 2496</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!(count == 2 &amp;&amp; prev == ch[1]) &amp;&amp; (*<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[1], &amp;a, &amp;b, &amp;c)) &gt; 0) {</div>
+<div class="line"><a id="l02496" name="l02496"></a><span class="lineno"> 2496</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!(count == 2 &amp;&amp; prev == ch[1]) &amp;&amp; *<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[1], &amp;a, &amp;b, &amp;c) &gt; 0) {</div>
 <div class="line"><a id="l02497" name="l02497"></a><span class="lineno"> 2497</span>                    oss &lt;&lt; ch[1];</div>
 <div class="line"><a id="l02498" name="l02498"></a><span class="lineno"> 2498</span>                    (*<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[1], &amp;a, &amp;b, &amp;c))--;</div>
 <div class="line"><a id="l02499" name="l02499"></a><span class="lineno"> 2499</span>                    <span class="keywordflow">if</span>(prev == ch[1]) {</div>
@@ -220,7 +215,7 @@ $(function() {
 <div class="line"><a id="l02502" name="l02502"></a><span class="lineno"> 2502</span>                        prev  = ch[1];</div>
 <div class="line"><a id="l02503" name="l02503"></a><span class="lineno"> 2503</span>                        count = 1;</div>
 <div class="line"><a id="l02504" name="l02504"></a><span class="lineno"> 2504</span>                    }</div>
-<div class="line"><a id="l02505" name="l02505"></a><span class="lineno"> 2505</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!(count == 2 &amp;&amp; prev == ch[0]) &amp;&amp; (*<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[0], &amp;a, &amp;b, &amp;c)) &gt; 0) {</div>
+<div class="line"><a id="l02505" name="l02505"></a><span class="lineno"> 2505</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!(count == 2 &amp;&amp; prev == ch[0]) &amp;&amp; *<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[0], &amp;a, &amp;b, &amp;c) &gt; 0) {</div>
 <div class="line"><a id="l02506" name="l02506"></a><span class="lineno"> 2506</span>                    oss &lt;&lt; ch[0];</div>
 <div class="line"><a id="l02507" name="l02507"></a><span class="lineno"> 2507</span>                    (*<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[0], &amp;a, &amp;b, &amp;c))--;</div>
 <div class="line"><a id="l02508" name="l02508"></a><span class="lineno"> 2508</span>                    <span class="keywordflow">if</span>(prev == ch[0]) {</div>

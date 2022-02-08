@@ -2542,13 +2542,13 @@ $(function() {
 <div class="line"><a id="l02478" name="l02478"></a><span class="lineno"> 2478</span> </div>
 <div class="line"><a id="l02479" name="l02479"></a><span class="lineno"><a class="line" href="../../d0/de8/a00133.html"> 2479</a></span>    <span class="keyword">namespace </span>longest_happy_string {</div>
 <div class="line"><a id="l02480" name="l02480"></a><span class="lineno"><a class="line" href="../../d5/d4c/a01058.html#a388f87abaeaefc78f4990069614b1a25"> 2480</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="../../d5/d4c/a01058.html#a388f87abaeaefc78f4990069614b1a25">Solution::longestDiverseString</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b, <span class="keywordtype">int</span> c) {</div>
-<div class="line"><a id="l02481" name="l02481"></a><span class="lineno"> 2481</span>            ostringstream oss = ostringstream();</div>
-<div class="line"><a id="l02482" name="l02482"></a><span class="lineno"> 2482</span>            <span class="keywordtype">int</span> count         = 0;</div>
-<div class="line"><a id="l02483" name="l02483"></a><span class="lineno"> 2483</span>            <span class="keywordtype">char</span> prev         = <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l02484" name="l02484"></a><span class="lineno"> 2484</span>            <span class="keywordtype">char</span> ch[3]        = {};</div>
+<div class="line"><a id="l02481" name="l02481"></a><span class="lineno"> 2481</span>            <span class="keyword">auto</span> oss   = ostringstream();</div>
+<div class="line"><a id="l02482" name="l02482"></a><span class="lineno"> 2482</span>            <span class="keywordtype">int</span> count  = 0;</div>
+<div class="line"><a id="l02483" name="l02483"></a><span class="lineno"> 2483</span>            <span class="keywordtype">char</span> prev  = <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l02484" name="l02484"></a><span class="lineno"> 2484</span>            <span class="keywordtype">char</span> ch[3] = {};</div>
 <div class="line"><a id="l02485" name="l02485"></a><span class="lineno"> 2485</span>            <a class="code hl_function" href="../../d5/d4c/a01058.html#a07cde23ba60129e45023a01a8c0fa6cb">sort</a>(ch, a, b, c);</div>
 <div class="line"><a id="l02486" name="l02486"></a><span class="lineno"> 2486</span>            <span class="keywordflow">while</span>(a != 0 || b != 0 || c != 0) {</div>
-<div class="line"><a id="l02487" name="l02487"></a><span class="lineno"> 2487</span>                <span class="keywordflow">if</span>(!(count == 2 &amp;&amp; prev == ch[2] &amp;&amp; (*<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[2], &amp;a, &amp;b, &amp;c)) &gt; 0)) {</div>
+<div class="line"><a id="l02487" name="l02487"></a><span class="lineno"> 2487</span>                <span class="keywordflow">if</span>(!(count == 2 &amp;&amp; prev == ch[2] &amp;&amp; *<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[2], &amp;a, &amp;b, &amp;c) &gt; 0)) {</div>
 <div class="line"><a id="l02488" name="l02488"></a><span class="lineno"> 2488</span>                    oss &lt;&lt; ch[2];</div>
 <div class="line"><a id="l02489" name="l02489"></a><span class="lineno"> 2489</span>                    (*<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[2], &amp;a, &amp;b, &amp;c))--;</div>
 <div class="line"><a id="l02490" name="l02490"></a><span class="lineno"> 2490</span>                    <span class="keywordflow">if</span>(prev == ch[2]) {</div>
@@ -2557,7 +2557,7 @@ $(function() {
 <div class="line"><a id="l02493" name="l02493"></a><span class="lineno"> 2493</span>                        prev  = ch[2];</div>
 <div class="line"><a id="l02494" name="l02494"></a><span class="lineno"> 2494</span>                        count = 1;</div>
 <div class="line"><a id="l02495" name="l02495"></a><span class="lineno"> 2495</span>                    }</div>
-<div class="line"><a id="l02496" name="l02496"></a><span class="lineno"> 2496</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!(count == 2 &amp;&amp; prev == ch[1]) &amp;&amp; (*<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[1], &amp;a, &amp;b, &amp;c)) &gt; 0) {</div>
+<div class="line"><a id="l02496" name="l02496"></a><span class="lineno"> 2496</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!(count == 2 &amp;&amp; prev == ch[1]) &amp;&amp; *<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[1], &amp;a, &amp;b, &amp;c) &gt; 0) {</div>
 <div class="line"><a id="l02497" name="l02497"></a><span class="lineno"> 2497</span>                    oss &lt;&lt; ch[1];</div>
 <div class="line"><a id="l02498" name="l02498"></a><span class="lineno"> 2498</span>                    (*<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[1], &amp;a, &amp;b, &amp;c))--;</div>
 <div class="line"><a id="l02499" name="l02499"></a><span class="lineno"> 2499</span>                    <span class="keywordflow">if</span>(prev == ch[1]) {</div>
@@ -2566,7 +2566,7 @@ $(function() {
 <div class="line"><a id="l02502" name="l02502"></a><span class="lineno"> 2502</span>                        prev  = ch[1];</div>
 <div class="line"><a id="l02503" name="l02503"></a><span class="lineno"> 2503</span>                        count = 1;</div>
 <div class="line"><a id="l02504" name="l02504"></a><span class="lineno"> 2504</span>                    }</div>
-<div class="line"><a id="l02505" name="l02505"></a><span class="lineno"> 2505</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!(count == 2 &amp;&amp; prev == ch[0]) &amp;&amp; (*<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[0], &amp;a, &amp;b, &amp;c)) &gt; 0) {</div>
+<div class="line"><a id="l02505" name="l02505"></a><span class="lineno"> 2505</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!(count == 2 &amp;&amp; prev == ch[0]) &amp;&amp; *<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[0], &amp;a, &amp;b, &amp;c) &gt; 0) {</div>
 <div class="line"><a id="l02506" name="l02506"></a><span class="lineno"> 2506</span>                    oss &lt;&lt; ch[0];</div>
 <div class="line"><a id="l02507" name="l02507"></a><span class="lineno"> 2507</span>                    (*<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">get_p</a>(ch[0], &amp;a, &amp;b, &amp;c))--;</div>
 <div class="line"><a id="l02508" name="l02508"></a><span class="lineno"> 2508</span>                    <span class="keywordflow">if</span>(prev == ch[0]) {</div>
@@ -2609,70 +2609,63 @@ $(function() {
 <div class="line"><a id="l02545" name="l02545"></a><span class="lineno"> 2545</span> </div>
 <div class="line"><a id="l02546" name="l02546"></a><span class="lineno"><a class="line" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c"> 2546</a></span>        <span class="keywordtype">int</span> *<a class="code hl_function" href="../../d5/d4c/a01058.html#a055bdadb8743757ce5a8fdfa3400af4c">Solution::get_p</a>(<span class="keywordtype">char</span> ch, <span class="keywordtype">int</span> *a, <span class="keywordtype">int</span> *b, <span class="keywordtype">int</span> *c) {</div>
 <div class="line"><a id="l02547" name="l02547"></a><span class="lineno"> 2547</span>            <span class="keywordflow">switch</span>(ch) {</div>
-<div class="line"><a id="l02548" name="l02548"></a><span class="lineno"> 2548</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;a&#39;</span>:</div>
-<div class="line"><a id="l02549" name="l02549"></a><span class="lineno"> 2549</span>                    <span class="keywordflow">return</span> a;</div>
-<div class="line"><a id="l02550" name="l02550"></a><span class="lineno"> 2550</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;b&#39;</span>:</div>
-<div class="line"><a id="l02551" name="l02551"></a><span class="lineno"> 2551</span>                    <span class="keywordflow">return</span> b;</div>
-<div class="line"><a id="l02552" name="l02552"></a><span class="lineno"> 2552</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;c&#39;</span>:</div>
-<div class="line"><a id="l02553" name="l02553"></a><span class="lineno"> 2553</span>                    <span class="keywordflow">return</span> c;</div>
-<div class="line"><a id="l02554" name="l02554"></a><span class="lineno"> 2554</span>                <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l02555" name="l02555"></a><span class="lineno"> 2555</span>                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l02556" name="l02556"></a><span class="lineno"> 2556</span>            }</div>
-<div class="line"><a id="l02557" name="l02557"></a><span class="lineno"> 2557</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l02558" name="l02558"></a><span class="lineno"> 2558</span>        }</div>
-<div class="line"><a id="l02559" name="l02559"></a><span class="lineno"> 2559</span>    }<span class="comment">// namespace longest_happy_string</span></div>
-<div class="line"><a id="l02560" name="l02560"></a><span class="lineno"> 2560</span> </div>
-<div class="line"><a id="l02561" name="l02561"></a><span class="lineno"><a class="line" href="../../de/d76/a00134.html"> 2561</a></span>    <span class="keyword">namespace </span>grid_illumination {</div>
-<div class="line"><a id="l02562" name="l02562"></a><span class="lineno"><a class="line" href="../../d0/dfb/a01066.html#adf32232d7f046a3cdda4e13658adcda7"> 2562</a></span>        vector&lt;int&gt; <a class="code hl_function" href="../../d0/dfb/a01066.html#adf32232d7f046a3cdda4e13658adcda7">Solution::gridIllumination</a>(<span class="keywordtype">int</span> n, vector&lt;vector&lt;int&gt;&gt; &amp;lamps, vector&lt;vector&lt;int&gt;&gt; &amp;queries) {</div>
-<div class="line"><a id="l02563" name="l02563"></a><span class="lineno"> 2563</span>            unordered_set&lt;pair&lt;int, int&gt;, <a class="code hl_struct" href="../../d4/d8a/a01062.html">pair_hash</a>&gt; ls = unordered_set&lt;pair&lt;int, int&gt;, <a class="code hl_struct" href="../../d4/d8a/a01062.html">pair_hash</a>&gt;();</div>
-<div class="line"><a id="l02564" name="l02564"></a><span class="lineno"> 2564</span>            unordered_map&lt;int, int&gt; row                 = unordered_map&lt;int, int&gt;();</div>
-<div class="line"><a id="l02565" name="l02565"></a><span class="lineno"> 2565</span>            unordered_map&lt;int, int&gt; col                 = unordered_map&lt;int, int&gt;();</div>
-<div class="line"><a id="l02566" name="l02566"></a><span class="lineno"> 2566</span>            unordered_map&lt;int, int&gt; diag_down           = unordered_map&lt;int, int&gt;();</div>
-<div class="line"><a id="l02567" name="l02567"></a><span class="lineno"> 2567</span>            unordered_map&lt;int, int&gt; diag_up             = unordered_map&lt;int, int&gt;();</div>
-<div class="line"><a id="l02568" name="l02568"></a><span class="lineno"> 2568</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> lamp: lamps) {</div>
-<div class="line"><a id="l02569" name="l02569"></a><span class="lineno"> 2569</span>                <span class="keywordtype">int</span> x  = lamp[0];</div>
-<div class="line"><a id="l02570" name="l02570"></a><span class="lineno"> 2570</span>                <span class="keywordtype">int</span> y  = lamp[1];</div>
-<div class="line"><a id="l02571" name="l02571"></a><span class="lineno"> 2571</span>                <span class="keyword">auto</span> p = make_pair(x, y);</div>
-<div class="line"><a id="l02572" name="l02572"></a><span class="lineno"> 2572</span>                <span class="keywordflow">if</span>(ls.count(p) == 0) {</div>
-<div class="line"><a id="l02573" name="l02573"></a><span class="lineno"> 2573</span>                    ls.insert(p);</div>
-<div class="line"><a id="l02574" name="l02574"></a><span class="lineno"> 2574</span>                    row[x]++;</div>
-<div class="line"><a id="l02575" name="l02575"></a><span class="lineno"> 2575</span>                    col[y]++;</div>
-<div class="line"><a id="l02576" name="l02576"></a><span class="lineno"> 2576</span>                    diag_down[n - x + y]++;</div>
-<div class="line"><a id="l02577" name="l02577"></a><span class="lineno"> 2577</span>                    diag_up[x + y]++;</div>
-<div class="line"><a id="l02578" name="l02578"></a><span class="lineno"> 2578</span>                }</div>
-<div class="line"><a id="l02579" name="l02579"></a><span class="lineno"> 2579</span>            }</div>
-<div class="line"><a id="l02580" name="l02580"></a><span class="lineno"> 2580</span>            vector&lt;int&gt; ans = vector&lt;int&gt;();</div>
-<div class="line"><a id="l02581" name="l02581"></a><span class="lineno"> 2581</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> query: queries) {</div>
-<div class="line"><a id="l02582" name="l02582"></a><span class="lineno"> 2582</span>                <span class="keywordtype">int</span> query_x = query[0];</div>
-<div class="line"><a id="l02583" name="l02583"></a><span class="lineno"> 2583</span>                <span class="keywordtype">int</span> query_y = query[1];</div>
-<div class="line"><a id="l02584" name="l02584"></a><span class="lineno"> 2584</span>                <span class="keywordflow">if</span>(row[query_x] &gt; 0 || col[query_y] &gt; 0 || diag_down[n - query_x + query_y] &gt; 0 || diag_up[query_x + query_y] &gt; 0) {</div>
-<div class="line"><a id="l02585" name="l02585"></a><span class="lineno"> 2585</span>                    ans.push_back(1);</div>
-<div class="line"><a id="l02586" name="l02586"></a><span class="lineno"> 2586</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02587" name="l02587"></a><span class="lineno"> 2587</span>                    ans.push_back(0);</div>
-<div class="line"><a id="l02588" name="l02588"></a><span class="lineno"> 2588</span>                }</div>
-<div class="line"><a id="l02589" name="l02589"></a><span class="lineno"> 2589</span>                pair&lt;int, int&gt; adjacents[9] = {make_pair(query_x + 1, query_y + 1), make_pair(query_x + 1, query_y), make_pair(query_x + 1, query_y - 1),</div>
-<div class="line"><a id="l02590" name="l02590"></a><span class="lineno"> 2590</span>                                               make_pair(query_x, query_y + 1), make_pair(query_x, query_y), make_pair(query_x, query_y - 1),</div>
-<div class="line"><a id="l02591" name="l02591"></a><span class="lineno"> 2591</span>                                               make_pair(query_x - 1, query_y + 1), make_pair(query_x - 1, query_y), make_pair(query_x - 1, query_y - 1)};</div>
-<div class="line"><a id="l02592" name="l02592"></a><span class="lineno"> 2592</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> adjacent: adjacents) {</div>
-<div class="line"><a id="l02593" name="l02593"></a><span class="lineno"> 2593</span>                    <span class="keywordflow">if</span>(ls.count(adjacent) != 0) {</div>
-<div class="line"><a id="l02594" name="l02594"></a><span class="lineno"> 2594</span>                        ls.erase(adjacent);</div>
-<div class="line"><a id="l02595" name="l02595"></a><span class="lineno"> 2595</span>                        <span class="keyword">auto</span> [x, y] = adjacent;</div>
-<div class="line"><a id="l02596" name="l02596"></a><span class="lineno"> 2596</span>                        row[x]--;</div>
-<div class="line"><a id="l02597" name="l02597"></a><span class="lineno"> 2597</span>                        col[y]--;</div>
-<div class="line"><a id="l02598" name="l02598"></a><span class="lineno"> 2598</span>                        diag_down[n - x + y]--;</div>
-<div class="line"><a id="l02599" name="l02599"></a><span class="lineno"> 2599</span>                        diag_up[x + y]--;</div>
-<div class="line"><a id="l02600" name="l02600"></a><span class="lineno"> 2600</span>                    }</div>
-<div class="line"><a id="l02601" name="l02601"></a><span class="lineno"> 2601</span>                }</div>
-<div class="line"><a id="l02602" name="l02602"></a><span class="lineno"> 2602</span>            }</div>
-<div class="line"><a id="l02603" name="l02603"></a><span class="lineno"> 2603</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l02604" name="l02604"></a><span class="lineno"> 2604</span>        }</div>
-<div class="line"><a id="l02605" name="l02605"></a><span class="lineno"> 2605</span> </div>
-<div class="line"><a id="l02606" name="l02606"></a><span class="lineno"><a class="line" href="../../d4/d8a/a01062.html#aa62ac2cbf1fa1ee8e5dcaf8832727482"> 2606</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_function" href="../../d4/d8a/a01062.html#aa62ac2cbf1fa1ee8e5dcaf8832727482">pair_hash::operator()</a>(<span class="keyword">const</span> pair&lt;int, int&gt; &amp;p)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l02607" name="l02607"></a><span class="lineno"> 2607</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(p.first) * 1000000000 + p.second;</div>
-<div class="line"><a id="l02608" name="l02608"></a><span class="lineno"> 2608</span>        }</div>
-<div class="line"><a id="l02609" name="l02609"></a><span class="lineno"> 2609</span>    }<span class="comment">// namespace grid_illumination</span></div>
-<div class="line"><a id="l02610" name="l02610"></a><span class="lineno"> 2610</span> </div>
-<div class="line"><a id="l02611" name="l02611"></a><span class="lineno"> 2611</span>}<span class="comment">// namespace leetcode</span></div>
+<div class="line"><a id="l02548" name="l02548"></a><span class="lineno"> 2548</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;a&#39;</span>: <span class="keywordflow">return</span> a;</div>
+<div class="line"><a id="l02549" name="l02549"></a><span class="lineno"> 2549</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;b&#39;</span>: <span class="keywordflow">return</span> b;</div>
+<div class="line"><a id="l02550" name="l02550"></a><span class="lineno"> 2550</span>                <span class="keywordflow">case</span> <span class="charliteral">&#39;c&#39;</span>: <span class="keywordflow">return</span> c;</div>
+<div class="line"><a id="l02551" name="l02551"></a><span class="lineno"> 2551</span>                <span class="keywordflow">default</span>: <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l02552" name="l02552"></a><span class="lineno"> 2552</span>            }</div>
+<div class="line"><a id="l02553" name="l02553"></a><span class="lineno"> 2553</span>        }</div>
+<div class="line"><a id="l02554" name="l02554"></a><span class="lineno"> 2554</span>    }<span class="comment">// namespace longest_happy_string</span></div>
+<div class="line"><a id="l02555" name="l02555"></a><span class="lineno"> 2555</span> </div>
+<div class="line"><a id="l02556" name="l02556"></a><span class="lineno"><a class="line" href="../../de/d76/a00134.html"> 2556</a></span>    <span class="keyword">namespace </span>grid_illumination {</div>
+<div class="line"><a id="l02557" name="l02557"></a><span class="lineno"><a class="line" href="../../d0/dfb/a01066.html#adf32232d7f046a3cdda4e13658adcda7"> 2557</a></span>        vector&lt;int&gt; <a class="code hl_function" href="../../d0/dfb/a01066.html#adf32232d7f046a3cdda4e13658adcda7">Solution::gridIllumination</a>(<span class="keywordtype">int</span> n, vector&lt;vector&lt;int&gt;&gt; &amp;lamps, vector&lt;vector&lt;int&gt;&gt; &amp;queries) {</div>
+<div class="line"><a id="l02558" name="l02558"></a><span class="lineno"> 2558</span>            <span class="keyword">auto</span> ls        = unordered_set&lt;pair&lt;int, int&gt;, <a class="code hl_struct" href="../../d4/d8a/a01062.html">pair_hash</a>&gt;();</div>
+<div class="line"><a id="l02559" name="l02559"></a><span class="lineno"> 2559</span>            <span class="keyword">auto</span> row       = unordered_map&lt;int, int&gt;();</div>
+<div class="line"><a id="l02560" name="l02560"></a><span class="lineno"> 2560</span>            <span class="keyword">auto</span> col       = unordered_map&lt;int, int&gt;();</div>
+<div class="line"><a id="l02561" name="l02561"></a><span class="lineno"> 2561</span>            <span class="keyword">auto</span> diag_down = unordered_map&lt;int, int&gt;();</div>
+<div class="line"><a id="l02562" name="l02562"></a><span class="lineno"> 2562</span>            <span class="keyword">auto</span> diag_up   = unordered_map&lt;int, int&gt;();</div>
+<div class="line"><a id="l02563" name="l02563"></a><span class="lineno"> 2563</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> lamp: lamps) {</div>
+<div class="line"><a id="l02564" name="l02564"></a><span class="lineno"> 2564</span>                <span class="keywordtype">int</span> x  = lamp[0];</div>
+<div class="line"><a id="l02565" name="l02565"></a><span class="lineno"> 2565</span>                <span class="keywordtype">int</span> y  = lamp[1];</div>
+<div class="line"><a id="l02566" name="l02566"></a><span class="lineno"> 2566</span>                <span class="keyword">auto</span> p = make_pair(x, y);</div>
+<div class="line"><a id="l02567" name="l02567"></a><span class="lineno"> 2567</span>                <span class="keywordflow">if</span>(!ls.contains(p)) {</div>
+<div class="line"><a id="l02568" name="l02568"></a><span class="lineno"> 2568</span>                    ls.insert(p);</div>
+<div class="line"><a id="l02569" name="l02569"></a><span class="lineno"> 2569</span>                    row[x]++;</div>
+<div class="line"><a id="l02570" name="l02570"></a><span class="lineno"> 2570</span>                    col[y]++;</div>
+<div class="line"><a id="l02571" name="l02571"></a><span class="lineno"> 2571</span>                    diag_down[n - x + y]++;</div>
+<div class="line"><a id="l02572" name="l02572"></a><span class="lineno"> 2572</span>                    diag_up[x + y]++;</div>
+<div class="line"><a id="l02573" name="l02573"></a><span class="lineno"> 2573</span>                }</div>
+<div class="line"><a id="l02574" name="l02574"></a><span class="lineno"> 2574</span>            }</div>
+<div class="line"><a id="l02575" name="l02575"></a><span class="lineno"> 2575</span>            <span class="keyword">auto</span> ans = vector&lt;int&gt;();</div>
+<div class="line"><a id="l02576" name="l02576"></a><span class="lineno"> 2576</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> query: queries) {</div>
+<div class="line"><a id="l02577" name="l02577"></a><span class="lineno"> 2577</span>                <span class="keywordtype">int</span> query_x = query[0];</div>
+<div class="line"><a id="l02578" name="l02578"></a><span class="lineno"> 2578</span>                <span class="keywordtype">int</span> query_y = query[1];</div>
+<div class="line"><a id="l02579" name="l02579"></a><span class="lineno"> 2579</span>                <span class="keywordflow">if</span>(row[query_x] &gt; 0 || col[query_y] &gt; 0 || diag_down[n - query_x + query_y] &gt; 0 || diag_up[query_x + query_y] &gt; 0) {</div>
+<div class="line"><a id="l02580" name="l02580"></a><span class="lineno"> 2580</span>                    ans.push_back(1);</div>
+<div class="line"><a id="l02581" name="l02581"></a><span class="lineno"> 2581</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02582" name="l02582"></a><span class="lineno"> 2582</span>                    ans.push_back(0);</div>
+<div class="line"><a id="l02583" name="l02583"></a><span class="lineno"> 2583</span>                }</div>
+<div class="line"><a id="l02584" name="l02584"></a><span class="lineno"> 2584</span>                pair&lt;int, int&gt; adjacents[9] = {make_pair(query_x + 1, query_y + 1), make_pair(query_x + 1, query_y), make_pair(query_x + 1, query_y - 1),</div>
+<div class="line"><a id="l02585" name="l02585"></a><span class="lineno"> 2585</span>                                               make_pair(query_x, query_y + 1), make_pair(query_x, query_y), make_pair(query_x, query_y - 1),</div>
+<div class="line"><a id="l02586" name="l02586"></a><span class="lineno"> 2586</span>                                               make_pair(query_x - 1, query_y + 1), make_pair(query_x - 1, query_y), make_pair(query_x - 1, query_y - 1)};</div>
+<div class="line"><a id="l02587" name="l02587"></a><span class="lineno"> 2587</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> adjacent: adjacents) {</div>
+<div class="line"><a id="l02588" name="l02588"></a><span class="lineno"> 2588</span>                    <span class="keywordflow">if</span>(ls.contains(adjacent)) {</div>
+<div class="line"><a id="l02589" name="l02589"></a><span class="lineno"> 2589</span>                        ls.erase(adjacent);</div>
+<div class="line"><a id="l02590" name="l02590"></a><span class="lineno"> 2590</span>                        <span class="keyword">auto</span> [x, y] = adjacent;</div>
+<div class="line"><a id="l02591" name="l02591"></a><span class="lineno"> 2591</span>                        row[x]--;</div>
+<div class="line"><a id="l02592" name="l02592"></a><span class="lineno"> 2592</span>                        col[y]--;</div>
+<div class="line"><a id="l02593" name="l02593"></a><span class="lineno"> 2593</span>                        diag_down[n - x + y]--;</div>
+<div class="line"><a id="l02594" name="l02594"></a><span class="lineno"> 2594</span>                        diag_up[x + y]--;</div>
+<div class="line"><a id="l02595" name="l02595"></a><span class="lineno"> 2595</span>                    }</div>
+<div class="line"><a id="l02596" name="l02596"></a><span class="lineno"> 2596</span>                }</div>
+<div class="line"><a id="l02597" name="l02597"></a><span class="lineno"> 2597</span>            }</div>
+<div class="line"><a id="l02598" name="l02598"></a><span class="lineno"> 2598</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l02599" name="l02599"></a><span class="lineno"> 2599</span>        }</div>
+<div class="line"><a id="l02600" name="l02600"></a><span class="lineno"> 2600</span> </div>
+<div class="line"><a id="l02601" name="l02601"></a><span class="lineno"><a class="line" href="../../d4/d8a/a01062.html#aa62ac2cbf1fa1ee8e5dcaf8832727482"> 2601</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_function" href="../../d4/d8a/a01062.html#aa62ac2cbf1fa1ee8e5dcaf8832727482">pair_hash::operator()</a>(<span class="keyword">const</span> pair&lt;int, int&gt; &amp;p)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(p.first) * 1000000000 + p.second; }</div>
+<div class="line"><a id="l02602" name="l02602"></a><span class="lineno"> 2602</span>    }<span class="comment">// namespace grid_illumination</span></div>
+<div class="line"><a id="l02603" name="l02603"></a><span class="lineno"> 2603</span> </div>
+<div class="line"><a id="l02604" name="l02604"></a><span class="lineno"> 2604</span>}<span class="comment">// namespace leetcode</span></div>
 <div class="ttc" id="aa00005_html"><div class="ttname"><a href="../../dd/dad/a00005.html">leetcode.h</a></div></div>
 <div class="ttc" id="aa00054_html"><div class="ttname"><a href="../../d1/dea/a00054.html">leetcode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l00013">leetcode.cpp:13</a></div></div>
 <div class="ttc" id="aa00069_html_ae68fb24f26d1729119604748b3b20490"><div class="ttname"><a href="../../d4/d31/a00069.html#ae68fb24f26d1729119604748b3b20490">leetcode::cat_and_mouse::MOUSE_WIN</a></div><div class="ttdeci">const int MOUSE_WIN</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00201">leetcode.h:201</a></div></div>
@@ -2860,8 +2853,8 @@ $(function() {
 <div class="ttc" id="aa01058_html_a07cde23ba60129e45023a01a8c0fa6cb"><div class="ttname"><a href="../../d5/d4c/a01058.html#a07cde23ba60129e45023a01a8c0fa6cb">leetcode::longest_happy_string::Solution::sort</a></div><div class="ttdeci">static void sort(char ch[3], int a, int b, int c)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l02522">leetcode.cpp:2522</a></div></div>
 <div class="ttc" id="aa01058_html_a388f87abaeaefc78f4990069614b1a25"><div class="ttname"><a href="../../d5/d4c/a01058.html#a388f87abaeaefc78f4990069614b1a25">leetcode::longest_happy_string::Solution::longestDiverseString</a></div><div class="ttdeci">static string longestDiverseString(int a, int b, int c)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l02480">leetcode.cpp:2480</a></div></div>
 <div class="ttc" id="aa01062_html"><div class="ttname"><a href="../../d4/d8a/a01062.html">leetcode::grid_illumination::pair_hash</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l01003">leetcode.h:1003</a></div></div>
-<div class="ttc" id="aa01062_html_aa62ac2cbf1fa1ee8e5dcaf8832727482"><div class="ttname"><a href="../../d4/d8a/a01062.html#aa62ac2cbf1fa1ee8e5dcaf8832727482">leetcode::grid_illumination::pair_hash::operator()</a></div><div class="ttdeci">unsigned long long operator()(const pair&lt; int, int &gt; &amp;) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l02606">leetcode.cpp:2606</a></div></div>
-<div class="ttc" id="aa01066_html_adf32232d7f046a3cdda4e13658adcda7"><div class="ttname"><a href="../../d0/dfb/a01066.html#adf32232d7f046a3cdda4e13658adcda7">leetcode::grid_illumination::Solution::gridIllumination</a></div><div class="ttdeci">static vector&lt; int &gt; gridIllumination(int n, vector&lt; vector&lt; int &gt; &gt; &amp;lamps, vector&lt; vector&lt; int &gt; &gt; &amp;queries)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l02562">leetcode.cpp:2562</a></div></div>
+<div class="ttc" id="aa01062_html_aa62ac2cbf1fa1ee8e5dcaf8832727482"><div class="ttname"><a href="../../d4/d8a/a01062.html#aa62ac2cbf1fa1ee8e5dcaf8832727482">leetcode::grid_illumination::pair_hash::operator()</a></div><div class="ttdeci">unsigned long long operator()(const pair&lt; int, int &gt; &amp;) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l02601">leetcode.cpp:2601</a></div></div>
+<div class="ttc" id="aa01066_html_adf32232d7f046a3cdda4e13658adcda7"><div class="ttname"><a href="../../d0/dfb/a01066.html#adf32232d7f046a3cdda4e13658adcda7">leetcode::grid_illumination::Solution::gridIllumination</a></div><div class="ttdeci">static vector&lt; int &gt; gridIllumination(int n, vector&lt; vector&lt; int &gt; &gt; &amp;lamps, vector&lt; vector&lt; int &gt; &gt; &amp;queries)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l02557">leetcode.cpp:2557</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

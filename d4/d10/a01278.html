@@ -130,7 +130,7 @@ $(function() {
 <div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>        <span class="keywordtype">int</span> n    = 1;</div>
 <div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>        <span class="keywordtype">double</span> s = 0;</div>
 <div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>        <span class="keywordflow">while</span>(s &lt;= k) {</div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>            s += 1.0 / double(n++);</div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>            s += 1.0 / <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(n++);</div>
 <div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>        }</div>
 <div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>        cout &lt;&lt; n - 1;</div>
 <div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>        <span class="keywordflow">return</span> 0;</div>

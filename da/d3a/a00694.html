@@ -123,31 +123,33 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03451">3451</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03451" name="l03451"></a><span class="lineno"> 3451</span>                                                    {</div>
-<div class="line"><a id="l03452" name="l03452"></a><span class="lineno"> 3452</span>        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l03453" name="l03453"></a><span class="lineno"> 3453</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l03454" name="l03454"></a><span class="lineno"> 3454</span>        unordered_map&lt;int, int&gt; sb = unordered_map&lt;int, int&gt;();</div>
-<div class="line"><a id="l03455" name="l03455"></a><span class="lineno"> 3455</span>        unordered_map&lt;int, int&gt; tb = unordered_map&lt;int, int&gt;();</div>
-<div class="line"><a id="l03456" name="l03456"></a><span class="lineno"> 3456</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l03457" name="l03457"></a><span class="lineno"> 3457</span>            <span class="keywordtype">int</span> s, t, b;</div>
-<div class="line"><a id="l03458" name="l03458"></a><span class="lineno"> 3458</span>            cin &gt;&gt; s &gt;&gt; t &gt;&gt; b;</div>
-<div class="line"><a id="l03459" name="l03459"></a><span class="lineno"> 3459</span>            sb.insert(make_pair(s, b));</div>
-<div class="line"><a id="l03460" name="l03460"></a><span class="lineno"> 3460</span>            tb.insert(make_pair(t, b));</div>
-<div class="line"><a id="l03461" name="l03461"></a><span class="lineno"> 3461</span>        }</div>
-<div class="line"><a id="l03462" name="l03462"></a><span class="lineno"> 3462</span>        <span class="keywordtype">int</span> ans     = 0;</div>
-<div class="line"><a id="l03463" name="l03463"></a><span class="lineno"> 3463</span>        <span class="keywordtype">int</span> current = 0;</div>
-<div class="line"><a id="l03464" name="l03464"></a><span class="lineno"> 3464</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= 1000; i++) {</div>
-<div class="line"><a id="l03465" name="l03465"></a><span class="lineno"> 3465</span>            <span class="keywordflow">if</span>(sb.count(i) == 1) {</div>
-<div class="line"><a id="l03466" name="l03466"></a><span class="lineno"> 3466</span>                current += sb[i];</div>
-<div class="line"><a id="l03467" name="l03467"></a><span class="lineno"> 3467</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(tb.count(i) == 1) {</div>
-<div class="line"><a id="l03468" name="l03468"></a><span class="lineno"> 3468</span>                current -= tb[i];</div>
-<div class="line"><a id="l03469" name="l03469"></a><span class="lineno"> 3469</span>            }</div>
-<div class="line"><a id="l03470" name="l03470"></a><span class="lineno"> 3470</span>            ans = max(ans, current);</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03459">3459</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03459" name="l03459"></a><span class="lineno"> 3459</span>                                                    {</div>
+<div class="line"><a id="l03460" name="l03460"></a><span class="lineno"> 3460</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l03461" name="l03461"></a><span class="lineno"> 3461</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l03462" name="l03462"></a><span class="lineno"> 3462</span>        <span class="keyword">auto</span> sb = unordered_map&lt;int, int&gt;();</div>
+<div class="line"><a id="l03463" name="l03463"></a><span class="lineno"> 3463</span>        <span class="keyword">auto</span> tb = unordered_map&lt;int, int&gt;();</div>
+<div class="line"><a id="l03464" name="l03464"></a><span class="lineno"> 3464</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l03465" name="l03465"></a><span class="lineno"> 3465</span>            <span class="keywordtype">int</span> s;</div>
+<div class="line"><a id="l03466" name="l03466"></a><span class="lineno"> 3466</span>            <span class="keywordtype">int</span> t;</div>
+<div class="line"><a id="l03467" name="l03467"></a><span class="lineno"> 3467</span>            <span class="keywordtype">int</span> b;</div>
+<div class="line"><a id="l03468" name="l03468"></a><span class="lineno"> 3468</span>            cin &gt;&gt; s &gt;&gt; t &gt;&gt; b;</div>
+<div class="line"><a id="l03469" name="l03469"></a><span class="lineno"> 3469</span>            sb.insert(make_pair(s, b));</div>
+<div class="line"><a id="l03470" name="l03470"></a><span class="lineno"> 3470</span>            tb.insert(make_pair(t, b));</div>
 <div class="line"><a id="l03471" name="l03471"></a><span class="lineno"> 3471</span>        }</div>
-<div class="line"><a id="l03472" name="l03472"></a><span class="lineno"> 3472</span>        cout &lt;&lt; ans;</div>
-<div class="line"><a id="l03473" name="l03473"></a><span class="lineno"> 3473</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l03474" name="l03474"></a><span class="lineno"> 3474</span>    }</div>
+<div class="line"><a id="l03472" name="l03472"></a><span class="lineno"> 3472</span>        <span class="keywordtype">int</span> ans     = 0;</div>
+<div class="line"><a id="l03473" name="l03473"></a><span class="lineno"> 3473</span>        <span class="keywordtype">int</span> current = 0;</div>
+<div class="line"><a id="l03474" name="l03474"></a><span class="lineno"> 3474</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= 1000; i++) {</div>
+<div class="line"><a id="l03475" name="l03475"></a><span class="lineno"> 3475</span>            <span class="keywordflow">if</span>(sb.count(i) == 1) {</div>
+<div class="line"><a id="l03476" name="l03476"></a><span class="lineno"> 3476</span>                current += sb[i];</div>
+<div class="line"><a id="l03477" name="l03477"></a><span class="lineno"> 3477</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(tb.count(i) == 1) {</div>
+<div class="line"><a id="l03478" name="l03478"></a><span class="lineno"> 3478</span>                current -= tb[i];</div>
+<div class="line"><a id="l03479" name="l03479"></a><span class="lineno"> 3479</span>            }</div>
+<div class="line"><a id="l03480" name="l03480"></a><span class="lineno"> 3480</span>            ans = max(ans, current);</div>
+<div class="line"><a id="l03481" name="l03481"></a><span class="lineno"> 3481</span>        }</div>
+<div class="line"><a id="l03482" name="l03482"></a><span class="lineno"> 3482</span>        cout &lt;&lt; ans;</div>
+<div class="line"><a id="l03483" name="l03483"></a><span class="lineno"> 3483</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l03484" name="l03484"></a><span class="lineno"> 3484</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l01675">acwing::TEST()</a>.</p>
 
