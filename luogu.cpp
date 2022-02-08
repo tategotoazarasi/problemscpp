@@ -765,4 +765,31 @@ namespace luogu {
 		cout << ans;
 		return 0;
 	}
+
+	int P5723::main(istream &cin, ostream &cout) {
+		unsigned int l;
+		unsigned int sum = 0;
+		int count        = 0;
+		cin >> l;
+		for(unsigned int i = 2; i <= l; i++) {
+			bool is_prime = true;
+			for(unsigned int j = 2; j <= sqrt(i); j++) {
+				if(i % j == 0) {
+					is_prime = false;
+					break;
+				}
+			}
+			if(is_prime) {
+				sum += i;
+				if(sum <= l) {
+					cout << i << endl;
+					count++;
+				} else {
+					break;
+				}
+			}
+		}
+		cout << count << endl;
+		return 0;
+	}
 }// namespace luogu
