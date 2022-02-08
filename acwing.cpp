@@ -3345,61 +3345,69 @@ namespace acwing {
 	}
 
 	int acwing1726::main(istream &cin, ostream &cout) {
-		int N, M, K;
+		int N;
+		int M;
+		int K;
 		cin >> N >> M >> K;
 		unordered_set<int> ms;
-		int *m = new int[M];
-		int *n = new int[N + 1];
+		auto *const m = new int[M];
+		auto *const n = new int[N + 1];
 		memset(n, -1, (N + 1) * sizeof(int));
 		for(int i = 0; i < M; i++) {
 			cin >> m[i];
 			ms.insert(m[i]);
 		}
-		unordered_map<int, int> cp = unordered_map<int, int>();
+		auto cp = unordered_map<int, int>();
 		for(int i = 0; i < K; i++) {
-			int c, p;
+			int c;
+			int p;
 			cin >> c >> p;
 			n[p] = c;
 			cp.insert(make_pair(c, p));
 		}
-		if(cp.count(1) != 0) {//固定
+		if(cp.contains(1)) {
+			//固定
 			cout << cp[1];
 			delete[] n;
 			delete[] m;
 			return 0;
 		}
-		if(ms.count(1) != 0) {//在阶级中
+		if(ms.contains(1)) {
+			//在阶级中
 			int current = 1;
-			for(int i = 0; i < M; i++) { //对所有阶级
-				if(cp.count(m[i]) != 0) {//是固定的
+			for(int i = 0; i < M; i++) {
+				//对所有阶级
+				if(cp.contains(m[i])) {
+					//是固定的
 					current = cp[m[i]];
 					continue;
-				} else {//不是固定的
-					while(n[current] != -1) {
-						current++;
-					}
-					n[current] = m[i];
-					if(m[i] == 1) {
-						cout << current;
-						delete[] n;
-						delete[] m;
-						return 0;
-					}
+				}
+				//不是固定的
+				while(n[current] != -1) {
+					current++;
+				}
+				n[current] = m[i];
+				if(m[i] == 1) {
+					cout << current;
+					delete[] n;
+					delete[] m;
+					return 0;
 				}
 			}
 		}
 		//不在阶级中
 		int current = N;
 		for(int i = M - 1; i >= 0; i--) {
-			if(cp.count(m[i]) != 0) {//是固定的
+			if(cp.contains(m[i])) {
+				//是固定的
 				current = cp[m[i]];
 				continue;
-			} else {//不是固定的
-				while(n[current] != -1) {
-					current--;
-				}
-				n[current] = m[i];
 			}
+			//不是固定的
+			while(n[current] != -1) {
+				current--;
+			}
+			n[current] = m[i];
 		}
 		for(int i = 1; i <= N; i++) {
 			if(n[i] == -1) {
@@ -3451,10 +3459,12 @@ namespace acwing {
 	int acwing1715::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		unordered_map<int, int> sb = unordered_map<int, int>();
-		unordered_map<int, int> tb = unordered_map<int, int>();
+		auto sb = unordered_map<int, int>();
+		auto tb = unordered_map<int, int>();
 		for(int i = 0; i < n; i++) {
-			int s, t, b;
+			int s;
+			int t;
+			int b;
 			cin >> s >> t >> b;
 			sb.insert(make_pair(s, b));
 			tb.insert(make_pair(t, b));

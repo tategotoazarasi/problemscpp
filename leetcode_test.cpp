@@ -198,9 +198,9 @@ namespace leetcode {
 	namespace convert_bst_to_greater_tree {
 		TEST(convert_bst_to_greater_tree, case1) {
 			auto *input        = new TreeNode(4, new TreeNode(1, new TreeNode(0), new TreeNode(2, nullptr, new TreeNode(3))),
-			                                  new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
+                                       new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
 			const auto *ans    = new TreeNode(30, new TreeNode(36, new TreeNode(36), new TreeNode(35, nullptr, new TreeNode(33))),
-			                                  new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
+                                           new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
 			const auto *output = Solution::convertBST(input);
 			ASSERT_TRUE(*ans == *output);
 		}
@@ -1371,35 +1371,35 @@ namespace leetcode {
 		TEST(grid_illumination, case1) {
 			vector<vector<int>> lamps   = {{0, 0}, {4, 4}};
 			vector<vector<int>> queries = {{1, 1}, {1, 0}};
-			vector<int> output          = {1, 0};
+			const vector output         = {1, 0};
 			ASSERT_EQ(output, Solution::gridIllumination(5, lamps, queries));
 		}
 
 		TEST(grid_illumination, case2) {
 			vector<vector<int>> lamps   = {{0, 0}, {4, 4}};
 			vector<vector<int>> queries = {{1, 1}, {1, 1}};
-			vector<int> output          = {1, 1};
+			const vector output         = {1, 1};
 			ASSERT_EQ(output, Solution::gridIllumination(5, lamps, queries));
 		}
 
 		TEST(grid_illumination, case3) {
 			vector<vector<int>> lamps   = {{0, 0}, {0, 4}};
 			vector<vector<int>> queries = {{0, 4}, {0, 1}, {1, 4}};
-			vector<int> output          = {1, 1, 0};
+			const vector output         = {1, 1, 0};
 			ASSERT_EQ(output, Solution::gridIllumination(5, lamps, queries));
 		}
 
 		TEST(grid_illumination, case4) {
 			vector<vector<int>> lamps   = {{1, 1}};
 			vector<vector<int>> queries = {{2, 0}, {1, 0}};
-			vector<int> output          = {1, 0};
+			const vector output         = {1, 0};
 			ASSERT_EQ(output, Solution::gridIllumination(6, lamps, queries));
 		}
 
 		TEST(grid_illumination, case5) {
 			vector<vector<int>> lamps   = {{2, 5}, {4, 2}, {0, 3}, {0, 5}, {1, 4}, {4, 2}, {3, 3}, {1, 0}};
 			vector<vector<int>> queries = {{4, 3}, {3, 1}, {5, 3}, {0, 5}, {4, 4}, {3, 3}};
-			vector<int> output          = {1, 0, 1, 1, 0, 1};
+			const vector output         = {1, 0, 1, 1, 0, 1};
 			ASSERT_EQ(output, Solution::gridIllumination(6, lamps, queries));
 		}
 	}// namespace grid_illumination

@@ -731,7 +731,7 @@ namespace luogu {
 		int n    = 1;
 		double s = 0;
 		while(s <= k) {
-			s += 1.0 / double(n++);
+			s += 1.0 / static_cast<double>(n++);
 		}
 		cout << n - 1;
 		return 0;

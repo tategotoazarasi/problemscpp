@@ -2478,13 +2478,13 @@ namespace leetcode {
 
 	namespace longest_happy_string {
 		string Solution::longestDiverseString(int a, int b, int c) {
-			ostringstream oss = ostringstream();
-			int count         = 0;
-			char prev         = '0';
-			char ch[3]        = {};
+			auto oss   = ostringstream();
+			int count  = 0;
+			char prev  = '0';
+			char ch[3] = {};
 			sort(ch, a, b, c);
 			while(a != 0 || b != 0 || c != 0) {
-				if(!(count == 2 && prev == ch[2] && (*get_p(ch[2], &a, &b, &c)) > 0)) {
+				if(!(count == 2 && prev == ch[2] && *get_p(ch[2], &a, &b, &c) > 0)) {
 					oss << ch[2];
 					(*get_p(ch[2], &a, &b, &c))--;
 					if(prev == ch[2]) {
@@ -2493,7 +2493,7 @@ namespace leetcode {
 						prev  = ch[2];
 						count = 1;
 					}
-				} else if(!(count == 2 && prev == ch[1]) && (*get_p(ch[1], &a, &b, &c)) > 0) {
+				} else if(!(count == 2 && prev == ch[1]) && *get_p(ch[1], &a, &b, &c) > 0) {
 					oss << ch[1];
 					(*get_p(ch[1], &a, &b, &c))--;
 					if(prev == ch[1]) {
@@ -2502,7 +2502,7 @@ namespace leetcode {
 						prev  = ch[1];
 						count = 1;
 					}
-				} else if(!(count == 2 && prev == ch[0]) && (*get_p(ch[0], &a, &b, &c)) > 0) {
+				} else if(!(count == 2 && prev == ch[0]) && *get_p(ch[0], &a, &b, &c) > 0) {
 					oss << ch[0];
 					(*get_p(ch[0], &a, &b, &c))--;
 					if(prev == ch[0]) {
@@ -2545,31 +2545,26 @@ namespace leetcode {
 
 		int *Solution::get_p(char ch, int *a, int *b, int *c) {
 			switch(ch) {
-				case 'a':
-					return a;
-				case 'b':
-					return b;
-				case 'c':
-					return c;
-				default:
-					return nullptr;
+				case 'a': return a;
+				case 'b': return b;
+				case 'c': return c;
+				default: return nullptr;
 			}
-			return nullptr;
 		}
 	}// namespace longest_happy_string
 
 	namespace grid_illumination {
 		vector<int> Solution::gridIllumination(int n, vector<vector<int>> &lamps, vector<vector<int>> &queries) {
-			unordered_set<pair<int, int>, pair_hash> ls = unordered_set<pair<int, int>, pair_hash>();
-			unordered_map<int, int> row                 = unordered_map<int, int>();
-			unordered_map<int, int> col                 = unordered_map<int, int>();
-			unordered_map<int, int> diag_down           = unordered_map<int, int>();///< 从左上到右下的对角线
-			unordered_map<int, int> diag_up             = unordered_map<int, int>();///< 从右上到左下的对角线
+			auto ls        = unordered_set<pair<int, int>, pair_hash>();
+			auto row       = unordered_map<int, int>();
+			auto col       = unordered_map<int, int>();
+			auto diag_down = unordered_map<int, int>();///< 从左上到右下的对角线
+			auto diag_up   = unordered_map<int, int>();///< 从右上到左下的对角线
 			for(auto lamp: lamps) {
 				int x  = lamp[0];
 				int y  = lamp[1];
 				auto p = make_pair(x, y);
-				if(ls.count(p) == 0) {
+				if(!ls.contains(p)) {
 					ls.insert(p);
 					row[x]++;
 					col[y]++;
@@ -2577,7 +2572,7 @@ namespace leetcode {
 					diag_up[x + y]++;
 				}
 			}
-			vector<int> ans = vector<int>();
+			auto ans = vector<int>();
 			for(auto query: queries) {
 				int query_x = query[0];
 				int query_y = query[1];
@@ -2590,7 +2585,7 @@ namespace leetcode {
 				                               make_pair(query_x, query_y + 1), make_pair(query_x, query_y), make_pair(query_x, query_y - 1),
 				                               make_pair(query_x - 1, query_y + 1), make_pair(query_x - 1, query_y), make_pair(query_x - 1, query_y - 1)};
 				for(auto adjacent: adjacents) {
-					if(ls.count(adjacent) != 0) {
+					if(ls.contains(adjacent)) {
 						ls.erase(adjacent);
 						auto [x, y] = adjacent;
 						row[x]--;
@@ -2603,9 +2598,7 @@ namespace leetcode {
 			return ans;
 		}
 
-		unsigned long long pair_hash::operator()(const pair<int, int> &p) const {
-			return static_cast<unsigned long long>(p.first) * 1000000000 + p.second;
-		}
+		unsigned long long pair_hash::operator()(const pair<int, int> &p) const { return static_cast<unsigned long long>(p.first) * 1000000000 + p.second; }
 	}// namespace grid_illumination
 
 }// namespace leetcode

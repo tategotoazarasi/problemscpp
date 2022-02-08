@@ -1001,7 +1001,7 @@ namespace leetcode {
 	/// \brief LeetCode 1001. Grid Illumination
 	namespace grid_illumination {
 		struct pair_hash {
-			unsigned long long operator()(const pair<int, int> &) const;
+			unsigned long long operator()(const pair<int, int> & /*p*/) const;
 		};
 
 		class Solution {
