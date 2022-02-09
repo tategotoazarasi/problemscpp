@@ -524,4 +524,24 @@ namespace luogu {
 		          "9\n",
 		          ans);
 	}
+
+	TEST(P1217, case1) {
+		istringstream in("5 500");
+		auto out = ostringstream();
+		P1217::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("5\n"
+		          "7\n"
+		          "11\n"
+		          "101\n"
+		          "131\n"
+		          "151\n"
+		          "181\n"
+		          "191\n"
+		          "313\n"
+		          "353\n"
+		          "373\n"
+		          "383\n",
+		          ans);
+	}
 }// namespace luogu
