@@ -87,7 +87,7 @@ $(function() {
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >AcWing 1696. 困牛排序 </p>
 
-<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.h</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l01102">1102</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.h</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l01101">1101</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="abd9bedecada51161f7ef3ce07b4f5376" name="abd9bedecada51161f7ef3ce07b4f5376"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd9bedecada51161f7ef3ce07b4f5376">&#9670;&nbsp;</a></span>main()</h2>
@@ -123,17 +123,18 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03573">3573</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03573" name="l03573"></a><span class="lineno"> 3573</span>                                                    {</div>
-<div class="line"><a id="l03574" name="l03574"></a><span class="lineno"> 3574</span>        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l03575" name="l03575"></a><span class="lineno"> 3575</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l03576" name="l03576"></a><span class="lineno"> 3576</span>        <span class="keywordtype">int</span> *p = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
-<div class="line"><a id="l03577" name="l03577"></a><span class="lineno"> 3577</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l03578" name="l03578"></a><span class="lineno"> 3578</span>            cin &gt;&gt; p[i];</div>
-<div class="line"><a id="l03579" name="l03579"></a><span class="lineno"> 3579</span>        }</div>
-<div class="line"><a id="l03580" name="l03580"></a><span class="lineno"> 3580</span>        <span class="keywordtype">int</span> i = n - 1;</div>
-<div class="line"><a id="l03581" name="l03581"></a><span class="lineno"> 3581</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i - 1; j &gt;= 0 &amp;&amp; p[j] &lt; p[i]; i--, j--)</div>
-<div class="line"><a id="l03582" name="l03582"></a><span class="lineno"> 3582</span>            ;</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03572">3572</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03572" name="l03572"></a><span class="lineno"> 3572</span>                                                    {</div>
+<div class="line"><a id="l03573" name="l03573"></a><span class="lineno"> 3573</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l03574" name="l03574"></a><span class="lineno"> 3574</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l03575" name="l03575"></a><span class="lineno"> 3575</span>        <span class="keyword">auto</span> *<span class="keyword">const</span> p = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l03576" name="l03576"></a><span class="lineno"> 3576</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l03577" name="l03577"></a><span class="lineno"> 3577</span>            cin &gt;&gt; p[i];</div>
+<div class="line"><a id="l03578" name="l03578"></a><span class="lineno"> 3578</span>        }</div>
+<div class="line"><a id="l03579" name="l03579"></a><span class="lineno"> 3579</span>        <span class="keywordtype">int</span> i = n - 1;</div>
+<div class="line"><a id="l03580" name="l03580"></a><span class="lineno"> 3580</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i - 1; j &gt;= 0 &amp;&amp; p[j] &lt; p[i]; i--, j--) {</div>
+<div class="line"><a id="l03581" name="l03581"></a><span class="lineno"> 3581</span>            ;</div>
+<div class="line"><a id="l03582" name="l03582"></a><span class="lineno"> 3582</span>        }</div>
 <div class="line"><a id="l03583" name="l03583"></a><span class="lineno"> 3583</span>        cout &lt;&lt; i;</div>
 <div class="line"><a id="l03584" name="l03584"></a><span class="lineno"> 3584</span>        <span class="keyword">delete</span>[] p;</div>
 <div class="line"><a id="l03585" name="l03585"></a><span class="lineno"> 3585</span>        <span class="keywordflow">return</span> 0;</div>
