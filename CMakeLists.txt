@@ -4,6 +4,7 @@ project(problemscpp)
 set(CMAKE_CXX_STANDARD 20)
 
 if (MSVC)
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /STACK:67108864")
     set(GTEST_URL https://archive.fastgit.org/google/googletest/archive/release-1.11.0.zip)
 else ()
     set(GTEST_URL https://codeload.github.com/google/googletest/zip/release-1.11.0)
@@ -15,7 +16,6 @@ if (PKG_CONFIG_FOUND)
 endif ()
 
 if (NOT ${PkgConfig_FOUND} OR (NOT DEFINED ${googletest_FOUND}) OR (NOT ${googletest_FOUND}))
-    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /STACK:67108864")
     include(FetchContent)
     FetchContent_Declare(
             googletest
