@@ -10,7 +10,7 @@ else ()
     set(GTEST_URL https://codeload.github.com/google/googletest/zip/release-1.11.0)
 endif ()
 
-find_package(PkgConfig REQUIRED)
+find_package(PkgConfig)
 if (PKG_CONFIG_FOUND)
     pkg_check_modules(googletest gtest)
 endif ()

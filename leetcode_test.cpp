@@ -198,9 +198,9 @@ namespace leetcode {
 	namespace convert_bst_to_greater_tree {
 		TEST(convert_bst_to_greater_tree, case1) {
 			auto *input        = new TreeNode(4, new TreeNode(1, new TreeNode(0), new TreeNode(2, nullptr, new TreeNode(3))),
-			                                  new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
+                                       new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
 			const auto *ans    = new TreeNode(30, new TreeNode(36, new TreeNode(36), new TreeNode(35, nullptr, new TreeNode(33))),
-			                                  new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
+                                           new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
 			const auto *output = Solution::convertBST(input);
 			ASSERT_TRUE(*ans == *output);
 		}
@@ -1406,17 +1406,17 @@ namespace leetcode {
 
 	namespace count_number_of_pairs_with_absolute_difference_k {
 		TEST(count_number_of_pairs_with_absolute_difference_k, case1) {
-			vector<int> input = {1, 2, 2, 1};
+			vector input = {1, 2, 2, 1};
 			ASSERT_EQ(4, Solution::countKDifference(input, 1));
 		}
 
 		TEST(count_number_of_pairs_with_absolute_difference_k, case2) {
-			vector<int> input = {1, 3};
+			vector input = {1, 3};
 			ASSERT_EQ(0, Solution::countKDifference(input, 3));
 		}
 
 		TEST(count_number_of_pairs_with_absolute_difference_k, case3) {
-			vector<int> input = {3, 2, 1, 5, 4};
+			vector input = {3, 2, 1, 5, 4};
 			ASSERT_EQ(3, Solution::countKDifference(input, 2));
 		}
 	}// namespace count_number_of_pairs_with_absolute_difference_k

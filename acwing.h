@@ -2,7 +2,6 @@
 #define PROBLEMSCPP_ACWING_H
 
 #include <iostream>
-#include <queue>
 #include <unordered_set>
 #include <vector>
 

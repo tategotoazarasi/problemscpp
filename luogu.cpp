@@ -795,14 +795,16 @@ namespace luogu {
 	}
 
 	int P1217::main(istream &cin, ostream &cout) {
-		unsigned int a, b;
+		unsigned int a;
+		unsigned int b;
 		cin >> a >> b;
-		set<unsigned int> palindromes = set<unsigned int>();
+		auto palindromes = set<unsigned int>();
 		if(a <= 2 && 2 <= b) {
 			palindromes.insert(2);
 		}
 		if(a <= 10 && b >= 0) {
-			for(unsigned int d1 = 3; d1 <= 9; d1 += 2) {//1 [0,10]
+			for(unsigned int d1 = 3; d1 <= 9; d1 += 2) {
+				//1 [0,10]
 				unsigned int palindrome = d1;
 				if(a <= palindrome && palindrome <= b) {
 					palindromes.insert(palindrome);
@@ -810,7 +812,8 @@ namespace luogu {
 			}
 		}
 		if(a <= 100 && b >= 10) {
-			for(unsigned int d1 = 1; d1 <= 9; d1 += 2) {//2 [10,100]
+			for(unsigned int d1 = 1; d1 <= 9; d1 += 2) {
+				//2 [10,100]
 				unsigned int palindrome = d1 * 10 + d1;
 				if(a <= palindrome && palindrome <= b) {
 					palindromes.insert(palindrome);
@@ -818,7 +821,8 @@ namespace luogu {
 			}
 		}
 		if(a <= 1000 && b >= 100) {
-			for(unsigned int d1 = 1; d1 <= 9; d1 += 2) {//3 [100,1000]
+			for(unsigned int d1 = 1; d1 <= 9; d1 += 2) {
+				//3 [100,1000]
 				for(unsigned int d2 = 0; d2 <= 9; d2++) {
 					unsigned int palindrome = d1 * 100 + d2 * 10 + d1;
 					if(a <= palindrome && palindrome <= b) {
@@ -828,7 +832,8 @@ namespace luogu {
 			}
 		}
 		if(a <= 10000 && b >= 1000) {
-			for(unsigned int d1 = 1; d1 <= 9; d1 += 2) {//4 [1000,10000]
+			for(unsigned int d1 = 1; d1 <= 9; d1 += 2) {
+				//4 [1000,10000]
 				for(unsigned int d2 = 0; d2 <= 9; d2++) {
 					unsigned int palindrome = d1 * 1000 + d2 * 100 + d2 * 10 + d1;
 					if(a <= palindrome && palindrome <= b) {
@@ -838,7 +843,8 @@ namespace luogu {
 			}
 		}
 		if(a <= 100000 && b >= 10000) {
-			for(unsigned int d1 = 1; d1 <= 9; d1 += 2) {//5 [10000,100000]
+			for(unsigned int d1 = 1; d1 <= 9; d1 += 2) {
+				//5 [10000,100000]
 				for(unsigned int d2 = 0; d2 <= 9; d2++) {
 					for(unsigned int d3 = 0; d3 <= 9; d3++) {
 						unsigned int palindrome = d1 * 10000 + 1000 * d2 + 100 * d3 + 10 * d2 + d1;
@@ -850,7 +856,8 @@ namespace luogu {
 			}
 		}
 		if(a <= 1000000 && b >= 100000) {
-			for(unsigned int d1 = 1; d1 <= 9; d1 += 2) {//6 [100000,1000000]
+			for(unsigned int d1 = 1; d1 <= 9; d1 += 2) {
+				//6 [100000,1000000]
 				for(unsigned int d2 = 0; d2 <= 9; d2++) {
 					for(unsigned int d3 = 0; d3 <= 9; d3++) {
 						unsigned int palindrome = d1 * 100000 + d2 * 10000 + d3 * 1000 + d3 * 100 + d2 * 10 + d1;
@@ -862,7 +869,8 @@ namespace luogu {
 			}
 		}
 		if(a <= 10000000 && b >= 1000000) {
-			for(unsigned int d1 = 1; d1 <= 9; d1 += 2) {//7 [1000000,10000000]
+			for(unsigned int d1 = 1; d1 <= 9; d1 += 2) {
+				//7 [1000000,10000000]
 				for(unsigned int d2 = 0; d2 <= 9; d2++) {
 					for(unsigned int d3 = 0; d3 <= 9; d3++) {
 						for(unsigned int d4 = 0; d4 <= 9; d4++) {
@@ -876,7 +884,8 @@ namespace luogu {
 			}
 		}
 		if(a <= 100000000 && b >= 10000000) {
-			for(unsigned int d1 = 1; d1 <= 9; d1 += 2) {//8 [10000000,100000000]
+			for(unsigned int d1 = 1; d1 <= 9; d1 += 2) {
+				//8 [10000000,100000000]
 				for(unsigned int d2 = 0; d2 <= 9; d2++) {
 					for(unsigned int d3 = 0; d3 <= 9; d3++) {
 						for(unsigned int d4 = 0; d4 <= 9; d4++) {
@@ -889,7 +898,7 @@ namespace luogu {
 				}
 			}
 		}
-		for(auto palindrome: palindromes) {
+		for(const auto palindrome: palindromes) {
 			bool is_prime = true;
 			for(unsigned int i = 3; i <= sqrt(palindrome); i++) {
 				if(palindrome % i == 0) {
