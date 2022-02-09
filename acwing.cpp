@@ -3482,4 +3482,22 @@ namespace acwing {
 		cout << ans;
 		return 0;
 	}
+
+	int acwing755::main(istream &cin, ostream &cout) {
+		int n;
+		while(true) {
+			cin >> n;
+			if(n == 0) {
+				break;
+			}
+			for(int i = 0; i < n; i++) {
+				for(int j = 0; j < n; j++) {
+					cout << int(pow(2, i + j)) << " ";
+				}
+				cout << endl;
+			}
+			cout << endl;
+		}
+		return 0;
+	}
 }// namespace acwing
