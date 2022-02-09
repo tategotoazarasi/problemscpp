@@ -3500,4 +3500,73 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing756::main(istream &cin, ostream &cout) {
+		int n, m;
+		int arr[100][100] = {};
+		int x = 0, y = 0;
+		int v   = 1;
+		int dir = 1;//0 上 1 右 2 下 3 左
+		cin >> n >> m;
+		while(v <= n * m) {
+			arr[x][y] = v++;
+		move:;
+			if(v > m * n) {
+				break;
+			}
+			switch(dir) {
+				case 3://左
+				{
+					int next_y = y - 1;
+					if(arr[x][next_y] != 0 || next_y < 0) {//不能向上
+						dir = (dir + 1) % 4;
+						goto move;
+					} else {
+						y--;
+					}
+					break;
+				}
+				case 2://下
+				{
+					int next_x = x + 1;
+					if(arr[next_x][y] != 0 || next_x >= n) {
+						dir = (dir + 1) % 4;
+						goto move;
+					} else {
+						x++;
+					}
+					break;
+				}
+				case 1://右
+				{
+					int next_y = y + 1;
+					if(arr[x][next_y] != 0 || next_y >= m) {
+						dir = (dir + 1) % 4;
+						goto move;
+					} else {
+						y++;
+					}
+					break;
+				}
+				case 0://上
+				{
+					int next_x = x - 1;
+					if(arr[next_x][y] != 0 || next_x < 0) {
+						dir = (dir + 1) % 4;
+						goto move;
+					} else {
+						x--;
+					}
+					break;
+				}
+			}
+		}
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < m; j++) {
+				cout << arr[i][j] << " ";
+			}
+			cout << endl;
+		}
+		return 0;
+	}
 }// namespace acwing
