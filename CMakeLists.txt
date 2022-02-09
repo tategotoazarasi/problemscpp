@@ -10,11 +10,11 @@ else ()
 endif ()
 
 find_package(PkgConfig REQUIRED)
-if (PkgConfig_FOUND)
+if (PKG_CONFIG_FOUND)
     pkg_check_modules(googletest gtest)
 endif ()
 
-if (NOT ${PkgConfig_FOUND} OR NOT ${googletest_FOUND})
+if (NOT ${PkgConfig_FOUND} OR (NOT DEFINED ${googletest_FOUND}) OR (NOT ${googletest_FOUND}))
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /STACK:67108864")
     include(FetchContent)
     FetchContent_Declare(
