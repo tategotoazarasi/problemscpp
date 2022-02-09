@@ -2,34 +2,29 @@ cmake_minimum_required(VERSION 3.21)
 project(problemscpp)
 
 set(CMAKE_CXX_STANDARD 20)
+
 if (MSVC)
+    set(GTEST_URL https://archive.fastgit.org/google/googletest/archive/release-1.11.0.zip)
+else ()
+    set(GTEST_URL https://codeload.github.com/google/googletest/zip/release-1.11.0)
+endif ()
+
+find_package(PkgConfig REQUIRED)
+if (PkgConfig_FOUND)
+    pkg_check_modules(googletest gtest)
+endif ()
+
+if (NOT ${PkgConfig_FOUND} OR NOT ${googletest_FOUND})
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /STACK:67108864")
     include(FetchContent)
     FetchContent_Declare(
             googletest
             # Specify the commit you depend on and update it regularly.
-            URL https://archive.fastgit.org/google/googletest/archive/release-1.11.0.zip
+            URL ${GTEST_URL}
     )
     # For Windows: Prevent overriding the parent project's compiler/linker settings
     set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
     FetchContent_MakeAvailable(googletest)
-endif ()
-if (LINUX)
-    find_package(PkgConfig REQUIRED)
-    if (NOT PkgConfig_FOUND)
-        set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /STACK:67108864")
-        include(FetchContent)
-        FetchContent_Declare(
-                googletest
-                # Specify the commit you depend on and update it regularly.
-                URL https://codeload.github.com/google/googletest/zip/release-1.11.0
-        )
-        # For Windows: Prevent overriding the parent project's compiler/linker settings
-        set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-        FetchContent_MakeAvailable(googletest)
-    else ()
-        pkg_check_modules(googletest gtest)
-    endif ()
 endif ()
 
 # Now simply link against gtest or gtest_main as needed. Eg
