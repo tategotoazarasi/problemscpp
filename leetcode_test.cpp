@@ -1403,4 +1403,21 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::gridIllumination(6, lamps, queries));
 		}
 	}// namespace grid_illumination
+
+	namespace count_number_of_pairs_with_absolute_difference_k {
+		TEST(count_number_of_pairs_with_absolute_difference_k, case1) {
+			vector<int> input = {1, 2, 2, 1};
+			ASSERT_EQ(4, Solution::countKDifference(input, 1));
+		}
+
+		TEST(count_number_of_pairs_with_absolute_difference_k, case2) {
+			vector<int> input = {1, 3};
+			ASSERT_EQ(0, Solution::countKDifference(input, 3));
+		}
+
+		TEST(count_number_of_pairs_with_absolute_difference_k, case3) {
+			vector<int> input = {3, 2, 1, 5, 4};
+			ASSERT_EQ(3, Solution::countKDifference(input, 2));
+		}
+	}// namespace count_number_of_pairs_with_absolute_difference_k
 }// namespace leetcode

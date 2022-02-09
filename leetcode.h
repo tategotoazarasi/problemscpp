@@ -1009,6 +1009,14 @@ namespace leetcode {
 			static vector<int> gridIllumination(int n, vector<vector<int>> &lamps, vector<vector<int>> &queries);
 		};
 	}// namespace grid_illumination
+
+	/// \brief LeetCode 2006. Count Number of Pairs With Absolute Difference K
+	namespace count_number_of_pairs_with_absolute_difference_k {
+		class Solution {
+		public:
+			static int countKDifference(vector<int> &nums, int k);
+		};
+	}// namespace count_number_of_pairs_with_absolute_difference_k
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -2601,4 +2601,17 @@ namespace leetcode {
 		unsigned long long pair_hash::operator()(const pair<int, int> &p) const { return static_cast<unsigned long long>(p.first) * 1000000000 + p.second; }
 	}// namespace grid_illumination
 
+	namespace count_number_of_pairs_with_absolute_difference_k {
+		int Solution::countKDifference(vector<int> &nums, int k) {
+			int ans = 0;
+			for(int i = 0; i < nums.size(); i++) {
+				for(int j = i + 1; j < nums.size(); j++) {
+					if(abs(nums[i] - nums[j]) == k) {
+						ans++;
+					}
+				}
+			}
+			return ans;
+		}
+	}// namespace count_number_of_pairs_with_absolute_difference_k
 }// namespace leetcode
