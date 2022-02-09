@@ -10,7 +10,7 @@ include(FetchContent)
 FetchContent_Declare(
         googletest
         # Specify the commit you depend on and update it regularly.
-        URL https://github.com.cnpmjs.org/google/googletest/archive/release-1.11.0.zip
+        URL https://archive.fastgit.org/google/googletest/archive/release-1.11.0.zip
 )
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
