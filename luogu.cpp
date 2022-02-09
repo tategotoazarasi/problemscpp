@@ -903,4 +903,18 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P1423::main(istream &cin, ostream &cout) {
+		double x;
+		cin >> x;
+		double sn = 2;
+		for(int i = 1; sn < x; i++) {
+			sn = 100 * (1 - pow(0.98, i));
+			if(sn >= x) {
+				cout << i;
+				return 0;
+			}
+		}
+		return 0;
+	}
 }// namespace luogu
