@@ -2,6 +2,7 @@
 #define PROBLEMSCPP_ACWING_H
 
 #include <iostream>
+#include <queue>
 #include <unordered_set>
 #include <vector>
 
@@ -1093,6 +1094,12 @@ namespace acwing {
 
 	/// \brief AcWing 756. 蛇形矩阵
 	class acwing756 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/// \brief AcWing 1696. 困牛排序
+	class acwing1696 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};

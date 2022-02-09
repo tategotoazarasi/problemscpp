@@ -3569,4 +3569,19 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing1696::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		int *p = new int[n];
+		for(int i = 0; i < n; i++) {
+			cin >> p[i];
+		}
+		int i = n - 1;
+		for(int j = i - 1; j >= 0 && p[j] < p[i]; i--, j--)
+			;
+		cout << i;
+		delete[] p;
+		return 0;
+	}
 }// namespace acwing
