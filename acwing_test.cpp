@@ -1720,4 +1720,18 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("no", ans);
 	}
+
+	TEST(acwing1684, case1) {
+		istringstream in("5 6\n"
+		                 "4 1\n"
+		                 "4 2\n"
+		                 "4 3\n"
+		                 "2 5\n"
+		                 "1 2\n"
+		                 "1 5");
+		auto out = ostringstream();
+		acwing1684::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("12133", ans);
+	}
 }// namespace acwing

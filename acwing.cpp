@@ -1,6 +1,7 @@
 #include "acwing.h"
 
 #include <algorithm>
+#include <bitset>
 #include <cmath>
 #include <cstring>
 #include <iomanip>
@@ -3608,6 +3609,29 @@ namespace acwing {
 			}
 		}
 		cout << ((match >= k * a.length()) ? "yes" : "no");
+		return 0;
+	}
+
+	int acwing1684::main(istream &cin, ostream &cout) {
+		int n, m;
+		cin >> n >> m;
+		bitset<151> ns[101] = {};
+		bitset<151> ans[4]  = {};
+		for(int i = 1; i <= m; i++) {
+			int m1, m2;
+			cin >> m1 >> m2;
+			ns[m1].set(i);
+			ns[m2].set(i);
+		}
+		for(int i = 1; i <= n; i++) {
+			for(int j = 0; j < 4; j++) {
+				if((ns[i] & ans[j]) == 0) {
+					cout << j + 1;
+					ans[j] |= ns[i];
+					break;
+				}
+			}
+		}
 		return 0;
 	}
 }// namespace acwing
