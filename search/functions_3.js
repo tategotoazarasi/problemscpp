@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['dayoftheweek_0',['dayOfTheWeek',['../dc/d0c/a00783.html#ac8fd4394da2121983b84922b7b7d9c9c',1,'leetcode::day_of_the_week::Solution']]],
-  ['decodeciphertext_1',['decodeCiphertext',['../dc/d1b/a00827.html#a252f4bfe7f988ff380c5b93665b70c46',1,'leetcode::decode_the_slanted_ciphertext::Solution']]],
-  ['decompress_2',['decompress',['../d4/def/a00359.html#a0af4b988fb6e15bce0971bd1bcfa5bba',1,'acwing::acwing1960']]],
-  ['detectsquares_3',['DetectSquares',['../db/dbf/a00975.html#a067cdd014b2828564da05bb538ae782b',1,'leetcode::detect_squares::DetectSquares']]],
-  ['devicecount_4',['deviceCount',['../dd/de5/a00771.html#afc11076e93a1fab56a8f902788a32c75',1,'leetcode::number_of_laser_beams_in_a_bank::Solution']]],
-  ['dfs_5',['dfs',['../dd/d86/a00271.html#a5748d94a13640c30b5a936d42c940120',1,'acwing::acwing2005::dfs()'],['../de/de6/a00723.html#a01f51ad1d5d64292586f154c16e550a6',1,'leetcode::concatenated_words::TrieNode::dfs()'],['../d3/db4/a00823.html#a7456bd067375cc15d38552dd53c48e82',1,'leetcode::additive_number::Solution::dfs()'],['../dc/db6/a00955.html#aa4d1b5fd09533259b0ea208856617fd7',1,'leetcode::maximum_good_people_based_on_statements::Solution::dfs()'],['../db/daf/a01019.html#a4c6eddb6510e6ddcc38f9a22a4244806',1,'leetcode::longest_nice_substring::Solution::dfs()']]],
-  ['digitcounts_6',['digitCounts',['../d8/d84/a01131.html#a879cde9870729cc588380741b31e3b60',1,'lintcode::digit_counts::Solution']]],
-  ['display_7',['display',['../da/dd4/a00291.html#ac0836d393fa80cd0e2e2b2e1559b36fd',1,'acwing::acwing4208::trie_node']]],
-  ['distributecandies_8',['distributeCandies',['../de/d6d/a01095.html#adfb5613a5114d683f053b012f8757d66',1,'lintcode::distribute_candies::Solution']]],
-  ['dividestring_9',['divideString',['../dd/de1/a00871.html#acf96624da9a5cfcef11059ba8a842f40',1,'leetcode::divide_a_string_into_groups_of_size_k::Solution']]],
-  ['dominantindex_10',['dominantIndex',['../d4/d60/a00847.html#af5954b955d9ffa9e9c1e846aa4ce36d5',1,'leetcode::largest_number_at_least_twice_of_others::Solution']]]
+  ['dayoftheweek_0',['dayOfTheWeek',['../d0/da2/a00796.html#ac8fd4394da2121983b84922b7b7d9c9c',1,'leetcode::day_of_the_week::Solution']]],
+  ['decodeciphertext_1',['decodeCiphertext',['../d9/d61/a00840.html#a252f4bfe7f988ff380c5b93665b70c46',1,'leetcode::decode_the_slanted_ciphertext::Solution']]],
+  ['decompress_2',['decompress',['../d0/d65/a00360.html#a0af4b988fb6e15bce0971bd1bcfa5bba',1,'acwing::acwing1960']]],
+  ['detectsquares_3',['DetectSquares',['../d6/d48/a00988.html#a067cdd014b2828564da05bb538ae782b',1,'leetcode::detect_squares::DetectSquares']]],
+  ['devicecount_4',['deviceCount',['../d9/d00/a00784.html#afc11076e93a1fab56a8f902788a32c75',1,'leetcode::number_of_laser_beams_in_a_bank::Solution']]],
+  ['dfs_5',['dfs',['../d9/dd6/a00272.html#a5748d94a13640c30b5a936d42c940120',1,'acwing::acwing2005::dfs()'],['../dc/d85/a00736.html#a01f51ad1d5d64292586f154c16e550a6',1,'leetcode::concatenated_words::TrieNode::dfs()'],['../d3/d13/a00836.html#a7456bd067375cc15d38552dd53c48e82',1,'leetcode::additive_number::Solution::dfs()'],['../d7/dd4/a00968.html#aa4d1b5fd09533259b0ea208856617fd7',1,'leetcode::maximum_good_people_based_on_statements::Solution::dfs()'],['../df/d89/a01032.html#a4c6eddb6510e6ddcc38f9a22a4244806',1,'leetcode::longest_nice_substring::Solution::dfs()']]],
+  ['digitcounts_6',['digitCounts',['../db/d17/a01148.html#a879cde9870729cc588380741b31e3b60',1,'lintcode::digit_counts::Solution']]],
+  ['display_7',['display',['../d8/d0a/a00292.html#ac0836d393fa80cd0e2e2b2e1559b36fd',1,'acwing::acwing4208::trie_node']]],
+  ['distributecandies_8',['distributeCandies',['../d0/d39/a01112.html#adfb5613a5114d683f053b012f8757d66',1,'lintcode::distribute_candies::Solution']]],
+  ['dividestring_9',['divideString',['../dd/d08/a00884.html#acf96624da9a5cfcef11059ba8a842f40',1,'leetcode::divide_a_string_into_groups_of_size_k::Solution']]],
+  ['dominantindex_10',['dominantIndex',['../d2/d5e/a00860.html#af5954b955d9ffa9e9c1e846aa4ce36d5',1,'leetcode::largest_number_at_least_twice_of_others::Solution']]]
 ];
