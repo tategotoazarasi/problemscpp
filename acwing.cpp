@@ -3578,16 +3578,14 @@ namespace acwing {
 			cin >> p[i];
 		}
 		int i = n - 1;
-		for(int j = i - 1; j >= 0 && p[j] < p[i]; i--, j--) {
-			;
-		}
+		for(int j = i - 1; j >= 0 && p[j] < p[i]; i--, j--) {}
 		cout << i;
 		delete[] p;
 		return 0;
 	}
 
 	int acwing760::main(istream &cin, ostream &cout) {
-		char *str = new char[101];
+		auto str = new char[101];
 		cin.getline(str, 101);
 		for(int i = 0; i < 101; i++) {
 			if(str[i] == '\0') {
@@ -3600,7 +3598,8 @@ namespace acwing {
 
 	int acwing762::main(istream &cin, ostream &cout) {
 		double k;
-		string a, b;
+		string a;
+		string b;
 		int match = 0;
 		cin >> k >> a >> b;
 		for(int i = 0; i < a.length(); i++) {
@@ -3608,17 +3607,19 @@ namespace acwing {
 				match++;
 			}
 		}
-		cout << ((match >= k * a.length()) ? "yes" : "no");
+		cout << (match >= k * a.length() ? "yes" : "no");
 		return 0;
 	}
 
 	int acwing1684::main(istream &cin, ostream &cout) {
-		int n, m;
+		int n;
+		int m;
 		cin >> n >> m;
 		bitset<151> ns[101] = {};
 		bitset<151> ans[4]  = {};
 		for(int i = 1; i <= m; i++) {
-			int m1, m2;
+			int m1;
+			int m2;
 			cin >> m1 >> m2;
 			ns[m1].set(i);
 			ns[m2].set(i);

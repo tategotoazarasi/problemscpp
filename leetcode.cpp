@@ -2617,23 +2617,20 @@ namespace leetcode {
 
 	namespace simplified_fractions {
 		vector<string> Solution::simplifiedFractions(int n) {
-			vector<string> ans = vector<string>();
+			auto ans = vector<string>();
 			for(int denominator = 2; denominator <= n; denominator++) {
 				for(int numerator = 1; numerator < denominator; numerator++) {
 					if(gcd(denominator, numerator) != 1) {
 						continue;
-					} else {
-						ostringstream oss = ostringstream();
-						oss << numerator << "/" << denominator;
-						ans.push_back(oss.str());
 					}
+					auto oss = ostringstream();
+					oss << numerator << "/" << denominator;
+					ans.push_back(oss.str());
 				}
 			}
 			return ans;
 		}
 
-		int Solution::gcd(int m, int n) {
-			return n ? gcd(n, m % n) : m;
-		}
+		int Solution::gcd(int m, int n) { return n != 0 ? gcd(n, m % n) : m; }
 	}// namespace simplified_fractions
 }// namespace leetcode
