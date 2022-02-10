@@ -123,29 +123,31 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03615">3615</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03615" name="l03615"></a><span class="lineno"> 3615</span>                                                    {</div>
-<div class="line"><a id="l03616" name="l03616"></a><span class="lineno"> 3616</span>        <span class="keywordtype">int</span> n, m;</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03614">3614</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03614" name="l03614"></a><span class="lineno"> 3614</span>                                                    {</div>
+<div class="line"><a id="l03615" name="l03615"></a><span class="lineno"> 3615</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l03616" name="l03616"></a><span class="lineno"> 3616</span>        <span class="keywordtype">int</span> m;</div>
 <div class="line"><a id="l03617" name="l03617"></a><span class="lineno"> 3617</span>        cin &gt;&gt; n &gt;&gt; m;</div>
 <div class="line"><a id="l03618" name="l03618"></a><span class="lineno"> 3618</span>        bitset&lt;151&gt; ns[101] = {};</div>
 <div class="line"><a id="l03619" name="l03619"></a><span class="lineno"> 3619</span>        bitset&lt;151&gt; ans[4]  = {};</div>
 <div class="line"><a id="l03620" name="l03620"></a><span class="lineno"> 3620</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= m; i++) {</div>
-<div class="line"><a id="l03621" name="l03621"></a><span class="lineno"> 3621</span>            <span class="keywordtype">int</span> m1, m2;</div>
-<div class="line"><a id="l03622" name="l03622"></a><span class="lineno"> 3622</span>            cin &gt;&gt; m1 &gt;&gt; m2;</div>
-<div class="line"><a id="l03623" name="l03623"></a><span class="lineno"> 3623</span>            ns[m1].set(i);</div>
-<div class="line"><a id="l03624" name="l03624"></a><span class="lineno"> 3624</span>            ns[m2].set(i);</div>
-<div class="line"><a id="l03625" name="l03625"></a><span class="lineno"> 3625</span>        }</div>
-<div class="line"><a id="l03626" name="l03626"></a><span class="lineno"> 3626</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
-<div class="line"><a id="l03627" name="l03627"></a><span class="lineno"> 3627</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 4; j++) {</div>
-<div class="line"><a id="l03628" name="l03628"></a><span class="lineno"> 3628</span>                <span class="keywordflow">if</span>((ns[i] &amp; ans[j]) == 0) {</div>
-<div class="line"><a id="l03629" name="l03629"></a><span class="lineno"> 3629</span>                    cout &lt;&lt; j + 1;</div>
-<div class="line"><a id="l03630" name="l03630"></a><span class="lineno"> 3630</span>                    ans[j] |= ns[i];</div>
-<div class="line"><a id="l03631" name="l03631"></a><span class="lineno"> 3631</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03632" name="l03632"></a><span class="lineno"> 3632</span>                }</div>
-<div class="line"><a id="l03633" name="l03633"></a><span class="lineno"> 3633</span>            }</div>
-<div class="line"><a id="l03634" name="l03634"></a><span class="lineno"> 3634</span>        }</div>
-<div class="line"><a id="l03635" name="l03635"></a><span class="lineno"> 3635</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l03636" name="l03636"></a><span class="lineno"> 3636</span>    }</div>
+<div class="line"><a id="l03621" name="l03621"></a><span class="lineno"> 3621</span>            <span class="keywordtype">int</span> m1;</div>
+<div class="line"><a id="l03622" name="l03622"></a><span class="lineno"> 3622</span>            <span class="keywordtype">int</span> m2;</div>
+<div class="line"><a id="l03623" name="l03623"></a><span class="lineno"> 3623</span>            cin &gt;&gt; m1 &gt;&gt; m2;</div>
+<div class="line"><a id="l03624" name="l03624"></a><span class="lineno"> 3624</span>            ns[m1].set(i);</div>
+<div class="line"><a id="l03625" name="l03625"></a><span class="lineno"> 3625</span>            ns[m2].set(i);</div>
+<div class="line"><a id="l03626" name="l03626"></a><span class="lineno"> 3626</span>        }</div>
+<div class="line"><a id="l03627" name="l03627"></a><span class="lineno"> 3627</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
+<div class="line"><a id="l03628" name="l03628"></a><span class="lineno"> 3628</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 4; j++) {</div>
+<div class="line"><a id="l03629" name="l03629"></a><span class="lineno"> 3629</span>                <span class="keywordflow">if</span>((ns[i] &amp; ans[j]) == 0) {</div>
+<div class="line"><a id="l03630" name="l03630"></a><span class="lineno"> 3630</span>                    cout &lt;&lt; j + 1;</div>
+<div class="line"><a id="l03631" name="l03631"></a><span class="lineno"> 3631</span>                    ans[j] |= ns[i];</div>
+<div class="line"><a id="l03632" name="l03632"></a><span class="lineno"> 3632</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l03633" name="l03633"></a><span class="lineno"> 3633</span>                }</div>
+<div class="line"><a id="l03634" name="l03634"></a><span class="lineno"> 3634</span>            }</div>
+<div class="line"><a id="l03635" name="l03635"></a><span class="lineno"> 3635</span>        }</div>
+<div class="line"><a id="l03636" name="l03636"></a><span class="lineno"> 3636</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l03637" name="l03637"></a><span class="lineno"> 3637</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l01724">acwing::TEST()</a>.</p>
 
