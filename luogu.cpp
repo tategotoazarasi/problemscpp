@@ -926,4 +926,25 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P1307::main(istream &cin, ostream &cout) {
+		bool negative = false;
+		int n;
+		int ans = 0;
+		cin >> n;
+		if(n < 0) {
+			n        = -n;
+			negative = true;
+		}
+		while(n != 0) {
+			ans *= 10;
+			ans += n % 10;
+			n /= 10;
+		}
+		if(negative) {
+			ans = -ans;
+		}
+		cout << ans;
+		return 0;
+	}
 }// namespace luogu

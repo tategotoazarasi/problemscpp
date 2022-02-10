@@ -28,6 +28,9 @@ if (NOT ${PkgConfig_FOUND} OR (NOT DEFINED ${googletest_FOUND}) OR (NOT ${google
 endif ()
 
 # Now simply link against gtest or gtest_main as needed. Eg
+enable_testing()
 add_executable(problemscpp main.cpp acwing.cpp acwing.h lintcode.cpp lintcode.h leetcode.cpp leetcode.h luogu.cpp luogu.h leetcode_test.cpp lintcode_test.cpp acwing_test.cpp luogu_test.cpp set_stack_limit.cpp)
 target_link_libraries(problemscpp gtest_main)
+include(GoogleTest)
+gtest_discover_tests(problemscpp)
 add_test(NAME problemscpp COMMAND problemscpp)
