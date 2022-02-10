@@ -1017,6 +1017,15 @@ namespace leetcode {
 			static int countKDifference(vector<int> &nums, int k);
 		};
 	}// namespace count_number_of_pairs_with_absolute_difference_k
+
+	/// \brief LeetCode 1447. Simplified Fractions
+	namespace simplified_fractions {
+		class Solution {
+		public:
+			static vector<string> simplifiedFractions(int n);
+			static int gcd(int m, int n);
+		};
+	}// namespace simplified_fractions
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

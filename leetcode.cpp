@@ -2614,4 +2614,26 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace count_number_of_pairs_with_absolute_difference_k
+
+	namespace simplified_fractions {
+		vector<string> Solution::simplifiedFractions(int n) {
+			vector<string> ans = vector<string>();
+			for(int denominator = 2; denominator <= n; denominator++) {
+				for(int numerator = 1; numerator < denominator; numerator++) {
+					if(gcd(denominator, numerator) != 1) {
+						continue;
+					} else {
+						ostringstream oss = ostringstream();
+						oss << numerator << "/" << denominator;
+						ans.push_back(oss.str());
+					}
+				}
+			}
+			return ans;
+		}
+
+		int Solution::gcd(int m, int n) {
+			return n ? gcd(n, m % n) : m;
+		}
+	}// namespace simplified_fractions
 }// namespace leetcode
