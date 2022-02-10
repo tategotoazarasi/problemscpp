@@ -3584,4 +3584,16 @@ namespace acwing {
 		delete[] p;
 		return 0;
 	}
+
+	int acwing760::main(istream &cin, ostream &cout) {
+		char *str = new char[101];
+		cin.getline(str, 101);
+		for(int i = 0; i < 101; i++) {
+			if(str[i] == '\0') {
+				cout << i;
+				break;
+			}
+		}
+		return 0;
+	}
 }// namespace acwing

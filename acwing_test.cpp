@@ -1702,4 +1702,12 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("3", ans);
 	}
+
+	TEST(acwing760, case1) {
+		istringstream in("I love Beijing.");
+		auto out = ostringstream();
+		acwing760::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("15", ans);
+	}
 }// namespace acwing
