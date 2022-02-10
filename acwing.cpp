@@ -3596,4 +3596,18 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing762::main(istream &cin, ostream &cout) {
+		double k;
+		string a, b;
+		int match = 0;
+		cin >> k >> a >> b;
+		for(int i = 0; i < a.length(); i++) {
+			if(a[i] == b[i]) {
+				match++;
+			}
+		}
+		cout << ((match >= k * a.length()) ? "yes" : "no");
+		return 0;
+	}
 }// namespace acwing
