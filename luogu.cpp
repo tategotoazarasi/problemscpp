@@ -947,4 +947,11 @@ namespace luogu {
 		cout << ans;
 		return 0;
 	}
+
+	int P1720::main(istream &cin, ostream &cout) {
+		double n;
+		cin >> n;
+		cout << fixed << setprecision(2) << (pow((1 + sqrt(5)) / 2, n) - pow((1 - sqrt(5)) / 2, n)) / sqrt(5);
+		return 0;
+	}
 }// namespace luogu
