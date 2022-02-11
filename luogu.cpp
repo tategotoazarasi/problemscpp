@@ -969,4 +969,24 @@ namespace luogu {
 		cout << maximum - minimum;
 		return 0;
 	}
+
+	int P1420::main(istream &cin, ostream &cout) {
+		unsigned int n;
+		cin >> n;
+		unsigned int prev;
+		cin >> prev;
+		unsigned int a;
+		unsigned int len = 1;
+		unsigned int ans = 1;
+		for(unsigned int i = 1; i < n; i++, prev = a, ans = max(ans, len)) {
+			cin >> a;
+			if(a == prev + 1) {
+				len++;
+			} else {
+				len = 1;
+			}
+		}
+		cout << ans;
+		return 0;
+	}
 }// namespace luogu
