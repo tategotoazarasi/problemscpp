@@ -954,4 +954,19 @@ namespace luogu {
 		cout << fixed << setprecision(2) << (pow((1 + sqrt(5)) / 2, n) - pow((1 - sqrt(5)) / 2, n)) / sqrt(5);
 		return 0;
 	}
+
+	int P5724::main(istream &cin, ostream &cout) {
+		unsigned short n;
+		cin >> n;
+		unsigned int a;
+		unsigned int maximum = 0;
+		unsigned int minimum = 1000;
+		for(unsigned short i = 0; i < n; i++) {
+			cin >> a;
+			maximum = max(maximum, a);
+			minimum = min(minimum, a);
+		}
+		cout << maximum - minimum;
+		return 0;
+	}
 }// namespace luogu

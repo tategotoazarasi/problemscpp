@@ -576,4 +576,12 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("8.00", ans);
 	}
+
+	TEST(P5724, case1) {
+		istringstream in("6\n1 1 4 5 1 4");
+		auto out = ostringstream();
+		P5724::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("4", ans);
+	}
 }// namespace luogu
