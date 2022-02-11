@@ -1026,6 +1026,16 @@ namespace leetcode {
 			static int gcd(int m, int n);
 		};
 	}// namespace simplified_fractions
+
+	/**
+	 * \brief LeetCode 1984. Minimum Difference Between Highest and Lowest of K Scores
+	 */
+	namespace minimum_difference_between_highest_and_lowest_of_k_scores {
+		class Solution {
+		public:
+			static int minimumDifference(vector<int> &nums, int k);
+		};
+	}// namespace minimum_difference_between_highest_and_lowest_of_k_scores
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

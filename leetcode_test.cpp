@@ -1437,4 +1437,16 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::simplifiedFractions(4));
 		}
 	}// namespace simplified_fractions
+
+	namespace minimum_difference_between_highest_and_lowest_of_k_scores {
+		TEST(minimum_difference_between_highest_and_lowest_of_k_scores, case1) {
+			vector input = {90};
+			ASSERT_EQ(0, Solution::minimumDifference(input, 1));
+		}
+
+		TEST(minimum_difference_between_highest_and_lowest_of_k_scores, case2) {
+			vector input = {9, 4, 1, 7};
+			ASSERT_EQ(2, Solution::minimumDifference(input, 2));
+		}
+	}// namespace minimum_difference_between_highest_and_lowest_of_k_scores
 }// namespace leetcode

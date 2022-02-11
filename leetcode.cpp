@@ -2633,4 +2633,15 @@ namespace leetcode {
 
 		int Solution::gcd(int m, int n) { return n != 0 ? gcd(n, m % n) : m; }
 	}// namespace simplified_fractions
+
+	namespace minimum_difference_between_highest_and_lowest_of_k_scores {
+		int Solution::minimumDifference(vector<int> &nums, int k) {
+			int ans = 100000;
+			sort(nums.begin(), nums.end());
+			for(int i = 0; i + k - 1 < nums.size(); i++) {
+				ans = min(ans, nums[i + k - 1] - nums[i]);
+			}
+			return ans;
+		}
+	}// namespace minimum_difference_between_highest_and_lowest_of_k_scores
 }// namespace leetcode
