@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['equal_0',['equal',['../d3/d13/a00836.html#add46e0187340fee257e6e06da7e1a3f4',1,'leetcode::additive_number::Solution']]]
+  ['equal_0',['equal',['../de/d37/a00849.html#add46e0187340fee257e6e06da7e1a3f4',1,'leetcode::additive_number::Solution']]]
 ];
