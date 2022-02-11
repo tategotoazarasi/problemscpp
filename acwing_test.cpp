@@ -1734,4 +1734,12 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("12133", ans);
 	}
+
+	TEST(acwing761, case1) {
+		istringstream in("I am 18 years old this year.");
+		auto out = ostringstream();
+		acwing761::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2", ans);
+	}
 }// namespace acwing
