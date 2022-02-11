@@ -3651,8 +3651,8 @@ namespace acwing {
 	}
 
 	int acwing768::main(istream &cin, ostream &cout) {
-		auto a = new char[81];
-		auto b = new char[81];
+		auto *a = new char[81];
+		auto *b = new char[81];
 		cin.getline(a, 81);
 		cin.getline(b, 81);
 		for(int i = 0;; i++) {
@@ -3677,6 +3677,45 @@ namespace acwing {
 		}
 		delete[] a;
 		delete[] b;
+		return 0;
+	}
+
+	int acwing1471::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		auto in  = new int[n];
+		auto out = new int[n];
+		memset(in, 0, n * sizeof(int));
+		memset(out, 0, n * sizeof(int));
+		int a;
+		int b;
+		for(int i = 0; i < n - 1; i++) {
+			cin >> a >> b;
+			out[a - 1]++;
+			in[b - 1]++;
+		}
+		bool ok = true;
+		int ans = -1;
+		for(int i = 0; i < n; i++) {
+			if(in[i] > 0 && out[i] == 0) {
+				if(ans != -1) {
+					ok = false;
+					break;
+				}
+				ans = i;
+			}
+			if(in[i] == 0 && out[i] > 1) {
+				ok = false;
+				break;
+			}
+		}
+		if(ok) {
+			cout << ans + 1;
+		} else {
+			cout << -1;
+		}
+		delete[] in;
+		delete[] out;
 		return 0;
 	}
 }// namespace acwing
