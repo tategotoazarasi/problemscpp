@@ -3637,7 +3637,7 @@ namespace acwing {
 	}
 
 	int acwing761::main(istream &cin, ostream &cout) {
-		auto str = new char[101];
+		auto *str = new char[101];
 		cin.getline(str, 101);
 		unsigned short ans = 0;
 		for(unsigned short i = 0; str[i] != '\0'; i++) {
@@ -3647,6 +3647,36 @@ namespace acwing {
 		}
 		cout << ans;
 		delete[] str;
+		return 0;
+	}
+
+	int acwing768::main(istream &cin, ostream &cout) {
+		auto a = new char[81];
+		auto b = new char[81];
+		cin.getline(a, 81);
+		cin.getline(b, 81);
+		for(int i = 0;; i++) {
+			if(isupper(a[i]) != 0) {
+				a[i] = tolower(a[i]);
+			}
+			if(isupper(b[i]) != 0) {
+				b[i] = tolower(b[i]);
+			}
+			if(a[i] == '\0' && b[i] == '\0') {
+				cout << '=';
+				break;
+			}
+			if(a[i] < b[i]) {
+				cout << '<';
+				break;
+			}
+			if(a[i] > b[i]) {
+				cout << '>';
+				break;
+			}
+		}
+		delete[] a;
+		delete[] b;
 		return 0;
 	}
 }// namespace acwing
