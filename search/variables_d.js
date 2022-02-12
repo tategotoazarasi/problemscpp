@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['parent_0',['parent',['../d2/d41/a01037.html#a8b8fbb4149478a627b4f1373787e8474',1,'leetcode::groups_of_strings::Solution']]],
-  ['person_1',['person',['../d5/d6c/a00977.html#a4c36bc87b6ea871fc4e662922972bf06',1,'leetcode::maximum_good_people_based_on_statements::msg']]],
-  ['position_2',['position',['../d4/d95/a00989.html#a4d6ee48ca18dd104c6bed2c37d2a057a',1,'leetcode::second_minimum_time_to_reach_destination::status']]],
-  ['price_3',['price',['../d5/da3/a00953.html#aee320f3f7b4364d6dd47ac22541a48ad',1,'leetcode::k_highest_ranked_items_within_a_price_range::item']]]
+  ['parent_0',['parent',['../d9/d8e/a01050.html#a8b8fbb4149478a627b4f1373787e8474',1,'leetcode::groups_of_strings::Solution']]],
+  ['person_1',['person',['../dd/d7a/a00990.html#a4c36bc87b6ea871fc4e662922972bf06',1,'leetcode::maximum_good_people_based_on_statements::msg']]],
+  ['position_2',['position',['../d2/dd5/a01002.html#a4d6ee48ca18dd104c6bed2c37d2a057a',1,'leetcode::second_minimum_time_to_reach_destination::status']]],
+  ['price_3',['price',['../d2/d6e/a00966.html#aee320f3f7b4364d6dd47ac22541a48ad',1,'leetcode::k_highest_ranked_items_within_a_price_range::item']]]
 ];
