@@ -3736,4 +3736,20 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing766::main(istream &cin, ostream &cout) {
+		char *str = new char[201];
+		cin.getline(str, 201);
+		bool flag = false;
+		for(int i = 0; str[i] != '\0'; i++) {
+			if(str[i] != ' ') {
+				cout << str[i];
+				flag = false;
+			} else if(!flag) {
+				cout << ' ';
+				flag = true;
+			}
+		}
+		return 0;
+	}
 }// namespace acwing

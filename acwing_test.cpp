@@ -1772,4 +1772,12 @@ namespace acwing {
 		          "Player2\n",
 		          ans);
 	}
+
+	TEST(acwing766, case1) {
+		istringstream in("Hello      world.This is    c language.");
+		auto out = ostringstream();
+		acwing766::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Hello world.This is c language.", ans);
+	}
 }// namespace acwing
