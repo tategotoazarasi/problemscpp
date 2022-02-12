@@ -3751,8 +3751,8 @@ $(function() {
 <div class="line"><a id="l03683" name="l03683"></a><span class="lineno"><a class="line" href="../../d6/dc0/a00734.html#a2625e99ad73d9fff4881f36af22943a9"> 3683</a></span><span class="stringliteral">    int acwing1471::main(istream &amp;cin, ostream &amp;cout) {</span></div>
 <div class="line"><a id="l03684" name="l03684"></a><span class="lineno"> 3684</span><span class="stringliteral">        int n;</span></div>
 <div class="line"><a id="l03685" name="l03685"></a><span class="lineno"> 3685</span><span class="stringliteral">        cin &gt;&gt; n;</span></div>
-<div class="line"><a id="l03686" name="l03686"></a><span class="lineno"> 3686</span><span class="stringliteral">        auto in  = new int[n];</span></div>
-<div class="line"><a id="l03687" name="l03687"></a><span class="lineno"> 3687</span><span class="stringliteral">        auto out = new int[n];</span></div>
+<div class="line"><a id="l03686" name="l03686"></a><span class="lineno"> 3686</span><span class="stringliteral">        auto *in  = new int[n];</span></div>
+<div class="line"><a id="l03687" name="l03687"></a><span class="lineno"> 3687</span><span class="stringliteral">        auto *out = new int[n];</span></div>
 <div class="line"><a id="l03688" name="l03688"></a><span class="lineno"> 3688</span><span class="stringliteral">        memset(in, 0, n * sizeof(int));</span></div>
 <div class="line"><a id="l03689" name="l03689"></a><span class="lineno"> 3689</span><span class="stringliteral">        memset(out, 0, n * sizeof(int));</span></div>
 <div class="line"><a id="l03690" name="l03690"></a><span class="lineno"> 3690</span><span class="stringliteral">        int a;</span></div>
@@ -3791,61 +3791,62 @@ $(function() {
 <div class="line"><a id="l03723" name="l03723"></a><span class="lineno"> 3723</span><span class="stringliteral">        int t;</span></div>
 <div class="line"><a id="l03724" name="l03724"></a><span class="lineno"> 3724</span><span class="stringliteral">        cin &gt;&gt; t;</span></div>
 <div class="line"><a id="l03725" name="l03725"></a><span class="lineno"> 3725</span><span class="stringliteral">        for(int i = 0; i &lt; t; i++) {</span></div>
-<div class="line"><a id="l03726" name="l03726"></a><span class="lineno"> 3726</span><span class="stringliteral">            string str1, str2;</span></div>
-<div class="line"><a id="l03727" name="l03727"></a><span class="lineno"> 3727</span><span class="stringliteral">            cin &gt;&gt; str1 &gt;&gt; str2;</span></div>
-<div class="line"><a id="l03728" name="l03728"></a><span class="lineno"> 3728</span><span class="stringliteral">            if(str1 == str2) {</span></div>
-<div class="line"><a id="l03729" name="l03729"></a><span class="lineno"> 3729</span><span class="stringliteral">                cout &lt;&lt; &quot;Tie&quot;;</span></div>
-<div class="line"><a id="l03730" name="l03730"></a><span class="lineno"> 3730</span><span class="stringliteral">            } else if((str1 == &quot;Hunter&quot; &amp;&amp; str2 == &quot;Gun&quot;) || (str1 == &quot;Gun&quot; &amp;&amp; str2 == &quot;Bear&quot;) || (str1 == &quot;Bear&quot; &amp;&amp; str2 == &quot;Hunter&quot;)) {</span></div>
-<div class="line"><a id="l03731" name="l03731"></a><span class="lineno"> 3731</span><span class="stringliteral">                cout &lt;&lt; &quot;Player1&quot;;</span></div>
-<div class="line"><a id="l03732" name="l03732"></a><span class="lineno"> 3732</span><span class="stringliteral">            } else {</span></div>
-<div class="line"><a id="l03733" name="l03733"></a><span class="lineno"> 3733</span><span class="stringliteral">                cout &lt;&lt; &quot;Player2&quot;;</span></div>
-<div class="line"><a id="l03734" name="l03734"></a><span class="lineno"> 3734</span><span class="stringliteral">            }</span></div>
-<div class="line"><a id="l03735" name="l03735"></a><span class="lineno"> 3735</span><span class="stringliteral">            cout &lt;&lt; endl;</span></div>
-<div class="line"><a id="l03736" name="l03736"></a><span class="lineno"> 3736</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l03737" name="l03737"></a><span class="lineno"> 3737</span><span class="stringliteral">        return 0;</span></div>
-<div class="line"><a id="l03738" name="l03738"></a><span class="lineno"> 3738</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l03739" name="l03739"></a><span class="lineno"> 3739</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l03740" name="l03740"></a><span class="lineno"><a class="line" href="../../d4/d8f/a00742.html#a974ea60637e4780a63957e326769c86f"> 3740</a></span><span class="stringliteral">    int acwing766::main(istream &amp;cin, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l03741" name="l03741"></a><span class="lineno"> 3741</span><span class="stringliteral">        char *str = new char[201];</span></div>
-<div class="line"><a id="l03742" name="l03742"></a><span class="lineno"> 3742</span><span class="stringliteral">        cin.getline(str, 201);</span></div>
-<div class="line"><a id="l03743" name="l03743"></a><span class="lineno"> 3743</span><span class="stringliteral">        bool flag = false;</span></div>
-<div class="line"><a id="l03744" name="l03744"></a><span class="lineno"> 3744</span><span class="stringliteral">        for(int i = 0; str[i] != &#39;</span>\0<span class="stringliteral">&#39;; i++) {</span></div>
-<div class="line"><a id="l03745" name="l03745"></a><span class="lineno"> 3745</span><span class="stringliteral">            if(str[i] != &#39;</span> <span class="stringliteral">&#39;) {</span></div>
-<div class="line"><a id="l03746" name="l03746"></a><span class="lineno"> 3746</span><span class="stringliteral">                cout &lt;&lt; str[i];</span></div>
-<div class="line"><a id="l03747" name="l03747"></a><span class="lineno"> 3747</span><span class="stringliteral">                flag = false;</span></div>
-<div class="line"><a id="l03748" name="l03748"></a><span class="lineno"> 3748</span><span class="stringliteral">            } else if(!flag) {</span></div>
-<div class="line"><a id="l03749" name="l03749"></a><span class="lineno"> 3749</span><span class="stringliteral">                cout &lt;&lt; &#39;</span> <span class="stringliteral">&#39;;</span></div>
-<div class="line"><a id="l03750" name="l03750"></a><span class="lineno"> 3750</span><span class="stringliteral">                flag = true;</span></div>
-<div class="line"><a id="l03751" name="l03751"></a><span class="lineno"> 3751</span><span class="stringliteral">            }</span></div>
-<div class="line"><a id="l03752" name="l03752"></a><span class="lineno"> 3752</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l03753" name="l03753"></a><span class="lineno"> 3753</span><span class="stringliteral">        return 0;</span></div>
-<div class="line"><a id="l03754" name="l03754"></a><span class="lineno"> 3754</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l03755" name="l03755"></a><span class="lineno"> 3755</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l03756" name="l03756"></a><span class="lineno"><a class="line" href="../../d4/dfa/a00746.html#af4b79456e09b7fdb1513d918166bfe3d"> 3756</a></span><span class="stringliteral">    int acwing1460::main(istream &amp;cin, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l03757" name="l03757"></a><span class="lineno"> 3757</span><span class="stringliteral">        int n;</span></div>
-<div class="line"><a id="l03758" name="l03758"></a><span class="lineno"> 3758</span><span class="stringliteral">        cin &gt;&gt; n;</span></div>
-<div class="line"><a id="l03759" name="l03759"></a><span class="lineno"> 3759</span><span class="stringliteral">        string str;</span></div>
-<div class="line"><a id="l03760" name="l03760"></a><span class="lineno"> 3760</span><span class="stringliteral">        cin &gt;&gt; str;</span></div>
-<div class="line"><a id="l03761" name="l03761"></a><span class="lineno"> 3761</span><span class="stringliteral">        for(int k = 1; k &lt;= n; k++) {</span></div>
-<div class="line"><a id="l03762" name="l03762"></a><span class="lineno"> 3762</span><span class="stringliteral">            unordered_set&lt;string&gt; us = unordered_set&lt;string&gt;();</span></div>
-<div class="line"><a id="l03763" name="l03763"></a><span class="lineno"> 3763</span><span class="stringliteral">            bool ok                  = true;</span></div>
-<div class="line"><a id="l03764" name="l03764"></a><span class="lineno"> 3764</span><span class="stringliteral">            for(int i = 0; i + k &lt;= n; i++) {</span></div>
-<div class="line"><a id="l03765" name="l03765"></a><span class="lineno"> 3765</span><span class="stringliteral">                string nstr = str.substr(i, k);</span></div>
-<div class="line"><a id="l03766" name="l03766"></a><span class="lineno"> 3766</span><span class="stringliteral">                if(us.count(nstr) == 0) {</span></div>
-<div class="line"><a id="l03767" name="l03767"></a><span class="lineno"> 3767</span><span class="stringliteral">                    us.insert(nstr);</span></div>
-<div class="line"><a id="l03768" name="l03768"></a><span class="lineno"> 3768</span><span class="stringliteral">                } else {</span></div>
-<div class="line"><a id="l03769" name="l03769"></a><span class="lineno"> 3769</span><span class="stringliteral">                    ok = false;</span></div>
-<div class="line"><a id="l03770" name="l03770"></a><span class="lineno"> 3770</span><span class="stringliteral">                    break;</span></div>
-<div class="line"><a id="l03771" name="l03771"></a><span class="lineno"> 3771</span><span class="stringliteral">                }</span></div>
-<div class="line"><a id="l03772" name="l03772"></a><span class="lineno"> 3772</span><span class="stringliteral">            }</span></div>
-<div class="line"><a id="l03773" name="l03773"></a><span class="lineno"> 3773</span><span class="stringliteral">            if(ok) {</span></div>
-<div class="line"><a id="l03774" name="l03774"></a><span class="lineno"> 3774</span><span class="stringliteral">                cout &lt;&lt; k;</span></div>
-<div class="line"><a id="l03775" name="l03775"></a><span class="lineno"> 3775</span><span class="stringliteral">                break;</span></div>
-<div class="line"><a id="l03776" name="l03776"></a><span class="lineno"> 3776</span><span class="stringliteral">            }</span></div>
-<div class="line"><a id="l03777" name="l03777"></a><span class="lineno"> 3777</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l03778" name="l03778"></a><span class="lineno"> 3778</span><span class="stringliteral">        return 0;</span></div>
-<div class="line"><a id="l03779" name="l03779"></a><span class="lineno"> 3779</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l03780" name="l03780"></a><span class="lineno"> 3780</span><span class="stringliteral">}// namespace acwing</span></div>
+<div class="line"><a id="l03726" name="l03726"></a><span class="lineno"> 3726</span><span class="stringliteral">            string str1;</span></div>
+<div class="line"><a id="l03727" name="l03727"></a><span class="lineno"> 3727</span><span class="stringliteral">            string str2;</span></div>
+<div class="line"><a id="l03728" name="l03728"></a><span class="lineno"> 3728</span><span class="stringliteral">            cin &gt;&gt; str1 &gt;&gt; str2;</span></div>
+<div class="line"><a id="l03729" name="l03729"></a><span class="lineno"> 3729</span><span class="stringliteral">            if(str1 == str2) {</span></div>
+<div class="line"><a id="l03730" name="l03730"></a><span class="lineno"> 3730</span><span class="stringliteral">                cout &lt;&lt; &quot;Tie&quot;;</span></div>
+<div class="line"><a id="l03731" name="l03731"></a><span class="lineno"> 3731</span><span class="stringliteral">            } else if(str1 == &quot;Hunter&quot; &amp;&amp; str2 == &quot;Gun&quot; || str1 == &quot;Gun&quot; &amp;&amp; str2 == &quot;Bear&quot; || str1 == &quot;Bear&quot; &amp;&amp; str2 == &quot;Hunter&quot;) {</span></div>
+<div class="line"><a id="l03732" name="l03732"></a><span class="lineno"> 3732</span><span class="stringliteral">                cout &lt;&lt; &quot;Player1&quot;;</span></div>
+<div class="line"><a id="l03733" name="l03733"></a><span class="lineno"> 3733</span><span class="stringliteral">            } else {</span></div>
+<div class="line"><a id="l03734" name="l03734"></a><span class="lineno"> 3734</span><span class="stringliteral">                cout &lt;&lt; &quot;Player2&quot;;</span></div>
+<div class="line"><a id="l03735" name="l03735"></a><span class="lineno"> 3735</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l03736" name="l03736"></a><span class="lineno"> 3736</span><span class="stringliteral">            cout &lt;&lt; endl;</span></div>
+<div class="line"><a id="l03737" name="l03737"></a><span class="lineno"> 3737</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l03738" name="l03738"></a><span class="lineno"> 3738</span><span class="stringliteral">        return 0;</span></div>
+<div class="line"><a id="l03739" name="l03739"></a><span class="lineno"> 3739</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l03740" name="l03740"></a><span class="lineno"> 3740</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l03741" name="l03741"></a><span class="lineno"><a class="line" href="../../d4/d8f/a00742.html#a974ea60637e4780a63957e326769c86f"> 3741</a></span><span class="stringliteral">    int acwing766::main(istream &amp;cin, ostream &amp;cout) {</span></div>
+<div class="line"><a id="l03742" name="l03742"></a><span class="lineno"> 3742</span><span class="stringliteral">        auto str = new char[201];</span></div>
+<div class="line"><a id="l03743" name="l03743"></a><span class="lineno"> 3743</span><span class="stringliteral">        cin.getline(str, 201);</span></div>
+<div class="line"><a id="l03744" name="l03744"></a><span class="lineno"> 3744</span><span class="stringliteral">        bool flag = false;</span></div>
+<div class="line"><a id="l03745" name="l03745"></a><span class="lineno"> 3745</span><span class="stringliteral">        for(int i = 0; str[i] != &#39;</span>\0<span class="stringliteral">&#39;; i++) {</span></div>
+<div class="line"><a id="l03746" name="l03746"></a><span class="lineno"> 3746</span><span class="stringliteral">            if(str[i] != &#39;</span> <span class="stringliteral">&#39;) {</span></div>
+<div class="line"><a id="l03747" name="l03747"></a><span class="lineno"> 3747</span><span class="stringliteral">                cout &lt;&lt; str[i];</span></div>
+<div class="line"><a id="l03748" name="l03748"></a><span class="lineno"> 3748</span><span class="stringliteral">                flag = false;</span></div>
+<div class="line"><a id="l03749" name="l03749"></a><span class="lineno"> 3749</span><span class="stringliteral">            } else if(!flag) {</span></div>
+<div class="line"><a id="l03750" name="l03750"></a><span class="lineno"> 3750</span><span class="stringliteral">                cout &lt;&lt; &#39;</span> <span class="stringliteral">&#39;;</span></div>
+<div class="line"><a id="l03751" name="l03751"></a><span class="lineno"> 3751</span><span class="stringliteral">                flag = true;</span></div>
+<div class="line"><a id="l03752" name="l03752"></a><span class="lineno"> 3752</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l03753" name="l03753"></a><span class="lineno"> 3753</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l03754" name="l03754"></a><span class="lineno"> 3754</span><span class="stringliteral">        return 0;</span></div>
+<div class="line"><a id="l03755" name="l03755"></a><span class="lineno"> 3755</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l03756" name="l03756"></a><span class="lineno"> 3756</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l03757" name="l03757"></a><span class="lineno"><a class="line" href="../../d4/dfa/a00746.html#af4b79456e09b7fdb1513d918166bfe3d"> 3757</a></span><span class="stringliteral">    int acwing1460::main(istream &amp;cin, ostream &amp;cout) {</span></div>
+<div class="line"><a id="l03758" name="l03758"></a><span class="lineno"> 3758</span><span class="stringliteral">        int n;</span></div>
+<div class="line"><a id="l03759" name="l03759"></a><span class="lineno"> 3759</span><span class="stringliteral">        cin &gt;&gt; n;</span></div>
+<div class="line"><a id="l03760" name="l03760"></a><span class="lineno"> 3760</span><span class="stringliteral">        string str;</span></div>
+<div class="line"><a id="l03761" name="l03761"></a><span class="lineno"> 3761</span><span class="stringliteral">        cin &gt;&gt; str;</span></div>
+<div class="line"><a id="l03762" name="l03762"></a><span class="lineno"> 3762</span><span class="stringliteral">        for(int k = 1; k &lt;= n; k++) {</span></div>
+<div class="line"><a id="l03763" name="l03763"></a><span class="lineno"> 3763</span><span class="stringliteral">            auto us = unordered_set&lt;string&gt;();</span></div>
+<div class="line"><a id="l03764" name="l03764"></a><span class="lineno"> 3764</span><span class="stringliteral">            bool ok = true;</span></div>
+<div class="line"><a id="l03765" name="l03765"></a><span class="lineno"> 3765</span><span class="stringliteral">            for(int i = 0; i + k &lt;= n; i++) {</span></div>
+<div class="line"><a id="l03766" name="l03766"></a><span class="lineno"> 3766</span><span class="stringliteral">                string nstr = str.substr(i, k);</span></div>
+<div class="line"><a id="l03767" name="l03767"></a><span class="lineno"> 3767</span><span class="stringliteral">                if(!us.contains(nstr)) {</span></div>
+<div class="line"><a id="l03768" name="l03768"></a><span class="lineno"> 3768</span><span class="stringliteral">                    us.insert(nstr);</span></div>
+<div class="line"><a id="l03769" name="l03769"></a><span class="lineno"> 3769</span><span class="stringliteral">                } else {</span></div>
+<div class="line"><a id="l03770" name="l03770"></a><span class="lineno"> 3770</span><span class="stringliteral">                    ok = false;</span></div>
+<div class="line"><a id="l03771" name="l03771"></a><span class="lineno"> 3771</span><span class="stringliteral">                    break;</span></div>
+<div class="line"><a id="l03772" name="l03772"></a><span class="lineno"> 3772</span><span class="stringliteral">                }</span></div>
+<div class="line"><a id="l03773" name="l03773"></a><span class="lineno"> 3773</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l03774" name="l03774"></a><span class="lineno"> 3774</span><span class="stringliteral">            if(ok) {</span></div>
+<div class="line"><a id="l03775" name="l03775"></a><span class="lineno"> 3775</span><span class="stringliteral">                cout &lt;&lt; k;</span></div>
+<div class="line"><a id="l03776" name="l03776"></a><span class="lineno"> 3776</span><span class="stringliteral">                break;</span></div>
+<div class="line"><a id="l03777" name="l03777"></a><span class="lineno"> 3777</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l03778" name="l03778"></a><span class="lineno"> 3778</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l03779" name="l03779"></a><span class="lineno"> 3779</span><span class="stringliteral">        return 0;</span></div>
+<div class="line"><a id="l03780" name="l03780"></a><span class="lineno"> 3780</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l03781" name="l03781"></a><span class="lineno"> 3781</span><span class="stringliteral">}// namespace acwing</span></div>
 <div class="ttc" id="aa00035_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d4/d8c/a00035.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8c/a00035_source.html#l00005">main.cpp:5</a></div></div>
 <div class="ttc" id="aa00038_html"><div class="ttname"><a href="../../d8/d41/a00038.html">acwing.h</a></div></div>
 <div class="ttc" id="aa00047_html"><div class="ttname"><a href="../../d6/d2d/a00047.html">acwing</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00019">acwing.cpp:19</a></div></div>

@@ -123,31 +123,31 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03756">3756</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03756" name="l03756"></a><span class="lineno"> 3756</span>                                                    {</div>
-<div class="line"><a id="l03757" name="l03757"></a><span class="lineno"> 3757</span>        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l03758" name="l03758"></a><span class="lineno"> 3758</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l03759" name="l03759"></a><span class="lineno"> 3759</span>        <span class="keywordtype">string</span> str;</div>
-<div class="line"><a id="l03760" name="l03760"></a><span class="lineno"> 3760</span>        cin &gt;&gt; str;</div>
-<div class="line"><a id="l03761" name="l03761"></a><span class="lineno"> 3761</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 1; k &lt;= n; k++) {</div>
-<div class="line"><a id="l03762" name="l03762"></a><span class="lineno"> 3762</span>            unordered_set&lt;string&gt; us = unordered_set&lt;string&gt;();</div>
-<div class="line"><a id="l03763" name="l03763"></a><span class="lineno"> 3763</span>            <span class="keywordtype">bool</span> ok                  = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l03764" name="l03764"></a><span class="lineno"> 3764</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i + k &lt;= n; i++) {</div>
-<div class="line"><a id="l03765" name="l03765"></a><span class="lineno"> 3765</span>                <span class="keywordtype">string</span> nstr = str.substr(i, k);</div>
-<div class="line"><a id="l03766" name="l03766"></a><span class="lineno"> 3766</span>                <span class="keywordflow">if</span>(us.count(nstr) == 0) {</div>
-<div class="line"><a id="l03767" name="l03767"></a><span class="lineno"> 3767</span>                    us.insert(nstr);</div>
-<div class="line"><a id="l03768" name="l03768"></a><span class="lineno"> 3768</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03769" name="l03769"></a><span class="lineno"> 3769</span>                    ok = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l03770" name="l03770"></a><span class="lineno"> 3770</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03771" name="l03771"></a><span class="lineno"> 3771</span>                }</div>
-<div class="line"><a id="l03772" name="l03772"></a><span class="lineno"> 3772</span>            }</div>
-<div class="line"><a id="l03773" name="l03773"></a><span class="lineno"> 3773</span>            <span class="keywordflow">if</span>(ok) {</div>
-<div class="line"><a id="l03774" name="l03774"></a><span class="lineno"> 3774</span>                cout &lt;&lt; k;</div>
-<div class="line"><a id="l03775" name="l03775"></a><span class="lineno"> 3775</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03776" name="l03776"></a><span class="lineno"> 3776</span>            }</div>
-<div class="line"><a id="l03777" name="l03777"></a><span class="lineno"> 3777</span>        }</div>
-<div class="line"><a id="l03778" name="l03778"></a><span class="lineno"> 3778</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l03779" name="l03779"></a><span class="lineno"> 3779</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03757">3757</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03757" name="l03757"></a><span class="lineno"> 3757</span>                                                    {</div>
+<div class="line"><a id="l03758" name="l03758"></a><span class="lineno"> 3758</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l03759" name="l03759"></a><span class="lineno"> 3759</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l03760" name="l03760"></a><span class="lineno"> 3760</span>        <span class="keywordtype">string</span> str;</div>
+<div class="line"><a id="l03761" name="l03761"></a><span class="lineno"> 3761</span>        cin &gt;&gt; str;</div>
+<div class="line"><a id="l03762" name="l03762"></a><span class="lineno"> 3762</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 1; k &lt;= n; k++) {</div>
+<div class="line"><a id="l03763" name="l03763"></a><span class="lineno"> 3763</span>            <span class="keyword">auto</span> us = unordered_set&lt;string&gt;();</div>
+<div class="line"><a id="l03764" name="l03764"></a><span class="lineno"> 3764</span>            <span class="keywordtype">bool</span> ok = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l03765" name="l03765"></a><span class="lineno"> 3765</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i + k &lt;= n; i++) {</div>
+<div class="line"><a id="l03766" name="l03766"></a><span class="lineno"> 3766</span>                <span class="keywordtype">string</span> nstr = str.substr(i, k);</div>
+<div class="line"><a id="l03767" name="l03767"></a><span class="lineno"> 3767</span>                <span class="keywordflow">if</span>(!us.contains(nstr)) {</div>
+<div class="line"><a id="l03768" name="l03768"></a><span class="lineno"> 3768</span>                    us.insert(nstr);</div>
+<div class="line"><a id="l03769" name="l03769"></a><span class="lineno"> 3769</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l03770" name="l03770"></a><span class="lineno"> 3770</span>                    ok = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l03771" name="l03771"></a><span class="lineno"> 3771</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l03772" name="l03772"></a><span class="lineno"> 3772</span>                }</div>
+<div class="line"><a id="l03773" name="l03773"></a><span class="lineno"> 3773</span>            }</div>
+<div class="line"><a id="l03774" name="l03774"></a><span class="lineno"> 3774</span>            <span class="keywordflow">if</span>(ok) {</div>
+<div class="line"><a id="l03775" name="l03775"></a><span class="lineno"> 3775</span>                cout &lt;&lt; k;</div>
+<div class="line"><a id="l03776" name="l03776"></a><span class="lineno"> 3776</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l03777" name="l03777"></a><span class="lineno"> 3777</span>            }</div>
+<div class="line"><a id="l03778" name="l03778"></a><span class="lineno"> 3778</span>        }</div>
+<div class="line"><a id="l03779" name="l03779"></a><span class="lineno"> 3779</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l03780" name="l03780"></a><span class="lineno"> 3780</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l01784">acwing::TEST()</a>.</p>
 

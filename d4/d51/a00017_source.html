@@ -2711,10 +2711,10 @@ $(function() {
 <div class="line"><a id="l02647" name="l02647"></a><span class="lineno"> 2647</span> </div>
 <div class="line"><a id="l02648" name="l02648"></a><span class="lineno"><a class="line" href="../../d4/ddd/a00138.html"> 2648</a></span>    <span class="keyword">namespace </span>number_of_enclaves {</div>
 <div class="line"><a id="l02649" name="l02649"></a><span class="lineno"><a class="line" href="../../dd/de2/a01134.html#aa86ea351227c0c252dd910d9ce9efb25"> 2649</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../dd/de2/a01134.html#aa86ea351227c0c252dd910d9ce9efb25">Solution::numEnclaves</a>(vector&lt;vector&lt;int&gt;&gt; &amp;grid) {</div>
-<div class="line"><a id="l02650" name="l02650"></a><span class="lineno"> 2650</span>            <span class="keywordtype">int</span> sum                   = 0;</div>
-<div class="line"><a id="l02651" name="l02651"></a><span class="lineno"> 2651</span>            <span class="keywordtype">int</span> m                     = grid.size();</div>
-<div class="line"><a id="l02652" name="l02652"></a><span class="lineno"> 2652</span>            <span class="keywordtype">int</span> n                     = grid[0].size();</div>
-<div class="line"><a id="l02653" name="l02653"></a><span class="lineno"> 2653</span>            queue&lt;pair&lt;int, int&gt;&gt; que = queue&lt;pair&lt;int, int&gt;&gt;();</div>
+<div class="line"><a id="l02650" name="l02650"></a><span class="lineno"> 2650</span>            <span class="keywordtype">int</span> sum     = 0;</div>
+<div class="line"><a id="l02651" name="l02651"></a><span class="lineno"> 2651</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> m = grid.size();</div>
+<div class="line"><a id="l02652" name="l02652"></a><span class="lineno"> 2652</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = grid[0].size();</div>
+<div class="line"><a id="l02653" name="l02653"></a><span class="lineno"> 2653</span>            <span class="keyword">auto</span> que    = queue&lt;pair&lt;int, int&gt;&gt;();</div>
 <div class="line"><a id="l02654" name="l02654"></a><span class="lineno"> 2654</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
 <div class="line"><a id="l02655" name="l02655"></a><span class="lineno"> 2655</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
 <div class="line"><a id="l02656" name="l02656"></a><span class="lineno"> 2656</span>                    <span class="keywordflow">if</span>(grid[i][j] == 1) {</div>
