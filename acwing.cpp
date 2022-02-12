@@ -3718,4 +3718,22 @@ namespace acwing {
 		delete[] out;
 		return 0;
 	}
+
+	int acwing763::main(istream &cin, ostream &cout) {
+		int t;
+		cin >> t;
+		for(int i = 0; i < t; i++) {
+			string str1, str2;
+			cin >> str1 >> str2;
+			if(str1 == str2) {
+				cout << "Tie";
+			} else if((str1 == "Hunter" && str2 == "Gun") || (str1 == "Gun" && str2 == "Bear") || (str1 == "Bear" && str2 == "Hunter")) {
+				cout << "Player1";
+			} else {
+				cout << "Player2";
+			}
+			cout << endl;
+		}
+		return 0;
+	}
 }// namespace acwing

@@ -1758,4 +1758,18 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("2", ans);
 	}
+
+	TEST(acwing763, case1) {
+		istringstream in("3\n"
+		                 "Hunter Gun\n"
+		                 "Bear Bear\n"
+		                 "Hunter Bear");
+		auto out = ostringstream();
+		acwing763::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Player1\n"
+		          "Tie\n"
+		          "Player2\n",
+		          ans);
+	}
 }// namespace acwing
