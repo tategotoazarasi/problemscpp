@@ -1001,4 +1001,27 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P5725::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < n; j++) {
+				cout << setw(2) << setfill('0') << right << i * n + j + 1;
+			}
+			cout << endl;
+		}
+		int count = 1;
+		cout << endl;
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < n - i - 1; j++) {
+				cout << "  ";
+			}
+			for(int j = 0; j < i + 1; j++) {
+				cout << setw(2) << setfill('0') << right << count++;
+			}
+			cout << endl;
+		}
+		return 0;
+	}
 }// namespace luogu

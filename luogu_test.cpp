@@ -600,4 +600,21 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("7", ans);
 	}
+
+	TEST(P5725, case1) {
+		istringstream in("4");
+		auto out = ostringstream();
+		P5725::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("01020304\n"
+		          "05060708\n"
+		          "09101112\n"
+		          "13141516\n"
+		          "\n"
+		          "      01\n"
+		          "    0203\n"
+		          "  040506\n"
+		          "07080910\n",
+		          ans);
+	}
 }// namespace luogu
