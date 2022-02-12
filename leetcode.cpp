@@ -2644,4 +2644,38 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace minimum_difference_between_highest_and_lowest_of_k_scores
+
+	namespace number_of_enclaves {
+		int Solution::numEnclaves(vector<vector<int>> &grid) {
+			int sum                   = 0;
+			int m                     = grid.size();
+			int n                     = grid[0].size();
+			queue<pair<int, int>> que = queue<pair<int, int>>();
+			for(int i = 0; i < m; i++) {
+				for(int j = 0; j < n; j++) {
+					if(grid[i][j] == 1) {
+						sum++;
+						if(i == 0 || i == m - 1 || j == 0 || j == n - 1) {
+							que.push(make_pair(i, j));
+							grid[i][j] = 0;
+						}
+					}
+				}
+			}
+			while(!que.empty()) {
+				auto [x, y] = que.front();
+				sum--;
+				que.pop();
+				pair<int, int> nexts[4] = {make_pair(x + 1, y), make_pair(x - 1, y), make_pair(x, y + 1), make_pair(x, y - 1)};
+				for(auto next: nexts) {
+					auto [next_x, next_y] = next;
+					if(0 <= next_x && next_x < m && 0 <= next_y && next_y < n && grid[next_x][next_y] != 0) {
+						que.push(next);
+						grid[next_x][next_y] = 0;
+					}
+				}
+			}
+			return sum;
+		}
+	}// namespace number_of_enclaves
 }// namespace leetcode

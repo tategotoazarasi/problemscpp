@@ -1036,6 +1036,14 @@ namespace leetcode {
 			static int minimumDifference(vector<int> &nums, int k);
 		};
 	}// namespace minimum_difference_between_highest_and_lowest_of_k_scores
+
+	/// \brief LeetCode 1020. Number of Enclaves
+	namespace number_of_enclaves {
+		class Solution {
+		public:
+			static int numEnclaves(vector<vector<int>> &grid);
+		};
+	}// namespace number_of_enclaves
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
