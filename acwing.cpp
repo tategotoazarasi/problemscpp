@@ -3739,7 +3739,7 @@ namespace acwing {
 	}
 
 	int acwing766::main(istream &cin, ostream &cout) {
-		auto str = new char[201];
+		auto *str = new char[201];
 		cin.getline(str, 201);
 		bool flag = false;
 		for(int i = 0; str[i] != '\0'; i++) {
@@ -3776,6 +3776,110 @@ namespace acwing {
 				break;
 			}
 		}
+		return 0;
+	}
+
+	int acwing4299::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		int pos = 0;
+		int neg = 0;
+		for(int i = 0; i < n; i++) {
+			int x;
+			int y;
+			cin >> x >> y;
+			if(x > 0) {
+				pos++;
+			} else {
+				neg++;
+			}
+		}
+		if(pos <= 1 || neg <= 1) {
+			cout << "Yes";
+		} else {
+			cout << "No";
+		}
+		return 0;
+	}
+
+	int acwing4300::main(istream &cin, ostream &cout) {
+		int n;
+		int m;
+		cin >> n >> m;
+		auto um  = unordered_set<int>();
+		auto que = queue<pair<int, int>>();
+		que.push(make_pair(n, 0));
+		um.insert(n);
+		while(!que.empty()) {
+			auto [current, step] = que.front();
+			que.pop();
+			if(current == m) {
+				cout << step;
+				return 0;
+			}
+			int k              = 1;
+			const int nexts[2] = {current - 1, current * 2};
+			if(current < m) {
+				k = 2;
+			}
+			for(int i = 0; i < k; i++) {
+				auto next = nexts[i];
+				if(next == m) {
+					cout << step + 1;
+					return 0;
+				}
+				if(next > 0 && !um.contains(next)) {
+					que.push(make_pair(next, step + 1));
+					um.insert(next);
+				}
+			}
+		}
+		return 0;
+	}
+
+	int acwing4301::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		auto vec     = vector<int>();
+		auto targets = unordered_set<int>();
+		int sum      = 0;
+		int maximum  = 0;
+		char ch;
+		vec.resize(n);
+		for(int i = 0; i < n; i++) {
+			cin >> ch;
+			int a  = ch - '0';
+			vec[i] = a;
+			sum += a;
+			maximum = max(maximum, a);
+		}
+		if(sum == 0) {
+			cout << "YES";
+			return 0;
+		}
+		for(int i = maximum; i <= sum / 2; i++) {
+			if(sum % i == 0) {
+				targets.insert(i);
+			}
+		}
+		for(const auto target: targets) {
+			int current = 0;
+			bool ok     = true;
+			for(int i = 0; i < n; i++) {
+				current += vec[i];
+				if(current == target) {
+					current = 0;
+				} else if(current > target) {
+					ok = false;
+					break;
+				}
+			}
+			if(ok && current == 0) {
+				cout << "YES";
+				return 0;
+			}
+		}
+		cout << "NO";
 		return 0;
 	}
 }// namespace acwing
