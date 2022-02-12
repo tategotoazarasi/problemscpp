@@ -3683,8 +3683,8 @@ namespace acwing {
 	int acwing1471::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		auto in  = new int[n];
-		auto out = new int[n];
+		auto *in  = new int[n];
+		auto *out = new int[n];
 		memset(in, 0, n * sizeof(int));
 		memset(out, 0, n * sizeof(int));
 		int a;
@@ -3723,11 +3723,12 @@ namespace acwing {
 		int t;
 		cin >> t;
 		for(int i = 0; i < t; i++) {
-			string str1, str2;
+			string str1;
+			string str2;
 			cin >> str1 >> str2;
 			if(str1 == str2) {
 				cout << "Tie";
-			} else if((str1 == "Hunter" && str2 == "Gun") || (str1 == "Gun" && str2 == "Bear") || (str1 == "Bear" && str2 == "Hunter")) {
+			} else if(str1 == "Hunter" && str2 == "Gun" || str1 == "Gun" && str2 == "Bear" || str1 == "Bear" && str2 == "Hunter") {
 				cout << "Player1";
 			} else {
 				cout << "Player2";
@@ -3738,7 +3739,7 @@ namespace acwing {
 	}
 
 	int acwing766::main(istream &cin, ostream &cout) {
-		char *str = new char[201];
+		auto str = new char[201];
 		cin.getline(str, 201);
 		bool flag = false;
 		for(int i = 0; str[i] != '\0'; i++) {
@@ -3759,11 +3760,11 @@ namespace acwing {
 		string str;
 		cin >> str;
 		for(int k = 1; k <= n; k++) {
-			unordered_set<string> us = unordered_set<string>();
-			bool ok                  = true;
+			auto us = unordered_set<string>();
+			bool ok = true;
 			for(int i = 0; i + k <= n; i++) {
 				string nstr = str.substr(i, k);
-				if(us.count(nstr) == 0) {
+				if(!us.contains(nstr)) {
 					us.insert(nstr);
 				} else {
 					ok = false;

@@ -2647,10 +2647,10 @@ namespace leetcode {
 
 	namespace number_of_enclaves {
 		int Solution::numEnclaves(vector<vector<int>> &grid) {
-			int sum                   = 0;
-			int m                     = grid.size();
-			int n                     = grid[0].size();
-			queue<pair<int, int>> que = queue<pair<int, int>>();
+			int sum     = 0;
+			const int m = grid.size();
+			const int n = grid[0].size();
+			auto que    = queue<pair<int, int>>();
 			for(int i = 0; i < m; i++) {
 				for(int j = 0; j < n; j++) {
 					if(grid[i][j] == 1) {
