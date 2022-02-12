@@ -1780,4 +1780,13 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("Hello world.This is c language.", ans);
 	}
+
+	TEST(acwing1460, case1) {
+		istringstream in("7\n"
+		                 "ABCDABC");
+		auto out = ostringstream();
+		acwing1460::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("4", ans);
+	}
 }// namespace acwing

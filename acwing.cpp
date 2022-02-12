@@ -3752,4 +3752,29 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing1460::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		string str;
+		cin >> str;
+		for(int k = 1; k <= n; k++) {
+			unordered_set<string> us = unordered_set<string>();
+			bool ok                  = true;
+			for(int i = 0; i + k <= n; i++) {
+				string nstr = str.substr(i, k);
+				if(us.count(nstr) == 0) {
+					us.insert(nstr);
+				} else {
+					ok = false;
+					break;
+				}
+			}
+			if(ok) {
+				cout << k;
+				break;
+			}
+		}
+		return 0;
+	}
 }// namespace acwing
