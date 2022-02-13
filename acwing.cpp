@@ -3884,10 +3884,25 @@ namespace acwing {
 	}
 
 	int acwing765::main(istream &cin, ostream &cout) {
-		auto str = new char[101];
+		auto *str = new char[101];
 		cin.getline(str, 101);
 		for(int i = 0; str[i] != '\0'; i++) {
 			cout << str[i] << " ";
+		}
+		delete[] str;
+		return 0;
+	}
+
+	int acwing767::main(istream &cin, ostream &cout) {
+		auto *str = new char[101];
+		cin.getline(str, 101);
+		for(int i = 0; str[i] != '\0'; i++) {
+			if(isupper(str[i]) != 0) {
+				str[i] = (str[i] - 'A' + 1) % 26 + 'A';
+			} else if(islower(str[i]) != 0) {
+				str[i] = (str[i] - 'a' + 1) % 26 + 'a';
+			}
+			cout << str[i];
 		}
 		delete[] str;
 		return 0;

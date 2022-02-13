@@ -1853,4 +1853,12 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("t e s t   c a s e ", ans);
 	}
+
+	TEST(acwing767, case1) {
+		istringstream in("Hello! How are you!");
+		auto out = ostringstream();
+		acwing767::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Ifmmp! Ipx bsf zpv!", ans);
+	}
 }// namespace acwing
