@@ -2715,4 +2715,150 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace maximum_number_of_balloons
+
+	namespace swap_adjacent_in_lr_string {
+		bool Solution::canTransform(const string &start, const string &end) {
+			auto oss_start = ostringstream();
+			auto oss_end   = ostringstream();
+			auto i_start   = vector<int>();
+			auto i_end     = vector<int>();
+			for(int i = 0; i < start.size(); i++) {
+				char ch = start[i];
+				if(ch == 'R' || ch == 'L') {
+					oss_start << ch;
+					i_start.push_back(i);
+				}
+			}
+			for(int i = 0; i < end.size(); i++) {
+				char ch = end[i];
+				if(ch == 'R' || ch == 'L') {
+					oss_end << ch;
+					i_end.push_back(i);
+				}
+			}
+			string str_start = oss_start.str();
+			string str_end   = oss_end.str();
+			if(str_start != str_end) {
+				return false;
+			}
+			for(int i = 0; i < i_start.size(); i++) {
+				if(str_start[i] == 'R') {
+					if(i_start[i] > i_end[i]) {
+						return false;
+					}
+				} else {
+					//L
+					if(i_start[i] < i_end[i]) {
+						return false;
+					}
+				}
+			}
+			return true;
+		}
+	}// namespace swap_adjacent_in_lr_string
+
+	namespace count_operations_to_obtain_zero {
+		int Solution::countOperations(int num1, int num2) {
+			int count = 0;
+			while(num1 != 0 && num2 != 0) {
+				if(num1 > num2) {
+					count += num1 / num2;
+					num1 = num1 % num2;
+				} else {
+					count += num2 / num1;
+					num2 = num2 % num1;
+				}
+			}
+			return count;
+		}
+	}// namespace count_operations_to_obtain_zero
+
+	namespace minimum_operations_to_make_the_array_alternating {
+		int Solution::minimumOperations(vector<int> &nums) {
+			int a_sum = 0;
+			int b_sum = 0;
+			auto a    = unordered_map<int, int>();
+			auto b    = unordered_map<int, int>();
+			for(int i = 0; i < nums.size(); i++) {
+				if(i % 2 == 0) {
+					a[nums[i]]++;
+					a_sum++;
+				} else {
+					b[nums[i]]++;
+					b_sum++;
+				}
+			}
+			int max_num = 0;
+			int maximum = 0;
+			int ans1    = 0;
+			for(const auto i: a) {
+				if(maximum < i.second) {
+					maximum = i.second;
+					max_num = i.first;
+				}
+			}
+			ans1 += a_sum - maximum;
+			maximum = 0;
+			for(const auto i: b) {
+				if(i.first != max_num && maximum < i.second) {
+					maximum = i.second;
+				}
+			}
+			ans1 += b_sum - maximum;
+
+			int ans2 = 0;
+			max_num  = 0;
+			maximum  = 0;
+			for(const auto i: b) {
+				if(maximum < i.second) {
+					maximum = i.second;
+					max_num = i.first;
+				}
+			}
+			ans2 += b_sum - maximum;
+			maximum = 0;
+			for(const auto i: a) {
+				if(i.first != max_num && maximum < i.second) {
+					maximum = i.second;
+				}
+			}
+			ans2 += a_sum - maximum;
+			return min(ans1, ans2);
+		}
+	}// namespace minimum_operations_to_make_the_array_alternating
+
+	namespace removing_minimum_number_of_magic_beans {
+		long long Solution::minimumRemoval(vector<int> &beans) {
+			sort(beans.begin(), beans.end());
+			long long sum     = 0;
+			long long maximum = 0;
+			for(int i = 0; i < beans.size(); i++) {
+				sum += beans[i];
+				maximum = max(maximum, static_cast<long long>(beans[i] * (beans.size() - i)));
+			}
+			return sum - maximum;
+		}
+	}// namespace removing_minimum_number_of_magic_beans
+
+	namespace maximum_and_sum_of_array {
+		int Solution::maximumANDSum(vector<int> &nums, int numSlots) {
+			int ans = 0;
+			vector<int> f(1 << numSlots * 2);
+			for(unsigned int i = 0; i < f.size(); ++i) {
+				//i:已经放置数字的篮子的集合
+				const int one_count = popcount(i);
+				if(one_count >= nums.size()) {
+					continue;
+				}
+				for(int j = 0; j < numSlots * 2; ++j) {
+					if((i & 1 << j) == 0) {
+						const int s = i | 1 << j;
+						f[s]        = max(f[s], f[i] + (j / 2 + 1 & nums[one_count]));
+						ans         = max(ans, f[s]);
+					}
+				}
+			}
+			return ans;
+		}
+	}// namespace maximum_and_sum_of_array
 }// namespace leetcode

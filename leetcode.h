@@ -1054,6 +1054,56 @@ namespace leetcode {
 			static int maxNumberOfBalloons(const string &text);
 		};
 	}// namespace maximum_number_of_balloons
+
+	/**
+	 * \brief LeetCode 777. 在LR字符串中交换相邻字符
+	 */
+	namespace swap_adjacent_in_lr_string {
+		class Solution {
+		public:
+			static bool canTransform(const string &start, const string &end);
+		};
+	}// namespace swap_adjacent_in_lr_string
+
+	/**
+	 * \brief LeetCode 6004. 得到 0 的操作数
+	 */
+	namespace count_operations_to_obtain_zero {
+		class Solution {
+		public:
+			static int countOperations(int num1, int num2);
+		};
+	}// namespace count_operations_to_obtain_zero
+
+	/**
+	 * \brief LeetCode 6005. 使数组变成交替数组的最少操作数
+	 */
+	namespace minimum_operations_to_make_the_array_alternating {
+		class Solution {
+		public:
+			static int minimumOperations(vector<int> &nums);
+		};
+	}// namespace minimum_operations_to_make_the_array_alternating
+
+	/**
+	 * \brief LeetCode 6006. 拿出最少数目的魔法豆
+	 */
+	namespace removing_minimum_number_of_magic_beans {
+		class Solution {
+		public:
+			static long long minimumRemoval(vector<int> &beans);
+		};
+	}// namespace removing_minimum_number_of_magic_beans
+
+	/**
+	 * \brief LeetCode 6007. 数组的最大与和
+	 */
+	namespace maximum_and_sum_of_array {
+		class Solution {
+		public:
+			static int maximumANDSum(vector<int> &nums, int numSlots);
+		};
+	}// namespace maximum_and_sum_of_array
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

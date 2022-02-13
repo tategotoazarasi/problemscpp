@@ -1475,4 +1475,69 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::maxNumberOfBalloons("leetcode"));
 		}
 	}// namespace maximum_number_of_balloons
+
+	namespace swap_adjacent_in_lr_string {
+		TEST(swap_adjacent_in_lr_string, case1) {
+			ASSERT_TRUE(Solution::canTransform("RXXLRXRXL", "XRLXXRRLX"));
+		}
+
+		TEST(swap_adjacent_in_lr_string, case2) {
+			ASSERT_FALSE(Solution::canTransform("X", "L"));
+		}
+
+		TEST(swap_adjacent_in_lr_string, case3) {
+			ASSERT_FALSE(Solution::canTransform("LXXLXRLXXL", "XLLXRXLXLX"));
+		}
+	}// namespace swap_adjacent_in_lr_string
+
+	namespace count_operations_to_obtain_zero {
+		TEST(count_operations_to_obtain_zero, case1) {
+			ASSERT_EQ(3, Solution::countOperations(2, 3));
+		}
+
+		TEST(count_operations_to_obtain_zero, case2) {
+			ASSERT_EQ(1, Solution::countOperations(10, 10));
+		}
+	}// namespace count_operations_to_obtain_zero
+
+	namespace minimum_operations_to_make_the_array_alternating {
+		TEST(minimum_operations_to_make_the_array_alternating, case1) {
+			vector input = {3, 1, 3, 2, 4, 3};
+			ASSERT_EQ(3, Solution::minimumOperations(input));
+		}
+
+		TEST(minimum_operations_to_make_the_array_alternating, case2) {
+			vector input = {1, 2, 2, 2, 2};
+			ASSERT_EQ(2, Solution::minimumOperations(input));
+		}
+
+		TEST(minimum_operations_to_make_the_array_alternating, case3) {
+			vector input = {69, 91, 47, 74, 75, 94, 22, 100, 43, 50, 82, 47, 40, 51, 90, 27, 98, 85, 47, 14, 55, 82, 52, 9, 65, 90, 86, 45, 52, 52, 95, 40, 85, 3, 46, 77, 16, 59, 32, 22, 41, 87, 89, 78, 59, 78, 34, 26, 71, 9, 82, 68, 80, 74, 100, 6, 10, 53, 84, 80, 7, 87, 3, 82, 26, 26, 14, 37, 26, 58, 96, 73, 41, 2, 79, 43, 56, 74, 30, 71, 6, 100, 72, 93, 83, 40, 28, 79, 24};
+			ASSERT_EQ(84, Solution::minimumOperations(input));
+		}
+	}// namespace minimum_operations_to_make_the_array_alternating
+
+	namespace removing_minimum_number_of_magic_beans {
+		TEST(removing_minimum_number_of_magic_beans, case1) {
+			vector input = {4, 1, 6, 5};
+			ASSERT_EQ(4, Solution::minimumRemoval(input));
+		}
+
+		TEST(removing_minimum_number_of_magic_beans, case2) {
+			vector input = {2, 10, 3, 2};
+			ASSERT_EQ(7, Solution::minimumRemoval(input));
+		}
+	}// namespace removing_minimum_number_of_magic_beans
+
+	namespace maximum_and_sum_of_array {
+		TEST(maximum_and_sum_of_array, case1) {
+			vector input = {1, 2, 3, 4, 5, 6};
+			ASSERT_EQ(9, Solution::maximumANDSum(input, 3));
+		}
+
+		TEST(maximum_and_sum_of_array, case2) {
+			vector input = {1, 3, 10, 4, 7, 1};
+			ASSERT_EQ(24, Solution::maximumANDSum(input, 9));
+		}
+	}// namespace maximum_and_sum_of_array
 }// namespace leetcode
