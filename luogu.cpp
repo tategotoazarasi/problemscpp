@@ -1024,4 +1024,21 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P4956::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		for(int k = 1; 1092 * k <= n; k++) {
+			if((n - 1092 * k) % 364 == 0) {
+				const int x = (n - 1092 * k) / 364;
+				if(x < 1 || 100 < x) {
+					continue;
+				}
+				cout << x << endl
+				     << k;
+				break;
+			}
+		}
+		return 0;
+	}
 }// namespace luogu

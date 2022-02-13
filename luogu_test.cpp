@@ -617,4 +617,28 @@ namespace luogu {
 		          "07080910\n",
 		          ans);
 	}
+
+	TEST(P4956, case1) {
+		istringstream in("1456");
+		auto out = ostringstream();
+		P4956::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1\n1", ans);
+	}
+
+	TEST(P4956, case2) {
+		istringstream in("6188");
+		auto out = ostringstream();
+		P4956::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("14\n1", ans);
+	}
+
+	TEST(P4956, case3) {
+		istringstream in("40404");
+		auto out = ostringstream();
+		P4956::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("99\n4", ans);
+	}
 }// namespace luogu
