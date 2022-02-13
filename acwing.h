@@ -1186,5 +1186,13 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/**
+	 * \brief AcWing 765. 字符串加空格
+	 */
+	class acwing765 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

@@ -3882,4 +3882,14 @@ namespace acwing {
 		cout << "NO";
 		return 0;
 	}
+
+	int acwing765::main(istream &cin, ostream &cout) {
+		auto str = new char[101];
+		cin.getline(str, 101);
+		for(int i = 0; str[i] != '\0'; i++) {
+			cout << str[i] << " ";
+		}
+		delete[] str;
+		return 0;
+	}
 }// namespace acwing
