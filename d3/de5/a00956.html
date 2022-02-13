@@ -109,20 +109,20 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01124">1124</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>                                                                  {</div>
-<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>            <span class="keyword">auto</span> vec = vector&lt;int&gt;();</div>
-<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>            <span class="keywordflow">for</span>(<span class="keywordtype">string</span> timePoint: timePoints) {</div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>                vec.push_back(((timePoint[0] - <span class="charliteral">&#39;0&#39;</span>) * 10 + (timePoint[1] - <span class="charliteral">&#39;0&#39;</span>)) * 60 + (timePoint[3] - <span class="charliteral">&#39;0&#39;</span>) * 10 + (timePoint[4] - <span class="charliteral">&#39;0&#39;</span>));</div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>            }</div>
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>            sort(vec.begin(), vec.end());</div>
-<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>            <span class="keywordtype">int</span> minimum = INT_MAX;</div>
-<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i + 1 &lt; vec.size(); i++) {</div>
-<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>                minimum = min(minimum, vec[i + 1] - vec[i]);</div>
-<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>            }</div>
-<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>            minimum = min(minimum, vec[0] + 24 * 60 - vec[vec.size() - 1]);</div>
-<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>            <span class="keywordflow">return</span> minimum;</div>
-<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01125">1125</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>                                                                  {</div>
+<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>            <span class="keyword">auto</span> vec = vector&lt;int&gt;();</div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>            <span class="keywordflow">for</span>(<span class="keywordtype">string</span> timePoint: timePoints) {</div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>                vec.push_back(((timePoint[0] - <span class="charliteral">&#39;0&#39;</span>) * 10 + (timePoint[1] - <span class="charliteral">&#39;0&#39;</span>)) * 60 + (timePoint[3] - <span class="charliteral">&#39;0&#39;</span>) * 10 + (timePoint[4] - <span class="charliteral">&#39;0&#39;</span>));</div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>            }</div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>            sort(vec.begin(), vec.end());</div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>            <span class="keywordtype">int</span> minimum = INT_MAX;</div>
+<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i + 1 &lt; vec.size(); i++) {</div>
+<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>                minimum = min(minimum, vec[i + 1] - vec[i]);</div>
+<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>            }</div>
+<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>            minimum = min(minimum, vec[0] + 24 * 60 - vec[vec.size() - 1]);</div>
+<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>            <span class="keywordflow">return</span> minimum;</div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l00740">leetcode::minimum_time_difference::TEST()</a>.</p>
 

@@ -109,16 +109,16 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01068">1068</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>                                                                     {</div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>            vector&lt;long long&gt; f(questions.size() + 1);</div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = questions.size() - 1; i &gt;= 0; --i) {</div>
-<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>                <span class="keyword">auto</span> &amp;q     = questions[i];</div>
-<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> j = i + q[1] + 1;</div>
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>                f[i]        = max(f[i + 1], q[0] + (j &lt; questions.size() ? f[j] : 0));</div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>            }</div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>            <span class="keywordflow">return</span> f[0];</div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01069">1069</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>                                                                     {</div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>            vector&lt;long long&gt; f(questions.size() + 1);</div>
+<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = questions.size() - 1; i &gt;= 0; --i) {</div>
+<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>                <span class="keyword">auto</span> &amp;q     = questions[i];</div>
+<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> j = i + q[1] + 1;</div>
+<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>                f[i]        = max(f[i + 1], q[0] + (j &lt; questions.size() ? f[j] : 0));</div>
+<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>            }</div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>            <span class="keywordflow">return</span> f[0];</div>
+<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>

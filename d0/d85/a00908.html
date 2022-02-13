@@ -109,35 +109,35 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l00894">894</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>                                                          {</div>
-<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>            <span class="keywordflow">if</span>(nums.size() &lt; 3) {</div>
-<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>            }</div>
-<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>            <span class="keyword">auto</span> *min            = <span class="keyword">new</span> <span class="keywordtype">int</span>[nums.size()];</div>
-<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>            <span class="keyword">auto</span> *max            = <span class="keyword">new</span> <span class="keywordtype">int</span>[nums.size()];</div>
-<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>            min[0]               = nums[0];</div>
-<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>            max[nums.size() - 1] = nums[nums.size() - 1];</div>
-<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1, j = nums.size() - 2; i &lt; nums.size() &amp;&amp; j &gt;= 0; i++, j--) {</div>
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>                <span class="keywordflow">if</span>(min[i - 1] &gt; nums[i]) {</div>
-<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>                    min[i] = nums[i];</div>
-<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>                    min[i] = min[i - 1];</div>
-<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>                }</div>
-<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span> </div>
-<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>                <span class="keywordflow">if</span>(max[j + 1] &lt; nums[j]) {</div>
-<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>                    max[j] = nums[j];</div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>                    max[j] = max[j + 1];</div>
-<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>                }</div>
-<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>            }</div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nums.size(); i++) {</div>
-<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>                <span class="keywordflow">if</span>(nums[i] &gt; min[i] &amp;&amp; nums[i] &lt; max[i]) {</div>
-<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>                }</div>
-<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>            }</div>
-<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l00895">895</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>                                                          {</div>
+<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>            <span class="keywordflow">if</span>(nums.size() &lt; 3) {</div>
+<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>            }</div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>            <span class="keyword">auto</span> *min            = <span class="keyword">new</span> <span class="keywordtype">int</span>[nums.size()];</div>
+<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>            <span class="keyword">auto</span> *max            = <span class="keyword">new</span> <span class="keywordtype">int</span>[nums.size()];</div>
+<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>            min[0]               = nums[0];</div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>            max[nums.size() - 1] = nums[nums.size() - 1];</div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1, j = nums.size() - 2; i &lt; nums.size() &amp;&amp; j &gt;= 0; i++, j--) {</div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>                <span class="keywordflow">if</span>(min[i - 1] &gt; nums[i]) {</div>
+<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>                    min[i] = nums[i];</div>
+<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>                    min[i] = min[i - 1];</div>
+<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>                }</div>
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span> </div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>                <span class="keywordflow">if</span>(max[j + 1] &lt; nums[j]) {</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>                    max[j] = nums[j];</div>
+<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>                    max[j] = max[j + 1];</div>
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>                }</div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>            }</div>
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nums.size(); i++) {</div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>                <span class="keywordflow">if</span>(nums[i] &gt; min[i] &amp;&amp; nums[i] &lt; max[i]) {</div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>                }</div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>            }</div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l00568">leetcode::increasing_triplet_subsequence::TEST()</a>.</p>
 

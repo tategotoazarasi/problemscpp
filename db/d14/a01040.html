@@ -110,8 +110,8 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01682">1682</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01682" name="l01682"></a><span class="lineno"> 1682</span>{ <a class="code hl_variable" href="../../db/d14/a01040.html#a204e26a914a8b55a6260017b12c8eabb">ms</a> = multiset&lt;pair&lt;int, int&gt;&gt;(); }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01683">1683</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01683" name="l01683"></a><span class="lineno"> 1683</span>{ <a class="code hl_variable" href="../../db/d14/a01040.html#a204e26a914a8b55a6260017b12c8eabb">ms</a> = multiset&lt;pair&lt;int, int&gt;&gt;(); }</div>
 <div class="ttc" id="aa01040_html_a204e26a914a8b55a6260017b12c8eabb"><div class="ttname"><a href="../../db/d14/a01040.html#a204e26a914a8b55a6260017b12c8eabb">leetcode::detect_squares::DetectSquares::ms</a></div><div class="ttdeci">multiset&lt; pair&lt; int, int &gt; &gt; ms</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00719">leetcode.h:719</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00719">ms</a>.</p>
@@ -135,8 +135,8 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01684">1684</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01684" name="l01684"></a><span class="lineno"> 1684</span>{ <a class="code hl_variable" href="../../db/d14/a01040.html#a204e26a914a8b55a6260017b12c8eabb">ms</a>.insert(pair(point[0], point[1])); }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01685">1685</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01685" name="l01685"></a><span class="lineno"> 1685</span>{ <a class="code hl_variable" href="../../db/d14/a01040.html#a204e26a914a8b55a6260017b12c8eabb">ms</a>.insert(pair(point[0], point[1])); }</div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00719">ms</a>.</p>
 
@@ -158,21 +158,21 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01686">1686</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01686" name="l01686"></a><span class="lineno"> 1686</span>                                                        {</div>
-<div class="line"><a id="l01687" name="l01687"></a><span class="lineno"> 1687</span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../db/d14/a01040.html#a6e0c92d9f16eb22be1d8c1b15b72864b">count</a> = 0;</div>
-<div class="line"><a id="l01688" name="l01688"></a><span class="lineno"> 1688</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> p: <a class="code hl_variable" href="../../db/d14/a01040.html#a204e26a914a8b55a6260017b12c8eabb">ms</a>) {</div>
-<div class="line"><a id="l01689" name="l01689"></a><span class="lineno"> 1689</span>                <span class="keywordflow">if</span>(p.first != point[0] &amp;&amp; p.second != point[1] &amp;&amp; abs(p.first - point[0]) == abs(p.second - point[1])) {</div>
-<div class="line"><a id="l01690" name="l01690"></a><span class="lineno"> 1690</span>                    <a class="code hl_function" href="../../db/d14/a01040.html#a6e0c92d9f16eb22be1d8c1b15b72864b">count</a> += <a class="code hl_variable" href="../../db/d14/a01040.html#a204e26a914a8b55a6260017b12c8eabb">ms</a>.count(pair(p.first, point[1])) * <a class="code hl_variable" href="../../db/d14/a01040.html#a204e26a914a8b55a6260017b12c8eabb">ms</a>.count(pair(point[0], p.second));</div>
-<div class="line"><a id="l01691" name="l01691"></a><span class="lineno"> 1691</span>                }</div>
-<div class="line"><a id="l01692" name="l01692"></a><span class="lineno"> 1692</span>            }</div>
-<div class="line"><a id="l01693" name="l01693"></a><span class="lineno"> 1693</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/d14/a01040.html#a6e0c92d9f16eb22be1d8c1b15b72864b">count</a>;</div>
-<div class="line"><a id="l01694" name="l01694"></a><span class="lineno"> 1694</span>        }</div>
-<div class="ttc" id="aa01040_html_a6e0c92d9f16eb22be1d8c1b15b72864b"><div class="ttname"><a href="../../db/d14/a01040.html#a6e0c92d9f16eb22be1d8c1b15b72864b">leetcode::detect_squares::DetectSquares::count</a></div><div class="ttdeci">int count(vector&lt; int &gt; point) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l01686">leetcode.cpp:1686</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01687">1687</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01687" name="l01687"></a><span class="lineno"> 1687</span>                                                        {</div>
+<div class="line"><a id="l01688" name="l01688"></a><span class="lineno"> 1688</span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../db/d14/a01040.html#a6e0c92d9f16eb22be1d8c1b15b72864b">count</a> = 0;</div>
+<div class="line"><a id="l01689" name="l01689"></a><span class="lineno"> 1689</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> p: <a class="code hl_variable" href="../../db/d14/a01040.html#a204e26a914a8b55a6260017b12c8eabb">ms</a>) {</div>
+<div class="line"><a id="l01690" name="l01690"></a><span class="lineno"> 1690</span>                <span class="keywordflow">if</span>(p.first != point[0] &amp;&amp; p.second != point[1] &amp;&amp; abs(p.first - point[0]) == abs(p.second - point[1])) {</div>
+<div class="line"><a id="l01691" name="l01691"></a><span class="lineno"> 1691</span>                    <a class="code hl_function" href="../../db/d14/a01040.html#a6e0c92d9f16eb22be1d8c1b15b72864b">count</a> += <a class="code hl_variable" href="../../db/d14/a01040.html#a204e26a914a8b55a6260017b12c8eabb">ms</a>.count(pair(p.first, point[1])) * <a class="code hl_variable" href="../../db/d14/a01040.html#a204e26a914a8b55a6260017b12c8eabb">ms</a>.count(pair(point[0], p.second));</div>
+<div class="line"><a id="l01692" name="l01692"></a><span class="lineno"> 1692</span>                }</div>
+<div class="line"><a id="l01693" name="l01693"></a><span class="lineno"> 1693</span>            }</div>
+<div class="line"><a id="l01694" name="l01694"></a><span class="lineno"> 1694</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/d14/a01040.html#a6e0c92d9f16eb22be1d8c1b15b72864b">count</a>;</div>
+<div class="line"><a id="l01695" name="l01695"></a><span class="lineno"> 1695</span>        }</div>
+<div class="ttc" id="aa01040_html_a6e0c92d9f16eb22be1d8c1b15b72864b"><div class="ttname"><a href="../../db/d14/a01040.html#a6e0c92d9f16eb22be1d8c1b15b72864b">leetcode::detect_squares::DetectSquares::count</a></div><div class="ttdeci">int count(vector&lt; int &gt; point) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l01687">leetcode.cpp:1687</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l01686">count()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00719">ms</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l01687">count()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00719">ms</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01686">count()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01687">count()</a>.</p>
 
 </div>
 </div>
@@ -199,7 +199,7 @@ Private 属性</h2></td></tr>
 
 <p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00719">719</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01682">DetectSquares()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l01684">add()</a> , 以及 <a class="el" href="../../d4/d51/a00017_source.html#l01686">count()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01683">DetectSquares()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l01685">add()</a> , 以及 <a class="el" href="../../d4/d51/a00017_source.html#l01687">count()</a>.</p>
 
 </div>
 </div>

@@ -133,26 +133,26 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02282">2282</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02282" name="l02282"></a><span class="lineno"> 2282</span>                                                                                        {</div>
-<div class="line"><a id="l02283" name="l02283"></a><span class="lineno"> 2283</span>            <span class="keywordtype">int</span> cost    = 0;</div>
-<div class="line"><a id="l02284" name="l02284"></a><span class="lineno"> 2284</span>            <span class="keywordtype">int</span> current = startAt;</div>
-<div class="line"><a id="l02285" name="l02285"></a><span class="lineno"> 2285</span>            <span class="keywordtype">bool</span> flag   = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l02286" name="l02286"></a><span class="lineno"> 2286</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 4; i++) {</div>
-<div class="line"><a id="l02287" name="l02287"></a><span class="lineno"> 2287</span>                <span class="keywordflow">if</span>(num[i] == 0 &amp;&amp; flag) {</div>
-<div class="line"><a id="l02288" name="l02288"></a><span class="lineno"> 2288</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l02289" name="l02289"></a><span class="lineno"> 2289</span>                }</div>
-<div class="line"><a id="l02290" name="l02290"></a><span class="lineno"> 2290</span>                flag = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l02291" name="l02291"></a><span class="lineno"> 2291</span>                <span class="keywordflow">if</span>(num[i] != current) {</div>
-<div class="line"><a id="l02292" name="l02292"></a><span class="lineno"> 2292</span>                    cost += moveCost;</div>
-<div class="line"><a id="l02293" name="l02293"></a><span class="lineno"> 2293</span>                    current = num[i];</div>
-<div class="line"><a id="l02294" name="l02294"></a><span class="lineno"> 2294</span>                }</div>
-<div class="line"><a id="l02295" name="l02295"></a><span class="lineno"> 2295</span>                cost += pushCost;</div>
-<div class="line"><a id="l02296" name="l02296"></a><span class="lineno"> 2296</span>            }</div>
-<div class="line"><a id="l02297" name="l02297"></a><span class="lineno"> 2297</span>            <span class="keywordflow">return</span> cost;</div>
-<div class="line"><a id="l02298" name="l02298"></a><span class="lineno"> 2298</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02283">2283</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02283" name="l02283"></a><span class="lineno"> 2283</span>                                                                                        {</div>
+<div class="line"><a id="l02284" name="l02284"></a><span class="lineno"> 2284</span>            <span class="keywordtype">int</span> cost    = 0;</div>
+<div class="line"><a id="l02285" name="l02285"></a><span class="lineno"> 2285</span>            <span class="keywordtype">int</span> current = startAt;</div>
+<div class="line"><a id="l02286" name="l02286"></a><span class="lineno"> 2286</span>            <span class="keywordtype">bool</span> flag   = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l02287" name="l02287"></a><span class="lineno"> 2287</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 4; i++) {</div>
+<div class="line"><a id="l02288" name="l02288"></a><span class="lineno"> 2288</span>                <span class="keywordflow">if</span>(num[i] == 0 &amp;&amp; flag) {</div>
+<div class="line"><a id="l02289" name="l02289"></a><span class="lineno"> 2289</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l02290" name="l02290"></a><span class="lineno"> 2290</span>                }</div>
+<div class="line"><a id="l02291" name="l02291"></a><span class="lineno"> 2291</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l02292" name="l02292"></a><span class="lineno"> 2292</span>                <span class="keywordflow">if</span>(num[i] != current) {</div>
+<div class="line"><a id="l02293" name="l02293"></a><span class="lineno"> 2293</span>                    cost += moveCost;</div>
+<div class="line"><a id="l02294" name="l02294"></a><span class="lineno"> 2294</span>                    current = num[i];</div>
+<div class="line"><a id="l02295" name="l02295"></a><span class="lineno"> 2295</span>                }</div>
+<div class="line"><a id="l02296" name="l02296"></a><span class="lineno"> 2296</span>                cost += pushCost;</div>
+<div class="line"><a id="l02297" name="l02297"></a><span class="lineno"> 2297</span>            }</div>
+<div class="line"><a id="l02298" name="l02298"></a><span class="lineno"> 2298</span>            <span class="keywordflow">return</span> cost;</div>
+<div class="line"><a id="l02299" name="l02299"></a><span class="lineno"> 2299</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l02263">minCostSetTime()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l02264">minCostSetTime()</a>.</p>
 
 </div>
 </div>
@@ -202,28 +202,28 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02263">2263</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02263" name="l02263"></a><span class="lineno"> 2263</span>                                                                                               {</div>
-<div class="line"><a id="l02264" name="l02264"></a><span class="lineno"> 2264</span>            <span class="keywordtype">int</span> ans    = (moveCost + pushCost) * 4;</div>
-<div class="line"><a id="l02265" name="l02265"></a><span class="lineno"> 2265</span>            <span class="keywordtype">int</span> minute = targetSeconds / 60;</div>
-<div class="line"><a id="l02266" name="l02266"></a><span class="lineno"> 2266</span>            <span class="keywordtype">int</span> second = targetSeconds % 60;</div>
-<div class="line"><a id="l02267" name="l02267"></a><span class="lineno"> 2267</span>            <span class="keywordflow">while</span>(minute &gt; 99) {</div>
-<div class="line"><a id="l02268" name="l02268"></a><span class="lineno"> 2268</span>                minute -= 1;</div>
-<div class="line"><a id="l02269" name="l02269"></a><span class="lineno"> 2269</span>                second += 60;</div>
-<div class="line"><a id="l02270" name="l02270"></a><span class="lineno"> 2270</span>            }</div>
-<div class="line"><a id="l02271" name="l02271"></a><span class="lineno"> 2271</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> num[4] = {minute / 10, minute % 10, second / 10, second % 10};</div>
-<div class="line"><a id="l02272" name="l02272"></a><span class="lineno"> 2272</span>            ans              = min(ans, <a class="code hl_function" href="../../d0/d39/a01112.html#a30331e11a86ffde67e8d06027fcb0408">get_cost</a>(startAt, moveCost, pushCost, num));</div>
-<div class="line"><a id="l02273" name="l02273"></a><span class="lineno"> 2273</span>            <span class="keywordflow">if</span>(second + 60 &lt; 100 &amp;&amp; minute - 1 &gt;= 0) {</div>
-<div class="line"><a id="l02274" name="l02274"></a><span class="lineno"> 2274</span>                second += 60;</div>
-<div class="line"><a id="l02275" name="l02275"></a><span class="lineno"> 2275</span>                minute -= 1;</div>
-<div class="line"><a id="l02276" name="l02276"></a><span class="lineno"> 2276</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> num[4] = {minute / 10, minute % 10, second / 10, second % 10};</div>
-<div class="line"><a id="l02277" name="l02277"></a><span class="lineno"> 2277</span>                ans              = min(ans, <a class="code hl_function" href="../../d0/d39/a01112.html#a30331e11a86ffde67e8d06027fcb0408">get_cost</a>(startAt, moveCost, pushCost, num));</div>
-<div class="line"><a id="l02278" name="l02278"></a><span class="lineno"> 2278</span>            }</div>
-<div class="line"><a id="l02279" name="l02279"></a><span class="lineno"> 2279</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l02280" name="l02280"></a><span class="lineno"> 2280</span>        }</div>
-<div class="ttc" id="aa01112_html_a30331e11a86ffde67e8d06027fcb0408"><div class="ttname"><a href="../../d0/d39/a01112.html#a30331e11a86ffde67e8d06027fcb0408">leetcode::minimum_cost_to_set_cooking_time::Solution::get_cost</a></div><div class="ttdeci">static int get_cost(int startAt, int moveCost, int pushCost, const int num[4])</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l02282">leetcode.cpp:2282</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02264">2264</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02264" name="l02264"></a><span class="lineno"> 2264</span>                                                                                               {</div>
+<div class="line"><a id="l02265" name="l02265"></a><span class="lineno"> 2265</span>            <span class="keywordtype">int</span> ans    = (moveCost + pushCost) * 4;</div>
+<div class="line"><a id="l02266" name="l02266"></a><span class="lineno"> 2266</span>            <span class="keywordtype">int</span> minute = targetSeconds / 60;</div>
+<div class="line"><a id="l02267" name="l02267"></a><span class="lineno"> 2267</span>            <span class="keywordtype">int</span> second = targetSeconds % 60;</div>
+<div class="line"><a id="l02268" name="l02268"></a><span class="lineno"> 2268</span>            <span class="keywordflow">while</span>(minute &gt; 99) {</div>
+<div class="line"><a id="l02269" name="l02269"></a><span class="lineno"> 2269</span>                minute -= 1;</div>
+<div class="line"><a id="l02270" name="l02270"></a><span class="lineno"> 2270</span>                second += 60;</div>
+<div class="line"><a id="l02271" name="l02271"></a><span class="lineno"> 2271</span>            }</div>
+<div class="line"><a id="l02272" name="l02272"></a><span class="lineno"> 2272</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> num[4] = {minute / 10, minute % 10, second / 10, second % 10};</div>
+<div class="line"><a id="l02273" name="l02273"></a><span class="lineno"> 2273</span>            ans              = min(ans, <a class="code hl_function" href="../../d0/d39/a01112.html#a30331e11a86ffde67e8d06027fcb0408">get_cost</a>(startAt, moveCost, pushCost, num));</div>
+<div class="line"><a id="l02274" name="l02274"></a><span class="lineno"> 2274</span>            <span class="keywordflow">if</span>(second + 60 &lt; 100 &amp;&amp; minute - 1 &gt;= 0) {</div>
+<div class="line"><a id="l02275" name="l02275"></a><span class="lineno"> 2275</span>                second += 60;</div>
+<div class="line"><a id="l02276" name="l02276"></a><span class="lineno"> 2276</span>                minute -= 1;</div>
+<div class="line"><a id="l02277" name="l02277"></a><span class="lineno"> 2277</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> num[4] = {minute / 10, minute % 10, second / 10, second % 10};</div>
+<div class="line"><a id="l02278" name="l02278"></a><span class="lineno"> 2278</span>                ans              = min(ans, <a class="code hl_function" href="../../d0/d39/a01112.html#a30331e11a86ffde67e8d06027fcb0408">get_cost</a>(startAt, moveCost, pushCost, num));</div>
+<div class="line"><a id="l02279" name="l02279"></a><span class="lineno"> 2279</span>            }</div>
+<div class="line"><a id="l02280" name="l02280"></a><span class="lineno"> 2280</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l02281" name="l02281"></a><span class="lineno"> 2281</span>        }</div>
+<div class="ttc" id="aa01112_html_a30331e11a86ffde67e8d06027fcb0408"><div class="ttname"><a href="../../d0/d39/a01112.html#a30331e11a86ffde67e8d06027fcb0408">leetcode::minimum_cost_to_set_cooking_time::Solution::get_cost</a></div><div class="ttdeci">static int get_cost(int startAt, int moveCost, int pushCost, const int num[4])</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l02283">leetcode.cpp:2283</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l02282">get_cost()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l02283">get_cost()</a>.</p>
 
 </div>
 </div>

@@ -119,45 +119,45 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02720">2720</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02720" name="l02720"></a><span class="lineno"> 2720</span>                                                                          {</div>
-<div class="line"><a id="l02721" name="l02721"></a><span class="lineno"> 2721</span>            <span class="keyword">auto</span> oss_start = ostringstream();</div>
-<div class="line"><a id="l02722" name="l02722"></a><span class="lineno"> 2722</span>            <span class="keyword">auto</span> oss_end   = ostringstream();</div>
-<div class="line"><a id="l02723" name="l02723"></a><span class="lineno"> 2723</span>            <span class="keyword">auto</span> i_start   = vector&lt;int&gt;();</div>
-<div class="line"><a id="l02724" name="l02724"></a><span class="lineno"> 2724</span>            <span class="keyword">auto</span> i_end     = vector&lt;int&gt;();</div>
-<div class="line"><a id="l02725" name="l02725"></a><span class="lineno"> 2725</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; start.size(); i++) {</div>
-<div class="line"><a id="l02726" name="l02726"></a><span class="lineno"> 2726</span>                <span class="keywordtype">char</span> ch = start[i];</div>
-<div class="line"><a id="l02727" name="l02727"></a><span class="lineno"> 2727</span>                <span class="keywordflow">if</span>(ch == <span class="charliteral">&#39;R&#39;</span> || ch == <span class="charliteral">&#39;L&#39;</span>) {</div>
-<div class="line"><a id="l02728" name="l02728"></a><span class="lineno"> 2728</span>                    oss_start &lt;&lt; ch;</div>
-<div class="line"><a id="l02729" name="l02729"></a><span class="lineno"> 2729</span>                    i_start.push_back(i);</div>
-<div class="line"><a id="l02730" name="l02730"></a><span class="lineno"> 2730</span>                }</div>
-<div class="line"><a id="l02731" name="l02731"></a><span class="lineno"> 2731</span>            }</div>
-<div class="line"><a id="l02732" name="l02732"></a><span class="lineno"> 2732</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; end.size(); i++) {</div>
-<div class="line"><a id="l02733" name="l02733"></a><span class="lineno"> 2733</span>                <span class="keywordtype">char</span> ch = end[i];</div>
-<div class="line"><a id="l02734" name="l02734"></a><span class="lineno"> 2734</span>                <span class="keywordflow">if</span>(ch == <span class="charliteral">&#39;R&#39;</span> || ch == <span class="charliteral">&#39;L&#39;</span>) {</div>
-<div class="line"><a id="l02735" name="l02735"></a><span class="lineno"> 2735</span>                    oss_end &lt;&lt; ch;</div>
-<div class="line"><a id="l02736" name="l02736"></a><span class="lineno"> 2736</span>                    i_end.push_back(i);</div>
-<div class="line"><a id="l02737" name="l02737"></a><span class="lineno"> 2737</span>                }</div>
-<div class="line"><a id="l02738" name="l02738"></a><span class="lineno"> 2738</span>            }</div>
-<div class="line"><a id="l02739" name="l02739"></a><span class="lineno"> 2739</span>            <span class="keywordtype">string</span> str_start = oss_start.str();</div>
-<div class="line"><a id="l02740" name="l02740"></a><span class="lineno"> 2740</span>            <span class="keywordtype">string</span> str_end   = oss_end.str();</div>
-<div class="line"><a id="l02741" name="l02741"></a><span class="lineno"> 2741</span>            <span class="keywordflow">if</span>(str_start != str_end) {</div>
-<div class="line"><a id="l02742" name="l02742"></a><span class="lineno"> 2742</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l02743" name="l02743"></a><span class="lineno"> 2743</span>            }</div>
-<div class="line"><a id="l02744" name="l02744"></a><span class="lineno"> 2744</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; i_start.size(); i++) {</div>
-<div class="line"><a id="l02745" name="l02745"></a><span class="lineno"> 2745</span>                <span class="keywordflow">if</span>(str_start[i] == <span class="charliteral">&#39;R&#39;</span>) {</div>
-<div class="line"><a id="l02746" name="l02746"></a><span class="lineno"> 2746</span>                    <span class="keywordflow">if</span>(i_start[i] &gt; i_end[i]) {</div>
-<div class="line"><a id="l02747" name="l02747"></a><span class="lineno"> 2747</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l02748" name="l02748"></a><span class="lineno"> 2748</span>                    }</div>
-<div class="line"><a id="l02749" name="l02749"></a><span class="lineno"> 2749</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02750" name="l02750"></a><span class="lineno"> 2750</span>                    <span class="comment">//L</span></div>
-<div class="line"><a id="l02751" name="l02751"></a><span class="lineno"> 2751</span>                    <span class="keywordflow">if</span>(i_start[i] &lt; i_end[i]) {</div>
-<div class="line"><a id="l02752" name="l02752"></a><span class="lineno"> 2752</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l02753" name="l02753"></a><span class="lineno"> 2753</span>                    }</div>
-<div class="line"><a id="l02754" name="l02754"></a><span class="lineno"> 2754</span>                }</div>
-<div class="line"><a id="l02755" name="l02755"></a><span class="lineno"> 2755</span>            }</div>
-<div class="line"><a id="l02756" name="l02756"></a><span class="lineno"> 2756</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l02757" name="l02757"></a><span class="lineno"> 2757</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02721">2721</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02721" name="l02721"></a><span class="lineno"> 2721</span>                                                                          {</div>
+<div class="line"><a id="l02722" name="l02722"></a><span class="lineno"> 2722</span>            <span class="keyword">auto</span> oss_start = ostringstream();</div>
+<div class="line"><a id="l02723" name="l02723"></a><span class="lineno"> 2723</span>            <span class="keyword">auto</span> oss_end   = ostringstream();</div>
+<div class="line"><a id="l02724" name="l02724"></a><span class="lineno"> 2724</span>            <span class="keyword">auto</span> i_start   = vector&lt;int&gt;();</div>
+<div class="line"><a id="l02725" name="l02725"></a><span class="lineno"> 2725</span>            <span class="keyword">auto</span> i_end     = vector&lt;int&gt;();</div>
+<div class="line"><a id="l02726" name="l02726"></a><span class="lineno"> 2726</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; start.size(); i++) {</div>
+<div class="line"><a id="l02727" name="l02727"></a><span class="lineno"> 2727</span>                <span class="keywordtype">char</span> ch = start[i];</div>
+<div class="line"><a id="l02728" name="l02728"></a><span class="lineno"> 2728</span>                <span class="keywordflow">if</span>(ch == <span class="charliteral">&#39;R&#39;</span> || ch == <span class="charliteral">&#39;L&#39;</span>) {</div>
+<div class="line"><a id="l02729" name="l02729"></a><span class="lineno"> 2729</span>                    oss_start &lt;&lt; ch;</div>
+<div class="line"><a id="l02730" name="l02730"></a><span class="lineno"> 2730</span>                    i_start.push_back(i);</div>
+<div class="line"><a id="l02731" name="l02731"></a><span class="lineno"> 2731</span>                }</div>
+<div class="line"><a id="l02732" name="l02732"></a><span class="lineno"> 2732</span>            }</div>
+<div class="line"><a id="l02733" name="l02733"></a><span class="lineno"> 2733</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; end.size(); i++) {</div>
+<div class="line"><a id="l02734" name="l02734"></a><span class="lineno"> 2734</span>                <span class="keywordtype">char</span> ch = end[i];</div>
+<div class="line"><a id="l02735" name="l02735"></a><span class="lineno"> 2735</span>                <span class="keywordflow">if</span>(ch == <span class="charliteral">&#39;R&#39;</span> || ch == <span class="charliteral">&#39;L&#39;</span>) {</div>
+<div class="line"><a id="l02736" name="l02736"></a><span class="lineno"> 2736</span>                    oss_end &lt;&lt; ch;</div>
+<div class="line"><a id="l02737" name="l02737"></a><span class="lineno"> 2737</span>                    i_end.push_back(i);</div>
+<div class="line"><a id="l02738" name="l02738"></a><span class="lineno"> 2738</span>                }</div>
+<div class="line"><a id="l02739" name="l02739"></a><span class="lineno"> 2739</span>            }</div>
+<div class="line"><a id="l02740" name="l02740"></a><span class="lineno"> 2740</span>            <span class="keywordtype">string</span> str_start = oss_start.str();</div>
+<div class="line"><a id="l02741" name="l02741"></a><span class="lineno"> 2741</span>            <span class="keywordtype">string</span> str_end   = oss_end.str();</div>
+<div class="line"><a id="l02742" name="l02742"></a><span class="lineno"> 2742</span>            <span class="keywordflow">if</span>(str_start != str_end) {</div>
+<div class="line"><a id="l02743" name="l02743"></a><span class="lineno"> 2743</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l02744" name="l02744"></a><span class="lineno"> 2744</span>            }</div>
+<div class="line"><a id="l02745" name="l02745"></a><span class="lineno"> 2745</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; i_start.size(); i++) {</div>
+<div class="line"><a id="l02746" name="l02746"></a><span class="lineno"> 2746</span>                <span class="keywordflow">if</span>(str_start[i] == <span class="charliteral">&#39;R&#39;</span>) {</div>
+<div class="line"><a id="l02747" name="l02747"></a><span class="lineno"> 2747</span>                    <span class="keywordflow">if</span>(i_start[i] &gt; i_end[i]) {</div>
+<div class="line"><a id="l02748" name="l02748"></a><span class="lineno"> 2748</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l02749" name="l02749"></a><span class="lineno"> 2749</span>                    }</div>
+<div class="line"><a id="l02750" name="l02750"></a><span class="lineno"> 2750</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02751" name="l02751"></a><span class="lineno"> 2751</span>                    <span class="comment">//L</span></div>
+<div class="line"><a id="l02752" name="l02752"></a><span class="lineno"> 2752</span>                    <span class="keywordflow">if</span>(i_start[i] &lt; i_end[i]) {</div>
+<div class="line"><a id="l02753" name="l02753"></a><span class="lineno"> 2753</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l02754" name="l02754"></a><span class="lineno"> 2754</span>                    }</div>
+<div class="line"><a id="l02755" name="l02755"></a><span class="lineno"> 2755</span>                }</div>
+<div class="line"><a id="l02756" name="l02756"></a><span class="lineno"> 2756</span>            }</div>
+<div class="line"><a id="l02757" name="l02757"></a><span class="lineno"> 2757</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l02758" name="l02758"></a><span class="lineno"> 2758</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l01480">leetcode::swap_adjacent_in_lr_string::TEST()</a>.</p>
 

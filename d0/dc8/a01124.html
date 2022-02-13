@@ -111,29 +111,29 @@ $(function() {
 <p >&lt; 偶数</p>
 <p >&lt; 奇数</p>
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02364">2364</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02364" name="l02364"></a><span class="lineno"> 2364</span>                                                           {</div>
-<div class="line"><a id="l02365" name="l02365"></a><span class="lineno"> 2365</span>            vector&lt;int&gt; even;</div>
-<div class="line"><a id="l02366" name="l02366"></a><span class="lineno"> 2366</span>            vector&lt;int&gt; odd; </div>
-<div class="line"><a id="l02367" name="l02367"></a><span class="lineno"> 2367</span>            vector&lt;int&gt; ans;</div>
-<div class="line"><a id="l02368" name="l02368"></a><span class="lineno"> 2368</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nums.size(); i++) {</div>
-<div class="line"><a id="l02369" name="l02369"></a><span class="lineno"> 2369</span>                <span class="keywordflow">if</span>(i % 2 == 0) {</div>
-<div class="line"><a id="l02370" name="l02370"></a><span class="lineno"> 2370</span>                    even.push_back(nums[i]);</div>
-<div class="line"><a id="l02371" name="l02371"></a><span class="lineno"> 2371</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02372" name="l02372"></a><span class="lineno"> 2372</span>                    odd.push_back(nums[i]);</div>
-<div class="line"><a id="l02373" name="l02373"></a><span class="lineno"> 2373</span>                }</div>
-<div class="line"><a id="l02374" name="l02374"></a><span class="lineno"> 2374</span>            }</div>
-<div class="line"><a id="l02375" name="l02375"></a><span class="lineno"> 2375</span>            sort(even.begin(), even.end());</div>
-<div class="line"><a id="l02376" name="l02376"></a><span class="lineno"> 2376</span>            sort(odd.begin(), odd.end(), greater&lt;int&gt;());</div>
-<div class="line"><a id="l02377" name="l02377"></a><span class="lineno"> 2377</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; odd.size(); i++) {</div>
-<div class="line"><a id="l02378" name="l02378"></a><span class="lineno"> 2378</span>                ans.push_back(even[i]);</div>
-<div class="line"><a id="l02379" name="l02379"></a><span class="lineno"> 2379</span>                ans.push_back(odd[i]);</div>
-<div class="line"><a id="l02380" name="l02380"></a><span class="lineno"> 2380</span>            }</div>
-<div class="line"><a id="l02381" name="l02381"></a><span class="lineno"> 2381</span>            <span class="keywordflow">if</span>(even.size() &gt; odd.size()) {</div>
-<div class="line"><a id="l02382" name="l02382"></a><span class="lineno"> 2382</span>                ans.push_back(even.back());</div>
-<div class="line"><a id="l02383" name="l02383"></a><span class="lineno"> 2383</span>            }</div>
-<div class="line"><a id="l02384" name="l02384"></a><span class="lineno"> 2384</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l02385" name="l02385"></a><span class="lineno"> 2385</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02365">2365</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02365" name="l02365"></a><span class="lineno"> 2365</span>                                                           {</div>
+<div class="line"><a id="l02366" name="l02366"></a><span class="lineno"> 2366</span>            vector&lt;int&gt; even;</div>
+<div class="line"><a id="l02367" name="l02367"></a><span class="lineno"> 2367</span>            vector&lt;int&gt; odd; </div>
+<div class="line"><a id="l02368" name="l02368"></a><span class="lineno"> 2368</span>            vector&lt;int&gt; ans;</div>
+<div class="line"><a id="l02369" name="l02369"></a><span class="lineno"> 2369</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nums.size(); i++) {</div>
+<div class="line"><a id="l02370" name="l02370"></a><span class="lineno"> 2370</span>                <span class="keywordflow">if</span>(i % 2 == 0) {</div>
+<div class="line"><a id="l02371" name="l02371"></a><span class="lineno"> 2371</span>                    even.push_back(nums[i]);</div>
+<div class="line"><a id="l02372" name="l02372"></a><span class="lineno"> 2372</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02373" name="l02373"></a><span class="lineno"> 2373</span>                    odd.push_back(nums[i]);</div>
+<div class="line"><a id="l02374" name="l02374"></a><span class="lineno"> 2374</span>                }</div>
+<div class="line"><a id="l02375" name="l02375"></a><span class="lineno"> 2375</span>            }</div>
+<div class="line"><a id="l02376" name="l02376"></a><span class="lineno"> 2376</span>            sort(even.begin(), even.end());</div>
+<div class="line"><a id="l02377" name="l02377"></a><span class="lineno"> 2377</span>            sort(odd.begin(), odd.end(), greater&lt;int&gt;());</div>
+<div class="line"><a id="l02378" name="l02378"></a><span class="lineno"> 2378</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; odd.size(); i++) {</div>
+<div class="line"><a id="l02379" name="l02379"></a><span class="lineno"> 2379</span>                ans.push_back(even[i]);</div>
+<div class="line"><a id="l02380" name="l02380"></a><span class="lineno"> 2380</span>                ans.push_back(odd[i]);</div>
+<div class="line"><a id="l02381" name="l02381"></a><span class="lineno"> 2381</span>            }</div>
+<div class="line"><a id="l02382" name="l02382"></a><span class="lineno"> 2382</span>            <span class="keywordflow">if</span>(even.size() &gt; odd.size()) {</div>
+<div class="line"><a id="l02383" name="l02383"></a><span class="lineno"> 2383</span>                ans.push_back(even.back());</div>
+<div class="line"><a id="l02384" name="l02384"></a><span class="lineno"> 2384</span>            }</div>
+<div class="line"><a id="l02385" name="l02385"></a><span class="lineno"> 2385</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l02386" name="l02386"></a><span class="lineno"> 2386</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -109,30 +109,30 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01160">1160</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>                                                      {</div>
-<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> remove    = 0;</div>
-<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> counts[3] = {0, 0, 0};</div>
-<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> stone: stones) {</div>
-<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>                stone %= 3;</div>
-<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span>                counts[stone]++;</div>
-<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>            }</div>
-<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>            <span class="keywordflow">if</span>(stones.size() == 1) {</div>
-<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>            }</div>
-<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>            <span class="keywordflow">if</span>(counts[1] + counts[2] == 2) {</div>
-<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span>                <span class="keywordflow">if</span>(counts[1] == 2 || counts[2] == 2) {</div>
-<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>                }</div>
-<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>            }</div>
-<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span>            <span class="keywordflow">if</span>(counts[1] == 0 &amp;&amp; counts[2] == 0) {</div>
-<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>            }</div>
-<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>            <span class="keywordflow">if</span>(abs(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(counts[1]) - <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(counts[2])) &lt;= 2) {</div>
-<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>                <span class="keywordflow">return</span> counts[0] % 2 == 0;</div>
-<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>            }</div>
-<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01161">1161</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>                                                      {</div>
+<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> remove    = 0;</div>
+<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> counts[3] = {0, 0, 0};</div>
+<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> stone: stones) {</div>
+<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span>                stone %= 3;</div>
+<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>                counts[stone]++;</div>
+<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>            }</div>
+<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>            <span class="keywordflow">if</span>(stones.size() == 1) {</div>
+<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>            }</div>
+<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span>            <span class="keywordflow">if</span>(counts[1] + counts[2] == 2) {</div>
+<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>                <span class="keywordflow">if</span>(counts[1] == 2 || counts[2] == 2) {</div>
+<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>                }</div>
+<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span>            }</div>
+<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>            <span class="keywordflow">if</span>(counts[1] == 0 &amp;&amp; counts[2] == 0) {</div>
+<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>            }</div>
+<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>            <span class="keywordflow">if</span>(abs(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(counts[1]) - <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(counts[2])) &lt;= 2) {</div>
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>                <span class="keywordflow">return</span> counts[0] % 2 == 0;</div>
+<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>            }</div>
+<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l00780">leetcode::stone_game_ix::TEST()</a>.</p>
 

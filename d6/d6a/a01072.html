@@ -137,27 +137,27 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01956">1956</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01956" name="l01956"></a><span class="lineno"> 1956</span>                                                                                         {</div>
-<div class="line"><a id="l01957" name="l01957"></a><span class="lineno"> 1957</span>            power %= modulo;</div>
-<div class="line"><a id="l01958" name="l01958"></a><span class="lineno"> 1958</span>            <span class="keyword">auto</span> *<span class="keyword">const</span> pn = <span class="keyword">new</span> <span class="keywordtype">int</span>[k];</div>
-<div class="line"><a id="l01959" name="l01959"></a><span class="lineno"> 1959</span>            pn[0]          = 1;</div>
-<div class="line"><a id="l01960" name="l01960"></a><span class="lineno"> 1960</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; k; i++) {</div>
-<div class="line"><a id="l01961" name="l01961"></a><span class="lineno"> 1961</span>                pn[i] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(pn[i - 1]) * <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(power) % modulo;</div>
-<div class="line"><a id="l01962" name="l01962"></a><span class="lineno"> 1962</span>            }</div>
-<div class="line"><a id="l01963" name="l01963"></a><span class="lineno"> 1963</span> </div>
-<div class="line"><a id="l01964" name="l01964"></a><span class="lineno"> 1964</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; s.length(); i++) {</div>
-<div class="line"><a id="l01965" name="l01965"></a><span class="lineno"> 1965</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> hash = 0;</div>
-<div class="line"><a id="l01966" name="l01966"></a><span class="lineno"> 1966</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; k; j++) {</div>
-<div class="line"><a id="l01967" name="l01967"></a><span class="lineno"> 1967</span>                    hash += <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>((s[i + j] - <span class="charliteral">&#39;a&#39;</span> + 1) % modulo) * pn[j];</div>
-<div class="line"><a id="l01968" name="l01968"></a><span class="lineno"> 1968</span>                    hash %= modulo;</div>
-<div class="line"><a id="l01969" name="l01969"></a><span class="lineno"> 1969</span>                }</div>
-<div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span>                <span class="keywordflow">if</span>(hash == hashValue) {</div>
-<div class="line"><a id="l01971" name="l01971"></a><span class="lineno"> 1971</span>                    <span class="keywordflow">return</span> s.substr(i, k);</div>
-<div class="line"><a id="l01972" name="l01972"></a><span class="lineno"> 1972</span>                }</div>
-<div class="line"><a id="l01973" name="l01973"></a><span class="lineno"> 1973</span>            }</div>
-<div class="line"><a id="l01974" name="l01974"></a><span class="lineno"> 1974</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l01975" name="l01975"></a><span class="lineno"> 1975</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01957">1957</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01957" name="l01957"></a><span class="lineno"> 1957</span>                                                                                         {</div>
+<div class="line"><a id="l01958" name="l01958"></a><span class="lineno"> 1958</span>            power %= modulo;</div>
+<div class="line"><a id="l01959" name="l01959"></a><span class="lineno"> 1959</span>            <span class="keyword">auto</span> *<span class="keyword">const</span> pn = <span class="keyword">new</span> <span class="keywordtype">int</span>[k];</div>
+<div class="line"><a id="l01960" name="l01960"></a><span class="lineno"> 1960</span>            pn[0]          = 1;</div>
+<div class="line"><a id="l01961" name="l01961"></a><span class="lineno"> 1961</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; k; i++) {</div>
+<div class="line"><a id="l01962" name="l01962"></a><span class="lineno"> 1962</span>                pn[i] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(pn[i - 1]) * <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(power) % modulo;</div>
+<div class="line"><a id="l01963" name="l01963"></a><span class="lineno"> 1963</span>            }</div>
+<div class="line"><a id="l01964" name="l01964"></a><span class="lineno"> 1964</span> </div>
+<div class="line"><a id="l01965" name="l01965"></a><span class="lineno"> 1965</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; s.length(); i++) {</div>
+<div class="line"><a id="l01966" name="l01966"></a><span class="lineno"> 1966</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> hash = 0;</div>
+<div class="line"><a id="l01967" name="l01967"></a><span class="lineno"> 1967</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; k; j++) {</div>
+<div class="line"><a id="l01968" name="l01968"></a><span class="lineno"> 1968</span>                    hash += <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>((s[i + j] - <span class="charliteral">&#39;a&#39;</span> + 1) % modulo) * pn[j];</div>
+<div class="line"><a id="l01969" name="l01969"></a><span class="lineno"> 1969</span>                    hash %= modulo;</div>
+<div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span>                }</div>
+<div class="line"><a id="l01971" name="l01971"></a><span class="lineno"> 1971</span>                <span class="keywordflow">if</span>(hash == hashValue) {</div>
+<div class="line"><a id="l01972" name="l01972"></a><span class="lineno"> 1972</span>                    <span class="keywordflow">return</span> s.substr(i, k);</div>
+<div class="line"><a id="l01973" name="l01973"></a><span class="lineno"> 1973</span>                }</div>
+<div class="line"><a id="l01974" name="l01974"></a><span class="lineno"> 1974</span>            }</div>
+<div class="line"><a id="l01975" name="l01975"></a><span class="lineno"> 1975</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l01976" name="l01976"></a><span class="lineno"> 1976</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l01161">leetcode::find_substring_with_given_hash_value::TEST()</a>.</p>
 

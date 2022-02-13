@@ -109,26 +109,26 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01465">1465</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01465" name="l01465"></a><span class="lineno"> 1465</span>                                                          {</div>
-<div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>            <span class="keywordflow">if</span>(nums.size() == 1) {</div>
-<div class="line"><a id="l01467" name="l01467"></a><span class="lineno"> 1467</span>                <span class="keywordflow">return</span> nums;</div>
-<div class="line"><a id="l01468" name="l01468"></a><span class="lineno"> 1468</span>            }</div>
-<div class="line"><a id="l01469" name="l01469"></a><span class="lineno"> 1469</span>            sort(nums.begin(), nums.end());</div>
-<div class="line"><a id="l01470" name="l01470"></a><span class="lineno"> 1470</span>            <span class="keyword">auto</span> ans = vector&lt;int&gt;();</div>
-<div class="line"><a id="l01471" name="l01471"></a><span class="lineno"> 1471</span>            <span class="keywordflow">if</span>(nums[1] - nums[0] &gt; 1) {</div>
-<div class="line"><a id="l01472" name="l01472"></a><span class="lineno"> 1472</span>                ans.push_back(nums[0]);</div>
-<div class="line"><a id="l01473" name="l01473"></a><span class="lineno"> 1473</span>            }</div>
-<div class="line"><a id="l01474" name="l01474"></a><span class="lineno"> 1474</span>            <span class="keywordflow">if</span>(nums[nums.size() - 1] - nums[nums.size() - 2] &gt; 1) {</div>
-<div class="line"><a id="l01475" name="l01475"></a><span class="lineno"> 1475</span>                ans.push_back(nums[nums.size() - 1]);</div>
-<div class="line"><a id="l01476" name="l01476"></a><span class="lineno"> 1476</span>            }</div>
-<div class="line"><a id="l01477" name="l01477"></a><span class="lineno"> 1477</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; nums.size() - 1; i++) {</div>
-<div class="line"><a id="l01478" name="l01478"></a><span class="lineno"> 1478</span>                <span class="keywordflow">if</span>(nums[i] - nums[i - 1] &gt; 1 &amp;&amp; nums[i + 1] - nums[i] &gt; 1) {</div>
-<div class="line"><a id="l01479" name="l01479"></a><span class="lineno"> 1479</span>                    ans.push_back(nums[i]);</div>
-<div class="line"><a id="l01480" name="l01480"></a><span class="lineno"> 1480</span>                }</div>
-<div class="line"><a id="l01481" name="l01481"></a><span class="lineno"> 1481</span>            }</div>
-<div class="line"><a id="l01482" name="l01482"></a><span class="lineno"> 1482</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l01483" name="l01483"></a><span class="lineno"> 1483</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01466">1466</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>                                                          {</div>
+<div class="line"><a id="l01467" name="l01467"></a><span class="lineno"> 1467</span>            <span class="keywordflow">if</span>(nums.size() == 1) {</div>
+<div class="line"><a id="l01468" name="l01468"></a><span class="lineno"> 1468</span>                <span class="keywordflow">return</span> nums;</div>
+<div class="line"><a id="l01469" name="l01469"></a><span class="lineno"> 1469</span>            }</div>
+<div class="line"><a id="l01470" name="l01470"></a><span class="lineno"> 1470</span>            sort(nums.begin(), nums.end());</div>
+<div class="line"><a id="l01471" name="l01471"></a><span class="lineno"> 1471</span>            <span class="keyword">auto</span> ans = vector&lt;int&gt;();</div>
+<div class="line"><a id="l01472" name="l01472"></a><span class="lineno"> 1472</span>            <span class="keywordflow">if</span>(nums[1] - nums[0] &gt; 1) {</div>
+<div class="line"><a id="l01473" name="l01473"></a><span class="lineno"> 1473</span>                ans.push_back(nums[0]);</div>
+<div class="line"><a id="l01474" name="l01474"></a><span class="lineno"> 1474</span>            }</div>
+<div class="line"><a id="l01475" name="l01475"></a><span class="lineno"> 1475</span>            <span class="keywordflow">if</span>(nums[nums.size() - 1] - nums[nums.size() - 2] &gt; 1) {</div>
+<div class="line"><a id="l01476" name="l01476"></a><span class="lineno"> 1476</span>                ans.push_back(nums[nums.size() - 1]);</div>
+<div class="line"><a id="l01477" name="l01477"></a><span class="lineno"> 1477</span>            }</div>
+<div class="line"><a id="l01478" name="l01478"></a><span class="lineno"> 1478</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; nums.size() - 1; i++) {</div>
+<div class="line"><a id="l01479" name="l01479"></a><span class="lineno"> 1479</span>                <span class="keywordflow">if</span>(nums[i] - nums[i - 1] &gt; 1 &amp;&amp; nums[i + 1] - nums[i] &gt; 1) {</div>
+<div class="line"><a id="l01480" name="l01480"></a><span class="lineno"> 1480</span>                    ans.push_back(nums[i]);</div>
+<div class="line"><a id="l01481" name="l01481"></a><span class="lineno"> 1481</span>                }</div>
+<div class="line"><a id="l01482" name="l01482"></a><span class="lineno"> 1482</span>            }</div>
+<div class="line"><a id="l01483" name="l01483"></a><span class="lineno"> 1483</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l01484" name="l01484"></a><span class="lineno"> 1484</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l01008">leetcode::find_all_lonely_numbers_in_the_array::TEST()</a>.</p>
 

@@ -119,23 +119,23 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01245">1245</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>                                                                                        {</div>
-<div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span>            <span class="keyword">auto</span> oss         = ostringstream();</div>
-<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span>            <span class="keyword">auto</span> *<span class="keyword">const</span> nstr = <span class="keyword">new</span> <span class="keywordtype">char</span>[sentence.length() + 1];</div>
-<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>            <span class="keyword">auto</span> tn          = TrieNode();</div>
-<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;root: dictionary) {</div>
-<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span>                tn.insert(root);</div>
-<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span>            }</div>
-<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>            strcpy(nstr, sentence.c_str());</div>
-<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>            <span class="keywordtype">char</span> *word = strtok(nstr, <span class="stringliteral">&quot; &quot;</span>);</div>
-<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>            <span class="keywordflow">while</span>(word != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>                oss &lt;&lt; tn.get_prefix(<span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">string</span>(word)) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>                word = strtok(<span class="keyword">nullptr</span>, <span class="stringliteral">&quot; &quot;</span>);</div>
-<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>            }</div>
-<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> ans = oss.str();</div>
-<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>            <span class="keywordflow">return</span> ans.substr(0, ans.length() - 1);</div>
-<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01246">1246</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span>                                                                                        {</div>
+<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span>            <span class="keyword">auto</span> oss         = ostringstream();</div>
+<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>            <span class="keyword">auto</span> *<span class="keyword">const</span> nstr = <span class="keyword">new</span> <span class="keywordtype">char</span>[sentence.length() + 1];</div>
+<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span>            <span class="keyword">auto</span> tn          = TrieNode();</div>
+<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;root: dictionary) {</div>
+<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span>                tn.insert(root);</div>
+<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>            }</div>
+<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>            strcpy(nstr, sentence.c_str());</div>
+<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>            <span class="keywordtype">char</span> *word = strtok(nstr, <span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>            <span class="keywordflow">while</span>(word != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>                oss &lt;&lt; tn.get_prefix(<span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">string</span>(word)) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>                word = strtok(<span class="keyword">nullptr</span>, <span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>            }</div>
+<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> ans = oss.str();</div>
+<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>            <span class="keywordflow">return</span> ans.substr(0, ans.length() - 1);</div>
+<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l00882">leetcode::UhWRSj::TEST()</a>.</p>
 

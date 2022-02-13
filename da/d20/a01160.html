@@ -109,38 +109,38 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02649">2649</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02649" name="l02649"></a><span class="lineno"> 2649</span>                                                           {</div>
-<div class="line"><a id="l02650" name="l02650"></a><span class="lineno"> 2650</span>            <span class="keywordtype">int</span> sum     = 0;</div>
-<div class="line"><a id="l02651" name="l02651"></a><span class="lineno"> 2651</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> m = grid.size();</div>
-<div class="line"><a id="l02652" name="l02652"></a><span class="lineno"> 2652</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = grid[0].size();</div>
-<div class="line"><a id="l02653" name="l02653"></a><span class="lineno"> 2653</span>            <span class="keyword">auto</span> que    = queue&lt;pair&lt;int, int&gt;&gt;();</div>
-<div class="line"><a id="l02654" name="l02654"></a><span class="lineno"> 2654</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l02655" name="l02655"></a><span class="lineno"> 2655</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l02656" name="l02656"></a><span class="lineno"> 2656</span>                    <span class="keywordflow">if</span>(grid[i][j] == 1) {</div>
-<div class="line"><a id="l02657" name="l02657"></a><span class="lineno"> 2657</span>                        sum++;</div>
-<div class="line"><a id="l02658" name="l02658"></a><span class="lineno"> 2658</span>                        <span class="keywordflow">if</span>(i == 0 || i == m - 1 || j == 0 || j == n - 1) {</div>
-<div class="line"><a id="l02659" name="l02659"></a><span class="lineno"> 2659</span>                            que.push(make_pair(i, j));</div>
-<div class="line"><a id="l02660" name="l02660"></a><span class="lineno"> 2660</span>                            grid[i][j] = 0;</div>
-<div class="line"><a id="l02661" name="l02661"></a><span class="lineno"> 2661</span>                        }</div>
-<div class="line"><a id="l02662" name="l02662"></a><span class="lineno"> 2662</span>                    }</div>
-<div class="line"><a id="l02663" name="l02663"></a><span class="lineno"> 2663</span>                }</div>
-<div class="line"><a id="l02664" name="l02664"></a><span class="lineno"> 2664</span>            }</div>
-<div class="line"><a id="l02665" name="l02665"></a><span class="lineno"> 2665</span>            <span class="keywordflow">while</span>(!que.empty()) {</div>
-<div class="line"><a id="l02666" name="l02666"></a><span class="lineno"> 2666</span>                <span class="keyword">auto</span> [x, y] = que.front();</div>
-<div class="line"><a id="l02667" name="l02667"></a><span class="lineno"> 2667</span>                sum--;</div>
-<div class="line"><a id="l02668" name="l02668"></a><span class="lineno"> 2668</span>                que.pop();</div>
-<div class="line"><a id="l02669" name="l02669"></a><span class="lineno"> 2669</span>                pair&lt;int, int&gt; nexts[4] = {make_pair(x + 1, y), make_pair(x - 1, y), make_pair(x, y + 1), make_pair(x, y - 1)};</div>
-<div class="line"><a id="l02670" name="l02670"></a><span class="lineno"> 2670</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> next: nexts) {</div>
-<div class="line"><a id="l02671" name="l02671"></a><span class="lineno"> 2671</span>                    <span class="keyword">auto</span> [next_x, next_y] = next;</div>
-<div class="line"><a id="l02672" name="l02672"></a><span class="lineno"> 2672</span>                    <span class="keywordflow">if</span>(0 &lt;= next_x &amp;&amp; next_x &lt; m &amp;&amp; 0 &lt;= next_y &amp;&amp; next_y &lt; n &amp;&amp; grid[next_x][next_y] != 0) {</div>
-<div class="line"><a id="l02673" name="l02673"></a><span class="lineno"> 2673</span>                        que.push(next);</div>
-<div class="line"><a id="l02674" name="l02674"></a><span class="lineno"> 2674</span>                        grid[next_x][next_y] = 0;</div>
-<div class="line"><a id="l02675" name="l02675"></a><span class="lineno"> 2675</span>                    }</div>
-<div class="line"><a id="l02676" name="l02676"></a><span class="lineno"> 2676</span>                }</div>
-<div class="line"><a id="l02677" name="l02677"></a><span class="lineno"> 2677</span>            }</div>
-<div class="line"><a id="l02678" name="l02678"></a><span class="lineno"> 2678</span>            <span class="keywordflow">return</span> sum;</div>
-<div class="line"><a id="l02679" name="l02679"></a><span class="lineno"> 2679</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02650">2650</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02650" name="l02650"></a><span class="lineno"> 2650</span>                                                           {</div>
+<div class="line"><a id="l02651" name="l02651"></a><span class="lineno"> 2651</span>            <span class="keywordtype">int</span> sum     = 0;</div>
+<div class="line"><a id="l02652" name="l02652"></a><span class="lineno"> 2652</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> m = grid.size();</div>
+<div class="line"><a id="l02653" name="l02653"></a><span class="lineno"> 2653</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = grid[0].size();</div>
+<div class="line"><a id="l02654" name="l02654"></a><span class="lineno"> 2654</span>            <span class="keyword">auto</span> que    = queue&lt;pair&lt;int, int&gt;&gt;();</div>
+<div class="line"><a id="l02655" name="l02655"></a><span class="lineno"> 2655</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l02656" name="l02656"></a><span class="lineno"> 2656</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><a id="l02657" name="l02657"></a><span class="lineno"> 2657</span>                    <span class="keywordflow">if</span>(grid[i][j] == 1) {</div>
+<div class="line"><a id="l02658" name="l02658"></a><span class="lineno"> 2658</span>                        sum++;</div>
+<div class="line"><a id="l02659" name="l02659"></a><span class="lineno"> 2659</span>                        <span class="keywordflow">if</span>(i == 0 || i == m - 1 || j == 0 || j == n - 1) {</div>
+<div class="line"><a id="l02660" name="l02660"></a><span class="lineno"> 2660</span>                            que.push(make_pair(i, j));</div>
+<div class="line"><a id="l02661" name="l02661"></a><span class="lineno"> 2661</span>                            grid[i][j] = 0;</div>
+<div class="line"><a id="l02662" name="l02662"></a><span class="lineno"> 2662</span>                        }</div>
+<div class="line"><a id="l02663" name="l02663"></a><span class="lineno"> 2663</span>                    }</div>
+<div class="line"><a id="l02664" name="l02664"></a><span class="lineno"> 2664</span>                }</div>
+<div class="line"><a id="l02665" name="l02665"></a><span class="lineno"> 2665</span>            }</div>
+<div class="line"><a id="l02666" name="l02666"></a><span class="lineno"> 2666</span>            <span class="keywordflow">while</span>(!que.empty()) {</div>
+<div class="line"><a id="l02667" name="l02667"></a><span class="lineno"> 2667</span>                <span class="keyword">auto</span> [x, y] = que.front();</div>
+<div class="line"><a id="l02668" name="l02668"></a><span class="lineno"> 2668</span>                sum--;</div>
+<div class="line"><a id="l02669" name="l02669"></a><span class="lineno"> 2669</span>                que.pop();</div>
+<div class="line"><a id="l02670" name="l02670"></a><span class="lineno"> 2670</span>                pair&lt;int, int&gt; nexts[4] = {make_pair(x + 1, y), make_pair(x - 1, y), make_pair(x, y + 1), make_pair(x, y - 1)};</div>
+<div class="line"><a id="l02671" name="l02671"></a><span class="lineno"> 2671</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> next: nexts) {</div>
+<div class="line"><a id="l02672" name="l02672"></a><span class="lineno"> 2672</span>                    <span class="keyword">auto</span> [next_x, next_y] = next;</div>
+<div class="line"><a id="l02673" name="l02673"></a><span class="lineno"> 2673</span>                    <span class="keywordflow">if</span>(0 &lt;= next_x &amp;&amp; next_x &lt; m &amp;&amp; 0 &lt;= next_y &amp;&amp; next_y &lt; n &amp;&amp; grid[next_x][next_y] != 0) {</div>
+<div class="line"><a id="l02674" name="l02674"></a><span class="lineno"> 2674</span>                        que.push(next);</div>
+<div class="line"><a id="l02675" name="l02675"></a><span class="lineno"> 2675</span>                        grid[next_x][next_y] = 0;</div>
+<div class="line"><a id="l02676" name="l02676"></a><span class="lineno"> 2676</span>                    }</div>
+<div class="line"><a id="l02677" name="l02677"></a><span class="lineno"> 2677</span>                }</div>
+<div class="line"><a id="l02678" name="l02678"></a><span class="lineno"> 2678</span>            }</div>
+<div class="line"><a id="l02679" name="l02679"></a><span class="lineno"> 2679</span>            <span class="keywordflow">return</span> sum;</div>
+<div class="line"><a id="l02680" name="l02680"></a><span class="lineno"> 2680</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l01454">leetcode::number_of_enclaves::TEST()</a>.</p>
 

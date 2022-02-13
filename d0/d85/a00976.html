@@ -129,7 +129,7 @@ Public 属性</h2></td></tr>
 <div class="ttc" id="aa00976_html_a576014934cce83be1aad01f5ad542dc5"><div class="ttname"><a href="../../d0/d85/a00976.html#a576014934cce83be1aad01f5ad542dc5">leetcode::UhWRSj::TrieNode::endroot</a></div><div class="ttdeci">bool endroot</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00544">leetcode.h:544</a></div></div>
 <div class="ttc" id="aa00976_html_aab3518041c9dd44264aba94c0c60e28d"><div class="ttname"><a href="../../d0/d85/a00976.html#aab3518041c9dd44264aba94c0c60e28d">leetcode::UhWRSj::TrieNode::ch</a></div><div class="ttdeci">char ch</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00542">leetcode.h:542</a></div></div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01262">insert()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01263">insert()</a>.</p>
 
 </div>
 </div>
@@ -189,22 +189,22 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01273">1273</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>                                                                        {</div>
-<div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span>            <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="../../d0/d85/a00976.html#a576014934cce83be1aad01f5ad542dc5">endroot</a> || str.empty()) {</div>
-<div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>                <span class="keywordflow">return</span> root;</div>
-<div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span>            }</div>
-<div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span>            <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="../../d0/d85/a00976.html#a368d5c925f403ef1e7e47b3bb66420ab">next</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>] == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span>                <span class="keywordflow">return</span> root + str;</div>
-<div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span>            }</div>
-<div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span>            <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="../../d0/d85/a00976.html#a368d5c925f403ef1e7e47b3bb66420ab">next</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>]-&gt;<a class="code hl_function" href="../../d0/d85/a00976.html#ac180bb16d235d389bfeea1e085d0fc07">get_prefix</a>(root + str[0], str.substr(1));</div>
-<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01274">1274</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span>                                                                        {</div>
+<div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>            <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="../../d0/d85/a00976.html#a576014934cce83be1aad01f5ad542dc5">endroot</a> || str.empty()) {</div>
+<div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span>                <span class="keywordflow">return</span> root;</div>
+<div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span>            }</div>
+<div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span>            <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="../../d0/d85/a00976.html#a368d5c925f403ef1e7e47b3bb66420ab">next</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>] == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span>                <span class="keywordflow">return</span> root + str;</div>
+<div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span>            }</div>
+<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span>            <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="../../d0/d85/a00976.html#a368d5c925f403ef1e7e47b3bb66420ab">next</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>]-&gt;<a class="code hl_function" href="../../d0/d85/a00976.html#ac180bb16d235d389bfeea1e085d0fc07">get_prefix</a>(root + str[0], str.substr(1));</div>
+<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span>        }</div>
 <div class="ttc" id="aa00976_html_a368d5c925f403ef1e7e47b3bb66420ab"><div class="ttname"><a href="../../d0/d85/a00976.html#a368d5c925f403ef1e7e47b3bb66420ab">leetcode::UhWRSj::TrieNode::next</a></div><div class="ttdeci">TrieNode * next[26]</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00543">leetcode.h:543</a></div></div>
-<div class="ttc" id="aa00976_html_ac180bb16d235d389bfeea1e085d0fc07"><div class="ttname"><a href="../../d0/d85/a00976.html#ac180bb16d235d389bfeea1e085d0fc07">leetcode::UhWRSj::TrieNode::get_prefix</a></div><div class="ttdeci">string get_prefix(string root, const string &amp;str) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l01273">leetcode.cpp:1273</a></div></div>
+<div class="ttc" id="aa00976_html_ac180bb16d235d389bfeea1e085d0fc07"><div class="ttname"><a href="../../d0/d85/a00976.html#ac180bb16d235d389bfeea1e085d0fc07">leetcode::UhWRSj::TrieNode::get_prefix</a></div><div class="ttdeci">string get_prefix(string root, const string &amp;str) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l01274">leetcode.cpp:1274</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00544">endroot</a>, <a class="el" href="../../d4/d51/a00017_source.html#l01273">get_prefix()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00543">next</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00544">endroot</a>, <a class="el" href="../../d4/d51/a00017_source.html#l01274">get_prefix()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00543">next</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01273">get_prefix()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01274">get_prefix()</a>.</p>
 
 </div>
 </div>
@@ -224,23 +224,23 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01262">1262</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>                                               {</div>
-<div class="line"><a id="l01263" name="l01263"></a><span class="lineno"> 1263</span>            <span class="keywordflow">if</span>(str.empty()) {</div>
-<div class="line"><a id="l01264" name="l01264"></a><span class="lineno"> 1264</span>                this-&gt;<a class="code hl_variable" href="../../d0/d85/a00976.html#a576014934cce83be1aad01f5ad542dc5">endroot</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span>            }</div>
-<div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>            <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="../../d0/d85/a00976.html#a368d5c925f403ef1e7e47b3bb66420ab">next</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>] == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>                this-&gt;<a class="code hl_variable" href="../../d0/d85/a00976.html#a368d5c925f403ef1e7e47b3bb66420ab">next</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>] = <span class="keyword">new</span> <a class="code hl_function" href="../../d0/d85/a00976.html#a7dc4756d75c179b8feac67c846e98eeb">TrieNode</a>(str[0]);</div>
-<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>            }</div>
-<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>            this-&gt;<a class="code hl_variable" href="../../d0/d85/a00976.html#a368d5c925f403ef1e7e47b3bb66420ab">next</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>]-&gt;<a class="code hl_function" href="../../d0/d85/a00976.html#a0912bcdc00842f1f49f2c290c48fdf1c">insert</a>(str.substr(1));</div>
-<div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span>        }</div>
-<div class="ttc" id="aa00976_html_a0912bcdc00842f1f49f2c290c48fdf1c"><div class="ttname"><a href="../../d0/d85/a00976.html#a0912bcdc00842f1f49f2c290c48fdf1c">leetcode::UhWRSj::TrieNode::insert</a></div><div class="ttdeci">void insert(const string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l01262">leetcode.cpp:1262</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01263">1263</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01263" name="l01263"></a><span class="lineno"> 1263</span>                                               {</div>
+<div class="line"><a id="l01264" name="l01264"></a><span class="lineno"> 1264</span>            <span class="keywordflow">if</span>(str.empty()) {</div>
+<div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span>                this-&gt;<a class="code hl_variable" href="../../d0/d85/a00976.html#a576014934cce83be1aad01f5ad542dc5">endroot</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>            }</div>
+<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>            <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="../../d0/d85/a00976.html#a368d5c925f403ef1e7e47b3bb66420ab">next</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>] == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>                this-&gt;<a class="code hl_variable" href="../../d0/d85/a00976.html#a368d5c925f403ef1e7e47b3bb66420ab">next</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>] = <span class="keyword">new</span> <a class="code hl_function" href="../../d0/d85/a00976.html#a7dc4756d75c179b8feac67c846e98eeb">TrieNode</a>(str[0]);</div>
+<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>            }</div>
+<div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span>            this-&gt;<a class="code hl_variable" href="../../d0/d85/a00976.html#a368d5c925f403ef1e7e47b3bb66420ab">next</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>]-&gt;<a class="code hl_function" href="../../d0/d85/a00976.html#a0912bcdc00842f1f49f2c290c48fdf1c">insert</a>(str.substr(1));</div>
+<div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span>        }</div>
+<div class="ttc" id="aa00976_html_a0912bcdc00842f1f49f2c290c48fdf1c"><div class="ttname"><a href="../../d0/d85/a00976.html#a0912bcdc00842f1f49f2c290c48fdf1c">leetcode::UhWRSj::TrieNode::insert</a></div><div class="ttdeci">void insert(const string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l01263">leetcode.cpp:1263</a></div></div>
 <div class="ttc" id="aa00976_html_a7dc4756d75c179b8feac67c846e98eeb"><div class="ttname"><a href="../../d0/d85/a00976.html#a7dc4756d75c179b8feac67c846e98eeb">leetcode::UhWRSj::TrieNode::TrieNode</a></div><div class="ttdeci">TrieNode()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00546">leetcode.h:546</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00546">TrieNode()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00544">endroot</a>, <a class="el" href="../../d4/d51/a00017_source.html#l01262">insert()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00543">next</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00546">TrieNode()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00544">endroot</a>, <a class="el" href="../../d4/d51/a00017_source.html#l01263">insert()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00543">next</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01262">insert()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01263">insert()</a>.</p>
 
 </div>
 </div>
@@ -275,7 +275,7 @@ Public 属性</h2></td></tr>
 
 <p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00544">544</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01273">get_prefix()</a> , 以及 <a class="el" href="../../d4/d51/a00017_source.html#l01262">insert()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01274">get_prefix()</a> , 以及 <a class="el" href="../../d4/d51/a00017_source.html#l01263">insert()</a>.</p>
 
 </div>
 </div>
@@ -293,7 +293,7 @@ Public 属性</h2></td></tr>
 
 <p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00543">543</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01273">get_prefix()</a> , 以及 <a class="el" href="../../d4/d51/a00017_source.html#l01262">insert()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01274">get_prefix()</a> , 以及 <a class="el" href="../../d4/d51/a00017_source.html#l01263">insert()</a>.</p>
 
 </div>
 </div>
