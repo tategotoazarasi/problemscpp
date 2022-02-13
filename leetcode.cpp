@@ -2843,18 +2843,20 @@ namespace leetcode {
 	namespace maximum_and_sum_of_array {
 		int Solution::maximumANDSum(vector<int> &nums, int numSlots) {
 			int ans = 0;
-			vector<int> f(1 << numSlots * 2);
-			for(unsigned int i = 0; i < f.size(); ++i) {
-				//i:已经放置数字的篮子的集合
-				const int one_count = popcount(i);
+			vector<int> max_and_sum_of_status(1 << numSlots * 2);
+			for(unsigned int status = 0; status < max_and_sum_of_status.size(); ++status) {
+				//status:已经放置数字的篮子的集合
+				const int one_count = popcount(status);
 				if(one_count >= nums.size()) {
 					continue;
 				}
-				for(int j = 0; j < numSlots * 2; ++j) {
-					if((i & 1 << j) == 0) {
-						const int s = i | 1 << j;
-						f[s]        = max(f[s], f[i] + (j / 2 + 1 & nums[one_count]));
-						ans         = max(ans, f[s]);
+				for(int next_slot = 0; next_slot < numSlots * 2; ++next_slot) {
+					if((status & 1 << next_slot) == 0) {
+						// next_slot是空的
+						const int next_status              = status | 1 << next_slot;                                                                              ///< 加上next_slot之后的状态
+						auto slot_num                      = next_slot / 2 + 1;                                                                                    ///< slot编号
+						max_and_sum_of_status[next_status] = max(max_and_sum_of_status[next_status], max_and_sum_of_status[status] + (slot_num & nums[one_count]));//放置第onecount个数字
+						ans                                = max(ans, max_and_sum_of_status[next_status]);
 					}
 				}
 			}
