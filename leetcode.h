@@ -1044,6 +1044,16 @@ namespace leetcode {
 			static int numEnclaves(vector<vector<int>> &grid);
 		};
 	}// namespace number_of_enclaves
+
+	/**
+	 * \brief LeetCode 1189. “气球” 的最大数量
+	 */
+	namespace maximum_number_of_balloons {
+		class Solution {
+		public:
+			static int maxNumberOfBalloons(const string &text);
+		};
+	}// namespace maximum_number_of_balloons
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

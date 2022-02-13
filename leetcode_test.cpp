@@ -1461,4 +1461,18 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::numEnclaves(input));
 		}
 	}// namespace number_of_enclaves
+
+	namespace maximum_number_of_balloons {
+		TEST(maximum_number_of_balloons, case1) {
+			ASSERT_EQ(1, Solution::maxNumberOfBalloons("nlaebolko"));
+		}
+
+		TEST(maximum_number_of_balloons, case2) {
+			ASSERT_EQ(2, Solution::maxNumberOfBalloons("loonbalxballpoon"));
+		}
+
+		TEST(maximum_number_of_balloons, case3) {
+			ASSERT_EQ(0, Solution::maxNumberOfBalloons("leetcode"));
+		}
+	}// namespace maximum_number_of_balloons
 }// namespace leetcode

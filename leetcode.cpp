@@ -2678,4 +2678,41 @@ namespace leetcode {
 			return sum;
 		}
 	}// namespace number_of_enclaves
+
+	namespace maximum_number_of_balloons {
+		int Solution::maxNumberOfBalloons(const string &text) {
+			int b = 0;
+			int a = 0;
+			int l = 0;
+			int o = 0;
+			int n = 0;
+			for(const char ch: text) {
+				switch(ch) {
+					case 'b':
+						b++;
+						break;
+					case 'a':
+						a++;
+						break;
+					case 'l':
+						l++;
+						break;
+					case 'o':
+						o++;
+						break;
+					case 'n':
+						n++;
+						break;
+				}
+			}
+			l /= 2;
+			o /= 2;
+			int ans = b;
+			ans     = min(ans, a);
+			ans     = min(ans, l);
+			ans     = min(ans, o);
+			ans     = min(ans, n);
+			return ans;
+		}
+	}// namespace maximum_number_of_balloons
 }// namespace leetcode
