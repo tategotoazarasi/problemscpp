@@ -1041,4 +1041,23 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P5726::main(istream &cin, ostream &cout) {
+		int n;
+		int maximum = 0;
+		int minimum = 10;
+		int sum     = 0;
+		cin >> n;
+		int score;
+		for(int i = 0; i < n; i++) {
+			cin >> score;
+			sum += score;
+			maximum = max(maximum, score);
+			minimum = min(minimum, score);
+		}
+		sum -= maximum;
+		sum -= minimum;
+		cout << fixed << setprecision(2) << static_cast<double>(sum) / (n - 2);
+		return 0;
+	}
 }// namespace luogu
