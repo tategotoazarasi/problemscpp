@@ -1,5 +1,6 @@
 #include "leetcode.h"
 #include <algorithm>
+#include <bit>
 #include <climits>
 #include <cmath>
 #include <cstring>
