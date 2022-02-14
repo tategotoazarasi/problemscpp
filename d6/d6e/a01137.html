@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::sort_even_and_odd_indices_independently::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,18 +63,85 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d1/dea/a00054.html">leetcode</a></li><li class="navelem"><a class="el" href="../../de/d76/a00134.html">grid_illumination</a></li><li class="navelem"><a class="el" href="../../dc/d64/a01140.html">pair_hash</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d1/dea/a00054.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d6/db3/a00130.html">sort_even_and_odd_indices_independently</a></li><li class="navelem"><a class="el" href="../../d6/d6e/a01137.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::grid_illumination::pair_hash 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../dd/de2/a01134.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::sort_even_and_odd_indices_independently::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../dc/d64/a01140.html">leetcode::grid_illumination::pair_hash</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../dc/d64/a01140.html#aa62ac2cbf1fa1ee8e5dcaf8832727482">operator()</a>(const pair&lt; int, int &gt; &amp;) const</td><td class="entry"><a class="el" href="../../dc/d64/a01140.html">leetcode::grid_illumination::pair_hash</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a70a80329389e6c072ac73870fd400003"><td class="memItemLeft" align="right" valign="top">static vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6e/a01137.html#a70a80329389e6c072ac73870fd400003">sortEvenOdd</a> (vector&lt; int &gt; &amp;nums)</td></tr>
+<tr class="separator:a70a80329389e6c072ac73870fd400003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00930">930</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a70a80329389e6c072ac73870fd400003" name="a70a80329389e6c072ac73870fd400003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70a80329389e6c072ac73870fd400003">&#9670;&nbsp;</a></span>sortEvenOdd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; int &gt; leetcode::sort_even_and_odd_indices_independently::Solution::sortEvenOdd </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nums</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >&lt; 偶数</p>
+<p >&lt; 奇数</p>
+
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02366">2366</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02366" name="l02366"></a><span class="lineno"> 2366</span>                                                           {</div>
+<div class="line"><a id="l02367" name="l02367"></a><span class="lineno"> 2367</span>            vector&lt;int&gt; even;</div>
+<div class="line"><a id="l02368" name="l02368"></a><span class="lineno"> 2368</span>            vector&lt;int&gt; odd; </div>
+<div class="line"><a id="l02369" name="l02369"></a><span class="lineno"> 2369</span>            vector&lt;int&gt; ans;</div>
+<div class="line"><a id="l02370" name="l02370"></a><span class="lineno"> 2370</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nums.size(); i++) {</div>
+<div class="line"><a id="l02371" name="l02371"></a><span class="lineno"> 2371</span>                <span class="keywordflow">if</span>(i % 2 == 0) {</div>
+<div class="line"><a id="l02372" name="l02372"></a><span class="lineno"> 2372</span>                    even.push_back(nums[i]);</div>
+<div class="line"><a id="l02373" name="l02373"></a><span class="lineno"> 2373</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02374" name="l02374"></a><span class="lineno"> 2374</span>                    odd.push_back(nums[i]);</div>
+<div class="line"><a id="l02375" name="l02375"></a><span class="lineno"> 2375</span>                }</div>
+<div class="line"><a id="l02376" name="l02376"></a><span class="lineno"> 2376</span>            }</div>
+<div class="line"><a id="l02377" name="l02377"></a><span class="lineno"> 2377</span>            sort(even.begin(), even.end());</div>
+<div class="line"><a id="l02378" name="l02378"></a><span class="lineno"> 2378</span>            sort(odd.begin(), odd.end(), greater&lt;int&gt;());</div>
+<div class="line"><a id="l02379" name="l02379"></a><span class="lineno"> 2379</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; odd.size(); i++) {</div>
+<div class="line"><a id="l02380" name="l02380"></a><span class="lineno"> 2380</span>                ans.push_back(even[i]);</div>
+<div class="line"><a id="l02381" name="l02381"></a><span class="lineno"> 2381</span>                ans.push_back(odd[i]);</div>
+<div class="line"><a id="l02382" name="l02382"></a><span class="lineno"> 2382</span>            }</div>
+<div class="line"><a id="l02383" name="l02383"></a><span class="lineno"> 2383</span>            <span class="keywordflow">if</span>(even.size() &gt; odd.size()) {</div>
+<div class="line"><a id="l02384" name="l02384"></a><span class="lineno"> 2384</span>                ans.push_back(even.back());</div>
+<div class="line"><a id="l02385" name="l02385"></a><span class="lineno"> 2385</span>            }</div>
+<div class="line"><a id="l02386" name="l02386"></a><span class="lineno"> 2386</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l02387" name="l02387"></a><span class="lineno"> 2387</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2

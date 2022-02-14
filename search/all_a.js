@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ksmallestpairs_0',['kSmallestPairs',['../d6/d82/a00920.html#ad10110d7c72b7b6e5c5fc388d87c02be',1,'leetcode::find_k_pairs_with_smallest_sums::Solution']]]
+  ['ksmallestpairs_0',['kSmallestPairs',['../d0/d5b/a00933.html#ad10110d7c72b7b6e5c5fc388d87c02be',1,'leetcode::find_k_pairs_with_smallest_sums::Solution']]]
 ];
