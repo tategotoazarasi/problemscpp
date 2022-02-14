@@ -4,6 +4,7 @@
 #include <climits>
 #include <cmath>
 #include <cstring>
+#include <numeric>
 #include <queue>
 #include <sstream>
 #include <stack>
@@ -2864,4 +2865,36 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace maximum_and_sum_of_array
+
+	namespace single_element_in_a_sorted_array {
+		int Solution::singleNonDuplicate(vector<int> &nums) {
+			int l = 0, r = nums.size() - 1;
+			while(l < r) {
+				if(l + 1 == r) {
+					if(l == 0) {
+						return nums[l];
+					}
+					if(r == nums.size() - 1) {
+						return nums[r];
+					}
+					if(nums[l - 1] == nums[l]) {
+						return nums[r];
+					} else {
+						return nums[l];
+					}
+				}
+				int m   = (l + r) / 2;
+				int tmp = m;
+				if(nums[m + 1] == nums[m]) {
+					tmp = m + 1;
+				}
+				if(tmp % 2 == 0) {//在左边
+					r = m;
+				} else {//在右边
+					l = m;
+				}
+			}
+			return nums[l];
+		}
+	}// namespace single_element_in_a_sorted_array
 }// namespace leetcode

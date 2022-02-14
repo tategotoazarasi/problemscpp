@@ -1104,6 +1104,14 @@ namespace leetcode {
 			static int maximumANDSum(vector<int> &nums, int numSlots);
 		};
 	}// namespace maximum_and_sum_of_array
+
+	/// \brief LeetCode 540. Single Element in a Sorted Array
+	namespace single_element_in_a_sorted_array {
+		class Solution {
+		public:
+			static int singleNonDuplicate(vector<int> &nums);
+		};
+	}// namespace single_element_in_a_sorted_array
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
