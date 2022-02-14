@@ -3921,4 +3921,15 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing764::main(istream &cin, ostream &cout) {
+		char *a = new char[101];
+		cin.getline(a, 101);
+		int len = strlen(a);
+		for(int i = 1; i <= len; i++) {
+			cout << char(a[(i - 1) % len] + a[i % len]);
+		}
+		delete[] a;
+		return 0;
+	}
 }// namespace acwing
