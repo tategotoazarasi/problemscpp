@@ -1079,4 +1079,25 @@ namespace luogu {
 		cout << current + saving / 5 * 6;
 		return 0;
 	}
+
+
+	int P1428::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		int *fish = new int[n];
+		for(int i = 0; i < n; i++) {
+			cin >> fish[i];
+		}
+		for(int i = 0; i < n; i++) {
+			int count = 0;
+			for(int j = 0; j < i; j++) {
+				if(fish[j] < fish[i]) {
+					count++;
+				}
+			}
+			cout << count << " ";
+		}
+		delete[] fish;
+		return 0;
+	}
 }// namespace luogu
