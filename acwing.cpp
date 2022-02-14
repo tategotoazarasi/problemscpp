@@ -3907,4 +3907,18 @@ namespace acwing {
 		delete[] str;
 		return 0;
 	}
+
+	int acwing769::main(istream &cin, ostream &cout) {
+		string str;
+		cin >> str;
+		char ch;
+		cin >> ch;
+		for(char c: str) {
+			if(c == ch) {
+				c = '#';
+			}
+			cout << c;
+		}
+		return 0;
+	}
 }// namespace acwing

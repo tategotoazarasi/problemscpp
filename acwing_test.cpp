@@ -1861,4 +1861,13 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("Ifmmp! Ipx bsf zpv!", ans);
 	}
+
+	TEST(acwing769, case1) {
+		istringstream in("hello\n"
+		                 "l");
+		auto out = ostringstream();
+		acwing769::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("he##o", ans);
+	}
 }// namespace acwing
