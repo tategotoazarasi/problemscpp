@@ -1878,4 +1878,13 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("QRRSd", ans);
 	}
+
+	TEST(acwing1443, case1) {
+		istringstream in("5\n"
+		                 "4 6 7 6");
+		auto out = ostringstream();
+		acwing1443::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("3 1 5 2 4 ", ans);
+	}
 }// namespace acwing

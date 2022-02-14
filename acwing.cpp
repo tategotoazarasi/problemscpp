@@ -3932,4 +3932,37 @@ namespace acwing {
 		delete[] a;
 		return 0;
 	}
+
+	int acwing1443::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		int *a = new int[n];
+		int *b = new int[n - 1];
+		for(int i = 0; i < n - 1; i++) {
+			cin >> b[i];
+		}
+		for(int i = 1; i <= n; i++) {
+			unordered_set<int> us = unordered_set<int>();
+			bool flag             = true;
+			a[0]                  = i;
+			for(int j = 1; j < n; j++) {
+				a[j] = b[j - 1] - a[j - 1];
+				if(us.count(a[j]) != 0 || a[j] <= 0) {
+					flag = false;
+					break;
+				} else {
+					us.insert(a[j]);
+				}
+			}
+			if(flag) {
+				for(int j = 0; j < n; j++) {
+					cout << a[j] << " ";
+				}
+				break;
+			}
+		}
+		delete[] b;
+		delete[] a;
+		return 0;
+	}
 }// namespace acwing
