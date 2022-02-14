@@ -1060,4 +1060,23 @@ namespace luogu {
 		cout << fixed << setprecision(2) << static_cast<double>(sum) / (n - 2);
 		return 0;
 	}
+
+	int P1089::main(istream &cin, ostream &cout) {
+		int budget;
+		int saving  = 0;
+		int current = 0;
+		for(int i = 0; i < 12; i++) {
+			current += 300;
+			cin >> budget;
+			if(current < budget) {
+				cout << -(i + 1);
+				return 0;
+			}
+			current -= budget;
+			saving += (current / 100) * 100;
+			current %= 100;
+		}
+		cout << current + saving / 5 * 6;
+		return 0;
+	}
 }// namespace luogu

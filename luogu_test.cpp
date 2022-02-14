@@ -649,4 +649,42 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("7.67", ans);
 	}
+
+	TEST(P1089, case1) {
+		istringstream in("290\n"
+		                 "230\n"
+		                 "280\n"
+		                 "200\n"
+		                 "300\n"
+		                 "170\n"
+		                 "340\n"
+		                 "50 \n"
+		                 "90 \n"
+		                 "80 \n"
+		                 "200\n"
+		                 "60 ");
+		auto out = ostringstream();
+		P1089::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("-7", ans);
+	}
+
+	TEST(P1089, case2) {
+		istringstream in("290 \n"
+		                 "230 \n"
+		                 "280 \n"
+		                 "200 \n"
+		                 "300 \n"
+		                 "170 \n"
+		                 "330 \n"
+		                 "50 \n"
+		                 "90 \n"
+		                 "80 \n"
+		                 "200 \n"
+		                 "60 ");
+		auto out = ostringstream();
+		P1089::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1580", ans);
+	}
 }// namespace luogu
