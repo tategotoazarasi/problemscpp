@@ -1908,4 +1908,14 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("I want someone to help you ", ans);
 	}
+
+	TEST(acwing1672, case1) {
+		istringstream in("7\n"
+		                 "GHHHGHH\n"
+		                 "HHGGGHH");
+		auto out = ostringstream();
+		acwing1672::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2", ans);
+	}
 }// namespace acwing

@@ -4013,4 +4013,28 @@ namespace acwing {
 		delete[] replacement;
 		return 0;
 	}
+
+	int acwing1672::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		string a, b;
+		cin >> a >> b;
+		bool prev_eq = true;
+		int ans      = 0;
+		for(int i = 0; i < n; i++) {
+			if(a[i] == b[i]) {
+				if(!prev_eq) {
+					ans++;
+				}
+				prev_eq = true;
+			} else {
+				prev_eq = false;
+			}
+		}
+		if(!prev_eq) {
+			ans++;
+		}
+		cout << ans;
+		return 0;
+	}
 }// namespace acwing
