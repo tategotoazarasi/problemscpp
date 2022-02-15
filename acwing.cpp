@@ -3992,4 +3992,25 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing770::main(istream &cin, ostream &cout) {
+		char *str            = new char[101];
+		char *to_be_replaced = new char[101];
+		char *replacement    = new char[101];
+		cin.getline(str, 101);
+		cin.getline(to_be_replaced, 101);
+		cin.getline(replacement, 101);
+		for(char *word = strtok(str, " "); word != nullptr; word = strtok(nullptr, " ")) {
+			if(strcmp(word, to_be_replaced) == 0) {
+				cout.write(replacement, strlen(replacement));
+			} else {
+				cout.write(word, strlen(word));
+			}
+			cout << " ";
+		}
+		delete[] str;
+		delete[] to_be_replaced;
+		delete[] replacement;
+		return 0;
+	}
 }// namespace acwing

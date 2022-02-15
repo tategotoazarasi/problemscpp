@@ -1898,4 +1898,14 @@ namespace acwing {
 		          "12345553\n",
 		          ans);
 	}
+
+	TEST(acwing770, case1) {
+		istringstream in("You want someone to help you\n"
+		                 "You\n"
+		                 "I");
+		auto out = ostringstream();
+		acwing770::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("I want someone to help you ", ans);
+	}
 }// namespace acwing
