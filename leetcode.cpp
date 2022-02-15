@@ -2919,4 +2919,32 @@ namespace leetcode {
 			return nums[l];
 		}
 	}// namespace single_element_in_a_sorted_array
+
+	namespace lucky_numbers_in_a_matrix {
+		vector<int> Solution::luckyNumbers(vector<vector<int>> &matrix) {
+			vector<int> ans = vector<int>();
+			auto m          = matrix.size();
+			auto n          = matrix[0].size();
+			int *minimum    = new int[m];
+			memset(minimum, 50, m * sizeof(int));
+			int *maximum = new int[n];
+			memset(maximum, 0, n * sizeof(int));
+			for(int i = 0; i < m; i++) {
+				for(int j = 0; j < n; j++) {
+					minimum[i] = min(minimum[i], matrix[i][j]);
+					maximum[j] = max(maximum[j], matrix[i][j]);
+				}
+			}
+			for(int i = 0; i < m; i++) {
+				for(int j = 0; j < n; j++) {
+					if(matrix[i][j] == minimum[i] && matrix[i][j] == maximum[j]) {
+						ans.push_back(matrix[i][j]);
+					}
+				}
+			}
+			delete[] minimum;
+			delete[] maximum;
+			return ans;
+		}
+	}// namespace lucky_numbers_in_a_matrix
 }// namespace leetcode

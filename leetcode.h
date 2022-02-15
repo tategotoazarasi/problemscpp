@@ -1112,6 +1112,15 @@ namespace leetcode {
 			static int singleNonDuplicate(vector<int> &nums);
 		};
 	}// namespace single_element_in_a_sorted_array
+
+
+	/// \brief LeetCode 1380. Lucky Numbers in a Matrix
+	namespace lucky_numbers_in_a_matrix {
+		class Solution {
+		public:
+			static vector<int> luckyNumbers(vector<vector<int>> &matrix);
+		};
+	}// namespace lucky_numbers_in_a_matrix
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

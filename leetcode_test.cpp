@@ -1552,4 +1552,24 @@ namespace leetcode {
 			ASSERT_EQ(10, Solution::singleNonDuplicate(input));
 		}
 	}// namespace single_element_in_a_sorted_array
+
+	namespace lucky_numbers_in_a_matrix {
+		TEST(lucky_numbers_in_a_matrix, case1) {
+			vector<vector<int>> input = {{3, 7, 8}, {9, 11, 13}, {15, 16, 17}};
+			vector<int> output        = {15};
+			ASSERT_EQ(output, Solution::luckyNumbers(input));
+		}
+
+		TEST(lucky_numbers_in_a_matrix, case2) {
+			vector<vector<int>> input = {{1, 10, 4, 2}, {9, 3, 8, 7}, {15, 16, 17, 12}};
+			vector<int> output        = {12};
+			ASSERT_EQ(output, Solution::luckyNumbers(input));
+		}
+
+		TEST(lucky_numbers_in_a_matrix, case3) {
+			vector<vector<int>> input = {{7, 8}, {1, 2}};
+			vector<int> output        = {7};
+			ASSERT_EQ(output, Solution::luckyNumbers(input));
+		}
+	}// namespace lucky_numbers_in_a_matrix
 }// namespace leetcode
