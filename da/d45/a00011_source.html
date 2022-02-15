@@ -1141,7 +1141,7 @@ $(function() {
 <div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>                <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>            }</div>
 <div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>            current -= budget;</div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>            saving += (current / 100) * 100;</div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>            saving += current / 100 * 100;</div>
 <div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>            current %= 100;</div>
 <div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>        }</div>
 <div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>        cout &lt;&lt; current + saving / 5 * 6;</div>
@@ -1152,7 +1152,7 @@ $(function() {
 <div class="line"><a id="l01084" name="l01084"></a><span class="lineno"><a class="line" href="../../de/d3c/a01490.html#a49028e378ac3d8bfe826bacee0bdc85f"> 1084</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d3c/a01490.html#a49028e378ac3d8bfe826bacee0bdc85f">P1428::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
 <div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>        <span class="keywordtype">int</span> n;</div>
 <div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>        <span class="keywordtype">int</span> *fish = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>        <span class="keyword">auto</span> fish = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
 <div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>            cin &gt;&gt; fish[i];</div>
 <div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>        }</div>
@@ -1171,7 +1171,7 @@ $(function() {
 <div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span> </div>
 <div class="line"><a id="l01104" name="l01104"></a><span class="lineno"><a class="line" href="../../d6/d51/a01494.html#a854ebf477478678967a8aaaf199bdb2a"> 1104</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d6/d51/a01494.html#a854ebf477478678967a8aaaf199bdb2a">P1427::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
 <div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>        vector&lt;unsigned int&gt; vec = vector&lt;unsigned int&gt;();</div>
+<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>        <span class="keyword">auto</span> vec = vector&lt;unsigned int&gt;();</div>
 <div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>        <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
 <div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>            cin &gt;&gt; n;</div>
 <div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>            <span class="keywordflow">if</span>(n == 0) {</div>
@@ -1188,7 +1188,7 @@ $(function() {
 <div class="line"><a id="l01120" name="l01120"></a><span class="lineno"><a class="line" href="../../d6/dc9/a01498.html#aff32658e41262615ebbe4a3dee2314e0"> 1120</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d6/dc9/a01498.html#aff32658e41262615ebbe4a3dee2314e0">P5727::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
 <div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>        <span class="keywordtype">int</span> n;</div>
 <div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>        vector&lt;int&gt; vec = vector&lt;int&gt;();</div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>        <span class="keyword">auto</span> vec = vector&lt;int&gt;();</div>
 <div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>        <span class="keywordflow">while</span>(n != 1) {</div>
 <div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>            vec.push_back(n);</div>
 <div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>            <span class="keywordflow">if</span>(n % 2 != 0) {</div>

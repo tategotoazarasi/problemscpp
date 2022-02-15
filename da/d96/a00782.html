@@ -125,11 +125,11 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03932">3932</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l03932" name="l03932"></a><span class="lineno"> 3932</span>                                                   {</div>
-<div class="line"><a id="l03933" name="l03933"></a><span class="lineno"> 3933</span>        <span class="keywordtype">char</span> *a = <span class="keyword">new</span> <span class="keywordtype">char</span>[101];</div>
+<div class="line"><a id="l03933" name="l03933"></a><span class="lineno"> 3933</span>        <span class="keyword">auto</span> a = <span class="keyword">new</span> <span class="keywordtype">char</span>[101];</div>
 <div class="line"><a id="l03934" name="l03934"></a><span class="lineno"> 3934</span>        cin.getline(a, 101);</div>
-<div class="line"><a id="l03935" name="l03935"></a><span class="lineno"> 3935</span>        <span class="keywordtype">int</span> len = strlen(a);</div>
+<div class="line"><a id="l03935" name="l03935"></a><span class="lineno"> 3935</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> len = strlen(a);</div>
 <div class="line"><a id="l03936" name="l03936"></a><span class="lineno"> 3936</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= len; i++) {</div>
-<div class="line"><a id="l03937" name="l03937"></a><span class="lineno"> 3937</span>            cout &lt;&lt; char(a[(i - 1) % len] + a[i % len]);</div>
+<div class="line"><a id="l03937" name="l03937"></a><span class="lineno"> 3937</span>            cout &lt;&lt; static_cast&lt;char&gt;(a[(i - 1) % len] + a[i % len]);</div>
 <div class="line"><a id="l03938" name="l03938"></a><span class="lineno"> 3938</span>        }</div>
 <div class="line"><a id="l03939" name="l03939"></a><span class="lineno"> 3939</span>        <span class="keyword">delete</span>[] a;</div>
 <div class="line"><a id="l03940" name="l03940"></a><span class="lineno"> 3940</span>        <span class="keywordflow">return</span> 0;</div>

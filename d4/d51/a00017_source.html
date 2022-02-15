@@ -2954,64 +2954,68 @@ $(function() {
 <div class="line"><a id="l02890" name="l02890"></a><span class="lineno"> 2890</span> </div>
 <div class="line"><a id="l02891" name="l02891"></a><span class="lineno"><a class="line" href="../../da/ddb/a00145.html"> 2891</a></span>    <span class="keyword">namespace </span>single_element_in_a_sorted_array {</div>
 <div class="line"><a id="l02892" name="l02892"></a><span class="lineno"><a class="line" href="../../d5/d32/a01214.html#a3e81c55df1c79cab718d79c6f0605cf8"> 2892</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d5/d32/a01214.html#a3e81c55df1c79cab718d79c6f0605cf8">Solution::singleNonDuplicate</a>(vector&lt;int&gt; &amp;nums) {</div>
-<div class="line"><a id="l02893" name="l02893"></a><span class="lineno"> 2893</span>            <span class="keywordtype">int</span> l = 0, r = nums.size() - 1;</div>
-<div class="line"><a id="l02894" name="l02894"></a><span class="lineno"> 2894</span>            <span class="keywordflow">while</span>(l &lt; r) {</div>
-<div class="line"><a id="l02895" name="l02895"></a><span class="lineno"> 2895</span>                <span class="keywordflow">if</span>(l + 1 == r) {</div>
-<div class="line"><a id="l02896" name="l02896"></a><span class="lineno"> 2896</span>                    <span class="keywordflow">if</span>(l == 0) {</div>
-<div class="line"><a id="l02897" name="l02897"></a><span class="lineno"> 2897</span>                        <span class="keywordflow">return</span> nums[l];</div>
-<div class="line"><a id="l02898" name="l02898"></a><span class="lineno"> 2898</span>                    }</div>
-<div class="line"><a id="l02899" name="l02899"></a><span class="lineno"> 2899</span>                    <span class="keywordflow">if</span>(r == nums.size() - 1) {</div>
-<div class="line"><a id="l02900" name="l02900"></a><span class="lineno"> 2900</span>                        <span class="keywordflow">return</span> nums[r];</div>
-<div class="line"><a id="l02901" name="l02901"></a><span class="lineno"> 2901</span>                    }</div>
-<div class="line"><a id="l02902" name="l02902"></a><span class="lineno"> 2902</span>                    <span class="keywordflow">if</span>(nums[l - 1] == nums[l]) {</div>
-<div class="line"><a id="l02903" name="l02903"></a><span class="lineno"> 2903</span>                        <span class="keywordflow">return</span> nums[r];</div>
-<div class="line"><a id="l02904" name="l02904"></a><span class="lineno"> 2904</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02905" name="l02905"></a><span class="lineno"> 2905</span>                        <span class="keywordflow">return</span> nums[l];</div>
-<div class="line"><a id="l02906" name="l02906"></a><span class="lineno"> 2906</span>                    }</div>
-<div class="line"><a id="l02907" name="l02907"></a><span class="lineno"> 2907</span>                }</div>
-<div class="line"><a id="l02908" name="l02908"></a><span class="lineno"> 2908</span>                <span class="keywordtype">int</span> m   = (l + r) / 2;</div>
-<div class="line"><a id="l02909" name="l02909"></a><span class="lineno"> 2909</span>                <span class="keywordtype">int</span> tmp = m;</div>
-<div class="line"><a id="l02910" name="l02910"></a><span class="lineno"> 2910</span>                <span class="keywordflow">if</span>(nums[m + 1] == nums[m]) {</div>
-<div class="line"><a id="l02911" name="l02911"></a><span class="lineno"> 2911</span>                    tmp = m + 1;</div>
-<div class="line"><a id="l02912" name="l02912"></a><span class="lineno"> 2912</span>                }</div>
-<div class="line"><a id="l02913" name="l02913"></a><span class="lineno"> 2913</span>                <span class="keywordflow">if</span>(tmp % 2 == 0) {<span class="comment">//在左边</span></div>
-<div class="line"><a id="l02914" name="l02914"></a><span class="lineno"> 2914</span>                    r = m;</div>
-<div class="line"><a id="l02915" name="l02915"></a><span class="lineno"> 2915</span>                } <span class="keywordflow">else</span> {<span class="comment">//在右边</span></div>
-<div class="line"><a id="l02916" name="l02916"></a><span class="lineno"> 2916</span>                    l = m;</div>
-<div class="line"><a id="l02917" name="l02917"></a><span class="lineno"> 2917</span>                }</div>
-<div class="line"><a id="l02918" name="l02918"></a><span class="lineno"> 2918</span>            }</div>
-<div class="line"><a id="l02919" name="l02919"></a><span class="lineno"> 2919</span>            <span class="keywordflow">return</span> nums[l];</div>
-<div class="line"><a id="l02920" name="l02920"></a><span class="lineno"> 2920</span>        }</div>
-<div class="line"><a id="l02921" name="l02921"></a><span class="lineno"> 2921</span>    }<span class="comment">// namespace single_element_in_a_sorted_array</span></div>
-<div class="line"><a id="l02922" name="l02922"></a><span class="lineno"> 2922</span> </div>
-<div class="line"><a id="l02923" name="l02923"></a><span class="lineno"><a class="line" href="../../d9/db6/a00146.html"> 2923</a></span>    <span class="keyword">namespace </span>lucky_numbers_in_a_matrix {</div>
-<div class="line"><a id="l02924" name="l02924"></a><span class="lineno"><a class="line" href="../../d8/d15/a01218.html#ab1c571cc391e630fd4bfd1063cc0d1cd"> 2924</a></span>        vector&lt;int&gt; <a class="code hl_function" href="../../d8/d15/a01218.html#ab1c571cc391e630fd4bfd1063cc0d1cd">Solution::luckyNumbers</a>(vector&lt;vector&lt;int&gt;&gt; &amp;matrix) {</div>
-<div class="line"><a id="l02925" name="l02925"></a><span class="lineno"> 2925</span>            vector&lt;int&gt; ans = vector&lt;int&gt;();</div>
-<div class="line"><a id="l02926" name="l02926"></a><span class="lineno"> 2926</span>            <span class="keyword">auto</span> m          = matrix.size();</div>
-<div class="line"><a id="l02927" name="l02927"></a><span class="lineno"> 2927</span>            <span class="keyword">auto</span> n          = matrix[0].size();</div>
-<div class="line"><a id="l02928" name="l02928"></a><span class="lineno"> 2928</span>            <span class="keywordtype">int</span> *minimum    = <span class="keyword">new</span> <span class="keywordtype">int</span>[m];</div>
-<div class="line"><a id="l02929" name="l02929"></a><span class="lineno"> 2929</span>            memset(minimum, 50, m * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><a id="l02930" name="l02930"></a><span class="lineno"> 2930</span>            <span class="keywordtype">int</span> *maximum = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
-<div class="line"><a id="l02931" name="l02931"></a><span class="lineno"> 2931</span>            memset(maximum, 0, n * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><a id="l02932" name="l02932"></a><span class="lineno"> 2932</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l02933" name="l02933"></a><span class="lineno"> 2933</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l02934" name="l02934"></a><span class="lineno"> 2934</span>                    minimum[i] = min(minimum[i], matrix[i][j]);</div>
-<div class="line"><a id="l02935" name="l02935"></a><span class="lineno"> 2935</span>                    maximum[j] = max(maximum[j], matrix[i][j]);</div>
-<div class="line"><a id="l02936" name="l02936"></a><span class="lineno"> 2936</span>                }</div>
-<div class="line"><a id="l02937" name="l02937"></a><span class="lineno"> 2937</span>            }</div>
-<div class="line"><a id="l02938" name="l02938"></a><span class="lineno"> 2938</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l02939" name="l02939"></a><span class="lineno"> 2939</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l02940" name="l02940"></a><span class="lineno"> 2940</span>                    <span class="keywordflow">if</span>(matrix[i][j] == minimum[i] &amp;&amp; matrix[i][j] == maximum[j]) {</div>
-<div class="line"><a id="l02941" name="l02941"></a><span class="lineno"> 2941</span>                        ans.push_back(matrix[i][j]);</div>
-<div class="line"><a id="l02942" name="l02942"></a><span class="lineno"> 2942</span>                    }</div>
-<div class="line"><a id="l02943" name="l02943"></a><span class="lineno"> 2943</span>                }</div>
-<div class="line"><a id="l02944" name="l02944"></a><span class="lineno"> 2944</span>            }</div>
-<div class="line"><a id="l02945" name="l02945"></a><span class="lineno"> 2945</span>            <span class="keyword">delete</span>[] minimum;</div>
-<div class="line"><a id="l02946" name="l02946"></a><span class="lineno"> 2946</span>            <span class="keyword">delete</span>[] maximum;</div>
-<div class="line"><a id="l02947" name="l02947"></a><span class="lineno"> 2947</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l02948" name="l02948"></a><span class="lineno"> 2948</span>        }</div>
-<div class="line"><a id="l02949" name="l02949"></a><span class="lineno"> 2949</span>    }<span class="comment">// namespace lucky_numbers_in_a_matrix</span></div>
-<div class="line"><a id="l02950" name="l02950"></a><span class="lineno"> 2950</span>}<span class="comment">// namespace leetcode</span></div>
+<div class="line"><a id="l02893" name="l02893"></a><span class="lineno"> 2893</span>            <span class="keywordtype">int</span> l = 0;</div>
+<div class="line"><a id="l02894" name="l02894"></a><span class="lineno"> 2894</span>            <span class="keywordtype">int</span> r = nums.size() - 1;</div>
+<div class="line"><a id="l02895" name="l02895"></a><span class="lineno"> 2895</span>            <span class="keywordflow">while</span>(l &lt; r) {</div>
+<div class="line"><a id="l02896" name="l02896"></a><span class="lineno"> 2896</span>                <span class="keywordflow">if</span>(l + 1 == r) {</div>
+<div class="line"><a id="l02897" name="l02897"></a><span class="lineno"> 2897</span>                    <span class="keywordflow">if</span>(l == 0) {</div>
+<div class="line"><a id="l02898" name="l02898"></a><span class="lineno"> 2898</span>                        <span class="keywordflow">return</span> nums[l];</div>
+<div class="line"><a id="l02899" name="l02899"></a><span class="lineno"> 2899</span>                    }</div>
+<div class="line"><a id="l02900" name="l02900"></a><span class="lineno"> 2900</span>                    <span class="keywordflow">if</span>(r == nums.size() - 1) {</div>
+<div class="line"><a id="l02901" name="l02901"></a><span class="lineno"> 2901</span>                        <span class="keywordflow">return</span> nums[r];</div>
+<div class="line"><a id="l02902" name="l02902"></a><span class="lineno"> 2902</span>                    }</div>
+<div class="line"><a id="l02903" name="l02903"></a><span class="lineno"> 2903</span>                    <span class="keywordflow">if</span>(nums[l - 1] == nums[l]) {</div>
+<div class="line"><a id="l02904" name="l02904"></a><span class="lineno"> 2904</span>                        <span class="keywordflow">return</span> nums[r];</div>
+<div class="line"><a id="l02905" name="l02905"></a><span class="lineno"> 2905</span>                    }</div>
+<div class="line"><a id="l02906" name="l02906"></a><span class="lineno"> 2906</span>                    <span class="keywordflow">return</span> nums[l];</div>
+<div class="line"><a id="l02907" name="l02907"></a><span class="lineno"> 2907</span> </div>
+<div class="line"><a id="l02908" name="l02908"></a><span class="lineno"> 2908</span>                    <span class="keywordflow">return</span> nums[l];</div>
+<div class="line"><a id="l02909" name="l02909"></a><span class="lineno"> 2909</span>                }</div>
+<div class="line"><a id="l02910" name="l02910"></a><span class="lineno"> 2910</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> m = (l + r) / 2;</div>
+<div class="line"><a id="l02911" name="l02911"></a><span class="lineno"> 2911</span>                <span class="keywordtype">int</span> tmp     = m;</div>
+<div class="line"><a id="l02912" name="l02912"></a><span class="lineno"> 2912</span>                <span class="keywordflow">if</span>(nums[m + 1] == nums[m]) {</div>
+<div class="line"><a id="l02913" name="l02913"></a><span class="lineno"> 2913</span>                    tmp = m + 1;</div>
+<div class="line"><a id="l02914" name="l02914"></a><span class="lineno"> 2914</span>                }</div>
+<div class="line"><a id="l02915" name="l02915"></a><span class="lineno"> 2915</span>                <span class="keywordflow">if</span>(tmp % 2 == 0) {</div>
+<div class="line"><a id="l02916" name="l02916"></a><span class="lineno"> 2916</span>                    <span class="comment">//在左边</span></div>
+<div class="line"><a id="l02917" name="l02917"></a><span class="lineno"> 2917</span>                    r = m;</div>
+<div class="line"><a id="l02918" name="l02918"></a><span class="lineno"> 2918</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02919" name="l02919"></a><span class="lineno"> 2919</span>                    <span class="comment">//在右边</span></div>
+<div class="line"><a id="l02920" name="l02920"></a><span class="lineno"> 2920</span>                    l = m;</div>
+<div class="line"><a id="l02921" name="l02921"></a><span class="lineno"> 2921</span>                }</div>
+<div class="line"><a id="l02922" name="l02922"></a><span class="lineno"> 2922</span>            }</div>
+<div class="line"><a id="l02923" name="l02923"></a><span class="lineno"> 2923</span>            <span class="keywordflow">return</span> nums[l];</div>
+<div class="line"><a id="l02924" name="l02924"></a><span class="lineno"> 2924</span>        }</div>
+<div class="line"><a id="l02925" name="l02925"></a><span class="lineno"> 2925</span>    }<span class="comment">// namespace single_element_in_a_sorted_array</span></div>
+<div class="line"><a id="l02926" name="l02926"></a><span class="lineno"> 2926</span> </div>
+<div class="line"><a id="l02927" name="l02927"></a><span class="lineno"><a class="line" href="../../d9/db6/a00146.html"> 2927</a></span>    <span class="keyword">namespace </span>lucky_numbers_in_a_matrix {</div>
+<div class="line"><a id="l02928" name="l02928"></a><span class="lineno"><a class="line" href="../../d8/d15/a01218.html#ab1c571cc391e630fd4bfd1063cc0d1cd"> 2928</a></span>        vector&lt;int&gt; <a class="code hl_function" href="../../d8/d15/a01218.html#ab1c571cc391e630fd4bfd1063cc0d1cd">Solution::luckyNumbers</a>(vector&lt;vector&lt;int&gt;&gt; &amp;matrix) {</div>
+<div class="line"><a id="l02929" name="l02929"></a><span class="lineno"> 2929</span>            <span class="keyword">auto</span> ans     = vector&lt;int&gt;();</div>
+<div class="line"><a id="l02930" name="l02930"></a><span class="lineno"> 2930</span>            <span class="keyword">const</span> <span class="keyword">auto</span> m = matrix.size();</div>
+<div class="line"><a id="l02931" name="l02931"></a><span class="lineno"> 2931</span>            <span class="keyword">const</span> <span class="keyword">auto</span> n = matrix[0].size();</div>
+<div class="line"><a id="l02932" name="l02932"></a><span class="lineno"> 2932</span>            <span class="keyword">auto</span> minimum = <span class="keyword">new</span> <span class="keywordtype">int</span>[m];</div>
+<div class="line"><a id="l02933" name="l02933"></a><span class="lineno"> 2933</span>            memset(minimum, 50, m * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a id="l02934" name="l02934"></a><span class="lineno"> 2934</span>            <span class="keyword">auto</span> maximum = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l02935" name="l02935"></a><span class="lineno"> 2935</span>            memset(maximum, 0, n * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a id="l02936" name="l02936"></a><span class="lineno"> 2936</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l02937" name="l02937"></a><span class="lineno"> 2937</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><a id="l02938" name="l02938"></a><span class="lineno"> 2938</span>                    minimum[i] = min(minimum[i], matrix[i][j]);</div>
+<div class="line"><a id="l02939" name="l02939"></a><span class="lineno"> 2939</span>                    maximum[j] = max(maximum[j], matrix[i][j]);</div>
+<div class="line"><a id="l02940" name="l02940"></a><span class="lineno"> 2940</span>                }</div>
+<div class="line"><a id="l02941" name="l02941"></a><span class="lineno"> 2941</span>            }</div>
+<div class="line"><a id="l02942" name="l02942"></a><span class="lineno"> 2942</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l02943" name="l02943"></a><span class="lineno"> 2943</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><a id="l02944" name="l02944"></a><span class="lineno"> 2944</span>                    <span class="keywordflow">if</span>(matrix[i][j] == minimum[i] &amp;&amp; matrix[i][j] == maximum[j]) {</div>
+<div class="line"><a id="l02945" name="l02945"></a><span class="lineno"> 2945</span>                        ans.push_back(matrix[i][j]);</div>
+<div class="line"><a id="l02946" name="l02946"></a><span class="lineno"> 2946</span>                    }</div>
+<div class="line"><a id="l02947" name="l02947"></a><span class="lineno"> 2947</span>                }</div>
+<div class="line"><a id="l02948" name="l02948"></a><span class="lineno"> 2948</span>            }</div>
+<div class="line"><a id="l02949" name="l02949"></a><span class="lineno"> 2949</span>            <span class="keyword">delete</span>[] minimum;</div>
+<div class="line"><a id="l02950" name="l02950"></a><span class="lineno"> 2950</span>            <span class="keyword">delete</span>[] maximum;</div>
+<div class="line"><a id="l02951" name="l02951"></a><span class="lineno"> 2951</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l02952" name="l02952"></a><span class="lineno"> 2952</span>        }</div>
+<div class="line"><a id="l02953" name="l02953"></a><span class="lineno"> 2953</span>    }<span class="comment">// namespace lucky_numbers_in_a_matrix</span></div>
+<div class="line"><a id="l02954" name="l02954"></a><span class="lineno"> 2954</span>}<span class="comment">// namespace leetcode</span></div>
 <div class="ttc" id="aa00005_html"><div class="ttname"><a href="../../dd/dad/a00005.html">leetcode.h</a></div></div>
 <div class="ttc" id="aa00054_html"><div class="ttname"><a href="../../d1/dea/a00054.html">leetcode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l00015">leetcode.cpp:15</a></div></div>
 <div class="ttc" id="aa00069_html_ae68fb24f26d1729119604748b3b20490"><div class="ttname"><a href="../../d4/d31/a00069.html#ae68fb24f26d1729119604748b3b20490">leetcode::cat_and_mouse::MOUSE_WIN</a></div><div class="ttdeci">const int MOUSE_WIN</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00201">leetcode.h:201</a></div></div>
@@ -3213,7 +3217,7 @@ $(function() {
 <div class="ttc" id="aa01206_html_a63e624e27158648fb67cc7d0f477d8a8"><div class="ttname"><a href="../../dc/d9e/a01206.html#a63e624e27158648fb67cc7d0f477d8a8">leetcode::removing_minimum_number_of_magic_beans::Solution::minimumRemoval</a></div><div class="ttdeci">static long long minimumRemoval(vector&lt; int &gt; &amp;beans)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l02855">leetcode.cpp:2855</a></div></div>
 <div class="ttc" id="aa01210_html_ae8757b5a8fd6b0fa708ac30cab03538a"><div class="ttname"><a href="../../d2/da6/a01210.html#ae8757b5a8fd6b0fa708ac30cab03538a">leetcode::maximum_and_sum_of_array::Solution::maximumANDSum</a></div><div class="ttdeci">static int maximumANDSum(vector&lt; int &gt; &amp;nums, int numSlots)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l02868">leetcode.cpp:2868</a></div></div>
 <div class="ttc" id="aa01214_html_a3e81c55df1c79cab718d79c6f0605cf8"><div class="ttname"><a href="../../d5/d32/a01214.html#a3e81c55df1c79cab718d79c6f0605cf8">leetcode::single_element_in_a_sorted_array::Solution::singleNonDuplicate</a></div><div class="ttdeci">static int singleNonDuplicate(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l02892">leetcode.cpp:2892</a></div></div>
-<div class="ttc" id="aa01218_html_ab1c571cc391e630fd4bfd1063cc0d1cd"><div class="ttname"><a href="../../d8/d15/a01218.html#ab1c571cc391e630fd4bfd1063cc0d1cd">leetcode::lucky_numbers_in_a_matrix::Solution::luckyNumbers</a></div><div class="ttdeci">static vector&lt; int &gt; luckyNumbers(vector&lt; vector&lt; int &gt; &gt; &amp;matrix)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l02924">leetcode.cpp:2924</a></div></div>
+<div class="ttc" id="aa01218_html_ab1c571cc391e630fd4bfd1063cc0d1cd"><div class="ttname"><a href="../../d8/d15/a01218.html#ab1c571cc391e630fd4bfd1063cc0d1cd">leetcode::lucky_numbers_in_a_matrix::Solution::luckyNumbers</a></div><div class="ttdeci">static vector&lt; int &gt; luckyNumbers(vector&lt; vector&lt; int &gt; &gt; &amp;matrix)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l02928">leetcode.cpp:2928</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

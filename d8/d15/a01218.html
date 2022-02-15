@@ -109,32 +109,32 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02924">2924</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02924" name="l02924"></a><span class="lineno"> 2924</span>                                                                      {</div>
-<div class="line"><a id="l02925" name="l02925"></a><span class="lineno"> 2925</span>            vector&lt;int&gt; ans = vector&lt;int&gt;();</div>
-<div class="line"><a id="l02926" name="l02926"></a><span class="lineno"> 2926</span>            <span class="keyword">auto</span> m          = matrix.size();</div>
-<div class="line"><a id="l02927" name="l02927"></a><span class="lineno"> 2927</span>            <span class="keyword">auto</span> n          = matrix[0].size();</div>
-<div class="line"><a id="l02928" name="l02928"></a><span class="lineno"> 2928</span>            <span class="keywordtype">int</span> *minimum    = <span class="keyword">new</span> <span class="keywordtype">int</span>[m];</div>
-<div class="line"><a id="l02929" name="l02929"></a><span class="lineno"> 2929</span>            memset(minimum, 50, m * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><a id="l02930" name="l02930"></a><span class="lineno"> 2930</span>            <span class="keywordtype">int</span> *maximum = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
-<div class="line"><a id="l02931" name="l02931"></a><span class="lineno"> 2931</span>            memset(maximum, 0, n * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><a id="l02932" name="l02932"></a><span class="lineno"> 2932</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l02933" name="l02933"></a><span class="lineno"> 2933</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l02934" name="l02934"></a><span class="lineno"> 2934</span>                    minimum[i] = min(minimum[i], matrix[i][j]);</div>
-<div class="line"><a id="l02935" name="l02935"></a><span class="lineno"> 2935</span>                    maximum[j] = max(maximum[j], matrix[i][j]);</div>
-<div class="line"><a id="l02936" name="l02936"></a><span class="lineno"> 2936</span>                }</div>
-<div class="line"><a id="l02937" name="l02937"></a><span class="lineno"> 2937</span>            }</div>
-<div class="line"><a id="l02938" name="l02938"></a><span class="lineno"> 2938</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l02939" name="l02939"></a><span class="lineno"> 2939</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l02940" name="l02940"></a><span class="lineno"> 2940</span>                    <span class="keywordflow">if</span>(matrix[i][j] == minimum[i] &amp;&amp; matrix[i][j] == maximum[j]) {</div>
-<div class="line"><a id="l02941" name="l02941"></a><span class="lineno"> 2941</span>                        ans.push_back(matrix[i][j]);</div>
-<div class="line"><a id="l02942" name="l02942"></a><span class="lineno"> 2942</span>                    }</div>
-<div class="line"><a id="l02943" name="l02943"></a><span class="lineno"> 2943</span>                }</div>
-<div class="line"><a id="l02944" name="l02944"></a><span class="lineno"> 2944</span>            }</div>
-<div class="line"><a id="l02945" name="l02945"></a><span class="lineno"> 2945</span>            <span class="keyword">delete</span>[] minimum;</div>
-<div class="line"><a id="l02946" name="l02946"></a><span class="lineno"> 2946</span>            <span class="keyword">delete</span>[] maximum;</div>
-<div class="line"><a id="l02947" name="l02947"></a><span class="lineno"> 2947</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l02948" name="l02948"></a><span class="lineno"> 2948</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l02928">2928</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02928" name="l02928"></a><span class="lineno"> 2928</span>                                                                      {</div>
+<div class="line"><a id="l02929" name="l02929"></a><span class="lineno"> 2929</span>            <span class="keyword">auto</span> ans     = vector&lt;int&gt;();</div>
+<div class="line"><a id="l02930" name="l02930"></a><span class="lineno"> 2930</span>            <span class="keyword">const</span> <span class="keyword">auto</span> m = matrix.size();</div>
+<div class="line"><a id="l02931" name="l02931"></a><span class="lineno"> 2931</span>            <span class="keyword">const</span> <span class="keyword">auto</span> n = matrix[0].size();</div>
+<div class="line"><a id="l02932" name="l02932"></a><span class="lineno"> 2932</span>            <span class="keyword">auto</span> minimum = <span class="keyword">new</span> <span class="keywordtype">int</span>[m];</div>
+<div class="line"><a id="l02933" name="l02933"></a><span class="lineno"> 2933</span>            memset(minimum, 50, m * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a id="l02934" name="l02934"></a><span class="lineno"> 2934</span>            <span class="keyword">auto</span> maximum = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l02935" name="l02935"></a><span class="lineno"> 2935</span>            memset(maximum, 0, n * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a id="l02936" name="l02936"></a><span class="lineno"> 2936</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l02937" name="l02937"></a><span class="lineno"> 2937</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><a id="l02938" name="l02938"></a><span class="lineno"> 2938</span>                    minimum[i] = min(minimum[i], matrix[i][j]);</div>
+<div class="line"><a id="l02939" name="l02939"></a><span class="lineno"> 2939</span>                    maximum[j] = max(maximum[j], matrix[i][j]);</div>
+<div class="line"><a id="l02940" name="l02940"></a><span class="lineno"> 2940</span>                }</div>
+<div class="line"><a id="l02941" name="l02941"></a><span class="lineno"> 2941</span>            }</div>
+<div class="line"><a id="l02942" name="l02942"></a><span class="lineno"> 2942</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l02943" name="l02943"></a><span class="lineno"> 2943</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><a id="l02944" name="l02944"></a><span class="lineno"> 2944</span>                    <span class="keywordflow">if</span>(matrix[i][j] == minimum[i] &amp;&amp; matrix[i][j] == maximum[j]) {</div>
+<div class="line"><a id="l02945" name="l02945"></a><span class="lineno"> 2945</span>                        ans.push_back(matrix[i][j]);</div>
+<div class="line"><a id="l02946" name="l02946"></a><span class="lineno"> 2946</span>                    }</div>
+<div class="line"><a id="l02947" name="l02947"></a><span class="lineno"> 2947</span>                }</div>
+<div class="line"><a id="l02948" name="l02948"></a><span class="lineno"> 2948</span>            }</div>
+<div class="line"><a id="l02949" name="l02949"></a><span class="lineno"> 2949</span>            <span class="keyword">delete</span>[] minimum;</div>
+<div class="line"><a id="l02950" name="l02950"></a><span class="lineno"> 2950</span>            <span class="keyword">delete</span>[] maximum;</div>
+<div class="line"><a id="l02951" name="l02951"></a><span class="lineno"> 2951</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l02952" name="l02952"></a><span class="lineno"> 2952</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l01557">leetcode::lucky_numbers_in_a_matrix::TEST()</a>.</p>
 

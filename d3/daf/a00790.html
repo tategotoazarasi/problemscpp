@@ -123,26 +123,26 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03976">3976</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03976" name="l03976"></a><span class="lineno"> 3976</span>                                                   {</div>
-<div class="line"><a id="l03977" name="l03977"></a><span class="lineno"> 3977</span>        <span class="keywordtype">string</span> str;</div>
-<div class="line"><a id="l03978" name="l03978"></a><span class="lineno"> 3978</span>        <span class="keywordtype">string</span> substr;</div>
-<div class="line"><a id="l03979" name="l03979"></a><span class="lineno"> 3979</span>        <span class="keywordflow">while</span>(cin &gt;&gt; str) {</div>
-<div class="line"><a id="l03980" name="l03980"></a><span class="lineno"> 3980</span>            cin &gt;&gt; substr;</div>
-<div class="line"><a id="l03981" name="l03981"></a><span class="lineno"> 3981</span>            ostringstream oss = ostringstream();</div>
-<div class="line"><a id="l03982" name="l03982"></a><span class="lineno"> 3982</span>            <span class="keywordtype">int</span> max_i         = 0;</div>
-<div class="line"><a id="l03983" name="l03983"></a><span class="lineno"> 3983</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; str.length(); i++) {</div>
-<div class="line"><a id="l03984" name="l03984"></a><span class="lineno"> 3984</span>                <span class="keywordflow">if</span>(str[i] &gt; str[max_i]) {</div>
-<div class="line"><a id="l03985" name="l03985"></a><span class="lineno"> 3985</span>                    max_i = i;</div>
-<div class="line"><a id="l03986" name="l03986"></a><span class="lineno"> 3986</span>                }</div>
-<div class="line"><a id="l03987" name="l03987"></a><span class="lineno"> 3987</span>            }</div>
-<div class="line"><a id="l03988" name="l03988"></a><span class="lineno"> 3988</span>            oss &lt;&lt; str.substr(0, max_i + 1);</div>
-<div class="line"><a id="l03989" name="l03989"></a><span class="lineno"> 3989</span>            oss &lt;&lt; substr;</div>
-<div class="line"><a id="l03990" name="l03990"></a><span class="lineno"> 3990</span>            oss &lt;&lt; str.substr(max_i + 1);</div>
-<div class="line"><a id="l03991" name="l03991"></a><span class="lineno"> 3991</span>            cout &lt;&lt; oss.str() &lt;&lt; endl;</div>
-<div class="line"><a id="l03992" name="l03992"></a><span class="lineno"> 3992</span>        }</div>
-<div class="line"><a id="l03993" name="l03993"></a><span class="lineno"> 3993</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l03994" name="l03994"></a><span class="lineno"> 3994</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03977">3977</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03977" name="l03977"></a><span class="lineno"> 3977</span>                                                   {</div>
+<div class="line"><a id="l03978" name="l03978"></a><span class="lineno"> 3978</span>        <span class="keywordtype">string</span> str;</div>
+<div class="line"><a id="l03979" name="l03979"></a><span class="lineno"> 3979</span>        <span class="keywordtype">string</span> substr;</div>
+<div class="line"><a id="l03980" name="l03980"></a><span class="lineno"> 3980</span>        <span class="keywordflow">while</span>(cin &gt;&gt; str) {</div>
+<div class="line"><a id="l03981" name="l03981"></a><span class="lineno"> 3981</span>            cin &gt;&gt; substr;</div>
+<div class="line"><a id="l03982" name="l03982"></a><span class="lineno"> 3982</span>            <span class="keyword">auto</span> oss  = ostringstream();</div>
+<div class="line"><a id="l03983" name="l03983"></a><span class="lineno"> 3983</span>            <span class="keywordtype">int</span> max_i = 0;</div>
+<div class="line"><a id="l03984" name="l03984"></a><span class="lineno"> 3984</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; str.length(); i++) {</div>
+<div class="line"><a id="l03985" name="l03985"></a><span class="lineno"> 3985</span>                <span class="keywordflow">if</span>(str[i] &gt; str[max_i]) {</div>
+<div class="line"><a id="l03986" name="l03986"></a><span class="lineno"> 3986</span>                    max_i = i;</div>
+<div class="line"><a id="l03987" name="l03987"></a><span class="lineno"> 3987</span>                }</div>
+<div class="line"><a id="l03988" name="l03988"></a><span class="lineno"> 3988</span>            }</div>
+<div class="line"><a id="l03989" name="l03989"></a><span class="lineno"> 3989</span>            oss &lt;&lt; str.substr(0, max_i + 1);</div>
+<div class="line"><a id="l03990" name="l03990"></a><span class="lineno"> 3990</span>            oss &lt;&lt; substr;</div>
+<div class="line"><a id="l03991" name="l03991"></a><span class="lineno"> 3991</span>            oss &lt;&lt; str.substr(max_i + 1);</div>
+<div class="line"><a id="l03992" name="l03992"></a><span class="lineno"> 3992</span>            cout &lt;&lt; oss.str() &lt;&lt; endl;</div>
+<div class="line"><a id="l03993" name="l03993"></a><span class="lineno"> 3993</span>        }</div>
+<div class="line"><a id="l03994" name="l03994"></a><span class="lineno"> 3994</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l03995" name="l03995"></a><span class="lineno"> 3995</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l01891">acwing::TEST()</a>.</p>
 
