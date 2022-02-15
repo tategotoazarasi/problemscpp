@@ -1116,4 +1116,23 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P5727::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		vector<int> vec = vector<int>();
+		while(n != 1) {
+			vec.push_back(n);
+			if(n % 2 != 0) {
+				n = n * 3 + 1;
+			} else {
+				n /= 2;
+			}
+		}
+		vec.push_back(n);
+		for(auto i = vec.rbegin(); i != vec.rend(); ++i) {
+			cout << *i << " ";
+		}
+		return 0;
+	}
 }// namespace luogu

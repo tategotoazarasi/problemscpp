@@ -373,8 +373,14 @@ namespace luogu {
 		static int main(istream &cin, ostream &cout);
 	};
 
-	/// \brief AcWing P1427 小鱼的数字游戏
+	/// \brief 洛谷 P1427 小鱼的数字游戏
 	class P1427 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/// \brief 洛谷 P5727 【深基5.例3】冰雹猜想
+	class P5727 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
