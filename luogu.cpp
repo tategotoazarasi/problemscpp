@@ -1100,4 +1100,20 @@ namespace luogu {
 		delete[] fish;
 		return 0;
 	}
+
+	int P1427::main(istream &cin, ostream &cout) {
+		unsigned int n;
+		vector<unsigned int> vec = vector<unsigned int>();
+		while(true) {
+			cin >> n;
+			if(n == 0) {
+				break;
+			}
+			vec.push_back(n);
+		}
+		for(auto i = vec.rbegin(); i != vec.rend(); ++i) {
+			cout << *i << " ";
+		}
+		return 0;
+	}
 }// namespace luogu
