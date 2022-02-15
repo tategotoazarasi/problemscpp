@@ -3972,4 +3972,24 @@ namespace acwing {
 		delete[] a;
 		return 0;
 	}
+
+	int acwing773::main(istream &cin, ostream &cout) {
+		string str;
+		string substr;
+		while(cin >> str) {
+			cin >> substr;
+			ostringstream oss = ostringstream();
+			int max_i         = 0;
+			for(int i = 0; i < str.length(); i++) {
+				if(str[i] > str[max_i]) {
+					max_i = i;
+				}
+			}
+			oss << str.substr(0, max_i + 1);
+			oss << substr;
+			oss << str.substr(max_i + 1);
+			cout << oss.str() << endl;
+		}
+		return 0;
+	}
 }// namespace acwing
