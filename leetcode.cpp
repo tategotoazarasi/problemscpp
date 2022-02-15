@@ -585,7 +585,7 @@ namespace leetcode {
 					stck.pop_front();
 				}
 			}
-
+			delete[] str_cpy;
 			return oss.str();
 		}
 	}// namespace simplify_path
@@ -626,6 +626,7 @@ namespace leetcode {
 				memset(row, 1, (n + 1) * sizeof(bool));
 				for(int j = 0; j < n; j++) {
 					if(!row[matrix[i][j]]) {
+						delete[] row;
 						return false;
 					}
 					row[matrix[i][j]] = false;
@@ -638,6 +639,7 @@ namespace leetcode {
 				memset(column, 1, (n + 1) * sizeof(bool));
 				for(int i = 0; i < n; i++) {
 					if(!column[matrix[i][j]]) {
+						delete[] column;
 						return false;
 					}
 					column[matrix[i][j]] = false;
@@ -757,6 +759,7 @@ namespace leetcode {
 					break;
 				}
 			}
+			delete[] nums;
 			return false;
 		}
 
@@ -822,6 +825,10 @@ namespace leetcode {
 				}
 			}
 			string ans = oss.str();
+			for(int i = 0; i < rows; i++) {
+				delete[] table[i];
+			}
+			delete[] table;
 			return rtrim(ans);
 		}
 
@@ -858,6 +865,8 @@ namespace leetcode {
 				return true;
 			}
 			const unsigned int target_status = search(blocked_set_target, p_target, p_source, limit);
+			delete p_source;
+			delete p_target;
 			return target_status != 0;
 		}
 
@@ -916,9 +925,13 @@ namespace leetcode {
 			}
 			for(int i = 0; i < nums.size(); i++) {
 				if(nums[i] > min[i] && nums[i] < max[i]) {
+					delete[] min;
+					delete[] max;
 					return true;
 				}
 			}
+			delete[] min;
+			delete[] max;
 			return false;
 		}
 	}// namespace increasing_triplet_subsequence
@@ -1228,6 +1241,7 @@ namespace leetcode {
 					flag[current_i + 1] = true;
 				}
 			}
+			delete[] flag;
 			return 0;
 		}
 	}// namespace jump_game_iv
@@ -1258,6 +1272,7 @@ namespace leetcode {
 				word = strtok(nullptr, " ");
 			}
 			const string ans = oss.str();
+			delete[] nstr;
 			return ans.substr(0, ans.length() - 1);
 		}
 
@@ -1738,6 +1753,7 @@ namespace leetcode {
 					count++;
 				}
 			}
+			delete[] str;
 			return count;
 		}
 	}// namespace number_of_valid_words_in_a_sentence
@@ -1868,6 +1884,7 @@ namespace leetcode {
 					}
 				}
 			}
+			delete[] occupied;
 			return isWater;
 		}
 	}// namespace map_of_highest_peak
@@ -1901,6 +1918,8 @@ namespace leetcode {
 					ans.push_back(p.first);
 				}
 			}
+			delete[] s1_str;
+			delete[] s2_str;
 			return ans;
 		}
 	}// namespace uncommon_words_from_two_sentences
@@ -1973,6 +1992,7 @@ namespace leetcode {
 					return s.substr(i, k);
 				}
 			}
+			delete[] pn;
 			return "";
 		}
 	}// namespace find_substring_with_given_hash_value
@@ -2342,6 +2362,8 @@ namespace leetcode {
 				ans = min(ans, left_sum[i] - right_sum[i + 1]);
 			}
 			ans = min(ans, left_sum[n - 1] - right_max_preserve);
+			delete[] left_sum;
+			delete[] right_sum;
 			return ans;
 		}
 	}// namespace minimum_difference_in_sums_after_removal_of_elements

@@ -220,6 +220,10 @@ namespace acwing {
 				cout << endl;
 			}
 		}
+		for(int i = 0; i < N; i++) {
+			delete[] g[i];
+		}
+		delete[] g;
 		return 0;
 	}
 
@@ -416,8 +420,11 @@ namespace acwing {
 				}
 				field[x][y] = 1;
 			}
-
 			cout << bfs(point(start_x, start_y, 0), field, max_x, max_y);
+			for(int i = 0; i < N + 10; i++) {
+				delete[] field[i];
+			}
+			delete[] field;
 			return 0;
 		}
 

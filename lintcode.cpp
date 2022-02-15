@@ -28,9 +28,8 @@ namespace lintcode {
 					}
 				}
 			}
-			string str  = S2.str();
-			int first   = len % K;
-			int average = len / K;
+			string str = S2.str();
+			int first  = len % K;
 			if(first == 0) {
 				first = K;
 			}
@@ -111,7 +110,9 @@ namespace lintcode {
 			for(int i = 2; i < n; i++) {
 				arr[i] = arr[i - 1] + arr[i - 2];
 			}
-			return arr[n - 1];
+			auto ans = arr[n - 1];
+			delete[] arr;
+			return ans;
 		}
 	}// namespace fibonacci
 
@@ -278,7 +279,12 @@ namespace lintcode {
 					dp[i][j] = grid[i - 1][j - 1] + min;
 				}
 			}
-			return dp[m][n];
+			auto ans = dp[m][n];
+			for(int i = 0; i <= m; i++) {
+				delete[] dp[i];
+			}
+			delete[] dp;
+			return ans;
 		}
 	}// namespace min_path_sum
 
