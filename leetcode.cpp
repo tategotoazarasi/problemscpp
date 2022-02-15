@@ -2890,7 +2890,8 @@ namespace leetcode {
 
 	namespace single_element_in_a_sorted_array {
 		int Solution::singleNonDuplicate(vector<int> &nums) {
-			int l = 0, r = nums.size() - 1;
+			int l = 0;
+			int r = nums.size() - 1;
 			while(l < r) {
 				if(l + 1 == r) {
 					if(l == 0) {
@@ -2901,18 +2902,21 @@ namespace leetcode {
 					}
 					if(nums[l - 1] == nums[l]) {
 						return nums[r];
-					} else {
-						return nums[l];
 					}
+					return nums[l];
+
+					return nums[l];
 				}
-				int m   = (l + r) / 2;
-				int tmp = m;
+				const int m = (l + r) / 2;
+				int tmp     = m;
 				if(nums[m + 1] == nums[m]) {
 					tmp = m + 1;
 				}
-				if(tmp % 2 == 0) {//在左边
+				if(tmp % 2 == 0) {
+					//在左边
 					r = m;
-				} else {//在右边
+				} else {
+					//在右边
 					l = m;
 				}
 			}
@@ -2922,12 +2926,12 @@ namespace leetcode {
 
 	namespace lucky_numbers_in_a_matrix {
 		vector<int> Solution::luckyNumbers(vector<vector<int>> &matrix) {
-			vector<int> ans = vector<int>();
-			auto m          = matrix.size();
-			auto n          = matrix[0].size();
-			int *minimum    = new int[m];
+			auto ans     = vector<int>();
+			const auto m = matrix.size();
+			const auto n = matrix[0].size();
+			auto minimum = new int[m];
 			memset(minimum, 50, m * sizeof(int));
-			int *maximum = new int[n];
+			auto maximum = new int[n];
 			memset(maximum, 0, n * sizeof(int));
 			for(int i = 0; i < m; i++) {
 				for(int j = 0; j < n; j++) {

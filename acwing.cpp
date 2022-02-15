@@ -3930,11 +3930,11 @@ namespace acwing {
 	}
 
 	int acwing764::main(istream &cin, ostream &cout) {
-		char *a = new char[101];
+		auto a = new char[101];
 		cin.getline(a, 101);
-		int len = strlen(a);
+		const int len = strlen(a);
 		for(int i = 1; i <= len; i++) {
-			cout << char(a[(i - 1) % len] + a[i % len]);
+			cout << static_cast<char>(a[(i - 1) % len] + a[i % len]);
 		}
 		delete[] a;
 		return 0;
@@ -3943,23 +3943,24 @@ namespace acwing {
 	int acwing1443::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		int *a = new int[n];
-		int *b = new int[n - 1];
+		auto a = new int[n];
+		auto b = new int[n - 1];
 		for(int i = 0; i < n - 1; i++) {
 			cin >> b[i];
 		}
 		for(int i = 1; i <= n; i++) {
-			unordered_set<int> us = unordered_set<int>();
-			bool flag             = true;
-			a[0]                  = i;
+			auto us   = unordered_set<int>();
+			bool flag = true;
+			a[0]      = i;
 			for(int j = 1; j < n; j++) {
 				a[j] = b[j - 1] - a[j - 1];
-				if(us.count(a[j]) != 0 || a[j] <= 0) {
+				if(us.contains(a[j]) || a[j] <= 0) {
 					flag = false;
 					break;
-				} else {
-					us.insert(a[j]);
 				}
+				us.insert(a[j]);
+
+				us.insert(a[j]);
 			}
 			if(flag) {
 				for(int j = 0; j < n; j++) {
@@ -3978,8 +3979,8 @@ namespace acwing {
 		string substr;
 		while(cin >> str) {
 			cin >> substr;
-			ostringstream oss = ostringstream();
-			int max_i         = 0;
+			auto oss  = ostringstream();
+			int max_i = 0;
 			for(int i = 0; i < str.length(); i++) {
 				if(str[i] > str[max_i]) {
 					max_i = i;
@@ -3994,9 +3995,9 @@ namespace acwing {
 	}
 
 	int acwing770::main(istream &cin, ostream &cout) {
-		char *str            = new char[101];
-		char *to_be_replaced = new char[101];
-		char *replacement    = new char[101];
+		auto str            = new char[101];
+		auto to_be_replaced = new char[101];
+		auto replacement    = new char[101];
 		cin.getline(str, 101);
 		cin.getline(to_be_replaced, 101);
 		cin.getline(replacement, 101);
@@ -4017,7 +4018,8 @@ namespace acwing {
 	int acwing1672::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		string a, b;
+		string a;
+		string b;
 		cin >> a >> b;
 		bool prev_eq = true;
 		int ans      = 0;

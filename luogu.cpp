@@ -1073,7 +1073,7 @@ namespace luogu {
 				return 0;
 			}
 			current -= budget;
-			saving += (current / 100) * 100;
+			saving += current / 100 * 100;
 			current %= 100;
 		}
 		cout << current + saving / 5 * 6;
@@ -1084,7 +1084,7 @@ namespace luogu {
 	int P1428::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		int *fish = new int[n];
+		auto fish = new int[n];
 		for(int i = 0; i < n; i++) {
 			cin >> fish[i];
 		}
@@ -1103,7 +1103,7 @@ namespace luogu {
 
 	int P1427::main(istream &cin, ostream &cout) {
 		unsigned int n;
-		vector<unsigned int> vec = vector<unsigned int>();
+		auto vec = vector<unsigned int>();
 		while(true) {
 			cin >> n;
 			if(n == 0) {
@@ -1120,7 +1120,7 @@ namespace luogu {
 	int P5727::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		vector<int> vec = vector<int>();
+		auto vec = vector<int>();
 		while(n != 1) {
 			vec.push_back(n);
 			if(n % 2 != 0) {
