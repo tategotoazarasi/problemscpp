@@ -4037,4 +4037,21 @@ namespace acwing {
 		cout << ans;
 		return 0;
 	}
+
+	int acwing772::main(istream &cin, ostream &cout) {
+		string str;
+		cin >> str;
+		int charset[26] = {};
+		for(char ch: str) {
+			charset[ch - 'a']++;
+		}
+		for(char ch: str) {
+			if(charset[ch - 'a'] == 1) {
+				cout << ch;
+				return 0;
+			}
+		}
+		cout << "no";
+		return 0;
+	}
 }// namespace acwing

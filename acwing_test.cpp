@@ -1918,4 +1918,12 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("2", ans);
 	}
+
+	TEST(acwing772, case1) {
+		istringstream in("abceabcd");
+		auto out = ostringstream();
+		acwing772::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("e", ans);
+	}
 }// namespace acwing
