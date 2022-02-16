@@ -1938,4 +1938,19 @@ namespace acwing {
 		          "a 1\n",
 		          ans);
 	}
+	namespace acwing1660 {
+		TEST(acwing1660, case1) {
+			istringstream in("6\n"
+			                 "7 1\n"
+			                 "1 1\n"
+			                 "15 1\n"
+			                 "3 1\n"
+			                 "10 0\n"
+			                 "6 1");
+			auto out = ostringstream();
+			acwing1660::main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3", ans);
+		}
+	}// namespace acwing1660
 }// namespace acwing

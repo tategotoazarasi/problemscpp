@@ -4085,4 +4085,45 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	namespace acwing1660 {
+		int acwing1660::main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			vector<cow> cows = vector<cow>();
+			for(int i = 0; i < n; i++) {
+				int x;
+				bool infected;
+				cin >> x >> infected;
+				cows.push_back(cow{x, infected});
+			}
+			sort(cows.begin(), cows.end());
+			int r = 1000000;
+			for(int i = 0; i < n; i++) {
+				if(i - 1 >= 0 && (cows[i].infected != cows[i - 1].infected)) {
+					r = min(r, abs(cows[i].x - cows[i - 1].x));
+				}
+				if(i + 1 < n && (cows[i].infected != cows[i + 1].infected)) {
+					r = min(r, abs(cows[i].x - cows[i + 1].x));
+				}
+			}
+			for(int i = 0; i + 1 < n; i++) {
+				if(cows[i].infected && cows[i + 1].infected && abs(cows[i].x - cows[i + 1].x) < r) {
+					cows[i].infected = false;
+				}
+			}
+			int ans = 0;
+			for(int i = 0; i < n; i++) {
+				if(cows[i].infected) {
+					ans++;
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+
+		bool cow::operator<(const cow &c) const {
+			return this->x < c.x;
+		}
+	}// namespace acwing1660
 }// namespace acwing

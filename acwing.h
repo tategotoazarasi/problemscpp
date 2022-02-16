@@ -1250,5 +1250,19 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief AcWing 1660. 社交距离 II
+	namespace acwing1660 {
+		struct cow {
+			int x;
+			bool infected;
+			bool operator<(const cow &) const;
+		};
+
+		class acwing1660 {
+		public:
+			static int main(istream &cin, ostream &cout);
+		};
+	}// namespace acwing1660
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
