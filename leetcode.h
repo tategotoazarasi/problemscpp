@@ -1121,6 +1121,14 @@ namespace leetcode {
 			static vector<int> luckyNumbers(vector<vector<int>> &matrix);
 		};
 	}// namespace lucky_numbers_in_a_matrix
+
+	/// \brief LeetCode 1719. Number Of Ways To Reconstruct A Tree
+	namespace number_of_ways_to_reconstruct_a_tree {
+		class Solution {
+		public:
+			static int checkWays(vector<vector<int>> &pairs);
+		};
+	}// namespace number_of_ways_to_reconstruct_a_tree
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

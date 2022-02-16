@@ -1572,4 +1572,21 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::luckyNumbers(input));
 		}
 	}// namespace lucky_numbers_in_a_matrix
+
+	namespace number_of_ways_to_reconstruct_a_tree {
+		TEST(number_of_ways_to_reconstruct_a_tree, case1) {
+			vector<vector<int>> input = {{1, 2}, {2, 3}};
+			ASSERT_EQ(1, Solution::checkWays(input));
+		}
+
+		TEST(number_of_ways_to_reconstruct_a_tree, case2) {
+			vector<vector<int>> input = {{1, 2}, {2, 3}, {1, 3}};
+			ASSERT_EQ(2, Solution::checkWays(input));
+		}
+
+		TEST(number_of_ways_to_reconstruct_a_tree, case3) {
+			vector<vector<int>> input = {{1, 2}, {2, 3}, {2, 4}, {1, 5}};
+			ASSERT_EQ(0, Solution::checkWays(input));
+		}
+	}// namespace number_of_ways_to_reconstruct_a_tree
 }// namespace leetcode
