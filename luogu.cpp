@@ -1159,4 +1159,41 @@ namespace luogu {
 		delete[] tree;
 		return 0;
 	}
+
+	int P5728::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		int **students = new int *[n];
+		for(int i = 0; i < n; i++) {
+			students[i] = new int[3];
+			cin >> students[i][0] >> students[i][1] >> students[i][2];
+		}
+		int ans = 0;
+		for(int i = 0; i + 1 < n; i++) {
+			int sum_i = 0;
+			for(int k = 0; k < 3; k++) {
+				sum_i += students[i][k];
+			}
+			for(int j = i + 1; j < n; j++) {
+				bool flag = true;
+				int sum_j = 0;
+				for(int k = 0; k < 3; k++) {
+					sum_j += students[j][k];
+					if(abs(students[i][k] - students[j][k]) > 5) {
+						flag = false;
+						break;
+					}
+				}
+				if(flag && abs(sum_i - sum_j) <= 10) {
+					ans++;
+				}
+			}
+		}
+		cout << ans;
+		for(int i = 0; i < n; i++) {
+			delete[] students[i];
+		}
+		delete[] students;
+		return 0;
+	}
 }// namespace luogu
