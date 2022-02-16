@@ -712,4 +712,15 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("1 2 4 8 16 5 10 20 ", ans);
 	}
+
+	TEST(P1047, case1) {
+		istringstream in("500 3\n"
+		                 "150 300\n"
+		                 "100 200\n"
+		                 "470 471");
+		auto out = ostringstream();
+		P1047::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("298", ans);
+	}
 }// namespace luogu

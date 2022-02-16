@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include <cstring>
 #include <iomanip>
 #include <set>
 #include <sstream>
@@ -1133,6 +1134,29 @@ namespace luogu {
 		for(auto i = vec.rbegin(); i != vec.rend(); ++i) {
 			cout << *i << " ";
 		}
+		return 0;
+	}
+
+	int P1047::main(istream &cin, ostream &cout) {
+		int l, m;
+		cin >> l >> m;
+		bool *tree = new bool[l + 1];
+		memset(tree, true, (l + 1) * sizeof(bool));
+		for(int i = 0; i < m; i++) {
+			int u, v;
+			cin >> u >> v;
+			for(int j = u; j <= v; j++) {
+				tree[j] = false;
+			}
+		}
+		int ans = 0;
+		for(int i = 0; i <= l; i++) {
+			if(tree[i]) {
+				ans++;
+			}
+		}
+		cout << ans;
+		delete[] tree;
 		return 0;
 	}
 }// namespace luogu
