@@ -4054,4 +4054,35 @@ namespace acwing {
 		cout << "no";
 		return 0;
 	}
+
+	int acwing771::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		for(int i = 0; i < n; i++) {
+			string str;
+			cin >> str;
+			char ch_max   = str[0];
+			int count_max = 1;
+			char ch       = str[0];
+			int count     = 1;
+			for(int j = 1; j < str.length(); j++) {
+				if(str[j] == str[j - 1]) {
+					count++;
+				} else {
+					if(count > count_max) {
+						count_max = count;
+						ch_max    = ch;
+					}
+					ch    = str[j];
+					count = 1;
+				}
+			}
+			if(count > count_max) {
+				count_max = count;
+				ch_max    = ch;
+			}
+			cout << ch_max << " " << count_max << endl;
+		}
+		return 0;
+	}
 }// namespace acwing
