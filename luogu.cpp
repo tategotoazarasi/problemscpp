@@ -1200,14 +1200,21 @@ namespace luogu {
 	}
 
 	int P5729::main(istream &cin, ostream &cout) {
-		int w, x, h;
+		int w;
+		int x;
+		int h;
 		cin >> w >> x >> h;
 		bool block[21][21][21] = {};
-		memset(block, true, sizeof block);
+		memset(block, 1, sizeof block);
 		int q;
 		cin >> q;
-		while(q--) {
-			int x1, y1, z1, x2, y2, z2;
+		while((q--) != 0) {
+			int x1;
+			int y1;
+			int z1;
+			int x2;
+			int y2;
+			int z2;
 			cin >> x1 >> y1 >> z1 >> x2 >> y2 >> z2;
 			for(int i = x1; i <= x2; i++) {
 				for(int j = y1; j <= y2; j++) {
@@ -1235,7 +1242,7 @@ namespace luogu {
 		int n;
 		cin >> n;
 		bool winning_numbers[34];
-		memset(winning_numbers, false, sizeof winning_numbers);
+		memset(winning_numbers, 0, sizeof winning_numbers);
 		int prize_numbers[7];
 		memset(prize_numbers, 0, sizeof prize_numbers);
 		for(int i = 0; i < 7; i++) {

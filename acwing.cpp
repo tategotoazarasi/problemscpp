@@ -4128,11 +4128,11 @@ namespace acwing {
 	}// namespace acwing1660
 
 	int acwing774::main(istream &cin, ostream &cout) {
-		char *str = new char[501];
+		auto str = new char[501];
 		cin.getline(str, 501);
-		str[strlen(str) - 1] = '\0';
-		char *longest_word   = nullptr;
-		int max_len          = 0;
+		str[strlen(str) - 1]     = '\0';
+		const char *longest_word = nullptr;
+		int max_len              = 0;
 		for(char *word = strtok(str, " "); word != nullptr; word = strtok(nullptr, " ")) {
 			if(max_len < strlen(word)) {
 				max_len      = strlen(word);
@@ -4145,9 +4145,9 @@ namespace acwing {
 	}
 
 	int acwing775::main(istream &cin, ostream &cout) {
-		char *str      = new char[101];
-		char **str_rev = new char *[101];
-		int i          = 0;
+		auto str     = new char[101];
+		auto str_rev = new char *[101];
+		int i        = 0;
 		cin.getline(str, 101);
 		for(char *word = strtok(str, " "); word != nullptr; word = strtok(nullptr, " ")) {
 			str_rev[i++] = word;
@@ -4162,9 +4162,9 @@ namespace acwing {
 
 	int acwing3347::main(istream &cin, ostream &cout) {
 		int n;
-		int *flowers                                    = new int[n];
-		int *prefix_sum                                 = new int[n];
-		unordered_map<int, unordered_set<int>> location = unordered_map<int, unordered_set<int>>();
+		auto flowers    = new int[n];
+		auto prefix_sum = new int[n];
+		auto location   = unordered_map<int, unordered_set<int>>();
 		cin >> n;
 		int sum = 0;
 		for(int i = 0; i < n; i++) {
@@ -4176,11 +4176,11 @@ namespace acwing {
 		int ans = 0;
 		for(int i = 0; i < n; i++) {
 			for(int j = i; j < n; j++) {
-				int len = j - i + 1;
-				sum     = prefix_sum[j] - ((i - 1 >= 0) ? prefix_sum[i - 1] : 0);
+				const int len = j - i + 1;
+				sum           = prefix_sum[j] - (i - 1 >= 0 ? prefix_sum[i - 1] : 0);
 				if(sum % len == 0) {
 					int avg = sum / len;
-					for(auto flower: location[avg]) {
+					for(const auto flower: location[avg]) {
 						if(i <= flower && flower <= j) {
 							ans++;
 							break;

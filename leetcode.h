@@ -1144,15 +1144,17 @@ namespace leetcode {
 			int k;
 			int row;
 			int column;
-			status(int k, int row, int column): k(k), row(row), column(column){};
+
+			status(int k, int row, int column)
+			    : k(k), row(row), column(column){};
 		};
 
 		struct status_hash {
-			unsigned int operator()(const status &) const;
+			unsigned int operator()(const status & /*s*/) const;
 		};
 
 		struct status_equal {
-			bool operator()(const status &, const status &) const;
+			bool operator()(const status & /*s1*/, const status & /*s2*/) const;
 		};
 
 		class Solution {
