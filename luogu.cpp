@@ -1085,7 +1085,7 @@ namespace luogu {
 	int P1428::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		auto fish = new int[n];
+		auto *fish = new int[n];
 		for(int i = 0; i < n; i++) {
 			cin >> fish[i];
 		}
@@ -1138,12 +1138,14 @@ namespace luogu {
 	}
 
 	int P1047::main(istream &cin, ostream &cout) {
-		int l, m;
+		int l;
+		int m;
 		cin >> l >> m;
-		bool *tree = new bool[l + 1];
-		memset(tree, true, (l + 1) * sizeof(bool));
+		auto *tree = new bool[l + 1];
+		memset(tree, 1, (l + 1) * sizeof(bool));
 		for(int i = 0; i < m; i++) {
-			int u, v;
+			int u;
+			int v;
 			cin >> u >> v;
 			for(int j = u; j <= v; j++) {
 				tree[j] = false;
@@ -1163,7 +1165,7 @@ namespace luogu {
 	int P5728::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		int **students = new int *[n];
+		auto *students = new int *[n];
 		for(int i = 0; i < n; i++) {
 			students[i] = new int[3];
 			cin >> students[i][0] >> students[i][1] >> students[i][2];

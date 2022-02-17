@@ -50,16 +50,6 @@ namespace lintcode {
 		}
 	}// namespace remove_extra
 
-	namespace fibonacci {
-		TEST(fibonacci, case1) {
-			ASSERT_EQ(0, Solution::fibonacci(1));
-		}
-
-		TEST(fibonacci, case2) {
-			ASSERT_EQ(1, Solution::fibonacci(2));
-		}
-	}// namespace fibonacci
-
 	namespace character_deletion {
 		TEST(character_deletion, case1) {
 			auto str = string("They are students");

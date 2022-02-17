@@ -1256,7 +1256,7 @@ namespace acwing {
 		struct cow {
 			int x;
 			bool infected;
-			bool operator<(const cow &) const;
+			bool operator<(const cow & /*c*/) const;
 		};
 
 		class acwing1660 {

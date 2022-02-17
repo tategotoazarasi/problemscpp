@@ -1938,6 +1938,7 @@ namespace acwing {
 		          "a 1\n",
 		          ans);
 	}
+
 	namespace acwing1660 {
 		TEST(acwing1660, case1) {
 			istringstream in("6\n"

@@ -102,20 +102,6 @@ namespace lintcode {
 		}
 	}// namespace remove_extra
 
-	namespace fibonacci {
-		int Solution::fibonacci(int n) {
-			auto *arr = new int[n];
-			arr[0]    = 0;
-			arr[1]    = 1;
-			for(int i = 2; i < n; i++) {
-				arr[i] = arr[i - 1] + arr[i - 2];
-			}
-			auto ans = arr[n - 1];
-			delete[] arr;
-			return ans;
-		}
-	}// namespace fibonacci
-
 	namespace character_deletion {
 		string Solution::CharacterDeletion(string &str, string &sub) {
 			auto oss = ostringstream();
@@ -279,7 +265,7 @@ namespace lintcode {
 					dp[i][j] = grid[i - 1][j - 1] + min;
 				}
 			}
-			auto ans = dp[m][n];
+			const auto ans = dp[m][n];
 			for(int i = 0; i <= m; i++) {
 				delete[] dp[i];
 			}

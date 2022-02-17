@@ -2904,8 +2904,6 @@ namespace leetcode {
 						return nums[r];
 					}
 					return nums[l];
-
-					return nums[l];
 				}
 				const int m = (l + r) / 2;
 				int tmp     = m;
@@ -2926,12 +2924,12 @@ namespace leetcode {
 
 	namespace lucky_numbers_in_a_matrix {
 		vector<int> Solution::luckyNumbers(vector<vector<int>> &matrix) {
-			auto ans     = vector<int>();
-			const auto m = matrix.size();
-			const auto n = matrix[0].size();
-			auto minimum = new int[m];
+			auto ans      = vector<int>();
+			const auto m  = matrix.size();
+			const auto n  = matrix[0].size();
+			auto *minimum = new int[m];
 			memset(minimum, 50, m * sizeof(int));
-			auto maximum = new int[n];
+			auto *maximum = new int[n];
 			memset(maximum, 0, n * sizeof(int));
 			for(int i = 0; i < m; i++) {
 				for(int j = 0; j < n; j++) {
@@ -2976,12 +2974,12 @@ namespace leetcode {
 				if(node == root) {
 					continue;
 				}
-				int currDegree   = neighbours.size();
-				int parent       = -1;
-				int parentDegree = INT_MAX;
+				const int currDegree = neighbours.size();
+				int parent           = -1;
+				int parentDegree     = INT_MAX;
 
 				/* 根据 degree 的大小找到 node 的父节点 parent */
-				for(auto &neighbour: neighbours) {
+				for(const auto &neighbour: neighbours) {
 					if(adj[neighbour].size() < parentDegree && adj[neighbour].size() >= currDegree) {
 						parent       = neighbour;
 						parentDegree = adj[neighbour].size();
@@ -2992,11 +2990,11 @@ namespace leetcode {
 				}
 
 				/* 检测 neighbours 是否是 adj[parent] 的子集 */
-				for(auto &neighbour: neighbours) {
+				for(const auto &neighbour: neighbours) {
 					if(neighbour == parent) {
 						continue;
 					}
-					if(!adj[parent].count(neighbour)) {
+					if(static_cast<unsigned int>(adj[parent].contains(neighbour)) == 0U) {
 						return 0;
 					}
 				}

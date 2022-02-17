@@ -51,20 +51,6 @@ namespace lintcode {
 	}// namespace remove_extra
 
 	/**
-	 * \brief lintcode 1807. 斐波纳契数列简单
-	 */
-	namespace fibonacci {
-		class Solution {
-		public:
-			/**
-			 * @param n: an integer
-			 * @return: an ineger f(n)
-			 */
-			static int fibonacci(int /*n*/);
-		};
-	}// namespace fibonacci
-
-	/**
 	 * \brief lintcode 1905. 字符删除
 	 */
 	namespace character_deletion {

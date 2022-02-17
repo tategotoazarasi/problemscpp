@@ -3930,7 +3930,7 @@ namespace acwing {
 	}
 
 	int acwing764::main(istream &cin, ostream &cout) {
-		auto a = new char[101];
+		auto *a = new char[101];
 		cin.getline(a, 101);
 		const int len = strlen(a);
 		for(int i = 1; i <= len; i++) {
@@ -3943,8 +3943,8 @@ namespace acwing {
 	int acwing1443::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		auto a = new int[n];
-		auto b = new int[n - 1];
+		auto *a = new int[n];
+		auto *b = new int[n - 1];
 		for(int i = 0; i < n - 1; i++) {
 			cin >> b[i];
 		}
@@ -3995,9 +3995,9 @@ namespace acwing {
 	}
 
 	int acwing770::main(istream &cin, ostream &cout) {
-		auto str            = new char[101];
-		auto to_be_replaced = new char[101];
-		auto replacement    = new char[101];
+		auto *str            = new char[101];
+		auto *to_be_replaced = new char[101];
+		auto *replacement    = new char[101];
 		cin.getline(str, 101);
 		cin.getline(to_be_replaced, 101);
 		cin.getline(replacement, 101);
@@ -4044,10 +4044,10 @@ namespace acwing {
 		string str;
 		cin >> str;
 		int charset[26] = {};
-		for(char ch: str) {
+		for(const char ch: str) {
 			charset[ch - 'a']++;
 		}
-		for(char ch: str) {
+		for(const char ch: str) {
 			if(charset[ch - 'a'] == 1) {
 				cout << ch;
 				return 0;
@@ -4092,7 +4092,7 @@ namespace acwing {
 		int acwing1660::main(istream &cin, ostream &cout) {
 			int n;
 			cin >> n;
-			vector<cow> cows = vector<cow>();
+			auto cows = vector<cow>();
 			for(int i = 0; i < n; i++) {
 				int x;
 				bool infected;
@@ -4102,10 +4102,10 @@ namespace acwing {
 			sort(cows.begin(), cows.end());
 			int r = 1000000;
 			for(int i = 0; i < n; i++) {
-				if(i - 1 >= 0 && (cows[i].infected != cows[i - 1].infected)) {
+				if(i - 1 >= 0 && cows[i].infected != cows[i - 1].infected) {
 					r = min(r, abs(cows[i].x - cows[i - 1].x));
 				}
-				if(i + 1 < n && (cows[i].infected != cows[i + 1].infected)) {
+				if(i + 1 < n && cows[i].infected != cows[i + 1].infected) {
 					r = min(r, abs(cows[i].x - cows[i + 1].x));
 				}
 			}
@@ -4124,8 +4124,6 @@ namespace acwing {
 			return 0;
 		}
 
-		bool cow::operator<(const cow &c) const {
-			return this->x < c.x;
-		}
+		bool cow::operator<(const cow &c) const { return this->x < c.x; }
 	}// namespace acwing1660
 }// namespace acwing
