@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['b_0',['b',['../d0/dc5/a00343.html#a567a53696628ec73eb65cabd484946a3',1,'acwing::acwing1978::path::b()'],['../de/d94/a00603.html#a7c26d176f2224e6ba3633990af031358',1,'acwing::acwing4217::b()'],['../d6/da1/a00675.html#adbe67de05abc4c41c2a1f0da190a1219',1,'acwing::acwing4298::b()']]],
-  ['back_1',['back',['../de/d94/a00603.html#a9f75fcdc8bb6d3c92ad13531a572f3fc',1,'acwing::acwing4217']]]
+  ['b_0',['b',['../d9/d48/a00345.html#a567a53696628ec73eb65cabd484946a3',1,'acwing::acwing1978::path::b()'],['../d0/d1c/a00605.html#a7c26d176f2224e6ba3633990af031358',1,'acwing::acwing4217::b()'],['../dc/de4/a00677.html#adbe67de05abc4c41c2a1f0da190a1219',1,'acwing::acwing4298::b()']]],
+  ['back_1',['back',['../d0/d1c/a00605.html#a9f75fcdc8bb6d3c92ad13531a572f3fc',1,'acwing::acwing4217']]]
 ];

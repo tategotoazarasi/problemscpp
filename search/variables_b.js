@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['n_0',['n',['../d6/d80/a00371.html#a1bf9235b72d60539ff2d79a50a84f192',1,'acwing::acwing1960::n()'],['../d0/dc4/a00443.html#a4f8aaaad3e0a942d33264415af596673',1,'acwing::acwing1929::Solution::n()'],['../de/d94/a00603.html#a0d4ccff0a5a181f31d26c63eedb308d0',1,'acwing::acwing4217::n()'],['../d6/da1/a00675.html#a7d62f827424e8d74afdb95e1df41795e',1,'acwing::acwing4298::n()'],['../d2/d21/a00895.html#ac720663a373d3d40ce2f2f14ce43d139',1,'leetcode::cat_and_mouse::Solution::n()']]],
-  ['n_1',['N',['../d2/dee/a00049.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8',1,'acwing::acwing2019']]],
-  ['next_2',['next',['../d3/db4/a00823.html#a5faec59514f8e67aae6f6d5d5436bf7d',1,'leetcode::ListNode::next()'],['../db/daf/a01019.html#a368d5c925f403ef1e7e47b3bb66420ab',1,'leetcode::UhWRSj::TrieNode::next()']]],
-  ['nexts_3',['nexts',['../dc/d0f/a00303.html#ae01415ca9922c08ac9ece9f26f0ca5f7',1,'acwing::acwing4208::trie_node::nexts()'],['../d7/d5f/a00831.html#a5c786bb189d8d537910a1b33db5ecb46',1,'leetcode::concatenated_words::TrieNode::nexts()']]]
+  ['m_0',['m',['../dd/d47/a00445.html#ad727aadba3ae32c473dffc35008bf5bd',1,'acwing::acwing1929::Solution::m()'],['../dc/de4/a00677.html#a6e5d007d92b9d19e589ca19f5a000245',1,'acwing::acwing4298::m()'],['../d0/d82/a00857.html#ad5f954429d13b3ae0e324807dc3f1523',1,'leetcode::majority_element::Solution::m()'],['../dd/dee/a01081.html#a61173cf20b689991c7b2e3cb43958e22',1,'leetcode::stock_price_fluctuation::StockPrice::m()']]],
+  ['match_1',['match',['../dc/de4/a00677.html#a70a95417e2f12317e215e2c724ddca6b',1,'acwing::acwing4298']]],
+  ['max_5fsize_2',['max_size',['../db/d28/a01133.html#a6e3f9cf227c2a4cb28e5133fa2587000',1,'leetcode::groups_of_strings::Solution']]],
+  ['maxn_3',['MAXN',['../d2/db1/a00070.html#a0a71b7e2a5c82a9ab3444d10a7fa5c91',1,'leetcode::cat_and_mouse']]],
+  ['mirrors_4',['mirrors',['../dd/d47/a00445.html#a07e6f6810fb7e332c12b3b40c1779c23',1,'acwing::acwing1929::Solution']]],
+  ['mouse_5fwin_5',['MOUSE_WIN',['../d2/db1/a00070.html#ae68fb24f26d1729119604748b3b20490',1,'leetcode::cat_and_mouse']]],
+  ['ms_6',['ms',['../dd/dee/a01081.html#a6851d53f741e2449b0f63cdcf69a1458',1,'leetcode::stock_price_fluctuation::StockPrice::ms()'],['../d1/dfa/a01097.html#a204e26a914a8b55a6260017b12c8eabb',1,'leetcode::detect_squares::DetectSquares::ms()']]]
 ];

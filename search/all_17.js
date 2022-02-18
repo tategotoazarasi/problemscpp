@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_0',['y',['../d3/d42/a00235.html#a7cc1ae7bbad61542a27009eea419fecf',1,'acwing::acwing2060::point::y()'],['../d0/d1f/a00247.html#a907203fb6ce188e3e52f7d22b989f832',1,'acwing::acwing2019::point::y()'],['../df/d70/a00431.html#ada38b57197bf006a785df93abb7cb190',1,'acwing::acwing1929::step::y()'],['../dd/d20/a00939.html#a8bceaeb02a938e820304bec2b44a770b',1,'leetcode::escape_a_large_maze::point::y()']]]
+  ['y_0',['y',['../d4/d08/a00237.html#a7cc1ae7bbad61542a27009eea419fecf',1,'acwing::acwing2060::point::y()'],['../de/dbc/a00249.html#a907203fb6ce188e3e52f7d22b989f832',1,'acwing::acwing2019::point::y()'],['../dd/d07/a00433.html#ada38b57197bf006a785df93abb7cb190',1,'acwing::acwing1929::step::y()'],['../d5/da3/a00953.html#a8bceaeb02a938e820304bec2b44a770b',1,'leetcode::escape_a_large_maze::point::y()']]]
 ];

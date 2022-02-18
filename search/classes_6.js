@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['listnode_0',['ListNode',['../d3/db4/a00823.html',1,'leetcode']]]
+  ['listnode_0',['ListNode',['../d1/de6/a00837.html',1,'leetcode']]]
 ];
