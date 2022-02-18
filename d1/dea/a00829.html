@@ -126,9 +126,9 @@ $(function() {
 <p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04163">4163</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l04163" name="l04163"></a><span class="lineno"> 4163</span>                                                    {</div>
 <div class="line"><a id="l04164" name="l04164"></a><span class="lineno"> 4164</span>        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l04165" name="l04165"></a><span class="lineno"> 4165</span>        <span class="keywordtype">int</span> *flowers                                    = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
-<div class="line"><a id="l04166" name="l04166"></a><span class="lineno"> 4166</span>        <span class="keywordtype">int</span> *prefix_sum                                 = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
-<div class="line"><a id="l04167" name="l04167"></a><span class="lineno"> 4167</span>        unordered_map&lt;int, unordered_set&lt;int&gt;&gt; location = unordered_map&lt;int, unordered_set&lt;int&gt;&gt;();</div>
+<div class="line"><a id="l04165" name="l04165"></a><span class="lineno"> 4165</span>        <span class="keyword">auto</span> flowers    = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l04166" name="l04166"></a><span class="lineno"> 4166</span>        <span class="keyword">auto</span> prefix_sum = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l04167" name="l04167"></a><span class="lineno"> 4167</span>        <span class="keyword">auto</span> location   = unordered_map&lt;int, unordered_set&lt;int&gt;&gt;();</div>
 <div class="line"><a id="l04168" name="l04168"></a><span class="lineno"> 4168</span>        cin &gt;&gt; n;</div>
 <div class="line"><a id="l04169" name="l04169"></a><span class="lineno"> 4169</span>        <span class="keywordtype">int</span> sum = 0;</div>
 <div class="line"><a id="l04170" name="l04170"></a><span class="lineno"> 4170</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
@@ -140,11 +140,11 @@ $(function() {
 <div class="line"><a id="l04176" name="l04176"></a><span class="lineno"> 4176</span>        <span class="keywordtype">int</span> ans = 0;</div>
 <div class="line"><a id="l04177" name="l04177"></a><span class="lineno"> 4177</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l04178" name="l04178"></a><span class="lineno"> 4178</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i; j &lt; n; j++) {</div>
-<div class="line"><a id="l04179" name="l04179"></a><span class="lineno"> 4179</span>                <span class="keywordtype">int</span> len = j - i + 1;</div>
-<div class="line"><a id="l04180" name="l04180"></a><span class="lineno"> 4180</span>                sum     = prefix_sum[j] - ((i - 1 &gt;= 0) ? prefix_sum[i - 1] : 0);</div>
+<div class="line"><a id="l04179" name="l04179"></a><span class="lineno"> 4179</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> len = j - i + 1;</div>
+<div class="line"><a id="l04180" name="l04180"></a><span class="lineno"> 4180</span>                sum           = prefix_sum[j] - (i - 1 &gt;= 0 ? prefix_sum[i - 1] : 0);</div>
 <div class="line"><a id="l04181" name="l04181"></a><span class="lineno"> 4181</span>                <span class="keywordflow">if</span>(sum % len == 0) {</div>
 <div class="line"><a id="l04182" name="l04182"></a><span class="lineno"> 4182</span>                    <span class="keywordtype">int</span> avg = sum / len;</div>
-<div class="line"><a id="l04183" name="l04183"></a><span class="lineno"> 4183</span>                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> flower: location[avg]) {</div>
+<div class="line"><a id="l04183" name="l04183"></a><span class="lineno"> 4183</span>                    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> flower: location[avg]) {</div>
 <div class="line"><a id="l04184" name="l04184"></a><span class="lineno"> 4184</span>                        <span class="keywordflow">if</span>(i &lt;= flower &amp;&amp; flower &lt;= j) {</div>
 <div class="line"><a id="l04185" name="l04185"></a><span class="lineno"> 4185</span>                            ans++;</div>
 <div class="line"><a id="l04186" name="l04186"></a><span class="lineno"> 4186</span>                            <span class="keywordflow">break</span>;</div>

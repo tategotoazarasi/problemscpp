@@ -1268,66 +1268,73 @@ $(function() {
 <div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>    }</div>
 <div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span> </div>
 <div class="line"><a id="l01202" name="l01202"></a><span class="lineno"><a class="line" href="../../d2/d49/a01561.html#a696f7410cda94722c8e8ea29fef8091b"> 1202</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d2/d49/a01561.html#a696f7410cda94722c8e8ea29fef8091b">P5729::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>        <span class="keywordtype">int</span> w, x, h;</div>
-<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>        cin &gt;&gt; w &gt;&gt; x &gt;&gt; h;</div>
-<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>        <span class="keywordtype">bool</span> block[21][21][21] = {};</div>
-<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span>        memset(block, <span class="keyword">true</span>, <span class="keyword">sizeof</span> block);</div>
-<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>        <span class="keywordtype">int</span> q;</div>
-<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>        cin &gt;&gt; q;</div>
-<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>        <span class="keywordflow">while</span>(q--) {</div>
-<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span>            <span class="keywordtype">int</span> x1, y1, z1, x2, y2, z2;</div>
-<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>            cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; z1 &gt;&gt; x2 &gt;&gt; y2 &gt;&gt; z2;</div>
-<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = x1; i &lt;= x2; i++) {</div>
-<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = y1; j &lt;= y2; j++) {</div>
-<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = z1; k &lt;= z2; k++) {</div>
-<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span>                        block[i][j][k] = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span>                    }</div>
-<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>                }</div>
-<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>            }</div>
-<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>        }</div>
-<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>        <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= w; i++) {</div>
-<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= x; j++) {</div>
-<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 1; k &lt;= h; k++) {</div>
-<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>                    <span class="keywordflow">if</span>(block[i][j][k]) {</div>
-<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>                        ans++;</div>
-<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>                    }</div>
-<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>                }</div>
-<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>            }</div>
-<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>        }</div>
-<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>        cout &lt;&lt; ans;</div>
-<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>    }</div>
-<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span> </div>
-<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"><a class="line" href="../../d6/d82/a01565.html#a16a16f76dc600b8eb7e22073db011981"> 1234</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d6/d82/a01565.html#a16a16f76dc600b8eb7e22073db011981">P2550::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>        <span class="keywordtype">bool</span> winning_numbers[34];</div>
-<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>        memset(winning_numbers, <span class="keyword">false</span>, <span class="keyword">sizeof</span> winning_numbers);</div>
-<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span>        <span class="keywordtype">int</span> prize_numbers[7];</div>
-<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>        memset(prize_numbers, 0, <span class="keyword">sizeof</span> prize_numbers);</div>
-<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 7; i++) {</div>
-<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>            <span class="keywordtype">int</span> winning_number;</div>
-<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>            cin &gt;&gt; winning_number;</div>
-<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>            winning_numbers[winning_number] = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>        }</div>
-<div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span>            <span class="keywordtype">int</span> prize_number = 7;</div>
-<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 7; j++) {</div>
-<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span>                <span class="keywordtype">int</span> lottery_number;</div>
-<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span>                cin &gt;&gt; lottery_number;</div>
-<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span>                <span class="keywordflow">if</span>(winning_numbers[lottery_number]) {</div>
-<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>                    prize_number--;</div>
-<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>                }</div>
-<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>            }</div>
-<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>            prize_numbers[prize_number]++;</div>
-<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>        }</div>
-<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 7; i++) {</div>
-<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>            cout &lt;&lt; prize_numbers[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>        }</div>
-<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>    }</div>
-<div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>}<span class="comment">// namespace luogu</span></div>
+<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>        <span class="keywordtype">int</span> w;</div>
+<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>        <span class="keywordtype">int</span> x;</div>
+<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>        <span class="keywordtype">int</span> h;</div>
+<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span>        cin &gt;&gt; w &gt;&gt; x &gt;&gt; h;</div>
+<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>        <span class="keywordtype">bool</span> block[21][21][21] = {};</div>
+<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>        memset(block, 1, <span class="keyword">sizeof</span> block);</div>
+<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>        <span class="keywordtype">int</span> q;</div>
+<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span>        cin &gt;&gt; q;</div>
+<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>        <span class="keywordflow">while</span>((q--) != 0) {</div>
+<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span>            <span class="keywordtype">int</span> x1;</div>
+<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>            <span class="keywordtype">int</span> y1;</div>
+<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>            <span class="keywordtype">int</span> z1;</div>
+<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span>            <span class="keywordtype">int</span> x2;</div>
+<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span>            <span class="keywordtype">int</span> y2;</div>
+<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>            <span class="keywordtype">int</span> z2;</div>
+<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>            cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; z1 &gt;&gt; x2 &gt;&gt; y2 &gt;&gt; z2;</div>
+<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = x1; i &lt;= x2; i++) {</div>
+<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = y1; j &lt;= y2; j++) {</div>
+<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = z1; k &lt;= z2; k++) {</div>
+<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span>                        block[i][j][k] = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span>                    }</div>
+<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>                }</div>
+<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>            }</div>
+<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>        }</div>
+<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>        <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= w; i++) {</div>
+<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= x; j++) {</div>
+<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 1; k &lt;= h; k++) {</div>
+<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>                    <span class="keywordflow">if</span>(block[i][j][k]) {</div>
+<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>                        ans++;</div>
+<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>                    }</div>
+<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>                }</div>
+<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>            }</div>
+<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>        }</div>
+<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>        cout &lt;&lt; ans;</div>
+<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span>    }</div>
+<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span> </div>
+<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"><a class="line" href="../../d6/d82/a01565.html#a16a16f76dc600b8eb7e22073db011981"> 1241</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d6/d82/a01565.html#a16a16f76dc600b8eb7e22073db011981">P2550::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>        <span class="keywordtype">bool</span> winning_numbers[34];</div>
+<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>        memset(winning_numbers, 0, <span class="keyword">sizeof</span> winning_numbers);</div>
+<div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span>        <span class="keywordtype">int</span> prize_numbers[7];</div>
+<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span>        memset(prize_numbers, 0, <span class="keyword">sizeof</span> prize_numbers);</div>
+<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 7; i++) {</div>
+<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span>            <span class="keywordtype">int</span> winning_number;</div>
+<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span>            cin &gt;&gt; winning_number;</div>
+<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span>            winning_numbers[winning_number] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>        }</div>
+<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>            <span class="keywordtype">int</span> prize_number = 7;</div>
+<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 7; j++) {</div>
+<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>                <span class="keywordtype">int</span> lottery_number;</div>
+<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>                cin &gt;&gt; lottery_number;</div>
+<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>                <span class="keywordflow">if</span>(winning_numbers[lottery_number]) {</div>
+<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>                    prize_number--;</div>
+<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>                }</div>
+<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>            }</div>
+<div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>            prize_numbers[prize_number]++;</div>
+<div class="line"><a id="l01263" name="l01263"></a><span class="lineno"> 1263</span>        }</div>
+<div class="line"><a id="l01264" name="l01264"></a><span class="lineno"> 1264</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 7; i++) {</div>
+<div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span>            cout &lt;&lt; prize_numbers[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span>        }</div>
+<div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>    }</div>
+<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>}<span class="comment">// namespace luogu</span></div>
 <div class="ttc" id="aa00014_html"><div class="ttname"><a href="../../d2/de7/a00014.html">luogu.h</a></div></div>
 <div class="ttc" id="aa00052_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d41/a00038_source.html#l00544">acwing.h:544</a></div></div>
 <div class="ttc" id="aa00164_html"><div class="ttname"><a href="../../db/ddf/a00164.html">luogu</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00014">luogu.cpp:14</a></div></div>
@@ -1392,7 +1399,7 @@ $(function() {
 <div class="ttc" id="aa01553_html_a7682cc9b5e1bae91c9cd739657976597"><div class="ttname"><a href="../../de/d2c/a01553.html#a7682cc9b5e1bae91c9cd739657976597">luogu::P1047::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l01140">luogu.cpp:1140</a></div></div>
 <div class="ttc" id="aa01557_html_a62820e85ca9ed1ec2136b7afe9a22ef6"><div class="ttname"><a href="../../d9/dac/a01557.html#a62820e85ca9ed1ec2136b7afe9a22ef6">luogu::P5728::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l01165">luogu.cpp:1165</a></div></div>
 <div class="ttc" id="aa01561_html_a696f7410cda94722c8e8ea29fef8091b"><div class="ttname"><a href="../../d2/d49/a01561.html#a696f7410cda94722c8e8ea29fef8091b">luogu::P5729::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l01202">luogu.cpp:1202</a></div></div>
-<div class="ttc" id="aa01565_html_a16a16f76dc600b8eb7e22073db011981"><div class="ttname"><a href="../../d6/d82/a01565.html#a16a16f76dc600b8eb7e22073db011981">luogu::P2550::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l01234">luogu.cpp:1234</a></div></div>
+<div class="ttc" id="aa01565_html_a16a16f76dc600b8eb7e22073db011981"><div class="ttname"><a href="../../d6/d82/a01565.html#a16a16f76dc600b8eb7e22073db011981">luogu::P2550::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l01241">luogu.cpp:1241</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
