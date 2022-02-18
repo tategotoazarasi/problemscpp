@@ -1230,4 +1230,33 @@ namespace luogu {
 		cout << ans;
 		return 0;
 	}
+
+	int P2550::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		bool winning_numbers[34];
+		memset(winning_numbers, false, sizeof winning_numbers);
+		int prize_numbers[7];
+		memset(prize_numbers, 0, sizeof prize_numbers);
+		for(int i = 0; i < 7; i++) {
+			int winning_number;
+			cin >> winning_number;
+			winning_numbers[winning_number] = true;
+		}
+		for(int i = 0; i < n; i++) {
+			int prize_number = 7;
+			for(int j = 0; j < 7; j++) {
+				int lottery_number;
+				cin >> lottery_number;
+				if(winning_numbers[lottery_number]) {
+					prize_number--;
+				}
+			}
+			prize_numbers[prize_number]++;
+		}
+		for(int i = 0; i < 7; i++) {
+			cout << prize_numbers[i] << " ";
+		}
+		return 0;
+	}
 }// namespace luogu
