@@ -3022,4 +3022,42 @@ namespace leetcode {
 			return 0;
 		}
 	}// namespace find_center_of_star_graph
+
+	namespace knight_probability_in_chessboard {
+		double Solution::knightProbability(int n, int k, int row, int column) {
+			if(k == 0) {
+				return 1;
+			}
+			auto s = status(k, row, column);
+			if(um.count(s) == 1) {
+				return um[s];
+			}
+			int off                 = 0;
+			pair<int, int> nexts[8] = {make_pair(row - 2, column - 1),
+			                           make_pair(row - 2, column + 1),
+			                           make_pair(row + 2, column - 1),
+			                           make_pair(row + 2, column + 1),
+			                           make_pair(row - 1, column - 2),
+			                           make_pair(row - 1, column + 2),
+			                           make_pair(row + 1, column - 2),
+			                           make_pair(row + 1, column + 2)};
+			double sum              = 0;
+			for(auto [next_x, next_y]: nexts) {
+				if(0 <= next_x && next_x < n && 0 <= next_y && next_y < n) {
+					sum += knightProbability(n, k - 1, next_x, next_y);
+				}
+			}
+			double ans = sum / 8;
+			um[s]      = ans;
+			return ans;
+		}
+
+		unsigned int status_hash::operator()(const status &s) const {
+			return s.k * 25 * 25 + s.row * 25 + s.column;
+		}
+
+		bool status_equal::operator()(const status &s1, const status &s2) const {
+			return (s1.k == s2.k) && (s1.row == s2.row) && (s1.column == s2.column);
+		}
+	}// namespace knight_probability_in_chessboard
 }// namespace leetcode

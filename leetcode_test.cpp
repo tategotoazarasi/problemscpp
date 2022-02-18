@@ -1601,4 +1601,16 @@ namespace leetcode {
 			ASSERT_EQ(1, Solution::findCenter(input));
 		}
 	}// namespace find_center_of_star_graph
+
+	namespace knight_probability_in_chessboard {
+		TEST(knight_probability_in_chessboard, case1) {
+			auto sol = Solution();
+			ASSERT_EQ(0.06250, sol.knightProbability(3, 2, 0, 0));
+		}
+
+		TEST(knight_probability_in_chessboard, case2) {
+			auto sol = Solution();
+			ASSERT_EQ(1.00000, sol.knightProbability(1, 0, 0, 0));
+		}
+	}// namespace knight_probability_in_chessboard
 }// namespace leetcode

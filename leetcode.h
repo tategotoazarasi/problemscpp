@@ -1137,6 +1137,31 @@ namespace leetcode {
 			static int findCenter(vector<vector<int>> &edges);
 		};
 	}// namespace find_center_of_star_graph
+
+	/// \brief LeetCode 688. Knight Probability in Chessboard
+	namespace knight_probability_in_chessboard {
+		struct status {
+			int k;
+			int row;
+			int column;
+			status(int k, int row, int column): k(k), row(row), column(column){};
+		};
+
+		struct status_hash {
+			unsigned int operator()(const status &) const;
+		};
+
+		struct status_equal {
+			bool operator()(const status &, const status &) const;
+		};
+
+		class Solution {
+			unordered_map<status, double, status_hash, status_equal> um = unordered_map<status, double, status_hash, status_equal>();
+
+		public:
+			double knightProbability(int n, int k, int row, int column);
+		};
+	}// namespace knight_probability_in_chessboard
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
