@@ -734,4 +734,14 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("2", ans);
 	}
+
+	TEST(P5729, case1) {
+		istringstream in("4 4 4\n"
+		                 "1\n"
+		                 "1 1 1 2 2 2");
+		auto out = ostringstream();
+		P5729::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("56", ans);
+	}
 }// namespace luogu
