@@ -4196,7 +4196,7 @@ $(function() {
 <div class="line"><a id="l04128" name="l04128"></a><span class="lineno"> 4128</span><span class="stringliteral">    }// namespace acwing1660</span></div>
 <div class="line"><a id="l04129" name="l04129"></a><span class="lineno"> 4129</span><span class="stringliteral"></span> </div>
 <div class="line"><a id="l04130" name="l04130"></a><span class="lineno"><a class="line" href="../../d6/d8b/a00821.html#a9bb8574b01cca2fe99f46eaf82784089"> 4130</a></span><span class="stringliteral">    int acwing774::main(istream &amp;cin, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l04131" name="l04131"></a><span class="lineno"> 4131</span><span class="stringliteral">        auto str = new char[501];</span></div>
+<div class="line"><a id="l04131" name="l04131"></a><span class="lineno"> 4131</span><span class="stringliteral">        auto *str = new char[501];</span></div>
 <div class="line"><a id="l04132" name="l04132"></a><span class="lineno"> 4132</span><span class="stringliteral">        cin.getline(str, 501);</span></div>
 <div class="line"><a id="l04133" name="l04133"></a><span class="lineno"> 4133</span><span class="stringliteral">        str[strlen(str) - 1]     = &#39;</span>\0<span class="stringliteral">&#39;;</span></div>
 <div class="line"><a id="l04134" name="l04134"></a><span class="lineno"> 4134</span><span class="stringliteral">        const char *longest_word = nullptr;</span></div>
@@ -4213,9 +4213,9 @@ $(function() {
 <div class="line"><a id="l04145" name="l04145"></a><span class="lineno"> 4145</span><span class="stringliteral">    }</span></div>
 <div class="line"><a id="l04146" name="l04146"></a><span class="lineno"> 4146</span><span class="stringliteral"></span> </div>
 <div class="line"><a id="l04147" name="l04147"></a><span class="lineno"><a class="line" href="../../dd/d5f/a00825.html#ab3c191efd1bad4e5c4a3dd7dfc7787ca"> 4147</a></span><span class="stringliteral">    int acwing775::main(istream &amp;cin, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l04148" name="l04148"></a><span class="lineno"> 4148</span><span class="stringliteral">        auto str     = new char[101];</span></div>
-<div class="line"><a id="l04149" name="l04149"></a><span class="lineno"> 4149</span><span class="stringliteral">        auto str_rev = new char *[101];</span></div>
-<div class="line"><a id="l04150" name="l04150"></a><span class="lineno"> 4150</span><span class="stringliteral">        int i        = 0;</span></div>
+<div class="line"><a id="l04148" name="l04148"></a><span class="lineno"> 4148</span><span class="stringliteral">        auto *str     = new char[101];</span></div>
+<div class="line"><a id="l04149" name="l04149"></a><span class="lineno"> 4149</span><span class="stringliteral">        auto *str_rev = new char *[101];</span></div>
+<div class="line"><a id="l04150" name="l04150"></a><span class="lineno"> 4150</span><span class="stringliteral">        int i         = 0;</span></div>
 <div class="line"><a id="l04151" name="l04151"></a><span class="lineno"> 4151</span><span class="stringliteral">        cin.getline(str, 101);</span></div>
 <div class="line"><a id="l04152" name="l04152"></a><span class="lineno"> 4152</span><span class="stringliteral">        for(char *word = strtok(str, &quot; &quot;); word != nullptr; word = strtok(nullptr, &quot; &quot;)) {</span></div>
 <div class="line"><a id="l04153" name="l04153"></a><span class="lineno"> 4153</span><span class="stringliteral">            str_rev[i++] = word;</span></div>
@@ -4230,11 +4230,11 @@ $(function() {
 <div class="line"><a id="l04162" name="l04162"></a><span class="lineno"> 4162</span><span class="stringliteral"></span> </div>
 <div class="line"><a id="l04163" name="l04163"></a><span class="lineno"><a class="line" href="../../d1/dea/a00829.html#a696985f38baca9d9a5a42530d047f65c"> 4163</a></span><span class="stringliteral">    int acwing3347::main(istream &amp;cin, ostream &amp;cout) {</span></div>
 <div class="line"><a id="l04164" name="l04164"></a><span class="lineno"> 4164</span><span class="stringliteral">        int n;</span></div>
-<div class="line"><a id="l04165" name="l04165"></a><span class="lineno"> 4165</span><span class="stringliteral">        auto flowers    = new int[n];</span></div>
-<div class="line"><a id="l04166" name="l04166"></a><span class="lineno"> 4166</span><span class="stringliteral">        auto prefix_sum = new int[n];</span></div>
-<div class="line"><a id="l04167" name="l04167"></a><span class="lineno"> 4167</span><span class="stringliteral">        auto location   = unordered_map&lt;int, unordered_set&lt;int&gt;&gt;();</span></div>
-<div class="line"><a id="l04168" name="l04168"></a><span class="lineno"> 4168</span><span class="stringliteral">        cin &gt;&gt; n;</span></div>
-<div class="line"><a id="l04169" name="l04169"></a><span class="lineno"> 4169</span><span class="stringliteral">        int sum = 0;</span></div>
+<div class="line"><a id="l04165" name="l04165"></a><span class="lineno"> 4165</span><span class="stringliteral">        cin &gt;&gt; n;</span></div>
+<div class="line"><a id="l04166" name="l04166"></a><span class="lineno"> 4166</span><span class="stringliteral">        auto *flowers    = new int[n];</span></div>
+<div class="line"><a id="l04167" name="l04167"></a><span class="lineno"> 4167</span><span class="stringliteral">        auto *prefix_sum = new int[n];</span></div>
+<div class="line"><a id="l04168" name="l04168"></a><span class="lineno"> 4168</span><span class="stringliteral">        auto location    = unordered_map&lt;int, unordered_set&lt;int&gt;&gt;();</span></div>
+<div class="line"><a id="l04169" name="l04169"></a><span class="lineno"> 4169</span><span class="stringliteral">        int sum          = 0;</span></div>
 <div class="line"><a id="l04170" name="l04170"></a><span class="lineno"> 4170</span><span class="stringliteral">        for(int i = 0; i &lt; n; i++) {</span></div>
 <div class="line"><a id="l04171" name="l04171"></a><span class="lineno"> 4171</span><span class="stringliteral">            cin &gt;&gt; flowers[i];</span></div>
 <div class="line"><a id="l04172" name="l04172"></a><span class="lineno"> 4172</span><span class="stringliteral">            sum += flowers[i];</span></div>

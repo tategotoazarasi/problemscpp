@@ -126,11 +126,11 @@ $(function() {
 <p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04163">4163</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l04163" name="l04163"></a><span class="lineno"> 4163</span>                                                    {</div>
 <div class="line"><a id="l04164" name="l04164"></a><span class="lineno"> 4164</span>        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l04165" name="l04165"></a><span class="lineno"> 4165</span>        <span class="keyword">auto</span> flowers    = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
-<div class="line"><a id="l04166" name="l04166"></a><span class="lineno"> 4166</span>        <span class="keyword">auto</span> prefix_sum = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
-<div class="line"><a id="l04167" name="l04167"></a><span class="lineno"> 4167</span>        <span class="keyword">auto</span> location   = unordered_map&lt;int, unordered_set&lt;int&gt;&gt;();</div>
-<div class="line"><a id="l04168" name="l04168"></a><span class="lineno"> 4168</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l04169" name="l04169"></a><span class="lineno"> 4169</span>        <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><a id="l04165" name="l04165"></a><span class="lineno"> 4165</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l04166" name="l04166"></a><span class="lineno"> 4166</span>        <span class="keyword">auto</span> *flowers    = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l04167" name="l04167"></a><span class="lineno"> 4167</span>        <span class="keyword">auto</span> *prefix_sum = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l04168" name="l04168"></a><span class="lineno"> 4168</span>        <span class="keyword">auto</span> location    = unordered_map&lt;int, unordered_set&lt;int&gt;&gt;();</div>
+<div class="line"><a id="l04169" name="l04169"></a><span class="lineno"> 4169</span>        <span class="keywordtype">int</span> sum          = 0;</div>
 <div class="line"><a id="l04170" name="l04170"></a><span class="lineno"> 4170</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l04171" name="l04171"></a><span class="lineno"> 4171</span>            cin &gt;&gt; flowers[i];</div>
 <div class="line"><a id="l04172" name="l04172"></a><span class="lineno"> 4172</span>            sum += flowers[i];</div>

@@ -125,9 +125,9 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04147">4147</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l04147" name="l04147"></a><span class="lineno"> 4147</span>                                                   {</div>
-<div class="line"><a id="l04148" name="l04148"></a><span class="lineno"> 4148</span>        <span class="keyword">auto</span> str     = <span class="keyword">new</span> <span class="keywordtype">char</span>[101];</div>
-<div class="line"><a id="l04149" name="l04149"></a><span class="lineno"> 4149</span>        <span class="keyword">auto</span> str_rev = <span class="keyword">new</span> <span class="keywordtype">char</span> *[101];</div>
-<div class="line"><a id="l04150" name="l04150"></a><span class="lineno"> 4150</span>        <span class="keywordtype">int</span> i        = 0;</div>
+<div class="line"><a id="l04148" name="l04148"></a><span class="lineno"> 4148</span>        <span class="keyword">auto</span> *str     = <span class="keyword">new</span> <span class="keywordtype">char</span>[101];</div>
+<div class="line"><a id="l04149" name="l04149"></a><span class="lineno"> 4149</span>        <span class="keyword">auto</span> *str_rev = <span class="keyword">new</span> <span class="keywordtype">char</span> *[101];</div>
+<div class="line"><a id="l04150" name="l04150"></a><span class="lineno"> 4150</span>        <span class="keywordtype">int</span> i         = 0;</div>
 <div class="line"><a id="l04151" name="l04151"></a><span class="lineno"> 4151</span>        cin.getline(str, 101);</div>
 <div class="line"><a id="l04152" name="l04152"></a><span class="lineno"> 4152</span>        <span class="keywordflow">for</span>(<span class="keywordtype">char</span> *word = strtok(str, <span class="stringliteral">&quot; &quot;</span>); word != <span class="keyword">nullptr</span>; word = strtok(<span class="keyword">nullptr</span>, <span class="stringliteral">&quot; &quot;</span>)) {</div>
 <div class="line"><a id="l04153" name="l04153"></a><span class="lineno"> 4153</span>            str_rev[i++] = word;</div>
