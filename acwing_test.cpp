@@ -1954,4 +1954,12 @@ namespace acwing {
 			ASSERT_EQ("3", ans);
 		}
 	}// namespace acwing1660
+
+	TEST(acwing774, case1) {
+		istringstream in("I am a student of Peking University.");
+		auto out = ostringstream();
+		acwing774::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("University", ans);
+	}
 }// namespace acwing

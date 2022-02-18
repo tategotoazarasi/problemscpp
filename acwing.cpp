@@ -4126,4 +4126,21 @@ namespace acwing {
 
 		bool cow::operator<(const cow &c) const { return this->x < c.x; }
 	}// namespace acwing1660
+
+	int acwing774::main(istream &cin, ostream &cout) {
+		char *str = new char[501];
+		cin.getline(str, 501);
+		str[strlen(str) - 1] = '\0';
+		char *longest_word   = nullptr;
+		int max_len          = 0;
+		for(char *word = strtok(str, " "); word != nullptr; word = strtok(nullptr, " ")) {
+			if(max_len < strlen(word)) {
+				max_len      = strlen(word);
+				longest_word = word;
+			}
+		}
+		cout << longest_word;
+		delete[] str;
+		return 0;
+	}
 }// namespace acwing

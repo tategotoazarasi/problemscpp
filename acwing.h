@@ -1264,5 +1264,11 @@ namespace acwing {
 			static int main(istream &cin, ostream &cout);
 		};
 	}// namespace acwing1660
+
+	/// \brief AcWing 774. 最长单词
+	class acwing774 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
