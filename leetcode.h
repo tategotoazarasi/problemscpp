@@ -1129,6 +1129,14 @@ namespace leetcode {
 			static int checkWays(vector<vector<int>> &pairs);
 		};
 	}// namespace number_of_ways_to_reconstruct_a_tree
+
+	/// \brief LeetCode 1791. Find Center of Star Graph
+	namespace find_center_of_star_graph {
+		class Solution {
+		public:
+			static int findCenter(vector<vector<int>> &edges);
+		};
+	}// namespace find_center_of_star_graph
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

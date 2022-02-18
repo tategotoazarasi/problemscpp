@@ -3005,4 +3005,21 @@ namespace leetcode {
 			return res;
 		}
 	}// namespace number_of_ways_to_reconstruct_a_tree
+
+	namespace find_center_of_star_graph {
+		int Solution::findCenter(vector<vector<int>> &edges) {
+			unordered_map<int, int> um = unordered_map<int, int>();
+			for(auto edge: edges) {
+				um[edge[0]]++;
+				um[edge[1]]++;
+				if(um[edge[0]] > 1) {
+					return edge[0];
+				}
+				if(um[edge[1]] > 1) {
+					return edge[1];
+				}
+			}
+			return 0;
+		}
+	}// namespace find_center_of_star_graph
 }// namespace leetcode

@@ -1589,4 +1589,16 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::checkWays(input));
 		}
 	}// namespace number_of_ways_to_reconstruct_a_tree
+
+	namespace find_center_of_star_graph {
+		TEST(find_center_of_star_graph, case1) {
+			vector<vector<int>> input = {{1, 2}, {2, 3}, {4, 2}};
+			ASSERT_EQ(2, Solution::findCenter(input));
+		}
+
+		TEST(find_center_of_star_graph, case2) {
+			vector<vector<int>> input = {{1, 2}, {5, 1}, {1, 3}, {1, 4}};
+			ASSERT_EQ(1, Solution::findCenter(input));
+		}
+	}// namespace find_center_of_star_graph
 }// namespace leetcode
