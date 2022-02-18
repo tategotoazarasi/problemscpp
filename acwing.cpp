@@ -4128,7 +4128,7 @@ namespace acwing {
 	}// namespace acwing1660
 
 	int acwing774::main(istream &cin, ostream &cout) {
-		auto str = new char[501];
+		auto *str = new char[501];
 		cin.getline(str, 501);
 		str[strlen(str) - 1]     = '\0';
 		const char *longest_word = nullptr;
@@ -4145,9 +4145,9 @@ namespace acwing {
 	}
 
 	int acwing775::main(istream &cin, ostream &cout) {
-		auto str     = new char[101];
-		auto str_rev = new char *[101];
-		int i        = 0;
+		auto *str     = new char[101];
+		auto *str_rev = new char *[101];
+		int i         = 0;
 		cin.getline(str, 101);
 		for(char *word = strtok(str, " "); word != nullptr; word = strtok(nullptr, " ")) {
 			str_rev[i++] = word;
@@ -4162,11 +4162,11 @@ namespace acwing {
 
 	int acwing3347::main(istream &cin, ostream &cout) {
 		int n;
-		auto flowers    = new int[n];
-		auto prefix_sum = new int[n];
-		auto location   = unordered_map<int, unordered_set<int>>();
 		cin >> n;
-		int sum = 0;
+		auto *flowers    = new int[n];
+		auto *prefix_sum = new int[n];
+		auto location    = unordered_map<int, unordered_set<int>>();
+		int sum          = 0;
 		for(int i = 0; i < n; i++) {
 			cin >> flowers[i];
 			sum += flowers[i];

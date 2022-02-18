@@ -23,6 +23,7 @@ if (NOT ${GTest_FOUND})
 endif ()
 
 # Now simply link against gtest or gtest_main as needed. Eg
+include(GoogleTest)
 enable_testing()
 add_executable(problemscpp main.cpp acwing.cpp acwing.h lintcode.cpp lintcode.h leetcode.cpp leetcode.h luogu.cpp luogu.h leetcode_test.cpp lintcode_test.cpp acwing_test.cpp luogu_test.cpp set_stack_limit.cpp)
 target_link_libraries(problemscpp PRIVATE GTest::gmock GTest::gtest GTest::gmock_main GTest::gtest_main)
