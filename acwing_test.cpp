@@ -1962,4 +1962,12 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("University", ans);
 	}
+
+	TEST(acwing775, case1) {
+		istringstream in("I am a student");
+		auto out = ostringstream();
+		acwing775::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("student a am I ", ans);
+	}
 }// namespace acwing

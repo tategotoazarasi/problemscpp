@@ -4143,4 +4143,20 @@ namespace acwing {
 		delete[] str;
 		return 0;
 	}
+
+	int acwing775::main(istream &cin, ostream &cout) {
+		char *str      = new char[101];
+		char **str_rev = new char *[101];
+		int i          = 0;
+		cin.getline(str, 101);
+		for(char *word = strtok(str, " "); word != nullptr; word = strtok(nullptr, " ")) {
+			str_rev[i++] = word;
+		}
+		for(int j = i - 1; j >= 0; j--) {
+			cout << str_rev[j] << " ";
+		}
+		delete[] str;
+		delete[] str_rev;
+		return 0;
+	}
 }// namespace acwing
