@@ -1970,4 +1970,13 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("student a am I ", ans);
 	}
+
+	TEST(acwing3347, case1) {
+		istringstream in("4\n"
+		                 "1 1 2 3");
+		auto out = ostringstream();
+		acwing3347::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("6", ans);
+	}
 }// namespace acwing

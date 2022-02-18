@@ -4159,4 +4159,39 @@ namespace acwing {
 		delete[] str_rev;
 		return 0;
 	}
+
+	int acwing3347::main(istream &cin, ostream &cout) {
+		int n;
+		int *flowers                                    = new int[n];
+		int *prefix_sum                                 = new int[n];
+		unordered_map<int, unordered_set<int>> location = unordered_map<int, unordered_set<int>>();
+		cin >> n;
+		int sum = 0;
+		for(int i = 0; i < n; i++) {
+			cin >> flowers[i];
+			sum += flowers[i];
+			prefix_sum[i] = sum;
+			location[flowers[i]].insert(i);
+		}
+		int ans = 0;
+		for(int i = 0; i < n; i++) {
+			for(int j = i; j < n; j++) {
+				int len = j - i + 1;
+				sum     = prefix_sum[j] - ((i - 1 >= 0) ? prefix_sum[i - 1] : 0);
+				if(sum % len == 0) {
+					int avg = sum / len;
+					for(auto flower: location[avg]) {
+						if(i <= flower && flower <= j) {
+							ans++;
+							break;
+						}
+					}
+				}
+			}
+		}
+		cout << ans;
+		delete[] flowers;
+		delete[] prefix_sum;
+		return 0;
+	}
 }// namespace acwing
