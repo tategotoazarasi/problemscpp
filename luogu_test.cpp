@@ -766,4 +766,18 @@ namespace luogu {
 		          "4 9 2 \n",
 		          ans);
 	}
+
+	TEST(P5730, case1) {
+		istringstream in("10\n"
+		                 "0123456789");
+		auto out = ostringstream();
+		P5730::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("XXX...X.XXX.XXX.X.X.XXX.XXX.XXX.XXX.XXX\n"
+		          "X.X...X...X...X.X.X.X...X.....X.X.X.X.X\n"
+		          "X.X...X.XXX.XXX.XXX.XXX.XXX...X.XXX.XXX\n"
+		          "X.X...X.X.....X...X...X.X.X...X.X.X...X\n"
+		          "XXX...X.XXX.XXX...X.XXX.XXX...X.XXX.XXX\n",
+		          ans);
+	}
 }// namespace luogu
