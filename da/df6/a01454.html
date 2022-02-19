@@ -125,18 +125,18 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l00556">556</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>                               {</div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>        <span class="keywordtype">int</span> r = m;</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>        <span class="keywordflow">while</span>(r != 0) {</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>            r = m % n;</div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>            m = n;</div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>            n = r;</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>        }</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>        <span class="keywordflow">return</span> m;</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l00557">557</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>                               {</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>        <span class="keywordtype">int</span> r = m;</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>        <span class="keywordflow">while</span>(r != 0) {</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>            r = m % n;</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>            m = n;</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>            n = r;</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>        }</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>        <span class="keywordflow">return</span> m;</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l00540">main()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l00541">main()</a>.</p>
 
 </div>
 </div>
@@ -174,25 +174,25 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l00540">540</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                                               {</div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>        <span class="keywordtype">int</span> a;</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>        <span class="keywordtype">int</span> b;</div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>        <span class="keywordtype">int</span> c;</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>        cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>        <span class="keywordtype">int</span> maximum = a;</div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>        <span class="keywordtype">int</span> minimum = a;</div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>        maximum     = max(maximum, b);</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>        maximum     = max(maximum, c);</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>        minimum     = min(minimum, b);</div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>        minimum     = min(minimum, c);</div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> g = <a class="code hl_function" href="../../da/df6/a01454.html#a301a800653e37eb8974e6849eadcf829">gcd</a>(maximum, minimum);</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>        cout &lt;&lt; minimum / g &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; maximum / g;</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>    }</div>
-<div class="ttc" id="aa01454_html_a301a800653e37eb8974e6849eadcf829"><div class="ttname"><a href="../../da/df6/a01454.html#a301a800653e37eb8974e6849eadcf829">luogu::P1888::gcd</a></div><div class="ttdeci">static int gcd(int m, int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00556">luogu.cpp:556</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l00541">541</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>                                               {</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>        <span class="keywordtype">int</span> a;</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>        <span class="keywordtype">int</span> b;</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>        <span class="keywordtype">int</span> c;</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>        cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>        <span class="keywordtype">int</span> maximum = a;</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>        <span class="keywordtype">int</span> minimum = a;</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>        maximum     = max(maximum, b);</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>        maximum     = max(maximum, c);</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>        minimum     = min(minimum, b);</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>        minimum     = min(minimum, c);</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> g = <a class="code hl_function" href="../../da/df6/a01454.html#a301a800653e37eb8974e6849eadcf829">gcd</a>(maximum, minimum);</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>        cout &lt;&lt; minimum / g &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; maximum / g;</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>    }</div>
+<div class="ttc" id="aa01454_html_a301a800653e37eb8974e6849eadcf829"><div class="ttname"><a href="../../da/df6/a01454.html#a301a800653e37eb8974e6849eadcf829">luogu::P1888::gcd</a></div><div class="ttdeci">static int gcd(int m, int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00557">luogu.cpp:557</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l00556">gcd()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l00557">gcd()</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00389">luogu::TEST()</a>.</p>
 

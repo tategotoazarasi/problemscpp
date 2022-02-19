@@ -125,13 +125,14 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04223">4223</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l04223" name="l04223"></a><span class="lineno"> 4223</span>                                                   {</div>
-<div class="line"><a id="l04224" name="l04224"></a><span class="lineno"> 4224</span>        <span class="keywordtype">string</span> s1, s2;</div>
-<div class="line"><a id="l04225" name="l04225"></a><span class="lineno"> 4225</span>        cin &gt;&gt; s1 &gt;&gt; s2;</div>
-<div class="line"><a id="l04226" name="l04226"></a><span class="lineno"> 4226</span>        <span class="keywordtype">string</span> s11 = s1 + s1;</div>
-<div class="line"><a id="l04227" name="l04227"></a><span class="lineno"> 4227</span>        <span class="keywordtype">string</span> s22 = s2 + s2;</div>
-<div class="line"><a id="l04228" name="l04228"></a><span class="lineno"> 4228</span>        cout &lt;&lt; boolalpha &lt;&lt; ((s11.find(s2) != string::npos) || (s22.find(s1) != string::npos));</div>
-<div class="line"><a id="l04229" name="l04229"></a><span class="lineno"> 4229</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l04230" name="l04230"></a><span class="lineno"> 4230</span>    }</div>
+<div class="line"><a id="l04224" name="l04224"></a><span class="lineno"> 4224</span>        <span class="keywordtype">string</span> s1;</div>
+<div class="line"><a id="l04225" name="l04225"></a><span class="lineno"> 4225</span>        <span class="keywordtype">string</span> s2;</div>
+<div class="line"><a id="l04226" name="l04226"></a><span class="lineno"> 4226</span>        cin &gt;&gt; s1 &gt;&gt; s2;</div>
+<div class="line"><a id="l04227" name="l04227"></a><span class="lineno"> 4227</span>        <span class="keywordtype">string</span> s11 = s1 + s1;</div>
+<div class="line"><a id="l04228" name="l04228"></a><span class="lineno"> 4228</span>        <span class="keywordtype">string</span> s22 = s2 + s2;</div>
+<div class="line"><a id="l04229" name="l04229"></a><span class="lineno"> 4229</span>        cout &lt;&lt; boolalpha &lt;&lt; (s11.find(s2) != string::npos || s22.find(s1) != string::npos);</div>
+<div class="line"><a id="l04230" name="l04230"></a><span class="lineno"> 4230</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l04231" name="l04231"></a><span class="lineno"> 4231</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l01997">acwing::TEST()</a>.</p>
 

@@ -111,10 +111,10 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l03061">3061</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l03061" name="l03061"></a><span class="lineno"> 3061</span>                                                          {</div>
-<div class="line"><a id="l03062" name="l03062"></a><span class="lineno"> 3062</span>            vector&lt;int&gt; ans = vector&lt;int&gt;();</div>
-<div class="line"><a id="l03063" name="l03063"></a><span class="lineno"> 3063</span>            <span class="keywordtype">int</span> n           = arr.size();</div>
-<div class="line"><a id="l03064" name="l03064"></a><span class="lineno"> 3064</span>            <span class="keywordtype">int</span> *current    = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
-<div class="line"><a id="l03065" name="l03065"></a><span class="lineno"> 3065</span>            <span class="keywordtype">int</span> *sorted     = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l03062" name="l03062"></a><span class="lineno"> 3062</span>            <span class="keyword">auto</span> ans     = vector&lt;int&gt;();</div>
+<div class="line"><a id="l03063" name="l03063"></a><span class="lineno"> 3063</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n  = arr.size();</div>
+<div class="line"><a id="l03064" name="l03064"></a><span class="lineno"> 3064</span>            <span class="keyword">auto</span> current = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l03065" name="l03065"></a><span class="lineno"> 3065</span>            <span class="keyword">auto</span> sorted  = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
 <div class="line"><a id="l03066" name="l03066"></a><span class="lineno"> 3066</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l03067" name="l03067"></a><span class="lineno"> 3067</span>                current[i] = arr[i];</div>
 <div class="line"><a id="l03068" name="l03068"></a><span class="lineno"> 3068</span>                sorted[i]  = arr[i];</div>
@@ -123,8 +123,8 @@ $(function() {
 <div class="line"><a id="l03071" name="l03071"></a><span class="lineno"> 3071</span>        RESTART:</div>
 <div class="line"><a id="l03072" name="l03072"></a><span class="lineno"> 3072</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = n - 1; i &gt;= 0; i--) {</div>
 <div class="line"><a id="l03073" name="l03073"></a><span class="lineno"> 3073</span>                <span class="keywordflow">if</span>(current[i] != sorted[i]) {</div>
-<div class="line"><a id="l03074" name="l03074"></a><span class="lineno"> 3074</span>                    <span class="keywordtype">int</span> target   = sorted[i];</div>
-<div class="line"><a id="l03075" name="l03075"></a><span class="lineno"> 3075</span>                    <span class="keywordtype">int</span> target_i = -1;</div>
+<div class="line"><a id="l03074" name="l03074"></a><span class="lineno"> 3074</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> target = sorted[i];</div>
+<div class="line"><a id="l03075" name="l03075"></a><span class="lineno"> 3075</span>                    <span class="keywordtype">int</span> target_i     = -1;</div>
 <div class="line"><a id="l03076" name="l03076"></a><span class="lineno"> 3076</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt;= i; j++) {</div>
 <div class="line"><a id="l03077" name="l03077"></a><span class="lineno"> 3077</span>                        <span class="keywordflow">if</span>(current[j] == target) {</div>
 <div class="line"><a id="l03078" name="l03078"></a><span class="lineno"> 3078</span>                            target_i = j + 1;</div>
