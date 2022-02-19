@@ -4221,11 +4221,12 @@ namespace acwing {
 	}
 
 	int acwing776::main(istream &cin, ostream &cout) {
-		string s1, s2;
+		string s1;
+		string s2;
 		cin >> s1 >> s2;
 		string s11 = s1 + s1;
 		string s22 = s2 + s2;
-		cout << boolalpha << ((s11.find(s2) != string::npos) || (s22.find(s1) != string::npos));
+		cout << boolalpha << (s11.find(s2) != string::npos || s22.find(s1) != string::npos);
 		return 0;
 	}
 }// namespace acwing

@@ -3059,10 +3059,10 @@ namespace leetcode {
 
 	namespace pancake_sorting {
 		vector<int> Solution::pancakeSort(vector<int> &arr) {
-			vector<int> ans = vector<int>();
-			int n           = arr.size();
-			int *current    = new int[n];
-			int *sorted     = new int[n];
+			auto ans     = vector<int>();
+			const int n  = arr.size();
+			auto current = new int[n];
+			auto sorted  = new int[n];
 			for(int i = 0; i < n; i++) {
 				current[i] = arr[i];
 				sorted[i]  = arr[i];
@@ -3071,8 +3071,8 @@ namespace leetcode {
 		RESTART:
 			for(int i = n - 1; i >= 0; i--) {
 				if(current[i] != sorted[i]) {
-					int target   = sorted[i];
-					int target_i = -1;
+					const int target = sorted[i];
+					int target_i     = -1;
 					for(int j = 0; j <= i; j++) {
 						if(current[j] == target) {
 							target_i = j + 1;
