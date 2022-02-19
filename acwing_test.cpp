@@ -1993,4 +1993,12 @@ namespace acwing {
 		          "3\n",
 		          ans);
 	}
+
+	TEST(acwing776, case1) {
+		istringstream in("AABCD CDAA");
+		auto out = ostringstream();
+		acwing776::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("true", ans);
+	}
 }// namespace acwing
