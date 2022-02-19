@@ -1164,6 +1164,14 @@ namespace leetcode {
 			double knightProbability(int n, int k, int row, int column);
 		};
 	}// namespace knight_probability_in_chessboard
+
+	/// \brief LeetCode 969. Pancake Sorting
+	namespace pancake_sorting {
+		class Solution {
+		public:
+			static vector<int> pancakeSort(vector<int> &arr);
+		};
+	}// namespace pancake_sorting
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

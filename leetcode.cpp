@@ -3056,4 +3056,42 @@ namespace leetcode {
 
 		bool status_equal::operator()(const status &s1, const status &s2) const { return s1.k == s2.k && s1.row == s2.row && s1.column == s2.column; }
 	}// namespace knight_probability_in_chessboard
+
+	namespace pancake_sorting {
+		vector<int> Solution::pancakeSort(vector<int> &arr) {
+			vector<int> ans = vector<int>();
+			int n           = arr.size();
+			int *current    = new int[n];
+			int *sorted     = new int[n];
+			for(int i = 0; i < n; i++) {
+				current[i] = arr[i];
+				sorted[i]  = arr[i];
+			}
+			sort(sorted, sorted + n);
+		RESTART:
+			for(int i = n - 1; i >= 0; i--) {
+				if(current[i] != sorted[i]) {
+					int target   = sorted[i];
+					int target_i = -1;
+					for(int j = 0; j <= i; j++) {
+						if(current[j] == target) {
+							target_i = j + 1;
+							break;
+						}
+					}
+					if(target_i == 1) {
+						target_i = i + 1;
+					}
+					ans.push_back(target_i);
+					for(int j = 0; j < target_i / 2; j++) {
+						swap(current[j], current[target_i - j - 1]);
+					}
+					goto RESTART;
+				}
+			}
+			delete[] current;
+			delete[] sorted;
+			return ans;
+		}
+	}// namespace pancake_sorting
 }// namespace leetcode
