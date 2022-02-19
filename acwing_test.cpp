@@ -2001,4 +2001,44 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("true", ans);
 	}
+
+	TEST(acwing4302, case1) {
+		istringstream in("3\n1 -2 0");
+		auto out = ostringstream();
+		acwing4302::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("3", ans);
+	}
+
+	TEST(acwing4302, case2) {
+		istringstream in("6\n16 23 16 15 42 8");
+		auto out = ostringstream();
+		acwing4302::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("120", ans);
+	}
+
+	TEST(acwing4304, case1) {
+		istringstream in("4\na\nb\nab\nd");
+		auto out = ostringstream();
+		acwing4304::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2", ans);
+	}
+
+	TEST(acwing4304, case2) {
+		istringstream in("3\nab\nbc\nabc");
+		auto out = ostringstream();
+		acwing4304::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1", ans);
+	}
+
+	TEST(acwing4304, case3) {
+		istringstream in("1\nabcdefghijklmn");
+		auto out = ostringstream();
+		acwing4304::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1", ans);
+	}
 }// namespace acwing

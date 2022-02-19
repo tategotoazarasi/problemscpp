@@ -4229,4 +4229,102 @@ namespace acwing {
 		cout << boolalpha << (s11.find(s2) != string::npos || s22.find(s1) != string::npos);
 		return 0;
 	}
+
+	int acwing4302::main(istream &cin, ostream &cout) {
+		int sum_b = 0;
+		int sum_c = 0;
+		int n;
+		cin >> n;
+		for(int i = 0; i < n; i++) {
+			int a;
+			cin >> a;
+			if(a > 0) {
+				sum_b += a;
+			} else {
+				sum_c -= a;
+			}
+		}
+		cout << sum_b + sum_c;
+		return 0;
+	}
+
+	int acwing4303::main(istream &cin, ostream &cout) {
+		int q;
+		cin >> q;
+		auto um = unordered_map<string, vector<string> *>();
+		for(int i = 0; i < q; i++) {
+			string str1;
+			string str2;
+			cin >> str1 >> str2;
+			if(!um.contains(str1)) {
+				auto *vec = new vector<string>();
+				vec->push_back(str1);
+				vec->push_back(str2);
+				um.insert(make_pair(str2, vec));
+			} else {
+				um[str1]->push_back(str2);
+				um[str2] = um[str1];
+				um[str1] = nullptr;
+			}
+		}
+		int count = 0;
+		for(auto [k, v]: um) {
+			if(v != nullptr) {
+				count++;
+			}
+		}
+		cout << count << endl;
+		for(auto [k, v]: um) {
+			if(v != nullptr) {
+				cout << *v->begin() << " " << k << endl;
+				delete v;
+			}
+		}
+		return 0;
+	}
+
+	int acwing4304::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		auto vec = vector<unsigned int>();
+		for(int i = 0; i < n; i++) {
+			string str;
+			cin >> str;
+			auto ui   = str2int(str);
+			bool flag = false;
+			for(int j = 0; j < vec.size(); j++) {
+				if((vec[j] & ui) != 0) {
+					vec[j] |= ui;
+					flag = true;
+				}
+			}
+			if(!flag) {
+				vec.push_back(ui);
+			}
+		}
+		auto ans = vector<unsigned int>();
+		bool ok  = true;
+		while(ok) {
+			ok = false;
+			for(int i = 0; i + 1 < vec.size(); i++) {
+				for(int j = i + 1; j < vec.size(); j++) {
+					if((vec[i] & vec[j]) != 0) {
+						vec[i] |= vec[j];
+						vec.erase(vec.begin() + j);
+						ok = true;
+					}
+				}
+			}
+		}
+		cout << vec.size();
+		return 0;
+	}
+
+	unsigned int acwing4304::str2int(const string &str) {
+		unsigned int ans = 0;
+		for(const char ch: str) {
+			ans |= 1 << ch - 'a';
+		}
+		return ans;
+	}
 }// namespace acwing

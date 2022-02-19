@@ -1294,5 +1294,30 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/**
+	 * \brief AcWing 4302. 元素分类
+	 */
+	class acwing4302 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4303. 链表
+	 */
+	class acwing4303 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4304. 字符串归类
+	 */
+	class acwing4304 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static unsigned int str2int(const string &str);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
