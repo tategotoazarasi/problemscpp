@@ -1979,4 +1979,18 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("6", ans);
 	}
+
+	TEST(acwing777, case1) {
+		istringstream in("abcd\n"
+		                 "aaaa\n"
+		                 "ababab\n"
+		                 ".");
+		auto out = ostringstream();
+		acwing777::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1\n"
+		          "4\n"
+		          "3\n",
+		          ans);
+	}
 }// namespace acwing

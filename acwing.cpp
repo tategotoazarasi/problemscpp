@@ -4194,4 +4194,29 @@ namespace acwing {
 		delete[] prefix_sum;
 		return 0;
 	}
+
+	int acwing777::main(istream &cin, ostream &cout) {
+		string str;
+		cin >> str;
+		while(str != ".") {
+			for(int i = 1; i <= str.length(); i++) {
+				if(str.length() % i == 0) {
+					bool ok       = true;
+					string substr = str.substr(0, i);
+					for(int j = i; j < str.length(); j += i) {
+						if(str.substr(j, i) != substr) {
+							ok = false;
+							break;
+						}
+					}
+					if(ok) {
+						cout << str.length() / i << endl;
+						break;
+					}
+				}
+			}
+			cin >> str;
+		}
+		return 0;
+	}
 }// namespace acwing
