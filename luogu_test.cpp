@@ -755,4 +755,15 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("0 0 0 0 0 1 1 ", ans);
 	}
+
+	TEST(P2615, case1) {
+		istringstream in("3");
+		auto out = ostringstream();
+		P2615::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("8 1 6 \n"
+		          "3 5 7 \n"
+		          "4 9 2 \n",
+		          ans);
+	}
 }// namespace luogu

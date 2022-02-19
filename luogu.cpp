@@ -1266,4 +1266,42 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P2615::main(istream &cin, ostream &cout) {
+		int n;
+		int square[40][40];
+		memset(square, 0, sizeof square);
+		unordered_map<int, pair<int, int>> um = unordered_map<int, pair<int, int>>();
+		cin >> n;
+		square[0][n / 2] = 1;
+		um[1]            = make_pair(0, n / 2);
+		for(int k = 2; k <= n * n; k++) {
+			auto [prev_x, prev_y] = um[k - 1];
+			if(prev_x == 0 && prev_y != n - 1) {//若 (K−1) 在第一行但不在最后一列，则将 K 填在最后一行， (K−1) 所在列的右一列；
+				square[n - 1][prev_y + 1] = k;
+				um[k]                     = make_pair(n - 1, prev_y + 1);
+			} else if(prev_y == n - 1 && prev_x != 0) {//若 (K−1) 在最后一列但不在第一行，则将 K 填在第一列， (K−1) 所在行的上一行；
+				square[prev_x - 1][0] = k;
+				um[k]                 = make_pair(prev_x - 1, 0);
+			} else if(prev_x == 0 && prev_y == n - 1) {//若 (K−1) 在第一行最后一列，则将 K 填在 (K−1) 的正下方；
+				square[1][prev_y] = k;
+				um[k]             = make_pair(1, prev_y);
+			} else if(prev_x != 0 && prev_y != n - 1) {//若 (K−1) 既不在第一行，也不在最后一列，如果 (K−1) 的右上方还未填数，则将 K 填在 (K−1) 的右上方，否则将 K 填在 (K−1) 的正下方。
+				if(square[prev_x - 1][prev_y + 1] == 0) {
+					square[prev_x - 1][prev_y + 1] = k;
+					um[k]                          = make_pair(prev_x - 1, prev_y + 1);
+				} else {
+					square[prev_x + 1][prev_y] = k;
+					um[k]                      = make_pair(prev_x + 1, prev_y);
+				}
+			}
+		}
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < n; j++) {
+				cout << square[i][j] << " ";
+			}
+			cout << endl;
+		}
+		return 0;
+	}
 }// namespace luogu
