@@ -4326,4 +4326,22 @@ namespace acwing {
 		}
 		return ans;
 	}
+
+	int acwing778::main(istream &cin, ostream &cout) {
+		auto input = new char[323];
+		auto strs  = vector<string>();
+		cin.getline(input, 323);
+		for(char *str = strtok(input, ","); str != nullptr; str = strtok(nullptr, ",")) {
+			strs.emplace_back(str);
+		}
+		auto l       = strs[0].find(strs[1]);
+		const auto r = strs[0].rfind(strs[2]);
+		if(l == string::npos || r == string::npos) {
+			cout << -1;
+			return 0;
+		}
+		l += strs[1].length();
+		cout << (static_cast<int>(r) < static_cast<int>(l) ? -1 : static_cast<int>(r) - static_cast<int>(l));
+		return 0;
+	}
 }// namespace acwing

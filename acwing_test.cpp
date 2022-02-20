@@ -2041,4 +2041,36 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("1", ans);
 	}
+
+	TEST(acwing778, case1) {
+		istringstream in("abcd123ab888efghij45ef67kl,ab,ef");
+		auto out = ostringstream();
+		acwing778::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("18", ans);
+	}
+
+	TEST(acwing778, case2) {
+		istringstream in("abcde,abc,bcd");
+		auto out = ostringstream();
+		acwing778::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("-1", ans);
+	}
+
+	TEST(acwing778, case3) {
+		istringstream in("CdqpUQX2G3Ek0vWfdIPopo0ZiHBaDeWnJWXUFBkHVrKGcld7g85DoKGvixBMYmV6GT4ndhdN2W3EknSm5LqEgN26GF96eB8s73Ek,Sm5LqEg,3Ek");
+		auto out = ostringstream();
+		acwing778::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("12", ans);
+	}
+
+	TEST(acwing778, case4) {
+		istringstream in("KOqRYKCcGkTnagtoeR14B2GSO3CStZUslISdqepllSeAfjVfVHqF8sRzaeV3r2LeQnQpu9MbYY1090oHlfobNzk5vTkLaV6qEDmMLlPUFlZuXnvB04UXTRUrLozeT5RYPZl43EdOwr7wYhFh3VJsDhn0B5D1IGkwzeADgPlJROu7MmRj0vqCBlWBnSZj5L6G7jRF6pTkZaswE7emZRRLXMRmSNxbHFlSfipL6biuSk6Lw0UeYGFuKZs8QDLzBrBYwNqbZyAlki45tufXWLift7Z9IqKfcVYspARBIMAv0OX8,LozeT5RYP,lP,Sm5LqEg,3Ek");
+		auto out = ostringstream();
+		acwing778::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("-1", ans);
+	}
 }// namespace acwing

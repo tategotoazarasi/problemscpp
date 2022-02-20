@@ -1319,5 +1319,13 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 		static unsigned int str2int(const string &str);
 	};
+
+	/**
+	 * \brief AcWing 778. 字符串最大跨距
+	 */
+	class acwing778 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
