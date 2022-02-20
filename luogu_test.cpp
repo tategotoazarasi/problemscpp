@@ -789,7 +789,7 @@ namespace luogu {
 		ASSERT_EQ("1 10 2 9 1 1 1 1 0 1 ", ans);
 	}
 
-	/*TEST(P2141, case1) {
+	TEST(P2141, case1) {
 		istringstream in("4\n"
 		                 "1 2 3 4");
 		auto out = ostringstream();
@@ -805,5 +805,5 @@ namespace luogu {
 		P2141::main(in, out);
 		const auto ans = out.str();
 		ASSERT_EQ("22", ans);
-	}*/
+	}
 }// namespace luogu
