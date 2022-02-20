@@ -198,9 +198,9 @@ namespace leetcode {
 	namespace convert_bst_to_greater_tree {
 		TEST(convert_bst_to_greater_tree, case1) {
 			auto *input        = new TreeNode(4, new TreeNode(1, new TreeNode(0), new TreeNode(2, nullptr, new TreeNode(3))),
-                                       new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
+			                                  new TreeNode(6, new TreeNode(5), new TreeNode(7, nullptr, new TreeNode(8))));
 			const auto *ans    = new TreeNode(30, new TreeNode(36, new TreeNode(36), new TreeNode(35, nullptr, new TreeNode(33))),
-                                           new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
+			                                  new TreeNode(21, new TreeNode(26), new TreeNode(15, nullptr, new TreeNode(8))));
 			const auto *output = Solution::convertBST(input);
 			ASSERT_TRUE(*ans == *output);
 		}
@@ -1613,4 +1613,59 @@ namespace leetcode {
 			ASSERT_EQ(1.00000, sol.knightProbability(1, 0, 0, 0));
 		}
 	}// namespace knight_probability_in_chessboard
+
+	namespace count_equal_and_divisible_pairs_in_an_array {
+		TEST(count_equal_and_divisible_pairs_in_an_array, case1) {
+			vector<int> input = {3, 1, 2, 2, 2, 1, 3};
+			ASSERT_EQ(4, Solution::countPairs(input, 2));
+		}
+
+		TEST(count_equal_and_divisible_pairs_in_an_array, case2) {
+			vector<int> input = {1, 2, 3, 4};
+			ASSERT_EQ(0, Solution::countPairs(input, 1));
+		}
+	}// namespace count_equal_and_divisible_pairs_in_an_array
+
+	namespace find_three_consecutive_integers_that_sum_to_a_given_number {
+		TEST(find_three_consecutive_integers_that_sum_to_a_given_number, case1) {
+			vector<long long> output = {10, 11, 12};
+			ASSERT_EQ(output, Solution::sumOfThree(33));
+		}
+
+		TEST(find_three_consecutive_integers_that_sum_to_a_given_number, case2) {
+			vector<long long> output = {};
+			ASSERT_EQ(output, Solution::sumOfThree(4));
+		}
+	}// namespace find_three_consecutive_integers_that_sum_to_a_given_number
+
+	namespace maximum_split_of_positive_even_integers {
+		TEST(maximum_split_of_positive_even_integers, case1) {
+			vector<long long> output = {2, 4, 6};
+			ASSERT_EQ(output, Solution::maximumEvenSplit(12));
+		}
+
+		TEST(maximum_split_of_positive_even_integers, case2) {
+			vector<long long> output = {};
+			ASSERT_EQ(output, Solution::maximumEvenSplit(7));
+		}
+
+		TEST(maximum_split_of_positive_even_integers, case3) {
+			vector<long long> output = {2, 4, 6, 16};
+			ASSERT_EQ(output, Solution::maximumEvenSplit(28));
+		}
+	}// namespace maximum_split_of_positive_even_integers
+
+	namespace count_good_triplets_in_an_array {
+		TEST(count_good_triplets_in_an_array, case1) {
+			vector<int> input1 = {2, 0, 1, 3};
+			vector<int> input2 = {0, 1, 2, 3};
+			ASSERT_EQ(1, Solution::goodTriplets(input1, input2));
+		}
+
+		TEST(count_good_triplets_in_an_array, case2) {
+			vector<int> input1 = {4, 0, 1, 3, 2};
+			vector<int> input2 = {4, 1, 0, 2, 3};
+			ASSERT_EQ(4, Solution::goodTriplets(input1, input2));
+		}
+	}// namespace count_good_triplets_in_an_array
 }// namespace leetcode

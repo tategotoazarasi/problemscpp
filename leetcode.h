@@ -1172,6 +1172,65 @@ namespace leetcode {
 			static vector<int> pancakeSort(vector<int> &arr);
 		};
 	}// namespace pancake_sorting
+
+	/// \brief LeetCode 5996. 统计数组中相等且可以被整除的数对
+	namespace count_equal_and_divisible_pairs_in_an_array {
+		class Solution {
+		public:
+			static int countPairs(vector<int> &nums, int k);
+		};
+	}// namespace count_equal_and_divisible_pairs_in_an_array
+
+	/// \brief LeetCode 5997. 找到和为给定整数的三个连续整数
+	namespace find_three_consecutive_integers_that_sum_to_a_given_number {
+		class Solution {
+		public:
+			static vector<long long> sumOfThree(long long num);
+		};
+	}// namespace find_three_consecutive_integers_that_sum_to_a_given_number
+
+	/// \brief LeetCode 5998. 拆分成最多数目的偶整数之和
+	namespace maximum_split_of_positive_even_integers {
+		class Solution {
+		public:
+			static vector<long long> maximumEvenSplit(long long finalSum);
+		};
+	}// namespace maximum_split_of_positive_even_integers
+
+	/// \brief LeetCode 5999. 统计数组中好三元组数目
+	namespace count_good_triplets_in_an_array {
+		template<class T> class FenwickTree {
+			int limit;
+			vector<T> arr;
+
+			int lowbit(int x) { return x & (-x); }
+
+		public:
+			FenwickTree(int limit) {
+				this->limit = limit;
+				arr         = vector<T>(limit + 1);
+			}
+
+			void update(int idx, T delta) {
+				for(; idx <= limit; idx += lowbit(idx)) {
+					arr[idx] += delta;
+				}
+			}
+
+			T query(int idx) {
+				T ans = 0;
+				for(; idx > 0; idx -= lowbit(idx)) {
+					ans += arr[idx];
+				}
+				return ans;
+			}
+		};
+
+		class Solution {
+		public:
+			static long long goodTriplets(vector<int> &nums1, vector<int> &nums2);
+		};
+	}// namespace count_good_triplets_in_an_array
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

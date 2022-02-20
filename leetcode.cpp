@@ -3094,4 +3094,76 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace pancake_sorting
+
+	namespace count_equal_and_divisible_pairs_in_an_array {
+		int Solution::countPairs(vector<int> &nums, int k) {
+			int ans = 0;
+			for(int i = 0; i + 1 < nums.size(); i++) {
+				for(int j = i + 1; j < nums.size(); j++) {
+					if(nums[i] == nums[j] && (i * j) % k == 0) {
+						ans++;
+					}
+				}
+			}
+			return ans;
+		}
+	}// namespace count_equal_and_divisible_pairs_in_an_array
+
+	namespace find_three_consecutive_integers_that_sum_to_a_given_number {
+		vector<long long> Solution::sumOfThree(long long int num) {
+			if(num % 3 == 0) {
+				long long mid         = num / 3;
+				vector<long long> ans = {mid - 1, mid, mid + 1};
+				return ans;
+			} else {
+				return {};
+			}
+		}
+	}// namespace find_three_consecutive_integers_that_sum_to_a_given_number
+
+	namespace maximum_split_of_positive_even_integers {
+		vector<long long> Solution::maximumEvenSplit(long long int finalSum) {
+			if(finalSum % 2 != 0) {
+				return {};
+			}
+			if(finalSum == 4) {
+				return {4};
+			}
+			vector<long long int> ans = vector<long long int>();
+			ans.push_back(2);
+			finalSum -= 2;
+			for(long long i = 4; i <= finalSum; i += 2) {
+				long long int next = finalSum - i;
+				if(next > i) {
+					ans.push_back(i);
+					finalSum = next;
+				} else {
+					ans.push_back(finalSum);
+					break;
+				}
+			}
+			return ans;
+		}
+	}// namespace maximum_split_of_positive_even_integers
+
+	namespace count_good_triplets_in_an_array {
+		long long Solution::goodTriplets(vector<int> &nums1, vector<int> &nums2) {
+			int n = nums1.size();
+			FenwickTree<int> occur(n);
+			unordered_map<int, int> pos;
+			for(int i = 0; i < n; ++i) {
+				pos[nums2[i]] = i + 1;
+			}
+			long long ans = 0;
+			for(int i = 0; i < n; ++i) {
+				int idx   = pos[nums1[i]];
+				int left  = occur.query(idx);
+				int right = n - idx - (occur.query(n) - occur.query(idx));
+				ans += 1LL * left * right;
+				occur.update(idx, 1);
+			}
+
+			return ans;
+		}
+	}// namespace count_good_triplets_in_an_array
 }// namespace leetcode
