@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['one1_0',['one1',['../d2/da6/a01210.html#ab30fd98a4cbeab349e350b674aecce8c',1,'leetcode::design_bitset::Bitset']]],
-  ['ops_1',['ops',['../d8/d00/a00606.html#ac20e1ee1042d8657c8812fc0bffdfc9a',1,'acwing::acwing4217']]]
+  ['one1_0',['one1',['../d8/d15/a01218.html#ab30fd98a4cbeab349e350b674aecce8c',1,'leetcode::design_bitset::Bitset']]],
+  ['ops_1',['ops',['../d7/d80/a00614.html#ac20e1ee1042d8657c8812fc0bffdfc9a',1,'acwing::acwing4217']]]
 ];
