@@ -3117,8 +3117,6 @@ namespace leetcode {
 				return ans;
 			}
 			return {};
-
-			return {};
 		}
 	}// namespace find_three_consecutive_integers_that_sum_to_a_given_number
 
@@ -3240,27 +3238,25 @@ namespace leetcode {
 
 	namespace count_array_pairs_divisible_by_k {
 		long long Solution::coutPairs(vector<int> &nums, int k) {
-			const int maximum = *max_element(nums.begin(), nums.end());
-			long long ans     = 0;
-			unordered_map<int, int> count;
-			vector<long long> s(maximum + 1);
-			for(int num: nums) {
+			long long ans = 0;
+			// 统计每个数的倍数出现的次数
+			auto count = unordered_map<int, int>();
+			for(const auto num: nums) {
 				count[num]++;
 			}
+			const int maximum = *max_element(nums.begin(), nums.end());
+			// 为什么这个算法是 O(nlnn) 的？因为这个算法的循环次数是 n(1 + 1/2 + 1/3 + ...)，由调和级数可知括号内趋向 lnn
 			for(int i = 1; i <= maximum; i++) {
-				for(int j = i; j <= maximum; j += i) {
-					s[i] += count[j];
+				for(int j = i * 2; j <= maximum; j += i) {
+					count[i] += count[j];
 				}
 			}
-			for(int i = 1; i <= maximum; i++) {
-				const int x = k / gcd(k, i);
-				if(x <= maximum) {
-					ans += count[i] * s[x];
-				}
-			}
-			for(long long i = 1; i <= maximum; i++) {
-				if(i * i % k == 0) {
-					ans -= count[i];
+			for(const auto num: nums) {
+				// 对于每个数统计与它形成好二元组的数有几个
+				ans += count[k / gcd(k, num)];
+				if(static_cast<long long>(num) * num % k == 0) {
+					// 排除自己和自己形成好二元组的情况
+					ans--;
 				}
 			}
 			return ans / 2;
