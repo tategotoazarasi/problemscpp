@@ -1668,4 +1668,45 @@ namespace leetcode {
 			ASSERT_EQ(4, Solution::goodTriplets(input1, input2));
 		}
 	}// namespace count_good_triplets_in_an_array
+
+	namespace count_integers_with_even_digit_sum {
+		TEST(count_integers_with_even_digit_sum, case1) {
+			ASSERT_EQ(2, Solution::countEven(4));
+		}
+
+		TEST(count_integers_with_even_digit_sum, case2) {
+			ASSERT_EQ(14, Solution::countEven(30));
+		}
+	}// namespace count_integers_with_even_digit_sum
+
+	namespace construct_string_with_repeat_limit {
+		TEST(construct_string_with_repeat_limit, case1) {
+			ASSERT_EQ("zzcccac", Solution::repeatLimitedString("cczazcc", 3));
+		}
+
+		TEST(construct_string_with_repeat_limit, case2) {
+			ASSERT_EQ("bbabaa", Solution::repeatLimitedString("aababab", 2));
+		}
+
+		TEST(construct_string_with_repeat_limit, case3) {
+			ASSERT_EQ("yxxvvuvusrrqqppopponliihgfeeddcbba", Solution::repeatLimitedString("robnsdvpuxbapuqgopqvxdrchivlifeepy", 2));
+		}
+	}// namespace construct_string_with_repeat_limit
+
+	namespace count_array_pairs_divisible_by_k {
+		TEST(count_array_pairs_divisible_by_k, case1) {
+			vector<int> input = {1, 2, 3, 4, 5};
+			ASSERT_EQ(7, Solution::coutPairs(input, 2));
+		}
+
+		TEST(count_array_pairs_divisible_by_k, case2) {
+			vector<int> input = {1, 2, 3, 4};
+			ASSERT_EQ(0, Solution::coutPairs(input, 5));
+		}
+
+		TEST(count_array_pairs_divisible_by_k, case3) {
+			vector<int> input = {8, 10, 2, 5, 9, 6, 3, 8, 2};
+			ASSERT_EQ(18, Solution::coutPairs(input, 6));
+		}
+	}// namespace count_array_pairs_divisible_by_k
 }// namespace leetcode

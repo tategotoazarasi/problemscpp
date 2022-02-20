@@ -3166,4 +3166,104 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace count_good_triplets_in_an_array
+
+	namespace count_integers_with_even_digit_sum {
+		int Solution::countEven(int num) {
+			int ans = 0;
+			for(int i = 1; i <= num; i++) {
+				stringstream ss;
+				ss << i;
+				char ch;
+				int sum = 0;
+				while(ss >> ch) {
+					sum += ch - '0';
+				}
+				if(sum % 2 == 0) {
+					ans++;
+				}
+			}
+			return ans;
+		}
+	}// namespace count_integers_with_even_digit_sum
+
+	namespace merge_nodes_in_between_zeros {
+		ListNode *Solution::mergeNodes(ListNode *head) {
+			while(head != nullptr && head->val == 0) {
+				head = head->next;
+			}
+			auto prev = head;
+			while(head != nullptr && head->next != nullptr) {
+				if(head->next->val != 0) {
+					head->val += head->next->val;
+					head->next = head->next->next;
+				} else {
+					head->next = head->next->next;
+					head       = head->next;
+				}
+			}
+			return prev;
+		}
+	}// namespace merge_nodes_in_between_zeros
+
+	namespace construct_string_with_repeat_limit {
+		string Solution::repeatLimitedString(string s, int repeatLimit) {
+			int ch[26] = {};
+			for(char c: s) {
+				ch[c - 'a']++;
+			}
+			int repeat        = 0;
+			ostringstream oss = ostringstream();
+			for(int i = 25; i >= 0; i--) {
+				repeat = 0;
+				while(ch[i] != 0) {
+					oss << char(i + 'a');
+					repeat++;
+					ch[i]--;
+					if(repeat == repeatLimit && ch[i] != 0) {
+						for(int j = i - 1; j >= 0; j--) {
+							if(ch[j] > 0) {
+								oss << char(j + 'a');
+								ch[j]--;
+								repeat = 0;
+								break;
+							}
+						}
+						if(repeat != 0) {
+							return oss.str();
+						}
+					}
+				}
+			}
+			return oss.str();
+		}
+	}// namespace construct_string_with_repeat_limit
+
+	namespace count_array_pairs_divisible_by_k {
+		long long Solution::coutPairs(vector<int> &nums, int k) {
+			int maximum   = *max_element(nums.begin(), nums.end());
+			long long ans = 0;
+			unordered_map<int, int> count;
+			vector<long long> s(maximum + 1);
+			for(int num: nums) {
+				count[num]++;
+			}
+			for(int i = 1; i <= maximum; i++) {
+				for(int j = i; j <= maximum; j += i) {
+					s[i] += count[j];
+				}
+			}
+			for(int i = 1; i <= maximum; i++) {
+				int x = k / gcd(k, i);
+				if(x <= maximum) {
+					ans += count[i] * s[x];
+				}
+			}
+			for(long long i = 1; i <= maximum; i++) {
+				if(i * i % k == 0) {
+					ans -= count[i];
+				}
+			}
+			return ans / 2;
+		}
+	}// namespace count_array_pairs_divisible_by_k
 }// namespace leetcode

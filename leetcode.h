@@ -1231,6 +1231,38 @@ namespace leetcode {
 			static long long goodTriplets(vector<int> &nums1, vector<int> &nums2);
 		};
 	}// namespace count_good_triplets_in_an_array
+
+	/// \brief LeetCode 6012. 统计各位数字之和为偶数的整数个数
+	namespace count_integers_with_even_digit_sum {
+		class Solution {
+		public:
+			static int countEven(int num);
+		};
+	}// namespace count_integers_with_even_digit_sum
+
+	/// \brief LeetCode 6013. 合并零之间的节点
+	namespace merge_nodes_in_between_zeros {
+		class Solution {
+		public:
+			static ListNode *mergeNodes(ListNode *head);
+		};
+	}// namespace merge_nodes_in_between_zeros
+
+	/// \brief LeetCode 6014. 构造限制重复的字符串
+	namespace construct_string_with_repeat_limit {
+		class Solution {
+		public:
+			static string repeatLimitedString(string s, int repeatLimit);
+		};
+	}// namespace construct_string_with_repeat_limit
+
+	/// \brief LeetCode 6015. 统计可以被 K 整除的下标对数目
+	namespace count_array_pairs_divisible_by_k {
+		class Solution {
+		public:
+			static long long coutPairs(vector<int> &nums, int k);
+		};
+	}// namespace count_array_pairs_divisible_by_k
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

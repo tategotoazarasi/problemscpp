@@ -1402,4 +1402,34 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P2141::main(istream &cin, ostream &cout) {
+		int n;
+		set<int> s = set<int>();
+		for(int i = 0; i < n; i++) {
+			int num;
+			cin >> num;
+			s.insert(num);
+		}
+		int ans = 0;
+		for(auto i = s.begin(); i != s.end(); ++i) {
+			int c = 0;
+			for(auto j = s.begin(); j != i; ++j) {
+				int sub = *i - *j;
+				if(sub != *j && s.count(sub) != 0) {
+					/*c++;
+					if(c > 2) {
+						break;
+					}*/
+					ans++;
+					break;
+				}
+			}
+			if(c > 0) {
+				ans++;
+			}
+		}
+		cout << ans;
+		return 0;
+	}
 }// namespace luogu
