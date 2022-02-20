@@ -1387,9 +1387,10 @@ namespace luogu {
 
 	int P1554::main(istream &cin, ostream &cout) {
 		int nums[10] = {};
-		int m, n;
+		int m;
+		int n;
 		cin >> m >> n;
-		stringstream ss = stringstream();
+		auto ss = stringstream();
 		for(int i = m; i <= n; i++) {
 			ss << i;
 		}
@@ -1405,7 +1406,7 @@ namespace luogu {
 
 	int P2141::main(istream &cin, ostream &cout) {
 		int n;
-		set<int> s = set<int>();
+		auto s = set<int>();
 		for(int i = 0; i < n; i++) {
 			int num;
 			cin >> num;
@@ -1413,10 +1414,10 @@ namespace luogu {
 		}
 		int ans = 0;
 		for(auto i = s.begin(); i != s.end(); ++i) {
-			int c = 0;
+			const int c = 0;
 			for(auto j = s.begin(); j != i; ++j) {
 				int sub = *i - *j;
-				if(sub != *j && s.count(sub) != 0) {
+				if(sub != *j && s.contains(sub)) {
 					/*c++;
 					if(c > 2) {
 						break;

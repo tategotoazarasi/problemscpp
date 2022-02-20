@@ -3059,10 +3059,10 @@ namespace leetcode {
 
 	namespace pancake_sorting {
 		vector<int> Solution::pancakeSort(vector<int> &arr) {
-			auto ans     = vector<int>();
-			const int n  = arr.size();
-			auto current = new int[n];
-			auto sorted  = new int[n];
+			auto ans      = vector<int>();
+			const int n   = arr.size();
+			auto *current = new int[n];
+			auto *sorted  = new int[n];
 			for(int i = 0; i < n; i++) {
 				current[i] = arr[i];
 				sorted[i]  = arr[i];
@@ -3100,7 +3100,7 @@ namespace leetcode {
 			int ans = 0;
 			for(int i = 0; i + 1 < nums.size(); i++) {
 				for(int j = i + 1; j < nums.size(); j++) {
-					if(nums[i] == nums[j] && (i * j) % k == 0) {
+					if(nums[i] == nums[j] && i * j % k == 0) {
 						ans++;
 					}
 				}
@@ -3112,12 +3112,13 @@ namespace leetcode {
 	namespace find_three_consecutive_integers_that_sum_to_a_given_number {
 		vector<long long> Solution::sumOfThree(long long int num) {
 			if(num % 3 == 0) {
-				long long mid         = num / 3;
-				vector<long long> ans = {mid - 1, mid, mid + 1};
+				const long long mid = num / 3;
+				vector ans          = {mid - 1, mid, mid + 1};
 				return ans;
-			} else {
-				return {};
 			}
+			return {};
+
+			return {};
 		}
 	}// namespace find_three_consecutive_integers_that_sum_to_a_given_number
 
@@ -3129,11 +3130,11 @@ namespace leetcode {
 			if(finalSum == 4) {
 				return {4};
 			}
-			vector<long long int> ans = vector<long long int>();
+			auto ans = vector<long long int>();
 			ans.push_back(2);
 			finalSum -= 2;
 			for(long long i = 4; i <= finalSum; i += 2) {
-				long long int next = finalSum - i;
+				const long long int next = finalSum - i;
 				if(next > i) {
 					ans.push_back(i);
 					finalSum = next;
@@ -3148,7 +3149,7 @@ namespace leetcode {
 
 	namespace count_good_triplets_in_an_array {
 		long long Solution::goodTriplets(vector<int> &nums1, vector<int> &nums2) {
-			int n = nums1.size();
+			const int n = nums1.size();
 			FenwickTree<int> occur(n);
 			unordered_map<int, int> pos;
 			for(int i = 0; i < n; ++i) {
@@ -3156,9 +3157,9 @@ namespace leetcode {
 			}
 			long long ans = 0;
 			for(int i = 0; i < n; ++i) {
-				int idx   = pos[nums1[i]];
-				int left  = occur.query(idx);
-				int right = n - idx - (occur.query(n) - occur.query(idx));
+				const int idx   = pos[nums1[i]];
+				const int left  = occur.query(idx);
+				const int right = n - idx - (occur.query(n) - occur.query(idx));
 				ans += 1LL * left * right;
 				occur.update(idx, 1);
 			}
@@ -3191,7 +3192,7 @@ namespace leetcode {
 			while(head != nullptr && head->val == 0) {
 				head = head->next;
 			}
-			auto prev = head;
+			auto *prev = head;
 			while(head != nullptr && head->next != nullptr) {
 				if(head->next->val != 0) {
 					head->val += head->next->val;
@@ -3206,23 +3207,22 @@ namespace leetcode {
 	}// namespace merge_nodes_in_between_zeros
 
 	namespace construct_string_with_repeat_limit {
-		string Solution::repeatLimitedString(string s, int repeatLimit) {
+		string Solution::repeatLimitedString(const string &s, int repeatLimit) {
 			int ch[26] = {};
-			for(char c: s) {
+			for(const char c: s) {
 				ch[c - 'a']++;
 			}
-			int repeat        = 0;
-			ostringstream oss = ostringstream();
+			auto oss = ostringstream();
 			for(int i = 25; i >= 0; i--) {
-				repeat = 0;
+				int repeat = 0;
 				while(ch[i] != 0) {
-					oss << char(i + 'a');
+					oss << static_cast<char>(i + 'a');
 					repeat++;
 					ch[i]--;
 					if(repeat == repeatLimit && ch[i] != 0) {
 						for(int j = i - 1; j >= 0; j--) {
 							if(ch[j] > 0) {
-								oss << char(j + 'a');
+								oss << static_cast<char>(j + 'a');
 								ch[j]--;
 								repeat = 0;
 								break;
@@ -3240,8 +3240,8 @@ namespace leetcode {
 
 	namespace count_array_pairs_divisible_by_k {
 		long long Solution::coutPairs(vector<int> &nums, int k) {
-			int maximum   = *max_element(nums.begin(), nums.end());
-			long long ans = 0;
+			const int maximum = *max_element(nums.begin(), nums.end());
+			long long ans     = 0;
 			unordered_map<int, int> count;
 			vector<long long> s(maximum + 1);
 			for(int num: nums) {
@@ -3253,7 +3253,7 @@ namespace leetcode {
 				}
 			}
 			for(int i = 1; i <= maximum; i++) {
-				int x = k / gcd(k, i);
+				const int x = k / gcd(k, i);
 				if(x <= maximum) {
 					ans += count[i] * s[x];
 				}

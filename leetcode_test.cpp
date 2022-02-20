@@ -1616,55 +1616,55 @@ namespace leetcode {
 
 	namespace count_equal_and_divisible_pairs_in_an_array {
 		TEST(count_equal_and_divisible_pairs_in_an_array, case1) {
-			vector<int> input = {3, 1, 2, 2, 2, 1, 3};
+			vector input = {3, 1, 2, 2, 2, 1, 3};
 			ASSERT_EQ(4, Solution::countPairs(input, 2));
 		}
 
 		TEST(count_equal_and_divisible_pairs_in_an_array, case2) {
-			vector<int> input = {1, 2, 3, 4};
+			vector input = {1, 2, 3, 4};
 			ASSERT_EQ(0, Solution::countPairs(input, 1));
 		}
 	}// namespace count_equal_and_divisible_pairs_in_an_array
 
 	namespace find_three_consecutive_integers_that_sum_to_a_given_number {
 		TEST(find_three_consecutive_integers_that_sum_to_a_given_number, case1) {
-			vector<long long> output = {10, 11, 12};
+			const vector<long long> output = {10, 11, 12};
 			ASSERT_EQ(output, Solution::sumOfThree(33));
 		}
 
 		TEST(find_three_consecutive_integers_that_sum_to_a_given_number, case2) {
-			vector<long long> output = {};
+			const vector<long long> output = {};
 			ASSERT_EQ(output, Solution::sumOfThree(4));
 		}
 	}// namespace find_three_consecutive_integers_that_sum_to_a_given_number
 
 	namespace maximum_split_of_positive_even_integers {
 		TEST(maximum_split_of_positive_even_integers, case1) {
-			vector<long long> output = {2, 4, 6};
+			const vector<long long> output = {2, 4, 6};
 			ASSERT_EQ(output, Solution::maximumEvenSplit(12));
 		}
 
 		TEST(maximum_split_of_positive_even_integers, case2) {
-			vector<long long> output = {};
+			const vector<long long> output = {};
 			ASSERT_EQ(output, Solution::maximumEvenSplit(7));
 		}
 
 		TEST(maximum_split_of_positive_even_integers, case3) {
-			vector<long long> output = {2, 4, 6, 16};
+			const vector<long long> output = {2, 4, 6, 16};
 			ASSERT_EQ(output, Solution::maximumEvenSplit(28));
 		}
 	}// namespace maximum_split_of_positive_even_integers
 
 	namespace count_good_triplets_in_an_array {
 		TEST(count_good_triplets_in_an_array, case1) {
-			vector<int> input1 = {2, 0, 1, 3};
-			vector<int> input2 = {0, 1, 2, 3};
+			vector input1 = {2, 0, 1, 3};
+			vector input2 = {0, 1, 2, 3};
 			ASSERT_EQ(1, Solution::goodTriplets(input1, input2));
 		}
 
 		TEST(count_good_triplets_in_an_array, case2) {
-			vector<int> input1 = {4, 0, 1, 3, 2};
-			vector<int> input2 = {4, 1, 0, 2, 3};
+			vector input1 = {4, 0, 1, 3, 2};
+			vector input2 = {4, 1, 0, 2, 3};
 			ASSERT_EQ(4, Solution::goodTriplets(input1, input2));
 		}
 	}// namespace count_good_triplets_in_an_array
@@ -1695,17 +1695,17 @@ namespace leetcode {
 
 	namespace count_array_pairs_divisible_by_k {
 		TEST(count_array_pairs_divisible_by_k, case1) {
-			vector<int> input = {1, 2, 3, 4, 5};
+			vector input = {1, 2, 3, 4, 5};
 			ASSERT_EQ(7, Solution::coutPairs(input, 2));
 		}
 
 		TEST(count_array_pairs_divisible_by_k, case2) {
-			vector<int> input = {1, 2, 3, 4};
+			vector input = {1, 2, 3, 4};
 			ASSERT_EQ(0, Solution::coutPairs(input, 5));
 		}
 
 		TEST(count_array_pairs_divisible_by_k, case3) {
-			vector<int> input = {8, 10, 2, 5, 9, 6, 3, 8, 2};
+			vector input = {8, 10, 2, 5, 9, 6, 3, 8, 2};
 			ASSERT_EQ(18, Solution::coutPairs(input, 6));
 		}
 	}// namespace count_array_pairs_divisible_by_k

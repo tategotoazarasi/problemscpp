@@ -4302,8 +4302,7 @@ namespace acwing {
 				vec.push_back(ui);
 			}
 		}
-		auto ans = vector<unsigned int>();
-		bool ok  = true;
+		bool ok = true;
 		while(ok) {
 			ok = false;
 			for(int i = 0; i + 1 < vec.size(); i++) {

@@ -1200,13 +1200,13 @@ namespace leetcode {
 	/// \brief LeetCode 5999. 统计数组中好三元组数目
 	namespace count_good_triplets_in_an_array {
 		template<class T> class FenwickTree {
-			int limit;
+			int limit{};
 			vector<T> arr;
 
-			int lowbit(int x) { return x & (-x); }
+			static int lowbit(int x) { return x & -x; }
 
 		public:
-			FenwickTree(int limit) {
+			explicit FenwickTree(int limit) {
 				this->limit = limit;
 				arr         = vector<T>(limit + 1);
 			}
@@ -1252,7 +1252,7 @@ namespace leetcode {
 	namespace construct_string_with_repeat_limit {
 		class Solution {
 		public:
-			static string repeatLimitedString(string s, int repeatLimit);
+			static string repeatLimitedString(const string &s, int repeatLimit);
 		};
 	}// namespace construct_string_with_repeat_limit
 
