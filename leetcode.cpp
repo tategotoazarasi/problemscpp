@@ -3262,4 +3262,22 @@ namespace leetcode {
 			return ans / 2;
 		}
 	}// namespace count_array_pairs_divisible_by_k
+
+	namespace leetcode717_1_bit_and_2_bit_characters {
+		bool Solution::isOneBitCharacter(vector<int> &bits) {
+			for(int i = 0; i < bits.size();) {
+				int next = i;
+				if(bits[i] == 1) {
+					next += 2;
+				} else {
+					next += 1;
+				}
+				if(next >= bits.size()) {
+					return i == bits.size() - 1;
+				}
+				i = next;
+			}
+			return false;
+		}
+	}// namespace leetcode717_1_bit_and_2_bit_characters
 }// namespace leetcode

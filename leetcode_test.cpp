@@ -1709,4 +1709,16 @@ namespace leetcode {
 			ASSERT_EQ(18, Solution::coutPairs(input, 6));
 		}
 	}// namespace count_array_pairs_divisible_by_k
+
+	namespace leetcode717_1_bit_and_2_bit_characters {
+		TEST(leetcode717_1_bit_and_2_bit_characters, case1) {
+			vector input = {1, 0, 0};
+			ASSERT_TRUE(Solution::isOneBitCharacter(input));
+		}
+
+		TEST(leetcode717_1_bit_and_2_bit_characters, case2) {
+			vector input = {1, 1, 1, 0};
+			ASSERT_FALSE(Solution::isOneBitCharacter(input));
+		}
+	}// namespace leetcode717_1_bit_and_2_bit_characters
 }// namespace leetcode

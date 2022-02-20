@@ -1263,6 +1263,16 @@ namespace leetcode {
 			static long long coutPairs(vector<int> &nums, int k);
 		};
 	}// namespace count_array_pairs_divisible_by_k
+
+	/**
+	 * \brief LeetCode 717. 1比特与2比特字符
+	 */
+	namespace leetcode717_1_bit_and_2_bit_characters {
+		class Solution {
+		public:
+			static bool isOneBitCharacter(vector<int> &bits);
+		};
+	}// namespace leetcode717_1_bit_and_2_bit_characters
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
