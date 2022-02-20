@@ -1455,52 +1455,53 @@ $(function() {
 <div class="line"><a id="l01387" name="l01387"></a><span class="lineno"> 1387</span> </div>
 <div class="line"><a id="l01388" name="l01388"></a><span class="lineno"><a class="line" href="../../df/dee/a01646.html#a801e4efd7900f11505ad72e2e9deec1e"> 1388</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../df/dee/a01646.html#a801e4efd7900f11505ad72e2e9deec1e">P1554::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
 <div class="line"><a id="l01389" name="l01389"></a><span class="lineno"> 1389</span>        <span class="keywordtype">int</span> nums[10] = {};</div>
-<div class="line"><a id="l01390" name="l01390"></a><span class="lineno"> 1390</span>        <span class="keywordtype">int</span> m, n;</div>
-<div class="line"><a id="l01391" name="l01391"></a><span class="lineno"> 1391</span>        cin &gt;&gt; m &gt;&gt; n;</div>
-<div class="line"><a id="l01392" name="l01392"></a><span class="lineno"> 1392</span>        stringstream ss = stringstream();</div>
-<div class="line"><a id="l01393" name="l01393"></a><span class="lineno"> 1393</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = m; i &lt;= n; i++) {</div>
-<div class="line"><a id="l01394" name="l01394"></a><span class="lineno"> 1394</span>            ss &lt;&lt; i;</div>
-<div class="line"><a id="l01395" name="l01395"></a><span class="lineno"> 1395</span>        }</div>
-<div class="line"><a id="l01396" name="l01396"></a><span class="lineno"> 1396</span>        <span class="keywordtype">char</span> ch;</div>
-<div class="line"><a id="l01397" name="l01397"></a><span class="lineno"> 1397</span>        <span class="keywordflow">while</span>(ss &gt;&gt; ch) {</div>
-<div class="line"><a id="l01398" name="l01398"></a><span class="lineno"> 1398</span>            nums[ch - <span class="charliteral">&#39;0&#39;</span>]++;</div>
-<div class="line"><a id="l01399" name="l01399"></a><span class="lineno"> 1399</span>        }</div>
-<div class="line"><a id="l01400" name="l01400"></a><span class="lineno"> 1400</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 10; i++) {</div>
-<div class="line"><a id="l01401" name="l01401"></a><span class="lineno"> 1401</span>            cout &lt;&lt; nums[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a id="l01402" name="l01402"></a><span class="lineno"> 1402</span>        }</div>
-<div class="line"><a id="l01403" name="l01403"></a><span class="lineno"> 1403</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01404" name="l01404"></a><span class="lineno"> 1404</span>    }</div>
-<div class="line"><a id="l01405" name="l01405"></a><span class="lineno"> 1405</span> </div>
-<div class="line"><a id="l01406" name="l01406"></a><span class="lineno"><a class="line" href="../../d9/d3b/a01650.html#a01356d1ba5cf9174fbb0fbba462acb36"> 1406</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d9/d3b/a01650.html#a01356d1ba5cf9174fbb0fbba462acb36">P2141::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l01407" name="l01407"></a><span class="lineno"> 1407</span>        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l01408" name="l01408"></a><span class="lineno"> 1408</span>        set&lt;int&gt; s = set&lt;int&gt;();</div>
-<div class="line"><a id="l01409" name="l01409"></a><span class="lineno"> 1409</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l01410" name="l01410"></a><span class="lineno"> 1410</span>            <span class="keywordtype">int</span> num;</div>
-<div class="line"><a id="l01411" name="l01411"></a><span class="lineno"> 1411</span>            cin &gt;&gt; num;</div>
-<div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>            s.insert(num);</div>
-<div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span>        }</div>
-<div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>        <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = s.begin(); i != s.end(); ++i) {</div>
-<div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span>            <span class="keywordtype">int</span> c = 0;</div>
-<div class="line"><a id="l01417" name="l01417"></a><span class="lineno"> 1417</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> j = s.begin(); j != i; ++j) {</div>
-<div class="line"><a id="l01418" name="l01418"></a><span class="lineno"> 1418</span>                <span class="keywordtype">int</span> sub = *i - *j;</div>
-<div class="line"><a id="l01419" name="l01419"></a><span class="lineno"> 1419</span>                <span class="keywordflow">if</span>(sub != *j &amp;&amp; s.count(sub) != 0) {</div>
-<div class="line"><a id="l01420" name="l01420"></a><span class="lineno"> 1420</span>                    <span class="comment">/*c++;</span></div>
-<div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span><span class="comment">                    if(c &gt; 2) {</span></div>
-<div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span><span class="comment">                        break;</span></div>
-<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span><span class="comment">                    }*/</span></div>
-<div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>                    ans++;</div>
-<div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span>                }</div>
-<div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span>            }</div>
-<div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>            <span class="keywordflow">if</span>(c &gt; 0) {</div>
-<div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>                ans++;</div>
-<div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>            }</div>
-<div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>        }</div>
-<div class="line"><a id="l01432" name="l01432"></a><span class="lineno"> 1432</span>        cout &lt;&lt; ans;</div>
-<div class="line"><a id="l01433" name="l01433"></a><span class="lineno"> 1433</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01434" name="l01434"></a><span class="lineno"> 1434</span>    }</div>
-<div class="line"><a id="l01435" name="l01435"></a><span class="lineno"> 1435</span>}<span class="comment">// namespace luogu</span></div>
+<div class="line"><a id="l01390" name="l01390"></a><span class="lineno"> 1390</span>        <span class="keywordtype">int</span> m;</div>
+<div class="line"><a id="l01391" name="l01391"></a><span class="lineno"> 1391</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l01392" name="l01392"></a><span class="lineno"> 1392</span>        cin &gt;&gt; m &gt;&gt; n;</div>
+<div class="line"><a id="l01393" name="l01393"></a><span class="lineno"> 1393</span>        <span class="keyword">auto</span> ss = stringstream();</div>
+<div class="line"><a id="l01394" name="l01394"></a><span class="lineno"> 1394</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = m; i &lt;= n; i++) {</div>
+<div class="line"><a id="l01395" name="l01395"></a><span class="lineno"> 1395</span>            ss &lt;&lt; i;</div>
+<div class="line"><a id="l01396" name="l01396"></a><span class="lineno"> 1396</span>        }</div>
+<div class="line"><a id="l01397" name="l01397"></a><span class="lineno"> 1397</span>        <span class="keywordtype">char</span> ch;</div>
+<div class="line"><a id="l01398" name="l01398"></a><span class="lineno"> 1398</span>        <span class="keywordflow">while</span>(ss &gt;&gt; ch) {</div>
+<div class="line"><a id="l01399" name="l01399"></a><span class="lineno"> 1399</span>            nums[ch - <span class="charliteral">&#39;0&#39;</span>]++;</div>
+<div class="line"><a id="l01400" name="l01400"></a><span class="lineno"> 1400</span>        }</div>
+<div class="line"><a id="l01401" name="l01401"></a><span class="lineno"> 1401</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 10; i++) {</div>
+<div class="line"><a id="l01402" name="l01402"></a><span class="lineno"> 1402</span>            cout &lt;&lt; nums[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l01403" name="l01403"></a><span class="lineno"> 1403</span>        }</div>
+<div class="line"><a id="l01404" name="l01404"></a><span class="lineno"> 1404</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01405" name="l01405"></a><span class="lineno"> 1405</span>    }</div>
+<div class="line"><a id="l01406" name="l01406"></a><span class="lineno"> 1406</span> </div>
+<div class="line"><a id="l01407" name="l01407"></a><span class="lineno"><a class="line" href="../../d9/d3b/a01650.html#a01356d1ba5cf9174fbb0fbba462acb36"> 1407</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d9/d3b/a01650.html#a01356d1ba5cf9174fbb0fbba462acb36">P2141::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l01408" name="l01408"></a><span class="lineno"> 1408</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l01409" name="l01409"></a><span class="lineno"> 1409</span>        <span class="keyword">auto</span> s = set&lt;int&gt;();</div>
+<div class="line"><a id="l01410" name="l01410"></a><span class="lineno"> 1410</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l01411" name="l01411"></a><span class="lineno"> 1411</span>            <span class="keywordtype">int</span> num;</div>
+<div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>            cin &gt;&gt; num;</div>
+<div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span>            s.insert(num);</div>
+<div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>        }</div>
+<div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span>        <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = s.begin(); i != s.end(); ++i) {</div>
+<div class="line"><a id="l01417" name="l01417"></a><span class="lineno"> 1417</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> c = 0;</div>
+<div class="line"><a id="l01418" name="l01418"></a><span class="lineno"> 1418</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> j = s.begin(); j != i; ++j) {</div>
+<div class="line"><a id="l01419" name="l01419"></a><span class="lineno"> 1419</span>                <span class="keywordtype">int</span> sub = *i - *j;</div>
+<div class="line"><a id="l01420" name="l01420"></a><span class="lineno"> 1420</span>                <span class="keywordflow">if</span>(sub != *j &amp;&amp; s.contains(sub)) {</div>
+<div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>                    <span class="comment">/*c++;</span></div>
+<div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span><span class="comment">                    if(c &gt; 2) {</span></div>
+<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span><span class="comment">                        break;</span></div>
+<div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span><span class="comment">                    }*/</span></div>
+<div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>                    ans++;</div>
+<div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span>                }</div>
+<div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>            }</div>
+<div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>            <span class="keywordflow">if</span>(c &gt; 0) {</div>
+<div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>                ans++;</div>
+<div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>            }</div>
+<div class="line"><a id="l01432" name="l01432"></a><span class="lineno"> 1432</span>        }</div>
+<div class="line"><a id="l01433" name="l01433"></a><span class="lineno"> 1433</span>        cout &lt;&lt; ans;</div>
+<div class="line"><a id="l01434" name="l01434"></a><span class="lineno"> 1434</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01435" name="l01435"></a><span class="lineno"> 1435</span>    }</div>
+<div class="line"><a id="l01436" name="l01436"></a><span class="lineno"> 1436</span>}<span class="comment">// namespace luogu</span></div>
 <div class="ttc" id="aa00014_html"><div class="ttname"><a href="../../d2/de7/a00014.html">luogu.h</a></div></div>
 <div class="ttc" id="aa00052_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d41/a00038_source.html#l00544">acwing.h:544</a></div></div>
 <div class="ttc" id="aa00173_html"><div class="ttname"><a href="../../d7/d3f/a00173.html">luogu</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00015">luogu.cpp:15</a></div></div>
@@ -1569,7 +1570,7 @@ $(function() {
 <div class="ttc" id="aa01638_html_a0c08759b3757764b8a4ebd8904bae990"><div class="ttname"><a href="../../dd/d55/a01638.html#a0c08759b3757764b8a4ebd8904bae990">luogu::P2615::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l01271">luogu.cpp:1271</a></div></div>
 <div class="ttc" id="aa01642_html_a8124d7e2e91ec6b853c3be9796aa5f26"><div class="ttname"><a href="../../d7/d94/a01642.html#a8124d7e2e91ec6b853c3be9796aa5f26">luogu::P5730::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l01313">luogu.cpp:1313</a></div></div>
 <div class="ttc" id="aa01646_html_a801e4efd7900f11505ad72e2e9deec1e"><div class="ttname"><a href="../../df/dee/a01646.html#a801e4efd7900f11505ad72e2e9deec1e">luogu::P1554::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l01388">luogu.cpp:1388</a></div></div>
-<div class="ttc" id="aa01650_html_a01356d1ba5cf9174fbb0fbba462acb36"><div class="ttname"><a href="../../d9/d3b/a01650.html#a01356d1ba5cf9174fbb0fbba462acb36">luogu::P2141::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l01406">luogu.cpp:1406</a></div></div>
+<div class="ttc" id="aa01650_html_a01356d1ba5cf9174fbb0fbba462acb36"><div class="ttname"><a href="../../d9/d3b/a01650.html#a01356d1ba5cf9174fbb0fbba462acb36">luogu::P2141::main</a></div><div class="ttdeci">static int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l01407">luogu.cpp:1407</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

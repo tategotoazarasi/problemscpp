@@ -4370,32 +4370,31 @@ $(function() {
 <div class="line"><a id="l04302" name="l04302"></a><span class="lineno"> 4302</span><span class="stringliteral">                vec.push_back(ui);</span></div>
 <div class="line"><a id="l04303" name="l04303"></a><span class="lineno"> 4303</span><span class="stringliteral">            }</span></div>
 <div class="line"><a id="l04304" name="l04304"></a><span class="lineno"> 4304</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04305" name="l04305"></a><span class="lineno"> 4305</span><span class="stringliteral">        auto ans = vector&lt;unsigned int&gt;();</span></div>
-<div class="line"><a id="l04306" name="l04306"></a><span class="lineno"> 4306</span><span class="stringliteral">        bool ok  = true;</span></div>
-<div class="line"><a id="l04307" name="l04307"></a><span class="lineno"> 4307</span><span class="stringliteral">        while(ok) {</span></div>
-<div class="line"><a id="l04308" name="l04308"></a><span class="lineno"> 4308</span><span class="stringliteral">            ok = false;</span></div>
-<div class="line"><a id="l04309" name="l04309"></a><span class="lineno"> 4309</span><span class="stringliteral">            for(int i = 0; i + 1 &lt; vec.size(); i++) {</span></div>
-<div class="line"><a id="l04310" name="l04310"></a><span class="lineno"> 4310</span><span class="stringliteral">                for(int j = i + 1; j &lt; vec.size(); j++) {</span></div>
-<div class="line"><a id="l04311" name="l04311"></a><span class="lineno"> 4311</span><span class="stringliteral">                    if((vec[i] &amp; vec[j]) != 0) {</span></div>
-<div class="line"><a id="l04312" name="l04312"></a><span class="lineno"> 4312</span><span class="stringliteral">                        vec[i] |= vec[j];</span></div>
-<div class="line"><a id="l04313" name="l04313"></a><span class="lineno"> 4313</span><span class="stringliteral">                        vec.erase(vec.begin() + j);</span></div>
-<div class="line"><a id="l04314" name="l04314"></a><span class="lineno"> 4314</span><span class="stringliteral">                        ok = true;</span></div>
-<div class="line"><a id="l04315" name="l04315"></a><span class="lineno"> 4315</span><span class="stringliteral">                    }</span></div>
-<div class="line"><a id="l04316" name="l04316"></a><span class="lineno"> 4316</span><span class="stringliteral">                }</span></div>
-<div class="line"><a id="l04317" name="l04317"></a><span class="lineno"> 4317</span><span class="stringliteral">            }</span></div>
-<div class="line"><a id="l04318" name="l04318"></a><span class="lineno"> 4318</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04319" name="l04319"></a><span class="lineno"> 4319</span><span class="stringliteral">        cout &lt;&lt; vec.size();</span></div>
-<div class="line"><a id="l04320" name="l04320"></a><span class="lineno"> 4320</span><span class="stringliteral">        return 0;</span></div>
-<div class="line"><a id="l04321" name="l04321"></a><span class="lineno"> 4321</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04322" name="l04322"></a><span class="lineno"> 4322</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l04323" name="l04323"></a><span class="lineno"><a class="line" href="../../d0/d66/a00858.html#a8a43de4cf440c8c0fe9413328c5d6e59"> 4323</a></span><span class="stringliteral">    unsigned int acwing4304::str2int(const string &amp;str) {</span></div>
-<div class="line"><a id="l04324" name="l04324"></a><span class="lineno"> 4324</span><span class="stringliteral">        unsigned int ans = 0;</span></div>
-<div class="line"><a id="l04325" name="l04325"></a><span class="lineno"> 4325</span><span class="stringliteral">        for(const char ch: str) {</span></div>
-<div class="line"><a id="l04326" name="l04326"></a><span class="lineno"> 4326</span><span class="stringliteral">            ans |= 1 &lt;&lt; ch - &#39;</span>a<span class="stringliteral">&#39;;</span></div>
-<div class="line"><a id="l04327" name="l04327"></a><span class="lineno"> 4327</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04328" name="l04328"></a><span class="lineno"> 4328</span><span class="stringliteral">        return ans;</span></div>
-<div class="line"><a id="l04329" name="l04329"></a><span class="lineno"> 4329</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04330" name="l04330"></a><span class="lineno"> 4330</span><span class="stringliteral">}// namespace acwing</span></div>
+<div class="line"><a id="l04305" name="l04305"></a><span class="lineno"> 4305</span><span class="stringliteral">        bool ok = true;</span></div>
+<div class="line"><a id="l04306" name="l04306"></a><span class="lineno"> 4306</span><span class="stringliteral">        while(ok) {</span></div>
+<div class="line"><a id="l04307" name="l04307"></a><span class="lineno"> 4307</span><span class="stringliteral">            ok = false;</span></div>
+<div class="line"><a id="l04308" name="l04308"></a><span class="lineno"> 4308</span><span class="stringliteral">            for(int i = 0; i + 1 &lt; vec.size(); i++) {</span></div>
+<div class="line"><a id="l04309" name="l04309"></a><span class="lineno"> 4309</span><span class="stringliteral">                for(int j = i + 1; j &lt; vec.size(); j++) {</span></div>
+<div class="line"><a id="l04310" name="l04310"></a><span class="lineno"> 4310</span><span class="stringliteral">                    if((vec[i] &amp; vec[j]) != 0) {</span></div>
+<div class="line"><a id="l04311" name="l04311"></a><span class="lineno"> 4311</span><span class="stringliteral">                        vec[i] |= vec[j];</span></div>
+<div class="line"><a id="l04312" name="l04312"></a><span class="lineno"> 4312</span><span class="stringliteral">                        vec.erase(vec.begin() + j);</span></div>
+<div class="line"><a id="l04313" name="l04313"></a><span class="lineno"> 4313</span><span class="stringliteral">                        ok = true;</span></div>
+<div class="line"><a id="l04314" name="l04314"></a><span class="lineno"> 4314</span><span class="stringliteral">                    }</span></div>
+<div class="line"><a id="l04315" name="l04315"></a><span class="lineno"> 4315</span><span class="stringliteral">                }</span></div>
+<div class="line"><a id="l04316" name="l04316"></a><span class="lineno"> 4316</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l04317" name="l04317"></a><span class="lineno"> 4317</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l04318" name="l04318"></a><span class="lineno"> 4318</span><span class="stringliteral">        cout &lt;&lt; vec.size();</span></div>
+<div class="line"><a id="l04319" name="l04319"></a><span class="lineno"> 4319</span><span class="stringliteral">        return 0;</span></div>
+<div class="line"><a id="l04320" name="l04320"></a><span class="lineno"> 4320</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04321" name="l04321"></a><span class="lineno"> 4321</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l04322" name="l04322"></a><span class="lineno"><a class="line" href="../../d0/d66/a00858.html#a8a43de4cf440c8c0fe9413328c5d6e59"> 4322</a></span><span class="stringliteral">    unsigned int acwing4304::str2int(const string &amp;str) {</span></div>
+<div class="line"><a id="l04323" name="l04323"></a><span class="lineno"> 4323</span><span class="stringliteral">        unsigned int ans = 0;</span></div>
+<div class="line"><a id="l04324" name="l04324"></a><span class="lineno"> 4324</span><span class="stringliteral">        for(const char ch: str) {</span></div>
+<div class="line"><a id="l04325" name="l04325"></a><span class="lineno"> 4325</span><span class="stringliteral">            ans |= 1 &lt;&lt; ch - &#39;</span>a<span class="stringliteral">&#39;;</span></div>
+<div class="line"><a id="l04326" name="l04326"></a><span class="lineno"> 4326</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l04327" name="l04327"></a><span class="lineno"> 4327</span><span class="stringliteral">        return ans;</span></div>
+<div class="line"><a id="l04328" name="l04328"></a><span class="lineno"> 4328</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04329" name="l04329"></a><span class="lineno"> 4329</span><span class="stringliteral">}// namespace acwing</span></div>
 <div class="ttc" id="aa00035_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d4/d8c/a00035.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8c/a00035_source.html#l00005">main.cpp:5</a></div></div>
 <div class="ttc" id="aa00038_html"><div class="ttname"><a href="../../d8/d41/a00038.html">acwing.h</a></div></div>
 <div class="ttc" id="aa00047_html"><div class="ttname"><a href="../../d6/d2d/a00047.html">acwing</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00019">acwing.cpp:19</a></div></div>

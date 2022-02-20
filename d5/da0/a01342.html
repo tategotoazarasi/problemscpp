@@ -121,8 +121,8 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l03242">3242</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l03242" name="l03242"></a><span class="lineno"> 3242</span>                                                              {</div>
-<div class="line"><a id="l03243" name="l03243"></a><span class="lineno"> 3243</span>            <span class="keywordtype">int</span> maximum   = *max_element(nums.begin(), nums.end());</div>
-<div class="line"><a id="l03244" name="l03244"></a><span class="lineno"> 3244</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans = 0;</div>
+<div class="line"><a id="l03243" name="l03243"></a><span class="lineno"> 3243</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> maximum = *max_element(nums.begin(), nums.end());</div>
+<div class="line"><a id="l03244" name="l03244"></a><span class="lineno"> 3244</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans     = 0;</div>
 <div class="line"><a id="l03245" name="l03245"></a><span class="lineno"> 3245</span>            unordered_map&lt;int, int&gt; count;</div>
 <div class="line"><a id="l03246" name="l03246"></a><span class="lineno"> 3246</span>            vector&lt;long long&gt; s(maximum + 1);</div>
 <div class="line"><a id="l03247" name="l03247"></a><span class="lineno"> 3247</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> num: nums) {</div>
@@ -134,7 +134,7 @@ $(function() {
 <div class="line"><a id="l03253" name="l03253"></a><span class="lineno"> 3253</span>                }</div>
 <div class="line"><a id="l03254" name="l03254"></a><span class="lineno"> 3254</span>            }</div>
 <div class="line"><a id="l03255" name="l03255"></a><span class="lineno"> 3255</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= maximum; i++) {</div>
-<div class="line"><a id="l03256" name="l03256"></a><span class="lineno"> 3256</span>                <span class="keywordtype">int</span> x = k / gcd(k, i);</div>
+<div class="line"><a id="l03256" name="l03256"></a><span class="lineno"> 3256</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> x = k / gcd(k, i);</div>
 <div class="line"><a id="l03257" name="l03257"></a><span class="lineno"> 3257</span>                <span class="keywordflow">if</span>(x &lt;= maximum) {</div>
 <div class="line"><a id="l03258" name="l03258"></a><span class="lineno"> 3258</span>                    ans += count[i] * s[x];</div>
 <div class="line"><a id="l03259" name="l03259"></a><span class="lineno"> 3259</span>                }</div>

@@ -112,13 +112,14 @@ $(function() {
 <p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l03113">3113</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l03113" name="l03113"></a><span class="lineno"> 3113</span>                                                                {</div>
 <div class="line"><a id="l03114" name="l03114"></a><span class="lineno"> 3114</span>            <span class="keywordflow">if</span>(num % 3 == 0) {</div>
-<div class="line"><a id="l03115" name="l03115"></a><span class="lineno"> 3115</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> mid         = num / 3;</div>
-<div class="line"><a id="l03116" name="l03116"></a><span class="lineno"> 3116</span>                vector&lt;long long&gt; ans = {mid - 1, mid, mid + 1};</div>
+<div class="line"><a id="l03115" name="l03115"></a><span class="lineno"> 3115</span>                <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> mid = num / 3;</div>
+<div class="line"><a id="l03116" name="l03116"></a><span class="lineno"> 3116</span>                vector ans          = {mid - 1, mid, mid + 1};</div>
 <div class="line"><a id="l03117" name="l03117"></a><span class="lineno"> 3117</span>                <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l03118" name="l03118"></a><span class="lineno"> 3118</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03119" name="l03119"></a><span class="lineno"> 3119</span>                <span class="keywordflow">return</span> {};</div>
-<div class="line"><a id="l03120" name="l03120"></a><span class="lineno"> 3120</span>            }</div>
-<div class="line"><a id="l03121" name="l03121"></a><span class="lineno"> 3121</span>        }</div>
+<div class="line"><a id="l03118" name="l03118"></a><span class="lineno"> 3118</span>            }</div>
+<div class="line"><a id="l03119" name="l03119"></a><span class="lineno"> 3119</span>            <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l03120" name="l03120"></a><span class="lineno"> 3120</span> </div>
+<div class="line"><a id="l03121" name="l03121"></a><span class="lineno"> 3121</span>            <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l03122" name="l03122"></a><span class="lineno"> 3122</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l01630">leetcode::find_three_consecutive_integers_that_sum_to_a_given_number::TEST()</a>.</p>
 

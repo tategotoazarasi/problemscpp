@@ -78,15 +78,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:ac1b4fbfa405c4251c7e47670ac7cdfa2"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/a01338.html#ac1b4fbfa405c4251c7e47670ac7cdfa2">repeatLimitedString</a> (string s, int repeatLimit)</td></tr>
-<tr class="separator:ac1b4fbfa405c4251c7e47670ac7cdfa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef77f8a5a379aff617a15b8e98984452"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/a01338.html#aef77f8a5a379aff617a15b8e98984452">repeatLimitedString</a> (const string &amp;s, int repeatLimit)</td></tr>
+<tr class="separator:aef77f8a5a379aff617a15b8e98984452"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
 <p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01253">1253</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="ac1b4fbfa405c4251c7e47670ac7cdfa2" name="ac1b4fbfa405c4251c7e47670ac7cdfa2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1b4fbfa405c4251c7e47670ac7cdfa2">&#9670;&nbsp;</a></span>repeatLimitedString()</h2>
+<a id="aef77f8a5a379aff617a15b8e98984452" name="aef77f8a5a379aff617a15b8e98984452"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef77f8a5a379aff617a15b8e98984452">&#9670;&nbsp;</a></span>repeatLimitedString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -97,7 +97,7 @@ $(function() {
         <tr>
           <td class="memname">string leetcode::construct_string_with_repeat_limit::Solution::repeatLimitedString </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>s</em>, </td>
         </tr>
         <tr>
@@ -119,24 +119,23 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l03209">3209</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03209" name="l03209"></a><span class="lineno"> 3209</span>                                                                      {</div>
-<div class="line"><a id="l03210" name="l03210"></a><span class="lineno"> 3210</span>            <span class="keywordtype">int</span> ch[26] = {};</div>
-<div class="line"><a id="l03211" name="l03211"></a><span class="lineno"> 3211</span>            <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: s) {</div>
-<div class="line"><a id="l03212" name="l03212"></a><span class="lineno"> 3212</span>                ch[c - <span class="charliteral">&#39;a&#39;</span>]++;</div>
-<div class="line"><a id="l03213" name="l03213"></a><span class="lineno"> 3213</span>            }</div>
-<div class="line"><a id="l03214" name="l03214"></a><span class="lineno"> 3214</span>            <span class="keywordtype">int</span> repeat        = 0;</div>
-<div class="line"><a id="l03215" name="l03215"></a><span class="lineno"> 3215</span>            ostringstream oss = ostringstream();</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l03210">3210</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03210" name="l03210"></a><span class="lineno"> 3210</span>                                                                             {</div>
+<div class="line"><a id="l03211" name="l03211"></a><span class="lineno"> 3211</span>            <span class="keywordtype">int</span> ch[26] = {};</div>
+<div class="line"><a id="l03212" name="l03212"></a><span class="lineno"> 3212</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> c: s) {</div>
+<div class="line"><a id="l03213" name="l03213"></a><span class="lineno"> 3213</span>                ch[c - <span class="charliteral">&#39;a&#39;</span>]++;</div>
+<div class="line"><a id="l03214" name="l03214"></a><span class="lineno"> 3214</span>            }</div>
+<div class="line"><a id="l03215" name="l03215"></a><span class="lineno"> 3215</span>            <span class="keyword">auto</span> oss = ostringstream();</div>
 <div class="line"><a id="l03216" name="l03216"></a><span class="lineno"> 3216</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 25; i &gt;= 0; i--) {</div>
-<div class="line"><a id="l03217" name="l03217"></a><span class="lineno"> 3217</span>                repeat = 0;</div>
+<div class="line"><a id="l03217" name="l03217"></a><span class="lineno"> 3217</span>                <span class="keywordtype">int</span> repeat = 0;</div>
 <div class="line"><a id="l03218" name="l03218"></a><span class="lineno"> 3218</span>                <span class="keywordflow">while</span>(ch[i] != 0) {</div>
-<div class="line"><a id="l03219" name="l03219"></a><span class="lineno"> 3219</span>                    oss &lt;&lt; char(i + <span class="charliteral">&#39;a&#39;</span>);</div>
+<div class="line"><a id="l03219" name="l03219"></a><span class="lineno"> 3219</span>                    oss &lt;&lt; static_cast&lt;char&gt;(i + <span class="charliteral">&#39;a&#39;</span>);</div>
 <div class="line"><a id="l03220" name="l03220"></a><span class="lineno"> 3220</span>                    repeat++;</div>
 <div class="line"><a id="l03221" name="l03221"></a><span class="lineno"> 3221</span>                    ch[i]--;</div>
 <div class="line"><a id="l03222" name="l03222"></a><span class="lineno"> 3222</span>                    <span class="keywordflow">if</span>(repeat == repeatLimit &amp;&amp; ch[i] != 0) {</div>
 <div class="line"><a id="l03223" name="l03223"></a><span class="lineno"> 3223</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i - 1; j &gt;= 0; j--) {</div>
 <div class="line"><a id="l03224" name="l03224"></a><span class="lineno"> 3224</span>                            <span class="keywordflow">if</span>(ch[j] &gt; 0) {</div>
-<div class="line"><a id="l03225" name="l03225"></a><span class="lineno"> 3225</span>                                oss &lt;&lt; char(j + <span class="charliteral">&#39;a&#39;</span>);</div>
+<div class="line"><a id="l03225" name="l03225"></a><span class="lineno"> 3225</span>                                oss &lt;&lt; static_cast&lt;char&gt;(j + <span class="charliteral">&#39;a&#39;</span>);</div>
 <div class="line"><a id="l03226" name="l03226"></a><span class="lineno"> 3226</span>                                ch[j]--;</div>
 <div class="line"><a id="l03227" name="l03227"></a><span class="lineno"> 3227</span>                                repeat = 0;</div>
 <div class="line"><a id="l03228" name="l03228"></a><span class="lineno"> 3228</span>                                <span class="keywordflow">break</span>;</div>
