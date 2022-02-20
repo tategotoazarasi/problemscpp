@@ -3280,4 +3280,45 @@ namespace leetcode {
 			return false;
 		}
 	}// namespace leetcode717_1_bit_and_2_bit_characters
+
+	namespace longest_mountain_in_array {
+		int Solution::longestMountain(vector<int> &arr) {
+			if(arr.size() < 3) {
+				return 0;
+			}
+			auto up_down = vector<int>(arr.size() - 1);
+			for(int i = 0; i + 1 < arr.size(); i++) {
+				if(arr[i] < arr[i + 1]) {
+					up_down[i] = 1;
+				} else if(arr[i] > arr[i + 1]) {
+					up_down[i] = 0;
+				} else {
+					up_down[i] = 2;
+				}
+			}
+			auto sector_size = vector<pair<int, int>>();
+			int prev         = up_down[0];
+			int count        = 1;
+			for(int i = 1; i < up_down.size(); i++) {
+				if(up_down[i] != prev) {
+					sector_size.emplace_back(prev, count);
+					count = 1;
+				} else {
+					count++;
+				}
+				prev = up_down[i];
+			}
+			sector_size.emplace_back(prev, count);
+			if(sector_size.size() < 2) {
+				return 0;
+			}
+			int maximum = 0;
+			for(int i = 0; i + 1 < sector_size.size(); i++) {
+				if(sector_size[i].first == 1 && sector_size[i + 1].first == 0) {
+					maximum = max(maximum, sector_size[i].second + sector_size[i + 1].second + 1);
+				}
+			}
+			return maximum;
+		}
+	}// namespace longest_mountain_in_array
 }// namespace leetcode

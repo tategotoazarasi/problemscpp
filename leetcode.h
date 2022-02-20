@@ -1273,6 +1273,16 @@ namespace leetcode {
 			static bool isOneBitCharacter(vector<int> &bits);
 		};
 	}// namespace leetcode717_1_bit_and_2_bit_characters
+
+	/**
+	 * \brief LeetCode 845. 数组中的最长山脉
+	 */
+	namespace longest_mountain_in_array {
+		class Solution {
+		public:
+			static int longestMountain(vector<int> &arr);
+		};
+	}// namespace longest_mountain_in_array
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -1721,4 +1721,16 @@ namespace leetcode {
 			ASSERT_FALSE(Solution::isOneBitCharacter(input));
 		}
 	}// namespace leetcode717_1_bit_and_2_bit_characters
+
+	namespace longest_mountain_in_array {
+		TEST(longest_mountain_in_array, case1) {
+			vector input = {2, 1, 4, 7, 3, 2, 5};
+			ASSERT_EQ(5, Solution::longestMountain(input));
+		}
+
+		TEST(longest_mountain_in_array, case2) {
+			vector input = {2, 2, 2};
+			ASSERT_EQ(0, Solution::longestMountain(input));
+		}
+	}// namespace longest_mountain_in_array
 }// namespace leetcode
