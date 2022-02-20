@@ -4328,8 +4328,8 @@ namespace acwing {
 	}
 
 	int acwing778::main(istream &cin, ostream &cout) {
-		auto input = new char[323];
-		auto strs  = vector<string>();
+		auto *input = new char[323];
+		auto strs   = vector<string>();
 		cin.getline(input, 323);
 		for(char *str = strtok(input, ","); str != nullptr; str = strtok(nullptr, ",")) {
 			strs.emplace_back(str);
@@ -4342,6 +4342,32 @@ namespace acwing {
 		}
 		l += strs[1].length();
 		cout << (static_cast<int>(r) < static_cast<int>(l) ? -1 : static_cast<int>(r) - static_cast<int>(l));
+		return 0;
+	}
+
+	int acwing779::main(istream &cin, ostream &cout) {
+		while(true) {
+			int n;
+			cin >> n;
+			if(n == 0) {
+				break;
+			}
+			string suffix;
+			cin >> suffix;
+			for(int i = 1; i < n; i++) {
+				string str;
+				cin >> str;
+				if(!suffix.empty()) {
+					auto ss = stringstream();
+					for(int j = 0; j < min(str.length(), suffix.length()) && suffix[suffix.length() - 1 - j] == str[str.length() - 1 - j]; j++) {
+						ss << suffix[suffix.length() - 1 - j];
+					}
+					string s = ss.str();
+					suffix   = string(s.rbegin(), s.rend());
+				}
+			}
+			cout << suffix << endl;
+		}
 		return 0;
 	}
 }// namespace acwing

@@ -2073,4 +2073,20 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("-1", ans);
 	}
+
+	TEST(acwing779, case1) {
+		istringstream in("3\nbaba\naba\ncba\n2\naa\ncc\n2\naa\na\n0");
+		auto out = ostringstream();
+		acwing779::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("ba\n\na\n", ans);
+	}
+
+	TEST(acwing779, case2) {
+		istringstream in("30\nnEoEScu\nZaeeACDJMPeugIe\npKTHmh\nkgSkIDuCqsEVpfWRgCkqFJLCJlqa\nOpd\nclMNzGWsFmLUdEjcIArnKnoZefM\ndNQtHCvZBvYuvxvBpZcuzYTKHjoqfi\njaKFnCmLSKv\ntwcakyTMLKdcJchpAf\nA\nnmafrdXuv\nLDJqRlEPZIXYeXXmHGXIaIkyLGxQ\nNGcGolaHClIEIPHsCDXaLOnmTUN\nqTQsxRcoZCmtZEIWSRYhur\nrykHNbbz\nseUPknypePTBHWSpMEXVyvquGTBtl\nlIRLLXRSYoSqCYeDcm\nb\nOAaRrcHFeoiRMkPraTBvqnVuqLsdY\nYyE\nMuyRhuWDdKqUdye\nlCvXQCbksXpkiKjiNK\nquItljpXxNZJs\nuYyzRLGDMUxzF\nDtYH\nUtCNQdnVhyCCUXBNFKgAvopmUH\nJvFbR\nDYrs\nxyHO\nv\n30\nrVygjuehTDCpUAXsbfphOmGYFL\nQPICAWIMDYFL\nsoDChYFL\nYIekoOFOZNjEEMYFL\nhNkyveMOoCmTZjPBIXiAnxDyfaYFL\nAVyriYTqOzYifQHfFumCFIAYFL\nDJYFL\nZJCDXYFL\nmzpfPMZeDwFoCCdCCpBpNcCYFL\nyIfnWzqfnnLmKesrJdtZZhBvOYYYFL\nsTArOZYFL\nmviuiCGDWxSjvrmRJzLIjNZeWFYFL\nrMCDDIYFL\nECrYFL\nqMZnaycgcDSYFL\nyysGWCYFL\nLawdLVBtSGYzBPVHyEBYFL\njYFL\nLAshGRGiKGuWONTRlKIYFL\nOaOwBeLgJTuXwIGRxMJYmowYFL\noaqOXEQeXEHXSovxQPoBkuTOGOYFL\nPlheYFL\nzpjaulbZXnTPQNckLlgvGIwiiswYFL\nRRUcMWVqlodYFL\nBXyJZXBKMOYFL\nbZivyYFL\nbUzMJcPNNDZhxaJeUmYFL\nnqNNoChHurWqWvQYFL\nLYFL\nzuoFKmVhTgyJljmuZcvkuomYFL\n30\nxEVZD\nfRVZD\ndmQEISVZD\nxHXbvTDrfORRzSHzGpAvybwMLVZD\nvUWDBiunOnyOchFlofVZD\nTDfoUHwJozMFChjjHKJVZD\ncHHYVZD\ncUBbkwaNAeTVZD\nFIuKsscZVvFtQktHkRBrHXVZD\nxLtWSUDVZD\nNIuxqauDaGCtcTkRxCgYAVZD\nkccsRWBfjvaaQJJoSnSrojerpPVZD\ndGIqkKGVZD\nZdFFnBVZD\nWxpyqMqVzeUiVZD\ntRcJlVZD\nYeCcIAHpNNDmvcwfQKVOWHcVZD\nQpNjpVXDrnAdYfVZD\nTKPBPkXcKPxzqyWZyUMlidOrxeVZD\nTVZD\nqFmmojqFRgxHQlEPWJaVZD\nyYwSyfXCJMYImSPaWbrOICSVZD\nJsVZD\notxyOTdyWVZD\nhlGzZrNatBVZD\npaKqVStOuxVZD\nsWQcmVZD\nJQCOynpNzexVZD\nMPzHWsTJEWgZZLoGSDCVZD\nLVZD\n30\nbWXjqUDxQtqWrTs\nhLOaWKvGApgoZfEIgyMvLCKTs\nstdgCWunkATs\nlaaKwHVnTs\nTTs\nOVVEcqRoGEinsIEoszUTs\nLTwzYpsPJVQTyHCKIqmCLNdkTs\nxjZOBXSTs\nljPbiauxwdayAdARChbTs\nPwpUxAnHCZXhSJwTs\nmxiCOoiiTs\nxtemzqhoYUVSHVbIPmTs\newvKtcpjralBkxnPPtTs\nMKzjTs\nJmLzHqNBbCslRqwBXWnygYwPOTTs\nqqWtjigdASztibHjzdedNsqTs\nBlXPWKiTs\nEisQTs\nvnOMHcFuxqCEsGTs\nIlnIBHZxHdqAiaTs\nzpegvMdYpFnSIoFTs\nEPIHFxOaUBBbrfEodOITs\nGOAimQOTs\nMlTs\ntoRynPMxSklAfxzTs\neLTs\nauEDlTlGFEkBTs\nQkKwiXugeRdWPGMPTs\ngaTs\nprtfvmLKTGjbPSTs\n0");
+		auto out = ostringstream();
+		acwing779::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("\nYFL\nVZD\nTs\n", ans);
+	}
 }// namespace acwing
