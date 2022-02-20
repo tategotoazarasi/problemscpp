@@ -780,4 +780,12 @@ namespace luogu {
 		          "XXX...X.XXX.XXX...X.XXX.XXX...X.XXX.XXX\n",
 		          ans);
 	}
+
+	TEST(P1554, case1) {
+		istringstream in("129 137");
+		auto out = ostringstream();
+		P1554::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1 10 2 9 1 1 1 1 0 1 ", ans);
+	}
 }// namespace luogu

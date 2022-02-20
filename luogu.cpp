@@ -1384,4 +1384,22 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P1554::main(istream &cin, ostream &cout) {
+		int nums[10] = {};
+		int m, n;
+		cin >> m >> n;
+		stringstream ss = stringstream();
+		for(int i = m; i <= n; i++) {
+			ss << i;
+		}
+		char ch;
+		while(ss >> ch) {
+			nums[ch - '0']++;
+		}
+		for(int i = 0; i < 10; i++) {
+			cout << nums[i] << " ";
+		}
+		return 0;
+	}
 }// namespace luogu
