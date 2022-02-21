@@ -1335,5 +1335,12 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief AcWing 804. n的阶乘
+	class acwing804 {
+	public:
+		static int fact(int n);
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

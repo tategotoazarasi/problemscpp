@@ -2089,4 +2089,12 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("\nYFL\nVZD\nTs\n", ans);
 	}
+
+	TEST(acwing804, case1) {
+		istringstream in("3");
+		auto out = ostringstream();
+		acwing804::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("6", ans);
+	}
 }// namespace acwing

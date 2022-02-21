@@ -4370,4 +4370,18 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing804::fact(int n) {
+		if(n == 1) {
+			return 1;
+		}
+		return n * fact(n - 1);
+	}
+
+	int acwing804::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		cout << fact(n);
+		return 0;
+	}
 }// namespace acwing
