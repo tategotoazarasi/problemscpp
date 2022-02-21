@@ -822,4 +822,12 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("6", ans);
 	}
+
+	TEST(P2911, case1) {
+		istringstream in("3 2 3");
+		auto out = ostringstream();
+		P2911::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("5", ans);
+	}
 }// namespace luogu

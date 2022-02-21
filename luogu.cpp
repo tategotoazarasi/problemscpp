@@ -1446,4 +1446,30 @@ namespace luogu {
 		delete[] a;
 		return 0;
 	}
+
+	int P2911::main(istream &cin, ostream &cout) {
+		int s1, s2, s3;
+		cin >> s1 >> s2 >> s3;
+		int n    = s1 + s2 + s3 + 1;
+		int *sum = new int[n];
+		memset(sum, 0, n * sizeof(int));
+		for(int i = 1; i <= s1; i++) {
+			for(int j = 1; j <= s2; j++) {
+				for(int k = 1; k <= s3; k++) {
+					sum[i + j + k]++;
+				}
+			}
+		}
+		int maximum = 0;
+		int ans     = 0;
+		for(int i = 3; i < n; i++) {
+			if(maximum < sum[i]) {
+				maximum = sum[i];
+				ans     = i;
+			}
+		}
+		cout << ans;
+		delete[] sum;
+		return 0;
+	}
 }// namespace luogu
