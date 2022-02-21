@@ -830,4 +830,15 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("5", ans);
 	}
+
+	TEST(P1161, case1) {
+		istringstream in("3\n"
+		                 "1.618034 13\n"
+		                 "2.618034 7\n"
+		                 "1.000000 21");
+		auto out = ostringstream();
+		P1161::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("20", ans);
+	}
 }// namespace luogu

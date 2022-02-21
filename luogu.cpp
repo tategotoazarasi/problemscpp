@@ -1472,4 +1472,28 @@ namespace luogu {
 		delete[] sum;
 		return 0;
 	}
+
+	int P1161::main(istream &cin, ostream &cout) {
+		int n;
+		bool *lamp = new bool[2000001];
+		memset(lamp, false, 2000001 * sizeof(bool));
+		cin >> n;
+		for(int i = 0; i < n; i++) {
+			double a;
+			int t;
+			cin >> a >> t;
+			for(int j = 1; j <= t; j++) {
+				int at   = a * j;
+				lamp[at] = !lamp[at];
+			}
+		}
+		for(int i = 0; i < 2000001; i++) {
+			if(lamp[i]) {
+				cout << i;
+				break;
+			}
+		}
+		delete[] lamp;
+		return 0;
+	}
 }// namespace luogu
