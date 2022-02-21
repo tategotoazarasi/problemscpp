@@ -1426,4 +1426,24 @@ namespace luogu {
 		cout << ans;
 		return 0;
 	}
+
+	int P1614::main(istream &cin, ostream &cout) {
+		int n, m;
+		cin >> n >> m;
+		int *a = new int[n];
+		for(int i = 0; i < n; i++) {
+			cin >> a[i];
+		}
+		int ans = 100 * m;
+		for(int i = 0; i + m <= n; i++) {
+			int sum = 0;
+			for(int j = i; j < i + m; j++) {
+				sum += a[j];
+			}
+			ans = min(ans, sum);
+		}
+		cout << ans;
+		delete[] a;
+		return 0;
+	}
 }// namespace luogu

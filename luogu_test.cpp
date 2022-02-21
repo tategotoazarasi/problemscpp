@@ -806,4 +806,20 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("22", ans);
 	}
+
+	TEST(P1614, case1) {
+		istringstream in("8 3\n"
+		                 "1\n"
+		                 "4\n"
+		                 "7\n"
+		                 "3\n"
+		                 "1\n"
+		                 "2\n"
+		                 "4\n"
+		                 "3");
+		auto out = ostringstream();
+		P1614::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("6", ans);
+	}
 }// namespace luogu
