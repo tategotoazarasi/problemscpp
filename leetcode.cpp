@@ -3321,4 +3321,65 @@ namespace leetcode {
 			return maximum;
 		}
 	}// namespace longest_mountain_in_array
+	namespace push_dominoes {
+		string Solution::pushDominoes(string dominoes) {
+			int n           = dominoes.length();
+			int *left_to_r  = new int[n];
+			int *right_to_l = new int[n];
+			char *left_is   = new char[n];
+			char *right_is  = new char[n];
+			int l2r         = 0;
+			int r2l         = 0;
+			char ch         = '.';
+			for(int i = 0; i < n; i++) {
+				if(dominoes[i] != '.') {
+					ch = dominoes[i];
+				}
+				left_is[i] = ch;
+			}
+			ch = '.';
+			for(int i = n - 1; i >= 0; i--) {
+				if(dominoes[i] != '.') {
+					ch = dominoes[i];
+				}
+				right_is[i] = ch;
+			}
+			for(int i = 0; i < n; i++) {
+				if(dominoes[i] == 'R') {
+					l2r = 0;
+				} else {
+					l2r++;
+				}
+				left_to_r[i] = l2r;
+			}
+			for(int i = n - 1; i >= 0; i--) {
+				if(dominoes[i] == 'L') {
+					r2l = 0;
+				} else {
+					r2l++;
+				}
+				right_to_l[i] = r2l;
+			}
+			for(int i = 0; i < n; i++) {
+				if(dominoes[i] == '.') {
+					if(left_is[i] == 'R' && right_is[i] == 'L') {
+						if(right_to_l[i] > left_to_r[i]) {
+							dominoes[i] = 'R';
+						} else if(left_to_r[i] > right_to_l[i]) {
+							dominoes[i] = 'L';
+						}
+					} else if(right_is[i] == 'L') {
+						dominoes[i] = 'L';
+					} else if(left_is[i] == 'R') {
+						dominoes[i] = 'R';
+					}
+				}
+			}
+			delete[] left_to_r;
+			delete[] right_to_l;
+			delete[] left_is;
+			delete[] right_is;
+			return dominoes;
+		}
+	}// namespace push_dominoes
 }// namespace leetcode

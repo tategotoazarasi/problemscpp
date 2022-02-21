@@ -1733,4 +1733,14 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::longestMountain(input));
 		}
 	}// namespace longest_mountain_in_array
+
+	namespace push_dominoes {
+		TEST(push_dominoes, case1) {
+			ASSERT_EQ("RR.L", Solution::pushDominoes("RR.L"));
+		}
+
+		TEST(push_dominoes, case2) {
+			ASSERT_EQ("LL.RR.LLRRLL..", Solution::pushDominoes(".L.R...LR..L.."));
+		}
+	}// namespace push_dominoes
 }// namespace leetcode

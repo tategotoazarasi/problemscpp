@@ -1283,6 +1283,14 @@ namespace leetcode {
 			static int longestMountain(vector<int> &arr);
 		};
 	}// namespace longest_mountain_in_array
+
+	/// \brief LeetCode 838. 推多米诺
+	namespace push_dominoes {
+		class Solution {
+		public:
+			static string pushDominoes(string dominoes);
+		};
+	}// namespace push_dominoes
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
