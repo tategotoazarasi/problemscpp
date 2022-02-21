@@ -4384,4 +4384,15 @@ namespace acwing {
 		cout << fact(n);
 		return 0;
 	}
+
+	int acwing810::abs(int n) {
+		return n > 0 ? n : -n;
+	}
+	
+	int acwing810::main(istream &cin, ostream &cout) {
+		int x;
+		cin >> x;
+		cout << abs(x);
+		return 0;
+	}
 }// namespace acwing

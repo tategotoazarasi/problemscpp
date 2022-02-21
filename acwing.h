@@ -1342,5 +1342,12 @@ namespace acwing {
 		static int fact(int n);
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief AcWing 810. 绝对值
+	class acwing810 {
+	public:
+		static int abs(int n);
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
