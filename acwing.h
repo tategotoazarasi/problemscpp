@@ -1356,5 +1356,12 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 		static int max(int x, int y);
 	};
+
+	/// \brief AcWing 806. 两个数的和
+	class acwing806 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static double add(double x, double y);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

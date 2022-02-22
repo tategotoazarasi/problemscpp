@@ -4406,4 +4406,15 @@ namespace acwing {
 	int acwing805::max(int x, int y) {
 		return x > y ? x : y;
 	}
+
+	int acwing806::main(istream &cin, ostream &cout) {
+		double x, y;
+		cin >> x >> y;
+		cout << fixed << setprecision(2) << add(x, y);
+		return 0;
+	}
+
+	double acwing806::add(double x, double y) {
+		return x + y;
+	}
 }// namespace acwing
