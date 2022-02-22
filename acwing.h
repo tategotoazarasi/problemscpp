@@ -1349,5 +1349,12 @@ namespace acwing {
 		static int abs(int n);
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief AcWing 805. x和y的最大值
+	class acwing805 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static int max(int x, int y);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

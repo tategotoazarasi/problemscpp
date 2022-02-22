@@ -4388,11 +4388,22 @@ namespace acwing {
 	int acwing810::abs(int n) {
 		return n > 0 ? n : -n;
 	}
-	
+
 	int acwing810::main(istream &cin, ostream &cout) {
 		int x;
 		cin >> x;
 		cout << abs(x);
 		return 0;
+	}
+
+	int acwing805::main(istream &cin, ostream &cout) {
+		int x, y;
+		cin >> x >> y;
+		cout << max(x, y);
+		return 0;
+	}
+
+	int acwing805::max(int x, int y) {
+		return x > y ? x : y;
 	}
 }// namespace acwing
