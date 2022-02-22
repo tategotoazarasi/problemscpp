@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['good_0',['good',['../dd/de4/a01121.html#aeb5619fa6dbb84e9525409af9dd24662',1,'leetcode::maximum_good_people_based_on_statements::msg']]],
-  ['graph_1',['graph',['../d1/df7/a00957.html#afb0c157317f0b85af1067f4dcd6d7903',1,'leetcode::cat_and_mouse::Solution']]],
-  ['groups_2',['groups',['../de/db5/a01181.html#ad3c22fb629f5dc7fba28d5575d3d7d57',1,'leetcode::groups_of_strings::Solution']]]
+  ['good_0',['good',['../d0/d61/a01130.html#aeb5619fa6dbb84e9525409af9dd24662',1,'leetcode::maximum_good_people_based_on_statements::msg']]],
+  ['graph_1',['graph',['../d2/d6e/a00966.html#afb0c157317f0b85af1067f4dcd6d7903',1,'leetcode::cat_and_mouse::Solution']]],
+  ['groups_2',['groups',['../dc/d19/a01190.html#ad3c22fb629f5dc7fba28d5575d3d7d57',1,'leetcode::groups_of_strings::Solution']]]
 ];
