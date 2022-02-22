@@ -450,6 +450,13 @@ namespace luogu {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief 洛谷 P5731 【深基5.习6】蛇形方阵
+	class P5731 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static pair<int, int> move_forward(int dir, int current_x, int current_y);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H

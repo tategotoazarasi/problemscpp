@@ -1496,4 +1496,50 @@ namespace luogu {
 		delete[] lamp;
 		return 0;
 	}
+
+	int P5731::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		int square[9][9] = {};
+		int dir          = 0;///< Direction 0 = R, 1 = D, 2 = L, 3 = U
+		int current_x    = 0;
+		int current_y    = 0;
+		for(int i = 1; i <= n * n; i++) {
+			square[current_x][current_y] = i;
+			auto [next_x, next_y]        = move_forward(dir, current_x, current_y);
+			if(next_x < 0 || next_x >= n || next_y < 0 || next_y >= n || square[next_x][next_y] != 0) {
+				dir = (dir + 1) % 4;
+			}
+			auto next = move_forward(dir, current_x, current_y);
+			current_x = next.first;
+			current_y = next.second;
+		}
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < n; j++) {
+				cout << setw(3) << right << setfill(' ') << square[i][j];
+			}
+			cout << endl;
+		}
+		return 0;
+	}
+
+	pair<int, int> P5731::move_forward(int dir, int current_x, int current_y) {
+		int next_x = current_x;
+		int next_y = current_y;
+		switch(dir) {
+			case 0:///< R
+				next_y++;
+				break;
+			case 1:///< D
+				next_x++;
+				break;
+			case 2:///< L
+				next_y--;
+				break;
+			case 3:///< U
+				next_x--;
+				break;
+		}
+		return make_pair(next_x, next_y);
+	}
 }// namespace luogu
