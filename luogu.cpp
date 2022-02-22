@@ -1428,9 +1428,10 @@ namespace luogu {
 	}
 
 	int P1614::main(istream &cin, ostream &cout) {
-		int n, m;
+		int n;
+		int m;
 		cin >> n >> m;
-		int *a = new int[n];
+		auto a = new int[n];
 		for(int i = 0; i < n; i++) {
 			cin >> a[i];
 		}
@@ -1448,10 +1449,12 @@ namespace luogu {
 	}
 
 	int P2911::main(istream &cin, ostream &cout) {
-		int s1, s2, s3;
+		int s1;
+		int s2;
+		int s3;
 		cin >> s1 >> s2 >> s3;
-		int n    = s1 + s2 + s3 + 1;
-		int *sum = new int[n];
+		const int n = s1 + s2 + s3 + 1;
+		auto sum    = new int[n];
 		memset(sum, 0, n * sizeof(int));
 		for(int i = 1; i <= s1; i++) {
 			for(int j = 1; j <= s2; j++) {
@@ -1475,16 +1478,16 @@ namespace luogu {
 
 	int P1161::main(istream &cin, ostream &cout) {
 		int n;
-		bool *lamp = new bool[2000001];
-		memset(lamp, false, 2000001 * sizeof(bool));
+		auto lamp = new bool[2000001];
+		memset(lamp, 0, 2000001 * sizeof(bool));
 		cin >> n;
 		for(int i = 0; i < n; i++) {
 			double a;
 			int t;
 			cin >> a >> t;
 			for(int j = 1; j <= t; j++) {
-				int at   = a * j;
-				lamp[at] = !lamp[at];
+				const int at = a * j;
+				lamp[at]     = !lamp[at];
 			}
 		}
 		for(int i = 0; i < 2000001; i++) {
@@ -1510,9 +1513,9 @@ namespace luogu {
 			if(next_x < 0 || next_x >= n || next_y < 0 || next_y >= n || square[next_x][next_y] != 0) {
 				dir = (dir + 1) % 4;
 			}
-			auto next = move_forward(dir, current_x, current_y);
-			current_x = next.first;
-			current_y = next.second;
+			const auto next = move_forward(dir, current_x, current_y);
+			current_x       = next.first;
+			current_y       = next.second;
 		}
 		for(int i = 0; i < n; i++) {
 			for(int j = 0; j < n; j++) {

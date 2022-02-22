@@ -3323,11 +3323,11 @@ namespace leetcode {
 	}// namespace longest_mountain_in_array
 	namespace push_dominoes {
 		string Solution::pushDominoes(string dominoes) {
-			int n           = dominoes.length();
-			int *left_to_r  = new int[n];
-			int *right_to_l = new int[n];
-			char *left_is   = new char[n];
-			char *right_is  = new char[n];
+			const int n     = dominoes.length();
+			auto left_to_r  = new int[n];
+			auto right_to_l = new int[n];
+			auto left_is    = new char[n];
+			auto right_is   = new char[n];
 			int l2r         = 0;
 			int r2l         = 0;
 			char ch         = '.';
@@ -3386,7 +3386,7 @@ namespace leetcode {
 	namespace the_number_of_good_subsets {
 		int Solution::numberOfGoodSubsets(vector<int> &nums) {
 			vector<int> freq(num_max + 1);
-			for(int num: nums) {
+			for(const int num: nums) {
 				freq[num]++;
 			}
 			vector<int> f(1 << primes.size());
@@ -3395,20 +3395,21 @@ namespace leetcode {
 				f[0] = f[0] * 2 % mod;
 			}
 			for(int i = 2; i <= num_max; ++i) {
-				if(!freq[i]) {
+				if(freq[i] == 0) {
 					continue;
 				}
 				// 检查 i 的每个质因数是否均不超过 1 个
-				int subset = 0, x = i;
+				int subset = 0;
+				int x      = i;
 				bool check = true;
 				for(int j = 0; j < primes.size(); ++j) {
-					int prime = primes[j];
+					const int prime = primes[j];
 					if(x % (prime * prime) == 0) {
 						check = false;
 						break;
 					}
 					if(x % prime == 0) {
-						subset |= (1 << j);
+						subset |= 1 << j;
 					}
 				}
 				if(!check) {
@@ -3422,7 +3423,7 @@ namespace leetcode {
 				}
 			}
 			int ans = 0;
-			for(int mask = 1, mask_max = (1 << primes.size()); mask < mask_max; ++mask) {
+			for(int mask = 1, mask_max = 1 << primes.size(); mask < mask_max; ++mask) {
 				ans = (ans + f[mask]) % mod;
 			}
 			return ans;

@@ -4385,9 +4385,7 @@ namespace acwing {
 		return 0;
 	}
 
-	int acwing810::abs(int n) {
-		return n > 0 ? n : -n;
-	}
+	int acwing810::abs(int n) { return n > 0 ? n : -n; }
 
 	int acwing810::main(istream &cin, ostream &cout) {
 		int x;
@@ -4397,24 +4395,22 @@ namespace acwing {
 	}
 
 	int acwing805::main(istream &cin, ostream &cout) {
-		int x, y;
+		int x;
+		int y;
 		cin >> x >> y;
 		cout << max(x, y);
 		return 0;
 	}
 
-	int acwing805::max(int x, int y) {
-		return x > y ? x : y;
-	}
+	int acwing805::max(int x, int y) { return x > y ? x : y; }
 
 	int acwing806::main(istream &cin, ostream &cout) {
-		double x, y;
+		double x;
+		double y;
 		cin >> x >> y;
 		cout << fixed << setprecision(2) << add(x, y);
 		return 0;
 	}
 
-	double acwing806::add(double x, double y) {
-		return x + y;
-	}
+	double acwing806::add(double x, double y) { return x + y; }
 }// namespace acwing
