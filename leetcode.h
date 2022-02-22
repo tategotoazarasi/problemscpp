@@ -2,7 +2,6 @@
 #define PROBLEMSCPP_LEETCODE_H
 
 #include <array>
-#include <climits>
 #include <functional>
 #include <map>
 #include <queue>
@@ -1300,6 +1299,7 @@ namespace leetcode {
 			static constexpr array<int, 10> primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29};
 			static constexpr int num_max           = 30;
 			static constexpr int mod               = 1000000007;
+			static constexpr int mask_max          = 1 << primes.size();
 
 		public:
 			static int numberOfGoodSubsets(vector<int> &nums);
