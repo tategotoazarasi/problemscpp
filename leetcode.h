@@ -1291,6 +1291,19 @@ namespace leetcode {
 			static string pushDominoes(string dominoes);
 		};
 	}// namespace push_dominoes
+
+	/// \brief LeetCode 1994. 好子集的数目
+	namespace the_number_of_good_subsets {
+		class Solution {
+		private:
+			static constexpr array<int, 10> primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29};
+			static constexpr int num_max           = 30;
+			static constexpr int mod               = 1000000007;
+
+		public:
+			static int numberOfGoodSubsets(vector<int> &nums);
+		};
+	}// namespace the_number_of_good_subsets
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

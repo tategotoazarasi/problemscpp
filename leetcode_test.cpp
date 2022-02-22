@@ -1743,4 +1743,16 @@ namespace leetcode {
 			ASSERT_EQ("LL.RR.LLRRLL..", Solution::pushDominoes(".L.R...LR..L.."));
 		}
 	}// namespace push_dominoes
+
+	namespace the_number_of_good_subsets {
+		TEST(the_number_of_good_subsets, case1) {
+			vector input = {1, 2, 3, 4};
+			ASSERT_EQ(6, Solution::numberOfGoodSubsets(input));
+		}
+
+		TEST(the_number_of_good_subsets, case2) {
+			vector input = {4, 2, 3, 15};
+			ASSERT_EQ(5, Solution::numberOfGoodSubsets(input));
+		}
+	}// namespace the_number_of_good_subsets
 }// namespace leetcode
