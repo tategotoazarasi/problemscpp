@@ -84,6 +84,8 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 静态 Private 属性</h2></td></tr>
+<tr class="memitem:aab91738a234849ccbda5f56782910af3"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/a01386.html#aab91738a234849ccbda5f56782910af3">mask_max</a> = 1 &lt;&lt; primes.size()</td></tr>
+<tr class="separator:aab91738a234849ccbda5f56782910af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe7c8491af49ff89f66665b232acb30f"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/a01386.html#afe7c8491af49ff89f66665b232acb30f">mod</a> = 1000000007</td></tr>
 <tr class="separator:afe7c8491af49ff89f66665b232acb30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab70cffdbee7130b4c1923a869163fdea"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/deb/a01386.html#ab70cffdbee7130b4c1923a869163fdea">num_max</a> = 30</td></tr>
@@ -119,61 +121,93 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l03387">3387</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03387" name="l03387"></a><span class="lineno"> 3387</span>                                                           {</div>
-<div class="line"><a id="l03388" name="l03388"></a><span class="lineno"> 3388</span>            vector&lt;int&gt; freq(<a class="code hl_variable" href="../../d3/deb/a01386.html#ab70cffdbee7130b4c1923a869163fdea">num_max</a> + 1);</div>
-<div class="line"><a id="l03389" name="l03389"></a><span class="lineno"> 3389</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> num: nums) {</div>
-<div class="line"><a id="l03390" name="l03390"></a><span class="lineno"> 3390</span>                freq[num]++;</div>
-<div class="line"><a id="l03391" name="l03391"></a><span class="lineno"> 3391</span>            }</div>
-<div class="line"><a id="l03392" name="l03392"></a><span class="lineno"> 3392</span>            vector&lt;int&gt; f(1 &lt;&lt; <a class="code hl_variable" href="../../d3/deb/a01386.html#aeb494f3a836c706277b2470a1789119a">primes</a>.size());</div>
-<div class="line"><a id="l03393" name="l03393"></a><span class="lineno"> 3393</span>            f[0] = 1;</div>
-<div class="line"><a id="l03394" name="l03394"></a><span class="lineno"> 3394</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; freq[1]; ++i) {</div>
-<div class="line"><a id="l03395" name="l03395"></a><span class="lineno"> 3395</span>                f[0] = f[0] * 2 % <a class="code hl_variable" href="../../d3/deb/a01386.html#afe7c8491af49ff89f66665b232acb30f">mod</a>;</div>
-<div class="line"><a id="l03396" name="l03396"></a><span class="lineno"> 3396</span>            }</div>
-<div class="line"><a id="l03397" name="l03397"></a><span class="lineno"> 3397</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2; i &lt;= <a class="code hl_variable" href="../../d3/deb/a01386.html#ab70cffdbee7130b4c1923a869163fdea">num_max</a>; ++i) {</div>
-<div class="line"><a id="l03398" name="l03398"></a><span class="lineno"> 3398</span>                <span class="keywordflow">if</span>(!freq[i]) {</div>
-<div class="line"><a id="l03399" name="l03399"></a><span class="lineno"> 3399</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l03400" name="l03400"></a><span class="lineno"> 3400</span>                }</div>
-<div class="line"><a id="l03401" name="l03401"></a><span class="lineno"> 3401</span>                <span class="comment">// 检查 i 的每个质因数是否均不超过 1 个</span></div>
-<div class="line"><a id="l03402" name="l03402"></a><span class="lineno"> 3402</span>                <span class="keywordtype">int</span> subset = 0, x = i;</div>
-<div class="line"><a id="l03403" name="l03403"></a><span class="lineno"> 3403</span>                <span class="keywordtype">bool</span> check = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l03404" name="l03404"></a><span class="lineno"> 3404</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../d3/deb/a01386.html#aeb494f3a836c706277b2470a1789119a">primes</a>.size(); ++j) {</div>
-<div class="line"><a id="l03405" name="l03405"></a><span class="lineno"> 3405</span>                    <span class="keywordtype">int</span> prime = <a class="code hl_variable" href="../../d3/deb/a01386.html#aeb494f3a836c706277b2470a1789119a">primes</a>[j];</div>
-<div class="line"><a id="l03406" name="l03406"></a><span class="lineno"> 3406</span>                    <span class="keywordflow">if</span>(x % (prime * prime) == 0) {</div>
-<div class="line"><a id="l03407" name="l03407"></a><span class="lineno"> 3407</span>                        check = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l03408" name="l03408"></a><span class="lineno"> 3408</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03409" name="l03409"></a><span class="lineno"> 3409</span>                    }</div>
-<div class="line"><a id="l03410" name="l03410"></a><span class="lineno"> 3410</span>                    <span class="keywordflow">if</span>(x % prime == 0) {</div>
-<div class="line"><a id="l03411" name="l03411"></a><span class="lineno"> 3411</span>                        subset |= (1 &lt;&lt; j);</div>
-<div class="line"><a id="l03412" name="l03412"></a><span class="lineno"> 3412</span>                    }</div>
-<div class="line"><a id="l03413" name="l03413"></a><span class="lineno"> 3413</span>                }</div>
-<div class="line"><a id="l03414" name="l03414"></a><span class="lineno"> 3414</span>                <span class="keywordflow">if</span>(!check) {</div>
-<div class="line"><a id="l03415" name="l03415"></a><span class="lineno"> 3415</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l03416" name="l03416"></a><span class="lineno"> 3416</span>                }</div>
-<div class="line"><a id="l03417" name="l03417"></a><span class="lineno"> 3417</span>                <span class="comment">// 动态规划</span></div>
-<div class="line"><a id="l03418" name="l03418"></a><span class="lineno"> 3418</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> mask = (1 &lt;&lt; <a class="code hl_variable" href="../../d3/deb/a01386.html#aeb494f3a836c706277b2470a1789119a">primes</a>.size()) - 1; mask &gt; 0; --mask) {</div>
-<div class="line"><a id="l03419" name="l03419"></a><span class="lineno"> 3419</span>                    <span class="keywordflow">if</span>((mask &amp; subset) == subset) {</div>
-<div class="line"><a id="l03420" name="l03420"></a><span class="lineno"> 3420</span>                        f[mask] = (f[mask] + <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(f[mask ^ subset]) * freq[i]) % <a class="code hl_variable" href="../../d3/deb/a01386.html#afe7c8491af49ff89f66665b232acb30f">mod</a>;</div>
-<div class="line"><a id="l03421" name="l03421"></a><span class="lineno"> 3421</span>                    }</div>
-<div class="line"><a id="l03422" name="l03422"></a><span class="lineno"> 3422</span>                }</div>
-<div class="line"><a id="l03423" name="l03423"></a><span class="lineno"> 3423</span>            }</div>
-<div class="line"><a id="l03424" name="l03424"></a><span class="lineno"> 3424</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l03425" name="l03425"></a><span class="lineno"> 3425</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> mask = 1, mask_max = (1 &lt;&lt; <a class="code hl_variable" href="../../d3/deb/a01386.html#aeb494f3a836c706277b2470a1789119a">primes</a>.size()); mask &lt; mask_max; ++mask) {</div>
-<div class="line"><a id="l03426" name="l03426"></a><span class="lineno"> 3426</span>                ans = (ans + f[mask]) % <a class="code hl_variable" href="../../d3/deb/a01386.html#afe7c8491af49ff89f66665b232acb30f">mod</a>;</div>
-<div class="line"><a id="l03427" name="l03427"></a><span class="lineno"> 3427</span>            }</div>
-<div class="line"><a id="l03428" name="l03428"></a><span class="lineno"> 3428</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l03429" name="l03429"></a><span class="lineno"> 3429</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l03388">3388</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03388" name="l03388"></a><span class="lineno"> 3388</span>                                                           {</div>
+<div class="line"><a id="l03389" name="l03389"></a><span class="lineno"> 3389</span>            vector&lt;int&gt; freq(<a class="code hl_variable" href="../../d3/deb/a01386.html#ab70cffdbee7130b4c1923a869163fdea">num_max</a> + 1);</div>
+<div class="line"><a id="l03390" name="l03390"></a><span class="lineno"> 3390</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">int</span> num: nums) {</div>
+<div class="line"><a id="l03391" name="l03391"></a><span class="lineno"> 3391</span>                freq[num]++;</div>
+<div class="line"><a id="l03392" name="l03392"></a><span class="lineno"> 3392</span>            }</div>
+<div class="line"><a id="l03393" name="l03393"></a><span class="lineno"> 3393</span> </div>
+<div class="line"><a id="l03394" name="l03394"></a><span class="lineno"> 3394</span>            vector&lt;int&gt; f(<a class="code hl_variable" href="../../d3/deb/a01386.html#aab91738a234849ccbda5f56782910af3">mask_max</a>);</div>
+<div class="line"><a id="l03395" name="l03395"></a><span class="lineno"> 3395</span>            f[0] = 1;</div>
+<div class="line"><a id="l03396" name="l03396"></a><span class="lineno"> 3396</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; freq[1]; ++i) {</div>
+<div class="line"><a id="l03397" name="l03397"></a><span class="lineno"> 3397</span>                f[0] = f[0] * 2 % <a class="code hl_variable" href="../../d3/deb/a01386.html#afe7c8491af49ff89f66665b232acb30f">mod</a>;</div>
+<div class="line"><a id="l03398" name="l03398"></a><span class="lineno"> 3398</span>            }</div>
+<div class="line"><a id="l03399" name="l03399"></a><span class="lineno"> 3399</span> </div>
+<div class="line"><a id="l03400" name="l03400"></a><span class="lineno"> 3400</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2; i &lt;= <a class="code hl_variable" href="../../d3/deb/a01386.html#ab70cffdbee7130b4c1923a869163fdea">num_max</a>; ++i) {</div>
+<div class="line"><a id="l03401" name="l03401"></a><span class="lineno"> 3401</span>                <span class="keywordflow">if</span>(freq[i] == 0) {</div>
+<div class="line"><a id="l03402" name="l03402"></a><span class="lineno"> 3402</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l03403" name="l03403"></a><span class="lineno"> 3403</span>                }</div>
+<div class="line"><a id="l03404" name="l03404"></a><span class="lineno"> 3404</span> </div>
+<div class="line"><a id="l03405" name="l03405"></a><span class="lineno"> 3405</span>                <span class="comment">// 检查 i 的每个质因数是否均不超过 1 个</span></div>
+<div class="line"><a id="l03406" name="l03406"></a><span class="lineno"> 3406</span>                <span class="keywordtype">int</span> subset  = 0;</div>
+<div class="line"><a id="l03407" name="l03407"></a><span class="lineno"> 3407</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> x = i;</div>
+<div class="line"><a id="l03408" name="l03408"></a><span class="lineno"> 3408</span>                <span class="keywordtype">bool</span> check  = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l03409" name="l03409"></a><span class="lineno"> 3409</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../d3/deb/a01386.html#aeb494f3a836c706277b2470a1789119a">primes</a>.size(); j++) {</div>
+<div class="line"><a id="l03410" name="l03410"></a><span class="lineno"> 3410</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> prime = <a class="code hl_variable" href="../../d3/deb/a01386.html#aeb494f3a836c706277b2470a1789119a">primes</a>[j];</div>
+<div class="line"><a id="l03411" name="l03411"></a><span class="lineno"> 3411</span>                    <span class="keywordflow">if</span>(x % (prime * prime) == 0) {</div>
+<div class="line"><a id="l03412" name="l03412"></a><span class="lineno"> 3412</span>                        check = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l03413" name="l03413"></a><span class="lineno"> 3413</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l03414" name="l03414"></a><span class="lineno"> 3414</span>                    }</div>
+<div class="line"><a id="l03415" name="l03415"></a><span class="lineno"> 3415</span>                    <span class="keywordflow">if</span>(x % prime == 0) {</div>
+<div class="line"><a id="l03416" name="l03416"></a><span class="lineno"> 3416</span>                        subset |= 1 &lt;&lt; j;</div>
+<div class="line"><a id="l03417" name="l03417"></a><span class="lineno"> 3417</span>                    }</div>
+<div class="line"><a id="l03418" name="l03418"></a><span class="lineno"> 3418</span>                }</div>
+<div class="line"><a id="l03419" name="l03419"></a><span class="lineno"> 3419</span>                <span class="keywordflow">if</span>(!check) {</div>
+<div class="line"><a id="l03420" name="l03420"></a><span class="lineno"> 3420</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l03421" name="l03421"></a><span class="lineno"> 3421</span>                }</div>
+<div class="line"><a id="l03422" name="l03422"></a><span class="lineno"> 3422</span> </div>
+<div class="line"><a id="l03423" name="l03423"></a><span class="lineno"> 3423</span>                <span class="comment">// 动态规划</span></div>
+<div class="line"><a id="l03424" name="l03424"></a><span class="lineno"> 3424</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> mask = <a class="code hl_variable" href="../../d3/deb/a01386.html#aab91738a234849ccbda5f56782910af3">mask_max</a> - 1; mask &gt; 0; mask--) {</div>
+<div class="line"><a id="l03425" name="l03425"></a><span class="lineno"> 3425</span>                    <span class="keywordflow">if</span>((mask &amp; subset) == subset) {</div>
+<div class="line"><a id="l03426" name="l03426"></a><span class="lineno"> 3426</span>                        f[mask] = (f[mask] + <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(f[mask ^ subset]) * freq[i]) % <a class="code hl_variable" href="../../d3/deb/a01386.html#afe7c8491af49ff89f66665b232acb30f">mod</a>;</div>
+<div class="line"><a id="l03427" name="l03427"></a><span class="lineno"> 3427</span>                    }</div>
+<div class="line"><a id="l03428" name="l03428"></a><span class="lineno"> 3428</span>                }</div>
+<div class="line"><a id="l03429" name="l03429"></a><span class="lineno"> 3429</span>            }</div>
+<div class="line"><a id="l03430" name="l03430"></a><span class="lineno"> 3430</span>            <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l03431" name="l03431"></a><span class="lineno"> 3431</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> mask = 1; mask &lt; <a class="code hl_variable" href="../../d3/deb/a01386.html#aab91738a234849ccbda5f56782910af3">mask_max</a>; mask++) {</div>
+<div class="line"><a id="l03432" name="l03432"></a><span class="lineno"> 3432</span>                ans = (ans + f[mask]) % <a class="code hl_variable" href="../../d3/deb/a01386.html#afe7c8491af49ff89f66665b232acb30f">mod</a>;</div>
+<div class="line"><a id="l03433" name="l03433"></a><span class="lineno"> 3433</span>            }</div>
+<div class="line"><a id="l03434" name="l03434"></a><span class="lineno"> 3434</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l03435" name="l03435"></a><span class="lineno"> 3435</span>        }</div>
+<div class="ttc" id="aa01386_html_aab91738a234849ccbda5f56782910af3"><div class="ttname"><a href="../../d3/deb/a01386.html#aab91738a234849ccbda5f56782910af3">leetcode::the_number_of_good_subsets::Solution::mask_max</a></div><div class="ttdeci">static constexpr int mask_max</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l01302">leetcode.h:1302</a></div></div>
 <div class="ttc" id="aa01386_html_ab70cffdbee7130b4c1923a869163fdea"><div class="ttname"><a href="../../d3/deb/a01386.html#ab70cffdbee7130b4c1923a869163fdea">leetcode::the_number_of_good_subsets::Solution::num_max</a></div><div class="ttdeci">static constexpr int num_max</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l01300">leetcode.h:1300</a></div></div>
 <div class="ttc" id="aa01386_html_aeb494f3a836c706277b2470a1789119a"><div class="ttname"><a href="../../d3/deb/a01386.html#aeb494f3a836c706277b2470a1789119a">leetcode::the_number_of_good_subsets::Solution::primes</a></div><div class="ttdeci">static constexpr array&lt; int, 10 &gt; primes</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l01299">leetcode.h:1299</a></div></div>
 <div class="ttc" id="aa01386_html_afe7c8491af49ff89f66665b232acb30f"><div class="ttname"><a href="../../d3/deb/a01386.html#afe7c8491af49ff89f66665b232acb30f">leetcode::the_number_of_good_subsets::Solution::mod</a></div><div class="ttdeci">static constexpr int mod</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l01301">leetcode.h:1301</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l01301">mod</a>, <a class="el" href="../../dd/dad/a00005_source.html#l01300">num_max</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l01299">primes</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l01302">mask_max</a>, <a class="el" href="../../dd/dad/a00005_source.html#l01301">mod</a>, <a class="el" href="../../dd/dad/a00005_source.html#l01300">num_max</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l01299">primes</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l01748">leetcode::the_number_of_good_subsets::TEST()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">类成员变量说明</h2>
+<a id="aab91738a234849ccbda5f56782910af3" name="aab91738a234849ccbda5f56782910af3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab91738a234849ccbda5f56782910af3">&#9670;&nbsp;</a></span>mask_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int leetcode::the_number_of_good_subsets::Solution::mask_max = 1 &lt;&lt; primes.size()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01302">1302</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l03388">numberOfGoodSubsets()</a>.</p>
+
+</div>
+</div>
 <a id="afe7c8491af49ff89f66665b232acb30f" name="afe7c8491af49ff89f66665b232acb30f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe7c8491af49ff89f66665b232acb30f">&#9670;&nbsp;</a></span>mod</h2>
 
@@ -196,7 +230,7 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01301">1301</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l03387">numberOfGoodSubsets()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l03388">numberOfGoodSubsets()</a>.</p>
 
 </div>
 </div>
@@ -222,7 +256,7 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01300">1300</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l03387">numberOfGoodSubsets()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l03388">numberOfGoodSubsets()</a>.</p>
 
 </div>
 </div>
@@ -248,7 +282,7 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01299">1299</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l03387">numberOfGoodSubsets()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l03388">numberOfGoodSubsets()</a>.</p>
 
 </div>
 </div>
