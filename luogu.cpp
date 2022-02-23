@@ -1568,4 +1568,56 @@ namespace luogu {
 		delete[] triangle;
 		return 0;
 	}
+
+	int P1789::main(istream &cin, ostream &cout) {
+		int n, m, k;
+		cin >> n >> m >> k;
+		bool space[101][101] = {};
+		memset(space, false, sizeof space);
+		for(int i = 0; i < m; i++) {
+			int x, y;
+			cin >> x >> y;
+			pair<int, int> lights[13] = {
+			        make_pair(x - 2, y),
+			        make_pair(x - 1, y - 1),
+			        make_pair(x - 1, y),
+			        make_pair(x - 1, y + 1),
+			        make_pair(x, y - 2),
+			        make_pair(x, y - 1),
+			        make_pair(x, y),
+			        make_pair(x, y + 1),
+			        make_pair(x, y + 2),
+			        make_pair(x + 1, y - 1),
+			        make_pair(x + 1, y),
+			        make_pair(x + 1, y + 1),
+			        make_pair(x + 2, y),
+			};
+			for(auto [light_x, light_y]: lights) {
+				if(0 < light_x && light_x <= n && 0 < light_y && light_y <= n) {
+					space[light_x][light_y] = true;
+				}
+			}
+		}
+		for(int i = 0; i < k; i++) {
+			int o, p;
+			cin >> o >> p;
+			for(int light_x = o - 2; light_x <= o + 2; light_x++) {
+				for(int light_y = p - 2; light_y <= p + 2; light_y++) {
+					if(0 < light_x && light_x <= n && 0 < light_y && light_y <= n) {
+						space[light_x][light_y] = true;
+					}
+				}
+			}
+		}
+		int ans = 0;
+		for(int i = 1; i <= n; i++) {
+			for(int j = 1; j <= n; j++) {
+				if(!space[i][j]) {
+					ans++;
+				}
+			}
+		}
+		cout << ans;
+		return 0;
+	}
 }// namespace luogu
