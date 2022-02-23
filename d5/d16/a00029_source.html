@@ -4483,37 +4483,38 @@ $(function() {
 <div class="line"><a id="l04415" name="l04415"></a><span class="lineno"><a class="line" href="../../d7/d92/a00887.html#a49765bf1414cfbb8dfb2db9d034047ed"> 4415</a></span><span class="stringliteral">    double acwing806::add(double x, double y) { return x + y; }</span></div>
 <div class="line"><a id="l04416" name="l04416"></a><span class="lineno"> 4416</span><span class="stringliteral"></span> </div>
 <div class="line"><a id="l04417" name="l04417"></a><span class="lineno"><a class="line" href="../../de/dfc/a00891.html#a97bf19a082a68a66de5c5c79c91d61b7"> 4417</a></span><span class="stringliteral">    int acwing808::main(istream &amp;cin, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l04418" name="l04418"></a><span class="lineno"> 4418</span><span class="stringliteral">        int a, b;</span></div>
-<div class="line"><a id="l04419" name="l04419"></a><span class="lineno"> 4419</span><span class="stringliteral">        cin &gt;&gt; a &gt;&gt; b;</span></div>
-<div class="line"><a id="l04420" name="l04420"></a><span class="lineno"> 4420</span><span class="stringliteral">        cout &lt;&lt; gcd(a, b);</span></div>
-<div class="line"><a id="l04421" name="l04421"></a><span class="lineno"> 4421</span><span class="stringliteral">        return 0;</span></div>
-<div class="line"><a id="l04422" name="l04422"></a><span class="lineno"> 4422</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04423" name="l04423"></a><span class="lineno"> 4423</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l04424" name="l04424"></a><span class="lineno"><a class="line" href="../../de/dfc/a00891.html#a361485924c4376bfbeadf002b2a5250f"> 4424</a></span><span class="stringliteral">    int acwing808::gcd(int a, int b) {</span></div>
-<div class="line"><a id="l04425" name="l04425"></a><span class="lineno"> 4425</span><span class="stringliteral">        int t;</span></div>
+<div class="line"><a id="l04418" name="l04418"></a><span class="lineno"> 4418</span><span class="stringliteral">        int a;</span></div>
+<div class="line"><a id="l04419" name="l04419"></a><span class="lineno"> 4419</span><span class="stringliteral">        int b;</span></div>
+<div class="line"><a id="l04420" name="l04420"></a><span class="lineno"> 4420</span><span class="stringliteral">        cin &gt;&gt; a &gt;&gt; b;</span></div>
+<div class="line"><a id="l04421" name="l04421"></a><span class="lineno"> 4421</span><span class="stringliteral">        cout &lt;&lt; gcd(a, b);</span></div>
+<div class="line"><a id="l04422" name="l04422"></a><span class="lineno"> 4422</span><span class="stringliteral">        return 0;</span></div>
+<div class="line"><a id="l04423" name="l04423"></a><span class="lineno"> 4423</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04424" name="l04424"></a><span class="lineno"> 4424</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l04425" name="l04425"></a><span class="lineno"><a class="line" href="../../de/dfc/a00891.html#a361485924c4376bfbeadf002b2a5250f"> 4425</a></span><span class="stringliteral">    int acwing808::gcd(int a, int b) {</span></div>
 <div class="line"><a id="l04426" name="l04426"></a><span class="lineno"> 4426</span><span class="stringliteral">        while(b != 0) {</span></div>
-<div class="line"><a id="l04427" name="l04427"></a><span class="lineno"> 4427</span><span class="stringliteral">            t = a % b;</span></div>
-<div class="line"><a id="l04428" name="l04428"></a><span class="lineno"> 4428</span><span class="stringliteral">            a = b;</span></div>
-<div class="line"><a id="l04429" name="l04429"></a><span class="lineno"> 4429</span><span class="stringliteral">            b = t;</span></div>
+<div class="line"><a id="l04427" name="l04427"></a><span class="lineno"> 4427</span><span class="stringliteral">            const int t = a % b;</span></div>
+<div class="line"><a id="l04428" name="l04428"></a><span class="lineno"> 4428</span><span class="stringliteral">            a           = b;</span></div>
+<div class="line"><a id="l04429" name="l04429"></a><span class="lineno"> 4429</span><span class="stringliteral">            b           = t;</span></div>
 <div class="line"><a id="l04430" name="l04430"></a><span class="lineno"> 4430</span><span class="stringliteral">        }</span></div>
 <div class="line"><a id="l04431" name="l04431"></a><span class="lineno"> 4431</span><span class="stringliteral">        return a;</span></div>
 <div class="line"><a id="l04432" name="l04432"></a><span class="lineno"> 4432</span><span class="stringliteral">    }</span></div>
 <div class="line"><a id="l04433" name="l04433"></a><span class="lineno"> 4433</span><span class="stringliteral"></span> </div>
 <div class="line"><a id="l04434" name="l04434"></a><span class="lineno"><a class="line" href="../../d2/d21/a00895.html#a24d42d042183a3726e3c2bdf66cf03dc"> 4434</a></span><span class="stringliteral">    int acwing807::main(istream &amp;cin, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l04435" name="l04435"></a><span class="lineno"> 4435</span><span class="stringliteral">        int l, r;</span></div>
-<div class="line"><a id="l04436" name="l04436"></a><span class="lineno"> 4436</span><span class="stringliteral">        cin &gt;&gt; l &gt;&gt; r;</span></div>
-<div class="line"><a id="l04437" name="l04437"></a><span class="lineno"> 4437</span><span class="stringliteral">        cout &lt;&lt; sum(l, r);</span></div>
-<div class="line"><a id="l04438" name="l04438"></a><span class="lineno"> 4438</span><span class="stringliteral">        return 0;</span></div>
-<div class="line"><a id="l04439" name="l04439"></a><span class="lineno"> 4439</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04440" name="l04440"></a><span class="lineno"> 4440</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l04441" name="l04441"></a><span class="lineno"><a class="line" href="../../d2/d21/a00895.html#ac29d8e6fd3bbc975d0e9f554b893637c"> 4441</a></span><span class="stringliteral">    int acwing807::sum(int l, int r) {</span></div>
-<div class="line"><a id="l04442" name="l04442"></a><span class="lineno"> 4442</span><span class="stringliteral">        int sum = (l + r) * ((r - l + 1) / 2);</span></div>
-<div class="line"><a id="l04443" name="l04443"></a><span class="lineno"> 4443</span><span class="stringliteral">        if((r - l + 1) % 2 == 1) {</span></div>
-<div class="line"><a id="l04444" name="l04444"></a><span class="lineno"> 4444</span><span class="stringliteral">            sum += (r + l) / 2;</span></div>
-<div class="line"><a id="l04445" name="l04445"></a><span class="lineno"> 4445</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04446" name="l04446"></a><span class="lineno"> 4446</span><span class="stringliteral">        return sum;</span></div>
-<div class="line"><a id="l04447" name="l04447"></a><span class="lineno"> 4447</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04448" name="l04448"></a><span class="lineno"> 4448</span><span class="stringliteral">}// namespace acwing</span></div>
+<div class="line"><a id="l04435" name="l04435"></a><span class="lineno"> 4435</span><span class="stringliteral">        int l;</span></div>
+<div class="line"><a id="l04436" name="l04436"></a><span class="lineno"> 4436</span><span class="stringliteral">        int r;</span></div>
+<div class="line"><a id="l04437" name="l04437"></a><span class="lineno"> 4437</span><span class="stringliteral">        cin &gt;&gt; l &gt;&gt; r;</span></div>
+<div class="line"><a id="l04438" name="l04438"></a><span class="lineno"> 4438</span><span class="stringliteral">        cout &lt;&lt; sum(l, r);</span></div>
+<div class="line"><a id="l04439" name="l04439"></a><span class="lineno"> 4439</span><span class="stringliteral">        return 0;</span></div>
+<div class="line"><a id="l04440" name="l04440"></a><span class="lineno"> 4440</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04441" name="l04441"></a><span class="lineno"> 4441</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l04442" name="l04442"></a><span class="lineno"><a class="line" href="../../d2/d21/a00895.html#ac29d8e6fd3bbc975d0e9f554b893637c"> 4442</a></span><span class="stringliteral">    int acwing807::sum(int l, int r) {</span></div>
+<div class="line"><a id="l04443" name="l04443"></a><span class="lineno"> 4443</span><span class="stringliteral">        int sum = (l + r) * ((r - l + 1) / 2);</span></div>
+<div class="line"><a id="l04444" name="l04444"></a><span class="lineno"> 4444</span><span class="stringliteral">        if((r - l + 1) % 2 == 1) {</span></div>
+<div class="line"><a id="l04445" name="l04445"></a><span class="lineno"> 4445</span><span class="stringliteral">            sum += (r + l) / 2;</span></div>
+<div class="line"><a id="l04446" name="l04446"></a><span class="lineno"> 4446</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l04447" name="l04447"></a><span class="lineno"> 4447</span><span class="stringliteral">        return sum;</span></div>
+<div class="line"><a id="l04448" name="l04448"></a><span class="lineno"> 4448</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04449" name="l04449"></a><span class="lineno"> 4449</span><span class="stringliteral">}// namespace acwing</span></div>
 <div class="ttc" id="aa00035_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d4/d8c/a00035.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8c/a00035_source.html#l00005">main.cpp:5</a></div></div>
 <div class="ttc" id="aa00038_html"><div class="ttname"><a href="../../d8/d41/a00038.html">acwing.h</a></div></div>
 <div class="ttc" id="aa00047_html"><div class="ttname"><a href="../../d6/d2d/a00047.html">acwing</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00019">acwing.cpp:19</a></div></div>
