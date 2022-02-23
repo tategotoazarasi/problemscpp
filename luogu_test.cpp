@@ -853,4 +853,18 @@ namespace luogu {
 		          " 10  9  8  7\n",
 		          ans);
 	}
+
+	TEST(P5732, case1) {
+		istringstream in("6");
+		auto out = ostringstream();
+		P5732::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1 \n"
+		          "1 1 \n"
+		          "1 2 1 \n"
+		          "1 3 3 1 \n"
+		          "1 4 6 4 1 \n"
+		          "1 5 10 10 5 1 \n",
+		          ans);
+	}
 }// namespace luogu

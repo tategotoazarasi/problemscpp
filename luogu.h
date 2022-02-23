@@ -457,6 +457,12 @@ namespace luogu {
 		static int main(istream &cin, ostream &cout);
 		static pair<int, int> move_forward(int dir, int current_x, int current_y);
 	};
+
+	/// \brief 洛谷 P5732 【深基5.习7】杨辉三角
+	class P5732 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H
