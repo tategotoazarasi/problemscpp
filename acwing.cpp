@@ -4430,4 +4430,19 @@ namespace acwing {
 		}
 		return a;
 	}
+
+	int acwing807::main(istream &cin, ostream &cout) {
+		int l, r;
+		cin >> l >> r;
+		cout << sum(l, r);
+		return 0;
+	}
+
+	int acwing807::sum(int l, int r) {
+		int sum = (l + r) * ((r - l + 1) / 2);
+		if((r - l + 1) % 2 == 1) {
+			sum += (r + l) / 2;
+		}
+		return sum;
+	}
 }// namespace acwing

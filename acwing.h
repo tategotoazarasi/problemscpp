@@ -1370,5 +1370,12 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 		static int gcd(int a, int b);
 	};
+
+	/// \brief AcWing 807. 区间求和
+	class acwing807 {
+	public:
+		static int sum(int l, int r);
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
