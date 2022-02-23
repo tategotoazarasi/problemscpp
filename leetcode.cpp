@@ -3438,17 +3438,17 @@ namespace leetcode {
 	namespace reverse_only_letters {
 		string Solution::reverseOnlyLetters(string s) {
 			for(int i = 0, j = s.length() - 1; i < j && i < s.length() && j >= 0;) {
-				if(isalpha(s[i]) && isalpha(s[j])) {
-					char temp = s[i];
-					s[i]      = s[j];
-					s[j]      = temp;
+				if(isalpha(s[i]) != 0 && isalpha(s[j]) != 0) {
+					const char temp = s[i];
+					s[i]            = s[j];
+					s[j]            = temp;
 					i++;
 					j--;
 				} else {
-					while(i < s.length() && !isalpha(s[i])) {
+					while(i < s.length() && isalpha(s[i]) == 0) {
 						i++;
 					}
-					while(j >= 0 && !isalpha(s[j])) {
+					while(j >= 0 && isalpha(s[j]) == 0) {
 						j--;
 					}
 				}

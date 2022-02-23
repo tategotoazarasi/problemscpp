@@ -1431,7 +1431,7 @@ namespace luogu {
 		int n;
 		int m;
 		cin >> n >> m;
-		auto a = new int[n];
+		auto *a = new int[n];
 		for(int i = 0; i < n; i++) {
 			cin >> a[i];
 		}
@@ -1454,7 +1454,7 @@ namespace luogu {
 		int s3;
 		cin >> s1 >> s2 >> s3;
 		const int n = s1 + s2 + s3 + 1;
-		auto sum    = new int[n];
+		auto *sum   = new int[n];
 		memset(sum, 0, n * sizeof(int));
 		for(int i = 1; i <= s1; i++) {
 			for(int j = 1; j <= s2; j++) {
@@ -1478,7 +1478,7 @@ namespace luogu {
 
 	int P1161::main(istream &cin, ostream &cout) {
 		int n;
-		auto lamp = new bool[2000001];
+		auto *lamp = new bool[2000001];
 		memset(lamp, 0, 2000001 * sizeof(bool));
 		cin >> n;
 		for(int i = 0; i < n; i++) {
@@ -1549,7 +1549,7 @@ namespace luogu {
 	int P5732::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		int **triangle = new int *[n];
+		auto *triangle = new int *[n];
 		for(int i = 0; i < n; i++) {
 			triangle[i] = new int[i + 1];
 			for(int j = 0; j <= i; j++) {
@@ -1570,12 +1570,15 @@ namespace luogu {
 	}
 
 	int P1789::main(istream &cin, ostream &cout) {
-		int n, m, k;
+		int n;
+		int m;
+		int k;
 		cin >> n >> m >> k;
 		bool space[101][101] = {};
-		memset(space, false, sizeof space);
+		memset(space, 0, sizeof space);
 		for(int i = 0; i < m; i++) {
-			int x, y;
+			int x;
+			int y;
 			cin >> x >> y;
 			pair<int, int> lights[13] = {
 			        make_pair(x - 2, y),
@@ -1599,7 +1602,8 @@ namespace luogu {
 			}
 		}
 		for(int i = 0; i < k; i++) {
-			int o, p;
+			int o;
+			int p;
 			cin >> o >> p;
 			for(int light_x = o - 2; light_x <= o + 2; light_x++) {
 				for(int light_y = p - 2; light_y <= p + 2; light_y++) {
