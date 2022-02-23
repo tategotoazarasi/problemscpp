@@ -1305,6 +1305,14 @@ namespace leetcode {
 			static int numberOfGoodSubsets(vector<int> &nums);
 		};
 	}// namespace the_number_of_good_subsets
+
+	/// \brief LeetCode 917. Reverse Only Letters
+	namespace reverse_only_letters {
+		class Solution {
+		public:
+			static string reverseOnlyLetters(string s);
+		};
+	}// namespace reverse_only_letters
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -1755,4 +1755,18 @@ namespace leetcode {
 			ASSERT_EQ(5, Solution::numberOfGoodSubsets(input));
 		}
 	}// namespace the_number_of_good_subsets
+
+	namespace reverse_only_letters {
+		TEST(reverse_only_letters, case1) {
+			ASSERT_EQ("dc-ba", Solution::reverseOnlyLetters("ab-cd"));
+		}
+
+		TEST(reverse_only_letters, case2) {
+			ASSERT_EQ("j-Ih-gfE-dCba", Solution::reverseOnlyLetters("a-bC-dEf-ghIj"));
+		}
+
+		TEST(reverse_only_letters, case3) {
+			ASSERT_EQ("Qedo1ct-eeLg=ntse-T!", Solution::reverseOnlyLetters("Test1ng-Leet=code-Q!"));
+		}
+	}// namespace reverse_only_letters
 }// namespace leetcode
