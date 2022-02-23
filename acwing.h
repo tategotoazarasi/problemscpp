@@ -1363,5 +1363,12 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 		static double add(double x, double y);
 	};
+
+	/// \brief AcWing 808. 最大公约数
+	class acwing808 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static int gcd(int a, int b);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

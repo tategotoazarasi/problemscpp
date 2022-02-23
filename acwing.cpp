@@ -4413,4 +4413,21 @@ namespace acwing {
 	}
 
 	double acwing806::add(double x, double y) { return x + y; }
+
+	int acwing808::main(istream &cin, ostream &cout) {
+		int a, b;
+		cin >> a >> b;
+		cout << gcd(a, b);
+		return 0;
+	}
+
+	int acwing808::gcd(int a, int b) {
+		int t;
+		while(b != 0) {
+			t = a % b;
+			a = b;
+			b = t;
+		}
+		return a;
+	}
 }// namespace acwing
