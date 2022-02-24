@@ -131,11 +131,11 @@ $(function() {
 <div class="line"><a id="l01655" name="l01655"></a><span class="lineno"> 1655</span>        vector&lt;int&gt; ans;</div>
 <div class="line"><a id="l01656" name="l01656"></a><span class="lineno"> 1656</span>        <span class="keywordtype">int</span> n = 0;</div>
 <div class="line"><a id="l01657" name="l01657"></a><span class="lineno"> 1657</span>        <span class="keywordflow">while</span>(cin &gt;&gt; ch) {</div>
-<div class="line"><a id="l01658" name="l01658"></a><span class="lineno"> 1658</span>            <span class="keywordflow">if</span>(!isdigit(ch)) {</div>
+<div class="line"><a id="l01658" name="l01658"></a><span class="lineno"> 1658</span>            <span class="keywordflow">if</span>(isdigit(ch) == 0) {</div>
 <div class="line"><a id="l01659" name="l01659"></a><span class="lineno"> 1659</span>                <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l01660" name="l01660"></a><span class="lineno"> 1660</span>            }</div>
 <div class="line"><a id="l01661" name="l01661"></a><span class="lineno"> 1661</span>            n++;</div>
-<div class="line"><a id="l01662" name="l01662"></a><span class="lineno"> 1662</span>            <span class="keywordflow">if</span>((ch - <span class="charliteral">&#39;0&#39;</span>) == current) {</div>
+<div class="line"><a id="l01662" name="l01662"></a><span class="lineno"> 1662</span>            <span class="keywordflow">if</span>(ch - <span class="charliteral">&#39;0&#39;</span> == current) {</div>
 <div class="line"><a id="l01663" name="l01663"></a><span class="lineno"> 1663</span>                count++;</div>
 <div class="line"><a id="l01664" name="l01664"></a><span class="lineno"> 1664</span>            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01665" name="l01665"></a><span class="lineno"> 1665</span>                ans.push_back(count);</div>
@@ -144,8 +144,8 @@ $(function() {
 <div class="line"><a id="l01668" name="l01668"></a><span class="lineno"> 1668</span>            }</div>
 <div class="line"><a id="l01669" name="l01669"></a><span class="lineno"> 1669</span>        }</div>
 <div class="line"><a id="l01670" name="l01670"></a><span class="lineno"> 1670</span>        ans.push_back(count);</div>
-<div class="line"><a id="l01671" name="l01671"></a><span class="lineno"> 1671</span>        cout &lt;&lt; int(sqrt(n)) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a id="l01672" name="l01672"></a><span class="lineno"> 1672</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> i: ans) {</div>
+<div class="line"><a id="l01671" name="l01671"></a><span class="lineno"> 1671</span>        cout &lt;&lt; static_cast&lt;int&gt;(sqrt(n)) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l01672" name="l01672"></a><span class="lineno"> 1672</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> i: ans) {</div>
 <div class="line"><a id="l01673" name="l01673"></a><span class="lineno"> 1673</span>            cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
 <div class="line"><a id="l01674" name="l01674"></a><span class="lineno"> 1674</span>        }</div>
 <div class="line"><a id="l01675" name="l01675"></a><span class="lineno"> 1675</span>        <span class="keywordflow">return</span> 0;</div>

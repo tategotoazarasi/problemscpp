@@ -4516,31 +4516,33 @@ $(function() {
 <div class="line"><a id="l04448" name="l04448"></a><span class="lineno"> 4448</span><span class="stringliteral">    }</span></div>
 <div class="line"><a id="l04449" name="l04449"></a><span class="lineno"> 4449</span><span class="stringliteral"></span> </div>
 <div class="line"><a id="l04450" name="l04450"></a><span class="lineno"><a class="line" href="../../d9/db0/a00900.html#a5a610b47630c206a3ef644b20216f5cf"> 4450</a></span><span class="stringliteral">    int acwing811::main(istream &amp;cin, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l04451" name="l04451"></a><span class="lineno"> 4451</span><span class="stringliteral">        int x, y;</span></div>
-<div class="line"><a id="l04452" name="l04452"></a><span class="lineno"> 4452</span><span class="stringliteral">        cin &gt;&gt; x &gt;&gt; y;</span></div>
-<div class="line"><a id="l04453" name="l04453"></a><span class="lineno"> 4453</span><span class="stringliteral">        swap(x, y);</span></div>
-<div class="line"><a id="l04454" name="l04454"></a><span class="lineno"> 4454</span><span class="stringliteral">        cout &lt;&lt; x &lt;&lt; &quot; &quot; &lt;&lt; y;</span></div>
-<div class="line"><a id="l04455" name="l04455"></a><span class="lineno"> 4455</span><span class="stringliteral">        return 0;</span></div>
-<div class="line"><a id="l04456" name="l04456"></a><span class="lineno"> 4456</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04457" name="l04457"></a><span class="lineno"> 4457</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l04458" name="l04458"></a><span class="lineno"><a class="line" href="../../d9/db0/a00900.html#a99de500bde58476ab518bd2beeb820ca"> 4458</a></span><span class="stringliteral">    void acwing811::swap(int &amp;x, int &amp;y) {</span></div>
-<div class="line"><a id="l04459" name="l04459"></a><span class="lineno"> 4459</span><span class="stringliteral">        int temp = x;</span></div>
-<div class="line"><a id="l04460" name="l04460"></a><span class="lineno"> 4460</span><span class="stringliteral">        x        = y;</span></div>
-<div class="line"><a id="l04461" name="l04461"></a><span class="lineno"> 4461</span><span class="stringliteral">        y        = temp;</span></div>
-<div class="line"><a id="l04462" name="l04462"></a><span class="lineno"> 4462</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04463" name="l04463"></a><span class="lineno"> 4463</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l04464" name="l04464"></a><span class="lineno"><a class="line" href="../../d8/d0a/a00904.html#a161ab8969307996c1f8f967ca2525285"> 4464</a></span><span class="stringliteral">    int acwing809::main(istream &amp;cin, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l04465" name="l04465"></a><span class="lineno"> 4465</span><span class="stringliteral">        int a, b;</span></div>
-<div class="line"><a id="l04466" name="l04466"></a><span class="lineno"> 4466</span><span class="stringliteral">        cin &gt;&gt; a &gt;&gt; b;</span></div>
-<div class="line"><a id="l04467" name="l04467"></a><span class="lineno"> 4467</span><span class="stringliteral">        cout &lt;&lt; lcm(a, b);</span></div>
-<div class="line"><a id="l04468" name="l04468"></a><span class="lineno"> 4468</span><span class="stringliteral">        return 0;</span></div>
-<div class="line"><a id="l04469" name="l04469"></a><span class="lineno"> 4469</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04470" name="l04470"></a><span class="lineno"> 4470</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l04471" name="l04471"></a><span class="lineno"><a class="line" href="../../d8/d0a/a00904.html#a2c8f698c104e02a573a4ab340e8fdc9e"> 4471</a></span><span class="stringliteral">    int acwing809::lcm(int a, int b) {</span></div>
-<div class="line"><a id="l04472" name="l04472"></a><span class="lineno"> 4472</span><span class="stringliteral">        int f = acwing808::gcd(a, b);</span></div>
-<div class="line"><a id="l04473" name="l04473"></a><span class="lineno"> 4473</span><span class="stringliteral">        return a * b / f;</span></div>
-<div class="line"><a id="l04474" name="l04474"></a><span class="lineno"> 4474</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04475" name="l04475"></a><span class="lineno"> 4475</span><span class="stringliteral">}// namespace acwing</span></div>
+<div class="line"><a id="l04451" name="l04451"></a><span class="lineno"> 4451</span><span class="stringliteral">        int x;</span></div>
+<div class="line"><a id="l04452" name="l04452"></a><span class="lineno"> 4452</span><span class="stringliteral">        int y;</span></div>
+<div class="line"><a id="l04453" name="l04453"></a><span class="lineno"> 4453</span><span class="stringliteral">        cin &gt;&gt; x &gt;&gt; y;</span></div>
+<div class="line"><a id="l04454" name="l04454"></a><span class="lineno"> 4454</span><span class="stringliteral">        swap(x, y);</span></div>
+<div class="line"><a id="l04455" name="l04455"></a><span class="lineno"> 4455</span><span class="stringliteral">        cout &lt;&lt; x &lt;&lt; &quot; &quot; &lt;&lt; y;</span></div>
+<div class="line"><a id="l04456" name="l04456"></a><span class="lineno"> 4456</span><span class="stringliteral">        return 0;</span></div>
+<div class="line"><a id="l04457" name="l04457"></a><span class="lineno"> 4457</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04458" name="l04458"></a><span class="lineno"> 4458</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l04459" name="l04459"></a><span class="lineno"><a class="line" href="../../d9/db0/a00900.html#a99de500bde58476ab518bd2beeb820ca"> 4459</a></span><span class="stringliteral">    void acwing811::swap(int &amp;x, int &amp;y) {</span></div>
+<div class="line"><a id="l04460" name="l04460"></a><span class="lineno"> 4460</span><span class="stringliteral">        const int temp = x;</span></div>
+<div class="line"><a id="l04461" name="l04461"></a><span class="lineno"> 4461</span><span class="stringliteral">        x              = y;</span></div>
+<div class="line"><a id="l04462" name="l04462"></a><span class="lineno"> 4462</span><span class="stringliteral">        y              = temp;</span></div>
+<div class="line"><a id="l04463" name="l04463"></a><span class="lineno"> 4463</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04464" name="l04464"></a><span class="lineno"> 4464</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l04465" name="l04465"></a><span class="lineno"><a class="line" href="../../d8/d0a/a00904.html#a161ab8969307996c1f8f967ca2525285"> 4465</a></span><span class="stringliteral">    int acwing809::main(istream &amp;cin, ostream &amp;cout) {</span></div>
+<div class="line"><a id="l04466" name="l04466"></a><span class="lineno"> 4466</span><span class="stringliteral">        int a;</span></div>
+<div class="line"><a id="l04467" name="l04467"></a><span class="lineno"> 4467</span><span class="stringliteral">        int b;</span></div>
+<div class="line"><a id="l04468" name="l04468"></a><span class="lineno"> 4468</span><span class="stringliteral">        cin &gt;&gt; a &gt;&gt; b;</span></div>
+<div class="line"><a id="l04469" name="l04469"></a><span class="lineno"> 4469</span><span class="stringliteral">        cout &lt;&lt; lcm(a, b);</span></div>
+<div class="line"><a id="l04470" name="l04470"></a><span class="lineno"> 4470</span><span class="stringliteral">        return 0;</span></div>
+<div class="line"><a id="l04471" name="l04471"></a><span class="lineno"> 4471</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04472" name="l04472"></a><span class="lineno"> 4472</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l04473" name="l04473"></a><span class="lineno"><a class="line" href="../../d8/d0a/a00904.html#a2c8f698c104e02a573a4ab340e8fdc9e"> 4473</a></span><span class="stringliteral">    int acwing809::lcm(int a, int b) {</span></div>
+<div class="line"><a id="l04474" name="l04474"></a><span class="lineno"> 4474</span><span class="stringliteral">        const int f = acwing808::gcd(a, b);</span></div>
+<div class="line"><a id="l04475" name="l04475"></a><span class="lineno"> 4475</span><span class="stringliteral">        return a * b / f;</span></div>
+<div class="line"><a id="l04476" name="l04476"></a><span class="lineno"> 4476</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04477" name="l04477"></a><span class="lineno"> 4477</span><span class="stringliteral">}// namespace acwing</span></div>
 <div class="ttc" id="aa00035_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d4/d8c/a00035.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8c/a00035_source.html#l00005">main.cpp:5</a></div></div>
 <div class="ttc" id="aa00038_html"><div class="ttname"><a href="../../d8/d41/a00038.html">acwing.h</a></div></div>
 <div class="ttc" id="aa00047_html"><div class="ttname"><a href="../../d6/d2d/a00047.html">acwing</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00019">acwing.cpp:19</a></div></div>
