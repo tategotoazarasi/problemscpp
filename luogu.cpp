@@ -1647,4 +1647,31 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P1320::main(istream &cin, ostream &cout) {
+		char ch;
+		int current = 0;
+		int count   = 0;
+		vector<int> ans;
+		int n = 0;
+		while(cin >> ch) {
+			if(!isdigit(ch)) {
+				continue;
+			}
+			n++;
+			if((ch - '0') == current) {
+				count++;
+			} else {
+				ans.push_back(count);
+				current = (current + 1) % 2;
+				count   = 1;
+			}
+		}
+		ans.push_back(count);
+		cout << int(sqrt(n)) << " ";
+		for(auto i: ans) {
+			cout << i << " ";
+		}
+		return 0;
+	}
 }// namespace luogu

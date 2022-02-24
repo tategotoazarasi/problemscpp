@@ -904,4 +904,18 @@ namespace luogu {
 		          "11111\n",
 		          ans);
 	}
+
+	TEST(P1320, case1) {
+		istringstream in("0001000\n"
+		                 "0001000\n"
+		                 "0001111\n"
+		                 "0001000\n"
+		                 "0001000\n"
+		                 "0001000\n"
+		                 "1111111");
+		auto out = ostringstream();
+		P1320::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("7 3 1 6 1 6 4 3 1 6 1 6 1 3 7 ", ans);
+	}
 }// namespace luogu
