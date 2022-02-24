@@ -3456,4 +3456,57 @@ namespace leetcode {
 			return s;
 		}
 	}// namespace reverse_only_letters
+
+	namespace where_will_the_ball_fall {
+		vector<int> Solution::findBall(vector<vector<int>> &grid) {
+			int m = grid.size();
+			int n = grid[0].size();
+			vector<int> ans(n);
+			for(int i = 0; i < n; i++) {
+				// 1 - \  -1 - /
+				int current_x = 0;
+				int current_y = i;
+				int dir       = 1;// 0 - 左, 1 - 下, 2 - 右
+				while(true) {
+					if(current_x == m) {
+						ans[i] = current_y;
+						break;
+					}
+					if(current_x < 0 || current_y < 0 || current_y >= n) {
+						ans[i] = -1;
+						break;
+					}
+					if(dir == 0) {                            //左
+						if(grid[current_x][current_y] == 1) { /** \**/
+							ans[i] = -1;
+							break;
+						} else {// /
+							dir = 1;
+						}
+					} else if(dir == 1) {                     //下
+						if(grid[current_x][current_y] == 1) { /**  \**/
+							dir = 2;
+						} else {// /
+							dir = 0;
+						}
+					} else {                                  //右
+						if(grid[current_x][current_y] == 1) { /**  \**/
+							dir = 1;
+						} else {// /
+							ans[i] = -1;
+							break;
+						}
+					}
+					if(dir == 0) {//左
+						current_y--;
+					} else if(dir == 1) {//下
+						current_x++;
+					} else {//右
+						current_y++;
+					}
+				}
+			}
+			return ans;
+		}
+	}// namespace where_will_the_ball_fall
 }// namespace leetcode

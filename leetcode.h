@@ -1313,6 +1313,14 @@ namespace leetcode {
 			static string reverseOnlyLetters(string s);
 		};
 	}// namespace reverse_only_letters
+
+	/// \brief LeetCode 1706. Where Will the Ball Fall
+	namespace where_will_the_ball_fall {
+		class Solution {
+		public:
+			static vector<int> findBall(vector<vector<int>> &grid);
+		};
+	}// namespace where_will_the_ball_fall
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
