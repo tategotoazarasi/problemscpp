@@ -1377,5 +1377,12 @@ namespace acwing {
 		static int sum(int l, int r);
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief AcWing 811. 交换数值
+	class acwing811 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static void swap(int &x, int &y);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

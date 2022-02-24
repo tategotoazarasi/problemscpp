@@ -4446,4 +4446,18 @@ namespace acwing {
 		}
 		return sum;
 	}
+
+	int acwing811::main(istream &cin, ostream &cout) {
+		int x, y;
+		cin >> x >> y;
+		swap(x, y);
+		cout << x << " " << y;
+		return 0;
+	}
+
+	void acwing811::swap(int &x, int &y) {
+		int temp = x;
+		x        = y;
+		y        = temp;
+	}
 }// namespace acwing
