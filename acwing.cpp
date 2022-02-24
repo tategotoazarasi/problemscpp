@@ -4460,4 +4460,16 @@ namespace acwing {
 		x        = y;
 		y        = temp;
 	}
+
+	int acwing809::main(istream &cin, ostream &cout) {
+		int a, b;
+		cin >> a >> b;
+		cout << lcm(a, b);
+		return 0;
+	}
+
+	int acwing809::lcm(int a, int b) {
+		int f = acwing808::gcd(a, b);
+		return a * b / f;
+	}
 }// namespace acwing

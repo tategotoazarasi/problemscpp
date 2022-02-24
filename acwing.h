@@ -1384,5 +1384,12 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 		static void swap(int &x, int &y);
 	};
+
+	/// \brief AcWing 809. 最小公倍数
+	class acwing809 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static int lcm(int a, int b);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
