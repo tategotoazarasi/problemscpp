@@ -876,4 +876,32 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("12", ans);
 	}
+
+	TEST(P1319, case1) {
+		istringstream in("7 3 1 6 1 6 4 3 1 6 1 6 1 3 7");
+		auto out = ostringstream();
+		P1319::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("0001000\n"
+		          "0001000\n"
+		          "0001111\n"
+		          "0001000\n"
+		          "0001000\n"
+		          "0001000\n"
+		          "1111111\n",
+		          ans);
+	}
+
+	TEST(P1319, case2) {
+		istringstream in("5 0 5 2 1 2 5 2 1 2 5");
+		auto out = ostringstream();
+		P1319::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("11111\n"
+		          "00100\n"
+		          "11111\n"
+		          "00100\n"
+		          "11111\n",
+		          ans);
+	}
 }// namespace luogu

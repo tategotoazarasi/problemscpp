@@ -1624,4 +1624,27 @@ namespace luogu {
 		cout << ans;
 		return 0;
 	}
+
+	int P1319::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		bool zero = false;
+		int count = 0;
+		for(int i = 0; i < n * n; i++) {
+			while(count == 0) {
+				cin >> count;
+				zero = !zero;
+			}
+			if(zero) {
+				cout << 0;
+			} else {
+				cout << 1;
+			}
+			count--;
+			if((i + 1) % n == 0) {
+				cout << endl;
+			}
+		}
+		return 0;
+	}
 }// namespace luogu
