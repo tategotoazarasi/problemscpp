@@ -1391,5 +1391,12 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 		static int lcm(int a, int b);
 	};
+
+	/// \brief AcWing 812. 打印数字
+	class acwing812 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static void print(int a[], int size, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

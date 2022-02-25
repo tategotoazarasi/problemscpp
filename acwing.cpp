@@ -4472,4 +4472,22 @@ namespace acwing {
 		int f = acwing808::gcd(a, b);
 		return a * b / f;
 	}
+
+	int acwing812::main(istream &cin, ostream &cout) {
+		int n, size;
+		cin >> n >> size;
+		int *a = new int[n];
+		for(int i = 0; i < n; i++) {
+			cin >> a[i];
+		}
+		print(a, size, cout);
+		delete[] a;
+		return 0;
+	}
+
+	void acwing812::print(int *a, int size, ostream &cout) {
+		for(int i = 0; i < size; i++) {
+			cout << a[i] << " ";
+		}
+	}
 }// namespace acwing
