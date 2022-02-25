@@ -4,6 +4,7 @@
 #include <cmath>
 #include <cstring>
 #include <iomanip>
+#include <queue>
 #include <set>
 #include <sstream>
 #include <unordered_map>
@@ -1673,5 +1674,136 @@ namespace luogu {
 			cout << i << " ";
 		}
 		return 0;
+	}
+
+	int P1205::main(istream &cin, ostream &cout) {
+		int ans = -1;
+		int n;
+		cin >> n;
+		char **start = new char *[n];
+		char **end   = new char *[n];
+		for(int i = 0; i < n; i++) {
+			start[i] = new char[n];
+			for(int j = 0; j < n; j++) {
+				cin >> start[i][j];
+			}
+		}
+		for(int i = 0; i < n; i++) {
+			end[i] = new char[n];
+			for(int j = 0; j < n; j++) {
+				cin >> end[i][j];
+			}
+		}
+		auto r90   = rorate90(n, start);
+		auto r180  = rorate180(n, start);
+		auto r270  = rorate270(n, start);
+		auto r     = reflect(n, start);
+		auto rr90  = reflect(n, r90);
+		auto rr180 = reflect(n, r180);
+		auto rr270 = reflect(n, r270);
+		if(equal(n, r90, end)) {
+			ans = 1;
+		} else if(equal(n, r180, end)) {
+			ans = 2;
+		} else if(equal(n, r270, end)) {
+			ans = 3;
+		} else if(equal(n, r, end)) {
+			ans = 4;
+		} else if(equal(n, rr90, end)) {
+			ans = 5;
+		} else if(equal(n, rr180, end)) {
+			ans = 5;
+		} else if(equal(n, rr270, end)) {
+			ans = 5;
+		} else if(equal(n, start, end)) {
+			ans = 6;
+		} else {
+			ans = 7;
+		}
+		cout << ans;
+		for(int i = 0; i < n; i++) {
+			delete[] start[i];
+			delete[] end[i];
+			delete[] r90[i];
+			delete[] r180[i];
+			delete[] r270[i];
+			delete[] r[i];
+			delete[] rr90[i];
+			delete[] rr180[i];
+			delete[] rr270[i];
+		}
+		delete[] start;
+		delete[] end;
+		delete[] r90;
+		delete[] r180;
+		delete[] r270;
+		delete[] r;
+		delete[] rr90;
+		delete[] rr180;
+		delete[] rr270;
+		return 0;
+	}
+
+	char **P1205::rorate90(int n, const char *const *const start) {
+		char **cpy = new char *[n];
+		for(int i = 0; i < n; i++) {
+			cpy[i] = new char[n];
+		}
+		for(int i1 = 0, j2 = 0; i1 < n && j2 < n; i1++, j2++) {
+			for(int j1 = 0, i2 = n - 1; j1 < n && i2 >= 0; j1++, i2--) {
+				cpy[i1][j1] = start[i2][j2];
+			}
+		}
+		return cpy;
+	}
+
+	char **P1205::rorate180(int n, const char *const *const start) {
+		char **cpy = new char *[n];
+		for(int i = 0; i < n; i++) {
+			cpy[i] = new char[n];
+		}
+		for(int i1 = 0, i2 = n - 1; i1 < n && i2 >= 0; i1++, i2--) {
+			for(int j1 = 0, j2 = n - 1; j1 < n && j2 >= 0; j1++, j2--) {
+				cpy[i1][j1] = start[i2][j2];
+			}
+		}
+		return cpy;
+	}
+
+	char **P1205::rorate270(int n, const char *const *const start) {
+		char **cpy = new char *[n];
+		for(int i = 0; i < n; i++) {
+			cpy[i] = new char[n];
+		}
+		for(int i1 = 0, j2 = n - 1; i1 < n && j2 >= 0; i1++, j2--) {
+			for(int j1 = 0, i2 = 0; j1 < n && i2 < n; j1++, i2++) {
+				cpy[i1][j1] = start[i2][j2];
+			}
+		}
+		return cpy;
+	}
+
+	char **P1205::reflect(int n, const char *const *const start) {
+		char **cpy = new char *[n];
+		for(int i = 0; i < n; i++) {
+			cpy[i] = new char[n];
+		}
+		for(int i1 = 0, i2 = 0; i1 < n && i2 < n; i1++, i2++) {
+			for(int j1 = 0, j2 = n - 1; j1 < n && j2 >= 0; j1++, j2--) {
+				cpy[i1][j1] = start[i2][j2];
+			}
+		}
+		return cpy;
+	}
+
+	bool P1205::equal(int n, const char *const *const start, const char *const *const end) {
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < n; j++) {
+				if(start[i][j] != end[i][j]) {
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 }// namespace luogu

@@ -918,4 +918,36 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("7 3 1 6 1 6 4 3 1 6 1 6 1 3 7 ", ans);
 	}
+
+	TEST(P1205, case1) {
+		istringstream in("3\n"
+		                 "@-@\n"
+		                 "---\n"
+		                 "@@-\n"
+		                 "@-@\n"
+		                 "@--\n"
+		                 "--@");
+		auto out = ostringstream();
+		P1205::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1", ans);
+	}
+
+	TEST(P1205, case2) {
+		istringstream in("5\n"
+		                 "-@@@-\n"
+		                 "-@@--\n"
+		                 "-@---\n"
+		                 "-----\n"
+		                 "-----\n"
+		                 "-----\n"
+		                 "----@\n"
+		                 "---@@\n"
+		                 "--@@@\n"
+		                 "-----");
+		auto out = ostringstream();
+		P1205::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("5", ans);
+	}
 }// namespace luogu
