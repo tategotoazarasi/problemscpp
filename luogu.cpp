@@ -1806,4 +1806,17 @@ namespace luogu {
 		}
 		return true;
 	}
+
+	int P5733::main(istream &cin, ostream &cout) {
+		string str;
+		cin >> str;
+		for(char ch: str) {
+			if(islower(ch)) {
+				cout << char(toupper(ch));
+			} else {
+				cout << ch;
+			}
+		}
+		return 0;
+	}
 }// namespace luogu

@@ -492,6 +492,12 @@ namespace luogu {
 		static char **reflect(int n, const char *const *const start);
 		static bool equal(int n, const char *const *const start, const char *const *const end);
 	};
+
+	/// \brief 洛谷 P5733 【深基6.例1】自动修正
+	class P5733 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H
