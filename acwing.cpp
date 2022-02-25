@@ -4490,4 +4490,28 @@ namespace acwing {
 			cout << a[i] << " ";
 		}
 	}
+
+	int acwing814::main(istream &cin, ostream &cout) {
+		int n, m, size;
+		cin >> n >> m >> size;
+		int *a = new int[n];
+		int *b = new int[m];
+		for(int i = 0; i < n; i++) {
+			cin >> a[i];
+		}
+		for(int i = 0; i < m; i++) {
+			cin >> b[i];
+		}
+		copy(a, b, size);
+		for(int i = 0; i < m; i++) {
+			cout << b[i] << " ";
+		}
+		return 0;
+	}
+
+	void acwing814::copy(int *a, int *b, int size) {
+		for(int i = 0; i < size; i++) {
+			b[i] = a[i];
+		}
+	}
 }// namespace acwing

@@ -2162,4 +2162,14 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("1 2 3 ", ans);
 	}
+
+	TEST(acwing814, case1) {
+		istringstream in("3 5 2\n"
+		                 "1 2 3\n"
+		                 "4 5 6 7 8");
+		auto out = ostringstream();
+		acwing814::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1 2 6 7 8 ", ans);
+	}
 }// namespace acwing

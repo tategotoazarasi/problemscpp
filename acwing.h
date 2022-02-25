@@ -1398,5 +1398,12 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 		static void print(int a[], int size, ostream &cout);
 	};
+
+	/// \brief AcWing 814. 复制数组
+	class acwing814 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static void copy(int a[], int b[], int size);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
