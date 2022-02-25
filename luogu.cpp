@@ -1656,11 +1656,11 @@ namespace luogu {
 		vector<int> ans;
 		int n = 0;
 		while(cin >> ch) {
-			if(!isdigit(ch)) {
+			if(isdigit(ch) == 0) {
 				continue;
 			}
 			n++;
-			if((ch - '0') == current) {
+			if(ch - '0' == current) {
 				count++;
 			} else {
 				ans.push_back(count);
@@ -1669,8 +1669,8 @@ namespace luogu {
 			}
 		}
 		ans.push_back(count);
-		cout << int(sqrt(n)) << " ";
-		for(auto i: ans) {
+		cout << static_cast<int>(sqrt(n)) << " ";
+		for(const auto i: ans) {
 			cout << i << " ";
 		}
 		return 0;

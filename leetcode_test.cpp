@@ -1773,19 +1773,19 @@ namespace leetcode {
 	namespace where_will_the_ball_fall {
 		TEST(where_will_the_ball_fall, case1) {
 			vector<vector<int>> input = {{1, 1, 1, -1, -1}, {1, 1, 1, -1, -1}, {-1, -1, -1, 1, 1}, {1, 1, 1, 1, -1}, {-1, -1, -1, -1, -1}};
-			vector<int> output        = {1, -1, -1, -1, -1};
+			const vector output       = {1, -1, -1, -1, -1};
 			ASSERT_EQ(output, Solution::findBall(input));
 		}
 
 		TEST(where_will_the_ball_fall, case2) {
 			vector<vector<int>> input = {{-1}};
-			vector<int> output        = {-1};
+			const vector output       = {-1};
 			ASSERT_EQ(output, Solution::findBall(input));
 		}
 
 		TEST(where_will_the_ball_fall, case3) {
 			vector<vector<int>> input = {{1, 1, 1, 1, 1, 1}, {-1, -1, -1, -1, -1, -1}, {1, 1, 1, 1, 1, 1}, {-1, -1, -1, -1, -1, -1}};
-			vector<int> output        = {0, 1, 2, 3, 4, -1};
+			const vector output       = {0, 1, 2, 3, 4, -1};
 			ASSERT_EQ(output, Solution::findBall(input));
 		}
 	}// namespace where_will_the_ball_fall

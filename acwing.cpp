@@ -4448,7 +4448,8 @@ namespace acwing {
 	}
 
 	int acwing811::main(istream &cin, ostream &cout) {
-		int x, y;
+		int x;
+		int y;
 		cin >> x >> y;
 		swap(x, y);
 		cout << x << " " << y;
@@ -4456,20 +4457,21 @@ namespace acwing {
 	}
 
 	void acwing811::swap(int &x, int &y) {
-		int temp = x;
-		x        = y;
-		y        = temp;
+		const int temp = x;
+		x              = y;
+		y              = temp;
 	}
 
 	int acwing809::main(istream &cin, ostream &cout) {
-		int a, b;
+		int a;
+		int b;
 		cin >> a >> b;
 		cout << lcm(a, b);
 		return 0;
 	}
 
 	int acwing809::lcm(int a, int b) {
-		int f = acwing808::gcd(a, b);
+		const int f = acwing808::gcd(a, b);
 		return a * b / f;
 	}
 
