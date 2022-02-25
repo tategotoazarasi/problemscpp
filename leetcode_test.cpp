@@ -1789,4 +1789,14 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::findBall(input));
 		}
 	}// namespace where_will_the_ball_fall
+
+	namespace complex_number_multiplication {
+		TEST(complex_number_multiplication, case1) {
+			ASSERT_EQ("0+2i", Solution::complexNumberMultiply("1+1i", "1+1i"));
+		}
+
+		TEST(complex_number_multiplication, case2) {
+			ASSERT_EQ("0+-2i", Solution::complexNumberMultiply("1+-1i", "1+-1i"));
+		}
+	}// namespace complex_number_multiplication
 }// namespace leetcode

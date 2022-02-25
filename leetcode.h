@@ -1321,6 +1321,14 @@ namespace leetcode {
 			static vector<int> findBall(vector<vector<int>> &grid);
 		};
 	}// namespace where_will_the_ball_fall
+
+	/// \brief LeetCode 537. Complex Number Multiplication
+	namespace complex_number_multiplication {
+		class Solution {
+		public:
+			static string complexNumberMultiply(string num1, string num2);
+		};
+	}// namespace complex_number_multiplication
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

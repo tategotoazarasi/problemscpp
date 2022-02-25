@@ -3509,4 +3509,24 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace where_will_the_ball_fall
+
+	namespace complex_number_multiplication {
+		string Solution::complexNumberMultiply(string num1, string num2) {
+			stringstream ss = stringstream();
+			ss << num1 << num2;
+			int r1, i1, r2, i2;
+			ss >> r1;
+			ss.get();
+			ss >> i1;
+			ss.get();
+			ss >> r2;
+			ss.get();
+			ss >> i2;
+			int r = r1 * r2 - (i1 * i2);
+			int i = (r1 * i2) + (r2 * i1);
+			ss    = stringstream();
+			ss << r << '+' << i << 'i';
+			return ss.str();
+		}
+	}// namespace complex_number_multiplication
 }// namespace leetcode
