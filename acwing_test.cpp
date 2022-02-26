@@ -2194,4 +2194,68 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("I love AcWing.", ans);
 	}
+
+	TEST(acwing4305, case1) {
+		istringstream in("8");
+		auto out = ostringstream();
+		acwing4305::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("OOOoOooO", ans);
+	}
+
+	TEST(acwing4305, case2) {
+		istringstream in("15");
+		auto out = ostringstream();
+		acwing4305::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("OOOoOooOooooOoo", ans);
+	}
+
+	TEST(acwing4306, case1) {
+		istringstream in("4\n1 3 1 4");
+		auto out = ostringstream();
+		acwing4306::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1", ans);
+	}
+
+	TEST(acwing4306, case2) {
+		istringstream in("5\n1 2 3 2 5");
+		auto out = ostringstream();
+		acwing4306::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2", ans);
+	}
+
+	TEST(acwing4307, case1) {
+		istringstream in("123\n222");
+		auto out = ostringstream();
+		acwing4307::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("213", ans);
+	}
+
+	TEST(acwing4307, case2) {
+		istringstream in("3921\n10000");
+		auto out = ostringstream();
+		acwing4307::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("9321", ans);
+	}
+
+	TEST(acwing4307, case3) {
+		istringstream in("4940\n5000");
+		auto out = ostringstream();
+		acwing4307::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("4940", ans);
+	}
+
+	TEST(acwing4307, case4) {
+		istringstream in("15778899\n98715689");
+		auto out = ostringstream();
+		acwing4307::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("98598771", ans);
+	}
 }// namespace acwing

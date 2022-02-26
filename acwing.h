@@ -2,6 +2,7 @@
 #define PROBLEMSCPP_ACWING_H
 
 #include <iostream>
+#include <unordered_map>
 #include <unordered_set>
 #include <vector>
 
@@ -1418,6 +1419,31 @@ namespace acwing {
 	public:
 		static int main(istream &cin, ostream &cout);
 		static void print(char str[], ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4305. 斐波那契字符串
+	 */
+	class acwing4305 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4306. 序列处理
+	 */
+	class acwing4306 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4307. 数字重构
+	 */
+	class acwing4307 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static string dfs(int i, bool free, unordered_map<int, int> um, string &b);
 	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

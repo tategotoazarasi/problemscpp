@@ -4555,4 +4555,112 @@ namespace acwing {
 			cout << str[i];
 		}
 	}
+
+	int acwing4305::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		char fibb[1001] = {};
+		memset(fibb, 'o', sizeof fibb);
+		fibb[1]           = 'O';
+		unsigned int a    = 1;
+		unsigned int b    = 1;
+		unsigned int next = a + b;
+		while(next <= n) {
+			fibb[next] = 'O';
+			a          = b;
+			b          = next;
+			next       = a + b;
+		}
+		for(int i = 1; i <= n; i++) {
+			cout << fibb[i];
+		}
+		return 0;
+	}
+
+	int acwing4306::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		vector<int> a(n);
+		for(int i = 0; i < n; i++) {
+			cin >> a[i];
+		}
+		sort(a.begin(), a.end());
+		int sum      = 0;
+		int addition = 0;
+		for(int i = 1; i <= n; i++) {
+			if(i + addition < a[i - 1]) {
+				addition = a[i - 1] - i;
+			}
+			sum += i + addition - a[i - 1];
+		}
+		cout << sum;
+		return 0;
+	}
+
+	int acwing4307::main(istream &cin, ostream &cout) {
+		string a;
+		string b;
+		cin >> a >> b;
+		auto a_count = unordered_map<int, int>();
+		for(const char ch: a) {
+			a_count[ch - '0']++;
+		}
+		if(a.length() == b.length()) {
+			cout << dfs(0, false, a_count, b);
+		} else {
+			for(int i = 9; i >= 0; i--) {
+				while(a_count[i] > 0) {
+					cout << i;
+					a_count[i]--;
+				}
+			}
+		}
+		return 0;
+	}
+
+	string acwing4307::dfs(int i, bool free, unordered_map<int, int> um, string &b) {
+		auto oss = ostringstream();
+		int j    = b[i] - '0';
+		if(free) {
+			goto B;
+		}
+		if(um[j] > 0) {
+			auto um_cpy = unordered_map(um);
+			um_cpy[j]--;
+			if(i == b.length() - 1) {
+				oss << j;
+				return oss.str();
+			}
+			string ans = dfs(i + 1, false, um_cpy, b);
+			if(!ans.empty()) {
+				oss << j << ans;
+			} else {
+				//不可行
+				goto B;
+			}
+		} else {
+		B:;
+			int k = b[i] - '0' - 1;
+			if(free) {
+				k = 9;
+			}
+			for(; k >= 0; k--) {
+				if(um[k] > 0) {
+					auto um_cpy = unordered_map(um);
+					um_cpy[k]--;
+					if(i == b.length() - 1) {
+						oss << k;
+						break;
+					}
+					string ans = dfs(i + 1, true, um_cpy, b);
+					if(!ans.empty()) {
+						oss << k << ans;
+						break;
+					}
+				}
+			}
+		}
+
+		return oss.str();
+	}
 }// namespace acwing
