@@ -485,12 +485,12 @@ namespace luogu {
 	/// \brief 洛谷 P1205 [USACO1.2] 方块转换 Transformations
 	class P1205 {
 	public:
-		static int main(istream &cin, ostream &cout);
-		static char **rorate90(int n, const char *const *const start);
-		static char **rorate180(int n, const char *const *const start);
-		static char **rorate270(int n, const char *const *const start);
-		static char **reflect(int n, const char *const *const start);
-		static bool equal(int n, const char *const *const start, const char *const *const end);
+		int main(istream &cin, ostream &cout);
+		static char **rorate90(int n, char **start);
+		static char **rorate180(int n, char **start);
+		static char **rorate270(int n, char **start);
+		static char **reflect(int n, char **start);
+		static static bool equal(int n, char **start, char **end);
 	};
 
 	/// \brief 洛谷 P5733 【深基6.例1】自动修正

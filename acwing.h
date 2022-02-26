@@ -1403,7 +1403,7 @@ namespace acwing {
 	class acwing814 {
 	public:
 		static int main(istream &cin, ostream &cout);
-		static void copy(int a[], int b[], int size);
+		static void copy(const int a[], int b[], int size);
 	};
 
 	/// \brief AcWing 813. 打印矩阵

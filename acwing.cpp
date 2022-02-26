@@ -4476,9 +4476,10 @@ namespace acwing {
 	}
 
 	int acwing812::main(istream &cin, ostream &cout) {
-		int n, size;
+		int n;
+		int size;
 		cin >> n >> size;
-		int *a = new int[n];
+		auto *a = new int[n];
 		for(int i = 0; i < n; i++) {
 			cin >> a[i];
 		}
@@ -4494,10 +4495,12 @@ namespace acwing {
 	}
 
 	int acwing814::main(istream &cin, ostream &cout) {
-		int n, m, size;
+		int n;
+		int m;
+		int size;
 		cin >> n >> m >> size;
-		int *a = new int[n];
-		int *b = new int[m];
+		auto *a = new int[n];
+		auto *b = new int[m];
 		for(int i = 0; i < n; i++) {
 			cin >> a[i];
 		}
@@ -4511,7 +4514,7 @@ namespace acwing {
 		return 0;
 	}
 
-	void acwing814::copy(int *a, int *b, int size) {
+	void acwing814::copy(const int *a, int *b, int size) {
 		for(int i = 0; i < size; i++) {
 			b[i] = a[i];
 		}
@@ -4527,7 +4530,8 @@ namespace acwing {
 	}
 
 	int acwing813::main(istream &cin, ostream &cout) {
-		int row, col;
+		int row;
+		int col;
 		cin >> row >> col;
 		int arr[100][100];
 		for(int i = 0; i < row; i++) {
@@ -4540,7 +4544,7 @@ namespace acwing {
 	}
 
 	int acwing815::main(istream &cin, ostream &cout) {
-		char *str = new char[101];
+		auto *str = new char[101];
 		cin.getline(str, 101);
 		print(str, cout);
 		return 0;

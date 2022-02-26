@@ -1326,7 +1326,7 @@ namespace leetcode {
 	namespace complex_number_multiplication {
 		class Solution {
 		public:
-			static string complexNumberMultiply(string num1, string num2);
+			static string complexNumberMultiply(const string &num1, const string &num2);
 		};
 	}// namespace complex_number_multiplication
 

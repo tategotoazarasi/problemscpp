@@ -4,7 +4,6 @@
 #include <cmath>
 #include <cstring>
 #include <iomanip>
-#include <queue>
 #include <set>
 #include <sstream>
 #include <unordered_map>
@@ -1680,8 +1679,8 @@ namespace luogu {
 		int ans = -1;
 		int n;
 		cin >> n;
-		char **start = new char *[n];
-		char **end   = new char *[n];
+		auto *start = new char *[n];
+		auto *end   = new char *[n];
 		for(int i = 0; i < n; i++) {
 			start[i] = new char[n];
 			for(int j = 0; j < n; j++) {
@@ -1694,13 +1693,13 @@ namespace luogu {
 				cin >> end[i][j];
 			}
 		}
-		auto r90   = rorate90(n, start);
-		auto r180  = rorate180(n, start);
-		auto r270  = rorate270(n, start);
-		auto r     = reflect(n, start);
-		auto rr90  = reflect(n, r90);
-		auto rr180 = reflect(n, r180);
-		auto rr270 = reflect(n, r270);
+		auto *const r90   = rorate90(n, start);
+		auto *const r180  = rorate180(n, start);
+		auto *const r270  = rorate270(n, start);
+		auto *const r     = reflect(n, start);
+		auto *const rr90  = reflect(n, r90);
+		auto *const rr180 = reflect(n, r180);
+		auto *const rr270 = reflect(n, r270);
 		if(equal(n, r90, end)) {
 			ans = 1;
 		} else if(equal(n, r180, end)) {
@@ -1744,8 +1743,8 @@ namespace luogu {
 		return 0;
 	}
 
-	char **P1205::rorate90(int n, const char *const *const start) {
-		char **cpy = new char *[n];
+	char **P1205::rorate90(int n, char **start) {
+		auto *const cpy = new char *[n];
 		for(int i = 0; i < n; i++) {
 			cpy[i] = new char[n];
 		}
@@ -1757,8 +1756,8 @@ namespace luogu {
 		return cpy;
 	}
 
-	char **P1205::rorate180(int n, const char *const *const start) {
-		char **cpy = new char *[n];
+	char **P1205::rorate180(int n, char **start) {
+		auto *const cpy = new char *[n];
 		for(int i = 0; i < n; i++) {
 			cpy[i] = new char[n];
 		}
@@ -1770,8 +1769,8 @@ namespace luogu {
 		return cpy;
 	}
 
-	char **P1205::rorate270(int n, const char *const *const start) {
-		char **cpy = new char *[n];
+	char **P1205::rorate270(int n, char **start) {
+		auto *const cpy = new char *[n];
 		for(int i = 0; i < n; i++) {
 			cpy[i] = new char[n];
 		}
@@ -1783,8 +1782,8 @@ namespace luogu {
 		return cpy;
 	}
 
-	char **P1205::reflect(int n, const char *const *const start) {
-		char **cpy = new char *[n];
+	char **P1205::reflect(int n, char **start) {
+		auto *const cpy = new char *[n];
 		for(int i = 0; i < n; i++) {
 			cpy[i] = new char[n];
 		}
@@ -1796,7 +1795,7 @@ namespace luogu {
 		return cpy;
 	}
 
-	bool P1205::equal(int n, const char *const *const start, const char *const *const end) {
+	bool P1205::equal(int n, char **start, char **end) {
 		for(int i = 0; i < n; i++) {
 			for(int j = 0; j < n; j++) {
 				if(start[i][j] != end[i][j]) {
@@ -1810,9 +1809,9 @@ namespace luogu {
 	int P5733::main(istream &cin, ostream &cout) {
 		string str;
 		cin >> str;
-		for(char ch: str) {
-			if(islower(ch)) {
-				cout << char(toupper(ch));
+		for(const char ch: str) {
+			if(islower(ch) != 0) {
+				cout << static_cast<char>(toupper(ch));
 			} else {
 				cout << ch;
 			}
@@ -1824,8 +1823,8 @@ namespace luogu {
 		string str;
 		int n;
 		cin >> n >> str;
-		for(char ch: str) {
-			cout << char((ch - 'a' + n) % 26 + 'a');
+		for(const char ch: str) {
+			cout << static_cast<char>((ch - 'a' + n) % 26 + 'a');
 		}
 		return 0;
 	}
@@ -1836,7 +1835,7 @@ namespace luogu {
 		int freq[26] = {};
 		int maxn     = 0;
 		int minn     = 100;
-		for(char ch: str) {
+		for(const char ch: str) {
 			freq[ch - 'a']++;
 		}
 		for(int i = 0; i < 26; i++) {

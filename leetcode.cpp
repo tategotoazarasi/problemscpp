@@ -3515,10 +3515,13 @@ namespace leetcode {
 	}// namespace where_will_the_ball_fall
 
 	namespace complex_number_multiplication {
-		string Solution::complexNumberMultiply(string num1, string num2) {
-			stringstream ss = stringstream();
+		string Solution::complexNumberMultiply(const string &num1, const string &num2) {
+			auto ss = stringstream();
 			ss << num1 << num2;
-			int r1, i1, r2, i2;
+			int r1;
+			int i1;
+			int r2;
+			int i2;
 			ss >> r1;
 			ss.get();
 			ss >> i1;
@@ -3526,9 +3529,9 @@ namespace leetcode {
 			ss >> r2;
 			ss.get();
 			ss >> i2;
-			int r = r1 * r2 - (i1 * i2);
-			int i = (r1 * i2) + (r2 * i1);
-			ss    = stringstream();
+			const int r = r1 * r2 - i1 * i2;
+			const int i = r1 * i2 + r2 * i1;
+			ss          = stringstream();
 			ss << r << '+' << i << 'i';
 			return ss.str();
 		}

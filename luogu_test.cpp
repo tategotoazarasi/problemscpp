@@ -928,7 +928,8 @@ namespace luogu {
 		                 "@--\n"
 		                 "--@");
 		auto out = ostringstream();
-		P1205::main(in, out);
+		auto sol = P1205();
+		sol.main(in, out);
 		const auto ans = out.str();
 		ASSERT_EQ("1", ans);
 	}
@@ -946,7 +947,8 @@ namespace luogu {
 		                 "--@@@\n"
 		                 "-----");
 		auto out = ostringstream();
-		P1205::main(in, out);
+		auto sol = P1205();
+		sol.main(in, out);
 		const auto ans = out.str();
 		ASSERT_EQ("5", ans);
 	}
