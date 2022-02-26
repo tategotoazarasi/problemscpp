@@ -123,29 +123,29 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01408">1408</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01408" name="l01408"></a><span class="lineno"> 1408</span>                                               {</div>
-<div class="line"><a id="l01409" name="l01409"></a><span class="lineno"> 1409</span>        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l01410" name="l01410"></a><span class="lineno"> 1410</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l01411" name="l01411"></a><span class="lineno"> 1411</span>        <span class="keyword">auto</span> s = set&lt;int&gt;();</div>
-<div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span>            <span class="keywordtype">int</span> num;</div>
-<div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>            cin &gt;&gt; num;</div>
-<div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span>            s.insert(num);</div>
-<div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span>        }</div>
-<div class="line"><a id="l01417" name="l01417"></a><span class="lineno"> 1417</span>        <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l01418" name="l01418"></a><span class="lineno"> 1418</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = s.begin(); i != s.end(); ++i) {</div>
-<div class="line"><a id="l01419" name="l01419"></a><span class="lineno"> 1419</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> j = s.begin(); j != i; ++j) {</div>
-<div class="line"><a id="l01420" name="l01420"></a><span class="lineno"> 1420</span>                <span class="keywordtype">int</span> sub = *i - *j;</div>
-<div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>                <span class="keywordflow">if</span>(sub != *j &amp;&amp; s.contains(sub)) {</div>
-<div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span>                    ans++;</div>
-<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>                }</div>
-<div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>            }</div>
-<div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span>        }</div>
-<div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span>        cout &lt;&lt; ans;</div>
-<div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01407">1407</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01407" name="l01407"></a><span class="lineno"> 1407</span>                                               {</div>
+<div class="line"><a id="l01408" name="l01408"></a><span class="lineno"> 1408</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l01409" name="l01409"></a><span class="lineno"> 1409</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l01410" name="l01410"></a><span class="lineno"> 1410</span>        <span class="keyword">auto</span> s = set&lt;int&gt;();</div>
+<div class="line"><a id="l01411" name="l01411"></a><span class="lineno"> 1411</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>            <span class="keywordtype">int</span> num;</div>
+<div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span>            cin &gt;&gt; num;</div>
+<div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>            s.insert(num);</div>
+<div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span>        }</div>
+<div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span>        <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l01417" name="l01417"></a><span class="lineno"> 1417</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = s.begin(); i != s.end(); ++i) {</div>
+<div class="line"><a id="l01418" name="l01418"></a><span class="lineno"> 1418</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> j = s.begin(); j != i; ++j) {</div>
+<div class="line"><a id="l01419" name="l01419"></a><span class="lineno"> 1419</span>                <span class="keywordtype">int</span> sub = *i - *j;</div>
+<div class="line"><a id="l01420" name="l01420"></a><span class="lineno"> 1420</span>                <span class="keywordflow">if</span>(sub != *j &amp;&amp; s.contains(sub)) {</div>
+<div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>                    ans++;</div>
+<div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span>                }</div>
+<div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>            }</div>
+<div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>        }</div>
+<div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span>        cout &lt;&lt; ans;</div>
+<div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00792">luogu::TEST()</a>.</p>
 

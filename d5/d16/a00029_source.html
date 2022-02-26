@@ -4544,82 +4544,86 @@ $(function() {
 <div class="line"><a id="l04476" name="l04476"></a><span class="lineno"> 4476</span><span class="stringliteral">    }</span></div>
 <div class="line"><a id="l04477" name="l04477"></a><span class="lineno"> 4477</span><span class="stringliteral"></span> </div>
 <div class="line"><a id="l04478" name="l04478"></a><span class="lineno"><a class="line" href="../../d4/d12/a00910.html#a38bcba7c83e923d3b4f5f8587f0645f5"> 4478</a></span><span class="stringliteral">    int acwing812::main(istream &amp;cin, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l04479" name="l04479"></a><span class="lineno"> 4479</span><span class="stringliteral">        int n, size;</span></div>
-<div class="line"><a id="l04480" name="l04480"></a><span class="lineno"> 4480</span><span class="stringliteral">        cin &gt;&gt; n &gt;&gt; size;</span></div>
-<div class="line"><a id="l04481" name="l04481"></a><span class="lineno"> 4481</span><span class="stringliteral">        int *a = new int[n];</span></div>
-<div class="line"><a id="l04482" name="l04482"></a><span class="lineno"> 4482</span><span class="stringliteral">        for(int i = 0; i &lt; n; i++) {</span></div>
-<div class="line"><a id="l04483" name="l04483"></a><span class="lineno"> 4483</span><span class="stringliteral">            cin &gt;&gt; a[i];</span></div>
-<div class="line"><a id="l04484" name="l04484"></a><span class="lineno"> 4484</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04485" name="l04485"></a><span class="lineno"> 4485</span><span class="stringliteral">        print(a, size, cout);</span></div>
-<div class="line"><a id="l04486" name="l04486"></a><span class="lineno"> 4486</span><span class="stringliteral">        delete[] a;</span></div>
-<div class="line"><a id="l04487" name="l04487"></a><span class="lineno"> 4487</span><span class="stringliteral">        return 0;</span></div>
-<div class="line"><a id="l04488" name="l04488"></a><span class="lineno"> 4488</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04489" name="l04489"></a><span class="lineno"> 4489</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l04490" name="l04490"></a><span class="lineno"><a class="line" href="../../d4/d12/a00910.html#ad0fd9d2de0276721fad1d24ae610fbfb"> 4490</a></span><span class="stringliteral">    void acwing812::print(int *a, int size, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l04491" name="l04491"></a><span class="lineno"> 4491</span><span class="stringliteral">        for(int i = 0; i &lt; size; i++) {</span></div>
-<div class="line"><a id="l04492" name="l04492"></a><span class="lineno"> 4492</span><span class="stringliteral">            cout &lt;&lt; a[i] &lt;&lt; &quot; &quot;;</span></div>
-<div class="line"><a id="l04493" name="l04493"></a><span class="lineno"> 4493</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04494" name="l04494"></a><span class="lineno"> 4494</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04495" name="l04495"></a><span class="lineno"> 4495</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l04496" name="l04496"></a><span class="lineno"><a class="line" href="../../d3/dd1/a00914.html#a66870a500772668285ff33ebe20ded44"> 4496</a></span><span class="stringliteral">    int acwing814::main(istream &amp;cin, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l04497" name="l04497"></a><span class="lineno"> 4497</span><span class="stringliteral">        int n, m, size;</span></div>
-<div class="line"><a id="l04498" name="l04498"></a><span class="lineno"> 4498</span><span class="stringliteral">        cin &gt;&gt; n &gt;&gt; m &gt;&gt; size;</span></div>
-<div class="line"><a id="l04499" name="l04499"></a><span class="lineno"> 4499</span><span class="stringliteral">        int *a = new int[n];</span></div>
-<div class="line"><a id="l04500" name="l04500"></a><span class="lineno"> 4500</span><span class="stringliteral">        int *b = new int[m];</span></div>
-<div class="line"><a id="l04501" name="l04501"></a><span class="lineno"> 4501</span><span class="stringliteral">        for(int i = 0; i &lt; n; i++) {</span></div>
-<div class="line"><a id="l04502" name="l04502"></a><span class="lineno"> 4502</span><span class="stringliteral">            cin &gt;&gt; a[i];</span></div>
-<div class="line"><a id="l04503" name="l04503"></a><span class="lineno"> 4503</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04504" name="l04504"></a><span class="lineno"> 4504</span><span class="stringliteral">        for(int i = 0; i &lt; m; i++) {</span></div>
-<div class="line"><a id="l04505" name="l04505"></a><span class="lineno"> 4505</span><span class="stringliteral">            cin &gt;&gt; b[i];</span></div>
+<div class="line"><a id="l04479" name="l04479"></a><span class="lineno"> 4479</span><span class="stringliteral">        int n;</span></div>
+<div class="line"><a id="l04480" name="l04480"></a><span class="lineno"> 4480</span><span class="stringliteral">        int size;</span></div>
+<div class="line"><a id="l04481" name="l04481"></a><span class="lineno"> 4481</span><span class="stringliteral">        cin &gt;&gt; n &gt;&gt; size;</span></div>
+<div class="line"><a id="l04482" name="l04482"></a><span class="lineno"> 4482</span><span class="stringliteral">        auto *a = new int[n];</span></div>
+<div class="line"><a id="l04483" name="l04483"></a><span class="lineno"> 4483</span><span class="stringliteral">        for(int i = 0; i &lt; n; i++) {</span></div>
+<div class="line"><a id="l04484" name="l04484"></a><span class="lineno"> 4484</span><span class="stringliteral">            cin &gt;&gt; a[i];</span></div>
+<div class="line"><a id="l04485" name="l04485"></a><span class="lineno"> 4485</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l04486" name="l04486"></a><span class="lineno"> 4486</span><span class="stringliteral">        print(a, size, cout);</span></div>
+<div class="line"><a id="l04487" name="l04487"></a><span class="lineno"> 4487</span><span class="stringliteral">        delete[] a;</span></div>
+<div class="line"><a id="l04488" name="l04488"></a><span class="lineno"> 4488</span><span class="stringliteral">        return 0;</span></div>
+<div class="line"><a id="l04489" name="l04489"></a><span class="lineno"> 4489</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04490" name="l04490"></a><span class="lineno"> 4490</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l04491" name="l04491"></a><span class="lineno"><a class="line" href="../../d4/d12/a00910.html#ad0fd9d2de0276721fad1d24ae610fbfb"> 4491</a></span><span class="stringliteral">    void acwing812::print(int *a, int size, ostream &amp;cout) {</span></div>
+<div class="line"><a id="l04492" name="l04492"></a><span class="lineno"> 4492</span><span class="stringliteral">        for(int i = 0; i &lt; size; i++) {</span></div>
+<div class="line"><a id="l04493" name="l04493"></a><span class="lineno"> 4493</span><span class="stringliteral">            cout &lt;&lt; a[i] &lt;&lt; &quot; &quot;;</span></div>
+<div class="line"><a id="l04494" name="l04494"></a><span class="lineno"> 4494</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l04495" name="l04495"></a><span class="lineno"> 4495</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04496" name="l04496"></a><span class="lineno"> 4496</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l04497" name="l04497"></a><span class="lineno"><a class="line" href="../../d3/dd1/a00914.html#a66870a500772668285ff33ebe20ded44"> 4497</a></span><span class="stringliteral">    int acwing814::main(istream &amp;cin, ostream &amp;cout) {</span></div>
+<div class="line"><a id="l04498" name="l04498"></a><span class="lineno"> 4498</span><span class="stringliteral">        int n;</span></div>
+<div class="line"><a id="l04499" name="l04499"></a><span class="lineno"> 4499</span><span class="stringliteral">        int m;</span></div>
+<div class="line"><a id="l04500" name="l04500"></a><span class="lineno"> 4500</span><span class="stringliteral">        int size;</span></div>
+<div class="line"><a id="l04501" name="l04501"></a><span class="lineno"> 4501</span><span class="stringliteral">        cin &gt;&gt; n &gt;&gt; m &gt;&gt; size;</span></div>
+<div class="line"><a id="l04502" name="l04502"></a><span class="lineno"> 4502</span><span class="stringliteral">        auto *a = new int[n];</span></div>
+<div class="line"><a id="l04503" name="l04503"></a><span class="lineno"> 4503</span><span class="stringliteral">        auto *b = new int[m];</span></div>
+<div class="line"><a id="l04504" name="l04504"></a><span class="lineno"> 4504</span><span class="stringliteral">        for(int i = 0; i &lt; n; i++) {</span></div>
+<div class="line"><a id="l04505" name="l04505"></a><span class="lineno"> 4505</span><span class="stringliteral">            cin &gt;&gt; a[i];</span></div>
 <div class="line"><a id="l04506" name="l04506"></a><span class="lineno"> 4506</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04507" name="l04507"></a><span class="lineno"> 4507</span><span class="stringliteral">        copy(a, b, size);</span></div>
-<div class="line"><a id="l04508" name="l04508"></a><span class="lineno"> 4508</span><span class="stringliteral">        for(int i = 0; i &lt; m; i++) {</span></div>
-<div class="line"><a id="l04509" name="l04509"></a><span class="lineno"> 4509</span><span class="stringliteral">            cout &lt;&lt; b[i] &lt;&lt; &quot; &quot;;</span></div>
-<div class="line"><a id="l04510" name="l04510"></a><span class="lineno"> 4510</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04511" name="l04511"></a><span class="lineno"> 4511</span><span class="stringliteral">        return 0;</span></div>
-<div class="line"><a id="l04512" name="l04512"></a><span class="lineno"> 4512</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04513" name="l04513"></a><span class="lineno"> 4513</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l04514" name="l04514"></a><span class="lineno"><a class="line" href="../../d3/dd1/a00914.html#a05036600e492de86035a354e27410cbf"> 4514</a></span><span class="stringliteral">    void acwing814::copy(int *a, int *b, int size) {</span></div>
-<div class="line"><a id="l04515" name="l04515"></a><span class="lineno"> 4515</span><span class="stringliteral">        for(int i = 0; i &lt; size; i++) {</span></div>
-<div class="line"><a id="l04516" name="l04516"></a><span class="lineno"> 4516</span><span class="stringliteral">            b[i] = a[i];</span></div>
-<div class="line"><a id="l04517" name="l04517"></a><span class="lineno"> 4517</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04518" name="l04518"></a><span class="lineno"> 4518</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04519" name="l04519"></a><span class="lineno"> 4519</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l04520" name="l04520"></a><span class="lineno"><a class="line" href="../../d0/ddf/a00918.html#afc8d7722b2b790c08644e80a8294beb6"> 4520</a></span><span class="stringliteral">    void acwing813::print2D(int a[][100], int row, int col, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l04521" name="l04521"></a><span class="lineno"> 4521</span><span class="stringliteral">        for(int i = 0; i &lt; row; i++) {</span></div>
-<div class="line"><a id="l04522" name="l04522"></a><span class="lineno"> 4522</span><span class="stringliteral">            for(int j = 0; j &lt; col; j++) {</span></div>
-<div class="line"><a id="l04523" name="l04523"></a><span class="lineno"> 4523</span><span class="stringliteral">                cout &lt;&lt; a[i][j] &lt;&lt; &quot; &quot;;</span></div>
-<div class="line"><a id="l04524" name="l04524"></a><span class="lineno"> 4524</span><span class="stringliteral">            }</span></div>
-<div class="line"><a id="l04525" name="l04525"></a><span class="lineno"> 4525</span><span class="stringliteral">            cout &lt;&lt; endl;</span></div>
-<div class="line"><a id="l04526" name="l04526"></a><span class="lineno"> 4526</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04527" name="l04527"></a><span class="lineno"> 4527</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04528" name="l04528"></a><span class="lineno"> 4528</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l04529" name="l04529"></a><span class="lineno"><a class="line" href="../../d0/ddf/a00918.html#a05d9323aea198894368cf16ced8de6d8"> 4529</a></span><span class="stringliteral">    int acwing813::main(istream &amp;cin, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l04530" name="l04530"></a><span class="lineno"> 4530</span><span class="stringliteral">        int row, col;</span></div>
-<div class="line"><a id="l04531" name="l04531"></a><span class="lineno"> 4531</span><span class="stringliteral">        cin &gt;&gt; row &gt;&gt; col;</span></div>
-<div class="line"><a id="l04532" name="l04532"></a><span class="lineno"> 4532</span><span class="stringliteral">        int arr[100][100];</span></div>
-<div class="line"><a id="l04533" name="l04533"></a><span class="lineno"> 4533</span><span class="stringliteral">        for(int i = 0; i &lt; row; i++) {</span></div>
-<div class="line"><a id="l04534" name="l04534"></a><span class="lineno"> 4534</span><span class="stringliteral">            for(int j = 0; j &lt; col; j++) {</span></div>
-<div class="line"><a id="l04535" name="l04535"></a><span class="lineno"> 4535</span><span class="stringliteral">                cin &gt;&gt; arr[i][j];</span></div>
-<div class="line"><a id="l04536" name="l04536"></a><span class="lineno"> 4536</span><span class="stringliteral">            }</span></div>
-<div class="line"><a id="l04537" name="l04537"></a><span class="lineno"> 4537</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04538" name="l04538"></a><span class="lineno"> 4538</span><span class="stringliteral">        print2D(arr, row, col, cout);</span></div>
-<div class="line"><a id="l04539" name="l04539"></a><span class="lineno"> 4539</span><span class="stringliteral">        return 0;</span></div>
-<div class="line"><a id="l04540" name="l04540"></a><span class="lineno"> 4540</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04541" name="l04541"></a><span class="lineno"> 4541</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l04542" name="l04542"></a><span class="lineno"><a class="line" href="../../dd/dcf/a00922.html#a1a2196f9fe3ffa9cbd8c88d20a82823a"> 4542</a></span><span class="stringliteral">    int acwing815::main(istream &amp;cin, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l04543" name="l04543"></a><span class="lineno"> 4543</span><span class="stringliteral">        char *str = new char[101];</span></div>
-<div class="line"><a id="l04544" name="l04544"></a><span class="lineno"> 4544</span><span class="stringliteral">        cin.getline(str, 101);</span></div>
-<div class="line"><a id="l04545" name="l04545"></a><span class="lineno"> 4545</span><span class="stringliteral">        print(str, cout);</span></div>
-<div class="line"><a id="l04546" name="l04546"></a><span class="lineno"> 4546</span><span class="stringliteral">        return 0;</span></div>
-<div class="line"><a id="l04547" name="l04547"></a><span class="lineno"> 4547</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04548" name="l04548"></a><span class="lineno"> 4548</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l04549" name="l04549"></a><span class="lineno"><a class="line" href="../../dd/dcf/a00922.html#a7b077c55380638afba8ead744367afd5"> 4549</a></span><span class="stringliteral">    void acwing815::print(char *str, ostream &amp;cout) {</span></div>
-<div class="line"><a id="l04550" name="l04550"></a><span class="lineno"> 4550</span><span class="stringliteral">        for(int i = 0; str[i] != &#39;</span>\0<span class="stringliteral">&#39;; i++) {</span></div>
-<div class="line"><a id="l04551" name="l04551"></a><span class="lineno"> 4551</span><span class="stringliteral">            cout &lt;&lt; str[i];</span></div>
-<div class="line"><a id="l04552" name="l04552"></a><span class="lineno"> 4552</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04553" name="l04553"></a><span class="lineno"> 4553</span><span class="stringliteral">    }</span></div>
-<div class="line"><a id="l04554" name="l04554"></a><span class="lineno"> 4554</span><span class="stringliteral">}// namespace acwing</span></div>
+<div class="line"><a id="l04507" name="l04507"></a><span class="lineno"> 4507</span><span class="stringliteral">        for(int i = 0; i &lt; m; i++) {</span></div>
+<div class="line"><a id="l04508" name="l04508"></a><span class="lineno"> 4508</span><span class="stringliteral">            cin &gt;&gt; b[i];</span></div>
+<div class="line"><a id="l04509" name="l04509"></a><span class="lineno"> 4509</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l04510" name="l04510"></a><span class="lineno"> 4510</span><span class="stringliteral">        copy(a, b, size);</span></div>
+<div class="line"><a id="l04511" name="l04511"></a><span class="lineno"> 4511</span><span class="stringliteral">        for(int i = 0; i &lt; m; i++) {</span></div>
+<div class="line"><a id="l04512" name="l04512"></a><span class="lineno"> 4512</span><span class="stringliteral">            cout &lt;&lt; b[i] &lt;&lt; &quot; &quot;;</span></div>
+<div class="line"><a id="l04513" name="l04513"></a><span class="lineno"> 4513</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l04514" name="l04514"></a><span class="lineno"> 4514</span><span class="stringliteral">        return 0;</span></div>
+<div class="line"><a id="l04515" name="l04515"></a><span class="lineno"> 4515</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04516" name="l04516"></a><span class="lineno"> 4516</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l04517" name="l04517"></a><span class="lineno"><a class="line" href="../../d3/dd1/a00914.html#a08dba24d83eccb59c816c45a0b8e6f83"> 4517</a></span><span class="stringliteral">    void acwing814::copy(const int *a, int *b, int size) {</span></div>
+<div class="line"><a id="l04518" name="l04518"></a><span class="lineno"> 4518</span><span class="stringliteral">        for(int i = 0; i &lt; size; i++) {</span></div>
+<div class="line"><a id="l04519" name="l04519"></a><span class="lineno"> 4519</span><span class="stringliteral">            b[i] = a[i];</span></div>
+<div class="line"><a id="l04520" name="l04520"></a><span class="lineno"> 4520</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l04521" name="l04521"></a><span class="lineno"> 4521</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04522" name="l04522"></a><span class="lineno"> 4522</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l04523" name="l04523"></a><span class="lineno"><a class="line" href="../../d0/ddf/a00918.html#afc8d7722b2b790c08644e80a8294beb6"> 4523</a></span><span class="stringliteral">    void acwing813::print2D(int a[][100], int row, int col, ostream &amp;cout) {</span></div>
+<div class="line"><a id="l04524" name="l04524"></a><span class="lineno"> 4524</span><span class="stringliteral">        for(int i = 0; i &lt; row; i++) {</span></div>
+<div class="line"><a id="l04525" name="l04525"></a><span class="lineno"> 4525</span><span class="stringliteral">            for(int j = 0; j &lt; col; j++) {</span></div>
+<div class="line"><a id="l04526" name="l04526"></a><span class="lineno"> 4526</span><span class="stringliteral">                cout &lt;&lt; a[i][j] &lt;&lt; &quot; &quot;;</span></div>
+<div class="line"><a id="l04527" name="l04527"></a><span class="lineno"> 4527</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l04528" name="l04528"></a><span class="lineno"> 4528</span><span class="stringliteral">            cout &lt;&lt; endl;</span></div>
+<div class="line"><a id="l04529" name="l04529"></a><span class="lineno"> 4529</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l04530" name="l04530"></a><span class="lineno"> 4530</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04531" name="l04531"></a><span class="lineno"> 4531</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l04532" name="l04532"></a><span class="lineno"><a class="line" href="../../d0/ddf/a00918.html#a05d9323aea198894368cf16ced8de6d8"> 4532</a></span><span class="stringliteral">    int acwing813::main(istream &amp;cin, ostream &amp;cout) {</span></div>
+<div class="line"><a id="l04533" name="l04533"></a><span class="lineno"> 4533</span><span class="stringliteral">        int row;</span></div>
+<div class="line"><a id="l04534" name="l04534"></a><span class="lineno"> 4534</span><span class="stringliteral">        int col;</span></div>
+<div class="line"><a id="l04535" name="l04535"></a><span class="lineno"> 4535</span><span class="stringliteral">        cin &gt;&gt; row &gt;&gt; col;</span></div>
+<div class="line"><a id="l04536" name="l04536"></a><span class="lineno"> 4536</span><span class="stringliteral">        int arr[100][100];</span></div>
+<div class="line"><a id="l04537" name="l04537"></a><span class="lineno"> 4537</span><span class="stringliteral">        for(int i = 0; i &lt; row; i++) {</span></div>
+<div class="line"><a id="l04538" name="l04538"></a><span class="lineno"> 4538</span><span class="stringliteral">            for(int j = 0; j &lt; col; j++) {</span></div>
+<div class="line"><a id="l04539" name="l04539"></a><span class="lineno"> 4539</span><span class="stringliteral">                cin &gt;&gt; arr[i][j];</span></div>
+<div class="line"><a id="l04540" name="l04540"></a><span class="lineno"> 4540</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l04541" name="l04541"></a><span class="lineno"> 4541</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l04542" name="l04542"></a><span class="lineno"> 4542</span><span class="stringliteral">        print2D(arr, row, col, cout);</span></div>
+<div class="line"><a id="l04543" name="l04543"></a><span class="lineno"> 4543</span><span class="stringliteral">        return 0;</span></div>
+<div class="line"><a id="l04544" name="l04544"></a><span class="lineno"> 4544</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04545" name="l04545"></a><span class="lineno"> 4545</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l04546" name="l04546"></a><span class="lineno"><a class="line" href="../../dd/dcf/a00922.html#a1a2196f9fe3ffa9cbd8c88d20a82823a"> 4546</a></span><span class="stringliteral">    int acwing815::main(istream &amp;cin, ostream &amp;cout) {</span></div>
+<div class="line"><a id="l04547" name="l04547"></a><span class="lineno"> 4547</span><span class="stringliteral">        auto *str = new char[101];</span></div>
+<div class="line"><a id="l04548" name="l04548"></a><span class="lineno"> 4548</span><span class="stringliteral">        cin.getline(str, 101);</span></div>
+<div class="line"><a id="l04549" name="l04549"></a><span class="lineno"> 4549</span><span class="stringliteral">        print(str, cout);</span></div>
+<div class="line"><a id="l04550" name="l04550"></a><span class="lineno"> 4550</span><span class="stringliteral">        return 0;</span></div>
+<div class="line"><a id="l04551" name="l04551"></a><span class="lineno"> 4551</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04552" name="l04552"></a><span class="lineno"> 4552</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l04553" name="l04553"></a><span class="lineno"><a class="line" href="../../dd/dcf/a00922.html#a7b077c55380638afba8ead744367afd5"> 4553</a></span><span class="stringliteral">    void acwing815::print(char *str, ostream &amp;cout) {</span></div>
+<div class="line"><a id="l04554" name="l04554"></a><span class="lineno"> 4554</span><span class="stringliteral">        for(int i = 0; str[i] != &#39;</span>\0<span class="stringliteral">&#39;; i++) {</span></div>
+<div class="line"><a id="l04555" name="l04555"></a><span class="lineno"> 4555</span><span class="stringliteral">            cout &lt;&lt; str[i];</span></div>
+<div class="line"><a id="l04556" name="l04556"></a><span class="lineno"> 4556</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l04557" name="l04557"></a><span class="lineno"> 4557</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l04558" name="l04558"></a><span class="lineno"> 4558</span><span class="stringliteral">}// namespace acwing</span></div>
 <div class="ttc" id="aa00035_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d4/d8c/a00035.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8c/a00035_source.html#l00005">main.cpp:5</a></div></div>
 <div class="ttc" id="aa00038_html"><div class="ttname"><a href="../../d8/d41/a00038.html">acwing.h</a></div></div>
 <div class="ttc" id="aa00047_html"><div class="ttname"><a href="../../d6/d2d/a00047.html">acwing</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00019">acwing.cpp:19</a></div></div>

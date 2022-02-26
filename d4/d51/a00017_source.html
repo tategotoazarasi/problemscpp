@@ -3579,39 +3579,42 @@ $(function() {
 <div class="line"><a id="l03515" name="l03515"></a><span class="lineno"> 3515</span>    }<span class="comment">// namespace where_will_the_ball_fall</span></div>
 <div class="line"><a id="l03516" name="l03516"></a><span class="lineno"> 3516</span> </div>
 <div class="line"><a id="l03517" name="l03517"></a><span class="lineno"><a class="line" href="../../d9/d38/a00166.html"> 3517</a></span>    <span class="keyword">namespace </span>complex_number_multiplication {</div>
-<div class="line"><a id="l03518" name="l03518"></a><span class="lineno"><a class="line" href="../../d1/de7/a01434.html#ad02a3d2659becb7b8fbcd5c2daa7fac6"> 3518</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="../../d1/de7/a01434.html#ad02a3d2659becb7b8fbcd5c2daa7fac6">Solution::complexNumberMultiply</a>(<span class="keywordtype">string</span> num1, <span class="keywordtype">string</span> num2) {</div>
-<div class="line"><a id="l03519" name="l03519"></a><span class="lineno"> 3519</span>            stringstream ss = stringstream();</div>
+<div class="line"><a id="l03518" name="l03518"></a><span class="lineno"><a class="line" href="../../d1/de7/a01434.html#add6d0ad5901391250e5831ab5db507b5"> 3518</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="../../d1/de7/a01434.html#add6d0ad5901391250e5831ab5db507b5">Solution::complexNumberMultiply</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;num1, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;num2) {</div>
+<div class="line"><a id="l03519" name="l03519"></a><span class="lineno"> 3519</span>            <span class="keyword">auto</span> ss = stringstream();</div>
 <div class="line"><a id="l03520" name="l03520"></a><span class="lineno"> 3520</span>            ss &lt;&lt; num1 &lt;&lt; num2;</div>
-<div class="line"><a id="l03521" name="l03521"></a><span class="lineno"> 3521</span>            <span class="keywordtype">int</span> r1, i1, r2, i2;</div>
-<div class="line"><a id="l03522" name="l03522"></a><span class="lineno"> 3522</span>            ss &gt;&gt; r1;</div>
-<div class="line"><a id="l03523" name="l03523"></a><span class="lineno"> 3523</span>            ss.get();</div>
-<div class="line"><a id="l03524" name="l03524"></a><span class="lineno"> 3524</span>            ss &gt;&gt; i1;</div>
-<div class="line"><a id="l03525" name="l03525"></a><span class="lineno"> 3525</span>            ss.get();</div>
-<div class="line"><a id="l03526" name="l03526"></a><span class="lineno"> 3526</span>            ss &gt;&gt; r2;</div>
-<div class="line"><a id="l03527" name="l03527"></a><span class="lineno"> 3527</span>            ss.get();</div>
-<div class="line"><a id="l03528" name="l03528"></a><span class="lineno"> 3528</span>            ss &gt;&gt; i2;</div>
-<div class="line"><a id="l03529" name="l03529"></a><span class="lineno"> 3529</span>            <span class="keywordtype">int</span> r = r1 * r2 - (i1 * i2);</div>
-<div class="line"><a id="l03530" name="l03530"></a><span class="lineno"> 3530</span>            <span class="keywordtype">int</span> i = (r1 * i2) + (r2 * i1);</div>
-<div class="line"><a id="l03531" name="l03531"></a><span class="lineno"> 3531</span>            ss    = stringstream();</div>
-<div class="line"><a id="l03532" name="l03532"></a><span class="lineno"> 3532</span>            ss &lt;&lt; r &lt;&lt; <span class="charliteral">&#39;+&#39;</span> &lt;&lt; i &lt;&lt; <span class="charliteral">&#39;i&#39;</span>;</div>
-<div class="line"><a id="l03533" name="l03533"></a><span class="lineno"> 3533</span>            <span class="keywordflow">return</span> ss.str();</div>
-<div class="line"><a id="l03534" name="l03534"></a><span class="lineno"> 3534</span>        }</div>
-<div class="line"><a id="l03535" name="l03535"></a><span class="lineno"> 3535</span>    }<span class="comment">// namespace complex_number_multiplication</span></div>
-<div class="line"><a id="l03536" name="l03536"></a><span class="lineno"> 3536</span> </div>
-<div class="line"><a id="l03537" name="l03537"></a><span class="lineno"><a class="line" href="../../dc/de6/a00167.html"> 3537</a></span>    <span class="keyword">namespace </span>maximum_difference_between_increasing_elements {</div>
-<div class="line"><a id="l03538" name="l03538"></a><span class="lineno"><a class="line" href="../../d5/dd0/a01438.html#a95eb9755493f927a298942386759d98d"> 3538</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d5/dd0/a01438.html#a95eb9755493f927a298942386759d98d">Solution::maximumDifference</a>(vector&lt;int&gt; &amp;nums) {</div>
-<div class="line"><a id="l03539" name="l03539"></a><span class="lineno"> 3539</span>            <span class="keywordtype">int</span> minn     = nums[0];</div>
-<div class="line"><a id="l03540" name="l03540"></a><span class="lineno"> 3540</span>            <span class="keywordtype">int</span> max_diff = -1;</div>
-<div class="line"><a id="l03541" name="l03541"></a><span class="lineno"> 3541</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; nums.size(); i++) {</div>
-<div class="line"><a id="l03542" name="l03542"></a><span class="lineno"> 3542</span>                <span class="keywordflow">if</span>(nums[i] &gt; minn) {</div>
-<div class="line"><a id="l03543" name="l03543"></a><span class="lineno"> 3543</span>                    max_diff = max(max_diff, nums[i] - minn);</div>
-<div class="line"><a id="l03544" name="l03544"></a><span class="lineno"> 3544</span>                }</div>
-<div class="line"><a id="l03545" name="l03545"></a><span class="lineno"> 3545</span>                minn = min(minn, nums[i]);</div>
-<div class="line"><a id="l03546" name="l03546"></a><span class="lineno"> 3546</span>            }</div>
-<div class="line"><a id="l03547" name="l03547"></a><span class="lineno"> 3547</span>            <span class="keywordflow">return</span> max_diff;</div>
-<div class="line"><a id="l03548" name="l03548"></a><span class="lineno"> 3548</span>        }</div>
-<div class="line"><a id="l03549" name="l03549"></a><span class="lineno"> 3549</span>    }<span class="comment">// namespace maximum_difference_between_increasing_elements</span></div>
-<div class="line"><a id="l03550" name="l03550"></a><span class="lineno"> 3550</span>}<span class="comment">// namespace leetcode</span></div>
+<div class="line"><a id="l03521" name="l03521"></a><span class="lineno"> 3521</span>            <span class="keywordtype">int</span> r1;</div>
+<div class="line"><a id="l03522" name="l03522"></a><span class="lineno"> 3522</span>            <span class="keywordtype">int</span> i1;</div>
+<div class="line"><a id="l03523" name="l03523"></a><span class="lineno"> 3523</span>            <span class="keywordtype">int</span> r2;</div>
+<div class="line"><a id="l03524" name="l03524"></a><span class="lineno"> 3524</span>            <span class="keywordtype">int</span> i2;</div>
+<div class="line"><a id="l03525" name="l03525"></a><span class="lineno"> 3525</span>            ss &gt;&gt; r1;</div>
+<div class="line"><a id="l03526" name="l03526"></a><span class="lineno"> 3526</span>            ss.get();</div>
+<div class="line"><a id="l03527" name="l03527"></a><span class="lineno"> 3527</span>            ss &gt;&gt; i1;</div>
+<div class="line"><a id="l03528" name="l03528"></a><span class="lineno"> 3528</span>            ss.get();</div>
+<div class="line"><a id="l03529" name="l03529"></a><span class="lineno"> 3529</span>            ss &gt;&gt; r2;</div>
+<div class="line"><a id="l03530" name="l03530"></a><span class="lineno"> 3530</span>            ss.get();</div>
+<div class="line"><a id="l03531" name="l03531"></a><span class="lineno"> 3531</span>            ss &gt;&gt; i2;</div>
+<div class="line"><a id="l03532" name="l03532"></a><span class="lineno"> 3532</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> r = r1 * r2 - i1 * i2;</div>
+<div class="line"><a id="l03533" name="l03533"></a><span class="lineno"> 3533</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> i = r1 * i2 + r2 * i1;</div>
+<div class="line"><a id="l03534" name="l03534"></a><span class="lineno"> 3534</span>            ss          = stringstream();</div>
+<div class="line"><a id="l03535" name="l03535"></a><span class="lineno"> 3535</span>            ss &lt;&lt; r &lt;&lt; <span class="charliteral">&#39;+&#39;</span> &lt;&lt; i &lt;&lt; <span class="charliteral">&#39;i&#39;</span>;</div>
+<div class="line"><a id="l03536" name="l03536"></a><span class="lineno"> 3536</span>            <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a id="l03537" name="l03537"></a><span class="lineno"> 3537</span>        }</div>
+<div class="line"><a id="l03538" name="l03538"></a><span class="lineno"> 3538</span>    }<span class="comment">// namespace complex_number_multiplication</span></div>
+<div class="line"><a id="l03539" name="l03539"></a><span class="lineno"> 3539</span> </div>
+<div class="line"><a id="l03540" name="l03540"></a><span class="lineno"><a class="line" href="../../dc/de6/a00167.html"> 3540</a></span>    <span class="keyword">namespace </span>maximum_difference_between_increasing_elements {</div>
+<div class="line"><a id="l03541" name="l03541"></a><span class="lineno"><a class="line" href="../../d5/dd0/a01438.html#a95eb9755493f927a298942386759d98d"> 3541</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d5/dd0/a01438.html#a95eb9755493f927a298942386759d98d">Solution::maximumDifference</a>(vector&lt;int&gt; &amp;nums) {</div>
+<div class="line"><a id="l03542" name="l03542"></a><span class="lineno"> 3542</span>            <span class="keywordtype">int</span> minn     = nums[0];</div>
+<div class="line"><a id="l03543" name="l03543"></a><span class="lineno"> 3543</span>            <span class="keywordtype">int</span> max_diff = -1;</div>
+<div class="line"><a id="l03544" name="l03544"></a><span class="lineno"> 3544</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; nums.size(); i++) {</div>
+<div class="line"><a id="l03545" name="l03545"></a><span class="lineno"> 3545</span>                <span class="keywordflow">if</span>(nums[i] &gt; minn) {</div>
+<div class="line"><a id="l03546" name="l03546"></a><span class="lineno"> 3546</span>                    max_diff = max(max_diff, nums[i] - minn);</div>
+<div class="line"><a id="l03547" name="l03547"></a><span class="lineno"> 3547</span>                }</div>
+<div class="line"><a id="l03548" name="l03548"></a><span class="lineno"> 3548</span>                minn = min(minn, nums[i]);</div>
+<div class="line"><a id="l03549" name="l03549"></a><span class="lineno"> 3549</span>            }</div>
+<div class="line"><a id="l03550" name="l03550"></a><span class="lineno"> 3550</span>            <span class="keywordflow">return</span> max_diff;</div>
+<div class="line"><a id="l03551" name="l03551"></a><span class="lineno"> 3551</span>        }</div>
+<div class="line"><a id="l03552" name="l03552"></a><span class="lineno"> 3552</span>    }<span class="comment">// namespace maximum_difference_between_increasing_elements</span></div>
+<div class="line"><a id="l03553" name="l03553"></a><span class="lineno"> 3553</span>}<span class="comment">// namespace leetcode</span></div>
 <div class="ttc" id="aa00005_html"><div class="ttname"><a href="../../dd/dad/a00005.html">leetcode.h</a></div></div>
 <div class="ttc" id="aa00052_html_af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977"><div class="ttname"><a href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">acwing::acwing1929::left</a></div><div class="ttdeci">@ left</div><div class="ttdoc">左</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d41/a00038_source.html#l00542">acwing.h:542</a></div></div>
 <div class="ttc" id="aa00052_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d41/a00038_source.html#l00544">acwing.h:544</a></div></div>
@@ -3850,8 +3853,8 @@ $(function() {
 <div class="ttc" id="aa01422_html_afe7c8491af49ff89f66665b232acb30f"><div class="ttname"><a href="../../d1/df4/a01422.html#afe7c8491af49ff89f66665b232acb30f">leetcode::the_number_of_good_subsets::Solution::mod</a></div><div class="ttdeci">static constexpr int mod</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l01301">leetcode.h:1301</a></div></div>
 <div class="ttc" id="aa01426_html_a58e7f066fd64a33f5ef53c46dfcc515d"><div class="ttname"><a href="../../dc/de6/a01426.html#a58e7f066fd64a33f5ef53c46dfcc515d">leetcode::reverse_only_letters::Solution::reverseOnlyLetters</a></div><div class="ttdeci">static string reverseOnlyLetters(string s)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l03439">leetcode.cpp:3439</a></div></div>
 <div class="ttc" id="aa01430_html_a38ec1f645f75c967cca33d392abfe9f6"><div class="ttname"><a href="../../d8/dd0/a01430.html#a38ec1f645f75c967cca33d392abfe9f6">leetcode::where_will_the_ball_fall::Solution::findBall</a></div><div class="ttdeci">static vector&lt; int &gt; findBall(vector&lt; vector&lt; int &gt; &gt; &amp;grid)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l03461">leetcode.cpp:3461</a></div></div>
-<div class="ttc" id="aa01434_html_ad02a3d2659becb7b8fbcd5c2daa7fac6"><div class="ttname"><a href="../../d1/de7/a01434.html#ad02a3d2659becb7b8fbcd5c2daa7fac6">leetcode::complex_number_multiplication::Solution::complexNumberMultiply</a></div><div class="ttdeci">static string complexNumberMultiply(string num1, string num2)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l03518">leetcode.cpp:3518</a></div></div>
-<div class="ttc" id="aa01438_html_a95eb9755493f927a298942386759d98d"><div class="ttname"><a href="../../d5/dd0/a01438.html#a95eb9755493f927a298942386759d98d">leetcode::maximum_difference_between_increasing_elements::Solution::maximumDifference</a></div><div class="ttdeci">static int maximumDifference(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l03538">leetcode.cpp:3538</a></div></div>
+<div class="ttc" id="aa01434_html_add6d0ad5901391250e5831ab5db507b5"><div class="ttname"><a href="../../d1/de7/a01434.html#add6d0ad5901391250e5831ab5db507b5">leetcode::complex_number_multiplication::Solution::complexNumberMultiply</a></div><div class="ttdeci">static string complexNumberMultiply(const string &amp;num1, const string &amp;num2)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l03518">leetcode.cpp:3518</a></div></div>
+<div class="ttc" id="aa01438_html_a95eb9755493f927a298942386759d98d"><div class="ttname"><a href="../../d5/dd0/a01438.html#a95eb9755493f927a298942386759d98d">leetcode::maximum_difference_between_increasing_elements::Solution::maximumDifference</a></div><div class="ttdeci">static int maximumDifference(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l03541">leetcode.cpp:3541</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

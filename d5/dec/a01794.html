@@ -123,44 +123,44 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01833">1833</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01833" name="l01833"></a><span class="lineno"> 1833</span>                                               {</div>
-<div class="line"><a id="l01834" name="l01834"></a><span class="lineno"> 1834</span>        <span class="keywordtype">string</span> str;</div>
-<div class="line"><a id="l01835" name="l01835"></a><span class="lineno"> 1835</span>        cin &gt;&gt; str;</div>
-<div class="line"><a id="l01836" name="l01836"></a><span class="lineno"> 1836</span>        <span class="keywordtype">int</span> freq[26] = {};</div>
-<div class="line"><a id="l01837" name="l01837"></a><span class="lineno"> 1837</span>        <span class="keywordtype">int</span> maxn     = 0;</div>
-<div class="line"><a id="l01838" name="l01838"></a><span class="lineno"> 1838</span>        <span class="keywordtype">int</span> minn     = 100;</div>
-<div class="line"><a id="l01839" name="l01839"></a><span class="lineno"> 1839</span>        <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: str) {</div>
-<div class="line"><a id="l01840" name="l01840"></a><span class="lineno"> 1840</span>            freq[ch - <span class="charliteral">&#39;a&#39;</span>]++;</div>
-<div class="line"><a id="l01841" name="l01841"></a><span class="lineno"> 1841</span>        }</div>
-<div class="line"><a id="l01842" name="l01842"></a><span class="lineno"> 1842</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
-<div class="line"><a id="l01843" name="l01843"></a><span class="lineno"> 1843</span>            <span class="keywordflow">if</span>(freq[i] &gt; 0) {</div>
-<div class="line"><a id="l01844" name="l01844"></a><span class="lineno"> 1844</span>                maxn = max(maxn, freq[i]);</div>
-<div class="line"><a id="l01845" name="l01845"></a><span class="lineno"> 1845</span>                minn = min(minn, freq[i]);</div>
-<div class="line"><a id="l01846" name="l01846"></a><span class="lineno"> 1846</span>            }</div>
-<div class="line"><a id="l01847" name="l01847"></a><span class="lineno"> 1847</span>        }</div>
-<div class="line"><a id="l01848" name="l01848"></a><span class="lineno"> 1848</span>        <span class="keywordtype">bool</span> is_prime = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01849" name="l01849"></a><span class="lineno"> 1849</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2; i &lt;= sqrt(maxn - minn); i++) {</div>
-<div class="line"><a id="l01850" name="l01850"></a><span class="lineno"> 1850</span>            <span class="keywordflow">if</span>((maxn - minn) % i == 0) {</div>
-<div class="line"><a id="l01851" name="l01851"></a><span class="lineno"> 1851</span>                is_prime = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01852" name="l01852"></a><span class="lineno"> 1852</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l01853" name="l01853"></a><span class="lineno"> 1853</span>            }</div>
-<div class="line"><a id="l01854" name="l01854"></a><span class="lineno"> 1854</span>        }</div>
-<div class="line"><a id="l01855" name="l01855"></a><span class="lineno"> 1855</span>        <span class="keywordflow">if</span>(maxn - minn &lt; 2) {</div>
-<div class="line"><a id="l01856" name="l01856"></a><span class="lineno"> 1856</span>            is_prime = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01857" name="l01857"></a><span class="lineno"> 1857</span>        }</div>
-<div class="line"><a id="l01858" name="l01858"></a><span class="lineno"> 1858</span>        <span class="keywordflow">if</span>(is_prime) {</div>
-<div class="line"><a id="l01859" name="l01859"></a><span class="lineno"> 1859</span>            cout &lt;&lt; <span class="stringliteral">&quot;Lucky Word&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l01860" name="l01860"></a><span class="lineno"> 1860</span>                 &lt;&lt; maxn - minn;</div>
-<div class="line"><a id="l01861" name="l01861"></a><span class="lineno"> 1861</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01862" name="l01862"></a><span class="lineno"> 1862</span>            cout &lt;&lt; <span class="stringliteral">&quot;No Answer&quot;</span> &lt;&lt; endl</div>
-<div class="line"><a id="l01863" name="l01863"></a><span class="lineno"> 1863</span>                 &lt;&lt; 0;</div>
-<div class="line"><a id="l01864" name="l01864"></a><span class="lineno"> 1864</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01865" name="l01865"></a><span class="lineno"> 1865</span>        }</div>
-<div class="line"><a id="l01866" name="l01866"></a><span class="lineno"> 1866</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01867" name="l01867"></a><span class="lineno"> 1867</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01832">1832</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01832" name="l01832"></a><span class="lineno"> 1832</span>                                               {</div>
+<div class="line"><a id="l01833" name="l01833"></a><span class="lineno"> 1833</span>        <span class="keywordtype">string</span> str;</div>
+<div class="line"><a id="l01834" name="l01834"></a><span class="lineno"> 1834</span>        cin &gt;&gt; str;</div>
+<div class="line"><a id="l01835" name="l01835"></a><span class="lineno"> 1835</span>        <span class="keywordtype">int</span> freq[26] = {};</div>
+<div class="line"><a id="l01836" name="l01836"></a><span class="lineno"> 1836</span>        <span class="keywordtype">int</span> maxn     = 0;</div>
+<div class="line"><a id="l01837" name="l01837"></a><span class="lineno"> 1837</span>        <span class="keywordtype">int</span> minn     = 100;</div>
+<div class="line"><a id="l01838" name="l01838"></a><span class="lineno"> 1838</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: str) {</div>
+<div class="line"><a id="l01839" name="l01839"></a><span class="lineno"> 1839</span>            freq[ch - <span class="charliteral">&#39;a&#39;</span>]++;</div>
+<div class="line"><a id="l01840" name="l01840"></a><span class="lineno"> 1840</span>        }</div>
+<div class="line"><a id="l01841" name="l01841"></a><span class="lineno"> 1841</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
+<div class="line"><a id="l01842" name="l01842"></a><span class="lineno"> 1842</span>            <span class="keywordflow">if</span>(freq[i] &gt; 0) {</div>
+<div class="line"><a id="l01843" name="l01843"></a><span class="lineno"> 1843</span>                maxn = max(maxn, freq[i]);</div>
+<div class="line"><a id="l01844" name="l01844"></a><span class="lineno"> 1844</span>                minn = min(minn, freq[i]);</div>
+<div class="line"><a id="l01845" name="l01845"></a><span class="lineno"> 1845</span>            }</div>
+<div class="line"><a id="l01846" name="l01846"></a><span class="lineno"> 1846</span>        }</div>
+<div class="line"><a id="l01847" name="l01847"></a><span class="lineno"> 1847</span>        <span class="keywordtype">bool</span> is_prime = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01848" name="l01848"></a><span class="lineno"> 1848</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2; i &lt;= sqrt(maxn - minn); i++) {</div>
+<div class="line"><a id="l01849" name="l01849"></a><span class="lineno"> 1849</span>            <span class="keywordflow">if</span>((maxn - minn) % i == 0) {</div>
+<div class="line"><a id="l01850" name="l01850"></a><span class="lineno"> 1850</span>                is_prime = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01851" name="l01851"></a><span class="lineno"> 1851</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01852" name="l01852"></a><span class="lineno"> 1852</span>            }</div>
+<div class="line"><a id="l01853" name="l01853"></a><span class="lineno"> 1853</span>        }</div>
+<div class="line"><a id="l01854" name="l01854"></a><span class="lineno"> 1854</span>        <span class="keywordflow">if</span>(maxn - minn &lt; 2) {</div>
+<div class="line"><a id="l01855" name="l01855"></a><span class="lineno"> 1855</span>            is_prime = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01856" name="l01856"></a><span class="lineno"> 1856</span>        }</div>
+<div class="line"><a id="l01857" name="l01857"></a><span class="lineno"> 1857</span>        <span class="keywordflow">if</span>(is_prime) {</div>
+<div class="line"><a id="l01858" name="l01858"></a><span class="lineno"> 1858</span>            cout &lt;&lt; <span class="stringliteral">&quot;Lucky Word&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l01859" name="l01859"></a><span class="lineno"> 1859</span>                 &lt;&lt; maxn - minn;</div>
+<div class="line"><a id="l01860" name="l01860"></a><span class="lineno"> 1860</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01861" name="l01861"></a><span class="lineno"> 1861</span>            cout &lt;&lt; <span class="stringliteral">&quot;No Answer&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a id="l01862" name="l01862"></a><span class="lineno"> 1862</span>                 &lt;&lt; 0;</div>
+<div class="line"><a id="l01863" name="l01863"></a><span class="lineno"> 1863</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01864" name="l01864"></a><span class="lineno"> 1864</span>        }</div>
+<div class="line"><a id="l01865" name="l01865"></a><span class="lineno"> 1865</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01866" name="l01866"></a><span class="lineno"> 1866</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00971">luogu::TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00973">luogu::TEST()</a>.</p>
 
 </div>
 </div>

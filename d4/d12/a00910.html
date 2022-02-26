@@ -127,17 +127,18 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04478">4478</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l04478" name="l04478"></a><span class="lineno"> 4478</span>                                                   {</div>
-<div class="line"><a id="l04479" name="l04479"></a><span class="lineno"> 4479</span>        <span class="keywordtype">int</span> n, size;</div>
-<div class="line"><a id="l04480" name="l04480"></a><span class="lineno"> 4480</span>        cin &gt;&gt; n &gt;&gt; size;</div>
-<div class="line"><a id="l04481" name="l04481"></a><span class="lineno"> 4481</span>        <span class="keywordtype">int</span> *a = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
-<div class="line"><a id="l04482" name="l04482"></a><span class="lineno"> 4482</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l04483" name="l04483"></a><span class="lineno"> 4483</span>            cin &gt;&gt; a[i];</div>
-<div class="line"><a id="l04484" name="l04484"></a><span class="lineno"> 4484</span>        }</div>
-<div class="line"><a id="l04485" name="l04485"></a><span class="lineno"> 4485</span>        <a class="code hl_function" href="../../d4/d12/a00910.html#ad0fd9d2de0276721fad1d24ae610fbfb">print</a>(a, size, cout);</div>
-<div class="line"><a id="l04486" name="l04486"></a><span class="lineno"> 4486</span>        <span class="keyword">delete</span>[] a;</div>
-<div class="line"><a id="l04487" name="l04487"></a><span class="lineno"> 4487</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l04488" name="l04488"></a><span class="lineno"> 4488</span>    }</div>
-<div class="ttc" id="aa00910_html_ad0fd9d2de0276721fad1d24ae610fbfb"><div class="ttname"><a href="../../d4/d12/a00910.html#ad0fd9d2de0276721fad1d24ae610fbfb">acwing::acwing812::print</a></div><div class="ttdeci">static void print(int a[], int size, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l04490">acwing.cpp:4490</a></div></div>
+<div class="line"><a id="l04479" name="l04479"></a><span class="lineno"> 4479</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l04480" name="l04480"></a><span class="lineno"> 4480</span>        <span class="keywordtype">int</span> size;</div>
+<div class="line"><a id="l04481" name="l04481"></a><span class="lineno"> 4481</span>        cin &gt;&gt; n &gt;&gt; size;</div>
+<div class="line"><a id="l04482" name="l04482"></a><span class="lineno"> 4482</span>        <span class="keyword">auto</span> *a = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l04483" name="l04483"></a><span class="lineno"> 4483</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l04484" name="l04484"></a><span class="lineno"> 4484</span>            cin &gt;&gt; a[i];</div>
+<div class="line"><a id="l04485" name="l04485"></a><span class="lineno"> 4485</span>        }</div>
+<div class="line"><a id="l04486" name="l04486"></a><span class="lineno"> 4486</span>        <a class="code hl_function" href="../../d4/d12/a00910.html#ad0fd9d2de0276721fad1d24ae610fbfb">print</a>(a, size, cout);</div>
+<div class="line"><a id="l04487" name="l04487"></a><span class="lineno"> 4487</span>        <span class="keyword">delete</span>[] a;</div>
+<div class="line"><a id="l04488" name="l04488"></a><span class="lineno"> 4488</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l04489" name="l04489"></a><span class="lineno"> 4489</span>    }</div>
+<div class="ttc" id="aa00910_html_ad0fd9d2de0276721fad1d24ae610fbfb"><div class="ttname"><a href="../../d4/d12/a00910.html#ad0fd9d2de0276721fad1d24ae610fbfb">acwing::acwing812::print</a></div><div class="ttdeci">static void print(int a[], int size, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l04491">acwing.cpp:4491</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l02157">acwing::TEST()</a>.</p>
 
@@ -183,12 +184,12 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04490">4490</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04490" name="l04490"></a><span class="lineno"> 4490</span>                                                         {</div>
-<div class="line"><a id="l04491" name="l04491"></a><span class="lineno"> 4491</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; size; i++) {</div>
-<div class="line"><a id="l04492" name="l04492"></a><span class="lineno"> 4492</span>            cout &lt;&lt; a[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a id="l04493" name="l04493"></a><span class="lineno"> 4493</span>        }</div>
-<div class="line"><a id="l04494" name="l04494"></a><span class="lineno"> 4494</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04491">4491</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04491" name="l04491"></a><span class="lineno"> 4491</span>                                                         {</div>
+<div class="line"><a id="l04492" name="l04492"></a><span class="lineno"> 4492</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; size; i++) {</div>
+<div class="line"><a id="l04493" name="l04493"></a><span class="lineno"> 4493</span>            cout &lt;&lt; a[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l04494" name="l04494"></a><span class="lineno"> 4494</span>        }</div>
+<div class="line"><a id="l04495" name="l04495"></a><span class="lineno"> 4495</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
