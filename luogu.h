@@ -490,7 +490,7 @@ namespace luogu {
 		static char **rorate180(int n, char **start);
 		static char **rorate270(int n, char **start);
 		static char **reflect(int n, char **start);
-		static static bool equal(int n, char **start, char **end);
+		static bool equal(int n, char **start, char **end);
 	};
 
 	/// \brief 洛谷 P5733 【深基6.例1】自动修正
