@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['k_0',['k',['../d7/dc4/a01354.html#a8e9c002415f8caeb62ab19c2d68e872e',1,'leetcode::knight_probability_in_chessboard::status']]]
+  ['k_0',['k',['../d6/dfe/a01366.html#a8e9c002415f8caeb62ab19c2d68e872e',1,'leetcode::knight_probability_in_chessboard::status']]]
 ];
