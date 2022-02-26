@@ -4538,4 +4538,17 @@ namespace acwing {
 		print2D(arr, row, col, cout);
 		return 0;
 	}
+
+	int acwing815::main(istream &cin, ostream &cout) {
+		char *str = new char[101];
+		cin.getline(str, 101);
+		print(str, cout);
+		return 0;
+	}
+
+	void acwing815::print(char *str, ostream &cout) {
+		for(int i = 0; str[i] != '\0'; i++) {
+			cout << str[i];
+		}
+	}
 }// namespace acwing
