@@ -1329,6 +1329,14 @@ namespace leetcode {
 			static string complexNumberMultiply(string num1, string num2);
 		};
 	}// namespace complex_number_multiplication
+
+	/// \brief LeetCode 2016. Maximum Difference Between Increasing Elements
+	namespace maximum_difference_between_increasing_elements {
+		class Solution {
+		public:
+			static int maximumDifference(vector<int> &nums);
+		};
+	}// namespace maximum_difference_between_increasing_elements
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

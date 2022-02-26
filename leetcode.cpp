@@ -3533,4 +3533,18 @@ namespace leetcode {
 			return ss.str();
 		}
 	}// namespace complex_number_multiplication
+
+	namespace maximum_difference_between_increasing_elements {
+		int Solution::maximumDifference(vector<int> &nums) {
+			int minn     = nums[0];
+			int max_diff = -1;
+			for(int i = 1; i < nums.size(); i++) {
+				if(nums[i] > minn) {
+					max_diff = max(max_diff, nums[i] - minn);
+				}
+				minn = min(minn, nums[i]);
+			}
+			return max_diff;
+		}
+	}// namespace maximum_difference_between_increasing_elements
 }// namespace leetcode

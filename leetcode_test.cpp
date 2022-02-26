@@ -1799,4 +1799,21 @@ namespace leetcode {
 			ASSERT_EQ("0+-2i", Solution::complexNumberMultiply("1+-1i", "1+-1i"));
 		}
 	}// namespace complex_number_multiplication
+
+	namespace maximum_difference_between_increasing_elements {
+		TEST(maximum_difference_between_increasing_elements, case1) {
+			vector input = {7, 1, 5, 4};
+			ASSERT_EQ(4, Solution::maximumDifference(input));
+		}
+
+		TEST(maximum_difference_between_increasing_elements, case2) {
+			vector input = {9, 4, 3, 2};
+			ASSERT_EQ(-1, Solution::maximumDifference(input));
+		}
+
+		TEST(maximum_difference_between_increasing_elements, case3) {
+			vector input = {1, 5, 2, 10};
+			ASSERT_EQ(9, Solution::maximumDifference(input));
+		}
+	}// namespace maximum_difference_between_increasing_elements
 }// namespace leetcode
