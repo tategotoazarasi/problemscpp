@@ -1819,4 +1819,14 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P1914::main(istream &cin, ostream &cout) {
+		string str;
+		int n;
+		cin >> n >> str;
+		for(char ch: str) {
+			cout << char((ch - 'a' + n) % 26 + 'a');
+		}
+		return 0;
+	}
 }// namespace luogu

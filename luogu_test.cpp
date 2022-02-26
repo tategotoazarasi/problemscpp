@@ -958,4 +958,13 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("LUOGU4!", ans);
 	}
+
+	TEST(P1914, case1) {
+		istringstream in("1\n"
+		                 "qwe");
+		auto out = ostringstream();
+		P1914::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("rxf", ans);
+	}
 }// namespace luogu
