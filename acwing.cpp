@@ -4516,4 +4516,26 @@ namespace acwing {
 			b[i] = a[i];
 		}
 	}
+
+	void acwing813::print2D(int a[][100], int row, int col, ostream &cout) {
+		for(int i = 0; i < row; i++) {
+			for(int j = 0; j < col; j++) {
+				cout << a[i][j] << " ";
+			}
+			cout << endl;
+		}
+	}
+
+	int acwing813::main(istream &cin, ostream &cout) {
+		int row, col;
+		cin >> row >> col;
+		int arr[100][100];
+		for(int i = 0; i < row; i++) {
+			for(int j = 0; j < col; j++) {
+				cin >> arr[i][j];
+			}
+		}
+		print2D(arr, row, col, cout);
+		return 0;
+	}
 }// namespace acwing

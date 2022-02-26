@@ -1405,5 +1405,12 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 		static void copy(int a[], int b[], int size);
 	};
+
+	/// \brief AcWing 813. 打印矩阵
+	class acwing813 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static void print2D(int a[][100], int row, int col, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
