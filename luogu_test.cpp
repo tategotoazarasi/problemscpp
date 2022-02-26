@@ -967,4 +967,34 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("rxf", ans);
 	}
+
+	TEST(P1125, case1) {
+		istringstream in("error");
+		auto out = ostringstream();
+		P1125::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Lucky Word\n"
+		          "2",
+		          ans);
+	}
+
+	TEST(P1125, case2) {
+		istringstream in("olympic");
+		auto out = ostringstream();
+		P1125::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("No Answer\n"
+		          "0",
+		          ans);
+	}
+
+	TEST(P1125, case3) {
+		istringstream in("ubuntuubuntuubuntuubuntuubuntuu");
+		auto out = ostringstream();
+		P1125::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("Lucky Word\n"
+		          "11",
+		          ans);
+	}
 }// namespace luogu

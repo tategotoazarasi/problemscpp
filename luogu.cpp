@@ -1829,4 +1829,40 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P1125::main(istream &cin, ostream &cout) {
+		string str;
+		cin >> str;
+		int freq[26] = {};
+		int maxn     = 0;
+		int minn     = 100;
+		for(char ch: str) {
+			freq[ch - 'a']++;
+		}
+		for(int i = 0; i < 26; i++) {
+			if(freq[i] > 0) {
+				maxn = max(maxn, freq[i]);
+				minn = min(minn, freq[i]);
+			}
+		}
+		bool is_prime = true;
+		for(int i = 2; i <= sqrt(maxn - minn); i++) {
+			if((maxn - minn) % i == 0) {
+				is_prime = false;
+				break;
+			}
+		}
+		if(maxn - minn < 2) {
+			is_prime = false;
+		}
+		if(is_prime) {
+			cout << "Lucky Word" << endl
+			     << maxn - minn;
+		} else {
+			cout << "No Answer" << endl
+			     << 0;
+			return 0;
+		}
+		return 0;
+	}
 }// namespace luogu
