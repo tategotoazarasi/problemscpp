@@ -485,7 +485,7 @@ namespace luogu {
 	/// \brief 洛谷 P1205 [USACO1.2] 方块转换 Transformations
 	class P1205 {
 	public:
-		int main(istream &cin, ostream &cout);
+		static int main(istream &cin, ostream &cout);
 		static char **rorate90(int n, char **start);
 		static char **rorate180(int n, char **start);
 		static char **rorate270(int n, char **start);
@@ -507,6 +507,14 @@ namespace luogu {
 
 	/// \brief 洛谷 P1125 [NOIP2008 提高组] 笨小猴
 	class P1125 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief 洛谷 P1957 口算练习题
+	 */
+	class P1957 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};

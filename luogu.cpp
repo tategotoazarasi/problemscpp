@@ -1864,4 +1864,44 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P1957::main(istream &cin, ostream &cout) {
+		int i;
+		cin >> i;
+		char op;
+		for(int _ = 0; _ < i; _++) {
+			int num1;
+			int num2;
+			string pos1;
+			cin >> pos1;
+			if(isalpha(pos1[0]) != 0) {
+				op = pos1[0];
+				cin >> num1 >> num2;
+			} else {
+				auto ss = stringstream();
+				ss << pos1;
+				ss >> num1;
+				cin >> num2;
+			}
+			auto oss = ostringstream();
+			switch(op) {
+				case 'a':
+					oss << num1 << '+' << num2 << '=' << num1 + num2;
+					break;
+				case 'b':
+					oss << num1 << '-' << num2 << '=' << num1 - num2;
+					break;
+				case 'c':
+					oss << num1 << '*' << num2 << '=' << num1 * num2;
+					break;
+				default:
+					cerr << "Unknown Op:\t" << op;
+					return 1;
+			}
+			string str = oss.str();
+			cout << str << endl
+			     << str.length() << endl;
+		}
+		return 0;
+	}
 }// namespace luogu
