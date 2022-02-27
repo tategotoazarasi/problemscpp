@@ -4663,4 +4663,18 @@ namespace acwing {
 
 		return oss.str();
 	}
+
+	int acwing819::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		cout << factorial(n);
+		return 0;
+	}
+
+	int acwing819::factorial(int n) {
+		if(n == 1) {
+			return 1;
+		}
+		return n * factorial(n - 1);
+	}
 }// namespace acwing

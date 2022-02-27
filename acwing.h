@@ -1445,5 +1445,14 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 		static string dfs(int i, bool free, unordered_map<int, int> um, string &b);
 	};
+
+	/**
+	 * \brief AcWing 819. 递归求阶乘
+	 */
+	class acwing819 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static int factorial(int n);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
