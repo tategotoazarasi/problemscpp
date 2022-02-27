@@ -3637,26 +3637,35 @@ namespace leetcode {
 
 	namespace minimum_time_to_finish_the_race {
 		int Solution::minimumFinishTime(vector<vector<int>> &tires, int changeTime, int numLaps) {
-			const int inf = 2e8;
-			const int n   = tires.size();
-			vector<int> minSec(18, inf);
-			vector<int> sumSec(n);
-			for(int x = 1; x <= 17; ++x) {
-				for(int i = 0; i < n; ++i) {
-					sumSec[i]   = min(sumSec[i] + tires[i][0], inf);// 累加该轮胎连续使用所消耗的时间
-					minSec[x]   = min(minSec[x], sumSec[i]);
-					tires[i][0] = min(static_cast<long>(tires[i][0]) * tires[i][1], static_cast<long>(inf));
+			/* min_times[i] = 用一个轮胎跑 i 圈的最小花费 */
+			vector<long long> min_times(20, 1e9);
+			for(auto &v: tires) {
+				long long f       = v[0];
+				long long r       = v[1];
+				long long cost    = f + changeTime;///< 第一次用该轮胎的耗费
+				long long current = f;
+				long long sum     = cost;
+				for(int i = 1; i <= 19; i++) {
+					min_times[i] = min(min_times[i], sum);
+					current *= r;
+					if(current > cost) {
+						current = f;
+						sum += cost;
+					} else {
+						sum += current;
+					}
 				}
 			}
-			vector f(numLaps + 1, inf);
-			f[0] = -changeTime;
-			for(int i = 1; i <= numLaps; ++i) {
-				for(int j = 1; j <= min(17, i); ++j) {
-					f[i] = min(f[i], f[i - j] + minSec[j]);
+			/* dp[i] = 跑 i 圈的最小花费 */
+			vector<long long> dp(numLaps + 1, 1e9);
+			dp[0] = 0;
+			for(int i = 1; i <= numLaps; i++) {
+				for(int j = 1; j <= min(19, i); j++) {
+					dp[i] = min(dp[i], dp[i - j] + min_times[j]);
 				}
-				f[i] += changeTime;
 			}
-			return f[numLaps];
+			/* 最后需要减去一次换轮胎的时间 */
+			return dp[numLaps] - changeTime;
 		}
 	}// namespace minimum_time_to_finish_the_race
 }// namespace leetcode

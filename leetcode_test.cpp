@@ -1800,6 +1800,28 @@ namespace leetcode {
 		}
 	}// namespace complex_number_multiplication
 
+	namespace counting_words_with_a_given_prefix {
+		TEST(counting_words_with_a_given_prefix, case1) {
+			vector<string> input = {"pay", "attention", "practice", "attend"};
+			ASSERT_EQ(2, Solution::prefixCount(input, "at"));
+		}
+
+		TEST(counting_words_with_a_given_prefix, case2) {
+			vector<string> input = {"leetcode", "win", "loops", "success"};
+			ASSERT_EQ(0, Solution::prefixCount(input, "code"));
+		}
+	}// namespace counting_words_with_a_given_prefix
+
+	namespace minimum_number_of_steps_to_make_two_strings_anagram_ii {
+		TEST(minimum_number_of_steps_to_make_two_strings_anagram_ii, case1) {
+			ASSERT_EQ(7, Solution::minSteps("leetcode", "coats"));
+		}
+
+		TEST(minimum_number_of_steps_to_make_two_strings_anagram_ii, case2) {
+			ASSERT_EQ(0, Solution::minSteps("night", "thing"));
+		}
+	}// namespace minimum_number_of_steps_to_make_two_strings_anagram_ii
+
 	namespace maximum_difference_between_increasing_elements {
 		TEST(maximum_difference_between_increasing_elements, case1) {
 			vector input = {7, 1, 5, 4};
