@@ -3568,4 +3568,95 @@ namespace leetcode {
 			return oss.str();
 		}
 	}// namespace optimal_division
+
+	namespace counting_words_with_a_given_prefix {
+		int Solution::prefixCount(vector<string> &words, string pref) {
+			int ans = 0;
+			for(auto word: words) {
+				bool ok = true;
+				for(int i = 0; i < pref.length(); i++) {
+					if(pref[i] != word[i]) {
+						ok = false;
+						break;
+					}
+				}
+				if(ok) {
+					ans++;
+				}
+			}
+			return ans;
+		}
+	}// namespace counting_words_with_a_given_prefix
+
+	namespace minimum_number_of_steps_to_make_two_strings_anagram_ii {
+		int Solution::minSteps(const string &s, const string &t) {
+			int ans       = 0;
+			int s_num[26] = {};
+			int t_num[26] = {};
+			for(const char ch: s) {
+				s_num[ch - 'a']++;
+			}
+			for(const char ch: t) {
+				t_num[ch - 'a']++;
+			}
+			for(int i = 0; i < 26; i++) {
+				ans += abs(s_num[i] - t_num[i]);
+			}
+			return ans;
+		}
+	}// namespace minimum_number_of_steps_to_make_two_strings_anagram_ii
+
+	namespace minimum_time_to_complete_trips {
+		long long Solution::minimumTime(vector<int> &time, int totalTrips) {
+			int max_t = 1;
+			int min_t = 100000;
+			for(auto t: time) {
+				max_t = max(max_t, t);
+				min_t = min(min_t, t);
+			}
+			long long l = static_cast<long long>(totalTrips) / max_t / time.size();
+			long long r = static_cast<long long>(totalTrips) * max_t;
+			while(l <= r) {
+				const long long m = (l + r) / 2;
+				long long sum     = 0;
+				for(const auto t: time) {
+					sum += m / t;
+				}
+				if(l == r || l + 1 == r) {
+					return r;
+				}
+				if(sum >= totalTrips) {
+					r = m;
+				} else if(sum < totalTrips) {
+					l = m;
+				}
+			}
+			return 0;
+		}
+	}// namespace minimum_time_to_complete_trips
+
+	namespace minimum_time_to_finish_the_race {
+		int Solution::minimumFinishTime(vector<vector<int>> &tires, int changeTime, int numLaps) {
+			const int inf = 2e8;
+			const int n   = tires.size();
+			vector<int> minSec(18, inf);
+			vector<int> sumSec(n);
+			for(int x = 1; x <= 17; ++x) {
+				for(int i = 0; i < n; ++i) {
+					sumSec[i]   = min(sumSec[i] + tires[i][0], inf);// 累加该轮胎连续使用所消耗的时间
+					minSec[x]   = min(minSec[x], sumSec[i]);
+					tires[i][0] = min(static_cast<long>(tires[i][0]) * tires[i][1], static_cast<long>(inf));
+				}
+			}
+			vector f(numLaps + 1, inf);
+			f[0] = -changeTime;
+			for(int i = 1; i <= numLaps; ++i) {
+				for(int j = 1; j <= min(17, i); ++j) {
+					f[i] = min(f[i], f[i - j] + minSec[j]);
+				}
+				f[i] += changeTime;
+			}
+			return f[numLaps];
+		}
+	}// namespace minimum_time_to_finish_the_race
 }// namespace leetcode

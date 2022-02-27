@@ -1833,4 +1833,33 @@ namespace leetcode {
 			ASSERT_EQ("2", Solution::optimalDivision(input));
 		}
 	}// namespace optimal_division
+
+	namespace minimum_time_to_complete_trips {
+		TEST(minimum_time_to_complete_trips, case1) {
+			vector input = {1, 2, 3};
+			ASSERT_EQ(3, Solution::minimumTime(input, 5));
+		}
+
+		TEST(minimum_time_to_complete_trips, case2) {
+			vector input = {2};
+			ASSERT_EQ(2, Solution::minimumTime(input, 1));
+		}
+
+		TEST(minimum_time_to_complete_trips, case3) {
+			vector input = {5, 10, 10};
+			ASSERT_EQ(25, Solution::minimumTime(input, 9));
+		}
+	}// namespace minimum_time_to_complete_trips
+
+	namespace minimum_time_to_finish_the_race {
+		TEST(minimum_time_to_finish_the_race, case1) {
+			vector<vector<int>> input = {{2, 3}, {3, 4}};
+			ASSERT_EQ(21, Solution::minimumFinishTime(input, 5, 4));
+		}
+
+		TEST(minimum_time_to_finish_the_race, case2) {
+			vector<vector<int>> input = {{1, 10}, {2, 2}, {3, 4}};
+			ASSERT_EQ(25, Solution::minimumFinishTime(input, 6, 5));
+		}
+	}// namespace minimum_time_to_finish_the_race
 }// namespace leetcode

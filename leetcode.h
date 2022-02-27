@@ -1347,6 +1347,46 @@ namespace leetcode {
 			static string optimalDivision(vector<int> &nums);
 		};
 	}// namespace optimal_division
+
+	/**
+	 * \brief LeetCode 6008. 统计包含给定前缀的字符串
+	 */
+	namespace counting_words_with_a_given_prefix {
+		class Solution {
+		public:
+			static int prefixCount(vector<string> &words, string pref);
+		};
+	}// namespace counting_words_with_a_given_prefix
+
+	/**
+	 * \brief LeetCode 6009. 使两字符串互为字母异位词的最少步骤数
+	 */
+	namespace minimum_number_of_steps_to_make_two_strings_anagram_ii {
+		class Solution {
+		public:
+			static int minSteps(const string &s, const string &t);
+		};
+	}// namespace minimum_number_of_steps_to_make_two_strings_anagram_ii
+
+	/**
+	 * \brief LeetCode 6010. 完成旅途的最少时间
+	 */
+	namespace minimum_time_to_complete_trips {
+		class Solution {
+		public:
+			static long long minimumTime(vector<int> &time, int totalTrips);
+		};
+	}// namespace minimum_time_to_complete_trips
+
+	/**
+	 * \brief LeetCode 6011. 完成比赛的最少时间
+	 */
+	namespace minimum_time_to_finish_the_race {
+		class Solution {
+		public:
+			static int minimumFinishTime(vector<vector<int>> &tires, int changeTime, int numLaps);
+		};
+	}// namespace minimum_time_to_finish_the_race
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
