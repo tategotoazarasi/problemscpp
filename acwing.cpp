@@ -4677,4 +4677,28 @@ namespace acwing {
 		}
 		return n * factorial(n - 1);
 	}
+
+	int acwing816::main(istream &cin, ostream &cout) {
+		int n;
+		int size;
+		cin >> n >> size;
+		auto a = new int[n];
+		for(int i = 0; i < n; i++) {
+			cin >> a[i];
+		}
+		reverse(a, size);
+		for(int i = 0; i < n; i++) {
+			cout << a[i] << " ";
+		}
+		delete[] a;
+		return 0;
+	}
+
+	void acwing816::reverse(int a[], int size) {
+		for(int i = 0; i < size - 1 - i; i++) {
+			const int tmp   = a[i];
+			a[i]            = a[size - 1 - i];
+			a[size - 1 - i] = tmp;
+		}
+	}
 }// namespace acwing

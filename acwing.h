@@ -1454,5 +1454,14 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 		static int factorial(int n);
 	};
+
+	/**
+	 * \brief AcWing 816. 数组翻转
+	 */
+	class acwing816 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static void reverse(int a[], int size);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
