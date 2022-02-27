@@ -929,7 +929,7 @@ namespace luogu {
 		                 "--@");
 		auto out = ostringstream();
 		auto sol = P1205();
-		luogu::P1205::main(in, out);
+		P1205::main(in, out);
 		const auto ans = out.str();
 		ASSERT_EQ("1", ans);
 	}
@@ -948,7 +948,7 @@ namespace luogu {
 		                 "-----");
 		auto out = ostringstream();
 		auto sol = P1205();
-		luogu::P1205::main(in, out);
+		P1205::main(in, out);
 		const auto ans = out.str();
 		ASSERT_EQ("5", ans);
 	}
@@ -1014,5 +1014,21 @@ namespace luogu {
 		P1957::main(in, out);
 		const auto ans = out.str();
 		ASSERT_EQ("99+999=1098\n11\n", ans);
+	}
+
+	TEST(P5015, case1) {
+		istringstream in("234");
+		auto out = ostringstream();
+		P5015::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("3", ans);
+	}
+
+	TEST(P5015, case2) {
+		istringstream in("Ca 45");
+		auto out = ostringstream();
+		P5015::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("4", ans);
 	}
 }// namespace luogu

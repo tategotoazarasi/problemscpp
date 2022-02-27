@@ -1904,4 +1904,16 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P5015::main(istream &cin, ostream &cout) {
+		int ans = 0;
+		char ch;
+		while((ch = cin.get()) != EOF) {
+			if(isalnum(ch) != 0) {
+				ans++;
+			}
+		}
+		cout << ans;
+		return 0;
+	}
 }// namespace luogu
