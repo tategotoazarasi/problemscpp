@@ -3550,4 +3550,22 @@ namespace leetcode {
 			return max_diff;
 		}
 	}// namespace maximum_difference_between_increasing_elements
+
+	namespace optimal_division {
+		string Solution::optimalDivision(vector<int> &nums) {
+			auto oss = ostringstream();
+			if(nums.size() == 1) {
+				oss << nums[0];
+			} else if(nums.size() == 2) {
+				oss << nums[0] << '/' << nums[1];
+			} else {
+				oss << nums[0] << "/(";
+				for(int i = 1; i < nums.size() - 1; i++) {
+					oss << nums[i] << '/';
+				}
+				oss << nums[nums.size() - 1] << ')';
+			}
+			return oss.str();
+		}
+	}// namespace optimal_division
 }// namespace leetcode

@@ -1337,6 +1337,16 @@ namespace leetcode {
 			static int maximumDifference(vector<int> &nums);
 		};
 	}// namespace maximum_difference_between_increasing_elements
+
+	/**
+	 * \brief LeetCode 553. Optimal Division
+	 */
+	namespace optimal_division {
+		class Solution {
+		public:
+			static string optimalDivision(vector<int> &nums);
+		};
+	}// namespace optimal_division
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

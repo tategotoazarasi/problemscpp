@@ -1816,4 +1816,21 @@ namespace leetcode {
 			ASSERT_EQ(9, Solution::maximumDifference(input));
 		}
 	}// namespace maximum_difference_between_increasing_elements
+
+	namespace optimal_division {
+		TEST(optimal_division, case1) {
+			vector input = {1000, 100, 10, 2};
+			ASSERT_EQ("1000/(100/10/2)", Solution::optimalDivision(input));
+		}
+
+		TEST(optimal_division, case2) {
+			vector input = {2, 3, 4};
+			ASSERT_EQ("2/(3/4)", Solution::optimalDivision(input));
+		}
+
+		TEST(optimal_division, case3) {
+			vector input = {2};
+			ASSERT_EQ("2", Solution::optimalDivision(input));
+		}
+	}// namespace optimal_division
 }// namespace leetcode
