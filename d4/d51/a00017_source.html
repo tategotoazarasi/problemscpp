@@ -3701,29 +3701,38 @@ $(function() {
 <div class="line"><a id="l03637" name="l03637"></a><span class="lineno"> 3637</span> </div>
 <div class="line"><a id="l03638" name="l03638"></a><span class="lineno"><a class="line" href="../../d6/dfb/a00172.html"> 3638</a></span>    <span class="keyword">namespace </span>minimum_time_to_finish_the_race {</div>
 <div class="line"><a id="l03639" name="l03639"></a><span class="lineno"><a class="line" href="../../d2/dc4/a01483.html#abcfea4fe2c5acf3831cc81307e7b9891"> 3639</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d2/dc4/a01483.html#abcfea4fe2c5acf3831cc81307e7b9891">Solution::minimumFinishTime</a>(vector&lt;vector&lt;int&gt;&gt; &amp;tires, <span class="keywordtype">int</span> changeTime, <span class="keywordtype">int</span> numLaps) {</div>
-<div class="line"><a id="l03640" name="l03640"></a><span class="lineno"> 3640</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> inf = 2e8;</div>
-<div class="line"><a id="l03641" name="l03641"></a><span class="lineno"> 3641</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n   = tires.size();</div>
-<div class="line"><a id="l03642" name="l03642"></a><span class="lineno"> 3642</span>            vector&lt;int&gt; minSec(18, inf);</div>
-<div class="line"><a id="l03643" name="l03643"></a><span class="lineno"> 3643</span>            vector&lt;int&gt; sumSec(n);</div>
-<div class="line"><a id="l03644" name="l03644"></a><span class="lineno"> 3644</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = 1; x &lt;= 17; ++x) {</div>
-<div class="line"><a id="l03645" name="l03645"></a><span class="lineno"> 3645</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
-<div class="line"><a id="l03646" name="l03646"></a><span class="lineno"> 3646</span>                    sumSec[i]   = min(sumSec[i] + tires[i][0], inf);<span class="comment">// 累加该轮胎连续使用所消耗的时间</span></div>
-<div class="line"><a id="l03647" name="l03647"></a><span class="lineno"> 3647</span>                    minSec[x]   = min(minSec[x], sumSec[i]);</div>
-<div class="line"><a id="l03648" name="l03648"></a><span class="lineno"> 3648</span>                    tires[i][0] = min(<span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span><span class="keyword">&gt;</span>(tires[i][0]) * tires[i][1], <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span><span class="keyword">&gt;</span>(inf));</div>
-<div class="line"><a id="l03649" name="l03649"></a><span class="lineno"> 3649</span>                }</div>
-<div class="line"><a id="l03650" name="l03650"></a><span class="lineno"> 3650</span>            }</div>
-<div class="line"><a id="l03651" name="l03651"></a><span class="lineno"> 3651</span>            vector f(numLaps + 1, inf);</div>
-<div class="line"><a id="l03652" name="l03652"></a><span class="lineno"> 3652</span>            f[0] = -changeTime;</div>
-<div class="line"><a id="l03653" name="l03653"></a><span class="lineno"> 3653</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= numLaps; ++i) {</div>
-<div class="line"><a id="l03654" name="l03654"></a><span class="lineno"> 3654</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= min(17, i); ++j) {</div>
-<div class="line"><a id="l03655" name="l03655"></a><span class="lineno"> 3655</span>                    f[i] = min(f[i], f[i - j] + minSec[j]);</div>
-<div class="line"><a id="l03656" name="l03656"></a><span class="lineno"> 3656</span>                }</div>
-<div class="line"><a id="l03657" name="l03657"></a><span class="lineno"> 3657</span>                f[i] += changeTime;</div>
+<div class="line"><a id="l03640" name="l03640"></a><span class="lineno"> 3640</span>            <span class="comment">/* min_times[i] = 用一个轮胎跑 i 圈的最小花费 */</span></div>
+<div class="line"><a id="l03641" name="l03641"></a><span class="lineno"> 3641</span>            vector&lt;long long&gt; min_times(20, 1e9);</div>
+<div class="line"><a id="l03642" name="l03642"></a><span class="lineno"> 3642</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;v: tires) {</div>
+<div class="line"><a id="l03643" name="l03643"></a><span class="lineno"> 3643</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> f       = v[0];</div>
+<div class="line"><a id="l03644" name="l03644"></a><span class="lineno"> 3644</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> r       = v[1];</div>
+<div class="line"><a id="l03645" name="l03645"></a><span class="lineno"> 3645</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> cost    = f + changeTime;</div>
+<div class="line"><a id="l03646" name="l03646"></a><span class="lineno"> 3646</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> current = f;</div>
+<div class="line"><a id="l03647" name="l03647"></a><span class="lineno"> 3647</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> sum     = cost;</div>
+<div class="line"><a id="l03648" name="l03648"></a><span class="lineno"> 3648</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= 19; i++) {</div>
+<div class="line"><a id="l03649" name="l03649"></a><span class="lineno"> 3649</span>                    min_times[i] = min(min_times[i], sum);</div>
+<div class="line"><a id="l03650" name="l03650"></a><span class="lineno"> 3650</span>                    current *= r;</div>
+<div class="line"><a id="l03651" name="l03651"></a><span class="lineno"> 3651</span>                    <span class="keywordflow">if</span>(current &gt; cost) {</div>
+<div class="line"><a id="l03652" name="l03652"></a><span class="lineno"> 3652</span>                        current = f;</div>
+<div class="line"><a id="l03653" name="l03653"></a><span class="lineno"> 3653</span>                        sum += cost;</div>
+<div class="line"><a id="l03654" name="l03654"></a><span class="lineno"> 3654</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l03655" name="l03655"></a><span class="lineno"> 3655</span>                        sum += current;</div>
+<div class="line"><a id="l03656" name="l03656"></a><span class="lineno"> 3656</span>                    }</div>
+<div class="line"><a id="l03657" name="l03657"></a><span class="lineno"> 3657</span>                }</div>
 <div class="line"><a id="l03658" name="l03658"></a><span class="lineno"> 3658</span>            }</div>
-<div class="line"><a id="l03659" name="l03659"></a><span class="lineno"> 3659</span>            <span class="keywordflow">return</span> f[numLaps];</div>
-<div class="line"><a id="l03660" name="l03660"></a><span class="lineno"> 3660</span>        }</div>
-<div class="line"><a id="l03661" name="l03661"></a><span class="lineno"> 3661</span>    }<span class="comment">// namespace minimum_time_to_finish_the_race</span></div>
-<div class="line"><a id="l03662" name="l03662"></a><span class="lineno"> 3662</span>}<span class="comment">// namespace leetcode</span></div>
+<div class="line"><a id="l03659" name="l03659"></a><span class="lineno"> 3659</span>            <span class="comment">/* dp[i] = 跑 i 圈的最小花费 */</span></div>
+<div class="line"><a id="l03660" name="l03660"></a><span class="lineno"> 3660</span>            vector&lt;long long&gt; dp(numLaps + 1, 1e9);</div>
+<div class="line"><a id="l03661" name="l03661"></a><span class="lineno"> 3661</span>            dp[0] = 0;</div>
+<div class="line"><a id="l03662" name="l03662"></a><span class="lineno"> 3662</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= numLaps; i++) {</div>
+<div class="line"><a id="l03663" name="l03663"></a><span class="lineno"> 3663</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= min(19, i); j++) {</div>
+<div class="line"><a id="l03664" name="l03664"></a><span class="lineno"> 3664</span>                    dp[i] = min(dp[i], dp[i - j] + min_times[j]);</div>
+<div class="line"><a id="l03665" name="l03665"></a><span class="lineno"> 3665</span>                }</div>
+<div class="line"><a id="l03666" name="l03666"></a><span class="lineno"> 3666</span>            }</div>
+<div class="line"><a id="l03667" name="l03667"></a><span class="lineno"> 3667</span>            <span class="comment">/* 最后需要减去一次换轮胎的时间 */</span></div>
+<div class="line"><a id="l03668" name="l03668"></a><span class="lineno"> 3668</span>            <span class="keywordflow">return</span> dp[numLaps] - changeTime;</div>
+<div class="line"><a id="l03669" name="l03669"></a><span class="lineno"> 3669</span>        }</div>
+<div class="line"><a id="l03670" name="l03670"></a><span class="lineno"> 3670</span>    }<span class="comment">// namespace minimum_time_to_finish_the_race</span></div>
+<div class="line"><a id="l03671" name="l03671"></a><span class="lineno"> 3671</span>}<span class="comment">// namespace leetcode</span></div>
 <div class="ttc" id="aa00005_html"><div class="ttname"><a href="../../dd/dad/a00005.html">leetcode.h</a></div></div>
 <div class="ttc" id="aa00052_html_af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977"><div class="ttname"><a href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">acwing::acwing1929::left</a></div><div class="ttdeci">@ left</div><div class="ttdoc">左</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d41/a00038_source.html#l00543">acwing.h:543</a></div></div>
 <div class="ttc" id="aa00052_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d41/a00038_source.html#l00545">acwing.h:545</a></div></div>
