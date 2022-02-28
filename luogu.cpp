@@ -1916,4 +1916,50 @@ namespace luogu {
 		cout << ans;
 		return 0;
 	}
+
+	int P5734::main(istream &cin, ostream &cout) {
+		string doc;
+		int n;
+		cin >> n >> doc;
+		int op;
+		for(int i = 0; i < n; i++) {
+			cin >> op;
+			switch(op) {
+				case 1: {
+					string str;
+					cin >> str;
+					doc.insert(doc.end(), str.begin(), str.end());
+					cout << doc << endl;
+					break;
+				}
+				case 2: {
+					int a, b;
+					cin >> a >> b;
+					doc = doc.substr(a, b);
+					cout << doc << endl;
+					break;
+				}
+				case 3: {
+					int a;
+					string str;
+					cin >> a >> str;
+					doc.insert(doc.begin() + a, str.begin(), str.end());
+					cout << doc << endl;
+					break;
+				}
+				case 4: {
+					string str;
+					cin >> str;
+					auto ans = doc.find(str);
+					if(ans == string::npos) {
+						cout << -1 << endl;
+					} else {
+						cout << ans << endl;
+					}
+					break;
+				}
+			}
+		}
+		return 0;
+	}
 }// namespace luogu

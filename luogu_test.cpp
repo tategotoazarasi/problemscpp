@@ -1031,4 +1031,40 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("4", ans);
 	}
+
+	TEST(P5734, case1) {
+		istringstream in("4\n"
+		                 "ILove\n"
+		                 "1 Luogu\n"
+		                 "2 5 5\n"
+		                 "3 3 guGugu\n"
+		                 "4 gu");
+		auto out = ostringstream();
+		P5734::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("ILoveLuogu\n"
+		          "Luogu\n"
+		          "LuoguGugugu\n"
+		          "3\n",
+		          ans);
+	}
+
+	TEST(P5734, case2) {
+		istringstream in("5\n"
+		                 "ILove\n"
+		                 "1 Luogu\n"
+		                 "2 5 5\n"
+		                 "3 3 guGugu\n"
+		                 "4 gu\n"
+		                 "4 fafa");
+		auto out = ostringstream();
+		P5734::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("ILoveLuogu\n"
+		          "Luogu\n"
+		          "LuoguGugugu\n"
+		          "3\n"
+		          "-1\n",
+		          ans);
+	}
 }// namespace luogu
