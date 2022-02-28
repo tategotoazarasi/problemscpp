@@ -1463,5 +1463,12 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 		static void reverse(int a[], int size);
 	};
+
+	/// \brief AcWing 820. 递归求斐波那契数列
+	class acwing820 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static int fibb(int n);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

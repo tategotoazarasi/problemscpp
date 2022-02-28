@@ -4701,4 +4701,19 @@ namespace acwing {
 			a[size - 1 - i] = tmp;
 		}
 	}
+
+	int acwing820::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		cout << fibb(n);
+		return 0;
+	}
+
+	int acwing820::fibb(int n) {
+		if(n <= 2) {
+			return 1;
+		} else {
+			return fibb(n - 1) + fibb(n - 2);
+		}
+	}
 }// namespace acwing
