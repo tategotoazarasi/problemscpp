@@ -1470,5 +1470,13 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 		static int fibb(int n);
 	};
+
+	/// \brief AcWing 817. 数组去重
+	class acwing817 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		/// \brief 返回数组前n个数中的不同数的个数
+		static int get_unique_count(int a[], int n);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

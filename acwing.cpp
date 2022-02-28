@@ -4716,4 +4716,24 @@ namespace acwing {
 			return fibb(n - 1) + fibb(n - 2);
 		}
 	}
+
+	int acwing817::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		int *a = new int[n];
+		for(int i = 0; i < n; i++) {
+			cin >> a[i];
+		}
+		cout << get_unique_count(a, n);
+		delete[] a;
+		return 0;
+	}
+
+	int acwing817::get_unique_count(int *a, int n) {
+		unordered_set<int> um;
+		for(int i = 0; i < n; i++) {
+			um.insert(a[i]);
+		}
+		return um.size();
+	}
 }// namespace acwing
