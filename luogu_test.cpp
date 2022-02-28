@@ -1067,4 +1067,31 @@ namespace luogu {
 		          "-1\n",
 		          ans);
 	}
+
+	TEST(P1308, case1) {
+		istringstream in("To\n"
+		                 "to be or not to be is a question");
+		auto out = ostringstream();
+		P1308::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2 0", ans);
+	}
+
+	TEST(P1308, case2) {
+		istringstream in("to\n"
+		                 "Did the Ottoman Empire lose its power at that time");
+		auto out = ostringstream();
+		P1308::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("-1", ans);
+	}
+
+	TEST(P1308, case3) {
+		istringstream in("td\n"
+		                 "  Td tLWCsrmt");
+		auto out = ostringstream();
+		P1308::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1 2", ans);
+	}
 }// namespace luogu

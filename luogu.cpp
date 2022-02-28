@@ -1962,4 +1962,43 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P1308::main(istream &cin, ostream &cout) {
+		int sum       = 0;
+		int pos       = -1;
+		char *target  = new char[11];
+		char *article = new char[1000001];
+		cin.getline(target, 11);
+		for(int i = 0; i < strlen(target); i++) {
+			target[i] = tolower(target[i]);
+		}
+		cin.getline(article, 1000001);
+
+		for(int i = 0; i + strlen(target) <= strlen(article); i++) {
+			if(!((i == 0 || article[i - 1] == ' ') && (i + strlen(target) == strlen(article) || article[i + strlen(target)] == ' '))) {
+				continue;
+			}
+			bool ok = true;
+			for(int j = 0; j < strlen(target); j++) {
+				if(target[j] != tolower(article[i + j])) {
+					ok = false;
+					break;
+				}
+			}
+			if(ok) {
+				sum++;
+				if(pos == -1) {
+					pos = i;
+				}
+			}
+		}
+		if(sum == 0) {
+			cout << -1;
+		} else {
+			cout << sum << " " << pos;
+		}
+		delete[] target;
+		delete[] article;
+		return 0;
+	}
 }// namespace luogu
