@@ -1387,6 +1387,14 @@ namespace leetcode {
 			static int minimumFinishTime(vector<vector<int>> &tires, int changeTime, int numLaps);
 		};
 	}// namespace minimum_time_to_finish_the_race
+
+	/// \brief LeetCode 1601. Maximum Number of Achievable Transfer Requests
+	namespace maximum_number_of_achievable_transfer_requests {
+		class Solution {
+		public:
+			static int maximumRequests(int n, vector<vector<int>> &requests);
+		};
+	}// namespace maximum_number_of_achievable_transfer_requests
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

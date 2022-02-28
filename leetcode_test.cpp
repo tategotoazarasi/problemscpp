@@ -1884,4 +1884,21 @@ namespace leetcode {
 			ASSERT_EQ(25, Solution::minimumFinishTime(input, 6, 5));
 		}
 	}// namespace minimum_time_to_finish_the_race
+
+	namespace maximum_number_of_achievable_transfer_requests {
+		TEST(maximum_number_of_achievable_transfer_requests, case1) {
+			vector<vector<int>> input = {{0, 1}, {1, 0}, {0, 1}, {1, 2}, {2, 0}, {3, 4}};
+			ASSERT_EQ(5, Solution::maximumRequests(5, input));
+		}
+
+		TEST(maximum_number_of_achievable_transfer_requests, case2) {
+			vector<vector<int>> input = {{0, 0}, {1, 2}, {2, 1}};
+			ASSERT_EQ(3, Solution::maximumRequests(3, input));
+		}
+
+		TEST(maximum_number_of_achievable_transfer_requests, case3) {
+			vector<vector<int>> input = {{0, 3}, {3, 1}, {1, 2}, {2, 0}};
+			ASSERT_EQ(4, Solution::maximumRequests(4, input));
+		}
+	}// namespace maximum_number_of_achievable_transfer_requests
 }// namespace leetcode

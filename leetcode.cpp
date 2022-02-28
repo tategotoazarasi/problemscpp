@@ -3668,4 +3668,35 @@ namespace leetcode {
 			return dp[numLaps] - changeTime;
 		}
 	}// namespace minimum_time_to_finish_the_race
+
+	namespace maximum_number_of_achievable_transfer_requests {
+		int Solution::maximumRequests(int n, vector<vector<int>> &requests) {
+			int ans = 0;
+			for(unsigned int i = 0; i < (1 << requests.size()); i++) {
+				int *in  = new int[n];
+				int *out = new int[n];
+				memset(in, 0, n * sizeof(int));
+				memset(out, 0, n * sizeof(int));
+				for(unsigned int j = 0; j < requests.size(); j++) {
+					if((i & (1 << j)) != 0) {
+						out[requests[j][0]]++;
+						in[requests[j][1]]++;
+					}
+				}
+				bool ok = true;
+				for(int j = 0; j < n; j++) {
+					if(out[j] != in[j]) {
+						ok = false;
+						break;
+					}
+				}
+				if(ok) {
+					ans = max(ans, popcount(i));
+				}
+				delete[] in;
+				delete[] out;
+			}
+			return ans;
+		}
+	}// namespace maximum_number_of_achievable_transfer_requests
 }// namespace leetcode
