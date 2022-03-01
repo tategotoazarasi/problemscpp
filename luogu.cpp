@@ -2016,4 +2016,29 @@ namespace luogu {
 		cout << ans;
 		return 0;
 	}
+
+	int P3741::main(istream &cin, ostream &cout) {
+		int n;
+		bool flag = false;
+		int ans   = 0;
+		cin >> n;
+		string str;
+		cin >> str;
+		for(int i = 0; i < n - 1; i++) {
+			if(str[i] == 'V') {
+				if(str[i + 1] == 'K') {
+					ans++;
+				} else if((i + 2 == n) || (i + 2 < n && str[i + 2] != 'K')) {
+					flag = true;
+				}
+			} else if(str[i + 1] == 'K' && ((i - 1 >= 0 && str[i - 1] != 'V') || (i == 0))) {
+				flag = true;
+			}
+		}
+		if(flag) {
+			ans++;
+		}
+		cout << ans;
+		return 0;
+	}
 }// namespace luogu
