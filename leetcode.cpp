@@ -3699,4 +3699,45 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace maximum_number_of_achievable_transfer_requests
+
+	namespace zigzag_conversion {
+		string Solution::convert(string s, int numRows) {
+			if(numRows == 1) {
+				return s;
+			}
+			ostringstream oss = ostringstream();
+			char **m          = new char *[numRows];
+			for(int i = 0; i < numRows; i++) {
+				m[i] = new char[s.length()];
+				memset(m[i], ' ', s.length() * sizeof(char));
+			}
+			int current_x = 0;
+			int current_y = 0;
+			bool dir      = true;// true = 下, false = 斜
+			for(char ch: s) {
+				m[current_x][current_y] = ch;
+				if((dir && current_x == numRows - 1) || (!dir && current_x == 0)) {
+					dir = !dir;
+				}
+				if(dir) {
+					current_x++;
+				} else {
+					current_x--;
+					current_y++;
+				}
+			}
+			for(int i = 0; i < numRows; i++) {
+				for(int j = 0; j <= min(current_y, static_cast<int>(s.length() - 1)); j++) {
+					if(m[i][j] != ' ') {
+						oss << m[i][j];
+					}
+				}
+			}
+			for(int i = 0; i < numRows; i++) {
+				delete[] m[i];
+			}
+			delete[] m;
+			return oss.str();
+		}
+	}// namespace zigzag_conversion
 }// namespace leetcode

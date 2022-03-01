@@ -1901,4 +1901,18 @@ namespace leetcode {
 			ASSERT_EQ(4, Solution::maximumRequests(4, input));
 		}
 	}// namespace maximum_number_of_achievable_transfer_requests
+
+	namespace zigzag_conversion {
+		TEST(zigzag_conversion, case1) {
+			ASSERT_EQ("PAHNAPLSIIGYIR", Solution::convert("PAYPALISHIRING", 3));
+		}
+
+		TEST(zigzag_conversion, case2) {
+			ASSERT_EQ("PINALSIGYAHRPI", Solution::convert("PAYPALISHIRING", 4));
+		}
+
+		TEST(zigzag_conversion, case3) {
+			ASSERT_EQ("A", Solution::convert("A", 1));
+		}
+	}// namespace zigzag_conversion
 }// namespace leetcode

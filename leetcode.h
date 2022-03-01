@@ -1395,6 +1395,14 @@ namespace leetcode {
 			static int maximumRequests(int n, vector<vector<int>> &requests);
 		};
 	}// namespace maximum_number_of_achievable_transfer_requests
+
+	/// \brief LeetCode 6. ZigZag Conversion
+	namespace zigzag_conversion {
+		class Solution {
+		public:
+			static string convert(string s, int numRows);
+		};
+	}// namespace zigzag_conversion
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
