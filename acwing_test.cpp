@@ -2300,4 +2300,12 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("4 5 1 2 3 ", ans);
 	}
+
+	TEST(acwing821, case1) {
+		istringstream in("5");
+		auto out = ostringstream();
+		acwing821::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("8", ans);
+	}
 }// namespace acwing

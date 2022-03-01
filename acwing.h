@@ -1485,5 +1485,11 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 		static void sort(int a[], int l, int r);
 	};
+
+	/// \brief AcWing 821. 跳台阶
+	class acwing821 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
