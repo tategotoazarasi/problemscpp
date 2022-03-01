@@ -1094,4 +1094,12 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("1 2", ans);
 	}
+
+	TEST(P1765, case1) {
+		istringstream in("i have a dream");
+		auto out = ostringstream();
+		P1765::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("23", ans);
+	}
 }// namespace luogu

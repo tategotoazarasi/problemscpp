@@ -2001,4 +2001,19 @@ namespace luogu {
 		delete[] article;
 		return 0;
 	}
+
+	int P1765::main(istream &cin, ostream &cout) {
+		int ans      = 0;
+		int nums[26] = {1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 1, 2, 3, 4};
+		char ch;
+		while((ch = cin.get()) != EOF) {
+			if(ch == ' ') {
+				ans++;
+			} else if(isalpha(ch)) {
+				ans += nums[ch - 'a'];
+			}
+		}
+		cout << ans;
+		return 0;
+	}
 }// namespace luogu
