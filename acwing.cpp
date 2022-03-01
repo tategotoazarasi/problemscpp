@@ -4736,4 +4736,57 @@ namespace acwing {
 		}
 		return um.size();
 	}
+
+	int acwing818::main(istream &cin, ostream &cout) {
+		int n, l, r;
+		cin >> n >> l >> r;
+		int *a = new int[n];
+		for(int i = 0; i < n; i++) {
+			cin >> a[i];
+		}
+		sort(a, l, r);
+		for(int i = 0; i < n; i++) {
+			cout << a[i] << " ";
+		}
+		delete[] a;
+		return 0;
+	}
+
+	void acwing818::sort(int *a, int l, int r) {
+		if(l == r) {
+			return;
+		}
+		if(l + 1 == r) {
+			if(a[l] < a[r]) {
+				return;
+			} else {
+				int tmp = a[l];
+				a[l]    = a[r];
+				a[r]    = tmp;
+			}
+		}
+		int m = a[(l + r) / 2];
+		deque<int> dq;
+		int cursor = l;
+		dq.push_back(m);
+		for(int i = l; i <= r; i++) {
+			if(i != (l + r) / 2) {
+				if(a[i] <= m) {
+					dq.push_front(a[i]);
+					cursor++;
+				} else {
+					dq.push_back(a[i]);
+				}
+			}
+		}
+		for(int i = l; i <= r; i++) {
+			a[i] = dq[i - l];
+		}
+		if(l <= cursor - 1) {
+			sort(a, l, cursor - 1);
+		}
+		if(r >= cursor + 1) {
+			sort(a, cursor + 1, r);
+		}
+	}
 }// namespace acwing

@@ -1478,5 +1478,12 @@ namespace acwing {
 		/// \brief 返回数组前n个数中的不同数的个数
 		static int get_unique_count(int a[], int n);
 	};
+
+	/// \brief AcWing 818. 数组排序
+	class acwing818 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static void sort(int a[], int l, int r);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
