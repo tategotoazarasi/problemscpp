@@ -4809,4 +4809,18 @@ namespace acwing {
 		delete[] dp;
 		return 0;
 	}
+
+	int acwing822::main(istream &cin, ostream &cout) {
+		int n, m;
+		cin >> n >> m;
+		int sum                       = n + m;
+		unsigned long long *factorial = new unsigned long long[sum + 1];
+		factorial[1]                  = 1;
+		for(int i = 2; i <= sum; i++) {
+			factorial[i] = i * factorial[i - 1];
+		}
+		cout << factorial[sum] / (factorial[n] * factorial[m]);
+		delete[] factorial;
+		return 0;
+	}
 }// namespace acwing
