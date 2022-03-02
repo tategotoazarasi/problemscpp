@@ -1934,7 +1934,8 @@ namespace luogu {
 					break;
 				}
 				case 2: {
-					int a, b;
+					int a;
+					int b;
 					cin >> a >> b;
 					doc = doc.substr(a, b);
 					cout << doc << endl;
@@ -1951,7 +1952,7 @@ namespace luogu {
 				case 4: {
 					string str;
 					cin >> str;
-					auto ans = doc.find(str);
+					const auto ans = doc.find(str);
 					if(ans == string::npos) {
 						cout << -1 << endl;
 					} else {
@@ -1967,8 +1968,8 @@ namespace luogu {
 	int P1308::main(istream &cin, ostream &cout) {
 		int sum       = 0;
 		int pos       = -1;
-		char *target  = new char[11];
-		char *article = new char[1000001];
+		auto *target  = new char[11];
+		auto *article = new char[1000001];
 		cin.getline(target, 11);
 		for(int i = 0; i < strlen(target); i++) {
 			target[i] = tolower(target[i]);
@@ -2004,13 +2005,13 @@ namespace luogu {
 	}
 
 	int P1765::main(istream &cin, ostream &cout) {
-		int ans      = 0;
-		int nums[26] = {1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 1, 2, 3, 4};
+		int ans            = 0;
+		const int nums[26] = {1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 1, 2, 3, 4};
 		char ch;
 		while((ch = cin.get()) != EOF) {
 			if(ch == ' ') {
 				ans++;
-			} else if(isalpha(ch)) {
+			} else if(isalpha(ch) != 0) {
 				ans += nums[ch - 'a'];
 			}
 		}
@@ -2029,10 +2030,10 @@ namespace luogu {
 			if(str[i] == 'V') {
 				if(str[i + 1] == 'K') {
 					ans++;
-				} else if((i + 2 == n) || (i + 2 < n && str[i + 2] != 'K')) {
+				} else if(i + 2 == n || i + 2 < n && str[i + 2] != 'K') {
 					flag = true;
 				}
-			} else if(str[i + 1] == 'K' && ((i - 1 >= 0 && str[i - 1] != 'V') || (i == 0))) {
+			} else if(str[i + 1] == 'K' && (i - 1 >= 0 && str[i - 1] != 'V' || i == 0)) {
 				flag = true;
 			}
 		}
@@ -2069,10 +2070,9 @@ namespace luogu {
 		int limit   = 1;
 		char op     = 'N';
 		char ch;
-		bool flag = true;
 		while(cin >> ch) {
-			if(isdigit(ch)) {
-				flag = false;
+			if(isdigit(ch) != 0) {
+				bool flag = false;
 				dq[current].push_front(ch);
 			} else {
 				op = ch;

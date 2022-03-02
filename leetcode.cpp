@@ -3640,11 +3640,11 @@ namespace leetcode {
 			/* min_times[i] = 用一个轮胎跑 i 圈的最小花费 */
 			vector<long long> min_times(20, 1e9);
 			for(auto &v: tires) {
-				long long f       = v[0];
-				long long r       = v[1];
-				long long cost    = f + changeTime;///< 第一次用该轮胎的耗费
-				long long current = f;
-				long long sum     = cost;
+				const long long f    = v[0];
+				const long long r    = v[1];
+				const long long cost = f + changeTime;///< 第一次用该轮胎的耗费
+				long long current    = f;
+				long long sum        = cost;
 				for(int i = 1; i <= 19; i++) {
 					min_times[i] = min(min_times[i], sum);
 					current *= r;
@@ -3672,13 +3672,13 @@ namespace leetcode {
 	namespace maximum_number_of_achievable_transfer_requests {
 		int Solution::maximumRequests(int n, vector<vector<int>> &requests) {
 			int ans = 0;
-			for(unsigned int i = 0; i < (1 << requests.size()); i++) {
-				int *in  = new int[n];
-				int *out = new int[n];
+			for(unsigned int i = 0; i < 1 << requests.size(); i++) {
+				auto *in  = new int[n];
+				auto *out = new int[n];
 				memset(in, 0, n * sizeof(int));
 				memset(out, 0, n * sizeof(int));
 				for(unsigned int j = 0; j < requests.size(); j++) {
-					if((i & (1 << j)) != 0) {
+					if((i & 1 << j) != 0) {
 						out[requests[j][0]]++;
 						in[requests[j][1]]++;
 					}
@@ -3705,8 +3705,8 @@ namespace leetcode {
 			if(numRows == 1) {
 				return s;
 			}
-			ostringstream oss = ostringstream();
-			char **m          = new char *[numRows];
+			auto oss = ostringstream();
+			auto *m  = new char *[numRows];
 			for(int i = 0; i < numRows; i++) {
 				m[i] = new char[s.length()];
 				memset(m[i], ' ', s.length() * sizeof(char));
@@ -3714,9 +3714,9 @@ namespace leetcode {
 			int current_x = 0;
 			int current_y = 0;
 			bool dir      = true;// true = 下, false = 斜
-			for(char ch: s) {
+			for(const char ch: s) {
 				m[current_x][current_y] = ch;
-				if((dir && current_x == numRows - 1) || (!dir && current_x == 0)) {
+				if(dir && current_x == numRows - 1 || !dir && current_x == 0) {
 					dir = !dir;
 				}
 				if(dir) {
@@ -3742,27 +3742,22 @@ namespace leetcode {
 	}// namespace zigzag_conversion
 
 	namespace find_the_closest_palindrome {
-		string Solution::nearestPalindromic(string n) {
-			bool even;
-			long long num = stoll(n);
+		string Solution::nearestPalindromic(const string &n) {
+			const long long num = stoll(n);
 			if(num == 10 || num == 11) {
 				return "9";
 			}
 			if(num < 10) {
 				return to_string(num - 1);
 			}
-			int len = n.length();
-			if(n.length() % 2 == 0) {
-				even = true;
-			} else {
-				even = false;
-			}
+			int len       = n.length();
+			bool even     = n.length() % 2 == 0;
 			string prefix = n.substr(0, n.length() / 2 + (even ? 0 : 1));
 			string option_str[3];
-			string rev              = string(prefix.rbegin() + (even ? 0 : 1), prefix.rend());
-			option_str[2]           = prefix + rev;
-			long long prefix_int[2] = {stoll(prefix) - 1, stoll(prefix) + 1};
-			string prefix_str[2]    = {to_string(prefix_int[0]), to_string(prefix_int[1])};
+			auto rev                      = string(prefix.rbegin() + (even ? 0 : 1), prefix.rend());
+			option_str[2]                 = prefix + rev;
+			const long long prefix_int[2] = {stoll(prefix) - 1, stoll(prefix) + 1};
+			string prefix_str[2]          = {to_string(prefix_int[0]), to_string(prefix_int[1])};
 			for(int i = 0; i < 2; i++) {
 				if(prefix_str[i].length() == prefix.length()) {
 					rev           = string(prefix_str[i].rbegin() + (even ? 0 : 1), prefix_str[i].rend());

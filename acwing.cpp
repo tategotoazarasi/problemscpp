@@ -4682,7 +4682,7 @@ namespace acwing {
 		int n;
 		int size;
 		cin >> n >> size;
-		auto a = new int[n];
+		auto *a = new int[n];
 		for(int i = 0; i < n; i++) {
 			cin >> a[i];
 		}
@@ -4712,15 +4712,14 @@ namespace acwing {
 	int acwing820::fibb(int n) {
 		if(n <= 2) {
 			return 1;
-		} else {
-			return fibb(n - 1) + fibb(n - 2);
 		}
+		return fibb(n - 1) + fibb(n - 2);
 	}
 
 	int acwing817::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		int *a = new int[n];
+		auto *a = new int[n];
 		for(int i = 0; i < n; i++) {
 			cin >> a[i];
 		}
@@ -4738,9 +4737,11 @@ namespace acwing {
 	}
 
 	int acwing818::main(istream &cin, ostream &cout) {
-		int n, l, r;
+		int n;
+		int l;
+		int r;
 		cin >> n >> l >> r;
-		int *a = new int[n];
+		auto *a = new int[n];
 		for(int i = 0; i < n; i++) {
 			cin >> a[i];
 		}
@@ -4759,13 +4760,12 @@ namespace acwing {
 		if(l + 1 == r) {
 			if(a[l] < a[r]) {
 				return;
-			} else {
-				int tmp = a[l];
-				a[l]    = a[r];
-				a[r]    = tmp;
 			}
+			const int tmp = a[l];
+			a[l]          = a[r];
+			a[r]          = tmp;
 		}
-		int m = a[(l + r) / 2];
+		const int m = a[(l + r) / 2];
 		deque<int> dq;
 		int cursor = l;
 		dq.push_back(m);
@@ -4793,7 +4793,7 @@ namespace acwing {
 	int acwing821::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
-		int *dp = new int[n + 1];
+		auto *dp = new int[n + 1];
 		memset(dp, 0, (n + 1) * sizeof(int));
 		dp[1] = 1;
 		dp[2] = 1;
@@ -4811,11 +4811,12 @@ namespace acwing {
 	}
 
 	int acwing822::main(istream &cin, ostream &cout) {
-		int n, m;
+		int n;
+		int m;
 		cin >> n >> m;
-		int sum                       = n + m;
-		unsigned long long *factorial = new unsigned long long[sum + 1];
-		factorial[1]                  = 1;
+		const int sum   = n + m;
+		auto *factorial = new unsigned long long[sum + 1];
+		factorial[1]    = 1;
 		for(int i = 2; i <= sum; i++) {
 			factorial[i] = i * factorial[i - 1];
 		}
@@ -4838,7 +4839,7 @@ namespace acwing {
 
 	void acwing823::dfs(vector<int> &vec, set<int> &s, ostream &cout) {
 		if(s.empty()) {
-			for(int i: vec) {
+			for(const int i: vec) {
 				cout << i << " ";
 			}
 			cout << endl;

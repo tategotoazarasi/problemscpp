@@ -1408,7 +1408,7 @@ namespace leetcode {
 	namespace find_the_closest_palindrome {
 		class Solution {
 		public:
-			static string nearestPalindromic(string n);
+			static string nearestPalindromic(const string &n);
 		};
 	}// namespace find_the_closest_palindrome
 };   // namespace leetcode
