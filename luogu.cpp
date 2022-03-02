@@ -2041,4 +2041,23 @@ namespace luogu {
 		cout << ans;
 		return 0;
 	}
+
+	int P1321::main(istream &cin, ostream &cout) {
+		string str;
+		string boygirl[] = {"boy", "girl"};
+		cin >> str;
+		for(auto word: boygirl) {
+			int count = 0;
+			for(int i = 0; i + word.length() - 1 < str.length(); i++) {
+				for(int j = 0; j < word.length(); j++) {
+					if(word[j] == str[i + j]) {
+						count++;
+						break;
+					}
+				}
+			}
+			cout << count << endl;
+		}
+		return 0;
+	}
 }// namespace luogu

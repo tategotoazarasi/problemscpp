@@ -1156,4 +1156,14 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("7", ans);
 	}
+
+	TEST(P1321, case1) {
+		istringstream in("......boyogirlyy......girl.......");
+		auto out = ostringstream();
+		P1321::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("4\n"
+		          "2\n",
+		          ans);
+	}
 }// namespace luogu
