@@ -3740,4 +3740,50 @@ namespace leetcode {
 			return oss.str();
 		}
 	}// namespace zigzag_conversion
+
+	namespace find_the_closest_palindrome {
+		string Solution::nearestPalindromic(string n) {
+			bool even;
+			long long num = stoll(n);
+			if(num == 10 || num == 11) {
+				return "9";
+			}
+			if(num < 10) {
+				return to_string(num - 1);
+			}
+			int len = n.length();
+			if(n.length() % 2 == 0) {
+				even = true;
+			} else {
+				even = false;
+			}
+			string prefix = n.substr(0, n.length() / 2 + (even ? 0 : 1));
+			string option_str[3];
+			string rev              = string(prefix.rbegin() + (even ? 0 : 1), prefix.rend());
+			option_str[2]           = prefix + rev;
+			long long prefix_int[2] = {stoll(prefix) - 1, stoll(prefix) + 1};
+			string prefix_str[2]    = {to_string(prefix_int[0]), to_string(prefix_int[1])};
+			for(int i = 0; i < 2; i++) {
+				if(prefix_str[i].length() == prefix.length()) {
+					rev           = string(prefix_str[i].rbegin() + (even ? 0 : 1), prefix_str[i].rend());
+					option_str[i] = prefix_str[i] + rev;
+				} else if(prefix_str[i].length() > prefix.length()) {
+					rev           = string(prefix_str[i].rbegin() + (even ? 1 : 2), prefix_str[i].rend());
+					option_str[i] = prefix_str[i] + rev;
+				} else if(prefix_str[i].length() < prefix.length()) {
+					rev           = string(prefix_str[i].rbegin(), prefix_str[i].rend());
+					option_str[i] = prefix_str[i] + (even ? "9" : "") + rev;
+				}
+			}
+			long long option_int[3] = {stoll(option_str[0]), stoll(option_str[1]), stoll(option_str[2])};
+			sort(option_int, option_int + 3);
+			long long minimum = option_int[0];
+			for(int i = 1; i < 3; i++) {
+				if(abs(option_int[i] - num) < abs(minimum - num) && option_int[i] != num) {
+					minimum = option_int[i];
+				}
+			}
+			return to_string(minimum);
+		}
+	}// namespace find_the_closest_palindrome
 }// namespace leetcode

@@ -1915,4 +1915,42 @@ namespace leetcode {
 			ASSERT_EQ("A", Solution::convert("A", 1));
 		}
 	}// namespace zigzag_conversion
+
+	namespace find_the_closest_palindrome {
+		TEST(find_the_closest_palindrome, case1) {
+			ASSERT_EQ("121", Solution::nearestPalindromic("123"));
+		}
+
+		TEST(find_the_closest_palindrome, case2) {
+			ASSERT_EQ("0", Solution::nearestPalindromic("1"));
+		}
+
+		TEST(find_the_closest_palindrome, case3) {
+			ASSERT_EQ("1221", Solution::nearestPalindromic("1234"));
+		}
+
+		TEST(find_the_closest_palindrome, case4) {
+			ASSERT_EQ("1001", Solution::nearestPalindromic("999"));
+		}
+
+		TEST(find_the_closest_palindrome, case5) {
+			ASSERT_EQ("999", Solution::nearestPalindromic("1000"));
+		}
+
+		TEST(find_the_closest_palindrome, case6) {
+			ASSERT_EQ("12921", Solution::nearestPalindromic("12932"));
+		}
+
+		TEST(find_the_closest_palindrome, case7) {
+			ASSERT_EQ("99799", Solution::nearestPalindromic("99800"));
+		}
+
+		TEST(find_the_closest_palindrome, case8) {
+			ASSERT_EQ("12121", Solution::nearestPalindromic("12120"));
+		}
+
+		TEST(find_the_closest_palindrome, case9) {
+			ASSERT_EQ("1805115081", Solution::nearestPalindromic("1805170081"));
+		}
+	}// namespace find_the_closest_palindrome
 }// namespace leetcode

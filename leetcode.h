@@ -1403,6 +1403,14 @@ namespace leetcode {
 			static string convert(string s, int numRows);
 		};
 	}// namespace zigzag_conversion
+
+	/// \brief LeetCode 564. Find the Closest Palindrome
+	namespace find_the_closest_palindrome {
+		class Solution {
+		public:
+			static string nearestPalindromic(string n);
+		};
+	}// namespace find_the_closest_palindrome
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
