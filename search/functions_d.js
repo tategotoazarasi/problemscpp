@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['nearestpalindromic_0',['nearestPalindromic',['../da/da6/a01522.html#a1425f163963850862f462d4039219d14',1,'leetcode::find_the_closest_palindrome::Solution']]],
+  ['nearestpalindromic_0',['nearestPalindromic',['../da/da6/a01522.html#a1738d6434ffd50b1b957111bc4dc2eff',1,'leetcode::find_the_closest_palindrome::Solution']]],
   ['no2_1',['no2',['../d1/d7e/a00434.html#aa804223b2bac5e209415b34dc5e8d550',1,'acwing::acwing4211']]],
   ['no3_2',['no3',['../d1/d7e/a00434.html#aab5d5df106b2b1946fe87985a4b94015',1,'acwing::acwing4211']]],
   ['numberofarrays_3',['numberOfArrays',['../dc/d19/a01190.html#aa2f8a5ba196ee6c8db0470fbb67dd7cc',1,'leetcode::count_the_hidden_sequences::Solution']]],

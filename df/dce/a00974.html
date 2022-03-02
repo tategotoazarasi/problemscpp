@@ -131,24 +131,24 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04839">4839</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04839" name="l04839"></a><span class="lineno"> 4839</span>                                                                    {</div>
-<div class="line"><a id="l04840" name="l04840"></a><span class="lineno"> 4840</span>        <span class="keywordflow">if</span>(s.empty()) {</div>
-<div class="line"><a id="l04841" name="l04841"></a><span class="lineno"> 4841</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i: vec) {</div>
-<div class="line"><a id="l04842" name="l04842"></a><span class="lineno"> 4842</span>                cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a id="l04843" name="l04843"></a><span class="lineno"> 4843</span>            }</div>
-<div class="line"><a id="l04844" name="l04844"></a><span class="lineno"> 4844</span>            cout &lt;&lt; endl;</div>
-<div class="line"><a id="l04845" name="l04845"></a><span class="lineno"> 4845</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l04846" name="l04846"></a><span class="lineno"> 4846</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i: s) {</div>
-<div class="line"><a id="l04847" name="l04847"></a><span class="lineno"> 4847</span>                vector vec_cpy = vec;</div>
-<div class="line"><a id="l04848" name="l04848"></a><span class="lineno"> 4848</span>                set&lt;int&gt; s_cpy = s;</div>
-<div class="line"><a id="l04849" name="l04849"></a><span class="lineno"> 4849</span>                vec_cpy.push_back(i);</div>
-<div class="line"><a id="l04850" name="l04850"></a><span class="lineno"> 4850</span>                s_cpy.erase(i);</div>
-<div class="line"><a id="l04851" name="l04851"></a><span class="lineno"> 4851</span>                <a class="code hl_function" href="../../df/dce/a00974.html#ad0bd3299bc4813bba92520ea869dc260">dfs</a>(vec_cpy, s_cpy, cout);</div>
-<div class="line"><a id="l04852" name="l04852"></a><span class="lineno"> 4852</span>            }</div>
-<div class="line"><a id="l04853" name="l04853"></a><span class="lineno"> 4853</span>        }</div>
-<div class="line"><a id="l04854" name="l04854"></a><span class="lineno"> 4854</span>    }</div>
-<div class="ttc" id="aa00974_html_ad0bd3299bc4813bba92520ea869dc260"><div class="ttname"><a href="../../df/dce/a00974.html#ad0bd3299bc4813bba92520ea869dc260">acwing::acwing823::dfs</a></div><div class="ttdeci">static void dfs(vector&lt; int &gt; &amp;vec, set&lt; int &gt; &amp;s, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l04839">acwing.cpp:4839</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04840">4840</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04840" name="l04840"></a><span class="lineno"> 4840</span>                                                                    {</div>
+<div class="line"><a id="l04841" name="l04841"></a><span class="lineno"> 4841</span>        <span class="keywordflow">if</span>(s.empty()) {</div>
+<div class="line"><a id="l04842" name="l04842"></a><span class="lineno"> 4842</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">int</span> i: vec) {</div>
+<div class="line"><a id="l04843" name="l04843"></a><span class="lineno"> 4843</span>                cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l04844" name="l04844"></a><span class="lineno"> 4844</span>            }</div>
+<div class="line"><a id="l04845" name="l04845"></a><span class="lineno"> 4845</span>            cout &lt;&lt; endl;</div>
+<div class="line"><a id="l04846" name="l04846"></a><span class="lineno"> 4846</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l04847" name="l04847"></a><span class="lineno"> 4847</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i: s) {</div>
+<div class="line"><a id="l04848" name="l04848"></a><span class="lineno"> 4848</span>                vector vec_cpy = vec;</div>
+<div class="line"><a id="l04849" name="l04849"></a><span class="lineno"> 4849</span>                set&lt;int&gt; s_cpy = s;</div>
+<div class="line"><a id="l04850" name="l04850"></a><span class="lineno"> 4850</span>                vec_cpy.push_back(i);</div>
+<div class="line"><a id="l04851" name="l04851"></a><span class="lineno"> 4851</span>                s_cpy.erase(i);</div>
+<div class="line"><a id="l04852" name="l04852"></a><span class="lineno"> 4852</span>                <a class="code hl_function" href="../../df/dce/a00974.html#ad0bd3299bc4813bba92520ea869dc260">dfs</a>(vec_cpy, s_cpy, cout);</div>
+<div class="line"><a id="l04853" name="l04853"></a><span class="lineno"> 4853</span>            }</div>
+<div class="line"><a id="l04854" name="l04854"></a><span class="lineno"> 4854</span>        }</div>
+<div class="line"><a id="l04855" name="l04855"></a><span class="lineno"> 4855</span>    }</div>
+<div class="ttc" id="aa00974_html_ad0bd3299bc4813bba92520ea869dc260"><div class="ttname"><a href="../../df/dce/a00974.html#ad0bd3299bc4813bba92520ea869dc260">acwing::acwing823::dfs</a></div><div class="ttdeci">static void dfs(vector&lt; int &gt; &amp;vec, set&lt; int &gt; &amp;s, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l04840">acwing.cpp:4840</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -186,18 +186,18 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04827">4827</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04827" name="l04827"></a><span class="lineno"> 4827</span>                                                   {</div>
-<div class="line"><a id="l04828" name="l04828"></a><span class="lineno"> 4828</span>        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l04829" name="l04829"></a><span class="lineno"> 4829</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l04830" name="l04830"></a><span class="lineno"> 4830</span>        set&lt;int&gt; s;</div>
-<div class="line"><a id="l04831" name="l04831"></a><span class="lineno"> 4831</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
-<div class="line"><a id="l04832" name="l04832"></a><span class="lineno"> 4832</span>            s.insert(i);</div>
-<div class="line"><a id="l04833" name="l04833"></a><span class="lineno"> 4833</span>        }</div>
-<div class="line"><a id="l04834" name="l04834"></a><span class="lineno"> 4834</span>        vector&lt;int&gt; vec;</div>
-<div class="line"><a id="l04835" name="l04835"></a><span class="lineno"> 4835</span>        <a class="code hl_function" href="../../df/dce/a00974.html#ad0bd3299bc4813bba92520ea869dc260">dfs</a>(vec, s, cout);</div>
-<div class="line"><a id="l04836" name="l04836"></a><span class="lineno"> 4836</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l04837" name="l04837"></a><span class="lineno"> 4837</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04828">4828</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04828" name="l04828"></a><span class="lineno"> 4828</span>                                                   {</div>
+<div class="line"><a id="l04829" name="l04829"></a><span class="lineno"> 4829</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l04830" name="l04830"></a><span class="lineno"> 4830</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l04831" name="l04831"></a><span class="lineno"> 4831</span>        set&lt;int&gt; s;</div>
+<div class="line"><a id="l04832" name="l04832"></a><span class="lineno"> 4832</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
+<div class="line"><a id="l04833" name="l04833"></a><span class="lineno"> 4833</span>            s.insert(i);</div>
+<div class="line"><a id="l04834" name="l04834"></a><span class="lineno"> 4834</span>        }</div>
+<div class="line"><a id="l04835" name="l04835"></a><span class="lineno"> 4835</span>        vector&lt;int&gt; vec;</div>
+<div class="line"><a id="l04836" name="l04836"></a><span class="lineno"> 4836</span>        <a class="code hl_function" href="../../df/dce/a00974.html#ad0bd3299bc4813bba92520ea869dc260">dfs</a>(vec, s, cout);</div>
+<div class="line"><a id="l04837" name="l04837"></a><span class="lineno"> 4837</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l04838" name="l04838"></a><span class="lineno"> 4838</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l02320">acwing::TEST()</a>.</p>
 

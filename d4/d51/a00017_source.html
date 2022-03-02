@@ -3704,11 +3704,11 @@ $(function() {
 <div class="line"><a id="l03640" name="l03640"></a><span class="lineno"> 3640</span>            <span class="comment">/* min_times[i] = 用一个轮胎跑 i 圈的最小花费 */</span></div>
 <div class="line"><a id="l03641" name="l03641"></a><span class="lineno"> 3641</span>            vector&lt;long long&gt; min_times(20, 1e9);</div>
 <div class="line"><a id="l03642" name="l03642"></a><span class="lineno"> 3642</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;v: tires) {</div>
-<div class="line"><a id="l03643" name="l03643"></a><span class="lineno"> 3643</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> f       = v[0];</div>
-<div class="line"><a id="l03644" name="l03644"></a><span class="lineno"> 3644</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> r       = v[1];</div>
-<div class="line"><a id="l03645" name="l03645"></a><span class="lineno"> 3645</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> cost    = f + changeTime;</div>
-<div class="line"><a id="l03646" name="l03646"></a><span class="lineno"> 3646</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> current = f;</div>
-<div class="line"><a id="l03647" name="l03647"></a><span class="lineno"> 3647</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> sum     = cost;</div>
+<div class="line"><a id="l03643" name="l03643"></a><span class="lineno"> 3643</span>                <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> f    = v[0];</div>
+<div class="line"><a id="l03644" name="l03644"></a><span class="lineno"> 3644</span>                <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> r    = v[1];</div>
+<div class="line"><a id="l03645" name="l03645"></a><span class="lineno"> 3645</span>                <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> cost = f + changeTime;</div>
+<div class="line"><a id="l03646" name="l03646"></a><span class="lineno"> 3646</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> current    = f;</div>
+<div class="line"><a id="l03647" name="l03647"></a><span class="lineno"> 3647</span>                <span class="keywordtype">long</span> <span class="keywordtype">long</span> sum        = cost;</div>
 <div class="line"><a id="l03648" name="l03648"></a><span class="lineno"> 3648</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= 19; i++) {</div>
 <div class="line"><a id="l03649" name="l03649"></a><span class="lineno"> 3649</span>                    min_times[i] = min(min_times[i], sum);</div>
 <div class="line"><a id="l03650" name="l03650"></a><span class="lineno"> 3650</span>                    current *= r;</div>
@@ -3736,13 +3736,13 @@ $(function() {
 <div class="line"><a id="l03672" name="l03672"></a><span class="lineno"><a class="line" href="../../d7/d3f/a00173.html"> 3672</a></span>    <span class="keyword">namespace </span>maximum_number_of_achievable_transfer_requests {</div>
 <div class="line"><a id="l03673" name="l03673"></a><span class="lineno"><a class="line" href="../../d7/d22/a01514.html#a9c434aff18e7d7afe376ac41a7e6f85e"> 3673</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d7/d22/a01514.html#a9c434aff18e7d7afe376ac41a7e6f85e">Solution::maximumRequests</a>(<span class="keywordtype">int</span> n, vector&lt;vector&lt;int&gt;&gt; &amp;requests) {</div>
 <div class="line"><a id="l03674" name="l03674"></a><span class="lineno"> 3674</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l03675" name="l03675"></a><span class="lineno"> 3675</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; (1 &lt;&lt; requests.size()); i++) {</div>
-<div class="line"><a id="l03676" name="l03676"></a><span class="lineno"> 3676</span>                <span class="keywordtype">int</span> *in  = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
-<div class="line"><a id="l03677" name="l03677"></a><span class="lineno"> 3677</span>                <span class="keywordtype">int</span> *out = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l03675" name="l03675"></a><span class="lineno"> 3675</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 1 &lt;&lt; requests.size(); i++) {</div>
+<div class="line"><a id="l03676" name="l03676"></a><span class="lineno"> 3676</span>                <span class="keyword">auto</span> *in  = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l03677" name="l03677"></a><span class="lineno"> 3677</span>                <span class="keyword">auto</span> *out = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
 <div class="line"><a id="l03678" name="l03678"></a><span class="lineno"> 3678</span>                memset(in, 0, n * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
 <div class="line"><a id="l03679" name="l03679"></a><span class="lineno"> 3679</span>                memset(out, 0, n * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
 <div class="line"><a id="l03680" name="l03680"></a><span class="lineno"> 3680</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; requests.size(); j++) {</div>
-<div class="line"><a id="l03681" name="l03681"></a><span class="lineno"> 3681</span>                    <span class="keywordflow">if</span>((i &amp; (1 &lt;&lt; j)) != 0) {</div>
+<div class="line"><a id="l03681" name="l03681"></a><span class="lineno"> 3681</span>                    <span class="keywordflow">if</span>((i &amp; 1 &lt;&lt; j) != 0) {</div>
 <div class="line"><a id="l03682" name="l03682"></a><span class="lineno"> 3682</span>                        out[requests[j][0]]++;</div>
 <div class="line"><a id="l03683" name="l03683"></a><span class="lineno"> 3683</span>                        in[requests[j][1]]++;</div>
 <div class="line"><a id="l03684" name="l03684"></a><span class="lineno"> 3684</span>                    }</div>
@@ -3769,8 +3769,8 @@ $(function() {
 <div class="line"><a id="l03705" name="l03705"></a><span class="lineno"> 3705</span>            <span class="keywordflow">if</span>(numRows == 1) {</div>
 <div class="line"><a id="l03706" name="l03706"></a><span class="lineno"> 3706</span>                <span class="keywordflow">return</span> s;</div>
 <div class="line"><a id="l03707" name="l03707"></a><span class="lineno"> 3707</span>            }</div>
-<div class="line"><a id="l03708" name="l03708"></a><span class="lineno"> 3708</span>            ostringstream oss = ostringstream();</div>
-<div class="line"><a id="l03709" name="l03709"></a><span class="lineno"> 3709</span>            <span class="keywordtype">char</span> **m          = <span class="keyword">new</span> <span class="keywordtype">char</span> *[numRows];</div>
+<div class="line"><a id="l03708" name="l03708"></a><span class="lineno"> 3708</span>            <span class="keyword">auto</span> oss = ostringstream();</div>
+<div class="line"><a id="l03709" name="l03709"></a><span class="lineno"> 3709</span>            <span class="keyword">auto</span> *m  = <span class="keyword">new</span> <span class="keywordtype">char</span> *[numRows];</div>
 <div class="line"><a id="l03710" name="l03710"></a><span class="lineno"> 3710</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; numRows; i++) {</div>
 <div class="line"><a id="l03711" name="l03711"></a><span class="lineno"> 3711</span>                m[i] = <span class="keyword">new</span> <span class="keywordtype">char</span>[s.length()];</div>
 <div class="line"><a id="l03712" name="l03712"></a><span class="lineno"> 3712</span>                memset(m[i], <span class="charliteral">&#39; &#39;</span>, s.length() * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
@@ -3778,9 +3778,9 @@ $(function() {
 <div class="line"><a id="l03714" name="l03714"></a><span class="lineno"> 3714</span>            <span class="keywordtype">int</span> current_x = 0;</div>
 <div class="line"><a id="l03715" name="l03715"></a><span class="lineno"> 3715</span>            <span class="keywordtype">int</span> current_y = 0;</div>
 <div class="line"><a id="l03716" name="l03716"></a><span class="lineno"> 3716</span>            <span class="keywordtype">bool</span> dir      = <span class="keyword">true</span>;<span class="comment">// true = 下, false = 斜</span></div>
-<div class="line"><a id="l03717" name="l03717"></a><span class="lineno"> 3717</span>            <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: s) {</div>
+<div class="line"><a id="l03717" name="l03717"></a><span class="lineno"> 3717</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: s) {</div>
 <div class="line"><a id="l03718" name="l03718"></a><span class="lineno"> 3718</span>                m[current_x][current_y] = ch;</div>
-<div class="line"><a id="l03719" name="l03719"></a><span class="lineno"> 3719</span>                <span class="keywordflow">if</span>((dir &amp;&amp; current_x == numRows - 1) || (!dir &amp;&amp; current_x == 0)) {</div>
+<div class="line"><a id="l03719" name="l03719"></a><span class="lineno"> 3719</span>                <span class="keywordflow">if</span>(dir &amp;&amp; current_x == numRows - 1 || !dir &amp;&amp; current_x == 0) {</div>
 <div class="line"><a id="l03720" name="l03720"></a><span class="lineno"> 3720</span>                    dir = !dir;</div>
 <div class="line"><a id="l03721" name="l03721"></a><span class="lineno"> 3721</span>                }</div>
 <div class="line"><a id="l03722" name="l03722"></a><span class="lineno"> 3722</span>                <span class="keywordflow">if</span>(dir) {</div>
@@ -3806,51 +3806,46 @@ $(function() {
 <div class="line"><a id="l03742" name="l03742"></a><span class="lineno"> 3742</span>    }<span class="comment">// namespace zigzag_conversion</span></div>
 <div class="line"><a id="l03743" name="l03743"></a><span class="lineno"> 3743</span> </div>
 <div class="line"><a id="l03744" name="l03744"></a><span class="lineno"><a class="line" href="../../de/d45/a00175.html"> 3744</a></span>    <span class="keyword">namespace </span>find_the_closest_palindrome {</div>
-<div class="line"><a id="l03745" name="l03745"></a><span class="lineno"><a class="line" href="../../da/da6/a01522.html#a1425f163963850862f462d4039219d14"> 3745</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="../../da/da6/a01522.html#a1425f163963850862f462d4039219d14">Solution::nearestPalindromic</a>(<span class="keywordtype">string</span> n) {</div>
-<div class="line"><a id="l03746" name="l03746"></a><span class="lineno"> 3746</span>            <span class="keywordtype">bool</span> even;</div>
-<div class="line"><a id="l03747" name="l03747"></a><span class="lineno"> 3747</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> num = stoll(n);</div>
-<div class="line"><a id="l03748" name="l03748"></a><span class="lineno"> 3748</span>            <span class="keywordflow">if</span>(num == 10 || num == 11) {</div>
-<div class="line"><a id="l03749" name="l03749"></a><span class="lineno"> 3749</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;9&quot;</span>;</div>
-<div class="line"><a id="l03750" name="l03750"></a><span class="lineno"> 3750</span>            }</div>
-<div class="line"><a id="l03751" name="l03751"></a><span class="lineno"> 3751</span>            <span class="keywordflow">if</span>(num &lt; 10) {</div>
-<div class="line"><a id="l03752" name="l03752"></a><span class="lineno"> 3752</span>                <span class="keywordflow">return</span> to_string(num - 1);</div>
-<div class="line"><a id="l03753" name="l03753"></a><span class="lineno"> 3753</span>            }</div>
-<div class="line"><a id="l03754" name="l03754"></a><span class="lineno"> 3754</span>            <span class="keywordtype">int</span> len = n.length();</div>
-<div class="line"><a id="l03755" name="l03755"></a><span class="lineno"> 3755</span>            <span class="keywordflow">if</span>(n.length() % 2 == 0) {</div>
-<div class="line"><a id="l03756" name="l03756"></a><span class="lineno"> 3756</span>                even = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l03757" name="l03757"></a><span class="lineno"> 3757</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03758" name="l03758"></a><span class="lineno"> 3758</span>                even = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l03759" name="l03759"></a><span class="lineno"> 3759</span>            }</div>
-<div class="line"><a id="l03760" name="l03760"></a><span class="lineno"> 3760</span>            <span class="keywordtype">string</span> prefix = n.substr(0, n.length() / 2 + (even ? 0 : 1));</div>
-<div class="line"><a id="l03761" name="l03761"></a><span class="lineno"> 3761</span>            <span class="keywordtype">string</span> option_str[3];</div>
-<div class="line"><a id="l03762" name="l03762"></a><span class="lineno"> 3762</span>            <span class="keywordtype">string</span> rev              = string(prefix.rbegin() + (even ? 0 : 1), prefix.rend());</div>
-<div class="line"><a id="l03763" name="l03763"></a><span class="lineno"> 3763</span>            option_str[2]           = prefix + rev;</div>
-<div class="line"><a id="l03764" name="l03764"></a><span class="lineno"> 3764</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> prefix_int[2] = {stoll(prefix) - 1, stoll(prefix) + 1};</div>
-<div class="line"><a id="l03765" name="l03765"></a><span class="lineno"> 3765</span>            <span class="keywordtype">string</span> prefix_str[2]    = {to_string(prefix_int[0]), to_string(prefix_int[1])};</div>
-<div class="line"><a id="l03766" name="l03766"></a><span class="lineno"> 3766</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 2; i++) {</div>
-<div class="line"><a id="l03767" name="l03767"></a><span class="lineno"> 3767</span>                <span class="keywordflow">if</span>(prefix_str[i].length() == prefix.length()) {</div>
-<div class="line"><a id="l03768" name="l03768"></a><span class="lineno"> 3768</span>                    rev           = string(prefix_str[i].rbegin() + (even ? 0 : 1), prefix_str[i].rend());</div>
-<div class="line"><a id="l03769" name="l03769"></a><span class="lineno"> 3769</span>                    option_str[i] = prefix_str[i] + rev;</div>
-<div class="line"><a id="l03770" name="l03770"></a><span class="lineno"> 3770</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(prefix_str[i].length() &gt; prefix.length()) {</div>
-<div class="line"><a id="l03771" name="l03771"></a><span class="lineno"> 3771</span>                    rev           = string(prefix_str[i].rbegin() + (even ? 1 : 2), prefix_str[i].rend());</div>
-<div class="line"><a id="l03772" name="l03772"></a><span class="lineno"> 3772</span>                    option_str[i] = prefix_str[i] + rev;</div>
-<div class="line"><a id="l03773" name="l03773"></a><span class="lineno"> 3773</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(prefix_str[i].length() &lt; prefix.length()) {</div>
-<div class="line"><a id="l03774" name="l03774"></a><span class="lineno"> 3774</span>                    rev           = string(prefix_str[i].rbegin(), prefix_str[i].rend());</div>
-<div class="line"><a id="l03775" name="l03775"></a><span class="lineno"> 3775</span>                    option_str[i] = prefix_str[i] + (even ? <span class="stringliteral">&quot;9&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + rev;</div>
-<div class="line"><a id="l03776" name="l03776"></a><span class="lineno"> 3776</span>                }</div>
-<div class="line"><a id="l03777" name="l03777"></a><span class="lineno"> 3777</span>            }</div>
-<div class="line"><a id="l03778" name="l03778"></a><span class="lineno"> 3778</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> option_int[3] = {stoll(option_str[0]), stoll(option_str[1]), stoll(option_str[2])};</div>
-<div class="line"><a id="l03779" name="l03779"></a><span class="lineno"> 3779</span>            sort(option_int, option_int + 3);</div>
-<div class="line"><a id="l03780" name="l03780"></a><span class="lineno"> 3780</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> minimum = option_int[0];</div>
-<div class="line"><a id="l03781" name="l03781"></a><span class="lineno"> 3781</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; 3; i++) {</div>
-<div class="line"><a id="l03782" name="l03782"></a><span class="lineno"> 3782</span>                <span class="keywordflow">if</span>(abs(option_int[i] - num) &lt; abs(minimum - num) &amp;&amp; option_int[i] != num) {</div>
-<div class="line"><a id="l03783" name="l03783"></a><span class="lineno"> 3783</span>                    minimum = option_int[i];</div>
-<div class="line"><a id="l03784" name="l03784"></a><span class="lineno"> 3784</span>                }</div>
-<div class="line"><a id="l03785" name="l03785"></a><span class="lineno"> 3785</span>            }</div>
-<div class="line"><a id="l03786" name="l03786"></a><span class="lineno"> 3786</span>            <span class="keywordflow">return</span> to_string(minimum);</div>
-<div class="line"><a id="l03787" name="l03787"></a><span class="lineno"> 3787</span>        }</div>
-<div class="line"><a id="l03788" name="l03788"></a><span class="lineno"> 3788</span>    }<span class="comment">// namespace find_the_closest_palindrome</span></div>
-<div class="line"><a id="l03789" name="l03789"></a><span class="lineno"> 3789</span>}<span class="comment">// namespace leetcode</span></div>
+<div class="line"><a id="l03745" name="l03745"></a><span class="lineno"><a class="line" href="../../da/da6/a01522.html#a1738d6434ffd50b1b957111bc4dc2eff"> 3745</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="../../da/da6/a01522.html#a1738d6434ffd50b1b957111bc4dc2eff">Solution::nearestPalindromic</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;n) {</div>
+<div class="line"><a id="l03746" name="l03746"></a><span class="lineno"> 3746</span>            <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> num = stoll(n);</div>
+<div class="line"><a id="l03747" name="l03747"></a><span class="lineno"> 3747</span>            <span class="keywordflow">if</span>(num == 10 || num == 11) {</div>
+<div class="line"><a id="l03748" name="l03748"></a><span class="lineno"> 3748</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;9&quot;</span>;</div>
+<div class="line"><a id="l03749" name="l03749"></a><span class="lineno"> 3749</span>            }</div>
+<div class="line"><a id="l03750" name="l03750"></a><span class="lineno"> 3750</span>            <span class="keywordflow">if</span>(num &lt; 10) {</div>
+<div class="line"><a id="l03751" name="l03751"></a><span class="lineno"> 3751</span>                <span class="keywordflow">return</span> to_string(num - 1);</div>
+<div class="line"><a id="l03752" name="l03752"></a><span class="lineno"> 3752</span>            }</div>
+<div class="line"><a id="l03753" name="l03753"></a><span class="lineno"> 3753</span>            <span class="keywordtype">int</span> len       = n.length();</div>
+<div class="line"><a id="l03754" name="l03754"></a><span class="lineno"> 3754</span>            <span class="keywordtype">bool</span> even     = n.length() % 2 == 0;</div>
+<div class="line"><a id="l03755" name="l03755"></a><span class="lineno"> 3755</span>            <span class="keywordtype">string</span> prefix = n.substr(0, n.length() / 2 + (even ? 0 : 1));</div>
+<div class="line"><a id="l03756" name="l03756"></a><span class="lineno"> 3756</span>            <span class="keywordtype">string</span> option_str[3];</div>
+<div class="line"><a id="l03757" name="l03757"></a><span class="lineno"> 3757</span>            <span class="keyword">auto</span> rev                      = string(prefix.rbegin() + (even ? 0 : 1), prefix.rend());</div>
+<div class="line"><a id="l03758" name="l03758"></a><span class="lineno"> 3758</span>            option_str[2]                 = prefix + rev;</div>
+<div class="line"><a id="l03759" name="l03759"></a><span class="lineno"> 3759</span>            <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> prefix_int[2] = {stoll(prefix) - 1, stoll(prefix) + 1};</div>
+<div class="line"><a id="l03760" name="l03760"></a><span class="lineno"> 3760</span>            <span class="keywordtype">string</span> prefix_str[2]          = {to_string(prefix_int[0]), to_string(prefix_int[1])};</div>
+<div class="line"><a id="l03761" name="l03761"></a><span class="lineno"> 3761</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 2; i++) {</div>
+<div class="line"><a id="l03762" name="l03762"></a><span class="lineno"> 3762</span>                <span class="keywordflow">if</span>(prefix_str[i].length() == prefix.length()) {</div>
+<div class="line"><a id="l03763" name="l03763"></a><span class="lineno"> 3763</span>                    rev           = string(prefix_str[i].rbegin() + (even ? 0 : 1), prefix_str[i].rend());</div>
+<div class="line"><a id="l03764" name="l03764"></a><span class="lineno"> 3764</span>                    option_str[i] = prefix_str[i] + rev;</div>
+<div class="line"><a id="l03765" name="l03765"></a><span class="lineno"> 3765</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(prefix_str[i].length() &gt; prefix.length()) {</div>
+<div class="line"><a id="l03766" name="l03766"></a><span class="lineno"> 3766</span>                    rev           = string(prefix_str[i].rbegin() + (even ? 1 : 2), prefix_str[i].rend());</div>
+<div class="line"><a id="l03767" name="l03767"></a><span class="lineno"> 3767</span>                    option_str[i] = prefix_str[i] + rev;</div>
+<div class="line"><a id="l03768" name="l03768"></a><span class="lineno"> 3768</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(prefix_str[i].length() &lt; prefix.length()) {</div>
+<div class="line"><a id="l03769" name="l03769"></a><span class="lineno"> 3769</span>                    rev           = string(prefix_str[i].rbegin(), prefix_str[i].rend());</div>
+<div class="line"><a id="l03770" name="l03770"></a><span class="lineno"> 3770</span>                    option_str[i] = prefix_str[i] + (even ? <span class="stringliteral">&quot;9&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + rev;</div>
+<div class="line"><a id="l03771" name="l03771"></a><span class="lineno"> 3771</span>                }</div>
+<div class="line"><a id="l03772" name="l03772"></a><span class="lineno"> 3772</span>            }</div>
+<div class="line"><a id="l03773" name="l03773"></a><span class="lineno"> 3773</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> option_int[3] = {stoll(option_str[0]), stoll(option_str[1]), stoll(option_str[2])};</div>
+<div class="line"><a id="l03774" name="l03774"></a><span class="lineno"> 3774</span>            sort(option_int, option_int + 3);</div>
+<div class="line"><a id="l03775" name="l03775"></a><span class="lineno"> 3775</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> minimum = option_int[0];</div>
+<div class="line"><a id="l03776" name="l03776"></a><span class="lineno"> 3776</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; 3; i++) {</div>
+<div class="line"><a id="l03777" name="l03777"></a><span class="lineno"> 3777</span>                <span class="keywordflow">if</span>(abs(option_int[i] - num) &lt; abs(minimum - num) &amp;&amp; option_int[i] != num) {</div>
+<div class="line"><a id="l03778" name="l03778"></a><span class="lineno"> 3778</span>                    minimum = option_int[i];</div>
+<div class="line"><a id="l03779" name="l03779"></a><span class="lineno"> 3779</span>                }</div>
+<div class="line"><a id="l03780" name="l03780"></a><span class="lineno"> 3780</span>            }</div>
+<div class="line"><a id="l03781" name="l03781"></a><span class="lineno"> 3781</span>            <span class="keywordflow">return</span> to_string(minimum);</div>
+<div class="line"><a id="l03782" name="l03782"></a><span class="lineno"> 3782</span>        }</div>
+<div class="line"><a id="l03783" name="l03783"></a><span class="lineno"> 3783</span>    }<span class="comment">// namespace find_the_closest_palindrome</span></div>
+<div class="line"><a id="l03784" name="l03784"></a><span class="lineno"> 3784</span>}<span class="comment">// namespace leetcode</span></div>
 <div class="ttc" id="aa00005_html"><div class="ttname"><a href="../../dd/dad/a00005.html">leetcode.h</a></div></div>
 <div class="ttc" id="aa00052_html_af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977"><div class="ttname"><a href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">acwing::acwing1929::left</a></div><div class="ttdeci">@ left</div><div class="ttdoc">左</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d41/a00038_source.html#l00544">acwing.h:544</a></div></div>
 <div class="ttc" id="aa00052_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d1/d84/a00052.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d41/a00038_source.html#l00546">acwing.h:546</a></div></div>
@@ -4098,7 +4093,7 @@ $(function() {
 <div class="ttc" id="aa01510_html_abcfea4fe2c5acf3831cc81307e7b9891"><div class="ttname"><a href="../../dc/d47/a01510.html#abcfea4fe2c5acf3831cc81307e7b9891">leetcode::minimum_time_to_finish_the_race::Solution::minimumFinishTime</a></div><div class="ttdeci">static int minimumFinishTime(vector&lt; vector&lt; int &gt; &gt; &amp;tires, int changeTime, int numLaps)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l03639">leetcode.cpp:3639</a></div></div>
 <div class="ttc" id="aa01514_html_a9c434aff18e7d7afe376ac41a7e6f85e"><div class="ttname"><a href="../../d7/d22/a01514.html#a9c434aff18e7d7afe376ac41a7e6f85e">leetcode::maximum_number_of_achievable_transfer_requests::Solution::maximumRequests</a></div><div class="ttdeci">static int maximumRequests(int n, vector&lt; vector&lt; int &gt; &gt; &amp;requests)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l03673">leetcode.cpp:3673</a></div></div>
 <div class="ttc" id="aa01518_html_ac897c5cb5968a04a3266cb550eb90bf6"><div class="ttname"><a href="../../d0/d1a/a01518.html#ac897c5cb5968a04a3266cb550eb90bf6">leetcode::zigzag_conversion::Solution::convert</a></div><div class="ttdeci">static string convert(string s, int numRows)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l03704">leetcode.cpp:3704</a></div></div>
-<div class="ttc" id="aa01522_html_a1425f163963850862f462d4039219d14"><div class="ttname"><a href="../../da/da6/a01522.html#a1425f163963850862f462d4039219d14">leetcode::find_the_closest_palindrome::Solution::nearestPalindromic</a></div><div class="ttdeci">static string nearestPalindromic(string n)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l03745">leetcode.cpp:3745</a></div></div>
+<div class="ttc" id="aa01522_html_a1738d6434ffd50b1b957111bc4dc2eff"><div class="ttname"><a href="../../da/da6/a01522.html#a1738d6434ffd50b1b957111bc4dc2eff">leetcode::find_the_closest_palindrome::Solution::nearestPalindromic</a></div><div class="ttdeci">static string nearestPalindromic(const string &amp;n)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l03745">leetcode.cpp:3745</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

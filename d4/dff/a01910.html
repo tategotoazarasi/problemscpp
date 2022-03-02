@@ -123,18 +123,17 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l02065">2065</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02065" name="l02065"></a><span class="lineno"> 2065</span>                                               {</div>
-<div class="line"><a id="l02066" name="l02066"></a><span class="lineno"> 2066</span>        deque&lt;char&gt; dq[2];</div>
-<div class="line"><a id="l02067" name="l02067"></a><span class="lineno"> 2067</span>        stringstream ss[2];</div>
-<div class="line"><a id="l02068" name="l02068"></a><span class="lineno"> 2068</span>        <span class="keywordtype">int</span> current = 0;</div>
-<div class="line"><a id="l02069" name="l02069"></a><span class="lineno"> 2069</span>        <span class="keywordtype">int</span> limit   = 1;</div>
-<div class="line"><a id="l02070" name="l02070"></a><span class="lineno"> 2070</span>        <span class="keywordtype">char</span> op     = <span class="charliteral">&#39;N&#39;</span>;</div>
-<div class="line"><a id="l02071" name="l02071"></a><span class="lineno"> 2071</span>        <span class="keywordtype">char</span> ch;</div>
-<div class="line"><a id="l02072" name="l02072"></a><span class="lineno"> 2072</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l02066">2066</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02066" name="l02066"></a><span class="lineno"> 2066</span>                                               {</div>
+<div class="line"><a id="l02067" name="l02067"></a><span class="lineno"> 2067</span>        deque&lt;char&gt; dq[2];</div>
+<div class="line"><a id="l02068" name="l02068"></a><span class="lineno"> 2068</span>        stringstream ss[2];</div>
+<div class="line"><a id="l02069" name="l02069"></a><span class="lineno"> 2069</span>        <span class="keywordtype">int</span> current = 0;</div>
+<div class="line"><a id="l02070" name="l02070"></a><span class="lineno"> 2070</span>        <span class="keywordtype">int</span> limit   = 1;</div>
+<div class="line"><a id="l02071" name="l02071"></a><span class="lineno"> 2071</span>        <span class="keywordtype">char</span> op     = <span class="charliteral">&#39;N&#39;</span>;</div>
+<div class="line"><a id="l02072" name="l02072"></a><span class="lineno"> 2072</span>        <span class="keywordtype">char</span> ch;</div>
 <div class="line"><a id="l02073" name="l02073"></a><span class="lineno"> 2073</span>        <span class="keywordflow">while</span>(cin &gt;&gt; ch) {</div>
-<div class="line"><a id="l02074" name="l02074"></a><span class="lineno"> 2074</span>            <span class="keywordflow">if</span>(isdigit(ch)) {</div>
-<div class="line"><a id="l02075" name="l02075"></a><span class="lineno"> 2075</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l02074" name="l02074"></a><span class="lineno"> 2074</span>            <span class="keywordflow">if</span>(isdigit(ch) != 0) {</div>
+<div class="line"><a id="l02075" name="l02075"></a><span class="lineno"> 2075</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l02076" name="l02076"></a><span class="lineno"> 2076</span>                dq[current].push_front(ch);</div>
 <div class="line"><a id="l02077" name="l02077"></a><span class="lineno"> 2077</span>            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l02078" name="l02078"></a><span class="lineno"> 2078</span>                op = ch;</div>

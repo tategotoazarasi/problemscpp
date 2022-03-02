@@ -125,22 +125,24 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04740">4740</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04740" name="l04740"></a><span class="lineno"> 4740</span>                                                   {</div>
-<div class="line"><a id="l04741" name="l04741"></a><span class="lineno"> 4741</span>        <span class="keywordtype">int</span> n, l, r;</div>
-<div class="line"><a id="l04742" name="l04742"></a><span class="lineno"> 4742</span>        cin &gt;&gt; n &gt;&gt; l &gt;&gt; r;</div>
-<div class="line"><a id="l04743" name="l04743"></a><span class="lineno"> 4743</span>        <span class="keywordtype">int</span> *a = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
-<div class="line"><a id="l04744" name="l04744"></a><span class="lineno"> 4744</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l04745" name="l04745"></a><span class="lineno"> 4745</span>            cin &gt;&gt; a[i];</div>
-<div class="line"><a id="l04746" name="l04746"></a><span class="lineno"> 4746</span>        }</div>
-<div class="line"><a id="l04747" name="l04747"></a><span class="lineno"> 4747</span>        <a class="code hl_function" href="../../df/d88/a00962.html#ae38532fd4c702d85cb7e32b287a7f7a2">sort</a>(a, l, r);</div>
-<div class="line"><a id="l04748" name="l04748"></a><span class="lineno"> 4748</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l04749" name="l04749"></a><span class="lineno"> 4749</span>            cout &lt;&lt; a[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a id="l04750" name="l04750"></a><span class="lineno"> 4750</span>        }</div>
-<div class="line"><a id="l04751" name="l04751"></a><span class="lineno"> 4751</span>        <span class="keyword">delete</span>[] a;</div>
-<div class="line"><a id="l04752" name="l04752"></a><span class="lineno"> 4752</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l04753" name="l04753"></a><span class="lineno"> 4753</span>    }</div>
-<div class="ttc" id="aa00962_html_ae38532fd4c702d85cb7e32b287a7f7a2"><div class="ttname"><a href="../../df/d88/a00962.html#ae38532fd4c702d85cb7e32b287a7f7a2">acwing::acwing818::sort</a></div><div class="ttdeci">static void sort(int a[], int l, int r)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l04755">acwing.cpp:4755</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04739">4739</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04739" name="l04739"></a><span class="lineno"> 4739</span>                                                   {</div>
+<div class="line"><a id="l04740" name="l04740"></a><span class="lineno"> 4740</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l04741" name="l04741"></a><span class="lineno"> 4741</span>        <span class="keywordtype">int</span> l;</div>
+<div class="line"><a id="l04742" name="l04742"></a><span class="lineno"> 4742</span>        <span class="keywordtype">int</span> r;</div>
+<div class="line"><a id="l04743" name="l04743"></a><span class="lineno"> 4743</span>        cin &gt;&gt; n &gt;&gt; l &gt;&gt; r;</div>
+<div class="line"><a id="l04744" name="l04744"></a><span class="lineno"> 4744</span>        <span class="keyword">auto</span> *a = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a id="l04745" name="l04745"></a><span class="lineno"> 4745</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l04746" name="l04746"></a><span class="lineno"> 4746</span>            cin &gt;&gt; a[i];</div>
+<div class="line"><a id="l04747" name="l04747"></a><span class="lineno"> 4747</span>        }</div>
+<div class="line"><a id="l04748" name="l04748"></a><span class="lineno"> 4748</span>        <a class="code hl_function" href="../../df/d88/a00962.html#ae38532fd4c702d85cb7e32b287a7f7a2">sort</a>(a, l, r);</div>
+<div class="line"><a id="l04749" name="l04749"></a><span class="lineno"> 4749</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l04750" name="l04750"></a><span class="lineno"> 4750</span>            cout &lt;&lt; a[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l04751" name="l04751"></a><span class="lineno"> 4751</span>        }</div>
+<div class="line"><a id="l04752" name="l04752"></a><span class="lineno"> 4752</span>        <span class="keyword">delete</span>[] a;</div>
+<div class="line"><a id="l04753" name="l04753"></a><span class="lineno"> 4753</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l04754" name="l04754"></a><span class="lineno"> 4754</span>    }</div>
+<div class="ttc" id="aa00962_html_ae38532fd4c702d85cb7e32b287a7f7a2"><div class="ttname"><a href="../../df/d88/a00962.html#ae38532fd4c702d85cb7e32b287a7f7a2">acwing::acwing818::sort</a></div><div class="ttdeci">static void sort(int a[], int l, int r)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l04756">acwing.cpp:4756</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l02295">acwing::TEST()</a>.</p>
 
@@ -186,21 +188,20 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04755">4755</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04755" name="l04755"></a><span class="lineno"> 4755</span>                                             {</div>
-<div class="line"><a id="l04756" name="l04756"></a><span class="lineno"> 4756</span>        <span class="keywordflow">if</span>(l == r) {</div>
-<div class="line"><a id="l04757" name="l04757"></a><span class="lineno"> 4757</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l04758" name="l04758"></a><span class="lineno"> 4758</span>        }</div>
-<div class="line"><a id="l04759" name="l04759"></a><span class="lineno"> 4759</span>        <span class="keywordflow">if</span>(l + 1 == r) {</div>
-<div class="line"><a id="l04760" name="l04760"></a><span class="lineno"> 4760</span>            <span class="keywordflow">if</span>(a[l] &lt; a[r]) {</div>
-<div class="line"><a id="l04761" name="l04761"></a><span class="lineno"> 4761</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l04762" name="l04762"></a><span class="lineno"> 4762</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l04763" name="l04763"></a><span class="lineno"> 4763</span>                <span class="keywordtype">int</span> tmp = a[l];</div>
-<div class="line"><a id="l04764" name="l04764"></a><span class="lineno"> 4764</span>                a[l]    = a[r];</div>
-<div class="line"><a id="l04765" name="l04765"></a><span class="lineno"> 4765</span>                a[r]    = tmp;</div>
-<div class="line"><a id="l04766" name="l04766"></a><span class="lineno"> 4766</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04756">4756</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04756" name="l04756"></a><span class="lineno"> 4756</span>                                             {</div>
+<div class="line"><a id="l04757" name="l04757"></a><span class="lineno"> 4757</span>        <span class="keywordflow">if</span>(l == r) {</div>
+<div class="line"><a id="l04758" name="l04758"></a><span class="lineno"> 4758</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l04759" name="l04759"></a><span class="lineno"> 4759</span>        }</div>
+<div class="line"><a id="l04760" name="l04760"></a><span class="lineno"> 4760</span>        <span class="keywordflow">if</span>(l + 1 == r) {</div>
+<div class="line"><a id="l04761" name="l04761"></a><span class="lineno"> 4761</span>            <span class="keywordflow">if</span>(a[l] &lt; a[r]) {</div>
+<div class="line"><a id="l04762" name="l04762"></a><span class="lineno"> 4762</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l04763" name="l04763"></a><span class="lineno"> 4763</span>            }</div>
+<div class="line"><a id="l04764" name="l04764"></a><span class="lineno"> 4764</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> tmp = a[l];</div>
+<div class="line"><a id="l04765" name="l04765"></a><span class="lineno"> 4765</span>            a[l]          = a[r];</div>
+<div class="line"><a id="l04766" name="l04766"></a><span class="lineno"> 4766</span>            a[r]          = tmp;</div>
 <div class="line"><a id="l04767" name="l04767"></a><span class="lineno"> 4767</span>        }</div>
-<div class="line"><a id="l04768" name="l04768"></a><span class="lineno"> 4768</span>        <span class="keywordtype">int</span> m = a[(l + r) / 2];</div>
+<div class="line"><a id="l04768" name="l04768"></a><span class="lineno"> 4768</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> m = a[(l + r) / 2];</div>
 <div class="line"><a id="l04769" name="l04769"></a><span class="lineno"> 4769</span>        deque&lt;int&gt; dq;</div>
 <div class="line"><a id="l04770" name="l04770"></a><span class="lineno"> 4770</span>        <span class="keywordtype">int</span> cursor = l;</div>
 <div class="line"><a id="l04771" name="l04771"></a><span class="lineno"> 4771</span>        dq.push_back(m);</div>

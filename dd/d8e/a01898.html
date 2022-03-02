@@ -123,21 +123,21 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l02006">2006</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02006" name="l02006"></a><span class="lineno"> 2006</span>                                               {</div>
-<div class="line"><a id="l02007" name="l02007"></a><span class="lineno"> 2007</span>        <span class="keywordtype">int</span> ans      = 0;</div>
-<div class="line"><a id="l02008" name="l02008"></a><span class="lineno"> 2008</span>        <span class="keywordtype">int</span> nums[26] = {1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 1, 2, 3, 4};</div>
-<div class="line"><a id="l02009" name="l02009"></a><span class="lineno"> 2009</span>        <span class="keywordtype">char</span> ch;</div>
-<div class="line"><a id="l02010" name="l02010"></a><span class="lineno"> 2010</span>        <span class="keywordflow">while</span>((ch = cin.get()) != EOF) {</div>
-<div class="line"><a id="l02011" name="l02011"></a><span class="lineno"> 2011</span>            <span class="keywordflow">if</span>(ch == <span class="charliteral">&#39; &#39;</span>) {</div>
-<div class="line"><a id="l02012" name="l02012"></a><span class="lineno"> 2012</span>                ans++;</div>
-<div class="line"><a id="l02013" name="l02013"></a><span class="lineno"> 2013</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(isalpha(ch)) {</div>
-<div class="line"><a id="l02014" name="l02014"></a><span class="lineno"> 2014</span>                ans += nums[ch - <span class="charliteral">&#39;a&#39;</span>];</div>
-<div class="line"><a id="l02015" name="l02015"></a><span class="lineno"> 2015</span>            }</div>
-<div class="line"><a id="l02016" name="l02016"></a><span class="lineno"> 2016</span>        }</div>
-<div class="line"><a id="l02017" name="l02017"></a><span class="lineno"> 2017</span>        cout &lt;&lt; ans;</div>
-<div class="line"><a id="l02018" name="l02018"></a><span class="lineno"> 2018</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02019" name="l02019"></a><span class="lineno"> 2019</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l02007">2007</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02007" name="l02007"></a><span class="lineno"> 2007</span>                                               {</div>
+<div class="line"><a id="l02008" name="l02008"></a><span class="lineno"> 2008</span>        <span class="keywordtype">int</span> ans            = 0;</div>
+<div class="line"><a id="l02009" name="l02009"></a><span class="lineno"> 2009</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> nums[26] = {1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 1, 2, 3, 4};</div>
+<div class="line"><a id="l02010" name="l02010"></a><span class="lineno"> 2010</span>        <span class="keywordtype">char</span> ch;</div>
+<div class="line"><a id="l02011" name="l02011"></a><span class="lineno"> 2011</span>        <span class="keywordflow">while</span>((ch = cin.get()) != EOF) {</div>
+<div class="line"><a id="l02012" name="l02012"></a><span class="lineno"> 2012</span>            <span class="keywordflow">if</span>(ch == <span class="charliteral">&#39; &#39;</span>) {</div>
+<div class="line"><a id="l02013" name="l02013"></a><span class="lineno"> 2013</span>                ans++;</div>
+<div class="line"><a id="l02014" name="l02014"></a><span class="lineno"> 2014</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(isalpha(ch) != 0) {</div>
+<div class="line"><a id="l02015" name="l02015"></a><span class="lineno"> 2015</span>                ans += nums[ch - <span class="charliteral">&#39;a&#39;</span>];</div>
+<div class="line"><a id="l02016" name="l02016"></a><span class="lineno"> 2016</span>            }</div>
+<div class="line"><a id="l02017" name="l02017"></a><span class="lineno"> 2017</span>        }</div>
+<div class="line"><a id="l02018" name="l02018"></a><span class="lineno"> 2018</span>        cout &lt;&lt; ans;</div>
+<div class="line"><a id="l02019" name="l02019"></a><span class="lineno"> 2019</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02020" name="l02020"></a><span class="lineno"> 2020</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l01098">luogu::TEST()</a>.</p>
 
