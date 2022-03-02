@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_0',['x',['../dc/d6a/a00261.html#a858de27a9ad7db2ce745e880b56299a6',1,'acwing::acwing2060::point::x()'],['../d0/d19/a00273.html#acaa459e164175cdbde974462ea6cf4a8',1,'acwing::acwing2019::point::x()'],['../d1/dbd/a00457.html#a1a66c3669ad5d5a8e768b745d216cdec',1,'acwing::acwing1929::step::x()'],['../d1/de6/a00837.html#a7c4c96e9aa013842e6065dd9f767760e',1,'acwing::acwing1660::cow::x()'],['../d3/dc4/a01089.html#ab29729c4bc9255f281c6c238c61ca01d',1,'leetcode::escape_a_large_maze::point::x()']]]
+  ['x_0',['x',['../d9/d8d/a00262.html#a858de27a9ad7db2ce745e880b56299a6',1,'acwing::acwing2060::point::x()'],['../dd/d56/a00274.html#acaa459e164175cdbde974462ea6cf4a8',1,'acwing::acwing2019::point::x()'],['../da/d65/a00458.html#a1a66c3669ad5d5a8e768b745d216cdec',1,'acwing::acwing1929::step::x()'],['../d2/dc7/a00838.html#a7c4c96e9aa013842e6065dd9f767760e',1,'acwing::acwing1660::cow::x()'],['../d5/d17/a01098.html#ab29729c4bc9255f281c6c238c61ca01d',1,'leetcode::escape_a_large_maze::point::x()']]]
 ];
