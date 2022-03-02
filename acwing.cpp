@@ -4823,4 +4823,33 @@ namespace acwing {
 		delete[] factorial;
 		return 0;
 	}
+
+	int acwing823::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		set<int> s;
+		for(int i = 1; i <= n; i++) {
+			s.insert(i);
+		}
+		vector<int> vec;
+		dfs(vec, s, cout);
+		return 0;
+	}
+
+	void acwing823::dfs(vector<int> &vec, set<int> &s, ostream &cout) {
+		if(s.empty()) {
+			for(int i: vec) {
+				cout << i << " ";
+			}
+			cout << endl;
+		} else {
+			for(auto i: s) {
+				vector vec_cpy = vec;
+				set<int> s_cpy = s;
+				vec_cpy.push_back(i);
+				s_cpy.erase(i);
+				dfs(vec_cpy, s_cpy, cout);
+			}
+		}
+	}
 }// namespace acwing

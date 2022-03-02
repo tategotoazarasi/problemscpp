@@ -2,6 +2,7 @@
 #define PROBLEMSCPP_ACWING_H
 
 #include <iostream>
+#include <set>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
@@ -1496,6 +1497,13 @@ namespace acwing {
 	class acwing822 {
 	public:
 		static int main(istream &cin, ostream &cout);
+	};
+
+	/// \brief AcWing 823. 排列
+	class acwing823 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static void dfs(vector<int> &vec, set<int> &s, ostream &cout);
 	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
