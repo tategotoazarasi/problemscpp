@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <cmath>
 #include <cstring>
+#include <deque>
 #include <iomanip>
 #include <set>
 #include <sstream>
@@ -2057,6 +2058,50 @@ namespace luogu {
 				}
 			}
 			cout << count << endl;
+		}
+		return 0;
+	}
+
+	int P1553::main(istream &cin, ostream &cout) {
+		deque<char> dq[2];
+		stringstream ss[2];
+		int current = 0;
+		int limit   = 1;
+		char op     = 'N';
+		char ch;
+		bool flag = true;
+		while(cin >> ch) {
+			if(isdigit(ch)) {
+				flag = false;
+				dq[current].push_front(ch);
+			} else {
+				op = ch;
+				current++;
+			}
+		}
+		if(op == '.' || op == '/') {
+			limit = 2;
+		}
+		for(int i = 0; i < limit; i++) {
+			while(dq[i].size() > 1 && dq[i].front() == '0') {
+				dq[i].pop_front();
+			}
+			if(op == '.' && i == 1) {
+				while(dq[i].size() > 1 && dq[i].back() == '0') {
+					dq[i].pop_back();
+				}
+			}
+			while(!dq[i].empty()) {
+				ss[i] << dq[i].front();
+				dq[i].pop_front();
+			}
+		}
+		cout << ss[0].str();
+		if(op != 'N') {
+			cout << op;
+			if(op != '%') {
+				cout << ss[1].str();
+			}
 		}
 		return 0;
 	}

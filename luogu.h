@@ -556,6 +556,12 @@ namespace luogu {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief 洛谷 P1553 数字反转（升级版）
+	class P1553 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H
