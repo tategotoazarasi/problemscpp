@@ -2158,4 +2158,21 @@ namespace luogu {
 		cout << ans;
 		return 0;
 	}
+
+	int P1200::main(istream &cin, ostream &cout) {
+		string comet, team;
+		cin >> comet >> team;
+		unsigned int comet_int = 1;
+		unsigned int team_int  = 1;
+		for(char ch: comet) {
+			comet_int *= (ch - 'A' + 1);
+			comet_int %= 47;
+		}
+		for(char ch: team) {
+			team_int *= (ch - 'A' + 1);
+			team_int %= 47;
+		}
+		cout << ((comet_int == team_int) ? "GO" : "STAY");
+		return 0;
+	}
 }// namespace luogu

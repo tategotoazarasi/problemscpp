@@ -1214,4 +1214,22 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("425", ans);
 	}
+
+	TEST(P1200, case1) {
+		istringstream in("COMETQ\n"
+		                 "HVNGAT");
+		auto out = ostringstream();
+		P1200::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("GO", ans);
+	}
+
+	TEST(P1200, case2) {
+		istringstream in("ABSTAR\n"
+		                 "USACO");
+		auto out = ostringstream();
+		P1200::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("STAY", ans);
+	}
 }// namespace luogu
