@@ -3781,4 +3781,10 @@ namespace leetcode {
 			return to_string(minimum);
 		}
 	}// namespace find_the_closest_palindrome
+
+	namespace add_digits {
+		int Solution::addDigits(int num) {
+			return (num - 1) % 9 + 1;
+		}
+	}// namespace add_digits
 }// namespace leetcode

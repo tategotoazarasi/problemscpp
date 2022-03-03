@@ -1411,6 +1411,14 @@ namespace leetcode {
 			static string nearestPalindromic(const string &n);
 		};
 	}// namespace find_the_closest_palindrome
+
+	/// \brief LeetCode 258. Add Digits
+	namespace add_digits {
+		class Solution {
+		public:
+			static int addDigits(int num);
+		};
+	}// namespace add_digits
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

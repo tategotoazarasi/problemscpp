@@ -1953,4 +1953,14 @@ namespace leetcode {
 			ASSERT_EQ("1805115081", Solution::nearestPalindromic("1805170081"));
 		}
 	}// namespace find_the_closest_palindrome
+
+	namespace add_digits {
+		TEST(add_digits, case1) {
+			ASSERT_EQ(2, Solution::addDigits(38));
+		}
+
+		TEST(add_digits, case2) {
+			ASSERT_EQ(0, Solution::addDigits(0));
+		}
+	}// namespace add_digits
 }// namespace leetcode
