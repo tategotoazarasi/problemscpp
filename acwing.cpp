@@ -4853,4 +4853,16 @@ namespace acwing {
 			}
 		}
 	}
+
+	int acwing21::Solution::Fibonacci(int n) {
+		int *fibb = new int[n];
+		fibb[0]   = 1;
+		fibb[1]   = 1;
+		for(int i = 2; i < n; i++) {
+			fibb[i] = fibb[i - 1] + fibb[i - 2];
+		}
+		int ans = fibb[n - 1];
+		delete[] fibb;
+		return ans;
+	}
 }// namespace acwing

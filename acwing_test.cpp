@@ -2330,4 +2330,10 @@ namespace acwing {
 		          "3 2 1 \n",
 		          ans);
 	}
+
+	namespace acwing21 {
+		TEST(acwing21, case1) {
+			ASSERT_EQ(5, Solution::Fibonacci(5));
+		}
+	}// namespace acwing21
 }// namespace acwing

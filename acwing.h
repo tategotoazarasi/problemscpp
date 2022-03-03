@@ -1505,5 +1505,13 @@ namespace acwing {
 		static int main(istream &cin, ostream &cout);
 		static void dfs(vector<int> &vec, set<int> &s, ostream &cout);
 	};
+
+	/// \brief AcWing 21. 斐波那契数列
+	namespace acwing21 {
+		class Solution {
+		public:
+			static int Fibonacci(int n);
+		};
+	}// namespace acwing21
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
