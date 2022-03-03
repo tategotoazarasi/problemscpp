@@ -1206,4 +1206,12 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("0", ans);
 	}
+
+	TEST(P1603, case1) {
+		istringstream in("Black Obama is two five zero .");
+		auto out = ostringstream();
+		P1603::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("425", ans);
+	}
 }// namespace luogu

@@ -2105,4 +2105,57 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P1603::main(istream &cin, ostream &cout) {
+		unordered_map<string, int> um;
+		um["one"]       = 1;
+		um["two"]       = 2;
+		um["three"]     = 3;
+		um["four"]      = 4;
+		um["five"]      = 5;
+		um["six"]       = 6;
+		um["seven"]     = 7;
+		um["eight"]     = 8;
+		um["nine"]      = 9;
+		um["ten"]       = 10;
+		um["eleven"]    = 11;
+		um["twelve"]    = 12;
+		um["thirteen"]  = 13;
+		um["fourteen"]  = 14;
+		um["fifteen"]   = 15;
+		um["sixteen"]   = 16;
+		um["seventeen"] = 17;
+		um["eighteen"]  = 18;
+		um["nineteen"]  = 19;
+		um["twenty"]    = 20;
+		um["a"]         = 1;
+		um["both"]      = 2;
+		um["another"]   = 1;
+		um["first"]     = 1;
+		um["second"]    = 2;
+		um["third"]     = 3;
+		multiset<int> ms;
+		string word;
+		for(int i = 0; i < 6; i++) {
+			cin >> word;
+			if(um.count(word) != 0) {
+				ms.insert((um[word] * um[word]) % 100);
+			}
+		}
+		if(ms.empty()) {
+			cout << 0;
+			return 0;
+		}
+		stringstream ss;
+		for(auto i: ms) {
+			if(i < 10) {
+				ss << '0';
+			}
+			ss << i;
+		}
+		unsigned long long ans;
+		ss >> ans;
+		cout << ans;
+		return 0;
+	}
 }// namespace luogu
