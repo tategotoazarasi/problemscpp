@@ -1513,5 +1513,13 @@ namespace acwing {
 			static int Fibonacci(int n);
 		};
 	}// namespace acwing21
+
+	/// \brief AcWing 78. 左旋转字符串
+	namespace acwing78 {
+		class Solution {
+		public:
+			static string leftRotateString(string str, int n);
+		};
+	}// namespace acwing78
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

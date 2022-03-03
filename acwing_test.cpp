@@ -2336,4 +2336,10 @@ namespace acwing {
 			ASSERT_EQ(5, Solution::Fibonacci(5));
 		}
 	}// namespace acwing21
+
+	namespace acwing78 {
+		TEST(acwing78, case1) {
+			ASSERT_EQ("cdefgab", Solution::leftRotateString("abcdefg", 2));
+		}
+	}// namespace acwing78
 }// namespace acwing

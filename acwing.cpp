@@ -4865,4 +4865,14 @@ namespace acwing {
 		delete[] fibb;
 		return ans;
 	}
+
+	namespace acwing78 {
+		string Solution::leftRotateString(string str, int n) {
+			ostringstream oss;
+			for(int i = 0; i < str.length(); i++) {
+				oss << str[(n + i) % str.length()];
+			}
+			return oss.str();
+		}
+	}// namespace acwing78
 }// namespace acwing
