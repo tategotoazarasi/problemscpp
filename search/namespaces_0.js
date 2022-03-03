@@ -7,5 +7,7 @@ var searchData=
   ['acwing1978_4',['acwing1978',['../d2/d79/a00051.html',1,'acwing']]],
   ['acwing2019_5',['acwing2019',['../d2/dee/a00049.html',1,'acwing']]],
   ['acwing2060_6',['acwing2060',['../d4/dca/a00048.html',1,'acwing']]],
-  ['acwing4208_7',['acwing4208',['../d5/de0/a00050.html',1,'acwing']]]
+  ['acwing21_7',['acwing21',['../d9/d2e/a00056.html',1,'acwing']]],
+  ['acwing4208_8',['acwing4208',['../d5/de0/a00050.html',1,'acwing']]],
+  ['acwing78_9',['acwing78',['../d4/d6d/a00055.html',1,'acwing']]]
 ];
