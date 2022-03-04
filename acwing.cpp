@@ -4856,13 +4856,13 @@ namespace acwing {
 	}
 
 	int acwing21::Solution::Fibonacci(int n) {
-		int *fibb = new int[n];
+		auto fibb = new int[n];
 		fibb[0]   = 1;
 		fibb[1]   = 1;
 		for(int i = 2; i < n; i++) {
 			fibb[i] = fibb[i - 1] + fibb[i - 2];
 		}
-		int ans = fibb[n - 1];
+		const int ans = fibb[n - 1];
 		delete[] fibb;
 		return ans;
 	}
@@ -4880,7 +4880,7 @@ namespace acwing {
 	namespace acwing16 {
 		string Solution::replaceSpaces(string &str) {
 			ostringstream oss;
-			for(char ch: str) {
+			for(const char ch: str) {
 				if(ch != ' ') {
 					oss << ch;
 				} else {
@@ -4901,19 +4901,20 @@ namespace acwing {
 			}
 			bool pos = true;
 			if(str[0] == '+' || str[0] == '-') {
-				pos = (str[0] == '+');
+				pos = str[0] == '+';
 				str = str.substr(1);
 			}
 			unsigned long long ans = 0;
-			for(char ch: str) {
-				if(isdigit(ch)) {
+			for(const char ch: str) {
+				if(isdigit(ch) != 0) {
 					ans *= 10;
-					ans += (ch - '0');
+					ans += ch - '0';
 				} else {
 					break;
 				}
 			}
-			return (ans > INT_MAX) ? (pos ? INT_MAX : INT_MIN) : (pos ? ans : -ans);
+			return ans > INT_MAX ? (pos ? INT_MAX : INT_MIN) : pos ? ans
+			                                                       : -ans;
 		}
 	}// namespace acwing87
 }// namespace acwing

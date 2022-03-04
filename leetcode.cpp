@@ -3750,9 +3750,9 @@ namespace leetcode {
 			if(num < 10) {
 				return to_string(num - 1);
 			}
-			int len       = n.length();
-			bool even     = n.length() % 2 == 0;
-			string prefix = n.substr(0, n.length() / 2 + (even ? 0 : 1));
+			int len         = n.length();
+			const bool even = n.length() % 2 == 0;
+			string prefix   = n.substr(0, n.length() / 2 + (even ? 0 : 1));
 			string option_str[3];
 			auto rev                      = string(prefix.rbegin() + (even ? 0 : 1), prefix.rend());
 			option_str[2]                 = prefix + rev;
@@ -3783,9 +3783,7 @@ namespace leetcode {
 	}// namespace find_the_closest_palindrome
 
 	namespace add_digits {
-		int Solution::addDigits(int num) {
-			return (num - 1) % 9 + 1;
-		}
+		int Solution::addDigits(int num) { return (num - 1) % 9 + 1; }
 	}// namespace add_digits
 
 	namespace sum_of_subarray_ranges {

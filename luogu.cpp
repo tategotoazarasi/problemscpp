@@ -2138,8 +2138,8 @@ namespace luogu {
 		string word;
 		for(int i = 0; i < 6; i++) {
 			cin >> word;
-			if(um.count(word) != 0) {
-				ms.insert((um[word] * um[word]) % 100);
+			if(um.contains(word)) {
+				ms.insert(um[word] * um[word] % 100);
 			}
 		}
 		if(ms.empty()) {
@@ -2147,7 +2147,7 @@ namespace luogu {
 			return 0;
 		}
 		stringstream ss;
-		for(auto i: ms) {
+		for(const auto i: ms) {
 			if(i < 10) {
 				ss << '0';
 			}
@@ -2160,19 +2160,20 @@ namespace luogu {
 	}
 
 	int P1200::main(istream &cin, ostream &cout) {
-		string comet, team;
+		string comet;
+		string team;
 		cin >> comet >> team;
 		unsigned int comet_int = 1;
 		unsigned int team_int  = 1;
-		for(char ch: comet) {
-			comet_int *= (ch - 'A' + 1);
+		for(const char ch: comet) {
+			comet_int *= ch - 'A' + 1;
 			comet_int %= 47;
 		}
-		for(char ch: team) {
-			team_int *= (ch - 'A' + 1);
+		for(const char ch: team) {
+			team_int *= ch - 'A' + 1;
 			team_int %= 47;
 		}
-		cout << ((comet_int == team_int) ? "GO" : "STAY");
+		cout << (comet_int == team_int ? "GO" : "STAY");
 		return 0;
 	}
 
@@ -2185,7 +2186,7 @@ namespace luogu {
 			int *p = nullptr;
 			int val;
 			char ref;
-			if(!(cin >> var) || !isalpha(var)) {
+			if(!(cin >> var) || (isalpha(var) == 0)) {
 				break;
 			}
 			switch(var) {
@@ -2201,7 +2202,7 @@ namespace luogu {
 			}
 			cin.get();
 			cin.get();
-			if(isdigit(cin.peek())) {
+			if(isdigit(cin.peek()) != 0) {
 				cin >> val;
 				*p = val;
 			} else {
@@ -2216,8 +2217,7 @@ namespace luogu {
 					case 'c':
 						*p = c;
 						break;
-					default:
-						break;
+					default: break;
 				}
 			}
 			cin.get();
@@ -2231,7 +2231,7 @@ namespace luogu {
 		int count[26] = {};
 		int maximum   = 0;
 		while(cin >> ch) {
-			if(isupper(ch)) {
+			if(isupper(ch) != 0) {
 				count[ch - 'A']++;
 				maximum = max(maximum, count[ch - 'A']);
 			}
