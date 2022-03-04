@@ -2342,4 +2342,11 @@ namespace acwing {
 			ASSERT_EQ("cdefgab", Solution::leftRotateString("abcdefg", 2));
 		}
 	}// namespace acwing78
+
+	namespace acwing16 {
+		TEST(acwing16, case1) {
+			string input = "We are happy.";
+			ASSERT_EQ("We%20are%20happy.", Solution::replaceSpaces(input));
+		}
+	}// namespace acwing16
 }// namespace acwing

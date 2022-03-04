@@ -1521,5 +1521,13 @@ namespace acwing {
 			static string leftRotateString(string str, int n);
 		};
 	}// namespace acwing78
+
+	/// \brief AcWing 16. 替换空格
+	namespace acwing16 {
+		class Solution {
+		public:
+			static string replaceSpaces(string &str);
+		};
+	}// namespace acwing16
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

@@ -4875,4 +4875,18 @@ namespace acwing {
 			return oss.str();
 		}
 	}// namespace acwing78
+
+	namespace acwing16 {
+		string Solution::replaceSpaces(string &str) {
+			ostringstream oss;
+			for(char ch: str) {
+				if(ch != ' ') {
+					oss << ch;
+				} else {
+					oss << "%20";
+				}
+			}
+			return oss.str();
+		}
+	}// namespace acwing16
 }// namespace acwing
