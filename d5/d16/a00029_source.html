@@ -4924,13 +4924,13 @@ $(function() {
 <div class="line"><a id="l04856" name="l04856"></a><span class="lineno"> 4856</span><span class="stringliteral">    }</span></div>
 <div class="line"><a id="l04857" name="l04857"></a><span class="lineno"> 4857</span><span class="stringliteral"></span> </div>
 <div class="line"><a id="l04858" name="l04858"></a><span class="lineno"><a class="line" href="../../d2/d4c/a00984.html#a4dd5929b5b12d302ecc3e89ada53af42"> 4858</a></span><span class="stringliteral">    int acwing21::Solution::Fibonacci(int n) {</span></div>
-<div class="line"><a id="l04859" name="l04859"></a><span class="lineno"> 4859</span><span class="stringliteral">        int *fibb = new int[n];</span></div>
+<div class="line"><a id="l04859" name="l04859"></a><span class="lineno"> 4859</span><span class="stringliteral">        auto fibb = new int[n];</span></div>
 <div class="line"><a id="l04860" name="l04860"></a><span class="lineno"> 4860</span><span class="stringliteral">        fibb[0]   = 1;</span></div>
 <div class="line"><a id="l04861" name="l04861"></a><span class="lineno"> 4861</span><span class="stringliteral">        fibb[1]   = 1;</span></div>
 <div class="line"><a id="l04862" name="l04862"></a><span class="lineno"> 4862</span><span class="stringliteral">        for(int i = 2; i &lt; n; i++) {</span></div>
 <div class="line"><a id="l04863" name="l04863"></a><span class="lineno"> 4863</span><span class="stringliteral">            fibb[i] = fibb[i - 1] + fibb[i - 2];</span></div>
 <div class="line"><a id="l04864" name="l04864"></a><span class="lineno"> 4864</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04865" name="l04865"></a><span class="lineno"> 4865</span><span class="stringliteral">        int ans = fibb[n - 1];</span></div>
+<div class="line"><a id="l04865" name="l04865"></a><span class="lineno"> 4865</span><span class="stringliteral">        const int ans = fibb[n - 1];</span></div>
 <div class="line"><a id="l04866" name="l04866"></a><span class="lineno"> 4866</span><span class="stringliteral">        delete[] fibb;</span></div>
 <div class="line"><a id="l04867" name="l04867"></a><span class="lineno"> 4867</span><span class="stringliteral">        return ans;</span></div>
 <div class="line"><a id="l04868" name="l04868"></a><span class="lineno"> 4868</span><span class="stringliteral">    }</span></div>
@@ -4948,7 +4948,7 @@ $(function() {
 <div class="line"><a id="l04880" name="l04880"></a><span class="lineno"><a class="line" href="../../d9/d2e/a00056.html"> 4880</a></span><span class="stringliteral">    namespace acwing16 {</span></div>
 <div class="line"><a id="l04881" name="l04881"></a><span class="lineno"><a class="line" href="../../d7/d76/a00992.html#a13d46ce944d1d4bccfd7753457889b56"> 4881</a></span><span class="stringliteral">        string Solution::replaceSpaces(string &amp;str) {</span></div>
 <div class="line"><a id="l04882" name="l04882"></a><span class="lineno"> 4882</span><span class="stringliteral">            ostringstream oss;</span></div>
-<div class="line"><a id="l04883" name="l04883"></a><span class="lineno"> 4883</span><span class="stringliteral">            for(char ch: str) {</span></div>
+<div class="line"><a id="l04883" name="l04883"></a><span class="lineno"> 4883</span><span class="stringliteral">            for(const char ch: str) {</span></div>
 <div class="line"><a id="l04884" name="l04884"></a><span class="lineno"> 4884</span><span class="stringliteral">                if(ch != &#39;</span> <span class="stringliteral">&#39;) {</span></div>
 <div class="line"><a id="l04885" name="l04885"></a><span class="lineno"> 4885</span><span class="stringliteral">                    oss &lt;&lt; ch;</span></div>
 <div class="line"><a id="l04886" name="l04886"></a><span class="lineno"> 4886</span><span class="stringliteral">                } else {</span></div>
@@ -4969,22 +4969,23 @@ $(function() {
 <div class="line"><a id="l04901" name="l04901"></a><span class="lineno"> 4901</span><span class="stringliteral">            }</span></div>
 <div class="line"><a id="l04902" name="l04902"></a><span class="lineno"> 4902</span><span class="stringliteral">            bool pos = true;</span></div>
 <div class="line"><a id="l04903" name="l04903"></a><span class="lineno"> 4903</span><span class="stringliteral">            if(str[0] == &#39;</span>+<span class="stringliteral">&#39; || str[0] == &#39;</span>-<span class="stringliteral">&#39;) {</span></div>
-<div class="line"><a id="l04904" name="l04904"></a><span class="lineno"> 4904</span><span class="stringliteral">                pos = (str[0] == &#39;</span>+<span class="stringliteral">&#39;);</span></div>
+<div class="line"><a id="l04904" name="l04904"></a><span class="lineno"> 4904</span><span class="stringliteral">                pos = str[0] == &#39;</span>+<span class="stringliteral">&#39;;</span></div>
 <div class="line"><a id="l04905" name="l04905"></a><span class="lineno"> 4905</span><span class="stringliteral">                str = str.substr(1);</span></div>
 <div class="line"><a id="l04906" name="l04906"></a><span class="lineno"> 4906</span><span class="stringliteral">            }</span></div>
 <div class="line"><a id="l04907" name="l04907"></a><span class="lineno"> 4907</span><span class="stringliteral">            unsigned long long ans = 0;</span></div>
-<div class="line"><a id="l04908" name="l04908"></a><span class="lineno"> 4908</span><span class="stringliteral">            for(char ch: str) {</span></div>
-<div class="line"><a id="l04909" name="l04909"></a><span class="lineno"> 4909</span><span class="stringliteral">                if(isdigit(ch)) {</span></div>
+<div class="line"><a id="l04908" name="l04908"></a><span class="lineno"> 4908</span><span class="stringliteral">            for(const char ch: str) {</span></div>
+<div class="line"><a id="l04909" name="l04909"></a><span class="lineno"> 4909</span><span class="stringliteral">                if(isdigit(ch) != 0) {</span></div>
 <div class="line"><a id="l04910" name="l04910"></a><span class="lineno"> 4910</span><span class="stringliteral">                    ans *= 10;</span></div>
-<div class="line"><a id="l04911" name="l04911"></a><span class="lineno"> 4911</span><span class="stringliteral">                    ans += (ch - &#39;</span>0<span class="stringliteral">&#39;);</span></div>
+<div class="line"><a id="l04911" name="l04911"></a><span class="lineno"> 4911</span><span class="stringliteral">                    ans += ch - &#39;</span>0<span class="stringliteral">&#39;;</span></div>
 <div class="line"><a id="l04912" name="l04912"></a><span class="lineno"> 4912</span><span class="stringliteral">                } else {</span></div>
 <div class="line"><a id="l04913" name="l04913"></a><span class="lineno"> 4913</span><span class="stringliteral">                    break;</span></div>
 <div class="line"><a id="l04914" name="l04914"></a><span class="lineno"> 4914</span><span class="stringliteral">                }</span></div>
 <div class="line"><a id="l04915" name="l04915"></a><span class="lineno"> 4915</span><span class="stringliteral">            }</span></div>
-<div class="line"><a id="l04916" name="l04916"></a><span class="lineno"> 4916</span><span class="stringliteral">            return (ans &gt; INT_MAX) ? (pos ? INT_MAX : INT_MIN) : (pos ? ans : -ans);</span></div>
-<div class="line"><a id="l04917" name="l04917"></a><span class="lineno"> 4917</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l04918" name="l04918"></a><span class="lineno"> 4918</span><span class="stringliteral">    }// namespace acwing87</span></div>
-<div class="line"><a id="l04919" name="l04919"></a><span class="lineno"> 4919</span><span class="stringliteral">}// namespace acwing</span></div>
+<div class="line"><a id="l04916" name="l04916"></a><span class="lineno"> 4916</span><span class="stringliteral">            return ans &gt; INT_MAX ? (pos ? INT_MAX : INT_MIN) : pos ? ans</span></div>
+<div class="line"><a id="l04917" name="l04917"></a><span class="lineno"> 4917</span><span class="stringliteral">                                                                   : -ans;</span></div>
+<div class="line"><a id="l04918" name="l04918"></a><span class="lineno"> 4918</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l04919" name="l04919"></a><span class="lineno"> 4919</span><span class="stringliteral">    }// namespace acwing87</span></div>
+<div class="line"><a id="l04920" name="l04920"></a><span class="lineno"> 4920</span><span class="stringliteral">}// namespace acwing</span></div>
 <div class="ttc" id="aa00035_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d4/d8c/a00035.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8c/a00035_source.html#l00005">main.cpp:5</a></div></div>
 <div class="ttc" id="aa00038_html"><div class="ttname"><a href="../../d8/d41/a00038.html">acwing.h</a></div></div>
 <div class="ttc" id="aa00047_html"><div class="ttname"><a href="../../d6/d2d/a00047.html">acwing</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00020">acwing.cpp:20</a></div></div>

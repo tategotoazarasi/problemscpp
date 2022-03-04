@@ -125,21 +125,22 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l02162">2162</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l02162" name="l02162"></a><span class="lineno"> 2162</span>                                               {</div>
-<div class="line"><a id="l02163" name="l02163"></a><span class="lineno"> 2163</span>        <span class="keywordtype">string</span> comet, team;</div>
-<div class="line"><a id="l02164" name="l02164"></a><span class="lineno"> 2164</span>        cin &gt;&gt; comet &gt;&gt; team;</div>
-<div class="line"><a id="l02165" name="l02165"></a><span class="lineno"> 2165</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> comet_int = 1;</div>
-<div class="line"><a id="l02166" name="l02166"></a><span class="lineno"> 2166</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> team_int  = 1;</div>
-<div class="line"><a id="l02167" name="l02167"></a><span class="lineno"> 2167</span>        <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: comet) {</div>
-<div class="line"><a id="l02168" name="l02168"></a><span class="lineno"> 2168</span>            comet_int *= (ch - <span class="charliteral">&#39;A&#39;</span> + 1);</div>
-<div class="line"><a id="l02169" name="l02169"></a><span class="lineno"> 2169</span>            comet_int %= 47;</div>
-<div class="line"><a id="l02170" name="l02170"></a><span class="lineno"> 2170</span>        }</div>
-<div class="line"><a id="l02171" name="l02171"></a><span class="lineno"> 2171</span>        <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: team) {</div>
-<div class="line"><a id="l02172" name="l02172"></a><span class="lineno"> 2172</span>            team_int *= (ch - <span class="charliteral">&#39;A&#39;</span> + 1);</div>
-<div class="line"><a id="l02173" name="l02173"></a><span class="lineno"> 2173</span>            team_int %= 47;</div>
-<div class="line"><a id="l02174" name="l02174"></a><span class="lineno"> 2174</span>        }</div>
-<div class="line"><a id="l02175" name="l02175"></a><span class="lineno"> 2175</span>        cout &lt;&lt; ((comet_int == team_int) ? <span class="stringliteral">&quot;GO&quot;</span> : <span class="stringliteral">&quot;STAY&quot;</span>);</div>
-<div class="line"><a id="l02176" name="l02176"></a><span class="lineno"> 2176</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02177" name="l02177"></a><span class="lineno"> 2177</span>    }</div>
+<div class="line"><a id="l02163" name="l02163"></a><span class="lineno"> 2163</span>        <span class="keywordtype">string</span> comet;</div>
+<div class="line"><a id="l02164" name="l02164"></a><span class="lineno"> 2164</span>        <span class="keywordtype">string</span> team;</div>
+<div class="line"><a id="l02165" name="l02165"></a><span class="lineno"> 2165</span>        cin &gt;&gt; comet &gt;&gt; team;</div>
+<div class="line"><a id="l02166" name="l02166"></a><span class="lineno"> 2166</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> comet_int = 1;</div>
+<div class="line"><a id="l02167" name="l02167"></a><span class="lineno"> 2167</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> team_int  = 1;</div>
+<div class="line"><a id="l02168" name="l02168"></a><span class="lineno"> 2168</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: comet) {</div>
+<div class="line"><a id="l02169" name="l02169"></a><span class="lineno"> 2169</span>            comet_int *= ch - <span class="charliteral">&#39;A&#39;</span> + 1;</div>
+<div class="line"><a id="l02170" name="l02170"></a><span class="lineno"> 2170</span>            comet_int %= 47;</div>
+<div class="line"><a id="l02171" name="l02171"></a><span class="lineno"> 2171</span>        }</div>
+<div class="line"><a id="l02172" name="l02172"></a><span class="lineno"> 2172</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: team) {</div>
+<div class="line"><a id="l02173" name="l02173"></a><span class="lineno"> 2173</span>            team_int *= ch - <span class="charliteral">&#39;A&#39;</span> + 1;</div>
+<div class="line"><a id="l02174" name="l02174"></a><span class="lineno"> 2174</span>            team_int %= 47;</div>
+<div class="line"><a id="l02175" name="l02175"></a><span class="lineno"> 2175</span>        }</div>
+<div class="line"><a id="l02176" name="l02176"></a><span class="lineno"> 2176</span>        cout &lt;&lt; (comet_int == team_int ? <span class="stringliteral">&quot;GO&quot;</span> : <span class="stringliteral">&quot;STAY&quot;</span>);</div>
+<div class="line"><a id="l02177" name="l02177"></a><span class="lineno"> 2177</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02178" name="l02178"></a><span class="lineno"> 2178</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l01218">luogu::TEST()</a>.</p>
 

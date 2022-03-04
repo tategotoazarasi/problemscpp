@@ -119,20 +119,21 @@ $(function() {
 <div class="line"><a id="l04901" name="l04901"></a><span class="lineno"> 4901</span>            }</div>
 <div class="line"><a id="l04902" name="l04902"></a><span class="lineno"> 4902</span>            <span class="keywordtype">bool</span> pos = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l04903" name="l04903"></a><span class="lineno"> 4903</span>            <span class="keywordflow">if</span>(str[0] == <span class="charliteral">&#39;+&#39;</span> || str[0] == <span class="charliteral">&#39;-&#39;</span>) {</div>
-<div class="line"><a id="l04904" name="l04904"></a><span class="lineno"> 4904</span>                pos = (str[0] == <span class="charliteral">&#39;+&#39;</span>);</div>
+<div class="line"><a id="l04904" name="l04904"></a><span class="lineno"> 4904</span>                pos = str[0] == <span class="charliteral">&#39;+&#39;</span>;</div>
 <div class="line"><a id="l04905" name="l04905"></a><span class="lineno"> 4905</span>                str = str.substr(1);</div>
 <div class="line"><a id="l04906" name="l04906"></a><span class="lineno"> 4906</span>            }</div>
 <div class="line"><a id="l04907" name="l04907"></a><span class="lineno"> 4907</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans = 0;</div>
-<div class="line"><a id="l04908" name="l04908"></a><span class="lineno"> 4908</span>            <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: str) {</div>
-<div class="line"><a id="l04909" name="l04909"></a><span class="lineno"> 4909</span>                <span class="keywordflow">if</span>(isdigit(ch)) {</div>
+<div class="line"><a id="l04908" name="l04908"></a><span class="lineno"> 4908</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: str) {</div>
+<div class="line"><a id="l04909" name="l04909"></a><span class="lineno"> 4909</span>                <span class="keywordflow">if</span>(isdigit(ch) != 0) {</div>
 <div class="line"><a id="l04910" name="l04910"></a><span class="lineno"> 4910</span>                    ans *= 10;</div>
-<div class="line"><a id="l04911" name="l04911"></a><span class="lineno"> 4911</span>                    ans += (ch - <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><a id="l04911" name="l04911"></a><span class="lineno"> 4911</span>                    ans += ch - <span class="charliteral">&#39;0&#39;</span>;</div>
 <div class="line"><a id="l04912" name="l04912"></a><span class="lineno"> 4912</span>                } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l04913" name="l04913"></a><span class="lineno"> 4913</span>                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l04914" name="l04914"></a><span class="lineno"> 4914</span>                }</div>
 <div class="line"><a id="l04915" name="l04915"></a><span class="lineno"> 4915</span>            }</div>
-<div class="line"><a id="l04916" name="l04916"></a><span class="lineno"> 4916</span>            <span class="keywordflow">return</span> (ans &gt; INT_MAX) ? (pos ? INT_MAX : INT_MIN) : (pos ? ans : -ans);</div>
-<div class="line"><a id="l04917" name="l04917"></a><span class="lineno"> 4917</span>        }</div>
+<div class="line"><a id="l04916" name="l04916"></a><span class="lineno"> 4916</span>            <span class="keywordflow">return</span> ans &gt; INT_MAX ? (pos ? INT_MAX : INT_MIN) : pos ? ans</div>
+<div class="line"><a id="l04917" name="l04917"></a><span class="lineno"> 4917</span>                                                                   : -ans;</div>
+<div class="line"><a id="l04918" name="l04918"></a><span class="lineno"> 4918</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l02354">acwing::acwing87::TEST()</a>.</p>
 

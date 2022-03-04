@@ -118,9 +118,9 @@ $(function() {
 <div class="line"><a id="l03750" name="l03750"></a><span class="lineno"> 3750</span>            <span class="keywordflow">if</span>(num &lt; 10) {</div>
 <div class="line"><a id="l03751" name="l03751"></a><span class="lineno"> 3751</span>                <span class="keywordflow">return</span> to_string(num - 1);</div>
 <div class="line"><a id="l03752" name="l03752"></a><span class="lineno"> 3752</span>            }</div>
-<div class="line"><a id="l03753" name="l03753"></a><span class="lineno"> 3753</span>            <span class="keywordtype">int</span> len       = n.length();</div>
-<div class="line"><a id="l03754" name="l03754"></a><span class="lineno"> 3754</span>            <span class="keywordtype">bool</span> even     = n.length() % 2 == 0;</div>
-<div class="line"><a id="l03755" name="l03755"></a><span class="lineno"> 3755</span>            <span class="keywordtype">string</span> prefix = n.substr(0, n.length() / 2 + (even ? 0 : 1));</div>
+<div class="line"><a id="l03753" name="l03753"></a><span class="lineno"> 3753</span>            <span class="keywordtype">int</span> len         = n.length();</div>
+<div class="line"><a id="l03754" name="l03754"></a><span class="lineno"> 3754</span>            <span class="keyword">const</span> <span class="keywordtype">bool</span> even = n.length() % 2 == 0;</div>
+<div class="line"><a id="l03755" name="l03755"></a><span class="lineno"> 3755</span>            <span class="keywordtype">string</span> prefix   = n.substr(0, n.length() / 2 + (even ? 0 : 1));</div>
 <div class="line"><a id="l03756" name="l03756"></a><span class="lineno"> 3756</span>            <span class="keywordtype">string</span> option_str[3];</div>
 <div class="line"><a id="l03757" name="l03757"></a><span class="lineno"> 3757</span>            <span class="keyword">auto</span> rev                      = string(prefix.rbegin() + (even ? 0 : 1), prefix.rend());</div>
 <div class="line"><a id="l03758" name="l03758"></a><span class="lineno"> 3758</span>            option_str[2]                 = prefix + rev;</div>
