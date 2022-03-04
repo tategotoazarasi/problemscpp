@@ -1419,6 +1419,14 @@ namespace leetcode {
 			static int addDigits(int num);
 		};
 	}// namespace add_digits
+
+	/// \brief LeetCode 2104. Sum of Subarray Ranges
+	namespace sum_of_subarray_ranges {
+		class Solution {
+		public:
+			static long long subArrayRanges(vector<int> &nums);
+		};
+	}// namespace sum_of_subarray_ranges
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

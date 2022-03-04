@@ -1963,4 +1963,21 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::addDigits(0));
 		}
 	}// namespace add_digits
+
+	namespace sum_of_subarray_ranges {
+		TEST(sum_of_subarray_ranges, case1) {
+			vector input = {1, 2, 3};
+			ASSERT_EQ(4, Solution::subArrayRanges(input));
+		}
+
+		TEST(sum_of_subarray_ranges, case2) {
+			vector input = {1, 3, 3};
+			ASSERT_EQ(4, Solution::subArrayRanges(input));
+		}
+
+		TEST(sum_of_subarray_ranges, case3) {
+			vector input = {4, -2, -3, 4, 1};
+			ASSERT_EQ(59, Solution::subArrayRanges(input));
+		}
+	}// namespace sum_of_subarray_ranges
 }// namespace leetcode

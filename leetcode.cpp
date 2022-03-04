@@ -3787,4 +3787,20 @@ namespace leetcode {
 			return (num - 1) % 9 + 1;
 		}
 	}// namespace add_digits
+
+	namespace sum_of_subarray_ranges {
+		long long Solution::subArrayRanges(vector<int> &nums) {
+			long long ans = 0;
+			for(int i = 0; i + 1 < nums.size(); i++) {
+				int minimum = nums[i];
+				int maximum = nums[i];
+				for(int j = i + 1; j < nums.size(); j++) {
+					minimum = min(minimum, nums[j]);
+					maximum = max(maximum, nums[j]);
+					ans += maximum - minimum;
+				}
+			}
+			return ans;
+		}
+	}// namespace sum_of_subarray_ranges
 }// namespace leetcode
