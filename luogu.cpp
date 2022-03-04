@@ -2225,4 +2225,31 @@ namespace luogu {
 		cout << a << " " << b << " " << c;
 		return 0;
 	}
+
+	int P1598::main(istream &cin, ostream &cout) {
+		char ch;
+		int count[26] = {};
+		int maximum   = 0;
+		while(cin >> ch) {
+			if(isupper(ch)) {
+				count[ch - 'A']++;
+				maximum = max(maximum, count[ch - 'A']);
+			}
+		}
+		for(int i = maximum; i > 0; i--) {
+			for(int j = 0; j < 26; j++) {
+				if(count[j] >= i) {
+					cout << '*';
+				} else {
+					cout << ' ';
+				}
+				cout << ' ';
+			}
+			cout << endl;
+		}
+		for(char ch = 'A'; ch <= 'Z'; ch++) {
+			cout << ch << ' ';
+		}
+		return 0;
+	}
 }// namespace luogu

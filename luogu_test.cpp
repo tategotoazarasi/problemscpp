@@ -1248,4 +1248,26 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("2 9 2", ans);
 	}
+
+	TEST(P1598, case1) {
+		istringstream in("THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.\n"
+		                 "THIS IS AN EXAMPLE TO TEST FOR YOUR\n"
+		                 "HISTOGRAM PROGRAM.\n"
+		                 "HELLO!");
+		auto out = ostringstream();
+		P1598::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("                            *                       \n"
+		          "                            *                       \n"
+		          "        *                   *                       \n"
+		          "        *                   *     *   *             \n"
+		          "        *                   *     *   *             \n"
+		          "*       *     *             *     *   *             \n"
+		          "*       *     * *     * *   *     * * *             \n"
+		          "*       *   * * *     * *   * *   * * * *           \n"
+		          "*     * * * * * *     * * * * *   * * * *     * *   \n"
+		          "* * * * * * * * * * * * * * * * * * * * * * * * * * \n"
+		          "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ",
+		          ans);
+	}
 }// namespace luogu
