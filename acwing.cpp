@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <bitset>
+#include <climits>
 #include <cmath>
 #include <cstring>
 #include <iomanip>
@@ -4889,4 +4890,30 @@ namespace acwing {
 			return oss.str();
 		}
 	}// namespace acwing16
+
+	namespace acwing87 {
+		int Solution::strToInt(string str) {
+			for(int i = 0; i < str.length(); i++) {
+				if(str[i] != ' ') {
+					str = str.substr(i);
+					break;
+				}
+			}
+			bool pos = true;
+			if(str[0] == '+' || str[0] == '-') {
+				pos = (str[0] == '+');
+				str = str.substr(1);
+			}
+			unsigned long long ans = 0;
+			for(char ch: str) {
+				if(isdigit(ch)) {
+					ans *= 10;
+					ans += (ch - '0');
+				} else {
+					break;
+				}
+			}
+			return (ans > INT_MAX) ? (pos ? INT_MAX : INT_MIN) : (pos ? ans : -ans);
+		}
+	}// namespace acwing87
 }// namespace acwing

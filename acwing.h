@@ -1529,5 +1529,13 @@ namespace acwing {
 			static string replaceSpaces(string &str);
 		};
 	}// namespace acwing16
+
+	/// \brief AcWing 87. 把字符串转换成整数
+	namespace acwing87 {
+		class Solution {
+		public:
+			static int strToInt(string str);
+		};
+	}// namespace acwing87
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

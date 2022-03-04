@@ -2349,4 +2349,10 @@ namespace acwing {
 			ASSERT_EQ("We%20are%20happy.", Solution::replaceSpaces(input));
 		}
 	}// namespace acwing16
+
+	namespace acwing87 {
+		TEST(acwing87, case1) {
+			ASSERT_EQ(123, Solution::strToInt("123"));
+		}
+	}// namespace acwing87
 }// namespace acwing
