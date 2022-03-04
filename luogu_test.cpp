@@ -1232,4 +1232,20 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("STAY", ans);
 	}
+
+	TEST(P1597, case1) {
+		istringstream in("a:=3;b:=4;c:=5;");
+		auto out = ostringstream();
+		P1597::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("3 4 5", ans);
+	}
+
+	TEST(P1597, case2) {
+		istringstream in("c:=5;a:=b;b:=c;c:=a;a:=a;b:=b;c:=c;a:=c;c:=a;a:=b;b:=c;c:=a;a:=a;b:=b;c:=c;a:=c;b:=a;a:=c;c:=b;a:=2;c:=a;b:=9;\n");
+		auto out = ostringstream();
+		P1597::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2 9 2", ans);
+	}
 }// namespace luogu

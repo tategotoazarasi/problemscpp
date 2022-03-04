@@ -2175,4 +2175,54 @@ namespace luogu {
 		cout << ((comet_int == team_int) ? "GO" : "STAY");
 		return 0;
 	}
+
+	int P1597::main(istream &cin, ostream &cout) {
+		int a = 0;
+		int b = 0;
+		int c = 0;
+		while(true) {
+			char var;
+			int *p = nullptr;
+			int val;
+			char ref;
+			if(!(cin >> var) || !isalpha(var)) {
+				break;
+			}
+			switch(var) {
+				case 'a':
+					p = &a;
+					break;
+				case 'b':
+					p = &b;
+					break;
+				case 'c':
+					p = &c;
+					break;
+			}
+			cin.get();
+			cin.get();
+			if(isdigit(cin.peek())) {
+				cin >> val;
+				*p = val;
+			} else {
+				cin >> ref;
+				switch(ref) {
+					case 'a':
+						*p = a;
+						break;
+					case 'b':
+						*p = b;
+						break;
+					case 'c':
+						*p = c;
+						break;
+					default:
+						break;
+				}
+			}
+			cin.get();
+		}
+		cout << a << " " << b << " " << c;
+		return 0;
+	}
 }// namespace luogu
