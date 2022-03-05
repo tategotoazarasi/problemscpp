@@ -4856,9 +4856,9 @@ namespace acwing {
 	}
 
 	int acwing21::Solution::Fibonacci(int n) {
-		auto fibb = new int[n];
-		fibb[0]   = 1;
-		fibb[1]   = 1;
+		auto *fibb = new int[n];
+		fibb[0]    = 1;
+		fibb[1]    = 1;
 		for(int i = 2; i < n; i++) {
 			fibb[i] = fibb[i - 1] + fibb[i - 2];
 		}
@@ -4913,8 +4913,11 @@ namespace acwing {
 					break;
 				}
 			}
-			return ans > INT_MAX ? (pos ? INT_MAX : INT_MIN) : pos ? ans
-			                                                       : -ans;
+			return ans > INT_MAX
+			               ? (pos ? INT_MAX : INT_MIN)
+			       : pos
+			               ? ans
+			               : -ans;
 		}
 	}// namespace acwing87
 }// namespace acwing
