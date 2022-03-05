@@ -2252,4 +2252,14 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P5735::main(istream &cin, ostream &cout) {
+		double x1, y1, x2, y2, x3, y3;
+		cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+		double d12 = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
+		double d23 = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
+		double d13 = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
+		cout << fixed << setprecision(2) << d12 + d23 + d13;
+		return 0;
+	}
 }// namespace luogu
