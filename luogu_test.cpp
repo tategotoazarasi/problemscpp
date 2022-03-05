@@ -1280,4 +1280,20 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("12.00", ans);
 	}
+
+	TEST(P5736, case1) {
+		istringstream in("5\n3 4 5 6 7");
+		auto out = ostringstream();
+		P5736::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("3 5 7 ", ans);
+	}
+
+	TEST(P5736, case2) {
+		istringstream in("7\n1 2 3 4 5 1 2");
+		auto out = ostringstream();
+		P5736::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2 3 5 2 ", ans);
+	}
 }// namespace luogu

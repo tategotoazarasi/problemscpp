@@ -2267,4 +2267,27 @@ namespace luogu {
 		cout << fixed << setprecision(2) << d12 + d23 + d13;
 		return 0;
 	}
+
+	int P5736::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		bool notprime[100001];
+		memset(notprime, 1, sizeof notprime);
+		notprime[0] = false;
+		notprime[1] = false;
+		notprime[2] = true;
+		for(unsigned int i = 2; i <= 50000; i++) {
+			for(unsigned int j = 2; i * j <= 100000; j++) {
+				notprime[i * j] = false;
+			}
+		}
+		unsigned int num;
+		for(int _ = 0; _ < n; _++) {
+			cin >> num;
+			if(notprime[num]) {
+				cout << num << " ";
+			}
+		}
+		return 0;
+	}
 }// namespace luogu
