@@ -1427,6 +1427,16 @@ namespace leetcode {
 			static long long subArrayRanges(vector<int> &nums);
 		};
 	}// namespace sum_of_subarray_ranges
+
+	/**
+	 * \brief LeetCode 521. Longest Uncommon Subsequence I
+	 */
+	namespace longest_uncommon_subsequence_i {
+		class Solution {
+		public:
+			static int findLUSlength(const string &a, const string &b);
+		};
+	}// namespace longest_uncommon_subsequence_i
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

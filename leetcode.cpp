@@ -3801,4 +3801,13 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace sum_of_subarray_ranges
+
+	namespace longest_uncommon_subsequence_i {
+		int Solution::findLUSlength(const string &a, const string &b) {
+			if(a.length() != b.length() || b.find(a) == string::npos && a.find(b) == string::npos) {
+				return max(a.length(), b.length());
+			}
+			return -1;
+		}
+	}// namespace longest_uncommon_subsequence_i
 }// namespace leetcode

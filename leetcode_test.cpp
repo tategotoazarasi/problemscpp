@@ -1980,4 +1980,18 @@ namespace leetcode {
 			ASSERT_EQ(59, Solution::subArrayRanges(input));
 		}
 	}// namespace sum_of_subarray_ranges
+
+	namespace longest_uncommon_subsequence_i {
+		TEST(longest_uncommon_subsequence_i, case1) {
+			ASSERT_EQ(3, Solution::findLUSlength("aba", "cdc"));
+		}
+
+		TEST(longest_uncommon_subsequence_i, case2) {
+			ASSERT_EQ(3, Solution::findLUSlength("aaa", "bbb"));
+		}
+
+		TEST(longest_uncommon_subsequence_i, case3) {
+			ASSERT_EQ(-1, Solution::findLUSlength("aaa", "aaa"));
+		}
+	}// namespace longest_uncommon_subsequence_i
 }// namespace leetcode
