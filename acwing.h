@@ -11,6 +11,14 @@
 using namespace std;
 
 namespace acwing {
+	struct ListNode {
+		int val;
+		ListNode *next;
+
+		explicit ListNode(int x)
+		    : val(x), next(nullptr) {}
+	};
+
 	class acwing1 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
@@ -1587,5 +1595,15 @@ namespace acwing {
 			static int getSum(int n);
 		};
 	};// namespace acwing84
+
+	/**
+	 * \brief AcWing 35. 反转链表
+	 */
+	namespace acwing35 {
+		class Solution {
+		public:
+			static ListNode *reverseList(ListNode *head);
+		};
+	}// namespace acwing35
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

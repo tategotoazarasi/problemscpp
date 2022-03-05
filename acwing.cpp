@@ -5018,4 +5018,22 @@ namespace acwing {
 			return ans;
 		}
 	}// namespace acwing84
+
+	namespace acwing35 {
+		ListNode *Solution::reverseList(ListNode *head) {
+			if(head == nullptr) {
+				return head;
+			}
+			auto *prev    = head;
+			auto *current = head->next;
+			while(current != nullptr) {
+				auto *next    = current->next;
+				current->next = prev;
+				prev          = current;
+				current       = next;
+			}
+			head->next = nullptr;
+			return prev;
+		}
+	}// namespace acwing35
 }// namespace acwing
