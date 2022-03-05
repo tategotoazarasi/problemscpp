@@ -2355,4 +2355,47 @@ namespace acwing {
 			ASSERT_EQ(123, Solution::strToInt("123"));
 		}
 	}// namespace acwing87
+
+	TEST(acwing4308, case1) {
+		istringstream in("happy birthday");
+		auto out = ostringstream();
+		acwing4308::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("hab", ans);
+	}
+
+	TEST(acwing4308, case2) {
+		istringstream in("abc defg");
+		auto out = ostringstream();
+		acwing4308::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("abcd", ans);
+	}
+
+	TEST(acwing4309, case1) {
+		istringstream in("4 0 0\n1 1\n2 2\n2 0\n-1 -1");
+		auto out = ostringstream();
+		acwing4309::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2", ans);
+	}
+
+	TEST(acwing4309, case2) {
+		istringstream in("2 1 2\n1 1\n1 0");
+		auto out = ostringstream();
+		acwing4309::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1", ans);
+	}
+
+	namespace acwing4310 {
+		TEST(acwing4310, case1) {
+			istringstream in("9 6\n1 1 1 3 5 3 5 7\n3 1\n1 5\n3 4\n7 3\n1 8\n1 9");
+			auto out = ostringstream();
+			auto sol = acwing4310();
+			sol.main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3\n6\n8\n-1\n9\n4\n", ans);
+		}
+	}// namespace acwing4310
 }// namespace acwing

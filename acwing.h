@@ -2,6 +2,7 @@
 #define PROBLEMSCPP_ACWING_H
 
 #include <iostream>
+#include <map>
 #include <set>
 #include <unordered_map>
 #include <unordered_set>
@@ -1537,5 +1538,44 @@ namespace acwing {
 			static int strToInt(string str);
 		};
 	}// namespace acwing87
+
+	/**
+	 * \brief AcWing 4308. 组合字符串
+	 */
+	class acwing4308 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4309. 消灭老鼠
+	 */
+	class acwing4309 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4310. 树的DFS
+	 */
+	namespace acwing4310 {
+		struct TreeNode {
+			int val;
+			map<int, TreeNode *> nexts;
+
+			explicit TreeNode(int val)
+			    : val(val) {}
+		};
+
+		class acwing4310 {
+			unordered_map<int, TreeNode *> um;
+			unordered_map<int, int> size_tree;
+			unordered_map<int, int> position;
+
+		public:
+			int main(istream &cin, ostream &cout);
+			int dfs(vector<int> *vec, TreeNode *node);
+		};
+	}// namespace acwing4310
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

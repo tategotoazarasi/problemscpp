@@ -4920,4 +4920,89 @@ namespace acwing {
 			               : -ans;
 		}
 	}// namespace acwing87
+
+	int acwing4308::main(istream &cin, ostream &cout) {
+		string s1;
+		string s2;
+		cin >> s1 >> s2;
+		bool flag = true;
+		cout << s1[0];
+		for(int i = 1; i < s1.length(); i++) {
+			const char ch = s1[i];
+			if(ch < s2[0]) {
+				cout << ch;
+			} else {
+				break;
+			}
+		}
+		cout << s2[0];
+		return 0;
+	}
+
+	int acwing4309::main(istream &cin, ostream &cout) {
+		int n;
+		int x0;
+		int y0;
+		cin >> n >> x0 >> y0;
+		bool flag = false;
+		unordered_set<double> slopes;
+		for(int i = 0; i < n; i++) {
+			int xi;
+			int yi;
+			cin >> xi >> yi;
+			if(xi != x0) {
+				double slope = static_cast<double>(y0 - yi) / (x0 - xi);
+				slopes.insert(slope);
+			} else {
+				flag = true;
+			}
+		}
+		cout << slopes.size() + (flag ? 1 : 0);
+		return 0;
+	}
+
+	namespace acwing4310 {
+		int acwing4310::main(istream &cin, ostream &cout) {
+			int n;
+			int q;
+			cin >> n >> q;
+			vector<int> vec;
+			for(int i = 1; i <= n; i++) {
+				um[i] = new TreeNode(i);
+			}
+			for(int i = 2; i <= n; i++) {
+				int parent;
+				cin >> parent;
+				um[parent]->nexts[i] = um[i];
+			}
+			dfs(&vec, um[1]);
+			for(int i = 0; i < vec.size(); i++) {
+				position[vec[i]] = i;
+			}
+			for(int i = 0; i < q; i++) {
+				int u;
+				int k;
+				cin >> u >> k;
+				if(k > size_tree[u]) {
+					cout << -1;
+				} else {
+					cout << vec[position[u] + k - 1];
+				}
+				cout << endl;
+			}
+			return 0;
+		}
+
+		int acwing4310::dfs(vector<int> *vec, TreeNode *node) {
+			int sum = 1;
+			vec->push_back(node->val);
+			for(auto [i, next]: node->nexts) {
+				if(next != nullptr) {
+					sum += dfs(vec, next);
+				}
+			}
+			size_tree[node->val] = sum;
+			return sum;
+		}
+	}// namespace acwing4310
 }// namespace acwing
