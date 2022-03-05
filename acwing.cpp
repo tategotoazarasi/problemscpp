@@ -4990,6 +4990,9 @@ namespace acwing {
 				}
 				cout << endl;
 			}
+			for(auto [i, v]: um) {
+				delete v;
+			}
 			return 0;
 		}
 
@@ -5005,4 +5008,14 @@ namespace acwing {
 			return sum;
 		}
 	}// namespace acwing4310
+
+	namespace acwing84 {
+		int Solution::getSum(int n) {
+			int ans = (1 + n) * (n / 2);
+			if(n % 2 != 0) {
+				ans += n / 2;
+			}
+			return ans;
+		}
+	}// namespace acwing84
 }// namespace acwing

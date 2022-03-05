@@ -2398,4 +2398,10 @@ namespace acwing {
 			ASSERT_EQ("3\n6\n8\n-1\n9\n4\n", ans);
 		}
 	}// namespace acwing4310
+
+	namespace acwing84 {
+		TEST(acwing84, case1) {
+			ASSERT_EQ(55, Solution::getSum(10));
+		}
+	}// namespace acwing84
 }// namespace acwing

@@ -1577,5 +1577,15 @@ namespace acwing {
 			int dfs(vector<int> *vec, TreeNode *node);
 		};
 	}// namespace acwing4310
+
+	/**
+	 * \brief AcWing 84. 求1+2+…+n 
+	 */
+	namespace acwing84 {
+		class Solution {
+		public:
+			static int getSum(int n);
+		};
+	};// namespace acwing84
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
