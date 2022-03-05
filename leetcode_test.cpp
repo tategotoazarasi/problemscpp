@@ -1994,4 +1994,62 @@ namespace leetcode {
 			ASSERT_EQ(-1, Solution::findLUSlength("aaa", "aaa"));
 		}
 	}// namespace longest_uncommon_subsequence_i
+
+	namespace most_frequent_number_following_key_in_an_array {
+		TEST(most_frequent_number_following_key_in_an_array, case1) {
+			vector input = {1, 100, 200, 1, 100};
+			ASSERT_EQ(100, Solution::mostFrequent(input, 1));
+		}
+
+		TEST(most_frequent_number_following_key_in_an_array, case2) {
+			vector input = {2, 2, 2, 2, 3};
+			ASSERT_EQ(2, Solution::mostFrequent(input, 2));
+		}
+	}// namespace most_frequent_number_following_key_in_an_array
+
+	namespace sort_the_jumbled_numbers {
+		TEST(sort_the_jumbled_numbers, case1) {
+			vector mapping      = {8, 9, 4, 0, 2, 1, 3, 5, 7, 6};
+			vector nums         = {991, 338, 38};
+			const vector output = {338, 38, 991};
+			ASSERT_EQ(output, Solution::sortJumbled(mapping, nums));
+		}
+
+		TEST(sort_the_jumbled_numbers, case2) {
+			vector mapping      = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+			vector nums         = {789, 456, 123};
+			const vector output = {123, 456, 789};
+			ASSERT_EQ(output, Solution::sortJumbled(mapping, nums));
+		}
+	}// namespace sort_the_jumbled_numbers
+
+	namespace all_ancestors_of_a_node_in_a_directed_acyclic_graph {
+		TEST(all_ancestors_of_a_node_in_a_directed_acyclic_graph, case1) {
+			vector<vector<int>> input        = {{0, 3}, {0, 4}, {1, 3}, {2, 4}, {2, 7}, {3, 5}, {3, 6}, {3, 7}, {4, 6}};
+			const vector<vector<int>> output = {{}, {}, {}, {0, 1}, {0, 2}, {0, 1, 3}, {0, 1, 2, 3, 4}, {0, 1, 2, 3}};
+			auto sol                         = Solution();
+			ASSERT_EQ(output, sol.getAncestors(8, input));
+		}
+
+		TEST(all_ancestors_of_a_node_in_a_directed_acyclic_graph, case2) {
+			vector<vector<int>> input        = {{0, 1}, {0, 2}, {0, 3}, {0, 4}, {1, 2}, {1, 3}, {1, 4}, {2, 3}, {2, 4}, {3, 4}};
+			const vector<vector<int>> output = {{}, {0}, {0, 1}, {0, 1, 2}, {0, 1, 2, 3}};
+			auto sol                         = Solution();
+			ASSERT_EQ(output, sol.getAncestors(5, input));
+		}
+	}// namespace all_ancestors_of_a_node_in_a_directed_acyclic_graph
+
+	namespace minimum_number_of_moves_to_make_palindrome {
+		TEST(minimum_number_of_moves_to_make_palindrome, case1) {
+			ASSERT_EQ(2, Solution::minMovesToMakePalindrome("aabb"));
+		}
+
+		TEST(minimum_number_of_moves_to_make_palindrome, case2) {
+			ASSERT_EQ(2, Solution::minMovesToMakePalindrome("letelt"));
+		}
+
+		TEST(minimum_number_of_moves_to_make_palindrome, case3) {
+			ASSERT_EQ(163, Solution::minMovesToMakePalindrome("skwhhaaunskegmdtutlgtteunmuuludii"));
+		}
+	}// namespace minimum_number_of_moves_to_make_palindrome
 }// namespace leetcode

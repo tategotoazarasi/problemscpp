@@ -3810,4 +3810,110 @@ namespace leetcode {
 			return -1;
 		}
 	}// namespace longest_uncommon_subsequence_i
+
+	namespace most_frequent_number_following_key_in_an_array {
+		int Solution::mostFrequent(vector<int> &nums, int key) {
+			unordered_map<int, int> um;
+			for(int i = 0; i + 1 < nums.size(); i++) {
+				if(nums[i] == key) {
+					um[nums[i + 1]]++;
+				}
+			}
+			int max_v = 0;
+			int max_k = 0;
+			for(auto [k, v]: um) {
+				if(v > max_v) {
+					max_v = v;
+					max_k = k;
+				}
+			}
+			return max_k;
+		}
+	}// namespace most_frequent_number_following_key_in_an_array
+
+	namespace sort_the_jumbled_numbers {
+		vector<int> Solution::sortJumbled(vector<int> &mapping, vector<int> &nums) {
+			vector<tuple<int, int, int>> vec;
+			for(int i = 0; i < nums.size(); i++) {
+				string str = to_string(nums[i]);
+				ostringstream oss;
+				for(const char ch: str) {
+					oss << mapping[ch - '0'];
+				}
+				vec.emplace_back(i, nums[i], stoi(oss.str()));
+			}
+			sort(vec.begin(), vec.end(), cmp());
+			vector<int> ans;
+			ans.reserve(vec.size());
+			for(auto [i, num, rev]: vec) {
+				ans.push_back(num);
+			}
+			return ans;
+		}
+	}// namespace sort_the_jumbled_numbers
+
+	namespace all_ancestors_of_a_node_in_a_directed_acyclic_graph {
+		vector<vector<int>> Solution::getAncestors(int n, vector<vector<int>> &edges) {
+			for(int i = 0; i < n; i++) {
+				nexts[i]     = unordered_set<int>();
+				ancestors[i] = set<int>();
+			}
+			for(auto edge: edges) {
+				nexts[edge[0]].insert(edge[1]);
+			}
+			for(int i = 0; i < n; i++) {
+				for(const auto next: nexts[i]) {
+					auto dfsd = new bool[n];
+					memset(dfsd, 0, n * sizeof(bool));
+					dfs(dfsd, i, next);
+					delete[] dfsd;
+				}
+			}
+			vector<vector<int>> ans;
+			for(int i = 0; i < n; i++) {
+				vector<int> vec;
+				for(auto i: ancestors[i]) {
+					vec.push_back(i);
+				}
+				ans.push_back(vec);
+			}
+			return ans;
+		}
+
+		void Solution::dfs(bool *dfsd, int v, int i) {
+			ancestors[i].insert(v);
+			dfsd[i] = true;
+			for(const auto next: nexts[i]) {
+				if(!dfsd[next]) {
+					dfs(dfsd, v, next);
+				}
+			}
+		}
+	}// namespace all_ancestors_of_a_node_in_a_directed_acyclic_graph
+
+	namespace minimum_number_of_moves_to_make_palindrome {
+		int Solution::minMovesToMakePalindrome(string s) {
+			int ans = 0;
+			for(int left = 0, right = s.size() - 1; left < right; left++) {
+				bool even = false;
+				for(int i = right; left != i; i--) {
+					if(s[left] == s[i]) {
+						// 字母出现偶数次的情况，模拟交换
+						for(; i < right; i++) {
+							swap(s[i], s[i + 1]);
+							ans++;
+						}
+						right--;
+						even = true;
+						break;
+					}
+				}
+				if(!even) {
+					// 字母出现奇数次的情况，计算它距离中间还有多少距离
+					ans += s.size() / 2 - left;
+				}
+			}
+			return ans;
+		}
+	}// namespace minimum_number_of_moves_to_make_palindrome
 }// namespace leetcode

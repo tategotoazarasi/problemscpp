@@ -1437,6 +1437,63 @@ namespace leetcode {
 			static int findLUSlength(const string &a, const string &b);
 		};
 	}// namespace longest_uncommon_subsequence_i
+
+	/**
+	 * \brief LeetCode 6024. 数组中紧跟 key 之后出现最频繁的数字
+	 */
+	namespace most_frequent_number_following_key_in_an_array {
+		class Solution {
+		public:
+			static int mostFrequent(vector<int> &nums, int key);
+		};
+	}// namespace most_frequent_number_following_key_in_an_array
+
+	/**
+	 * \brief LeetCode 5217. 将杂乱无章的数字排序
+	 */
+	namespace sort_the_jumbled_numbers {
+		struct cmp {
+			bool operator()(const tuple<int, int, int> &s1, const tuple<int, int, int> &s2) const {
+				auto [i1, num1, rev1] = s1;
+				auto [i2, num2, rev2] = s2;
+				if(rev1 != rev2) {
+					return rev1 < rev2;
+				}
+				return i1 < i2;
+
+				return i1 < i2;
+			}
+		};
+
+		class Solution {
+		public:
+			static vector<int> sortJumbled(vector<int> &mapping, vector<int> &nums);
+		};
+	}// namespace sort_the_jumbled_numbers
+
+	/**
+	 * \brief LeetCode 5300. 有向无环图中一个节点的所有祖先
+	 */
+	namespace all_ancestors_of_a_node_in_a_directed_acyclic_graph {
+		class Solution {
+			unordered_map<int, unordered_set<int>> nexts;
+			unordered_map<int, set<int>> ancestors;
+
+		public:
+			vector<vector<int>> getAncestors(int n, vector<vector<int>> &edges);
+			void dfs(bool *dfsd, int v, int i);
+		};
+	}// namespace all_ancestors_of_a_node_in_a_directed_acyclic_graph
+
+	/**
+	 * \brief LeetCode 5237. 得到回文串的最少操作次数
+	 */
+	namespace minimum_number_of_moves_to_make_palindrome {
+		class Solution {
+		public:
+			static int minMovesToMakePalindrome(string s);
+		};
+	}// namespace minimum_number_of_moves_to_make_palindrome
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
