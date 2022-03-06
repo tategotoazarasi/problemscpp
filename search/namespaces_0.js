@@ -8,11 +8,13 @@ var searchData=
   ['acwing1978_5',['acwing1978',['../d2/d79/a00051.html',1,'acwing']]],
   ['acwing2019_6',['acwing2019',['../d2/dee/a00049.html',1,'acwing']]],
   ['acwing2060_7',['acwing2060',['../d4/dca/a00048.html',1,'acwing']]],
-  ['acwing21_8',['acwing21',['../d4/de8/a00061.html',1,'acwing']]],
-  ['acwing35_9',['acwing35',['../d9/d73/a00060.html',1,'acwing']]],
-  ['acwing4208_10',['acwing4208',['../d5/de0/a00050.html',1,'acwing']]],
-  ['acwing4310_11',['acwing4310',['../d7/df7/a00058.html',1,'acwing']]],
-  ['acwing78_12',['acwing78',['../d4/d6d/a00055.html',1,'acwing']]],
-  ['acwing84_13',['acwing84',['../d3/d8b/a00059.html',1,'acwing']]],
-  ['acwing87_14',['acwing87',['../d1/d22/a00057.html',1,'acwing']]]
+  ['acwing21_8',['acwing21',['../d1/d6f/a00063.html',1,'acwing']]],
+  ['acwing28_9',['acwing28',['../d4/de8/a00061.html',1,'acwing']]],
+  ['acwing35_10',['acwing35',['../d9/d73/a00060.html',1,'acwing']]],
+  ['acwing4208_11',['acwing4208',['../d5/de0/a00050.html',1,'acwing']]],
+  ['acwing4310_12',['acwing4310',['../d7/df7/a00058.html',1,'acwing']]],
+  ['acwing66_13',['acwing66',['../df/d03/a00062.html',1,'acwing']]],
+  ['acwing78_14',['acwing78',['../d4/d6d/a00055.html',1,'acwing']]],
+  ['acwing84_15',['acwing84',['../d3/d8b/a00059.html',1,'acwing']]],
+  ['acwing87_16',['acwing87',['../d1/d22/a00057.html',1,'acwing']]]
 ];
