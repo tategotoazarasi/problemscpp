@@ -5,6 +5,7 @@
 #include <cstring>
 #include <deque>
 #include <iomanip>
+#include <numeric>
 #include <set>
 #include <sstream>
 #include <unordered_map>
@@ -2305,6 +2306,23 @@ namespace luogu {
 		}
 		cout << sum << endl
 		     << oss.str();
+		return 0;
+	}
+
+	int P5738::main(istream &cin, ostream &cout) {
+		int n;
+		int m;
+		cin >> n >> m;
+		double ans = 0;
+		for(int i = 0; i < n; i++) {
+			vector<int> vec(m);
+			for(int j = 0; j < m; j++) {
+				cin >> vec[j];
+			}
+			sort(vec.begin(), vec.end());
+			ans = max(ans, static_cast<double>(accumulate(vec.begin() + 1, vec.end() - 1, 0)) / (m - 2));
+		}
+		cout << fixed << setprecision(2) << ans;
 		return 0;
 	}
 }// namespace luogu
