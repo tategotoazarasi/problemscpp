@@ -3863,7 +3863,7 @@ namespace leetcode {
 			}
 			for(int i = 0; i < n; i++) {
 				for(const auto next: nexts[i]) {
-					auto dfsd = new bool[n];
+					auto *dfsd = new bool[n];
 					memset(dfsd, 0, n * sizeof(bool));
 					dfs(dfsd, i, next);
 					delete[] dfsd;
@@ -3898,13 +3898,13 @@ namespace leetcode {
 				bool even = false;
 				for(int i = right; left != i; i--) {
 					if(s[left] == s[i]) {
+						even = true;
 						// 字母出现偶数次的情况，模拟交换
 						for(; i < right; i++) {
 							swap(s[i], s[i + 1]);
 							ans++;
 						}
 						right--;
-						even = true;
 						break;
 					}
 				}
@@ -3916,4 +3916,91 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace minimum_number_of_moves_to_make_palindrome
+
+	namespace cells_in_a_range_on_an_excel_sheet {
+		vector<string> Solution::cellsInRange(const string &s) {
+			vector<string> ans;
+			istringstream ss(s);
+			char col1;
+			char col2;
+			int row1;
+			int row2;
+			ss >> col1 >> row1;
+			ss.get();
+			ss >> col2 >> row2;
+			for(char col = col1; col <= col2; col++) {
+				for(int row = row1; row <= row2; row++) {
+					ostringstream oss;
+					oss << col << row;
+					ans.push_back(oss.str());
+				}
+			}
+			return ans;
+		}
+	}// namespace cells_in_a_range_on_an_excel_sheet
+
+	namespace append_k_integers_with_minimal_sum {
+		long long Solution::minimalKSum(vector<int> &nums, int k) {
+			long long ans = 0;
+			set<int> s;
+			for(auto num: nums) {
+				s.insert(num);
+			}
+			long long limit = k;
+			for(auto i = s.begin(); i != s.end() && *i <= limit; ++i) {
+				limit++;
+			}
+			ans += limit + limit * (limit - 1) / 2;
+			for(auto i = s.begin(); i != s.end() && *i < limit; ++i) {
+				ans -= *i;
+			}
+			return ans;
+		}
+	}// namespace append_k_integers_with_minimal_sum
+
+	namespace create_binary_tree_from_descriptions {
+		TreeNode *Solution::createBinaryTree(vector<vector<int>> &descriptions) {
+			unordered_map<int, TreeNode *> um;
+			unordered_set<int> nodes;
+			unordered_set<int> childs;
+			for(auto description: descriptions) {
+				nodes.insert(description[0]);
+				nodes.insert(description[1]);
+				childs.insert(description[1]);
+			}
+			for(auto node: nodes) {
+				um[node] = new TreeNode();
+			}
+			for(auto description: descriptions) {
+				if(description[2] == 1) {
+					//childi 是 parenti 的左子节点
+					um[description[0]]->left = um[description[1]];
+				} else {
+					//childi 是 parenti 的右子节点。
+					um[description[0]]->right = um[description[1]];
+				}
+			}
+			for(auto node: nodes) {
+				if(!childs.contains(node)) {
+					return um[node];
+				}
+			}
+			return nullptr;
+		}
+	}// namespace create_binary_tree_from_descriptions
+
+	namespace replace_non_coprime_numbers_in_array {
+		vector<int> Solution::replaceNonCoprimes(vector<int> &nums) {
+			vector<int> ans;
+			for(int i = 0; i < nums.size(); i++) {
+				int num = nums[i];
+				while(!ans.empty() && gcd(num, ans.back()) > 1) {
+					num = num / gcd(num, ans.back()) * ans.back();
+					ans.pop_back();
+				}
+				ans.push_back(num);
+			}
+			return ans;
+		}
+	}// namespace replace_non_coprime_numbers_in_array
 }// namespace leetcode

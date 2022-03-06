@@ -2052,4 +2052,57 @@ namespace leetcode {
 			ASSERT_EQ(163, Solution::minMovesToMakePalindrome("skwhhaaunskegmdtutlgtteunmuuludii"));
 		}
 	}// namespace minimum_number_of_moves_to_make_palindrome
+
+	namespace cells_in_a_range_on_an_excel_sheet {
+		TEST(cells_in_a_range_on_an_excel_sheet, case1) {
+			const vector<string> output = {"K1", "K2", "L1", "L2"};
+			ASSERT_EQ(output, Solution::cellsInRange("K1:L2"));
+		}
+
+		TEST(cells_in_a_range_on_an_excel_sheet, case2) {
+			const vector<string> output = {"A1", "B1", "C1", "D1", "E1", "F1"};
+			ASSERT_EQ(output, Solution::cellsInRange("A1:F1"));
+		}
+	}// namespace cells_in_a_range_on_an_excel_sheet
+
+	namespace append_k_integers_with_minimal_sum {
+		TEST(append_k_integers_with_minimal_sum, case1) {
+			vector input = {96, 44, 99, 25, 61, 84, 88, 18, 19, 33, 60, 86, 52, 19, 32, 47, 35, 50, 94, 17, 29, 98, 22, 21, 72, 100, 40, 84};
+			ASSERT_EQ(794, Solution::minimalKSum(input, 35));
+		}
+
+		TEST(append_k_integers_with_minimal_sum, case2) {
+			vector input = {5, 6};
+			ASSERT_EQ(25, Solution::minimalKSum(input, 6));
+		}
+
+		TEST(append_k_integers_with_minimal_sum, case3) {
+			vector input = {1, 4, 25, 10, 25};
+			ASSERT_EQ(5, Solution::minimalKSum(input, 2));
+		}
+
+		TEST(append_k_integers_with_minimal_sum, case4) {
+			vector input = {1, 2};
+			ASSERT_EQ(3, Solution::minimalKSum(input, 1));
+		}
+
+		TEST(append_k_integers_with_minimal_sum, case5) {
+			vector input = {2, 2, 2, 2};
+			ASSERT_EQ(8, Solution::minimalKSum(input, 3));
+		}
+	}// namespace append_k_integers_with_minimal_sum
+
+	namespace replace_non_coprime_numbers_in_array {
+		TEST(replace_non_coprime_numbers_in_array, case1) {
+			vector input        = {6, 4, 3, 2, 7, 6, 2};
+			const vector output = {12, 7, 6};
+			ASSERT_EQ(output, Solution::replaceNonCoprimes(input));
+		}
+
+		TEST(replace_non_coprime_numbers_in_array, case2) {
+			vector input        = {2, 2, 1, 1, 3, 3, 3};
+			const vector output = {2, 1, 1, 3};
+			ASSERT_EQ(output, Solution::replaceNonCoprimes(input));
+		}
+	}// namespace replace_non_coprime_numbers_in_array
 }// namespace leetcode

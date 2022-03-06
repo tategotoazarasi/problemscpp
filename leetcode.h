@@ -1460,8 +1460,6 @@ namespace leetcode {
 					return rev1 < rev2;
 				}
 				return i1 < i2;
-
-				return i1 < i2;
 			}
 		};
 
@@ -1494,6 +1492,46 @@ namespace leetcode {
 			static int minMovesToMakePalindrome(string s);
 		};
 	}// namespace minimum_number_of_moves_to_make_palindrome
+
+	/**
+	 * \brief LeetCode 6016. Excel 表中某个范围内的单元格
+	 */
+	namespace cells_in_a_range_on_an_excel_sheet {
+		class Solution {
+		public:
+			static vector<string> cellsInRange(const string &s);
+		};
+	}// namespace cells_in_a_range_on_an_excel_sheet
+
+	/**
+	 * \brief LeetCode 6017. 向数组中追加 K 个整数
+	 */
+	namespace append_k_integers_with_minimal_sum {
+		class Solution {
+		public:
+			static long long minimalKSum(vector<int> &nums, int k);
+		};
+	}// namespace append_k_integers_with_minimal_sum
+
+	/**
+	 * \brief LeetCode 6018. 根据描述创建二叉树
+	 */
+	namespace create_binary_tree_from_descriptions {
+		class Solution {
+		public:
+			static TreeNode *createBinaryTree(vector<vector<int>> &descriptions);
+		};
+	}// namespace create_binary_tree_from_descriptions
+
+	/**
+	 * \brief LeetCode 6019. 替换数组中的非互质数
+	 */
+	namespace replace_non_coprime_numbers_in_array {
+		class Solution {
+		public:
+			static vector<int> replaceNonCoprimes(vector<int> &nums);
+		};
+	}// namespace replace_non_coprime_numbers_in_array
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
