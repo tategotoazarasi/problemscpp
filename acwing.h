@@ -1605,5 +1605,15 @@ namespace acwing {
 			static ListNode *reverseList(ListNode *head);
 		};
 	}// namespace acwing35
+
+	/**
+	 * \brief AcWing 28. 在O(1)时间删除链表结点
+	 */
+	namespace acwing28 {
+		class Solution {
+		public:
+			static void deleteNode(ListNode *node);
+		};
+	}// namespace acwing28
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
