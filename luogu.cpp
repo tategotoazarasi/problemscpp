@@ -2290,4 +2290,21 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P5737::main(istream &cin, ostream &cout) {
+		int x;
+		int y;
+		cin >> x >> y;
+		ostringstream oss;
+		int sum = 0;
+		for(int year = x; year <= y; year++) {
+			if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+				oss << year << ' ';
+				sum++;
+			}
+		}
+		cout << sum << endl
+		     << oss.str();
+		return 0;
+	}
 }// namespace luogu

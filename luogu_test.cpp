@@ -1296,4 +1296,12 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("2 3 5 2 ", ans);
 	}
+
+	TEST(P5737, case1) {
+		istringstream in("1989 2001");
+		auto out = ostringstream();
+		P5737::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("3\n1992 1996 2000 ", ans);
+	}
 }// namespace luogu
