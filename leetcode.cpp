@@ -4003,4 +4003,39 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace replace_non_coprime_numbers_in_array
+
+	namespace find_good_days_to_rob_the_bank {
+		vector<int> Solution::goodDaysToRobBank(vector<int> &security, int time) {
+			if(security.size() < 2 * time + 1) {
+				return {};
+			}
+			vector<int> ans;
+			if(time == 0) {
+				for(int i = 0; i < security.size(); i++) {
+					ans.push_back(i);
+				}
+				return ans;
+			}
+			vector non_increasing(security.size(), 0);
+			vector non_decreasing(security.size(), 0);
+			for(int i = 1; i < security.size(); i++) {
+				if(security[i] >= security[i - 1]) {
+					non_decreasing[i] = non_decreasing[i - 1] + 1;
+				} else {
+					non_decreasing[i] = 0;
+				}
+				if(security[i] <= security[i - 1]) {
+					non_increasing[i] = non_increasing[i - 1] + 1;
+				} else {
+					non_increasing[i] = 0;
+				}
+			}
+			for(int i = time; i + time < security.size(); i++) {
+				if(non_decreasing[i + time] >= time && non_increasing[i] >= time) {
+					ans.push_back(i);
+				}
+			}
+			return ans;
+		}
+	}// namespace find_good_days_to_rob_the_bank
 }// namespace leetcode

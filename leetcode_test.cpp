@@ -2105,4 +2105,30 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::replaceNonCoprimes(input));
 		}
 	}// namespace replace_non_coprime_numbers_in_array
+
+	namespace find_good_days_to_rob_the_bank {
+		TEST(find_good_days_to_rob_the_bank, case1) {
+			vector input        = {5, 3, 3, 3, 5, 6, 2};
+			const vector output = {2, 3};
+			ASSERT_EQ(output, Solution::goodDaysToRobBank(input, 2));
+		}
+
+		TEST(find_good_days_to_rob_the_bank, case2) {
+			vector input        = {1, 1, 1, 1, 1};
+			const vector output = {0, 1, 2, 3, 4};
+			ASSERT_EQ(output, Solution::goodDaysToRobBank(input, 0));
+		}
+
+		TEST(find_good_days_to_rob_the_bank, case3) {
+			vector input             = {1, 2, 3, 4, 5, 6};
+			const vector<int> output = {};
+			ASSERT_EQ(output, Solution::goodDaysToRobBank(input, 2));
+		}
+
+		TEST(find_good_days_to_rob_the_bank, case4) {
+			vector input             = {4, 3, 2, 1};
+			const vector<int> output = {};
+			ASSERT_EQ(output, Solution::goodDaysToRobBank(input, 1));
+		}
+	}// namespace find_good_days_to_rob_the_bank
 }// namespace leetcode

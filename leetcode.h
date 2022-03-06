@@ -1532,6 +1532,16 @@ namespace leetcode {
 			static vector<int> replaceNonCoprimes(vector<int> &nums);
 		};
 	}// namespace replace_non_coprime_numbers_in_array
+
+	/**
+	 * \brief LeetCode 2100. Find Good Days to Rob the Bank
+	 */
+	namespace find_good_days_to_rob_the_bank {
+		class Solution {
+		public:
+			static vector<int> goodDaysToRobBank(vector<int> &security, int time);
+		};
+	}// namespace find_good_days_to_rob_the_bank
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
