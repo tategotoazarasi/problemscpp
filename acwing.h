@@ -1615,5 +1615,15 @@ namespace acwing {
 			static void deleteNode(ListNode *node);
 		};
 	}// namespace acwing28
+
+	/**
+	 * \brief AcWing 66. 两个链表的第一个公共结点
+	 */
+	namespace acwing66 {
+		class Solution {
+		public:
+			static ListNode *findFirstCommonNode(ListNode *headA, ListNode *headB);
+		};
+	}// namespace acwing66
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

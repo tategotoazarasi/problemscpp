@@ -5039,10 +5039,25 @@ namespace acwing {
 
 	namespace acwing28 {
 		void Solution::deleteNode(ListNode *node) {
-			node->val  = node->next->val;
-			auto *next = node->next;
+			node->val        = node->next->val;
+			const auto *next = node->next;
 			delete next;
 			node->next = node->next->next;
 		}
 	}// namespace acwing28
+
+	namespace acwing66 {
+		ListNode *Solution::findFirstCommonNode(ListNode *headA, ListNode *headB) {
+			unordered_set<ListNode *> nodes;
+			for(auto *current = headA; current != nullptr; current = current->next) {
+				nodes.insert(current);
+			}
+			for(auto *current = headB; current != nullptr; current = current->next) {
+				if(nodes.contains(current)) {
+					return current;
+				}
+			}
+			return nullptr;
+		}
+	}// namespace acwing66
 }// namespace acwing
