@@ -2131,4 +2131,14 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::goodDaysToRobBank(input, 1));
 		}
 	}// namespace find_good_days_to_rob_the_bank
+
+	namespace base_7 {
+		TEST(base_7, case1) {
+			ASSERT_EQ("202", Solution::convertToBase7(100));
+		}
+
+		TEST(base_7, case2) {
+			ASSERT_EQ("-10", Solution::convertToBase7(-7));
+		}
+	}// namespace base_7
 }// namespace leetcode

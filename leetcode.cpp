@@ -4038,4 +4038,30 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace find_good_days_to_rob_the_bank
+
+	namespace base_7 {
+		string Solution::convertToBase7(int num) {
+			bool pos = true;
+			if(num < 0) {
+				pos = false;
+				num = -num;
+			}
+			if(num == 0) {
+				return "0";
+			}
+			deque<int> deq;
+			while(num != 0) {
+				deq.push_front(num % 7);
+				num /= 7;
+			}
+			ostringstream oss;
+			if(!pos) {
+				oss << '-';
+			}
+			for(int n: deq) {
+				oss << n;
+			}
+			return oss.str();
+		}
+	}// namespace base_7
 }// namespace leetcode

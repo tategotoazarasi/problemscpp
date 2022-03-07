@@ -1542,6 +1542,14 @@ namespace leetcode {
 			static vector<int> goodDaysToRobBank(vector<int> &security, int time);
 		};
 	}// namespace find_good_days_to_rob_the_bank
+
+	/// \brief LeetCode 504. Base 7
+	namespace base_7 {
+		class Solution {
+		public:
+			static string convertToBase7(int num);
+		};
+	}// namespace base_7
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
