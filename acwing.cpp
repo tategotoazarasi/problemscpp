@@ -5060,4 +5060,28 @@ namespace acwing {
 			return nullptr;
 		}
 	}// namespace acwing66
+
+	namespace acwing36 {
+		ListNode *Solution::merge(ListNode *l1, ListNode *l2) {
+			ListNode *current = new ListNode(0);
+			ListNode *head    = current;
+			while(l1 != nullptr && l2 != nullptr) {
+				if(l1->val < l2->val) {
+					current->next = l1;
+					l1            = l1->next;
+
+				} else {
+					current->next = l2;
+					l2            = l2->next;
+				}
+				current = current->next;
+			}
+			if(l1 == nullptr) {
+				current->next = l2;
+			} else {
+				current->next = l1;
+			}
+			return head->next;
+		}
+	}// namespace acwing36
 }// namespace acwing

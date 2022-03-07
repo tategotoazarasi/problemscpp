@@ -1625,5 +1625,13 @@ namespace acwing {
 			static ListNode *findFirstCommonNode(ListNode *headA, ListNode *headB);
 		};
 	}// namespace acwing66
+
+	/// \brief AcWing 36. 合并两个排序的链表
+	namespace acwing36 {
+		class Solution {
+		public:
+			static ListNode *merge(ListNode *l1, ListNode *l2);
+		};
+	}// namespace acwing36
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
