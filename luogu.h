@@ -622,6 +622,13 @@ namespace luogu {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief 洛谷 P5461 赦免战俘
+	class P5461 {
+	public:
+		static int main(istream &cin, ostream &cout);
+		static void pardon(bool **matrix, int x0, int y0, int n);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H

@@ -2336,4 +2336,40 @@ namespace luogu {
 		cout << ans;
 		return 0;
 	}
+
+	int P5461::main(istream &cin, ostream &cout) {
+		unsigned int n;
+		cin >> n;
+		n             = 1 << n;
+		bool **matrix = new bool *[n];
+		for(int i = 0; i < n; i++) {
+			matrix[i] = new bool[n];
+			memset(matrix[i], true, n * sizeof(bool));
+		}
+		pardon(matrix, 0, 0, n);
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < n; j++) {
+				cout << matrix[i][j] << " ";
+			}
+			cout << endl;
+			delete[] matrix[i];
+		}
+		delete[] matrix;
+		return 0;
+	}
+
+	void P5461::pardon(bool **matrix, int x0, int y0, int n) {
+		if(n == 2) {
+			matrix[x0][y0] = false;
+			return;
+		}
+		for(int i = 0; i < n / 2; i++) {
+			for(int j = 0; j < n / 2; j++) {
+				matrix[x0 + i][y0 + j] = false;
+			}
+		}
+		pardon(matrix, x0, y0 + n / 2, n / 2);
+		pardon(matrix, x0 + n / 2, y0, n / 2);
+		pardon(matrix, x0 + n / 2, y0 + n / 2, n / 2);
+	}
 }// namespace luogu
