@@ -1633,5 +1633,13 @@ namespace acwing {
 			static ListNode *merge(ListNode *l1, ListNode *l2);
 		};
 	}// namespace acwing36
+
+	/// \brief AcWing 29. 删除链表中重复的节点
+	namespace acwing29 {
+		class Solution {
+		public:
+			static ListNode *deleteDuplication(ListNode *head);
+		};
+	}// namespace acwing29
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

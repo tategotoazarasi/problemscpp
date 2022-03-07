@@ -5084,4 +5084,31 @@ namespace acwing {
 			return head->next;
 		}
 	}// namespace acwing36
+
+	namespace acwing29 {
+		ListNode *Solution::deleteDuplication(ListNode *head) {
+			if(head == nullptr) {
+				return head;
+			}
+			while(head != nullptr && head->next != nullptr && head->val == head->next->val) {
+				int val = head->val;
+				while(head != nullptr && head->val == val) {
+					head = head->next;
+				}
+			}
+			ListNode *ans = head;
+			while(head != nullptr) {
+				while(head->next != nullptr && head->next->next != nullptr && head->next->val == head->next->next->val) {
+					int val          = head->next->val;
+					ListNode *cursor = head->next;
+					while(cursor != nullptr && cursor->val == val) {
+						cursor = cursor->next;
+					}
+					head->next = cursor;
+				}
+				head = head->next;
+			}
+			return ans;
+		}
+	}// namespace acwing29
 }// namespace acwing
