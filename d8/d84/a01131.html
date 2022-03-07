@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::replace_all_s_to_avoid_consecutive_repeating_characters::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,80 +63,18 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../df/d5f/a00064.html">leetcode</a></li><li class="navelem"><a class="el" href="../../da/dec/a00080.html">replace_all_s_to_avoid_consecutive_repeating_characters</a></li><li class="navelem"><a class="el" href="../../d8/d84/a01131.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d9/db3/a00066.html">leetcode</a></li><li class="navelem"><a class="el" href="../../da/dec/a00080.html">day_of_the_week</a></li><li class="navelem"><a class="el" href="../../dd/de2/a01134.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="../../d9/d12/a01128.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::replace_all_s_to_avoid_consecutive_repeating_characters::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::day_of_the_week::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a905edc751425d10aa97d32f05de32de3"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d84/a01131.html#a905edc751425d10aa97d32f05de32de3">modifyString</a> (string s)</td></tr>
-<tr class="separator:a905edc751425d10aa97d32f05de32de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00224">224</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="a905edc751425d10aa97d32f05de32de3" name="a905edc751425d10aa97d32f05de32de3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a905edc751425d10aa97d32f05de32de3">&#9670;&nbsp;</a></span>modifyString()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string leetcode::replace_all_s_to_avoid_consecutive_repeating_characters::Solution::modifyString </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l00537">537</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>                                              {</div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; s.size(); i++) {</div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>                <span class="keywordflow">if</span>(s[i] == <span class="charliteral">&#39;?&#39;</span>) {</div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch = <span class="charliteral">&#39;a&#39;</span>; ch &lt; <span class="charliteral">&#39;z&#39;</span> + 1; ch++) {</div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>                        <span class="keywordflow">if</span>(0 &lt;= i - 1 &amp;&amp; s[i - 1] == ch) {</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>                        }</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>                        <span class="keywordflow">if</span>(i + 1 &lt; s.size() &amp;&amp; s[i + 1] == ch) {</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>                        }</div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>                        s[i] = ch;</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>                    }</div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>                }</div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>            }</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>            <span class="keywordflow">return</span> s;</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l00330">leetcode::replace_all_s_to_avoid_consecutive_repeating_characters::TEST()</a>.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a></li>
-<li><a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="../../dd/de2/a01134.html">leetcode::day_of_the_week::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../dd/de2/a01134.html#ac8fd4394da2121983b84922b7b7d9c9c">dayOfTheWeek</a>(int day, int month, int year)</td><td class="entry"><a class="el" href="../../dd/de2/a01134.html">leetcode::day_of_the_week::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
