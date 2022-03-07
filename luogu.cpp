@@ -2325,4 +2325,15 @@ namespace luogu {
 		cout << fixed << setprecision(2) << ans;
 		return 0;
 	}
+
+	int P5739::main(istream &cin, ostream &cout) {
+		unsigned int n;
+		cin >> n;
+		unsigned int ans = 1;
+		for(unsigned int i = 1; i <= n; i++) {
+			ans *= i;
+		}
+		cout << ans;
+		return 0;
+	}
 }// namespace luogu
