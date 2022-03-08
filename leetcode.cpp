@@ -4058,7 +4058,7 @@ namespace leetcode {
 			if(!pos) {
 				oss << '-';
 			}
-			for(int n: deq) {
+			for(const int n: deq) {
 				oss << n;
 			}
 			return oss.str();

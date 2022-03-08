@@ -5063,13 +5063,12 @@ namespace acwing {
 
 	namespace acwing36 {
 		ListNode *Solution::merge(ListNode *l1, ListNode *l2) {
-			ListNode *current = new ListNode(0);
-			ListNode *head    = current;
+			auto current         = new ListNode(0);
+			const ListNode *head = current;
 			while(l1 != nullptr && l2 != nullptr) {
 				if(l1->val < l2->val) {
 					current->next = l1;
 					l1            = l1->next;
-
 				} else {
 					current->next = l2;
 					l2            = l2->next;
@@ -5091,7 +5090,7 @@ namespace acwing {
 				return head;
 			}
 			while(head != nullptr && head->next != nullptr && head->val == head->next->val) {
-				int val = head->val;
+				const int val = head->val;
 				while(head != nullptr && head->val == val) {
 					head = head->next;
 				}
@@ -5099,7 +5098,7 @@ namespace acwing {
 			ListNode *ans = head;
 			while(head != nullptr) {
 				while(head->next != nullptr && head->next->next != nullptr && head->next->val == head->next->next->val) {
-					int val          = head->next->val;
+					const int val    = head->next->val;
 					ListNode *cursor = head->next;
 					while(cursor != nullptr && cursor->val == val) {
 						cursor = cursor->next;
@@ -5116,7 +5115,7 @@ namespace acwing {
 		int Solution::getNumberOfK(vector<int> &nums, int k) {
 			int ans   = 0;
 			bool flag = false;
-			for(auto num: nums) {
+			for(const auto num: nums) {
 				if(num == k) {
 					ans++;
 					flag = true;

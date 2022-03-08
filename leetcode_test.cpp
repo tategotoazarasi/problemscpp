@@ -2145,13 +2145,13 @@ namespace leetcode {
 	namespace plates_between_candles {
 		TEST(plates_between_candles, case1) {
 			vector<vector<int>> input = {{2, 5}, {5, 9}};
-			vector output             = {2, 3};
+			const vector output       = {2, 3};
 			ASSERT_EQ(output, Solution::platesBetweenCandles("**|**|***|", input));
 		}
 
 		TEST(plates_between_candles, case2) {
 			vector<vector<int>> input = {{1, 17}, {4, 5}, {14, 17}, {5, 11}, {15, 16}};
-			vector output             = {9, 0, 0, 0, 0};
+			const vector output       = {9, 0, 0, 0, 0};
 			ASSERT_EQ(output, Solution::platesBetweenCandles("***|**|*****|**||**|*", input));
 		}
 	}// namespace plates_between_candles

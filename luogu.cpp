@@ -2340,11 +2340,11 @@ namespace luogu {
 	int P5461::main(istream &cin, ostream &cout) {
 		unsigned int n;
 		cin >> n;
-		n             = 1 << n;
-		bool **matrix = new bool *[n];
+		n           = 1 << n;
+		auto matrix = new bool *[n];
 		for(int i = 0; i < n; i++) {
 			matrix[i] = new bool[n];
-			memset(matrix[i], true, n * sizeof(bool));
+			memset(matrix[i], 1, n * sizeof(bool));
 		}
 		pardon(matrix, 0, 0, n);
 		for(int i = 0; i < n; i++) {
@@ -2387,7 +2387,7 @@ namespace luogu {
 			int grade2;
 			int grade3;
 			cin >> name >> grade1 >> grade2 >> grade3;
-			int sum = grade1 + grade2 + grade3;
+			const int sum = grade1 + grade2 + grade3;
 			if(max_sum < sum) {
 				max_sum  = sum;
 				max_name = name;
@@ -2411,9 +2411,9 @@ namespace luogu {
 			vec[i] = make_pair(name, grade);
 		}
 		for(int i = 0; i + 1 < n; i++) {
-			int sum_i = vec[i].second[0] + vec[i].second[1] + vec[i].second[2];
+			const int sum_i = vec[i].second[0] + vec[i].second[1] + vec[i].second[2];
 			for(int j = i + 1; j < n; j++) {
-				int sum_j = vec[j].second[0] + vec[j].second[1] + vec[j].second[2];
+				const int sum_j = vec[j].second[0] + vec[j].second[1] + vec[j].second[2];
 				if(abs(sum_i - sum_j) <= 10) {
 					bool flag = true;
 					for(int k = 0; k < 3; k++) {

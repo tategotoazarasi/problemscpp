@@ -2414,8 +2414,8 @@ namespace acwing {
 
 	namespace acwing53 {
 		TEST(acwing53, case1) {
-			vector input  = {1, 2, 3, 4, 5, 6, 7, 8};
-			vector output = {1, 2, 3, 4};
+			const vector input  = {1, 2, 3, 4, 5, 6, 7, 8};
+			const vector output = {1, 2, 3, 4};
 			ASSERT_EQ(output, Solution::getLeastNumbers_Solution(input, 4));
 		}
 	}// namespace acwing53
