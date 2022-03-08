@@ -4064,4 +4064,42 @@ namespace leetcode {
 			return oss.str();
 		}
 	}// namespace base_7
+
+	namespace plates_between_candles {
+		vector<int> Solution::platesBetweenCandles(string s, vector<vector<int>> &queries) {
+			vector<int> ans;
+			vector<int> plate_count(s.length());
+			vector<int> candle_pos;
+			if(s[0] == '*') {
+				plate_count[0] = 1;
+			} else {
+				plate_count[0] = 0;
+				candle_pos.push_back(0);
+			}
+			for(int i = 1; i < s.length(); i++) {
+				plate_count[i] = plate_count[i - 1];
+				if(s[i] == '*') {
+					plate_count[i]++;
+				} else {
+					candle_pos.push_back(i);
+				}
+			}
+			for(auto query: queries) {
+				int left  = query[0];
+				int right = query[1];
+				auto li   = lower_bound(candle_pos.begin(), candle_pos.end(), left);
+				if(li == candle_pos.end() || *li > right) {
+					ans.push_back(0);
+					continue;
+				}
+				auto ri = lower_bound(candle_pos.rbegin(), candle_pos.rend(), right, greater<int>());
+				if(ri == candle_pos.rend() || *ri < left) {
+					ans.push_back(0);
+					continue;
+				}
+				ans.push_back(plate_count[*ri] - plate_count[*li]);
+			}
+			return ans;
+		}
+	}// namespace plates_between_candles
 }// namespace leetcode

@@ -1550,6 +1550,14 @@ namespace leetcode {
 			static string convertToBase7(int num);
 		};
 	}// namespace base_7
+
+	/// \brief LeetCode 2055. Plates Between Candles
+	namespace plates_between_candles {
+		class Solution {
+		public:
+			static vector<int> platesBetweenCandles(string s, vector<vector<int>> &queries);
+		};
+	}// namespace plates_between_candles
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
