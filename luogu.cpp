@@ -2372,4 +2372,31 @@ namespace luogu {
 		pardon(matrix, x0 + n / 2, y0, n / 2);
 		pardon(matrix, x0 + n / 2, y0 + n / 2, n / 2);
 	}
+
+	int P5740::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		string max_name;
+		int max_1   = 0;
+		int max_2   = 0;
+		int max_3   = 0;
+		int max_sum = -1;
+		for(int i = 0; i < n; i++) {
+			string name;
+			int grade1;
+			int grade2;
+			int grade3;
+			cin >> name >> grade1 >> grade2 >> grade3;
+			int sum = grade1 + grade2 + grade3;
+			if(max_sum < sum) {
+				max_sum  = sum;
+				max_name = name;
+				max_1    = grade1;
+				max_2    = grade2;
+				max_3    = grade3;
+			}
+		}
+		cout << max_name << ' ' << max_1 << ' ' << max_2 << ' ' << max_3;
+		return 0;
+	}
 }// namespace luogu

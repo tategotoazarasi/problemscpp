@@ -629,6 +629,12 @@ namespace luogu {
 		static int main(istream &cin, ostream &cout);
 		static void pardon(bool **matrix, int x0, int y0, int n);
 	};
+
+	/// \brief 洛谷 P5740 【深基7.例9】最厉害的学生
+	class P5740 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H

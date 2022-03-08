@@ -1336,4 +1336,15 @@ namespace luogu {
 		          "1 1 1 1 1 1 1 1 \n",
 		          ans);
 	}
+
+	TEST(P5740, case1) {
+		istringstream in("3\n"
+		                 "senpai 114 51 4\n"
+		                 "lxl 114 10 23\n"
+		                 "fafa 51 42 60");
+		auto out = ostringstream();
+		P5740::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("senpai 114 51 4", ans);
+	}
 }// namespace luogu
