@@ -1649,5 +1649,13 @@ namespace acwing {
 			static int getNumberOfK(vector<int> &nums, int k);
 		};
 	}// namespace acwing67
+
+	/// \brief AcWing 53. 最小的k个数
+	namespace acwing53 {
+		class Solution {
+		public:
+			static vector<int> getLeastNumbers_Solution(vector<int> input, int k);
+		};
+	}// namespace acwing53
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

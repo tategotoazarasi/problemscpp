@@ -5127,4 +5127,11 @@ namespace acwing {
 			return ans;
 		}
 	}// namespace acwing67
+
+	namespace acwing53 {
+		vector<int> Solution::getLeastNumbers_Solution(vector<int> input, int k) {
+			sort(input.begin(), input.end());
+			return vector(input.begin(), input.begin() + k);
+		}
+	}// namespace acwing53
 }// namespace acwing

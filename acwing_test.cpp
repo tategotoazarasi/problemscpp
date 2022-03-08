@@ -2411,4 +2411,12 @@ namespace acwing {
 			ASSERT_EQ(4, Solution::getNumberOfK(input, 3));
 		}
 	}// namespace acwing67
+
+	namespace acwing53 {
+		TEST(acwing53, case1) {
+			vector input  = {1, 2, 3, 4, 5, 6, 7, 8};
+			vector output = {1, 2, 3, 4};
+			ASSERT_EQ(output, Solution::getLeastNumbers_Solution(input, 4));
+		}
+	}// namespace acwing53
 }// namespace acwing
