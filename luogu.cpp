@@ -2399,4 +2399,35 @@ namespace luogu {
 		cout << max_name << ' ' << max_1 << ' ' << max_2 << ' ' << max_3;
 		return 0;
 	}
+
+	int P5741::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		vector<pair<string, array<int, 3>>> vec(n);
+		for(int i = 0; i < n; i++) {
+			string name;
+			array<int, 3> grade = {};
+			cin >> name >> grade[0] >> grade[1] >> grade[2];
+			vec[i] = make_pair(name, grade);
+		}
+		for(int i = 0; i + 1 < n; i++) {
+			int sum_i = vec[i].second[0] + vec[i].second[1] + vec[i].second[2];
+			for(int j = i + 1; j < n; j++) {
+				int sum_j = vec[j].second[0] + vec[j].second[1] + vec[j].second[2];
+				if(abs(sum_i - sum_j) <= 10) {
+					bool flag = true;
+					for(int k = 0; k < 3; k++) {
+						if(abs(vec[i].second[k] - vec[j].second[k]) > 5) {
+							flag = false;
+							break;
+						}
+					}
+					if(flag) {
+						cout << vec[i].first << ' ' << vec[j].first << endl;
+					}
+				}
+			}
+		}
+		return 0;
+	}
 }// namespace luogu

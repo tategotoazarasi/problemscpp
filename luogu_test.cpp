@@ -1347,4 +1347,17 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("senpai 114 51 4", ans);
 	}
+
+	TEST(P5741, case1) {
+		istringstream in("3\n"
+		                 "fafa 90 90 90\n"
+		                 "lxl 95 85 90\n"
+		                 "senpai 100 80 91");
+		auto out = ostringstream();
+		P5741::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("fafa lxl\n"
+		          "lxl senpai\n",
+		          ans);
+	}
 }// namespace luogu
