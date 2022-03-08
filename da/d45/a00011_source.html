@@ -2408,11 +2408,11 @@ $(function() {
 <div class="line"><a id="l02340" name="l02340"></a><span class="lineno"><a class="line" href="../../db/d7a/a02105.html#a81752d5bbc38e8099c39ca3c42bb1deb"> 2340</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../db/d7a/a02105.html#a81752d5bbc38e8099c39ca3c42bb1deb">P5461::main</a>(istream &amp;cin, ostream &amp;cout) {</div>
 <div class="line"><a id="l02341" name="l02341"></a><span class="lineno"> 2341</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n;</div>
 <div class="line"><a id="l02342" name="l02342"></a><span class="lineno"> 2342</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l02343" name="l02343"></a><span class="lineno"> 2343</span>        n             = 1 &lt;&lt; n;</div>
-<div class="line"><a id="l02344" name="l02344"></a><span class="lineno"> 2344</span>        <span class="keywordtype">bool</span> **matrix = <span class="keyword">new</span> <span class="keywordtype">bool</span> *[n];</div>
+<div class="line"><a id="l02343" name="l02343"></a><span class="lineno"> 2343</span>        n           = 1 &lt;&lt; n;</div>
+<div class="line"><a id="l02344" name="l02344"></a><span class="lineno"> 2344</span>        <span class="keyword">auto</span> matrix = <span class="keyword">new</span> <span class="keywordtype">bool</span> *[n];</div>
 <div class="line"><a id="l02345" name="l02345"></a><span class="lineno"> 2345</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l02346" name="l02346"></a><span class="lineno"> 2346</span>            matrix[i] = <span class="keyword">new</span> <span class="keywordtype">bool</span>[n];</div>
-<div class="line"><a id="l02347" name="l02347"></a><span class="lineno"> 2347</span>            memset(matrix[i], <span class="keyword">true</span>, n * <span class="keyword">sizeof</span>(<span class="keywordtype">bool</span>));</div>
+<div class="line"><a id="l02347" name="l02347"></a><span class="lineno"> 2347</span>            memset(matrix[i], 1, n * <span class="keyword">sizeof</span>(<span class="keywordtype">bool</span>));</div>
 <div class="line"><a id="l02348" name="l02348"></a><span class="lineno"> 2348</span>        }</div>
 <div class="line"><a id="l02349" name="l02349"></a><span class="lineno"> 2349</span>        <a class="code hl_function" href="../../db/d7a/a02105.html#ab3509bc7c7fea602ba679370ac9d41d8">pardon</a>(matrix, 0, 0, n);</div>
 <div class="line"><a id="l02350" name="l02350"></a><span class="lineno"> 2350</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
@@ -2455,7 +2455,7 @@ $(function() {
 <div class="line"><a id="l02387" name="l02387"></a><span class="lineno"> 2387</span>            <span class="keywordtype">int</span> grade2;</div>
 <div class="line"><a id="l02388" name="l02388"></a><span class="lineno"> 2388</span>            <span class="keywordtype">int</span> grade3;</div>
 <div class="line"><a id="l02389" name="l02389"></a><span class="lineno"> 2389</span>            cin &gt;&gt; name &gt;&gt; grade1 &gt;&gt; grade2 &gt;&gt; grade3;</div>
-<div class="line"><a id="l02390" name="l02390"></a><span class="lineno"> 2390</span>            <span class="keywordtype">int</span> sum = grade1 + grade2 + grade3;</div>
+<div class="line"><a id="l02390" name="l02390"></a><span class="lineno"> 2390</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> sum = grade1 + grade2 + grade3;</div>
 <div class="line"><a id="l02391" name="l02391"></a><span class="lineno"> 2391</span>            <span class="keywordflow">if</span>(max_sum &lt; sum) {</div>
 <div class="line"><a id="l02392" name="l02392"></a><span class="lineno"> 2392</span>                max_sum  = sum;</div>
 <div class="line"><a id="l02393" name="l02393"></a><span class="lineno"> 2393</span>                max_name = name;</div>
@@ -2479,9 +2479,9 @@ $(function() {
 <div class="line"><a id="l02411" name="l02411"></a><span class="lineno"> 2411</span>            vec[i] = make_pair(name, grade);</div>
 <div class="line"><a id="l02412" name="l02412"></a><span class="lineno"> 2412</span>        }</div>
 <div class="line"><a id="l02413" name="l02413"></a><span class="lineno"> 2413</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i + 1 &lt; n; i++) {</div>
-<div class="line"><a id="l02414" name="l02414"></a><span class="lineno"> 2414</span>            <span class="keywordtype">int</span> sum_i = vec[i].second[0] + vec[i].second[1] + vec[i].second[2];</div>
+<div class="line"><a id="l02414" name="l02414"></a><span class="lineno"> 2414</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> sum_i = vec[i].second[0] + vec[i].second[1] + vec[i].second[2];</div>
 <div class="line"><a id="l02415" name="l02415"></a><span class="lineno"> 2415</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i + 1; j &lt; n; j++) {</div>
-<div class="line"><a id="l02416" name="l02416"></a><span class="lineno"> 2416</span>                <span class="keywordtype">int</span> sum_j = vec[j].second[0] + vec[j].second[1] + vec[j].second[2];</div>
+<div class="line"><a id="l02416" name="l02416"></a><span class="lineno"> 2416</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> sum_j = vec[j].second[0] + vec[j].second[1] + vec[j].second[2];</div>
 <div class="line"><a id="l02417" name="l02417"></a><span class="lineno"> 2417</span>                <span class="keywordflow">if</span>(abs(sum_i - sum_j) &lt;= 10) {</div>
 <div class="line"><a id="l02418" name="l02418"></a><span class="lineno"> 2418</span>                    <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l02419" name="l02419"></a><span class="lineno"> 2419</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 0; k &lt; 3; k++) {</div>

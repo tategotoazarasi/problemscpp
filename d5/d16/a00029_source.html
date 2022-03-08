@@ -5131,78 +5131,77 @@ $(function() {
 <div class="line"><a id="l05063" name="l05063"></a><span class="lineno"> 5063</span><span class="stringliteral"></span> </div>
 <div class="line"><a id="l05064" name="l05064"></a><span class="lineno"><a class="line" href="../../d1/d6f/a00063.html"> 5064</a></span><span class="stringliteral">    namespace acwing36 {</span></div>
 <div class="line"><a id="l05065" name="l05065"></a><span class="lineno"><a class="line" href="../../d2/db8/a01057.html#a8916096776eae168107eda07a850670e"> 5065</a></span><span class="stringliteral">        ListNode *Solution::merge(ListNode *l1, ListNode *l2) {</span></div>
-<div class="line"><a id="l05066" name="l05066"></a><span class="lineno"> 5066</span><span class="stringliteral">            ListNode *current = new ListNode(0);</span></div>
-<div class="line"><a id="l05067" name="l05067"></a><span class="lineno"> 5067</span><span class="stringliteral">            ListNode *head    = current;</span></div>
+<div class="line"><a id="l05066" name="l05066"></a><span class="lineno"> 5066</span><span class="stringliteral">            auto current         = new ListNode(0);</span></div>
+<div class="line"><a id="l05067" name="l05067"></a><span class="lineno"> 5067</span><span class="stringliteral">            const ListNode *head = current;</span></div>
 <div class="line"><a id="l05068" name="l05068"></a><span class="lineno"> 5068</span><span class="stringliteral">            while(l1 != nullptr &amp;&amp; l2 != nullptr) {</span></div>
 <div class="line"><a id="l05069" name="l05069"></a><span class="lineno"> 5069</span><span class="stringliteral">                if(l1-&gt;val &lt; l2-&gt;val) {</span></div>
 <div class="line"><a id="l05070" name="l05070"></a><span class="lineno"> 5070</span><span class="stringliteral">                    current-&gt;next = l1;</span></div>
 <div class="line"><a id="l05071" name="l05071"></a><span class="lineno"> 5071</span><span class="stringliteral">                    l1            = l1-&gt;next;</span></div>
-<div class="line"><a id="l05072" name="l05072"></a><span class="lineno"> 5072</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l05073" name="l05073"></a><span class="lineno"> 5073</span><span class="stringliteral">                } else {</span></div>
-<div class="line"><a id="l05074" name="l05074"></a><span class="lineno"> 5074</span><span class="stringliteral">                    current-&gt;next = l2;</span></div>
-<div class="line"><a id="l05075" name="l05075"></a><span class="lineno"> 5075</span><span class="stringliteral">                    l2            = l2-&gt;next;</span></div>
-<div class="line"><a id="l05076" name="l05076"></a><span class="lineno"> 5076</span><span class="stringliteral">                }</span></div>
-<div class="line"><a id="l05077" name="l05077"></a><span class="lineno"> 5077</span><span class="stringliteral">                current = current-&gt;next;</span></div>
-<div class="line"><a id="l05078" name="l05078"></a><span class="lineno"> 5078</span><span class="stringliteral">            }</span></div>
-<div class="line"><a id="l05079" name="l05079"></a><span class="lineno"> 5079</span><span class="stringliteral">            if(l1 == nullptr) {</span></div>
-<div class="line"><a id="l05080" name="l05080"></a><span class="lineno"> 5080</span><span class="stringliteral">                current-&gt;next = l2;</span></div>
-<div class="line"><a id="l05081" name="l05081"></a><span class="lineno"> 5081</span><span class="stringliteral">            } else {</span></div>
-<div class="line"><a id="l05082" name="l05082"></a><span class="lineno"> 5082</span><span class="stringliteral">                current-&gt;next = l1;</span></div>
-<div class="line"><a id="l05083" name="l05083"></a><span class="lineno"> 5083</span><span class="stringliteral">            }</span></div>
-<div class="line"><a id="l05084" name="l05084"></a><span class="lineno"> 5084</span><span class="stringliteral">            return head-&gt;next;</span></div>
-<div class="line"><a id="l05085" name="l05085"></a><span class="lineno"> 5085</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l05086" name="l05086"></a><span class="lineno"> 5086</span><span class="stringliteral">    }// namespace acwing36</span></div>
-<div class="line"><a id="l05087" name="l05087"></a><span class="lineno"> 5087</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l05088" name="l05088"></a><span class="lineno"><a class="line" href="../../df/d5f/a00064.html"> 5088</a></span><span class="stringliteral">    namespace acwing29 {</span></div>
-<div class="line"><a id="l05089" name="l05089"></a><span class="lineno"><a class="line" href="../../de/d9e/a01061.html#a50787f324e6f0e54011e8a71a201ea74"> 5089</a></span><span class="stringliteral">        ListNode *Solution::deleteDuplication(ListNode *head) {</span></div>
-<div class="line"><a id="l05090" name="l05090"></a><span class="lineno"> 5090</span><span class="stringliteral">            if(head == nullptr) {</span></div>
-<div class="line"><a id="l05091" name="l05091"></a><span class="lineno"> 5091</span><span class="stringliteral">                return head;</span></div>
-<div class="line"><a id="l05092" name="l05092"></a><span class="lineno"> 5092</span><span class="stringliteral">            }</span></div>
-<div class="line"><a id="l05093" name="l05093"></a><span class="lineno"> 5093</span><span class="stringliteral">            while(head != nullptr &amp;&amp; head-&gt;next != nullptr &amp;&amp; head-&gt;val == head-&gt;next-&gt;val) {</span></div>
-<div class="line"><a id="l05094" name="l05094"></a><span class="lineno"> 5094</span><span class="stringliteral">                int val = head-&gt;val;</span></div>
-<div class="line"><a id="l05095" name="l05095"></a><span class="lineno"> 5095</span><span class="stringliteral">                while(head != nullptr &amp;&amp; head-&gt;val == val) {</span></div>
-<div class="line"><a id="l05096" name="l05096"></a><span class="lineno"> 5096</span><span class="stringliteral">                    head = head-&gt;next;</span></div>
-<div class="line"><a id="l05097" name="l05097"></a><span class="lineno"> 5097</span><span class="stringliteral">                }</span></div>
-<div class="line"><a id="l05098" name="l05098"></a><span class="lineno"> 5098</span><span class="stringliteral">            }</span></div>
-<div class="line"><a id="l05099" name="l05099"></a><span class="lineno"> 5099</span><span class="stringliteral">            ListNode *ans = head;</span></div>
-<div class="line"><a id="l05100" name="l05100"></a><span class="lineno"> 5100</span><span class="stringliteral">            while(head != nullptr) {</span></div>
-<div class="line"><a id="l05101" name="l05101"></a><span class="lineno"> 5101</span><span class="stringliteral">                while(head-&gt;next != nullptr &amp;&amp; head-&gt;next-&gt;next != nullptr &amp;&amp; head-&gt;next-&gt;val == head-&gt;next-&gt;next-&gt;val) {</span></div>
-<div class="line"><a id="l05102" name="l05102"></a><span class="lineno"> 5102</span><span class="stringliteral">                    int val          = head-&gt;next-&gt;val;</span></div>
-<div class="line"><a id="l05103" name="l05103"></a><span class="lineno"> 5103</span><span class="stringliteral">                    ListNode *cursor = head-&gt;next;</span></div>
-<div class="line"><a id="l05104" name="l05104"></a><span class="lineno"> 5104</span><span class="stringliteral">                    while(cursor != nullptr &amp;&amp; cursor-&gt;val == val) {</span></div>
-<div class="line"><a id="l05105" name="l05105"></a><span class="lineno"> 5105</span><span class="stringliteral">                        cursor = cursor-&gt;next;</span></div>
-<div class="line"><a id="l05106" name="l05106"></a><span class="lineno"> 5106</span><span class="stringliteral">                    }</span></div>
-<div class="line"><a id="l05107" name="l05107"></a><span class="lineno"> 5107</span><span class="stringliteral">                    head-&gt;next = cursor;</span></div>
-<div class="line"><a id="l05108" name="l05108"></a><span class="lineno"> 5108</span><span class="stringliteral">                }</span></div>
-<div class="line"><a id="l05109" name="l05109"></a><span class="lineno"> 5109</span><span class="stringliteral">                head = head-&gt;next;</span></div>
-<div class="line"><a id="l05110" name="l05110"></a><span class="lineno"> 5110</span><span class="stringliteral">            }</span></div>
-<div class="line"><a id="l05111" name="l05111"></a><span class="lineno"> 5111</span><span class="stringliteral">            return ans;</span></div>
-<div class="line"><a id="l05112" name="l05112"></a><span class="lineno"> 5112</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l05113" name="l05113"></a><span class="lineno"> 5113</span><span class="stringliteral">    }// namespace acwing29</span></div>
-<div class="line"><a id="l05114" name="l05114"></a><span class="lineno"> 5114</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l05115" name="l05115"></a><span class="lineno"><a class="line" href="../../de/de1/a00065.html"> 5115</a></span><span class="stringliteral">    namespace acwing67 {</span></div>
-<div class="line"><a id="l05116" name="l05116"></a><span class="lineno"><a class="line" href="../../d0/dc9/a01065.html#a52e951c078906aa62e7a4cbeaf9fc618"> 5116</a></span><span class="stringliteral">        int Solution::getNumberOfK(vector&lt;int&gt; &amp;nums, int k) {</span></div>
-<div class="line"><a id="l05117" name="l05117"></a><span class="lineno"> 5117</span><span class="stringliteral">            int ans   = 0;</span></div>
-<div class="line"><a id="l05118" name="l05118"></a><span class="lineno"> 5118</span><span class="stringliteral">            bool flag = false;</span></div>
-<div class="line"><a id="l05119" name="l05119"></a><span class="lineno"> 5119</span><span class="stringliteral">            for(auto num: nums) {</span></div>
-<div class="line"><a id="l05120" name="l05120"></a><span class="lineno"> 5120</span><span class="stringliteral">                if(num == k) {</span></div>
-<div class="line"><a id="l05121" name="l05121"></a><span class="lineno"> 5121</span><span class="stringliteral">                    ans++;</span></div>
-<div class="line"><a id="l05122" name="l05122"></a><span class="lineno"> 5122</span><span class="stringliteral">                    flag = true;</span></div>
-<div class="line"><a id="l05123" name="l05123"></a><span class="lineno"> 5123</span><span class="stringliteral">                } else if(flag) {</span></div>
-<div class="line"><a id="l05124" name="l05124"></a><span class="lineno"> 5124</span><span class="stringliteral">                    break;</span></div>
-<div class="line"><a id="l05125" name="l05125"></a><span class="lineno"> 5125</span><span class="stringliteral">                }</span></div>
-<div class="line"><a id="l05126" name="l05126"></a><span class="lineno"> 5126</span><span class="stringliteral">            }</span></div>
-<div class="line"><a id="l05127" name="l05127"></a><span class="lineno"> 5127</span><span class="stringliteral">            return ans;</span></div>
-<div class="line"><a id="l05128" name="l05128"></a><span class="lineno"> 5128</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l05129" name="l05129"></a><span class="lineno"> 5129</span><span class="stringliteral">    }// namespace acwing67</span></div>
-<div class="line"><a id="l05130" name="l05130"></a><span class="lineno"> 5130</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l05131" name="l05131"></a><span class="lineno"><a class="line" href="../../d9/db3/a00066.html"> 5131</a></span><span class="stringliteral">    namespace acwing53 {</span></div>
-<div class="line"><a id="l05132" name="l05132"></a><span class="lineno"><a class="line" href="../../d8/d18/a01069.html#ad2077e8265bfbcf26c5b75f30c053c83"> 5132</a></span><span class="stringliteral">        vector&lt;int&gt; Solution::getLeastNumbers_Solution(vector&lt;int&gt; input, int k) {</span></div>
-<div class="line"><a id="l05133" name="l05133"></a><span class="lineno"> 5133</span><span class="stringliteral">            sort(input.begin(), input.end());</span></div>
-<div class="line"><a id="l05134" name="l05134"></a><span class="lineno"> 5134</span><span class="stringliteral">            return vector(input.begin(), input.begin() + k);</span></div>
-<div class="line"><a id="l05135" name="l05135"></a><span class="lineno"> 5135</span><span class="stringliteral">        }</span></div>
-<div class="line"><a id="l05136" name="l05136"></a><span class="lineno"> 5136</span><span class="stringliteral">    }// namespace acwing53</span></div>
-<div class="line"><a id="l05137" name="l05137"></a><span class="lineno"> 5137</span><span class="stringliteral">}// namespace acwing</span></div>
+<div class="line"><a id="l05072" name="l05072"></a><span class="lineno"> 5072</span><span class="stringliteral">                } else {</span></div>
+<div class="line"><a id="l05073" name="l05073"></a><span class="lineno"> 5073</span><span class="stringliteral">                    current-&gt;next = l2;</span></div>
+<div class="line"><a id="l05074" name="l05074"></a><span class="lineno"> 5074</span><span class="stringliteral">                    l2            = l2-&gt;next;</span></div>
+<div class="line"><a id="l05075" name="l05075"></a><span class="lineno"> 5075</span><span class="stringliteral">                }</span></div>
+<div class="line"><a id="l05076" name="l05076"></a><span class="lineno"> 5076</span><span class="stringliteral">                current = current-&gt;next;</span></div>
+<div class="line"><a id="l05077" name="l05077"></a><span class="lineno"> 5077</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l05078" name="l05078"></a><span class="lineno"> 5078</span><span class="stringliteral">            if(l1 == nullptr) {</span></div>
+<div class="line"><a id="l05079" name="l05079"></a><span class="lineno"> 5079</span><span class="stringliteral">                current-&gt;next = l2;</span></div>
+<div class="line"><a id="l05080" name="l05080"></a><span class="lineno"> 5080</span><span class="stringliteral">            } else {</span></div>
+<div class="line"><a id="l05081" name="l05081"></a><span class="lineno"> 5081</span><span class="stringliteral">                current-&gt;next = l1;</span></div>
+<div class="line"><a id="l05082" name="l05082"></a><span class="lineno"> 5082</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l05083" name="l05083"></a><span class="lineno"> 5083</span><span class="stringliteral">            return head-&gt;next;</span></div>
+<div class="line"><a id="l05084" name="l05084"></a><span class="lineno"> 5084</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l05085" name="l05085"></a><span class="lineno"> 5085</span><span class="stringliteral">    }// namespace acwing36</span></div>
+<div class="line"><a id="l05086" name="l05086"></a><span class="lineno"> 5086</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l05087" name="l05087"></a><span class="lineno"><a class="line" href="../../df/d5f/a00064.html"> 5087</a></span><span class="stringliteral">    namespace acwing29 {</span></div>
+<div class="line"><a id="l05088" name="l05088"></a><span class="lineno"><a class="line" href="../../de/d9e/a01061.html#a50787f324e6f0e54011e8a71a201ea74"> 5088</a></span><span class="stringliteral">        ListNode *Solution::deleteDuplication(ListNode *head) {</span></div>
+<div class="line"><a id="l05089" name="l05089"></a><span class="lineno"> 5089</span><span class="stringliteral">            if(head == nullptr) {</span></div>
+<div class="line"><a id="l05090" name="l05090"></a><span class="lineno"> 5090</span><span class="stringliteral">                return head;</span></div>
+<div class="line"><a id="l05091" name="l05091"></a><span class="lineno"> 5091</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l05092" name="l05092"></a><span class="lineno"> 5092</span><span class="stringliteral">            while(head != nullptr &amp;&amp; head-&gt;next != nullptr &amp;&amp; head-&gt;val == head-&gt;next-&gt;val) {</span></div>
+<div class="line"><a id="l05093" name="l05093"></a><span class="lineno"> 5093</span><span class="stringliteral">                const int val = head-&gt;val;</span></div>
+<div class="line"><a id="l05094" name="l05094"></a><span class="lineno"> 5094</span><span class="stringliteral">                while(head != nullptr &amp;&amp; head-&gt;val == val) {</span></div>
+<div class="line"><a id="l05095" name="l05095"></a><span class="lineno"> 5095</span><span class="stringliteral">                    head = head-&gt;next;</span></div>
+<div class="line"><a id="l05096" name="l05096"></a><span class="lineno"> 5096</span><span class="stringliteral">                }</span></div>
+<div class="line"><a id="l05097" name="l05097"></a><span class="lineno"> 5097</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l05098" name="l05098"></a><span class="lineno"> 5098</span><span class="stringliteral">            ListNode *ans = head;</span></div>
+<div class="line"><a id="l05099" name="l05099"></a><span class="lineno"> 5099</span><span class="stringliteral">            while(head != nullptr) {</span></div>
+<div class="line"><a id="l05100" name="l05100"></a><span class="lineno"> 5100</span><span class="stringliteral">                while(head-&gt;next != nullptr &amp;&amp; head-&gt;next-&gt;next != nullptr &amp;&amp; head-&gt;next-&gt;val == head-&gt;next-&gt;next-&gt;val) {</span></div>
+<div class="line"><a id="l05101" name="l05101"></a><span class="lineno"> 5101</span><span class="stringliteral">                    const int val    = head-&gt;next-&gt;val;</span></div>
+<div class="line"><a id="l05102" name="l05102"></a><span class="lineno"> 5102</span><span class="stringliteral">                    ListNode *cursor = head-&gt;next;</span></div>
+<div class="line"><a id="l05103" name="l05103"></a><span class="lineno"> 5103</span><span class="stringliteral">                    while(cursor != nullptr &amp;&amp; cursor-&gt;val == val) {</span></div>
+<div class="line"><a id="l05104" name="l05104"></a><span class="lineno"> 5104</span><span class="stringliteral">                        cursor = cursor-&gt;next;</span></div>
+<div class="line"><a id="l05105" name="l05105"></a><span class="lineno"> 5105</span><span class="stringliteral">                    }</span></div>
+<div class="line"><a id="l05106" name="l05106"></a><span class="lineno"> 5106</span><span class="stringliteral">                    head-&gt;next = cursor;</span></div>
+<div class="line"><a id="l05107" name="l05107"></a><span class="lineno"> 5107</span><span class="stringliteral">                }</span></div>
+<div class="line"><a id="l05108" name="l05108"></a><span class="lineno"> 5108</span><span class="stringliteral">                head = head-&gt;next;</span></div>
+<div class="line"><a id="l05109" name="l05109"></a><span class="lineno"> 5109</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l05110" name="l05110"></a><span class="lineno"> 5110</span><span class="stringliteral">            return ans;</span></div>
+<div class="line"><a id="l05111" name="l05111"></a><span class="lineno"> 5111</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l05112" name="l05112"></a><span class="lineno"> 5112</span><span class="stringliteral">    }// namespace acwing29</span></div>
+<div class="line"><a id="l05113" name="l05113"></a><span class="lineno"> 5113</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l05114" name="l05114"></a><span class="lineno"><a class="line" href="../../de/de1/a00065.html"> 5114</a></span><span class="stringliteral">    namespace acwing67 {</span></div>
+<div class="line"><a id="l05115" name="l05115"></a><span class="lineno"><a class="line" href="../../d0/dc9/a01065.html#a52e951c078906aa62e7a4cbeaf9fc618"> 5115</a></span><span class="stringliteral">        int Solution::getNumberOfK(vector&lt;int&gt; &amp;nums, int k) {</span></div>
+<div class="line"><a id="l05116" name="l05116"></a><span class="lineno"> 5116</span><span class="stringliteral">            int ans   = 0;</span></div>
+<div class="line"><a id="l05117" name="l05117"></a><span class="lineno"> 5117</span><span class="stringliteral">            bool flag = false;</span></div>
+<div class="line"><a id="l05118" name="l05118"></a><span class="lineno"> 5118</span><span class="stringliteral">            for(const auto num: nums) {</span></div>
+<div class="line"><a id="l05119" name="l05119"></a><span class="lineno"> 5119</span><span class="stringliteral">                if(num == k) {</span></div>
+<div class="line"><a id="l05120" name="l05120"></a><span class="lineno"> 5120</span><span class="stringliteral">                    ans++;</span></div>
+<div class="line"><a id="l05121" name="l05121"></a><span class="lineno"> 5121</span><span class="stringliteral">                    flag = true;</span></div>
+<div class="line"><a id="l05122" name="l05122"></a><span class="lineno"> 5122</span><span class="stringliteral">                } else if(flag) {</span></div>
+<div class="line"><a id="l05123" name="l05123"></a><span class="lineno"> 5123</span><span class="stringliteral">                    break;</span></div>
+<div class="line"><a id="l05124" name="l05124"></a><span class="lineno"> 5124</span><span class="stringliteral">                }</span></div>
+<div class="line"><a id="l05125" name="l05125"></a><span class="lineno"> 5125</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l05126" name="l05126"></a><span class="lineno"> 5126</span><span class="stringliteral">            return ans;</span></div>
+<div class="line"><a id="l05127" name="l05127"></a><span class="lineno"> 5127</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l05128" name="l05128"></a><span class="lineno"> 5128</span><span class="stringliteral">    }// namespace acwing67</span></div>
+<div class="line"><a id="l05129" name="l05129"></a><span class="lineno"> 5129</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l05130" name="l05130"></a><span class="lineno"><a class="line" href="../../d9/db3/a00066.html"> 5130</a></span><span class="stringliteral">    namespace acwing53 {</span></div>
+<div class="line"><a id="l05131" name="l05131"></a><span class="lineno"><a class="line" href="../../d8/d18/a01069.html#ad2077e8265bfbcf26c5b75f30c053c83"> 5131</a></span><span class="stringliteral">        vector&lt;int&gt; Solution::getLeastNumbers_Solution(vector&lt;int&gt; input, int k) {</span></div>
+<div class="line"><a id="l05132" name="l05132"></a><span class="lineno"> 5132</span><span class="stringliteral">            sort(input.begin(), input.end());</span></div>
+<div class="line"><a id="l05133" name="l05133"></a><span class="lineno"> 5133</span><span class="stringliteral">            return vector(input.begin(), input.begin() + k);</span></div>
+<div class="line"><a id="l05134" name="l05134"></a><span class="lineno"> 5134</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l05135" name="l05135"></a><span class="lineno"> 5135</span><span class="stringliteral">    }// namespace acwing53</span></div>
+<div class="line"><a id="l05136" name="l05136"></a><span class="lineno"> 5136</span><span class="stringliteral">}// namespace acwing</span></div>
 <div class="ttc" id="aa00035_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d4/d8c/a00035.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8c/a00035_source.html#l00005">main.cpp:5</a></div></div>
 <div class="ttc" id="aa00038_html"><div class="ttname"><a href="../../d8/d41/a00038.html">acwing.h</a></div></div>
 <div class="ttc" id="aa00047_html"><div class="ttname"><a href="../../d6/d2d/a00047.html">acwing</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00020">acwing.cpp:20</a></div></div>
