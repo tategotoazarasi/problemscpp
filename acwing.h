@@ -1641,5 +1641,13 @@ namespace acwing {
 			static ListNode *deleteDuplication(ListNode *head);
 		};
 	}// namespace acwing29
+
+	/// \brief AcWing 67. 数字在排序数组中出现的次数
+	namespace acwing67 {
+		class Solution {
+		public:
+			static int getNumberOfK(vector<int> &nums, int k);
+		};
+	}// namespace acwing67
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

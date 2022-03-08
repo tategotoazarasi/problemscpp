@@ -5111,4 +5111,20 @@ namespace acwing {
 			return ans;
 		}
 	}// namespace acwing29
+
+	namespace acwing67 {
+		int Solution::getNumberOfK(vector<int> &nums, int k) {
+			int ans   = 0;
+			bool flag = false;
+			for(auto num: nums) {
+				if(num == k) {
+					ans++;
+					flag = true;
+				} else if(flag) {
+					break;
+				}
+			}
+			return ans;
+		}
+	}// namespace acwing67
 }// namespace acwing

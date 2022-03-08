@@ -2404,4 +2404,11 @@ namespace acwing {
 			ASSERT_EQ(55, Solution::getSum(10));
 		}
 	}// namespace acwing84
+
+	namespace acwing67 {
+		TEST(acwing67, case1) {
+			vector input = {1, 2, 3, 3, 3, 3, 4, 5};
+			ASSERT_EQ(4, Solution::getNumberOfK(input, 3));
+		}
+	}// namespace acwing67
 }// namespace acwing
