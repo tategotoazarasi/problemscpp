@@ -1657,5 +1657,13 @@ namespace acwing {
 			static vector<int> getLeastNumbers_Solution(vector<int> input, int k);
 		};
 	}// namespace acwing53
+
+	/// \brief AcWing 68. 0到n-1中缺失的数字
+	namespace acwing68 {
+		class Solution {
+		public:
+			static int getMissingNumber(vector<int> &nums);
+		};
+	}// namespace acwing68
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

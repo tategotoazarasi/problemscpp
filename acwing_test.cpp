@@ -2419,4 +2419,11 @@ namespace acwing {
 			ASSERT_EQ(output, Solution::getLeastNumbers_Solution(input, 4));
 		}
 	}// namespace acwing53
+
+	namespace acwing68 {
+		TEST(acwing68, case1) {
+			vector input = {0, 1, 2, 4};
+			ASSERT_EQ(3, Solution::getMissingNumber(input));
+		}
+	}// namespace acwing68
 }// namespace acwing

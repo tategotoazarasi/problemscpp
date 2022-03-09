@@ -5133,4 +5133,18 @@ namespace acwing {
 			return vector(input.begin(), input.begin() + k);
 		}
 	}// namespace acwing53
+
+	/// \brief AcWing 68. 0到n-1中缺失的数字
+	namespace acwing68 {
+		int Solution::getMissingNumber(vector<int> &nums) {
+			if(nums.empty()) {
+				return 0;
+			}
+			int i = 0;
+			while(nums[i] == i) {
+				i++;
+			}
+			return i;
+		}
+	}// namespace acwing68
 }// namespace acwing
