@@ -659,7 +659,7 @@ namespace luogu {
 			    : number(number), grade(grade), extra_grade(extra_grade), sum(grade + extra_grade), composite(grade * 0.7 + extra_grade * 0.3){};
 			/// \brief 学生是否优秀
 			/// \return 是否优秀
-			[[nodiscard]] bool excellent() const const;
+			[[nodiscard]] bool excellent() const;
 		};
 
 		class P5742 {
