@@ -2155,4 +2155,16 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::platesBetweenCandles("***|**|*****|**||**|*", input));
 		}
 	}// namespace plates_between_candles
+
+	namespace smallest_rotation_with_highest_score {
+		TEST(smallest_rotation_with_highest_score, case1) {
+			vector input = {2, 3, 1, 4, 0};
+			ASSERT_EQ(3, Solution::bestRotation(input));
+		}
+
+		TEST(smallest_rotation_with_highest_score, case2) {
+			vector input = {1, 3, 0, 2, 4};
+			ASSERT_EQ(0, Solution::bestRotation(input));
+		}
+	}// namespace smallest_rotation_with_highest_score
 }// namespace leetcode

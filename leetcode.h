@@ -1558,6 +1558,14 @@ namespace leetcode {
 			static vector<int> platesBetweenCandles(string s, vector<vector<int>> &queries);
 		};
 	}// namespace plates_between_candles
+
+	/// \brief LeetCode 798. Smallest Rotation with Highest Score
+	namespace smallest_rotation_with_highest_score {
+		class Solution {
+		public:
+			static int bestRotation(vector<int> &nums);
+		};
+	}// namespace smallest_rotation_with_highest_score
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
