@@ -1378,4 +1378,16 @@ namespace luogu {
 			          ans);
 		}
 	}// namespace P5742
+
+	TEST(P1304, case1) {
+		istringstream in("10");
+		auto out = ostringstream();
+		P1304::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("4=2+2\n"
+		          "6=3+3\n"
+		          "8=3+5\n"
+		          "10=3+7\n",
+		          ans);
+	}
 }// namespace luogu

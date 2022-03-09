@@ -2450,4 +2450,27 @@ namespace luogu {
 			return sum > 140 && composite >= 80;
 		}
 	}// namespace P5742
+
+	int P1304::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		set<int> primes;
+		for(int i = 2; i <= n; i++) {
+			primes.insert(i);
+		}
+		for(int i = 2; i <= n; i++) {
+			for(int j = 2; i * j <= n; j++) {
+				primes.erase(i * j);
+			}
+		}
+		for(int i = 4; i <= n; i += 2) {
+			for(auto prime = primes.begin(); *prime <= i / 2 && prime != primes.end(); ++prime) {
+				if(primes.count(i - *prime) > 0) {
+					cout << i << '=' << *prime << '+' << i - *prime << endl;
+					break;
+				}
+			}
+		}
+		return 0;
+	}
 }// namespace luogu

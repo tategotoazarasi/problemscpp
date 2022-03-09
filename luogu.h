@@ -666,6 +666,12 @@ namespace luogu {
 			static int main(istream &cin, ostream &cout);
 		};
 	}// namespace P5742
+
+	/// \brief 洛谷 P1304 哥德巴赫猜想
+	class P1304 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H
