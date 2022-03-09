@@ -4106,10 +4106,10 @@ namespace leetcode {
 	namespace smallest_rotation_with_highest_score {
 		int Solution::bestRotation(vector<int> &nums) {
 			const int n = nums.size();
-			vector<int> k_score_diff(n + 1, 0);
+			vector k_score_diff(n + 1, 0);
 			for(int i = 0; i < n; i++) {
-				int low  = (i + 1) % n;
-				int high = (i - nums[i] + n) % n;
+				const int low  = (i + 1) % n;
+				const int high = (i - nums[i] + n) % n;
 				k_score_diff[low]++;
 				k_score_diff[high + 1]--;
 				if(low > high) {

@@ -1,6 +1,7 @@
 #include "luogu.h"
 
 #include <algorithm>
+#include <array>
 #include <cmath>
 #include <cstring>
 #include <deque>
@@ -2340,8 +2341,8 @@ namespace luogu {
 	int P5461::main(istream &cin, ostream &cout) {
 		unsigned int n;
 		cin >> n;
-		n           = 1 << n;
-		auto matrix = new bool *[n];
+		n                  = 1 << n;
+		auto *const matrix = new bool *[n];
 		for(int i = 0; i < n; i++) {
 			matrix[i] = new bool[n];
 			memset(matrix[i], 1, n * sizeof(bool));
@@ -2436,19 +2437,19 @@ namespace luogu {
 			int n;
 			cin >> n;
 			for(int i = 0; i < n; i++) {
-				int number, grade, extra_grade;
+				int number;
+				int grade;
+				int extra_grade;
 				cin >> number;
 				cin >> grade;
 				cin >> extra_grade;
-				Student s = Student(number, grade, extra_grade);
+				auto s = Student(number, grade, extra_grade);
 				cout << (s.excellent() ? "Excellent" : "Not excellent") << endl;
 			}
 			return 0;
 		}
 
-		bool Student::excellent() {
-			return sum > 140 && composite >= 80;
-		}
+		bool Student::excellent() const { return sum > 140 && composite >= 80; }
 	}// namespace P5742
 
 	int P1304::main(istream &cin, ostream &cout) {
@@ -2465,7 +2466,7 @@ namespace luogu {
 		}
 		for(int i = 4; i <= n; i += 2) {
 			for(auto prime = primes.begin(); *prime <= i / 2 && prime != primes.end(); ++prime) {
-				if(primes.count(i - *prime) > 0) {
+				if(primes.contains(i - *prime)) {
 					cout << i << '=' << *prime << '+' << i - *prime << endl;
 					break;
 				}

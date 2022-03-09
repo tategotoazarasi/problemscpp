@@ -655,10 +655,11 @@ namespace luogu {
 			/// \param number 学号
 			/// \param grade 成绩
 			/// \param extra_grade 素质拓展成绩
-			Student(int number, int grade, int extra_grade): number(number), grade(grade), extra_grade(extra_grade), sum(grade + extra_grade), composite(grade * 0.7 + extra_grade * 0.3){};
+			Student(int number, int grade, int extra_grade)
+			    : number(number), grade(grade), extra_grade(extra_grade), sum(grade + extra_grade), composite(grade * 0.7 + extra_grade * 0.3){};
 			/// \brief 学生是否优秀
 			/// \return 是否优秀
-			bool excellent();
+			[[nodiscard]] bool excellent() const const;
 		};
 
 		class P5742 {

@@ -5063,7 +5063,7 @@ namespace acwing {
 
 	namespace acwing36 {
 		ListNode *Solution::merge(ListNode *l1, ListNode *l2) {
-			auto current         = new ListNode(0);
+			auto *current        = new ListNode(0);
 			const ListNode *head = current;
 			while(l1 != nullptr && l2 != nullptr) {
 				if(l1->val < l2->val) {
@@ -5151,9 +5151,9 @@ namespace acwing {
 	namespace acwing75 {
 		vector<int> Solution::findNumbersWithSum(vector<int> &nums, int target) {
 			vector<int> ans(2);
-			set<int> nms(nums.begin(), nums.end());
+			set nms(nums.begin(), nums.end());
 			for(auto num = nms.begin(); *num <= target / 2 && num != nms.end(); ++num) {
-				if(nms.count(target - *num) > 0) {
+				if(nms.contains(target - *num)) {
 					ans[0] = *num;
 					ans[1] = target - *num;
 					return ans;
