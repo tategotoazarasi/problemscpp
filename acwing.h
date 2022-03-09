@@ -1665,5 +1665,13 @@ namespace acwing {
 			static int getMissingNumber(vector<int> &nums);
 		};
 	}// namespace acwing68
+
+	/// \brief AcWing 75. 和为S的两个数字
+	namespace acwing75 {
+		class Solution {
+		public:
+			static vector<int> findNumbersWithSum(vector<int> &nums, int target);
+		};
+	}// namespace acwing75
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

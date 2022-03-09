@@ -5147,4 +5147,19 @@ namespace acwing {
 			return i;
 		}
 	}// namespace acwing68
+
+	namespace acwing75 {
+		vector<int> Solution::findNumbersWithSum(vector<int> &nums, int target) {
+			vector<int> ans(2);
+			set<int> nms(nums.begin(), nums.end());
+			for(auto num = nms.begin(); *num <= target / 2 && num != nms.end(); ++num) {
+				if(nms.count(target - *num) > 0) {
+					ans[0] = *num;
+					ans[1] = target - *num;
+					return ans;
+				}
+			}
+			return ans;
+		}
+	}// namespace acwing75
 }// namespace acwing

@@ -2426,4 +2426,12 @@ namespace acwing {
 			ASSERT_EQ(3, Solution::getMissingNumber(input));
 		}
 	}// namespace acwing68
+
+	namespace acwing75 {
+		TEST(acwing75, case1) {
+			vector input  = {1, 2, 3, 4};
+			vector output = {3, 4};
+			ASSERT_EQ(output, Solution::findNumbersWithSum(input, 7));
+		}
+	}// namespace acwing75
 }// namespace acwing
