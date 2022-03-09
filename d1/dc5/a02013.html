@@ -123,30 +123,30 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01481">1481</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01481" name="l01481"></a><span class="lineno"> 1481</span>                                               {</div>
-<div class="line"><a id="l01482" name="l01482"></a><span class="lineno"> 1482</span>        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l01483" name="l01483"></a><span class="lineno"> 1483</span>        <span class="keyword">auto</span> *lamp = <span class="keyword">new</span> <span class="keywordtype">bool</span>[2000001];</div>
-<div class="line"><a id="l01484" name="l01484"></a><span class="lineno"> 1484</span>        memset(lamp, 0, 2000001 * <span class="keyword">sizeof</span>(<span class="keywordtype">bool</span>));</div>
-<div class="line"><a id="l01485" name="l01485"></a><span class="lineno"> 1485</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l01486" name="l01486"></a><span class="lineno"> 1486</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l01487" name="l01487"></a><span class="lineno"> 1487</span>            <span class="keywordtype">double</span> a;</div>
-<div class="line"><a id="l01488" name="l01488"></a><span class="lineno"> 1488</span>            <span class="keywordtype">int</span> t;</div>
-<div class="line"><a id="l01489" name="l01489"></a><span class="lineno"> 1489</span>            cin &gt;&gt; a &gt;&gt; t;</div>
-<div class="line"><a id="l01490" name="l01490"></a><span class="lineno"> 1490</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= t; j++) {</div>
-<div class="line"><a id="l01491" name="l01491"></a><span class="lineno"> 1491</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> at = a * j;</div>
-<div class="line"><a id="l01492" name="l01492"></a><span class="lineno"> 1492</span>                lamp[at]     = !lamp[at];</div>
-<div class="line"><a id="l01493" name="l01493"></a><span class="lineno"> 1493</span>            }</div>
-<div class="line"><a id="l01494" name="l01494"></a><span class="lineno"> 1494</span>        }</div>
-<div class="line"><a id="l01495" name="l01495"></a><span class="lineno"> 1495</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 2000001; i++) {</div>
-<div class="line"><a id="l01496" name="l01496"></a><span class="lineno"> 1496</span>            <span class="keywordflow">if</span>(lamp[i]) {</div>
-<div class="line"><a id="l01497" name="l01497"></a><span class="lineno"> 1497</span>                cout &lt;&lt; i;</div>
-<div class="line"><a id="l01498" name="l01498"></a><span class="lineno"> 1498</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span>            }</div>
-<div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span>        }</div>
-<div class="line"><a id="l01501" name="l01501"></a><span class="lineno"> 1501</span>        <span class="keyword">delete</span>[] lamp;</div>
-<div class="line"><a id="l01502" name="l01502"></a><span class="lineno"> 1502</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01503" name="l01503"></a><span class="lineno"> 1503</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01482">1482</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01482" name="l01482"></a><span class="lineno"> 1482</span>                                               {</div>
+<div class="line"><a id="l01483" name="l01483"></a><span class="lineno"> 1483</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l01484" name="l01484"></a><span class="lineno"> 1484</span>        <span class="keyword">auto</span> *lamp = <span class="keyword">new</span> <span class="keywordtype">bool</span>[2000001];</div>
+<div class="line"><a id="l01485" name="l01485"></a><span class="lineno"> 1485</span>        memset(lamp, 0, 2000001 * <span class="keyword">sizeof</span>(<span class="keywordtype">bool</span>));</div>
+<div class="line"><a id="l01486" name="l01486"></a><span class="lineno"> 1486</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l01487" name="l01487"></a><span class="lineno"> 1487</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l01488" name="l01488"></a><span class="lineno"> 1488</span>            <span class="keywordtype">double</span> a;</div>
+<div class="line"><a id="l01489" name="l01489"></a><span class="lineno"> 1489</span>            <span class="keywordtype">int</span> t;</div>
+<div class="line"><a id="l01490" name="l01490"></a><span class="lineno"> 1490</span>            cin &gt;&gt; a &gt;&gt; t;</div>
+<div class="line"><a id="l01491" name="l01491"></a><span class="lineno"> 1491</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= t; j++) {</div>
+<div class="line"><a id="l01492" name="l01492"></a><span class="lineno"> 1492</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> at = a * j;</div>
+<div class="line"><a id="l01493" name="l01493"></a><span class="lineno"> 1493</span>                lamp[at]     = !lamp[at];</div>
+<div class="line"><a id="l01494" name="l01494"></a><span class="lineno"> 1494</span>            }</div>
+<div class="line"><a id="l01495" name="l01495"></a><span class="lineno"> 1495</span>        }</div>
+<div class="line"><a id="l01496" name="l01496"></a><span class="lineno"> 1496</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 2000001; i++) {</div>
+<div class="line"><a id="l01497" name="l01497"></a><span class="lineno"> 1497</span>            <span class="keywordflow">if</span>(lamp[i]) {</div>
+<div class="line"><a id="l01498" name="l01498"></a><span class="lineno"> 1498</span>                cout &lt;&lt; i;</div>
+<div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span>            }</div>
+<div class="line"><a id="l01501" name="l01501"></a><span class="lineno"> 1501</span>        }</div>
+<div class="line"><a id="l01502" name="l01502"></a><span class="lineno"> 1502</span>        <span class="keyword">delete</span>[] lamp;</div>
+<div class="line"><a id="l01503" name="l01503"></a><span class="lineno"> 1503</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01504" name="l01504"></a><span class="lineno"> 1504</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00834">luogu::TEST()</a>.</p>
 

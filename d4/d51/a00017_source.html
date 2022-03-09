@@ -4170,10 +4170,10 @@ $(function() {
 <div class="line"><a id="l04106" name="l04106"></a><span class="lineno"><a class="line" href="../../d5/d13/a00205.html"> 4106</a></span>    <span class="keyword">namespace </span>smallest_rotation_with_highest_score {</div>
 <div class="line"><a id="l04107" name="l04107"></a><span class="lineno"><a class="line" href="../../dd/db4/a01693.html#a68a2af5d7a221517c76ed92fa5fd819c"> 4107</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../dd/db4/a01693.html#a68a2af5d7a221517c76ed92fa5fd819c">Solution::bestRotation</a>(vector&lt;int&gt; &amp;nums) {</div>
 <div class="line"><a id="l04108" name="l04108"></a><span class="lineno"> 4108</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = nums.size();</div>
-<div class="line"><a id="l04109" name="l04109"></a><span class="lineno"> 4109</span>            vector&lt;int&gt; k_score_diff(n + 1, 0);</div>
+<div class="line"><a id="l04109" name="l04109"></a><span class="lineno"> 4109</span>            vector k_score_diff(n + 1, 0);</div>
 <div class="line"><a id="l04110" name="l04110"></a><span class="lineno"> 4110</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l04111" name="l04111"></a><span class="lineno"> 4111</span>                <span class="keywordtype">int</span> low  = (i + 1) % n;</div>
-<div class="line"><a id="l04112" name="l04112"></a><span class="lineno"> 4112</span>                <span class="keywordtype">int</span> high = (i - nums[i] + n) % n;</div>
+<div class="line"><a id="l04111" name="l04111"></a><span class="lineno"> 4111</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> low  = (i + 1) % n;</div>
+<div class="line"><a id="l04112" name="l04112"></a><span class="lineno"> 4112</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> high = (i - nums[i] + n) % n;</div>
 <div class="line"><a id="l04113" name="l04113"></a><span class="lineno"> 4113</span>                k_score_diff[low]++;</div>
 <div class="line"><a id="l04114" name="l04114"></a><span class="lineno"> 4114</span>                k_score_diff[high + 1]--;</div>
 <div class="line"><a id="l04115" name="l04115"></a><span class="lineno"> 4115</span>                <span class="keywordflow">if</span>(low &gt; high) {</div>

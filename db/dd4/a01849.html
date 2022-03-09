@@ -123,35 +123,35 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l00482">482</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span>                                               {</div>
-<div class="line"><a id="l00483" name="l00483"></a><span class="lineno">  483</span>        <span class="keywordtype">string</span> isbn;</div>
-<div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span>        cin &gt;&gt; isbn;</div>
-<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>        <span class="keyword">const</span> <span class="keywordtype">string</span> isbn_prefix = isbn.substr(0, isbn.length() - 1);</div>
-<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>        <span class="keywordtype">int</span> sum                  = 0;</div>
-<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>        <span class="keywordtype">int</span> count                = 1;</div>
-<div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: isbn_prefix) {</div>
-<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>            <span class="keywordflow">if</span>(isdigit(ch) != 0) {</div>
-<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>                sum += (ch - <span class="charliteral">&#39;0&#39;</span>) * count++;</div>
-<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>                sum %= 11;</div>
-<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>            }</div>
-<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>        }</div>
-<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>        sum %= 11;</div>
-<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>        <span class="keywordtype">int</span> end = *isbn.rbegin() - <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>        <span class="keywordflow">if</span>(end == <span class="charliteral">&#39;X&#39;</span> - <span class="charliteral">&#39;0&#39;</span>) {</div>
-<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>            end = 10;</div>
-<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span>        }</div>
-<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>        <span class="keywordflow">if</span>(sum == end) {</div>
-<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span>            cout &lt;&lt; <span class="stringliteral">&quot;Right&quot;</span>;</div>
-<div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>            end = sum;</div>
-<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>            <span class="keywordflow">if</span>(sum == 10) {</div>
-<div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>                end = <span class="charliteral">&#39;X&#39;</span> - <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>            }</div>
-<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>            cout &lt;&lt; isbn_prefix &lt;&lt; static_cast&lt;char&gt;(end + <span class="charliteral">&#39;0&#39;</span>);</div>
-<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>        }</div>
-<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l00483">483</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00483" name="l00483"></a><span class="lineno">  483</span>                                               {</div>
+<div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span>        <span class="keywordtype">string</span> isbn;</div>
+<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>        cin &gt;&gt; isbn;</div>
+<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>        <span class="keyword">const</span> <span class="keywordtype">string</span> isbn_prefix = isbn.substr(0, isbn.length() - 1);</div>
+<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>        <span class="keywordtype">int</span> sum                  = 0;</div>
+<div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>        <span class="keywordtype">int</span> count                = 1;</div>
+<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: isbn_prefix) {</div>
+<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>            <span class="keywordflow">if</span>(isdigit(ch) != 0) {</div>
+<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>                sum += (ch - <span class="charliteral">&#39;0&#39;</span>) * count++;</div>
+<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>                sum %= 11;</div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>            }</div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>        }</div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>        sum %= 11;</div>
+<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>        <span class="keywordtype">int</span> end = *isbn.rbegin() - <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>        <span class="keywordflow">if</span>(end == <span class="charliteral">&#39;X&#39;</span> - <span class="charliteral">&#39;0&#39;</span>) {</div>
+<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span>            end = 10;</div>
+<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>        }</div>
+<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span>        <span class="keywordflow">if</span>(sum == end) {</div>
+<div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>            cout &lt;&lt; <span class="stringliteral">&quot;Right&quot;</span>;</div>
+<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>            end = sum;</div>
+<div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>            <span class="keywordflow">if</span>(sum == 10) {</div>
+<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>                end = <span class="charliteral">&#39;X&#39;</span> - <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>            }</div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>            cout &lt;&lt; isbn_prefix &lt;&lt; static_cast&lt;char&gt;(end + <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>        }</div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00357">luogu::TEST()</a>.</p>
 

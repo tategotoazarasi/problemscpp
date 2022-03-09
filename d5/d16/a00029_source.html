@@ -5131,7 +5131,7 @@ $(function() {
 <div class="line"><a id="l05063" name="l05063"></a><span class="lineno"> 5063</span><span class="stringliteral"></span> </div>
 <div class="line"><a id="l05064" name="l05064"></a><span class="lineno"><a class="line" href="../../d1/d6f/a00063.html"> 5064</a></span><span class="stringliteral">    namespace acwing36 {</span></div>
 <div class="line"><a id="l05065" name="l05065"></a><span class="lineno"><a class="line" href="../../de/d9e/a01061.html#a8916096776eae168107eda07a850670e"> 5065</a></span><span class="stringliteral">        ListNode *Solution::merge(ListNode *l1, ListNode *l2) {</span></div>
-<div class="line"><a id="l05066" name="l05066"></a><span class="lineno"> 5066</span><span class="stringliteral">            auto current         = new ListNode(0);</span></div>
+<div class="line"><a id="l05066" name="l05066"></a><span class="lineno"> 5066</span><span class="stringliteral">            auto *current        = new ListNode(0);</span></div>
 <div class="line"><a id="l05067" name="l05067"></a><span class="lineno"> 5067</span><span class="stringliteral">            const ListNode *head = current;</span></div>
 <div class="line"><a id="l05068" name="l05068"></a><span class="lineno"> 5068</span><span class="stringliteral">            while(l1 != nullptr &amp;&amp; l2 != nullptr) {</span></div>
 <div class="line"><a id="l05069" name="l05069"></a><span class="lineno"> 5069</span><span class="stringliteral">                if(l1-&gt;val &lt; l2-&gt;val) {</span></div>
@@ -5218,9 +5218,9 @@ $(function() {
 <div class="line"><a id="l05151" name="l05151"></a><span class="lineno"><a class="line" href="../../da/d24/a00068.html"> 5151</a></span><span class="stringliteral">    namespace acwing75 {</span></div>
 <div class="line"><a id="l05152" name="l05152"></a><span class="lineno"><a class="line" href="../../dd/dee/a01081.html#a67080a4b88144b1ea4dcb758f5b86e5a"> 5152</a></span><span class="stringliteral">        vector&lt;int&gt; Solution::findNumbersWithSum(vector&lt;int&gt; &amp;nums, int target) {</span></div>
 <div class="line"><a id="l05153" name="l05153"></a><span class="lineno"> 5153</span><span class="stringliteral">            vector&lt;int&gt; ans(2);</span></div>
-<div class="line"><a id="l05154" name="l05154"></a><span class="lineno"> 5154</span><span class="stringliteral">            set&lt;int&gt; nms(nums.begin(), nums.end());</span></div>
+<div class="line"><a id="l05154" name="l05154"></a><span class="lineno"> 5154</span><span class="stringliteral">            set nms(nums.begin(), nums.end());</span></div>
 <div class="line"><a id="l05155" name="l05155"></a><span class="lineno"> 5155</span><span class="stringliteral">            for(auto num = nms.begin(); *num &lt;= target / 2 &amp;&amp; num != nms.end(); ++num) {</span></div>
-<div class="line"><a id="l05156" name="l05156"></a><span class="lineno"> 5156</span><span class="stringliteral">                if(nms.count(target - *num) &gt; 0) {</span></div>
+<div class="line"><a id="l05156" name="l05156"></a><span class="lineno"> 5156</span><span class="stringliteral">                if(nms.contains(target - *num)) {</span></div>
 <div class="line"><a id="l05157" name="l05157"></a><span class="lineno"> 5157</span><span class="stringliteral">                    ans[0] = *num;</span></div>
 <div class="line"><a id="l05158" name="l05158"></a><span class="lineno"> 5158</span><span class="stringliteral">                    ans[1] = target - *num;</span></div>
 <div class="line"><a id="l05159" name="l05159"></a><span class="lineno"> 5159</span><span class="stringliteral">                    return ans;</span></div>

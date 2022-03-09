@@ -123,29 +123,29 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01551">1551</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01551" name="l01551"></a><span class="lineno"> 1551</span>                                               {</div>
-<div class="line"><a id="l01552" name="l01552"></a><span class="lineno"> 1552</span>        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l01553" name="l01553"></a><span class="lineno"> 1553</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l01554" name="l01554"></a><span class="lineno"> 1554</span>        <span class="keyword">auto</span> *triangle = <span class="keyword">new</span> <span class="keywordtype">int</span> *[n];</div>
-<div class="line"><a id="l01555" name="l01555"></a><span class="lineno"> 1555</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l01556" name="l01556"></a><span class="lineno"> 1556</span>            triangle[i] = <span class="keyword">new</span> <span class="keywordtype">int</span>[i + 1];</div>
-<div class="line"><a id="l01557" name="l01557"></a><span class="lineno"> 1557</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt;= i; j++) {</div>
-<div class="line"><a id="l01558" name="l01558"></a><span class="lineno"> 1558</span>                <span class="keywordflow">if</span>(j == 0 || j == i) {</div>
-<div class="line"><a id="l01559" name="l01559"></a><span class="lineno"> 1559</span>                    triangle[i][j] = 1;</div>
-<div class="line"><a id="l01560" name="l01560"></a><span class="lineno"> 1560</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01561" name="l01561"></a><span class="lineno"> 1561</span>                    triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];</div>
-<div class="line"><a id="l01562" name="l01562"></a><span class="lineno"> 1562</span>                }</div>
-<div class="line"><a id="l01563" name="l01563"></a><span class="lineno"> 1563</span>                cout &lt;&lt; triangle[i][j] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a id="l01564" name="l01564"></a><span class="lineno"> 1564</span>            }</div>
-<div class="line"><a id="l01565" name="l01565"></a><span class="lineno"> 1565</span>            cout &lt;&lt; endl;</div>
-<div class="line"><a id="l01566" name="l01566"></a><span class="lineno"> 1566</span>        }</div>
-<div class="line"><a id="l01567" name="l01567"></a><span class="lineno"> 1567</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l01568" name="l01568"></a><span class="lineno"> 1568</span>            <span class="keyword">delete</span>[] triangle[i];</div>
-<div class="line"><a id="l01569" name="l01569"></a><span class="lineno"> 1569</span>        }</div>
-<div class="line"><a id="l01570" name="l01570"></a><span class="lineno"> 1570</span>        <span class="keyword">delete</span>[] triangle;</div>
-<div class="line"><a id="l01571" name="l01571"></a><span class="lineno"> 1571</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01572" name="l01572"></a><span class="lineno"> 1572</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01552">1552</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01552" name="l01552"></a><span class="lineno"> 1552</span>                                               {</div>
+<div class="line"><a id="l01553" name="l01553"></a><span class="lineno"> 1553</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l01554" name="l01554"></a><span class="lineno"> 1554</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l01555" name="l01555"></a><span class="lineno"> 1555</span>        <span class="keyword">auto</span> *triangle = <span class="keyword">new</span> <span class="keywordtype">int</span> *[n];</div>
+<div class="line"><a id="l01556" name="l01556"></a><span class="lineno"> 1556</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l01557" name="l01557"></a><span class="lineno"> 1557</span>            triangle[i] = <span class="keyword">new</span> <span class="keywordtype">int</span>[i + 1];</div>
+<div class="line"><a id="l01558" name="l01558"></a><span class="lineno"> 1558</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt;= i; j++) {</div>
+<div class="line"><a id="l01559" name="l01559"></a><span class="lineno"> 1559</span>                <span class="keywordflow">if</span>(j == 0 || j == i) {</div>
+<div class="line"><a id="l01560" name="l01560"></a><span class="lineno"> 1560</span>                    triangle[i][j] = 1;</div>
+<div class="line"><a id="l01561" name="l01561"></a><span class="lineno"> 1561</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01562" name="l01562"></a><span class="lineno"> 1562</span>                    triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];</div>
+<div class="line"><a id="l01563" name="l01563"></a><span class="lineno"> 1563</span>                }</div>
+<div class="line"><a id="l01564" name="l01564"></a><span class="lineno"> 1564</span>                cout &lt;&lt; triangle[i][j] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l01565" name="l01565"></a><span class="lineno"> 1565</span>            }</div>
+<div class="line"><a id="l01566" name="l01566"></a><span class="lineno"> 1566</span>            cout &lt;&lt; endl;</div>
+<div class="line"><a id="l01567" name="l01567"></a><span class="lineno"> 1567</span>        }</div>
+<div class="line"><a id="l01568" name="l01568"></a><span class="lineno"> 1568</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l01569" name="l01569"></a><span class="lineno"> 1569</span>            <span class="keyword">delete</span>[] triangle[i];</div>
+<div class="line"><a id="l01570" name="l01570"></a><span class="lineno"> 1570</span>        }</div>
+<div class="line"><a id="l01571" name="l01571"></a><span class="lineno"> 1571</span>        <span class="keyword">delete</span>[] triangle;</div>
+<div class="line"><a id="l01572" name="l01572"></a><span class="lineno"> 1572</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01573" name="l01573"></a><span class="lineno"> 1573</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00857">luogu::TEST()</a>.</p>
 

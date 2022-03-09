@@ -123,23 +123,23 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l02312">2312</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02312" name="l02312"></a><span class="lineno"> 2312</span>                                               {</div>
-<div class="line"><a id="l02313" name="l02313"></a><span class="lineno"> 2313</span>        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l02314" name="l02314"></a><span class="lineno"> 2314</span>        <span class="keywordtype">int</span> m;</div>
-<div class="line"><a id="l02315" name="l02315"></a><span class="lineno"> 2315</span>        cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l02316" name="l02316"></a><span class="lineno"> 2316</span>        <span class="keywordtype">double</span> ans = 0;</div>
-<div class="line"><a id="l02317" name="l02317"></a><span class="lineno"> 2317</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l02318" name="l02318"></a><span class="lineno"> 2318</span>            vector&lt;int&gt; vec(m);</div>
-<div class="line"><a id="l02319" name="l02319"></a><span class="lineno"> 2319</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; m; j++) {</div>
-<div class="line"><a id="l02320" name="l02320"></a><span class="lineno"> 2320</span>                cin &gt;&gt; vec[j];</div>
-<div class="line"><a id="l02321" name="l02321"></a><span class="lineno"> 2321</span>            }</div>
-<div class="line"><a id="l02322" name="l02322"></a><span class="lineno"> 2322</span>            sort(vec.begin(), vec.end());</div>
-<div class="line"><a id="l02323" name="l02323"></a><span class="lineno"> 2323</span>            ans = max(ans, <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(accumulate(vec.begin() + 1, vec.end() - 1, 0)) / (m - 2));</div>
-<div class="line"><a id="l02324" name="l02324"></a><span class="lineno"> 2324</span>        }</div>
-<div class="line"><a id="l02325" name="l02325"></a><span class="lineno"> 2325</span>        cout &lt;&lt; fixed &lt;&lt; setprecision(2) &lt;&lt; ans;</div>
-<div class="line"><a id="l02326" name="l02326"></a><span class="lineno"> 2326</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02327" name="l02327"></a><span class="lineno"> 2327</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l02313">2313</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02313" name="l02313"></a><span class="lineno"> 2313</span>                                               {</div>
+<div class="line"><a id="l02314" name="l02314"></a><span class="lineno"> 2314</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l02315" name="l02315"></a><span class="lineno"> 2315</span>        <span class="keywordtype">int</span> m;</div>
+<div class="line"><a id="l02316" name="l02316"></a><span class="lineno"> 2316</span>        cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l02317" name="l02317"></a><span class="lineno"> 2317</span>        <span class="keywordtype">double</span> ans = 0;</div>
+<div class="line"><a id="l02318" name="l02318"></a><span class="lineno"> 2318</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l02319" name="l02319"></a><span class="lineno"> 2319</span>            vector&lt;int&gt; vec(m);</div>
+<div class="line"><a id="l02320" name="l02320"></a><span class="lineno"> 2320</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; m; j++) {</div>
+<div class="line"><a id="l02321" name="l02321"></a><span class="lineno"> 2321</span>                cin &gt;&gt; vec[j];</div>
+<div class="line"><a id="l02322" name="l02322"></a><span class="lineno"> 2322</span>            }</div>
+<div class="line"><a id="l02323" name="l02323"></a><span class="lineno"> 2323</span>            sort(vec.begin(), vec.end());</div>
+<div class="line"><a id="l02324" name="l02324"></a><span class="lineno"> 2324</span>            ans = max(ans, <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(accumulate(vec.begin() + 1, vec.end() - 1, 0)) / (m - 2));</div>
+<div class="line"><a id="l02325" name="l02325"></a><span class="lineno"> 2325</span>        }</div>
+<div class="line"><a id="l02326" name="l02326"></a><span class="lineno"> 2326</span>        cout &lt;&lt; fixed &lt;&lt; setprecision(2) &lt;&lt; ans;</div>
+<div class="line"><a id="l02327" name="l02327"></a><span class="lineno"> 2327</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02328" name="l02328"></a><span class="lineno"> 2328</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l01308">luogu::TEST()</a>.</p>
 

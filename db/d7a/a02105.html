@@ -123,29 +123,29 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l02272">2272</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02272" name="l02272"></a><span class="lineno"> 2272</span>                                               {</div>
-<div class="line"><a id="l02273" name="l02273"></a><span class="lineno"> 2273</span>        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l02274" name="l02274"></a><span class="lineno"> 2274</span>        cin &gt;&gt; n;</div>
-<div class="line"><a id="l02275" name="l02275"></a><span class="lineno"> 2275</span>        <span class="keywordtype">bool</span> notprime[100001];</div>
-<div class="line"><a id="l02276" name="l02276"></a><span class="lineno"> 2276</span>        memset(notprime, 1, <span class="keyword">sizeof</span> notprime);</div>
-<div class="line"><a id="l02277" name="l02277"></a><span class="lineno"> 2277</span>        notprime[0] = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l02278" name="l02278"></a><span class="lineno"> 2278</span>        notprime[1] = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l02279" name="l02279"></a><span class="lineno"> 2279</span>        notprime[2] = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l02280" name="l02280"></a><span class="lineno"> 2280</span>        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 2; i &lt;= 50000; i++) {</div>
-<div class="line"><a id="l02281" name="l02281"></a><span class="lineno"> 2281</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 2; i * j &lt;= 100000; j++) {</div>
-<div class="line"><a id="l02282" name="l02282"></a><span class="lineno"> 2282</span>                notprime[i * j] = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l02283" name="l02283"></a><span class="lineno"> 2283</span>            }</div>
-<div class="line"><a id="l02284" name="l02284"></a><span class="lineno"> 2284</span>        }</div>
-<div class="line"><a id="l02285" name="l02285"></a><span class="lineno"> 2285</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> num;</div>
-<div class="line"><a id="l02286" name="l02286"></a><span class="lineno"> 2286</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> _ = 0; _ &lt; n; _++) {</div>
-<div class="line"><a id="l02287" name="l02287"></a><span class="lineno"> 2287</span>            cin &gt;&gt; num;</div>
-<div class="line"><a id="l02288" name="l02288"></a><span class="lineno"> 2288</span>            <span class="keywordflow">if</span>(notprime[num]) {</div>
-<div class="line"><a id="l02289" name="l02289"></a><span class="lineno"> 2289</span>                cout &lt;&lt; num &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a id="l02290" name="l02290"></a><span class="lineno"> 2290</span>            }</div>
-<div class="line"><a id="l02291" name="l02291"></a><span class="lineno"> 2291</span>        }</div>
-<div class="line"><a id="l02292" name="l02292"></a><span class="lineno"> 2292</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02293" name="l02293"></a><span class="lineno"> 2293</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">luogu.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l02273">2273</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02273" name="l02273"></a><span class="lineno"> 2273</span>                                               {</div>
+<div class="line"><a id="l02274" name="l02274"></a><span class="lineno"> 2274</span>        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l02275" name="l02275"></a><span class="lineno"> 2275</span>        cin &gt;&gt; n;</div>
+<div class="line"><a id="l02276" name="l02276"></a><span class="lineno"> 2276</span>        <span class="keywordtype">bool</span> notprime[100001];</div>
+<div class="line"><a id="l02277" name="l02277"></a><span class="lineno"> 2277</span>        memset(notprime, 1, <span class="keyword">sizeof</span> notprime);</div>
+<div class="line"><a id="l02278" name="l02278"></a><span class="lineno"> 2278</span>        notprime[0] = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l02279" name="l02279"></a><span class="lineno"> 2279</span>        notprime[1] = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l02280" name="l02280"></a><span class="lineno"> 2280</span>        notprime[2] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l02281" name="l02281"></a><span class="lineno"> 2281</span>        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 2; i &lt;= 50000; i++) {</div>
+<div class="line"><a id="l02282" name="l02282"></a><span class="lineno"> 2282</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 2; i * j &lt;= 100000; j++) {</div>
+<div class="line"><a id="l02283" name="l02283"></a><span class="lineno"> 2283</span>                notprime[i * j] = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l02284" name="l02284"></a><span class="lineno"> 2284</span>            }</div>
+<div class="line"><a id="l02285" name="l02285"></a><span class="lineno"> 2285</span>        }</div>
+<div class="line"><a id="l02286" name="l02286"></a><span class="lineno"> 2286</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> num;</div>
+<div class="line"><a id="l02287" name="l02287"></a><span class="lineno"> 2287</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> _ = 0; _ &lt; n; _++) {</div>
+<div class="line"><a id="l02288" name="l02288"></a><span class="lineno"> 2288</span>            cin &gt;&gt; num;</div>
+<div class="line"><a id="l02289" name="l02289"></a><span class="lineno"> 2289</span>            <span class="keywordflow">if</span>(notprime[num]) {</div>
+<div class="line"><a id="l02290" name="l02290"></a><span class="lineno"> 2290</span>                cout &lt;&lt; num &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l02291" name="l02291"></a><span class="lineno"> 2291</span>            }</div>
+<div class="line"><a id="l02292" name="l02292"></a><span class="lineno"> 2292</span>        }</div>
+<div class="line"><a id="l02293" name="l02293"></a><span class="lineno"> 2293</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02294" name="l02294"></a><span class="lineno"> 2294</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l01284">luogu::TEST()</a>.</p>
 

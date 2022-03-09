@@ -122,9 +122,9 @@ $(function() {
 <p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l05152">5152</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l05152" name="l05152"></a><span class="lineno"> 5152</span>                                                                              {</div>
 <div class="line"><a id="l05153" name="l05153"></a><span class="lineno"> 5153</span>            vector&lt;int&gt; ans(2);</div>
-<div class="line"><a id="l05154" name="l05154"></a><span class="lineno"> 5154</span>            set&lt;int&gt; nms(nums.begin(), nums.end());</div>
+<div class="line"><a id="l05154" name="l05154"></a><span class="lineno"> 5154</span>            set nms(nums.begin(), nums.end());</div>
 <div class="line"><a id="l05155" name="l05155"></a><span class="lineno"> 5155</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> num = nms.begin(); *num &lt;= target / 2 &amp;&amp; num != nms.end(); ++num) {</div>
-<div class="line"><a id="l05156" name="l05156"></a><span class="lineno"> 5156</span>                <span class="keywordflow">if</span>(nms.count(target - *num) &gt; 0) {</div>
+<div class="line"><a id="l05156" name="l05156"></a><span class="lineno"> 5156</span>                <span class="keywordflow">if</span>(nms.contains(target - *num)) {</div>
 <div class="line"><a id="l05157" name="l05157"></a><span class="lineno"> 5157</span>                    ans[0] = *num;</div>
 <div class="line"><a id="l05158" name="l05158"></a><span class="lineno"> 5158</span>                    ans[1] = target - *num;</div>
 <div class="line"><a id="l05159" name="l05159"></a><span class="lineno"> 5159</span>                    <span class="keywordflow">return</span> ans;</div>
