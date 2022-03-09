@@ -1360,4 +1360,22 @@ namespace luogu {
 		          "lxl senpai\n",
 		          ans);
 	}
+
+	namespace P5742 {
+		TEST(P5742, case1) {
+			istringstream in("4\n"
+			                 "1223 95 59\n"
+			                 "1224 50 7\n"
+			                 "1473 32 45\n"
+			                 "1556 86 99");
+			auto out = ostringstream();
+			P5742::main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("Excellent\n"
+			          "Not excellent\n"
+			          "Not excellent\n"
+			          "Excellent\n",
+			          ans);
+		}
+	}// namespace P5742
 }// namespace luogu

@@ -641,6 +641,31 @@ namespace luogu {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief 洛谷 P5742 【深基7.例11】评等级
+	namespace P5742 {
+		/// \brief 学生
+		struct Student {
+			int number;      ///< 学号
+			int grade;       ///< 成绩
+			int extra_grade; ///< 素质拓展成绩
+			int sum;         ///< 总分
+			double composite;///< 综合分数
+			/// \brief 构造函数
+			/// \param number 学号
+			/// \param grade 成绩
+			/// \param extra_grade 素质拓展成绩
+			Student(int number, int grade, int extra_grade): number(number), grade(grade), extra_grade(extra_grade), sum(grade + extra_grade), composite(grade * 0.7 + extra_grade * 0.3){};
+			/// \brief 学生是否优秀
+			/// \return 是否优秀
+			bool excellent();
+		};
+
+		class P5742 {
+		public:
+			static int main(istream &cin, ostream &cout);
+		};
+	}// namespace P5742
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H

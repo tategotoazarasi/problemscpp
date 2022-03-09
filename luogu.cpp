@@ -2430,4 +2430,24 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	namespace P5742 {
+		int P5742::main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			for(int i = 0; i < n; i++) {
+				int number, grade, extra_grade;
+				cin >> number;
+				cin >> grade;
+				cin >> extra_grade;
+				Student s = Student(number, grade, extra_grade);
+				cout << (s.excellent() ? "Excellent" : "Not excellent") << endl;
+			}
+			return 0;
+		}
+
+		bool Student::excellent() {
+			return sum > 140 && composite >= 80;
+		}
+	}// namespace P5742
 }// namespace luogu
