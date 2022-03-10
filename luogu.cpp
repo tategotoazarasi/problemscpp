@@ -2474,4 +2474,20 @@ namespace luogu {
 		}
 		return 0;
 	}
+
+	int P2415::main(istream &cin, ostream &cout) {
+		vector<int> vec;
+		int num;
+		while(cin >> num) {
+			vec.push_back(num);
+		}
+		int n                   = vec.size();
+		unsigned long long base = static_cast<unsigned long long>(1) << (n - 1);
+		unsigned long long sum  = 0;
+		for(auto num: vec) {
+			sum += num * base;
+		}
+		cout << sum;
+		return 0;
+	}
 }// namespace luogu

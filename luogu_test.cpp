@@ -1390,4 +1390,12 @@ namespace luogu {
 		          "10=3+7\n",
 		          ans);
 	}
+
+	TEST(P2415, case1) {
+		istringstream in("2 3");
+		auto out = ostringstream();
+		P2415::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("10", ans);
+	}
 }// namespace luogu
