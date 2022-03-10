@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::slowest_key::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,89 +63,18 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d2/db1/a00070.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d4/d7d/a00093.html">slowest_key</a></li><li class="navelem"><a class="el" href="../../dd/d43/a01193.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d6/d2c/a00072.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d4/d7d/a00093.html">minimum_swaps_to_group_all_1s_together_ii</a></li><li class="navelem"><a class="el" href="../../d2/d22/a01196.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="../../dc/d19/a01190.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::slowest_key::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::minimum_swaps_to_group_all_1s_together_ii::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:ab7976dc380cf88058bb93aeac322ebbb"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d43/a01193.html#ab7976dc380cf88058bb93aeac322ebbb">slowestKey</a> (vector&lt; int &gt; &amp;releaseTimes, string keysPressed)</td></tr>
-<tr class="separator:ab7976dc380cf88058bb93aeac322ebbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00286">286</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="ab7976dc380cf88058bb93aeac322ebbb" name="ab7976dc380cf88058bb93aeac322ebbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7976dc380cf88058bb93aeac322ebbb">&#9670;&nbsp;</a></span>slowestKey()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char leetcode::slowest_key::Solution::slowestKey </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>releaseTimes</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>keysPressed</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l00720">720</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>                                                                               {</div>
-<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>            <span class="keywordtype">int</span> max  = releaseTimes[0];</div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>            <span class="keywordtype">int</span> maxi = 0;</div>
-<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; releaseTimes.size(); i++) {</div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> time = releaseTimes[i] - releaseTimes[i - 1];</div>
-<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>                <span class="keywordflow">if</span>(max &lt; time) {</div>
-<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>                    max  = time;</div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>                    maxi = i;</div>
-<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(max == time) {</div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>                    <span class="keywordflow">if</span>(keysPressed[i] &gt; keysPressed[maxi]) {</div>
-<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>                        maxi = i;</div>
-<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>                    }</div>
-<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>                }</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>            }</div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>            <span class="keywordflow">return</span> keysPressed[maxi];</div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l00449">leetcode::slowest_key::TEST()</a>.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a></li>
-<li><a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="../../d2/d22/a01196.html">leetcode::minimum_swaps_to_group_all_1s_together_ii::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../d2/d22/a01196.html#a34b42b02393784f6c9a57bb3b583bd7f">minSwaps</a>(vector&lt; int &gt; &amp;nums)</td><td class="entry"><a class="el" href="../../d2/d22/a01196.html">leetcode::minimum_swaps_to_group_all_1s_together_ii::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
