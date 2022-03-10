@@ -5183,22 +5183,22 @@ namespace acwing {
 
 	namespace acwing51 {
 		vector<vector<int>> Solution::permutation(vector<int> &nums) {
-			vector<vector<int>> ans = vector<vector<int>>();
+			auto ans = vector<vector<int>>();
 			set<vector<int>> s;
 			dfs(vector<int>(), nums, s);
-			for(auto vec: s) {
+			for(const auto &vec: s) {
 				ans.push_back(vec);
 			}
 			return ans;
 		}
 
-		void Solution::dfs(vector<int> vec, vector<int> nums, set<vector<int>> &s) {
+		void Solution::dfs(const vector<int> &vec, vector<int> nums, set<vector<int>> &s) {
 			if(nums.empty()) {
 				s.insert(vec);
 			}
 			for(int i = 0; i < nums.size(); i++) {
-				vector nums_cpy = vector(nums);
-				vector vec_cpy  = vector(vec);
+				auto nums_cpy = vector(nums);
+				auto vec_cpy  = vector(vec);
 				nums_cpy.erase(nums_cpy.begin() + i);
 				vec_cpy.push_back(nums[i]);
 				dfs(vec_cpy, nums_cpy, s);

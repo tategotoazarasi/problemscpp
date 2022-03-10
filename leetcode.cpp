@@ -4138,7 +4138,7 @@ namespace leetcode {
 			}
 			vector<int> ans;
 			ans.push_back(root->val);
-			for(auto child: root->children) {
+			for(auto *child: root->children) {
 				auto preorder_child = preorder(child);
 				ans.insert(ans.end(), preorder_child.begin(), preorder_child.end());
 			}

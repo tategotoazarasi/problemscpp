@@ -8,6 +8,7 @@
 #include <set>
 #include <string>
 #include <unordered_set>
+#include <utility>
 #include <vector>
 
 using namespace std;
@@ -1571,11 +1572,15 @@ namespace leetcode {
 	namespace n_ary_tree_preorder_traversal {
 		class Node {
 		public:
-			int val;
+			int val{};
 			vector<Node *> children;
-			Node() {}
-			Node(int _val): val(_val) {}
-			Node(int _val, vector<Node *> _children): val(_val), children(_children) {}
+			Node() = default;
+
+			explicit Node(int _val)
+			    : val(_val) {}
+
+			Node(int _val, vector<Node *> _children)
+			    : val(_val), children(std::move(std::move(_children))) {}
 		};
 
 		class Solution {

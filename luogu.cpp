@@ -2481,10 +2481,10 @@ namespace luogu {
 		while(cin >> num) {
 			vec.push_back(num);
 		}
-		int n                   = vec.size();
-		unsigned long long base = static_cast<unsigned long long>(1) << (n - 1);
-		unsigned long long sum  = 0;
-		for(auto num: vec) {
+		const int n                   = vec.size();
+		const unsigned long long base = static_cast<unsigned long long>(1) << n - 1;
+		unsigned long long sum        = 0;
+		for(const auto num: vec) {
 			sum += num * base;
 		}
 		cout << sum;

@@ -1687,7 +1687,7 @@ namespace acwing {
 		class Solution {
 		public:
 			static vector<vector<int>> permutation(vector<int> &nums);
-			static void dfs(vector<int> vec, vector<int> nums, set<vector<int>> &s);
+			static void dfs(const vector<int> &vec, vector<int> nums, set<vector<int>> &s);
 		};
 	}// namespace acwing51
 }// namespace acwing
