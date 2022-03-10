@@ -2549,10 +2549,10 @@ $(function() {
 <div class="line"><a id="l02481" name="l02481"></a><span class="lineno"> 2481</span>        <span class="keywordflow">while</span>(cin &gt;&gt; num) {</div>
 <div class="line"><a id="l02482" name="l02482"></a><span class="lineno"> 2482</span>            vec.push_back(num);</div>
 <div class="line"><a id="l02483" name="l02483"></a><span class="lineno"> 2483</span>        }</div>
-<div class="line"><a id="l02484" name="l02484"></a><span class="lineno"> 2484</span>        <span class="keywordtype">int</span> n                   = vec.size();</div>
-<div class="line"><a id="l02485" name="l02485"></a><span class="lineno"> 2485</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> base = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(1) &lt;&lt; (n - 1);</div>
-<div class="line"><a id="l02486" name="l02486"></a><span class="lineno"> 2486</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> sum  = 0;</div>
-<div class="line"><a id="l02487" name="l02487"></a><span class="lineno"> 2487</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> num: vec) {</div>
+<div class="line"><a id="l02484" name="l02484"></a><span class="lineno"> 2484</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> n                   = vec.size();</div>
+<div class="line"><a id="l02485" name="l02485"></a><span class="lineno"> 2485</span>        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> base = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(1) &lt;&lt; n - 1;</div>
+<div class="line"><a id="l02486" name="l02486"></a><span class="lineno"> 2486</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> sum        = 0;</div>
+<div class="line"><a id="l02487" name="l02487"></a><span class="lineno"> 2487</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> num: vec) {</div>
 <div class="line"><a id="l02488" name="l02488"></a><span class="lineno"> 2488</span>            sum += num * base;</div>
 <div class="line"><a id="l02489" name="l02489"></a><span class="lineno"> 2489</span>        }</div>
 <div class="line"><a id="l02490" name="l02490"></a><span class="lineno"> 2490</span>        cout &lt;&lt; sum;</div>

@@ -3,7 +3,7 @@ var searchData=
   ['nearestpalindromic_0',['nearestPalindromic',['../de/d14/a01640.html#a1738d6434ffd50b1b957111bc4dc2eff',1,'leetcode::find_the_closest_palindrome::Solution']]],
   ['no2_1',['no2',['../d7/db5/a00472.html#aa804223b2bac5e209415b34dc5e8d550',1,'acwing::acwing4211']]],
   ['no3_2',['no3',['../d7/db5/a00472.html#aab5d5df106b2b1946fe87985a4b94015',1,'acwing::acwing4211']]],
-  ['node_3',['Node',['../de/d5c/a01708.html#a157bca9d110ed73ecf92e6145ea4a16e',1,'leetcode::n_ary_tree_preorder_traversal::Node::Node()'],['../de/d5c/a01708.html#aa06529b40fa3a6a15bd46cdce7c5352b',1,'leetcode::n_ary_tree_preorder_traversal::Node::Node(int _val)'],['../de/d5c/a01708.html#a3171840f2e53d1068de1d7c32e9fd975',1,'leetcode::n_ary_tree_preorder_traversal::Node::Node(int _val, vector&lt; Node * &gt; _children)']]],
+  ['node_3',['Node',['../de/d5c/a01708.html#ada3ffdf238064b47d5544fbcc363dbfa',1,'leetcode::n_ary_tree_preorder_traversal::Node::Node()=default'],['../de/d5c/a01708.html#aa06529b40fa3a6a15bd46cdce7c5352b',1,'leetcode::n_ary_tree_preorder_traversal::Node::Node(int _val)'],['../de/d5c/a01708.html#a3171840f2e53d1068de1d7c32e9fd975',1,'leetcode::n_ary_tree_preorder_traversal::Node::Node(int _val, vector&lt; Node * &gt; _children)']]],
   ['numberofarrays_4',['numberOfArrays',['../d1/d56/a01308.html#aa2f8a5ba196ee6c8db0470fbb67dd7cc',1,'leetcode::count_the_hidden_sequences::Solution']]],
   ['numberofbeams_5',['numberOfBeams',['../d9/d42/a01156.html#a3c2c37ad0e13b180a6873bbcdb9a4de3',1,'leetcode::number_of_laser_beams_in_a_bank::Solution']]],
   ['numberofgoodsubsets_6',['numberOfGoodSubsets',['../de/d40/a01592.html#a53621eb26bf4ca073b325b02278cda9a',1,'leetcode::the_number_of_good_subsets::Solution']]],
