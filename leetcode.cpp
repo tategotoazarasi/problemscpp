@@ -4130,4 +4130,19 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace smallest_rotation_with_highest_score
+
+	namespace n_ary_tree_preorder_traversal {
+		vector<int> Solution::preorder(Node *root) {
+			if(root == nullptr) {
+				return {};
+			}
+			vector<int> ans;
+			ans.push_back(root->val);
+			for(auto child: root->children) {
+				auto preorder_child = preorder(child);
+				ans.insert(ans.end(), preorder_child.begin(), preorder_child.end());
+			}
+			return ans;
+		}
+	}// namespace n_ary_tree_preorder_traversal
 }// namespace leetcode

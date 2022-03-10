@@ -1566,6 +1566,23 @@ namespace leetcode {
 			static int bestRotation(vector<int> &nums);
 		};
 	}// namespace smallest_rotation_with_highest_score
+
+	/// \brief LeetCode 589. N-ary Tree Preorder Traversal
+	namespace n_ary_tree_preorder_traversal {
+		class Node {
+		public:
+			int val;
+			vector<Node *> children;
+			Node() {}
+			Node(int _val): val(_val) {}
+			Node(int _val, vector<Node *> _children): val(_val), children(_children) {}
+		};
+
+		class Solution {
+		public:
+			static vector<int> preorder(Node *root);
+		};
+	}// namespace n_ary_tree_preorder_traversal
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
