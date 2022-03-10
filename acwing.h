@@ -1681,5 +1681,14 @@ namespace acwing {
 			static void reOrderArray(vector<int> &array);
 		};
 	}// namespace acwing32
+
+	/// \brief AcWing 51. 数字排列
+	namespace acwing51 {
+		class Solution {
+		public:
+			static vector<vector<int>> permutation(vector<int> &nums);
+			static void dfs(vector<int> vec, vector<int> nums, set<vector<int>> &s);
+		};
+	}// namespace acwing51
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
