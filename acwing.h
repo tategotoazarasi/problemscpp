@@ -1673,5 +1673,13 @@ namespace acwing {
 			static vector<int> findNumbersWithSum(vector<int> &nums, int target);
 		};
 	}// namespace acwing75
+
+	/// \brief AcWing 32. 调整数组顺序使奇数位于偶数前面
+	namespace acwing32 {
+		class Solution {
+		public:
+			static void reOrderArray(vector<int> &array);
+		};
+	}// namespace acwing32
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

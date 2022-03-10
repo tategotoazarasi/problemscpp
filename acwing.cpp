@@ -5162,4 +5162,22 @@ namespace acwing {
 			return ans;
 		}
 	}// namespace acwing75
+
+	namespace acwing32 {
+		void Solution::reOrderArray(vector<int> &array) {
+			int l = 0;
+			int r = array.size() - 1;
+			while(l < r) {
+				while(l < r && array[l] % 2 == 1) {
+					l++;
+				}
+				while(l < r && array[r] % 2 == 0) {
+					r--;
+				}
+				if(l < r) {
+					swap(array[l], array[r]);
+				}
+			}
+		}
+	}// namespace acwing32
 }// namespace acwing
