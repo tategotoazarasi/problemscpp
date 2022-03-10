@@ -2490,4 +2490,16 @@ namespace luogu {
 		cout << sum;
 		return 0;
 	}
+
+	int P5743::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		int count = 1;
+		for(int i = 0; i < n - 1; i++) {
+			count++;
+			count *= 2;
+		}
+		cout << count;
+		return 0;
+	}
 }// namespace luogu
