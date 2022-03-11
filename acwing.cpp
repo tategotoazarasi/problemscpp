@@ -5215,4 +5215,16 @@ namespace acwing {
 			return vector<int>(deq.begin(), deq.end());
 		}
 	}// namespace acwing17
+
+	namespace acwing26 {
+		int Solution::NumberOf1(int n) {
+			int ans         = 0;
+			unsigned int un = n;
+			while(un) {
+				ans += un & 1;
+				un >>= 1;
+			}
+			return ans;
+		}
+	}// namespace acwing26
 }// namespace acwing

@@ -1698,5 +1698,13 @@ namespace acwing {
 			static vector<int> printListReversingly(ListNode *head);
 		};
 	}// namespace acwing17
+
+	/// \brief AcWing 26. 二进制中1的个数
+	namespace acwing26 {
+		class Solution {
+		public:
+			static int NumberOf1(int n);
+		};
+	}// namespace acwing26
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

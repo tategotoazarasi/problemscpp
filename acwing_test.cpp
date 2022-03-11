@@ -2434,7 +2434,7 @@ namespace acwing {
 			ASSERT_EQ(output, Solution::findNumbersWithSum(input, 7));
 		}
 	}// namespace acwing75
-	
+
 	namespace acwing51 {
 		TEST(acwing51, case1) {
 			vector input               = {1, 2, 3};
@@ -2447,4 +2447,14 @@ namespace acwing {
 			ASSERT_EQ(output, Solution::permutation(input));
 		}
 	}// namespace acwing51
+
+	namespace acwing26 {
+		TEST(acwing26, case1) {
+			ASSERT_EQ(2, Solution::NumberOf1(9));
+		}
+
+		TEST(acwing26, case2) {
+			ASSERT_EQ(31, Solution::NumberOf1(-2));
+		}
+	}// namespace acwing26
 }// namespace acwing
