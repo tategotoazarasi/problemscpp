@@ -5205,4 +5205,14 @@ namespace acwing {
 			}
 		}
 	}// namespace acwing51
+
+	namespace acwing17 {
+		vector<int> Solution::printListReversingly(ListNode *head) {
+			deque<int> deq;
+			for(auto current = head; current != nullptr; current = current->next) {
+				deq.push_front(current->val);
+			}
+			return vector<int>(deq.begin(), deq.end());
+		}
+	}// namespace acwing17
 }// namespace acwing

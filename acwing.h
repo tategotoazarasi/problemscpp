@@ -1690,5 +1690,13 @@ namespace acwing {
 			static void dfs(vector<int> vec, vector<int> nums, set<vector<int>> &s);
 		};
 	}// namespace acwing51
+
+	/// \brief AcWing 17. 从尾到头打印链表
+	namespace acwing17 {
+		class Solution {
+		public:
+			static vector<int> printListReversingly(ListNode *head);
+		};
+	}// namespace acwing17
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
