@@ -4148,10 +4148,10 @@ namespace leetcode {
 
 	namespace count_nodes_with_the_highest_score {
 		int Solution::countHighestScoreNodes(vector<int> &parents) {
-			int ans                           = 0;
-			vector<TreeNode *> nodes          = vector<TreeNode *>(parents.size(), nullptr);
-			vector<vector<int>> edges         = vector<vector<int>>(parents.size(), vector<int>());
-			vector<unsigned long long> scores = vector<unsigned long long>(parents.size(), 0);
+			int ans     = 0;
+			auto nodes  = vector<TreeNode *>(parents.size(), nullptr);
+			auto edges  = vector(parents.size(), vector<int>());
+			auto scores = vector<unsigned long long>(parents.size(), 0);
 			for(int i = 0; i < parents.size(); i++) {
 				nodes[i] = new TreeNode(i);
 				if(parents[i] != -1) {
@@ -4171,12 +4171,12 @@ namespace leetcode {
 			unsigned long long max_score = 0;
 			for(int i = 0; i < parents.size(); i++) {
 				unsigned long long score = 1;
-				auto node                = nodes[i];
-				for(auto child: node->get_children()) {
+				auto *node               = nodes[i];
+				for(auto *child: node->get_children()) {
 					score *= child->get_count();
 				}
 				if(node->get_parent() != nullptr) {
-					score *= (root->get_count() - node->get_count());
+					score *= root->get_count() - node->get_count();
 				}
 				max_score = max(max_score, score);
 				scores[i] = score;
@@ -4191,23 +4191,17 @@ namespace leetcode {
 
 		int TreeNode::dfs() {
 			int ans = 1;
-			for(auto child: this->children) {
+			for(auto *child: this->children) {
 				ans += child->dfs();
 			}
 			this->count = ans;
 			return ans;
 		}
 
-		const vector<TreeNode *> &TreeNode::get_children() const {
-			return children;
-		}
+		const vector<TreeNode *> &TreeNode::get_children() const { return children; }
 
-		int TreeNode::get_count() const {
-			return count;
-		}
+		int TreeNode::get_count() const { return count; }
 
-		TreeNode *TreeNode::get_parent() const {
-			return parent;
-		}
+		TreeNode *TreeNode::get_parent() const { return parent; }
 	}// namespace count_nodes_with_the_highest_score
 }// namespace leetcode

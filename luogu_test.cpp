@@ -1406,6 +1406,7 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("22", ans);
 	}
+
 	namespace P5744 {
 		TEST(P5744, case1) {
 			istringstream in("3\n"

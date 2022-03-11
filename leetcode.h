@@ -1599,13 +1599,15 @@ namespace leetcode {
 			TreeNode *parent = nullptr;
 
 		public:
-			TreeNode(int val): val(val){};
+			explicit TreeNode(int val)
+			    : val(val){};
 			void add_child(TreeNode *node);
 			[[nodiscard]] const vector<TreeNode *> &get_children() const;
 			[[nodiscard]] int get_count() const;
 			[[nodiscard]] TreeNode *get_parent() const;
 			int dfs();
 		};
+
 		class Solution {
 		public:
 			static int countHighestScoreNodes(vector<int> &parents);

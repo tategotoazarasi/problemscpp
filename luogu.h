@@ -691,8 +691,8 @@ namespace luogu {
 		/// \brief 学员
 		struct Student {
 			string name;///< 姓名
-			int age;    ///< 年龄
-			int grade;  ///< 去年 NOIP 成绩
+			int age{};  ///< 年龄
+			int grade{};///< 去年 NOIP 成绩
 			/// \brief 训练
 			void train();
 		};

@@ -5209,10 +5209,10 @@ namespace acwing {
 	namespace acwing17 {
 		vector<int> Solution::printListReversingly(ListNode *head) {
 			deque<int> deq;
-			for(auto current = head; current != nullptr; current = current->next) {
+			for(auto *current = head; current != nullptr; current = current->next) {
 				deq.push_front(current->val);
 			}
-			return vector<int>(deq.begin(), deq.end());
+			return vector(deq.begin(), deq.end());
 		}
 	}// namespace acwing17
 
@@ -5220,7 +5220,7 @@ namespace acwing {
 		int Solution::NumberOf1(int n) {
 			int ans         = 0;
 			unsigned int un = n;
-			while(un) {
+			while(un != 0u) {
 				ans += un & 1;
 				un >>= 1;
 			}

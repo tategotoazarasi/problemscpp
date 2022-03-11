@@ -2508,7 +2508,7 @@ namespace luogu {
 			int n;
 			cin >> n;
 			for(int i = 0; i < n; i++) {
-				Student stu = Student();
+				auto stu = Student();
 				cin >> stu.name;
 				cin >> stu.age;
 				cin >> stu.grade;
