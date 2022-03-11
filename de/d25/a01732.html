@@ -83,7 +83,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.h</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01609">1609</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.h</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01611">1611</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a49f05b6edd18b2a9fd5c8a9232a01361" name="a49f05b6edd18b2a9fd5c8a9232a01361"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49f05b6edd18b2a9fd5c8a9232a01361">&#9670;&nbsp;</a></span>countHighestScoreNodes()</h2>
@@ -111,10 +111,10 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../d5/df9/a00044_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d5/df9/a00044_source.html#l04150">4150</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l04150" name="l04150"></a><span class="lineno"> 4150</span>                                                                 {</div>
-<div class="line"><a id="l04151" name="l04151"></a><span class="lineno"> 4151</span>            <span class="keywordtype">int</span> ans                           = 0;</div>
-<div class="line"><a id="l04152" name="l04152"></a><span class="lineno"> 4152</span>            vector&lt;TreeNode *&gt; nodes          = vector&lt;TreeNode *&gt;(parents.size(), <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l04153" name="l04153"></a><span class="lineno"> 4153</span>            vector&lt;vector&lt;int&gt;&gt; edges         = vector&lt;vector&lt;int&gt;&gt;(parents.size(), vector&lt;int&gt;());</div>
-<div class="line"><a id="l04154" name="l04154"></a><span class="lineno"> 4154</span>            vector&lt;unsigned long long&gt; scores = vector&lt;unsigned long long&gt;(parents.size(), 0);</div>
+<div class="line"><a id="l04151" name="l04151"></a><span class="lineno"> 4151</span>            <span class="keywordtype">int</span> ans     = 0;</div>
+<div class="line"><a id="l04152" name="l04152"></a><span class="lineno"> 4152</span>            <span class="keyword">auto</span> nodes  = vector&lt;TreeNode *&gt;(parents.size(), <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l04153" name="l04153"></a><span class="lineno"> 4153</span>            <span class="keyword">auto</span> edges  = vector(parents.size(), vector&lt;int&gt;());</div>
+<div class="line"><a id="l04154" name="l04154"></a><span class="lineno"> 4154</span>            <span class="keyword">auto</span> scores = vector&lt;unsigned long long&gt;(parents.size(), 0);</div>
 <div class="line"><a id="l04155" name="l04155"></a><span class="lineno"> 4155</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; parents.size(); i++) {</div>
 <div class="line"><a id="l04156" name="l04156"></a><span class="lineno"> 4156</span>                nodes[i] = <span class="keyword">new</span> TreeNode(i);</div>
 <div class="line"><a id="l04157" name="l04157"></a><span class="lineno"> 4157</span>                <span class="keywordflow">if</span>(parents[i] != -1) {</div>
@@ -134,12 +134,12 @@ $(function() {
 <div class="line"><a id="l04171" name="l04171"></a><span class="lineno"> 4171</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> max_score = 0;</div>
 <div class="line"><a id="l04172" name="l04172"></a><span class="lineno"> 4172</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; parents.size(); i++) {</div>
 <div class="line"><a id="l04173" name="l04173"></a><span class="lineno"> 4173</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> score = 1;</div>
-<div class="line"><a id="l04174" name="l04174"></a><span class="lineno"> 4174</span>                <span class="keyword">auto</span> node                = nodes[i];</div>
-<div class="line"><a id="l04175" name="l04175"></a><span class="lineno"> 4175</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> child: node-&gt;get_children()) {</div>
+<div class="line"><a id="l04174" name="l04174"></a><span class="lineno"> 4174</span>                <span class="keyword">auto</span> *node               = nodes[i];</div>
+<div class="line"><a id="l04175" name="l04175"></a><span class="lineno"> 4175</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> *child: node-&gt;get_children()) {</div>
 <div class="line"><a id="l04176" name="l04176"></a><span class="lineno"> 4176</span>                    score *= child-&gt;get_count();</div>
 <div class="line"><a id="l04177" name="l04177"></a><span class="lineno"> 4177</span>                }</div>
 <div class="line"><a id="l04178" name="l04178"></a><span class="lineno"> 4178</span>                <span class="keywordflow">if</span>(node-&gt;get_parent() != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l04179" name="l04179"></a><span class="lineno"> 4179</span>                    score *= (root-&gt;get_count() - node-&gt;get_count());</div>
+<div class="line"><a id="l04179" name="l04179"></a><span class="lineno"> 4179</span>                    score *= root-&gt;get_count() - node-&gt;get_count();</div>
 <div class="line"><a id="l04180" name="l04180"></a><span class="lineno"> 4180</span>                }</div>
 <div class="line"><a id="l04181" name="l04181"></a><span class="lineno"> 4181</span>                max_score = max(max_score, score);</div>
 <div class="line"><a id="l04182" name="l04182"></a><span class="lineno"> 4182</span>                scores[i] = score;</div>
@@ -147,7 +147,7 @@ $(function() {
 <div class="line"><a id="l04184" name="l04184"></a><span class="lineno"> 4184</span>            <span class="keywordflow">return</span> count(scores.begin(), scores.end(), max_score);</div>
 <div class="line"><a id="l04185" name="l04185"></a><span class="lineno"> 4185</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/df9/a00044_source.html#l04187">leetcode::count_nodes_with_the_highest_score::TreeNode::add_child()</a>, <a class="el" href="../../d5/df9/a00044_source.html#l04192">leetcode::count_nodes_with_the_highest_score::TreeNode::dfs()</a> , 以及 <a class="el" href="../../d5/df9/a00044_source.html#l04205">leetcode::count_nodes_with_the_highest_score::TreeNode::get_count()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/df9/a00044_source.html#l04187">leetcode::count_nodes_with_the_highest_score::TreeNode::add_child()</a>, <a class="el" href="../../d5/df9/a00044_source.html#l04192">leetcode::count_nodes_with_the_highest_score::TreeNode::dfs()</a> , 以及 <a class="el" href="../../d5/df9/a00044_source.html#l04203">leetcode::count_nodes_with_the_highest_score::TreeNode::get_count()</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l02172">leetcode::count_nodes_with_the_highest_score::TEST()</a>.</p>
 

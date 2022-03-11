@@ -112,10 +112,10 @@ $(function() {
 <p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">acwing.cpp</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l05210">5210</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l05210" name="l05210"></a><span class="lineno"> 5210</span>                                                                 {</div>
 <div class="line"><a id="l05211" name="l05211"></a><span class="lineno"> 5211</span>            deque&lt;int&gt; deq;</div>
-<div class="line"><a id="l05212" name="l05212"></a><span class="lineno"> 5212</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> current = head; current != <span class="keyword">nullptr</span>; current = current-&gt;next) {</div>
+<div class="line"><a id="l05212" name="l05212"></a><span class="lineno"> 5212</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> *current = head; current != <span class="keyword">nullptr</span>; current = current-&gt;next) {</div>
 <div class="line"><a id="l05213" name="l05213"></a><span class="lineno"> 5213</span>                deq.push_front(current-&gt;val);</div>
 <div class="line"><a id="l05214" name="l05214"></a><span class="lineno"> 5214</span>            }</div>
-<div class="line"><a id="l05215" name="l05215"></a><span class="lineno"> 5215</span>            <span class="keywordflow">return</span> vector&lt;int&gt;(deq.begin(), deq.end());</div>
+<div class="line"><a id="l05215" name="l05215"></a><span class="lineno"> 5215</span>            <span class="keywordflow">return</span> vector(deq.begin(), deq.end());</div>
 <div class="line"><a id="l05216" name="l05216"></a><span class="lineno"> 5216</span>        }</div>
 </div><!-- fragment -->
 </div>

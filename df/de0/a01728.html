@@ -126,13 +126,13 @@ Private 属性</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.h</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01602">1602</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01602" name="l01602"></a><span class="lineno"> 1602</span>: <a class="code hl_variable" href="../../df/de0/a01728.html#a7817a0f0facc29e855ace6786fbaeb35">val</a>(<a class="code hl_variable" href="../../df/de0/a01728.html#a7817a0f0facc29e855ace6786fbaeb35">val</a>){};</div>
+<div class="fragment"><div class="line"><a id="l01603" name="l01603"></a><span class="lineno"> 1603</span>                : <a class="code hl_variable" href="../../df/de0/a01728.html#a7817a0f0facc29e855ace6786fbaeb35">val</a>(<a class="code hl_variable" href="../../df/de0/a01728.html#a7817a0f0facc29e855ace6786fbaeb35">val</a>){};</div>
 <div class="ttc" id="aa01728_html_a7817a0f0facc29e855ace6786fbaeb35"><div class="ttname"><a href="../../df/de0/a01728.html#a7817a0f0facc29e855ace6786fbaeb35">leetcode::count_nodes_with_the_highest_score::TreeNode::val</a></div><div class="ttdeci">int val</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l01596">leetcode.h:1596</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -185,7 +185,7 @@ Private 属性</h2></td></tr>
 <p class="definition">在文件 <a class="el" href="../../d5/df9/a00044_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d5/df9/a00044_source.html#l04192">4192</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l04192" name="l04192"></a><span class="lineno"> 4192</span>                          {</div>
 <div class="line"><a id="l04193" name="l04193"></a><span class="lineno"> 4193</span>            <span class="keywordtype">int</span> ans = 1;</div>
-<div class="line"><a id="l04194" name="l04194"></a><span class="lineno"> 4194</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> child: this-&gt;<a class="code hl_variable" href="../../df/de0/a01728.html#aff7fe3dc058f821403219663a71b7331">children</a>) {</div>
+<div class="line"><a id="l04194" name="l04194"></a><span class="lineno"> 4194</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> *child: this-&gt;<a class="code hl_variable" href="../../df/de0/a01728.html#aff7fe3dc058f821403219663a71b7331">children</a>) {</div>
 <div class="line"><a id="l04195" name="l04195"></a><span class="lineno"> 4195</span>                ans += child-&gt;dfs();</div>
 <div class="line"><a id="l04196" name="l04196"></a><span class="lineno"> 4196</span>            }</div>
 <div class="line"><a id="l04197" name="l04197"></a><span class="lineno"> 4197</span>            this-&gt;<a class="code hl_variable" href="../../df/de0/a01728.html#a71cb816808b95f691c0e937771b557c0">count</a> = ans;</div>
@@ -215,9 +215,7 @@ Private 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">在文件 <a class="el" href="../../d5/df9/a00044_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d5/df9/a00044_source.html#l04201">4201</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04201" name="l04201"></a><span class="lineno"> 4201</span>                                                               {</div>
-<div class="line"><a id="l04202" name="l04202"></a><span class="lineno"> 4202</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/de0/a01728.html#aff7fe3dc058f821403219663a71b7331">children</a>;</div>
-<div class="line"><a id="l04203" name="l04203"></a><span class="lineno"> 4203</span>        }</div>
+<div class="fragment"><div class="line"><a id="l04201" name="l04201"></a><span class="lineno"> 4201</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/de0/a01728.html#aff7fe3dc058f821403219663a71b7331">children</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01598">children</a>.</p>
 
@@ -238,10 +236,8 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/df9/a00044_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d5/df9/a00044_source.html#l04205">4205</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04205" name="l04205"></a><span class="lineno"> 4205</span>                                      {</div>
-<div class="line"><a id="l04206" name="l04206"></a><span class="lineno"> 4206</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/de0/a01728.html#a71cb816808b95f691c0e937771b557c0">count</a>;</div>
-<div class="line"><a id="l04207" name="l04207"></a><span class="lineno"> 4207</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/df9/a00044_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d5/df9/a00044_source.html#l04203">4203</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04203" name="l04203"></a><span class="lineno"> 4203</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/de0/a01728.html#a71cb816808b95f691c0e937771b557c0">count</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01597">count</a>.</p>
 
@@ -264,10 +260,8 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/df9/a00044_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d5/df9/a00044_source.html#l04209">4209</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04209" name="l04209"></a><span class="lineno"> 4209</span>                                             {</div>
-<div class="line"><a id="l04210" name="l04210"></a><span class="lineno"> 4210</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/de0/a01728.html#a15133d0f7bc45a4e7f4b9a79b4ea9470">parent</a>;</div>
-<div class="line"><a id="l04211" name="l04211"></a><span class="lineno"> 4211</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/df9/a00044_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d5/df9/a00044_source.html#l04205">4205</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04205" name="l04205"></a><span class="lineno"> 4205</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/de0/a01728.html#a15133d0f7bc45a4e7f4b9a79b4ea9470">parent</a>; }</div>
 <div class="ttc" id="aa01728_html_a15133d0f7bc45a4e7f4b9a79b4ea9470"><div class="ttname"><a href="../../df/de0/a01728.html#a15133d0f7bc45a4e7f4b9a79b4ea9470">leetcode::count_nodes_with_the_highest_score::TreeNode::parent</a></div><div class="ttdeci">TreeNode * parent</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l01599">leetcode.h:1599</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01599">parent</a>.</p>
@@ -323,7 +317,7 @@ Private 属性</h2></td></tr>
 
 <p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.h</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01597">1597</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d5/df9/a00044_source.html#l04192">dfs()</a> , 以及 <a class="el" href="../../d5/df9/a00044_source.html#l04205">get_count()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d5/df9/a00044_source.html#l04192">dfs()</a> , 以及 <a class="el" href="../../d5/df9/a00044_source.html#l04203">get_count()</a>.</p>
 
 </div>
 </div>
@@ -349,7 +343,7 @@ Private 属性</h2></td></tr>
 
 <p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.h</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01599">1599</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d5/df9/a00044_source.html#l04187">add_child()</a> , 以及 <a class="el" href="../../d5/df9/a00044_source.html#l04209">get_parent()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d5/df9/a00044_source.html#l04187">add_child()</a> , 以及 <a class="el" href="../../d5/df9/a00044_source.html#l04205">get_parent()</a>.</p>
 
 </div>
 </div>
