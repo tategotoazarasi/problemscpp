@@ -2502,4 +2502,26 @@ namespace luogu {
 		cout << count;
 		return 0;
 	}
+
+	namespace P5744 {
+		int P5744::main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			for(int i = 0; i < n; i++) {
+				Student stu = Student();
+				cin >> stu.name;
+				cin >> stu.age;
+				cin >> stu.grade;
+				stu.train();
+				cout << stu.name << ' ' << stu.age << ' ' << stu.grade << endl;
+			}
+			return 0;
+		}
+
+		void Student::train() {
+			age++;
+			grade = grade / 5 * 6;
+			grade = min(grade, 600);
+		}
+	}// namespace P5744
 }// namespace luogu

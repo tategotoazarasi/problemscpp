@@ -685,6 +685,23 @@ namespace luogu {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief 洛谷 P5744 【深基7.习9】培训
+	namespace P5744 {
+		/// \brief 学员
+		struct Student {
+			string name;///< 姓名
+			int age;    ///< 年龄
+			int grade;  ///< 去年 NOIP 成绩
+			/// \brief 训练
+			void train();
+		};
+
+		class P5744 {
+		public:
+			static int main(istream &cin, ostream &cout);
+		};
+	}// namespace P5744
 }// namespace luogu
 
 #endif//PROBLEMSCPP_LUOGU_H

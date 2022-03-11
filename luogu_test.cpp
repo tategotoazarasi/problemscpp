@@ -1406,4 +1406,19 @@ namespace luogu {
 		const auto ans = out.str();
 		ASSERT_EQ("22", ans);
 	}
+	namespace P5744 {
+		TEST(P5744, case1) {
+			istringstream in("3\n"
+			                 "kkksc03 24 0\n"
+			                 "chen_zhe 14 400\n"
+			                 "nzhtl1477 18 590");
+			auto out = ostringstream();
+			P5744::main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("kkksc03 25 0\n"
+			          "chen_zhe 15 480\n"
+			          "nzhtl1477 19 600\n",
+			          ans);
+		}
+	}// namespace P5744
 }// namespace luogu
