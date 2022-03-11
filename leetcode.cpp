@@ -4145,4 +4145,69 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace n_ary_tree_preorder_traversal
+
+	namespace count_nodes_with_the_highest_score {
+		int Solution::countHighestScoreNodes(vector<int> &parents) {
+			int ans                           = 0;
+			vector<TreeNode *> nodes          = vector<TreeNode *>(parents.size(), nullptr);
+			vector<vector<int>> edges         = vector<vector<int>>(parents.size(), vector<int>());
+			vector<unsigned long long> scores = vector<unsigned long long>(parents.size(), 0);
+			for(int i = 0; i < parents.size(); i++) {
+				nodes[i] = new TreeNode(i);
+				if(parents[i] != -1) {
+					edges[i].push_back(parents[i]);
+					edges[parents[i]].push_back(i);
+				}
+			}
+			TreeNode *root = nullptr;
+			for(int i = 0; i < parents.size(); i++) {
+				if(parents[i] != -1) {
+					nodes[parents[i]]->add_child(nodes[i]);
+				} else {
+					root = nodes[i];
+				}
+			}
+			root->dfs();
+			unsigned long long max_score = 0;
+			for(int i = 0; i < parents.size(); i++) {
+				unsigned long long score = 1;
+				auto node                = nodes[i];
+				for(auto child: node->get_children()) {
+					score *= child->get_count();
+				}
+				if(node->get_parent() != nullptr) {
+					score *= (root->get_count() - node->get_count());
+				}
+				max_score = max(max_score, score);
+				scores[i] = score;
+			}
+			return count(scores.begin(), scores.end(), max_score);
+		}
+
+		void TreeNode::add_child(TreeNode *node) {
+			this->children.push_back(node);
+			node->parent = this;
+		}
+
+		int TreeNode::dfs() {
+			int ans = 1;
+			for(auto child: this->children) {
+				ans += child->dfs();
+			}
+			this->count = ans;
+			return ans;
+		}
+
+		const vector<TreeNode *> &TreeNode::get_children() const {
+			return children;
+		}
+
+		int TreeNode::get_count() const {
+			return count;
+		}
+
+		TreeNode *TreeNode::get_parent() const {
+			return parent;
+		}
+	}// namespace count_nodes_with_the_highest_score
 }// namespace leetcode

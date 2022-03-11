@@ -1583,6 +1583,29 @@ namespace leetcode {
 			static vector<int> preorder(Node *root);
 		};
 	}// namespace n_ary_tree_preorder_traversal
+
+	/// \brief LeetCode 2049. Count Nodes With the Highest Score
+	namespace count_nodes_with_the_highest_score {
+		class TreeNode {
+		private:
+			int val;
+			int count = 0;
+			vector<TreeNode *> children;
+			TreeNode *parent = nullptr;
+
+		public:
+			TreeNode(int val): val(val){};
+			void add_child(TreeNode *node);
+			[[nodiscard]] const vector<TreeNode *> &get_children() const;
+			[[nodiscard]] int get_count() const;
+			[[nodiscard]] TreeNode *get_parent() const;
+			int dfs();
+		};
+		class Solution {
+		public:
+			static int countHighestScoreNodes(vector<int> &parents);
+		};
+	}// namespace count_nodes_with_the_highest_score
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

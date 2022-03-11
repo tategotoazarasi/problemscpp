@@ -2167,4 +2167,16 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::bestRotation(input));
 		}
 	}// namespace smallest_rotation_with_highest_score
+
+	namespace count_nodes_with_the_highest_score {
+		TEST(count_nodes_with_the_highest_score, case1) {
+			vector input = {-1, 2, 0, 2, 0};
+			ASSERT_EQ(3, Solution::countHighestScoreNodes(input));
+		}
+
+		TEST(count_nodes_with_the_highest_score, case2) {
+			vector input = {-1, 2, 0};
+			ASSERT_EQ(2, Solution::countHighestScoreNodes(input));
+		}
+	}// namespace count_nodes_with_the_highest_score
 }// namespace leetcode
