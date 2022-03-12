@@ -1731,5 +1731,11 @@ namespace acwing {
 			bool empty();
 		};
 	}// namespace acwing20
+
+	/// \brief AcWing 862. 三元组排序
+	class acwing862 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

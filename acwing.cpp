@@ -5269,4 +5269,27 @@ namespace acwing {
 			return main.empty();
 		}
 	}// namespace acwing20
+
+	int acwing862::main(istream &cin, ostream &cout) {
+		int n;
+		cin >> n;
+		auto comp = [](tuple<int, float, string> a, tuple<int, float, string> b) {
+			auto [ax, ay, az] = a;
+			auto [bx, by, bz] = b;
+			return ax < bx;
+		};
+		set<tuple<int, float, string>, decltype(comp)> s(comp);
+		for(int i = 0; i < n; i++) {
+			int x;
+			float y;
+			string z;
+			cin >> x >> y >> z;
+			s.insert(make_tuple(x, y, z));
+		}
+		for(auto t: s) {
+			auto [x, y, z] = t;
+			cout << x << ' ' << fixed << setprecision(2) << y << ' ' << z << endl;
+		}
+		return 0;
+	}
 }// namespace acwing

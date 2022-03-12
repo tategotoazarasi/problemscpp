@@ -2457,4 +2457,22 @@ namespace acwing {
 			ASSERT_EQ(31, Solution::NumberOf1(-2));
 		}
 	}// namespace acwing26
+
+	TEST(acwing862, case1) {
+		istringstream in("5\n"
+		                 "32 1.36 nsyiupnnhc\n"
+		                 "18 4.53 fmofzwrah\n"
+		                 "33 4.86 wzuymbm\n"
+		                 "1 3.93 gtnrwcebt\n"
+		                 "31 4.53 gcllxioc");
+		auto out = ostringstream();
+		acwing862::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1 3.93 gtnrwcebt\n"
+		          "18 4.53 fmofzwrah\n"
+		          "31 4.53 gcllxioc\n"
+		          "32 1.36 nsyiupnnhc\n"
+		          "33 4.86 wzuymbm\n",
+		          ans);
+	}
 }// namespace acwing
