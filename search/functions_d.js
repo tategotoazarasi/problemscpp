@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['nearestpalindromic_0',['nearestPalindromic',['../dd/d38/a01663.html#a1738d6434ffd50b1b957111bc4dc2eff',1,'leetcode::find_the_closest_palindrome::Solution']]],
-  ['no2_1',['no2',['../d9/d4a/a00479.html#aa804223b2bac5e209415b34dc5e8d550',1,'acwing::acwing4211']]],
-  ['no3_2',['no3',['../d9/d4a/a00479.html#aab5d5df106b2b1946fe87985a4b94015',1,'acwing::acwing4211']]],
-  ['node_3',['Node',['../df/dd2/a01731.html#ada3ffdf238064b47d5544fbcc363dbfa',1,'leetcode::n_ary_tree_preorder_traversal::Node::Node()=default'],['../df/dd2/a01731.html#aa06529b40fa3a6a15bd46cdce7c5352b',1,'leetcode::n_ary_tree_preorder_traversal::Node::Node(int _val)'],['../df/dd2/a01731.html#a3171840f2e53d1068de1d7c32e9fd975',1,'leetcode::n_ary_tree_preorder_traversal::Node::Node(int _val, vector&lt; Node * &gt; _children)'],['../d7/db4/a01747.html#a2eb5e07303c97f721abad5ec4bd02d36',1,'leetcode::n_ary_tree_postorder_traversal::Node::Node()=default'],['../d7/db4/a01747.html#a4d97613b0c4c357b2c8cb024c4bc1cf7',1,'leetcode::n_ary_tree_postorder_traversal::Node::Node(int _val)'],['../d7/db4/a01747.html#a359ab551ae09b6a6179183c1a637bce6',1,'leetcode::n_ary_tree_postorder_traversal::Node::Node(int _val, vector&lt; Node * &gt; _children)']]],
-  ['numberof1_4',['NumberOf1',['../de/d4a/a01107.html#a022bd4568a279c163a0592c71b97c4c7',1,'acwing::acwing26::Solution']]],
-  ['numberofarrays_5',['numberOfArrays',['../dc/d8e/a01331.html#aa2f8a5ba196ee6c8db0470fbb67dd7cc',1,'leetcode::count_the_hidden_sequences::Solution']]],
-  ['numberofbeams_6',['numberOfBeams',['../de/d1a/a01179.html#a3c2c37ad0e13b180a6873bbcdb9a4de3',1,'leetcode::number_of_laser_beams_in_a_bank::Solution']]],
-  ['numberofgoodsubsets_7',['numberOfGoodSubsets',['../d7/dae/a01615.html#a53621eb26bf4ca073b325b02278cda9a',1,'leetcode::the_number_of_good_subsets::Solution']]],
-  ['numberofmatches_8',['numberOfMatches',['../d0/d9b/a01379.html#aef569159d8173a8861d6121c76191fcb',1,'leetcode::count_of_matches_in_tournament::Solution']]],
-  ['numberofsteps_9',['numberOfSteps',['../d9/ddc/a01423.html#abe33ffec778030512eb180bf397800ec',1,'leetcode::number_of_steps_to_reduce_a_number_to_zero::Solution']]],
-  ['numberofways_10',['numberOfWays',['../d3/da4/a01343.html#a945fcfea4985a913cb678aaf3749a373',1,'leetcode::number_of_ways_to_divide_a_long_corridor::Solution']]],
-  ['numberofweakcharacters_11',['numberOfWeakCharacters',['../dc/dbc/a01391.html#a58f47f0773e0c7360783034493ce2bc4',1,'leetcode::the_number_of_weak_characters_in_the_game::Solution']]],
-  ['numenclaves_12',['numEnclaves',['../d6/df5/a01503.html#aa86ea351227c0c252dd910d9ce9efb25',1,'leetcode::number_of_enclaves::Solution']]]
+  ['nearestpalindromic_0',['nearestPalindromic',['../d2/d44/a01677.html#a1738d6434ffd50b1b957111bc4dc2eff',1,'leetcode::find_the_closest_palindrome::Solution']]],
+  ['no2_1',['no2',['../d6/d1a/a00485.html#aa804223b2bac5e209415b34dc5e8d550',1,'acwing::acwing4211']]],
+  ['no3_2',['no3',['../d6/d1a/a00485.html#aab5d5df106b2b1946fe87985a4b94015',1,'acwing::acwing4211']]],
+  ['node_3',['Node',['../d0/d78/a01745.html#ada3ffdf238064b47d5544fbcc363dbfa',1,'leetcode::n_ary_tree_preorder_traversal::Node::Node()=default'],['../d0/d78/a01745.html#aa06529b40fa3a6a15bd46cdce7c5352b',1,'leetcode::n_ary_tree_preorder_traversal::Node::Node(int _val)'],['../d0/d78/a01745.html#a3171840f2e53d1068de1d7c32e9fd975',1,'leetcode::n_ary_tree_preorder_traversal::Node::Node(int _val, vector&lt; Node * &gt; _children)'],['../db/db8/a01761.html#a2eb5e07303c97f721abad5ec4bd02d36',1,'leetcode::n_ary_tree_postorder_traversal::Node::Node()=default'],['../db/db8/a01761.html#a4d97613b0c4c357b2c8cb024c4bc1cf7',1,'leetcode::n_ary_tree_postorder_traversal::Node::Node(int _val)'],['../db/db8/a01761.html#a359ab551ae09b6a6179183c1a637bce6',1,'leetcode::n_ary_tree_postorder_traversal::Node::Node(int _val, vector&lt; Node * &gt; _children)']]],
+  ['numberof1_4',['NumberOf1',['../d8/ded/a01113.html#a022bd4568a279c163a0592c71b97c4c7',1,'acwing::acwing26::Solution']]],
+  ['numberofarrays_5',['numberOfArrays',['../d4/deb/a01345.html#aa2f8a5ba196ee6c8db0470fbb67dd7cc',1,'leetcode::count_the_hidden_sequences::Solution']]],
+  ['numberofbeams_6',['numberOfBeams',['../dd/d43/a01193.html#a3c2c37ad0e13b180a6873bbcdb9a4de3',1,'leetcode::number_of_laser_beams_in_a_bank::Solution']]],
+  ['numberofgoodsubsets_7',['numberOfGoodSubsets',['../dc/d62/a01629.html#a53621eb26bf4ca073b325b02278cda9a',1,'leetcode::the_number_of_good_subsets::Solution']]],
+  ['numberofmatches_8',['numberOfMatches',['../d3/d92/a01393.html#aef569159d8173a8861d6121c76191fcb',1,'leetcode::count_of_matches_in_tournament::Solution']]],
+  ['numberofsteps_9',['numberOfSteps',['../d9/db0/a01437.html#abe33ffec778030512eb180bf397800ec',1,'leetcode::number_of_steps_to_reduce_a_number_to_zero::Solution']]],
+  ['numberofways_10',['numberOfWays',['../df/d10/a01357.html#a945fcfea4985a913cb678aaf3749a373',1,'leetcode::number_of_ways_to_divide_a_long_corridor::Solution']]],
+  ['numberofweakcharacters_11',['numberOfWeakCharacters',['../d4/d1a/a01405.html#a58f47f0773e0c7360783034493ce2bc4',1,'leetcode::the_number_of_weak_characters_in_the_game::Solution']]],
+  ['numenclaves_12',['numEnclaves',['../dc/d96/a01517.html#aa86ea351227c0c252dd910d9ce9efb25',1,'leetcode::number_of_enclaves::Solution']]]
 ];
