@@ -1728,12 +1728,28 @@ namespace acwing {
 			int peek();
 			/// \brief Returns whether the queue is empty
 			/// \return Whether the queue is empty
-			bool empty() const;
+			[[nodiscard]] bool empty() const;
 		};
 	}// namespace acwing20
 
 	/// \brief AcWing 862. 三元组排序
 	class acwing862 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4311. 最小值
+	 */
+	class acwing4311 {
+	public:
+		static int main(istream &cin, ostream &cout);
+	};
+
+	/**
+	 * \brief AcWing 4312. 出现次数
+	 */
+	class acwing3412 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};

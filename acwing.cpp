@@ -5289,4 +5289,70 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing4311::main(istream &cin, ostream &cout) {
+		int n;
+		int m;
+		cin >> n >> m;
+		double maximum = 0;
+		for(int i = 0; i < n; i++) {
+			int a;
+			int b;
+			cin >> a >> b;
+			maximum = max(maximum, m * a / static_cast<double>(b));
+		}
+		cout << fixed << setprecision(6) << maximum;
+		return 0;
+	}
+
+	int acwing3412::main(istream &cin, ostream &cout) {
+		int n;
+		int m;
+		int q;
+		cin >> n >> m >> q;
+		if(m > n) {
+			for(int i = 0; i < q; i++) {
+				cout << 0 << endl;
+			}
+			return 0;
+		}
+		string s;
+		string t;
+		cin >> s >> t;
+		set<int> sub_end;
+		set<int> sub_start;
+		int sub_count = 0;
+		for(int i = 0; i + m <= n; i++) {
+			string str = s.substr(i, m);
+			if(str == t) {
+				sub_count++;
+				sub_start.insert(i);
+				sub_end.insert(i + m - 1);
+			}
+		}
+		vector sub_end_count(n + 1, 0);
+		vector sub_start_count(n + 1, 0);
+		int current = 0;
+		for(int i = 0; i < n + 1; i++) {
+			if(sub_end.contains(i)) {
+				current++;
+			}
+			sub_end_count[i] = current;
+		}
+		current = 0;
+		for(int i = n; i >= 0; i--) {
+			if(sub_start.contains(i)) {
+				current++;
+			}
+			sub_start_count[i] = current;
+		}
+		for(int i = 0; i < q; i++) {
+			int l;
+			int r;
+			cin >> l >> r;
+			int ans = sub_end_count[r - 1] - (sub_count - sub_start_count[l - 1]);
+			cout << max(ans, 0) << endl;
+		}
+		return 0;
+	}
 }// namespace acwing

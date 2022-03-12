@@ -2458,6 +2458,22 @@ namespace acwing {
 		}
 	}// namespace acwing26
 
+	TEST(acwing4311, case1) {
+		istringstream in("3 5\n1 2\n3 4\n1 3");
+		auto out = ostringstream();
+		acwing4311::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("1.666667", ans);
+	}
+
+	TEST(acwing4311, case2) {
+		istringstream in("2 1\n99 100\n98 99");
+		auto out = ostringstream();
+		acwing4311::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("0.989899", ans);
+	}
+
 	TEST(acwing862, case1) {
 		istringstream in("5\n"
 		                 "32 1.36 nsyiupnnhc\n"
@@ -2474,5 +2490,29 @@ namespace acwing {
 		          "32 1.36 nsyiupnnhc\n"
 		          "33 4.86 wzuymbm\n",
 		          ans);
+	}
+
+	TEST(acwing3412, case1) {
+		istringstream in("15 2 3\abacabadabacaba\nba\n1 15\n3 4\n2 14");
+		auto out = ostringstream();
+		acwing3412::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("4\n0\n3\n", ans);
+	}
+
+	TEST(acwing3412, case2) {
+		istringstream in("3 5 2\naaa\nbaaab\n1 3\n1 1");
+		auto out = ostringstream();
+		acwing3412::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("0\n0\n", ans);
+	}
+
+	TEST(acwing3412, case3) {
+		istringstream in("3 1 1\naaa\na\n1 2");
+		auto out = ostringstream();
+		acwing3412::main(in, out);
+		const auto ans = out.str();
+		ASSERT_EQ("2\n", ans);
 	}
 }// namespace acwing
