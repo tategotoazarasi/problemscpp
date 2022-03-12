@@ -4171,8 +4171,8 @@ namespace leetcode {
 			unsigned long long max_score = 0;
 			for(int i = 0; i < parents.size(); i++) {
 				unsigned long long score = 1;
-				auto *node               = nodes[i];
-				for(auto *child: node->get_children()) {
+				const auto *node         = nodes[i];
+				for(const auto *child: node->get_children()) {
 					score *= child->get_count();
 				}
 				if(node->get_parent() != nullptr) {
@@ -4211,7 +4211,7 @@ namespace leetcode {
 				return {};
 			}
 			vector<int> ans;
-			for(auto child: root->children) {
+			for(auto *child: root->children) {
 				auto res = postorder(child);
 				ans.insert(ans.end(), res.begin(), res.end());
 			}

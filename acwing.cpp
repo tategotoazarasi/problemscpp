@@ -13,6 +13,7 @@
 #include <stack>
 #include <unordered_map>
 #include <unordered_set>
+#include <utility>
 #include <vector>
 
 using namespace std;
@@ -5220,7 +5221,7 @@ namespace acwing {
 		int Solution::NumberOf1(int n) {
 			int ans         = 0;
 			unsigned int un = n;
-			while(un != 0u) {
+			while(un != 0U) {
 				ans += un & 1;
 				un >>= 1;
 			}
@@ -5234,16 +5235,14 @@ namespace acwing {
 			tmp  = vector<int>();
 		}
 
-		void MyQueue::push(int x) {
-			main.push_back(x);
-		}
+		void MyQueue::push(int x) { main.push_back(x); }
 
 		int MyQueue::pop() {
 			while(main.size() != 1) {
 				tmp.push_back(main.back());
 				main.pop_back();
 			}
-			auto ret = main.back();
+			const auto ret = main.back();
 			main.pop_back();
 			while(!tmp.empty()) {
 				main.push_back(tmp.back());
@@ -5257,7 +5256,7 @@ namespace acwing {
 				tmp.push_back(main.back());
 				main.pop_back();
 			}
-			auto ret = main.back();
+			const auto ret = main.back();
 			while(!tmp.empty()) {
 				main.push_back(tmp.back());
 				tmp.pop_back();
@@ -5265,17 +5264,15 @@ namespace acwing {
 			return ret;
 		}
 
-		bool MyQueue::empty() {
-			return main.empty();
-		}
+		bool MyQueue::empty() const { return main.empty(); }
 	}// namespace acwing20
 
 	int acwing862::main(istream &cin, ostream &cout) {
 		int n;
 		cin >> n;
 		auto comp = [](tuple<int, float, string> a, tuple<int, float, string> b) {
-			auto [ax, ay, az] = a;
-			auto [bx, by, bz] = b;
+			auto [ax, ay, az] = std::move(a);
+			auto [bx, by, bz] = std::move(b);
 			return ax < bx;
 		};
 		set<tuple<int, float, string>, decltype(comp)> s(comp);
@@ -5286,7 +5283,7 @@ namespace acwing {
 			cin >> x >> y >> z;
 			s.insert(make_tuple(x, y, z));
 		}
-		for(auto t: s) {
+		for(const auto &t: s) {
 			auto [x, y, z] = t;
 			cout << x << ' ' << fixed << setprecision(2) << y << ' ' << z << endl;
 		}

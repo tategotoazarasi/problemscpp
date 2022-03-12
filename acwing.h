@@ -1728,7 +1728,7 @@ namespace acwing {
 			int peek();
 			/// \brief Returns whether the queue is empty
 			/// \return Whether the queue is empty
-			bool empty();
+			bool empty() const;
 		};
 	}// namespace acwing20
 
