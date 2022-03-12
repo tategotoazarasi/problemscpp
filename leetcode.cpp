@@ -4204,4 +4204,19 @@ namespace leetcode {
 
 		TreeNode *TreeNode::get_parent() const { return parent; }
 	}// namespace count_nodes_with_the_highest_score
+
+	namespace n_ary_tree_postorder_traversal {
+		vector<int> Solution::postorder(Node *root) {
+			if(root == nullptr) {
+				return {};
+			}
+			vector<int> ans;
+			for(auto child: root->children) {
+				auto res = postorder(child);
+				ans.insert(ans.end(), res.begin(), res.end());
+			}
+			ans.push_back(root->val);
+			return ans;
+		}
+	}// namespace n_ary_tree_postorder_traversal
 }// namespace leetcode
