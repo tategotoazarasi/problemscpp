@@ -2179,4 +2179,23 @@ namespace leetcode {
 			ASSERT_EQ(2, Solution::countHighestScoreNodes(input));
 		}
 	}// namespace count_nodes_with_the_highest_score
+
+	namespace max_area_of_island {
+		TEST(max_area_of_island, case1) {
+			vector<vector<int>> input = {{0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+			                             {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+			                             {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+			                             {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
+			                             {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0},
+			                             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
+			                             {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+			                             {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
+			ASSERT_EQ(6, Solution::maxAreaOfIsland(input));
+		}
+
+		TEST(max_area_of_island, case2) {
+			vector<vector<int>> input = {{0, 0, 0, 0, 0, 0, 0, 0}};
+			ASSERT_EQ(0, Solution::maxAreaOfIsland(input));
+		}
+	}// namespace max_area_of_island
 }// namespace leetcode

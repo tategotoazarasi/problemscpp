@@ -1634,6 +1634,33 @@ namespace leetcode {
 			static vector<int> postorder(Node *root);
 		};
 	}// namespace n_ary_tree_postorder_traversal
+
+	/**
+	 * \brief LeetCode 695. Max Area of Island
+	 */
+	namespace max_area_of_island {
+		class UnionFind {
+		private:
+			int m;
+			int n;
+			unordered_map<pair<int, int>, pair<int, int>, function<unsigned int(const pair<int, int> &)>> parent;
+			unordered_map<pair<int, int>, int, function<unsigned int(const pair<int, int> &)>> size;
+			unordered_map<pair<int, int>, int, function<unsigned int(const pair<int, int> &)>> rank;
+
+		public:
+			UnionFind(int m, int n);
+			pair<int, int> find(pair<int, int> val);
+			void merge(pair<int, int> a, pair<int, int> b);
+			bool same(pair<int, int> a, pair<int, int> b);
+			[[nodiscard]] bool contains(pair<int, int> p) const;
+			int get_size(pair<int, int> p);
+		};
+
+		class Solution {
+		public:
+			static int maxAreaOfIsland(vector<vector<int>> &grid);
+		};
+	}// namespace max_area_of_island
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

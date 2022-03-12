@@ -4219,4 +4219,92 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace n_ary_tree_postorder_traversal
+
+	namespace max_area_of_island {
+		int Solution::maxAreaOfIsland(vector<vector<int>> &grid) {
+			const int m = grid.size();
+			const int n = grid[0].size();
+			auto uf     = UnionFind(m, n);
+			int ans     = 0;
+			for(int i = 0; i < m; i++) {
+				for(int j = 0; j < n; j++) {
+					if(grid[i][j] == 1) {
+						const pair<int, int> p     = make_pair(i, j);
+						ans                        = max(ans, uf.get_size(p));
+						pair<int, int> siblings[4] = {
+						        make_pair(i + 1, j),
+						        make_pair(i - 1, j),
+						        make_pair(i, j + 1),
+						        make_pair(i, j - 1),
+						};
+						for(const auto sibling: siblings) {
+							if(uf.contains(sibling) && grid[sibling.first][sibling.second] == 1 && !uf.same(p, sibling)) {
+								uf.merge(p, sibling);
+								ans = max(ans, uf.get_size(p));
+							}
+						}
+					}
+				}
+			}
+			return ans;
+		}
+
+		UnionFind::UnionFind(int m, int n)
+		    : m(m), n(n) {
+			parent = unordered_map<pair<int, int>,
+			                       pair<int, int>,
+			                       function<unsigned int(const pair<int, int> &)>>(
+			        m * n,
+			        [](const pair<int, int> &p) { return static_cast<unsigned int>(p.first * 50 + p.second); });
+			size = unordered_map<pair<int, int>,
+			                     int,
+			                     function<unsigned int(const pair<int, int> &)>>(
+			        m * n,
+			        [](const pair<int, int> &p) { return static_cast<unsigned int>(p.first * 50 + p.second); });
+			rank = unordered_map<pair<int, int>,
+			                     int,
+			                     function<unsigned int(const pair<int, int> &)>>(
+			        m * n,
+			        [](const pair<int, int> &p) { return static_cast<unsigned int>(p.first * 50 + p.second); });
+			for(int i = 0; i < m; i++) {
+				for(int j = 0; j < n; j++) {
+					pair<int, int> p = make_pair(i, j);
+					parent[p]        = p;
+					size[p]          = 1;
+					rank[p]          = 0;
+				}
+			}
+		}
+
+		pair<int, int> UnionFind::find(pair<int, int> val) {
+			if(parent[val] != val) {
+				parent[val] = find(parent[val]);
+			}
+			return parent[val];
+		}
+
+		void UnionFind::merge(pair<int, int> a, pair<int, int> b) {
+			const auto pa = find(a);
+			const auto pb = find(b);
+			if(pa != pb) {
+				const int sum = size[pa] + size[pb];
+				if(rank[pa] > rank[pb]) {
+					parent[pb] = pa;
+				} else {
+					parent[pa] = pb;
+					if(rank[pa] == rank[pb]) {
+						++rank[pb];
+					}
+				}
+				size[pa] = sum;
+				size[pb] = sum;
+			}
+		}
+
+		bool UnionFind::same(pair<int, int> a, pair<int, int> b) { return find(a) == find(b); }
+
+		bool UnionFind::contains(pair<int, int> p) const { return parent.contains(p); }
+
+		int UnionFind::get_size(pair<int, int> p) { return size[find(p)]; }
+	}// namespace max_area_of_island
 }// namespace leetcode
