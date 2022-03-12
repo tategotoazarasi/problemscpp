@@ -579,7 +579,7 @@ namespace acwing {
 		};
 
 		struct step_equal {
-			bool operator()(const step & /*s1*/, const step & /*s2*/) const;
+			bool operator()(const step & /*main*/, const step & /*tmp*/) const;
 		};
 
 		class Solution {
@@ -1706,5 +1706,30 @@ namespace acwing {
 			static int NumberOf1(int n);
 		};
 	}// namespace acwing26
+
+	/// \brief AcWing 20. 用两个栈实现队列
+	namespace acwing20 {
+		class MyQueue {
+		private:
+			vector<int> main;
+			vector<int> tmp;
+
+		public:
+			/// \brief Initialize your data structure here
+			MyQueue();
+			/// \brief Push element x to the back of queue
+			/// \param x The element to be pushed back into the queue
+			void push(int x);
+			/// \brief Removes the element from in front of queue and returns that element
+			/// \return The element from in front of queue
+			int pop();
+			/// \brief Get the front element
+			/// \return The front element
+			int peek();
+			/// \brief Returns whether the queue is empty
+			/// \return Whether the queue is empty
+			bool empty();
+		};
+	}// namespace acwing20
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

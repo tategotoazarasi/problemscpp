@@ -5227,4 +5227,46 @@ namespace acwing {
 			return ans;
 		}
 	}// namespace acwing26
+
+	namespace acwing20 {
+		MyQueue::MyQueue() {
+			main = vector<int>();
+			tmp  = vector<int>();
+		}
+
+		void MyQueue::push(int x) {
+			main.push_back(x);
+		}
+
+		int MyQueue::pop() {
+			while(main.size() != 1) {
+				tmp.push_back(main.back());
+				main.pop_back();
+			}
+			auto ret = main.back();
+			main.pop_back();
+			while(!tmp.empty()) {
+				main.push_back(tmp.back());
+				tmp.pop_back();
+			}
+			return ret;
+		}
+
+		int MyQueue::peek() {
+			while(main.size() != 1) {
+				tmp.push_back(main.back());
+				main.pop_back();
+			}
+			auto ret = main.back();
+			while(!tmp.empty()) {
+				main.push_back(tmp.back());
+				tmp.pop_back();
+			}
+			return ret;
+		}
+
+		bool MyQueue::empty() {
+			return main.empty();
+		}
+	}// namespace acwing20
 }// namespace acwing
