@@ -2260,4 +2260,21 @@ namespace leetcode {
 			ASSERT_EQ(132, Solution::minimumWeight(100, edges, 46, 31, 82));
 		}
 	}// namespace minimum_weighted_subgraph_with_the_required_paths
+
+	namespace utf_8_validation {
+		TEST(utf_8_validation, case1) {
+			vector data = {193, 130, 1};
+			ASSERT_TRUE(Solution::validUtf8(data));
+		}
+
+		TEST(utf_8_validation, case2) {
+			vector data = {235, 140, 4};
+			ASSERT_FALSE(Solution::validUtf8(data));
+		}
+
+		TEST(utf_8_validation, case3) {
+			vector data = {250, 145, 145, 145, 145};
+			ASSERT_FALSE(Solution::validUtf8(data));
+		}
+	}// namespace utf_8_validation
 }// namespace leetcode

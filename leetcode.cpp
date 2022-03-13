@@ -4448,4 +4448,40 @@ namespace leetcode {
 			}
 		}
 	}// namespace minimum_weighted_subgraph_with_the_required_paths
+
+	namespace utf_8_validation {
+		bool Solution::validUtf8(vector<int> &data) {
+			vector<int> len;
+			for(auto num: data) {
+				if(num >> 7 == 0) {//0xxxxxxx
+					len.push_back(1);
+				} else if(num >> 3 == 30) {//11110xxx
+					len.push_back(4);
+				} else if(num >> 4 == 14) {//1110xxxx
+					len.push_back(3);
+				} else if(num >> 5 == 6) {//110xxxxx
+					len.push_back(2);
+				} else if(num >> 6 == 2) {//10xxxxxx
+					len.push_back(-1);
+				} else {
+					return false;
+				}
+			}
+			int count = 0;
+			for(int i = 0; i < len.size(); i++) {
+				if(count != 0) {
+					if(len[i] != -1) {
+						return false;
+					}
+				} else {
+					count = len[i];
+					if(count == -1) {
+						return false;
+					}
+				}
+				count--;
+			}
+			return count == 0;
+		}
+	}// namespace utf_8_validation
 }// namespace leetcode

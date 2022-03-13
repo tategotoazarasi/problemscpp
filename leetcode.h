@@ -1694,6 +1694,14 @@ namespace leetcode {
 			static void calc_dist(int s, vector<pair<int, int>> *graph, vector<long long int> &dist);
 		};
 	}// namespace minimum_weighted_subgraph_with_the_required_paths
+
+	/// \brief LeetCode 393. UTF-8 Validation
+	namespace utf_8_validation {
+		class Solution {
+		public:
+			static bool validUtf8(vector<int> &data);
+		};
+	}// namespace utf_8_validation
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
