@@ -4307,4 +4307,145 @@ namespace leetcode {
 
 		int UnionFind::get_size(pair<int, int> p) { return size[find(p)]; }
 	}// namespace max_area_of_island
+
+	namespace find_all_k_distant_indices_in_an_array {
+		vector<int> Solution::findKDistantIndices(vector<int> &nums, int key, int k) {
+			set<int> key_set;
+			set<int> ans_set;
+			for(int i = 0; i < nums.size(); i++) {
+				if(nums[i] == key) {
+					key_set.insert(i);
+				}
+			}
+			for(auto ks: key_set) {
+				for(int i = ks - k; i <= ks + k; i++) {
+					if(0 <= i && i < nums.size()) {
+						ans_set.insert(i);
+					}
+				}
+			}
+			return vector<int>(ans_set.begin(), ans_set.end());
+		}
+	}// namespace find_all_k_distant_indices_in_an_array
+
+	namespace count_artifacts_that_can_be_extracted {
+		int Solution::digArtifacts(int n, vector<vector<int>> &artifacts, vector<vector<int>> &dig) {
+			bool **grid = new bool *[n];
+			for(int i = 0; i < n; i++) {
+				grid[i] = new bool[n];
+				memset(grid[i], false, n * sizeof(bool));
+			}
+			for(auto i: dig) {
+				grid[i[0]][i[1]] = true;
+			}
+			int ans = 0;
+			for(auto artifact: artifacts) {
+				bool flag = true;
+				for(int i = artifact[0]; i <= artifact[2]; i++) {
+					for(int j = artifact[1]; j <= artifact[3]; j++) {
+						if(!grid[i][j]) {
+							flag = false;
+							break;
+						}
+					}
+					if(!flag) {
+						break;
+					}
+				}
+				if(flag) {
+					ans++;
+				}
+			}
+			for(int i = 0; i < n; i++) {
+				delete[] grid[i];
+			}
+			delete[] grid;
+			return ans;
+		}
+	}// namespace count_artifacts_that_can_be_extracted
+
+	namespace maximize_the_topmost_element_after_k_moves {
+		int maximize_the_topmost_element_after_k_moves::Solution::maximumTop(vector<int> &nums, int k) {
+			if(nums.size() == 1 && k % 2 == 1) {
+				return -1;
+			}
+			if(k > nums.size()) {
+				int ans = -1;
+				for(auto num: nums) {
+					ans = max(ans, num);
+				}
+				return ans;
+			}
+			unordered_map<int, int> element_count;
+			set<int> poped_elements;
+			for(auto num: nums) {
+				element_count[num]++;
+			}
+			for(int i = 0; i < nums.size() && i < k - 1; i++) {
+				poped_elements.insert(nums[i]);
+				element_count[nums[i]]--;
+			}
+			int ans = -1;
+			if(k < nums.size()) {
+				ans = nums[k];
+			}
+			int maximum = -1;
+			for(auto i = poped_elements.rbegin(); i != poped_elements.rend(); ++i) {
+				maximum = *i;
+				break;
+			}
+			return max(ans, maximum);
+		}
+	}// namespace maximize_the_topmost_element_after_k_moves
+
+	namespace minimum_weighted_subgraph_with_the_required_paths {
+		long long Solution::minimumWeight(int n, vector<vector<int>> &edges, int src1, int src2, int dest) {
+			vector<pair<int, int>> graph[n], graph_rev[n];
+			for(auto &edge: edges) {
+				auto from   = edge[0];
+				auto to     = edge[1];
+				auto weight = edge[2];
+				graph[from].emplace_back(to, weight);
+				graph_rev[to].emplace_back(from, weight);
+			}
+
+			long long a = LONG_LONG_MAX;
+			vector<long long> dist_src1(n, LONG_LONG_MAX), dist_src2(n, LONG_LONG_MAX), dist_dest(n, LONG_LONG_MAX);
+
+			calc_dist(src1, graph, dist_src1);
+			calc_dist(src2, graph, dist_src2);
+			calc_dist(dest, graph_rev, dist_dest);
+
+			long long ans = LONG_LONG_MAX;
+
+			for(int i = 0; i < n; ++i) {
+				if(dist_src1[i] != LONG_LONG_MAX && dist_src2[i] != LONG_LONG_MAX && dist_dest[i] != LONG_LONG_MAX) {
+					ans = min(ans, dist_src1[i] + dist_src2[i] + dist_dest[i]);
+				}
+			}
+			if(ans == LONG_LONG_MAX) {
+				ans = -1;
+			}
+			return ans;
+		}
+
+		void Solution::calc_dist(int s, vector<pair<int, int>> *graph, vector<long long int> &dist) {
+			priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<>> pq;
+			dist[s] = 0;
+			pq.emplace(0, s);
+			while(!pq.empty()) {
+				auto [weight, node] = pq.top();
+				pq.pop();
+				if(weight > dist[node]) {
+					continue;
+				}
+				for(auto [next_node, next_weight]: graph[node]) {
+					if(weight + next_weight < dist[next_node]) {
+						dist[next_node] = weight + next_weight;
+						pq.emplace(weight + next_weight, next_node);
+					}
+				}
+			}
+		}
+	}// namespace minimum_weighted_subgraph_with_the_required_paths
 }// namespace leetcode

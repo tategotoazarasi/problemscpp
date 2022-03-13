@@ -2458,22 +2458,6 @@ namespace acwing {
 		}
 	}// namespace acwing26
 
-	TEST(acwing4311, case1) {
-		istringstream in("3 5\n1 2\n3 4\n1 3");
-		auto out = ostringstream();
-		acwing4311::main(in, out);
-		const auto ans = out.str();
-		ASSERT_EQ("1.666667", ans);
-	}
-
-	TEST(acwing4311, case2) {
-		istringstream in("2 1\n99 100\n98 99");
-		auto out = ostringstream();
-		acwing4311::main(in, out);
-		const auto ans = out.str();
-		ASSERT_EQ("0.989899", ans);
-	}
-
 	TEST(acwing862, case1) {
 		istringstream in("5\n"
 		                 "32 1.36 nsyiupnnhc\n"

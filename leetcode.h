@@ -1661,6 +1661,39 @@ namespace leetcode {
 			static int maxAreaOfIsland(vector<vector<int>> &grid);
 		};
 	}// namespace max_area_of_island
+
+	/// \brief LeetCode 6031. 找出数组中的所有 K 近邻下标
+	namespace find_all_k_distant_indices_in_an_array {
+		class Solution {
+		public:
+			static vector<int> findKDistantIndices(vector<int> &nums, int key, int k);
+		};
+	}// namespace find_all_k_distant_indices_in_an_array
+
+	/// \brief LeetCode 5203. 统计可以提取的工件
+	namespace count_artifacts_that_can_be_extracted {
+		class Solution {
+		public:
+			static int digArtifacts(int n, vector<vector<int>> &artifacts, vector<vector<int>> &dig);
+		};
+	}// namespace count_artifacts_that_can_be_extracted
+
+	/// \brief LeetCode 5227. K 次操作后最大化顶端元素
+	namespace maximize_the_topmost_element_after_k_moves {
+		class Solution {
+		public:
+			static int maximumTop(vector<int> &nums, int k);
+		};
+	}// namespace maximize_the_topmost_element_after_k_moves
+
+	/// \brief LeetCode 6032. 得到要求路径的最小带权子图
+	namespace minimum_weighted_subgraph_with_the_required_paths {
+		class Solution {
+		public:
+			static long long minimumWeight(int n, vector<vector<int>> &edges, int src1, int src2, int dest);
+			static void calc_dist(int s, vector<pair<int, int>> *graph, vector<long long int> &dist);
+		};
+	}// namespace minimum_weighted_subgraph_with_the_required_paths
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

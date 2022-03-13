@@ -2198,4 +2198,66 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::maxAreaOfIsland(input));
 		}
 	}// namespace max_area_of_island
+
+	namespace find_all_k_distant_indices_in_an_array {
+		TEST(find_all_k_distant_indices_in_an_array, case1) {
+			vector nums   = {3, 4, 9, 1, 3, 9, 5};
+			vector output = {1, 2, 3, 4, 5, 6};
+			ASSERT_EQ(output, Solution::findKDistantIndices(nums, 9, 1));
+		}
+
+		TEST(find_all_k_distant_indices_in_an_array, case2) {
+			vector nums   = {2, 2, 2, 2, 2};
+			vector output = {0, 1, 2, 3, 4};
+			ASSERT_EQ(output, Solution::findKDistantIndices(nums, 2, 2));
+		}
+	}// namespace find_all_k_distant_indices_in_an_array
+
+	namespace count_artifacts_that_can_be_extracted {
+		TEST(count_artifacts_that_can_be_extracted, case1) {
+			vector<vector<int>> artifacts = {{0, 0, 0, 0}, {0, 1, 1, 1}};
+			vector<vector<int>> dig       = {{0, 0}, {0, 1}};
+			ASSERT_EQ(1, Solution::digArtifacts(2, artifacts, dig));
+		}
+
+		TEST(count_artifacts_that_can_be_extracted, case2) {
+			vector<vector<int>> artifacts = {{0, 0, 0, 0}, {0, 1, 1, 1}};
+			vector<vector<int>> dig       = {{0, 0}, {0, 1}, {1, 1}};
+			ASSERT_EQ(2, Solution::digArtifacts(2, artifacts, dig));
+		}
+	}// namespace count_artifacts_that_can_be_extracted
+
+	namespace maximize_the_topmost_element_after_k_moves {
+		TEST(maximize_the_topmost_element_after_k_moves, case1) {
+			vector nums = {5, 2, 2, 4, 0, 6};
+			ASSERT_EQ(5, Solution::maximumTop(nums, 4));
+		}
+
+		TEST(maximize_the_topmost_element_after_k_moves, case2) {
+			vector nums = {2};
+			ASSERT_EQ(-1, Solution::maximumTop(nums, 1));
+		}
+	}// namespace maximize_the_topmost_element_after_k_moves
+
+	namespace minimum_weighted_subgraph_with_the_required_paths {
+		TEST(minimum_weighted_subgraph_with_the_required_paths, case1) {
+			vector<vector<int>> edges = {{0, 2, 2}, {0, 5, 6}, {1, 0, 3}, {1, 4, 5}, {2, 1, 1}, {2, 3, 3}, {2, 3, 4}, {3, 4, 2}, {4, 5, 1}};
+			ASSERT_EQ(9, Solution::minimumWeight(6, edges, 0, 1, 5));
+		}
+
+		TEST(minimum_weighted_subgraph_with_the_required_paths, case2) {
+			vector<vector<int>> edges = {{0, 1, 1}, {2, 1, 1}};
+			ASSERT_EQ(-1, Solution::minimumWeight(3, edges, 0, 1, 2));
+		}
+
+		TEST(minimum_weighted_subgraph_with_the_required_paths, case3) {
+			vector<vector<int>> edges = {{4, 2, 20}, {4, 3, 46}, {0, 1, 15}, {0, 1, 43}, {0, 1, 32}, {3, 1, 13}};
+			ASSERT_EQ(74, Solution::minimumWeight(5, edges, 0, 4, 1));
+		}
+
+		TEST(minimum_weighted_subgraph_with_the_required_paths, case4) {
+			vector<vector<int>> edges = {{31, 64, 44}, {31, 6, 14}, {46, 21, 45}, {46, 65, 27}, {46, 30, 46}, {31, 0, 14}, {31, 29, 40}, {46, 95, 6}, {46, 73, 62}, {31, 74, 16}, {31, 55, 35}, {46, 40, 89}, {46, 57, 93}, {31, 90, 27}, {46, 58, 59}, {46, 12, 80}, {31, 44, 26}, {46, 67, 82}, {31, 8, 64}, {31, 23, 15}, {31, 7, 27}, {31, 94, 33}, {31, 86, 36}, {31, 33, 61}, {46, 88, 46}, {46, 69, 76}, {46, 39, 89}, {46, 53, 17}, {31, 75, 69}, {31, 72, 30}, {46, 83, 87}, {31, 35, 86}, {31, 62, 84}, {46, 51, 47}, {46, 66, 16}, {46, 50, 85}, {46, 81, 65}, {46, 36, 89}, {46, 60, 21}, {46, 10, 76}, {31, 18, 70}, {46, 3, 93}, {31, 47, 52}, {46, 16, 61}, {31, 15, 77}, {46, 28, 3}, {31, 93, 53}, {46, 43, 94}, {31, 38, 25}, {46, 1, 42}, {31, 22, 49}, {46, 45, 55}, {46, 99, 43}, {46, 24, 90}, {31, 9, 28}, {46, 13, 15}, {46, 27, 93}, {46, 49, 83}, {31, 71, 51}, {31, 59, 93}, {31, 91, 98}, {31, 54, 67}, {31, 25, 75}, {31, 68, 24}, {31, 76, 13}, {31, 41, 31}, {31, 19, 36}, {31, 87, 37}, {46, 17, 70}, {46, 97, 46}, {46, 61, 82}, {46, 79, 74}, {46, 85, 18}, {46, 14, 74}, {31, 32, 60}, {46, 84, 69}, {31, 34, 69}, {31, 4, 13}, {46, 70, 27}, {31, 48, 27}, {31, 11, 63}, {46, 5, 14}, {46, 37, 88}, {31, 96, 70}, {46, 52, 17}, {46, 42, 9}, {46, 20, 68}, {31, 77, 79}, {31, 80, 68}, {46, 78, 13}, {46, 26, 48}, {46, 2, 10}, {46, 63, 6}, {31, 89, 66}, {31, 56, 96}, {46, 92, 36}, {46, 98, 12}, {46, 82, 94}, {8, 82, 84}, {92, 82, 23}, {40, 82, 98}, {39, 82, 67}, {86, 82, 37}, {75, 82, 21}};
+			ASSERT_EQ(132, Solution::minimumWeight(100, edges, 46, 31, 82));
+		}
+	}// namespace minimum_weighted_subgraph_with_the_required_paths
 }// namespace leetcode
