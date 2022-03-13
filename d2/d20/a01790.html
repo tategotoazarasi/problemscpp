@@ -120,7 +120,7 @@ $(function() {
 </div><div class="memdoc">
 
 <p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l04368">4368</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04368" name="l04368"></a><span class="lineno"> 4368</span>                                                                                                   {</div>
+<div class="fragment"><div class="line"><a id="l04368" name="l04368"></a><span class="lineno"> 4368</span>                                                         {</div>
 <div class="line"><a id="l04369" name="l04369"></a><span class="lineno"> 4369</span>            <span class="keywordflow">if</span>(nums.size() == 1 &amp;&amp; k % 2 == 1) {</div>
 <div class="line"><a id="l04370" name="l04370"></a><span class="lineno"> 4370</span>                <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a id="l04371" name="l04371"></a><span class="lineno"> 4371</span>            }</div>
@@ -145,7 +145,7 @@ $(function() {
 <div class="line"><a id="l04390" name="l04390"></a><span class="lineno"> 4390</span>                ans = nums[k];</div>
 <div class="line"><a id="l04391" name="l04391"></a><span class="lineno"> 4391</span>            }</div>
 <div class="line"><a id="l04392" name="l04392"></a><span class="lineno"> 4392</span>            <span class="keywordtype">int</span> maximum = -1;</div>
-<div class="line"><a id="l04393" name="l04393"></a><span class="lineno"> 4393</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = poped_elements.rbegin(); i != poped_elements.rend(); ++i) {</div>
+<div class="line"><a id="l04393" name="l04393"></a><span class="lineno"> 4393</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> i = poped_elements.rbegin(); i != poped_elements.rend();) {</div>
 <div class="line"><a id="l04394" name="l04394"></a><span class="lineno"> 4394</span>                maximum = *i;</div>
 <div class="line"><a id="l04395" name="l04395"></a><span class="lineno"> 4395</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l04396" name="l04396"></a><span class="lineno"> 4396</span>            }</div>

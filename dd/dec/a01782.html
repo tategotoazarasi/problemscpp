@@ -134,14 +134,14 @@ $(function() {
 <div class="line"><a id="l04317" name="l04317"></a><span class="lineno"> 4317</span>                    key_set.insert(i);</div>
 <div class="line"><a id="l04318" name="l04318"></a><span class="lineno"> 4318</span>                }</div>
 <div class="line"><a id="l04319" name="l04319"></a><span class="lineno"> 4319</span>            }</div>
-<div class="line"><a id="l04320" name="l04320"></a><span class="lineno"> 4320</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> ks: key_set) {</div>
+<div class="line"><a id="l04320" name="l04320"></a><span class="lineno"> 4320</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> ks: key_set) {</div>
 <div class="line"><a id="l04321" name="l04321"></a><span class="lineno"> 4321</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = ks - k; i &lt;= ks + k; i++) {</div>
 <div class="line"><a id="l04322" name="l04322"></a><span class="lineno"> 4322</span>                    <span class="keywordflow">if</span>(0 &lt;= i &amp;&amp; i &lt; nums.size()) {</div>
 <div class="line"><a id="l04323" name="l04323"></a><span class="lineno"> 4323</span>                        ans_set.insert(i);</div>
 <div class="line"><a id="l04324" name="l04324"></a><span class="lineno"> 4324</span>                    }</div>
 <div class="line"><a id="l04325" name="l04325"></a><span class="lineno"> 4325</span>                }</div>
 <div class="line"><a id="l04326" name="l04326"></a><span class="lineno"> 4326</span>            }</div>
-<div class="line"><a id="l04327" name="l04327"></a><span class="lineno"> 4327</span>            <span class="keywordflow">return</span> vector&lt;int&gt;(ans_set.begin(), ans_set.end());</div>
+<div class="line"><a id="l04327" name="l04327"></a><span class="lineno"> 4327</span>            <span class="keywordflow">return</span> vector(ans_set.begin(), ans_set.end());</div>
 <div class="line"><a id="l04328" name="l04328"></a><span class="lineno"> 4328</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l02203">leetcode::find_all_k_distant_indices_in_an_array::TEST()</a>.</p>

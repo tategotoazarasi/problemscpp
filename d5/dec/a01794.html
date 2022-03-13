@@ -127,25 +127,25 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l04432">4432</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04432" name="l04432"></a><span class="lineno"> 4432</span>                                                                                                  {</div>
-<div class="line"><a id="l04433" name="l04433"></a><span class="lineno"> 4433</span>            priority_queue&lt;pair&lt;long long, int&gt;, vector&lt;pair&lt;long long, int&gt;&gt;, greater&lt;&gt;&gt; pq;</div>
-<div class="line"><a id="l04434" name="l04434"></a><span class="lineno"> 4434</span>            dist[s] = 0;</div>
-<div class="line"><a id="l04435" name="l04435"></a><span class="lineno"> 4435</span>            pq.emplace(0, s);</div>
-<div class="line"><a id="l04436" name="l04436"></a><span class="lineno"> 4436</span>            <span class="keywordflow">while</span>(!pq.empty()) {</div>
-<div class="line"><a id="l04437" name="l04437"></a><span class="lineno"> 4437</span>                <span class="keyword">auto</span> [weight, node] = pq.top();</div>
-<div class="line"><a id="l04438" name="l04438"></a><span class="lineno"> 4438</span>                pq.pop();</div>
-<div class="line"><a id="l04439" name="l04439"></a><span class="lineno"> 4439</span>                <span class="keywordflow">if</span>(weight &gt; dist[node]) {</div>
-<div class="line"><a id="l04440" name="l04440"></a><span class="lineno"> 4440</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l04441" name="l04441"></a><span class="lineno"> 4441</span>                }</div>
-<div class="line"><a id="l04442" name="l04442"></a><span class="lineno"> 4442</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> [next_node, next_weight]: graph[node]) {</div>
-<div class="line"><a id="l04443" name="l04443"></a><span class="lineno"> 4443</span>                    <span class="keywordflow">if</span>(weight + next_weight &lt; dist[next_node]) {</div>
-<div class="line"><a id="l04444" name="l04444"></a><span class="lineno"> 4444</span>                        dist[next_node] = weight + next_weight;</div>
-<div class="line"><a id="l04445" name="l04445"></a><span class="lineno"> 4445</span>                        pq.emplace(weight + next_weight, next_node);</div>
-<div class="line"><a id="l04446" name="l04446"></a><span class="lineno"> 4446</span>                    }</div>
-<div class="line"><a id="l04447" name="l04447"></a><span class="lineno"> 4447</span>                }</div>
-<div class="line"><a id="l04448" name="l04448"></a><span class="lineno"> 4448</span>            }</div>
-<div class="line"><a id="l04449" name="l04449"></a><span class="lineno"> 4449</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l04441">4441</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04441" name="l04441"></a><span class="lineno"> 4441</span>                                                                                                  {</div>
+<div class="line"><a id="l04442" name="l04442"></a><span class="lineno"> 4442</span>            priority_queue&lt;pair&lt;long long, int&gt;, vector&lt;pair&lt;long long, int&gt;&gt;, greater&lt;&gt;&gt; pq;</div>
+<div class="line"><a id="l04443" name="l04443"></a><span class="lineno"> 4443</span>            dist[s] = 0;</div>
+<div class="line"><a id="l04444" name="l04444"></a><span class="lineno"> 4444</span>            pq.emplace(0, s);</div>
+<div class="line"><a id="l04445" name="l04445"></a><span class="lineno"> 4445</span>            <span class="keywordflow">while</span>(!pq.empty()) {</div>
+<div class="line"><a id="l04446" name="l04446"></a><span class="lineno"> 4446</span>                <span class="keyword">auto</span> [weight, node] = pq.top();</div>
+<div class="line"><a id="l04447" name="l04447"></a><span class="lineno"> 4447</span>                pq.pop();</div>
+<div class="line"><a id="l04448" name="l04448"></a><span class="lineno"> 4448</span>                <span class="keywordflow">if</span>(weight &gt; dist[node]) {</div>
+<div class="line"><a id="l04449" name="l04449"></a><span class="lineno"> 4449</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l04450" name="l04450"></a><span class="lineno"> 4450</span>                }</div>
+<div class="line"><a id="l04451" name="l04451"></a><span class="lineno"> 4451</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> [next_node, next_weight]: graph[node]) {</div>
+<div class="line"><a id="l04452" name="l04452"></a><span class="lineno"> 4452</span>                    <span class="keywordflow">if</span>(weight + next_weight &lt; dist[next_node]) {</div>
+<div class="line"><a id="l04453" name="l04453"></a><span class="lineno"> 4453</span>                        dist[next_node] = weight + next_weight;</div>
+<div class="line"><a id="l04454" name="l04454"></a><span class="lineno"> 4454</span>                        pq.emplace(weight + next_weight, next_node);</div>
+<div class="line"><a id="l04455" name="l04455"></a><span class="lineno"> 4455</span>                    }</div>
+<div class="line"><a id="l04456" name="l04456"></a><span class="lineno"> 4456</span>                }</div>
+<div class="line"><a id="l04457" name="l04457"></a><span class="lineno"> 4457</span>            }</div>
+<div class="line"><a id="l04458" name="l04458"></a><span class="lineno"> 4458</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l04402">minimumWeight()</a>.</p>
 
@@ -205,37 +205,46 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l04402">4402</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l04402" name="l04402"></a><span class="lineno"> 4402</span>                                                                                                         {</div>
-<div class="line"><a id="l04403" name="l04403"></a><span class="lineno"> 4403</span>            vector&lt;pair&lt;int, int&gt;&gt; graph[n], graph_rev[n];</div>
-<div class="line"><a id="l04404" name="l04404"></a><span class="lineno"> 4404</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;edge: edges) {</div>
-<div class="line"><a id="l04405" name="l04405"></a><span class="lineno"> 4405</span>                <span class="keyword">auto</span> from   = edge[0];</div>
-<div class="line"><a id="l04406" name="l04406"></a><span class="lineno"> 4406</span>                <span class="keyword">auto</span> to     = edge[1];</div>
-<div class="line"><a id="l04407" name="l04407"></a><span class="lineno"> 4407</span>                <span class="keyword">auto</span> weight = edge[2];</div>
-<div class="line"><a id="l04408" name="l04408"></a><span class="lineno"> 4408</span>                graph[from].emplace_back(to, weight);</div>
-<div class="line"><a id="l04409" name="l04409"></a><span class="lineno"> 4409</span>                graph_rev[to].emplace_back(from, weight);</div>
-<div class="line"><a id="l04410" name="l04410"></a><span class="lineno"> 4410</span>            }</div>
-<div class="line"><a id="l04411" name="l04411"></a><span class="lineno"> 4411</span> </div>
-<div class="line"><a id="l04412" name="l04412"></a><span class="lineno"> 4412</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> a = LONG_LONG_MAX;</div>
-<div class="line"><a id="l04413" name="l04413"></a><span class="lineno"> 4413</span>            vector&lt;long long&gt; dist_src1(n, LONG_LONG_MAX), dist_src2(n, LONG_LONG_MAX), dist_dest(n, LONG_LONG_MAX);</div>
-<div class="line"><a id="l04414" name="l04414"></a><span class="lineno"> 4414</span> </div>
-<div class="line"><a id="l04415" name="l04415"></a><span class="lineno"> 4415</span>            <a class="code hl_function" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">calc_dist</a>(src1, graph, dist_src1);</div>
-<div class="line"><a id="l04416" name="l04416"></a><span class="lineno"> 4416</span>            <a class="code hl_function" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">calc_dist</a>(src2, graph, dist_src2);</div>
-<div class="line"><a id="l04417" name="l04417"></a><span class="lineno"> 4417</span>            <a class="code hl_function" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">calc_dist</a>(dest, graph_rev, dist_dest);</div>
-<div class="line"><a id="l04418" name="l04418"></a><span class="lineno"> 4418</span> </div>
-<div class="line"><a id="l04419" name="l04419"></a><span class="lineno"> 4419</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans = LONG_LONG_MAX;</div>
-<div class="line"><a id="l04420" name="l04420"></a><span class="lineno"> 4420</span> </div>
-<div class="line"><a id="l04421" name="l04421"></a><span class="lineno"> 4421</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
-<div class="line"><a id="l04422" name="l04422"></a><span class="lineno"> 4422</span>                <span class="keywordflow">if</span>(dist_src1[i] != LONG_LONG_MAX &amp;&amp; dist_src2[i] != LONG_LONG_MAX &amp;&amp; dist_dest[i] != LONG_LONG_MAX) {</div>
-<div class="line"><a id="l04423" name="l04423"></a><span class="lineno"> 4423</span>                    ans = min(ans, dist_src1[i] + dist_src2[i] + dist_dest[i]);</div>
-<div class="line"><a id="l04424" name="l04424"></a><span class="lineno"> 4424</span>                }</div>
-<div class="line"><a id="l04425" name="l04425"></a><span class="lineno"> 4425</span>            }</div>
-<div class="line"><a id="l04426" name="l04426"></a><span class="lineno"> 4426</span>            <span class="keywordflow">if</span>(ans == LONG_LONG_MAX) {</div>
-<div class="line"><a id="l04427" name="l04427"></a><span class="lineno"> 4427</span>                ans = -1;</div>
-<div class="line"><a id="l04428" name="l04428"></a><span class="lineno"> 4428</span>            }</div>
-<div class="line"><a id="l04429" name="l04429"></a><span class="lineno"> 4429</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l04430" name="l04430"></a><span class="lineno"> 4430</span>        }</div>
-<div class="ttc" id="aa01794_html_a6d0b13d473a99c69485a95e6d2570eba"><div class="ttname"><a href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">leetcode::minimum_weighted_subgraph_with_the_required_paths::Solution::calc_dist</a></div><div class="ttdeci">static void calc_dist(int s, vector&lt; pair&lt; int, int &gt; &gt; *graph, vector&lt; long long int &gt; &amp;dist)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l04432">leetcode.cpp:4432</a></div></div>
+<div class="line"><a id="l04403" name="l04403"></a><span class="lineno"> 4403</span>            <span class="keyword">auto</span> *graph     = <span class="keyword">new</span> vector&lt;pair&lt;int, int&gt;&gt;[n];</div>
+<div class="line"><a id="l04404" name="l04404"></a><span class="lineno"> 4404</span>            <span class="keyword">auto</span> *graph_rev = <span class="keyword">new</span> vector&lt;pair&lt;int, int&gt;&gt;[n];</div>
+<div class="line"><a id="l04405" name="l04405"></a><span class="lineno"> 4405</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l04406" name="l04406"></a><span class="lineno"> 4406</span>                graph[i]     = vector&lt;pair&lt;int, int&gt;&gt;();</div>
+<div class="line"><a id="l04407" name="l04407"></a><span class="lineno"> 4407</span>                graph_rev[i] = vector&lt;pair&lt;int, int&gt;&gt;();</div>
+<div class="line"><a id="l04408" name="l04408"></a><span class="lineno"> 4408</span>            }</div>
+<div class="line"><a id="l04409" name="l04409"></a><span class="lineno"> 4409</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;edge: edges) {</div>
+<div class="line"><a id="l04410" name="l04410"></a><span class="lineno"> 4410</span>                <span class="keyword">auto</span> from   = edge[0];</div>
+<div class="line"><a id="l04411" name="l04411"></a><span class="lineno"> 4411</span>                <span class="keyword">auto</span> to     = edge[1];</div>
+<div class="line"><a id="l04412" name="l04412"></a><span class="lineno"> 4412</span>                <span class="keyword">auto</span> weight = edge[2];</div>
+<div class="line"><a id="l04413" name="l04413"></a><span class="lineno"> 4413</span>                graph[from].emplace_back(to, weight);</div>
+<div class="line"><a id="l04414" name="l04414"></a><span class="lineno"> 4414</span>                graph_rev[to].emplace_back(from, weight);</div>
+<div class="line"><a id="l04415" name="l04415"></a><span class="lineno"> 4415</span>            }</div>
+<div class="line"><a id="l04416" name="l04416"></a><span class="lineno"> 4416</span> </div>
+<div class="line"><a id="l04417" name="l04417"></a><span class="lineno"> 4417</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> a = LLONG_MAX;</div>
+<div class="line"><a id="l04418" name="l04418"></a><span class="lineno"> 4418</span>            vector dist_src1(n, LLONG_MAX);</div>
+<div class="line"><a id="l04419" name="l04419"></a><span class="lineno"> 4419</span>            vector dist_src2(n, LLONG_MAX);</div>
+<div class="line"><a id="l04420" name="l04420"></a><span class="lineno"> 4420</span>            vector dist_dest(n, LLONG_MAX);</div>
+<div class="line"><a id="l04421" name="l04421"></a><span class="lineno"> 4421</span> </div>
+<div class="line"><a id="l04422" name="l04422"></a><span class="lineno"> 4422</span>            <a class="code hl_function" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">calc_dist</a>(src1, graph, dist_src1);</div>
+<div class="line"><a id="l04423" name="l04423"></a><span class="lineno"> 4423</span>            <a class="code hl_function" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">calc_dist</a>(src2, graph, dist_src2);</div>
+<div class="line"><a id="l04424" name="l04424"></a><span class="lineno"> 4424</span>            <a class="code hl_function" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">calc_dist</a>(dest, graph_rev, dist_dest);</div>
+<div class="line"><a id="l04425" name="l04425"></a><span class="lineno"> 4425</span> </div>
+<div class="line"><a id="l04426" name="l04426"></a><span class="lineno"> 4426</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans = LLONG_MAX;</div>
+<div class="line"><a id="l04427" name="l04427"></a><span class="lineno"> 4427</span> </div>
+<div class="line"><a id="l04428" name="l04428"></a><span class="lineno"> 4428</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><a id="l04429" name="l04429"></a><span class="lineno"> 4429</span>                <span class="keywordflow">if</span>(dist_src1[i] != LLONG_MAX &amp;&amp; dist_src2[i] != LLONG_MAX &amp;&amp; dist_dest[i] != LLONG_MAX) {</div>
+<div class="line"><a id="l04430" name="l04430"></a><span class="lineno"> 4430</span>                    ans = min(ans, dist_src1[i] + dist_src2[i] + dist_dest[i]);</div>
+<div class="line"><a id="l04431" name="l04431"></a><span class="lineno"> 4431</span>                }</div>
+<div class="line"><a id="l04432" name="l04432"></a><span class="lineno"> 4432</span>            }</div>
+<div class="line"><a id="l04433" name="l04433"></a><span class="lineno"> 4433</span>            <span class="keywordflow">if</span>(ans == LLONG_MAX) {</div>
+<div class="line"><a id="l04434" name="l04434"></a><span class="lineno"> 4434</span>                ans = -1;</div>
+<div class="line"><a id="l04435" name="l04435"></a><span class="lineno"> 4435</span>            }</div>
+<div class="line"><a id="l04436" name="l04436"></a><span class="lineno"> 4436</span>            <span class="keyword">delete</span>[] graph;</div>
+<div class="line"><a id="l04437" name="l04437"></a><span class="lineno"> 4437</span>            <span class="keyword">delete</span>[] graph_rev;</div>
+<div class="line"><a id="l04438" name="l04438"></a><span class="lineno"> 4438</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l04439" name="l04439"></a><span class="lineno"> 4439</span>        }</div>
+<div class="ttc" id="aa01794_html_a6d0b13d473a99c69485a95e6d2570eba"><div class="ttname"><a href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">leetcode::minimum_weighted_subgraph_with_the_required_paths::Solution::calc_dist</a></div><div class="ttdeci">static void calc_dist(int s, vector&lt; pair&lt; int, int &gt; &gt; *graph, vector&lt; long long int &gt; &amp;dist)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l04441">leetcode.cpp:4441</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l04432">calc_dist()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l04441">calc_dist()</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l02243">leetcode::minimum_weighted_subgraph_with_the_required_paths::TEST()</a>.</p>
 

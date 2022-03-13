@@ -4381,23 +4381,23 @@ $(function() {
 <div class="line"><a id="l04317" name="l04317"></a><span class="lineno"> 4317</span>                    key_set.insert(i);</div>
 <div class="line"><a id="l04318" name="l04318"></a><span class="lineno"> 4318</span>                }</div>
 <div class="line"><a id="l04319" name="l04319"></a><span class="lineno"> 4319</span>            }</div>
-<div class="line"><a id="l04320" name="l04320"></a><span class="lineno"> 4320</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> ks: key_set) {</div>
+<div class="line"><a id="l04320" name="l04320"></a><span class="lineno"> 4320</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> ks: key_set) {</div>
 <div class="line"><a id="l04321" name="l04321"></a><span class="lineno"> 4321</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = ks - k; i &lt;= ks + k; i++) {</div>
 <div class="line"><a id="l04322" name="l04322"></a><span class="lineno"> 4322</span>                    <span class="keywordflow">if</span>(0 &lt;= i &amp;&amp; i &lt; nums.size()) {</div>
 <div class="line"><a id="l04323" name="l04323"></a><span class="lineno"> 4323</span>                        ans_set.insert(i);</div>
 <div class="line"><a id="l04324" name="l04324"></a><span class="lineno"> 4324</span>                    }</div>
 <div class="line"><a id="l04325" name="l04325"></a><span class="lineno"> 4325</span>                }</div>
 <div class="line"><a id="l04326" name="l04326"></a><span class="lineno"> 4326</span>            }</div>
-<div class="line"><a id="l04327" name="l04327"></a><span class="lineno"> 4327</span>            <span class="keywordflow">return</span> vector&lt;int&gt;(ans_set.begin(), ans_set.end());</div>
+<div class="line"><a id="l04327" name="l04327"></a><span class="lineno"> 4327</span>            <span class="keywordflow">return</span> vector(ans_set.begin(), ans_set.end());</div>
 <div class="line"><a id="l04328" name="l04328"></a><span class="lineno"> 4328</span>        }</div>
 <div class="line"><a id="l04329" name="l04329"></a><span class="lineno"> 4329</span>    }<span class="comment">// namespace find_all_k_distant_indices_in_an_array</span></div>
 <div class="line"><a id="l04330" name="l04330"></a><span class="lineno"> 4330</span> </div>
 <div class="line"><a id="l04331" name="l04331"></a><span class="lineno"><a class="line" href="../../d0/d24/a00222.html"> 4331</a></span>    <span class="keyword">namespace </span>count_artifacts_that_can_be_extracted {</div>
 <div class="line"><a id="l04332" name="l04332"></a><span class="lineno"><a class="line" href="../../db/d4b/a01786.html#aef4eb815260b961deb9493d4b3028b5e"> 4332</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../db/d4b/a01786.html#aef4eb815260b961deb9493d4b3028b5e">Solution::digArtifacts</a>(<span class="keywordtype">int</span> n, vector&lt;vector&lt;int&gt;&gt; &amp;artifacts, vector&lt;vector&lt;int&gt;&gt; &amp;dig) {</div>
-<div class="line"><a id="l04333" name="l04333"></a><span class="lineno"> 4333</span>            <span class="keywordtype">bool</span> **grid = <span class="keyword">new</span> <span class="keywordtype">bool</span> *[n];</div>
+<div class="line"><a id="l04333" name="l04333"></a><span class="lineno"> 4333</span>            <span class="keyword">auto</span> *grid = <span class="keyword">new</span> <span class="keywordtype">bool</span> *[n];</div>
 <div class="line"><a id="l04334" name="l04334"></a><span class="lineno"> 4334</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l04335" name="l04335"></a><span class="lineno"> 4335</span>                grid[i] = <span class="keyword">new</span> <span class="keywordtype">bool</span>[n];</div>
-<div class="line"><a id="l04336" name="l04336"></a><span class="lineno"> 4336</span>                memset(grid[i], <span class="keyword">false</span>, n * <span class="keyword">sizeof</span>(<span class="keywordtype">bool</span>));</div>
+<div class="line"><a id="l04336" name="l04336"></a><span class="lineno"> 4336</span>                memset(grid[i], 0, n * <span class="keyword">sizeof</span>(<span class="keywordtype">bool</span>));</div>
 <div class="line"><a id="l04337" name="l04337"></a><span class="lineno"> 4337</span>            }</div>
 <div class="line"><a id="l04338" name="l04338"></a><span class="lineno"> 4338</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i: dig) {</div>
 <div class="line"><a id="l04339" name="l04339"></a><span class="lineno"> 4339</span>                grid[i[0]][i[1]] = <span class="keyword">true</span>;</div>
@@ -4429,7 +4429,7 @@ $(function() {
 <div class="line"><a id="l04365" name="l04365"></a><span class="lineno"> 4365</span>    }<span class="comment">// namespace count_artifacts_that_can_be_extracted</span></div>
 <div class="line"><a id="l04366" name="l04366"></a><span class="lineno"> 4366</span> </div>
 <div class="line"><a id="l04367" name="l04367"></a><span class="lineno"><a class="line" href="../../dc/d28/a00223.html"> 4367</a></span>    <span class="keyword">namespace </span>maximize_the_topmost_element_after_k_moves {</div>
-<div class="line"><a id="l04368" name="l04368"></a><span class="lineno"><a class="line" href="../../d2/d20/a01790.html#a036ef8c0758bf66253cde0112c6c5935"> 4368</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d2/d20/a01790.html#a036ef8c0758bf66253cde0112c6c5935">maximize_the_topmost_element_after_k_moves::Solution::maximumTop</a>(vector&lt;int&gt; &amp;nums, <span class="keywordtype">int</span> k) {</div>
+<div class="line"><a id="l04368" name="l04368"></a><span class="lineno"><a class="line" href="../../d2/d20/a01790.html#a036ef8c0758bf66253cde0112c6c5935"> 4368</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d2/d20/a01790.html#a036ef8c0758bf66253cde0112c6c5935">Solution::maximumTop</a>(vector&lt;int&gt; &amp;nums, <span class="keywordtype">int</span> k) {</div>
 <div class="line"><a id="l04369" name="l04369"></a><span class="lineno"> 4369</span>            <span class="keywordflow">if</span>(nums.size() == 1 &amp;&amp; k % 2 == 1) {</div>
 <div class="line"><a id="l04370" name="l04370"></a><span class="lineno"> 4370</span>                <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a id="l04371" name="l04371"></a><span class="lineno"> 4371</span>            }</div>
@@ -4454,7 +4454,7 @@ $(function() {
 <div class="line"><a id="l04390" name="l04390"></a><span class="lineno"> 4390</span>                ans = nums[k];</div>
 <div class="line"><a id="l04391" name="l04391"></a><span class="lineno"> 4391</span>            }</div>
 <div class="line"><a id="l04392" name="l04392"></a><span class="lineno"> 4392</span>            <span class="keywordtype">int</span> maximum = -1;</div>
-<div class="line"><a id="l04393" name="l04393"></a><span class="lineno"> 4393</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = poped_elements.rbegin(); i != poped_elements.rend(); ++i) {</div>
+<div class="line"><a id="l04393" name="l04393"></a><span class="lineno"> 4393</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> i = poped_elements.rbegin(); i != poped_elements.rend();) {</div>
 <div class="line"><a id="l04394" name="l04394"></a><span class="lineno"> 4394</span>                maximum = *i;</div>
 <div class="line"><a id="l04395" name="l04395"></a><span class="lineno"> 4395</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l04396" name="l04396"></a><span class="lineno"> 4396</span>            }</div>
@@ -4464,91 +4464,105 @@ $(function() {
 <div class="line"><a id="l04400" name="l04400"></a><span class="lineno"> 4400</span> </div>
 <div class="line"><a id="l04401" name="l04401"></a><span class="lineno"><a class="line" href="../../d5/ddf/a00224.html"> 4401</a></span>    <span class="keyword">namespace </span>minimum_weighted_subgraph_with_the_required_paths {</div>
 <div class="line"><a id="l04402" name="l04402"></a><span class="lineno"><a class="line" href="../../d5/dec/a01794.html#ae55b2ff8e4ca1bbb54dfcb5086c55666"> 4402</a></span>        <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_function" href="../../d5/dec/a01794.html#ae55b2ff8e4ca1bbb54dfcb5086c55666">Solution::minimumWeight</a>(<span class="keywordtype">int</span> n, vector&lt;vector&lt;int&gt;&gt; &amp;edges, <span class="keywordtype">int</span> src1, <span class="keywordtype">int</span> src2, <span class="keywordtype">int</span> dest) {</div>
-<div class="line"><a id="l04403" name="l04403"></a><span class="lineno"> 4403</span>            vector&lt;pair&lt;int, int&gt;&gt; graph[n], graph_rev[n];</div>
-<div class="line"><a id="l04404" name="l04404"></a><span class="lineno"> 4404</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;edge: edges) {</div>
-<div class="line"><a id="l04405" name="l04405"></a><span class="lineno"> 4405</span>                <span class="keyword">auto</span> from   = edge[0];</div>
-<div class="line"><a id="l04406" name="l04406"></a><span class="lineno"> 4406</span>                <span class="keyword">auto</span> to     = edge[1];</div>
-<div class="line"><a id="l04407" name="l04407"></a><span class="lineno"> 4407</span>                <span class="keyword">auto</span> weight = edge[2];</div>
-<div class="line"><a id="l04408" name="l04408"></a><span class="lineno"> 4408</span>                graph[from].emplace_back(to, weight);</div>
-<div class="line"><a id="l04409" name="l04409"></a><span class="lineno"> 4409</span>                graph_rev[to].emplace_back(from, weight);</div>
-<div class="line"><a id="l04410" name="l04410"></a><span class="lineno"> 4410</span>            }</div>
-<div class="line"><a id="l04411" name="l04411"></a><span class="lineno"> 4411</span> </div>
-<div class="line"><a id="l04412" name="l04412"></a><span class="lineno"> 4412</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> a = LONG_LONG_MAX;</div>
-<div class="line"><a id="l04413" name="l04413"></a><span class="lineno"> 4413</span>            vector&lt;long long&gt; dist_src1(n, LONG_LONG_MAX), dist_src2(n, LONG_LONG_MAX), dist_dest(n, LONG_LONG_MAX);</div>
-<div class="line"><a id="l04414" name="l04414"></a><span class="lineno"> 4414</span> </div>
-<div class="line"><a id="l04415" name="l04415"></a><span class="lineno"> 4415</span>            <a class="code hl_function" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">calc_dist</a>(src1, graph, dist_src1);</div>
-<div class="line"><a id="l04416" name="l04416"></a><span class="lineno"> 4416</span>            <a class="code hl_function" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">calc_dist</a>(src2, graph, dist_src2);</div>
-<div class="line"><a id="l04417" name="l04417"></a><span class="lineno"> 4417</span>            <a class="code hl_function" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">calc_dist</a>(dest, graph_rev, dist_dest);</div>
-<div class="line"><a id="l04418" name="l04418"></a><span class="lineno"> 4418</span> </div>
-<div class="line"><a id="l04419" name="l04419"></a><span class="lineno"> 4419</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans = LONG_LONG_MAX;</div>
-<div class="line"><a id="l04420" name="l04420"></a><span class="lineno"> 4420</span> </div>
-<div class="line"><a id="l04421" name="l04421"></a><span class="lineno"> 4421</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
-<div class="line"><a id="l04422" name="l04422"></a><span class="lineno"> 4422</span>                <span class="keywordflow">if</span>(dist_src1[i] != LONG_LONG_MAX &amp;&amp; dist_src2[i] != LONG_LONG_MAX &amp;&amp; dist_dest[i] != LONG_LONG_MAX) {</div>
-<div class="line"><a id="l04423" name="l04423"></a><span class="lineno"> 4423</span>                    ans = min(ans, dist_src1[i] + dist_src2[i] + dist_dest[i]);</div>
-<div class="line"><a id="l04424" name="l04424"></a><span class="lineno"> 4424</span>                }</div>
-<div class="line"><a id="l04425" name="l04425"></a><span class="lineno"> 4425</span>            }</div>
-<div class="line"><a id="l04426" name="l04426"></a><span class="lineno"> 4426</span>            <span class="keywordflow">if</span>(ans == LONG_LONG_MAX) {</div>
-<div class="line"><a id="l04427" name="l04427"></a><span class="lineno"> 4427</span>                ans = -1;</div>
-<div class="line"><a id="l04428" name="l04428"></a><span class="lineno"> 4428</span>            }</div>
-<div class="line"><a id="l04429" name="l04429"></a><span class="lineno"> 4429</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l04430" name="l04430"></a><span class="lineno"> 4430</span>        }</div>
-<div class="line"><a id="l04431" name="l04431"></a><span class="lineno"> 4431</span> </div>
-<div class="line"><a id="l04432" name="l04432"></a><span class="lineno"><a class="line" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba"> 4432</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">Solution::calc_dist</a>(<span class="keywordtype">int</span> s, vector&lt;pair&lt;int, int&gt;&gt; *graph, vector&lt;long long int&gt; &amp;dist) {</div>
-<div class="line"><a id="l04433" name="l04433"></a><span class="lineno"> 4433</span>            priority_queue&lt;pair&lt;long long, int&gt;, vector&lt;pair&lt;long long, int&gt;&gt;, greater&lt;&gt;&gt; pq;</div>
-<div class="line"><a id="l04434" name="l04434"></a><span class="lineno"> 4434</span>            dist[s] = 0;</div>
-<div class="line"><a id="l04435" name="l04435"></a><span class="lineno"> 4435</span>            pq.emplace(0, s);</div>
-<div class="line"><a id="l04436" name="l04436"></a><span class="lineno"> 4436</span>            <span class="keywordflow">while</span>(!pq.empty()) {</div>
-<div class="line"><a id="l04437" name="l04437"></a><span class="lineno"> 4437</span>                <span class="keyword">auto</span> [weight, node] = pq.top();</div>
-<div class="line"><a id="l04438" name="l04438"></a><span class="lineno"> 4438</span>                pq.pop();</div>
-<div class="line"><a id="l04439" name="l04439"></a><span class="lineno"> 4439</span>                <span class="keywordflow">if</span>(weight &gt; dist[node]) {</div>
-<div class="line"><a id="l04440" name="l04440"></a><span class="lineno"> 4440</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l04441" name="l04441"></a><span class="lineno"> 4441</span>                }</div>
-<div class="line"><a id="l04442" name="l04442"></a><span class="lineno"> 4442</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> [next_node, next_weight]: graph[node]) {</div>
-<div class="line"><a id="l04443" name="l04443"></a><span class="lineno"> 4443</span>                    <span class="keywordflow">if</span>(weight + next_weight &lt; dist[next_node]) {</div>
-<div class="line"><a id="l04444" name="l04444"></a><span class="lineno"> 4444</span>                        dist[next_node] = weight + next_weight;</div>
-<div class="line"><a id="l04445" name="l04445"></a><span class="lineno"> 4445</span>                        pq.emplace(weight + next_weight, next_node);</div>
-<div class="line"><a id="l04446" name="l04446"></a><span class="lineno"> 4446</span>                    }</div>
-<div class="line"><a id="l04447" name="l04447"></a><span class="lineno"> 4447</span>                }</div>
-<div class="line"><a id="l04448" name="l04448"></a><span class="lineno"> 4448</span>            }</div>
-<div class="line"><a id="l04449" name="l04449"></a><span class="lineno"> 4449</span>        }</div>
-<div class="line"><a id="l04450" name="l04450"></a><span class="lineno"> 4450</span>    }<span class="comment">// namespace minimum_weighted_subgraph_with_the_required_paths</span></div>
-<div class="line"><a id="l04451" name="l04451"></a><span class="lineno"> 4451</span> </div>
-<div class="line"><a id="l04452" name="l04452"></a><span class="lineno"><a class="line" href="../../dc/d98/a00225.html"> 4452</a></span>    <span class="keyword">namespace </span>utf_8_validation {</div>
-<div class="line"><a id="l04453" name="l04453"></a><span class="lineno"><a class="line" href="../../d2/d86/a01798.html#aa36a76be856fd22d5ab949c945d66dd1"> 4453</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d2/d86/a01798.html#aa36a76be856fd22d5ab949c945d66dd1">Solution::validUtf8</a>(vector&lt;int&gt; &amp;data) {</div>
-<div class="line"><a id="l04454" name="l04454"></a><span class="lineno"> 4454</span>            vector&lt;int&gt; len;</div>
-<div class="line"><a id="l04455" name="l04455"></a><span class="lineno"> 4455</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> num: data) {</div>
-<div class="line"><a id="l04456" name="l04456"></a><span class="lineno"> 4456</span>                <span class="keywordflow">if</span>(num &gt;&gt; 7 == 0) {<span class="comment">//0xxxxxxx</span></div>
-<div class="line"><a id="l04457" name="l04457"></a><span class="lineno"> 4457</span>                    len.push_back(1);</div>
-<div class="line"><a id="l04458" name="l04458"></a><span class="lineno"> 4458</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(num &gt;&gt; 3 == 30) {<span class="comment">//11110xxx</span></div>
-<div class="line"><a id="l04459" name="l04459"></a><span class="lineno"> 4459</span>                    len.push_back(4);</div>
-<div class="line"><a id="l04460" name="l04460"></a><span class="lineno"> 4460</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(num &gt;&gt; 4 == 14) {<span class="comment">//1110xxxx</span></div>
-<div class="line"><a id="l04461" name="l04461"></a><span class="lineno"> 4461</span>                    len.push_back(3);</div>
-<div class="line"><a id="l04462" name="l04462"></a><span class="lineno"> 4462</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(num &gt;&gt; 5 == 6) {<span class="comment">//110xxxxx</span></div>
-<div class="line"><a id="l04463" name="l04463"></a><span class="lineno"> 4463</span>                    len.push_back(2);</div>
-<div class="line"><a id="l04464" name="l04464"></a><span class="lineno"> 4464</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(num &gt;&gt; 6 == 2) {<span class="comment">//10xxxxxx</span></div>
-<div class="line"><a id="l04465" name="l04465"></a><span class="lineno"> 4465</span>                    len.push_back(-1);</div>
-<div class="line"><a id="l04466" name="l04466"></a><span class="lineno"> 4466</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l04467" name="l04467"></a><span class="lineno"> 4467</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04468" name="l04468"></a><span class="lineno"> 4468</span>                }</div>
-<div class="line"><a id="l04469" name="l04469"></a><span class="lineno"> 4469</span>            }</div>
-<div class="line"><a id="l04470" name="l04470"></a><span class="lineno"> 4470</span>            <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><a id="l04471" name="l04471"></a><span class="lineno"> 4471</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; len.size(); i++) {</div>
-<div class="line"><a id="l04472" name="l04472"></a><span class="lineno"> 4472</span>                <span class="keywordflow">if</span>(count != 0) {</div>
-<div class="line"><a id="l04473" name="l04473"></a><span class="lineno"> 4473</span>                    <span class="keywordflow">if</span>(len[i] != -1) {</div>
-<div class="line"><a id="l04474" name="l04474"></a><span class="lineno"> 4474</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04475" name="l04475"></a><span class="lineno"> 4475</span>                    }</div>
-<div class="line"><a id="l04476" name="l04476"></a><span class="lineno"> 4476</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l04477" name="l04477"></a><span class="lineno"> 4477</span>                    count = len[i];</div>
-<div class="line"><a id="l04478" name="l04478"></a><span class="lineno"> 4478</span>                    <span class="keywordflow">if</span>(count == -1) {</div>
-<div class="line"><a id="l04479" name="l04479"></a><span class="lineno"> 4479</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04480" name="l04480"></a><span class="lineno"> 4480</span>                    }</div>
-<div class="line"><a id="l04481" name="l04481"></a><span class="lineno"> 4481</span>                }</div>
-<div class="line"><a id="l04482" name="l04482"></a><span class="lineno"> 4482</span>                count--;</div>
+<div class="line"><a id="l04403" name="l04403"></a><span class="lineno"> 4403</span>            <span class="keyword">auto</span> *graph     = <span class="keyword">new</span> vector&lt;pair&lt;int, int&gt;&gt;[n];</div>
+<div class="line"><a id="l04404" name="l04404"></a><span class="lineno"> 4404</span>            <span class="keyword">auto</span> *graph_rev = <span class="keyword">new</span> vector&lt;pair&lt;int, int&gt;&gt;[n];</div>
+<div class="line"><a id="l04405" name="l04405"></a><span class="lineno"> 4405</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l04406" name="l04406"></a><span class="lineno"> 4406</span>                graph[i]     = vector&lt;pair&lt;int, int&gt;&gt;();</div>
+<div class="line"><a id="l04407" name="l04407"></a><span class="lineno"> 4407</span>                graph_rev[i] = vector&lt;pair&lt;int, int&gt;&gt;();</div>
+<div class="line"><a id="l04408" name="l04408"></a><span class="lineno"> 4408</span>            }</div>
+<div class="line"><a id="l04409" name="l04409"></a><span class="lineno"> 4409</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;edge: edges) {</div>
+<div class="line"><a id="l04410" name="l04410"></a><span class="lineno"> 4410</span>                <span class="keyword">auto</span> from   = edge[0];</div>
+<div class="line"><a id="l04411" name="l04411"></a><span class="lineno"> 4411</span>                <span class="keyword">auto</span> to     = edge[1];</div>
+<div class="line"><a id="l04412" name="l04412"></a><span class="lineno"> 4412</span>                <span class="keyword">auto</span> weight = edge[2];</div>
+<div class="line"><a id="l04413" name="l04413"></a><span class="lineno"> 4413</span>                graph[from].emplace_back(to, weight);</div>
+<div class="line"><a id="l04414" name="l04414"></a><span class="lineno"> 4414</span>                graph_rev[to].emplace_back(from, weight);</div>
+<div class="line"><a id="l04415" name="l04415"></a><span class="lineno"> 4415</span>            }</div>
+<div class="line"><a id="l04416" name="l04416"></a><span class="lineno"> 4416</span> </div>
+<div class="line"><a id="l04417" name="l04417"></a><span class="lineno"> 4417</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> a = LLONG_MAX;</div>
+<div class="line"><a id="l04418" name="l04418"></a><span class="lineno"> 4418</span>            vector dist_src1(n, LLONG_MAX);</div>
+<div class="line"><a id="l04419" name="l04419"></a><span class="lineno"> 4419</span>            vector dist_src2(n, LLONG_MAX);</div>
+<div class="line"><a id="l04420" name="l04420"></a><span class="lineno"> 4420</span>            vector dist_dest(n, LLONG_MAX);</div>
+<div class="line"><a id="l04421" name="l04421"></a><span class="lineno"> 4421</span> </div>
+<div class="line"><a id="l04422" name="l04422"></a><span class="lineno"> 4422</span>            <a class="code hl_function" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">calc_dist</a>(src1, graph, dist_src1);</div>
+<div class="line"><a id="l04423" name="l04423"></a><span class="lineno"> 4423</span>            <a class="code hl_function" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">calc_dist</a>(src2, graph, dist_src2);</div>
+<div class="line"><a id="l04424" name="l04424"></a><span class="lineno"> 4424</span>            <a class="code hl_function" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">calc_dist</a>(dest, graph_rev, dist_dest);</div>
+<div class="line"><a id="l04425" name="l04425"></a><span class="lineno"> 4425</span> </div>
+<div class="line"><a id="l04426" name="l04426"></a><span class="lineno"> 4426</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans = LLONG_MAX;</div>
+<div class="line"><a id="l04427" name="l04427"></a><span class="lineno"> 4427</span> </div>
+<div class="line"><a id="l04428" name="l04428"></a><span class="lineno"> 4428</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><a id="l04429" name="l04429"></a><span class="lineno"> 4429</span>                <span class="keywordflow">if</span>(dist_src1[i] != LLONG_MAX &amp;&amp; dist_src2[i] != LLONG_MAX &amp;&amp; dist_dest[i] != LLONG_MAX) {</div>
+<div class="line"><a id="l04430" name="l04430"></a><span class="lineno"> 4430</span>                    ans = min(ans, dist_src1[i] + dist_src2[i] + dist_dest[i]);</div>
+<div class="line"><a id="l04431" name="l04431"></a><span class="lineno"> 4431</span>                }</div>
+<div class="line"><a id="l04432" name="l04432"></a><span class="lineno"> 4432</span>            }</div>
+<div class="line"><a id="l04433" name="l04433"></a><span class="lineno"> 4433</span>            <span class="keywordflow">if</span>(ans == LLONG_MAX) {</div>
+<div class="line"><a id="l04434" name="l04434"></a><span class="lineno"> 4434</span>                ans = -1;</div>
+<div class="line"><a id="l04435" name="l04435"></a><span class="lineno"> 4435</span>            }</div>
+<div class="line"><a id="l04436" name="l04436"></a><span class="lineno"> 4436</span>            <span class="keyword">delete</span>[] graph;</div>
+<div class="line"><a id="l04437" name="l04437"></a><span class="lineno"> 4437</span>            <span class="keyword">delete</span>[] graph_rev;</div>
+<div class="line"><a id="l04438" name="l04438"></a><span class="lineno"> 4438</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l04439" name="l04439"></a><span class="lineno"> 4439</span>        }</div>
+<div class="line"><a id="l04440" name="l04440"></a><span class="lineno"> 4440</span> </div>
+<div class="line"><a id="l04441" name="l04441"></a><span class="lineno"><a class="line" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba"> 4441</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">Solution::calc_dist</a>(<span class="keywordtype">int</span> s, vector&lt;pair&lt;int, int&gt;&gt; *graph, vector&lt;long long int&gt; &amp;dist) {</div>
+<div class="line"><a id="l04442" name="l04442"></a><span class="lineno"> 4442</span>            priority_queue&lt;pair&lt;long long, int&gt;, vector&lt;pair&lt;long long, int&gt;&gt;, greater&lt;&gt;&gt; pq;</div>
+<div class="line"><a id="l04443" name="l04443"></a><span class="lineno"> 4443</span>            dist[s] = 0;</div>
+<div class="line"><a id="l04444" name="l04444"></a><span class="lineno"> 4444</span>            pq.emplace(0, s);</div>
+<div class="line"><a id="l04445" name="l04445"></a><span class="lineno"> 4445</span>            <span class="keywordflow">while</span>(!pq.empty()) {</div>
+<div class="line"><a id="l04446" name="l04446"></a><span class="lineno"> 4446</span>                <span class="keyword">auto</span> [weight, node] = pq.top();</div>
+<div class="line"><a id="l04447" name="l04447"></a><span class="lineno"> 4447</span>                pq.pop();</div>
+<div class="line"><a id="l04448" name="l04448"></a><span class="lineno"> 4448</span>                <span class="keywordflow">if</span>(weight &gt; dist[node]) {</div>
+<div class="line"><a id="l04449" name="l04449"></a><span class="lineno"> 4449</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l04450" name="l04450"></a><span class="lineno"> 4450</span>                }</div>
+<div class="line"><a id="l04451" name="l04451"></a><span class="lineno"> 4451</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> [next_node, next_weight]: graph[node]) {</div>
+<div class="line"><a id="l04452" name="l04452"></a><span class="lineno"> 4452</span>                    <span class="keywordflow">if</span>(weight + next_weight &lt; dist[next_node]) {</div>
+<div class="line"><a id="l04453" name="l04453"></a><span class="lineno"> 4453</span>                        dist[next_node] = weight + next_weight;</div>
+<div class="line"><a id="l04454" name="l04454"></a><span class="lineno"> 4454</span>                        pq.emplace(weight + next_weight, next_node);</div>
+<div class="line"><a id="l04455" name="l04455"></a><span class="lineno"> 4455</span>                    }</div>
+<div class="line"><a id="l04456" name="l04456"></a><span class="lineno"> 4456</span>                }</div>
+<div class="line"><a id="l04457" name="l04457"></a><span class="lineno"> 4457</span>            }</div>
+<div class="line"><a id="l04458" name="l04458"></a><span class="lineno"> 4458</span>        }</div>
+<div class="line"><a id="l04459" name="l04459"></a><span class="lineno"> 4459</span>    }<span class="comment">// namespace minimum_weighted_subgraph_with_the_required_paths</span></div>
+<div class="line"><a id="l04460" name="l04460"></a><span class="lineno"> 4460</span> </div>
+<div class="line"><a id="l04461" name="l04461"></a><span class="lineno"><a class="line" href="../../dc/d98/a00225.html"> 4461</a></span>    <span class="keyword">namespace </span>utf_8_validation {</div>
+<div class="line"><a id="l04462" name="l04462"></a><span class="lineno"><a class="line" href="../../d2/d86/a01798.html#aa36a76be856fd22d5ab949c945d66dd1"> 4462</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d2/d86/a01798.html#aa36a76be856fd22d5ab949c945d66dd1">Solution::validUtf8</a>(vector&lt;int&gt; &amp;data) {</div>
+<div class="line"><a id="l04463" name="l04463"></a><span class="lineno"> 4463</span>            vector&lt;int&gt; len;</div>
+<div class="line"><a id="l04464" name="l04464"></a><span class="lineno"> 4464</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> num: data) {</div>
+<div class="line"><a id="l04465" name="l04465"></a><span class="lineno"> 4465</span>                <span class="keywordflow">if</span>(num &gt;&gt; 7 == 0) {</div>
+<div class="line"><a id="l04466" name="l04466"></a><span class="lineno"> 4466</span>                    <span class="comment">//0xxxxxxx</span></div>
+<div class="line"><a id="l04467" name="l04467"></a><span class="lineno"> 4467</span>                    len.push_back(1);</div>
+<div class="line"><a id="l04468" name="l04468"></a><span class="lineno"> 4468</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(num &gt;&gt; 3 == 30) {</div>
+<div class="line"><a id="l04469" name="l04469"></a><span class="lineno"> 4469</span>                    <span class="comment">//11110xxx</span></div>
+<div class="line"><a id="l04470" name="l04470"></a><span class="lineno"> 4470</span>                    len.push_back(4);</div>
+<div class="line"><a id="l04471" name="l04471"></a><span class="lineno"> 4471</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(num &gt;&gt; 4 == 14) {</div>
+<div class="line"><a id="l04472" name="l04472"></a><span class="lineno"> 4472</span>                    <span class="comment">//1110xxxx</span></div>
+<div class="line"><a id="l04473" name="l04473"></a><span class="lineno"> 4473</span>                    len.push_back(3);</div>
+<div class="line"><a id="l04474" name="l04474"></a><span class="lineno"> 4474</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(num &gt;&gt; 5 == 6) {</div>
+<div class="line"><a id="l04475" name="l04475"></a><span class="lineno"> 4475</span>                    <span class="comment">//110xxxxx</span></div>
+<div class="line"><a id="l04476" name="l04476"></a><span class="lineno"> 4476</span>                    len.push_back(2);</div>
+<div class="line"><a id="l04477" name="l04477"></a><span class="lineno"> 4477</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(num &gt;&gt; 6 == 2) {</div>
+<div class="line"><a id="l04478" name="l04478"></a><span class="lineno"> 4478</span>                    <span class="comment">//10xxxxxx</span></div>
+<div class="line"><a id="l04479" name="l04479"></a><span class="lineno"> 4479</span>                    len.push_back(-1);</div>
+<div class="line"><a id="l04480" name="l04480"></a><span class="lineno"> 4480</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l04481" name="l04481"></a><span class="lineno"> 4481</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04482" name="l04482"></a><span class="lineno"> 4482</span>                }</div>
 <div class="line"><a id="l04483" name="l04483"></a><span class="lineno"> 4483</span>            }</div>
-<div class="line"><a id="l04484" name="l04484"></a><span class="lineno"> 4484</span>            <span class="keywordflow">return</span> count == 0;</div>
-<div class="line"><a id="l04485" name="l04485"></a><span class="lineno"> 4485</span>        }</div>
-<div class="line"><a id="l04486" name="l04486"></a><span class="lineno"> 4486</span>    }<span class="comment">// namespace utf_8_validation</span></div>
-<div class="line"><a id="l04487" name="l04487"></a><span class="lineno"> 4487</span>}<span class="comment">// namespace leetcode</span></div>
+<div class="line"><a id="l04484" name="l04484"></a><span class="lineno"> 4484</span>            <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l04485" name="l04485"></a><span class="lineno"> 4485</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; len.size(); i++) {</div>
+<div class="line"><a id="l04486" name="l04486"></a><span class="lineno"> 4486</span>                <span class="keywordflow">if</span>(count != 0) {</div>
+<div class="line"><a id="l04487" name="l04487"></a><span class="lineno"> 4487</span>                    <span class="keywordflow">if</span>(len[i] != -1) {</div>
+<div class="line"><a id="l04488" name="l04488"></a><span class="lineno"> 4488</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04489" name="l04489"></a><span class="lineno"> 4489</span>                    }</div>
+<div class="line"><a id="l04490" name="l04490"></a><span class="lineno"> 4490</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l04491" name="l04491"></a><span class="lineno"> 4491</span>                    count = len[i];</div>
+<div class="line"><a id="l04492" name="l04492"></a><span class="lineno"> 4492</span>                    <span class="keywordflow">if</span>(count == -1) {</div>
+<div class="line"><a id="l04493" name="l04493"></a><span class="lineno"> 4493</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04494" name="l04494"></a><span class="lineno"> 4494</span>                    }</div>
+<div class="line"><a id="l04495" name="l04495"></a><span class="lineno"> 4495</span>                }</div>
+<div class="line"><a id="l04496" name="l04496"></a><span class="lineno"> 4496</span>                count--;</div>
+<div class="line"><a id="l04497" name="l04497"></a><span class="lineno"> 4497</span>            }</div>
+<div class="line"><a id="l04498" name="l04498"></a><span class="lineno"> 4498</span>            <span class="keywordflow">return</span> count == 0;</div>
+<div class="line"><a id="l04499" name="l04499"></a><span class="lineno"> 4499</span>        }</div>
+<div class="line"><a id="l04500" name="l04500"></a><span class="lineno"> 4500</span>    }<span class="comment">// namespace utf_8_validation</span></div>
+<div class="line"><a id="l04501" name="l04501"></a><span class="lineno"> 4501</span>}<span class="comment">// namespace leetcode</span></div>
 <div class="ttc" id="aa00005_html"><div class="ttname"><a href="../../dd/dad/a00005.html">leetcode.h</a></div></div>
 <div class="ttc" id="aa00058_html_af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977"><div class="ttname"><a href="../../d7/df7/a00058.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">acwing::acwing1929::left</a></div><div class="ttdeci">@ left</div><div class="ttdoc">左</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00553">acwing.h:553</a></div></div>
 <div class="ttc" id="aa00058_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d7/df7/a00058.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00555">acwing.h:555</a></div></div>
@@ -4850,9 +4864,9 @@ $(function() {
 <div class="ttc" id="aa01782_html_af60959453ba69a411bd85ba353b2cda2"><div class="ttname"><a href="../../dd/dec/a01782.html#af60959453ba69a411bd85ba353b2cda2">leetcode::find_all_k_distant_indices_in_an_array::Solution::findKDistantIndices</a></div><div class="ttdeci">static vector&lt; int &gt; findKDistantIndices(vector&lt; int &gt; &amp;nums, int key, int k)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l04312">leetcode.cpp:4312</a></div></div>
 <div class="ttc" id="aa01786_html_aef4eb815260b961deb9493d4b3028b5e"><div class="ttname"><a href="../../db/d4b/a01786.html#aef4eb815260b961deb9493d4b3028b5e">leetcode::count_artifacts_that_can_be_extracted::Solution::digArtifacts</a></div><div class="ttdeci">static int digArtifacts(int n, vector&lt; vector&lt; int &gt; &gt; &amp;artifacts, vector&lt; vector&lt; int &gt; &gt; &amp;dig)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l04332">leetcode.cpp:4332</a></div></div>
 <div class="ttc" id="aa01790_html_a036ef8c0758bf66253cde0112c6c5935"><div class="ttname"><a href="../../d2/d20/a01790.html#a036ef8c0758bf66253cde0112c6c5935">leetcode::maximize_the_topmost_element_after_k_moves::Solution::maximumTop</a></div><div class="ttdeci">static int maximumTop(vector&lt; int &gt; &amp;nums, int k)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l04368">leetcode.cpp:4368</a></div></div>
-<div class="ttc" id="aa01794_html_a6d0b13d473a99c69485a95e6d2570eba"><div class="ttname"><a href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">leetcode::minimum_weighted_subgraph_with_the_required_paths::Solution::calc_dist</a></div><div class="ttdeci">static void calc_dist(int s, vector&lt; pair&lt; int, int &gt; &gt; *graph, vector&lt; long long int &gt; &amp;dist)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l04432">leetcode.cpp:4432</a></div></div>
+<div class="ttc" id="aa01794_html_a6d0b13d473a99c69485a95e6d2570eba"><div class="ttname"><a href="../../d5/dec/a01794.html#a6d0b13d473a99c69485a95e6d2570eba">leetcode::minimum_weighted_subgraph_with_the_required_paths::Solution::calc_dist</a></div><div class="ttdeci">static void calc_dist(int s, vector&lt; pair&lt; int, int &gt; &gt; *graph, vector&lt; long long int &gt; &amp;dist)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l04441">leetcode.cpp:4441</a></div></div>
 <div class="ttc" id="aa01794_html_ae55b2ff8e4ca1bbb54dfcb5086c55666"><div class="ttname"><a href="../../d5/dec/a01794.html#ae55b2ff8e4ca1bbb54dfcb5086c55666">leetcode::minimum_weighted_subgraph_with_the_required_paths::Solution::minimumWeight</a></div><div class="ttdeci">static long long minimumWeight(int n, vector&lt; vector&lt; int &gt; &gt; &amp;edges, int src1, int src2, int dest)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l04402">leetcode.cpp:4402</a></div></div>
-<div class="ttc" id="aa01798_html_aa36a76be856fd22d5ab949c945d66dd1"><div class="ttname"><a href="../../d2/d86/a01798.html#aa36a76be856fd22d5ab949c945d66dd1">leetcode::utf_8_validation::Solution::validUtf8</a></div><div class="ttdeci">static bool validUtf8(vector&lt; int &gt; &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l04453">leetcode.cpp:4453</a></div></div>
+<div class="ttc" id="aa01798_html_aa36a76be856fd22d5ab949c945d66dd1"><div class="ttname"><a href="../../d2/d86/a01798.html#aa36a76be856fd22d5ab949c945d66dd1">leetcode::utf_8_validation::Solution::validUtf8</a></div><div class="ttdeci">static bool validUtf8(vector&lt; int &gt; &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l04462">leetcode.cpp:4462</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
