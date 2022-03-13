@@ -2201,14 +2201,14 @@ namespace leetcode {
 
 	namespace find_all_k_distant_indices_in_an_array {
 		TEST(find_all_k_distant_indices_in_an_array, case1) {
-			vector nums   = {3, 4, 9, 1, 3, 9, 5};
-			vector output = {1, 2, 3, 4, 5, 6};
+			vector nums         = {3, 4, 9, 1, 3, 9, 5};
+			const vector output = {1, 2, 3, 4, 5, 6};
 			ASSERT_EQ(output, Solution::findKDistantIndices(nums, 9, 1));
 		}
 
 		TEST(find_all_k_distant_indices_in_an_array, case2) {
-			vector nums   = {2, 2, 2, 2, 2};
-			vector output = {0, 1, 2, 3, 4};
+			vector nums         = {2, 2, 2, 2, 2};
+			const vector output = {0, 1, 2, 3, 4};
 			ASSERT_EQ(output, Solution::findKDistantIndices(nums, 2, 2));
 		}
 	}// namespace find_all_k_distant_indices_in_an_array

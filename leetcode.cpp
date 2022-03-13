@@ -4317,23 +4317,23 @@ namespace leetcode {
 					key_set.insert(i);
 				}
 			}
-			for(auto ks: key_set) {
+			for(const auto ks: key_set) {
 				for(int i = ks - k; i <= ks + k; i++) {
 					if(0 <= i && i < nums.size()) {
 						ans_set.insert(i);
 					}
 				}
 			}
-			return vector<int>(ans_set.begin(), ans_set.end());
+			return vector(ans_set.begin(), ans_set.end());
 		}
 	}// namespace find_all_k_distant_indices_in_an_array
 
 	namespace count_artifacts_that_can_be_extracted {
 		int Solution::digArtifacts(int n, vector<vector<int>> &artifacts, vector<vector<int>> &dig) {
-			bool **grid = new bool *[n];
+			auto *grid = new bool *[n];
 			for(int i = 0; i < n; i++) {
 				grid[i] = new bool[n];
-				memset(grid[i], false, n * sizeof(bool));
+				memset(grid[i], 0, n * sizeof(bool));
 			}
 			for(auto i: dig) {
 				grid[i[0]][i[1]] = true;
@@ -4365,7 +4365,7 @@ namespace leetcode {
 	}// namespace count_artifacts_that_can_be_extracted
 
 	namespace maximize_the_topmost_element_after_k_moves {
-		int maximize_the_topmost_element_after_k_moves::Solution::maximumTop(vector<int> &nums, int k) {
+		int Solution::maximumTop(vector<int> &nums, int k) {
 			if(nums.size() == 1 && k % 2 == 1) {
 				return -1;
 			}
@@ -4390,7 +4390,7 @@ namespace leetcode {
 				ans = nums[k];
 			}
 			int maximum = -1;
-			for(auto i = poped_elements.rbegin(); i != poped_elements.rend(); ++i) {
+			for(const auto i = poped_elements.rbegin(); i != poped_elements.rend();) {
 				maximum = *i;
 				break;
 			}
@@ -4400,7 +4400,12 @@ namespace leetcode {
 
 	namespace minimum_weighted_subgraph_with_the_required_paths {
 		long long Solution::minimumWeight(int n, vector<vector<int>> &edges, int src1, int src2, int dest) {
-			vector<pair<int, int>> graph[n], graph_rev[n];
+			auto *graph     = new vector<pair<int, int>>[n];
+			auto *graph_rev = new vector<pair<int, int>>[n];
+			for(int i = 0; i < n; i++) {
+				graph[i]     = vector<pair<int, int>>();
+				graph_rev[i] = vector<pair<int, int>>();
+			}
 			for(auto &edge: edges) {
 				auto from   = edge[0];
 				auto to     = edge[1];
@@ -4409,23 +4414,27 @@ namespace leetcode {
 				graph_rev[to].emplace_back(from, weight);
 			}
 
-			long long a = LONG_LONG_MAX;
-			vector<long long> dist_src1(n, LONG_LONG_MAX), dist_src2(n, LONG_LONG_MAX), dist_dest(n, LONG_LONG_MAX);
+			long long a = LLONG_MAX;
+			vector dist_src1(n, LLONG_MAX);
+			vector dist_src2(n, LLONG_MAX);
+			vector dist_dest(n, LLONG_MAX);
 
 			calc_dist(src1, graph, dist_src1);
 			calc_dist(src2, graph, dist_src2);
 			calc_dist(dest, graph_rev, dist_dest);
 
-			long long ans = LONG_LONG_MAX;
+			long long ans = LLONG_MAX;
 
 			for(int i = 0; i < n; ++i) {
-				if(dist_src1[i] != LONG_LONG_MAX && dist_src2[i] != LONG_LONG_MAX && dist_dest[i] != LONG_LONG_MAX) {
+				if(dist_src1[i] != LLONG_MAX && dist_src2[i] != LLONG_MAX && dist_dest[i] != LLONG_MAX) {
 					ans = min(ans, dist_src1[i] + dist_src2[i] + dist_dest[i]);
 				}
 			}
-			if(ans == LONG_LONG_MAX) {
+			if(ans == LLONG_MAX) {
 				ans = -1;
 			}
+			delete[] graph;
+			delete[] graph_rev;
 			return ans;
 		}
 
@@ -4452,16 +4461,21 @@ namespace leetcode {
 	namespace utf_8_validation {
 		bool Solution::validUtf8(vector<int> &data) {
 			vector<int> len;
-			for(auto num: data) {
-				if(num >> 7 == 0) {//0xxxxxxx
+			for(const auto num: data) {
+				if(num >> 7 == 0) {
+					//0xxxxxxx
 					len.push_back(1);
-				} else if(num >> 3 == 30) {//11110xxx
+				} else if(num >> 3 == 30) {
+					//11110xxx
 					len.push_back(4);
-				} else if(num >> 4 == 14) {//1110xxxx
+				} else if(num >> 4 == 14) {
+					//1110xxxx
 					len.push_back(3);
-				} else if(num >> 5 == 6) {//110xxxxx
+				} else if(num >> 5 == 6) {
+					//110xxxxx
 					len.push_back(2);
-				} else if(num >> 6 == 2) {//10xxxxxx
+				} else if(num >> 6 == 2) {
+					//10xxxxxx
 					len.push_back(-1);
 				} else {
 					return false;
