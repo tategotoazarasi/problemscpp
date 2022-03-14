@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['left_0',['left',['../d0/d39/a01138.html#a03bca16cb19c3e93d15266a039523d4e',1,'leetcode::TreeNode::left()'],['../d8/d11/a01178.html#a527dd1073e87fbd3a0406ac26e038996',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::left()'],['../dd/ddc/a01802.html#ac24be0ef8a477f2baac82561b3a906e0',1,'lintcode::TreeNode::left()']]],
-  ['left_5fmap_1',['left_map',['../d0/d35/a00526.html#ae0ed96db182459f5342f080095ad9723',1,'acwing::acwing1929::Solution']]],
-  ['limit_2',['limit',['../d3/da5/a01598.html#a1ec4ba2d7adf9af5984cc0a43f28e37d',1,'leetcode::count_good_triplets_in_an_array::FenwickTree']]]
+  ['left_0',['left',['../db/db2/a01143.html#a03bca16cb19c3e93d15266a039523d4e',1,'leetcode::TreeNode::left()'],['../dc/d2d/a01183.html#a527dd1073e87fbd3a0406ac26e038996',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::left()'],['../d2/d31/a01811.html#ac24be0ef8a477f2baac82561b3a906e0',1,'lintcode::TreeNode::left()']]],
+  ['left_5fmap_1',['left_map',['../d9/d44/a00527.html#ae0ed96db182459f5342f080095ad9723',1,'acwing::acwing1929::Solution']]],
+  ['limit_2',['limit',['../db/d51/a01603.html#a1ec4ba2d7adf9af5984cc0a43f28e37d',1,'leetcode::count_good_triplets_in_an_array::FenwickTree']]]
 ];
