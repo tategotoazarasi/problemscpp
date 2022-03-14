@@ -5355,4 +5355,19 @@ namespace acwing {
 		}
 		return 0;
 	}
+
+	int acwing3346::main(istream &cin, ostream &cout) {
+		vector<int> nums(7);
+		vector<int> abc(3);
+		for(int i = 0; i < 7; i++) {
+			cin >> nums[i];
+		}
+		sort(nums.begin(), nums.end());
+		abc[0] = nums[0];
+		abc[1] = nums[1];
+		abc[2] = nums[6] - abc[0] - abc[1];
+		sort(abc.begin(), abc.end());
+		cout << abc[0] << ' ' << abc[1] << ' ' << abc[2];
+		return 0;
+	}
 }// namespace acwing
