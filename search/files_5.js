@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['templates_2eh_0',['templates.h',['../db/db2/a00020.html',1,'']]],
-  ['templates_5ftest_2ecpp_1',['templates_test.cpp',['../d3/d52/a00023.html',1,'']]]
+  ['set_5fstack_5flimit_2ecpp_0',['set_stack_limit.cpp',['../d6/d2d/a00047.html',1,'']]]
 ];
