@@ -13,11 +13,21 @@ namespace pat {
 			TEST(b1001, case1) {
 				istringstream in("3");
 				auto out = ostringstream();
-				b1001::main(in, out);
+				main(in, out);
 				const auto ans = out.str();
 				ASSERT_EQ("5", ans);
 			}
 		}// namespace b1001
+
+		namespace b1002 {
+			TEST(b1002, case1) {
+				istringstream in("1234567890987654321123456789");
+				auto out = ostringstream();
+				pat::b::b1002::main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("yi san wu", ans);
+			}
+		}// namespace b1002
 	}    // namespace b
 
 	namespace a {

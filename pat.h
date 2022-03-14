@@ -17,6 +17,11 @@ namespace pat {
 		namespace b1001 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1002 写出这个数
+		namespace b1002 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
