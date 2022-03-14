@@ -4498,4 +4498,39 @@ namespace leetcode {
 			return count == 0;
 		}
 	}// namespace utf_8_validation
+
+	namespace minimum_index_sum_of_two_lists {
+		vector<string> Solution::findRestaurant(vector<string> &list1, vector<string> &list2) {
+			unordered_map<string, int> restaurants;
+			unordered_map<string, int> index1;
+			unordered_map<string, int> index2;
+			for(int i = 0; i < list1.size(); i++) {
+				restaurants[list1[i]]++;
+				index1[list1[i]] = i;
+			}
+			for(int i = 0; i < list2.size(); i++) {
+				restaurants[list2[i]]++;
+				index2[list2[i]] = i;
+			}
+			unordered_set<string> optional_restaurants;
+			for(auto [restaurant, count]: restaurants) {
+				if(count > 1) {
+					optional_restaurants.insert(restaurant);
+				}
+			}
+			int min_index_sum = INT_MAX;
+			for(auto optional_restaurant: optional_restaurants) {
+				int index_sum = index1[optional_restaurant] + index2[optional_restaurant];
+				min_index_sum = min(min_index_sum, index_sum);
+			}
+			vector<string> ans;
+			for(auto optional_restaurant: optional_restaurants) {
+				int index_sum = index1[optional_restaurant] + index2[optional_restaurant];
+				if(index_sum == min_index_sum) {
+					ans.push_back(optional_restaurant);
+				}
+			}
+			return ans;
+		}
+	}// namespace minimum_index_sum_of_two_lists
 }// namespace leetcode

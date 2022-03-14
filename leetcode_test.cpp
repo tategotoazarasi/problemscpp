@@ -2277,4 +2277,20 @@ namespace leetcode {
 			ASSERT_FALSE(Solution::validUtf8(data));
 		}
 	}// namespace utf_8_validation
+
+	namespace minimum_index_sum_of_two_lists {
+		TEST(minimum_index_sum_of_two_lists, case1) {
+			vector<string> list1  = {"Shogun", "Tapioca Express", "Burger King", "KFC"};
+			vector<string> list2  = {"Piatti", "The Grill at Torrey Pines", "Hungry Hunter Steakhouse", "Shogun"};
+			vector<string> output = {"Shogun"};
+			ASSERT_EQ(output, Solution::findRestaurant(list1, list2));
+		}
+
+		TEST(minimum_index_sum_of_two_lists, case2) {
+			vector<string> list1  = {"Shogun", "Tapioca Express", "Burger King", "KFC"};
+			vector<string> list2  = {"KFC", "Shogun", "Burger King"};
+			vector<string> output = {"Shogun"};
+			ASSERT_EQ(output, Solution::findRestaurant(list1, list2));
+		}
+	}// namespace minimum_index_sum_of_two_lists
 }// namespace leetcode

@@ -1702,6 +1702,14 @@ namespace leetcode {
 			static bool validUtf8(vector<int> &data);
 		};
 	}// namespace utf_8_validation
+
+	/// \brief LeetCode 599. Minimum Index Sum of Two Lists
+	namespace minimum_index_sum_of_two_lists {
+		class Solution {
+		public:
+			static vector<string> findRestaurant(vector<string> &list1, vector<string> &list2);
+		};
+	}// namespace minimum_index_sum_of_two_lists
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
