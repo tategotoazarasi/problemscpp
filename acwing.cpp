@@ -5370,4 +5370,25 @@ namespace acwing {
 		cout << abc[0] << ' ' << abc[1] << ' ' << abc[2];
 		return 0;
 	}
+
+	namespace acwing3358 {
+		int main(istream &cin, ostream &cout) {
+			int char_pos[26] = {};
+			char ch;
+			for(int i = 0; i < 26; i++) {
+				cin >> ch;
+				char_pos[ch - 'a'] = i;
+			}
+			int ans     = 1;
+			int current = -1;
+			while(cin >> ch) {
+				if(char_pos[ch - 'a'] <= current) {
+					ans++;
+				}
+				current = char_pos[ch - 'a'];
+			}
+			cout << ans;
+			return 0;
+		}
+	};// namespace acwing3358
 }// namespace acwing

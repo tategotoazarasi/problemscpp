@@ -2507,4 +2507,15 @@ namespace acwing {
 		const auto ans = out.str();
 		ASSERT_EQ("2 2 7", ans);
 	}
+
+	namespace acwing3358 {
+		TEST(acwing3358, case1) {
+			istringstream in("abcdefghijklmnopqrstuvwxyz\n"
+			                 "mood");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3", ans);
+		}
+	}// namespace acwing3358
 }// namespace acwing
