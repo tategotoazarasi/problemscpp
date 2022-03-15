@@ -22,6 +22,11 @@ namespace pat {
 		namespace b1002 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1003 我要通过！
+		namespace b1003 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

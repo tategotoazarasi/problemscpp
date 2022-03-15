@@ -81,6 +81,67 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1002
+
+		namespace b1003 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				for(int _ = 0; _ < n; _++) {
+					string str;
+					cin >> str;
+					int p      = -1;
+					int t      = -1;
+					int pref_a = 0;
+					int mid_a  = 0;
+					int suf_a  = 0;
+					for(int i = 0; i < str.length(); i++) {
+						char ch = str[i];
+						switch(ch) {
+							case 'P':
+								if(p != -1 || t != -1) {
+									goto NO;
+								}
+								p = i;
+								break;
+							case 'A':
+								if(p == -1 && t == -1) {
+									pref_a++;
+								} else if(p != -1 && t == -1) {
+									mid_a++;
+								} else if(p != -1 && t != -1) {
+									suf_a++;
+								} else {
+									goto NO;
+								}
+								break;
+							case 'T':
+								if(p == -1 || t != -1) {
+									goto NO;
+								}
+								t = i;
+								break;
+							default:
+								goto NO;
+								break;
+						}
+					}
+					if(p == -1 || t == -1) {
+						goto NO;
+					}
+					if(mid_a < 1) {
+						goto NO;
+					}
+					if(suf_a != mid_a * pref_a) {
+						goto NO;
+					}
+					cout << "YES" << endl;
+					continue;
+				NO:
+					cout << "NO" << endl;
+				}
+				return 0;
+			}
+		}// namespace b1003
 	}    // namespace b
 
 	namespace a {
