@@ -4533,4 +4533,27 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace minimum_index_sum_of_two_lists
+
+	namespace count_number_of_maximum_bitwise_or_subsets {
+		int Solution::countMaxOrSubsets(vector<int> &nums) {
+			int max = 0;
+			for(auto num: nums) {
+				max |= num;
+			}
+			return dfs(0, max, nums);
+		}
+
+		int Solution::dfs(int current, int target, vector<int> nums) {
+			if((current | target) == current) {
+				return 1 << nums.size();
+			}
+			int sum         = 0;
+			vector nums_cpy = nums;
+			for(int i = 0; i < nums.size(); i++) {
+				nums_cpy.erase(nums_cpy.begin());
+				sum += dfs(current | nums[i], target, nums_cpy);
+			}
+			return sum;
+		}
+	}// namespace count_number_of_maximum_bitwise_or_subsets
 }// namespace leetcode

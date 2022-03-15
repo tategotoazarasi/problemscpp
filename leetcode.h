@@ -1710,6 +1710,15 @@ namespace leetcode {
 			static vector<string> findRestaurant(vector<string> &list1, vector<string> &list2);
 		};
 	}// namespace minimum_index_sum_of_two_lists
+
+	/// \brief LeetCode 2044. Count Number of Maximum Bitwise-OR Subsets
+	namespace count_number_of_maximum_bitwise_or_subsets {
+		class Solution {
+		public:
+			static int countMaxOrSubsets(vector<int> &nums);
+			static int dfs(int current, int target, vector<int> nums);
+		};
+	}// namespace count_number_of_maximum_bitwise_or_subsets
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

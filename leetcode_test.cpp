@@ -278,32 +278,6 @@ namespace leetcode {
 		}
 	}// namespace destroying_asteroids
 
-	/*namespace maximum_employees_to_be_invited_to_a_meeting {
-		TEST(maximum_employees_to_be_invited_to_a_meeting, case1) {
-			int input[] = { 2, 2, 1, 2 };
-			auto vec = vector<int>(begin(input), end(input));
-			ASSERT_EQ(3, Solution::maximumInvitations(vec));
-		}
-
-		TEST(maximum_employees_to_be_invited_to_a_meeting, case2) {
-			int input[] = { 1, 2, 0 };
-			auto vec = vector<int>(begin(input), end(input));
-			ASSERT_EQ(3, Solution::maximumInvitations(vec));
-		}
-
-		TEST(maximum_employees_to_be_invited_to_a_meeting, case3) {
-			int input[] = { 1, 2, 0 };
-			auto vec = vector<int>(begin(input), end(input));
-			ASSERT_EQ(3, Solution::maximumInvitations(vec));
-		}
-
-		TEST(maximum_employees_to_be_invited_to_a_meeting, case4) {
-			int input[] = { 1, 0, 0, 2, 1, 4, 7, 8, 9, 6, 7, 10, 8 };
-			auto vec = vector<int>(begin(input), end(input));
-			ASSERT_EQ(6, Solution::maximumInvitations(vec));
-		}
-	}*/
-
 	namespace day_of_the_week {
 		TEST(day_of_the_week, case1) {
 			ASSERT_EQ("Saturday", Solution::dayOfTheWeek(31, 8, 2019));
@@ -2293,4 +2267,21 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::findRestaurant(list1, list2));
 		}
 	}// namespace minimum_index_sum_of_two_lists
+
+	namespace count_number_of_maximum_bitwise_or_subsets {
+		TEST(count_number_of_maximum_bitwise_or_subsets, case1) {
+			vector nums = {3, 1};
+			ASSERT_EQ(2, Solution::countMaxOrSubsets(nums));
+		}
+
+		TEST(count_number_of_maximum_bitwise_or_subsets, case2) {
+			vector nums = {2, 2, 2};
+			ASSERT_EQ(7, Solution::countMaxOrSubsets(nums));
+		}
+
+		TEST(count_number_of_maximum_bitwise_or_subsets, case3) {
+			vector nums = {3, 2, 1, 5};
+			ASSERT_EQ(6, Solution::countMaxOrSubsets(nums));
+		}
+	}// namespace count_number_of_maximum_bitwise_or_subsets
 }// namespace leetcode
