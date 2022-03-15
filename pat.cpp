@@ -3,9 +3,11 @@
 //
 
 #include "pat.h"
-#include <bit>
+#include <algorithm>
 #include <iostream>
 #include <sstream>
+#include <tuple>
+#include <vector>
 
 using namespace std;
 
@@ -142,6 +144,31 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1003
+
+		namespace b1004 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				vector<tuple<string, string, unsigned short>> vec(n);
+				for(int i = 0; i < n; i++) {
+					string name;
+					string id;
+					int grade;
+					cin >> name >> id >> grade;
+					vec[i] = make_tuple(name, id, grade);
+				}
+				sort(vec.begin(), vec.end(), [](const tuple<string, string, unsigned short> &a, const tuple<string, string, unsigned short> &b) -> bool {
+					auto &[a_name, a_id, a_grade] = a;
+					auto &[b_name, b_id, b_grade] = b;
+					return a_grade < b_grade;
+				});
+				auto [highest_name, highest_id, highest_grade] = vec.back();
+				auto [lowest_name, lowest_id, lowest_grade]    = vec.front();
+				cout << highest_name << ' ' << highest_id << endl
+				     << lowest_name << ' ' << lowest_id;
+				return 0;
+			}
+		}// namespace b1004
 	}    // namespace b
 
 	namespace a {

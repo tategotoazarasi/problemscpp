@@ -27,6 +27,11 @@ namespace pat {
 		namespace b1003 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1004 成绩排名
+		namespace b1004 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

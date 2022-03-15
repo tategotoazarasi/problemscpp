@@ -58,6 +58,21 @@ namespace pat {
 				          ans);
 			}
 		}// namespace b1003
+
+		namespace b1004 {
+			TEST(b1004, case1) {
+				istringstream in("3\n"
+				                 "Joe Math990112 89\n"
+				                 "Mike CS991301 100\n"
+				                 "Mary EE990830 95");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Mike CS991301\n"
+				          "Joe Math990112",
+				          ans);
+			}
+		}// namespace b1004
 	}    // namespace b
 
 	namespace a {
