@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['infected_0',['infected',['../d4/d12/a00910.html#ac81cea14ef48e4527c4ad2e960c61983',1,'acwing::acwing1660::cow']]],
-  ['is_5fend_1',['is_end',['../d3/dc7/a01170.html#a141233e2e5064b034f34ee364ab573ba',1,'leetcode::concatenated_words::TrieNode']]]
+  ['infected_0',['infected',['../d3/dd1/a00914.html#ac81cea14ef48e4527c4ad2e960c61983',1,'acwing::acwing1660::cow']]],
+  ['is_5fend_1',['is_end',['../da/dfb/a01174.html#a141233e2e5064b034f34ee364ab573ba',1,'leetcode::concatenated_words::TrieNode']]]
 ];
