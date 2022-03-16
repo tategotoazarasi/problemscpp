@@ -1719,6 +1719,30 @@ namespace leetcode {
 			static int dfs(int current, int target, vector<int> nums);
 		};
 	}// namespace count_number_of_maximum_bitwise_or_subsets
+
+	/// \brief LeetCode 432. All O`one Data Structure
+	namespace all_oone_data_structure {
+		class AllOne {
+			int max = 0;
+			int min = 50000;
+			unordered_map<string, int> str_count;
+			map<int, unordered_set<string>> count_str;
+
+		public:
+			/// \brief Initializes the object of the data structure.
+			AllOne(): str_count(unordered_map<string, int>()), count_str(map<int, unordered_set<string>>()){};
+			/// \brief Increments the count of the string key by 1. If key does not exist in the data structure, insert it with count 1.
+			void inc(string key);
+			/// \brief Decrements the count of the string key by 1. If the count of key is 0 after the decrement, remove it from the data structure. It is guaranteed that key exists in the data structure before the decrement.
+			void dec(string key);
+			/// \brief Returns one of the keys with the maximal count.
+			/// \return One of the keys with the maximal count. If no element exists, return an empty string "".
+			string getMaxKey();
+			/// \brief Returns one of the keys with the minimum count.
+			/// \return One of the keys with the minimum count. If no element exists, return an empty string "".
+			string getMinKey();
+		};
+	}// namespace all_oone_data_structure
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

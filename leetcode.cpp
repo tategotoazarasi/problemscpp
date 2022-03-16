@@ -4556,4 +4556,57 @@ namespace leetcode {
 			return sum;
 		}
 	}// namespace count_number_of_maximum_bitwise_or_subsets
+
+	namespace all_oone_data_structure {
+		void AllOne::inc(string key) {
+			int prev = str_count[key]++;
+			count_str[prev].erase(key);
+			count_str[prev + 1].insert(key);
+			if(count_str[prev].empty()) {
+				count_str.erase(prev);
+			}
+			if(!count_str.empty()) {
+				min = count_str.begin()->first;
+				max = count_str.rbegin()->first;
+			} else {
+				min = 50000;
+				max = 0;
+			}
+		}
+
+		void AllOne::dec(string key) {
+			int prev = str_count[key]--;
+			if(str_count[key] == 0) {
+				str_count.erase(key);
+			}
+			count_str[prev].erase(key);
+			if(count_str[prev].empty()) {
+				count_str.erase(prev);
+			}
+			if(prev != 1) {
+				count_str[prev - 1].insert(key);
+			}
+			if(!count_str.empty()) {
+				min = count_str.begin()->first;
+				max = count_str.rbegin()->first;
+			} else {
+				min = 50000;
+				max = 0;
+			}
+		}
+
+		string AllOne::getMaxKey() {
+			if(str_count.empty()) {
+				return "";
+			}
+			return *count_str[max].begin();
+		}
+
+		string AllOne::getMinKey() {
+			if(str_count.empty()) {
+				return "";
+			}
+			return *count_str[min].begin();
+		}
+	}// namespace all_oone_data_structure
 }// namespace leetcode

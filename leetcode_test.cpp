@@ -2284,4 +2284,22 @@ namespace leetcode {
 			ASSERT_EQ(6, Solution::countMaxOrSubsets(nums));
 		}
 	}// namespace count_number_of_maximum_bitwise_or_subsets
+
+	namespace all_oone_data_structure {
+		TEST(all_oone_data_structure, case1) {
+			AllOne ao;
+			ao.inc("a");
+			ao.inc("b");
+			ao.inc("b");
+			ao.inc("c");
+			ao.inc("c");
+			ao.inc("c");
+			ao.dec("b");
+			ao.dec("b");
+			ao.getMinKey();
+			ao.dec("a");
+			ao.getMaxKey();
+			ao.getMinKey();
+		}
+	}// namespace all_oone_data_structure
 }// namespace leetcode
