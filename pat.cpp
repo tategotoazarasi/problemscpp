@@ -5,6 +5,7 @@
 #include "pat.h"
 #include <algorithm>
 #include <iostream>
+#include <map>
 #include <sstream>
 #include <tuple>
 #include <vector>
@@ -169,6 +170,48 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1004
+
+		namespace b1005 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				unordered_map<int, int> in(n);
+				for(int i = 0; i < n; i++) {
+					int num;
+					cin >> num;
+					in[num] = 0;
+				}
+				for(auto [num, deg]: in) {
+					int cpy = num;
+					if(deg == 0) {
+						while(cpy != 1) {
+							if(cpy % 2 == 0) {
+								cpy /= 2;
+							} else {
+								cpy = (cpy * 3 + 1) / 2;
+							}
+							if(in.count(cpy) > 0) {
+								in[cpy]++;
+							}
+						}
+					}
+				}
+				vector<int> ans;
+				for(auto [num, deg]: in) {
+					if(deg == 0) {
+						ans.push_back(num);
+					}
+				}
+				sort(ans.rbegin(), ans.rend());
+				for(int i = 0; i < ans.size(); i++) {
+					cout << ans[i];
+					if(i != ans.size() - 1) {
+						cout << ' ';
+					}
+				}
+				return 0;
+			}
+		}// namespace b1005
 	}    // namespace b
 
 	namespace a {

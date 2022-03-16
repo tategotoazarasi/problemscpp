@@ -73,6 +73,17 @@ namespace pat {
 				          ans);
 			}
 		}// namespace b1004
+
+		namespace b1005 {
+			TEST(b1005, case1) {
+				istringstream in("6\n"
+				                 "3 5 6 7 8 11");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("7 6", ans);
+			}
+		}// namespace b1005
 	}    // namespace b
 
 	namespace a {

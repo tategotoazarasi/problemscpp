@@ -32,6 +32,11 @@ namespace pat {
 		namespace b1004 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1005 继续(3n+1)猜想
+		namespace b1005 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
