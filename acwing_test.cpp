@@ -2518,4 +2518,36 @@ namespace acwing {
 			ASSERT_EQ("3", ans);
 		}
 	}// namespace acwing3358
+
+	namespace acwing3370 {
+		TEST(acwing3370, case1) {
+			istringstream in("4\n"
+			                 "Mildred born in previous Dragon year from Bessie\n"
+			                 "Gretta born in previous Monkey year from Mildred\n"
+			                 "Elsie born in next Ox year from Gretta\n"
+			                 "Paulina born in next Dog year from Bessie");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("12", ans);
+		}
+
+		TEST(acwing3370, case2) {
+			istringstream in("10\n"
+			                 "Aa born in previous Dog year from Bessie\n"
+			                 "Ab born in next Monkey year from Aa\n"
+			                 "Ac born in previous Dog year from Bessie\n"
+			                 "Ad born in next Monkey year from Ab\n"
+			                 "Ae born in next Rat year from Ad\n"
+			                 "Af born in next Goat year from Bessie\n"
+			                 "Ag born in next Rat year from Ab\n"
+			                 "Ah born in next Dog year from Ag\n"
+			                 "Elsie born in previous Rabbit year from Ah\n"
+			                 "Aj born in previous Monkey year from Ag");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("14", ans);
+		}
+	}// namespace acwing3370
 }// namespace acwing

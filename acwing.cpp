@@ -5391,4 +5391,95 @@ namespace acwing {
 			return 0;
 		}
 	};// namespace acwing3358
+
+	namespace acwing3370 {
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			unordered_map<string, int> zodiacs;
+			unordered_map<string, cow *> cows;
+			zodiacs["Ox"]      = 0;
+			zodiacs["Tiger"]   = 1;
+			zodiacs["Rabbit"]  = 2;
+			zodiacs["Dragon"]  = 3;
+			zodiacs["Snake"]   = 4;
+			zodiacs["Horse"]   = 5;
+			zodiacs["Goat"]    = 6;
+			zodiacs["Monkey"]  = 7;
+			zodiacs["Rooster"] = 8;
+			zodiacs["Dog"]     = 9;
+			zodiacs["Pig"]     = 10;
+			zodiacs["Rat"]     = 11;
+			cows["Bessie"]     = new cow("Bessie", 0, zodiacs["Ox"]);
+			for(int i = 0; i < n; i++) {
+				string str;
+				string name1;
+				string name2;
+				int zodiac;
+				bool previous;
+				cin >> name1 >> str >> str >> str;
+				previous = str == "previous";
+				cin >> str;
+				zodiac = zodiacs[str];
+				cin >> str >> str >> name2;
+				cow *cow1;
+				cow *cow2;
+				if(cows.count(name1) == 0) {
+					cow1        = new cow(name1, -1, zodiac);
+					cows[name1] = cow1;
+				} else {
+					cow1         = cows[name1];
+					cow1->zodiac = zodiac;
+				}
+				if(cows.count(name2) == 0) {
+					cow2        = new cow(name2, -1, -1);
+					cows[name2] = cow2;
+				} else {
+					cow2 = cows[name2];
+				}
+				if(previous) {
+					cow2->previous.push_back(cow1);
+					cow1->next.push_back(cow2);
+				} else {
+					cow2->next.push_back(cow1);
+					cow1->previous.push_back(cow2);
+				}
+			}
+			cout << abs(dfs(cows["Bessie"]));
+			return 0;
+		}
+
+		int dfs(cow *c) {
+			if(c->name == "Elsie") {
+				return c->val;
+			}
+			for(auto prev: c->previous) {
+				if(prev->val == -1) {
+					if(c->zodiac == prev->zodiac) {
+						prev->val = c->val - 12;
+					} else {
+						prev->val = c->val - ((c->zodiac + 12 - prev->zodiac) % 12);
+					}
+					int ret = dfs(prev);
+					if(ret != -1) {
+						return ret;
+					}
+				}
+			}
+			for(auto nxt: c->next) {
+				if(nxt->val == -1) {
+					if(c->zodiac == nxt->zodiac) {
+						nxt->val = c->val + 12;
+					} else {
+						nxt->val = c->val + ((nxt->zodiac + 12 - c->zodiac) % 12);
+					}
+					int ret = dfs(nxt);
+					if(ret != -1) {
+						return ret;
+					}
+				}
+			}
+			return -1;
+		}
+	}// namespace acwing3370
 }// namespace acwing

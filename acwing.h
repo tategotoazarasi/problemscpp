@@ -1764,5 +1764,19 @@ namespace acwing {
 	namespace acwing3358 {
 		int main(istream &cin, ostream &cout);
 	};
+
+	/// \brief AcWing 3370. 牛年
+	namespace acwing3370 {
+		struct cow {
+			string name;
+			int val;
+			int zodiac;
+			vector<cow *> previous;
+			vector<cow *> next;
+			cow(string name, int val, int zodiac): name(name), val(val), zodiac(zodiac), previous(vector<cow *>()), next(vector<cow *>()) {}
+		};
+		int main(istream &cin, ostream &cout);
+		int dfs(cow *c);
+	}// namespace acwing3370
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
