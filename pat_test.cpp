@@ -84,6 +84,24 @@ namespace pat {
 				ASSERT_EQ("7 6", ans);
 			}
 		}// namespace b1005
+
+		namespace b1006 {
+			TEST(b1006, case1) {
+				istringstream in("234");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("BBSSS1234", ans);
+			}
+
+			TEST(b1006, case2) {
+				istringstream in("23");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("SS123", ans);
+			}
+		}// namespace b1006
 	}    // namespace b
 
 	namespace a {

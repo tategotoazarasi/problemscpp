@@ -212,6 +212,27 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1005
+
+		namespace b1006 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				int b = n / 100;
+				for(int i = 0; i < b; i++) {
+					cout << 'B';
+				}
+				n %= 100;
+				int s = n / 10;
+				for(int i = 0; i < s; i++) {
+					cout << 'S';
+				}
+				n %= 10;
+				for(int i = 1; i <= n; i++) {
+					cout << i;
+				}
+				return 0;
+			}
+		}// namespace b1006
 	}    // namespace b
 
 	namespace a {

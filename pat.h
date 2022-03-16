@@ -37,6 +37,11 @@ namespace pat {
 		namespace b1005 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1006 换个格式输出整数
+		namespace b1006 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
