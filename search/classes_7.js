@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['msg_0',['msg',['../d0/dc7/a01402.html',1,'leetcode::maximum_good_people_based_on_statements']]],
-  ['myqueue_1',['MyQueue',['../d3/ddc/a01142.html',1,'acwing::acwing20']]]
+  ['msg_0',['msg',['../d8/d01/a01410.html',1,'leetcode::maximum_good_people_based_on_statements']]],
+  ['myqueue_1',['MyQueue',['../de/d07/a01146.html',1,'acwing::acwing20']]]
 ];
