@@ -5482,4 +5482,45 @@ namespace acwing {
 			return -1;
 		}
 	}// namespace acwing3370
+
+	namespace acwing3745 {
+		int main(istream &cin, ostream &cout) {
+			int n, l;
+			cin >> n >> l;
+			vector<int> c(n);
+			unordered_map<int, int> count;
+			for(int i = 0; i < n; i++) {
+				cin >> c[i];
+				count[c[i]]++;
+			}
+			sort(c.rbegin(), c.rend());
+			if(*c.begin() == 0) {
+				if(l != 0) {
+					*c.begin() = 1;
+					l--;
+				} else {
+					cout << 0;
+					return 0;
+				}
+			}
+			int h = 0;
+			while(h < n && c[h] >= h + 1) {
+				h++;
+			}
+			if(l == 0) {
+				cout << h;
+				return 0;
+			}
+			int k = 0;
+			for(int i = h - 1; i >= 0 && c[i] == h; i--) {
+				k++;
+			}
+			if(l >= k + 1 && c[h] == h) {
+				cout << h + 1;
+			} else {
+				cout << h;
+			}
+			return 0;
+		}
+	}// namespace acwing3745
 }// namespace acwing

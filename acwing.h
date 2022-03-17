@@ -1778,5 +1778,10 @@ namespace acwing {
 		int main(istream &cin, ostream &cout);
 		int dfs(cow *c);
 	}// namespace acwing3370
+
+	/// \brief AcWing 3745. 牛的学术圈 I
+	namespace acwing3745 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

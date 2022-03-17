@@ -2550,4 +2550,83 @@ namespace acwing {
 			ASSERT_EQ("14", ans);
 		}
 	}// namespace acwing3370
+
+	namespace acwing3745 {
+		TEST(acwing3745, case1) {
+			istringstream in("4 0\n"
+			                 "1 100 2 3");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2", ans);
+		}
+
+		TEST(acwing3745, case2) {
+			istringstream in("4 1\n"
+			                 "1 100 2 3");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3", ans);
+		}
+
+		TEST(acwing3745, case3) {
+			istringstream in("1 1\n"
+			                 "0");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1", ans);
+		}
+
+		TEST(acwing3745, case4) {
+			istringstream in("10 9\n"
+			                 "9 9 10 9 9 9 9 9 9 9");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("10", ans);
+		}
+
+		TEST(acwing3745, case5) {
+			istringstream in("2 1\n"
+			                 "1 1");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1", ans);
+		}
+
+		TEST(acwing3745, case6) {
+			ostringstream oss;
+			oss << 1000 << ' ' << 1000 << endl;
+			for(int i = 0; i < 999; i++) {
+				oss << 999 << ' ';
+			}
+			oss << 998;
+			istringstream in(oss.str());
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("999", ans);
+		}
+
+		TEST(acwing3745, case7) {
+			istringstream in("10 10\n"
+			                 "0 0 0 0 0 0 0 0 0 0");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1", ans);
+		}
+
+		TEST(acwing3745, case8) {
+			istringstream in("100 11\n"
+			                 "50 54 50 50 50 50 50 50 50 54 50 50 50 50 51 52 54 50 50 50 50 50 50 54 52 50 52 50 50 53 52 50 51 50 50 50 50 50 51 50 52 50 50 53 50 54 50 50 50 54 53 54 50 53 50 50 54 50 50 52 51 50 52 50 51 51 50 50 53 52 52 50 50 50 50 50 50 50 53 51 50 50 50 53 50 50 54 53 50 51 50 53 52 51 50 50 53 50 51 54");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("51", ans);
+		}
+	}// namespace acwing3745
 }// namespace acwing
