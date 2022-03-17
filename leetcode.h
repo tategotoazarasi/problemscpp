@@ -1,6 +1,7 @@
 #ifndef PROBLEMSCPP_LEETCODE_H
 #define PROBLEMSCPP_LEETCODE_H
 
+#include "templates.h"
 #include <array>
 #include <functional>
 #include <map>
@@ -1743,6 +1744,15 @@ namespace leetcode {
 			string getMinKey();
 		};
 	}// namespace all_oone_data_structure
+
+	/// \brief LeetCode 720. Longest Word in Dictionary
+	namespace longest_word_in_dictionary {
+		class Solution {
+		public:
+			static string longestWord(vector<string> &words);
+			static string dfs(string str, TrieNode *node);
+		};
+	}// namespace longest_word_in_dictionary
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -1,4 +1,5 @@
 #include "leetcode.h"
+#include "templates.h"
 #include <algorithm>
 #include <bit>
 #include <climits>
@@ -4609,4 +4610,27 @@ namespace leetcode {
 			return *count_str[min].begin();
 		}
 	}// namespace all_oone_data_structure
+
+	namespace longest_word_in_dictionary {
+		string Solution::longestWord(vector<string> &words) {
+			TrieNode root = TrieNode('0');
+			for(auto word: words) {
+				root.insert(word);
+			}
+			return dfs("", &root);
+		}
+
+		string Solution::dfs(string str, TrieNode *node) {
+			string ans = str;
+			for(auto next: node->nexts) {
+				if(next != nullptr && next->end_of_word) {
+					string ret = dfs(str + next->ch, next);
+					if(ans.length() < ret.length()) {
+						ans = ret;
+					}
+				}
+			}
+			return ans;
+		}
+	}// namespace longest_word_in_dictionary
 }// namespace leetcode

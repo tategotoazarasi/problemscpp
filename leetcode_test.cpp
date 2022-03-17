@@ -2302,4 +2302,18 @@ namespace leetcode {
 			ao.getMinKey();
 		}
 	}// namespace all_oone_data_structure
+
+	namespace longest_word_in_dictionary {
+		TEST(longest_word_in_dictionary, case1) {
+			vector<string> words = {"w", "wo", "wor", "worl", "world"};
+			string output        = "world";
+			ASSERT_EQ(output, Solution::longestWord(words));
+		}
+
+		TEST(longest_word_in_dictionary, case2) {
+			vector<string> words = {"a", "banana", "app", "appl", "ap", "apply", "apple"};
+			string output        = "apple";
+			ASSERT_EQ(output, Solution::longestWord(words));
+		}
+	}// namespace longest_word_in_dictionary
 }// namespace leetcode
