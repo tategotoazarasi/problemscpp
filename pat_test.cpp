@@ -112,6 +112,17 @@ namespace pat {
 				ASSERT_EQ("4", ans);
 			}
 		}// namespace b1007
+
+		namespace b1008 {
+			TEST(b1008, case1) {
+				istringstream in("6 2\n"
+				                 "1 2 3 4 5 6");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("5 6 1 2 3 4", ans);
+			}
+		}// namespace b1008
 	}    // namespace b
 
 	namespace a {

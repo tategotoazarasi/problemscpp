@@ -257,6 +257,24 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1007
+
+		namespace b1008 {
+			int main(istream &cin, ostream &cout) {
+				int n, m;
+				cin >> n >> m;
+				vector<int> vec(n);
+				for(int i = 0; i < n; i++) {
+					cin >> vec[(i + m) % n];
+				}
+				for(int i = 0; i < n; i++) {
+					cout << vec[i];
+					if(i != n - 1) {
+						cout << ' ';
+					}
+				}
+				return 0;
+			}
+		}// namespace b1008
 	}    // namespace b
 
 	namespace a {

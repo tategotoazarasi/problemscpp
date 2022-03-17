@@ -47,6 +47,11 @@ namespace pat {
 		namespace b1007 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1008 数组元素循环右移问题
+		namespace b1008 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
