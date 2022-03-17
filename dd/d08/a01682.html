@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::maximum_difference_between_increasing_elements::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,74 +63,18 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d1/dc1/a00092.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d1/d72/a00204.html">maximum_difference_between_increasing_elements</a></li><li class="navelem"><a class="el" href="../../dd/d08/a01682.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d9/df8/a00096.html">leetcode</a></li><li class="navelem"><a class="el" href="../../de/dd2/a00207.html">complex_number_multiplication</a></li><li class="navelem"><a class="el" href="../../de/d96/a01685.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="../../d2/d34/a01679.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::maximum_difference_between_increasing_elements::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::complex_number_multiplication::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a95eb9755493f927a298942386759d98d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d08/a01682.html#a95eb9755493f927a298942386759d98d">maximumDifference</a> (vector&lt; int &gt; &amp;nums)</td></tr>
-<tr class="separator:a95eb9755493f927a298942386759d98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01336">1336</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="a95eb9755493f927a298942386759d98d" name="a95eb9755493f927a298942386759d98d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95eb9755493f927a298942386759d98d">&#9670;&nbsp;</a></span>maximumDifference()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int leetcode::maximum_difference_between_increasing_elements::Solution::maximumDifference </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>nums</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l03541">3541</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03541" name="l03541"></a><span class="lineno"> 3541</span>                                                         {</div>
-<div class="line"><a id="l03542" name="l03542"></a><span class="lineno"> 3542</span>            <span class="keywordtype">int</span> minn     = nums[0];</div>
-<div class="line"><a id="l03543" name="l03543"></a><span class="lineno"> 3543</span>            <span class="keywordtype">int</span> max_diff = -1;</div>
-<div class="line"><a id="l03544" name="l03544"></a><span class="lineno"> 3544</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; nums.size(); i++) {</div>
-<div class="line"><a id="l03545" name="l03545"></a><span class="lineno"> 3545</span>                <span class="keywordflow">if</span>(nums[i] &gt; minn) {</div>
-<div class="line"><a id="l03546" name="l03546"></a><span class="lineno"> 3546</span>                    max_diff = max(max_diff, nums[i] - minn);</div>
-<div class="line"><a id="l03547" name="l03547"></a><span class="lineno"> 3547</span>                }</div>
-<div class="line"><a id="l03548" name="l03548"></a><span class="lineno"> 3548</span>                minn = min(minn, nums[i]);</div>
-<div class="line"><a id="l03549" name="l03549"></a><span class="lineno"> 3549</span>            }</div>
-<div class="line"><a id="l03550" name="l03550"></a><span class="lineno"> 3550</span>            <span class="keywordflow">return</span> max_diff;</div>
-<div class="line"><a id="l03551" name="l03551"></a><span class="lineno"> 3551</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../dd/d32/a00041_source.html#l01800">leetcode::maximum_difference_between_increasing_elements::TEST()</a>.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a></li>
-<li><a class="el" href="../../d3/d52/a00023_source.html">leetcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="../../de/d96/a01685.html">leetcode::complex_number_multiplication::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../de/d96/a01685.html#add6d0ad5901391250e5831ab5db507b5">complexNumberMultiply</a>(const string &amp;num1, const string &amp;num2)</td><td class="entry"><a class="el" href="../../de/d96/a01685.html">leetcode::complex_number_multiplication::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2

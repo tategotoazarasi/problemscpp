@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: templates_test.cpp 源文件</title>
+<title>problemscpp: templates.h 源文件</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,22 +63,30 @@ $(function() {
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">templates_test.cpp</div></div>
+  <div class="headertitle"><div class="title">templates.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d5/d16/a00029.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*#include &quot;gtest/gtest.h&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">#include&quot;templates.h&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"></span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">TEST(UnionFind,case1) {</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">    auto hash = [](const int &amp;val) {</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">        return size_t(val);</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">    };</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">    auto equal = [](const int&amp;a,const int&amp;b) {</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">        return a == b;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">    };</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">    function&lt;size_t(const int &amp;val)&gt; h = hash;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">    UnionFind&lt;int,h,equal&gt; uf;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">}*/</span></div>
+<a href="../../d5/d16/a00029.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../d2/d0a/a02321.html">    8</a></span><span class="keyword">struct </span><a class="code hl_struct" href="../../d2/d0a/a02321.html">TrieNode</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../d2/d0a/a02321.html#a056d2c88a2e128b05422c9d834d7f8dd">    9</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="../../d2/d0a/a02321.html#a056d2c88a2e128b05422c9d834d7f8dd">ch</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d2/d0a/a02321.html#a07d53b17d0b024afcbabb556c9964bbd">   10</a></span>    array&lt;TrieNode *, 26&gt; <a class="code hl_variable" href="../../d2/d0a/a02321.html#a07d53b17d0b024afcbabb556c9964bbd">nexts</a> = {};</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d2/d0a/a02321.html#af666fb8105ecd041463c44670146b1a9">   11</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../d2/d0a/a02321.html#af666fb8105ecd041463c44670146b1a9">end_of_word</a>            = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d2/d0a/a02321.html#ab03b8f092ac717a32f1d4c8f3e6e2057">   12</a></span>    <a class="code hl_function" href="../../d2/d0a/a02321.html#ab03b8f092ac717a32f1d4c8f3e6e2057">TrieNode</a>(<span class="keywordtype">char</span> <a class="code hl_variable" href="../../d2/d0a/a02321.html#a056d2c88a2e128b05422c9d834d7f8dd">ch</a>): <a class="code hl_variable" href="../../d2/d0a/a02321.html#a056d2c88a2e128b05422c9d834d7f8dd">ch</a>(<a class="code hl_variable" href="../../d2/d0a/a02321.html#a056d2c88a2e128b05422c9d834d7f8dd">ch</a>) {}</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d0a/a02321.html#a9845dc41b755ffd1e9c7e2acc08893f2">insert</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;str);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_function" href="../../d2/d0a/a02321.html#a2c338a9960c601bbe654668cbe4f18a5">~TrieNode</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
+<div class="ttc" id="aa02321_html"><div class="ttname"><a href="../../d2/d0a/a02321.html">TrieNode</a></div><div class="ttdoc">字典树节点</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00008">templates.h:8</a></div></div>
+<div class="ttc" id="aa02321_html_a056d2c88a2e128b05422c9d834d7f8dd"><div class="ttname"><a href="../../d2/d0a/a02321.html#a056d2c88a2e128b05422c9d834d7f8dd">TrieNode::ch</a></div><div class="ttdeci">char ch</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00009">templates.h:9</a></div></div>
+<div class="ttc" id="aa02321_html_a07d53b17d0b024afcbabb556c9964bbd"><div class="ttname"><a href="../../d2/d0a/a02321.html#a07d53b17d0b024afcbabb556c9964bbd">TrieNode::nexts</a></div><div class="ttdeci">array&lt; TrieNode *, 26 &gt; nexts</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00010">templates.h:10</a></div></div>
+<div class="ttc" id="aa02321_html_a2c338a9960c601bbe654668cbe4f18a5"><div class="ttname"><a href="../../d2/d0a/a02321.html#a2c338a9960c601bbe654668cbe4f18a5">TrieNode::~TrieNode</a></div><div class="ttdeci">~TrieNode()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dee/a00008_source.html#l00017">templates.cpp:17</a></div></div>
+<div class="ttc" id="aa02321_html_a9845dc41b755ffd1e9c7e2acc08893f2"><div class="ttname"><a href="../../d2/d0a/a02321.html#a9845dc41b755ffd1e9c7e2acc08893f2">TrieNode::insert</a></div><div class="ttdeci">void insert(const string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dee/a00008_source.html#l00006">templates.cpp:6</a></div></div>
+<div class="ttc" id="aa02321_html_ab03b8f092ac717a32f1d4c8f3e6e2057"><div class="ttname"><a href="../../d2/d0a/a02321.html#ab03b8f092ac717a32f1d4c8f3e6e2057">TrieNode::TrieNode</a></div><div class="ttdeci">TrieNode(char ch)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00012">templates.h:12</a></div></div>
+<div class="ttc" id="aa02321_html_af666fb8105ecd041463c44670146b1a9"><div class="ttname"><a href="../../d2/d0a/a02321.html#af666fb8105ecd041463c44670146b1a9">TrieNode::end_of_word</a></div><div class="ttdeci">bool end_of_word</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00011">templates.h:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
