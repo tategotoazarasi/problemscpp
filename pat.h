@@ -42,6 +42,11 @@ namespace pat {
 		namespace b1006 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1007 素数对猜想
+		namespace b1007 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

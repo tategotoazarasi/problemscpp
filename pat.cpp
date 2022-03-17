@@ -4,6 +4,7 @@
 
 #include "pat.h"
 #include <algorithm>
+#include <cstring>
 #include <iostream>
 #include <map>
 #include <sstream>
@@ -233,6 +234,29 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1006
+
+		namespace b1007 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				bool *is_prime = new bool[n + 1];
+				memset(is_prime, true, (n + 1) * sizeof(bool));
+				for(int i = 2; i <= n / 2; i++) {
+					for(int j = 2; i * j <= n; j++) {
+						is_prime[i * j] = false;
+					}
+				}
+				int ans = 0;
+				for(int i = 2; i + 2 <= n; i++) {
+					if(is_prime[i] && is_prime[i + 2]) {
+						ans++;
+					}
+				}
+				cout << ans;
+				delete[] is_prime;
+				return 0;
+			}
+		}// namespace b1007
 	}    // namespace b
 
 	namespace a {
