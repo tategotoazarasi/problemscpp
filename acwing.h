@@ -1783,5 +1783,10 @@ namespace acwing {
 	namespace acwing3745 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief AcWing 1459. 奶牛体操
+	namespace acwing1459 {
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing1459
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

@@ -5523,4 +5523,35 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3745
+
+	namespace acwing1459 {
+		int main(istream &cin, ostream &cout) {
+			int k, n;
+			cin >> k >> n;
+			auto hash = [](const pair<int, int> p) -> int {
+				return p.first * 20 + p.second;
+			};
+			unordered_set<pair<int, int>, decltype(hash)> pairs;
+			for(int i = 1; i <= n; i++) {
+				for(int j = 1; j <= n; j++) {
+					if(i != j) {
+						pairs.insert(make_pair(i, j));
+					}
+				}
+			}
+			for(int i = 0; i < k; i++) {
+				vector<int> vec(n);
+				for(int j = 0; j < n; j++) {
+					cin >> vec[j];
+				}
+				for(int j = 0; j + 1 < n; j++) {
+					for(int l = j + 1; l < n; l++) {
+						pairs.erase(make_pair(vec[j], vec[l]));
+					}
+				}
+			}
+			cout << pairs.size();
+			return 0;
+		}
+	}// namespace acwing1459
 }// namespace acwing

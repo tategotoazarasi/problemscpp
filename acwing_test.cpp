@@ -2629,4 +2629,17 @@ namespace acwing {
 			ASSERT_EQ("51", ans);
 		}
 	}// namespace acwing3745
+
+	namespace acwing1459 {
+		TEST(acwing1459, case1) {
+			istringstream in("3 4\n"
+			                 "4 1 2 3\n"
+			                 "4 1 3 2\n"
+			                 "4 2 1 3");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("4", ans);
+		}
+	}// namespace acwing1459
 }// namespace acwing
