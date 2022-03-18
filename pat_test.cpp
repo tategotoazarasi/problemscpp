@@ -133,6 +133,16 @@ namespace pat {
 				ASSERT_EQ("Come I Here World Hello", ans);
 			}
 		}// namespace b1009
+
+		namespace b1010 {
+			TEST(b1010, case1) {
+				istringstream in("3 4 -5 2 6 1 -2 0");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("12 3 -10 1 6 0", ans);
+			}
+		}// namespace b1010
 	}    // namespace b
 
 	namespace a {

@@ -57,6 +57,11 @@ namespace pat {
 		namespace b1009 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1010 一元多项式求导
+		namespace b1010 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

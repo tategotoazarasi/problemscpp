@@ -290,6 +290,31 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1009
+
+		namespace b1010 {
+			int main(istream &cin, ostream &cout) {
+				int num;
+				vector<int> vec;
+				ostringstream oss;
+				while(cin >> num) {
+					vec.push_back(num);
+				}
+				for(int i = 0; i + 1 < vec.size(); i += 2) {
+					int a = vec[i] * vec[i + 1];
+					int b = vec[i + 1] - 1;
+					if(vec[i + 1] != 0) {
+						oss << a << ' ' << b << ' ';
+					}
+				}
+				if(vec.size() == 2 && vec[1] == 0) {
+					oss << "0 0 ";
+				}
+				string ans = oss.str();
+				ans        = ans.substr(0, ans.length() - 1);
+				cout << ans;
+				return 0;
+			}
+		}// namespace b1010
 	}    // namespace b
 
 	namespace a {
