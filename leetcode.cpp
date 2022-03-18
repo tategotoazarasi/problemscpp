@@ -4633,4 +4633,41 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace longest_word_in_dictionary
+
+	namespace simple_bank_system {
+		Bank::Bank(vector<long long int> &balance) {
+			accounts = unordered_map<int, long long>(balance.size());
+			for(int i = 0; i < balance.size(); i++) {
+				accounts[i + 1] = balance[i];
+			}
+		}
+		bool Bank::transfer(int account1, int account2, long long int money) {
+			if(accounts.count(account1) == 0 || accounts.count(account2) == 0) {
+				return false;
+			}
+			if(accounts[account1] < money) {
+				return false;
+			}
+			accounts[account1] -= money;
+			accounts[account2] += money;
+			return true;
+		}
+		bool Bank::deposit(int account, long long int money) {
+			if(accounts.count(account) == 0) {
+				return false;
+			}
+			accounts[account] += money;
+			return true;
+		}
+		bool Bank::withdraw(int account, long long int money) {
+			if(accounts.count(account) == 0) {
+				return false;
+			}
+			if(accounts[account] < money) {
+				return false;
+			}
+			accounts[account] -= money;
+			return true;
+		}
+	}// namespace simple_bank_system
 }// namespace leetcode

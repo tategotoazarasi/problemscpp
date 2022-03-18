@@ -1753,6 +1753,26 @@ namespace leetcode {
 			static string dfs(string str, TrieNode *node);
 		};
 	}// namespace longest_word_in_dictionary
+
+	/// \brief LeetCode 2043. Simple Bank System
+	namespace simple_bank_system {
+		class Bank {
+			unordered_map<int, long long> accounts;
+
+		public:
+			/// \brief Initializes the object with the 0-indexed integer array balance.
+			Bank(vector<long long> &balance);
+			/// \brief Transfers money dollars from the account numbered account1 to the account numbered account2.
+			/// \return True if the transaction was successful, false otherwise.
+			bool transfer(int account1, int account2, long long money);
+			/// \brief Deposit money dollars into the account numbered account.
+			/// \return True if the transaction was successful, false otherwise.
+			bool deposit(int account, long long money);
+			/// \brief Withdraw money dollars from the account numbered account.
+			/// \return True if the transaction was successful, false otherwise.
+			bool withdraw(int account, long long money);
+		};
+	}// namespace simple_bank_system
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
