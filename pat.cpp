@@ -275,6 +275,21 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1008
+
+		namespace b1009 {
+			int main(istream &cin, ostream &cout) {
+				string str;
+				vector<string> strs;
+				while(cin >> str) {
+					strs.push_back(str);
+				}
+				for(int i = strs.size() - 1; i > 0; i--) {
+					cout << strs[i] << ' ';
+				}
+				cout << strs[0];
+				return 0;
+			}
+		}// namespace b1009
 	}    // namespace b
 
 	namespace a {

@@ -52,6 +52,11 @@ namespace pat {
 		namespace b1008 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1009 说反话
+		namespace b1009 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
