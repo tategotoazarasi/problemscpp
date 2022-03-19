@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['b_0',['b',['../d5/d5f/a00461.html#a567a53696628ec73eb65cabd484946a3',1,'acwing::acwing1978::path::b()'],['../dd/dc1/a00721.html#a7c26d176f2224e6ba3633990af031358',1,'acwing::acwing4217::b()'],['../d4/dd7/a00793.html#adbe67de05abc4c41c2a1f0da190a1219',1,'acwing::acwing4298::b()']]],
-  ['back_1',['back',['../dd/dc1/a00721.html#a9f75fcdc8bb6d3c92ad13531a572f3fc',1,'acwing::acwing4217']]],
-  ['bank_2',['Bank',['../d6/d56/a01861.html#adc82b80228206a6e6bbfee8f3d2d8235',1,'leetcode::simple_bank_system::Bank::Bank()'],['../d6/d56/a01861.html',1,'leetcode::simple_bank_system::Bank']]],
-  ['bestrotation_3',['bestRotation',['../d6/d53/a01789.html#a68a2af5d7a221517c76ed92fa5fd819c',1,'leetcode::smallest_rotation_with_highest_score::Solution']]],
+  ['b_0',['b',['../db/de0/a00465.html#a567a53696628ec73eb65cabd484946a3',1,'acwing::acwing1978::path::b()'],['../d8/db9/a00725.html#a7c26d176f2224e6ba3633990af031358',1,'acwing::acwing4217::b()'],['../da/db8/a00797.html#adbe67de05abc4c41c2a1f0da190a1219',1,'acwing::acwing4298::b()']]],
+  ['back_1',['back',['../d8/db9/a00725.html#a9f75fcdc8bb6d3c92ad13531a572f3fc',1,'acwing::acwing4217']]],
+  ['bank_2',['Bank',['../d5/da8/a01865.html#adc82b80228206a6e6bbfee8f3d2d8235',1,'leetcode::simple_bank_system::Bank::Bank()'],['../d5/da8/a01865.html',1,'leetcode::simple_bank_system::Bank']]],
+  ['bestrotation_3',['bestRotation',['../d4/dc6/a01793.html#a68a2af5d7a221517c76ed92fa5fd819c',1,'leetcode::smallest_rotation_with_highest_score::Solution']]],
   ['bfs_4',['bfs',['../dc/ddf/a00067.html#aebbe246b1823b0e047716abf2ebc661e',1,'acwing::acwing2019']]],
-  ['bitset_5',['Bitset',['../df/d3f/a01537.html#a5007777079d091302c1e7f94a5466f67',1,'leetcode::design_bitset::Bitset::Bitset()'],['../df/d3f/a01537.html',1,'leetcode::design_bitset::Bitset']]]
+  ['bitset_5',['Bitset',['../d5/dc8/a01541.html#a5007777079d091302c1e7f94a5466f67',1,'leetcode::design_bitset::Bitset::Bitset()'],['../d5/dc8/a01541.html',1,'leetcode::design_bitset::Bitset']]]
 ];
