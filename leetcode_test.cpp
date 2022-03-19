@@ -2254,16 +2254,16 @@ namespace leetcode {
 
 	namespace minimum_index_sum_of_two_lists {
 		TEST(minimum_index_sum_of_two_lists, case1) {
-			vector<string> list1  = {"Shogun", "Tapioca Express", "Burger King", "KFC"};
-			vector<string> list2  = {"Piatti", "The Grill at Torrey Pines", "Hungry Hunter Steakhouse", "Shogun"};
-			vector<string> output = {"Shogun"};
+			vector<string> list1        = {"Shogun", "Tapioca Express", "Burger King", "KFC"};
+			vector<string> list2        = {"Piatti", "The Grill at Torrey Pines", "Hungry Hunter Steakhouse", "Shogun"};
+			const vector<string> output = {"Shogun"};
 			ASSERT_EQ(output, Solution::findRestaurant(list1, list2));
 		}
 
 		TEST(minimum_index_sum_of_two_lists, case2) {
-			vector<string> list1  = {"Shogun", "Tapioca Express", "Burger King", "KFC"};
-			vector<string> list2  = {"KFC", "Shogun", "Burger King"};
-			vector<string> output = {"Shogun"};
+			vector<string> list1        = {"Shogun", "Tapioca Express", "Burger King", "KFC"};
+			vector<string> list2        = {"KFC", "Shogun", "Burger King"};
+			const vector<string> output = {"Shogun"};
 			ASSERT_EQ(output, Solution::findRestaurant(list1, list2));
 		}
 	}// namespace minimum_index_sum_of_two_lists
@@ -2306,13 +2306,13 @@ namespace leetcode {
 	namespace longest_word_in_dictionary {
 		TEST(longest_word_in_dictionary, case1) {
 			vector<string> words = {"w", "wo", "wor", "worl", "world"};
-			string output        = "world";
+			const string output  = "world";
 			ASSERT_EQ(output, Solution::longestWord(words));
 		}
 
 		TEST(longest_word_in_dictionary, case2) {
 			vector<string> words = {"a", "banana", "app", "appl", "ap", "apply", "apple"};
-			string output        = "apple";
+			const string output  = "apple";
 			ASSERT_EQ(output, Solution::longestWord(words));
 		}
 	}// namespace longest_word_in_dictionary

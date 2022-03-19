@@ -1,7 +1,3 @@
-//
-// Created by tategotoazarasi on 2022/3/14.
-//
-
 #ifndef PROBLEMSCPP_PAT_H
 #define PROBLEMSCPP_PAT_H
 
@@ -75,14 +71,10 @@ namespace pat {
 	}// namespace b
 
 	/// \brief 甲级
-	namespace a {
-
-	}
+	namespace a {}
 
 	/// \brief 顶级
-	namespace top {
-
-	}
+	namespace top {}
 }// namespace pat
 
 #endif//PROBLEMSCPP_PAT_H

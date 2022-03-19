@@ -1,9 +1,5 @@
-//
-// Created by tategotoazarasi on 2022/3/14.
-//
 #include "pat.h"
 #include "gtest/gtest.h"
-#include <iostream>
 
 using namespace std;
 
@@ -181,11 +177,7 @@ namespace pat {
 		}// namespace b1012
 	}    // namespace b
 
-	namespace a {
+	namespace a {}
 
-	}
-
-	namespace top {
-
-	}
+	namespace top {}
 }// namespace pat

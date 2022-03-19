@@ -6,6 +6,7 @@
 #include <set>
 #include <unordered_map>
 #include <unordered_set>
+#include <utility>
 #include <vector>
 
 using namespace std;
@@ -1773,8 +1774,10 @@ namespace acwing {
 			int zodiac;
 			vector<cow *> previous;
 			vector<cow *> next;
-			cow(string name, int val, int zodiac): name(name), val(val), zodiac(zodiac), previous(vector<cow *>()), next(vector<cow *>()) {}
+
+			cow(string name, int val, int zodiac);
 		};
+
 		int main(istream &cin, ostream &cout);
 		int dfs(cow *c);
 	}// namespace acwing3370

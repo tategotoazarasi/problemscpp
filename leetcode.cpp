@@ -4520,12 +4520,12 @@ namespace leetcode {
 				}
 			}
 			int min_index_sum = INT_MAX;
-			for(auto optional_restaurant: optional_restaurants) {
+			for(const auto &optional_restaurant: optional_restaurants) {
 				int index_sum = index1[optional_restaurant] + index2[optional_restaurant];
 				min_index_sum = min(min_index_sum, index_sum);
 			}
 			vector<string> ans;
-			for(auto optional_restaurant: optional_restaurants) {
+			for(const auto &optional_restaurant: optional_restaurants) {
 				int index_sum = index1[optional_restaurant] + index2[optional_restaurant];
 				if(index_sum == min_index_sum) {
 					ans.push_back(optional_restaurant);
@@ -4538,7 +4538,7 @@ namespace leetcode {
 	namespace count_number_of_maximum_bitwise_or_subsets {
 		int Solution::countMaxOrSubsets(vector<int> &nums) {
 			int max = 0;
-			for(auto num: nums) {
+			for(const auto num: nums) {
 				max |= num;
 			}
 			return dfs(0, max, nums);
@@ -4559,8 +4559,13 @@ namespace leetcode {
 	}// namespace count_number_of_maximum_bitwise_or_subsets
 
 	namespace all_oone_data_structure {
-		void AllOne::inc(string key) {
-			int prev = str_count[key]++;
+		AllOne::AllOne() {
+			str_count = unordered_map<string, int>();
+			count_str = map<int, unordered_set<string>>();
+		}
+
+		void AllOne::inc(const string &key) {
+			const int prev = str_count[key]++;
 			count_str[prev].erase(key);
 			count_str[prev + 1].insert(key);
 			if(count_str[prev].empty()) {
@@ -4575,8 +4580,8 @@ namespace leetcode {
 			}
 		}
 
-		void AllOne::dec(string key) {
-			int prev = str_count[key]--;
+		void AllOne::dec(const string &key) {
+			const int prev = str_count[key]--;
 			if(str_count[key] == 0) {
 				str_count.erase(key);
 			}
@@ -4613,16 +4618,16 @@ namespace leetcode {
 
 	namespace longest_word_in_dictionary {
 		string Solution::longestWord(vector<string> &words) {
-			TrieNode root = TrieNode('0');
-			for(auto word: words) {
+			auto root = TrieNode('0');
+			for(const auto &word: words) {
 				root.insert(word);
 			}
 			return dfs("", &root);
 		}
 
-		string Solution::dfs(string str, TrieNode *node) {
+		string Solution::dfs(const string &str, TrieNode *node) {
 			string ans = str;
-			for(auto next: node->nexts) {
+			for(auto *next: node->nexts) {
 				if(next != nullptr && next->end_of_word) {
 					string ret = dfs(str + next->ch, next);
 					if(ans.length() < ret.length()) {
@@ -4641,8 +4646,9 @@ namespace leetcode {
 				accounts[i + 1] = balance[i];
 			}
 		}
+
 		bool Bank::transfer(int account1, int account2, long long int money) {
-			if(accounts.count(account1) == 0 || accounts.count(account2) == 0) {
+			if(!accounts.contains(account1) || !accounts.contains(account2)) {
 				return false;
 			}
 			if(accounts[account1] < money) {
@@ -4652,15 +4658,17 @@ namespace leetcode {
 			accounts[account2] += money;
 			return true;
 		}
+
 		bool Bank::deposit(int account, long long int money) {
-			if(accounts.count(account) == 0) {
+			if(!accounts.contains(account)) {
 				return false;
 			}
 			accounts[account] += money;
 			return true;
 		}
+
 		bool Bank::withdraw(int account, long long int money) {
-			if(accounts.count(account) == 0) {
+			if(!accounts.contains(account)) {
 				return false;
 			}
 			if(accounts[account] < money) {

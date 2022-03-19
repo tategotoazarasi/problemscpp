@@ -1,6 +1,3 @@
-//
-// Created by tategotoazarasi on 2022/3/17.
-//
 #include "templates.h"
 
 void TrieNode::insert(const string &str) {
@@ -15,9 +12,7 @@ void TrieNode::insert(const string &str) {
 }
 
 TrieNode::~TrieNode() {
-	for(auto next: this->nexts) {
-		if(next != nullptr) {
-			delete next;
-		}
+	for(const auto *next: this->nexts) {
+		delete next;
 	}
 }

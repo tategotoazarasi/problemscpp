@@ -1,15 +1,11 @@
-//
-// Created by tategotoazarasi on 2022/3/14.
-//
-
 #include "pat.h"
 #include <algorithm>
 #include <cstring>
 #include <iomanip>
-#include <iostream>
 #include <map>
 #include <sstream>
 #include <tuple>
+#include <unordered_map>
 #include <vector>
 
 using namespace std;
@@ -100,7 +96,7 @@ namespace pat {
 					int mid_a  = 0;
 					int suf_a  = 0;
 					for(int i = 0; i < str.length(); i++) {
-						char ch = str[i];
+						const char ch = str[i];
 						switch(ch) {
 							case 'P':
 								if(p != -1 || t != -1) {
@@ -125,9 +121,7 @@ namespace pat {
 								}
 								t = i;
 								break;
-							default:
-								goto NO;
-								break;
+							default: goto NO;
 						}
 					}
 					if(p == -1 || t == -1) {
@@ -161,8 +155,8 @@ namespace pat {
 					vec[i] = make_tuple(name, id, grade);
 				}
 				sort(vec.begin(), vec.end(), [](const tuple<string, string, unsigned short> &a, const tuple<string, string, unsigned short> &b) -> bool {
-					auto &[a_name, a_id, a_grade] = a;
-					auto &[b_name, b_id, b_grade] = b;
+					const auto &[a_name, a_id, a_grade] = a;
+					const auto &[b_name, b_id, b_grade] = b;
 					return a_grade < b_grade;
 				});
 				auto [highest_name, highest_id, highest_grade] = vec.back();
@@ -192,7 +186,7 @@ namespace pat {
 							} else {
 								cpy = (cpy * 3 + 1) / 2;
 							}
-							if(in.count(cpy) > 0) {
+							if(in.contains(cpy)) {
 								in[cpy]++;
 							}
 						}
@@ -219,12 +213,12 @@ namespace pat {
 			int main(istream &cin, ostream &cout) {
 				int n;
 				cin >> n;
-				int b = n / 100;
+				const int b = n / 100;
 				for(int i = 0; i < b; i++) {
 					cout << 'B';
 				}
 				n %= 100;
-				int s = n / 10;
+				const int s = n / 10;
 				for(int i = 0; i < s; i++) {
 					cout << 'S';
 				}
@@ -240,8 +234,8 @@ namespace pat {
 			int main(istream &cin, ostream &cout) {
 				int n;
 				cin >> n;
-				bool *is_prime = new bool[n + 1];
-				memset(is_prime, true, (n + 1) * sizeof(bool));
+				auto *is_prime = new bool[n + 1];
+				memset(is_prime, 1, (n + 1) * sizeof(bool));
 				for(int i = 2; i <= n / 2; i++) {
 					for(int j = 2; i * j <= n; j++) {
 						is_prime[i * j] = false;
@@ -261,7 +255,8 @@ namespace pat {
 
 		namespace b1008 {
 			int main(istream &cin, ostream &cout) {
-				int n, m;
+				int n;
+				int m;
 				cin >> n >> m;
 				vector<int> vec(n);
 				for(int i = 0; i < n; i++) {
@@ -301,8 +296,8 @@ namespace pat {
 					vec.push_back(num);
 				}
 				for(int i = 0; i + 1 < vec.size(); i += 2) {
-					int a = vec[i] * vec[i + 1];
-					int b = vec[i + 1] - 1;
+					const int a = vec[i] * vec[i + 1];
+					const int b = vec[i + 1] - 1;
 					if(vec[i + 1] != 0) {
 						oss << a << ' ' << b << ' ';
 					}
@@ -319,12 +314,14 @@ namespace pat {
 
 		namespace b1011 {
 			int main(istream &cin, ostream &cout) {
-				long long a, b, c;
+				long long a;
+				long long b;
+				long long c;
 				int n;
 				cin >> n;
 				for(int i = 1; i <= n; i++) {
 					cin >> a >> b >> c;
-					cout << "Case #" << i << ": " << ((a + b > c) ? "true" : "false") << endl;
+					cout << "Case #" << i << ": " << (a + b > c ? "true" : "false") << endl;
 				}
 				return 0;
 			}
@@ -345,7 +342,7 @@ namespace pat {
 				for(int i = 0; i < n; i++) {
 					int num;
 					cin >> num;
-					int remainder = num % 5;
+					const int remainder = num % 5;
 					switch(remainder) {
 						case 0:
 							if(num % 2 == 0) {
@@ -373,7 +370,7 @@ namespace pat {
 							break;
 					}
 				}
-				double a4 = static_cast<double>(a4_sum) / a4_count;
+				const double a4 = static_cast<double>(a4_sum) / a4_count;
 				if(a1 == 0) {
 					cout << 'N';
 				} else {
@@ -408,11 +405,7 @@ namespace pat {
 		}// namespace b1012
 	}    // namespace b
 
-	namespace a {
+	namespace a {}
 
-	}
-
-	namespace top {
-
-	}
+	namespace top {}
 }// namespace pat

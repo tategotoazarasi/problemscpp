@@ -5415,23 +5415,21 @@ namespace acwing {
 				string str;
 				string name1;
 				string name2;
-				int zodiac;
-				bool previous;
 				cin >> name1 >> str >> str >> str;
-				previous = str == "previous";
+				const bool previous = str == "previous";
 				cin >> str;
-				zodiac = zodiacs[str];
+				const int zodiac = zodiacs[str];
 				cin >> str >> str >> name2;
 				cow *cow1;
 				cow *cow2;
-				if(cows.count(name1) == 0) {
+				if(!cows.contains(name1)) {
 					cow1        = new cow(name1, -1, zodiac);
 					cows[name1] = cow1;
 				} else {
 					cow1         = cows[name1];
 					cow1->zodiac = zodiac;
 				}
-				if(cows.count(name2) == 0) {
+				if(!cows.contains(name2)) {
 					cow2        = new cow(name2, -1, -1);
 					cows[name2] = cow2;
 				} else {
@@ -5453,27 +5451,27 @@ namespace acwing {
 			if(c->name == "Elsie") {
 				return c->val;
 			}
-			for(auto prev: c->previous) {
+			for(auto *prev: c->previous) {
 				if(prev->val == -1) {
 					if(c->zodiac == prev->zodiac) {
 						prev->val = c->val - 12;
 					} else {
-						prev->val = c->val - ((c->zodiac + 12 - prev->zodiac) % 12);
+						prev->val = c->val - (c->zodiac + 12 - prev->zodiac) % 12;
 					}
-					int ret = dfs(prev);
+					const int ret = dfs(prev);
 					if(ret != -1) {
 						return ret;
 					}
 				}
 			}
-			for(auto nxt: c->next) {
+			for(auto *nxt: c->next) {
 				if(nxt->val == -1) {
 					if(c->zodiac == nxt->zodiac) {
 						nxt->val = c->val + 12;
 					} else {
-						nxt->val = c->val + ((nxt->zodiac + 12 - c->zodiac) % 12);
+						nxt->val = c->val + (nxt->zodiac + 12 - c->zodiac) % 12;
 					}
-					int ret = dfs(nxt);
+					const int ret = dfs(nxt);
 					if(ret != -1) {
 						return ret;
 					}
@@ -5481,11 +5479,20 @@ namespace acwing {
 			}
 			return -1;
 		}
+
+		cow::cow(string name, int val, int zodiac) {
+			this->name     = name;
+			this->val      = val;
+			this->zodiac   = zodiac;
+			this->previous = vector<cow *>();
+			this->next     = vector<cow *>();
+		}
 	}// namespace acwing3370
 
 	namespace acwing3745 {
 		int main(istream &cin, ostream &cout) {
-			int n, l;
+			int n;
+			int l;
 			cin >> n >> l;
 			vector<int> c(n);
 			unordered_map<int, int> count;
@@ -5526,11 +5533,10 @@ namespace acwing {
 
 	namespace acwing1459 {
 		int main(istream &cin, ostream &cout) {
-			int k, n;
+			int k;
+			int n;
 			cin >> k >> n;
-			auto hash = [](const pair<int, int> p) -> int {
-				return p.first * 20 + p.second;
-			};
+			auto hash = [](const pair<int, int> p) -> int { return p.first * 20 + p.second; };
 			unordered_set<pair<int, int>, decltype(hash)> pairs;
 			for(int i = 1; i <= n; i++) {
 				for(int j = 1; j <= n; j++) {
@@ -5557,7 +5563,8 @@ namespace acwing {
 
 	namespace acwing1442 {
 		int main(istream &cin, ostream &cout) {
-			int n, k;
+			int n;
+			int k;
 			cin >> n >> k;
 			vector<string> vec(n);
 			for(int i = 0; i < n; i++) {

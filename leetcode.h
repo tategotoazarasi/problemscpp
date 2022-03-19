@@ -1732,11 +1732,11 @@ namespace leetcode {
 
 		public:
 			/// \brief Initializes the object of the data structure.
-			AllOne(): str_count(unordered_map<string, int>()), count_str(map<int, unordered_set<string>>()){};
+			AllOne();
 			/// \brief Increments the count of the string key by 1. If key does not exist in the data structure, insert it with count 1.
-			void inc(string key);
+			void inc(const string &key);
 			/// \brief Decrements the count of the string key by 1. If the count of key is 0 after the decrement, remove it from the data structure. It is guaranteed that key exists in the data structure before the decrement.
-			void dec(string key);
+			void dec(const string &key);
 			/// \brief Returns one of the keys with the maximal count.
 			/// \return One of the keys with the maximal count. If no element exists, return an empty string "".
 			string getMaxKey();
@@ -1751,7 +1751,7 @@ namespace leetcode {
 		class Solution {
 		public:
 			static string longestWord(vector<string> &words);
-			static string dfs(string str, TrieNode *node);
+			static string dfs(const string &str, TrieNode *node);
 		};
 	}// namespace longest_word_in_dictionary
 
@@ -1762,7 +1762,7 @@ namespace leetcode {
 
 		public:
 			/// \brief Initializes the object with the 0-indexed integer array balance.
-			Bank(vector<long long> &balance);
+			explicit Bank(vector<long long> &balance);
 			/// \brief Transfers money dollars from the account numbered account1 to the account numbered account2.
 			/// \return True if the transaction was successful, false otherwise.
 			bool transfer(int account1, int account2, long long money);

@@ -9,7 +9,10 @@ struct TrieNode {
 	char ch;
 	array<TrieNode *, 26> nexts = {};
 	bool end_of_word            = false;
-	TrieNode(char ch): ch(ch) {}
+
+	explicit TrieNode(char ch)
+	    : ch(ch) {}
+
 	void insert(const string &str);
 	~TrieNode();
 };
