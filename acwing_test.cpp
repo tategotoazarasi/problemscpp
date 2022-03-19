@@ -2659,4 +2659,48 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing1442
+
+	namespace acwing4314 {
+		TEST(acwing4314, case1) {
+			istringstream in("6");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1", ans);
+		}
+
+		TEST(acwing4314, case2) {
+			istringstream in("10");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2", ans);
+		}
+	}// namespace acwing4314
+
+	namespace acwing4315 {
+		TEST(acwing4315, case1) {
+			istringstream in("2 8 4 4");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3 3 ", ans);
+		}
+
+		TEST(acwing4315, case2) {
+			istringstream in("1 3 5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("4 ", ans);
+		}
+
+		TEST(acwing4315, case3) {
+			istringstream in("2 3 2 3");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("0 1 ", ans);
+		}
+	}// namespace acwing4315
 }// namespace acwing

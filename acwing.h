@@ -1796,5 +1796,19 @@ namespace acwing {
 	namespace acwing1442 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/**
+	 * \brief AcWing 4314. 三元组
+	 */
+	namespace acwing4314 {
+		int main(istream &cin, ostream &cout);
+	}
+
+	/**
+	 * \brief AcWing 4315. 两个数列
+	 */
+	namespace acwing4315 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

@@ -5589,4 +5589,44 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1442
+
+	namespace acwing4314 {
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			int ans = 0;
+			for(int a = 1; a <= n; a++) {
+				for(int b = a; b <= n; b++) {
+					const int c = a ^ b ^ 0;
+					if(n >= c && c >= b && c < a + b) {
+						ans++;
+					}
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing4314
+
+	namespace acwing4315 {
+		int main(istream &cin, ostream &cout) {
+			long long n;
+			long long s;
+			cin >> n >> s;
+			vector<long long> a(n);
+			long long a_sum = 0;
+			for(int i = 0; i < n; i++) {
+				cin >> a[i];
+				a_sum += a[i];
+			}
+			for(int i = 0; i < n; i++) {
+				const long long low  = max(static_cast<long long>(1), s - (a_sum - a[i]));
+				const long long high = min(a[i], s - (n - 1));
+				if(low <= high) {
+					cout << a[i] - (high - low + 1) << ' ';
+				}
+			}
+			return 0;
+		}
+	}// namespace acwing4315
 }// namespace acwing
