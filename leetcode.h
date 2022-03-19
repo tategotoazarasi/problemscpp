@@ -7,6 +7,7 @@
 #include <map>
 #include <queue>
 #include <set>
+#include <sstream>
 #include <string>
 #include <unordered_set>
 #include <utility>
@@ -1773,6 +1774,26 @@ namespace leetcode {
 			bool withdraw(int account, long long money);
 		};
 	}// namespace simple_bank_system
+
+	/// \brief LeetCode 606. Construct String from Binary Tree
+	namespace construct_string_from_binary_tree {
+		class Solution {
+		public:
+			static string tree2str(TreeNode *root) {
+				ostringstream oss;
+				oss << root->val;
+				if(root->left != nullptr) {
+					oss << '(' << tree2str(root->left) << ')';
+				} else if(root->right != nullptr) {
+					oss << "()";
+				}
+				if(root->right != nullptr) {
+					oss << '(' << tree2str(root->right) << ')';
+				}
+				return oss.str();
+			}
+		};
+	}// namespace construct_string_from_binary_tree
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

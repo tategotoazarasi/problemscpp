@@ -4670,4 +4670,10 @@ namespace leetcode {
 			return true;
 		}
 	}// namespace simple_bank_system
+
+	namespace construct_string_from_binary_tree {
+		string Solution::tree2str(TreeNode *root) {
+			return std::string();
+		}
+	}// namespace construct_string_from_binary_tree
 }// namespace leetcode
