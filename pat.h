@@ -67,6 +67,11 @@ namespace pat {
 		namespace b1011 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1012 数字分类
+		namespace b1012 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

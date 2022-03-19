@@ -5,6 +5,7 @@
 #include "pat.h"
 #include <algorithm>
 #include <cstring>
+#include <iomanip>
 #include <iostream>
 #include <map>
 #include <sstream>
@@ -328,6 +329,83 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1011
+
+		namespace b1012 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				int a1       = 0;
+				int a2       = 0;
+				bool a2_flag = true;
+				int a2_count = 0;
+				int a3       = 0;
+				int a4_sum   = 0;
+				int a4_count = 0;
+				int a5       = 0;
+				for(int i = 0; i < n; i++) {
+					int num;
+					cin >> num;
+					int remainder = num % 5;
+					switch(remainder) {
+						case 0:
+							if(num % 2 == 0) {
+								a1 += num;
+							}
+							break;
+						case 1:
+							if(a2_flag) {
+								a2 += num;
+							} else {
+								a2 -= num;
+							}
+							a2_flag = !a2_flag;
+							a2_count++;
+							break;
+						case 2:
+							a3++;
+							break;
+						case 3:
+							a4_sum += num;
+							a4_count++;
+							break;
+						case 4:
+							a5 = max(a5, num);
+							break;
+					}
+				}
+				double a4 = static_cast<double>(a4_sum) / a4_count;
+				if(a1 == 0) {
+					cout << 'N';
+				} else {
+					cout << a1;
+				}
+				cout << ' ';
+				if(a2_count == 0) {
+					cout << 'N';
+				} else {
+					cout << a2;
+				}
+				cout << ' ';
+				if(a3 == 0) {
+					cout << 'N';
+				} else {
+					cout << a3;
+				}
+				cout << ' ';
+				if(a4_count == 0) {
+					cout << 'N';
+				} else {
+					cout << fixed << setprecision(1) << a4;
+				}
+				cout << ' ';
+				if(a5 == 0) {
+					cout << 'N';
+				} else {
+					cout << a5;
+				}
+				return 0;
+			}
+		}// namespace b1012
 	}    // namespace b
 
 	namespace a {

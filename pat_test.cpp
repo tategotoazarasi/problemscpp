@@ -161,6 +161,24 @@ namespace pat {
 				          ans);
 			}
 		}// namespace b1011
+
+		namespace b1012 {
+			TEST(b1012, case1) {
+				istringstream in("13 1 2 3 4 5 6 7 8 9 10 20 16 18");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("30 11 2 9.7 9", ans);
+			}
+
+			TEST(b1012, case2) {
+				istringstream in("8 1 2 4 5 6 7 9 16");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("N 11 2 N 9", ans);
+			}
+		}// namespace b1012
 	}    // namespace b
 
 	namespace a {
