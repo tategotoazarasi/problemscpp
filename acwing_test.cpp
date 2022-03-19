@@ -2642,4 +2642,21 @@ namespace acwing {
 			ASSERT_EQ("4", ans);
 		}
 	}// namespace acwing1459
+
+	namespace acwing1442 {
+		TEST(acwing1442, case1) {
+			istringstream in("10 7\n"
+			                 "hello my name is Bessie and this is my essay");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("hello my\n"
+			          "name is\n"
+			          "Bessie\n"
+			          "and this\n"
+			          "is my\n"
+			          "essay",
+			          ans);
+		}
+	}// namespace acwing1442
 }// namespace acwing

@@ -5554,4 +5554,32 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1459
+
+	namespace acwing1442 {
+		int main(istream &cin, ostream &cout) {
+			int n, k;
+			cin >> n >> k;
+			vector<string> vec(n);
+			for(int i = 0; i < n; i++) {
+				cin >> vec[i];
+			}
+			ostringstream oss;
+			oss << vec[0];
+			int current = vec[0].length();
+			for(int i = 1; i < n; i++) {
+				if(current + vec[i].length() > k) {
+					cout << oss.str() << endl;
+					oss = ostringstream();
+					oss << vec[i];
+					current = vec[i].length();
+				} else {
+					oss << ' ';
+					oss << vec[i];
+					current += vec[i].length();
+				}
+			}
+			cout << oss.str();
+			return 0;
+		}
+	}// namespace acwing1442
 }// namespace acwing

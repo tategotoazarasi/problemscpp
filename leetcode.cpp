@@ -4673,7 +4673,17 @@ namespace leetcode {
 
 	namespace construct_string_from_binary_tree {
 		string Solution::tree2str(TreeNode *root) {
-			return std::string();
+			ostringstream oss;
+			oss << root->val;
+			if(root->left != nullptr) {
+				oss << '(' << tree2str(root->left) << ')';
+			} else if(root->right != nullptr) {
+				oss << "()";
+			}
+			if(root->right != nullptr) {
+				oss << '(' << tree2str(root->right) << ')';
+			}
+			return oss.str();
 		}
 	}// namespace construct_string_from_binary_tree
 }// namespace leetcode

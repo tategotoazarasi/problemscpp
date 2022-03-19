@@ -1788,5 +1788,10 @@ namespace acwing {
 	namespace acwing1459 {
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing1459
+
+	/// \brief AcWing 1442. 单词处理器
+	namespace acwing1442 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
