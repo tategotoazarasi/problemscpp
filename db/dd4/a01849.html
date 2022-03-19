@@ -139,12 +139,12 @@ $(function() {
 <div class="line"><a id="l04520" name="l04520"></a><span class="lineno"> 4520</span>                }</div>
 <div class="line"><a id="l04521" name="l04521"></a><span class="lineno"> 4521</span>            }</div>
 <div class="line"><a id="l04522" name="l04522"></a><span class="lineno"> 4522</span>            <span class="keywordtype">int</span> min_index_sum = INT_MAX;</div>
-<div class="line"><a id="l04523" name="l04523"></a><span class="lineno"> 4523</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> optional_restaurant: optional_restaurants) {</div>
+<div class="line"><a id="l04523" name="l04523"></a><span class="lineno"> 4523</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;optional_restaurant: optional_restaurants) {</div>
 <div class="line"><a id="l04524" name="l04524"></a><span class="lineno"> 4524</span>                <span class="keywordtype">int</span> index_sum = index1[optional_restaurant] + index2[optional_restaurant];</div>
 <div class="line"><a id="l04525" name="l04525"></a><span class="lineno"> 4525</span>                min_index_sum = min(min_index_sum, index_sum);</div>
 <div class="line"><a id="l04526" name="l04526"></a><span class="lineno"> 4526</span>            }</div>
 <div class="line"><a id="l04527" name="l04527"></a><span class="lineno"> 4527</span>            vector&lt;string&gt; ans;</div>
-<div class="line"><a id="l04528" name="l04528"></a><span class="lineno"> 4528</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> optional_restaurant: optional_restaurants) {</div>
+<div class="line"><a id="l04528" name="l04528"></a><span class="lineno"> 4528</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;optional_restaurant: optional_restaurants) {</div>
 <div class="line"><a id="l04529" name="l04529"></a><span class="lineno"> 4529</span>                <span class="keywordtype">int</span> index_sum = index1[optional_restaurant] + index2[optional_restaurant];</div>
 <div class="line"><a id="l04530" name="l04530"></a><span class="lineno"> 4530</span>                <span class="keywordflow">if</span>(index_sum == min_index_sum) {</div>
 <div class="line"><a id="l04531" name="l04531"></a><span class="lineno"> 4531</span>                    ans.push_back(optional_restaurant);</div>

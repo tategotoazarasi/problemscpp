@@ -106,6 +106,9 @@ Private 属性</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">leetcode::simple_bank_system::Bank::Bank </td>
@@ -115,17 +118,22 @@ Private 属性</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Initializes the object with the 0-indexed integer array balance. </p>
 
-<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l04638">4638</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04638" name="l04638"></a><span class="lineno"> 4638</span>                                                 {</div>
-<div class="line"><a id="l04639" name="l04639"></a><span class="lineno"> 4639</span>            <a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a> = unordered_map&lt;int, long long&gt;(balance.size());</div>
-<div class="line"><a id="l04640" name="l04640"></a><span class="lineno"> 4640</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; balance.size(); i++) {</div>
-<div class="line"><a id="l04641" name="l04641"></a><span class="lineno"> 4641</span>                <a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>[i + 1] = balance[i];</div>
-<div class="line"><a id="l04642" name="l04642"></a><span class="lineno"> 4642</span>            }</div>
-<div class="line"><a id="l04643" name="l04643"></a><span class="lineno"> 4643</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l04643">4643</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04643" name="l04643"></a><span class="lineno"> 4643</span>                                                 {</div>
+<div class="line"><a id="l04644" name="l04644"></a><span class="lineno"> 4644</span>            <a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a> = unordered_map&lt;int, long long&gt;(balance.size());</div>
+<div class="line"><a id="l04645" name="l04645"></a><span class="lineno"> 4645</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; balance.size(); i++) {</div>
+<div class="line"><a id="l04646" name="l04646"></a><span class="lineno"> 4646</span>                <a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>[i + 1] = balance[i];</div>
+<div class="line"><a id="l04647" name="l04647"></a><span class="lineno"> 4647</span>            }</div>
+<div class="line"><a id="l04648" name="l04648"></a><span class="lineno"> 4648</span>        }</div>
 <div class="ttc" id="aa01865_html_aeaefc4d52a57e3bc0101cc6b28e352a5"><div class="ttname"><a href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">leetcode::simple_bank_system::Bank::accounts</a></div><div class="ttdeci">unordered_map&lt; int, long long &gt; accounts</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l01761">leetcode.h:1761</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l01761">accounts</a>.</p>
@@ -162,14 +170,14 @@ Private 属性</h2></td></tr>
 <p>Deposit money dollars into the account numbered account. </p>
 <dl class="section return"><dt>返回</dt><dd>True if the transaction was successful, false otherwise. </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l04655">4655</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04655" name="l04655"></a><span class="lineno"> 4655</span>                                                           {</div>
-<div class="line"><a id="l04656" name="l04656"></a><span class="lineno"> 4656</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>.count(account) == 0) {</div>
-<div class="line"><a id="l04657" name="l04657"></a><span class="lineno"> 4657</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04658" name="l04658"></a><span class="lineno"> 4658</span>            }</div>
-<div class="line"><a id="l04659" name="l04659"></a><span class="lineno"> 4659</span>            <a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>[account] += money;</div>
-<div class="line"><a id="l04660" name="l04660"></a><span class="lineno"> 4660</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l04661" name="l04661"></a><span class="lineno"> 4661</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l04662">4662</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04662" name="l04662"></a><span class="lineno"> 4662</span>                                                           {</div>
+<div class="line"><a id="l04663" name="l04663"></a><span class="lineno"> 4663</span>            <span class="keywordflow">if</span>(!<a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>.contains(account)) {</div>
+<div class="line"><a id="l04664" name="l04664"></a><span class="lineno"> 4664</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04665" name="l04665"></a><span class="lineno"> 4665</span>            }</div>
+<div class="line"><a id="l04666" name="l04666"></a><span class="lineno"> 4666</span>            <a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>[account] += money;</div>
+<div class="line"><a id="l04667" name="l04667"></a><span class="lineno"> 4667</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l04668" name="l04668"></a><span class="lineno"> 4668</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l01761">accounts</a>.</p>
 
@@ -210,18 +218,18 @@ Private 属性</h2></td></tr>
 <p>Transfers money dollars from the account numbered account1 to the account numbered account2. </p>
 <dl class="section return"><dt>返回</dt><dd>True if the transaction was successful, false otherwise. </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l04644">4644</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04644" name="l04644"></a><span class="lineno"> 4644</span>                                                                           {</div>
-<div class="line"><a id="l04645" name="l04645"></a><span class="lineno"> 4645</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>.count(account1) == 0 || <a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>.count(account2) == 0) {</div>
-<div class="line"><a id="l04646" name="l04646"></a><span class="lineno"> 4646</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04647" name="l04647"></a><span class="lineno"> 4647</span>            }</div>
-<div class="line"><a id="l04648" name="l04648"></a><span class="lineno"> 4648</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>[account1] &lt; money) {</div>
-<div class="line"><a id="l04649" name="l04649"></a><span class="lineno"> 4649</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04650" name="l04650"></a><span class="lineno"> 4650</span>            }</div>
-<div class="line"><a id="l04651" name="l04651"></a><span class="lineno"> 4651</span>            <a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>[account1] -= money;</div>
-<div class="line"><a id="l04652" name="l04652"></a><span class="lineno"> 4652</span>            <a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>[account2] += money;</div>
-<div class="line"><a id="l04653" name="l04653"></a><span class="lineno"> 4653</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l04654" name="l04654"></a><span class="lineno"> 4654</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l04650">4650</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04650" name="l04650"></a><span class="lineno"> 4650</span>                                                                           {</div>
+<div class="line"><a id="l04651" name="l04651"></a><span class="lineno"> 4651</span>            <span class="keywordflow">if</span>(!<a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>.contains(account1) || !<a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>.contains(account2)) {</div>
+<div class="line"><a id="l04652" name="l04652"></a><span class="lineno"> 4652</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04653" name="l04653"></a><span class="lineno"> 4653</span>            }</div>
+<div class="line"><a id="l04654" name="l04654"></a><span class="lineno"> 4654</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>[account1] &lt; money) {</div>
+<div class="line"><a id="l04655" name="l04655"></a><span class="lineno"> 4655</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04656" name="l04656"></a><span class="lineno"> 4656</span>            }</div>
+<div class="line"><a id="l04657" name="l04657"></a><span class="lineno"> 4657</span>            <a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>[account1] -= money;</div>
+<div class="line"><a id="l04658" name="l04658"></a><span class="lineno"> 4658</span>            <a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>[account2] += money;</div>
+<div class="line"><a id="l04659" name="l04659"></a><span class="lineno"> 4659</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l04660" name="l04660"></a><span class="lineno"> 4660</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l01761">accounts</a>.</p>
 
@@ -256,17 +264,17 @@ Private 属性</h2></td></tr>
 <p>Withdraw money dollars from the account numbered account. </p>
 <dl class="section return"><dt>返回</dt><dd>True if the transaction was successful, false otherwise. </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l04662">4662</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04662" name="l04662"></a><span class="lineno"> 4662</span>                                                            {</div>
-<div class="line"><a id="l04663" name="l04663"></a><span class="lineno"> 4663</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>.count(account) == 0) {</div>
-<div class="line"><a id="l04664" name="l04664"></a><span class="lineno"> 4664</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04665" name="l04665"></a><span class="lineno"> 4665</span>            }</div>
-<div class="line"><a id="l04666" name="l04666"></a><span class="lineno"> 4666</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>[account] &lt; money) {</div>
-<div class="line"><a id="l04667" name="l04667"></a><span class="lineno"> 4667</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04668" name="l04668"></a><span class="lineno"> 4668</span>            }</div>
-<div class="line"><a id="l04669" name="l04669"></a><span class="lineno"> 4669</span>            <a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>[account] -= money;</div>
-<div class="line"><a id="l04670" name="l04670"></a><span class="lineno"> 4670</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l04671" name="l04671"></a><span class="lineno"> 4671</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l04670">4670</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04670" name="l04670"></a><span class="lineno"> 4670</span>                                                            {</div>
+<div class="line"><a id="l04671" name="l04671"></a><span class="lineno"> 4671</span>            <span class="keywordflow">if</span>(!<a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>.contains(account)) {</div>
+<div class="line"><a id="l04672" name="l04672"></a><span class="lineno"> 4672</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04673" name="l04673"></a><span class="lineno"> 4673</span>            }</div>
+<div class="line"><a id="l04674" name="l04674"></a><span class="lineno"> 4674</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>[account] &lt; money) {</div>
+<div class="line"><a id="l04675" name="l04675"></a><span class="lineno"> 4675</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04676" name="l04676"></a><span class="lineno"> 4676</span>            }</div>
+<div class="line"><a id="l04677" name="l04677"></a><span class="lineno"> 4677</span>            <a class="code hl_variable" href="../../d5/da8/a01865.html#aeaefc4d52a57e3bc0101cc6b28e352a5">accounts</a>[account] -= money;</div>
+<div class="line"><a id="l04678" name="l04678"></a><span class="lineno"> 4678</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l04679" name="l04679"></a><span class="lineno"> 4679</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l01761">accounts</a>.</p>
 
@@ -295,7 +303,7 @@ Private 属性</h2></td></tr>
 
 <p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01761">1761</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l04638">Bank()</a>, <a class="el" href="../../d6/d5b/a00026_source.html#l04655">deposit()</a>, <a class="el" href="../../d6/d5b/a00026_source.html#l04644">transfer()</a> , 以及 <a class="el" href="../../d6/d5b/a00026_source.html#l04662">withdraw()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l04643">Bank()</a>, <a class="el" href="../../d6/d5b/a00026_source.html#l04662">deposit()</a>, <a class="el" href="../../d6/d5b/a00026_source.html#l04650">transfer()</a> , 以及 <a class="el" href="../../d6/d5b/a00026_source.html#l04670">withdraw()</a>.</p>
 
 </div>
 </div>
