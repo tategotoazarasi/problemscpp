@@ -315,6 +315,19 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1010
+
+		namespace b1011 {
+			int main(istream &cin, ostream &cout) {
+				long long a, b, c;
+				int n;
+				cin >> n;
+				for(int i = 1; i <= n; i++) {
+					cin >> a >> b >> c;
+					cout << "Case #" << i << ": " << ((a + b > c) ? "true" : "false") << endl;
+				}
+				return 0;
+			}
+		}// namespace b1011
 	}    // namespace b
 
 	namespace a {

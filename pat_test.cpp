@@ -143,6 +143,24 @@ namespace pat {
 				ASSERT_EQ("12 3 -10 1 6 0", ans);
 			}
 		}// namespace b1010
+
+		namespace b1011 {
+			TEST(b1011, case1) {
+				istringstream in("4\n"
+				                 "1 2 3\n"
+				                 "2 3 4\n"
+				                 "2147483647 0 2147483646\n"
+				                 "0 -2147483648 -2147483647");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Case #1: false\n"
+				          "Case #2: true\n"
+				          "Case #3: true\n"
+				          "Case #4: false\n",
+				          ans);
+			}
+		}// namespace b1011
 	}    // namespace b
 
 	namespace a {
