@@ -3,6 +3,7 @@
 
 #include "templates.h"
 #include <array>
+#include <bitset>
 #include <functional>
 #include <map>
 #include <queue>
@@ -1782,6 +1783,27 @@ namespace leetcode {
 			static string tree2str(TreeNode *root);
 		};
 	}// namespace construct_string_from_binary_tree
+
+	namespace maximize_number_of_subsequences_in_a_string {
+		class Solution {
+		public:
+			static long long maximumSubsequenceCount(string text, string pattern);
+		};
+	}// namespace maximize_number_of_subsequences_in_a_string
+
+	namespace minimum_operations_to_halve_array_sum {
+		class Solution {
+		public:
+			static int halveArray(vector<int> &nums);
+		};
+	}// namespace minimum_operations_to_halve_array_sum
+
+	namespace minimum_white_tiles_after_covering_with_carpets {
+		class Solution {
+		public:
+			static int minimumWhiteTiles(string floor, int numCarpets, int carpetLen);
+		};
+	}// namespace minimum_white_tiles_after_covering_with_carpets
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

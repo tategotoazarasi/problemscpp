@@ -2316,4 +2316,18 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::longestWord(words));
 		}
 	}// namespace longest_word_in_dictionary
+
+	namespace minimum_white_tiles_after_covering_with_carpets {
+		TEST(minimum_white_tiles_after_covering_with_carpets, case1) {
+			ASSERT_EQ(2, Solution::minimumWhiteTiles("10110101", 2, 2));
+		}
+
+		TEST(minimum_white_tiles_after_covering_with_carpets, case2) {
+			ASSERT_EQ(0, Solution::minimumWhiteTiles("11111", 2, 3));
+		}
+
+		TEST(minimum_white_tiles_after_covering_with_carpets, case3) {
+			ASSERT_EQ(0, Solution::minimumWhiteTiles("10111101", 2, 4));
+		}
+	}// namespace minimum_white_tiles_after_covering_with_carpets
 }// namespace leetcode

@@ -2,6 +2,7 @@
 #include "templates.h"
 #include <algorithm>
 #include <bit>
+#include <bitset>
 #include <climits>
 #include <cmath>
 #include <cstring>
@@ -4694,4 +4695,73 @@ namespace leetcode {
 			return oss.str();
 		}
 	}// namespace construct_string_from_binary_tree
+
+	namespace maximize_number_of_subsequences_in_a_string {
+		long long Solution::maximumSubsequenceCount(string text, string pattern) {
+			long long ans   = 0;
+			long long count = 0;
+			vector<long long> p1count(text.length());
+			long long p0count          = 0;
+			long long p1c              = 0;
+			p1count[text.length() - 1] = 0;
+			for(int i = text.length() - 1; i >= 0; i--) {
+				if(text[i] == pattern[1]) {
+					count++;
+				} else if(text[i] == pattern[0]) {
+					p0count++;
+				}
+				if(i - 1 >= 0) {
+					p1count[i - 1] = count;
+				}
+			}
+			for(int i = 0; i < text.length(); i++) {
+				if(text[i] == pattern[0]) {
+					ans += p1count[i];
+				}
+			}
+			ans += max(p0count, count);
+			return ans;
+		}
+	}// namespace maximize_number_of_subsequences_in_a_string
+
+	namespace minimum_operations_to_halve_array_sum {
+		int Solution::halveArray(vector<int> &nums) {
+			long double sum = 0;
+			int ans         = 0;
+			priority_queue<long double> pq;
+			for(const auto num: nums) {
+				pq.push(num);
+				sum += num;
+			}
+			const long double target = sum / 2;
+			while(sum > target) {
+				auto num = pq.top();
+				pq.pop();
+				num /= 2;
+				sum -= num;
+				pq.push(num);
+				ans++;
+			}
+			return ans;
+		}
+	}// namespace minimum_operations_to_halve_array_sum
+
+	namespace minimum_white_tiles_after_covering_with_carpets {
+		int Solution::minimumWhiteTiles(string floor, int numCarpets, int carpetLen) {
+			const int n = floor.size();
+			vector f(numCarpets + 1, vector(n + 1, 0));
+			vector<int> a(n + 1);
+			for(int i = 0; i < n; i++) {
+				a[i + 1] = a[i] + static_cast<int>(floor[i] == '1');
+			}
+			for(int i = 1; i <= numCarpets; i++) {
+				for(int j = 1; j <= n; j++) {
+					f[i][j]     = f[i][j - 1];
+					const int k = max(j - carpetLen, 0);
+					f[i][j]     = max(f[i][j], f[i - 1][k] + (a[j] - a[k]));
+				}
+			}
+			return a[n] - f[numCarpets][n];
+		}
+	}// namespace minimum_white_tiles_after_covering_with_carpets
 }// namespace leetcode
