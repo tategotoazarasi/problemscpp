@@ -4845,4 +4845,49 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace maximum_points_in_an_archery_competition
+
+	namespace the_time_when_the_network_becomes_idle {
+		int Solution::networkBecomesIdle(vector<vector<int>> &edges, vector<int> &patience) {
+			unordered_map<int, Node *> um;
+			unordered_set<int> nodes;
+			for(int i = 0; i < patience.size(); i++) {
+				um[i] = new Node(i, patience[i]);
+				nodes.insert(i);
+			}
+			for(auto edge: edges) {
+				um[edge[0]]->linked.insert(edge[1]);
+				um[edge[1]]->linked.insert(edge[0]);
+			}
+			auto comp = [](const pair<int, int> &s1, const pair<int, int> &s2) -> bool {
+				return s1.second > s2.second;
+			};
+			priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(comp)> pq;
+			pq.push(make_pair(0, 0));
+			while(!nodes.empty()) {
+				auto [num, len] = pq.top();
+				pq.pop();
+				if(nodes.count(num) > 0) {
+					nodes.erase(num);
+					Node *node = um[num];
+					node->time = len;
+					for(auto next: node->linked) {
+						if(nodes.count(next) > 0) {
+							pq.push(make_pair(next, len + 1));
+						}
+					}
+				}
+			}
+			int ans = 0;
+			for(auto [num, node]: um) {
+				if(num != 0) {
+					int resent_num = (node->time * 2) / node->patience;
+					if((node->time * 2) % node->patience == 0) {
+						resent_num--;
+					}
+					ans = max(ans, resent_num * node->patience + 2 * node->time + 1);
+				}
+			}
+			return ans;
+		}
+	}// namespace the_time_when_the_network_becomes_idle
 }// namespace leetcode

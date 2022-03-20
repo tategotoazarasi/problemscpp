@@ -2388,4 +2388,18 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::maximumBobPoints(3, aliceArrows));
 		}
 	}// namespace maximum_points_in_an_archery_competition
+
+	namespace the_time_when_the_network_becomes_idle {
+		TEST(the_time_when_the_network_becomes_idle, case1) {
+			vector<vector<int>> edges = {{0, 1}, {1, 2}};
+			vector patience           = {0, 2, 1};
+			ASSERT_EQ(8, Solution::networkBecomesIdle(edges, patience));
+		}
+
+		TEST(the_time_when_the_network_becomes_idle, case2) {
+			vector<vector<int>> edges = {{0, 1}, {0, 2}, {1, 2}};
+			vector patience           = {0, 10, 10};
+			ASSERT_EQ(3, Solution::networkBecomesIdle(edges, patience));
+		}
+	}// namespace the_time_when_the_network_becomes_idle
 }// namespace leetcode

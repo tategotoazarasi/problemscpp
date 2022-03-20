@@ -1831,6 +1831,22 @@ namespace leetcode {
 			static vector<int> maximumBobPoints(int numArrows, vector<int> &aliceArrows);
 		};
 	}// namespace maximum_points_in_an_archery_competition
+
+	/// \brief LeetCode 2039. The Time When the Network Becomes Idle
+	namespace the_time_when_the_network_becomes_idle {
+		struct Node {
+			int num;
+			int time = 0;
+			int patience;
+			unordered_set<int> linked = {};
+			Node(int num, int patience): num(num), patience(patience) {}
+		};
+
+		class Solution {
+		public:
+			static int networkBecomesIdle(vector<vector<int>> &edges, vector<int> &patience);
+		};
+	}// namespace the_time_when_the_network_becomes_idle
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
