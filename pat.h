@@ -68,6 +68,11 @@ namespace pat {
 		namespace b1012 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1013 数素数
+		namespace b1013 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

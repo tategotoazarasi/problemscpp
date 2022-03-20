@@ -175,6 +175,19 @@ namespace pat {
 				ASSERT_EQ("N 11 2 N 9", ans);
 			}
 		}// namespace b1012
+
+		namespace b1013 {
+			TEST(b1013, case1) {
+				istringstream in("5 27");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("11 13 17 19 23 29 31 37 41 43\n"
+				          "47 53 59 61 67 71 73 79 83 89\n"
+				          "97 101 103",
+				          ans);
+			}
+		}// namespace b1013
 	}    // namespace b
 
 	namespace a {}

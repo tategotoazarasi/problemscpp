@@ -1,8 +1,10 @@
 #include "pat.h"
 #include <algorithm>
+#include <cmath>
 #include <cstring>
 #include <iomanip>
 #include <map>
+#include <set>
 #include <sstream>
 #include <tuple>
 #include <unordered_map>
@@ -403,6 +405,40 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1012
+
+		namespace b1013 {
+			int main(istream &cin, ostream &cout) {
+				int m, n;
+				cin >> m >> n;
+				int count          = 0;
+				vector<int> primes = {};
+				for(int i = 2; count <= n; i++) {
+					bool is_prime = true;
+					for(int factor = 2; factor <= sqrt(i); factor++) {
+						if(i % factor == 0) {
+							is_prime = false;
+							break;
+						}
+					}
+					if(is_prime) {
+						primes.push_back(i);
+						count++;
+					}
+				}
+				count = 0;
+				for(int i = m - 1; i < n; i++) {
+					cout << primes[i];
+					count++;
+					if(count == 10) {
+						count = 0;
+						cout << endl;
+					} else if(i != n - 1) {
+						cout << ' ';
+					}
+				}
+				return 0;
+			}
+		}// namespace b1013
 	}    // namespace b
 
 	namespace a {}
