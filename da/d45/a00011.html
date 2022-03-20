@@ -71,9 +71,11 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d3/d52/a00023_source.html">pat.h</a>&quot;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;iomanip&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;tuple&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
@@ -86,8 +88,8 @@ $(function() {
 <tr class="memitem:dd/d56/a00274"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d56/a00274.html">pat</a></td></tr>
 <tr class="memdesc:dd/d56/a00274"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算机程序设计能力考试 <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:da/ddc/a00288"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/ddc/a00288.html">pat::a</a></td></tr>
-<tr class="memdesc:da/ddc/a00288"><td class="mdescLeft">&#160;</td><td class="mdescRight">甲级 <br /></td></tr>
+<tr class="memitem:de/d25/a00290"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d25/a00290.html">pat::a</a></td></tr>
+<tr class="memdesc:de/d25/a00290"><td class="mdescLeft">&#160;</td><td class="mdescRight">甲级 <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d3/d5e/a00275"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d5e/a00275.html">pat::b</a></td></tr>
 <tr class="memdesc:d3/d5e/a00275"><td class="mdescLeft">&#160;</td><td class="mdescRight">乙级 <br /></td></tr>
@@ -128,8 +130,14 @@ $(function() {
 <tr class="memitem:d6/d7f/a00287"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7f/a00287.html">pat::b::b1012</a></td></tr>
 <tr class="memdesc:d6/d7f/a00287"><td class="mdescLeft">&#160;</td><td class="mdescRight">1012 数字分类 <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:d4/d66/a00289"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d66/a00289.html">pat::top</a></td></tr>
-<tr class="memdesc:d4/d66/a00289"><td class="mdescLeft">&#160;</td><td class="mdescRight">顶级 <br /></td></tr>
+<tr class="memitem:da/ddc/a00288"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/ddc/a00288.html">pat::b::b1013</a></td></tr>
+<tr class="memdesc:da/ddc/a00288"><td class="mdescLeft">&#160;</td><td class="mdescRight">1013 数素数 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/d66/a00289"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d66/a00289.html">pat::b::b1014</a></td></tr>
+<tr class="memdesc:d4/d66/a00289"><td class="mdescLeft">&#160;</td><td class="mdescRight">1014 福尔摩斯的约会 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:da/dd4/a00291"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd4/a00291.html">pat::top</a></td></tr>
+<tr class="memdesc:da/dd4/a00291"><td class="mdescLeft">&#160;</td><td class="mdescRight">顶级 <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -158,6 +166,10 @@ $(function() {
 <tr class="separator:a2f8ccd024bcd25da1188eecb3349f083"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae29936d9d75d21c5c57bc9c4a15ad2d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7f/a00287.html#ae29936d9d75d21c5c57bc9c4a15ad2d5">pat::b::b1012::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
 <tr class="separator:ae29936d9d75d21c5c57bc9c4a15ad2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b0834927354383c6efa9619683151b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/ddc/a00288.html#a6b0834927354383c6efa9619683151b3">pat::b::b1013::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a6b0834927354383c6efa9619683151b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36918cc0ed41681d16494a9e0918ac9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d66/a00289.html#a36918cc0ed41681d16494a9e0918ac9d">pat::b::b1014::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a36918cc0ed41681d16494a9e0918ac9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

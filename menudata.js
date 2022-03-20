@@ -44,7 +44,6 @@ var menudata={children:[
 {text:"b",url:"namespacemembers_func.html#index_b"},
 {text:"d",url:"namespacemembers_func_d.html#index_d"},
 {text:"f",url:"namespacemembers_func_f.html#index_f"},
-{text:"l",url:"namespacemembers_func_l.html#index_l"},
 {text:"m",url:"namespacemembers_func_m.html#index_m"},
 {text:"o",url:"namespacemembers_func_o.html#index_o"},
 {text:"r",url:"namespacemembers_func_r.html#index_r"},
