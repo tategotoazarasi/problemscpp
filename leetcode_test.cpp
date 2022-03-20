@@ -2330,4 +2330,30 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::minimumWhiteTiles("10111101", 2, 4));
 		}
 	}// namespace minimum_white_tiles_after_covering_with_carpets
+
+	namespace longest_substring_of_one_repeating_character {
+		TEST(longest_substring_of_one_repeating_character, case1) {
+			vector queryIndices = {1, 3, 3};
+			const vector output = {3, 3, 4};
+			ASSERT_EQ(output, Solution::longestRepeating("babacc", "bcb", queryIndices));
+		}
+
+		TEST(longest_substring_of_one_repeating_character, case2) {
+			vector queryIndices = {2, 1};
+			const vector output = {2, 3};
+			ASSERT_EQ(output, Solution::longestRepeating("abyzz", "aa", queryIndices));
+		}
+
+		TEST(longest_substring_of_one_repeating_character, case3) {
+			vector queryIndices = {0, 0, 1, 0, 0, 1, 1, 0};
+			const vector output = {1, 1, 1, 1, 1, 1, 1, 1};
+			ASSERT_EQ(output, Solution::longestRepeating("mm", "bfviuwsr", queryIndices));
+		}
+
+		TEST(longest_substring_of_one_repeating_character, case4) {
+			vector queryIndices = {3, 4, 2, 6, 5, 6, 5, 4, 3, 2};
+			const vector output = {1, 1, 2, 2, 2, 2, 2, 2, 2, 1};
+			ASSERT_EQ(output, Solution::longestRepeating("geuqjmt", "bgemoegklm", queryIndices));
+		}
+	}// namespace longest_substring_of_one_repeating_character
 }// namespace leetcode

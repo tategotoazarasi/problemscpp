@@ -1804,6 +1804,34 @@ namespace leetcode {
 			static int minimumWhiteTiles(string floor, int numCarpets, int carpetLen);
 		};
 	}// namespace minimum_white_tiles_after_covering_with_carpets
+
+	namespace count_hills_and_valleys_in_an_array {
+		class Solution {
+		public:
+			static int countHillValley(vector<int> &nums);
+		};
+	}// namespace count_hills_and_valleys_in_an_array
+
+	namespace count_collisions_on_a_road {
+		class Solution {
+		public:
+			static int countCollisions(const string &directions);
+		};
+	}// namespace count_collisions_on_a_road
+
+	namespace maximum_points_in_an_archery_competition {
+		class Solution {
+		public:
+			static vector<int> maximumBobPoints(int numArrows, vector<int> &aliceArrows);
+		};
+	}// namespace maximum_points_in_an_archery_competition
+
+	namespace longest_substring_of_one_repeating_character {
+		class Solution {
+		public:
+			static vector<int> longestRepeating(const string &s, const string &queryCharacters, vector<int> &queryIndices);
+		};
+	}// namespace longest_substring_of_one_repeating_character
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

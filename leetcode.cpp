@@ -4764,4 +4764,90 @@ namespace leetcode {
 			return a[n] - f[numCarpets][n];
 		}
 	}// namespace minimum_white_tiles_after_covering_with_carpets
+
+	namespace count_hills_and_valleys_in_an_array {
+		int Solution::countHillValley(vector<int> &nums) {
+			int ans      = 0;
+			const auto u = unique(nums.begin(), nums.end());
+			nums.erase(u, nums.end());
+			for(int i = 1; i + 1 < nums.size(); i++) {
+				if(nums[i] > nums[i - 1] && nums[i] > nums[i + 1] || nums[i] < nums[i - 1] && nums[i] < nums[i + 1]) {
+					ans++;
+				}
+			}
+			return 0;
+		}
+	}// namespace count_hills_and_valleys_in_an_array
+
+	namespace count_collisions_on_a_road {
+		int Solution::countCollisions(const string &directions) {
+			int ans = 0;
+			vector<char> status;
+			vector<int> count;
+			int current = 0;
+			for(char ch: directions) {
+				if(status.empty()) {
+					status.push_back(ch);
+					current++;
+				} else {
+					if(status.back() == ch) {
+						current++;
+					} else {
+						status.push_back(ch);
+						count.push_back(current);
+						current = 1;
+					}
+				}
+			}
+			count.push_back(current);
+			for(int i = 0; i + 1 < status.size(); i++) {
+				if(status[i] == 'R' && status[i + 1] == 'L') {
+					ans += count[i] + count[i + 1];
+				} else if(status[i] == 'R' && status[i + 1] == 'S') {
+					ans += count[i];
+				} else if(status[i] == 'S' && status[i + 1] == 'L') {
+					ans += count[i + 1];
+				}
+			}
+			return ans;
+		}
+	}// namespace count_collisions_on_a_road
+
+	namespace maximum_points_in_an_archery_competition {
+		vector<int> Solution::maximumBobPoints(int numArrows, vector<int> &aliceArrows) {
+			int maximum = 0;
+			int max_n   = 0;
+			for(unsigned int n = 1; n < 1 << 11; n++) {
+				int rest  = numArrows;
+				int score = 0;
+				for(int i = 0; i <= 10; i++) {
+					if((n & 1 << i) != 0) {
+						score += 11 - i;
+						rest -= aliceArrows[11 - i] + 1;
+					}
+					if(rest < 0) {
+						goto NEXT_N;
+					}
+				}
+				if(maximum < score) {
+					maximum = score;
+					max_n   = n;
+				}
+			NEXT_N:;
+			}
+			vector ans(aliceArrows.size(), 0);
+			for(int i = 0; i <= 10; i++) {
+				if((max_n & 1 << i) != 0) {
+					numArrows -= aliceArrows[11 - i] + 1;
+					ans[11 - i] = aliceArrows[11 - i] + 1;
+				}
+			}
+			ans[0] += numArrows;
+			return ans;
+		}
+	}// namespace maximum_points_in_an_archery_competition
+
+	namespace longest_substring_of_one_repeating_character {
+		vector<int> longestRepeating(const string & /*s*/, const string & /*queryCharacters*/, vector<int> & /*queryIndices*/) { return {}; }
+	}// namespace longest_substring_of_one_repeating_character
 }// namespace leetcode
