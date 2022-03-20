@@ -1784,6 +1784,7 @@ namespace leetcode {
 		};
 	}// namespace construct_string_from_binary_tree
 
+	/// \brief LeetCode 6021. Maximize Number of Subsequences in a String
 	namespace maximize_number_of_subsequences_in_a_string {
 		class Solution {
 		public:
@@ -1791,6 +1792,7 @@ namespace leetcode {
 		};
 	}// namespace maximize_number_of_subsequences_in_a_string
 
+	/// \brief LeetCode 6022. Minimum Operations to Halve Array Sum
 	namespace minimum_operations_to_halve_array_sum {
 		class Solution {
 		public:
@@ -1798,6 +1800,7 @@ namespace leetcode {
 		};
 	}// namespace minimum_operations_to_halve_array_sum
 
+	/// \brief LeetCode 6023. Minimum White Tiles After Covering With Carpets
 	namespace minimum_white_tiles_after_covering_with_carpets {
 		class Solution {
 		public:
@@ -1805,6 +1808,7 @@ namespace leetcode {
 		};
 	}// namespace minimum_white_tiles_after_covering_with_carpets
 
+	/// \brief LeetCode 6027. Count Hills and Valleys in an Array
 	namespace count_hills_and_valleys_in_an_array {
 		class Solution {
 		public:
@@ -1812,6 +1816,7 @@ namespace leetcode {
 		};
 	}// namespace count_hills_and_valleys_in_an_array
 
+	/// \brief LeetCode 6028. Count Collisions on a Road
 	namespace count_collisions_on_a_road {
 		class Solution {
 		public:
@@ -1819,19 +1824,13 @@ namespace leetcode {
 		};
 	}// namespace count_collisions_on_a_road
 
+	/// \brief LeetCode 6029. Maximum Points in an Archery Competition
 	namespace maximum_points_in_an_archery_competition {
 		class Solution {
 		public:
 			static vector<int> maximumBobPoints(int numArrows, vector<int> &aliceArrows);
 		};
 	}// namespace maximum_points_in_an_archery_competition
-
-	namespace longest_substring_of_one_repeating_character {
-		class Solution {
-		public:
-			static vector<int> longestRepeating(const string &s, const string &queryCharacters, vector<int> &queryIndices);
-		};
-	}// namespace longest_substring_of_one_repeating_character
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

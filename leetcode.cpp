@@ -4748,34 +4748,33 @@ namespace leetcode {
 
 	namespace minimum_white_tiles_after_covering_with_carpets {
 		int Solution::minimumWhiteTiles(string floor, int numCarpets, int carpetLen) {
-			const int n = floor.size();
-			vector f(numCarpets + 1, vector(n + 1, 0));
-			vector<int> a(n + 1);
-			for(int i = 0; i < n; i++) {
-				a[i + 1] = a[i] + static_cast<int>(floor[i] == '1');
+			int n = floor.length();
+			vector<vector<int>> f(numCarpets + 1, vector<int>(n));
+			f[0][0] = floor[0] % 2;
+			for(int i = 1; i < n; ++i) {
+				f[0][i] = f[0][i - 1] + floor[i] % 2;
 			}
-			for(int i = 1; i <= numCarpets; i++) {
-				for(int j = 1; j <= n; j++) {
-					f[i][j]     = f[i][j - 1];
-					const int k = max(j - carpetLen, 0);
-					f[i][j]     = max(f[i][j], f[i - 1][k] + (a[j] - a[k]));
+			for(int i = 1; i <= numCarpets; ++i) {
+				// j < carpetLen 的 f[i][j] 均为 0
+				for(int j = carpetLen; j < n; ++j) {
+					f[i][j] = min(f[i][j - 1] + floor[j] % 2, f[i - 1][j - carpetLen]);
 				}
 			}
-			return a[n] - f[numCarpets][n];
+			return f[numCarpets][n - 1];
 		}
 	}// namespace minimum_white_tiles_after_covering_with_carpets
 
 	namespace count_hills_and_valleys_in_an_array {
 		int Solution::countHillValley(vector<int> &nums) {
-			int ans      = 0;
-			const auto u = unique(nums.begin(), nums.end());
+			int ans = 0;
+			auto u  = unique(nums.begin(), nums.end());
 			nums.erase(u, nums.end());
 			for(int i = 1; i + 1 < nums.size(); i++) {
-				if(nums[i] > nums[i - 1] && nums[i] > nums[i + 1] || nums[i] < nums[i - 1] && nums[i] < nums[i + 1]) {
+				if((nums[i] > nums[i - 1] && nums[i] > nums[i + 1]) || (nums[i] < nums[i - 1] && nums[i] < nums[i + 1])) {
 					ans++;
 				}
 			}
-			return 0;
+			return ans;
 		}
 	}// namespace count_hills_and_valleys_in_an_array
 
@@ -4846,8 +4845,4 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace maximum_points_in_an_archery_competition
-
-	namespace longest_substring_of_one_repeating_character {
-		vector<int> longestRepeating(const string & /*s*/, const string & /*queryCharacters*/, vector<int> & /*queryIndices*/) { return {}; }
-	}// namespace longest_substring_of_one_repeating_character
 }// namespace leetcode

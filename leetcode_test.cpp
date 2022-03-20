@@ -2317,6 +2317,28 @@ namespace leetcode {
 		}
 	}// namespace longest_word_in_dictionary
 
+	namespace maximize_number_of_subsequences_in_a_string {
+		TEST(maximize_number_of_subsequences_in_a_string, case1) {
+			ASSERT_EQ(4, Solution::maximumSubsequenceCount("abdcdbc", "ac"));
+		}
+
+		TEST(maximize_number_of_subsequences_in_a_string, case2) {
+			ASSERT_EQ(6, Solution::maximumSubsequenceCount("aabb", "ab"));
+		}
+	}// namespace maximize_number_of_subsequences_in_a_string
+
+	namespace minimum_operations_to_halve_array_sum {
+		TEST(minimum_operations_to_halve_array_sum, case1) {
+			vector nums = {5, 19, 8, 1};
+			ASSERT_EQ(3, Solution::halveArray(nums));
+		}
+
+		TEST(minimum_operations_to_halve_array_sum, case2) {
+			vector nums = {3, 8, 20};
+			ASSERT_EQ(3, Solution::halveArray(nums));
+		}
+	}// namespace minimum_operations_to_halve_array_sum
+
 	namespace minimum_white_tiles_after_covering_with_carpets {
 		TEST(minimum_white_tiles_after_covering_with_carpets, case1) {
 			ASSERT_EQ(2, Solution::minimumWhiteTiles("10110101", 2, 2));
@@ -2331,29 +2353,39 @@ namespace leetcode {
 		}
 	}// namespace minimum_white_tiles_after_covering_with_carpets
 
-	namespace longest_substring_of_one_repeating_character {
-		TEST(longest_substring_of_one_repeating_character, case1) {
-			vector queryIndices = {1, 3, 3};
-			const vector output = {3, 3, 4};
-			ASSERT_EQ(output, Solution::longestRepeating("babacc", "bcb", queryIndices));
+	namespace count_hills_and_valleys_in_an_array {
+		TEST(count_hills_and_valleys_in_an_array, case1) {
+			vector num = {2, 4, 1, 1, 6, 5};
+			ASSERT_EQ(3, Solution::countHillValley(num));
 		}
 
-		TEST(longest_substring_of_one_repeating_character, case2) {
-			vector queryIndices = {2, 1};
-			const vector output = {2, 3};
-			ASSERT_EQ(output, Solution::longestRepeating("abyzz", "aa", queryIndices));
+		TEST(count_hills_and_valleys_in_an_array, case2) {
+			vector num = {6, 6, 5, 5, 4, 1};
+			ASSERT_EQ(0, Solution::countHillValley(num));
+		}
+	}// namespace count_hills_and_valleys_in_an_array
+
+	namespace count_collisions_on_a_road {
+		TEST(count_collisions_on_a_road, case1) {
+			ASSERT_EQ(5, Solution::countCollisions("RLRSLL"));
 		}
 
-		TEST(longest_substring_of_one_repeating_character, case3) {
-			vector queryIndices = {0, 0, 1, 0, 0, 1, 1, 0};
-			const vector output = {1, 1, 1, 1, 1, 1, 1, 1};
-			ASSERT_EQ(output, Solution::longestRepeating("mm", "bfviuwsr", queryIndices));
+		TEST(count_collisions_on_a_road, case2) {
+			ASSERT_EQ(0, Solution::countCollisions("LLRR"));
+		}
+	}// namespace count_collisions_on_a_road
+
+	namespace maximum_points_in_an_archery_competition {
+		TEST(maximum_points_in_an_archery_competition, case1) {
+			vector aliceArrows = {1, 1, 0, 1, 0, 0, 2, 1, 0, 1, 2, 0};
+			vector output      = {0, 0, 0, 0, 1, 1, 0, 0, 1, 2, 3, 1};
+			ASSERT_EQ(output, Solution::maximumBobPoints(9, aliceArrows));
 		}
 
-		TEST(longest_substring_of_one_repeating_character, case4) {
-			vector queryIndices = {3, 4, 2, 6, 5, 6, 5, 4, 3, 2};
-			const vector output = {1, 1, 2, 2, 2, 2, 2, 2, 2, 1};
-			ASSERT_EQ(output, Solution::longestRepeating("geuqjmt", "bgemoegklm", queryIndices));
+		TEST(maximum_points_in_an_archery_competition, case2) {
+			vector aliceArrows = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2};
+			vector output      = {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0};
+			ASSERT_EQ(output, Solution::maximumBobPoints(3, aliceArrows));
 		}
-	}// namespace longest_substring_of_one_repeating_character
+	}// namespace maximum_points_in_an_archery_competition
 }// namespace leetcode
