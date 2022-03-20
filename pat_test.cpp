@@ -188,6 +188,19 @@ namespace pat {
 				          ans);
 			}
 		}// namespace b1013
+
+		namespace b1014 {
+			TEST(b1014, case1) {
+				istringstream in("3485djDkxh4hhGE \n"
+				                 "2984akDfkkkkggEdsb \n"
+				                 "s&hgsfdk \n"
+				                 "d&Hyscvnm");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("THU 14:04", ans);
+			}
+		}// namespace b1014
 	}    // namespace b
 
 	namespace a {}

@@ -439,6 +439,42 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1013
+
+		namespace b1014 {
+			int main(istream &cin, ostream &cout) {
+				string str1, str2;
+				cin >> str1 >> str2;
+				string day;
+				vector<string> days = {"MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"};
+				int hh;
+				int mm;
+				for(int i = 0; i < str1.length() && i < str2.length(); i++) {
+					if(str1[i] == str2[i]) {
+						if(day.empty()) {
+							if(isupper(str1[i])) {
+								day = days[str1[i] - 'A'];
+							}
+						} else if(isdigit(str1[i]) || ('A' <= str1[i] && str1[i] <= 'N')) {
+							if(isdigit(str1[i])) {
+								hh = str1[i] - '0';
+							} else {
+								hh = 10 + str1[i] - 'A';
+							}
+							break;
+						}
+					}
+				}
+				cin >> str1 >> str2;
+				for(int i = 0; i < str1.length() && i < str2.length(); i++) {
+					if(str1[i] == str2[i] && isalpha(str1[i])) {
+						mm = i;
+						break;
+					}
+				}
+				cout << day << ' ' << setw(2) << right << setfill('0') << hh << ':' << setw(2) << right << setfill('0') << mm;
+				return 0;
+			}
+		}// namespace b1014
 	}    // namespace b
 
 	namespace a {}

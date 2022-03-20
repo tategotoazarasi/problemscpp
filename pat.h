@@ -73,6 +73,11 @@ namespace pat {
 		namespace b1013 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1014 福尔摩斯的约会
+		namespace b1014 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
