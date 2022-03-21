@@ -78,7 +78,19 @@ namespace pat {
 		namespace b1014 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1015 德才论
+		namespace b1015 {
+			struct student {
+				string id;
+				int morality;
+				int ability;
+				bool operator<(const student &stu) const;
+			};
+
+			int main(istream &cin, ostream &cout);
+		}// namespace b1015
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}

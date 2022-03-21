@@ -475,6 +475,52 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1014
+
+		namespace b1015 {
+			int main(istream &cin, ostream &cout) {
+				unsigned int n, l, h;
+				cin >> n >> l >> h;
+				vector<student> sector[4] = {vector<student>(), vector<student>(), vector<student>(), vector<student>()};
+				int sum                   = 0;
+				for(int i = 0; i < n; i++) {
+					auto stu = student();
+					cin >> stu.id >> stu.morality >> stu.ability;
+					if(stu.morality >= l && stu.ability >= l) {
+						sum++;
+						if(stu.morality >= h && stu.ability >= h) {
+							sector[0].push_back(stu);
+						} else if(stu.morality >= h) {
+							sector[1].push_back(stu);
+						} else if(stu.morality < h && stu.ability < h && stu.morality >= stu.ability) {
+							sector[2].push_back(stu);
+						} else {
+							sector[3].push_back(stu);
+						}
+					}
+				}
+				cout << sum << endl;
+				for(int i = 0; i < 4; i++) {
+					sort(sector[i].begin(), sector[i].end());
+					for(auto it = sector[i].begin(); it != sector[i].end(); ++it) {
+						auto stu = *it;
+						cout << stu.id << ' ' << stu.morality << ' ' << stu.ability << endl;
+					}
+				}
+				return 0;
+			}
+
+			bool student::operator<(const student &stu) const {
+				if(this->ability + this->morality == stu.ability + stu.morality) {
+					if(this->morality == stu.morality) {
+						return this->id < stu.id;
+					} else {
+						return this->morality > stu.morality;
+					}
+				} else {
+					return this->ability + this->morality > stu.ability + stu.morality;
+				}
+			}
+		}// namespace b1015
 	}    // namespace b
 
 	namespace a {}
