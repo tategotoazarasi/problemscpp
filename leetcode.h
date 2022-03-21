@@ -1847,6 +1847,14 @@ namespace leetcode {
 			static int networkBecomesIdle(vector<vector<int>> &edges, vector<int> &patience);
 		};
 	}// namespace the_time_when_the_network_becomes_idle
+
+	/// \brief LeetCode 653. Two Sum IV - Input is a BST
+	namespace two_sum_iv_input_is_a_bst {
+		class Solution {
+		public:
+			static bool findTarget(TreeNode *root, int k);
+		};
+	}// namespace two_sum_iv_input_is_a_bst
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

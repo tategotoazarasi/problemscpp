@@ -4890,4 +4890,39 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace the_time_when_the_network_becomes_idle
+
+	namespace two_sum_iv_input_is_a_bst {
+		bool Solution::findTarget(TreeNode *root, int k) {
+			set<int> s;
+			unordered_map<int, int> count;
+			queue<TreeNode *> que;
+			que.push(root);
+			while(!que.empty()) {
+				auto node = que.front();
+				que.pop();
+				s.insert(node->val);
+				count[node->val]++;
+				if(node->left != nullptr) {
+					que.push(node->left);
+				}
+				if(node->right != nullptr) {
+					que.push(node->right);
+				}
+			}
+			bool ans = false;
+			for(auto it = s.begin(); it != s.end(); ++it) {
+				int other = k - (*it);
+				if(other == *it) {
+					if(count[other] > 1) {
+						ans = true;
+						break;
+					}
+				} else if(s.count(other) > 0) {
+					ans = true;
+					break;
+				}
+			}
+			return ans;
+		}
+	}// namespace two_sum_iv_input_is_a_bst
 }// namespace leetcode
