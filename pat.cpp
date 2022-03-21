@@ -521,6 +521,40 @@ namespace pat {
 				}
 			}
 		}// namespace b1015
+
+		namespace b1016 {
+			int main(istream &cin, ostream &cout) {
+				string a, b;
+				int da, db;
+				cin >> a >> da >> b >> db;
+				stringstream ssa;
+				stringstream ssb;
+				int count_a = 0;
+				int count_b = 0;
+				for(char ch: a) {
+					if(ch - '0' == da) {
+						count_a++;
+						ssa << ch;
+					}
+				}
+				for(char ch: b) {
+					if(ch - '0' == db) {
+						count_b++;
+						ssb << ch;
+					}
+				}
+				int pa = 0;
+				int pb = 0;
+				if(count_a != 0) {
+					ssa >> pa;
+				}
+				if(count_b != 0) {
+					ssb >> pb;
+				}
+				cout << pa + pb;
+				return 0;
+			}
+		}// namespace b1016
 	}    // namespace b
 
 	namespace a {}

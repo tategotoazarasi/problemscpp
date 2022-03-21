@@ -90,7 +90,12 @@ namespace pat {
 
 			int main(istream &cin, ostream &cout);
 		}// namespace b1015
-	}    // namespace b
+
+		/// \brief 1016 部分A+B
+		namespace b1016 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}

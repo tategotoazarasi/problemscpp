@@ -238,6 +238,24 @@ namespace pat {
 				          ans);
 			}
 		}// namespace b1015
+
+		namespace b1016 {
+			TEST(b1016, case1) {
+				istringstream in("3862767 6 13530293 3");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("399", ans);
+			}
+
+			TEST(b1016, case2) {
+				istringstream in("3862767 1 13530293 8");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("0", ans);
+			}
+		}// namespace b1016
 	}    // namespace b
 
 	namespace a {}
