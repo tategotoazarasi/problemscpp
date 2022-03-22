@@ -131,7 +131,8 @@ var menudata={children:[
 {text:"v",url:"functions_vars.html#index_v"},
 {text:"x",url:"functions_vars.html#index_x"},
 {text:"y",url:"functions_vars.html#index_y"},
-{text:"z",url:"functions_vars.html#index_z"}]}]}]},
+{text:"z",url:"functions_vars.html#index_z"}]},
+{text:"相关函数",url:"functions_rela.html"}]}]},
 {text:"文件",url:"files.html",children:[
 {text:"文件列表",url:"files.html"},
 {text:"文件成员",url:"globals.html",children:[

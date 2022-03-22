@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['withdraw_0',['withdraw',['../d9/dca/a01879.html#a91143511689bdbbc61721cc98564370b',1,'leetcode::simple_bank_system::Bank']]],
-  ['wordcount_1',['wordCount',['../d6/d07/a01303.html#a7f1751f84964dffec1cb5db46bef2816',1,'leetcode::count_words_obtained_after_adding_a_letter::Solution']]]
+  ['winnerofgame_0',['winnerOfGame',['../d2/db9/a01926.html#ab2211697c42a6ef38bdb40993dbf0373',1,'leetcode::remove_colored_pieces_if_both_neighbors_are_the_same_color::Solution']]],
+  ['withdraw_1',['withdraw',['../d6/d18/a01882.html#a91143511689bdbbc61721cc98564370b',1,'leetcode::simple_bank_system::Bank']]],
+  ['wordcount_2',['wordCount',['../d7/d8c/a01306.html#a7f1751f84964dffec1cb5db46bef2816',1,'leetcode::count_words_obtained_after_adding_a_letter::Solution']]]
 ];

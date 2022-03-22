@@ -8,7 +8,8 @@ var indexSectionsWithContent =
   5: "abcdefghiklmnoprstuvxyz",
   6: "d",
   7: "dlru",
-  8: "p"
+  8: "o",
+  9: "p"
 };
 
 var indexSectionNames =
@@ -21,7 +22,8 @@ var indexSectionNames =
   5: "variables",
   6: "enums",
   7: "enumvalues",
-  8: "pages"
+  8: "related",
+  9: "pages"
 };
 
 var indexSectionLabels =
@@ -34,6 +36,7 @@ var indexSectionLabels =
   5: "变量",
   6: "枚举",
   7: "枚举值",
-  8: "页"
+  8: "友元",
+  9: "页"
 };
 

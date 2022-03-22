@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['k_0',['k',['../de/db6/a01627.html#a8e9c002415f8caeb62ab19c2d68e872e',1,'leetcode::knight_probability_in_chessboard::status']]],
-  ['knightprobability_1',['knightProbability',['../db/dca/a01639.html#aa778581a1cd8b722fba7ede7ca818493',1,'leetcode::knight_probability_in_chessboard::Solution']]],
-  ['ksmallestpairs_2',['kSmallestPairs',['../d3/da4/a01343.html#ad10110d7c72b7b6e5c5fc388d87c02be',1,'leetcode::find_k_pairs_with_smallest_sums::Solution']]]
+  ['k_0',['k',['../d3/d33/a01630.html#a8e9c002415f8caeb62ab19c2d68e872e',1,'leetcode::knight_probability_in_chessboard::status']]],
+  ['knightprobability_1',['knightProbability',['../d7/d94/a01642.html#aa778581a1cd8b722fba7ede7ca818493',1,'leetcode::knight_probability_in_chessboard::Solution']]],
+  ['ksmallestpairs_2',['kSmallestPairs',['../d9/de4/a01346.html#ad10110d7c72b7b6e5c5fc388d87c02be',1,'leetcode::find_k_pairs_with_smallest_sums::Solution']]]
 ];
