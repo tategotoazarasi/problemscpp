@@ -5629,4 +5629,29 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing4315
+
+	namespace acwing1671 {
+		int main(istream &cin, ostream &cout) {
+			int ans = 0;
+			unordered_map<int, set<int>> col;
+			unordered_map<int, set<int>> row;
+			set<pair<int, int>> us;
+			int n;
+			cin >> n;
+			for(int i = 0; i < n; i++) {
+				int x, y;
+				cin >> x >> y;
+				us.insert(make_pair(x, y));
+				row[x].insert(y);
+				col[y].insert(x);
+			}
+			for(auto [x, y]: us) {
+				int max_width  = max(abs(*row[x].begin() - y), abs(*row[x].rbegin() - y));
+				int max_height = max(abs(*col[y].begin() - x), abs(*col[y].rbegin() - x));
+				ans            = max(ans, max_width * max_height);
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing1671
 }// namespace acwing

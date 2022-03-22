@@ -2703,4 +2703,18 @@ namespace acwing {
 			ASSERT_EQ("0 1 ", ans);
 		}
 	}// namespace acwing4315
+
+	namespace acwing1671 {
+		TEST(acwing1671, case1) {
+			istringstream in("4\n"
+			                 "0 0\n"
+			                 "0 1\n"
+			                 "1 0\n"
+			                 "1 2");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2", ans);
+		}
+	}// namespace acwing1671
 }// namespace acwing

@@ -1810,5 +1810,10 @@ namespace acwing {
 	namespace acwing4315 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 1671. 三角形
+	namespace acwing1671 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
