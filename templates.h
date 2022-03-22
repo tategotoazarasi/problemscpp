@@ -25,7 +25,8 @@ private:
 	vector<unsigned short> vec = {};
 	unsigned long get_size() const;
 	unsigned short operator[](unsigned long) const;
-	BigInt(const vector<unsigned short> &vec, bool positive): vec(vec), positive(positive){};
+	BigInt(const vector<unsigned short> &vec, bool positive);
+	vector<unsigned short> operator*(const unsigned short n) const;
 
 public:
 	BigInt(short n);
@@ -37,27 +38,23 @@ public:
 	BigInt(const unsigned long &n);
 	BigInt(const unsigned long long &n);
 	BigInt(const string &str);
+	BigInt(const char *str);
 	BigInt(const BigInt &bi);
-	BigInt &operator=(const BigInt &bi);
-	BigInt &operator=(const string &str);
-	BigInt &operator=(int n);
-	BigInt &operator=(short n);
-	BigInt &operator=(long n);
-	BigInt &operator=(long long n);
-	BigInt &operator=(const unsigned short &n);
-	BigInt &operator=(const unsigned int &n);
-	BigInt &operator=(const unsigned long &n);
-	BigInt &operator=(const unsigned long long &n);
 	BigInt operator+(const BigInt &bi) const;
 	BigInt operator-(const BigInt &bi) const;
 	BigInt operator*(const BigInt &bi) const;
 	BigInt operator/(const BigInt &bi) const;
 	BigInt operator%(const BigInt &bi) const;
+	BigInt operator-() const;
 	BigInt &operator+=(const BigInt &bi);
 	BigInt &operator-=(const BigInt &bi);
 	BigInt &operator*=(const BigInt &bi);
 	BigInt &operator/=(const BigInt &bi);
 	BigInt &operator%=(const BigInt &bi);
+	BigInt &operator++();
+	BigInt &operator--();
+	BigInt &operator++(int);
+	BigInt &operator--(int);
 	bool operator>(const BigInt &bi) const;
 	bool operator<(const BigInt &bi) const;
 	bool operator==(const BigInt &bi) const;
