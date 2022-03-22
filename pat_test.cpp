@@ -256,6 +256,29 @@ namespace pat {
 				ASSERT_EQ("0", ans);
 			}
 		}// namespace b1016
+
+		namespace b1018 {
+			TEST(b1018, case1) {
+				istringstream in("10\n"
+				                 "C J\n"
+				                 "J B\n"
+				                 "C B\n"
+				                 "B B\n"
+				                 "B C\n"
+				                 "C C\n"
+				                 "C B\n"
+				                 "J B\n"
+				                 "B C\n"
+				                 "J J");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("5 3 2\n"
+				          "2 3 5\n"
+				          "B B",
+				          ans);
+			}
+		}// namespace b1018
 	}    // namespace b
 
 	namespace a {}

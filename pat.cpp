@@ -555,6 +555,93 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1016
+
+		namespace b1018 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				int a_win          = 0;
+				int b_win          = 0;
+				int a_win_count[3] = {};
+				int b_win_count[3] = {};
+				int tie            = 0;
+				for(int i = 0; i < n; i++) {
+					char a, b;
+					cin >> a >> b;
+					if(a == b) {
+						tie++;
+					} else if((a == 'C' && b == 'J') || (a == 'J' && b == 'B') || (a == 'B' && b == 'C')) {
+						a_win++;
+						switch(a) {
+							case 'B':
+								a_win_count[0]++;
+								break;
+							case 'C':
+								a_win_count[1]++;
+								break;
+							case 'J':
+								a_win_count[2]++;
+								break;
+						}
+					} else {
+						b_win++;
+						switch(b) {
+							case 'B':
+								b_win_count[0]++;
+								break;
+							case 'C':
+								b_win_count[1]++;
+								break;
+							case 'J':
+								b_win_count[2]++;
+								break;
+						}
+					}
+				}
+				cout << a_win << ' ' << tie << ' ' << b_win << endl
+				     << b_win << ' ' << tie << ' ' << a_win << endl;
+				int a_win_max = 0;
+				int b_win_max = 0;
+				for(int i = 0; i < 3; i++) {
+					a_win_max = max(a_win_max, a_win_count[i]);
+					b_win_max = max(b_win_max, b_win_count[i]);
+				}
+				for(int i = 0; i < 3; i++) {
+					if(a_win_count[i] == a_win_max) {
+						switch(i) {
+							case 0:
+								cout << 'B';
+								break;
+							case 1:
+								cout << 'C';
+								break;
+							case 2:
+								cout << 'J';
+								break;
+						}
+						cout << ' ';
+						break;
+					}
+				}
+				for(int i = 0; i < 3; i++) {
+					if(b_win_count[i] == b_win_max) {
+						switch(i) {
+							case 0:
+								cout << 'B';
+								break;
+							case 1:
+								cout << 'C';
+								break;
+							case 2:
+								cout << 'J';
+								break;
+						}
+						break;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1018
 	}    // namespace b
 
 	namespace a {}

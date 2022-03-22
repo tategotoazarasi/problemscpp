@@ -95,6 +95,11 @@ namespace pat {
 		namespace b1016 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1018 锤子剪刀布
+		namespace b1018 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
