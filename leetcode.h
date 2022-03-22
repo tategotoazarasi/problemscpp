@@ -1855,6 +1855,14 @@ namespace leetcode {
 			static bool findTarget(TreeNode *root, int k);
 		};
 	}// namespace two_sum_iv_input_is_a_bst
+
+	/// \brief 2038. Remove Colored Pieces if Both Neighbors are the Same Color
+	namespace remove_colored_pieces_if_both_neighbors_are_the_same_color {
+		class Solution {
+		public:
+			static bool winnerOfGame(string colors);
+		};
+	}// namespace remove_colored_pieces_if_both_neighbors_are_the_same_color
 };   // namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

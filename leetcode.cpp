@@ -4925,4 +4925,30 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace two_sum_iv_input_is_a_bst
+
+	namespace remove_colored_pieces_if_both_neighbors_are_the_same_color {
+		bool Solution::winnerOfGame(string colors) {
+			int a_count = 0;
+			int b_count = 0;
+			vector<bool> vec(colors.length(), true);
+			vec[0]                   = false;
+			vec[colors.length() - 1] = false;
+			for(int i = 0; i + 1 < colors.length(); i++) {
+				if(colors[i] != colors[i + 1]) {
+					vec[i]     = false;
+					vec[i + 1] = false;
+				}
+			}
+			for(int i = 0; i + 1 < colors.length(); i++) {
+				if(vec[i]) {
+					if(colors[i] == 'A') {
+						a_count++;
+					} else {
+						b_count++;
+					}
+				}
+			}
+			return a_count > b_count;
+		}
+	}// namespace remove_colored_pieces_if_both_neighbors_are_the_same_color
 }// namespace leetcode

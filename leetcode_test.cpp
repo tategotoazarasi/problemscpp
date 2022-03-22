@@ -2402,4 +2402,18 @@ namespace leetcode {
 			ASSERT_EQ(3, Solution::networkBecomesIdle(edges, patience));
 		}
 	}// namespace the_time_when_the_network_becomes_idle
+
+	namespace remove_colored_pieces_if_both_neighbors_are_the_same_color {
+		TEST(remove_colored_pieces_if_both_neighbors_are_the_same_color, case1) {
+			ASSERT_TRUE(Solution::winnerOfGame("AAABABB"));
+		}
+
+		TEST(remove_colored_pieces_if_both_neighbors_are_the_same_color, case2) {
+			ASSERT_FALSE(Solution::winnerOfGame("AA"));
+		}
+
+		TEST(remove_colored_pieces_if_both_neighbors_are_the_same_color, case3) {
+			ASSERT_FALSE(Solution::winnerOfGame("ABBBBBBBAAA"));
+		}
+	}// namespace remove_colored_pieces_if_both_neighbors_are_the_same_color
 }// namespace leetcode
