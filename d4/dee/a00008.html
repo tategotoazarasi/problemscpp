@@ -69,20 +69,21 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d5/d16/a00029_source.html">templates.h</a>&quot;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 </div>
 <p><a href="../../d4/dee/a00008_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a5bfa0694dcfb588baef2174a3ea82794"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dee/a00008.html#a5bfa0694dcfb588baef2174a3ea82794">operator&lt;&lt;</a> (ostream &amp;os, const <a class="el" href="../../df/d79/a02402.html">BigInt</a> &amp;)</td></tr>
-<tr class="separator:a5bfa0694dcfb588baef2174a3ea82794"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac34f777e9f24df2612d7769e2252a065"><td class="memItemLeft" align="right" valign="top">istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dee/a00008.html#ac34f777e9f24df2612d7769e2252a065">operator&gt;&gt;</a> (istream &amp;is, const <a class="el" href="../../df/d79/a02402.html">BigInt</a> &amp;)</td></tr>
-<tr class="separator:ac34f777e9f24df2612d7769e2252a065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a306bf00524f91d87d511fe540d517e8f"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dee/a00008.html#a306bf00524f91d87d511fe540d517e8f">operator&lt;&lt;</a> (ostream &amp;os, const <a class="el" href="../../df/d79/a02402.html">BigInt</a> &amp;bi)</td></tr>
+<tr class="separator:a306bf00524f91d87d511fe540d517e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7d1fbb95e4728ed5ee1b6ccabf9cc19"><td class="memItemLeft" align="right" valign="top">istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dee/a00008.html#aa7d1fbb95e4728ed5ee1b6ccabf9cc19">operator&gt;&gt;</a> (istream &amp;is, const <a class="el" href="../../df/d79/a02402.html">BigInt</a> &amp;bi)</td></tr>
+<tr class="separator:aa7d1fbb95e4728ed5ee1b6ccabf9cc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
-<a id="a5bfa0694dcfb588baef2174a3ea82794" name="a5bfa0694dcfb588baef2174a3ea82794"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bfa0694dcfb588baef2174a3ea82794">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+<a id="a306bf00524f91d87d511fe540d517e8f" name="a306bf00524f91d87d511fe540d517e8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a306bf00524f91d87d511fe540d517e8f">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -97,7 +98,7 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../df/d79/a02402.html">BigInt</a> &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>bi</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -107,14 +108,23 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/dee/a00008_source.html">templates.cpp</a> 第 <a class="el" href="../../d4/dee/a00008_source.html#l00337">337</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                                                 {</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../d4/dee/a00008_source.html">templates.cpp</a> 第 <a class="el" href="../../d4/dee/a00008_source.html#l00328">328</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                                                   {</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <span class="keywordflow">if</span>(!bi.<a class="code hl_variable" href="../../df/d79/a02402.html#a622851f40dd8992cc2a66a5ce83133df">positive</a>) {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        os &lt;&lt; <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    }</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> num: bi.<a class="code hl_variable" href="../../df/d79/a02402.html#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>) {</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        os &lt;&lt; num;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    }</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    <span class="keywordflow">return</span> os;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>}</div>
+<div class="ttc" id="aa02402_html_a622851f40dd8992cc2a66a5ce83133df"><div class="ttname"><a href="../../df/d79/a02402.html#a622851f40dd8992cc2a66a5ce83133df">BigInt::positive</a></div><div class="ttdeci">bool positive</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00024">templates.h:24</a></div></div>
+<div class="ttc" id="aa02402_html_a8ff0b8f430da59beb2b9e3d9a8f4f122"><div class="ttname"><a href="../../df/d79/a02402.html#a8ff0b8f430da59beb2b9e3d9a8f4f122">BigInt::vec</a></div><div class="ttdeci">vector&lt; unsigned short &gt; vec</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00025">templates.h:25</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ac34f777e9f24df2612d7769e2252a065" name="ac34f777e9f24df2612d7769e2252a065"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac34f777e9f24df2612d7769e2252a065">&#9670;&nbsp;</a></span>operator&gt;&gt;()</h2>
+<a id="aa7d1fbb95e4728ed5ee1b6ccabf9cc19" name="aa7d1fbb95e4728ed5ee1b6ccabf9cc19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7d1fbb95e4728ed5ee1b6ccabf9cc19">&#9670;&nbsp;</a></span>operator&gt;&gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -129,7 +139,7 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../df/d79/a02402.html">BigInt</a> &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>bi</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -139,9 +149,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/dee/a00008_source.html">templates.cpp</a> 第 <a class="el" href="../../d4/dee/a00008_source.html#l00340">340</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                                                 {</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../d4/dee/a00008_source.html">templates.cpp</a> 第 <a class="el" href="../../d4/dee/a00008_source.html#l00338">338</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                                                   {</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
