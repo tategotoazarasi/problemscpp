@@ -4896,7 +4896,7 @@ namespace leetcode {
 			queue<TreeNode *> que;
 			que.push(root);
 			while(!que.empty()) {
-				auto *node = que.front();
+				const auto *node = que.front();
 				que.pop();
 				s.insert(node->val);
 				count[node->val]++;
@@ -4949,4 +4949,34 @@ namespace leetcode {
 			return a_count > b_count;
 		}
 	}// namespace remove_colored_pieces_if_both_neighbors_are_the_same_color
+
+	namespace k_th_smallest_in_lexicographical_order {
+		int Solution::findKthNumber(int n, int k) {
+			int curr = 1;
+			k--;
+			while(k > 0) {
+				const int steps = getSteps(curr, n);
+				if(steps <= k) {
+					k -= steps;
+					curr++;
+				} else {
+					curr = curr * 10;
+					k--;
+				}
+			}
+			return curr;
+		}
+
+		int Solution::getSteps(int curr, long n) {
+			int steps  = 0;
+			long first = curr;
+			long last  = curr;
+			while(first <= n) {
+				steps += min(last, n) - first + 1;
+				first = first * 10;
+				last  = last * 10 + 9;
+			}
+			return steps;
+		}
+	}// namespace k_th_smallest_in_lexicographical_order
 }// namespace leetcode

@@ -2416,4 +2416,14 @@ namespace leetcode {
 			ASSERT_FALSE(Solution::winnerOfGame("ABBBBBBBAAA"));
 		}
 	}// namespace remove_colored_pieces_if_both_neighbors_are_the_same_color
+
+	namespace k_th_smallest_in_lexicographical_order {
+		TEST(k_th_smallest_in_lexicographical_order, case1) {
+			ASSERT_EQ(10, Solution::findKthNumber(13, 2));
+		}
+
+		TEST(k_th_smallest_in_lexicographical_order, case2) {
+			ASSERT_EQ(1, Solution::findKthNumber(1, 1));
+		}
+	}// namespace k_th_smallest_in_lexicographical_order
 }// namespace leetcode

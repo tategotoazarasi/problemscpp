@@ -1865,6 +1865,17 @@ namespace leetcode {
 			static bool winnerOfGame(string colors);
 		};
 	}// namespace remove_colored_pieces_if_both_neighbors_are_the_same_color
-};   // namespace leetcode
+
+	/**
+	 * \brief 440. K-th Smallest in Lexicographical Order
+	 */
+	namespace k_th_smallest_in_lexicographical_order {
+		class Solution {
+		public:
+			static int findKthNumber(int n, int k);
+			static int getSteps(int curr, long n);
+		};
+	}// namespace k_th_smallest_in_lexicographical_order
+}// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
