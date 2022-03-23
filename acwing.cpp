@@ -5655,4 +5655,93 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1671
+
+	namespace acwing1659 {
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			vector<bool> pen(n);
+			string str;
+			cin >> str;
+			bool has1 = false;
+			for(int i = 0; i < n; i++) {
+				pen[i] = str[i] == '1';
+				if(pen[i]) {
+					has1 = true;
+				}
+			}
+			if(!has1) {
+				cout << n - 1;
+				return 0;
+			}
+			vector<int> spaces2;
+			vector<int> spaces1;
+			int current = 0;
+			int left    = 0;
+			int right   = n - 1;
+			while(!pen[left]) {
+				left++;
+			}
+			if(left > 0) {
+				spaces1.push_back(left);
+			}
+			left++;
+			while(!pen[right]) {
+				right--;
+			}
+			if(right < n - 1) {
+				spaces1.push_back(n - 1 - right);
+			}
+			for(; left <= right; left++) {
+				if(!pen[left]) {
+					current++;
+				} else {
+					spaces2.push_back(current);
+					current = 0;
+				}
+			}
+			int minimum = 0;
+			int limit   = n;
+			sort(spaces2.begin(), spaces2.end());
+			sort(spaces1.begin(), spaces1.end());
+			if(!spaces2.empty()) {
+				limit = *spaces2.begin();
+				//两个都在2
+				//两个都在2的最大
+				const int a = (*spaces2.rbegin() - 2) / 3;
+				minimum     = max(minimum, a);
+				//两个分别在2的最大和第二大
+				if(spaces2.size() > 1) {
+					const int b = (spaces2[spaces2.size() - 2] - 1) / 2;
+					minimum     = max(minimum, b);
+				}
+				//两个分别在2的最大和1的最大
+				if(!spaces1.empty()) {
+					const int a = (*spaces2.rbegin() - 1) / 2;
+					int b       = *spaces1.rbegin() - 1;
+					minimum     = max(minimum, min(a, b));
+					//两个都在1的最大
+					b       = (*spaces1.rbegin() - 2) / 2;
+					minimum = max(minimum, b);
+					//两个分别在1的最大和第二大
+					if(spaces1.size() > 1) {
+						const int a = *spaces1.begin() - 1;
+						minimum     = max(minimum, a);
+					}
+				}
+			} else {
+				//两个分别在1的最大和第二大
+				if(spaces1.size() > 1) {
+					const int a = *spaces1.begin() - 1;
+					minimum     = max(minimum, a);
+				}
+				//两个都在1的最大
+				const int b = (*spaces1.rbegin() - 2) / 2;
+				minimum     = max(minimum, b);
+			}
+			minimum = min(limit, minimum);
+			cout << minimum + 1;
+			return 0;
+		}
+	}// namespace acwing1659
 }// namespace acwing

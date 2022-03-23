@@ -1815,5 +1815,12 @@ namespace acwing {
 	namespace acwing1671 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/**
+	 * \brief 1659. 社交距离 I
+	 */
+	namespace acwing1659 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
