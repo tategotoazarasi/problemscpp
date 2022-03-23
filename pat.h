@@ -107,6 +107,13 @@ namespace pat {
 		namespace b1019 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/**
+		 * \brief 1020 月饼 
+		 */
+		namespace b1020 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

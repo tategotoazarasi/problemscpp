@@ -678,6 +678,43 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1019
+
+		namespace b1020 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				int d;
+				cin >> n >> d;
+				vector<long double> storage(n);
+				vector<long double> sales(n);
+				vector<pair<long double, int>> unit_price(n);
+				for(int i = 0; i < n; i++) {
+					cin >> storage[i];
+				}
+				for(int i = 0; i < n; i++) {
+					cin >> sales[i];
+				}
+				for(int i = 0; i < n; i++) {
+					unit_price[i] = make_pair(sales[i] / storage[i], i);
+				}
+				sort(unit_price.begin(), unit_price.end(), [](const pair<long double, int> &a, const pair<long double, int> &b) { return a.first > b.first; });
+				int current_amount = 0;
+				long double ans    = 0;
+				for(int i = 0; i < n && current_amount < d; i++) {
+					int amount = 0;
+					if(current_amount + storage[unit_price[i].second] > d) {
+						amount         = d - current_amount;
+						current_amount = d;
+						ans += amount * sales[unit_price[i].second] / storage[unit_price[i].second];
+					} else {
+						amount = storage[unit_price[i].second];
+						ans += sales[unit_price[i].second];
+						current_amount += storage[unit_price[i].second];
+					}
+				}
+				cout << fixed << setprecision(2) << ans;
+				return 0;
+			}
+		}// namespace b1020
 	}    // namespace b
 
 	namespace a {}
