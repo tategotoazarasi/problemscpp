@@ -5639,16 +5639,17 @@ namespace acwing {
 			int n;
 			cin >> n;
 			for(int i = 0; i < n; i++) {
-				int x, y;
+				int x;
+				int y;
 				cin >> x >> y;
 				us.insert(make_pair(x, y));
 				row[x].insert(y);
 				col[y].insert(x);
 			}
 			for(auto [x, y]: us) {
-				int max_width  = max(abs(*row[x].begin() - y), abs(*row[x].rbegin() - y));
-				int max_height = max(abs(*col[y].begin() - x), abs(*col[y].rbegin() - x));
-				ans            = max(ans, max_width * max_height);
+				const int max_width  = max(abs(*row[x].begin() - y), abs(*row[x].rbegin() - y));
+				const int max_height = max(abs(*col[y].begin() - x), abs(*col[y].rbegin() - x));
+				ans                  = max(ans, max_width * max_height);
 			}
 			cout << ans;
 			return 0;

@@ -23,10 +23,10 @@ class BigInt {
 private:
 	bool positive              = true;
 	vector<unsigned short> vec = {};
-	unsigned long get_size() const;
-	unsigned short operator[](unsigned long) const;
+	[[nodiscard]] unsigned long get_size() const;
+	unsigned short operator[](unsigned long /*i*/) const;
 	BigInt(const vector<unsigned short> &vec, bool positive);
-	vector<unsigned short> operator*(const unsigned short n) const;
+	vector<unsigned short> operator*(unsigned short n) const;
 
 public:
 	BigInt(short n);
@@ -53,14 +53,14 @@ public:
 	BigInt &operator%=(const BigInt &bi);
 	BigInt &operator++();
 	BigInt &operator--();
-	BigInt &operator++(int);
-	BigInt &operator--(int);
+	const BigInt operator++(int);
+	const BigInt operator--(int);
 	bool operator>(const BigInt &bi) const;
 	bool operator<(const BigInt &bi) const;
 	bool operator==(const BigInt &bi) const;
 	bool operator!=(const BigInt &bi) const;
 	bool operator>=(const BigInt &bi) const;
 	bool operator<=(const BigInt &bi) const;
-	friend ostream &operator<<(ostream &os, const BigInt &);
-	friend istream &operator>>(istream &is, const BigInt &);
+	friend ostream &operator<<(ostream &os, const BigInt & /*bi*/);
+	friend istream &operator>>(istream &is, const BigInt & /*bi*/);
 };

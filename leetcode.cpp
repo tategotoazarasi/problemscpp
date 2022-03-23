@@ -4748,8 +4748,8 @@ namespace leetcode {
 
 	namespace minimum_white_tiles_after_covering_with_carpets {
 		int Solution::minimumWhiteTiles(string floor, int numCarpets, int carpetLen) {
-			int n = floor.length();
-			vector<vector<int>> f(numCarpets + 1, vector<int>(n));
+			const int n = floor.length();
+			vector f(numCarpets + 1, vector<int>(n));
 			f[0][0] = floor[0] % 2;
 			for(int i = 1; i < n; ++i) {
 				f[0][i] = f[0][i - 1] + floor[i] % 2;
@@ -4766,11 +4766,11 @@ namespace leetcode {
 
 	namespace count_hills_and_valleys_in_an_array {
 		int Solution::countHillValley(vector<int> &nums) {
-			int ans = 0;
-			auto u  = unique(nums.begin(), nums.end());
+			int ans      = 0;
+			const auto u = unique(nums.begin(), nums.end());
 			nums.erase(u, nums.end());
 			for(int i = 1; i + 1 < nums.size(); i++) {
-				if((nums[i] > nums[i - 1] && nums[i] > nums[i + 1]) || (nums[i] < nums[i - 1] && nums[i] < nums[i + 1])) {
+				if(nums[i] > nums[i - 1] && nums[i] > nums[i + 1] || nums[i] < nums[i - 1] && nums[i] < nums[i + 1]) {
 					ans++;
 				}
 			}
@@ -4858,20 +4858,18 @@ namespace leetcode {
 				um[edge[0]]->linked.insert(edge[1]);
 				um[edge[1]]->linked.insert(edge[0]);
 			}
-			auto comp = [](const pair<int, int> &s1, const pair<int, int> &s2) -> bool {
-				return s1.second > s2.second;
-			};
+			auto comp = [](const pair<int, int> &s1, const pair<int, int> &s2) -> bool { return s1.second > s2.second; };
 			priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(comp)> pq;
 			pq.push(make_pair(0, 0));
 			while(!nodes.empty()) {
 				auto [num, len] = pq.top();
 				pq.pop();
-				if(nodes.count(num) > 0) {
+				if(nodes.contains(num)) {
 					nodes.erase(num);
 					Node *node = um[num];
 					node->time = len;
 					for(auto next: node->linked) {
-						if(nodes.count(next) > 0) {
+						if(nodes.contains(next)) {
 							pq.push(make_pair(next, len + 1));
 						}
 					}
@@ -4880,8 +4878,8 @@ namespace leetcode {
 			int ans = 0;
 			for(auto [num, node]: um) {
 				if(num != 0) {
-					int resent_num = (node->time * 2) / node->patience;
-					if((node->time * 2) % node->patience == 0) {
+					int resent_num = node->time * 2 / node->patience;
+					if(node->time * 2 % node->patience == 0) {
 						resent_num--;
 					}
 					ans = max(ans, resent_num * node->patience + 2 * node->time + 1);
@@ -4898,7 +4896,7 @@ namespace leetcode {
 			queue<TreeNode *> que;
 			que.push(root);
 			while(!que.empty()) {
-				auto node = que.front();
+				auto *node = que.front();
 				que.pop();
 				s.insert(node->val);
 				count[node->val]++;
@@ -4911,13 +4909,13 @@ namespace leetcode {
 			}
 			bool ans = false;
 			for(auto it = s.begin(); it != s.end(); ++it) {
-				int other = k - (*it);
+				int other = k - *it;
 				if(other == *it) {
 					if(count[other] > 1) {
 						ans = true;
 						break;
 					}
-				} else if(s.count(other) > 0) {
+				} else if(s.contains(other)) {
 					ans = true;
 					break;
 				}
@@ -4930,7 +4928,7 @@ namespace leetcode {
 		bool Solution::winnerOfGame(string colors) {
 			int a_count = 0;
 			int b_count = 0;
-			vector<bool> vec(colors.length(), true);
+			vector vec(colors.length(), true);
 			vec[0]                   = false;
 			vec[colors.length() - 1] = false;
 			for(int i = 0; i + 1 < colors.length(); i++) {

@@ -2377,14 +2377,14 @@ namespace leetcode {
 
 	namespace maximum_points_in_an_archery_competition {
 		TEST(maximum_points_in_an_archery_competition, case1) {
-			vector aliceArrows = {1, 1, 0, 1, 0, 0, 2, 1, 0, 1, 2, 0};
-			vector output      = {0, 0, 0, 0, 1, 1, 0, 0, 1, 2, 3, 1};
+			vector aliceArrows  = {1, 1, 0, 1, 0, 0, 2, 1, 0, 1, 2, 0};
+			const vector output = {0, 0, 0, 0, 1, 1, 0, 0, 1, 2, 3, 1};
 			ASSERT_EQ(output, Solution::maximumBobPoints(9, aliceArrows));
 		}
 
 		TEST(maximum_points_in_an_archery_competition, case2) {
-			vector aliceArrows = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2};
-			vector output      = {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0};
+			vector aliceArrows  = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2};
+			const vector output = {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0};
 			ASSERT_EQ(output, Solution::maximumBobPoints(3, aliceArrows));
 		}
 	}// namespace maximum_points_in_an_archery_competition

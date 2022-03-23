@@ -1,5 +1,4 @@
 #include "templates.h"
-#include <cstring>
 #include <sstream>
 
 using namespace std;
@@ -21,15 +20,12 @@ TrieNode::~TrieNode() {
 	}
 }
 
-unsigned long BigInt::get_size() const {
-	return vec.size();
-}
+unsigned long BigInt::get_size() const { return vec.size(); }
 
-unsigned short BigInt::operator[](unsigned long i) const {
-	return vec[i];
-}
+unsigned short BigInt::operator[](unsigned long i) const { return vec[i]; }
 
-BigInt::BigInt(const vector<unsigned short> &vec, bool positive): positive(positive) {
+BigInt::BigInt(const vector<unsigned short> &vec, bool positive)
+    : positive(positive) {
 	int start_i = 0;
 	while(vec[start_i] == 0) {
 		start_i++;
@@ -180,42 +176,42 @@ BigInt::BigInt(const BigInt &bi) {
 
 BigInt BigInt::operator+(const BigInt &bi) const {
 	if(this->positive && !bi.positive) {
-		return (*this) - (-bi);
+		return *this - -bi;
 	}
 	if(!this->positive && bi.positive) {
-		return bi - (-(*this));
+		return bi - -*this;
 	}
 	vector<unsigned short> v;
 	unsigned short carry = 0;
 	for(long long i = 0; i < max(this->get_size(), bi.get_size()) || carry != 0; i++) {
-		unsigned short this_num = (static_cast<long long>(this->get_size()) - i - 1) >= 0 ? (*this)[this->get_size() - i - 1] : 0;
-		unsigned short bi_num   = (static_cast<long long>(bi.get_size()) - i - 1) >= 0 ? bi[bi.get_size() - i - 1] : 0;
-		unsigned short sum      = this_num + bi_num;
+		const unsigned short this_num = static_cast<long long>(this->get_size()) - i - 1 >= 0 ? (*this)[this->get_size() - i - 1] : 0;
+		const unsigned short bi_num   = static_cast<long long>(bi.get_size()) - i - 1 >= 0 ? bi[bi.get_size() - i - 1] : 0;
+		unsigned short sum            = this_num + bi_num;
 		sum += carry;
 		carry = sum / 10;
 		sum %= 10;
 		v.push_back(sum);
 	}
-	v          = vector(v.rbegin(), v.rend());
-	BigInt ret = BigInt(v, this->positive);
+	v        = vector(v.rbegin(), v.rend());
+	auto ret = BigInt(v, this->positive);
 	return ret;
 }
 
 BigInt BigInt::operator-(const BigInt &bi) const {
 	if(this->positive != bi.positive) {
-		return (*this) + (-bi);
+		return *this + -bi;
 	}
 	if(!this->positive) {
-		return (-bi - (-(*this)));
+		return -bi - -*this;
 	}
-	if((*this) < bi) {
-		return -(bi - (*this));
+	if(*this < bi) {
+		return -(bi - *this);
 	}
 	vector<unsigned short> v;
 	unsigned short borrow = 0;
 	for(long long i = 0; i < max(this->get_size(), bi.get_size()); i++) {
-		short this_num = (static_cast<long long>(this->get_size()) - i - 1) >= 0 ? (*this)[this->get_size() - i - 1] : 0;
-		short bi_num   = (static_cast<long long>(bi.get_size()) - i - 1) >= 0 ? bi[bi.get_size() - i - 1] : 0;
+		short this_num     = static_cast<long long>(this->get_size()) - i - 1 >= 0 ? (*this)[this->get_size() - i - 1] : 0;
+		const short bi_num = static_cast<long long>(bi.get_size()) - i - 1 >= 0 ? bi[bi.get_size() - i - 1] : 0;
 		this_num -= borrow;
 		short diff = this_num - bi_num;
 		borrow     = 0;
@@ -225,33 +221,25 @@ BigInt BigInt::operator-(const BigInt &bi) const {
 		}
 		v.push_back(diff);
 	}
-	v          = vector(v.rbegin(), v.rend());
-	BigInt ret = BigInt(v, true);
+	v        = vector(v.rbegin(), v.rend());
+	auto ret = BigInt(v, true);
 	return ret;
 }
 
-vector<unsigned short> BigInt::operator*(const unsigned short n) const {
-	return {};
-}
+vector<unsigned short> BigInt::operator*(const unsigned short /*n*/) const { return {}; }
 
-BigInt BigInt::operator*(const BigInt &bi) const {
-	return *this;
-}
+BigInt BigInt::operator*(const BigInt & /*bi*/) const { return *this; }
 
-BigInt BigInt::operator/(const BigInt &bi) const {
-	return *this;
-}
+BigInt BigInt::operator/(const BigInt & /*bi*/) const { return *this; }
 
-BigInt BigInt::operator%(const BigInt &bi) const {
-	return *this;
-}
+BigInt BigInt::operator%(const BigInt & /*bi*/) const { return *this; }
 
 bool BigInt::operator>(const BigInt &bi) const {
 	if(this->positive != bi.positive) {
 		return this->positive;
 	}
 	if(!this->positive && !bi.positive) {
-		return (-(*this)) < (-bi);
+		return -*this < -bi;
 	}
 	if(this->get_size() != bi.get_size()) {
 		return this->get_size() > bi.get_size();
@@ -270,12 +258,12 @@ bool BigInt::operator<(const BigInt &bi) const {
 		return !this->positive;
 	}
 	if(!this->positive && !bi.positive) {
-		return (-(*this)) > (-bi);
+		return -*this > -bi;
 	}
 	if(this->get_size() != bi.get_size()) {
 		return this->get_size() < bi.get_size();
 	}
-	return !((*this) >= bi);
+	return !(*this >= bi);
 }
 
 bool BigInt::operator==(const BigInt &bi) const {
@@ -292,36 +280,32 @@ bool BigInt::operator!=(const BigInt &bi) const {
 	return true;
 }
 
-bool BigInt::operator>=(const BigInt &bi) const {
-	return (*this) == bi || (*this) > bi;
-}
+bool BigInt::operator>=(const BigInt &bi) const { return *this == bi || *this > bi; }
 
-bool BigInt::operator<=(const BigInt &bi) const {
-	return (*this) == bi || (*this) < bi;
-}
+bool BigInt::operator<=(const BigInt &bi) const { return *this == bi || *this < bi; }
 
 BigInt &BigInt::operator+=(const BigInt &bi) {
-	(*this) = (*this) + bi;
+	*this = *this + bi;
 	return *this;
 }
 
 BigInt &BigInt::operator-=(const BigInt &bi) {
-	(*this) = (*this) - bi;
+	*this = *this - bi;
 	return *this;
 }
 
 BigInt &BigInt::operator*=(const BigInt &bi) {
-	(*this) = (*this) * bi;
+	*this = *this * bi;
 	return *this;
 }
 
 BigInt &BigInt::operator/=(const BigInt &bi) {
-	(*this) = (*this) / bi;
+	*this = *this / bi;
 	return *this;
 }
 
 BigInt &BigInt::operator%=(const BigInt &bi) {
-	(*this) = (*this) % bi;
+	*this = *this % bi;
 	return *this;
 }
 
@@ -329,37 +313,36 @@ ostream &operator<<(ostream &os, const BigInt &bi) {
 	if(!bi.positive) {
 		os << '-';
 	}
-	for(auto num: bi.vec) {
+	for(const auto num: bi.vec) {
 		os << num;
 	}
 	return os;
 }
 
 istream &operator>>(istream &is, const BigInt &bi) {
+	return is;
 }
 
-BigInt BigInt::operator-() const {
-	return BigInt(this->vec, !this->positive);
-}
+BigInt BigInt::operator-() const { return BigInt(this->vec, !this->positive); }
 
 BigInt &BigInt::operator++() {
-	(*this) += 1;
+	*this += 1;
 	return *this;
 }
 
 BigInt &BigInt::operator--() {
-	(*this) -= 1;
+	*this -= 1;
 	return *this;
 }
 
-BigInt &BigInt::operator++(int) {
+const BigInt BigInt::operator++(int) {
 	auto ret = BigInt(*this);
-	(*this) += 1;
+	*this += 1;
 	return ret;
 }
 
-BigInt &BigInt::operator--(int) {
+const BigInt BigInt::operator--(int) {
 	auto ret = BigInt(*this);
-	(*this) -= 1;
+	*this -= 1;
 	return ret;
 }

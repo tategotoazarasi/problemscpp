@@ -4,7 +4,6 @@
 #include <cstring>
 #include <iomanip>
 #include <map>
-#include <set>
 #include <sstream>
 #include <tuple>
 #include <unordered_map>
@@ -408,7 +407,8 @@ namespace pat {
 
 		namespace b1013 {
 			int main(istream &cin, ostream &cout) {
-				int m, n;
+				int m;
+				int n;
 				cin >> m >> n;
 				int count          = 0;
 				vector<int> primes = {};
@@ -442,20 +442,21 @@ namespace pat {
 
 		namespace b1014 {
 			int main(istream &cin, ostream &cout) {
-				string str1, str2;
+				string str1;
+				string str2;
 				cin >> str1 >> str2;
 				string day;
-				vector<string> days = {"MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"};
+				const vector<string> days = {"MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"};
 				int hh;
 				int mm;
 				for(int i = 0; i < str1.length() && i < str2.length(); i++) {
 					if(str1[i] == str2[i]) {
 						if(day.empty()) {
-							if(isupper(str1[i])) {
+							if(isupper(str1[i]) != 0) {
 								day = days[str1[i] - 'A'];
 							}
-						} else if(isdigit(str1[i]) || ('A' <= str1[i] && str1[i] <= 'N')) {
-							if(isdigit(str1[i])) {
+						} else if((isdigit(str1[i]) != 0) || 'A' <= str1[i] && str1[i] <= 'N') {
+							if(isdigit(str1[i]) != 0) {
 								hh = str1[i] - '0';
 							} else {
 								hh = 10 + str1[i] - 'A';
@@ -466,7 +467,7 @@ namespace pat {
 				}
 				cin >> str1 >> str2;
 				for(int i = 0; i < str1.length() && i < str2.length(); i++) {
-					if(str1[i] == str2[i] && isalpha(str1[i])) {
+					if(str1[i] == str2[i] && (isalpha(str1[i]) != 0)) {
 						mm = i;
 						break;
 					}
@@ -478,7 +479,9 @@ namespace pat {
 
 		namespace b1015 {
 			int main(istream &cin, ostream &cout) {
-				unsigned int n, l, h;
+				unsigned int n;
+				unsigned int l;
+				unsigned int h;
 				cin >> n >> l >> h;
 				vector<student> sector[4] = {vector<student>(), vector<student>(), vector<student>(), vector<student>()};
 				int sum                   = 0;
@@ -513,31 +516,33 @@ namespace pat {
 				if(this->ability + this->morality == stu.ability + stu.morality) {
 					if(this->morality == stu.morality) {
 						return this->id < stu.id;
-					} else {
-						return this->morality > stu.morality;
 					}
-				} else {
-					return this->ability + this->morality > stu.ability + stu.morality;
+					return this->morality > stu.morality;
 				}
+				return this->ability + this->morality > stu.ability + stu.morality;
+
+				return this->ability + this->morality > stu.ability + stu.morality;
 			}
 		}// namespace b1015
 
 		namespace b1016 {
 			int main(istream &cin, ostream &cout) {
-				string a, b;
-				int da, db;
+				string a;
+				string b;
+				int da;
+				int db;
 				cin >> a >> da >> b >> db;
 				stringstream ssa;
 				stringstream ssb;
 				int count_a = 0;
 				int count_b = 0;
-				for(char ch: a) {
+				for(const char ch: a) {
 					if(ch - '0' == da) {
 						count_a++;
 						ssa << ch;
 					}
 				}
-				for(char ch: b) {
+				for(const char ch: b) {
 					if(ch - '0' == db) {
 						count_b++;
 						ssb << ch;
@@ -566,11 +571,12 @@ namespace pat {
 				int b_win_count[3] = {};
 				int tie            = 0;
 				for(int i = 0; i < n; i++) {
-					char a, b;
+					char a;
+					char b;
 					cin >> a >> b;
 					if(a == b) {
 						tie++;
-					} else if((a == 'C' && b == 'J') || (a == 'J' && b == 'B') || (a == 'B' && b == 'C')) {
+					} else if(a == 'C' && b == 'J' || a == 'J' && b == 'B' || a == 'B' && b == 'C') {
 						a_win++;
 						switch(a) {
 							case 'B':

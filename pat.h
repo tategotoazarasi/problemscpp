@@ -83,8 +83,8 @@ namespace pat {
 		namespace b1015 {
 			struct student {
 				string id;
-				int morality;
-				int ability;
+				int morality{};
+				int ability{};
 				bool operator<(const student &stu) const;
 			};
 

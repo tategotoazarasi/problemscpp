@@ -1839,7 +1839,9 @@ namespace leetcode {
 			int time = 0;
 			int patience;
 			unordered_set<int> linked = {};
-			Node(int num, int patience): num(num), patience(patience) {}
+
+			Node(int num, int patience)
+			    : num(num), patience(patience) {}
 		};
 
 		class Solution {
