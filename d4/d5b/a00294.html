@@ -114,38 +114,40 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">pat.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l00526">526</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>                                                  {</div>
-<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>                <span class="keywordtype">string</span> a, b;</div>
-<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>                <span class="keywordtype">int</span> da, db;</div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>                cin &gt;&gt; a &gt;&gt; da &gt;&gt; b &gt;&gt; db;</div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>                stringstream ssa;</div>
-<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>                stringstream ssb;</div>
-<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>                <span class="keywordtype">int</span> count_a = 0;</div>
-<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>                <span class="keywordtype">int</span> count_b = 0;</div>
-<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: a) {</div>
-<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>                    <span class="keywordflow">if</span>(ch - <span class="charliteral">&#39;0&#39;</span> == da) {</div>
-<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>                        count_a++;</div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>                        ssa &lt;&lt; ch;</div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>                    }</div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>                }</div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: b) {</div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>                    <span class="keywordflow">if</span>(ch - <span class="charliteral">&#39;0&#39;</span> == db) {</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>                        count_b++;</div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>                        ssb &lt;&lt; ch;</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>                    }</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>                }</div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>                <span class="keywordtype">int</span> pa = 0;</div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>                <span class="keywordtype">int</span> pb = 0;</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>                <span class="keywordflow">if</span>(count_a != 0) {</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>                    ssa &gt;&gt; pa;</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">pat.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l00529">529</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>                                                  {</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>                <span class="keywordtype">string</span> a;</div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>                <span class="keywordtype">string</span> b;</div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>                <span class="keywordtype">int</span> da;</div>
+<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>                <span class="keywordtype">int</span> db;</div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>                cin &gt;&gt; a &gt;&gt; da &gt;&gt; b &gt;&gt; db;</div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>                stringstream ssa;</div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>                stringstream ssb;</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>                <span class="keywordtype">int</span> count_a = 0;</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>                <span class="keywordtype">int</span> count_b = 0;</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: a) {</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                    <span class="keywordflow">if</span>(ch - <span class="charliteral">&#39;0&#39;</span> == da) {</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>                        count_a++;</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>                        ssa &lt;&lt; ch;</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>                    }</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>                }</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: b) {</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>                    <span class="keywordflow">if</span>(ch - <span class="charliteral">&#39;0&#39;</span> == db) {</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>                        count_b++;</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>                        ssb &lt;&lt; ch;</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>                    }</div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>                }</div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>                <span class="keywordflow">if</span>(count_b != 0) {</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>                    ssb &gt;&gt; pb;</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>                }</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>                cout &lt;&lt; pa + pb;</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>            }</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>                <span class="keywordtype">int</span> pa = 0;</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>                <span class="keywordtype">int</span> pb = 0;</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>                <span class="keywordflow">if</span>(count_a != 0) {</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>                    ssa &gt;&gt; pa;</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>                }</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>                <span class="keywordflow">if</span>(count_b != 0) {</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>                    ssb &gt;&gt; pb;</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>                }</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>                cout &lt;&lt; pa + pb;</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dd/d32/a00041_source.html#l00243">TEST()</a>.</p>
 
@@ -187,7 +189,7 @@ $(function() {
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l00526">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l00529">main()</a>.</p>
 
 </div>
 </div>
@@ -226,7 +228,7 @@ $(function() {
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                ASSERT_EQ(<span class="stringliteral">&quot;0&quot;</span>, ans);</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l00526">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l00529">main()</a>.</p>
 
 </div>
 </div>

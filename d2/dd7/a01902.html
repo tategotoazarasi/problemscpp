@@ -111,11 +111,11 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l04768">4768</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l04768" name="l04768"></a><span class="lineno"> 4768</span>                                                       {</div>
-<div class="line"><a id="l04769" name="l04769"></a><span class="lineno"> 4769</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l04770" name="l04770"></a><span class="lineno"> 4770</span>            <span class="keyword">auto</span> u  = unique(nums.begin(), nums.end());</div>
+<div class="line"><a id="l04769" name="l04769"></a><span class="lineno"> 4769</span>            <span class="keywordtype">int</span> ans      = 0;</div>
+<div class="line"><a id="l04770" name="l04770"></a><span class="lineno"> 4770</span>            <span class="keyword">const</span> <span class="keyword">auto</span> u = unique(nums.begin(), nums.end());</div>
 <div class="line"><a id="l04771" name="l04771"></a><span class="lineno"> 4771</span>            nums.erase(u, nums.end());</div>
 <div class="line"><a id="l04772" name="l04772"></a><span class="lineno"> 4772</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i + 1 &lt; nums.size(); i++) {</div>
-<div class="line"><a id="l04773" name="l04773"></a><span class="lineno"> 4773</span>                <span class="keywordflow">if</span>((nums[i] &gt; nums[i - 1] &amp;&amp; nums[i] &gt; nums[i + 1]) || (nums[i] &lt; nums[i - 1] &amp;&amp; nums[i] &lt; nums[i + 1])) {</div>
+<div class="line"><a id="l04773" name="l04773"></a><span class="lineno"> 4773</span>                <span class="keywordflow">if</span>(nums[i] &gt; nums[i - 1] &amp;&amp; nums[i] &gt; nums[i + 1] || nums[i] &lt; nums[i - 1] &amp;&amp; nums[i] &lt; nums[i + 1]) {</div>
 <div class="line"><a id="l04774" name="l04774"></a><span class="lineno"> 4774</span>                    ans++;</div>
 <div class="line"><a id="l04775" name="l04775"></a><span class="lineno"> 4775</span>                }</div>
 <div class="line"><a id="l04776" name="l04776"></a><span class="lineno"> 4776</span>            }</div>

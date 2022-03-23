@@ -4812,8 +4812,8 @@ $(function() {
 <div class="line"><a id="l04748" name="l04748"></a><span class="lineno"> 4748</span> </div>
 <div class="line"><a id="l04749" name="l04749"></a><span class="lineno"><a class="line" href="../../d7/d03/a00254.html"> 4749</a></span>    <span class="keyword">namespace </span>minimum_white_tiles_after_covering_with_carpets {</div>
 <div class="line"><a id="l04750" name="l04750"></a><span class="lineno"><a class="line" href="../../dd/d8e/a01898.html#a3e18d20a58aae74b219a435bab82b255"> 4750</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../dd/d8e/a01898.html#a3e18d20a58aae74b219a435bab82b255">Solution::minimumWhiteTiles</a>(<span class="keywordtype">string</span> floor, <span class="keywordtype">int</span> numCarpets, <span class="keywordtype">int</span> carpetLen) {</div>
-<div class="line"><a id="l04751" name="l04751"></a><span class="lineno"> 4751</span>            <span class="keywordtype">int</span> n = floor.length();</div>
-<div class="line"><a id="l04752" name="l04752"></a><span class="lineno"> 4752</span>            vector&lt;vector&lt;int&gt;&gt; f(numCarpets + 1, vector&lt;int&gt;(n));</div>
+<div class="line"><a id="l04751" name="l04751"></a><span class="lineno"> 4751</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = floor.length();</div>
+<div class="line"><a id="l04752" name="l04752"></a><span class="lineno"> 4752</span>            vector f(numCarpets + 1, vector&lt;int&gt;(n));</div>
 <div class="line"><a id="l04753" name="l04753"></a><span class="lineno"> 4753</span>            f[0][0] = floor[0] % 2;</div>
 <div class="line"><a id="l04754" name="l04754"></a><span class="lineno"> 4754</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; n; ++i) {</div>
 <div class="line"><a id="l04755" name="l04755"></a><span class="lineno"> 4755</span>                f[0][i] = f[0][i - 1] + floor[i] % 2;</div>
@@ -4830,11 +4830,11 @@ $(function() {
 <div class="line"><a id="l04766" name="l04766"></a><span class="lineno"> 4766</span> </div>
 <div class="line"><a id="l04767" name="l04767"></a><span class="lineno"><a class="line" href="../../d4/d04/a00255.html"> 4767</a></span>    <span class="keyword">namespace </span>count_hills_and_valleys_in_an_array {</div>
 <div class="line"><a id="l04768" name="l04768"></a><span class="lineno"><a class="line" href="../../d2/dd7/a01902.html#a31c8b30be0e3cceb6b69a546e2689fc1"> 4768</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d2/dd7/a01902.html#a31c8b30be0e3cceb6b69a546e2689fc1">Solution::countHillValley</a>(vector&lt;int&gt; &amp;nums) {</div>
-<div class="line"><a id="l04769" name="l04769"></a><span class="lineno"> 4769</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l04770" name="l04770"></a><span class="lineno"> 4770</span>            <span class="keyword">auto</span> u  = unique(nums.begin(), nums.end());</div>
+<div class="line"><a id="l04769" name="l04769"></a><span class="lineno"> 4769</span>            <span class="keywordtype">int</span> ans      = 0;</div>
+<div class="line"><a id="l04770" name="l04770"></a><span class="lineno"> 4770</span>            <span class="keyword">const</span> <span class="keyword">auto</span> u = unique(nums.begin(), nums.end());</div>
 <div class="line"><a id="l04771" name="l04771"></a><span class="lineno"> 4771</span>            nums.erase(u, nums.end());</div>
 <div class="line"><a id="l04772" name="l04772"></a><span class="lineno"> 4772</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i + 1 &lt; nums.size(); i++) {</div>
-<div class="line"><a id="l04773" name="l04773"></a><span class="lineno"> 4773</span>                <span class="keywordflow">if</span>((nums[i] &gt; nums[i - 1] &amp;&amp; nums[i] &gt; nums[i + 1]) || (nums[i] &lt; nums[i - 1] &amp;&amp; nums[i] &lt; nums[i + 1])) {</div>
+<div class="line"><a id="l04773" name="l04773"></a><span class="lineno"> 4773</span>                <span class="keywordflow">if</span>(nums[i] &gt; nums[i - 1] &amp;&amp; nums[i] &gt; nums[i + 1] || nums[i] &lt; nums[i - 1] &amp;&amp; nums[i] &lt; nums[i + 1]) {</div>
 <div class="line"><a id="l04774" name="l04774"></a><span class="lineno"> 4774</span>                    ans++;</div>
 <div class="line"><a id="l04775" name="l04775"></a><span class="lineno"> 4775</span>                }</div>
 <div class="line"><a id="l04776" name="l04776"></a><span class="lineno"> 4776</span>            }</div>
@@ -4922,100 +4922,98 @@ $(function() {
 <div class="line"><a id="l04858" name="l04858"></a><span class="lineno"> 4858</span>                um[edge[0]]-&gt;linked.insert(edge[1]);</div>
 <div class="line"><a id="l04859" name="l04859"></a><span class="lineno"> 4859</span>                um[edge[1]]-&gt;linked.insert(edge[0]);</div>
 <div class="line"><a id="l04860" name="l04860"></a><span class="lineno"> 4860</span>            }</div>
-<div class="line"><a id="l04861" name="l04861"></a><span class="lineno"> 4861</span>            <span class="keyword">auto</span> comp = [](<span class="keyword">const</span> pair&lt;int, int&gt; &amp;s1, <span class="keyword">const</span> pair&lt;int, int&gt; &amp;s2) -&gt; <span class="keywordtype">bool</span> {</div>
-<div class="line"><a id="l04862" name="l04862"></a><span class="lineno"> 4862</span>                <span class="keywordflow">return</span> s1.second &gt; s2.second;</div>
-<div class="line"><a id="l04863" name="l04863"></a><span class="lineno"> 4863</span>            };</div>
-<div class="line"><a id="l04864" name="l04864"></a><span class="lineno"> 4864</span>            priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, <span class="keyword">decltype</span>(comp)&gt; pq;</div>
-<div class="line"><a id="l04865" name="l04865"></a><span class="lineno"> 4865</span>            pq.push(make_pair(0, 0));</div>
-<div class="line"><a id="l04866" name="l04866"></a><span class="lineno"> 4866</span>            <span class="keywordflow">while</span>(!nodes.empty()) {</div>
-<div class="line"><a id="l04867" name="l04867"></a><span class="lineno"> 4867</span>                <span class="keyword">auto</span> [num, len] = pq.top();</div>
-<div class="line"><a id="l04868" name="l04868"></a><span class="lineno"> 4868</span>                pq.pop();</div>
-<div class="line"><a id="l04869" name="l04869"></a><span class="lineno"> 4869</span>                <span class="keywordflow">if</span>(nodes.count(num) &gt; 0) {</div>
-<div class="line"><a id="l04870" name="l04870"></a><span class="lineno"> 4870</span>                    nodes.erase(num);</div>
-<div class="line"><a id="l04871" name="l04871"></a><span class="lineno"> 4871</span>                    <a class="code hl_struct" href="../../dc/d18/a01914.html">Node</a> *node = um[num];</div>
-<div class="line"><a id="l04872" name="l04872"></a><span class="lineno"> 4872</span>                    node-&gt;<a class="code hl_variable" href="../../dc/d18/a01914.html#a95ae7aeaf3c1c355791e0a7f9b44db39">time</a> = len;</div>
-<div class="line"><a id="l04873" name="l04873"></a><span class="lineno"> 4873</span>                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> next: node-&gt;<a class="code hl_variable" href="../../dc/d18/a01914.html#ae4985a0226209426b3d214953807decb">linked</a>) {</div>
-<div class="line"><a id="l04874" name="l04874"></a><span class="lineno"> 4874</span>                        <span class="keywordflow">if</span>(nodes.count(next) &gt; 0) {</div>
-<div class="line"><a id="l04875" name="l04875"></a><span class="lineno"> 4875</span>                            pq.push(make_pair(next, len + 1));</div>
-<div class="line"><a id="l04876" name="l04876"></a><span class="lineno"> 4876</span>                        }</div>
-<div class="line"><a id="l04877" name="l04877"></a><span class="lineno"> 4877</span>                    }</div>
-<div class="line"><a id="l04878" name="l04878"></a><span class="lineno"> 4878</span>                }</div>
-<div class="line"><a id="l04879" name="l04879"></a><span class="lineno"> 4879</span>            }</div>
-<div class="line"><a id="l04880" name="l04880"></a><span class="lineno"> 4880</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l04881" name="l04881"></a><span class="lineno"> 4881</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> [num, node]: um) {</div>
-<div class="line"><a id="l04882" name="l04882"></a><span class="lineno"> 4882</span>                <span class="keywordflow">if</span>(num != 0) {</div>
-<div class="line"><a id="l04883" name="l04883"></a><span class="lineno"> 4883</span>                    <span class="keywordtype">int</span> resent_num = (node-&gt;time * 2) / node-&gt;patience;</div>
-<div class="line"><a id="l04884" name="l04884"></a><span class="lineno"> 4884</span>                    <span class="keywordflow">if</span>((node-&gt;time * 2) % node-&gt;patience == 0) {</div>
-<div class="line"><a id="l04885" name="l04885"></a><span class="lineno"> 4885</span>                        resent_num--;</div>
-<div class="line"><a id="l04886" name="l04886"></a><span class="lineno"> 4886</span>                    }</div>
-<div class="line"><a id="l04887" name="l04887"></a><span class="lineno"> 4887</span>                    ans = max(ans, resent_num * node-&gt;patience + 2 * node-&gt;time + 1);</div>
-<div class="line"><a id="l04888" name="l04888"></a><span class="lineno"> 4888</span>                }</div>
-<div class="line"><a id="l04889" name="l04889"></a><span class="lineno"> 4889</span>            }</div>
-<div class="line"><a id="l04890" name="l04890"></a><span class="lineno"> 4890</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l04891" name="l04891"></a><span class="lineno"> 4891</span>        }</div>
-<div class="line"><a id="l04892" name="l04892"></a><span class="lineno"> 4892</span>    }<span class="comment">// namespace the_time_when_the_network_becomes_idle</span></div>
-<div class="line"><a id="l04893" name="l04893"></a><span class="lineno"> 4893</span> </div>
-<div class="line"><a id="l04894" name="l04894"></a><span class="lineno"><a class="line" href="../../d0/d2f/a00259.html"> 4894</a></span>    <span class="keyword">namespace </span>two_sum_iv_input_is_a_bst {</div>
-<div class="line"><a id="l04895" name="l04895"></a><span class="lineno"><a class="line" href="../../dd/d19/a01922.html#aa9c9ff36bb0dc4ad1e3a1b38acdecf75"> 4895</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dd/d19/a01922.html#aa9c9ff36bb0dc4ad1e3a1b38acdecf75">Solution::findTarget</a>(<a class="code hl_struct" href="../../d4/d5d/a01202.html">TreeNode</a> *root, <span class="keywordtype">int</span> k) {</div>
-<div class="line"><a id="l04896" name="l04896"></a><span class="lineno"> 4896</span>            set&lt;int&gt; s;</div>
-<div class="line"><a id="l04897" name="l04897"></a><span class="lineno"> 4897</span>            unordered_map&lt;int, int&gt; count;</div>
-<div class="line"><a id="l04898" name="l04898"></a><span class="lineno"> 4898</span>            queue&lt;TreeNode *&gt; que;</div>
-<div class="line"><a id="l04899" name="l04899"></a><span class="lineno"> 4899</span>            que.push(root);</div>
-<div class="line"><a id="l04900" name="l04900"></a><span class="lineno"> 4900</span>            <span class="keywordflow">while</span>(!que.empty()) {</div>
-<div class="line"><a id="l04901" name="l04901"></a><span class="lineno"> 4901</span>                <span class="keyword">auto</span> node = que.front();</div>
-<div class="line"><a id="l04902" name="l04902"></a><span class="lineno"> 4902</span>                que.pop();</div>
-<div class="line"><a id="l04903" name="l04903"></a><span class="lineno"> 4903</span>                s.insert(node-&gt;val);</div>
-<div class="line"><a id="l04904" name="l04904"></a><span class="lineno"> 4904</span>                count[node-&gt;val]++;</div>
-<div class="line"><a id="l04905" name="l04905"></a><span class="lineno"> 4905</span>                <span class="keywordflow">if</span>(node-&gt;left != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l04906" name="l04906"></a><span class="lineno"> 4906</span>                    que.push(node-&gt;left);</div>
-<div class="line"><a id="l04907" name="l04907"></a><span class="lineno"> 4907</span>                }</div>
-<div class="line"><a id="l04908" name="l04908"></a><span class="lineno"> 4908</span>                <span class="keywordflow">if</span>(node-&gt;right != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l04909" name="l04909"></a><span class="lineno"> 4909</span>                    que.push(node-&gt;right);</div>
-<div class="line"><a id="l04910" name="l04910"></a><span class="lineno"> 4910</span>                }</div>
-<div class="line"><a id="l04911" name="l04911"></a><span class="lineno"> 4911</span>            }</div>
-<div class="line"><a id="l04912" name="l04912"></a><span class="lineno"> 4912</span>            <span class="keywordtype">bool</span> ans = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04913" name="l04913"></a><span class="lineno"> 4913</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = s.begin(); it != s.end(); ++it) {</div>
-<div class="line"><a id="l04914" name="l04914"></a><span class="lineno"> 4914</span>                <span class="keywordtype">int</span> other = k - (*it);</div>
-<div class="line"><a id="l04915" name="l04915"></a><span class="lineno"> 4915</span>                <span class="keywordflow">if</span>(other == *it) {</div>
-<div class="line"><a id="l04916" name="l04916"></a><span class="lineno"> 4916</span>                    <span class="keywordflow">if</span>(count[other] &gt; 1) {</div>
-<div class="line"><a id="l04917" name="l04917"></a><span class="lineno"> 4917</span>                        ans = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l04918" name="l04918"></a><span class="lineno"> 4918</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04919" name="l04919"></a><span class="lineno"> 4919</span>                    }</div>
-<div class="line"><a id="l04920" name="l04920"></a><span class="lineno"> 4920</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(s.count(other) &gt; 0) {</div>
-<div class="line"><a id="l04921" name="l04921"></a><span class="lineno"> 4921</span>                    ans = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l04922" name="l04922"></a><span class="lineno"> 4922</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04923" name="l04923"></a><span class="lineno"> 4923</span>                }</div>
-<div class="line"><a id="l04924" name="l04924"></a><span class="lineno"> 4924</span>            }</div>
-<div class="line"><a id="l04925" name="l04925"></a><span class="lineno"> 4925</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l04926" name="l04926"></a><span class="lineno"> 4926</span>        }</div>
-<div class="line"><a id="l04927" name="l04927"></a><span class="lineno"> 4927</span>    }<span class="comment">// namespace two_sum_iv_input_is_a_bst</span></div>
-<div class="line"><a id="l04928" name="l04928"></a><span class="lineno"> 4928</span> </div>
-<div class="line"><a id="l04929" name="l04929"></a><span class="lineno"><a class="line" href="../../dd/dd7/a00260.html"> 4929</a></span>    <span class="keyword">namespace </span>remove_colored_pieces_if_both_neighbors_are_the_same_color {</div>
-<div class="line"><a id="l04930" name="l04930"></a><span class="lineno"><a class="line" href="../../d2/db9/a01926.html#ab2211697c42a6ef38bdb40993dbf0373"> 4930</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d2/db9/a01926.html#ab2211697c42a6ef38bdb40993dbf0373">Solution::winnerOfGame</a>(<span class="keywordtype">string</span> colors) {</div>
-<div class="line"><a id="l04931" name="l04931"></a><span class="lineno"> 4931</span>            <span class="keywordtype">int</span> a_count = 0;</div>
-<div class="line"><a id="l04932" name="l04932"></a><span class="lineno"> 4932</span>            <span class="keywordtype">int</span> b_count = 0;</div>
-<div class="line"><a id="l04933" name="l04933"></a><span class="lineno"> 4933</span>            vector&lt;bool&gt; vec(colors.length(), <span class="keyword">true</span>);</div>
-<div class="line"><a id="l04934" name="l04934"></a><span class="lineno"> 4934</span>            vec[0]                   = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04935" name="l04935"></a><span class="lineno"> 4935</span>            vec[colors.length() - 1] = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04936" name="l04936"></a><span class="lineno"> 4936</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i + 1 &lt; colors.length(); i++) {</div>
-<div class="line"><a id="l04937" name="l04937"></a><span class="lineno"> 4937</span>                <span class="keywordflow">if</span>(colors[i] != colors[i + 1]) {</div>
-<div class="line"><a id="l04938" name="l04938"></a><span class="lineno"> 4938</span>                    vec[i]     = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04939" name="l04939"></a><span class="lineno"> 4939</span>                    vec[i + 1] = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04940" name="l04940"></a><span class="lineno"> 4940</span>                }</div>
-<div class="line"><a id="l04941" name="l04941"></a><span class="lineno"> 4941</span>            }</div>
-<div class="line"><a id="l04942" name="l04942"></a><span class="lineno"> 4942</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i + 1 &lt; colors.length(); i++) {</div>
-<div class="line"><a id="l04943" name="l04943"></a><span class="lineno"> 4943</span>                <span class="keywordflow">if</span>(vec[i]) {</div>
-<div class="line"><a id="l04944" name="l04944"></a><span class="lineno"> 4944</span>                    <span class="keywordflow">if</span>(colors[i] == <span class="charliteral">&#39;A&#39;</span>) {</div>
-<div class="line"><a id="l04945" name="l04945"></a><span class="lineno"> 4945</span>                        a_count++;</div>
-<div class="line"><a id="l04946" name="l04946"></a><span class="lineno"> 4946</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l04947" name="l04947"></a><span class="lineno"> 4947</span>                        b_count++;</div>
-<div class="line"><a id="l04948" name="l04948"></a><span class="lineno"> 4948</span>                    }</div>
-<div class="line"><a id="l04949" name="l04949"></a><span class="lineno"> 4949</span>                }</div>
-<div class="line"><a id="l04950" name="l04950"></a><span class="lineno"> 4950</span>            }</div>
-<div class="line"><a id="l04951" name="l04951"></a><span class="lineno"> 4951</span>            <span class="keywordflow">return</span> a_count &gt; b_count;</div>
-<div class="line"><a id="l04952" name="l04952"></a><span class="lineno"> 4952</span>        }</div>
-<div class="line"><a id="l04953" name="l04953"></a><span class="lineno"> 4953</span>    }<span class="comment">// namespace remove_colored_pieces_if_both_neighbors_are_the_same_color</span></div>
-<div class="line"><a id="l04954" name="l04954"></a><span class="lineno"> 4954</span>}<span class="comment">// namespace leetcode</span></div>
+<div class="line"><a id="l04861" name="l04861"></a><span class="lineno"> 4861</span>            <span class="keyword">auto</span> comp = [](<span class="keyword">const</span> pair&lt;int, int&gt; &amp;s1, <span class="keyword">const</span> pair&lt;int, int&gt; &amp;s2) -&gt; <span class="keywordtype">bool</span> { <span class="keywordflow">return</span> s1.second &gt; s2.second; };</div>
+<div class="line"><a id="l04862" name="l04862"></a><span class="lineno"> 4862</span>            priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, <span class="keyword">decltype</span>(comp)&gt; pq;</div>
+<div class="line"><a id="l04863" name="l04863"></a><span class="lineno"> 4863</span>            pq.push(make_pair(0, 0));</div>
+<div class="line"><a id="l04864" name="l04864"></a><span class="lineno"> 4864</span>            <span class="keywordflow">while</span>(!nodes.empty()) {</div>
+<div class="line"><a id="l04865" name="l04865"></a><span class="lineno"> 4865</span>                <span class="keyword">auto</span> [num, len] = pq.top();</div>
+<div class="line"><a id="l04866" name="l04866"></a><span class="lineno"> 4866</span>                pq.pop();</div>
+<div class="line"><a id="l04867" name="l04867"></a><span class="lineno"> 4867</span>                <span class="keywordflow">if</span>(nodes.contains(num)) {</div>
+<div class="line"><a id="l04868" name="l04868"></a><span class="lineno"> 4868</span>                    nodes.erase(num);</div>
+<div class="line"><a id="l04869" name="l04869"></a><span class="lineno"> 4869</span>                    <a class="code hl_struct" href="../../dc/d18/a01914.html">Node</a> *node = um[num];</div>
+<div class="line"><a id="l04870" name="l04870"></a><span class="lineno"> 4870</span>                    node-&gt;<a class="code hl_variable" href="../../dc/d18/a01914.html#a95ae7aeaf3c1c355791e0a7f9b44db39">time</a> = len;</div>
+<div class="line"><a id="l04871" name="l04871"></a><span class="lineno"> 4871</span>                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> next: node-&gt;<a class="code hl_variable" href="../../dc/d18/a01914.html#ae4985a0226209426b3d214953807decb">linked</a>) {</div>
+<div class="line"><a id="l04872" name="l04872"></a><span class="lineno"> 4872</span>                        <span class="keywordflow">if</span>(nodes.contains(next)) {</div>
+<div class="line"><a id="l04873" name="l04873"></a><span class="lineno"> 4873</span>                            pq.push(make_pair(next, len + 1));</div>
+<div class="line"><a id="l04874" name="l04874"></a><span class="lineno"> 4874</span>                        }</div>
+<div class="line"><a id="l04875" name="l04875"></a><span class="lineno"> 4875</span>                    }</div>
+<div class="line"><a id="l04876" name="l04876"></a><span class="lineno"> 4876</span>                }</div>
+<div class="line"><a id="l04877" name="l04877"></a><span class="lineno"> 4877</span>            }</div>
+<div class="line"><a id="l04878" name="l04878"></a><span class="lineno"> 4878</span>            <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l04879" name="l04879"></a><span class="lineno"> 4879</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> [num, node]: um) {</div>
+<div class="line"><a id="l04880" name="l04880"></a><span class="lineno"> 4880</span>                <span class="keywordflow">if</span>(num != 0) {</div>
+<div class="line"><a id="l04881" name="l04881"></a><span class="lineno"> 4881</span>                    <span class="keywordtype">int</span> resent_num = node-&gt;time * 2 / node-&gt;patience;</div>
+<div class="line"><a id="l04882" name="l04882"></a><span class="lineno"> 4882</span>                    <span class="keywordflow">if</span>(node-&gt;time * 2 % node-&gt;patience == 0) {</div>
+<div class="line"><a id="l04883" name="l04883"></a><span class="lineno"> 4883</span>                        resent_num--;</div>
+<div class="line"><a id="l04884" name="l04884"></a><span class="lineno"> 4884</span>                    }</div>
+<div class="line"><a id="l04885" name="l04885"></a><span class="lineno"> 4885</span>                    ans = max(ans, resent_num * node-&gt;patience + 2 * node-&gt;time + 1);</div>
+<div class="line"><a id="l04886" name="l04886"></a><span class="lineno"> 4886</span>                }</div>
+<div class="line"><a id="l04887" name="l04887"></a><span class="lineno"> 4887</span>            }</div>
+<div class="line"><a id="l04888" name="l04888"></a><span class="lineno"> 4888</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l04889" name="l04889"></a><span class="lineno"> 4889</span>        }</div>
+<div class="line"><a id="l04890" name="l04890"></a><span class="lineno"> 4890</span>    }<span class="comment">// namespace the_time_when_the_network_becomes_idle</span></div>
+<div class="line"><a id="l04891" name="l04891"></a><span class="lineno"> 4891</span> </div>
+<div class="line"><a id="l04892" name="l04892"></a><span class="lineno"><a class="line" href="../../d0/d2f/a00259.html"> 4892</a></span>    <span class="keyword">namespace </span>two_sum_iv_input_is_a_bst {</div>
+<div class="line"><a id="l04893" name="l04893"></a><span class="lineno"><a class="line" href="../../dd/d19/a01922.html#aa9c9ff36bb0dc4ad1e3a1b38acdecf75"> 4893</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dd/d19/a01922.html#aa9c9ff36bb0dc4ad1e3a1b38acdecf75">Solution::findTarget</a>(<a class="code hl_struct" href="../../d4/d5d/a01202.html">TreeNode</a> *root, <span class="keywordtype">int</span> k) {</div>
+<div class="line"><a id="l04894" name="l04894"></a><span class="lineno"> 4894</span>            set&lt;int&gt; s;</div>
+<div class="line"><a id="l04895" name="l04895"></a><span class="lineno"> 4895</span>            unordered_map&lt;int, int&gt; count;</div>
+<div class="line"><a id="l04896" name="l04896"></a><span class="lineno"> 4896</span>            queue&lt;TreeNode *&gt; que;</div>
+<div class="line"><a id="l04897" name="l04897"></a><span class="lineno"> 4897</span>            que.push(root);</div>
+<div class="line"><a id="l04898" name="l04898"></a><span class="lineno"> 4898</span>            <span class="keywordflow">while</span>(!que.empty()) {</div>
+<div class="line"><a id="l04899" name="l04899"></a><span class="lineno"> 4899</span>                <span class="keyword">auto</span> *node = que.front();</div>
+<div class="line"><a id="l04900" name="l04900"></a><span class="lineno"> 4900</span>                que.pop();</div>
+<div class="line"><a id="l04901" name="l04901"></a><span class="lineno"> 4901</span>                s.insert(node-&gt;val);</div>
+<div class="line"><a id="l04902" name="l04902"></a><span class="lineno"> 4902</span>                count[node-&gt;val]++;</div>
+<div class="line"><a id="l04903" name="l04903"></a><span class="lineno"> 4903</span>                <span class="keywordflow">if</span>(node-&gt;left != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l04904" name="l04904"></a><span class="lineno"> 4904</span>                    que.push(node-&gt;left);</div>
+<div class="line"><a id="l04905" name="l04905"></a><span class="lineno"> 4905</span>                }</div>
+<div class="line"><a id="l04906" name="l04906"></a><span class="lineno"> 4906</span>                <span class="keywordflow">if</span>(node-&gt;right != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l04907" name="l04907"></a><span class="lineno"> 4907</span>                    que.push(node-&gt;right);</div>
+<div class="line"><a id="l04908" name="l04908"></a><span class="lineno"> 4908</span>                }</div>
+<div class="line"><a id="l04909" name="l04909"></a><span class="lineno"> 4909</span>            }</div>
+<div class="line"><a id="l04910" name="l04910"></a><span class="lineno"> 4910</span>            <span class="keywordtype">bool</span> ans = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04911" name="l04911"></a><span class="lineno"> 4911</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = s.begin(); it != s.end(); ++it) {</div>
+<div class="line"><a id="l04912" name="l04912"></a><span class="lineno"> 4912</span>                <span class="keywordtype">int</span> other = k - *it;</div>
+<div class="line"><a id="l04913" name="l04913"></a><span class="lineno"> 4913</span>                <span class="keywordflow">if</span>(other == *it) {</div>
+<div class="line"><a id="l04914" name="l04914"></a><span class="lineno"> 4914</span>                    <span class="keywordflow">if</span>(count[other] &gt; 1) {</div>
+<div class="line"><a id="l04915" name="l04915"></a><span class="lineno"> 4915</span>                        ans = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l04916" name="l04916"></a><span class="lineno"> 4916</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04917" name="l04917"></a><span class="lineno"> 4917</span>                    }</div>
+<div class="line"><a id="l04918" name="l04918"></a><span class="lineno"> 4918</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(s.contains(other)) {</div>
+<div class="line"><a id="l04919" name="l04919"></a><span class="lineno"> 4919</span>                    ans = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l04920" name="l04920"></a><span class="lineno"> 4920</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04921" name="l04921"></a><span class="lineno"> 4921</span>                }</div>
+<div class="line"><a id="l04922" name="l04922"></a><span class="lineno"> 4922</span>            }</div>
+<div class="line"><a id="l04923" name="l04923"></a><span class="lineno"> 4923</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l04924" name="l04924"></a><span class="lineno"> 4924</span>        }</div>
+<div class="line"><a id="l04925" name="l04925"></a><span class="lineno"> 4925</span>    }<span class="comment">// namespace two_sum_iv_input_is_a_bst</span></div>
+<div class="line"><a id="l04926" name="l04926"></a><span class="lineno"> 4926</span> </div>
+<div class="line"><a id="l04927" name="l04927"></a><span class="lineno"><a class="line" href="../../dd/dd7/a00260.html"> 4927</a></span>    <span class="keyword">namespace </span>remove_colored_pieces_if_both_neighbors_are_the_same_color {</div>
+<div class="line"><a id="l04928" name="l04928"></a><span class="lineno"><a class="line" href="../../d2/db9/a01926.html#ab2211697c42a6ef38bdb40993dbf0373"> 4928</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d2/db9/a01926.html#ab2211697c42a6ef38bdb40993dbf0373">Solution::winnerOfGame</a>(<span class="keywordtype">string</span> colors) {</div>
+<div class="line"><a id="l04929" name="l04929"></a><span class="lineno"> 4929</span>            <span class="keywordtype">int</span> a_count = 0;</div>
+<div class="line"><a id="l04930" name="l04930"></a><span class="lineno"> 4930</span>            <span class="keywordtype">int</span> b_count = 0;</div>
+<div class="line"><a id="l04931" name="l04931"></a><span class="lineno"> 4931</span>            vector vec(colors.length(), <span class="keyword">true</span>);</div>
+<div class="line"><a id="l04932" name="l04932"></a><span class="lineno"> 4932</span>            vec[0]                   = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04933" name="l04933"></a><span class="lineno"> 4933</span>            vec[colors.length() - 1] = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04934" name="l04934"></a><span class="lineno"> 4934</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i + 1 &lt; colors.length(); i++) {</div>
+<div class="line"><a id="l04935" name="l04935"></a><span class="lineno"> 4935</span>                <span class="keywordflow">if</span>(colors[i] != colors[i + 1]) {</div>
+<div class="line"><a id="l04936" name="l04936"></a><span class="lineno"> 4936</span>                    vec[i]     = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04937" name="l04937"></a><span class="lineno"> 4937</span>                    vec[i + 1] = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04938" name="l04938"></a><span class="lineno"> 4938</span>                }</div>
+<div class="line"><a id="l04939" name="l04939"></a><span class="lineno"> 4939</span>            }</div>
+<div class="line"><a id="l04940" name="l04940"></a><span class="lineno"> 4940</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i + 1 &lt; colors.length(); i++) {</div>
+<div class="line"><a id="l04941" name="l04941"></a><span class="lineno"> 4941</span>                <span class="keywordflow">if</span>(vec[i]) {</div>
+<div class="line"><a id="l04942" name="l04942"></a><span class="lineno"> 4942</span>                    <span class="keywordflow">if</span>(colors[i] == <span class="charliteral">&#39;A&#39;</span>) {</div>
+<div class="line"><a id="l04943" name="l04943"></a><span class="lineno"> 4943</span>                        a_count++;</div>
+<div class="line"><a id="l04944" name="l04944"></a><span class="lineno"> 4944</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l04945" name="l04945"></a><span class="lineno"> 4945</span>                        b_count++;</div>
+<div class="line"><a id="l04946" name="l04946"></a><span class="lineno"> 4946</span>                    }</div>
+<div class="line"><a id="l04947" name="l04947"></a><span class="lineno"> 4947</span>                }</div>
+<div class="line"><a id="l04948" name="l04948"></a><span class="lineno"> 4948</span>            }</div>
+<div class="line"><a id="l04949" name="l04949"></a><span class="lineno"> 4949</span>            <span class="keywordflow">return</span> a_count &gt; b_count;</div>
+<div class="line"><a id="l04950" name="l04950"></a><span class="lineno"> 4950</span>        }</div>
+<div class="line"><a id="l04951" name="l04951"></a><span class="lineno"> 4951</span>    }<span class="comment">// namespace remove_colored_pieces_if_both_neighbors_are_the_same_color</span></div>
+<div class="line"><a id="l04952" name="l04952"></a><span class="lineno"> 4952</span>}<span class="comment">// namespace leetcode</span></div>
 <div class="ttc" id="aa00005_html"><div class="ttname"><a href="../../dd/dad/a00005.html">leetcode.h</a></div></div>
 <div class="ttc" id="aa00029_html"><div class="ttname"><a href="../../d5/d16/a00029.html">templates.h</a></div></div>
 <div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">acwing::acwing1929::left</a></div><div class="ttdeci">@ left</div><div class="ttdoc">左</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00554">acwing.h:554</a></div></div>
@@ -5351,8 +5349,8 @@ $(function() {
 <div class="ttc" id="aa01914_html_a95ae7aeaf3c1c355791e0a7f9b44db39"><div class="ttname"><a href="../../dc/d18/a01914.html#a95ae7aeaf3c1c355791e0a7f9b44db39">leetcode::the_time_when_the_network_becomes_idle::Node::time</a></div><div class="ttdeci">int time</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l01839">leetcode.h:1839</a></div></div>
 <div class="ttc" id="aa01914_html_ae4985a0226209426b3d214953807decb"><div class="ttname"><a href="../../dc/d18/a01914.html#ae4985a0226209426b3d214953807decb">leetcode::the_time_when_the_network_becomes_idle::Node::linked</a></div><div class="ttdeci">unordered_set&lt; int &gt; linked</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l01841">leetcode.h:1841</a></div></div>
 <div class="ttc" id="aa01918_html_a36ce3f2790544d6b24235f0be85eb170"><div class="ttname"><a href="../../dc/d63/a01918.html#a36ce3f2790544d6b24235f0be85eb170">leetcode::the_time_when_the_network_becomes_idle::Solution::networkBecomesIdle</a></div><div class="ttdeci">static int networkBecomesIdle(vector&lt; vector&lt; int &gt; &gt; &amp;edges, vector&lt; int &gt; &amp;patience)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l04850">leetcode.cpp:4850</a></div></div>
-<div class="ttc" id="aa01922_html_aa9c9ff36bb0dc4ad1e3a1b38acdecf75"><div class="ttname"><a href="../../dd/d19/a01922.html#aa9c9ff36bb0dc4ad1e3a1b38acdecf75">leetcode::two_sum_iv_input_is_a_bst::Solution::findTarget</a></div><div class="ttdeci">static bool findTarget(TreeNode *root, int k)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l04895">leetcode.cpp:4895</a></div></div>
-<div class="ttc" id="aa01926_html_ab2211697c42a6ef38bdb40993dbf0373"><div class="ttname"><a href="../../d2/db9/a01926.html#ab2211697c42a6ef38bdb40993dbf0373">leetcode::remove_colored_pieces_if_both_neighbors_are_the_same_color::Solution::winnerOfGame</a></div><div class="ttdeci">static bool winnerOfGame(string colors)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l04930">leetcode.cpp:4930</a></div></div>
+<div class="ttc" id="aa01922_html_aa9c9ff36bb0dc4ad1e3a1b38acdecf75"><div class="ttname"><a href="../../dd/d19/a01922.html#aa9c9ff36bb0dc4ad1e3a1b38acdecf75">leetcode::two_sum_iv_input_is_a_bst::Solution::findTarget</a></div><div class="ttdeci">static bool findTarget(TreeNode *root, int k)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l04893">leetcode.cpp:4893</a></div></div>
+<div class="ttc" id="aa01926_html_ab2211697c42a6ef38bdb40993dbf0373"><div class="ttname"><a href="../../d2/db9/a01926.html#ab2211697c42a6ef38bdb40993dbf0373">leetcode::remove_colored_pieces_if_both_neighbors_are_the_same_color::Solution::winnerOfGame</a></div><div class="ttdeci">static bool winnerOfGame(string colors)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l04928">leetcode.cpp:4928</a></div></div>
 <div class="ttc" id="aa02398_html"><div class="ttname"><a href="../../dc/d09/a02398.html">TrieNode</a></div><div class="ttdoc">字典树节点</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00009">templates.h:9</a></div></div>
 <div class="ttc" id="aa02398_html_a07d53b17d0b024afcbabb556c9964bbd"><div class="ttname"><a href="../../dc/d09/a02398.html#a07d53b17d0b024afcbabb556c9964bbd">TrieNode::nexts</a></div><div class="ttdeci">array&lt; TrieNode *, 26 &gt; nexts</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00011">templates.h:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
