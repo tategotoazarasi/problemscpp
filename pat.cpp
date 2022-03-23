@@ -455,7 +455,7 @@ namespace pat {
 							if(isupper(str1[i]) != 0) {
 								day = days[str1[i] - 'A'];
 							}
-						} else if((isdigit(str1[i]) != 0) || 'A' <= str1[i] && str1[i] <= 'N') {
+						} else if(isdigit(str1[i]) != 0 || 'A' <= str1[i] && str1[i] <= 'N') {
 							if(isdigit(str1[i]) != 0) {
 								hh = str1[i] - '0';
 							} else {
@@ -467,7 +467,7 @@ namespace pat {
 				}
 				cin >> str1 >> str2;
 				for(int i = 0; i < str1.length() && i < str2.length(); i++) {
-					if(str1[i] == str2[i] && (isalpha(str1[i]) != 0)) {
+					if(str1[i] == str2[i] && isalpha(str1[i]) != 0) {
 						mm = i;
 						break;
 					}
@@ -519,8 +519,6 @@ namespace pat {
 					}
 					return this->morality > stu.morality;
 				}
-				return this->ability + this->morality > stu.ability + stu.morality;
-
 				return this->ability + this->morality > stu.ability + stu.morality;
 			}
 		}// namespace b1015
@@ -648,6 +646,38 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1018
+
+		namespace b1019 {
+			int main(istream &cin, ostream &cout) {
+				string num;
+				cin >> num;
+				int a = 0;
+				int b = 0;
+				while(num.length() < 4) {
+					num = num + '0';
+				}
+				if(num == "0000") {
+					cout << "0000 - 0000 = 0000";
+					return 0;
+				}
+				while(num != "0000" && a - b != 6174) {
+					stringstream ssa;
+					stringstream ssb;
+					stringstream ss;
+					sort(num.rbegin(), num.rend());
+					ssa << num;
+					ssa >> a;
+					sort(num.begin(), num.end());
+					ssb << num;
+					ssb >> b;
+					ss << setw(4) << right << setfill('0') << a - b;
+					num = "";
+					ss >> num;
+					cout << setw(4) << right << setfill('0') << a << " - " << setw(4) << right << setfill('0') << b << " = " << setw(4) << right << setfill('0') << a - b << endl;
+				}
+				return 0;
+			}
+		}// namespace b1019
 	}    // namespace b
 
 	namespace a {}

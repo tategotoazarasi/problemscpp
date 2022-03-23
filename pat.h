@@ -100,6 +100,13 @@ namespace pat {
 		namespace b1018 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/**
+		 * \brief 1019 数字黑洞 
+		 */
+		namespace b1019 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

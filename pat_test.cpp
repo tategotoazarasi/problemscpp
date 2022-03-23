@@ -279,6 +279,24 @@ namespace pat {
 				          ans);
 			}
 		}// namespace b1018
+
+		namespace b1019 {
+			TEST(b1019, case1) {
+				istringstream in("6767");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("7766 - 6677 = 1089\n9810 - 0189 = 9621\n9621 - 1269 = 8352\n8532 - 2358 = 6174\n", ans);
+			}
+
+			TEST(b1019, case2) {
+				istringstream in("2222");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("2222 - 2222 = 0000\n", out.str());
+			}
+		}// namespace b1019
 	}    // namespace b
 
 	namespace a {}
