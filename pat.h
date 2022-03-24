@@ -119,6 +119,11 @@ namespace pat {
 		namespace b1021 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1022 D进制的A+B
+		namespace b1022 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

@@ -731,6 +731,27 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1021
+
+		namespace b1022 {
+			int main(istream &cin, ostream &cout) {
+				int a, b, d;
+				cin >> a >> b >> d;
+				int sum = a + b;
+				if(sum == 0) {
+					cout << 0;
+					return 0;
+				}
+				vector<unsigned short> vec;
+				while(sum != 0) {
+					vec.push_back(sum % d);
+					sum /= d;
+				}
+				for(auto it = vec.rbegin(); it != vec.rend(); ++it) {
+					cout << *it;
+				}
+				return 0;
+			}
+		}// namespace b1022
 	}    // namespace b
 
 	namespace a {}

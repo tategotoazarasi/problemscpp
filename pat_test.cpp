@@ -320,6 +320,24 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1021
+
+		namespace b1022 {
+			TEST(b1022, case1) {
+				istringstream in("123 456 8");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("1103", out.str());
+			}
+
+			TEST(b1022, case2) {
+				istringstream in("20 30 10");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("50", out.str());
+			}
+		}// namespace b1022
 	}    // namespace b
 
 	namespace a {}
