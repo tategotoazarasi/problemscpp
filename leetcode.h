@@ -1876,6 +1876,14 @@ namespace leetcode {
 			static int getSteps(int curr, long n);
 		};
 	}// namespace k_th_smallest_in_lexicographical_order
+
+	/// \brief 661. Image Smoother
+	namespace image_smoother {
+		class Solution {
+		public:
+			static vector<vector<int>> imageSmoother(vector<vector<int>> &img);
+		};
+	}// namespace image_smoother
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

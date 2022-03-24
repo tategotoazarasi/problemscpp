@@ -4979,4 +4979,30 @@ namespace leetcode {
 			return steps;
 		}
 	}// namespace k_th_smallest_in_lexicographical_order
+
+	namespace image_smoother {
+		vector<vector<int>> Solution::imageSmoother(vector<vector<int>> &img) {
+			int m                   = img.size();
+			int n                   = img[0].size();
+			vector<vector<int>> ans = vector<vector<int>>(m, vector<int>(n));
+			for(int i = 0; i < m; i++) {
+				for(int j = 0; j < n; j++) {
+					pair<int, int> cells[9] = {make_pair(i - 1, j - 1), make_pair(i - 1, j), make_pair(i - 1, j + 1),
+					                           make_pair(i, j - 1), make_pair(i, j), make_pair(i, j + 1),
+					                           make_pair(i + 1, j - 1), make_pair(i + 1, j), make_pair(i + 1, j + 1)};
+					int sum                 = 0;
+					int count               = 0;
+					for(int k = 0; k < 9; k++) {
+						auto [x, y] = cells[k];
+						if(0 <= x && x < m && 0 <= y && y < n) {
+							count++;
+							sum += img[x][y];
+						}
+					}
+					ans[i][j] = sum / count;
+				}
+			}
+			return ans;
+		}
+	}// namespace image_smoother
 }// namespace leetcode
