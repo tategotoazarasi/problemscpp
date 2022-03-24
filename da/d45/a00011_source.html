@@ -789,7 +789,7 @@ $(function() {
 <div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>                map&lt;char, int&gt; dm;</div>
 <div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>                <span class="keywordtype">char</span> ch;</div>
 <div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>                <span class="keywordflow">while</span>(cin &gt;&gt; ch) {</div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>                    <span class="keywordflow">if</span>(isdigit(ch)) {</div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>                    <span class="keywordflow">if</span>(isdigit(ch) != 0) {</div>
 <div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>                        dm[ch]++;</div>
 <div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>                    }</div>
 <div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>                }</div>
@@ -802,30 +802,32 @@ $(function() {
 <div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span> </div>
 <div class="line"><a id="l00735" name="l00735"></a><span class="lineno"><a class="line" href="../../dc/d0f/a00303.html">  735</a></span>        <span class="keyword">namespace </span>b1022 {</div>
 <div class="line"><a id="l00736" name="l00736"></a><span class="lineno"><a class="line" href="../../dc/d0f/a00303.html#afc5244ddd6aa01e874ff5caf2f0cea5c">  736</a></span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../dc/d0f/a00303.html#afc5244ddd6aa01e874ff5caf2f0cea5c">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>                <span class="keywordtype">int</span> a, b, d;</div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>                cin &gt;&gt; a &gt;&gt; b &gt;&gt; d;</div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>                <span class="keywordtype">int</span> sum = a + b;</div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>                <span class="keywordflow">if</span>(sum == 0) {</div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>                    cout &lt;&lt; 0;</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>                }</div>
-<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>                vector&lt;unsigned short&gt; vec;</div>
-<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>                <span class="keywordflow">while</span>(sum != 0) {</div>
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>                    vec.push_back(sum % d);</div>
-<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>                    sum /= d;</div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                }</div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = vec.rbegin(); it != vec.rend(); ++it) {</div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>                    cout &lt;&lt; *it;</div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>                }</div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>            }</div>
-<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>        }<span class="comment">// namespace b1022</span></div>
-<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>    }    <span class="comment">// namespace b</span></div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span> </div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno"><a class="line" href="../../d8/d17/a00304.html">  757</a></span>    <span class="keyword">namespace </span>a {}</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>                <span class="keywordtype">int</span> a;</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>                <span class="keywordtype">int</span> b;</div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>                <span class="keywordtype">int</span> d;</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>                cin &gt;&gt; a &gt;&gt; b &gt;&gt; d;</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>                <span class="keywordtype">int</span> sum = a + b;</div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>                <span class="keywordflow">if</span>(sum == 0) {</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>                    cout &lt;&lt; 0;</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>                }</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>                vector&lt;unsigned short&gt; vec;</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>                <span class="keywordflow">while</span>(sum != 0) {</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                    vec.push_back(sum % d);</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>                    sum /= d;</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>                }</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = vec.rbegin(); it != vec.rend(); ++it) {</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>                    cout &lt;&lt; *it;</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>                }</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>            }</div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>        }<span class="comment">// namespace b1022</span></div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>    }    <span class="comment">// namespace b</span></div>
 <div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span> </div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno"><a class="line" href="../../d3/d07/a00305.html">  759</a></span>    <span class="keyword">namespace </span>top {}</div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>}<span class="comment">// namespace pat</span></div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno"><a class="line" href="../../d8/d17/a00304.html">  759</a></span>    <span class="keyword">namespace </span>a {}</div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span> </div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno"><a class="line" href="../../d3/d07/a00305.html">  761</a></span>    <span class="keyword">namespace </span>top {}</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>}<span class="comment">// namespace pat</span></div>
 <div class="ttc" id="aa00023_html"><div class="ttname"><a href="../../d3/d52/a00023.html">pat.h</a></div></div>
 <div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00556">acwing.h:556</a></div></div>
 <div class="ttc" id="aa00281_html"><div class="ttname"><a href="../../d2/d04/a00281.html">pat</a></div><div class="ttdoc">计算机程序设计能力考试</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00014">pat.cpp:14</a></div></div>

@@ -116,23 +116,25 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">pat.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l00736">736</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>                                                  {</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>                <span class="keywordtype">int</span> a, b, d;</div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>                cin &gt;&gt; a &gt;&gt; b &gt;&gt; d;</div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>                <span class="keywordtype">int</span> sum = a + b;</div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>                <span class="keywordflow">if</span>(sum == 0) {</div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>                    cout &lt;&lt; 0;</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>                }</div>
-<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>                vector&lt;unsigned short&gt; vec;</div>
-<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>                <span class="keywordflow">while</span>(sum != 0) {</div>
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>                    vec.push_back(sum % d);</div>
-<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>                    sum /= d;</div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                }</div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = vec.rbegin(); it != vec.rend(); ++it) {</div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>                    cout &lt;&lt; *it;</div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>                }</div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>            }</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>                <span class="keywordtype">int</span> a;</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>                <span class="keywordtype">int</span> b;</div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>                <span class="keywordtype">int</span> d;</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>                cin &gt;&gt; a &gt;&gt; b &gt;&gt; d;</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>                <span class="keywordtype">int</span> sum = a + b;</div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>                <span class="keywordflow">if</span>(sum == 0) {</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>                    cout &lt;&lt; 0;</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>                }</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>                vector&lt;unsigned short&gt; vec;</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>                <span class="keywordflow">while</span>(sum != 0) {</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                    vec.push_back(sum % d);</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>                    sum /= d;</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>                }</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = vec.rbegin(); it != vec.rend(); ++it) {</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>                    cout &lt;&lt; *it;</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>                }</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dd/d32/a00041_source.html#l00325">TEST()</a>.</p>
 

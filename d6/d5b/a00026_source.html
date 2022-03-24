@@ -5046,9 +5046,9 @@ $(function() {
 <div class="line"><a id="l04982" name="l04982"></a><span class="lineno"> 4982</span> </div>
 <div class="line"><a id="l04983" name="l04983"></a><span class="lineno"><a class="line" href="../../d3/dcc/a00264.html"> 4983</a></span>    <span class="keyword">namespace </span>image_smoother {</div>
 <div class="line"><a id="l04984" name="l04984"></a><span class="lineno"><a class="line" href="../../d3/df9/a01942.html#a95f897eaa521948f43cd0eaab09708ab"> 4984</a></span>        vector&lt;vector&lt;int&gt;&gt; <a class="code hl_function" href="../../d3/df9/a01942.html#a95f897eaa521948f43cd0eaab09708ab">Solution::imageSmoother</a>(vector&lt;vector&lt;int&gt;&gt; &amp;img) {</div>
-<div class="line"><a id="l04985" name="l04985"></a><span class="lineno"> 4985</span>            <span class="keywordtype">int</span> m                   = img.size();</div>
-<div class="line"><a id="l04986" name="l04986"></a><span class="lineno"> 4986</span>            <span class="keywordtype">int</span> n                   = img[0].size();</div>
-<div class="line"><a id="l04987" name="l04987"></a><span class="lineno"> 4987</span>            vector&lt;vector&lt;int&gt;&gt; ans = vector&lt;vector&lt;int&gt;&gt;(m, vector&lt;int&gt;(n));</div>
+<div class="line"><a id="l04985" name="l04985"></a><span class="lineno"> 4985</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> m = img.size();</div>
+<div class="line"><a id="l04986" name="l04986"></a><span class="lineno"> 4986</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = img[0].size();</div>
+<div class="line"><a id="l04987" name="l04987"></a><span class="lineno"> 4987</span>            <span class="keyword">auto</span> ans    = vector(m, vector&lt;int&gt;(n));</div>
 <div class="line"><a id="l04988" name="l04988"></a><span class="lineno"> 4988</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
 <div class="line"><a id="l04989" name="l04989"></a><span class="lineno"> 4989</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
 <div class="line"><a id="l04990" name="l04990"></a><span class="lineno"> 4990</span>                    pair&lt;int, int&gt; cells[9] = {make_pair(i - 1, j - 1), make_pair(i - 1, j), make_pair(i - 1, j + 1),</div>
