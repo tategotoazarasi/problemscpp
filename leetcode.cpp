@@ -4982,9 +4982,9 @@ namespace leetcode {
 
 	namespace image_smoother {
 		vector<vector<int>> Solution::imageSmoother(vector<vector<int>> &img) {
-			int m                   = img.size();
-			int n                   = img[0].size();
-			vector<vector<int>> ans = vector<vector<int>>(m, vector<int>(n));
+			const int m = img.size();
+			const int n = img[0].size();
+			auto ans    = vector(m, vector<int>(n));
 			for(int i = 0; i < m; i++) {
 				for(int j = 0; j < n; j++) {
 					pair<int, int> cells[9] = {make_pair(i - 1, j - 1), make_pair(i - 1, j), make_pair(i - 1, j + 1),

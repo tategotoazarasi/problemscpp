@@ -5753,8 +5753,8 @@ namespace acwing {
 				cin >> c[i] >> m[i];
 			}
 			for(int i = 0; i < 100; i++) {
-				int a = i % 3;
-				int b = (i + 1) % 3;
+				const int a = i % 3;
+				const int b = (i + 1) % 3;
 				if(m[a] + m[b] <= c[b]) {
 					m[b] += m[a];
 					m[a] = 0;

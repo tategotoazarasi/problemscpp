@@ -2429,14 +2429,14 @@ namespace leetcode {
 
 	namespace image_smoother {
 		TEST(image_smoother, case1) {
-			vector<vector<int>> img    = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
-			vector<vector<int>> output = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+			vector<vector<int>> img          = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+			const vector<vector<int>> output = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
 			ASSERT_EQ(output, Solution::imageSmoother(img));
 		}
 
 		TEST(image_smoother, case2) {
-			vector<vector<int>> img    = {{100, 200, 100}, {200, 50, 200}, {100, 200, 100}};
-			vector<vector<int>> output = {{137, 141, 137}, {141, 138, 141}, {137, 141, 137}};
+			vector<vector<int>> img          = {{100, 200, 100}, {200, 50, 200}, {100, 200, 100}};
+			const vector<vector<int>> output = {{137, 141, 137}, {141, 138, 141}, {137, 141, 137}};
 			ASSERT_EQ(output, Solution::imageSmoother(img));
 		}
 	}// namespace image_smoother

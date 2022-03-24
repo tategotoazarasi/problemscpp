@@ -721,7 +721,7 @@ namespace pat {
 				map<char, int> dm;
 				char ch;
 				while(cin >> ch) {
-					if(isdigit(ch)) {
+					if(isdigit(ch) != 0) {
 						dm[ch]++;
 					}
 				}
@@ -734,7 +734,9 @@ namespace pat {
 
 		namespace b1022 {
 			int main(istream &cin, ostream &cout) {
-				int a, b, d;
+				int a;
+				int b;
+				int d;
 				cin >> a >> b >> d;
 				int sum = a + b;
 				if(sum == 0) {
