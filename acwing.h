@@ -1822,5 +1822,10 @@ namespace acwing {
 	namespace acwing1659 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 1714. 混合牛奶
+	namespace acwing1714 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

@@ -5744,4 +5744,29 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1659
+
+	namespace acwing1714 {
+		int main(istream &cin, ostream &cout) {
+			unsigned int c[3];
+			unsigned int m[3];
+			for(int i = 0; i < 3; i++) {
+				cin >> c[i] >> m[i];
+			}
+			for(int i = 0; i < 100; i++) {
+				int a = i % 3;
+				int b = (i + 1) % 3;
+				if(m[a] + m[b] <= c[b]) {
+					m[b] += m[a];
+					m[a] = 0;
+				} else {
+					m[a] -= c[b] - m[b];
+					m[b] = c[b];
+				}
+			}
+			for(int i = 0; i < 3; i++) {
+				cout << m[i] << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing1714
 }// namespace acwing
