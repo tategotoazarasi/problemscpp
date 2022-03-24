@@ -715,6 +715,22 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1020
+
+		namespace b1021 {
+			int main(istream &cin, ostream &cout) {
+				map<char, int> dm;
+				char ch;
+				while(cin >> ch) {
+					if(isdigit(ch)) {
+						dm[ch]++;
+					}
+				}
+				for(auto [d, m]: dm) {
+					cout << d << ':' << m << endl;
+				}
+				return 0;
+			}
+		}// namespace b1021
 	}    // namespace b
 
 	namespace a {}

@@ -114,6 +114,11 @@ namespace pat {
 		namespace b1020 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1021 个位数统计
+		namespace b1021 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

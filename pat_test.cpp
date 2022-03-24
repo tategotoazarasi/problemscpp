@@ -307,6 +307,19 @@ namespace pat {
 				ASSERT_EQ("94.50", out.str());
 			}
 		}// namespace b1020
+
+		namespace b1021 {
+			TEST(b1021, case1) {
+				istringstream in("100311");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("0:2\n"
+				          "1:3\n"
+				          "3:1\n",
+				          out.str());
+			}
+		}// namespace b1021
 	}    // namespace b
 
 	namespace a {}
