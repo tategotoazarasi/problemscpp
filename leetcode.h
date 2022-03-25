@@ -1884,6 +1884,14 @@ namespace leetcode {
 			static vector<vector<int>> imageSmoother(vector<vector<int>> &img);
 		};
 	}// namespace image_smoother
+
+	/// \brief 172. Factorial Trailing Zeroes
+	namespace factorial_trailing_zeroes {
+		class Solution {
+		public:
+			static int trailingZeroes(int n);
+		};
+	}// namespace factorial_trailing_zeroes
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

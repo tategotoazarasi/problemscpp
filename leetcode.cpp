@@ -5005,4 +5005,22 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace image_smoother
+
+	namespace factorial_trailing_zeroes {
+		int Solution::trailingZeroes(int n) {
+			unsigned int pow5   = 5;
+			unsigned int pow2   = 2;
+			unsigned int count5 = 0;
+			unsigned int count2 = 0;
+			while(n / pow5 != 0) {
+				count5 += n / pow5;
+				pow5 *= 5;
+			}
+			while(n / pow2 != 0) {
+				count2 += n / pow2;
+				pow2 *= 2;
+			}
+			return min(count2, count5);
+		}
+	}// namespace factorial_trailing_zeroes
 }// namespace leetcode

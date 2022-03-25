@@ -2440,4 +2440,18 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::imageSmoother(img));
 		}
 	}// namespace image_smoother
+
+	namespace factorial_trailing_zeroes {
+		TEST(factorial_trailing_zeroes, case1) {
+			ASSERT_EQ(0, Solution::trailingZeroes(3));
+		}
+
+		TEST(factorial_trailing_zeroes, case2) {
+			ASSERT_EQ(1, Solution::trailingZeroes(5));
+		}
+
+		TEST(factorial_trailing_zeroes, case3) {
+			ASSERT_EQ(0, Solution::trailingZeroes(0));
+		}
+	}// namespace factorial_trailing_zeroes
 }// namespace leetcode
