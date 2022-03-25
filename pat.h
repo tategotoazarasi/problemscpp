@@ -129,6 +129,11 @@ namespace pat {
 		namespace b1023 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1024 科学计数法
+		namespace b1024 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

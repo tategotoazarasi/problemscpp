@@ -777,6 +777,50 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1023
+
+		namespace b1024 {
+			int main(istream &cin, ostream &cout) {
+				string str;
+				cin >> str;
+				char op         = str[0];
+				char num1       = str[1];
+				auto pos_e      = str.find('E');
+				string num2     = str.substr(3, pos_e - 3);
+				string num3_str = str.substr(pos_e + 1);
+				stringstream ss;
+				ss << num3_str;
+				int num3;
+				ss >> num3;
+				if(op == '-') {
+					cout << op;
+				}
+				if(num3 < 0) {
+					cout << 0 << '.';
+					for(int i = 1; i < abs(num3); i++) {
+						cout << 0;
+					}
+					cout << num1 << num2;
+				} else {
+					cout << num1;
+					int i = 0;
+					for(; i < num3 && i < num2.length(); i++) {
+						cout << num2[i];
+					}
+					if(i < num2.length()) {
+						cout << '.';
+						for(; i < num2.length(); i++) {
+							cout << num2[i];
+						}
+					}
+					if(i < num3) {
+						for(; i < num3; i++) {
+							cout << 0;
+						}
+					}
+				}
+				return 0;
+			}
+		}// namespace b1024
 	}    // namespace b
 
 	namespace a {}

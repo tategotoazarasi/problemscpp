@@ -348,6 +348,24 @@ namespace pat {
 				ASSERT_EQ("10015558", out.str());
 			}
 		}// namespace b1023
+
+		namespace b1024 {
+			TEST(b1024, case1) {
+				istringstream in("+1.23400E-03");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("0.00123400", out.str());
+			}
+
+			TEST(b1024, case2) {
+				istringstream in("-1.2E+10");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("-12000000000", out.str());
+			}
+		}// namespace b1024
 	}    // namespace b
 
 	namespace a {}
