@@ -5779,7 +5779,9 @@ namespace acwing {
 			unsigned short ans      = 0;
 			unsigned short n;
 			cin >> n;
-			unsigned short a, b, g;
+			unsigned short a;
+			unsigned short b;
+			unsigned short g;
 			for(unsigned short i = 0; i < n; i++) {
 				cin >> a >> b >> g;
 				a--;

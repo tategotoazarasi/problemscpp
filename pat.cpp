@@ -782,11 +782,11 @@ namespace pat {
 			int main(istream &cin, ostream &cout) {
 				string str;
 				cin >> str;
-				char op         = str[0];
-				char num1       = str[1];
-				auto pos_e      = str.find('E');
-				string num2     = str.substr(3, pos_e - 3);
-				string num3_str = str.substr(pos_e + 1);
+				const char op         = str[0];
+				const char num1       = str[1];
+				const auto pos_e      = str.find('E');
+				const string num2     = str.substr(3, pos_e - 3);
+				const string num3_str = str.substr(pos_e + 1);
 				stringstream ss;
 				ss << num3_str;
 				int num3;
