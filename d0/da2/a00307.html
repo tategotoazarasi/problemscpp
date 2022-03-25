@@ -118,11 +118,11 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>                                                  {</div>
 <div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>                <span class="keywordtype">string</span> str;</div>
 <div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>                cin &gt;&gt; str;</div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>                <span class="keywordtype">char</span> op         = str[0];</div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>                <span class="keywordtype">char</span> num1       = str[1];</div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>                <span class="keyword">auto</span> pos_e      = str.find(<span class="charliteral">&#39;E&#39;</span>);</div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>                <span class="keywordtype">string</span> num2     = str.substr(3, pos_e - 3);</div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>                <span class="keywordtype">string</span> num3_str = str.substr(pos_e + 1);</div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>                <span class="keyword">const</span> <span class="keywordtype">char</span> op         = str[0];</div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>                <span class="keyword">const</span> <span class="keywordtype">char</span> num1       = str[1];</div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>                <span class="keyword">const</span> <span class="keyword">auto</span> pos_e      = str.find(<span class="charliteral">&#39;E&#39;</span>);</div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>                <span class="keyword">const</span> <span class="keywordtype">string</span> num2     = str.substr(3, pos_e - 3);</div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>                <span class="keyword">const</span> <span class="keywordtype">string</span> num3_str = str.substr(pos_e + 1);</div>
 <div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>                stringstream ss;</div>
 <div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>                ss &lt;&lt; num3_str;</div>
 <div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>                <span class="keywordtype">int</span> num3;</div>
