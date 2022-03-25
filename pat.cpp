@@ -754,6 +754,29 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1022
+
+		namespace b1023 {
+			int main(istream &cin, ostream &cout) {
+				vector<int> vec(10);
+				for(int i = 0; i < 10; i++) {
+					cin >> vec[i];
+				}
+				for(int i = 1; i < 10; i++) {
+					if(vec[i] > 0) {
+						cout << i;
+						vec[i]--;
+						break;
+					}
+				}
+				for(int i = 0; i < 10; i++) {
+					while(vec[i] > 0) {
+						cout << i;
+						vec[i]--;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1023
 	}    // namespace b
 
 	namespace a {}

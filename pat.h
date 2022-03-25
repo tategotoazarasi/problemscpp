@@ -124,6 +124,11 @@ namespace pat {
 		namespace b1022 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1023 组个最小数
+		namespace b1023 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
