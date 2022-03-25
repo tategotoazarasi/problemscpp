@@ -1827,5 +1827,10 @@ namespace acwing {
 	namespace acwing1714 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 1695. 果壳游戏
+	namespace acwing1695 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

@@ -2742,4 +2742,17 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing1714
+
+	namespace acwing1695 {
+		TEST(acwing1695, case1) {
+			istringstream in("3\n"
+			                 "1 2 1\n"
+			                 "3 2 1\n"
+			                 "1 3 1");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2", ans);
+		}
+	}// namespace acwing1695
 }// namespace acwing

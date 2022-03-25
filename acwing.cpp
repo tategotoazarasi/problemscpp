@@ -5769,4 +5769,34 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1714
+
+	namespace acwing1695 {
+		int main(istream &cin, ostream &cout) {
+			bool nuts[3][3]         = {{true, false, false},
+                               {false, true, false},
+                               {false, false, true}};
+			unsigned short score[3] = {0, 0, 0};
+			unsigned short ans      = 0;
+			unsigned short n;
+			cin >> n;
+			unsigned short a, b, g;
+			for(unsigned short i = 0; i < n; i++) {
+				cin >> a >> b >> g;
+				a--;
+				b--;
+				g--;
+				for(unsigned short j = 0; j < 3; j++) {
+					swap(nuts[j][a], nuts[j][b]);
+					if(nuts[j][g]) {
+						score[j]++;
+					}
+				}
+			}
+			for(unsigned short i = 0; i < 3; i++) {
+				ans = max(ans, score[i]);
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing1695
 }// namespace acwing
