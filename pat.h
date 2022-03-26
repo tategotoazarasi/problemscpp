@@ -145,7 +145,12 @@ namespace pat {
 			};
 			int main(istream &cin, ostream &cout);
 		}// namespace b1025
-	}    // namespace b
+
+		/// \brief 1026 程序运行时间
+		namespace b1026 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}

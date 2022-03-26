@@ -851,6 +851,21 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1025
+
+		namespace b1026 {
+			int main(istream &cin, ostream &cout) {
+				unsigned int c1, c2;
+				cin >> c1 >> c2;
+				unsigned int d = (c2 + 50 - c1) / 100;
+				unsigned int h = d / 3600;
+				d %= 3600;
+				unsigned int m = d / 60;
+				d %= 60;
+				unsigned s = d;
+				cout << setw(2) << right << setfill('0') << h << ':' << setw(2) << right << setfill('0') << m << ':' << setw(2) << right << setfill('0') << s;
+				return 0;
+			}
+		}// namespace b1026
 	}    // namespace b
 
 	namespace a {}
