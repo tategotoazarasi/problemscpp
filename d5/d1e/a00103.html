@@ -120,17 +120,17 @@ $(function() {
 <p class="definition">在文件 <a class="el" href="../../d6/d2d/a00047_source.html">acwing.cpp</a> 第 <a class="el" href="../../d6/d2d/a00047_source.html#l05806">5806</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l05806" name="l05806"></a><span class="lineno"> 5806</span>                                              {</div>
 <div class="line"><a id="l05807" name="l05807"></a><span class="lineno"> 5807</span>            <span class="keywordtype">int</span> pos[3];</div>
-<div class="line"><a id="l05808" name="l05808"></a><span class="lineno"> 5808</span>            <span class="keywordtype">int</span> ans1, ans2;</div>
+<div class="line"><a id="l05808" name="l05808"></a><span class="lineno"> 5808</span>            <span class="keywordtype">int</span> ans1;</div>
 <div class="line"><a id="l05809" name="l05809"></a><span class="lineno"> 5809</span>            cin &gt;&gt; pos[0] &gt;&gt; pos[1] &gt;&gt; pos[2];</div>
 <div class="line"><a id="l05810" name="l05810"></a><span class="lineno"> 5810</span>            sort(pos, pos + 3);</div>
-<div class="line"><a id="l05811" name="l05811"></a><span class="lineno"> 5811</span>            <span class="keywordtype">int</span> g1 = pos[1] - pos[0];</div>
-<div class="line"><a id="l05812" name="l05812"></a><span class="lineno"> 5812</span>            <span class="keywordtype">int</span> g2 = pos[2] - pos[1];</div>
+<div class="line"><a id="l05811" name="l05811"></a><span class="lineno"> 5811</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> g1 = pos[1] - pos[0];</div>
+<div class="line"><a id="l05812" name="l05812"></a><span class="lineno"> 5812</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> g2 = pos[2] - pos[1];</div>
 <div class="line"><a id="l05813" name="l05813"></a><span class="lineno"> 5813</span>            <span class="keywordflow">if</span>(g1 == 2 || g2 == 2) {</div>
 <div class="line"><a id="l05814" name="l05814"></a><span class="lineno"> 5814</span>                ans1 = 1;</div>
 <div class="line"><a id="l05815" name="l05815"></a><span class="lineno"> 5815</span>            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l05816" name="l05816"></a><span class="lineno"> 5816</span>                ans1 = 2;</div>
 <div class="line"><a id="l05817" name="l05817"></a><span class="lineno"> 5817</span>            }</div>
-<div class="line"><a id="l05818" name="l05818"></a><span class="lineno"> 5818</span>            ans2 = max(g1, g2);</div>
+<div class="line"><a id="l05818" name="l05818"></a><span class="lineno"> 5818</span>            <span class="keywordtype">int</span> ans2 = max(g1, g2);</div>
 <div class="line"><a id="l05819" name="l05819"></a><span class="lineno"> 5819</span>            ans2--;</div>
 <div class="line"><a id="l05820" name="l05820"></a><span class="lineno"> 5820</span>            cout &lt;&lt; ans1 &lt;&lt; endl</div>
 <div class="line"><a id="l05821" name="l05821"></a><span class="lineno"> 5821</span>                 &lt;&lt; ans2;</div>

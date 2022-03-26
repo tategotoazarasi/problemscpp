@@ -893,53 +893,56 @@ $(function() {
 <div class="line"><a id="l00825" name="l00825"></a><span class="lineno"><a class="line" href="../../d1/d67/a00310.html">  825</a></span>        <span class="keyword">namespace </span>b1025 {</div>
 <div class="line"><a id="l00826" name="l00826"></a><span class="lineno"><a class="line" href="../../d1/d67/a00310.html#ad2ef03943d399dda491bb6d13676da11">  826</a></span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../d1/d67/a00310.html#ad2ef03943d399dda491bb6d13676da11">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
 <div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>                <span class="keywordtype">string</span> address0;</div>
-<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>                <span class="keywordtype">int</span> n, k;</div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>                cin &gt;&gt; address0 &gt;&gt; n &gt;&gt; k;</div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>                unordered_map&lt;string, pair&lt;int, string&gt;&gt; nodes;</div>
-<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>                    <span class="keywordtype">string</span> address, next;</div>
-<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>                    <span class="keywordtype">int</span> data;</div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>                    cin &gt;&gt; address &gt;&gt; data &gt;&gt; next;</div>
-<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>                    nodes.insert(make_pair(address, make_pair(data, next)));</div>
-<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>                }</div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>                vector&lt;pair&lt;string, int&gt;&gt; vec;</div>
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>                <span class="keywordtype">string</span> current_addr = address0;</div>
-<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>                <span class="keywordflow">while</span>(current_addr != <span class="stringliteral">&quot;-1&quot;</span>) {</div>
-<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>                    <span class="keyword">auto</span> [data, next] = nodes[current_addr];</div>
-<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>                    vec.push_back(make_pair(current_addr, data));</div>
-<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>                    current_addr = next;</div>
-<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>                }</div>
-<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>                n = vec.size();</div>
-<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; (n - n % k); i += k) {</div>
-<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>                    reverse(vec.begin() + i, vec.begin() + i + k);</div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>                }</div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>                    cout &lt;&lt; vec[i].first &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; vec[i].second &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; (i + 1 &lt; n ? vec[i + 1].first : <span class="stringliteral">&quot;-1&quot;</span>) &lt;&lt; endl;</div>
-<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>                }</div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>            }</div>
-<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>        }<span class="comment">// namespace b1025</span></div>
-<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span> </div>
-<div class="line"><a id="l00855" name="l00855"></a><span class="lineno"><a class="line" href="../../d1/d5d/a00311.html">  855</a></span>        <span class="keyword">namespace </span>b1026 {</div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno"><a class="line" href="../../d1/d5d/a00311.html#a3eaf5688acc6137b2ee63cc6af0999be">  856</a></span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../d1/d5d/a00311.html#a3eaf5688acc6137b2ee63cc6af0999be">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> c1, c2;</div>
-<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>                cin &gt;&gt; c1 &gt;&gt; c2;</div>
-<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = (c2 + 50 - c1) / 100;</div>
-<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> h = d / 3600;</div>
-<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>                d %= 3600;</div>
-<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m = d / 60;</div>
-<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>                d %= 60;</div>
-<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>                <span class="keywordtype">unsigned</span> s = d;</div>
-<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>                cout &lt;&lt; setw(2) &lt;&lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; h &lt;&lt; <span class="charliteral">&#39;:&#39;</span> &lt;&lt; setw(2) &lt;&lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; m &lt;&lt; <span class="charliteral">&#39;:&#39;</span> &lt;&lt; setw(2) &lt;&lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; s;</div>
-<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>            }</div>
-<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>        }<span class="comment">// namespace b1026</span></div>
-<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>    }    <span class="comment">// namespace b</span></div>
-<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span> </div>
-<div class="line"><a id="l00871" name="l00871"></a><span class="lineno"><a class="line" href="../../d7/df2/a00312.html">  871</a></span>    <span class="keyword">namespace </span>a {}</div>
-<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span> </div>
-<div class="line"><a id="l00873" name="l00873"></a><span class="lineno"><a class="line" href="../../dd/db3/a00313.html">  873</a></span>    <span class="keyword">namespace </span>top {}</div>
-<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>}<span class="comment">// namespace pat</span></div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>                <span class="keywordtype">int</span> k;</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>                cin &gt;&gt; address0 &gt;&gt; n &gt;&gt; k;</div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>                unordered_map&lt;string, pair&lt;int, string&gt;&gt; nodes;</div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>                    <span class="keywordtype">string</span> address;</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>                    <span class="keywordtype">string</span> next;</div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>                    <span class="keywordtype">int</span> data;</div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>                    cin &gt;&gt; address &gt;&gt; data &gt;&gt; next;</div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>                    nodes.insert(make_pair(address, make_pair(data, next)));</div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>                }</div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>                vector&lt;pair&lt;string, int&gt;&gt; vec;</div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>                <span class="keywordtype">string</span> current_addr = address0;</div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>                <span class="keywordflow">while</span>(current_addr != <span class="stringliteral">&quot;-1&quot;</span>) {</div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>                    <span class="keyword">auto</span> [data, next] = nodes[current_addr];</div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>                    vec.emplace_back(current_addr, data);</div>
+<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>                    current_addr = next;</div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>                }</div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>                n = vec.size();</div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n - n % k; i += k) {</div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>                    reverse(vec.begin() + i, vec.begin() + i + k);</div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>                }</div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>                    cout &lt;&lt; vec[i].first &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; vec[i].second &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; (i + 1 &lt; n ? vec[i + 1].first : <span class="stringliteral">&quot;-1&quot;</span>) &lt;&lt; endl;</div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>                }</div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>            }</div>
+<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>        }<span class="comment">// namespace b1025</span></div>
+<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span> </div>
+<div class="line"><a id="l00857" name="l00857"></a><span class="lineno"><a class="line" href="../../d1/d5d/a00311.html">  857</a></span>        <span class="keyword">namespace </span>b1026 {</div>
+<div class="line"><a id="l00858" name="l00858"></a><span class="lineno"><a class="line" href="../../d1/d5d/a00311.html#a3eaf5688acc6137b2ee63cc6af0999be">  858</a></span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../d1/d5d/a00311.html#a3eaf5688acc6137b2ee63cc6af0999be">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> c1;</div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> c2;</div>
+<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>                cin &gt;&gt; c1 &gt;&gt; c2;</div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d       = (c2 + 50 - c1) / 100;</div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>                <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> h = d / 3600;</div>
+<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>                d %= 3600;</div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>                <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m = d / 60;</div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>                d %= 60;</div>
+<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>                <span class="keyword">const</span> <span class="keywordtype">unsigned</span> s = d;</div>
+<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>                cout &lt;&lt; setw(2) &lt;&lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; h &lt;&lt; <span class="charliteral">&#39;:&#39;</span> &lt;&lt; setw(2) &lt;&lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; m &lt;&lt; <span class="charliteral">&#39;:&#39;</span> &lt;&lt; setw(2) &lt;&lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; s;</div>
+<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>            }</div>
+<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>        }<span class="comment">// namespace b1026</span></div>
+<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>    }    <span class="comment">// namespace b</span></div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span> </div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno"><a class="line" href="../../d7/df2/a00312.html">  874</a></span>    <span class="keyword">namespace </span>a {}</div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span> </div>
+<div class="line"><a id="l00876" name="l00876"></a><span class="lineno"><a class="line" href="../../dd/db3/a00313.html">  876</a></span>    <span class="keyword">namespace </span>top {}</div>
+<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>}<span class="comment">// namespace pat</span></div>
 <div class="ttc" id="aa00023_html"><div class="ttname"><a href="../../d3/d52/a00023.html">pat.h</a></div></div>
 <div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00556">acwing.h:556</a></div></div>
 <div class="ttc" id="aa00285_html"><div class="ttname"><a href="../../d3/d58/a00285.html">pat</a></div><div class="ttdoc">计算机程序设计能力考试</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00014">pat.cpp:14</a></div></div>
@@ -967,7 +970,7 @@ $(function() {
 <div class="ttc" id="aa00308_html_a2b3ee415d78f4a9511158e1882fe87de"><div class="ttname"><a href="../../d5/d0f/a00308.html#a2b3ee415d78f4a9511158e1882fe87de">pat::b::b1023::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00759">pat.cpp:759</a></div></div>
 <div class="ttc" id="aa00309_html_a1a7f20d36470d9704718341c8aab815d"><div class="ttname"><a href="../../d2/d71/a00309.html#a1a7f20d36470d9704718341c8aab815d">pat::b::b1024::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00782">pat.cpp:782</a></div></div>
 <div class="ttc" id="aa00310_html_ad2ef03943d399dda491bb6d13676da11"><div class="ttname"><a href="../../d1/d67/a00310.html#ad2ef03943d399dda491bb6d13676da11">pat::b::b1025::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00826">pat.cpp:826</a></div></div>
-<div class="ttc" id="aa00311_html_a3eaf5688acc6137b2ee63cc6af0999be"><div class="ttname"><a href="../../d1/d5d/a00311.html#a3eaf5688acc6137b2ee63cc6af0999be">pat::b::b1026::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00856">pat.cpp:856</a></div></div>
+<div class="ttc" id="aa00311_html_a3eaf5688acc6137b2ee63cc6af0999be"><div class="ttname"><a href="../../d1/d5d/a00311.html#a3eaf5688acc6137b2ee63cc6af0999be">pat::b::b1026::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00858">pat.cpp:858</a></div></div>
 <div class="ttc" id="aa02426_html"><div class="ttname"><a href="../../d0/d1e/a02426.html">pat::b::b1015::student</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l00084">pat.h:84</a></div></div>
 <div class="ttc" id="aa02426_html_a34f0536bf9cd2d1751bc5b94096518fd"><div class="ttname"><a href="../../d0/d1e/a02426.html#a34f0536bf9cd2d1751bc5b94096518fd">pat::b::b1015::student::ability</a></div><div class="ttdeci">int ability</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l00087">pat.h:87</a></div></div>
 <div class="ttc" id="aa02426_html_a42c601c940726d2e4acfc2e940352d84"><div class="ttname"><a href="../../d0/d1e/a02426.html#a42c601c940726d2e4acfc2e940352d84">pat::b::b1015::student::id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l00085">pat.h:85</a></div></div>

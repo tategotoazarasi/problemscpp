@@ -112,10 +112,10 @@ $(function() {
 <p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l05028">5028</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l05028" name="l05028"></a><span class="lineno"> 5028</span>                                                   {</div>
 <div class="line"><a id="l05029" name="l05029"></a><span class="lineno"> 5029</span>            vector&lt;int&gt; stk;</div>
-<div class="line"><a id="l05030" name="l05030"></a><span class="lineno"> 5030</span>            <span class="keywordflow">for</span>(<span class="keywordtype">string</span> op: ops) {</div>
+<div class="line"><a id="l05030" name="l05030"></a><span class="lineno"> 5030</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;op: ops) {</div>
 <div class="line"><a id="l05031" name="l05031"></a><span class="lineno"> 5031</span>                <span class="keywordflow">if</span>(op == <span class="stringliteral">&quot;+&quot;</span>) {</div>
-<div class="line"><a id="l05032" name="l05032"></a><span class="lineno"> 5032</span>                    <span class="keywordtype">int</span> score1 = stk.back();</div>
-<div class="line"><a id="l05033" name="l05033"></a><span class="lineno"> 5033</span>                    <span class="keywordtype">int</span> score2 = *(stk.rbegin() + 1);</div>
+<div class="line"><a id="l05032" name="l05032"></a><span class="lineno"> 5032</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> score1 = stk.back();</div>
+<div class="line"><a id="l05033" name="l05033"></a><span class="lineno"> 5033</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> score2 = *(stk.rbegin() + 1);</div>
 <div class="line"><a id="l05034" name="l05034"></a><span class="lineno"> 5034</span>                    stk.push_back(score1 + score2);</div>
 <div class="line"><a id="l05035" name="l05035"></a><span class="lineno"> 5035</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(op == <span class="stringliteral">&quot;D&quot;</span>) {</div>
 <div class="line"><a id="l05036" name="l05036"></a><span class="lineno"> 5036</span>                    stk.push_back(2 * stk.back());</div>
@@ -130,7 +130,7 @@ $(function() {
 <div class="line"><a id="l05045" name="l05045"></a><span class="lineno"> 5045</span>                }</div>
 <div class="line"><a id="l05046" name="l05046"></a><span class="lineno"> 5046</span>            }</div>
 <div class="line"><a id="l05047" name="l05047"></a><span class="lineno"> 5047</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l05048" name="l05048"></a><span class="lineno"> 5048</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> score: stk) {</div>
+<div class="line"><a id="l05048" name="l05048"></a><span class="lineno"> 5048</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> score: stk) {</div>
 <div class="line"><a id="l05049" name="l05049"></a><span class="lineno"> 5049</span>                ans += score;</div>
 <div class="line"><a id="l05050" name="l05050"></a><span class="lineno"> 5050</span>            }</div>
 <div class="line"><a id="l05051" name="l05051"></a><span class="lineno"> 5051</span>            <span class="keywordflow">return</span> ans;</div>
