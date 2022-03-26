@@ -1892,6 +1892,14 @@ namespace leetcode {
 			static int trailingZeroes(int n);
 		};
 	}// namespace factorial_trailing_zeroes
+
+	/// \brief 682. Baseball Game
+	namespace baseball_game {
+		class Solution {
+		public:
+			static int calPoints(vector<string> &ops);
+		};
+	}// namespace baseball_game
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

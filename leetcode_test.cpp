@@ -2454,4 +2454,21 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::trailingZeroes(0));
 		}
 	}// namespace factorial_trailing_zeroes
+
+	namespace baseball_game {
+		TEST(baseball_game, case1) {
+			vector<string> ops = {"5", "2", "C", "D", "+"};
+			ASSERT_EQ(30, Solution::calPoints(ops));
+		}
+
+		TEST(baseball_game, case2) {
+			vector<string> ops = {"5", "-2", "4", "C", "D", "9", "+", "+"};
+			ASSERT_EQ(27, Solution::calPoints(ops));
+		}
+
+		TEST(baseball_game, case3) {
+			vector<string> ops = {"1"};
+			ASSERT_EQ(1, Solution::calPoints(ops));
+		}
+	}// namespace baseball_game
 }// namespace leetcode

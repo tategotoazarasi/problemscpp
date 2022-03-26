@@ -5023,4 +5023,32 @@ namespace leetcode {
 			return min(count2, count5);
 		}
 	}// namespace factorial_trailing_zeroes
+
+	namespace baseball_game {
+		int Solution::calPoints(vector<string> &ops) {
+			vector<int> stk;
+			for(string op: ops) {
+				if(op == "+") {
+					int score1 = stk.back();
+					int score2 = *(stk.rbegin() + 1);
+					stk.push_back(score1 + score2);
+				} else if(op == "D") {
+					stk.push_back(2 * stk.back());
+				} else if(op == "C") {
+					stk.pop_back();
+				} else {
+					stringstream ss;
+					ss << op;
+					int score;
+					ss >> score;
+					stk.push_back(score);
+				}
+			}
+			int ans = 0;
+			for(auto score: stk) {
+				ans += score;
+			}
+			return ans;
+		}
+	}// namespace baseball_game
 }// namespace leetcode
