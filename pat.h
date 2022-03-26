@@ -134,7 +134,18 @@ namespace pat {
 		namespace b1024 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1025 反转链表
+		namespace b1025 {
+			struct Node {
+				string address;
+				int data;
+				Node *prev = nullptr;
+				Node *next = nullptr;
+			};
+			int main(istream &cin, ostream &cout);
+		}// namespace b1025
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}

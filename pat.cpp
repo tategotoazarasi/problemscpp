@@ -821,6 +821,36 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1024
+
+		namespace b1025 {
+			int main(istream &cin, ostream &cout) {
+				string address0;
+				int n, k;
+				cin >> address0 >> n >> k;
+				unordered_map<string, pair<int, string>> nodes;
+				for(int i = 0; i < n; i++) {
+					string address, next;
+					int data;
+					cin >> address >> data >> next;
+					nodes.insert(make_pair(address, make_pair(data, next)));
+				}
+				vector<pair<string, int>> vec;
+				string current_addr = address0;
+				while(current_addr != "-1") {
+					auto [data, next] = nodes[current_addr];
+					vec.push_back(make_pair(current_addr, data));
+					current_addr = next;
+				}
+				n = vec.size();
+				for(int i = 0; i < (n - n % k); i += k) {
+					reverse(vec.begin() + i, vec.begin() + i + k);
+				}
+				for(int i = 0; i < n; i++) {
+					cout << vec[i].first << ' ' << vec[i].second << ' ' << (i + 1 < n ? vec[i + 1].first : "-1") << endl;
+				}
+				return 0;
+			}
+		}// namespace b1025
 	}    // namespace b
 
 	namespace a {}

@@ -366,6 +366,28 @@ namespace pat {
 				ASSERT_EQ("-12000000000", out.str());
 			}
 		}// namespace b1024
+
+		namespace b1025 {
+			TEST(b1025, case1) {
+				istringstream in("00100 6 4\n"
+				                 "00000 4 99999\n"
+				                 "00100 1 12309\n"
+				                 "68237 6 -1\n"
+				                 "33218 3 00000\n"
+				                 "99999 5 68237\n"
+				                 "12309 2 33218");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("00000 4 33218\n"
+				          "33218 3 12309\n"
+				          "12309 2 00100\n"
+				          "00100 1 99999\n"
+				          "99999 5 68237\n"
+				          "68237 6 -1\n",
+				          out.str());
+			}
+		}// namespace b1025
 	}    // namespace b
 
 	namespace a {}
