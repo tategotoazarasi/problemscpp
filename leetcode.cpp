@@ -5027,10 +5027,10 @@ namespace leetcode {
 	namespace baseball_game {
 		int Solution::calPoints(vector<string> &ops) {
 			vector<int> stk;
-			for(string op: ops) {
+			for(const string &op: ops) {
 				if(op == "+") {
-					int score1 = stk.back();
-					int score2 = *(stk.rbegin() + 1);
+					const int score1 = stk.back();
+					const int score2 = *(stk.rbegin() + 1);
 					stk.push_back(score1 + score2);
 				} else if(op == "D") {
 					stk.push_back(2 * stk.back());
@@ -5045,7 +5045,7 @@ namespace leetcode {
 				}
 			}
 			int ans = 0;
-			for(auto score: stk) {
+			for(const auto score: stk) {
 				ans += score;
 			}
 			return ans;

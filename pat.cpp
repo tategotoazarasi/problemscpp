@@ -825,11 +825,13 @@ namespace pat {
 		namespace b1025 {
 			int main(istream &cin, ostream &cout) {
 				string address0;
-				int n, k;
+				int n;
+				int k;
 				cin >> address0 >> n >> k;
 				unordered_map<string, pair<int, string>> nodes;
 				for(int i = 0; i < n; i++) {
-					string address, next;
+					string address;
+					string next;
 					int data;
 					cin >> address >> data >> next;
 					nodes.insert(make_pair(address, make_pair(data, next)));
@@ -838,11 +840,11 @@ namespace pat {
 				string current_addr = address0;
 				while(current_addr != "-1") {
 					auto [data, next] = nodes[current_addr];
-					vec.push_back(make_pair(current_addr, data));
+					vec.emplace_back(current_addr, data);
 					current_addr = next;
 				}
 				n = vec.size();
-				for(int i = 0; i < (n - n % k); i += k) {
+				for(int i = 0; i < n - n % k; i += k) {
 					reverse(vec.begin() + i, vec.begin() + i + k);
 				}
 				for(int i = 0; i < n; i++) {
@@ -854,14 +856,15 @@ namespace pat {
 
 		namespace b1026 {
 			int main(istream &cin, ostream &cout) {
-				unsigned int c1, c2;
+				unsigned int c1;
+				unsigned int c2;
 				cin >> c1 >> c2;
-				unsigned int d = (c2 + 50 - c1) / 100;
-				unsigned int h = d / 3600;
+				unsigned int d       = (c2 + 50 - c1) / 100;
+				const unsigned int h = d / 3600;
 				d %= 3600;
-				unsigned int m = d / 60;
+				const unsigned int m = d / 60;
 				d %= 60;
-				unsigned s = d;
+				const unsigned s = d;
 				cout << setw(2) << right << setfill('0') << h << ':' << setw(2) << right << setfill('0') << m << ':' << setw(2) << right << setfill('0') << s;
 				return 0;
 			}

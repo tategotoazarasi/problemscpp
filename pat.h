@@ -143,6 +143,7 @@ namespace pat {
 				Node *prev = nullptr;
 				Node *next = nullptr;
 			};
+
 			int main(istream &cin, ostream &cout);
 		}// namespace b1025
 

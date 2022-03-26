@@ -5805,17 +5805,17 @@ namespace acwing {
 	namespace acwing1683 {
 		int main(istream &cin, ostream &cout) {
 			int pos[3];
-			int ans1, ans2;
+			int ans1;
 			cin >> pos[0] >> pos[1] >> pos[2];
 			sort(pos, pos + 3);
-			int g1 = pos[1] - pos[0];
-			int g2 = pos[2] - pos[1];
+			const int g1 = pos[1] - pos[0];
+			const int g2 = pos[2] - pos[1];
 			if(g1 == 2 || g2 == 2) {
 				ans1 = 1;
 			} else {
 				ans1 = 2;
 			}
-			ans2 = max(g1, g2);
+			int ans2 = max(g1, g2);
 			ans2--;
 			cout << ans1 << endl
 			     << ans2;
