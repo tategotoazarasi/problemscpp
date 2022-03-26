@@ -1837,5 +1837,19 @@ namespace acwing {
 	namespace acwing1683 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/**
+	 * \brief 4318. 最短路径
+	 */
+	namespace acwing4318 {
+		int main(istream &cin, ostream &cout);
+	}
+
+	/**
+	 * \brief 4319. 合适数对
+	 */
+	namespace acwing4319 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

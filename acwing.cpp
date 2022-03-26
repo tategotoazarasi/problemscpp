@@ -5822,4 +5822,116 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1683
+
+	namespace acwing4318 {
+		int main(istream &cin, ostream &cout) {
+			int x = 0;
+			int y = 0;
+			char op;
+			int step = 0;
+			set<pair<int, int>> s;
+			s.insert(make_pair(0, 0));
+			while(cin >> op) {
+				step++;
+				switch(op) {
+					case 'U':
+						x--;
+						if(s.contains(make_pair(x, y)) ||
+						   s.contains(make_pair(x - 1, y)) ||
+						   s.contains(make_pair(x, y + 1)) ||
+						   s.contains(make_pair(x, y - 1))) {
+							cout << "NO";
+							return 0;
+						}
+						break;
+					case 'D':
+						x++;
+						if(s.contains(make_pair(x, y)) ||
+						   s.contains(make_pair(x + 1, y)) ||
+						   s.contains(make_pair(x, y + 1)) ||
+						   s.contains(make_pair(x, y - 1))) {
+							cout << "NO";
+							return 0;
+						}
+						break;
+					case 'L':
+						y--;
+						if(s.contains(make_pair(x, y)) ||
+						   s.contains(make_pair(x, y - 1)) ||
+						   s.contains(make_pair(x + 1, y)) ||
+						   s.contains(make_pair(x - 1, y))) {
+							cout << "NO";
+							return 0;
+						}
+						break;
+					case 'R':
+						y++;
+						if(s.contains(make_pair(x, y)) ||
+						   s.contains(make_pair(x, y + 1)) ||
+						   s.contains(make_pair(x + 1, y)) ||
+						   s.contains(make_pair(x - 1, y))) {
+							cout << "NO";
+							return 0;
+						}
+						break;
+					default:
+						step--;
+						break;
+				}
+				s.insert(make_pair(x, y));
+			}
+			if(step == 1) {
+				cout << "YES";
+				return 0;
+			}
+			if(abs(x) <= 1 && y == 0 || x == 0 && abs(y) <= 1) {
+				cout << "NO";
+			} else {
+				cout << "YES";
+			}
+			return 0;
+		}
+	}// namespace acwing4318
+
+	namespace acwing4319 {
+		int main(istream &cin, ostream &cout) {
+			unsigned int n;
+			unsigned int k;
+			cin >> n >> k;
+			vector<unsigned int> a(n);
+			vector<vector<pair<unsigned int, unsigned int>>> factors(n);
+			map<vector<pair<unsigned int, unsigned int>>, unsigned int> factor_status_count;
+			for(int i = 0; i < n; i++) {
+				cin >> a[i];
+				for(unsigned int factor = 2; factor * factor <= a[i]; factor++) {
+					if((a[i] % factor) != 0u) {
+						continue;
+					}
+					unsigned int count = 0;
+					while(a[i] % factor == 0) {
+						a[i] /= factor;
+						++count;
+					}
+					count %= k;
+					if(count != 0) {
+						factors[i].emplace_back(factor, count);
+					}
+				}
+				if(a[i] != 1) {
+					factors[i].emplace_back(a[i], 1);
+				}
+			}
+			unsigned long long ans = 0;
+			for(unsigned int i = 0; i < n; i++) {
+				vector<pair<unsigned int, unsigned int>> factor_status;
+				for(auto [factor, count]: factors[i]) {
+					factor_status.emplace_back(factor, k - count);
+				}
+				ans += factor_status_count[factor_status];
+				++factor_status_count[factors[i]];
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing4319
 }// namespace acwing
