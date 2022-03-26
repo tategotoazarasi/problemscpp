@@ -1832,5 +1832,10 @@ namespace acwing {
 	namespace acwing1695 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 1683. 困牛放牧
+	namespace acwing1683 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
