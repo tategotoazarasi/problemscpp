@@ -1900,6 +1900,28 @@ namespace leetcode {
 			static int calPoints(vector<string> &ops);
 		};
 	}// namespace baseball_game
+
+	/**
+	 * \brief 5236. 美化数组的最少删除数
+	 */
+	namespace minimum_deletions_to_make_array_beautiful {
+		class Solution {
+		public:
+			static int minDeletion(vector<int> &nums);
+		};
+	}// namespace minimum_deletions_to_make_array_beautiful
+
+	/**
+	 * \brief 5253. 找到指定长度的回文数
+	 */
+	namespace find_palindrome_with_fixed_length {
+		unsigned long long qmi(unsigned long long m, unsigned long long k);
+
+		class Solution {
+		public:
+			static vector<long long> kthPalindrome(vector<int> &queries, int intLength);
+		};
+	}// namespace find_palindrome_with_fixed_length
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

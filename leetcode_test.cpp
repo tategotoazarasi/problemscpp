@@ -2471,4 +2471,59 @@ namespace leetcode {
 			ASSERT_EQ(1, Solution::calPoints(ops));
 		}
 	}// namespace baseball_game
+
+	namespace minimum_deletions_to_make_array_beautiful {
+		TEST(minimum_deletions_to_make_array_beautiful, case1) {
+			vector nums = {2, 2, 2, 2, 2};
+			ASSERT_EQ(5, Solution::minDeletion(nums));
+		}
+
+		TEST(minimum_deletions_to_make_array_beautiful, case2) {
+			vector nums = {1, 1, 2, 3, 5};
+			ASSERT_EQ(5, Solution::minDeletion(nums));
+		}
+
+		TEST(minimum_deletions_to_make_array_beautiful, case3) {
+			vector nums = {1, 1, 2, 2, 3, 3};
+			ASSERT_EQ(5, Solution::minDeletion(nums));
+		}
+	}// namespace minimum_deletions_to_make_array_beautiful
+
+	namespace find_palindrome_with_fixed_length {
+		TEST(find_palindrome_with_fixed_length, case1) {
+			vector queries                 = {1, 2, 3, 4, 5, 90};
+			const vector<long long> output = {101, 111, 121, 131, 141, 999};
+			ASSERT_EQ(output, Solution::kthPalindrome(queries, 3));
+		}
+
+		TEST(find_palindrome_with_fixed_length, case2) {
+			vector queries                 = {2, 4, 6};
+			const vector<long long> output = {1111, 1331, 1551};
+			ASSERT_EQ(output, Solution::kthPalindrome(queries, 4));
+		}
+
+		TEST(find_palindrome_with_fixed_length, case4) {
+			vector queries                 = {10};
+			const vector<long long> output = {191};
+			ASSERT_EQ(output, Solution::kthPalindrome(queries, 3));
+		}
+
+		TEST(find_palindrome_with_fixed_length, case5) {
+			vector queries                 = {9};
+			const vector<long long> output = {10801};
+			ASSERT_EQ(output, Solution::kthPalindrome(queries, 5));
+		}
+
+		TEST(find_palindrome_with_fixed_length, case6) {
+			vector queries                 = {10};
+			const vector<long long> output = {10901};
+			ASSERT_EQ(output, Solution::kthPalindrome(queries, 5));
+		}
+
+		TEST(find_palindrome_with_fixed_length, case7) {
+			vector queries                 = {60};
+			const vector<long long> output = {15951};
+			ASSERT_EQ(output, Solution::kthPalindrome(queries, 5));
+		}
+	}// namespace find_palindrome_with_fixed_length
 }// namespace leetcode

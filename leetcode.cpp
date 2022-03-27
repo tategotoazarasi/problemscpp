@@ -5051,4 +5051,124 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace baseball_game
+
+	namespace minimum_deletions_to_make_array_beautiful {
+		int Solution::minDeletion(vector<int> &nums) {
+			vector<int> indexes;
+			for(int i = 0; i + 1 < nums.size(); i++) {
+				if(nums[i] == nums[i + 1]) {
+					indexes.push_back(i);
+				}
+			}
+			int ans   = 0;
+			bool even = true;
+			for(const auto index: indexes) {
+				if(even && index % 2 == 0 || !even && index % 2 != 0) {
+					ans++;
+					even = !even;
+				}
+			}
+			if((nums.size() - ans) % 2 != 0) {
+				ans++;
+			}
+			return ans;
+		}
+	}// namespace minimum_deletions_to_make_array_beautiful
+
+	namespace find_palindrome_with_fixed_length {
+		unsigned long long qmi(unsigned long long m, unsigned long long k) {
+			unsigned long long res = 1;
+			unsigned long long t   = m;
+			while(k != 0u) {
+				if((k & 1) != 0u) {
+					res = res * t;
+				}
+				t = t * t;
+				k >>= 1;
+			}
+			return res;
+		}
+
+		vector<long long> Solution::kthPalindrome(vector<int> &queries, int intLength) {
+			vector<long long> ans;
+			if(intLength == 1) {
+				for(auto query: queries) {
+					if(query < 10) {
+						ans.push_back(query);
+					} else {
+						ans.push_back(-1);
+					}
+				}
+				return ans;
+			}
+			if(intLength == 2) {
+				for(auto query: queries) {
+					if(query < 10) {
+						ans.push_back(query * 10 + query);
+					} else {
+						ans.push_back(-1);
+					}
+				}
+				return ans;
+			}
+			int n = (intLength + 1) / 2;
+			vector<unsigned long long> q10(n + 1);
+			for(int i = 1; i <= n; i++) {
+				q10[i] = qmi(10, n - i);
+			}
+			for(auto query: queries) {
+				vector<unsigned long long> num;
+				int n1 = query / q10[1] + 1;
+				if(n1 == 10 && query % q10[1] == 0) {
+					stringstream ss;
+					for(int i = 0; i < intLength; i++) {
+						ss << 9;
+					}
+					long long res;
+					ss >> res;
+					ans.push_back(res);
+					continue;
+				}
+				if(n1 > 9) {
+					ans.push_back(-1);
+					continue;
+				}
+				if(n1 < 10 && query % q10[1] == 0) {
+					n1--;
+					query = (query - 1) % q10[1] + 1;
+				} else {
+					query %= q10[1];
+				}
+				num.push_back(n1);
+				for(int i = 2; i <= n; i++) {
+					int digit = query / q10[i];
+					if(i == n) {
+						digit--;
+					} else if(query != q10[i] && query % q10[i] == 0) {
+						digit--;
+					} else if(query == q10[i]) {
+						digit = 0;
+					}
+					query %= q10[i];
+					num.push_back((digit + 10) % 10);
+				}
+				stringstream ss;
+				for(int digit: num) {
+					ss << digit;
+				}
+				int i = num.size() - 1;
+				if(intLength % 2 != 0) {
+					i--;
+				}
+				while(i >= 0) {
+					ss << num[i];
+					--i;
+				}
+				long long res;
+				ss >> res;
+				ans.push_back(res);
+			}
+			return ans;
+		}
+	}// namespace find_palindrome_with_fixed_length
 }// namespace leetcode
