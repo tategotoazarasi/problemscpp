@@ -158,7 +158,28 @@ namespace pat {
 		namespace b1027 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/**
+		 * \brief 1028 人口普查 
+		 */
+		namespace b1028 {
+			struct Person {
+				string name;
+				int year{};
+				int month{};
+				int day{};
+				Person() = default;
+
+				Person(int year, int month, int day)
+				    : year(year), month(month), day(day) {}
+
+				bool operator<(const Person &p) const;
+			};
+
+			bool is_valid(int year, int month, int day);
+			int main(istream &cin, ostream &cout);
+		}// namespace b1028
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}

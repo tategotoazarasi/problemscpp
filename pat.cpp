@@ -902,6 +902,74 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1027
+
+		namespace b1028 {
+			bool is_valid(int year, int month, int day) {
+				if(year > 2014) {
+					return false;
+				}
+				if(year == 2014 && month > 9) {
+					return false;
+				}
+				if(year == 2014 && month == 9 && day > 6) {
+					return false;
+				}
+				if(year < 1814) {
+					return false;
+				}
+				if(year == 1814 && month < 9) {
+					return false;
+				}
+				if(year == 1814 && month == 9 && day < 6) {
+					return false;
+				}
+				return true;
+			}
+
+			int main(istream &cin, ostream &cout) {
+				int n;
+				int count = 0;
+				cin >> n;
+				auto oldest   = Person(2014, 9, 6);
+				auto youngest = Person(1814, 9, 6);
+				for(int i = 0; i < n; i++) {
+					Person p;
+					cin >> p.name >> p.year;
+					cin.get();
+					cin >> p.month;
+					cin.get();
+					cin >> p.day;
+					if(is_valid(p.year, p.month, p.day)) {
+						count++;
+						if(p < oldest) {
+							oldest = p;
+						}
+						if(youngest < p) {
+							youngest = p;
+						}
+					}
+				}
+				if(count > 0) {
+					cout << count << ' ' << oldest.name << ' ' << youngest.name;
+				} else {
+					cout << 0;
+				}
+				return 0;
+			}
+
+			bool Person::operator<(const Person &p) const {
+				if(this->year < p.year) {
+					return true;
+				}
+				if(this->year == p.year && this->month < p.month) {
+					return true;
+				}
+				if(this->year == p.year && this->month == p.month && this->day < p.day) {
+					return true;
+				}
+				return false;
+			}
+		}// namespace b1028
 	}    // namespace b
 
 	namespace a {}

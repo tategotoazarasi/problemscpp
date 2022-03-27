@@ -408,6 +408,16 @@ namespace pat {
 				ASSERT_EQ("*****\n ***\n  *\n ***\n*****\n2", out.str());
 			}
 		}// namespace b1027
+
+		namespace b1028 {
+			TEST(b1028, case1) {
+				istringstream in("5\nJohn 2001/05/12\nTom 1814/09/06\nAnn 2121/01/30\nJames 1814/09/05\nSteve 1967/11/20");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("3 Tom John", out.str());
+			}
+		}// namespace b1028
 	}    // namespace b
 
 	namespace a {}
