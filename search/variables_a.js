@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['left_0',['left',['../db/d42/a01220.html#a03bca16cb19c3e93d15266a039523d4e',1,'leetcode::TreeNode::left()'],['../d7/da3/a01260.html#a527dd1073e87fbd3a0406ac26e038996',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::left()'],['../d6/d90/a01964.html#ac24be0ef8a477f2baac82561b3a906e0',1,'lintcode::TreeNode::left()']]],
-  ['left_5fmap_1',['left_map',['../d1/d8c/a00600.html#ae0ed96db182459f5342f080095ad9723',1,'acwing::acwing1929::Solution']]],
-  ['limit_2',['limit',['../d5/d83/a01680.html#a1ec4ba2d7adf9af5984cc0a43f28e37d',1,'leetcode::count_good_triplets_in_an_array::FenwickTree']]],
-  ['linked_3',['linked',['../d8/d22/a01932.html#ae4985a0226209426b3d214953807decb',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]]
+  ['left_0',['left',['../d8/d53/a01225.html#a03bca16cb19c3e93d15266a039523d4e',1,'leetcode::TreeNode::left()'],['../da/dd8/a01265.html#a527dd1073e87fbd3a0406ac26e038996',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::left()'],['../df/db2/a01981.html#ac24be0ef8a477f2baac82561b3a906e0',1,'lintcode::TreeNode::left()']]],
+  ['left_5fmap_1',['left_map',['../d0/d1c/a00605.html#ae0ed96db182459f5342f080095ad9723',1,'acwing::acwing1929::Solution']]],
+  ['limit_2',['limit',['../de/d96/a01685.html#a1ec4ba2d7adf9af5984cc0a43f28e37d',1,'leetcode::count_good_triplets_in_an_array::FenwickTree']]],
+  ['linked_3',['linked',['../d9/d17/a01937.html#ae4985a0226209426b3d214953807decb',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]]
 ];
