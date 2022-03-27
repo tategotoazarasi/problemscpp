@@ -151,6 +151,13 @@ namespace pat {
 		namespace b1026 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/**
+		 * \brief 1027 打印沙漏
+		 */
+		namespace b1027 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

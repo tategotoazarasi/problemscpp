@@ -398,6 +398,16 @@ namespace pat {
 				ASSERT_EQ("12:42:59", out.str());
 			}
 		}// namespace b1026
+
+		namespace b1027 {
+			TEST(b1027, case1) {
+				istringstream in("19 *");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("*****\n ***\n  *\n ***\n*****\n2", out.str());
+			}
+		}// namespace b1027
 	}    // namespace b
 
 	namespace a {}

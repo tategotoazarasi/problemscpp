@@ -2472,23 +2472,6 @@ namespace leetcode {
 		}
 	}// namespace baseball_game
 
-	namespace minimum_deletions_to_make_array_beautiful {
-		TEST(minimum_deletions_to_make_array_beautiful, case1) {
-			vector nums = {2, 2, 2, 2, 2};
-			ASSERT_EQ(5, Solution::minDeletion(nums));
-		}
-
-		TEST(minimum_deletions_to_make_array_beautiful, case2) {
-			vector nums = {1, 1, 2, 3, 5};
-			ASSERT_EQ(5, Solution::minDeletion(nums));
-		}
-
-		TEST(minimum_deletions_to_make_array_beautiful, case3) {
-			vector nums = {1, 1, 2, 2, 3, 3};
-			ASSERT_EQ(5, Solution::minDeletion(nums));
-		}
-	}// namespace minimum_deletions_to_make_array_beautiful
-
 	namespace find_palindrome_with_fixed_length {
 		TEST(find_palindrome_with_fixed_length, case1) {
 			vector queries                 = {1, 2, 3, 4, 5, 90};

@@ -869,6 +869,39 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1026
+
+		namespace b1027 {
+			int main(istream &cin, ostream &cout) {
+				unsigned int n;
+				char ch;
+				cin >> n >> ch;
+				int i = 1;
+				while((i + 1) * (i + 1) / 2 - 1 <= n) {
+					i += 2;
+				}
+				i -= 2;
+				for(int j = 0; j < (i + 1) / 2; ++j) {
+					for(int k = 0; k < j; k++) {
+						cout << ' ';
+					}
+					for(int k = 0; k < i - 2 * j; k++) {
+						cout << ch;
+					}
+					cout << endl;
+				}
+				for(int j = (i + 1) / 2 - 2; j >= 0; --j) {
+					for(int k = 0; k < j; k++) {
+						cout << ' ';
+					}
+					for(int k = 0; k < i - 2 * j; k++) {
+						cout << ch;
+					}
+					cout << endl;
+				}
+				cout << n - ((i + 1) * (i + 1) / 2 - 1);
+				return 0;
+			}
+		}// namespace b1027
 	}    // namespace b
 
 	namespace a {}
