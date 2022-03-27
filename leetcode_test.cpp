@@ -2509,4 +2509,18 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::kthPalindrome(queries, 5));
 		}
 	}// namespace find_palindrome_with_fixed_length
+
+	namespace find_missing_observations {
+		TEST(find_missing_observations, case1) {
+			vector rolls        = {3, 2, 4, 3};
+			const vector output = {6, 6};
+			ASSERT_EQ(output, Solution::missingRolls(rolls, 4, 2));
+		}
+
+		TEST(find_missing_observations, case3) {
+			vector rolls             = {1, 2, 3, 4};
+			const vector<int> output = {};
+			ASSERT_EQ(output, Solution::missingRolls(rolls, 6, 4));
+		}
+	}// namespace find_missing_observations
 }// namespace leetcode

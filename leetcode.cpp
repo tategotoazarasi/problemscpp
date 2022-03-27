@@ -5079,8 +5079,8 @@ namespace leetcode {
 		unsigned long long qmi(unsigned long long m, unsigned long long k) {
 			unsigned long long res = 1;
 			unsigned long long t   = m;
-			while(k != 0u) {
-				if((k & 1) != 0u) {
+			while(k != 0U) {
+				if((k & 1) != 0U) {
 					res = res * t;
 				}
 				t = t * t;
@@ -5171,4 +5171,23 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace find_palindrome_with_fixed_length
+
+	namespace find_missing_observations {
+		vector<int> Solution::missingRolls(vector<int> &rolls, int mean, int n) {
+			const int m = rolls.size();
+			int sum     = (m + n) * mean;
+			for(const auto roll: rolls) {
+				sum -= roll;
+			}
+			if(sum < n || sum > 6 * n) {
+				return {};
+			}
+			vector ans(n, sum / n);
+			sum %= n;
+			for(int i = 0; i < sum; i++) {
+				ans[i]++;
+			}
+			return ans;
+		}
+	}// namespace find_missing_observations
 }// namespace leetcode

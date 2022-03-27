@@ -1922,6 +1922,16 @@ namespace leetcode {
 			static vector<long long> kthPalindrome(vector<int> &queries, int intLength);
 		};
 	}// namespace find_palindrome_with_fixed_length
+
+	/**
+	 * \brief 2028. Find Missing Observations
+	 */
+	namespace find_missing_observations {
+		class Solution {
+		public:
+			static vector<int> missingRolls(vector<int> &rolls, int mean, int n);
+		};
+	}// namespace find_missing_observations
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
