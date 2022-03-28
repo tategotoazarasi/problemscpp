@@ -184,6 +184,11 @@ namespace pat {
 		namespace b1029 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1030 完美数列
+		namespace b1030 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

@@ -429,6 +429,17 @@ namespace pat {
 				ASSERT_EQ("7TI", out.str());
 			}
 		}// namespace b1029
+
+		namespace b1030 {
+			TEST(b1030, case1) {
+				istringstream in("10 8\n"
+				                 "2 3 20 4 5 1 6 7 8 9");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("8", out.str());
+			}
+		}// namespace b1030
 	}    // namespace b
 
 	namespace a {}

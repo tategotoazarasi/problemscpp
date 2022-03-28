@@ -992,6 +992,25 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1029
+
+		namespace b1030 {
+			int main(istream &cin, ostream &cout) {
+				unsigned int n, p;
+				cin >> n >> p;
+				vector<unsigned int> vec(n);
+				for(unsigned int i = 0; i < n; i++) {
+					cin >> vec[i];
+				}
+				sort(vec.begin(), vec.end());
+				unsigned int ans = 0;
+				for(unsigned i = 0; i < vec.size(); i++) {
+					unsigned diff = upper_bound(vec.begin(), vec.end(), vec[i] * p) - (vec.begin() + i);
+					ans           = max(ans, diff);
+				}
+				cout << ans;
+				return 0;
+			}
+		}// namespace b1030
 	}    // namespace b
 
 	namespace a {}
