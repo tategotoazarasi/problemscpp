@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::where_will_the_ball_fall::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,117 +63,18 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../df/d98/a00107.html">leetcode</a></li><li class="navelem"><a class="el" href="../../df/d24/a00217.html">where_will_the_ball_fall</a></li><li class="navelem"><a class="el" href="../../d2/d70/a01729.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../df/d98/a00107.html">leetcode</a></li><li class="navelem"><a class="el" href="../../df/d24/a00217.html">where_will_the_ball_fall</a></li><li class="navelem"><a class="el" href="../../de/d25/a01732.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="../../df/dba/a01726.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::where_will_the_ball_fall::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::where_will_the_ball_fall::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a38ec1f645f75c967cca33d392abfe9f6"><td class="memItemLeft" align="right" valign="top">static vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d70/a01729.html#a38ec1f645f75c967cca33d392abfe9f6">findBall</a> (vector&lt; vector&lt; int &gt; &gt; &amp;grid)</td></tr>
-<tr class="separator:a38ec1f645f75c967cca33d392abfe9f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01323">1323</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="a38ec1f645f75c967cca33d392abfe9f6" name="a38ec1f645f75c967cca33d392abfe9f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38ec1f645f75c967cca33d392abfe9f6">&#9670;&nbsp;</a></span>findBall()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt; int &gt; leetcode::where_will_the_ball_fall::Solution::findBall </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; vector&lt; int &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>grid</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l03463">3463</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03463" name="l03463"></a><span class="lineno"> 3463</span>                                                                {</div>
-<div class="line"><a id="l03464" name="l03464"></a><span class="lineno"> 3464</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> m = grid.size();</div>
-<div class="line"><a id="l03465" name="l03465"></a><span class="lineno"> 3465</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = grid[0].size();</div>
-<div class="line"><a id="l03466" name="l03466"></a><span class="lineno"> 3466</span>            vector&lt;int&gt; ans(n);</div>
-<div class="line"><a id="l03467" name="l03467"></a><span class="lineno"> 3467</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l03468" name="l03468"></a><span class="lineno"> 3468</span>                <span class="keywordtype">int</span> current_x = 0;</div>
-<div class="line"><a id="l03469" name="l03469"></a><span class="lineno"> 3469</span>                <span class="keywordtype">int</span> current_y = i;</div>
-<div class="line"><a id="l03470" name="l03470"></a><span class="lineno"> 3470</span>                <span class="keywordtype">int</span> dir       = 1;<span class="comment">// 0 - 左, 1 - 下, 2 - 右</span></div>
-<div class="line"><a id="l03471" name="l03471"></a><span class="lineno"> 3471</span>                <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
-<div class="line"><a id="l03472" name="l03472"></a><span class="lineno"> 3472</span>                    <span class="keywordflow">if</span>(current_x == m) {</div>
-<div class="line"><a id="l03473" name="l03473"></a><span class="lineno"> 3473</span>                        ans[i] = current_y;</div>
-<div class="line"><a id="l03474" name="l03474"></a><span class="lineno"> 3474</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03475" name="l03475"></a><span class="lineno"> 3475</span>                    }</div>
-<div class="line"><a id="l03476" name="l03476"></a><span class="lineno"> 3476</span>                    <span class="keywordflow">if</span>(current_x &lt; 0 || current_y &lt; 0 || current_y &gt;= n) {</div>
-<div class="line"><a id="l03477" name="l03477"></a><span class="lineno"> 3477</span>                        ans[i] = -1;</div>
-<div class="line"><a id="l03478" name="l03478"></a><span class="lineno"> 3478</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03479" name="l03479"></a><span class="lineno"> 3479</span>                    }</div>
-<div class="line"><a id="l03480" name="l03480"></a><span class="lineno"> 3480</span>                    <span class="keywordflow">if</span>(dir == 0) {</div>
-<div class="line"><a id="l03481" name="l03481"></a><span class="lineno"> 3481</span>                        <span class="comment">//左</span></div>
-<div class="line"><a id="l03482" name="l03482"></a><span class="lineno"> 3482</span>                        <span class="keywordflow">if</span>(grid[current_x][current_y] == 1) {</div>
-<div class="line"><a id="l03483" name="l03483"></a><span class="lineno"> 3483</span>                            ans[i] = -1;</div>
-<div class="line"><a id="l03484" name="l03484"></a><span class="lineno"> 3484</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03485" name="l03485"></a><span class="lineno"> 3485</span>                        }</div>
-<div class="line"><a id="l03486" name="l03486"></a><span class="lineno"> 3486</span>                        dir = 1;</div>
-<div class="line"><a id="l03487" name="l03487"></a><span class="lineno"> 3487</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(dir == 1) {</div>
-<div class="line"><a id="l03488" name="l03488"></a><span class="lineno"> 3488</span>                        <span class="comment">//下</span></div>
-<div class="line"><a id="l03489" name="l03489"></a><span class="lineno"> 3489</span>                        <span class="keywordflow">if</span>(grid[current_x][current_y] == 1) {</div>
-<div class="line"><a id="l03490" name="l03490"></a><span class="lineno"> 3490</span>                            dir = 2;</div>
-<div class="line"><a id="l03491" name="l03491"></a><span class="lineno"> 3491</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03492" name="l03492"></a><span class="lineno"> 3492</span>                            dir = 0;</div>
-<div class="line"><a id="l03493" name="l03493"></a><span class="lineno"> 3493</span>                        }</div>
-<div class="line"><a id="l03494" name="l03494"></a><span class="lineno"> 3494</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03495" name="l03495"></a><span class="lineno"> 3495</span>                        <span class="comment">//右</span></div>
-<div class="line"><a id="l03496" name="l03496"></a><span class="lineno"> 3496</span>                        <span class="keywordflow">if</span>(grid[current_x][current_y] == 1) {</div>
-<div class="line"><a id="l03497" name="l03497"></a><span class="lineno"> 3497</span>                            dir = 1;</div>
-<div class="line"><a id="l03498" name="l03498"></a><span class="lineno"> 3498</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03499" name="l03499"></a><span class="lineno"> 3499</span>                            ans[i] = -1;</div>
-<div class="line"><a id="l03500" name="l03500"></a><span class="lineno"> 3500</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03501" name="l03501"></a><span class="lineno"> 3501</span>                        }</div>
-<div class="line"><a id="l03502" name="l03502"></a><span class="lineno"> 3502</span>                    }</div>
-<div class="line"><a id="l03503" name="l03503"></a><span class="lineno"> 3503</span>                    <span class="keywordflow">if</span>(dir == 0) {</div>
-<div class="line"><a id="l03504" name="l03504"></a><span class="lineno"> 3504</span>                        <span class="comment">//左</span></div>
-<div class="line"><a id="l03505" name="l03505"></a><span class="lineno"> 3505</span>                        current_y--;</div>
-<div class="line"><a id="l03506" name="l03506"></a><span class="lineno"> 3506</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(dir == 1) {</div>
-<div class="line"><a id="l03507" name="l03507"></a><span class="lineno"> 3507</span>                        <span class="comment">//下</span></div>
-<div class="line"><a id="l03508" name="l03508"></a><span class="lineno"> 3508</span>                        current_x++;</div>
-<div class="line"><a id="l03509" name="l03509"></a><span class="lineno"> 3509</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03510" name="l03510"></a><span class="lineno"> 3510</span>                        <span class="comment">//右</span></div>
-<div class="line"><a id="l03511" name="l03511"></a><span class="lineno"> 3511</span>                        current_y++;</div>
-<div class="line"><a id="l03512" name="l03512"></a><span class="lineno"> 3512</span>                    }</div>
-<div class="line"><a id="l03513" name="l03513"></a><span class="lineno"> 3513</span>                }</div>
-<div class="line"><a id="l03514" name="l03514"></a><span class="lineno"> 3514</span>            }</div>
-<div class="line"><a id="l03515" name="l03515"></a><span class="lineno"> 3515</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l03516" name="l03516"></a><span class="lineno"> 3516</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d5/df9/a00044_source.html#l01748">leetcode::where_will_the_ball_fall::TEST()</a>.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a></li>
-<li><a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="../../de/d25/a01732.html">leetcode::where_will_the_ball_fall::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../de/d25/a01732.html#a38ec1f645f75c967cca33d392abfe9f6">findBall</a>(vector&lt; vector&lt; int &gt; &gt; &amp;grid)</td><td class="entry"><a class="el" href="../../de/d25/a01732.html">leetcode::where_will_the_ball_fall::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
