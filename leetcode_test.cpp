@@ -2523,4 +2523,18 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::missingRolls(rolls, 6, 4));
 		}
 	}// namespace find_missing_observations
+
+	namespace binary_number_with_alternating_bits {
+		TEST(binary_number_with_alternating_bits, case1) {
+			ASSERT_TRUE(Solution::hasAlternatingBits(5));
+		}
+
+		TEST(binary_number_with_alternating_bits, case2) {
+			ASSERT_FALSE(Solution::hasAlternatingBits(7));
+		}
+
+		TEST(binary_number_with_alternating_bits, case3) {
+			ASSERT_FALSE(Solution::hasAlternatingBits(11));
+		}
+	}// namespace binary_number_with_alternating_bits
 }// namespace leetcode

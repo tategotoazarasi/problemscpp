@@ -5190,4 +5190,22 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace find_missing_observations
+
+	namespace binary_number_with_alternating_bits {
+		bool Solution::hasAlternatingBits(int n) {
+			stringstream ss;
+			while(n != 0) {
+				ss << n % 2;
+				n /= 2;
+			}
+			string str;
+			ss >> str;
+			for(int i = 0; i + 1 < str.length(); i++) {
+				if(str[i] == str[i + 1]) {
+					return false;
+				}
+			}
+			return true;
+		}
+	}// namespace binary_number_with_alternating_bits
 }// namespace leetcode

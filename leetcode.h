@@ -1932,6 +1932,14 @@ namespace leetcode {
 			static vector<int> missingRolls(vector<int> &rolls, int mean, int n);
 		};
 	}// namespace find_missing_observations
+
+	/// \brief 693. Binary Number with Alternating Bits
+	namespace binary_number_with_alternating_bits {
+		class Solution {
+		public:
+			static bool hasAlternatingBits(int n);
+		};
+	}// namespace binary_number_with_alternating_bits
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
