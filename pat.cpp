@@ -974,8 +974,10 @@ namespace pat {
 
 		namespace b1029 {
 			int main(istream &cin, ostream &cout) {
-				unordered_set<char> bad, s;
-				string good_str, bad_str;
+				unordered_set<char> bad;
+				unordered_set<char> s;
+				string good_str;
+				string bad_str;
 				cin >> good_str;
 				cin >> bad_str;
 				for(char ch: bad_str) {
@@ -984,7 +986,7 @@ namespace pat {
 				}
 				for(char ch: good_str) {
 					ch = toupper(ch);
-					if(bad.count(ch) == 0 && s.count(ch) == 0) {
+					if(!bad.contains(ch) && !s.contains(ch)) {
 						cout << ch;
 						s.insert(ch);
 					}
@@ -995,7 +997,8 @@ namespace pat {
 
 		namespace b1030 {
 			int main(istream &cin, ostream &cout) {
-				unsigned int n, p;
+				unsigned int n;
+				unsigned int p;
 				cin >> n >> p;
 				vector<unsigned int> vec(n);
 				for(unsigned int i = 0; i < n; i++) {
