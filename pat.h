@@ -179,7 +179,12 @@ namespace pat {
 			bool is_valid(int year, int month, int day);
 			int main(istream &cin, ostream &cout);
 		}// namespace b1028
-	}    // namespace b
+
+		/// \brief 1029 旧键盘
+		namespace b1029 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}

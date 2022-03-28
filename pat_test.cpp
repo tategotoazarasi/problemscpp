@@ -418,6 +418,17 @@ namespace pat {
 				ASSERT_EQ("3 Tom John", out.str());
 			}
 		}// namespace b1028
+
+		namespace b1029 {
+			TEST(b1029, case1) {
+				istringstream in("7_This_is_a_test\n"
+				                 "_hs_s_a_es");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("7TI", out.str());
+			}
+		}// namespace b1029
 	}    // namespace b
 
 	namespace a {}

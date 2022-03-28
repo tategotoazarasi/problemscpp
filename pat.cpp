@@ -7,6 +7,7 @@
 #include <sstream>
 #include <tuple>
 #include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 using namespace std;
@@ -970,6 +971,27 @@ namespace pat {
 				return false;
 			}
 		}// namespace b1028
+
+		namespace b1029 {
+			int main(istream &cin, ostream &cout) {
+				unordered_set<char> bad, s;
+				string good_str, bad_str;
+				cin >> good_str;
+				cin >> bad_str;
+				for(char ch: bad_str) {
+					ch = toupper(ch);
+					bad.insert(ch);
+				}
+				for(char ch: good_str) {
+					ch = toupper(ch);
+					if(bad.count(ch) == 0 && s.count(ch) == 0) {
+						cout << ch;
+						s.insert(ch);
+					}
+				}
+				return 0;
+			}
+		}// namespace b1029
 	}    // namespace b
 
 	namespace a {}
