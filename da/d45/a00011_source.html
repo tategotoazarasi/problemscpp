@@ -1042,49 +1042,52 @@ $(function() {
 <div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span> </div>
 <div class="line"><a id="l00975" name="l00975"></a><span class="lineno"><a class="line" href="../../dd/de2/a00320.html">  975</a></span>        <span class="keyword">namespace </span>b1029 {</div>
 <div class="line"><a id="l00976" name="l00976"></a><span class="lineno"><a class="line" href="../../dd/de2/a00320.html#ac5237442ec4bff711841ab9c4158a35a">  976</a></span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../dd/de2/a00320.html#ac5237442ec4bff711841ab9c4158a35a">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>                unordered_set&lt;char&gt; bad, s;</div>
-<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>                <span class="keywordtype">string</span> good_str, bad_str;</div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>                cin &gt;&gt; good_str;</div>
-<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>                cin &gt;&gt; bad_str;</div>
-<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: bad_str) {</div>
-<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>                    ch = toupper(ch);</div>
-<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>                    bad.insert(ch);</div>
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>                }</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: good_str) {</div>
-<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>                    ch = toupper(ch);</div>
-<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>                    <span class="keywordflow">if</span>(bad.count(ch) == 0 &amp;&amp; s.count(ch) == 0) {</div>
-<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>                        cout &lt;&lt; ch;</div>
-<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>                        s.insert(ch);</div>
-<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>                    }</div>
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>                }</div>
-<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>            }</div>
-<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>        }<span class="comment">// namespace b1029</span></div>
-<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span> </div>
-<div class="line"><a id="l00996" name="l00996"></a><span class="lineno"><a class="line" href="../../db/d53/a00321.html">  996</a></span>        <span class="keyword">namespace </span>b1030 {</div>
-<div class="line"><a id="l00997" name="l00997"></a><span class="lineno"><a class="line" href="../../db/d53/a00321.html#a4c8a4f226428901140861417e0c7a142">  997</a></span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../db/d53/a00321.html#a4c8a4f226428901140861417e0c7a142">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n, p;</div>
-<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>                cin &gt;&gt; n &gt;&gt; p;</div>
-<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>                vector&lt;unsigned int&gt; vec(n);</div>
-<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>                    cin &gt;&gt; vec[i];</div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>                }</div>
-<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>                sort(vec.begin(), vec.end());</div>
-<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; vec.size(); i++) {</div>
-<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>                    <span class="keywordtype">unsigned</span> diff = upper_bound(vec.begin(), vec.end(), vec[i] * p) - (vec.begin() + i);</div>
-<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>                    ans           = max(ans, diff);</div>
-<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>                }</div>
-<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>                cout &lt;&lt; ans;</div>
-<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>            }</div>
-<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>        }<span class="comment">// namespace b1030</span></div>
-<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>    }    <span class="comment">// namespace b</span></div>
-<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span> </div>
-<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"><a class="line" href="../../de/de9/a00322.html"> 1016</a></span>    <span class="keyword">namespace </span>a {}</div>
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span> </div>
-<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"><a class="line" href="../../de/d55/a00323.html"> 1018</a></span>    <span class="keyword">namespace </span>top {}</div>
-<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>}<span class="comment">// namespace pat</span></div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>                unordered_set&lt;char&gt; bad;</div>
+<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>                unordered_set&lt;char&gt; s;</div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>                <span class="keywordtype">string</span> good_str;</div>
+<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>                <span class="keywordtype">string</span> bad_str;</div>
+<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>                cin &gt;&gt; good_str;</div>
+<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>                cin &gt;&gt; bad_str;</div>
+<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: bad_str) {</div>
+<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>                    ch = toupper(ch);</div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>                    bad.insert(ch);</div>
+<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>                }</div>
+<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: good_str) {</div>
+<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>                    ch = toupper(ch);</div>
+<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>                    <span class="keywordflow">if</span>(!bad.contains(ch) &amp;&amp; !s.contains(ch)) {</div>
+<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>                        cout &lt;&lt; ch;</div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>                        s.insert(ch);</div>
+<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>                    }</div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>                }</div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>            }</div>
+<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>        }<span class="comment">// namespace b1029</span></div>
+<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span> </div>
+<div class="line"><a id="l00998" name="l00998"></a><span class="lineno"><a class="line" href="../../db/d53/a00321.html">  998</a></span>        <span class="keyword">namespace </span>b1030 {</div>
+<div class="line"><a id="l00999" name="l00999"></a><span class="lineno"><a class="line" href="../../db/d53/a00321.html#a4c8a4f226428901140861417e0c7a142">  999</a></span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../db/d53/a00321.html#a4c8a4f226428901140861417e0c7a142">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> p;</div>
+<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>                cin &gt;&gt; n &gt;&gt; p;</div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>                vector&lt;unsigned int&gt; vec(n);</div>
+<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>                    cin &gt;&gt; vec[i];</div>
+<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>                }</div>
+<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>                sort(vec.begin(), vec.end());</div>
+<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; vec.size(); i++) {</div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>                    <span class="keywordtype">unsigned</span> diff = upper_bound(vec.begin(), vec.end(), vec[i] * p) - (vec.begin() + i);</div>
+<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>                    ans           = max(ans, diff);</div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>                }</div>
+<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>                cout &lt;&lt; ans;</div>
+<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>            }</div>
+<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>        }<span class="comment">// namespace b1030</span></div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>    }    <span class="comment">// namespace b</span></div>
+<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span> </div>
+<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"><a class="line" href="../../de/de9/a00322.html"> 1019</a></span>    <span class="keyword">namespace </span>a {}</div>
+<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span> </div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"><a class="line" href="../../de/d55/a00323.html"> 1021</a></span>    <span class="keyword">namespace </span>top {}</div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>}<span class="comment">// namespace pat</span></div>
 <div class="ttc" id="aa00023_html"><div class="ttname"><a href="../../d3/d52/a00023.html">pat.h</a></div></div>
 <div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00556">acwing.h:556</a></div></div>
 <div class="ttc" id="aa00291_html"><div class="ttname"><a href="../../da/dd4/a00291.html">pat</a></div><div class="ttdoc">计算机程序设计能力考试</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00015">pat.cpp:15</a></div></div>
@@ -1117,7 +1120,7 @@ $(function() {
 <div class="ttc" id="aa00319_html_a562c32ece689e3da3a0c85ee98003ed7"><div class="ttname"><a href="../../de/dab/a00319.html#a562c32ece689e3da3a0c85ee98003ed7">pat::b::b1028::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00930">pat.cpp:930</a></div></div>
 <div class="ttc" id="aa00319_html_a9b79de354cd90917dbef88fe38c2fb1d"><div class="ttname"><a href="../../de/dab/a00319.html#a9b79de354cd90917dbef88fe38c2fb1d">pat::b::b1028::is_valid</a></div><div class="ttdeci">bool is_valid(int year, int month, int day)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00908">pat.cpp:908</a></div></div>
 <div class="ttc" id="aa00320_html_ac5237442ec4bff711841ab9c4158a35a"><div class="ttname"><a href="../../dd/de2/a00320.html#ac5237442ec4bff711841ab9c4158a35a">pat::b::b1029::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00976">pat.cpp:976</a></div></div>
-<div class="ttc" id="aa00321_html_a4c8a4f226428901140861417e0c7a142"><div class="ttname"><a href="../../db/d53/a00321.html#a4c8a4f226428901140861417e0c7a142">pat::b::b1030::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00997">pat.cpp:997</a></div></div>
+<div class="ttc" id="aa00321_html_a4c8a4f226428901140861417e0c7a142"><div class="ttname"><a href="../../db/d53/a00321.html#a4c8a4f226428901140861417e0c7a142">pat::b::b1030::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00999">pat.cpp:999</a></div></div>
 <div class="ttc" id="aa02452_html"><div class="ttname"><a href="../../da/d23/a02452.html">pat::b::b1015::student</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l00084">pat.h:84</a></div></div>
 <div class="ttc" id="aa02452_html_a34f0536bf9cd2d1751bc5b94096518fd"><div class="ttname"><a href="../../da/d23/a02452.html#a34f0536bf9cd2d1751bc5b94096518fd">pat::b::b1015::student::ability</a></div><div class="ttdeci">int ability</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l00087">pat.h:87</a></div></div>
 <div class="ttc" id="aa02452_html_a42c601c940726d2e4acfc2e940352d84"><div class="ttname"><a href="../../da/d23/a02452.html#a42c601c940726d2e4acfc2e940352d84">pat::b::b1015::student::id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l00085">pat.h:85</a></div></div>
