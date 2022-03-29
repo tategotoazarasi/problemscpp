@@ -1087,9 +1087,9 @@ $(function() {
 <div class="line"><a id="l01019" name="l01019"></a><span class="lineno"><a class="line" href="../../d4/d8f/a00324.html#accb53c051e6b4a98d1cc79e5975d778e"> 1019</a></span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../d4/d8f/a00324.html#accb53c051e6b4a98d1cc79e5975d778e">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
 <div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>                <span class="keywordtype">int</span> n;</div>
 <div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>                cin &gt;&gt; n;</div>
-<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>                <span class="keywordtype">char</span> captcha[11] = {<span class="charliteral">&#39;1&#39;</span>, <span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;X&#39;</span>, <span class="charliteral">&#39;9&#39;</span>, <span class="charliteral">&#39;8&#39;</span>, <span class="charliteral">&#39;7&#39;</span>, <span class="charliteral">&#39;6&#39;</span>, <span class="charliteral">&#39;5&#39;</span>, <span class="charliteral">&#39;4&#39;</span>, <span class="charliteral">&#39;3&#39;</span>, <span class="charliteral">&#39;2&#39;</span>};</div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>                <span class="keywordtype">int</span> weight[17]   = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};</div>
-<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>                <span class="keywordtype">bool</span> flag        = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>                <span class="keyword">const</span> <span class="keywordtype">char</span> captcha[11] = {<span class="charliteral">&#39;1&#39;</span>, <span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;X&#39;</span>, <span class="charliteral">&#39;9&#39;</span>, <span class="charliteral">&#39;8&#39;</span>, <span class="charliteral">&#39;7&#39;</span>, <span class="charliteral">&#39;6&#39;</span>, <span class="charliteral">&#39;5&#39;</span>, <span class="charliteral">&#39;4&#39;</span>, <span class="charliteral">&#39;3&#39;</span>, <span class="charliteral">&#39;2&#39;</span>};</div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> weight[17]   = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};</div>
+<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>                <span class="keywordtype">bool</span> flag              = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>                    <span class="keywordtype">string</span> str;</div>
 <div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>                    cin &gt;&gt; str;</div>
@@ -1118,24 +1118,25 @@ $(function() {
 <div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> maximum_score = 0;</div>
 <div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>                <span class="keywordtype">int</span> maximum_id;</div>
 <div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>                    <span class="keywordtype">int</span> id, score;</div>
-<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>                    cin &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; score;</div>
-<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>                    um[id] += score;</div>
-<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>                    <span class="keywordflow">if</span>(um[<span class="keywordtype">id</span>] &gt;= maximum_score) {</div>
-<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>                        maximum_score = um[id];</div>
-<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>                        maximum_id    = id;</div>
-<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>                    }</div>
-<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>                }</div>
-<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>                cout &lt;&lt; maximum_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; maximum_score;</div>
-<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>            }</div>
-<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>        }<span class="comment">// namespace b1032</span></div>
-<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>    }    <span class="comment">// namespace b</span></div>
-<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span> </div>
-<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"><a class="line" href="../../d8/d23/a00326.html"> 1067</a></span>    <span class="keyword">namespace </span>a {}</div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span> </div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"><a class="line" href="../../d8/dfc/a00327.html"> 1069</a></span>    <span class="keyword">namespace </span>top {}</div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>}<span class="comment">// namespace pat</span></div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>                    <span class="keywordtype">int</span> id;</div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>                    <span class="keywordtype">int</span> score;</div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>                    cin &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; score;</div>
+<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>                    um[id] += score;</div>
+<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>                    <span class="keywordflow">if</span>(um[<span class="keywordtype">id</span>] &gt;= maximum_score) {</div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>                        maximum_score = um[id];</div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>                        maximum_id    = id;</div>
+<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>                    }</div>
+<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>                }</div>
+<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>                cout &lt;&lt; maximum_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; maximum_score;</div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>            }</div>
+<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>        }<span class="comment">// namespace b1032</span></div>
+<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>    }    <span class="comment">// namespace b</span></div>
+<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span> </div>
+<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"><a class="line" href="../../d8/d23/a00326.html"> 1068</a></span>    <span class="keyword">namespace </span>a {}</div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span> </div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"><a class="line" href="../../d8/dfc/a00327.html"> 1070</a></span>    <span class="keyword">namespace </span>top {}</div>
+<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>}<span class="comment">// namespace pat</span></div>
 <div class="ttc" id="aa00023_html"><div class="ttname"><a href="../../d3/d52/a00023.html">pat.h</a></div></div>
 <div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00556">acwing.h:556</a></div></div>
 <div class="ttc" id="aa00293_html"><div class="ttname"><a href="../../d6/d82/a00293.html">pat</a></div><div class="ttdoc">计算机程序设计能力考试</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00015">pat.cpp:15</a></div></div>

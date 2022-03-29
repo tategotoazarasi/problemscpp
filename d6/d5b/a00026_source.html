@@ -5295,8 +5295,8 @@ $(function() {
 <div class="line"><a id="l05231" name="l05231"></a><span class="lineno"> 5231</span>            <span class="keywordtype">int</span> r      = answerKey.size();</div>
 <div class="line"><a id="l05232" name="l05232"></a><span class="lineno"> 5232</span>            <span class="keyword">auto</span> check = [&amp;answerKey, &amp;t_count, &amp;f_count, &amp;k](<span class="keywordtype">int</span> len) -&gt; <span class="keywordtype">bool</span> {</div>
 <div class="line"><a id="l05233" name="l05233"></a><span class="lineno"> 5233</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i + len &lt;= answerKey.length(); i++) {</div>
-<div class="line"><a id="l05234" name="l05234"></a><span class="lineno"> 5234</span>                    <span class="keywordtype">int</span> tc = t_count[i + len - 1] - ((i - 1 &gt;= 0) ? t_count[i - 1] : 0);</div>
-<div class="line"><a id="l05235" name="l05235"></a><span class="lineno"> 5235</span>                    <span class="keywordtype">int</span> fc = f_count[i + len - 1] - ((i - 1 &gt;= 0) ? f_count[i - 1] : 0);</div>
+<div class="line"><a id="l05234" name="l05234"></a><span class="lineno"> 5234</span>                    <span class="keywordtype">int</span> tc = t_count[i + len - 1] - (i - 1 &gt;= 0 ? t_count[i - 1] : 0);</div>
+<div class="line"><a id="l05235" name="l05235"></a><span class="lineno"> 5235</span>                    <span class="keywordtype">int</span> fc = f_count[i + len - 1] - (i - 1 &gt;= 0 ? f_count[i - 1] : 0);</div>
 <div class="line"><a id="l05236" name="l05236"></a><span class="lineno"> 5236</span>                    <span class="keywordflow">if</span>(min(tc, fc) &lt;= k) {</div>
 <div class="line"><a id="l05237" name="l05237"></a><span class="lineno"> 5237</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l05238" name="l05238"></a><span class="lineno"> 5238</span>                    }</div>
@@ -5307,21 +5307,22 @@ $(function() {
 <div class="line"><a id="l05243" name="l05243"></a><span class="lineno"> 5243</span>                <span class="keywordflow">if</span>(l + 1 == r) {</div>
 <div class="line"><a id="l05244" name="l05244"></a><span class="lineno"> 5244</span>                    <span class="keywordflow">if</span>(check(r)) {</div>
 <div class="line"><a id="l05245" name="l05245"></a><span class="lineno"> 5245</span>                        <span class="keywordflow">return</span> r;</div>
-<div class="line"><a id="l05246" name="l05246"></a><span class="lineno"> 5246</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l05247" name="l05247"></a><span class="lineno"> 5247</span>                        <span class="keywordflow">return</span> l;</div>
-<div class="line"><a id="l05248" name="l05248"></a><span class="lineno"> 5248</span>                    }</div>
-<div class="line"><a id="l05249" name="l05249"></a><span class="lineno"> 5249</span>                }</div>
-<div class="line"><a id="l05250" name="l05250"></a><span class="lineno"> 5250</span>                <span class="keywordtype">int</span> mid = (l + r) / 2;</div>
-<div class="line"><a id="l05251" name="l05251"></a><span class="lineno"> 5251</span>                <span class="keywordflow">if</span>(check(mid)) {</div>
-<div class="line"><a id="l05252" name="l05252"></a><span class="lineno"> 5252</span>                    l = mid;</div>
-<div class="line"><a id="l05253" name="l05253"></a><span class="lineno"> 5253</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l05254" name="l05254"></a><span class="lineno"> 5254</span>                    r = mid;</div>
-<div class="line"><a id="l05255" name="l05255"></a><span class="lineno"> 5255</span>                }</div>
-<div class="line"><a id="l05256" name="l05256"></a><span class="lineno"> 5256</span>            }</div>
-<div class="line"><a id="l05257" name="l05257"></a><span class="lineno"> 5257</span>            <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l05258" name="l05258"></a><span class="lineno"> 5258</span>        }</div>
-<div class="line"><a id="l05259" name="l05259"></a><span class="lineno"> 5259</span>    }<span class="comment">// namespace maximize_the_confusion_of_an_exam</span></div>
-<div class="line"><a id="l05260" name="l05260"></a><span class="lineno"> 5260</span>}<span class="comment">// namespace leetcode</span></div>
+<div class="line"><a id="l05246" name="l05246"></a><span class="lineno"> 5246</span>                    }</div>
+<div class="line"><a id="l05247" name="l05247"></a><span class="lineno"> 5247</span>                    <span class="keywordflow">return</span> l;</div>
+<div class="line"><a id="l05248" name="l05248"></a><span class="lineno"> 5248</span> </div>
+<div class="line"><a id="l05249" name="l05249"></a><span class="lineno"> 5249</span>                    <span class="keywordflow">return</span> l;</div>
+<div class="line"><a id="l05250" name="l05250"></a><span class="lineno"> 5250</span>                }</div>
+<div class="line"><a id="l05251" name="l05251"></a><span class="lineno"> 5251</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> mid = (l + r) / 2;</div>
+<div class="line"><a id="l05252" name="l05252"></a><span class="lineno"> 5252</span>                <span class="keywordflow">if</span>(check(mid)) {</div>
+<div class="line"><a id="l05253" name="l05253"></a><span class="lineno"> 5253</span>                    l = mid;</div>
+<div class="line"><a id="l05254" name="l05254"></a><span class="lineno"> 5254</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l05255" name="l05255"></a><span class="lineno"> 5255</span>                    r = mid;</div>
+<div class="line"><a id="l05256" name="l05256"></a><span class="lineno"> 5256</span>                }</div>
+<div class="line"><a id="l05257" name="l05257"></a><span class="lineno"> 5257</span>            }</div>
+<div class="line"><a id="l05258" name="l05258"></a><span class="lineno"> 5258</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l05259" name="l05259"></a><span class="lineno"> 5259</span>        }</div>
+<div class="line"><a id="l05260" name="l05260"></a><span class="lineno"> 5260</span>    }<span class="comment">// namespace maximize_the_confusion_of_an_exam</span></div>
+<div class="line"><a id="l05261" name="l05261"></a><span class="lineno"> 5261</span>}<span class="comment">// namespace leetcode</span></div>
 <div class="ttc" id="aa00005_html"><div class="ttname"><a href="../../dd/dad/a00005.html">leetcode.h</a></div></div>
 <div class="ttc" id="aa00029_html"><div class="ttname"><a href="../../d5/d16/a00029.html">templates.h</a></div></div>
 <div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">acwing::acwing1929::left</a></div><div class="ttdeci">@ left</div><div class="ttdoc">左</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00554">acwing.h:554</a></div></div>
