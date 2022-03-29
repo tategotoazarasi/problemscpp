@@ -1940,6 +1940,14 @@ namespace leetcode {
 			static bool hasAlternatingBits(int n);
 		};
 	}// namespace binary_number_with_alternating_bits
+
+	/// \brief 2024. Maximize the Confusion of an Exam
+	namespace maximize_the_confusion_of_an_exam {
+		class Solution {
+		public:
+			static int maxConsecutiveAnswers(string answerKey, int k);
+		};
+	}// namespace maximize_the_confusion_of_an_exam
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

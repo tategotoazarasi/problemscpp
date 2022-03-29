@@ -2537,4 +2537,22 @@ namespace leetcode {
 			ASSERT_FALSE(Solution::hasAlternatingBits(11));
 		}
 	}// namespace binary_number_with_alternating_bits
+
+	namespace maximize_the_confusion_of_an_exam {
+		TEST(maximize_the_confusion_of_an_exam, case1) {
+			ASSERT_EQ(4, Solution::maxConsecutiveAnswers("TTFF", 2));
+		}
+
+		TEST(maximize_the_confusion_of_an_exam, case2) {
+			ASSERT_EQ(3, Solution::maxConsecutiveAnswers("TFFT", 1));
+		}
+
+		TEST(maximize_the_confusion_of_an_exam, case3) {
+			ASSERT_EQ(5, Solution::maxConsecutiveAnswers("TTFTTFTT", 1));
+		}
+
+		TEST(maximize_the_confusion_of_an_exam, case4) {
+			ASSERT_EQ(1, Solution::maxConsecutiveAnswers("F", 1));
+		}
+	}// namespace maximize_the_confusion_of_an_exam
 }// namespace leetcode

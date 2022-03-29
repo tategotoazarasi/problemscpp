@@ -5208,4 +5208,53 @@ namespace leetcode {
 			return true;
 		}
 	}// namespace binary_number_with_alternating_bits
+
+	namespace maximize_the_confusion_of_an_exam {
+		int Solution::maxConsecutiveAnswers(string answerKey, int k) {
+			if(answerKey.length() == 1) {
+				return 1;
+			}
+			vector<int> t_count(answerKey.length());
+			vector<int> f_count(answerKey.length());
+			int t_current = 0;
+			int f_current = 0;
+			for(int i = 0; i < t_count.size(); i++) {
+				if(answerKey[i] == 'T') {
+					t_current++;
+				} else {
+					f_current++;
+				}
+				t_count[i] = t_current;
+				f_count[i] = f_current;
+			}
+			int l      = 1;
+			int r      = answerKey.size();
+			auto check = [&answerKey, &t_count, &f_count, &k](int len) -> bool {
+				for(int i = 0; i + len <= answerKey.length(); i++) {
+					int tc = t_count[i + len - 1] - ((i - 1 >= 0) ? t_count[i - 1] : 0);
+					int fc = f_count[i + len - 1] - ((i - 1 >= 0) ? f_count[i - 1] : 0);
+					if(min(tc, fc) <= k) {
+						return true;
+					}
+				}
+				return false;
+			};
+			while(l < r) {
+				if(l + 1 == r) {
+					if(check(r)) {
+						return r;
+					} else {
+						return l;
+					}
+				}
+				int mid = (l + r) / 2;
+				if(check(mid)) {
+					l = mid;
+				} else {
+					r = mid;
+				}
+			}
+			return -1;
+		}
+	}// namespace maximize_the_confusion_of_an_exam
 }// namespace leetcode
