@@ -440,6 +440,34 @@ namespace pat {
 				ASSERT_EQ("8", out.str());
 			}
 		}// namespace b1030
+
+		namespace b1031 {
+			TEST(b1032, case1) {
+				istringstream in("4\n"
+				                 "320124198808240056\n"
+				                 "12010X198901011234\n"
+				                 "110108196711301866\n"
+				                 "37070419881216001X");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("12010X198901011234\n"
+				          "110108196711301866\n"
+				          "37070419881216001X\n",
+				          out.str());
+			}
+
+			TEST(b1032, case2) {
+				istringstream in("2\n"
+				                 "320124198808240056\n"
+				                 "110108196711301862");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("All passed",
+				          out.str());
+			}
+		}// namespace b1031
 	}    // namespace b
 
 	namespace a {}

@@ -1014,6 +1014,33 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1030
+
+		namespace b1031 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				char captcha[11] = {'1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'};
+				int weight[17]   = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
+				bool flag        = true;
+				for(int i = 0; i < n; i++) {
+					string str;
+					cin >> str;
+					int sum = 0;
+					for(int j = 0; j < 17; j++) {
+						sum += weight[j] * (str[j] - '0');
+					}
+					sum %= 11;
+					if(str[17] != captcha[sum]) {
+						cout << str << endl;
+						flag = false;
+					}
+				}
+				if(flag) {
+					cout << "All passed";
+				}
+				return 0;
+			}
+		}// namespace b1031
 	}    // namespace b
 
 	namespace a {}

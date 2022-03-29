@@ -189,6 +189,11 @@ namespace pat {
 		namespace b1030 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1031 查验身份证
+		namespace b1031 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
