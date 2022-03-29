@@ -5904,7 +5904,7 @@ namespace acwing {
 			for(int i = 0; i < n; i++) {
 				cin >> a[i];
 				for(unsigned int factor = 2; factor * factor <= a[i]; factor++) {
-					if((a[i] % factor) != 0u) {
+					if(a[i] % factor != 0U) {
 						continue;
 					}
 					unsigned int count = 0;
@@ -5938,7 +5938,8 @@ namespace acwing {
 	namespace acwing1470 {
 		int main(istream &cin, ostream &cout) {
 			char farm[10][10] = {};
-			pair<int, int> b, l;
+			pair<int, int> b;
+			pair<int, int> l;
 			for(int i = 0; i < 10; i++) {
 				for(int j = 0; j < 10; j++) {
 					cin >> farm[i][j];
@@ -5962,7 +5963,7 @@ namespace acwing {
 				                           make_pair(s.current.first - 1, s.current.second),
 				                           make_pair(s.current.first, s.current.second + 1),
 				                           make_pair(s.current.first, s.current.second - 1)};
-				for(auto next: nexts) {
+				for(const auto next: nexts) {
 					if(0 <= next.first && next.first < 10 && 0 <= next.second && next.second < 10 && farm[next.first][next.second] != 'R') {
 						pq.push(status(s.len + 1, next, b));
 					}
@@ -5971,12 +5972,8 @@ namespace acwing {
 			return 0;
 		}
 
-		bool status::operator<(const status &s) const {
-			return this->get_weight() > s.get_weight();
-		}
+		bool status::operator<(const status &s) const { return this->get_weight() > s.get_weight(); }
 
-		int status::get_weight() const {
-			return len + abs(current.first - target.first) + abs(current.second - target.second);
-		}
+		int status::get_weight() const { return len + abs(current.first - target.first) + abs(current.second - target.second); }
 	}// namespace acwing1470
 }// namespace acwing

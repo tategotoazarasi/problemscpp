@@ -1859,9 +1859,12 @@ namespace acwing {
 			pair<int, int> current;
 			pair<int, int> target;
 			bool operator<(const status &s) const;
-			int get_weight() const;
-			status(int len, pair<int, int> current, pair<int, int> target): len(len), current(current), target(target) {}
+			[[nodiscard]] int get_weight() const;
+
+			status(int len, pair<int, int> current, pair<int, int> target)
+			    : len(len), current(std::move(current)), target(std::move(target)) {}
 		};
+
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing1470
 }// namespace acwing

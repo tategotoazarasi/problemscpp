@@ -5231,8 +5231,8 @@ namespace leetcode {
 			int r      = answerKey.size();
 			auto check = [&answerKey, &t_count, &f_count, &k](int len) -> bool {
 				for(int i = 0; i + len <= answerKey.length(); i++) {
-					int tc = t_count[i + len - 1] - ((i - 1 >= 0) ? t_count[i - 1] : 0);
-					int fc = f_count[i + len - 1] - ((i - 1 >= 0) ? f_count[i - 1] : 0);
+					int tc = t_count[i + len - 1] - (i - 1 >= 0 ? t_count[i - 1] : 0);
+					int fc = f_count[i + len - 1] - (i - 1 >= 0 ? f_count[i - 1] : 0);
 					if(min(tc, fc) <= k) {
 						return true;
 					}
@@ -5243,11 +5243,12 @@ namespace leetcode {
 				if(l + 1 == r) {
 					if(check(r)) {
 						return r;
-					} else {
-						return l;
 					}
+					return l;
+
+					return l;
 				}
-				int mid = (l + r) / 2;
+				const int mid = (l + r) / 2;
 				if(check(mid)) {
 					l = mid;
 				} else {

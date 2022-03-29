@@ -1019,9 +1019,9 @@ namespace pat {
 			int main(istream &cin, ostream &cout) {
 				int n;
 				cin >> n;
-				char captcha[11] = {'1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'};
-				int weight[17]   = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
-				bool flag        = true;
+				const char captcha[11] = {'1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'};
+				const int weight[17]   = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
+				bool flag              = true;
 				for(int i = 0; i < n; i++) {
 					string str;
 					cin >> str;
@@ -1050,7 +1050,8 @@ namespace pat {
 				unsigned long long maximum_score = 0;
 				int maximum_id;
 				for(int i = 0; i < n; i++) {
-					int id, score;
+					int id;
+					int score;
 					cin >> id >> score;
 					um[id] += score;
 					if(um[id] >= maximum_score) {
