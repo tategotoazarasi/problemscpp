@@ -194,6 +194,11 @@ namespace pat {
 		namespace b1031 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1032 挖掘机技术哪家强
+		namespace b1032 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

@@ -1041,6 +1041,27 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1031
+
+		namespace b1032 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				unordered_map<int, unsigned long long> um;
+				unsigned long long maximum_score = 0;
+				int maximum_id;
+				for(int i = 0; i < n; i++) {
+					int id, score;
+					cin >> id >> score;
+					um[id] += score;
+					if(um[id] >= maximum_score) {
+						maximum_score = um[id];
+						maximum_id    = id;
+					}
+				}
+				cout << maximum_id << ' ' << maximum_score;
+				return 0;
+			}
+		}// namespace b1032
 	}    // namespace b
 
 	namespace a {}

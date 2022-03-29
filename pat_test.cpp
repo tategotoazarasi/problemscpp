@@ -468,6 +468,22 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1031
+
+		namespace b1032 {
+			TEST(b1032, case1) {
+				istringstream in("6\n"
+				                 "3 65\n"
+				                 "2 80\n"
+				                 "1 100\n"
+				                 "2 70\n"
+				                 "3 40\n"
+				                 "3 0");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("2 150", out.str());
+			}
+		}// namespace b1032
 	}    // namespace b
 
 	namespace a {}
