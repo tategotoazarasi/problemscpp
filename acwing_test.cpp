@@ -2795,4 +2795,23 @@ namespace acwing {
 			ASSERT_EQ("5", ans);
 		}
 	}// namespace acwing4319
+
+	namespace acwing1470 {
+		TEST(acwing1470, case1) {
+			istringstream in("..........\n"
+			                 "..........\n"
+			                 "..........\n"
+			                 "..B.......\n"
+			                 "..........\n"
+			                 ".....R....\n"
+			                 "..........\n"
+			                 "..........\n"
+			                 ".....L....\n"
+			                 "..........");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("7", ans);
+		}
+	}// namespace acwing1470
 }// namespace acwing

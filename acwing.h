@@ -1851,5 +1851,18 @@ namespace acwing {
 	namespace acwing4319 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 1470. 水桶传递队列
+	namespace acwing1470 {
+		struct status {
+			int len;
+			pair<int, int> current;
+			pair<int, int> target;
+			bool operator<(const status &s) const;
+			int get_weight() const;
+			status(int len, pair<int, int> current, pair<int, int> target): len(len), current(current), target(target) {}
+		};
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing1470
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

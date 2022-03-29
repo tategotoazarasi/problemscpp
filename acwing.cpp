@@ -5934,4 +5934,49 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing4319
+
+	namespace acwing1470 {
+		int main(istream &cin, ostream &cout) {
+			char farm[10][10] = {};
+			pair<int, int> b, l;
+			for(int i = 0; i < 10; i++) {
+				for(int j = 0; j < 10; j++) {
+					cin >> farm[i][j];
+					if(farm[i][j] == 'B') {
+						b = make_pair(i, j);
+					} else if(farm[i][j] == 'L') {
+						l = make_pair(i, j);
+					}
+				}
+			}
+			priority_queue<status> pq;
+			pq.push(status(0, l, b));
+			while(!pq.empty()) {
+				status s = pq.top();
+				pq.pop();
+				if(s.current == b) {
+					cout << s.len - 1;
+					return 0;
+				}
+				pair<int, int> nexts[4] = {make_pair(s.current.first + 1, s.current.second),
+				                           make_pair(s.current.first - 1, s.current.second),
+				                           make_pair(s.current.first, s.current.second + 1),
+				                           make_pair(s.current.first, s.current.second - 1)};
+				for(auto next: nexts) {
+					if(0 <= next.first && next.first < 10 && 0 <= next.second && next.second < 10 && farm[next.first][next.second] != 'R') {
+						pq.push(status(s.len + 1, next, b));
+					}
+				}
+			}
+			return 0;
+		}
+
+		bool status::operator<(const status &s) const {
+			return this->get_weight() > s.get_weight();
+		}
+
+		int status::get_weight() const {
+			return len + abs(current.first - target.first) + abs(current.second - target.second);
+		}
+	}// namespace acwing1470
 }// namespace acwing
