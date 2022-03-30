@@ -6046,32 +6046,35 @@ $(function() {
 <div class="line"><a id="l05979" name="l05979"></a><span class="lineno"> 5979</span> </div>
 <div class="line"><a id="l05980" name="l05980"></a><span class="lineno"><a class="line" href="../../df/d98/a00107.html"> 5980</a></span>    <span class="keyword">namespace </span>acwing1761 {</div>
 <div class="line"><a id="l05981" name="l05981"></a><span class="lineno"><a class="line" href="../../df/d98/a00107.html#a2ad7cacceb62428d59d3de02a8fe6fb1"> 5981</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../df/d98/a00107.html#a2ad7cacceb62428d59d3de02a8fe6fb1">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l05982" name="l05982"></a><span class="lineno"> 5982</span>            <span class="keywordtype">int</span> x1[3], y1[3], x2[3], y2[3];</div>
-<div class="line"><a id="l05983" name="l05983"></a><span class="lineno"> 5983</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {</div>
-<div class="line"><a id="l05984" name="l05984"></a><span class="lineno"> 5984</span>                cin &gt;&gt; x1[i] &gt;&gt; y1[i] &gt;&gt; x2[i] &gt;&gt; y2[i];</div>
-<div class="line"><a id="l05985" name="l05985"></a><span class="lineno"> 5985</span>            }</div>
-<div class="line"><a id="l05986" name="l05986"></a><span class="lineno"> 5986</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> area = 0;</div>
-<div class="line"><a id="l05987" name="l05987"></a><span class="lineno"> 5987</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 2; i++) {</div>
-<div class="line"><a id="l05988" name="l05988"></a><span class="lineno"> 5988</span>                area += abs(x2[i] - x1[i]) * abs(y2[i] - y1[i]);</div>
-<div class="line"><a id="l05989" name="l05989"></a><span class="lineno"> 5989</span>                <span class="keywordtype">int</span> x_1 = x1[2];</div>
-<div class="line"><a id="l05990" name="l05990"></a><span class="lineno"> 5990</span>                <span class="keywordtype">int</span> x_2 = x2[2];</div>
-<div class="line"><a id="l05991" name="l05991"></a><span class="lineno"> 5991</span>                <span class="keywordtype">int</span> y_1 = y1[2];</div>
-<div class="line"><a id="l05992" name="l05992"></a><span class="lineno"> 5992</span>                <span class="keywordtype">int</span> y_2 = y2[2];</div>
-<div class="line"><a id="l05993" name="l05993"></a><span class="lineno"> 5993</span>                x_1     = max(x_1, x1[i]);</div>
-<div class="line"><a id="l05994" name="l05994"></a><span class="lineno"> 5994</span>                x_2     = max(x_2, x1[i]);</div>
-<div class="line"><a id="l05995" name="l05995"></a><span class="lineno"> 5995</span>                x_1     = min(x_1, x2[i]);</div>
-<div class="line"><a id="l05996" name="l05996"></a><span class="lineno"> 5996</span>                x_2     = min(x_2, x2[i]);</div>
-<div class="line"><a id="l05997" name="l05997"></a><span class="lineno"> 5997</span>                y_1     = max(y_1, y1[i]);</div>
-<div class="line"><a id="l05998" name="l05998"></a><span class="lineno"> 5998</span>                y_2     = max(y_2, y1[i]);</div>
-<div class="line"><a id="l05999" name="l05999"></a><span class="lineno"> 5999</span>                y_1     = min(y_1, y2[i]);</div>
-<div class="line"><a id="l06000" name="l06000"></a><span class="lineno"> 6000</span>                y_2     = min(y_2, y2[i]);</div>
-<div class="line"><a id="l06001" name="l06001"></a><span class="lineno"> 6001</span>                area -= abs(x_2 - x_1) * abs(y_2 - y_1);</div>
-<div class="line"><a id="l06002" name="l06002"></a><span class="lineno"> 6002</span>            }</div>
-<div class="line"><a id="l06003" name="l06003"></a><span class="lineno"> 6003</span>            cout &lt;&lt; area;</div>
-<div class="line"><a id="l06004" name="l06004"></a><span class="lineno"> 6004</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l06005" name="l06005"></a><span class="lineno"> 6005</span>        }</div>
-<div class="line"><a id="l06006" name="l06006"></a><span class="lineno"> 6006</span>    }<span class="comment">// namespace acwing1761</span></div>
-<div class="line"><a id="l06007" name="l06007"></a><span class="lineno"> 6007</span>}<span class="comment">// namespace acwing</span></div>
+<div class="line"><a id="l05982" name="l05982"></a><span class="lineno"> 5982</span>            <span class="keywordtype">int</span> x1[3];</div>
+<div class="line"><a id="l05983" name="l05983"></a><span class="lineno"> 5983</span>            <span class="keywordtype">int</span> y1[3];</div>
+<div class="line"><a id="l05984" name="l05984"></a><span class="lineno"> 5984</span>            <span class="keywordtype">int</span> x2[3];</div>
+<div class="line"><a id="l05985" name="l05985"></a><span class="lineno"> 5985</span>            <span class="keywordtype">int</span> y2[3];</div>
+<div class="line"><a id="l05986" name="l05986"></a><span class="lineno"> 5986</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {</div>
+<div class="line"><a id="l05987" name="l05987"></a><span class="lineno"> 5987</span>                cin &gt;&gt; x1[i] &gt;&gt; y1[i] &gt;&gt; x2[i] &gt;&gt; y2[i];</div>
+<div class="line"><a id="l05988" name="l05988"></a><span class="lineno"> 5988</span>            }</div>
+<div class="line"><a id="l05989" name="l05989"></a><span class="lineno"> 5989</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> area = 0;</div>
+<div class="line"><a id="l05990" name="l05990"></a><span class="lineno"> 5990</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 2; i++) {</div>
+<div class="line"><a id="l05991" name="l05991"></a><span class="lineno"> 5991</span>                area += abs(x2[i] - x1[i]) * abs(y2[i] - y1[i]);</div>
+<div class="line"><a id="l05992" name="l05992"></a><span class="lineno"> 5992</span>                <span class="keywordtype">int</span> x_1 = x1[2];</div>
+<div class="line"><a id="l05993" name="l05993"></a><span class="lineno"> 5993</span>                <span class="keywordtype">int</span> x_2 = x2[2];</div>
+<div class="line"><a id="l05994" name="l05994"></a><span class="lineno"> 5994</span>                <span class="keywordtype">int</span> y_1 = y1[2];</div>
+<div class="line"><a id="l05995" name="l05995"></a><span class="lineno"> 5995</span>                <span class="keywordtype">int</span> y_2 = y2[2];</div>
+<div class="line"><a id="l05996" name="l05996"></a><span class="lineno"> 5996</span>                x_1     = max(x_1, x1[i]);</div>
+<div class="line"><a id="l05997" name="l05997"></a><span class="lineno"> 5997</span>                x_2     = max(x_2, x1[i]);</div>
+<div class="line"><a id="l05998" name="l05998"></a><span class="lineno"> 5998</span>                x_1     = min(x_1, x2[i]);</div>
+<div class="line"><a id="l05999" name="l05999"></a><span class="lineno"> 5999</span>                x_2     = min(x_2, x2[i]);</div>
+<div class="line"><a id="l06000" name="l06000"></a><span class="lineno"> 6000</span>                y_1     = max(y_1, y1[i]);</div>
+<div class="line"><a id="l06001" name="l06001"></a><span class="lineno"> 6001</span>                y_2     = max(y_2, y1[i]);</div>
+<div class="line"><a id="l06002" name="l06002"></a><span class="lineno"> 6002</span>                y_1     = min(y_1, y2[i]);</div>
+<div class="line"><a id="l06003" name="l06003"></a><span class="lineno"> 6003</span>                y_2     = min(y_2, y2[i]);</div>
+<div class="line"><a id="l06004" name="l06004"></a><span class="lineno"> 6004</span>                area -= abs(x_2 - x_1) * abs(y_2 - y_1);</div>
+<div class="line"><a id="l06005" name="l06005"></a><span class="lineno"> 6005</span>            }</div>
+<div class="line"><a id="l06006" name="l06006"></a><span class="lineno"> 6006</span>            cout &lt;&lt; area;</div>
+<div class="line"><a id="l06007" name="l06007"></a><span class="lineno"> 6007</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l06008" name="l06008"></a><span class="lineno"> 6008</span>        }</div>
+<div class="line"><a id="l06009" name="l06009"></a><span class="lineno"> 6009</span>    }<span class="comment">// namespace acwing1761</span></div>
+<div class="line"><a id="l06010" name="l06010"></a><span class="lineno"> 6010</span>}<span class="comment">// namespace acwing</span></div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 <div class="ttc" id="aa00056_html"><div class="ttname"><a href="../../d9/d2e/a00056.html">acwing.h</a></div></div>
 <div class="ttc" id="aa00065_html"><div class="ttname"><a href="../../de/de1/a00065.html">acwing</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l00021">acwing.cpp:21</a></div></div>

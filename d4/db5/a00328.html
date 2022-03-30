@@ -112,10 +112,11 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">pat.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01070">1070</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>                                                  {</div>
-<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>                unordered_set&lt;char&gt; broken;</div>
-<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>                <span class="keywordtype">string</span> str1, str2;</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">pat.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l01069">1069</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>                                                  {</div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>                unordered_set&lt;char&gt; broken;</div>
+<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>                <span class="keywordtype">string</span> str1;</div>
+<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>                <span class="keywordtype">string</span> str2;</div>
 <div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>                cin &gt;&gt; str1 &gt;&gt; str2;</div>
 <div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>                <span class="keywordflow">if</span>(str2.empty()) {</div>
 <div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>                    cout &lt;&lt; str1;</div>
@@ -128,8 +129,8 @@ $(function() {
 <div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>                        shift = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>                    }</div>
 <div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>                }</div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: str2) {</div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>                    <span class="keywordflow">if</span>(!(broken.count(toupper(ch)) &gt; 0 || (!shift &amp;&amp; isupper(ch)))) {</div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: str2) {</div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>                    <span class="keywordflow">if</span>(!(broken.contains(toupper(ch)) || !shift &amp;&amp; (isupper(ch) != 0))) {</div>
 <div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>                        cout &lt;&lt; ch;</div>
 <div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>                    }</div>
 <div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>                }</div>
@@ -177,7 +178,7 @@ $(function() {
 <div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01070">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01069">main()</a>.</p>
 
 </div>
 </div>
