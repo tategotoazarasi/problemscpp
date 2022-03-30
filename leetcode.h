@@ -1948,6 +1948,22 @@ namespace leetcode {
 			static int maxConsecutiveAnswers(string answerKey, int k);
 		};
 	}// namespace maximize_the_confusion_of_an_exam
+
+	/// \brief 1606. Find Servers That Handled Most Number of Requests
+	namespace find_servers_that_handled_most_number_of_requests {
+		struct event {
+			int time;
+			bool start;
+			int index;
+			int server_index;
+
+			bool operator<(const event &e) const;
+		};
+		class Solution {
+		public:
+			static vector<int> busiestServers(int k, vector<int> &arrival, vector<int> &load);
+		};
+	}// namespace find_servers_that_handled_most_number_of_requests
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

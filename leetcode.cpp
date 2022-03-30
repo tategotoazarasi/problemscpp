@@ -5258,4 +5258,53 @@ namespace leetcode {
 			return -1;
 		}
 	}// namespace maximize_the_confusion_of_an_exam
+
+	namespace find_servers_that_handled_most_number_of_requests {
+		vector<int> Solution::busiestServers(int k, vector<int> &arrival, vector<int> &load) {
+			vector<int> ans;
+			vector<int> count(k, 0);
+			set<int> available;
+			for(int i = 0; i < k; i++) {
+				available.insert(i);
+			}
+			priority_queue<event> events;
+			for(int i = 0; i < arrival.size(); i++) {
+				event e = {arrival[i], true, i};
+				events.push(e);
+			}
+			while(!events.empty()) {
+				event e = events.top();
+				events.pop();
+				if(e.start) {
+					if(!available.empty()) {
+						auto it = available.lower_bound(e.index % k);
+						if(it == available.end()) {
+							it = available.begin();
+						}
+						event next = {e.time + load[e.index], false, e.index, *it};
+						events.push(next);
+						available.erase(it);
+					}
+				} else {//end
+					available.insert(e.server_index);
+					count[e.server_index]++;
+				}
+			}
+			int maximum = *max_element(count.begin(), count.end());
+			for(int i = 0; i < k; i++) {
+				if(count[i] == maximum) {
+					ans.push_back(i);
+				}
+			}
+			return ans;
+		}
+
+		bool event::operator<(const event &e) const {
+			if(this->time != e.time) {
+				return this->time > e.time;
+			} else {
+				return this->start;
+			}
+		}
+	}// namespace find_servers_that_handled_most_number_of_requests
 }// namespace leetcode

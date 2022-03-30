@@ -2555,4 +2555,34 @@ namespace leetcode {
 			ASSERT_EQ(1, Solution::maxConsecutiveAnswers("F", 1));
 		}
 	}// namespace maximize_the_confusion_of_an_exam
+
+	namespace find_servers_that_handled_most_number_of_requests {
+		TEST(find_servers_that_handled_most_number_of_requests, case1) {
+			vector arrival = {1, 2, 3, 4, 5};
+			vector load    = {5, 2, 3, 3, 3};
+			vector output  = {1};
+			ASSERT_EQ(output, Solution::busiestServers(3, arrival, load));
+		}
+
+		TEST(find_servers_that_handled_most_number_of_requests, case2) {
+			vector arrival = {1, 2, 3, 4};
+			vector load    = {1, 2, 1, 2};
+			vector output  = {0};
+			ASSERT_EQ(output, Solution::busiestServers(3, arrival, load));
+		}
+
+		TEST(find_servers_that_handled_most_number_of_requests, case3) {
+			vector arrival = {1, 2, 3};
+			vector load    = {10, 12, 11};
+			vector output  = {0, 1, 2};
+			ASSERT_EQ(output, Solution::busiestServers(3, arrival, load));
+		}
+
+		TEST(find_servers_that_handled_most_number_of_requests, case4) {
+			vector arrival = {1, 2, 3};
+			vector load    = {1000000000, 1, 1000000000};
+			vector output  = {1};
+			ASSERT_EQ(output, Solution::busiestServers(2, arrival, load));
+		}
+	}// namespace find_servers_that_handled_most_number_of_requests
 }// namespace leetcode
