@@ -495,6 +495,32 @@ namespace pat {
 				ASSERT_EQ("_hs_s_a_tst", out.str());
 			}
 		}// namespace b1033
+
+		namespace b1034 {
+			TEST(b1034, case1) {
+				istringstream in("2/3 -4/2");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("2/3 + (-2) = (-1 1/3)\n"
+				          "2/3 - (-2) = 2 2/3\n"
+				          "2/3 * (-2) = (-1 1/3)\n"
+				          "2/3 / (-2) = (-1/3)",
+				          out.str());
+			}
+
+			TEST(b1034, case2) {
+				istringstream in("5/3 0/6");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("1 2/3 + 0 = 1 2/3\n"
+				          "1 2/3 - 0 = 1 2/3\n"
+				          "1 2/3 * 0 = 0\n"
+				          "1 2/3 / 0 = Inf",
+				          out.str());
+			}
+		}// namespace b1034
 	}    // namespace b
 
 	namespace a {}

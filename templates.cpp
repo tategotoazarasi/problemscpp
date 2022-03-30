@@ -1,4 +1,5 @@
 #include "templates.h"
+#include <numeric>
 #include <sstream>
 
 using namespace std;
@@ -345,4 +346,101 @@ const BigInt BigInt::operator--(int) {
 	auto ret = BigInt(*this);
 	*this -= 1;
 	return ret;
+}
+
+bool Fraction::is_positive() const {
+	return positive;
+}
+
+unsigned long long Fraction::get_numerator() const {
+	return numerator;
+}
+
+unsigned long long Fraction::get_denominator() const {
+	return denominator;
+}
+
+void Fraction::simplify() {
+	unsigned long long factor = gcd(numerator, denominator);
+	numerator /= factor;
+	denominator /= factor;
+}
+
+Fraction::Fraction(bool positive, long long numerator, long long denominator) {
+	if(numerator < 0) {
+		positive = !positive;
+	}
+	if(denominator < 0) {
+		positive = !positive;
+	}
+	this->positive    = positive;
+	this->numerator   = abs(numerator);
+	this->denominator = abs(denominator);
+	this->simplify();
+}
+
+Fraction Fraction::operator+(const Fraction &f) {
+	long long numerator1 = this->numerator * f.denominator;
+	long long numerator2 = this->denominator * f.numerator;
+	if(!this->positive) {
+		numerator1 = -numerator1;
+	}
+	if(!f.positive) {
+		numerator2 = -numerator2;
+	}
+	return Fraction(true, numerator1 + numerator2, this->denominator * f.denominator);
+}
+
+Fraction Fraction::operator-(const Fraction &f) {
+	long long numerator1 = this->numerator * f.denominator;
+	long long numerator2 = this->denominator * f.numerator;
+	if(!this->positive) {
+		numerator1 = -numerator1;
+	}
+	if(!f.positive) {
+		numerator2 = -numerator2;
+	}
+	return Fraction(true, numerator1 - numerator2, this->denominator * f.denominator);
+}
+
+Fraction Fraction::operator*(const Fraction &f) {
+	long long numerator1 = this->numerator;
+	long long numerator2 = f.numerator;
+	if(!this->positive) {
+		numerator1 = -numerator1;
+	}
+	if(!f.positive) {
+		numerator2 = -numerator2;
+	}
+	return Fraction(true, numerator1 * numerator2, this->denominator * f.denominator);
+}
+
+Fraction Fraction::operator/(const Fraction &f) {
+	return (*this) * Fraction(f.positive, f.denominator, f.numerator);
+}
+
+ostream &operator<<(ostream &os, const Fraction &frac) {
+	if(frac.denominator == 0) {
+		os << "Inf";
+		return os;
+	}
+	if(frac.numerator == 0) {
+		os << 0;
+		return os;
+	}
+	if(!frac.positive) {
+		os << "(-";
+	}
+	if(frac.numerator % frac.denominator == 0) {
+		os << frac.numerator / frac.denominator;
+	} else {
+		if(frac.numerator / frac.denominator != 0) {
+			os << frac.numerator / frac.denominator << ' ';
+		}
+		os << frac.numerator % frac.denominator << '/' << frac.denominator;
+	}
+	if(!frac.positive) {
+		os << ")";
+	}
+	return os;
 }

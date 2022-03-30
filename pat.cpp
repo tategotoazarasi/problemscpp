@@ -1,9 +1,11 @@
 #include "pat.h"
+#include "templates.h"
 #include <algorithm>
 #include <cmath>
 #include <cstring>
 #include <iomanip>
 #include <map>
+#include <ratio>
 #include <sstream>
 #include <tuple>
 #include <unordered_map>
@@ -1088,6 +1090,21 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1033
+
+		namespace b1034 {
+			int main(istream &cin, ostream &cout) {
+				long long numerator1, numerator2, denominator1, denominator2;
+				char ch;
+				cin >> numerator1 >> ch >> denominator1 >> numerator2 >> ch >> denominator2;
+				Fraction frac1(true, numerator1, denominator1);
+				Fraction frac2(true, numerator2, denominator2);
+				cout << frac1 << " + " << frac2 << " = " << frac1 + frac2 << endl
+				     << frac1 << " - " << frac2 << " = " << frac1 - frac2 << endl
+				     << frac1 << " * " << frac2 << " = " << frac1 * frac2 << endl
+				     << frac1 << " / " << frac2 << " = " << frac1 / frac2;
+				return 0;
+			}
+		}// namespace b1034
 	}    // namespace b
 
 	namespace a {}

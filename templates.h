@@ -64,3 +64,23 @@ public:
 	friend ostream &operator<<(ostream &os, const BigInt & /*bi*/);
 	friend istream &operator>>(istream &is, const BigInt & /*bi*/);
 };
+
+/// \brief 分数
+class Fraction {
+private:
+	bool positive;                 ///< 正负
+	unsigned long long numerator;  ///< 分子
+	unsigned long long denominator;///< 分母
+	void simplify();
+
+public:
+	Fraction(bool positive, long long numerator, long long denominator);
+	Fraction operator+(const Fraction &f);
+	Fraction operator-(const Fraction &f);
+	Fraction operator*(const Fraction &f);
+	Fraction operator/(const Fraction &f);
+	bool is_positive() const;
+	unsigned long long get_numerator() const;
+	unsigned long long get_denominator() const;
+	friend ostream &operator<<(ostream &os, const Fraction &frac);
+};

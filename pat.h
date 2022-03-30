@@ -204,6 +204,11 @@ namespace pat {
 		namespace b1033 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1034 有理数四则运算
+		namespace b1034 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
