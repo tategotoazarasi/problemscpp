@@ -320,9 +320,7 @@ ostream &operator<<(ostream &os, const BigInt &bi) {
 	return os;
 }
 
-istream &operator>>(istream &is, const BigInt &bi) {
-	return is;
-}
+istream &operator>>(istream &is, const BigInt & /*bi*/) { return is; }
 
 BigInt BigInt::operator-() const { return BigInt(this->vec, !this->positive); }
 
@@ -336,32 +334,26 @@ BigInt &BigInt::operator--() {
 	return *this;
 }
 
-const BigInt BigInt::operator++(int) {
+BigInt BigInt::operator++(int) {
 	auto ret = BigInt(*this);
 	*this += 1;
 	return ret;
 }
 
-const BigInt BigInt::operator--(int) {
+BigInt BigInt::operator--(int) {
 	auto ret = BigInt(*this);
 	*this -= 1;
 	return ret;
 }
 
-bool Fraction::is_positive() const {
-	return positive;
-}
+bool Fraction::is_positive() const { return positive; }
 
-unsigned long long Fraction::get_numerator() const {
-	return numerator;
-}
+unsigned long long Fraction::get_numerator() const { return numerator; }
 
-unsigned long long Fraction::get_denominator() const {
-	return denominator;
-}
+unsigned long long Fraction::get_denominator() const { return denominator; }
 
 void Fraction::simplify() {
-	unsigned long long factor = gcd(numerator, denominator);
+	const unsigned long long factor = gcd(numerator, denominator);
 	numerator /= factor;
 	denominator /= factor;
 }
@@ -379,7 +371,7 @@ Fraction::Fraction(bool positive, long long numerator, long long denominator) {
 	this->simplify();
 }
 
-Fraction Fraction::operator+(const Fraction &f) {
+Fraction Fraction::operator+(const Fraction &f) const {
 	long long numerator1 = this->numerator * f.denominator;
 	long long numerator2 = this->denominator * f.numerator;
 	if(!this->positive) {
@@ -388,10 +380,10 @@ Fraction Fraction::operator+(const Fraction &f) {
 	if(!f.positive) {
 		numerator2 = -numerator2;
 	}
-	return Fraction(true, numerator1 + numerator2, this->denominator * f.denominator);
+	return {true, numerator1 + numerator2, static_cast<long long>(this->denominator * f.denominator)};
 }
 
-Fraction Fraction::operator-(const Fraction &f) {
+Fraction Fraction::operator-(const Fraction &f) const {
 	long long numerator1 = this->numerator * f.denominator;
 	long long numerator2 = this->denominator * f.numerator;
 	if(!this->positive) {
@@ -400,10 +392,10 @@ Fraction Fraction::operator-(const Fraction &f) {
 	if(!f.positive) {
 		numerator2 = -numerator2;
 	}
-	return Fraction(true, numerator1 - numerator2, this->denominator * f.denominator);
+	return {true, numerator1 - numerator2, static_cast<long long>(this->denominator * f.denominator)};
 }
 
-Fraction Fraction::operator*(const Fraction &f) {
+Fraction Fraction::operator*(const Fraction &f) const {
 	long long numerator1 = this->numerator;
 	long long numerator2 = f.numerator;
 	if(!this->positive) {
@@ -412,12 +404,10 @@ Fraction Fraction::operator*(const Fraction &f) {
 	if(!f.positive) {
 		numerator2 = -numerator2;
 	}
-	return Fraction(true, numerator1 * numerator2, this->denominator * f.denominator);
+	return {true, numerator1 * numerator2, static_cast<long long>(this->denominator * f.denominator)};
 }
 
-Fraction Fraction::operator/(const Fraction &f) {
-	return (*this) * Fraction(f.positive, f.denominator, f.numerator);
-}
+Fraction Fraction::operator/(const Fraction &f) const { return *this * Fraction(f.positive, f.denominator, f.numerator); }
 
 ostream &operator<<(ostream &os, const Fraction &frac) {
 	if(frac.denominator == 0) {

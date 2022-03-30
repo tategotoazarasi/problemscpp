@@ -1959,6 +1959,7 @@ namespace leetcode {
 
 			bool operator<(const event &e) const;
 		};
+
 		class Solution {
 		public:
 			static vector<int> busiestServers(int k, vector<int> &arrival, vector<int> &load);

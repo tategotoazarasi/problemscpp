@@ -5245,8 +5245,6 @@ namespace leetcode {
 						return r;
 					}
 					return l;
-
-					return l;
 				}
 				const int mid = (l + r) / 2;
 				if(check(mid)) {
@@ -5262,7 +5260,7 @@ namespace leetcode {
 	namespace find_servers_that_handled_most_number_of_requests {
 		vector<int> Solution::busiestServers(int k, vector<int> &arrival, vector<int> &load) {
 			vector<int> ans;
-			vector<int> count(k, 0);
+			vector count(k, 0);
 			set<int> available;
 			for(int i = 0; i < k; i++) {
 				available.insert(i);
@@ -5285,12 +5283,13 @@ namespace leetcode {
 						events.push(next);
 						available.erase(it);
 					}
-				} else {//end
+				} else {
+					//end
 					available.insert(e.server_index);
 					count[e.server_index]++;
 				}
 			}
-			int maximum = *max_element(count.begin(), count.end());
+			const int maximum = *max_element(count.begin(), count.end());
 			for(int i = 0; i < k; i++) {
 				if(count[i] == maximum) {
 					ans.push_back(i);
@@ -5302,9 +5301,8 @@ namespace leetcode {
 		bool event::operator<(const event &e) const {
 			if(this->time != e.time) {
 				return this->time > e.time;
-			} else {
-				return this->start;
 			}
+			return this->start;
 		}
 	}// namespace find_servers_that_handled_most_number_of_requests
 }// namespace leetcode

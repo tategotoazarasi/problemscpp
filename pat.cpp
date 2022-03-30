@@ -5,7 +5,6 @@
 #include <cstring>
 #include <iomanip>
 #include <map>
-#include <ratio>
 #include <sstream>
 #include <tuple>
 #include <unordered_map>
@@ -1069,7 +1068,8 @@ namespace pat {
 		namespace b1033 {
 			int main(istream &cin, ostream &cout) {
 				unordered_set<char> broken;
-				string str1, str2;
+				string str1;
+				string str2;
 				cin >> str1 >> str2;
 				if(str2.empty()) {
 					cout << str1;
@@ -1082,8 +1082,8 @@ namespace pat {
 						shift = false;
 					}
 				}
-				for(char ch: str2) {
-					if(!(broken.count(toupper(ch)) > 0 || (!shift && isupper(ch)))) {
+				for(const char ch: str2) {
+					if(!(broken.contains(toupper(ch)) || !shift && (isupper(ch) != 0))) {
 						cout << ch;
 					}
 				}
@@ -1093,11 +1093,14 @@ namespace pat {
 
 		namespace b1034 {
 			int main(istream &cin, ostream &cout) {
-				long long numerator1, numerator2, denominator1, denominator2;
+				long long numerator1;
+				long long numerator2;
+				long long denominator1;
+				long long denominator2;
 				char ch;
 				cin >> numerator1 >> ch >> denominator1 >> numerator2 >> ch >> denominator2;
-				Fraction frac1(true, numerator1, denominator1);
-				Fraction frac2(true, numerator2, denominator2);
+				const Fraction frac1(true, numerator1, denominator1);
+				const Fraction frac2(true, numerator2, denominator2);
 				cout << frac1 << " + " << frac2 << " = " << frac1 + frac2 << endl
 				     << frac1 << " - " << frac2 << " = " << frac1 - frac2 << endl
 				     << frac1 << " * " << frac2 << " = " << frac1 * frac2 << endl

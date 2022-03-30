@@ -5979,7 +5979,10 @@ namespace acwing {
 
 	namespace acwing1761 {
 		int main(istream &cin, ostream &cout) {
-			int x1[3], y1[3], x2[3], y2[3];
+			int x1[3];
+			int y1[3];
+			int x2[3];
+			int y2[3];
 			for(int i = 0; i < 3; i++) {
 				cin >> x1[i] >> y1[i] >> x2[i] >> y2[i];
 			}

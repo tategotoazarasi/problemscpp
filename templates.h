@@ -53,8 +53,8 @@ public:
 	BigInt &operator%=(const BigInt &bi);
 	BigInt &operator++();
 	BigInt &operator--();
-	const BigInt operator++(int);
-	const BigInt operator--(int);
+	BigInt operator++(int);
+	BigInt operator--(int);
 	bool operator>(const BigInt &bi) const;
 	bool operator<(const BigInt &bi) const;
 	bool operator==(const BigInt &bi) const;
@@ -75,12 +75,12 @@ private:
 
 public:
 	Fraction(bool positive, long long numerator, long long denominator);
-	Fraction operator+(const Fraction &f);
-	Fraction operator-(const Fraction &f);
-	Fraction operator*(const Fraction &f);
-	Fraction operator/(const Fraction &f);
-	bool is_positive() const;
-	unsigned long long get_numerator() const;
-	unsigned long long get_denominator() const;
+	Fraction operator+(const Fraction &f) const;
+	Fraction operator-(const Fraction &f) const;
+	Fraction operator*(const Fraction &f) const;
+	Fraction operator/(const Fraction &f) const;
+	[[nodiscard]] bool is_positive() const;
+	[[nodiscard]] unsigned long long get_numerator() const;
+	[[nodiscard]] unsigned long long get_denominator() const;
 	friend ostream &operator<<(ostream &os, const Fraction &frac);
 };
