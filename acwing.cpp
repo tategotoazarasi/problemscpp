@@ -5976,4 +5976,32 @@ namespace acwing {
 
 		int status::get_weight() const { return len + abs(current.first - target.first) + abs(current.second - target.second); }
 	}// namespace acwing1470
+
+	namespace acwing1761 {
+		int main(istream &cin, ostream &cout) {
+			int x1[3], y1[3], x2[3], y2[3];
+			for(int i = 0; i < 3; i++) {
+				cin >> x1[i] >> y1[i] >> x2[i] >> y2[i];
+			}
+			unsigned int area = 0;
+			for(int i = 0; i < 2; i++) {
+				area += abs(x2[i] - x1[i]) * abs(y2[i] - y1[i]);
+				int x_1 = x1[2];
+				int x_2 = x2[2];
+				int y_1 = y1[2];
+				int y_2 = y2[2];
+				x_1     = max(x_1, x1[i]);
+				x_2     = max(x_2, x1[i]);
+				x_1     = min(x_1, x2[i]);
+				x_2     = min(x_2, x2[i]);
+				y_1     = max(y_1, y1[i]);
+				y_2     = max(y_2, y1[i]);
+				y_1     = min(y_1, y2[i]);
+				y_2     = min(y_2, y2[i]);
+				area -= abs(x_2 - x_1) * abs(y_2 - y_1);
+			}
+			cout << area;
+			return 0;
+		}
+	}// namespace acwing1761
 }// namespace acwing
