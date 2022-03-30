@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['head_0',['head',['../d1/dcc/a01392.html#a4f57c3dd424723297e00af02450b7d55',1,'leetcode::linked_list_random_node::Solution']]]
+  ['head_0',['head',['../d9/d45/a01396.html#a4f57c3dd424723297e00af02450b7d55',1,'leetcode::linked_list_random_node::Solution']]]
 ];

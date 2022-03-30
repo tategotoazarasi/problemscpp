@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::minimum_number_of_moves_to_make_palindrome::Solution类 参考</title>
+<title>problemscpp: leetcode::all_ancestors_of_a_node_in_a_directed_acyclic_graph::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,30 +63,151 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d1/dd6/a00108.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d3/d42/a00235.html">minimum_number_of_moves_to_make_palindrome</a></li><li class="navelem"><a class="el" href="../../dc/d5b/a01812.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dd/d42/a00109.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d3/d42/a00235.html">all_ancestors_of_a_node_in_a_directed_acyclic_graph</a></li><li class="navelem"><a class="el" href="../../dc/d5b/a01812.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
 <a href="../../de/d3c/a01809.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::minimum_number_of_moves_to_make_palindrome::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::all_ancestors_of_a_node_in_a_directed_acyclic_graph::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a426418c38d5d2892099c131881b1e4e9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5b/a01812.html#a426418c38d5d2892099c131881b1e4e9">minMovesToMakePalindrome</a> (string s)</td></tr>
-<tr class="separator:a426418c38d5d2892099c131881b1e4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a286b34a9b06451fbcdc8ff97b3b1ca48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5b/a01812.html#a286b34a9b06451fbcdc8ff97b3b1ca48">dfs</a> (bool *dfsd, int v, int i)</td></tr>
+<tr class="separator:a286b34a9b06451fbcdc8ff97b3b1ca48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c9e4c5c35e15d8d008120bba7169387"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5b/a01812.html#a7c9e4c5c35e15d8d008120bba7169387">getAncestors</a> (int n, vector&lt; vector&lt; int &gt; &gt; &amp;edges)</td></tr>
+<tr class="separator:a7c9e4c5c35e15d8d008120bba7169387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ab66ad60eff2fb58bc641c45788b90826"><td class="memItemLeft" align="right" valign="top">unordered_map&lt; int, set&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5b/a01812.html#ab66ad60eff2fb58bc641c45788b90826">ancestors</a></td></tr>
+<tr class="separator:ab66ad60eff2fb58bc641c45788b90826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e2c4ee2b5a3b76226ee90cc8958c915"><td class="memItemLeft" align="right" valign="top">unordered_map&lt; int, unordered_set&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5b/a01812.html#a1e2c4ee2b5a3b76226ee90cc8958c915">nexts</a></td></tr>
+<tr class="separator:a1e2c4ee2b5a3b76226ee90cc8958c915"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01494">1494</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01480">1480</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a426418c38d5d2892099c131881b1e4e9" name="a426418c38d5d2892099c131881b1e4e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a426418c38d5d2892099c131881b1e4e9">&#9670;&nbsp;</a></span>minMovesToMakePalindrome()</h2>
+<a id="a286b34a9b06451fbcdc8ff97b3b1ca48" name="a286b34a9b06451fbcdc8ff97b3b1ca48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a286b34a9b06451fbcdc8ff97b3b1ca48">&#9670;&nbsp;</a></span>dfs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void leetcode::all_ancestors_of_a_node_in_a_directed_acyclic_graph::Solution::dfs </td>
+          <td>(</td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>dfsd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l03885">3885</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03885" name="l03885"></a><span class="lineno"> 3885</span>                                                   {</div>
+<div class="line"><a id="l03886" name="l03886"></a><span class="lineno"> 3886</span>            <a class="code hl_variable" href="../../dc/d5b/a01812.html#ab66ad60eff2fb58bc641c45788b90826">ancestors</a>[i].insert(v);</div>
+<div class="line"><a id="l03887" name="l03887"></a><span class="lineno"> 3887</span>            dfsd[i] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l03888" name="l03888"></a><span class="lineno"> 3888</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> next: <a class="code hl_variable" href="../../dc/d5b/a01812.html#a1e2c4ee2b5a3b76226ee90cc8958c915">nexts</a>[i]) {</div>
+<div class="line"><a id="l03889" name="l03889"></a><span class="lineno"> 3889</span>                <span class="keywordflow">if</span>(!dfsd[next]) {</div>
+<div class="line"><a id="l03890" name="l03890"></a><span class="lineno"> 3890</span>                    <a class="code hl_function" href="../../dc/d5b/a01812.html#a286b34a9b06451fbcdc8ff97b3b1ca48">dfs</a>(dfsd, v, next);</div>
+<div class="line"><a id="l03891" name="l03891"></a><span class="lineno"> 3891</span>                }</div>
+<div class="line"><a id="l03892" name="l03892"></a><span class="lineno"> 3892</span>            }</div>
+<div class="line"><a id="l03893" name="l03893"></a><span class="lineno"> 3893</span>        }</div>
+<div class="ttc" id="aa01812_html_a1e2c4ee2b5a3b76226ee90cc8958c915"><div class="ttname"><a href="../../dc/d5b/a01812.html#a1e2c4ee2b5a3b76226ee90cc8958c915">leetcode::all_ancestors_of_a_node_in_a_directed_acyclic_graph::Solution::nexts</a></div><div class="ttdeci">unordered_map&lt; int, unordered_set&lt; int &gt; &gt; nexts</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l01481">leetcode.h:1481</a></div></div>
+<div class="ttc" id="aa01812_html_a286b34a9b06451fbcdc8ff97b3b1ca48"><div class="ttname"><a href="../../dc/d5b/a01812.html#a286b34a9b06451fbcdc8ff97b3b1ca48">leetcode::all_ancestors_of_a_node_in_a_directed_acyclic_graph::Solution::dfs</a></div><div class="ttdeci">void dfs(bool *dfsd, int v, int i)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l03885">leetcode.cpp:3885</a></div></div>
+<div class="ttc" id="aa01812_html_ab66ad60eff2fb58bc641c45788b90826"><div class="ttname"><a href="../../dc/d5b/a01812.html#ab66ad60eff2fb58bc641c45788b90826">leetcode::all_ancestors_of_a_node_in_a_directed_acyclic_graph::Solution::ancestors</a></div><div class="ttdeci">unordered_map&lt; int, set&lt; int &gt; &gt; ancestors</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l01482">leetcode.h:1482</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l01482">ancestors</a>, <a class="el" href="../../d6/d5b/a00026_source.html#l03885">dfs()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l01481">nexts</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l03885">dfs()</a> , 以及 <a class="el" href="../../d6/d5b/a00026_source.html#l03858">getAncestors()</a>.</p>
+
+</div>
+</div>
+<a id="a7c9e4c5c35e15d8d008120bba7169387" name="a7c9e4c5c35e15d8d008120bba7169387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c9e4c5c35e15d8d008120bba7169387">&#9670;&nbsp;</a></span>getAncestors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; vector&lt; int &gt; &gt; leetcode::all_ancestors_of_a_node_in_a_directed_acyclic_graph::Solution::getAncestors </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; vector&lt; int &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>edges</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l03858">3858</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03858" name="l03858"></a><span class="lineno"> 3858</span>                                                                                    {</div>
+<div class="line"><a id="l03859" name="l03859"></a><span class="lineno"> 3859</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l03860" name="l03860"></a><span class="lineno"> 3860</span>                <a class="code hl_variable" href="../../dc/d5b/a01812.html#a1e2c4ee2b5a3b76226ee90cc8958c915">nexts</a>[i]     = unordered_set&lt;int&gt;();</div>
+<div class="line"><a id="l03861" name="l03861"></a><span class="lineno"> 3861</span>                <a class="code hl_variable" href="../../dc/d5b/a01812.html#ab66ad60eff2fb58bc641c45788b90826">ancestors</a>[i] = set&lt;int&gt;();</div>
+<div class="line"><a id="l03862" name="l03862"></a><span class="lineno"> 3862</span>            }</div>
+<div class="line"><a id="l03863" name="l03863"></a><span class="lineno"> 3863</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> edge: edges) {</div>
+<div class="line"><a id="l03864" name="l03864"></a><span class="lineno"> 3864</span>                <a class="code hl_variable" href="../../dc/d5b/a01812.html#a1e2c4ee2b5a3b76226ee90cc8958c915">nexts</a>[edge[0]].insert(edge[1]);</div>
+<div class="line"><a id="l03865" name="l03865"></a><span class="lineno"> 3865</span>            }</div>
+<div class="line"><a id="l03866" name="l03866"></a><span class="lineno"> 3866</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l03867" name="l03867"></a><span class="lineno"> 3867</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> next: <a class="code hl_variable" href="../../dc/d5b/a01812.html#a1e2c4ee2b5a3b76226ee90cc8958c915">nexts</a>[i]) {</div>
+<div class="line"><a id="l03868" name="l03868"></a><span class="lineno"> 3868</span>                    <span class="keyword">auto</span> *dfsd = <span class="keyword">new</span> <span class="keywordtype">bool</span>[n];</div>
+<div class="line"><a id="l03869" name="l03869"></a><span class="lineno"> 3869</span>                    memset(dfsd, 0, n * <span class="keyword">sizeof</span>(<span class="keywordtype">bool</span>));</div>
+<div class="line"><a id="l03870" name="l03870"></a><span class="lineno"> 3870</span>                    <a class="code hl_function" href="../../dc/d5b/a01812.html#a286b34a9b06451fbcdc8ff97b3b1ca48">dfs</a>(dfsd, i, next);</div>
+<div class="line"><a id="l03871" name="l03871"></a><span class="lineno"> 3871</span>                    <span class="keyword">delete</span>[] dfsd;</div>
+<div class="line"><a id="l03872" name="l03872"></a><span class="lineno"> 3872</span>                }</div>
+<div class="line"><a id="l03873" name="l03873"></a><span class="lineno"> 3873</span>            }</div>
+<div class="line"><a id="l03874" name="l03874"></a><span class="lineno"> 3874</span>            vector&lt;vector&lt;int&gt;&gt; ans;</div>
+<div class="line"><a id="l03875" name="l03875"></a><span class="lineno"> 3875</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l03876" name="l03876"></a><span class="lineno"> 3876</span>                vector&lt;int&gt; vec;</div>
+<div class="line"><a id="l03877" name="l03877"></a><span class="lineno"> 3877</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> i: <a class="code hl_variable" href="../../dc/d5b/a01812.html#ab66ad60eff2fb58bc641c45788b90826">ancestors</a>[i]) {</div>
+<div class="line"><a id="l03878" name="l03878"></a><span class="lineno"> 3878</span>                    vec.push_back(i);</div>
+<div class="line"><a id="l03879" name="l03879"></a><span class="lineno"> 3879</span>                }</div>
+<div class="line"><a id="l03880" name="l03880"></a><span class="lineno"> 3880</span>                ans.push_back(vec);</div>
+<div class="line"><a id="l03881" name="l03881"></a><span class="lineno"> 3881</span>            }</div>
+<div class="line"><a id="l03882" name="l03882"></a><span class="lineno"> 3882</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l03883" name="l03883"></a><span class="lineno"> 3883</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l01482">ancestors</a>, <a class="el" href="../../d6/d5b/a00026_source.html#l03885">dfs()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l01481">nexts</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ab66ad60eff2fb58bc641c45788b90826" name="ab66ad60eff2fb58bc641c45788b90826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab66ad60eff2fb58bc641c45788b90826">&#9670;&nbsp;</a></span>ancestors</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -95,50 +216,45 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int leetcode::minimum_number_of_moves_to_make_palindrome::Solution::minMovesToMakePalindrome </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
-          <td></td>
+          <td class="memname">unordered_map&lt;int, set&lt;int&gt; &gt; leetcode::all_ancestors_of_a_node_in_a_directed_acyclic_graph::Solution::ancestors</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l03897">3897</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03897" name="l03897"></a><span class="lineno"> 3897</span>                                                       {</div>
-<div class="line"><a id="l03898" name="l03898"></a><span class="lineno"> 3898</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l03899" name="l03899"></a><span class="lineno"> 3899</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a> = 0, <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> = s.size() - 1; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a> &lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>++) {</div>
-<div class="line"><a id="l03900" name="l03900"></a><span class="lineno"> 3900</span>                <span class="keywordtype">bool</span> even = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l03901" name="l03901"></a><span class="lineno"> 3901</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a> != i; i--) {</div>
-<div class="line"><a id="l03902" name="l03902"></a><span class="lineno"> 3902</span>                    <span class="keywordflow">if</span>(s[<a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>] == s[i]) {</div>
-<div class="line"><a id="l03903" name="l03903"></a><span class="lineno"> 3903</span>                        even = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l03904" name="l03904"></a><span class="lineno"> 3904</span>                        <span class="comment">// 字母出现偶数次的情况，模拟交换</span></div>
-<div class="line"><a id="l03905" name="l03905"></a><span class="lineno"> 3905</span>                        <span class="keywordflow">for</span>(; i &lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>; i++) {</div>
-<div class="line"><a id="l03906" name="l03906"></a><span class="lineno"> 3906</span>                            swap(s[i], s[i + 1]);</div>
-<div class="line"><a id="l03907" name="l03907"></a><span class="lineno"> 3907</span>                            ans++;</div>
-<div class="line"><a id="l03908" name="l03908"></a><span class="lineno"> 3908</span>                        }</div>
-<div class="line"><a id="l03909" name="l03909"></a><span class="lineno"> 3909</span>                        <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>--;</div>
-<div class="line"><a id="l03910" name="l03910"></a><span class="lineno"> 3910</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03911" name="l03911"></a><span class="lineno"> 3911</span>                    }</div>
-<div class="line"><a id="l03912" name="l03912"></a><span class="lineno"> 3912</span>                }</div>
-<div class="line"><a id="l03913" name="l03913"></a><span class="lineno"> 3913</span>                <span class="keywordflow">if</span>(!even) {</div>
-<div class="line"><a id="l03914" name="l03914"></a><span class="lineno"> 3914</span>                    <span class="comment">// 字母出现奇数次的情况，计算它距离中间还有多少距离</span></div>
-<div class="line"><a id="l03915" name="l03915"></a><span class="lineno"> 3915</span>                    ans += s.size() / 2 - <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>;</div>
-<div class="line"><a id="l03916" name="l03916"></a><span class="lineno"> 3916</span>                }</div>
-<div class="line"><a id="l03917" name="l03917"></a><span class="lineno"> 3917</span>            }</div>
-<div class="line"><a id="l03918" name="l03918"></a><span class="lineno"> 3918</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l03919" name="l03919"></a><span class="lineno"> 3919</span>        }</div>
-<div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">acwing::acwing1929::left</a></div><div class="ttdeci">@ left</div><div class="ttdoc">左</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00554">acwing.h:554</a></div></div>
-<div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00556">acwing.h:556</a></div></div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d9/d2e/a00056_source.html#l00554">acwing::acwing1929::left</a> , 以及 <a class="el" href="../../d9/d2e/a00056_source.html#l00556">acwing::acwing1929::right</a>.</p>
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01482">1482</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d5/df9/a00044_source.html#l02017">leetcode::minimum_number_of_moves_to_make_palindrome::TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l03885">dfs()</a> , 以及 <a class="el" href="../../d6/d5b/a00026_source.html#l03858">getAncestors()</a>.</p>
+
+</div>
+</div>
+<a id="a1e2c4ee2b5a3b76226ee90cc8958c915" name="a1e2c4ee2b5a3b76226ee90cc8958c915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e2c4ee2b5a3b76226ee90cc8958c915">&#9670;&nbsp;</a></span>nexts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unordered_map&lt;int, unordered_set&lt;int&gt; &gt; leetcode::all_ancestors_of_a_node_in_a_directed_acyclic_graph::Solution::nexts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01481">1481</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l03885">dfs()</a> , 以及 <a class="el" href="../../d6/d5b/a00026_source.html#l03858">getAncestors()</a>.</p>
 
 </div>
 </div>
