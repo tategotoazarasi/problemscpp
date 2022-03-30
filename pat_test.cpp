@@ -484,6 +484,17 @@ namespace pat {
 				ASSERT_EQ("2 150", out.str());
 			}
 		}// namespace b1032
+
+		namespace b1033 {
+			TEST(b1033, case1) {
+				istringstream in("7+IE.\n"
+				                 "7_This_is_a_test.");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("_hs_s_a_tst", out.str());
+			}
+		}// namespace b1033
 	}    // namespace b
 
 	namespace a {}

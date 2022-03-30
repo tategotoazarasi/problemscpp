@@ -199,6 +199,11 @@ namespace pat {
 		namespace b1032 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1033 旧键盘打字
+		namespace b1033 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

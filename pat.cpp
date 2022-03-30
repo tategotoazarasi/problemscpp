@@ -1063,6 +1063,31 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1032
+
+		namespace b1033 {
+			int main(istream &cin, ostream &cout) {
+				unordered_set<char> broken;
+				string str1, str2;
+				cin >> str1 >> str2;
+				if(str2.empty()) {
+					cout << str1;
+					return 0;
+				}
+				bool shift = true;
+				for(char ch: str1) {
+					broken.insert(ch);
+					if(ch == '+') {
+						shift = false;
+					}
+				}
+				for(char ch: str2) {
+					if(!(broken.count(toupper(ch)) > 0 || (!shift && isupper(ch)))) {
+						cout << ch;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1033
 	}    // namespace b
 
 	namespace a {}
