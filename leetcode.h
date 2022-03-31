@@ -1965,6 +1965,14 @@ namespace leetcode {
 			static vector<int> busiestServers(int k, vector<int> &arrival, vector<int> &load);
 		};
 	}// namespace find_servers_that_handled_most_number_of_requests
+
+	/// \brief 728. Self Dividing Numbers
+	namespace self_dividing_numbers {
+		class Solution {
+		public:
+			static vector<int> selfDividingNumbers(int left, int right);
+		};
+	}// namespace self_dividing_numbers
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

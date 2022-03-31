@@ -2585,4 +2585,16 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::busiestServers(2, arrival, load));
 		}
 	}// namespace find_servers_that_handled_most_number_of_requests
+
+	namespace self_dividing_numbers {
+		TEST(self_dividing_numbers, case1) {
+			vector output = {1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22};
+			ASSERT_EQ(output, Solution::selfDividingNumbers(1, 22));
+		}
+
+		TEST(self_dividing_numbers, case2) {
+			vector output = {48, 55, 66, 77};
+			ASSERT_EQ(output, Solution::selfDividingNumbers(47, 85));
+		}
+	}// namespace self_dividing_numbers
 }// namespace leetcode

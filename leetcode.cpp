@@ -5305,4 +5305,31 @@ namespace leetcode {
 			return this->start;
 		}
 	}// namespace find_servers_that_handled_most_number_of_requests
+
+	namespace self_dividing_numbers {
+		vector<int> Solution::selfDividingNumbers(int left, int right) {
+			vector<int> ans;
+			for(int i = left; i <= right; ++i) {
+				stringstream ss;
+				ss << i;
+				char ch;
+				bool flag = true;
+				while(ss >> ch) {
+					int num = ch - '0';
+					if(num == 0) {
+						flag = false;
+						break;
+					}
+					if(i % num != 0) {
+						flag = false;
+						break;
+					}
+				}
+				if(flag) {
+					ans.push_back(i);
+				}
+			}
+			return ans;
+		}
+	}// namespace self_dividing_numbers
 }// namespace leetcode
