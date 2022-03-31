@@ -521,6 +521,32 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1034
+
+		namespace b1035 {
+			TEST(b1035, case1) {
+				istringstream in("10\n"
+				                 "3 1 2 8 7 5 9 4 6 0\n"
+				                 "1 2 3 7 8 5 9 4 6 0");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Insertion Sort\n"
+				          "1 2 3 5 7 8 9 4 6 0",
+				          out.str());
+			}
+
+			TEST(b1035, case2) {
+				istringstream in("10\n"
+				                 "3 1 2 8 7 5 9 4 0 6\n"
+				                 "1 3 2 8 5 7 4 9 0 6");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Merge Sort\n"
+				          "1 2 3 8 4 5 7 9 0 6",
+				          out.str());
+			}
+		}// namespace b1035
 	}    // namespace b
 
 	namespace a {}

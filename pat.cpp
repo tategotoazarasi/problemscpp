@@ -1108,6 +1108,87 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1034
+
+		namespace b1035 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				vector<int> vec1(n), vec2(n);
+				for(int i = 0; i < n; i++) {
+					cin >> vec1[i];
+				}
+				for(int i = 0; i < n; i++) {
+					cin >> vec2[i];
+				}
+				int i = n - 1;
+				for(; i >= 0 && vec1[i] == vec2[i]; --i)
+					;
+				vector<int> sorted_vec = vec1;
+				sort(sorted_vec.begin(), sorted_vec.begin() + i + 1);
+				bool insertion = true;
+				for(int j = 0; j <= i; j++) {
+					if(sorted_vec[j] != vec2[j]) {
+						insertion = false;
+						break;
+					}
+				}
+				if(insertion) {//插入排序
+					cout << "Insertion Sort" << endl;
+					/*if(j != n - 1) {
+						sort(sorted_vec.begin(), sorted_vec.begin() + j + 2);
+					}
+					for(int k = 0; k < n; k++) {
+						cout << sorted_vec[k];
+						if(k != n - 1) {
+							cout << ' ';
+						}
+					}*/
+					int j = n - 1;
+					for(; j >= 0; --j) {
+						vector vec1_cpy = vec1;
+						sort(vec1_cpy.begin(), vec1_cpy.begin() + j);
+						if(vec1_cpy == vec2) {
+							break;
+						}
+					}
+					sort(vec1.begin(), vec1.begin() + j + 1);
+					for(int k = 0; k < n; k++) {
+						cout << vec1[k];
+						if(k != n - 1) {
+							cout << ' ';
+						}
+					}
+					return 0;
+				} else {//归并排序
+					cout << "Merge Sort" << endl;
+					int factor = 1;
+					bool flag  = false;
+					while(true) {
+						factor *= 2;
+						int j = 0;
+						for(; (j + 1) * factor <= n; j++) {
+							sort(vec1.begin() + j * factor, vec1.begin() + (j + 1) * factor);
+						}
+						if(j * factor < n) {
+							sort(vec1.begin() + j * factor, vec1.end());
+						}
+						if(flag) {
+							for(int k = 0; k < n; k++) {
+								cout << vec1[k];
+								if(k != n - 1) {
+									cout << ' ';
+								}
+							}
+							return 0;
+						}
+						if(vec1 == vec2) {
+							flag = true;
+						}
+					}
+				}
+				return 0;
+			}
+		}// namespace b1035
 	}    // namespace b
 
 	namespace a {}

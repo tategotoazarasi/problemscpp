@@ -209,6 +209,11 @@ namespace pat {
 		namespace b1034 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1035 插入与归并
+		namespace b1035 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
