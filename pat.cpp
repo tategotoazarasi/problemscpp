@@ -1189,6 +1189,29 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1035
+
+		namespace b1036 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				char c;
+				cin >> n >> c;
+				for(int i = 0; i < n; i++) {
+					cout << c;
+				}
+				cout << endl;
+				for(int i = 0; i < (n + 1) / 2 - 2; i++) {
+					cout << c;
+					for(int j = 0; j < n - 2; j++) {
+						cout << ' ';
+					}
+					cout << c << endl;
+				}
+				for(int i = 0; i < n; i++) {
+					cout << c;
+				}
+				return 0;
+			}
+		}// namespace b1036
 	}    // namespace b
 
 	namespace a {}

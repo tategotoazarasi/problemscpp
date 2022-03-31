@@ -214,6 +214,11 @@ namespace pat {
 		namespace b1035 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1036 跟奥巴马一起编程
+		namespace b1036 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

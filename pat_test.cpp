@@ -547,6 +547,21 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1035
+
+		namespace b1036 {
+			TEST(b1036, case1) {
+				istringstream in("10 a");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("aaaaaaaaaa\n"
+				          "a        a\n"
+				          "a        a\n"
+				          "a        a\n"
+				          "aaaaaaaaaa",
+				          out.str());
+			}
+		}// namespace b1036
 	}    // namespace b
 
 	namespace a {}
