@@ -1872,5 +1872,10 @@ namespace acwing {
 	namespace acwing1761 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 1749. 阻挡广告牌 II
+	namespace acwing1749 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

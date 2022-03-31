@@ -6007,4 +6007,43 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1761
+
+	namespace acwing1749 {
+		int main(istream &cin, ostream &cout) {
+			int x1[2], x2[2], y1[2], y2[2];
+			for(int i = 0; i < 2; i++) {
+				cin >> x1[i] >> y1[i] >> x2[i] >> y2[i];
+			}
+			unsigned int area = abs(x2[0] - x1[0]) * abs(y2[0] - y1[0]);
+			int x_1           = x1[1];
+			int x_2           = x2[1];
+			int y_1           = y1[1];
+			int y_2           = y2[1];
+			x_1               = max(x_1, x1[0]);
+			x_2               = max(x_2, x1[0]);
+			x_1               = min(x_1, x2[0]);
+			x_2               = min(x_2, x2[0]);
+			y_1               = max(y_1, y1[0]);
+			y_2               = max(y_2, y1[0]);
+			y_1               = min(y_1, y2[0]);
+			y_2               = min(y_2, y2[0]);
+			if(x_2 == x_1 || y_2 == y_1) {
+				//没有遮盖
+				cout << area;
+				return 0;
+			}
+			if(y_2 == y2[0] && y_1 == y1[0]) {
+				//纵向填满
+				cout << abs(abs(x2[0] - x1[0]) - abs(x_2 - x_1)) * abs(y_2 - y_1);
+				return 0;
+			}
+			if(x_1 == x1[0] && x_2 == x2[0] && (y_1 == y1[0] || y_2 == y2[0])) {
+				//横向填满
+				cout << (x_2 - x_1) * max(y2[0] - y_2, y_1 - y1[0]);
+				return 0;
+			}
+			cout << area;
+			return 0;
+		}
+	}// namespace acwing1749
 }// namespace acwing
