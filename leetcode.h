@@ -1973,6 +1973,14 @@ namespace leetcode {
 			static vector<int> selfDividingNumbers(int left, int right);
 		};
 	}// namespace self_dividing_numbers
+
+	/// \brief 954. Array of Doubled Pairs
+	namespace array_of_doubled_pairs {
+		class Solution {
+		public:
+			static bool canReorderDoubled(vector<int> &arr);
+		};
+	}// namespace array_of_doubled_pairs
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

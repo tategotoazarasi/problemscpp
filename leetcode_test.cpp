@@ -2597,4 +2597,21 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::selfDividingNumbers(47, 85));
 		}
 	}// namespace self_dividing_numbers
+
+	namespace array_of_doubled_pairs {
+		TEST(array_of_doubled_pairs, case1) {
+			vector arr = {3, 1, 3, 6};
+			ASSERT_FALSE(Solution::canReorderDoubled(arr));
+		}
+
+		TEST(array_of_doubled_pairs, case2) {
+			vector arr = {2, 1, 2, 6};
+			ASSERT_FALSE(Solution::canReorderDoubled(arr));
+		}
+
+		TEST(array_of_doubled_pairs, case3) {
+			vector arr = {4, -2, 2, -4};
+			ASSERT_TRUE(Solution::canReorderDoubled(arr));
+		}
+	}// namespace array_of_doubled_pairs
 }// namespace leetcode

@@ -5332,4 +5332,39 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace self_dividing_numbers
+
+	namespace array_of_doubled_pairs {
+		bool Solution::canReorderDoubled(vector<int> &arr) {
+			multiset<int> positive;
+			multiset<int, greater<>> negative;
+			for(auto num: arr) {
+				if(num >= 0) {
+					positive.insert(num);
+				} else {
+					negative.insert(num);
+				}
+			}
+			while(!positive.empty()) {
+				int num = *positive.begin();
+				positive.erase(positive.begin());
+				auto it = positive.find(num * 2);
+				if(it == positive.end()) {
+					return false;
+				} else {
+					positive.erase(it);
+				}
+			}
+			while(!negative.empty()) {
+				int num = *negative.begin();
+				negative.erase(negative.begin());
+				auto it = negative.find(num * 2);
+				if(it == negative.end()) {
+					return false;
+				} else {
+					negative.erase(it);
+				}
+			}
+			return true;
+		}
+	}// namespace array_of_doubled_pairs
 }// namespace leetcode
