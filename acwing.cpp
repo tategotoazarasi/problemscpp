@@ -6046,4 +6046,16 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1749
+
+	namespace acwing1737 {
+		int main(istream &cin, ostream &cout) {
+			int a, b, x, y;
+			cin >> a >> b >> x >> y;
+			int d1 = abs(b - a);
+			int d2 = abs(a - x) + abs(b - y);
+			int d3 = abs(a - y) + abs(b - x);
+			cout << min(d1, min(d2, d3));
+			return 0;
+		}
+	}// namespace acwing1737
 }// namespace acwing

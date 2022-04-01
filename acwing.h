@@ -1877,5 +1877,10 @@ namespace acwing {
 	namespace acwing1749 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 1737. 传送
+	namespace acwing1737 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
