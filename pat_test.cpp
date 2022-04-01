@@ -562,6 +562,24 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1036
+
+		namespace b1037 {
+			TEST(b1037, case1) {
+				istringstream in("10.16.27 14.1.28");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("3.2.1", out.str());
+			}
+
+			TEST(b1037, case2) {
+				istringstream in("14.1.28 10.16.27");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("-3.2.1", out.str());
+			}
+		}// namespace b1037
 	}    // namespace b
 
 	namespace a {}

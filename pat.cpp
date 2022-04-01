@@ -1212,6 +1212,35 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1036
+
+		namespace b1037 {
+			int main(istream &cin, ostream &cout) {
+				unsigned long long galleon, sickle, knut;
+				char ch;
+				unsigned long long sum[2];
+				for(int i = 0; i < 2; i++) {
+					cin >> galleon >> ch >> sickle >> ch >> knut;
+					sum[i] = galleon * 17 * 29 + sickle * 29 + knut;
+				}
+				bool positive = sum[0] <= sum[1];
+				unsigned long long diff;
+				if(positive) {
+					diff = sum[1] - sum[0];
+				} else {
+					diff = sum[0] - sum[1];
+				}
+				galleon = diff / (17 * 29);
+				diff %= (17 * 29);
+				sickle = diff / 29;
+				diff %= 29;
+				knut = diff;
+				if(!positive) {
+					cout << '-';
+				}
+				cout << galleon << '.' << sickle << '.' << knut;
+				return 0;
+			}
+		}// namespace b1037
 	}    // namespace b
 
 	namespace a {}

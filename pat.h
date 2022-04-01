@@ -219,6 +219,11 @@ namespace pat {
 		namespace b1036 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1037 在霍格沃茨找零钱
+		namespace b1037 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
