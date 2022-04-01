@@ -224,6 +224,11 @@ namespace pat {
 		namespace b1037 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1038 统计同成绩学生
+		namespace b1038 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

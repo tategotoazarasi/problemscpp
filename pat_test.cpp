@@ -580,6 +580,18 @@ namespace pat {
 				ASSERT_EQ("-3.2.1", out.str());
 			}
 		}// namespace b1037
+
+		namespace b1038 {
+			TEST(b1038, case2) {
+				istringstream in("10\n"
+				                 "60 75 90 55 75 99 82 90 75 50\n"
+				                 "3 75 90 88");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("3 2 0", out.str());
+			}
+		}// namespace b1038
 	}    // namespace b
 
 	namespace a {}

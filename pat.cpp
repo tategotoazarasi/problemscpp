@@ -1241,6 +1241,28 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1037
+
+		namespace b1038 {
+			int main(istream &cin, ostream &cout) {
+				unordered_map<int, int> um;
+				int n;
+				cin >> n;
+				int score;
+				for(int i = 0; i < n; i++) {
+					cin >> score;
+					um[score]++;
+				}
+				cin >> n;
+				for(int i = 0; i < n; i++) {
+					cin >> score;
+					cout << um[score];
+					if(i != n - 1) {
+						cout << ' ';
+					}
+				}
+				return 0;
+			}
+		}// namespace b1038
 	}    // namespace b
 
 	namespace a {}
