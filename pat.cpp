@@ -1263,6 +1263,34 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1038
+
+		namespace b1039 {
+			int main(istream &cin, ostream &cout) {
+				string str1, str2;
+				cin >> str1 >> str2;
+				unordered_map<char, int> um;
+				for(char ch: str1) {
+					um[ch]++;
+				}
+				bool yes = true;
+				for(char ch: str2) {
+					um[ch]--;
+					if(um[ch] < 0) {
+						yes = false;
+					}
+				}
+				int sum = 0;
+				for(auto [ch, count]: um) {
+					if(yes && count > 0) {
+						sum += count;
+					} else if(!yes && count < 0) {
+						sum -= count;
+					}
+				}
+				cout << (yes ? "Yes " : "No ") << sum;
+				return 0;
+			}
+		}// namespace b1039
 	}    // namespace b
 
 	namespace a {}

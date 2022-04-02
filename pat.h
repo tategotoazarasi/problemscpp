@@ -229,6 +229,11 @@ namespace pat {
 		namespace b1038 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1039 到底买不买
+		namespace b1039 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

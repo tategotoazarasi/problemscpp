@@ -592,6 +592,26 @@ namespace pat {
 				ASSERT_EQ("3 2 0", out.str());
 			}
 		}// namespace b1038
+
+		namespace b1039 {
+			TEST(b1039, case1) {
+				istringstream in("ppRYYGrrYBR2258\n"
+				                 "YrR8RrY");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Yes 8", out.str());
+			}
+
+			TEST(b1039, case2) {
+				istringstream in("ppRYYGrrYB225\n"
+				                 "YrR8RrY");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("No 2", out.str());
+			}
+		}// namespace b1039
 	}    // namespace b
 
 	namespace a {}
