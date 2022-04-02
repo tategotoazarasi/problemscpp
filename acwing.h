@@ -1882,5 +1882,10 @@ namespace acwing {
 	namespace acwing1737 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 1725. 组队井字游戏
+	namespace acwing1725 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

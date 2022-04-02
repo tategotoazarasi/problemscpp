@@ -6058,4 +6058,62 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1737
+
+	namespace acwing1725 {
+		int main(istream &cin, ostream &cout) {
+			unordered_set<char> row[3], col[3], main_diagonal, leading_diagonal;
+			unordered_set<char> win_1;
+			auto hash = [](const pair<char, char> &p) {
+				vector<char> vec = {p.first, p.second};
+				sort(vec.begin(), vec.end());
+				unsigned int val = 0;
+				for(auto &ch: vec) {
+					ch -= 'A';
+					val *= 26;
+					val += ch;
+				}
+				return val;
+			};
+			unordered_set<pair<char, char>, decltype(hash)> win_2;
+			char board[3][3];
+			for(int i = 0; i < 3; i++) {
+				for(int j = 0; j < 3; j++) {
+					cin >> board[i][j];
+					row[i].insert(board[i][j]);
+					col[j].insert(board[i][j]);
+				}
+			}
+			main_diagonal.insert(board[0][0]);
+			main_diagonal.insert(board[1][1]);
+			main_diagonal.insert(board[2][2]);
+			leading_diagonal.insert(board[0][2]);
+			leading_diagonal.insert(board[1][1]);
+			leading_diagonal.insert(board[2][0]);
+			for(int i = 0; i < 3; i++) {
+				if(row[i].size() == 1) {
+					win_1.insert(board[i][0]);
+				} else if(row[i].size() == 2) {
+					win_2.insert(make_pair(*row[i].begin(), *(++row[i].begin())));
+				}
+				if(col[i].size() == 1) {
+					win_1.insert(board[0][i]);
+				} else if(col[i].size() == 2) {
+					win_2.insert(make_pair(*col[i].begin(), *(++col[i].begin())));
+				}
+			}
+			if(main_diagonal.size() == 1) {
+				win_1.insert(board[1][1]);
+			} else if(main_diagonal.size() == 2) {
+				win_2.insert(make_pair(*main_diagonal.begin(), *(++main_diagonal.begin())));
+			}
+			if(leading_diagonal.size() == 1) {
+				win_1.insert(board[1][1]);
+			} else if(leading_diagonal.size() == 2) {
+				win_2.insert(make_pair(*leading_diagonal.begin(), *(++leading_diagonal.begin())));
+			}
+			cout << win_1.size() << endl
+			     << win_2.size();
+			return 0;
+		}
+	}// namespace acwing1725
 }// namespace acwing
