@@ -1981,6 +1981,14 @@ namespace leetcode {
 			static bool canReorderDoubled(vector<int> &arr);
 		};
 	}// namespace array_of_doubled_pairs
+
+	/// \brief 420. Strong Password Checker
+	namespace strong_password_checker {
+		class Solution {
+		public:
+			static int strongPasswordChecker(string password);
+		};
+	}// namespace strong_password_checker
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

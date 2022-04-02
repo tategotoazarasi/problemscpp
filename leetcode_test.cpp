@@ -2614,4 +2614,26 @@ namespace leetcode {
 			ASSERT_TRUE(Solution::canReorderDoubled(arr));
 		}
 	}// namespace array_of_doubled_pairs
+
+	namespace strong_password_checker {
+		TEST(strong_password_checker, case1) {
+			ASSERT_EQ(5, Solution::strongPasswordChecker("a"));
+		}
+
+		TEST(strong_password_checker, case2) {
+			ASSERT_EQ(3, Solution::strongPasswordChecker("aA1"));
+		}
+
+		TEST(strong_password_checker, case3) {
+			ASSERT_EQ(0, Solution::strongPasswordChecker("1337C0d3"));
+		}
+
+		TEST(strong_password_checker, case4) {
+			ASSERT_EQ(1, Solution::strongPasswordChecker("1111b"));
+		}
+
+		TEST(strong_password_checker, case5) {
+			ASSERT_EQ(2, Solution::strongPasswordChecker("aaaa"));
+		}
+	}// namespace strong_password_checker
 }// namespace leetcode
