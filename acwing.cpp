@@ -6125,4 +6125,65 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1725
+
+	namespace acwing4394 {
+		int main(istream &cin, ostream &cout) {
+			unsigned n;
+			unsigned k;
+			cin >> n >> k;
+			vector<unsigned> vec(n);
+			for(unsigned i = 0; i < n; i++) {
+				cin >> vec[i];
+			}
+			unsigned l     = 0;
+			unsigned r     = 0;
+			unsigned max_l = l;
+			unsigned max_r = r;
+			vector<unsigned> um(1000001, 0);
+			unsigned size = 1;
+			um[vec[0]]++;
+			while(r < n) {
+				while(size <= k) {
+					r++;
+					if(r < n) {
+						if(um[vec[r]] == 0) {
+							size++;
+						}
+						if(size > k) {
+							r--;
+							size--;
+							break;
+						}
+						um[vec[r]]++;
+					} else {
+						cout << max_l + 1 << ' ' << max_r + 1;
+						return 0;
+					}
+					max_r = r;
+				}
+
+				um[vec[l]]--;
+				if(um[vec[l]] == 0) {
+					size--;
+				}
+				l++;
+				r++;
+				if(r < n) {
+					if(um[vec[r]] == 0) {
+						size++;
+					}
+					um[vec[r]]++;
+					if(size <= k) {
+						max_l = l;
+						max_r = r;
+					}
+				} else {
+					cout << max_l + 1 << ' ' << max_r + 1;
+					return 0;
+				}
+			}
+			cout << max_l + 1 << ' ' << max_r + 1;
+			return 0;
+		}
+	}// namespace acwing4394
 }// namespace acwing

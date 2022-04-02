@@ -1887,5 +1887,12 @@ namespace acwing {
 	namespace acwing1725 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/**
+	 * \brief 4394. 最长连续子序列
+	 */
+	namespace acwing4394 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
