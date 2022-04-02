@@ -5315,7 +5315,7 @@ namespace leetcode {
 				char ch;
 				bool flag = true;
 				while(ss >> ch) {
-					int num = ch - '0';
+					const int num = ch - '0';
 					if(num == 0) {
 						flag = false;
 						break;
@@ -5345,52 +5345,55 @@ namespace leetcode {
 				}
 			}
 			while(!positive.empty()) {
-				int num = *positive.begin();
+				const int num = *positive.begin();
 				positive.erase(positive.begin());
 				auto it = positive.find(num * 2);
 				if(it == positive.end()) {
 					return false;
-				} else {
-					positive.erase(it);
 				}
+				positive.erase(it);
 			}
 			while(!negative.empty()) {
-				int num = *negative.begin();
+				const int num = *negative.begin();
 				negative.erase(negative.begin());
 				auto it = negative.find(num * 2);
 				if(it == negative.end()) {
 					return false;
-				} else {
-					negative.erase(it);
 				}
+				negative.erase(it);
+
+				negative.erase(it);
 			}
 			return true;
 		}
 	}// namespace array_of_doubled_pairs
 
 	namespace strong_password_checker {
-		int Solution::strongPasswordChecker(string password) {
-			int n          = password.length();
-			bool has_lower = false, has_upper = false, has_digit = false;
-			for(char ch: password) {
-				if(islower(ch)) {
+		int Solution::strongPasswordChecker(const string &password) {
+			const int n    = password.length();
+			bool has_lower = false;
+			bool has_upper = false;
+			bool has_digit = false;
+			for(const char ch: password) {
+				if(islower(ch) != 0) {
 					has_lower = true;
-				} else if(isupper(ch)) {
+				} else if(isupper(ch) != 0) {
 					has_upper = true;
-				} else if(isdigit(ch)) {
+				} else if(isdigit(ch) != 0) {
 					has_digit = true;
 				}
 			}
-			int categories = has_lower + has_upper + has_digit;
+			const int categories = static_cast<int>(has_lower) + static_cast<int>(has_upper) + static_cast<int>(has_digit);
 
 			if(n < 6) {
 				return max(6 - n, 3 - categories);
-			} else if(n <= 20) {
+			}
+			if(n <= 20) {
 				int replace  = 0;
 				int count    = 0;
 				char current = '#';
 
-				for(char ch: password) {
+				for(const char ch: password) {
 					if(ch == current) {
 						++count;
 					} else {
@@ -5401,54 +5404,54 @@ namespace leetcode {
 				}
 				replace += count / 3;
 				return max(replace, 3 - categories);
-			} else {
-				// 替换次数和删除次数
-				int replace = 0, remove = n - 20;
-				// k mod 3 = 1 的组数，即删除 2 个字符可以减少 1 次替换操作
-				int rm2   = 0;
-				int count = 0;
-				char cur  = '#';
-
-				for(char ch: password) {
-					if(ch == cur) {
-						++count;
-					} else {
-						if(remove > 0 && count >= 3) {
-							if(count % 3 == 0) {
-								// 如果是 k % 3 = 0 的组，那么优先删除 1 个字符，减少 1 次替换操作
-								--remove;
-								--replace;
-							} else if(count % 3 == 1) {
-								// 如果是 k % 3 = 1 的组，那么存下来备用
-								++rm2;
-							}
-							// k % 3 = 2 的组无需显式考虑
-						}
-						replace += count / 3;
-						count = 1;
-						cur   = ch;
-					}
-				}
-				if(remove > 0 && count >= 3) {
-					if(count % 3 == 0) {
-						--remove;
-						--replace;
-					} else if(count % 3 == 1) {
-						++rm2;
-					}
-				}
-				replace += count / 3;
-
-				// 使用 k % 3 = 1 的组的数量，由剩余的替换次数、组数和剩余的删除次数共同决定
-				int use2 = min({replace, rm2, remove / 2});
-				replace -= use2;
-				remove -= use2 * 2;
-				// 由于每有一次替换次数就一定有 3 个连续相同的字符（k / 3 决定），因此这里可以直接计算出使用 k % 3 = 2 的组的数量
-				int use3 = min(replace, remove / 3);
-				replace -= use3;
-				remove -= use3 * 3;
-				return (n - 20) + max(replace, 3 - categories);
 			}
+			// 替换次数和删除次数
+			int replace = 0;
+			int remove  = n - 20;
+			// k mod 3 = 1 的组数，即删除 2 个字符可以减少 1 次替换操作
+			int rm2   = 0;
+			int count = 0;
+			char cur  = '#';
+
+			for(const char ch: password) {
+				if(ch == cur) {
+					++count;
+				} else {
+					if(remove > 0 && count >= 3) {
+						if(count % 3 == 0) {
+							// 如果是 k % 3 = 0 的组，那么优先删除 1 个字符，减少 1 次替换操作
+							--remove;
+							--replace;
+						} else if(count % 3 == 1) {
+							// 如果是 k % 3 = 1 的组，那么存下来备用
+							++rm2;
+						}
+						// k % 3 = 2 的组无需显式考虑
+					}
+					replace += count / 3;
+					count = 1;
+					cur   = ch;
+				}
+			}
+			if(remove > 0 && count >= 3) {
+				if(count % 3 == 0) {
+					--remove;
+					--replace;
+				} else if(count % 3 == 1) {
+					++rm2;
+				}
+			}
+			replace += count / 3;
+
+			// 使用 k % 3 = 1 的组的数量，由剩余的替换次数、组数和剩余的删除次数共同决定
+			const int use2 = min({replace, rm2, remove / 2});
+			replace -= use2;
+			remove -= use2 * 2;
+			// 由于每有一次替换次数就一定有 3 个连续相同的字符（k / 3 决定），因此这里可以直接计算出使用 k % 3 = 2 的组的数量
+			const int use3 = min(replace, remove / 3);
+			replace -= use3;
+			remove -= use3 * 3;
+			return n - 20 + max(replace, 3 - categories);
 		}
 	}// namespace strong_password_checker
 }// namespace leetcode

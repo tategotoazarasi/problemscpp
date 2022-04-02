@@ -2588,12 +2588,12 @@ namespace leetcode {
 
 	namespace self_dividing_numbers {
 		TEST(self_dividing_numbers, case1) {
-			vector output = {1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22};
+			const vector output = {1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22};
 			ASSERT_EQ(output, Solution::selfDividingNumbers(1, 22));
 		}
 
 		TEST(self_dividing_numbers, case2) {
-			vector output = {48, 55, 66, 77};
+			const vector output = {48, 55, 66, 77};
 			ASSERT_EQ(output, Solution::selfDividingNumbers(47, 85));
 		}
 	}// namespace self_dividing_numbers
@@ -2607,11 +2607,6 @@ namespace leetcode {
 		TEST(array_of_doubled_pairs, case2) {
 			vector arr = {2, 1, 2, 6};
 			ASSERT_FALSE(Solution::canReorderDoubled(arr));
-		}
-
-		TEST(array_of_doubled_pairs, case3) {
-			vector arr = {4, -2, 2, -4};
-			ASSERT_TRUE(Solution::canReorderDoubled(arr));
 		}
 	}// namespace array_of_doubled_pairs
 

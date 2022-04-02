@@ -1083,7 +1083,7 @@ namespace pat {
 					}
 				}
 				for(const char ch: str2) {
-					if(!(broken.contains(toupper(ch)) || !shift && (isupper(ch) != 0))) {
+					if(!(broken.contains(toupper(ch)) || !shift && isupper(ch) != 0)) {
 						cout << ch;
 					}
 				}
@@ -1113,7 +1113,8 @@ namespace pat {
 			int main(istream &cin, ostream &cout) {
 				int n;
 				cin >> n;
-				vector<int> vec1(n), vec2(n);
+				vector<int> vec1(n);
+				vector<int> vec2(n);
 				for(int i = 0; i < n; i++) {
 					cin >> vec1[i];
 				}
@@ -1121,8 +1122,7 @@ namespace pat {
 					cin >> vec2[i];
 				}
 				int i = n - 1;
-				for(; i >= 0 && vec1[i] == vec2[i]; --i)
-					;
+				for(; i >= 0 && vec1[i] == vec2[i]; --i) {}
 				vector<int> sorted_vec = vec1;
 				sort(sorted_vec.begin(), sorted_vec.begin() + i + 1);
 				bool insertion = true;
@@ -1132,17 +1132,9 @@ namespace pat {
 						break;
 					}
 				}
-				if(insertion) {//插入排序
+				if(insertion) {
+					//插入排序
 					cout << "Insertion Sort" << endl;
-					/*if(j != n - 1) {
-						sort(sorted_vec.begin(), sorted_vec.begin() + j + 2);
-					}
-					for(int k = 0; k < n; k++) {
-						cout << sorted_vec[k];
-						if(k != n - 1) {
-							cout << ' ';
-						}
-					}*/
 					int j = n - 1;
 					for(; j >= 0; --j) {
 						vector vec1_cpy = vec1;
@@ -1159,34 +1151,33 @@ namespace pat {
 						}
 					}
 					return 0;
-				} else {//归并排序
-					cout << "Merge Sort" << endl;
-					int factor = 1;
-					bool flag  = false;
-					while(true) {
-						factor *= 2;
-						int j = 0;
-						for(; (j + 1) * factor <= n; j++) {
-							sort(vec1.begin() + j * factor, vec1.begin() + (j + 1) * factor);
-						}
-						if(j * factor < n) {
-							sort(vec1.begin() + j * factor, vec1.end());
-						}
-						if(flag) {
-							for(int k = 0; k < n; k++) {
-								cout << vec1[k];
-								if(k != n - 1) {
-									cout << ' ';
-								}
+				}
+				//归并排序
+				cout << "Merge Sort" << endl;
+				int factor = 1;
+				bool flag  = false;
+				while(true) {
+					factor *= 2;
+					int j = 0;
+					for(; (j + 1) * factor <= n; j++) {
+						sort(vec1.begin() + j * factor, vec1.begin() + (j + 1) * factor);
+					}
+					if(j * factor < n) {
+						sort(vec1.begin() + j * factor, vec1.end());
+					}
+					if(flag) {
+						for(int k = 0; k < n; k++) {
+							cout << vec1[k];
+							if(k != n - 1) {
+								cout << ' ';
 							}
-							return 0;
 						}
-						if(vec1 == vec2) {
-							flag = true;
-						}
+						return 0;
+					}
+					if(vec1 == vec2) {
+						flag = true;
 					}
 				}
-				return 0;
 			}
 		}// namespace b1035
 
@@ -1215,14 +1206,16 @@ namespace pat {
 
 		namespace b1037 {
 			int main(istream &cin, ostream &cout) {
-				unsigned long long galleon, sickle, knut;
+				unsigned long long galleon;
+				unsigned long long sickle;
+				unsigned long long knut;
 				char ch;
 				unsigned long long sum[2];
 				for(int i = 0; i < 2; i++) {
 					cin >> galleon >> ch >> sickle >> ch >> knut;
 					sum[i] = galleon * 17 * 29 + sickle * 29 + knut;
 				}
-				bool positive = sum[0] <= sum[1];
+				const bool positive = sum[0] <= sum[1];
 				unsigned long long diff;
 				if(positive) {
 					diff = sum[1] - sum[0];
@@ -1230,7 +1223,7 @@ namespace pat {
 					diff = sum[0] - sum[1];
 				}
 				galleon = diff / (17 * 29);
-				diff %= (17 * 29);
+				diff %= 17 * 29;
 				sickle = diff / 29;
 				diff %= 29;
 				knut = diff;
@@ -1266,7 +1259,8 @@ namespace pat {
 
 		namespace b1039 {
 			int main(istream &cin, ostream &cout) {
-				string str1, str2;
+				string str1;
+				string str2;
 				cin >> str1 >> str2;
 				unordered_map<char, int> um;
 				for(char ch: str1) {
@@ -1315,7 +1309,7 @@ namespace pat {
 				unsigned long long ans = 0;
 				for(int i = 0; i < p.size(); i++) {
 					if(str[i] == 'A') {
-						ans += (p[i] * t[i]) % 1000000007;
+						ans += p[i] * t[i] % 1000000007;
 						ans %= 1000000007;
 					}
 				}

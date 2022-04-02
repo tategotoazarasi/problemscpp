@@ -6010,23 +6010,26 @@ namespace acwing {
 
 	namespace acwing1749 {
 		int main(istream &cin, ostream &cout) {
-			int x1[2], x2[2], y1[2], y2[2];
+			int x1[2];
+			int x2[2];
+			int y1[2];
+			int y2[2];
 			for(int i = 0; i < 2; i++) {
 				cin >> x1[i] >> y1[i] >> x2[i] >> y2[i];
 			}
-			unsigned int area = abs(x2[0] - x1[0]) * abs(y2[0] - y1[0]);
-			int x_1           = x1[1];
-			int x_2           = x2[1];
-			int y_1           = y1[1];
-			int y_2           = y2[1];
-			x_1               = max(x_1, x1[0]);
-			x_2               = max(x_2, x1[0]);
-			x_1               = min(x_1, x2[0]);
-			x_2               = min(x_2, x2[0]);
-			y_1               = max(y_1, y1[0]);
-			y_2               = max(y_2, y1[0]);
-			y_1               = min(y_1, y2[0]);
-			y_2               = min(y_2, y2[0]);
+			const unsigned int area = abs(x2[0] - x1[0]) * abs(y2[0] - y1[0]);
+			int x_1                 = x1[1];
+			int x_2                 = x2[1];
+			int y_1                 = y1[1];
+			int y_2                 = y2[1];
+			x_1                     = max(x_1, x1[0]);
+			x_2                     = max(x_2, x1[0]);
+			x_1                     = min(x_1, x2[0]);
+			x_2                     = min(x_2, x2[0]);
+			y_1                     = max(y_1, y1[0]);
+			y_2                     = max(y_2, y1[0]);
+			y_1                     = min(y_1, y2[0]);
+			y_2                     = min(y_2, y2[0]);
 			if(x_2 == x_1 || y_2 == y_1) {
 				//没有遮盖
 				cout << area;
@@ -6049,11 +6052,14 @@ namespace acwing {
 
 	namespace acwing1737 {
 		int main(istream &cin, ostream &cout) {
-			int a, b, x, y;
+			int a;
+			int b;
+			int x;
+			int y;
 			cin >> a >> b >> x >> y;
-			int d1 = abs(b - a);
-			int d2 = abs(a - x) + abs(b - y);
-			int d3 = abs(a - y) + abs(b - x);
+			const int d1 = abs(b - a);
+			const int d2 = abs(a - x) + abs(b - y);
+			const int d3 = abs(a - y) + abs(b - x);
 			cout << min(d1, min(d2, d3));
 			return 0;
 		}
@@ -6061,10 +6067,13 @@ namespace acwing {
 
 	namespace acwing1725 {
 		int main(istream &cin, ostream &cout) {
-			unordered_set<char> row[3], col[3], main_diagonal, leading_diagonal;
+			unordered_set<char> row[3];
+			unordered_set<char> col[3];
+			unordered_set<char> main_diagonal;
+			unordered_set<char> leading_diagonal;
 			unordered_set<char> win_1;
 			auto hash = [](const pair<char, char> &p) {
-				vector<char> vec = {p.first, p.second};
+				vector vec = {p.first, p.second};
 				sort(vec.begin(), vec.end());
 				unsigned int val = 0;
 				for(auto &ch: vec) {
@@ -6093,23 +6102,23 @@ namespace acwing {
 				if(row[i].size() == 1) {
 					win_1.insert(board[i][0]);
 				} else if(row[i].size() == 2) {
-					win_2.insert(make_pair(*row[i].begin(), *(++row[i].begin())));
+					win_2.insert(make_pair(*row[i].begin(), *++row[i].begin()));
 				}
 				if(col[i].size() == 1) {
 					win_1.insert(board[0][i]);
 				} else if(col[i].size() == 2) {
-					win_2.insert(make_pair(*col[i].begin(), *(++col[i].begin())));
+					win_2.insert(make_pair(*col[i].begin(), *++col[i].begin()));
 				}
 			}
 			if(main_diagonal.size() == 1) {
 				win_1.insert(board[1][1]);
 			} else if(main_diagonal.size() == 2) {
-				win_2.insert(make_pair(*main_diagonal.begin(), *(++main_diagonal.begin())));
+				win_2.insert(make_pair(*main_diagonal.begin(), *++main_diagonal.begin()));
 			}
 			if(leading_diagonal.size() == 1) {
 				win_1.insert(board[1][1]);
 			} else if(leading_diagonal.size() == 2) {
-				win_2.insert(make_pair(*leading_diagonal.begin(), *(++leading_diagonal.begin())));
+				win_2.insert(make_pair(*leading_diagonal.begin(), *++leading_diagonal.begin()));
 			}
 			cout << win_1.size() << endl
 			     << win_2.size();

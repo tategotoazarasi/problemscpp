@@ -1986,7 +1986,7 @@ namespace leetcode {
 	namespace strong_password_checker {
 		class Solution {
 		public:
-			static int strongPasswordChecker(string password);
+			static int strongPasswordChecker(const string &password);
 		};
 	}// namespace strong_password_checker
 }// namespace leetcode
