@@ -612,6 +612,16 @@ namespace pat {
 				ASSERT_EQ("No 2", out.str());
 			}
 		}// namespace b1039
+
+		namespace b1040 {
+			TEST(b1040, case1) {
+				istringstream in("APPAPT");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("2", out.str());
+			}
+		}// namespace b1040
 	}    // namespace b
 
 	namespace a {}

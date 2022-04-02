@@ -234,6 +234,11 @@ namespace pat {
 		namespace b1039 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1040 有几个PAT
+		namespace b1040 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

@@ -1291,6 +1291,38 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1039
+
+		namespace b1040 {
+			int main(istream &cin, ostream &cout) {
+				string str;
+				cin >> str;
+				vector<unsigned long long> p(str.length(), 0);
+				vector<unsigned long long> t(str.length(), 0);
+				unsigned long long current_p = 0;
+				for(int i = 0; i < p.size(); ++i) {
+					p[i] = current_p;
+					if(str[i] == 'P') {
+						current_p++;
+					}
+				}
+				unsigned long long current_t = 0;
+				for(int i = t.size() - 1; i >= 0; --i) {
+					t[i] = current_t;
+					if(str[i] == 'T') {
+						current_t++;
+					}
+				}
+				unsigned long long ans = 0;
+				for(int i = 0; i < p.size(); i++) {
+					if(str[i] == 'A') {
+						ans += (p[i] * t[i]) % 1000000007;
+						ans %= 1000000007;
+					}
+				}
+				cout << ans;
+				return 0;
+			}
+		}// namespace b1040
 	}    // namespace b
 
 	namespace a {}
