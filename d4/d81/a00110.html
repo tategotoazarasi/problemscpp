@@ -117,62 +117,65 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d6/d2d/a00047_source.html">acwing.cpp</a> 第 <a class="el" href="../../d6/d2d/a00047_source.html#l06063">6063</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l06063" name="l06063"></a><span class="lineno"> 6063</span>                                              {</div>
-<div class="line"><a id="l06064" name="l06064"></a><span class="lineno"> 6064</span>            unordered_set&lt;char&gt; row[3], col[3], main_diagonal, leading_diagonal;</div>
-<div class="line"><a id="l06065" name="l06065"></a><span class="lineno"> 6065</span>            unordered_set&lt;char&gt; win_1;</div>
-<div class="line"><a id="l06066" name="l06066"></a><span class="lineno"> 6066</span>            <span class="keyword">auto</span> hash = [](<span class="keyword">const</span> pair&lt;char, char&gt; &amp;p) {</div>
-<div class="line"><a id="l06067" name="l06067"></a><span class="lineno"> 6067</span>                vector&lt;char&gt; vec = {p.first, p.second};</div>
-<div class="line"><a id="l06068" name="l06068"></a><span class="lineno"> 6068</span>                sort(vec.begin(), vec.end());</div>
-<div class="line"><a id="l06069" name="l06069"></a><span class="lineno"> 6069</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> val = 0;</div>
-<div class="line"><a id="l06070" name="l06070"></a><span class="lineno"> 6070</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;ch: vec) {</div>
-<div class="line"><a id="l06071" name="l06071"></a><span class="lineno"> 6071</span>                    ch -= <span class="charliteral">&#39;A&#39;</span>;</div>
-<div class="line"><a id="l06072" name="l06072"></a><span class="lineno"> 6072</span>                    val *= 26;</div>
-<div class="line"><a id="l06073" name="l06073"></a><span class="lineno"> 6073</span>                    val += ch;</div>
-<div class="line"><a id="l06074" name="l06074"></a><span class="lineno"> 6074</span>                }</div>
-<div class="line"><a id="l06075" name="l06075"></a><span class="lineno"> 6075</span>                <span class="keywordflow">return</span> val;</div>
-<div class="line"><a id="l06076" name="l06076"></a><span class="lineno"> 6076</span>            };</div>
-<div class="line"><a id="l06077" name="l06077"></a><span class="lineno"> 6077</span>            unordered_set&lt;pair&lt;char, char&gt;, <span class="keyword">decltype</span>(hash)&gt; win_2;</div>
-<div class="line"><a id="l06078" name="l06078"></a><span class="lineno"> 6078</span>            <span class="keywordtype">char</span> board[3][3];</div>
-<div class="line"><a id="l06079" name="l06079"></a><span class="lineno"> 6079</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {</div>
-<div class="line"><a id="l06080" name="l06080"></a><span class="lineno"> 6080</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 3; j++) {</div>
-<div class="line"><a id="l06081" name="l06081"></a><span class="lineno"> 6081</span>                    cin &gt;&gt; board[i][j];</div>
-<div class="line"><a id="l06082" name="l06082"></a><span class="lineno"> 6082</span>                    row[i].insert(board[i][j]);</div>
-<div class="line"><a id="l06083" name="l06083"></a><span class="lineno"> 6083</span>                    col[j].insert(board[i][j]);</div>
-<div class="line"><a id="l06084" name="l06084"></a><span class="lineno"> 6084</span>                }</div>
-<div class="line"><a id="l06085" name="l06085"></a><span class="lineno"> 6085</span>            }</div>
-<div class="line"><a id="l06086" name="l06086"></a><span class="lineno"> 6086</span>            main_diagonal.insert(board[0][0]);</div>
-<div class="line"><a id="l06087" name="l06087"></a><span class="lineno"> 6087</span>            main_diagonal.insert(board[1][1]);</div>
-<div class="line"><a id="l06088" name="l06088"></a><span class="lineno"> 6088</span>            main_diagonal.insert(board[2][2]);</div>
-<div class="line"><a id="l06089" name="l06089"></a><span class="lineno"> 6089</span>            leading_diagonal.insert(board[0][2]);</div>
-<div class="line"><a id="l06090" name="l06090"></a><span class="lineno"> 6090</span>            leading_diagonal.insert(board[1][1]);</div>
-<div class="line"><a id="l06091" name="l06091"></a><span class="lineno"> 6091</span>            leading_diagonal.insert(board[2][0]);</div>
-<div class="line"><a id="l06092" name="l06092"></a><span class="lineno"> 6092</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {</div>
-<div class="line"><a id="l06093" name="l06093"></a><span class="lineno"> 6093</span>                <span class="keywordflow">if</span>(row[i].size() == 1) {</div>
-<div class="line"><a id="l06094" name="l06094"></a><span class="lineno"> 6094</span>                    win_1.insert(board[i][0]);</div>
-<div class="line"><a id="l06095" name="l06095"></a><span class="lineno"> 6095</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(row[i].size() == 2) {</div>
-<div class="line"><a id="l06096" name="l06096"></a><span class="lineno"> 6096</span>                    win_2.insert(make_pair(*row[i].begin(), *(++row[i].begin())));</div>
-<div class="line"><a id="l06097" name="l06097"></a><span class="lineno"> 6097</span>                }</div>
-<div class="line"><a id="l06098" name="l06098"></a><span class="lineno"> 6098</span>                <span class="keywordflow">if</span>(col[i].size() == 1) {</div>
-<div class="line"><a id="l06099" name="l06099"></a><span class="lineno"> 6099</span>                    win_1.insert(board[0][i]);</div>
-<div class="line"><a id="l06100" name="l06100"></a><span class="lineno"> 6100</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(col[i].size() == 2) {</div>
-<div class="line"><a id="l06101" name="l06101"></a><span class="lineno"> 6101</span>                    win_2.insert(make_pair(*col[i].begin(), *(++col[i].begin())));</div>
-<div class="line"><a id="l06102" name="l06102"></a><span class="lineno"> 6102</span>                }</div>
-<div class="line"><a id="l06103" name="l06103"></a><span class="lineno"> 6103</span>            }</div>
-<div class="line"><a id="l06104" name="l06104"></a><span class="lineno"> 6104</span>            <span class="keywordflow">if</span>(main_diagonal.size() == 1) {</div>
-<div class="line"><a id="l06105" name="l06105"></a><span class="lineno"> 6105</span>                win_1.insert(board[1][1]);</div>
-<div class="line"><a id="l06106" name="l06106"></a><span class="lineno"> 6106</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(main_diagonal.size() == 2) {</div>
-<div class="line"><a id="l06107" name="l06107"></a><span class="lineno"> 6107</span>                win_2.insert(make_pair(*main_diagonal.begin(), *(++main_diagonal.begin())));</div>
-<div class="line"><a id="l06108" name="l06108"></a><span class="lineno"> 6108</span>            }</div>
-<div class="line"><a id="l06109" name="l06109"></a><span class="lineno"> 6109</span>            <span class="keywordflow">if</span>(leading_diagonal.size() == 1) {</div>
-<div class="line"><a id="l06110" name="l06110"></a><span class="lineno"> 6110</span>                win_1.insert(board[1][1]);</div>
-<div class="line"><a id="l06111" name="l06111"></a><span class="lineno"> 6111</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(leading_diagonal.size() == 2) {</div>
-<div class="line"><a id="l06112" name="l06112"></a><span class="lineno"> 6112</span>                win_2.insert(make_pair(*leading_diagonal.begin(), *(++leading_diagonal.begin())));</div>
-<div class="line"><a id="l06113" name="l06113"></a><span class="lineno"> 6113</span>            }</div>
-<div class="line"><a id="l06114" name="l06114"></a><span class="lineno"> 6114</span>            cout &lt;&lt; win_1.size() &lt;&lt; endl</div>
-<div class="line"><a id="l06115" name="l06115"></a><span class="lineno"> 6115</span>                 &lt;&lt; win_2.size();</div>
-<div class="line"><a id="l06116" name="l06116"></a><span class="lineno"> 6116</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l06117" name="l06117"></a><span class="lineno"> 6117</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d6/d2d/a00047_source.html">acwing.cpp</a> 第 <a class="el" href="../../d6/d2d/a00047_source.html#l06069">6069</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l06069" name="l06069"></a><span class="lineno"> 6069</span>                                              {</div>
+<div class="line"><a id="l06070" name="l06070"></a><span class="lineno"> 6070</span>            unordered_set&lt;char&gt; row[3];</div>
+<div class="line"><a id="l06071" name="l06071"></a><span class="lineno"> 6071</span>            unordered_set&lt;char&gt; col[3];</div>
+<div class="line"><a id="l06072" name="l06072"></a><span class="lineno"> 6072</span>            unordered_set&lt;char&gt; main_diagonal;</div>
+<div class="line"><a id="l06073" name="l06073"></a><span class="lineno"> 6073</span>            unordered_set&lt;char&gt; leading_diagonal;</div>
+<div class="line"><a id="l06074" name="l06074"></a><span class="lineno"> 6074</span>            unordered_set&lt;char&gt; win_1;</div>
+<div class="line"><a id="l06075" name="l06075"></a><span class="lineno"> 6075</span>            <span class="keyword">auto</span> hash = [](<span class="keyword">const</span> pair&lt;char, char&gt; &amp;p) {</div>
+<div class="line"><a id="l06076" name="l06076"></a><span class="lineno"> 6076</span>                vector vec = {p.first, p.second};</div>
+<div class="line"><a id="l06077" name="l06077"></a><span class="lineno"> 6077</span>                sort(vec.begin(), vec.end());</div>
+<div class="line"><a id="l06078" name="l06078"></a><span class="lineno"> 6078</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> val = 0;</div>
+<div class="line"><a id="l06079" name="l06079"></a><span class="lineno"> 6079</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;ch: vec) {</div>
+<div class="line"><a id="l06080" name="l06080"></a><span class="lineno"> 6080</span>                    ch -= <span class="charliteral">&#39;A&#39;</span>;</div>
+<div class="line"><a id="l06081" name="l06081"></a><span class="lineno"> 6081</span>                    val *= 26;</div>
+<div class="line"><a id="l06082" name="l06082"></a><span class="lineno"> 6082</span>                    val += ch;</div>
+<div class="line"><a id="l06083" name="l06083"></a><span class="lineno"> 6083</span>                }</div>
+<div class="line"><a id="l06084" name="l06084"></a><span class="lineno"> 6084</span>                <span class="keywordflow">return</span> val;</div>
+<div class="line"><a id="l06085" name="l06085"></a><span class="lineno"> 6085</span>            };</div>
+<div class="line"><a id="l06086" name="l06086"></a><span class="lineno"> 6086</span>            unordered_set&lt;pair&lt;char, char&gt;, <span class="keyword">decltype</span>(hash)&gt; win_2;</div>
+<div class="line"><a id="l06087" name="l06087"></a><span class="lineno"> 6087</span>            <span class="keywordtype">char</span> board[3][3];</div>
+<div class="line"><a id="l06088" name="l06088"></a><span class="lineno"> 6088</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {</div>
+<div class="line"><a id="l06089" name="l06089"></a><span class="lineno"> 6089</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 3; j++) {</div>
+<div class="line"><a id="l06090" name="l06090"></a><span class="lineno"> 6090</span>                    cin &gt;&gt; board[i][j];</div>
+<div class="line"><a id="l06091" name="l06091"></a><span class="lineno"> 6091</span>                    row[i].insert(board[i][j]);</div>
+<div class="line"><a id="l06092" name="l06092"></a><span class="lineno"> 6092</span>                    col[j].insert(board[i][j]);</div>
+<div class="line"><a id="l06093" name="l06093"></a><span class="lineno"> 6093</span>                }</div>
+<div class="line"><a id="l06094" name="l06094"></a><span class="lineno"> 6094</span>            }</div>
+<div class="line"><a id="l06095" name="l06095"></a><span class="lineno"> 6095</span>            main_diagonal.insert(board[0][0]);</div>
+<div class="line"><a id="l06096" name="l06096"></a><span class="lineno"> 6096</span>            main_diagonal.insert(board[1][1]);</div>
+<div class="line"><a id="l06097" name="l06097"></a><span class="lineno"> 6097</span>            main_diagonal.insert(board[2][2]);</div>
+<div class="line"><a id="l06098" name="l06098"></a><span class="lineno"> 6098</span>            leading_diagonal.insert(board[0][2]);</div>
+<div class="line"><a id="l06099" name="l06099"></a><span class="lineno"> 6099</span>            leading_diagonal.insert(board[1][1]);</div>
+<div class="line"><a id="l06100" name="l06100"></a><span class="lineno"> 6100</span>            leading_diagonal.insert(board[2][0]);</div>
+<div class="line"><a id="l06101" name="l06101"></a><span class="lineno"> 6101</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {</div>
+<div class="line"><a id="l06102" name="l06102"></a><span class="lineno"> 6102</span>                <span class="keywordflow">if</span>(row[i].size() == 1) {</div>
+<div class="line"><a id="l06103" name="l06103"></a><span class="lineno"> 6103</span>                    win_1.insert(board[i][0]);</div>
+<div class="line"><a id="l06104" name="l06104"></a><span class="lineno"> 6104</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(row[i].size() == 2) {</div>
+<div class="line"><a id="l06105" name="l06105"></a><span class="lineno"> 6105</span>                    win_2.insert(make_pair(*row[i].begin(), *++row[i].begin()));</div>
+<div class="line"><a id="l06106" name="l06106"></a><span class="lineno"> 6106</span>                }</div>
+<div class="line"><a id="l06107" name="l06107"></a><span class="lineno"> 6107</span>                <span class="keywordflow">if</span>(col[i].size() == 1) {</div>
+<div class="line"><a id="l06108" name="l06108"></a><span class="lineno"> 6108</span>                    win_1.insert(board[0][i]);</div>
+<div class="line"><a id="l06109" name="l06109"></a><span class="lineno"> 6109</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(col[i].size() == 2) {</div>
+<div class="line"><a id="l06110" name="l06110"></a><span class="lineno"> 6110</span>                    win_2.insert(make_pair(*col[i].begin(), *++col[i].begin()));</div>
+<div class="line"><a id="l06111" name="l06111"></a><span class="lineno"> 6111</span>                }</div>
+<div class="line"><a id="l06112" name="l06112"></a><span class="lineno"> 6112</span>            }</div>
+<div class="line"><a id="l06113" name="l06113"></a><span class="lineno"> 6113</span>            <span class="keywordflow">if</span>(main_diagonal.size() == 1) {</div>
+<div class="line"><a id="l06114" name="l06114"></a><span class="lineno"> 6114</span>                win_1.insert(board[1][1]);</div>
+<div class="line"><a id="l06115" name="l06115"></a><span class="lineno"> 6115</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(main_diagonal.size() == 2) {</div>
+<div class="line"><a id="l06116" name="l06116"></a><span class="lineno"> 6116</span>                win_2.insert(make_pair(*main_diagonal.begin(), *++main_diagonal.begin()));</div>
+<div class="line"><a id="l06117" name="l06117"></a><span class="lineno"> 6117</span>            }</div>
+<div class="line"><a id="l06118" name="l06118"></a><span class="lineno"> 6118</span>            <span class="keywordflow">if</span>(leading_diagonal.size() == 1) {</div>
+<div class="line"><a id="l06119" name="l06119"></a><span class="lineno"> 6119</span>                win_1.insert(board[1][1]);</div>
+<div class="line"><a id="l06120" name="l06120"></a><span class="lineno"> 6120</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(leading_diagonal.size() == 2) {</div>
+<div class="line"><a id="l06121" name="l06121"></a><span class="lineno"> 6121</span>                win_2.insert(make_pair(*leading_diagonal.begin(), *++leading_diagonal.begin()));</div>
+<div class="line"><a id="l06122" name="l06122"></a><span class="lineno"> 6122</span>            }</div>
+<div class="line"><a id="l06123" name="l06123"></a><span class="lineno"> 6123</span>            cout &lt;&lt; win_1.size() &lt;&lt; endl</div>
+<div class="line"><a id="l06124" name="l06124"></a><span class="lineno"> 6124</span>                 &lt;&lt; win_2.size();</div>
+<div class="line"><a id="l06125" name="l06125"></a><span class="lineno"> 6125</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l06126" name="l06126"></a><span class="lineno"> 6126</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l02861">TEST()</a>.</p>
 
@@ -218,7 +221,7 @@ $(function() {
 <div class="line"><a id="l02871" name="l02871"></a><span class="lineno"> 2871</span>        }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l06063">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l06069">main()</a>.</p>
 
 </div>
 </div>
