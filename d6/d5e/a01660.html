@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::single_element_in_a_sorted_array::Solution类 参考</title>
+<title>problemscpp: leetcode::maximum_and_sum_of_array::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,14 +63,14 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/d6d/a00111.html">leetcode</a></li><li class="navelem"><a class="el" href="../../db/d53/a00202.html">single_element_in_a_sorted_array</a></li><li class="navelem"><a class="el" href="../../d6/d5e/a01660.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../db/d57/a00112.html">leetcode</a></li><li class="navelem"><a class="el" href="../../db/d53/a00202.html">maximum_and_sum_of_array</a></li><li class="navelem"><a class="el" href="../../d6/d5e/a01660.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="../../d3/d21/a01657.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::single_element_in_a_sorted_array::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::maximum_and_sum_of_array::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -78,15 +78,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a3e81c55df1c79cab718d79c6f0605cf8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5e/a01660.html#a3e81c55df1c79cab718d79c6f0605cf8">singleNonDuplicate</a> (vector&lt; int &gt; &amp;nums)</td></tr>
-<tr class="separator:a3e81c55df1c79cab718d79c6f0605cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8757b5a8fd6b0fa708ac30cab03538a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5e/a01660.html#ae8757b5a8fd6b0fa708ac30cab03538a">maximumANDSum</a> (vector&lt; int &gt; &amp;nums, int numSlots)</td></tr>
+<tr class="separator:ae8757b5a8fd6b0fa708ac30cab03538a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01114">1114</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01106">1106</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a3e81c55df1c79cab718d79c6f0605cf8" name="a3e81c55df1c79cab718d79c6f0605cf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e81c55df1c79cab718d79c6f0605cf8">&#9670;&nbsp;</a></span>singleNonDuplicate()</h2>
+<a id="ae8757b5a8fd6b0fa708ac30cab03538a" name="ae8757b5a8fd6b0fa708ac30cab03538a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8757b5a8fd6b0fa708ac30cab03538a">&#9670;&nbsp;</a></span>maximumANDSum()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -95,11 +95,21 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int leetcode::single_element_in_a_sorted_array::Solution::singleNonDuplicate </td>
+          <td class="memname">int leetcode::maximum_and_sum_of_array::Solution::maximumANDSum </td>
           <td>(</td>
           <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>nums</em></td><td>)</td>
+          <td class="paramname"><em>nums</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numSlots</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -108,41 +118,33 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
+<p >&lt; 加上next_slot之后的状态</p>
+<p >&lt; slot编号</p>
 
-<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l02894">2894</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02894" name="l02894"></a><span class="lineno"> 2894</span>                                                          {</div>
-<div class="line"><a id="l02895" name="l02895"></a><span class="lineno"> 2895</span>            <span class="keywordtype">int</span> l = 0;</div>
-<div class="line"><a id="l02896" name="l02896"></a><span class="lineno"> 2896</span>            <span class="keywordtype">int</span> r = nums.size() - 1;</div>
-<div class="line"><a id="l02897" name="l02897"></a><span class="lineno"> 2897</span>            <span class="keywordflow">while</span>(l &lt; r) {</div>
-<div class="line"><a id="l02898" name="l02898"></a><span class="lineno"> 2898</span>                <span class="keywordflow">if</span>(l + 1 == r) {</div>
-<div class="line"><a id="l02899" name="l02899"></a><span class="lineno"> 2899</span>                    <span class="keywordflow">if</span>(l == 0) {</div>
-<div class="line"><a id="l02900" name="l02900"></a><span class="lineno"> 2900</span>                        <span class="keywordflow">return</span> nums[l];</div>
-<div class="line"><a id="l02901" name="l02901"></a><span class="lineno"> 2901</span>                    }</div>
-<div class="line"><a id="l02902" name="l02902"></a><span class="lineno"> 2902</span>                    <span class="keywordflow">if</span>(r == nums.size() - 1) {</div>
-<div class="line"><a id="l02903" name="l02903"></a><span class="lineno"> 2903</span>                        <span class="keywordflow">return</span> nums[r];</div>
-<div class="line"><a id="l02904" name="l02904"></a><span class="lineno"> 2904</span>                    }</div>
-<div class="line"><a id="l02905" name="l02905"></a><span class="lineno"> 2905</span>                    <span class="keywordflow">if</span>(nums[l - 1] == nums[l]) {</div>
-<div class="line"><a id="l02906" name="l02906"></a><span class="lineno"> 2906</span>                        <span class="keywordflow">return</span> nums[r];</div>
-<div class="line"><a id="l02907" name="l02907"></a><span class="lineno"> 2907</span>                    }</div>
-<div class="line"><a id="l02908" name="l02908"></a><span class="lineno"> 2908</span>                    <span class="keywordflow">return</span> nums[l];</div>
-<div class="line"><a id="l02909" name="l02909"></a><span class="lineno"> 2909</span>                }</div>
-<div class="line"><a id="l02910" name="l02910"></a><span class="lineno"> 2910</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> m = (l + r) / 2;</div>
-<div class="line"><a id="l02911" name="l02911"></a><span class="lineno"> 2911</span>                <span class="keywordtype">int</span> tmp     = m;</div>
-<div class="line"><a id="l02912" name="l02912"></a><span class="lineno"> 2912</span>                <span class="keywordflow">if</span>(nums[m + 1] == nums[m]) {</div>
-<div class="line"><a id="l02913" name="l02913"></a><span class="lineno"> 2913</span>                    tmp = m + 1;</div>
-<div class="line"><a id="l02914" name="l02914"></a><span class="lineno"> 2914</span>                }</div>
-<div class="line"><a id="l02915" name="l02915"></a><span class="lineno"> 2915</span>                <span class="keywordflow">if</span>(tmp % 2 == 0) {</div>
-<div class="line"><a id="l02916" name="l02916"></a><span class="lineno"> 2916</span>                    <span class="comment">//在左边</span></div>
-<div class="line"><a id="l02917" name="l02917"></a><span class="lineno"> 2917</span>                    r = m;</div>
-<div class="line"><a id="l02918" name="l02918"></a><span class="lineno"> 2918</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02919" name="l02919"></a><span class="lineno"> 2919</span>                    <span class="comment">//在右边</span></div>
-<div class="line"><a id="l02920" name="l02920"></a><span class="lineno"> 2920</span>                    l = m;</div>
-<div class="line"><a id="l02921" name="l02921"></a><span class="lineno"> 2921</span>                }</div>
-<div class="line"><a id="l02922" name="l02922"></a><span class="lineno"> 2922</span>            }</div>
-<div class="line"><a id="l02923" name="l02923"></a><span class="lineno"> 2923</span>            <span class="keywordflow">return</span> nums[l];</div>
-<div class="line"><a id="l02924" name="l02924"></a><span class="lineno"> 2924</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l02870">2870</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02870" name="l02870"></a><span class="lineno"> 2870</span>                                                                   {</div>
+<div class="line"><a id="l02871" name="l02871"></a><span class="lineno"> 2871</span>            <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l02872" name="l02872"></a><span class="lineno"> 2872</span>            vector&lt;int&gt; max_and_sum_of_status(1 &lt;&lt; numSlots * 2);</div>
+<div class="line"><a id="l02873" name="l02873"></a><span class="lineno"> 2873</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> status = 0; status &lt; max_and_sum_of_status.size(); ++status) {</div>
+<div class="line"><a id="l02874" name="l02874"></a><span class="lineno"> 2874</span>                <span class="comment">//status:已经放置数字的篮子的集合</span></div>
+<div class="line"><a id="l02875" name="l02875"></a><span class="lineno"> 2875</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> one_count = popcount(status);</div>
+<div class="line"><a id="l02876" name="l02876"></a><span class="lineno"> 2876</span>                <span class="keywordflow">if</span>(one_count &gt;= nums.size()) {</div>
+<div class="line"><a id="l02877" name="l02877"></a><span class="lineno"> 2877</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l02878" name="l02878"></a><span class="lineno"> 2878</span>                }</div>
+<div class="line"><a id="l02879" name="l02879"></a><span class="lineno"> 2879</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> next_slot = 0; next_slot &lt; numSlots * 2; ++next_slot) {</div>
+<div class="line"><a id="l02880" name="l02880"></a><span class="lineno"> 2880</span>                    <span class="keywordflow">if</span>((status &amp; 1 &lt;&lt; next_slot) == 0) {</div>
+<div class="line"><a id="l02881" name="l02881"></a><span class="lineno"> 2881</span>                        <span class="comment">// next_slot是空的</span></div>
+<div class="line"><a id="l02882" name="l02882"></a><span class="lineno"> 2882</span>                        <span class="keyword">const</span> <span class="keywordtype">int</span> next_status              = status | 1 &lt;&lt; next_slot;                                                                              </div>
+<div class="line"><a id="l02883" name="l02883"></a><span class="lineno"> 2883</span>                        <span class="keyword">auto</span> slot_num                      = next_slot / 2 + 1;                                                                                    </div>
+<div class="line"><a id="l02884" name="l02884"></a><span class="lineno"> 2884</span>                        max_and_sum_of_status[next_status] = max(max_and_sum_of_status[next_status], max_and_sum_of_status[status] + (slot_num &amp; nums[one_count]));<span class="comment">//放置第onecount个数字</span></div>
+<div class="line"><a id="l02885" name="l02885"></a><span class="lineno"> 2885</span>                        ans                                = max(ans, max_and_sum_of_status[next_status]);</div>
+<div class="line"><a id="l02886" name="l02886"></a><span class="lineno"> 2886</span>                    }</div>
+<div class="line"><a id="l02887" name="l02887"></a><span class="lineno"> 2887</span>                }</div>
+<div class="line"><a id="l02888" name="l02888"></a><span class="lineno"> 2888</span>            }</div>
+<div class="line"><a id="l02889" name="l02889"></a><span class="lineno"> 2889</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l02890" name="l02890"></a><span class="lineno"> 2890</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d5/df9/a00044_source.html#l01519">leetcode::single_element_in_a_sorted_array::TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d5/df9/a00044_source.html#l01507">leetcode::maximum_and_sum_of_array::TEST()</a>.</p>
 
 </div>
 </div>
