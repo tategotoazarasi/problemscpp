@@ -5454,4 +5454,63 @@ namespace leetcode {
 			return n - 20 + max(replace, 3 - categories);
 		}
 	}// namespace strong_password_checker
+
+	namespace number_of_ways_to_select_buildings {
+		long long Solution::numberOfWays(string s) {
+			unsigned int n = s.length();
+			vector<unsigned int> prev0(n, 0);
+			vector<unsigned int> prev1(n, 0);
+			vector<unsigned int> post0(n, 0);
+			vector<unsigned int> post1(n, 0);
+			unsigned current0 = 0;
+			unsigned current1 = 0;
+			for(int i = 0; i < n; i++) {
+				prev0[i] = current0;
+				prev1[i] = current1;
+				if(s[i] == '0') {
+					current0++;
+				} else {
+					current1++;
+				}
+			}
+			current0 = 0;
+			current1 = 0;
+			for(int i = n - 1; i >= 0; i--) {
+				post0[i] = current0;
+				post1[i] = current1;
+				if(s[i] == '0') {
+					current0++;
+				} else {
+					current1++;
+				}
+			}
+			long long ans = 0;
+			for(unsigned i = 0; i < n; i++) {
+				if(s[i] == '0') {
+					ans += static_cast<long long>(prev1[i]) * post1[i];
+				} else {
+					ans += static_cast<long long>(prev0[i]) * post0[i];
+				}
+			}
+			return ans;
+		}
+	}// namespace number_of_ways_to_select_buildings
+
+	namespace sum_of_scores_of_built_strings {
+		long long Solution::sumScores(string s) {
+			int n    = s.length();
+			long ans = n;
+			vector<int> z(n);
+			for(int i = 1, l = 0, r = 0; i < n; ++i) {
+				z[i] = max(min(z[i - l], r - i + 1), 0);
+				while(i + z[i] < n && s[z[i]] == s[i + z[i]]) {
+					l = i;
+					r = i + z[i];
+					++z[i];
+				}
+				ans += z[i];
+			}
+			return ans;
+		}
+	}// namespace sum_of_scores_of_built_strings
 }// namespace leetcode

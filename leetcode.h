@@ -1989,6 +1989,26 @@ namespace leetcode {
 			static int strongPasswordChecker(const string &password);
 		};
 	}// namespace strong_password_checker
+
+	/**
+	 * \brief 6035. 选择建筑的方案数
+	 */
+	namespace number_of_ways_to_select_buildings {
+		class Solution {
+		public:
+			static long long numberOfWays(string s);
+		};
+	}
+
+	/**
+	 * \brief 6036. 构造字符串的总得分和
+	 */
+	namespace sum_of_scores_of_built_strings {
+		class Solution {
+		public:
+			static long long sumScores(string s);
+		};
+	}
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

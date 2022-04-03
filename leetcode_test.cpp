@@ -2631,4 +2631,14 @@ namespace leetcode {
 			ASSERT_EQ(2, Solution::strongPasswordChecker("aaaa"));
 		}
 	}// namespace strong_password_checker
+
+	namespace sum_of_scores_of_built_strings {
+		TEST(sum_of_scores_of_built_strings, case1) {
+			ASSERT_EQ(9, Solution::sumScores("babab"));
+		}
+
+		TEST(sum_of_scores_of_built_strings, case2) {
+			ASSERT_EQ(14, Solution::sumScores("azbazbzaz"));
+		}
+	}// namespace sum_of_scores_of_built_strings
 }// namespace leetcode
