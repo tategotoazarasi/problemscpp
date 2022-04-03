@@ -2046,7 +2046,7 @@ namespace leetcode {
 	namespace encrypt_and_decrypt_strings {
 		class Encrypter {
 			array<string, 26> mp;
-			unordered_map<string, int> cnt;
+			unordered_map<string, int> count;
 
 		public:
 			/**

@@ -5498,15 +5498,23 @@ namespace leetcode {
 
 	namespace sum_of_scores_of_built_strings {
 		long long Solution::sumScores(string s) {
-			const int n = s.length();
-			long ans    = n;
-			vector<int> z(n);
-			for(int i = 1, l = 0, r = 0; i < n; ++i) {
-				z[i] = max(min(z[i - l], r - i + 1), 0);
-				while(i + z[i] < n && s[z[i]] == s[i + z[i]]) {
+			const int n   = s.length();
+			long long ans = n;
+			int l         = 0;
+			int r         = 0;
+			vector z(n, 0);
+			for(int i = 1; i < n; ++i) {
+				if(i <= r && z[i - l] < r - i + 1) {
+					z[i] = z[i - l];
+				} else {
+					z[i] = max(0, r - i + 1);
+					while(i + z[i] < n && s[z[i]] == s[i + z[i]]) {
+						++z[i];
+					}
+				}
+				if(i + z[i] - 1 > r) {
 					l = i;
-					r = i + z[i];
-					++z[i];
+					r = i + z[i] - 1;
 				}
 				ans += z[i];
 			}
@@ -5514,6 +5522,9 @@ namespace leetcode {
 		}
 	}// namespace sum_of_scores_of_built_strings
 
+	/**
+	 * \brief 6055. Minimum Number of Operations to Convert Time
+	 */
 	namespace minimum_number_of_operations_to_convert_time {
 		int Solution::convertTime(string current, string correct) {
 			const int current_h = (current[0] - '0') * 10 + (current[1] - '0');
@@ -5536,6 +5547,9 @@ namespace leetcode {
 		}
 	}// namespace minimum_number_of_operations_to_convert_time
 
+	/**
+	 * \brief 5235. Find Players With Zero or One Losses
+	 */
 	namespace find_players_with_zero_or_one_losses {
 		vector<vector<int>> Solution::findWinners(vector<vector<int>> &matches) {
 			map<unsigned, unsigned> lose;
@@ -5559,6 +5573,9 @@ namespace leetcode {
 		}
 	}// namespace find_players_with_zero_or_one_losses
 
+	/**
+	 * \brief 5219. Maximum Candies Allocated to K Children
+	 */
 	namespace maximum_candies_allocated_to_k_children {
 		int Solution::maximumCandies(vector<int> &candies, long long k) {
 			sort(candies.begin(), candies.end());
@@ -5609,7 +5626,7 @@ namespace leetcode {
 				mp[keys[i] - 'a'] = values[i];
 			}
 			for(const auto &s: dictionary) {
-				++cnt[encrypt(s)];
+				++count[encrypt(s)];
 			}
 		}
 
@@ -5626,13 +5643,10 @@ namespace leetcode {
 		}
 
 		int Encrypter::decrypt(const string &word2) {
-			if(cnt.contains(word2)) {
-				cnt[word2] += 0;
-				return cnt[word2];
+			if(count.contains(word2)) {
+				count[word2] += 0;
+				return count[word2];
 			}
-			// 防止把不在 cnt 中的字符串加进去
-			return 0;
-
 			// 防止把不在 cnt 中的字符串加进去
 			return 0;
 		}
