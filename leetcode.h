@@ -1998,7 +1998,7 @@ namespace leetcode {
 		public:
 			static long long numberOfWays(string s);
 		};
-	}
+	}// namespace number_of_ways_to_select_buildings
 
 	/**
 	 * \brief 6036. 构造字符串的总得分和
@@ -2008,7 +2008,63 @@ namespace leetcode {
 		public:
 			static long long sumScores(string s);
 		};
-	}
+	}// namespace sum_of_scores_of_built_strings
+
+	/**
+	 * \brief 6055. 转化时间需要的最少操作数
+	 */
+	namespace minimum_number_of_operations_to_convert_time {
+		class Solution {
+		public:
+			static int convertTime(string current, string correct);
+		};
+	}// namespace minimum_number_of_operations_to_convert_time
+
+	/**
+	 * \brief 5235. 找出输掉零场或一场比赛的玩家
+	 */
+	namespace find_players_with_zero_or_one_losses {
+		class Solution {
+		public:
+			static vector<vector<int>> findWinners(vector<vector<int>> &matches);
+		};
+	}// namespace find_players_with_zero_or_one_losses
+
+	/**
+	 * \brief 5219. 每个小孩最多能分到多少糖果
+	 */
+	namespace maximum_candies_allocated_to_k_children {
+		class Solution {
+		public:
+			static int maximumCandies(vector<int> &candies, long long k);
+		};
+	}// namespace maximum_candies_allocated_to_k_children
+
+	/**
+	 * \brief 5302. 加密解密字符串
+	 */
+	namespace encrypt_and_decrypt_strings {
+		class Encrypter {
+			array<string, 26> mp;
+			unordered_map<string, int> cnt;
+
+		public:
+			/**
+			 * \brief 用 keys、values 和 dictionary 初始化 Encrypter 类。
+			 */
+			Encrypter(vector<char> &keys, vector<string> &values, vector<string> &dictionary);
+			/**
+			 * \brief 按上述加密过程完成对 word1 的加密
+			 * \return 加密后的字符串
+			 */
+			[[nodiscard]] string encrypt(const string &word1) const;
+			/**
+			 * \brief 统计可以由 word2 解密得到且出现在 dictionary 中的字符串数目
+			 * \return 可以由 word2 解密得到且出现在 dictionary 中的字符串数目
+			 */
+			[[nodiscard]] int decrypt(const string &word2);
+		};
+	}// namespace encrypt_and_decrypt_strings
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

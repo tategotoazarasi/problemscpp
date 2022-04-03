@@ -2641,4 +2641,74 @@ namespace leetcode {
 			ASSERT_EQ(14, Solution::sumScores("azbazbzaz"));
 		}
 	}// namespace sum_of_scores_of_built_strings
+
+	namespace minimum_number_of_operations_to_convert_time {
+		TEST(minimum_number_of_operations_to_convert_time, case1) {
+			ASSERT_EQ(3, Solution::convertTime("02:30", "04:35"));
+		}
+
+		TEST(minimum_number_of_operations_to_convert_time, case2) {
+			ASSERT_EQ(1, Solution::convertTime("11:00", "11:01"));
+		}
+
+		TEST(minimum_number_of_operations_to_convert_time, case3) {
+			ASSERT_EQ(32, Solution::convertTime("00:00", "23:59"));
+		}
+	}// namespace minimum_number_of_operations_to_convert_time
+
+	namespace find_players_with_zero_or_one_losses {
+		TEST(find_players_with_zero_or_one_losses, case1) {
+			vector<vector<int>> matches      = {{1, 3},
+                                           {2, 3},
+                                           {3, 6},
+                                           {5, 6},
+                                           {5, 7},
+                                           {4, 5},
+                                           {4, 8},
+                                           {4, 9},
+                                           {10, 4},
+                                           {10, 9}};
+			const vector<vector<int>> output = {{1, 2, 10}, {4, 5, 7, 8}};
+			ASSERT_EQ(output, Solution::findWinners(matches));
+		}
+
+		TEST(find_players_with_zero_or_one_losses, case2) {
+			vector<vector<int>> matches      = {{2, 3}, {1, 3}, {5, 4}, {6, 4}};
+			const vector<vector<int>> output = {{1, 2, 5, 6}, {}};
+			ASSERT_EQ(output, Solution::findWinners(matches));
+		}
+	}// namespace find_players_with_zero_or_one_losses
+
+	namespace maximum_candies_allocated_to_k_children {
+		TEST(maximum_candies_allocated_to_k_children, case1) {
+			vector candies = {5, 8, 6};
+			ASSERT_EQ(5, Solution::maximumCandies(candies, 3));
+		}
+
+		TEST(maximum_candies_allocated_to_k_children, case2) {
+			vector candies = {2, 5};
+			ASSERT_EQ(0, Solution::maximumCandies(candies, 11));
+		}
+
+		TEST(maximum_candies_allocated_to_k_children, case3) {
+			vector candies = {1, 2, 3, 4, 10};
+			ASSERT_EQ(3, Solution::maximumCandies(candies, 5));
+		}
+
+		TEST(maximum_candies_allocated_to_k_children, case4) {
+			vector candies = {123, 13300, 1000, 23, 11, 41, 311};
+			ASSERT_EQ(15, Solution::maximumCandies(candies, 980));
+		}
+	}// namespace maximum_candies_allocated_to_k_children
+
+	namespace encrypt_and_decrypt_strings {
+		TEST(encrypt_and_decrypt_strings, case1) {
+			vector keys               = {'a', 'b', 'c', 'd'};
+			vector<string> values     = {"ei", "zf", "ei", "am"};
+			vector<string> dictionary = {"abcd", "acbd", "adbc", "badc", "dacb", "cadb", "cbda", "abad"};
+			auto enc                  = Encrypter(keys, values, dictionary);
+			ASSERT_EQ("eizfeiam", enc.encrypt("abcd"));
+			ASSERT_EQ(2, enc.decrypt("eizfeiam"));
+		}
+	}// namespace encrypt_and_decrypt_strings
 }// namespace leetcode

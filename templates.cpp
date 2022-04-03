@@ -10,6 +10,7 @@ void TrieNode::insert(const string &str) {
 	}
 	if(str.length() == 1) {
 		this->nexts[str[0] - 'a']->end_of_word = true;
+		this->nexts[str[0] - 'a']->count++;
 	} else {
 		this->nexts[str[0] - 'a']->insert(str.substr(1));
 	}
@@ -334,13 +335,13 @@ BigInt &BigInt::operator--() {
 	return *this;
 }
 
-BigInt BigInt::operator++(int) {
+const BigInt BigInt::operator++(int) {
 	auto ret = BigInt(*this);
 	*this += 1;
 	return ret;
 }
 
-BigInt BigInt::operator--(int) {
+const BigInt BigInt::operator--(int) {
 	auto ret = BigInt(*this);
 	*this -= 1;
 	return ret;

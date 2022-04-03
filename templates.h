@@ -10,6 +10,7 @@ struct TrieNode {
 	char ch;
 	array<TrieNode *, 26> nexts = {};
 	bool end_of_word            = false;
+	unsigned count              = 0;
 
 	explicit TrieNode(char ch)
 	    : ch(ch) {}
@@ -53,8 +54,8 @@ public:
 	BigInt &operator%=(const BigInt &bi);
 	BigInt &operator++();
 	BigInt &operator--();
-	BigInt operator++(int);
-	BigInt operator--(int);
+	const BigInt operator++(int);
+	const BigInt operator--(int);
 	bool operator>(const BigInt &bi) const;
 	bool operator<(const BigInt &bi) const;
 	bool operator==(const BigInt &bi) const;

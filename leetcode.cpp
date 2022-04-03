@@ -5457,7 +5457,7 @@ namespace leetcode {
 
 	namespace number_of_ways_to_select_buildings {
 		long long Solution::numberOfWays(string s) {
-			unsigned int n = s.length();
+			const unsigned int n = s.length();
 			vector<unsigned int> prev0(n, 0);
 			vector<unsigned int> prev1(n, 0);
 			vector<unsigned int> post0(n, 0);
@@ -5498,8 +5498,8 @@ namespace leetcode {
 
 	namespace sum_of_scores_of_built_strings {
 		long long Solution::sumScores(string s) {
-			int n    = s.length();
-			long ans = n;
+			const int n = s.length();
+			long ans    = n;
 			vector<int> z(n);
 			for(int i = 1, l = 0, r = 0; i < n; ++i) {
 				z[i] = max(min(z[i - l], r - i + 1), 0);
@@ -5513,4 +5513,128 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace sum_of_scores_of_built_strings
+
+	namespace minimum_number_of_operations_to_convert_time {
+		int Solution::convertTime(string current, string correct) {
+			const int current_h = (current[0] - '0') * 10 + (current[1] - '0');
+			const int current_m = (current[3] - '0') * 10 + (current[4] - '0');
+			const int correct_h = (correct[0] - '0') * 10 + (correct[1] - '0');
+			const int correct_m = (correct[3] - '0') * 10 + (correct[4] - '0');
+			int diff            = correct_h * 60 + correct_m - (current_h * 60 + current_m);
+			if(diff < 0) {
+				diff += 24 * 60;
+			}
+			int ans = 0;
+			ans += diff / 60;
+			diff %= 60;
+			ans += diff / 15;
+			diff %= 15;
+			ans += diff / 5;
+			diff %= 5;
+			ans += diff;
+			return ans;
+		}
+	}// namespace minimum_number_of_operations_to_convert_time
+
+	namespace find_players_with_zero_or_one_losses {
+		vector<vector<int>> Solution::findWinners(vector<vector<int>> &matches) {
+			map<unsigned, unsigned> lose;
+			for(auto match: matches) {
+				lose[match[0]] += 0;
+				lose[match[1]] += 1;
+			}
+			vector<vector<int>> ans(2);
+			vector<int> ans1;
+			vector<int> ans2;
+			for(auto [player, count]: lose) {
+				if(count == 0) {
+					ans1.push_back(player);
+				} else if(count == 1) {
+					ans2.push_back(player);
+				}
+			}
+			ans[0] = ans1;
+			ans[1] = ans2;
+			return ans;
+		}
+	}// namespace find_players_with_zero_or_one_losses
+
+	namespace maximum_candies_allocated_to_k_children {
+		int Solution::maximumCandies(vector<int> &candies, long long k) {
+			sort(candies.begin(), candies.end());
+			long long sum = 0;
+			for(const auto candy: candies) {
+				sum += candy;
+			}
+			int l = 1;
+			int r = sum / k;
+			if(sum < k) {
+				return 0;
+			}
+			while(l < r) {
+				if(l + 1 == r) {
+					unsigned long long count = 0;
+					for(auto it = candies.rbegin(); it != candies.rend() && *it >= r; ++it) {
+						count += *it / r;
+						if(count > k) {
+							break;
+						}
+					}
+					if(count > k) {
+						return r;
+					}
+					return l;
+				}
+				const int m              = (l + r) / 2;
+				unsigned long long count = 0;
+				for(auto it = candies.rbegin(); it != candies.rend() && *it >= m; ++it) {
+					count += *it / m;
+					if(count > k) {
+						break;
+					}
+				}
+				if(count >= k) {
+					l = m;
+				} else if(count < k) {
+					r = m;
+				}
+			}
+			return (l + r) / 2;
+		}
+	}// namespace maximum_candies_allocated_to_k_children
+
+	namespace encrypt_and_decrypt_strings {
+		Encrypter::Encrypter(vector<char> &keys, vector<string> &values, vector<string> &dictionary) {
+			for(int i = 0; i < keys.size(); ++i) {
+				mp[keys[i] - 'a'] = values[i];
+			}
+			for(const auto &s: dictionary) {
+				++cnt[encrypt(s)];
+			}
+		}
+
+		string Encrypter::encrypt(const string &word1) const {
+			string res;
+			for(const char ch: word1) {
+				const auto &s = mp[ch - 'a'];
+				if(s.empty()) {
+					return "";
+				}
+				res += s;
+			}
+			return res;
+		}
+
+		int Encrypter::decrypt(const string &word2) {
+			if(cnt.contains(word2)) {
+				cnt[word2] += 0;
+				return cnt[word2];
+			}
+			// 防止把不在 cnt 中的字符串加进去
+			return 0;
+
+			// 防止把不在 cnt 中的字符串加进去
+			return 0;
+		}
+	}// namespace encrypt_and_decrypt_strings
 }// namespace leetcode
