@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['event_0',['event',['../d0/dfd/a02017.html',1,'leetcode::find_servers_that_handled_most_number_of_requests']]]
+  ['encrypter_0',['Encrypter',['../d2/d8a/a02063.html',1,'leetcode::encrypt_and_decrypt_strings']]],
+  ['event_1',['event',['../d6/d5d/a02023.html',1,'leetcode::find_servers_that_handled_most_number_of_requests']]]
 ];
