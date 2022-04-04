@@ -435,3 +435,43 @@ ostream &operator<<(ostream &os, const Fraction &frac) {
 	}
 	return os;
 }
+
+UnionFind::UnionFind(int n) {
+	this->parent = vector<int>(n);
+	this->rank   = vector<int>(n);
+	this->size   = vector<int>(n);
+	for(int i = 0; i < n; i++) {
+		this->parent[i] = i;
+		this->rank[i]   = 0;
+		size[i]         = 1;
+	}
+}
+
+int UnionFind::find(int x) {
+	if(parent[x] != x) {
+		parent[x] = find(parent[x]);
+	}
+	return parent[x];
+}
+
+void UnionFind::unite(int x, int y) {
+	x = find(x);
+	y = find(y);
+	if(x == y) {
+		return;
+	}
+	if(rank[x] < rank[y]) {
+		parent[x] = y;
+		size[y] += size[x];
+	} else {
+		parent[y] = x;
+		size[x] += size[y];
+		if(rank[x] == rank[y]) {
+			rank[x]++;
+		}
+	}
+}
+
+bool UnionFind::same(int x, int y) {
+	return find(x) == find(y);
+}

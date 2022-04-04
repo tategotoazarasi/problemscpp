@@ -5678,4 +5678,38 @@ namespace leetcode {
 			return sum1 + sum2 + sum3;
 		}
 	}// namespace range_sum_query_mutable
+
+	namespace process_restricted_friend_requests {
+		vector<bool> Solution::friendRequests(int n, vector<vector<int>> &restrictions, vector<vector<int>> &requests) {
+			UnionFind uf(n);
+			vector<bool> ans(requests.size());
+			auto check = [&uf, &restrictions](int x, int y) -> bool {
+				x = uf.find(x);
+				y = uf.find(y);
+				if(x > y) {
+					swap(x, y);
+				}
+				for(auto &restriction: restrictions) {
+					int i = uf.find(restriction[0]);
+					int j = uf.find(restriction[1]);
+					if(i > j) {
+						swap(i, j);
+					}
+					if(i == x && j == y) {
+						return false;
+					}
+				}
+				return true;
+			};
+			for(int i = 0; i < requests.size(); i++) {
+				if(check(requests[i][0], requests[i][1])) {
+					uf.unite(requests[i][0], requests[i][1]);
+					ans[i] = true;
+				} else {
+					ans[i] = false;
+				}
+			}
+			return ans;
+		}
+	}// namespace process_restricted_friend_requests
 }// namespace leetcode

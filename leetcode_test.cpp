@@ -2711,4 +2711,20 @@ namespace leetcode {
 			ASSERT_EQ(2, enc.decrypt("eizfeiam"));
 		}
 	}// namespace encrypt_and_decrypt_strings
+
+	namespace process_restricted_friend_requests {
+		TEST(process_restricted_friend_requests, case1) {
+			vector<vector<int>> restrictions = {{0, 1}};
+			vector<vector<int>> requests     = {{0, 2}, {2, 1}};
+			vector output                    = {true, false};
+			ASSERT_EQ(output, Solution::friendRequests(3, restrictions, requests));
+		}
+
+		TEST(process_restricted_friend_requests, case2) {
+			vector<vector<int>> restrictions = {{0, 1}};
+			vector<vector<int>> requests     = {{1, 2}, {0, 2}};
+			vector output                    = {true, false};
+			ASSERT_EQ(output, Solution::friendRequests(3, restrictions, requests));
+		}
+	}// namespace process_restricted_friend_requests
 }// namespace leetcode

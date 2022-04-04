@@ -85,3 +85,16 @@ public:
 	[[nodiscard]] unsigned long long get_denominator() const;
 	friend ostream &operator<<(ostream &os, const Fraction &frac);
 };
+
+class UnionFind {
+private:
+	vector<int> parent;
+	vector<int> rank;
+	vector<int> size;
+
+public:
+	UnionFind(int n);
+	int find(int x);
+	void unite(int x, int y);
+	bool same(int x, int y);
+};

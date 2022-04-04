@@ -2083,6 +2083,14 @@ namespace leetcode {
 			int sumRange(int left, int right);
 		};
 	}// namespace range_sum_query_mutable
+
+	/// \brief 2076. Process Restricted Friend Requests
+	namespace process_restricted_friend_requests {
+		class Solution {
+		public:
+			static vector<bool> friendRequests(int n, vector<vector<int>> &restrictions, vector<vector<int>> &requests);
+		};
+	}// namespace process_restricted_friend_requests
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
