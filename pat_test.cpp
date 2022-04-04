@@ -622,6 +622,24 @@ namespace pat {
 				ASSERT_EQ("2", out.str());
 			}
 		}// namespace b1040
+
+		namespace b1041 {
+			TEST(b1041, case1) {
+				istringstream in("4\n"
+				                 "3310120150912233 2 4\n"
+				                 "3310120150912119 4 1\n"
+				                 "3310120150912126 1 3\n"
+				                 "3310120150912002 3 2\n"
+				                 "2\n"
+				                 "3 4");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("3310120150912002 2\n"
+				          "3310120150912119 1\n",
+				          out.str());
+			}
+		}// namespace b1041
 	}    // namespace b
 
 	namespace a {}

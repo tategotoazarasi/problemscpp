@@ -239,7 +239,17 @@ namespace pat {
 		namespace b1040 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1041 考试座位号
+		namespace b1041 {
+			struct student {
+				string id;
+				int seat1;
+				int seat2;
+			};
+			int main(istream &cin, ostream &cout);
+		}// namespace b1041
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}

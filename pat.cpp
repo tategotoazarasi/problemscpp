@@ -1317,6 +1317,27 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1040
+
+		namespace b1041 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				unordered_map<int, student> um;
+				for(int i = 0; i < n; i++) {
+					student stu;
+					cin >> stu.id >> stu.seat1 >> stu.seat2;
+					um[stu.seat1] = stu;
+				}
+				cin >> n;
+				int seat1;
+				for(int i = 0; i < n; i++) {
+					cin >> seat1;
+					student stu = um[seat1];
+					cout << stu.id << ' ' << stu.seat2 << endl;
+				}
+				return 0;
+			}
+		}// namespace b1041
 	}    // namespace b
 
 	namespace a {}
