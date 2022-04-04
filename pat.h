@@ -249,7 +249,12 @@ namespace pat {
 			};
 			int main(istream &cin, ostream &cout);
 		}// namespace b1041
-	}    // namespace b
+
+		/// \brief 1042 字符统计
+		namespace b1042 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}

@@ -640,6 +640,16 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1041
+
+		namespace b1042 {
+			TEST(b1042, case1) {
+				istringstream in("This is a simple TEST.  There ARE numbers and other symbols 1&2&3...........");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("e 7", out.str());
+			}
+		}// namespace b1042
 	}    // namespace b
 
 	namespace a {}

@@ -1338,6 +1338,30 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1041
+
+		namespace b1042 {
+			int main(istream &cin, ostream &cout) {
+				char *str = new char[1001];
+				cin.getline(str, 1001);
+				map<char, int> m;
+				int maximum = 0;
+				for(int i = 0; i < strlen(str); ++i) {
+					char ch = tolower(str[i]);
+					if(isalpha(ch)) {
+						m[ch]++;
+						maximum = max(maximum, m[ch]);
+					}
+				}
+				for(auto [ch, cnt]: m) {
+					if(cnt == maximum) {
+						cout << ch << ' ' << cnt;
+						break;
+					}
+				}
+				delete[] str;
+				return 0;
+			}
+		}// namespace b1042
 	}    // namespace b
 
 	namespace a {}
