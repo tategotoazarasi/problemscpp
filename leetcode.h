@@ -2065,6 +2065,24 @@ namespace leetcode {
 			[[nodiscard]] int decrypt(const string &word2);
 		};
 	}// namespace encrypt_and_decrypt_strings
+
+	/// \brief 307. Range Sum Query - Mutable
+	namespace range_sum_query_mutable {
+		class NumArray {
+			vector<int> sum;// sum[i] 表示第 i 个块的元素和
+			int size;       // 块的大小
+			vector<int> &nums;
+
+		public:
+			/// \brief Initializes the object with the integer array nums.
+			NumArray(vector<int> &nums);
+			/// \brief Updates the value of nums[index] to be val.
+			void update(int index, int val);
+			/// \brief Returns the sum of the elements of nums between indices left and right inclusive (i.e. nums[left] + nums[left + 1] + ... + nums[right]).
+			/// \return The sum of the elements of nums between indices left and right inclusive
+			int sumRange(int left, int right);
+		};
+	}// namespace range_sum_query_mutable
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
