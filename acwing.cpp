@@ -6186,4 +6186,20 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing4394
+
+	namespace acwing1812 {
+		int main(istream &cin, ostream &cout) {
+			int x[2][2], y[2][2];
+			for(int i = 0; i < 2; i++) {
+				cin >> x[i][0] >> y[i][0] >> x[i][1] >> y[i][1];
+			}
+			int x1   = min(x[0][0], x[1][0]);
+			int x2   = max(x[0][1], x[1][1]);
+			int y1   = min(y[0][0], y[1][0]);
+			int y2   = max(y[0][1], y[1][1]);
+			int edge = max(y2 - y1, x2 - x1);
+			cout << edge * edge;
+			return 0;
+		}
+	}// namespace acwing1812
 }// namespace acwing

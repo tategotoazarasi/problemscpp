@@ -1894,5 +1894,10 @@ namespace acwing {
 	namespace acwing4394 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 1812. 方形牧场
+	namespace acwing1812 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
