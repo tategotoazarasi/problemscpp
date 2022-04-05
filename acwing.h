@@ -1899,5 +1899,10 @@ namespace acwing {
 	namespace acwing1812 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 1800. 不做最后一个！
+	namespace acwing1800 {
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing1800
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

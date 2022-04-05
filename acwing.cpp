@@ -6202,4 +6202,49 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1812
+
+	namespace acwing1800 {
+		int main(istream &cin, ostream &cout) {
+			unordered_map<string, unsigned> um;
+			um["Bessie"]    = 0;
+			um["Elsie"]     = 0;
+			um["Daisy"]     = 0;
+			um["Gertie"]    = 0;
+			um["Annabelle"] = 0;
+			um["Maggie"]    = 0;
+			um["Henrietta"] = 0;
+			unsigned short n;
+			cin >> n;
+			string name;
+			unsigned amount;
+			unsigned minimum = 0;
+			while(n--) {
+				cin >> name >> amount;
+				um[name] += amount;
+				minimum = max(minimum, um[name]);
+			}
+			unsigned second_minimum = minimum;
+			for(auto &[name, amount]: um) {
+				minimum = min(minimum, amount);
+			}
+			for(auto &[name, amount]: um) {
+				if(amount != minimum && amount < second_minimum) {
+					second_minimum = amount;
+				}
+			}
+			string ans = "";
+			for(auto &[name, amount]: um) {
+				if(second_minimum == amount) {
+					if(ans == "") {
+						ans = name;
+					} else {
+						cout << "Tie";
+						return 0;
+					}
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing1800
 }// namespace acwing

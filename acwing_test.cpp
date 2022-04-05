@@ -2915,4 +2915,24 @@ namespace acwing {
 			ASSERT_EQ("49", ans);
 		}
 	}// namespace acwing1812
+
+	namespace acwing1800 {
+		TEST(acwing1800, case1) {
+			istringstream in("10\n"
+			                 "Bessie 1\n"
+			                 "Maggie 13\n"
+			                 "Elsie 3\n"
+			                 "Elsie 4\n"
+			                 "Henrietta 4\n"
+			                 "Gertie 12\n"
+			                 "Daisy 7\n"
+			                 "Annabelle 10\n"
+			                 "Bessie 6\n"
+			                 "Henrietta 5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("Henrietta", ans);
+		}
+	}// namespace acwing1800
 }// namespace acwing
