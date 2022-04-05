@@ -2727,4 +2727,14 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::friendRequests(3, restrictions, requests));
 		}
 	}// namespace process_restricted_friend_requests
+
+	namespace prime_number_of_set_bits_in_binary_representation {
+		TEST(prime_number_of_set_bits_in_binary_representation, case1) {
+			ASSERT_EQ(4, Solution::countPrimeSetBits(6, 10));
+		}
+
+		TEST(prime_number_of_set_bits_in_binary_representation, case2) {
+			ASSERT_EQ(5, Solution::countPrimeSetBits(10, 15));
+		}
+	}// namespace prime_number_of_set_bits_in_binary_representation
 }// namespace leetcode

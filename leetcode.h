@@ -2091,6 +2091,14 @@ namespace leetcode {
 			static vector<bool> friendRequests(int n, vector<vector<int>> &restrictions, vector<vector<int>> &requests);
 		};
 	}// namespace process_restricted_friend_requests
+
+	/// \brief 762. Prime Number of Set Bits in Binary Representation
+	namespace prime_number_of_set_bits_in_binary_representation {
+		class Solution {
+		public:
+			static int countPrimeSetBits(int left, int right);
+		};
+	}// namespace prime_number_of_set_bits_in_binary_representation
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

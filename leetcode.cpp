@@ -5712,4 +5712,17 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace process_restricted_friend_requests
+
+	namespace prime_number_of_set_bits_in_binary_representation {
+		int Solution::countPrimeSetBits(int left, int right) {
+			int ans = 0;
+			unordered_set<int> primes{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61};
+			for(unsigned i = left; i <= right; i++) {
+				if(primes.count(popcount(i)) > 0) {
+					ans++;
+				}
+			}
+			return ans;
+		}
+	}// namespace prime_number_of_set_bits_in_binary_representation
 }// namespace leetcode
