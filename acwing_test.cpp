@@ -2935,4 +2935,22 @@ namespace acwing {
 			ASSERT_EQ("Henrietta", ans);
 		}
 	}// namespace acwing1800
+
+	namespace acwing1788 {
+		TEST(acwing1788, case1) {
+			istringstream in("8\n"
+			                 "3 1\n"
+			                 "3 0\n"
+			                 "6 0\n"
+			                 "2 1\n"
+			                 "4 1\n"
+			                 "3 0\n"
+			                 "4 0\n"
+			                 "3 1");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3", ans);
+		}
+	}// namespace acwing1788
 }// namespace acwing

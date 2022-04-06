@@ -6247,4 +6247,25 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1800
+
+	namespace acwing1788 {
+		int main(istream &cin, ostream &cout) {
+			int n;
+			unordered_map<int, int> um;
+			cin >> n;
+			int ans = 0;
+			while(n--) {
+				int id, side;
+				cin >> id >> side;
+				if(um.count(id) == 0) {
+					um[id] = side;
+				} else if(um[id] != side) {
+					ans++;
+					um[id] = side;
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing1788
 }// namespace acwing
