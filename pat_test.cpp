@@ -660,6 +660,42 @@ namespace pat {
 				ASSERT_EQ("PATestPATestPTetPTePePee", out.str());
 			}
 		}// namespace b1043
+
+		namespace b1044 {
+			TEST(b1044, case1) {
+				istringstream in("4\n"
+				                 "29\n"
+				                 "5\n"
+				                 "elo nov\n"
+				                 "tam");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("hel mar\n"
+				          "may\n"
+				          "115\n"
+				          "13",
+				          out.str());
+			}
+
+			TEST(b1044, case2) {
+				istringstream in("1\n"
+				                 "tret tret\n");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("0", out.str());
+			}
+			
+			TEST(b1044, case3) {
+				istringstream in("1\n"
+				                 "0\n");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("tret", out.str());
+			}
+		}// namespace b1044
 	}    // namespace b
 
 	namespace a {}

@@ -259,6 +259,11 @@ namespace pat {
 		namespace b1043 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1044 火星数字
+		namespace b1044 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

@@ -1404,6 +1404,82 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1043
+
+		namespace b1044 {
+			int main(istream &cin, ostream &cout) {
+				string abc[13]  = {"tret", "jan", "feb", "mar", "apr", "may", "jun", "jly", "aug", "sep", "oct", "nov", "dec"};
+				string abc2[13] = {"tret", "tam", "hel", "maa", "huh", "tou", "kes", "hei", "elo", "syy", "lok", "mer", "jou"};
+				unordered_map<string, int> um;
+				unordered_set<string> us2;
+				for(int i = 0; i < 13; i++) {
+					us2.insert(abc2[i]);
+					um[abc[i]]  = i;
+					um[abc2[i]] = i;
+				}
+				int n;
+				cin >> n;
+				char cccc[16];
+				cin.getline(cccc, 16);
+				while(n--) {
+					char *cstr = new char[1024];
+					cin.getline(cstr, 1024);
+					stringstream ss;
+					ss << cstr;
+					if(isdigit(ss.peek())) {
+						// 地球数字
+						unsigned long long num;
+						ss >> num;
+						vector<string> output;
+						bool flag = true;
+						if(num == 0) {
+							cout << "tret";
+						} else {
+							while(num != 0) {
+								if(flag) {
+									if(num % 13 != 0) {
+										output.push_back(abc[num % 13]);
+									}
+									flag = false;
+								} else {
+									output.push_back(abc2[num % 13]);
+								}
+								num /= 13;
+							}
+							for(auto it = output.rbegin(); it != output.rend(); ++it) {
+								cout << *it;
+								if(it + 1 != output.rend()) {
+									cout << ' ';
+								}
+							}
+						}
+					} else {
+						// 火星数字
+						int b = 0;
+						for(int i = 0; cstr[i] != '\0'; i++) {
+							if(cstr[i] == ' ') {
+								b++;
+							}
+						}
+						b++;
+						string str;
+						unsigned long long num = 0;
+						while(b) {
+							ss >> str;
+							num += um[str] * pow(13, --b);
+						}
+						if(us2.count(str) != 0) {
+							num *= 13;
+						}
+						cout << num;
+					}
+					delete[] cstr;
+					if(n != 0) {
+						cout << endl;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1044
 	}    // namespace b
 
 	namespace a {}
