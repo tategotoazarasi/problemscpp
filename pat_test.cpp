@@ -650,6 +650,16 @@ namespace pat {
 				ASSERT_EQ("e 7", out.str());
 			}
 		}// namespace b1042
+
+		namespace b1043 {
+			TEST(b1043, case1) {
+				istringstream in("redlesPayBestPATTopTeePHPereatitAPPT");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("PATestPATestPTetPTePePee", out.str());
+			}
+		}// namespace b1043
 	}    // namespace b
 
 	namespace a {}

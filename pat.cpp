@@ -1362,6 +1362,48 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1042
+
+		namespace b1043 {
+			int main(istream &cin, ostream &cout) {
+				unordered_map<char, unsigned> um;
+				char patest[6] = {'P', 'A', 'T', 'e', 's', 't'};
+				um['P']        = 0;
+				um['A']        = 0;
+				um['T']        = 0;
+				um['e']        = 0;
+				um['s']        = 0;
+				um['t']        = 0;
+				string str;
+				cin >> str;
+				for(char ch: str) {
+					if(um.count(ch) > 0) {
+						um[ch]++;
+					}
+				}
+				unsigned minimum = 10000;
+				for(const auto &[ch, count]: um) {
+					minimum = min(minimum, count);
+				}
+				for(auto &[ch, count]: um) {
+					count -= minimum;
+				}
+				for(unsigned i = 0; i < minimum; i++) {
+					cout << "PATest";
+				}
+				bool flag = true;
+				while(flag) {
+					flag = false;
+					for(unsigned i = 0; i < 6; i++) {
+						if(um[patest[i]] > 0) {
+							cout << patest[i];
+							um[patest[i]]--;
+							flag = true;
+						}
+					}
+				}
+				return 0;
+			}
+		}// namespace b1043
 	}    // namespace b
 
 	namespace a {}

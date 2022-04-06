@@ -254,6 +254,11 @@ namespace pat {
 		namespace b1042 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1043 输出PATest
+		namespace b1043 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
