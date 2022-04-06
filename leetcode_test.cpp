@@ -2737,4 +2737,20 @@ namespace leetcode {
 			ASSERT_EQ(5, Solution::countPrimeSetBits(10, 15));
 		}
 	}// namespace prime_number_of_set_bits_in_binary_representation
+
+	namespace minimum_height_trees {
+		TEST(minimum_height_trees, case1) {
+			vector<vector<int>> edges = {{1, 0}, {1, 2}, {1, 3}};
+			vector output             = {1};
+			auto sol                  = Solution();
+			ASSERT_EQ(output, sol.findMinHeightTrees(4, edges));
+		}
+
+		TEST(minimum_height_trees, case2) {
+			vector<vector<int>> edges = {{3, 0}, {3, 1}, {3, 2}, {3, 4}, {5, 4}};
+			vector output             = {3, 4};
+			auto sol                  = Solution();
+			ASSERT_EQ(output, sol.findMinHeightTrees(6, edges));
+		}
+	}// namespace minimum_height_trees
 }// namespace leetcode

@@ -2099,6 +2099,15 @@ namespace leetcode {
 			static int countPrimeSetBits(int left, int right);
 		};
 	}// namespace prime_number_of_set_bits_in_binary_representation
+
+	/// \brief 310. Minimum Height Trees
+	namespace minimum_height_trees {
+		class Solution {
+		public:
+			int findLongestNode(int u, vector<int> &parent, vector<vector<int>> &adj);
+			vector<int> findMinHeightTrees(int n, vector<vector<int>> &edges);
+		};
+	}// namespace minimum_height_trees
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
