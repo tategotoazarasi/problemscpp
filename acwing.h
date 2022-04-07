@@ -1914,5 +1914,11 @@ namespace acwing {
 	namespace acwing1775 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 785. 快速排序
+	namespace acwing785 {
+		void qs(vector<int> &vec, int l, int r);
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing785
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

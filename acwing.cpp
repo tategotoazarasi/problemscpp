@@ -6290,4 +6290,40 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1775
+
+	namespace acwing785 {
+		void qs(vector<int> &vec, int l, int r) {
+			if(l >= r) {
+				return;
+			}
+			int x  = vec[(l + r) / 2];
+			int lp = l;
+			int rp = r;
+			while(lp < rp) {
+				while(vec[++lp] < x)
+					;
+				while(vec[--rp] > x)
+					;
+				if(lp < rp) {
+					swap(vec[lp], vec[rp]);
+				}
+			}
+			qs(vec, l, rp);
+			qs(vec, rp + 1, r);
+		}
+
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			vector<int> vec(n);
+			for(int i = 0; i < n; i++) {
+				cin >> vec[i];
+			}
+			qs(vec, 0, n - 1);
+			for(int i = 0; i < n; i++) {
+				cout << vec[i] << ' ';
+			}
+			return 0;
+		}
+	}// namespace acwing785
 }// namespace acwing
