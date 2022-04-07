@@ -1909,5 +1909,10 @@ namespace acwing {
 	namespace acwing1788 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 1775. 丢失的牛
+	namespace acwing1775 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

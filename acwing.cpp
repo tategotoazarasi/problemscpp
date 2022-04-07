@@ -6268,4 +6268,26 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1788
+
+	namespace acwing1775 {
+		int main(istream &cin, ostream &cout) {
+			int x, y;
+			cin >> x >> y;
+			int step     = 1;
+			unsigned ans = 0;
+			int current  = x;
+			while(current != y) {
+				if((y - current) * (y - (x + step)) < 0) {
+					ans += abs(y - current);
+					cout << ans;
+					return 0;
+				}
+				ans += abs((x + step) - current);
+				current = x + step;
+				step *= -2;
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing1775
 }// namespace acwing
