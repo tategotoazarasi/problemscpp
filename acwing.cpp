@@ -6372,4 +6372,49 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing788
+
+	namespace acwing789 {
+		unsigned bfl(const vector<unsigned> &vec, unsigned target) {
+			int l = 0;
+			int r = vec.size() - 1;
+			while(l < r) {
+				int m = (l + r) / 2;
+				if(vec[m] <= target) {
+					r = m;
+				} else {
+					l = m + 1;
+				}
+			}
+			return l;
+		}
+
+		unsigned bfr(const vector<unsigned> &vec, unsigned target) {
+			int l = 0;
+			int r = vec.size() - 1;
+			while(l < r) {
+				int m = (l + r + 1) / 2;
+				if(vec[m] < target) {
+					l = m;
+				} else {
+					r = m - 1;
+				}
+			}
+			return l;
+		}
+
+		int main(istream &cin, ostream &cout) {
+			unsigned n, q;
+			cin >> n >> q;
+			vector<unsigned> vec(n);
+			for(unsigned i = 0; i < n; i++) {
+				cin >> vec[i];
+			}
+			for(unsigned i = 0; i < q; i++) {
+				unsigned k;
+				cin >> k;
+				cout << bfr(vec, k) << ' ' << bfl(vec, k) << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing789
 }// namespace acwing

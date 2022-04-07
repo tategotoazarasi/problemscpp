@@ -1926,5 +1926,12 @@ namespace acwing {
 		void ms(vector<int> &vec, int l, int r);
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing788
+
+	/// \brief 789. 数的范围
+	namespace acwing789 {
+		unsigned bfl(const vector<unsigned> &vec, unsigned target);
+		unsigned bfr(const vector<unsigned> &vec, unsigned target);
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing789
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
