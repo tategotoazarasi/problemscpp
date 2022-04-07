@@ -686,7 +686,7 @@ namespace pat {
 				const auto ans = out.str();
 				ASSERT_EQ("0", out.str());
 			}
-			
+
 			TEST(b1044, case3) {
 				istringstream in("1\n"
 				                 "0\n");
@@ -696,6 +696,19 @@ namespace pat {
 				ASSERT_EQ("tret", out.str());
 			}
 		}// namespace b1044
+
+		namespace b1045 {
+			TEST(b1045, case1) {
+				istringstream in("5\n"
+				                 "1 3 2 4 5");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("3\n"
+				          "1 4 5",
+				          out.str());
+			}
+		}// namespace b1045
 	}    // namespace b
 
 	namespace a {}

@@ -1480,6 +1480,42 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1044
+
+		namespace b1045 {
+			int main(istream &cin, ostream &cout) {
+				unsigned n;
+				cin >> n;
+				vector<unsigned> vec(n);
+				vector<unsigned> l_max(n);
+				vector<unsigned> r_min(n);
+				unsigned current = 0;
+				for(unsigned i = 0; i < n; ++i) {
+					cin >> vec[i];
+					l_max[i] = current;
+					current  = max(current, vec[i]);
+				}
+				current = 1000000001;
+				for(int i = n - 1; i >= 0; --i) {
+					r_min[i] = current;
+					current  = min(current, vec[i]);
+				}
+				vector<unsigned> ans;
+				for(unsigned i = 0; i < n; ++i) {
+					if(vec[i] > l_max[i] && vec[i] < r_min[i]) {
+						ans.push_back(vec[i]);
+					}
+				}
+				cout << ans.size() << endl;
+				for(int i = 0; i < ans.size(); i++) {
+					cout << ans[i];
+					if(i != ans.size() - 1) {
+						cout << ' ';
+					}
+				}
+				cout << endl;
+				return 0;
+			}
+		}// namespace b1045
 	}    // namespace b
 
 	namespace a {}
