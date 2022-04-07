@@ -6296,9 +6296,9 @@ namespace acwing {
 			if(l >= r) {
 				return;
 			}
-			int x  = vec[(l + r) / 2];
-			int lp = l;
-			int rp = r;
+			int x  = vec[(l + r) >> 1];
+			int lp = l - 1;
+			int rp = r + 1;
 			while(lp < rp) {
 				while(vec[++lp] < x)
 					;
@@ -6326,4 +6326,50 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing785
+
+	/// \brief 788. 逆序对的数量
+	namespace acwing788 {
+		void ms(vector<int> &arr, int l, int r, int *ans) {
+			if(l >= r) {
+				return;
+			}
+			int m = l + r >> 1;
+			ms(arr, l, m, ans);
+			ms(arr, m + 1, r, ans);
+			int i = l;
+			int j = m + 1;
+			int p = 0;
+			vector<int> tmp(r - l + 1);
+			while(i <= m && j <= r) {
+				if(arr[i] <= arr[j]) {
+					tmp[p++] = arr[i++];
+				} else {
+					tmp[p++] = arr[j++];
+					(*ans) += (m - i + 1);
+				}
+			}
+			while(i <= m) {
+				tmp[p++] = arr[i++];
+			}
+			while(j <= r) {
+				tmp[p++] = arr[j++];
+			}
+			for(int i = 0; i < p; i++) {
+				arr[l + i] = tmp[i];
+			}
+		}
+
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			vector<int> vec(n);
+			for(int i = 0; i < n; i++) {
+				cin >> vec[i];
+			}
+			int ans = 0;
+			ms(vec, 0, n - 1, &ans);
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing788
 }// namespace acwing

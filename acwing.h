@@ -1920,5 +1920,11 @@ namespace acwing {
 		void qs(vector<int> &vec, int l, int r);
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing785
+
+	/// \brief 788. 逆序对的数量
+	namespace acwing788 {
+		void ms(vector<int> &vec, int l, int r);
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing788
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
