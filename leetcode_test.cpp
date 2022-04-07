@@ -2753,4 +2753,14 @@ namespace leetcode {
 			ASSERT_EQ(output, sol.findMinHeightTrees(6, edges));
 		}
 	}// namespace minimum_height_trees
+
+	namespace rotate_string {
+		TEST(rotate_string, case1) {
+			ASSERT_TRUE(Solution::rotateString("abcde", "cdeab"));
+		}
+
+		TEST(rotate_string, case2) {
+			ASSERT_FALSE(Solution::rotateString("abcde", "abced"));
+		}
+	}// namespace rotate_string
 }// namespace leetcode

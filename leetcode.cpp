@@ -5780,4 +5780,14 @@ namespace leetcode {
 			return node;
 		}
 	}// namespace minimum_height_trees
+
+	namespace rotate_string {
+		bool Solution::rotateString(string s, string goal) {
+			if(s.length() != goal.length()) {
+				return false;
+			}
+			s += s;
+			return s.find(goal) != string::npos;
+		}
+	}// namespace rotate_string
 }// namespace leetcode

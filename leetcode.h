@@ -2108,6 +2108,14 @@ namespace leetcode {
 			vector<int> findMinHeightTrees(int n, vector<vector<int>> &edges);
 		};
 	}// namespace minimum_height_trees
+
+	/// \brief 796. Rotate String
+	namespace rotate_string {
+		class Solution {
+		public:
+			static bool rotateString(string s, string goal);
+		};
+	}// namespace rotate_string
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
