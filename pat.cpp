@@ -1516,6 +1516,27 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1045
+
+		namespace b1046 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				int ans1 = 0;
+				int ans2 = 0;
+				while(n--) {
+					int a1, a2, b1, b2;
+					cin >> a1 >> a2 >> b1 >> b2;
+					int sum = a1 + b1;
+					if(sum == a2 && sum != b2) {
+						ans2++;
+					} else if(sum == b2 && sum != a2) {
+						ans1++;
+					}
+				}
+				cout << ans1 << ' ' << ans2;
+				return 0;
+			}
+		}// namespace b1046
 	}    // namespace b
 
 	namespace a {}

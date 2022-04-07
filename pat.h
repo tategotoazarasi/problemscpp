@@ -269,6 +269,11 @@ namespace pat {
 		namespace b1045 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1046 划拳
+		namespace b1046 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

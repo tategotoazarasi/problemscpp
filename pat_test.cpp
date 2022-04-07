@@ -705,10 +705,25 @@ namespace pat {
 				main(in, out);
 				const auto ans = out.str();
 				ASSERT_EQ("3\n"
-				          "1 4 5",
+				          "1 4 5\n",
 				          out.str());
 			}
 		}// namespace b1045
+
+		namespace b1046 {
+			TEST(b1046, case1) {
+				istringstream in("5\n"
+				                 "8 10 9 12\n"
+				                 "5 10 5 10\n"
+				                 "3 8 5 12\n"
+				                 "12 18 1 13\n"
+				                 "4 16 12 15");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("1 2", out.str());
+			}
+		}// namespace b1046
 	}    // namespace b
 
 	namespace a {}
