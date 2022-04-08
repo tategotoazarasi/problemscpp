@@ -274,6 +274,11 @@ namespace pat {
 		namespace b1046 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1047 编程团体赛
+		namespace b1047 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

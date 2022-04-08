@@ -1537,6 +1537,33 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1046
+
+		namespace b1047 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				unordered_map<int, int> um;
+				int maximum = 0;
+				while(n--) {
+					int a;
+					cin >> a;
+					cin.get();
+					int b;
+					cin >> b >> b;
+					um[a] += b;
+				}
+				for(const auto &[team, score]: um) {
+					maximum = max(score, maximum);
+				}
+				for(const auto &[team, score]: um) {
+					if(score == maximum) {
+						cout << team << ' ' << score;
+						return 0;
+					}
+				}
+				return 1;
+			}
+		}// namespace b1047
 	}    // namespace b
 
 	namespace a {}
