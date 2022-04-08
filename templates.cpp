@@ -1,4 +1,5 @@
 #include "templates.h"
+#include <cstring>
 #include <numeric>
 #include <sstream>
 
@@ -28,13 +29,16 @@ unsigned short BigInt::operator[](unsigned long i) const { return vec[i]; }
 
 BigInt::BigInt(const vector<unsigned short> &vec, bool positive)
     : positive(positive) {
-	int start_i = 0;
-	while(vec[start_i] == 0) {
-		start_i++;
+	int end_i = vec.size() - 1;
+	while(end_i >= 0 && vec[end_i] == 0) {
+		end_i--;
 	}
 	this->vec = vector<unsigned short>();
-	for(int i = start_i; i < vec.size(); i++) {
+	for(int i = 0; i <= end_i; i++) {
 		this->vec.push_back(vec[i]);
+	}
+	if(this->vec.size() == 0) {
+		this->vec.push_back(0);
 	}
 }
 
@@ -86,92 +90,77 @@ BigInt::BigInt(long long int n) {
 		n        = -n;
 	}
 	vec = vector<unsigned short>();
-	stringstream ss;
-	ss << n;
-	char ch;
-	while(ss >> ch) {
-		vec.push_back(ch - '0');
-	}
+	do {
+		vec.push_back(n % 10);
+		n /= 10;
+	} while(n != 0);
 }
 
-BigInt::BigInt(const unsigned short &n) {
+BigInt::BigInt(unsigned short n) {
 	vec = vector<unsigned short>();
-	stringstream ss;
-	ss << n;
-	char ch;
-	while(ss >> ch) {
-		vec.push_back(ch - '0');
-	}
+	do {
+		vec.push_back(n % 10);
+		n /= 10;
+	} while(n != 0);
 }
 
-BigInt::BigInt(const unsigned int &n) {
+BigInt::BigInt(unsigned int n) {
 	vec = vector<unsigned short>();
-	stringstream ss;
-	ss << n;
-	char ch;
-	while(ss >> ch) {
-		vec.push_back(ch - '0');
-	}
+	do {
+		vec.push_back(n % 10);
+		n /= 10;
+	} while(n != 0);
 }
 
-BigInt::BigInt(const unsigned long &n) {
+BigInt::BigInt(unsigned long n) {
 	vec = vector<unsigned short>();
-	stringstream ss;
-	ss << n;
-	char ch;
-	while(ss >> ch) {
-		vec.push_back(ch - '0');
-	}
+	do {
+		vec.push_back(n % 10);
+		n /= 10;
+	} while(n != 0);
 }
 
-BigInt::BigInt(const unsigned long long int &n) {
+BigInt::BigInt(unsigned long long int n) {
 	vec = vector<unsigned short>();
-	stringstream ss;
-	ss << n;
-	char ch;
-	while(ss >> ch) {
-		vec.push_back(ch - '0');
-	}
+	do {
+		vec.push_back(n % 10);
+		n /= 10;
+	} while(n != 0);
 }
 
 BigInt::BigInt(const string &str) {
-	int start_i = 0;
+	int start_i = str.length() - 1;
+	while(start_i >= 0 && isdigit(str[start_i])) {
+		vec.push_back(str[start_i] - '0');
+		start_i--;
+	}
 	if(str[0] == '-') {
 		positive = false;
-		start_i  = 1;
-	}
-	while(str[start_i] == '0') {
-		start_i++;
-	}
-	vec = vector<unsigned short>();
-	for(int i = start_i; i < str.length(); i++) {
-		vec.push_back(str[i] - '0');
 	}
 }
 
 BigInt::BigInt(const char *str) {
-	int start_i = 0;
+	int start_i = strlen(str) - 1;
+	while(start_i >= 0 && isdigit(str[start_i])) {
+		vec.push_back(str[start_i] - '0');
+		start_i--;
+	}
 	if(str[0] == '-') {
 		positive = false;
-		start_i  = 1;
-	}
-	while(str[start_i] == '0') {
-		start_i++;
-	}
-	vec = vector<unsigned short>();
-	for(int i = start_i; str[i] != '\0'; i++) {
-		vec.push_back(str[i] - '0');
 	}
 }
 
 BigInt::BigInt(const BigInt &bi) {
-	int start_i = 0;
-	while(bi[start_i] == 0) {
-		start_i++;
+	int end_i = bi.vec.size() - 1;
+	while(end_i >= 0 && bi.vec[end_i] == 0) {
+		end_i--;
 	}
 	this->vec = vector<unsigned short>();
-	for(int i = start_i; i < bi.get_size(); i++) {
-		this->vec.push_back(bi[i]);
+	for(int i = 0; i <= end_i; i++) {
+		this->vec.push_back(bi.vec[i]);
+	}
+	if(this->vec.size() == 0) {
+		this->vec.push_back(0);
 	}
 	this->positive = bi.positive;
 }
@@ -186,15 +175,14 @@ BigInt BigInt::operator+(const BigInt &bi) const {
 	vector<unsigned short> v;
 	unsigned short carry = 0;
 	for(long long i = 0; i < max(this->get_size(), bi.get_size()) || carry != 0; i++) {
-		const unsigned short this_num = static_cast<long long>(this->get_size()) - i - 1 >= 0 ? (*this)[this->get_size() - i - 1] : 0;
-		const unsigned short bi_num   = static_cast<long long>(bi.get_size()) - i - 1 >= 0 ? bi[bi.get_size() - i - 1] : 0;
+		const unsigned short this_num = i < this->get_size() ? (*this)[i] : 0;
+		const unsigned short bi_num   = i < bi.get_size() ? bi[i] : 0;
 		unsigned short sum            = this_num + bi_num;
 		sum += carry;
 		carry = sum / 10;
 		sum %= 10;
 		v.push_back(sum);
 	}
-	v        = vector(v.rbegin(), v.rend());
 	auto ret = BigInt(v, this->positive);
 	return ret;
 }
@@ -212,8 +200,8 @@ BigInt BigInt::operator-(const BigInt &bi) const {
 	vector<unsigned short> v;
 	unsigned short borrow = 0;
 	for(long long i = 0; i < max(this->get_size(), bi.get_size()); i++) {
-		short this_num     = static_cast<long long>(this->get_size()) - i - 1 >= 0 ? (*this)[this->get_size() - i - 1] : 0;
-		const short bi_num = static_cast<long long>(bi.get_size()) - i - 1 >= 0 ? bi[bi.get_size() - i - 1] : 0;
+		short this_num     = i < this->get_size() ? (*this)[i] : 0;
+		const short bi_num = i < bi.get_size() ? bi[i] : 0;
 		this_num -= borrow;
 		short diff = this_num - bi_num;
 		borrow     = 0;
@@ -223,7 +211,6 @@ BigInt BigInt::operator-(const BigInt &bi) const {
 		}
 		v.push_back(diff);
 	}
-	v        = vector(v.rbegin(), v.rend());
 	auto ret = BigInt(v, true);
 	return ret;
 }
@@ -247,9 +234,11 @@ bool BigInt::operator>(const BigInt &bi) const {
 		return this->get_size() > bi.get_size();
 	}
 
-	for(int i = 0; i < get_size(); i++) {
+	for(int i = get_size() - 1; i >= 0; --i) {
 		if((*this)[i] > bi[i]) {
 			return true;
+		} else if((*this)[i] < bi[i]) {
+			return false;
 		}
 	}
 	return false;
@@ -315,8 +304,8 @@ ostream &operator<<(ostream &os, const BigInt &bi) {
 	if(!bi.positive) {
 		os << '-';
 	}
-	for(const auto num: bi.vec) {
-		os << num;
+	for(auto it = bi.vec.rbegin(); it != bi.vec.rend(); it++) {
+		os << *it;
 	}
 	return os;
 }

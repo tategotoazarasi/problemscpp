@@ -34,10 +34,10 @@ public:
 	BigInt(int n);
 	BigInt(long n);
 	BigInt(long long n);
-	BigInt(const unsigned short &n);
-	BigInt(const unsigned int &n);
-	BigInt(const unsigned long &n);
-	BigInt(const unsigned long long &n);
+	BigInt(unsigned short n);
+	BigInt(unsigned int n);
+	BigInt(unsigned long n);
+	BigInt(unsigned long long n);
 	BigInt(const string &str);
 	BigInt(const char *str);
 	BigInt(const BigInt &bi);

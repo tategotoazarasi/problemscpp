@@ -16,6 +16,17 @@ TEST(BigInt, plus1) {
 }
 
 TEST(BigInt, plus2) {
+	const BigInt bi1 = "1";
+	const BigInt bi2 = "999999999";
+	const BigInt bi  = bi1 + bi2;
+	stringstream ss;
+	ss << bi;
+	string ans;
+	ss >> ans;
+	ASSERT_EQ("1000000000", ans);
+}
+
+TEST(BigInt, plus3) {
 	const BigInt bi1 = "-57483928028032689427590";
 	const BigInt bi2 = "-1093857940790276890525749302";
 	const BigInt bi  = bi1 + bi2;
@@ -109,4 +120,15 @@ TEST(BigInt, minus4) {
 	string ans;
 	ss >> ans;
 	ASSERT_EQ("4777741230", ans);
+}
+
+TEST(BigInt, minus5) {
+	const BigInt bi1 = "123456789";
+	const BigInt bi2 = "987654321";
+	const BigInt bi  = bi1 - bi2;
+	stringstream ss;
+	ss << bi;
+	string ans;
+	ss >> ans;
+	ASSERT_EQ("-864197532", ans);
 }
