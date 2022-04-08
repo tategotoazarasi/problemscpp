@@ -2116,6 +2116,22 @@ namespace leetcode {
 			static bool rotateString(string s, string goal);
 		};
 	}// namespace rotate_string
+
+	/// \brief 429. N-ary Tree Level Order Traversal
+	namespace n_ary_tree_level_order_traversal {
+		class Node {
+		public:
+			int val;
+			vector<Node *> children;
+			Node() = default;
+			Node(int _val): val(_val){};
+			Node(int _val, vector<Node *> _children): val(_val), children(_children){};
+		};
+		class Solution {
+		public:
+			static vector<vector<int>> levelOrder(Node *root);
+		};
+	}// namespace n_ary_tree_level_order_traversal
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

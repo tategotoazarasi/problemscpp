@@ -5790,4 +5790,27 @@ namespace leetcode {
 			return s.find(goal) != string::npos;
 		}
 	}// namespace rotate_string
+
+	namespace n_ary_tree_level_order_traversal {
+		vector<vector<int>> Solution::levelOrder(Node *root) {
+			queue<pair<int, Node *>> q;
+			vector<vector<int>> ans;
+			if(root == nullptr) {
+				return ans;
+			}
+			q.push(make_pair(0, root));
+			while(!q.empty()) {
+				auto [level, node] = q.front();
+				if(ans.size() == level) {
+					ans.push_back(vector<int>());
+				}
+				ans[level].push_back(node->val);
+				q.pop();
+				for(auto next: node->children) {
+					q.push(make_pair(level + 1, next));
+				}
+			}
+			return ans;
+		}
+	}// namespace n_ary_tree_level_order_traversal
 }// namespace leetcode
