@@ -3011,4 +3011,15 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing789
+
+	namespace acwing1866 {
+		TEST(acwing1866, case1) {
+			istringstream in("7 10\n"
+			                 "4 8");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("6", ans);
+		}
+	}// namespace acwing1866
 }// namespace acwing

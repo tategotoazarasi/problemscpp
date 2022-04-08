@@ -1933,5 +1933,10 @@ namespace acwing {
 		unsigned bfr(const vector<unsigned> &vec, unsigned target);
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing789
+
+	/// \brief 1866. 围栏刷漆
+	namespace acwing1866 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

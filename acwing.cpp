@@ -6424,4 +6424,18 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing789
+
+	namespace acwing1866 {
+		int main(istream &cin, ostream &cout) {
+			int a, b, c, d;
+			cin >> a >> b >> c >> d;
+			int ab    = b - a;
+			int cd    = d - c;
+			int dup_d = min(b, max(a, d));
+			int dup_c = min(b, max(a, c));
+			int sum   = ab + cd - (dup_d - dup_c);
+			cout << sum;
+			return 0;
+		}
+	}// namespace acwing1866
 }// namespace acwing
