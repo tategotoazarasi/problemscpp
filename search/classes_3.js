@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['detectsquares_0',['DetectSquares',['../d7/def/a01538.html',1,'leetcode::detect_squares']]]
+  ['detectsquares_0',['DetectSquares',['../dd/dba/a01545.html',1,'leetcode::detect_squares']]]
 ];
