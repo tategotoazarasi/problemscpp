@@ -1564,6 +1564,47 @@ namespace pat {
 				return 1;
 			}
 		}// namespace b1047
+
+		namespace b1048 {
+			int main(istream &cin, ostream &cout) {
+				string a, b;
+				cin >> a >> b;
+				vector<char> ans;
+				int i = 1;
+				for(; i <= max(b.length(), a.length()); ++i) {
+					int bi = (b.length() >= i) ? (b[b.length() - i] - '0') : 0;
+					int ai = (a.length() >= i) ? (a[a.length() - i] - '0') : 0;
+					if(i % 2 != 0) {
+						char ret = (ai + bi) % 13;
+						switch(ret) {
+							case 10:
+								ret = 'J';
+								break;
+							case 11:
+								ret = 'Q';
+								break;
+							case 12:
+								ret = 'K';
+								break;
+							default:
+								ret += '0';
+								break;
+						}
+						ans.push_back(ret);
+					} else {
+						int ret = bi - ai;
+						if(ret < 0) {
+							ret += 10;
+						}
+						ans.push_back(ret + '0');
+					}
+				}
+				for(auto it = ans.rbegin(); it != ans.rend(); ++it) {
+					cout << *it;
+				}
+				return 0;
+			}
+		}// namespace b1048
 	}    // namespace b
 
 	namespace a {}

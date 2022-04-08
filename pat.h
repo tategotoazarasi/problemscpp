@@ -279,6 +279,11 @@ namespace pat {
 		namespace b1047 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1048 数字加密
+		namespace b1048 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

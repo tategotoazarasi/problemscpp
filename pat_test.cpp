@@ -740,6 +740,16 @@ namespace pat {
 				ASSERT_EQ("11 176", out.str());
 			}
 		}// namespace b1047
+
+		namespace b1048 {
+			TEST(b1048, case1) {
+				istringstream in("1234567 368782971");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("3695Q8118", out.str());
+			}
+		}// namespace b1048
 	}    // namespace b
 
 	namespace a {}
