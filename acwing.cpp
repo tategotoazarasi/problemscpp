@@ -6443,4 +6443,25 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1866
+
+	namespace acwing1854 {
+		int main(istream &cin, ostream &cout) {
+			int b[4][2];
+			for(int i = 0; i < 4; i++) {
+				for(int j = 0; j < 2; j++) {
+					cin >> b[i][j];
+				}
+			}
+			int ans[3];
+			ans[2] = b[3][1] - b[3][0];
+			b[2][0] -= ans[2];
+			ans[1] = b[2][1] - b[2][0];
+			b[1][0] -= ans[1];
+			ans[0] = b[1][1] - b[1][0];
+			for(int i = 0; i < 3; i++) {
+				cout << ans[i] << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing1854
 }// namespace acwing

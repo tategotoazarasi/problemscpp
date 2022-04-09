@@ -1938,5 +1938,12 @@ namespace acwing {
 	namespace acwing1866 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/**
+	 * \brief 1854. 晋升计数 
+	 */
+	namespace acwing1854 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
