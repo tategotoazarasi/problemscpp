@@ -2137,6 +2137,16 @@ namespace leetcode {
 			static vector<vector<int>> levelOrder(Node *root);
 		};
 	}// namespace n_ary_tree_level_order_traversal
+
+	/**
+	 * \brief 780. Reaching Points
+	 */
+	namespace reaching_points {
+		class Solution {
+		public:
+			static bool reachingPoints(int sx, int sy, int tx, int ty);
+		};
+	}// namespace reaching_points
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

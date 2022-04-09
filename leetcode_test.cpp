@@ -2757,4 +2757,18 @@ namespace leetcode {
 			ASSERT_FALSE(Solution::rotateString("abcde", "abced"));
 		}
 	}// namespace rotate_string
+
+	namespace reaching_points {
+		TEST(reaching_points, case1) {
+			ASSERT_TRUE(Solution::reachingPoints(1, 1, 3, 5));
+		}
+
+		TEST(reaching_points, case2) {
+			ASSERT_FALSE(Solution::reachingPoints(1, 1, 2, 2));
+		}
+
+		TEST(reaching_points, case3) {
+			ASSERT_TRUE(Solution::reachingPoints(1, 1, 1, 1));
+		}
+	}// namespace reaching_points
 }// namespace leetcode
