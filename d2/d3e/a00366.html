@@ -131,12 +131,12 @@ $(function() {
 <div class="line"><a id="l01420" name="l01420"></a><span class="lineno"> 1420</span>                cin &gt;&gt; n;</div>
 <div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>                <span class="keywordtype">char</span> cccc[16];</div>
 <div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span>                cin.getline(cccc, 16);</div>
-<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span>                <span class="keywordflow">while</span>(n--) {</div>
-<div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>                    <span class="keywordtype">char</span> *cstr = <span class="keyword">new</span> <span class="keywordtype">char</span>[1024];</div>
+<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span>                <span class="keywordflow">while</span>(n-- != 0) {</div>
+<div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>                    <span class="keyword">auto</span> *cstr = <span class="keyword">new</span> <span class="keywordtype">char</span>[1024];</div>
 <div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>                    cin.getline(cstr, 1024);</div>
 <div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span>                    stringstream ss;</div>
 <div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span>                    ss &lt;&lt; cstr;</div>
-<div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>                    <span class="keywordflow">if</span>(isdigit(ss.peek())) {</div>
+<div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>                    <span class="keywordflow">if</span>(isdigit(ss.peek()) != 0) {</div>
 <div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>                        <span class="comment">// 地球数字</span></div>
 <div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>                        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> num;</div>
 <div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>                        ss &gt;&gt; num;</div>
@@ -174,11 +174,11 @@ $(function() {
 <div class="line"><a id="l01463" name="l01463"></a><span class="lineno"> 1463</span>                        b++;</div>
 <div class="line"><a id="l01464" name="l01464"></a><span class="lineno"> 1464</span>                        <span class="keywordtype">string</span> str;</div>
 <div class="line"><a id="l01465" name="l01465"></a><span class="lineno"> 1465</span>                        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> num = 0;</div>
-<div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>                        <span class="keywordflow">while</span>(b) {</div>
+<div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>                        <span class="keywordflow">while</span>(b != 0) {</div>
 <div class="line"><a id="l01467" name="l01467"></a><span class="lineno"> 1467</span>                            ss &gt;&gt; str;</div>
 <div class="line"><a id="l01468" name="l01468"></a><span class="lineno"> 1468</span>                            num += um[str] * pow(13, --b);</div>
 <div class="line"><a id="l01469" name="l01469"></a><span class="lineno"> 1469</span>                        }</div>
-<div class="line"><a id="l01470" name="l01470"></a><span class="lineno"> 1470</span>                        <span class="keywordflow">if</span>(us2.count(str) != 0) {</div>
+<div class="line"><a id="l01470" name="l01470"></a><span class="lineno"> 1470</span>                        <span class="keywordflow">if</span>(us2.contains(str)) {</div>
 <div class="line"><a id="l01471" name="l01471"></a><span class="lineno"> 1471</span>                            num *= 13;</div>
 <div class="line"><a id="l01472" name="l01472"></a><span class="lineno"> 1472</span>                        }</div>
 <div class="line"><a id="l01473" name="l01473"></a><span class="lineno"> 1473</span>                        cout &lt;&lt; num;</div>

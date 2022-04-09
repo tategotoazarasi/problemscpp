@@ -78,15 +78,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a4e0740df1f797bcd4152387911b0cf57"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7a/a02105.html#a4e0740df1f797bcd4152387911b0cf57">rotateString</a> (string s, string goal)</td></tr>
-<tr class="separator:a4e0740df1f797bcd4152387911b0cf57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac60a8155dba9e7f53393a1a346c49007"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7a/a02105.html#ac60a8155dba9e7f53393a1a346c49007">rotateString</a> (string s, const string &amp;goal)</td></tr>
+<tr class="separator:ac60a8155dba9e7f53393a1a346c49007"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
 <p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">leetcode.h</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l02114">2114</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a4e0740df1f797bcd4152387911b0cf57" name="a4e0740df1f797bcd4152387911b0cf57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e0740df1f797bcd4152387911b0cf57">&#9670;&nbsp;</a></span>rotateString()</h2>
+<a id="ac60a8155dba9e7f53393a1a346c49007" name="ac60a8155dba9e7f53393a1a346c49007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac60a8155dba9e7f53393a1a346c49007">&#9670;&nbsp;</a></span>rotateString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -103,7 +103,7 @@ $(function() {
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>goal</em>&#160;</td>
         </tr>
         <tr>
@@ -119,16 +119,16 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d8c/a00035_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d8c/a00035_source.html#l05785">5785</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l05785" name="l05785"></a><span class="lineno"> 5785</span>                                                         {</div>
-<div class="line"><a id="l05786" name="l05786"></a><span class="lineno"> 5786</span>            <span class="keywordflow">if</span>(s.length() != goal.length()) {</div>
-<div class="line"><a id="l05787" name="l05787"></a><span class="lineno"> 5787</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l05788" name="l05788"></a><span class="lineno"> 5788</span>            }</div>
-<div class="line"><a id="l05789" name="l05789"></a><span class="lineno"> 5789</span>            s += s;</div>
-<div class="line"><a id="l05790" name="l05790"></a><span class="lineno"> 5790</span>            <span class="keywordflow">return</span> s.find(goal) != string::npos;</div>
-<div class="line"><a id="l05791" name="l05791"></a><span class="lineno"> 5791</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d8c/a00035_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d8c/a00035_source.html#l05789">5789</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l05789" name="l05789"></a><span class="lineno"> 5789</span>                                                                {</div>
+<div class="line"><a id="l05790" name="l05790"></a><span class="lineno"> 5790</span>            <span class="keywordflow">if</span>(s.length() != goal.length()) {</div>
+<div class="line"><a id="l05791" name="l05791"></a><span class="lineno"> 5791</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l05792" name="l05792"></a><span class="lineno"> 5792</span>            }</div>
+<div class="line"><a id="l05793" name="l05793"></a><span class="lineno"> 5793</span>            s += s;</div>
+<div class="line"><a id="l05794" name="l05794"></a><span class="lineno"> 5794</span>            <span class="keywordflow">return</span> s.find(goal) != string::npos;</div>
+<div class="line"><a id="l05795" name="l05795"></a><span class="lineno"> 5795</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l02758">leetcode::rotate_string::TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l02752">leetcode::rotate_string::TEST()</a>.</p>
 
 </div>
 </div>

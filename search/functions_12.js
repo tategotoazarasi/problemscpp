@@ -30,7 +30,7 @@ var searchData=
   ['sum_27',['sum',['../de/d1c/a01093.html#ac29d8e6fd3bbc975d0e9f554b893637c',1,'acwing::acwing807']]],
   ['sumofthree_28',['sumOfThree',['../d8/d9c/a01733.html#a95d7706a053a0cd3bc657d95b453fbd9',1,'leetcode::find_three_consecutive_integers_that_sum_to_a_given_number::Solution']]],
   ['sumofunique_29',['sumOfUnique',['../d3/d2d/a01625.html#a05da7801ddeb727ef31c9617578a9644',1,'leetcode::sum_of_unique_elements::Solution']]],
-  ['sumrange_30',['sumRange',['../db/ddd/a02089.html#abc2f86ceeb108cf0538e713c9bdaacf2',1,'leetcode::range_sum_query_mutable::NumArray']]],
+  ['sumrange_30',['sumRange',['../db/ddd/a02089.html#afcb9c6380210f2acfb4eff504679c8f9',1,'leetcode::range_sum_query_mutable::NumArray']]],
   ['sumscores_31',['sumScores',['../d3/d48/a02069.html#a7d5a5a0c7fec6234aa5d10f2b5456b76',1,'leetcode::sum_of_scores_of_built_strings::Solution']]],
   ['swap_32',['swap',['../d1/dfa/a01097.html#a99de500bde58476ab518bd2beeb820ca',1,'acwing::acwing811']]]
 ];

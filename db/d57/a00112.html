@@ -119,18 +119,19 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">acwing.cpp</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l06191">6191</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l06191" name="l06191"></a><span class="lineno"> 6191</span>                                              {</div>
-<div class="line"><a id="l06192" name="l06192"></a><span class="lineno"> 6192</span>            <span class="keywordtype">int</span> x[2][2], y[2][2];</div>
-<div class="line"><a id="l06193" name="l06193"></a><span class="lineno"> 6193</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 2; i++) {</div>
-<div class="line"><a id="l06194" name="l06194"></a><span class="lineno"> 6194</span>                cin &gt;&gt; x[i][0] &gt;&gt; y[i][0] &gt;&gt; x[i][1] &gt;&gt; y[i][1];</div>
-<div class="line"><a id="l06195" name="l06195"></a><span class="lineno"> 6195</span>            }</div>
-<div class="line"><a id="l06196" name="l06196"></a><span class="lineno"> 6196</span>            <span class="keywordtype">int</span> x1   = min(x[0][0], x[1][0]);</div>
-<div class="line"><a id="l06197" name="l06197"></a><span class="lineno"> 6197</span>            <span class="keywordtype">int</span> x2   = max(x[0][1], x[1][1]);</div>
-<div class="line"><a id="l06198" name="l06198"></a><span class="lineno"> 6198</span>            <span class="keywordtype">int</span> y1   = min(y[0][0], y[1][0]);</div>
-<div class="line"><a id="l06199" name="l06199"></a><span class="lineno"> 6199</span>            <span class="keywordtype">int</span> y2   = max(y[0][1], y[1][1]);</div>
-<div class="line"><a id="l06200" name="l06200"></a><span class="lineno"> 6200</span>            <span class="keywordtype">int</span> edge = max(y2 - y1, x2 - x1);</div>
-<div class="line"><a id="l06201" name="l06201"></a><span class="lineno"> 6201</span>            cout &lt;&lt; edge * edge;</div>
-<div class="line"><a id="l06202" name="l06202"></a><span class="lineno"> 6202</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l06203" name="l06203"></a><span class="lineno"> 6203</span>        }</div>
+<div class="line"><a id="l06192" name="l06192"></a><span class="lineno"> 6192</span>            <span class="keywordtype">int</span> x[2][2];</div>
+<div class="line"><a id="l06193" name="l06193"></a><span class="lineno"> 6193</span>            <span class="keywordtype">int</span> y[2][2];</div>
+<div class="line"><a id="l06194" name="l06194"></a><span class="lineno"> 6194</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 2; i++) {</div>
+<div class="line"><a id="l06195" name="l06195"></a><span class="lineno"> 6195</span>                cin &gt;&gt; x[i][0] &gt;&gt; y[i][0] &gt;&gt; x[i][1] &gt;&gt; y[i][1];</div>
+<div class="line"><a id="l06196" name="l06196"></a><span class="lineno"> 6196</span>            }</div>
+<div class="line"><a id="l06197" name="l06197"></a><span class="lineno"> 6197</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> x1   = min(x[0][0], x[1][0]);</div>
+<div class="line"><a id="l06198" name="l06198"></a><span class="lineno"> 6198</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> x2   = max(x[0][1], x[1][1]);</div>
+<div class="line"><a id="l06199" name="l06199"></a><span class="lineno"> 6199</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> y1   = min(y[0][0], y[1][0]);</div>
+<div class="line"><a id="l06200" name="l06200"></a><span class="lineno"> 6200</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> y2   = max(y[0][1], y[1][1]);</div>
+<div class="line"><a id="l06201" name="l06201"></a><span class="lineno"> 6201</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> edge = max(y2 - y1, x2 - x1);</div>
+<div class="line"><a id="l06202" name="l06202"></a><span class="lineno"> 6202</span>            cout &lt;&lt; edge * edge;</div>
+<div class="line"><a id="l06203" name="l06203"></a><span class="lineno"> 6203</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l06204" name="l06204"></a><span class="lineno"> 6204</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d5/de0/a00050_source.html#l02909">TEST()</a>.</p>
 

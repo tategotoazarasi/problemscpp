@@ -118,19 +118,22 @@ $(function() {
 <div class="line"><a id="l01523" name="l01523"></a><span class="lineno"> 1523</span>                cin &gt;&gt; n;</div>
 <div class="line"><a id="l01524" name="l01524"></a><span class="lineno"> 1524</span>                <span class="keywordtype">int</span> ans1 = 0;</div>
 <div class="line"><a id="l01525" name="l01525"></a><span class="lineno"> 1525</span>                <span class="keywordtype">int</span> ans2 = 0;</div>
-<div class="line"><a id="l01526" name="l01526"></a><span class="lineno"> 1526</span>                <span class="keywordflow">while</span>(n--) {</div>
-<div class="line"><a id="l01527" name="l01527"></a><span class="lineno"> 1527</span>                    <span class="keywordtype">int</span> a1, a2, b1, b2;</div>
-<div class="line"><a id="l01528" name="l01528"></a><span class="lineno"> 1528</span>                    cin &gt;&gt; a1 &gt;&gt; a2 &gt;&gt; b1 &gt;&gt; b2;</div>
-<div class="line"><a id="l01529" name="l01529"></a><span class="lineno"> 1529</span>                    <span class="keywordtype">int</span> sum = a1 + b1;</div>
-<div class="line"><a id="l01530" name="l01530"></a><span class="lineno"> 1530</span>                    <span class="keywordflow">if</span>(sum == a2 &amp;&amp; sum != b2) {</div>
-<div class="line"><a id="l01531" name="l01531"></a><span class="lineno"> 1531</span>                        ans2++;</div>
-<div class="line"><a id="l01532" name="l01532"></a><span class="lineno"> 1532</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(sum == b2 &amp;&amp; sum != a2) {</div>
-<div class="line"><a id="l01533" name="l01533"></a><span class="lineno"> 1533</span>                        ans1++;</div>
-<div class="line"><a id="l01534" name="l01534"></a><span class="lineno"> 1534</span>                    }</div>
-<div class="line"><a id="l01535" name="l01535"></a><span class="lineno"> 1535</span>                }</div>
-<div class="line"><a id="l01536" name="l01536"></a><span class="lineno"> 1536</span>                cout &lt;&lt; ans1 &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; ans2;</div>
-<div class="line"><a id="l01537" name="l01537"></a><span class="lineno"> 1537</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01538" name="l01538"></a><span class="lineno"> 1538</span>            }</div>
+<div class="line"><a id="l01526" name="l01526"></a><span class="lineno"> 1526</span>                <span class="keywordflow">while</span>(n-- != 0) {</div>
+<div class="line"><a id="l01527" name="l01527"></a><span class="lineno"> 1527</span>                    <span class="keywordtype">int</span> a1;</div>
+<div class="line"><a id="l01528" name="l01528"></a><span class="lineno"> 1528</span>                    <span class="keywordtype">int</span> a2;</div>
+<div class="line"><a id="l01529" name="l01529"></a><span class="lineno"> 1529</span>                    <span class="keywordtype">int</span> b1;</div>
+<div class="line"><a id="l01530" name="l01530"></a><span class="lineno"> 1530</span>                    <span class="keywordtype">int</span> b2;</div>
+<div class="line"><a id="l01531" name="l01531"></a><span class="lineno"> 1531</span>                    cin &gt;&gt; a1 &gt;&gt; a2 &gt;&gt; b1 &gt;&gt; b2;</div>
+<div class="line"><a id="l01532" name="l01532"></a><span class="lineno"> 1532</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> sum = a1 + b1;</div>
+<div class="line"><a id="l01533" name="l01533"></a><span class="lineno"> 1533</span>                    <span class="keywordflow">if</span>(sum == a2 &amp;&amp; sum != b2) {</div>
+<div class="line"><a id="l01534" name="l01534"></a><span class="lineno"> 1534</span>                        ans2++;</div>
+<div class="line"><a id="l01535" name="l01535"></a><span class="lineno"> 1535</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(sum == b2 &amp;&amp; sum != a2) {</div>
+<div class="line"><a id="l01536" name="l01536"></a><span class="lineno"> 1536</span>                        ans1++;</div>
+<div class="line"><a id="l01537" name="l01537"></a><span class="lineno"> 1537</span>                    }</div>
+<div class="line"><a id="l01538" name="l01538"></a><span class="lineno"> 1538</span>                }</div>
+<div class="line"><a id="l01539" name="l01539"></a><span class="lineno"> 1539</span>                cout &lt;&lt; ans1 &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; ans2;</div>
+<div class="line"><a id="l01540" name="l01540"></a><span class="lineno"> 1540</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01541" name="l01541"></a><span class="lineno"> 1541</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d3/d8b/a00059_source.html#l00714">TEST()</a>.</p>
 
