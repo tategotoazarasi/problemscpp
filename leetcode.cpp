@@ -5653,9 +5653,10 @@ namespace leetcode {
 	}// namespace encrypt_and_decrypt_strings
 
 	namespace range_sum_query_mutable {
-		NumArray::NumArray(vector<int> &nums): nums(nums) {
-			int n = nums.size();
-			size  = sqrt(n);
+		NumArray::NumArray(vector<int> &nums)
+		    : nums(nums) {
+			const int n = nums.size();
+			size        = sqrt(n);
 			sum.resize((n + size - 1) / size);// n/size 向上取整
 			for(int i = 0; i < n; i++) {
 				sum[i / size] += nums[i];
@@ -5667,14 +5668,18 @@ namespace leetcode {
 			nums[index] = val;
 		}
 
-		int NumArray::sumRange(int left, int right) {
-			int b1 = left / size, i1 = left % size, b2 = right / size, i2 = right % size;
-			if(b1 == b2) {// 区间 [left, right] 在同一块中
+		int NumArray::sumRange(int left, int right) const {
+			const int b1 = left / size;
+			const int i1 = left % size;
+			const int b2 = right / size;
+			const int i2 = right % size;
+			if(b1 == b2) {
+				// 区间 [left, right] 在同一块中
 				return accumulate(nums.begin() + b1 * size + i1, nums.begin() + b1 * size + i2 + 1, 0);
 			}
-			int sum1 = accumulate(nums.begin() + b1 * size + i1, nums.begin() + b1 * size + size, 0);
-			int sum2 = accumulate(nums.begin() + b2 * size, nums.begin() + b2 * size + i2 + 1, 0);
-			int sum3 = accumulate(sum.begin() + b1 + 1, sum.begin() + b2, 0);
+			const int sum1 = accumulate(nums.begin() + b1 * size + i1, nums.begin() + b1 * size + size, 0);
+			const int sum2 = accumulate(nums.begin() + b2 * size, nums.begin() + b2 * size + i2 + 1, 0);
+			const int sum3 = accumulate(sum.begin() + b1 + 1, sum.begin() + b2, 0);
 			return sum1 + sum2 + sum3;
 		}
 	}// namespace range_sum_query_mutable
@@ -5716,9 +5721,9 @@ namespace leetcode {
 	namespace prime_number_of_set_bits_in_binary_representation {
 		int Solution::countPrimeSetBits(int left, int right) {
 			int ans = 0;
-			unordered_set<int> primes{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61};
+			const unordered_set primes{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61};
 			for(unsigned i = left; i <= right; i++) {
-				if(primes.count(popcount(i)) > 0) {
+				if(primes.contains(popcount(i))) {
 					ans++;
 				}
 			}
@@ -5737,9 +5742,9 @@ namespace leetcode {
 				adj[edge[1]].emplace_back(edge[0]);
 			}
 
-			vector<int> parent(n, -1);
+			vector parent(n, -1);
 			/* 找到与节点 0 最远的节点 x */
-			int x = findLongestNode(0, parent, adj);
+			const int x = findLongestNode(0, parent, adj);
 			/* 找到与节点 x 最远的节点 y */
 			int y = findLongestNode(x, parent, adj);
 			/* 求出节点 x 到节点 y 的路径 */
@@ -5749,16 +5754,15 @@ namespace leetcode {
 				path.emplace_back(y);
 				y = parent[y];
 			}
-			int m = path.size();
+			const int m = path.size();
 			if(m % 2 == 0) {
 				return {path[m / 2 - 1], path[m / 2]};
-			} else {
-				return {path[m / 2]};
 			}
+			return {path[m / 2]};
 		}
 
 		int Solution::findLongestNode(int u, vector<int> &parent, vector<vector<int>> &adj) {
-			int n = adj.size();
+			const int n = adj.size();
 			queue<int> qu;
 			vector<bool> visit(n);
 			qu.emplace(u);
@@ -5766,7 +5770,7 @@ namespace leetcode {
 			int node = -1;
 
 			while(!qu.empty()) {
-				int curr = qu.front();
+				const int curr = qu.front();
 				qu.pop();
 				node = curr;
 				for(auto &v: adj[curr]) {
@@ -5782,7 +5786,7 @@ namespace leetcode {
 	}// namespace minimum_height_trees
 
 	namespace rotate_string {
-		bool Solution::rotateString(string s, string goal) {
+		bool Solution::rotateString(string s, const string &goal) {
 			if(s.length() != goal.length()) {
 				return false;
 			}
@@ -5802,11 +5806,11 @@ namespace leetcode {
 			while(!q.empty()) {
 				auto [level, node] = q.front();
 				if(ans.size() == level) {
-					ans.push_back(vector<int>());
+					ans.emplace_back();
 				}
 				ans[level].push_back(node->val);
 				q.pop();
-				for(auto next: node->children) {
+				for(auto *next: node->children) {
 					q.push(make_pair(level + 1, next));
 				}
 			}

@@ -1341,13 +1341,13 @@ namespace pat {
 
 		namespace b1042 {
 			int main(istream &cin, ostream &cout) {
-				char *str = new char[1001];
+				auto *str = new char[1001];
 				cin.getline(str, 1001);
 				map<char, int> m;
 				int maximum = 0;
 				for(int i = 0; i < strlen(str); ++i) {
 					char ch = tolower(str[i]);
-					if(isalpha(ch)) {
+					if(isalpha(ch) != 0) {
 						m[ch]++;
 						maximum = max(maximum, m[ch]);
 					}
@@ -1366,17 +1366,17 @@ namespace pat {
 		namespace b1043 {
 			int main(istream &cin, ostream &cout) {
 				unordered_map<char, unsigned> um;
-				char patest[6] = {'P', 'A', 'T', 'e', 's', 't'};
-				um['P']        = 0;
-				um['A']        = 0;
-				um['T']        = 0;
-				um['e']        = 0;
-				um['s']        = 0;
-				um['t']        = 0;
+				const char patest[6] = {'P', 'A', 'T', 'e', 's', 't'};
+				um['P']              = 0;
+				um['A']              = 0;
+				um['T']              = 0;
+				um['e']              = 0;
+				um['s']              = 0;
+				um['t']              = 0;
 				string str;
 				cin >> str;
 				for(char ch: str) {
-					if(um.count(ch) > 0) {
+					if(um.contains(ch)) {
 						um[ch]++;
 					}
 				}
@@ -1420,12 +1420,12 @@ namespace pat {
 				cin >> n;
 				char cccc[16];
 				cin.getline(cccc, 16);
-				while(n--) {
-					char *cstr = new char[1024];
+				while(n-- != 0) {
+					auto *cstr = new char[1024];
 					cin.getline(cstr, 1024);
 					stringstream ss;
 					ss << cstr;
-					if(isdigit(ss.peek())) {
+					if(isdigit(ss.peek()) != 0) {
 						// 地球数字
 						unsigned long long num;
 						ss >> num;
@@ -1463,11 +1463,11 @@ namespace pat {
 						b++;
 						string str;
 						unsigned long long num = 0;
-						while(b) {
+						while(b != 0) {
 							ss >> str;
 							num += um[str] * pow(13, --b);
 						}
-						if(us2.count(str) != 0) {
+						if(us2.contains(str)) {
 							num *= 13;
 						}
 						cout << num;
@@ -1523,10 +1523,13 @@ namespace pat {
 				cin >> n;
 				int ans1 = 0;
 				int ans2 = 0;
-				while(n--) {
-					int a1, a2, b1, b2;
+				while(n-- != 0) {
+					int a1;
+					int a2;
+					int b1;
+					int b2;
 					cin >> a1 >> a2 >> b1 >> b2;
-					int sum = a1 + b1;
+					const int sum = a1 + b1;
 					if(sum == a2 && sum != b2) {
 						ans2++;
 					} else if(sum == b2 && sum != a2) {
@@ -1544,7 +1547,7 @@ namespace pat {
 				cin >> n;
 				unordered_map<int, int> um;
 				int maximum = 0;
-				while(n--) {
+				while(n-- != 0) {
 					int a;
 					cin >> a;
 					cin.get();
@@ -1567,13 +1570,14 @@ namespace pat {
 
 		namespace b1048 {
 			int main(istream &cin, ostream &cout) {
-				string a, b;
+				string a;
+				string b;
 				cin >> a >> b;
 				vector<char> ans;
 				int i = 1;
 				for(; i <= max(b.length(), a.length()); ++i) {
-					int bi = (b.length() >= i) ? (b[b.length() - i] - '0') : 0;
-					int ai = (a.length() >= i) ? (a[a.length() - i] - '0') : 0;
+					const int bi = b.length() >= i ? b[b.length() - i] - '0' : 0;
+					const int ai = a.length() >= i ? a[a.length() - i] - '0' : 0;
 					if(i % 2 != 0) {
 						char ret = (ai + bi) % 13;
 						switch(ret) {

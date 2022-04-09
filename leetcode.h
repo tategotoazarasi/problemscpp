@@ -2075,12 +2075,12 @@ namespace leetcode {
 
 		public:
 			/// \brief Initializes the object with the integer array nums.
-			NumArray(vector<int> &nums);
+			explicit NumArray(vector<int> &nums);
 			/// \brief Updates the value of nums[index] to be val.
 			void update(int index, int val);
 			/// \brief Returns the sum of the elements of nums between indices left and right inclusive (i.e. nums[left] + nums[left + 1] + ... + nums[right]).
 			/// \return The sum of the elements of nums between indices left and right inclusive
-			int sumRange(int left, int right);
+			[[nodiscard]] int sumRange(int left, int right) const;
 		};
 	}// namespace range_sum_query_mutable
 
@@ -2104,8 +2104,8 @@ namespace leetcode {
 	namespace minimum_height_trees {
 		class Solution {
 		public:
-			int findLongestNode(int u, vector<int> &parent, vector<vector<int>> &adj);
-			vector<int> findMinHeightTrees(int n, vector<vector<int>> &edges);
+			static int findLongestNode(int u, vector<int> &parent, vector<vector<int>> &adj);
+			static vector<int> findMinHeightTrees(int n, vector<vector<int>> &edges);
 		};
 	}// namespace minimum_height_trees
 
@@ -2113,7 +2113,7 @@ namespace leetcode {
 	namespace rotate_string {
 		class Solution {
 		public:
-			static bool rotateString(string s, string goal);
+			static bool rotateString(string s, const string &goal);
 		};
 	}// namespace rotate_string
 
@@ -2121,12 +2121,17 @@ namespace leetcode {
 	namespace n_ary_tree_level_order_traversal {
 		class Node {
 		public:
-			int val;
+			int val{};
 			vector<Node *> children;
 			Node() = default;
-			Node(int _val): val(_val){};
-			Node(int _val, vector<Node *> _children): val(_val), children(_children){};
+
+			explicit Node(int _val)
+			    : val(_val){};
+
+			Node(int _val, vector<Node *> _children)
+			    : val(_val), children(std::move(std::move(_children))){};
 		};
+
 		class Solution {
 		public:
 			static vector<vector<int>> levelOrder(Node *root);

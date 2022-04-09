@@ -6189,15 +6189,16 @@ namespace acwing {
 
 	namespace acwing1812 {
 		int main(istream &cin, ostream &cout) {
-			int x[2][2], y[2][2];
+			int x[2][2];
+			int y[2][2];
 			for(int i = 0; i < 2; i++) {
 				cin >> x[i][0] >> y[i][0] >> x[i][1] >> y[i][1];
 			}
-			int x1   = min(x[0][0], x[1][0]);
-			int x2   = max(x[0][1], x[1][1]);
-			int y1   = min(y[0][0], y[1][0]);
-			int y2   = max(y[0][1], y[1][1]);
-			int edge = max(y2 - y1, x2 - x1);
+			const int x1   = min(x[0][0], x[1][0]);
+			const int x2   = max(x[0][1], x[1][1]);
+			const int y1   = min(y[0][0], y[1][0]);
+			const int y2   = max(y[0][1], y[1][1]);
+			const int edge = max(y2 - y1, x2 - x1);
 			cout << edge * edge;
 			return 0;
 		}
@@ -6218,7 +6219,7 @@ namespace acwing {
 			string name;
 			unsigned amount;
 			unsigned minimum = 0;
-			while(n--) {
+			while(n-- != 0U) {
 				cin >> name >> amount;
 				um[name] += amount;
 				minimum = max(minimum, um[name]);
@@ -6232,10 +6233,10 @@ namespace acwing {
 					second_minimum = amount;
 				}
 			}
-			string ans = "";
+			string ans;
 			for(auto &[name, amount]: um) {
 				if(second_minimum == amount) {
-					if(ans == "") {
+					if(ans.empty()) {
 						ans = name;
 					} else {
 						cout << "Tie";
@@ -6254,10 +6255,11 @@ namespace acwing {
 			unordered_map<int, int> um;
 			cin >> n;
 			int ans = 0;
-			while(n--) {
-				int id, side;
+			while(n-- != 0) {
+				int id;
+				int side;
 				cin >> id >> side;
-				if(um.count(id) == 0) {
+				if(!um.contains(id)) {
 					um[id] = side;
 				} else if(um[id] != side) {
 					ans++;
@@ -6271,7 +6273,8 @@ namespace acwing {
 
 	namespace acwing1775 {
 		int main(istream &cin, ostream &cout) {
-			int x, y;
+			int x;
+			int y;
 			cin >> x >> y;
 			int step     = 1;
 			unsigned ans = 0;
@@ -6282,7 +6285,7 @@ namespace acwing {
 					cout << ans;
 					return 0;
 				}
-				ans += abs((x + step) - current);
+				ans += abs(x + step - current);
 				current = x + step;
 				step *= -2;
 			}
@@ -6296,14 +6299,12 @@ namespace acwing {
 			if(l >= r) {
 				return;
 			}
-			int x  = vec[(l + r) >> 1];
-			int lp = l - 1;
-			int rp = r + 1;
+			const int x = vec[l + r >> 1];
+			int lp      = l - 1;
+			int rp      = r + 1;
 			while(lp < rp) {
-				while(vec[++lp] < x)
-					;
-				while(vec[--rp] > x)
-					;
+				while(vec[++lp] < x) {}
+				while(vec[--rp] > x) {}
 				if(lp < rp) {
 					swap(vec[lp], vec[rp]);
 				}
@@ -6333,7 +6334,7 @@ namespace acwing {
 			if(l >= r) {
 				return;
 			}
-			int m = l + r >> 1;
+			const int m = l + r >> 1;
 			ms(arr, l, m, ans);
 			ms(arr, m + 1, r, ans);
 			int i = l;
@@ -6345,7 +6346,7 @@ namespace acwing {
 					tmp[p++] = arr[i++];
 				} else {
 					tmp[p++] = arr[j++];
-					(*ans) += (m - i + 1);
+					*ans += m - i + 1;
 				}
 			}
 			while(i <= m) {
@@ -6379,7 +6380,7 @@ namespace acwing {
 			int l = 0;
 			int r = vec.size() - 1;
 			while(l < r) {
-				int m = (l + r + 1) / 2;
+				const int m = (l + r + 1) / 2;
 				if(vec[m] <= target) {
 					l = m;
 				} else {
@@ -6396,7 +6397,7 @@ namespace acwing {
 			int l = 0;
 			int r = vec.size() - 1;
 			while(l < r) {
-				int m = (l + r) / 2;
+				const int m = (l + r) / 2;
 				if(vec[m] < target) {
 					l = m + 1;
 				} else {
@@ -6410,7 +6411,8 @@ namespace acwing {
 		}
 
 		int main(istream &cin, ostream &cout) {
-			long n, q;
+			long n;
+			long q;
 			cin >> n >> q;
 			vector<long> vec(n);
 			for(long i = 0; i < n; i++) {
@@ -6427,13 +6429,16 @@ namespace acwing {
 
 	namespace acwing1866 {
 		int main(istream &cin, ostream &cout) {
-			int a, b, c, d;
+			int a;
+			int b;
+			int c;
+			int d;
 			cin >> a >> b >> c >> d;
-			int ab    = b - a;
-			int cd    = d - c;
-			int dup_d = min(b, max(a, d));
-			int dup_c = min(b, max(a, c));
-			int sum   = ab + cd - (dup_d - dup_c);
+			const int ab    = b - a;
+			const int cd    = d - c;
+			const int dup_d = min(b, max(a, d));
+			const int dup_c = min(b, max(a, c));
+			const int sum   = ab + cd - (dup_d - dup_c);
 			cout << sum;
 			return 0;
 		}

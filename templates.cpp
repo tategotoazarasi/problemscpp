@@ -37,7 +37,7 @@ BigInt::BigInt(const vector<unsigned short> &vec, bool positive)
 	for(int i = 0; i <= end_i; i++) {
 		this->vec.push_back(vec[i]);
 	}
-	if(this->vec.size() == 0) {
+	if(this->vec.empty()) {
 		this->vec.push_back(0);
 	}
 }
@@ -130,7 +130,7 @@ BigInt::BigInt(unsigned long long int n) {
 
 BigInt::BigInt(const string &str) {
 	int start_i = str.length() - 1;
-	while(start_i >= 0 && isdigit(str[start_i])) {
+	while(start_i >= 0 && isdigit(str[start_i]) != 0) {
 		vec.push_back(str[start_i] - '0');
 		start_i--;
 	}
@@ -141,7 +141,7 @@ BigInt::BigInt(const string &str) {
 
 BigInt::BigInt(const char *str) {
 	int start_i = strlen(str) - 1;
-	while(start_i >= 0 && isdigit(str[start_i])) {
+	while(start_i >= 0 && isdigit(str[start_i]) != 0) {
 		vec.push_back(str[start_i] - '0');
 		start_i--;
 	}
@@ -159,7 +159,7 @@ BigInt::BigInt(const BigInt &bi) {
 	for(int i = 0; i <= end_i; i++) {
 		this->vec.push_back(bi.vec[i]);
 	}
-	if(this->vec.size() == 0) {
+	if(this->vec.empty()) {
 		this->vec.push_back(0);
 	}
 	this->positive = bi.positive;
@@ -237,7 +237,11 @@ bool BigInt::operator>(const BigInt &bi) const {
 	for(int i = get_size() - 1; i >= 0; --i) {
 		if((*this)[i] > bi[i]) {
 			return true;
-		} else if((*this)[i] < bi[i]) {
+		}
+		if((*this)[i] < bi[i]) {
+			return false;
+		}
+		if((*this)[i] < bi[i]) {
 			return false;
 		}
 	}
@@ -304,7 +308,7 @@ ostream &operator<<(ostream &os, const BigInt &bi) {
 	if(!bi.positive) {
 		os << '-';
 	}
-	for(auto it = bi.vec.rbegin(); it != bi.vec.rend(); it++) {
+	for(auto it = bi.vec.rbegin(); it != bi.vec.rend(); ++it) {
 		os << *it;
 	}
 	return os;
@@ -461,6 +465,4 @@ void UnionFind::unite(int x, int y) {
 	}
 }
 
-bool UnionFind::same(int x, int y) {
-	return find(x) == find(y);
-}
+bool UnionFind::same(int x, int y) { return find(x) == find(y); }

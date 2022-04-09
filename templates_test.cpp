@@ -74,7 +74,7 @@ TEST(BigInt, comp6) {
 }
 
 TEST(BigInt, comp7) {
-	BigInt bi1 = "44324324";
+	const BigInt bi1 = "44324324";
 	ASSERT_TRUE(bi1 > 456);
 }
 

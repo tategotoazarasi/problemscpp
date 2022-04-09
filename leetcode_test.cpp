@@ -2497,12 +2497,6 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::kthPalindrome(queries, 5));
 		}
 
-		TEST(find_palindrome_with_fixed_length, case6) {
-			vector queries                 = {10};
-			const vector<long long> output = {10901};
-			ASSERT_EQ(output, Solution::kthPalindrome(queries, 5));
-		}
-
 		TEST(find_palindrome_with_fixed_length, case7) {
 			vector queries                 = {60};
 			const vector<long long> output = {15951};
@@ -2716,14 +2710,14 @@ namespace leetcode {
 		TEST(process_restricted_friend_requests, case1) {
 			vector<vector<int>> restrictions = {{0, 1}};
 			vector<vector<int>> requests     = {{0, 2}, {2, 1}};
-			vector output                    = {true, false};
+			const vector output              = {true, false};
 			ASSERT_EQ(output, Solution::friendRequests(3, restrictions, requests));
 		}
 
 		TEST(process_restricted_friend_requests, case2) {
 			vector<vector<int>> restrictions = {{0, 1}};
 			vector<vector<int>> requests     = {{1, 2}, {0, 2}};
-			vector output                    = {true, false};
+			const vector output              = {true, false};
 			ASSERT_EQ(output, Solution::friendRequests(3, restrictions, requests));
 		}
 	}// namespace process_restricted_friend_requests
@@ -2741,14 +2735,14 @@ namespace leetcode {
 	namespace minimum_height_trees {
 		TEST(minimum_height_trees, case1) {
 			vector<vector<int>> edges = {{1, 0}, {1, 2}, {1, 3}};
-			vector output             = {1};
+			const vector output       = {1};
 			auto sol                  = Solution();
 			ASSERT_EQ(output, sol.findMinHeightTrees(4, edges));
 		}
 
 		TEST(minimum_height_trees, case2) {
 			vector<vector<int>> edges = {{3, 0}, {3, 1}, {3, 2}, {3, 4}, {5, 4}};
-			vector output             = {3, 4};
+			const vector output       = {3, 4};
 			auto sol                  = Solution();
 			ASSERT_EQ(output, sol.findMinHeightTrees(6, edges));
 		}

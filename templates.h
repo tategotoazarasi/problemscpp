@@ -93,7 +93,7 @@ private:
 	vector<int> size;
 
 public:
-	UnionFind(int n);
+	explicit UnionFind(int n);
 	int find(int x);
 	void unite(int x, int y);
 	bool same(int x, int y);
