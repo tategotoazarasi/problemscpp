@@ -1624,6 +1624,72 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1049
+
+		namespace b1050 {
+			int main(istream &cin, ostream &cout) {
+				int N;
+				cin >> N;
+				int m = N;
+				int n = 1;
+				for(int i = 1; i * i <= N; ++i) {
+					if(N % i == 0) {
+						n = i;
+						m = N / i;
+					}
+				}
+				vector matrix(m, vector(n, 0));
+				vector<int> vec(N);
+				for(int i = 0; i < N; i++) {
+					cin >> vec[i];
+				}
+				sort(vec.rbegin(), vec.rend());
+				int direction = 0;//0 右  1 下  2 左  3 上
+				int x         = 0;
+				int y         = 0;
+				int current   = 0;
+				matrix[0][0]  = vec[current];
+				--N;
+				while(N != 0) {
+					int next_x = x;
+					int next_y = y;
+					switch(direction) {
+						case 0:
+							next_y += 1;
+							break;
+						case 1:
+							next_x += 1;
+							break;
+						case 2:
+							next_y -= 1;
+							break;
+						case 3:
+							next_x -= 1;
+							break;
+					}
+					if(next_x < 0 || next_x >= m || next_y < 0 || next_y >= n || matrix[next_x][next_y] != 0) {
+						direction += 1;
+						direction %= 4;
+					} else {
+						matrix[next_x][next_y] = vec[++current];
+						x                      = next_x;
+						y                      = next_y;
+						N--;
+					}
+				}
+				for(int i = 0; i < m; i++) {
+					for(int j = 0; j < n; j++) {
+						cout << matrix[i][j];
+						if(j != n - 1) {
+							cout << ' ';
+						}
+					}
+					if(i != m - 1) {
+						cout << endl;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1050
 	}    // namespace b
 
 	namespace a {}
