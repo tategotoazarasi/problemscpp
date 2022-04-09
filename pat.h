@@ -285,6 +285,13 @@ namespace pat {
 		namespace b1048 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/**
+		 * \brief 1049 数列的片段和
+		 */
+		namespace b1049 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

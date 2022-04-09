@@ -1609,6 +1609,21 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1048
+
+		namespace b1049 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				long double num;
+				long double ans = 0;
+				for(int i = 0; i < n; ++i) {
+					cin >> num;
+					ans += num * (n - i) * (i + 1);
+				}
+				cout << fixed << setprecision(2) << ans;
+				return 0;
+			}
+		}// namespace b1049
 	}    // namespace b
 
 	namespace a {}
