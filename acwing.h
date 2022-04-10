@@ -1945,5 +1945,34 @@ namespace acwing {
 	namespace acwing1854 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/**
+	 * \brief 4397. 卡牌
+	 */
+	namespace acwing4397 {
+		bool cmp(const pair<int, int> &a, const pair<int, int> &b);
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing4397
+
+	/**
+	 * \brief 4398. 查询字符串
+	 */
+	namespace acwing4398 {
+		/// \brief 字典树节点
+		struct TrieNode {
+			char ch;
+			unordered_map<char, TrieNode *> nexts = unordered_map<char, TrieNode *>();
+			unordered_set<string *> origin        = unordered_set<string *>();
+
+			explicit TrieNode(char ch)
+			    : ch(ch) {}
+
+			void insert(const string &str, int start, string *origin);
+			[[nodiscard]] TrieNode *search(const string &str, int start);
+			~TrieNode();
+		};
+
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing4398
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

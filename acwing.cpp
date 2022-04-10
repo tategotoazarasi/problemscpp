@@ -6464,4 +6464,95 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1854
+
+	namespace acwing4397 {
+		bool cmp(const pair<int, int> &a, const pair<int, int> &b) { return a.first > b.first; }
+
+		int main(istream &cin, ostream &cout) {
+			int n;
+			int k;
+			cin >> n >> k;
+			vector<int> a(n);
+			vector<int> b(n);
+			vector<pair<int, int>> a_b(n);
+			for(int i = 0; i < n; i++) {
+				cin >> a[i];
+			}
+			for(int i = 0; i < n; i++) {
+				cin >> b[i];
+				a_b[i] = make_pair(a[i] - b[i], i);
+			}
+			sort(a_b.begin(), a_b.end(), cmp);
+			for(int i = 0; i < k; i++) {
+				if(a_b[i].first > 0) {
+					a[a_b[i].second] = b[a_b[i].second];
+				} else {
+					break;
+				}
+			}
+			long long ans = 0;
+			for(int i = 0; i < n; i++) {
+				ans += a[i];
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing4397
+
+	namespace acwing4398 {
+		void TrieNode::insert(const string &str, int start, string *origin) {
+			if(!this->nexts.contains(str[start])) {
+				this->nexts[str[start]] = new TrieNode(str[start]);
+			}
+			if(origin != nullptr) {
+				this->nexts[str[start]]->origin.insert(origin);
+			}
+			if(str.length() - start != 1) {
+				this->nexts[str[start]]->insert(str, start + 1, origin);
+			}
+		}
+
+		TrieNode *TrieNode::search(const string &str, int start) {
+			this->ch = this->ch;
+			if(this->nexts.contains(str[start])) {
+				if(start + 1 == str.length()) {
+					return this->nexts[str[start]];
+				}
+				return this->nexts[str[start]]->search(str, start + 1);
+			}
+			return nullptr;
+		}
+
+		TrieNode::~TrieNode() {
+			for(const auto [k, v]: this->nexts) {
+				delete v;
+			}
+		}
+
+		int main(istream &cin, ostream &cout) {
+			int n;
+			int q;
+			cin >> n;
+			TrieNode tn(0);
+			vector<string> f(n);
+			for(int i = 0; i < n; i++) {
+				cin >> f[i];
+				for(int j = 0; j < f[i].length(); ++j) {
+					tn.insert(f[i], j, &f[i]);
+				}
+			}
+			cin >> q;
+			for(int i = 0; i < q; i++) {
+				string s;
+				cin >> s;
+				TrieNode *node = tn.search(s, 0);
+				if(node == nullptr) {
+					cout << "0 -" << endl;
+				} else {
+					cout << node->origin.size() << ' ' << **node->origin.begin() << endl;
+				}
+			}
+			return 0;
+		}
+	}// namespace acwing4398
 }// namespace acwing

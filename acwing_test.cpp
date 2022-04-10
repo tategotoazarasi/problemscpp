@@ -3032,4 +3032,22 @@ namespace acwing {
 			ASSERT_EQ("1\n1\n1\n", ans);
 		}
 	}// namespace acwing1854
+
+	namespace acwing4397 {
+		TEST(acwing4397, case1) {
+			istringstream in("3 1\n5 4 6\n3 1 5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("10", ans);
+		}
+
+		TEST(acwing4397, case2) {
+			istringstream in("5 3\n3 4 7 10 3\n4 5 5 12 5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("25", ans);
+		}
+	}// namespace acwing4397
 }// namespace acwing
