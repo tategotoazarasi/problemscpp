@@ -306,6 +306,13 @@ namespace pat {
 		namespace b1051 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/**
+		 * \brief 1052 卖个萌
+		 */
+		namespace b1052 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

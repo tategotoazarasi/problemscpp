@@ -780,6 +780,16 @@ namespace pat {
 				ASSERT_EQ("-8.68-8.23i", out.str());
 			}
 		}// namespace b1051
+
+		namespace b1052 {
+			TEST(b1052, case1) {
+				istringstream in("[¨r][¨q][o][~\\][/~]  [<][>]\n [¨s][¨t][^][-][=][>][<][@][¡Ñ]\n[§¥][¨Œ][_][¦Å][^]  ...\n4\n1 1 2 2 2\n6 8 1 5 5\n3 3 4 3 3\n2 10 3 9 3\n");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("¨r(¨s¨Œ¨t)¨q\n<(@§¥=)/~\no(^¦Å^)o\nAre you kidding me? @\\/@\n", out.str());
+			}
+		}// namespace b1052
 	}    // namespace b
 
 	namespace a {}

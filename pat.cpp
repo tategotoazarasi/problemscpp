@@ -1714,6 +1714,83 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1051
+
+		namespace b1052 {
+			int main(istream &cin, ostream &cout) {
+				vector<string> vec[3];
+				char line[1024];
+				for(int a = 0; a < 3; a++) {
+					cin.getline(line, sizeof line);
+					int i = 0;
+					int j = 0;
+					while(i < strlen(line) && j < strlen(line)) {
+						while(line[i] != '[' && i < strlen(line)) {
+							++i;
+						}
+						while(line[j] != ']' && j < strlen(line)) {
+							++j;
+						}
+						if(i < strlen(line) && j < strlen(line)) {
+							ostringstream oss;
+							for(int m = i + 1; m < j; ++m) {
+								oss << line[m];
+							}
+							vec[a].push_back(oss.str());
+							++i;
+							++j;
+						}
+					}
+				}
+				int k;
+				cin >> k;
+				while(k-- != 0) {
+					ostringstream oss;
+					int a;
+					int b;
+					int c;
+					int d;
+					int e;
+					cin >> a >> b >> c >> d >> e;
+					--a;
+					--b;
+					--c;
+					--d;
+					--e;
+					if(a < vec[0].size()) {
+						oss << vec[0][a];
+					} else {
+						goto END;
+					}
+					oss << '(';
+					if(b < vec[1].size()) {
+						oss << vec[1][b];
+					} else {
+						goto END;
+					}
+					if(c < vec[2].size()) {
+						oss << vec[2][c];
+					} else {
+						goto END;
+					}
+					if(d < vec[1].size()) {
+						oss << vec[1][d];
+					} else {
+						goto END;
+					}
+					oss << ')';
+					if(e < vec[0].size()) {
+						oss << vec[0][e];
+					} else {
+						goto END;
+					}
+					cout << oss.str() << endl;
+					continue;
+				END:;
+					cout << "Are you kidding me? @\\/@" << endl;
+				}
+				return 0;
+			}
+		}// namespace b1052
 	}    // namespace b
 
 	namespace a {}
