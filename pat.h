@@ -171,7 +171,7 @@ namespace pat {
 				Person() = default;
 
 				Person(int year, int month, int day)
-					: year(year), month(month), day(day) {}
+				    : year(year), month(month), day(day) {}
 
 				bool operator<(const Person &p) const;
 			};
@@ -297,6 +297,13 @@ namespace pat {
 		 * \brief 1050 螺旋矩阵
 		 */
 		namespace b1050 {
+			int main(istream &cin, ostream &cout);
+		}
+
+		/**
+		 * \brief 1051 复数乘法
+		 */
+		namespace b1051 {
 			int main(istream &cin, ostream &cout);
 		}
 	}// namespace b

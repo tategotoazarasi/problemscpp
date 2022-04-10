@@ -1690,6 +1690,30 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1050
+
+		namespace b1051 {
+			int main(istream &cin, ostream &cout) {
+				long double r1;
+				long double p1;
+				long double r2;
+				long double p2;
+				cin >> r1 >> p1 >> r2 >> p2;
+				const long double a1 = r1 * cos(p1);
+				const long double a2 = r2 * cos(p2);
+				const long double b1 = r1 * sin(p1);
+				const long double b2 = r2 * sin(p2);
+				long double a        = a1 * a2 - b1 * b2;
+				long double b        = a1 * b2 + a2 * b1;
+				if(a < 0 && a + 0.005 >= 0) {
+					a += 0.005;
+				}
+				if(b < 0 && b + 0.005 >= 0) {
+					b += 0.005;
+				}
+				cout << fixed << setprecision(2) << a << fixed << setprecision(2) << showpos << b << 'i';
+				return 0;
+			}
+		}// namespace b1051
 	}    // namespace b
 
 	namespace a {}

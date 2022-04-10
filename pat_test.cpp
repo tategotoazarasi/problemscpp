@@ -770,6 +770,16 @@ namespace pat {
 				ASSERT_EQ("98 95 93\n42 37 81\n53 20 76\n58 60 76", out.str());
 			}
 		}// namespace b1050
+
+		namespace b1051 {
+			TEST(b1051, case1) {
+				istringstream in("2.3 3.5 5.2 0.4");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("-8.68-8.23i", out.str());
+			}
+		}// namespace b1051
 	}    // namespace b
 
 	namespace a {}
