@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['judgecircle_0',['judgeCircle',['../d7/d2d/a02145.html#a9ef53a28bd3fe0b90d3eed6fd9ad125d',1,'lintcode::judge_circle::Solution']]]
+  ['judgecircle_0',['judgeCircle',['../dc/d6c/a02163.html#a9ef53a28bd3fe0b90d3eed6fd9ad125d',1,'lintcode::judge_circle::Solution']]]
 ];

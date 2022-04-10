@@ -44,6 +44,7 @@ var menudata={children:[
 {text:"u",url:"namespacemembers_u.html#index_u"}]},
 {text:"函数",url:"namespacemembers_func.html",children:[
 {text:"b",url:"namespacemembers_func.html#index_b"},
+{text:"c",url:"namespacemembers_func_c.html#index_c"},
 {text:"d",url:"namespacemembers_func_d.html#index_d"},
 {text:"f",url:"namespacemembers_func_f.html#index_f"},
 {text:"i",url:"namespacemembers_func_i.html#index_i"},
