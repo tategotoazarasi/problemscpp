@@ -5839,4 +5839,55 @@ namespace leetcode {
 			return false;
 		}
 	}// namespace reaching_points
+
+	namespace maximum_product_after_k_increments {
+		int Solution::maximumProduct(vector<int> &nums, int k) {
+			priority_queue<int, vector<int>, greater<int>> pq;
+			for(auto num: nums) {
+				pq.push(num);
+			}
+			while(k-- != 0) {
+				const int num = pq.top();
+				pq.pop();
+				pq.push(num + 1);
+			}
+			long long ans = 1;
+			while(!pq.empty()) {
+				const int num = pq.top();
+				pq.pop();
+				ans *= num;
+				ans %= 1000000007;
+			}
+			return ans;
+		}
+	}// namespace maximum_product_after_k_increments
+
+	namespace maximum_total_beauty_of_the_gardens {
+		long long Solution::maximumBeauty(vector<int> &flowers, long long newFlowers, int target, int full, int partial) {
+			const int n = flowers.size();
+			sort(flowers.begin(), flowers.end());
+			for(int i = 0; i < n; i++) {
+				flowers[i] = min(flowers[i], target);
+			}
+			long long ans = 0;
+			vector<long long> sum(n + 1, 0);///< 当前项之前的和
+			for(int i = 0; i < n; i++) {
+				sum[i + 1] = sum[i] + flowers[i];
+			}
+			for(int i = 0, j = 0; i <= n; i++) {
+				const long long rest = newFlowers - (static_cast<long long>(target) * (n - i) - (sum[n] - sum[i]));///< 补齐后n-i项到target后剩余的
+				if(rest >= 0) {
+					while(j < i && rest >= static_cast<long long>(flowers[j]) * j - sum[j]) {
+						//将前j项补齐到flowers[j]
+						j++;
+					}
+					ans = max(ans, static_cast<long long>(full) * (n - i) + (j == 0 ? 0 : static_cast<long long>(partial) * min(static_cast<long long>(target - 1), (rest + sum[j]) / j)));
+				}
+				if(i < n && flowers[i] == target) {
+					break;
+				}
+			}
+			return ans;
+		}
+	}// namespace maximum_total_beauty_of_the_gardens
 }// namespace leetcode

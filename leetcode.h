@@ -2147,6 +2147,26 @@ namespace leetcode {
 			static bool reachingPoints(int sx, int sy, int tx, int ty);
 		};
 	}// namespace reaching_points
+
+	/**
+	 * \brief 6039. K 次增加后的最大乘积
+	 */
+	namespace maximum_product_after_k_increments {
+		class Solution {
+		public:
+			static int maximumProduct(vector<int> &nums, int k);
+		};
+	}// namespace maximum_product_after_k_increments
+
+	/**
+	 * \brief 6040. 花园的最大总美丽值
+	 */
+	namespace maximum_total_beauty_of_the_gardens {
+		class Solution {
+		public:
+			static long long maximumBeauty(vector<int> &flowers, long long newFlowers, int target, int full, int partial);
+		};
+	}// namespace maximum_total_beauty_of_the_gardens
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

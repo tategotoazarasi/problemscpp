@@ -2771,4 +2771,33 @@ namespace leetcode {
 			ASSERT_TRUE(Solution::reachingPoints(1, 1, 1, 1));
 		}
 	}// namespace reaching_points
+
+	namespace maximum_product_after_k_increments {
+		TEST(maximum_product_after_k_increments, case1) {
+			vector nums = {0, 4};
+			ASSERT_EQ(20, Solution::maximumProduct(nums, 5));
+		}
+
+		TEST(maximum_product_after_k_increments, case2) {
+			vector nums = {6, 3, 3, 2};
+			ASSERT_EQ(216, Solution::maximumProduct(nums, 2));
+		}
+	}// namespace maximum_product_after_k_increments
+
+	namespace maximum_total_beauty_of_the_gardens {
+		TEST(maximum_total_beauty_of_the_gardens, case1) {
+			vector flowers = {1, 3, 1, 1};
+			ASSERT_EQ(14, Solution::maximumBeauty(flowers, 7, 6, 12, 1));
+		}
+
+		TEST(maximum_total_beauty_of_the_gardens, case2) {
+			vector flowers = {2, 4, 5, 3};
+			ASSERT_EQ(30, Solution::maximumBeauty(flowers, 10, 5, 2, 6));
+		}
+
+		TEST(maximum_total_beauty_of_the_gardens, case3) {
+			vector flowers = {19, 17, 6, 9, 19};
+			ASSERT_EQ(104, Solution::maximumBeauty(flowers, 24, 10, 17, 4));
+		}
+	}// namespace maximum_total_beauty_of_the_gardens
 }// namespace leetcode
