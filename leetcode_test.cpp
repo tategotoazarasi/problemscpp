@@ -2800,4 +2800,14 @@ namespace leetcode {
 			ASSERT_EQ(104, Solution::maximumBeauty(flowers, 24, 10, 17, 4));
 		}
 	}// namespace maximum_total_beauty_of_the_gardens
+
+	namespace count_numbers_with_unique_digits {
+		TEST(count_numbers_with_unique_digits, case1) {
+			ASSERT_EQ(91, Solution::countNumbersWithUniqueDigits(2));
+		}
+
+		TEST(count_numbers_with_unique_digits, case2) {
+			ASSERT_EQ(1, Solution::countNumbersWithUniqueDigits(0));
+		}
+	}// namespace count_numbers_with_unique_digits
 }// namespace leetcode

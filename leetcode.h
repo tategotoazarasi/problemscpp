@@ -2167,6 +2167,14 @@ namespace leetcode {
 			static long long maximumBeauty(vector<int> &flowers, long long newFlowers, int target, int full, int partial);
 		};
 	}// namespace maximum_total_beauty_of_the_gardens
+
+	/// \brief 357. Count Numbers with Unique Digits
+	namespace count_numbers_with_unique_digits {
+		class Solution {
+		public:
+			static int countNumbersWithUniqueDigits(int n);
+		};
+	}// namespace count_numbers_with_unique_digits
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
