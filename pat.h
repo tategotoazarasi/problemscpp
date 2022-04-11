@@ -318,6 +318,11 @@ namespace pat {
 		namespace b1053 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1054 求平均值
+		namespace b1054 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

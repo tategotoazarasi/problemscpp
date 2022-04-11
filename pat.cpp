@@ -1825,6 +1825,82 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1053
+
+		namespace b1054 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				string x;
+				long double sum = 0;
+				int k           = 0;
+				while(n--) {
+					cin >> x;
+					bool flag = true;
+					int start = 0;
+					if(x[0] == '-') {
+						if(x.length() > 1) {
+							start = 1;
+						} else {
+							goto ERROR;
+						}
+					}
+					if(x.length() > 8) {
+						goto ERROR;
+					}
+					if(isdigit(x[start])) {
+						int pos = -1;
+						for(int i = start + 1; i < x.length(); ++i) {
+							if(x[i] == '.') {
+								if(flag) {
+									flag = false;
+									pos  = i;
+								} else {
+									goto ERROR;
+								}
+							} else if(!isdigit(x[i])) {
+								goto ERROR;
+							}
+						}
+						if(!flag) {
+							if(pos + 3 < x.length()) {
+								goto ERROR;
+							}
+						}
+						stringstream ss;
+						ss << x;
+						if(flag) {
+							int num;
+							ss >> num;
+							if(num >= -1000 && num <= 1000) {
+								sum += num;
+								k++;
+							} else {
+								goto ERROR;
+							}
+						} else {
+							long double num;
+							ss >> num;
+							if(num >= -1000 && num <= 1000) {
+								sum += num;
+								k++;
+							} else {
+								goto ERROR;
+							}
+						}
+					} else {
+					ERROR:
+						cout << "ERROR: " << x << " is not a legal number" << endl;
+					}
+				}
+				if(k == 0) {
+					cout << "The average of 0 numbers is Undefined" << endl;
+				} else {
+					long double y = sum / k;
+					cout << "The average of " << k << " number" << (k == 1 ? "" : "s") << " is " << fixed << setprecision(2) << y << endl;
+				}
+				return 0;
+			}
+		}// namespace b1054
 	}    // namespace b
 
 	namespace a {}

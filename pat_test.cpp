@@ -805,6 +805,34 @@ namespace pat {
 				ASSERT_EQ("40.0% 20.0%", out.str());
 			}
 		}// namespace b1053
+
+		namespace b1054 {
+			TEST(b1054, case1) {
+				istringstream in("7\n"
+				                 "5 -3.2 aaa 9999 2.3.4 7.123 2.35");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("ERROR: aaa is not a legal number\n"
+				          "ERROR: 9999 is not a legal number\n"
+				          "ERROR: 2.3.4 is not a legal number\n"
+				          "ERROR: 7.123 is not a legal number\n"
+				          "The average of 3 numbers is 1.38\n",
+				          out.str());
+			}
+
+			TEST(b1054, case2) {
+				istringstream in("2\n"
+				                 "aaa -9999");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("ERROR: aaa is not a legal number\n"
+				          "ERROR: -9999 is not a legal number\n"
+				          "The average of 0 numbers is Undefined\n",
+				          out.str());
+			}
+		}// namespace b1054
 	}    // namespace b
 
 	namespace a {}
