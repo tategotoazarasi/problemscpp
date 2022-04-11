@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::minimum_difference_in_sums_after_removal_of_elements::Solution类 参考</title>
+<title>problemscpp: leetcode::minimum_cost_to_set_cooking_time::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,14 +63,14 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../da/d72/a00124.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d7/da0/a00198.html">minimum_difference_in_sums_after_removal_of_elements</a></li><li class="navelem"><a class="el" href="../../dd/d2d/a01635.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/dfe/a00125.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d7/da0/a00198.html">minimum_cost_to_set_cooking_time</a></li><li class="navelem"><a class="el" href="../../dd/d2d/a01635.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="../../d6/daf/a01632.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::minimum_difference_in_sums_after_removal_of_elements::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::minimum_cost_to_set_cooking_time::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -78,15 +78,17 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a70ac6ce237e75442787241bfc7bcc801"><td class="memItemLeft" align="right" valign="top">static long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/a01635.html#a70ac6ce237e75442787241bfc7bcc801">minimumDifference</a> (vector&lt; int &gt; &amp;nums)</td></tr>
-<tr class="separator:a70ac6ce237e75442787241bfc7bcc801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30331e11a86ffde67e8d06027fcb0408"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/a01635.html#a30331e11a86ffde67e8d06027fcb0408">get_cost</a> (int startAt, int moveCost, int pushCost, const int num[4])</td></tr>
+<tr class="separator:a30331e11a86ffde67e8d06027fcb0408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad91b39aae2018064e4f61abe046f547b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/a01635.html#ad91b39aae2018064e4f61abe046f547b">minCostSetTime</a> (int startAt, int moveCost, int pushCost, int targetSeconds)</td></tr>
+<tr class="separator:ad91b39aae2018064e4f61abe046f547b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">leetcode.h</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00914">914</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">leetcode.h</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00903">903</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a70ac6ce237e75442787241bfc7bcc801" name="a70ac6ce237e75442787241bfc7bcc801"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70ac6ce237e75442787241bfc7bcc801">&#9670;&nbsp;</a></span>minimumDifference()</h2>
+<a id="a30331e11a86ffde67e8d06027fcb0408" name="a30331e11a86ffde67e8d06027fcb0408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30331e11a86ffde67e8d06027fcb0408">&#9670;&nbsp;</a></span>get_cost()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -95,11 +97,33 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long leetcode::minimum_difference_in_sums_after_removal_of_elements::Solution::minimumDifference </td>
+          <td class="memname">int leetcode::minimum_cost_to_set_cooking_time::Solution::get_cost </td>
           <td>(</td>
-          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>nums</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>startAt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>moveCost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pushCost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>num</em>[4]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -109,54 +133,97 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d8c/a00035_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d8c/a00035_source.html#l02326">2326</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02326" name="l02326"></a><span class="lineno"> 2326</span>                                                               {</div>
-<div class="line"><a id="l02327" name="l02327"></a><span class="lineno"> 2327</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n         = nums.size() / 3;</div>
-<div class="line"><a id="l02328" name="l02328"></a><span class="lineno"> 2328</span>            <span class="keyword">auto</span> *left_sum      = <span class="keyword">new</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span>[n];</div>
-<div class="line"><a id="l02329" name="l02329"></a><span class="lineno"> 2329</span>            <span class="keyword">auto</span> *right_sum     = <span class="keyword">new</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span>[n];</div>
-<div class="line"><a id="l02330" name="l02330"></a><span class="lineno"> 2330</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> left_min  = 0;</div>
-<div class="line"><a id="l02331" name="l02331"></a><span class="lineno"> 2331</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> right_max = 0;</div>
-<div class="line"><a id="l02332" name="l02332"></a><span class="lineno"> 2332</span>            <span class="keyword">auto</span> left_n         = priority_queue&lt;int&gt;();</div>
-<div class="line"><a id="l02333" name="l02333"></a><span class="lineno"> 2333</span>            <span class="keyword">auto</span> right_n        = priority_queue&lt;int, vector&lt;int&gt;, greater&lt;&gt;&gt;();</div>
-<div class="line"><a id="l02334" name="l02334"></a><span class="lineno"> 2334</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l02335" name="l02335"></a><span class="lineno"> 2335</span>                left_n.push(nums[i]);</div>
-<div class="line"><a id="l02336" name="l02336"></a><span class="lineno"> 2336</span>                left_min += nums[i];</div>
-<div class="line"><a id="l02337" name="l02337"></a><span class="lineno"> 2337</span>            }</div>
-<div class="line"><a id="l02338" name="l02338"></a><span class="lineno"> 2338</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 3 * n - 1; i &gt;= 2 * n; i--) {</div>
-<div class="line"><a id="l02339" name="l02339"></a><span class="lineno"> 2339</span>                right_n.push(nums[i]);</div>
-<div class="line"><a id="l02340" name="l02340"></a><span class="lineno"> 2340</span>                right_max += nums[i];</div>
-<div class="line"><a id="l02341" name="l02341"></a><span class="lineno"> 2341</span>            }</div>
-<div class="line"><a id="l02342" name="l02342"></a><span class="lineno"> 2342</span>            <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> left_min_preserve  = left_min;</div>
-<div class="line"><a id="l02343" name="l02343"></a><span class="lineno"> 2343</span>            <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> right_max_preserve = right_max;</div>
-<div class="line"><a id="l02344" name="l02344"></a><span class="lineno"> 2344</span>            left_sum[0]                        = left_min;</div>
-<div class="line"><a id="l02345" name="l02345"></a><span class="lineno"> 2345</span>            right_sum[n - 1]                   = right_max;</div>
-<div class="line"><a id="l02346" name="l02346"></a><span class="lineno"> 2346</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = n; i &lt; 2 * n; i++) {</div>
-<div class="line"><a id="l02347" name="l02347"></a><span class="lineno"> 2347</span>                <span class="keywordflow">if</span>(nums[i] &lt; left_n.top()) {</div>
-<div class="line"><a id="l02348" name="l02348"></a><span class="lineno"> 2348</span>                    left_min += nums[i] - left_n.top();</div>
-<div class="line"><a id="l02349" name="l02349"></a><span class="lineno"> 2349</span>                    left_n.pop();</div>
-<div class="line"><a id="l02350" name="l02350"></a><span class="lineno"> 2350</span>                    left_n.push(nums[i]);</div>
-<div class="line"><a id="l02351" name="l02351"></a><span class="lineno"> 2351</span>                }</div>
-<div class="line"><a id="l02352" name="l02352"></a><span class="lineno"> 2352</span>                left_sum[i - n] = left_min;</div>
-<div class="line"><a id="l02353" name="l02353"></a><span class="lineno"> 2353</span>            }</div>
-<div class="line"><a id="l02354" name="l02354"></a><span class="lineno"> 2354</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2 * n - 1; i &gt;= n; i--) {</div>
-<div class="line"><a id="l02355" name="l02355"></a><span class="lineno"> 2355</span>                <span class="keywordflow">if</span>(nums[i] &gt; right_n.top()) {</div>
-<div class="line"><a id="l02356" name="l02356"></a><span class="lineno"> 2356</span>                    right_max += nums[i] - right_n.top();</div>
-<div class="line"><a id="l02357" name="l02357"></a><span class="lineno"> 2357</span>                    right_n.pop();</div>
-<div class="line"><a id="l02358" name="l02358"></a><span class="lineno"> 2358</span>                    right_n.push(nums[i]);</div>
-<div class="line"><a id="l02359" name="l02359"></a><span class="lineno"> 2359</span>                }</div>
-<div class="line"><a id="l02360" name="l02360"></a><span class="lineno"> 2360</span>                right_sum[i - n] = right_max;</div>
-<div class="line"><a id="l02361" name="l02361"></a><span class="lineno"> 2361</span>            }</div>
-<div class="line"><a id="l02362" name="l02362"></a><span class="lineno"> 2362</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans = left_min_preserve - right_sum[0];</div>
-<div class="line"><a id="l02363" name="l02363"></a><span class="lineno"> 2363</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n - 1; i++) {</div>
-<div class="line"><a id="l02364" name="l02364"></a><span class="lineno"> 2364</span>                ans = min(ans, left_sum[i] - right_sum[i + 1]);</div>
-<div class="line"><a id="l02365" name="l02365"></a><span class="lineno"> 2365</span>            }</div>
-<div class="line"><a id="l02366" name="l02366"></a><span class="lineno"> 2366</span>            ans = min(ans, left_sum[n - 1] - right_max_preserve);</div>
-<div class="line"><a id="l02367" name="l02367"></a><span class="lineno"> 2367</span>            <span class="keyword">delete</span>[] left_sum;</div>
-<div class="line"><a id="l02368" name="l02368"></a><span class="lineno"> 2368</span>            <span class="keyword">delete</span>[] right_sum;</div>
-<div class="line"><a id="l02369" name="l02369"></a><span class="lineno"> 2369</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l02370" name="l02370"></a><span class="lineno"> 2370</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d8c/a00035_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d8c/a00035_source.html#l02306">2306</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02306" name="l02306"></a><span class="lineno"> 2306</span>                                                                                        {</div>
+<div class="line"><a id="l02307" name="l02307"></a><span class="lineno"> 2307</span>            <span class="keywordtype">int</span> cost    = 0;</div>
+<div class="line"><a id="l02308" name="l02308"></a><span class="lineno"> 2308</span>            <span class="keywordtype">int</span> current = startAt;</div>
+<div class="line"><a id="l02309" name="l02309"></a><span class="lineno"> 2309</span>            <span class="keywordtype">bool</span> flag   = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l02310" name="l02310"></a><span class="lineno"> 2310</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 4; i++) {</div>
+<div class="line"><a id="l02311" name="l02311"></a><span class="lineno"> 2311</span>                <span class="keywordflow">if</span>(num[i] == 0 &amp;&amp; flag) {</div>
+<div class="line"><a id="l02312" name="l02312"></a><span class="lineno"> 2312</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l02313" name="l02313"></a><span class="lineno"> 2313</span>                }</div>
+<div class="line"><a id="l02314" name="l02314"></a><span class="lineno"> 2314</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l02315" name="l02315"></a><span class="lineno"> 2315</span>                <span class="keywordflow">if</span>(num[i] != current) {</div>
+<div class="line"><a id="l02316" name="l02316"></a><span class="lineno"> 2316</span>                    cost += moveCost;</div>
+<div class="line"><a id="l02317" name="l02317"></a><span class="lineno"> 2317</span>                    current = num[i];</div>
+<div class="line"><a id="l02318" name="l02318"></a><span class="lineno"> 2318</span>                }</div>
+<div class="line"><a id="l02319" name="l02319"></a><span class="lineno"> 2319</span>                cost += pushCost;</div>
+<div class="line"><a id="l02320" name="l02320"></a><span class="lineno"> 2320</span>            }</div>
+<div class="line"><a id="l02321" name="l02321"></a><span class="lineno"> 2321</span>            <span class="keywordflow">return</span> cost;</div>
+<div class="line"><a id="l02322" name="l02322"></a><span class="lineno"> 2322</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l01276">leetcode::minimum_difference_in_sums_after_removal_of_elements::TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d8c/a00035_source.html#l02287">minCostSetTime()</a>.</p>
+
+</div>
+</div>
+<a id="ad91b39aae2018064e4f61abe046f547b" name="ad91b39aae2018064e4f61abe046f547b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad91b39aae2018064e4f61abe046f547b">&#9670;&nbsp;</a></span>minCostSetTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leetcode::minimum_cost_to_set_cooking_time::Solution::minCostSetTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>startAt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>moveCost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pushCost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>targetSeconds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d4/d8c/a00035_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d8c/a00035_source.html#l02287">2287</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02287" name="l02287"></a><span class="lineno"> 2287</span>                                                                                               {</div>
+<div class="line"><a id="l02288" name="l02288"></a><span class="lineno"> 2288</span>            <span class="keywordtype">int</span> ans    = (moveCost + pushCost) * 4;</div>
+<div class="line"><a id="l02289" name="l02289"></a><span class="lineno"> 2289</span>            <span class="keywordtype">int</span> minute = targetSeconds / 60;</div>
+<div class="line"><a id="l02290" name="l02290"></a><span class="lineno"> 2290</span>            <span class="keywordtype">int</span> second = targetSeconds % 60;</div>
+<div class="line"><a id="l02291" name="l02291"></a><span class="lineno"> 2291</span>            <span class="keywordflow">while</span>(minute &gt; 99) {</div>
+<div class="line"><a id="l02292" name="l02292"></a><span class="lineno"> 2292</span>                minute -= 1;</div>
+<div class="line"><a id="l02293" name="l02293"></a><span class="lineno"> 2293</span>                second += 60;</div>
+<div class="line"><a id="l02294" name="l02294"></a><span class="lineno"> 2294</span>            }</div>
+<div class="line"><a id="l02295" name="l02295"></a><span class="lineno"> 2295</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> num[4] = {minute / 10, minute % 10, second / 10, second % 10};</div>
+<div class="line"><a id="l02296" name="l02296"></a><span class="lineno"> 2296</span>            ans              = min(ans, <a class="code hl_function" href="../../dd/d2d/a01635.html#a30331e11a86ffde67e8d06027fcb0408">get_cost</a>(startAt, moveCost, pushCost, num));</div>
+<div class="line"><a id="l02297" name="l02297"></a><span class="lineno"> 2297</span>            <span class="keywordflow">if</span>(second + 60 &lt; 100 &amp;&amp; minute - 1 &gt;= 0) {</div>
+<div class="line"><a id="l02298" name="l02298"></a><span class="lineno"> 2298</span>                second += 60;</div>
+<div class="line"><a id="l02299" name="l02299"></a><span class="lineno"> 2299</span>                minute -= 1;</div>
+<div class="line"><a id="l02300" name="l02300"></a><span class="lineno"> 2300</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> num[4] = {minute / 10, minute % 10, second / 10, second % 10};</div>
+<div class="line"><a id="l02301" name="l02301"></a><span class="lineno"> 2301</span>                ans              = min(ans, <a class="code hl_function" href="../../dd/d2d/a01635.html#a30331e11a86ffde67e8d06027fcb0408">get_cost</a>(startAt, moveCost, pushCost, num));</div>
+<div class="line"><a id="l02302" name="l02302"></a><span class="lineno"> 2302</span>            }</div>
+<div class="line"><a id="l02303" name="l02303"></a><span class="lineno"> 2303</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l02304" name="l02304"></a><span class="lineno"> 2304</span>        }</div>
+<div class="ttc" id="aa01635_html_a30331e11a86ffde67e8d06027fcb0408"><div class="ttname"><a href="../../dd/d2d/a01635.html#a30331e11a86ffde67e8d06027fcb0408">leetcode::minimum_cost_to_set_cooking_time::Solution::get_cost</a></div><div class="ttdeci">static int get_cost(int startAt, int moveCost, int pushCost, const int num[4])</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8c/a00035_source.html#l02306">leetcode.cpp:2306</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d4/d8c/a00035_source.html#l02306">get_cost()</a>.</p>
 
 </div>
 </div>
