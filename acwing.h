@@ -1974,5 +1974,10 @@ namespace acwing {
 
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing4398
+
+	/// \brief 1842. 牛奶桶
+	namespace acwing1842 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

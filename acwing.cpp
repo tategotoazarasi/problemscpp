@@ -6555,4 +6555,19 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing4398
+
+	namespace acwing1842 {
+		int main(istream &cin, ostream &cout) {
+			int x, y, m;
+			cin >> x >> y >> m;
+			int ans = 0;
+			for(int i = 0; y * i <= m; ++i) {
+				int amount = y * i;
+				amount += (m - amount) / x * x;
+				ans = max(ans, amount);
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing1842
 }// namespace acwing
