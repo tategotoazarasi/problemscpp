@@ -1791,6 +1791,40 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1052
+
+		namespace b1053 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				double e;
+				int d;
+				int cnt1 = 0;
+				int cnt2 = 0;
+				cin >> n >> e >> d;
+				for(int i = 0; i < n; ++i) {
+					int k;
+					cin >> k;
+					int cnt = 0;
+					for(int j = 0; j < k; ++j) {
+						double E;
+						cin >> E;
+						if(E < e) {
+							cnt++;
+						}
+					}
+					if(2 * cnt > k) {
+						if(k > d) {
+							cnt2++;
+						} else {
+							cnt1++;
+						}
+					}
+				}
+				double ans1 = static_cast<double>(cnt1) / n * 100;
+				double ans2 = static_cast<double>(cnt2) / n * 100;
+				cout << fixed << setprecision(1) << ans1 << "% " << fixed << setprecision(1) << ans2 << '%';
+				return 0;
+			}
+		}// namespace b1053
 	}    // namespace b
 
 	namespace a {}

@@ -783,13 +783,28 @@ namespace pat {
 
 		namespace b1052 {
 			TEST(b1052, case1) {
-				istringstream in("[¨r][¨q][o][~\\][/~]  [<][>]\n [¨s][¨t][^][-][=][>][<][@][¡Ñ]\n[§¥][¨Œ][_][¦Å][^]  ...\n4\n1 1 2 2 2\n6 8 1 5 5\n3 3 4 3 3\n2 10 3 9 3\n");
+				istringstream in("[ï¿½r][ï¿½q][o][~\\][/~]  [<][>]\n [ï¿½s][ï¿½t][^][-][=][>][<][@][ï¿½ï¿½]\n[ï¿½ï¿½][ï¿½ï¿½][_][ï¿½ï¿½][^]  ...\n4\n1 1 2 2 2\n6 8 1 5 5\n3 3 4 3 3\n2 10 3 9 3\n");
 				auto out = ostringstream();
 				main(in, out);
 				const auto ans = out.str();
-				ASSERT_EQ("¨r(¨s¨Œ¨t)¨q\n<(@§¥=)/~\no(^¦Å^)o\nAre you kidding me? @\\/@\n", out.str());
+				ASSERT_EQ("ï¿½r(ï¿½sï¿½ï¿½ï¿½t)ï¿½q\n<(@ï¿½ï¿½=)/~\no(^ï¿½ï¿½^)o\nAre you kidding me? @\\/@\n", out.str());
 			}
 		}// namespace b1052
+
+		namespace b1053 {
+			TEST(b1053, case1) {
+				istringstream in("5 0.5 10\n"
+				                 "6 0.3 0.4 0.5 0.2 0.8 0.6\n"
+				                 "10 0.0 0.1 0.2 0.3 0.0 0.8 0.6 0.7 0.0 0.5\n"
+				                 "5 0.4 0.3 0.5 0.1 0.7\n"
+				                 "11 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1\n"
+				                 "11 2 2 2 1 1 0.1 1 0.1 0.1 0.1 0.1");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("40.0% 20.0%", out.str());
+			}
+		}// namespace b1053
 	}    // namespace b
 
 	namespace a {}

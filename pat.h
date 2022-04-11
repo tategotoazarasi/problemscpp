@@ -313,6 +313,11 @@ namespace pat {
 		namespace b1052 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1053 住房空置率
+		namespace b1053 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
