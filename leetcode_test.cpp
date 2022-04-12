@@ -2824,4 +2824,18 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::numberOfLines(width, "bbbcccdddaaa"));
 		}
 	}// namespace number_of_lines_to_write_string
+
+	namespace permutation_in_string {
+		TEST(permutation_in_string, case1) {
+			ASSERT_TRUE(Solution::checkInclusion("ab", "eidbaooo"));
+		}
+
+		TEST(permutation_in_string, case2) {
+			ASSERT_FALSE(Solution::checkInclusion("ab", "eidboaoo"));
+		}
+
+		TEST(permutation_in_string, case2) {
+			ASSERT_FALSE(Solution::checkInclusion("dinitrophenylhydrazine", "dimethylhydrazine"));
+		}
+	}// namespace permutation_in_string
 }// namespace leetcode

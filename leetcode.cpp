@@ -5923,4 +5923,34 @@ namespace leetcode {
 			return {lines, current};
 		}
 	}// namespace number_of_lines_to_write_string
+
+	namespace permutation_in_string {
+		bool Solution::checkInclusion(string s1, string s2) {
+			if(s1.length() > s2.length()) {
+				return false;
+			}
+			unordered_map<char, int> um1;
+			unordered_map<char, int> um2;
+			for(char ch: s1) {
+				um1[ch]++;
+			}
+			for(int i = 0; i < s1.length(); i++) {
+				um2[s2[i]]++;
+			}
+			if(um2 == um1) {
+				return true;
+			}
+			for(int i = 0; i + s1.length() < s2.length(); i++) {
+				um2[s2[i]]--;
+				um2[s2[i + s1.length()]]++;
+				if(um2[s2[i]] == 0) {
+					um2.erase(s2[i]);
+				}
+				if(um2 == um1) {
+					return true;
+				}
+			}
+			return false;
+		}
+	}// namespace permutation_in_string
 }// namespace leetcode

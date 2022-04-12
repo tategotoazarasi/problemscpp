@@ -2183,6 +2183,14 @@ namespace leetcode {
 			static vector<int> numberOfLines(vector<int> &widths, string s);
 		};
 	}// namespace number_of_lines_to_write_string
+
+	/// \brief 567. Permutation in String
+	namespace permutation_in_string {
+		class Solution {
+		public:
+			static bool checkInclusion(string s1, string s2);
+		};
+	}// namespace permutation_in_string
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
