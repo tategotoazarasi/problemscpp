@@ -332,9 +332,15 @@ namespace pat {
 
 				bool operator<(const Person &p) const;
 			};
+
 			int main(istream &cin, ostream &cout);
 		}// namespace b1055
-	}    // namespace b
+
+		/// \brief 1056 组合数的和
+		namespace b1056 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}

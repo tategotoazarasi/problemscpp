@@ -1963,6 +1963,21 @@ namespace pat {
 				}
 			}
 		}// namespace b1055
+
+		namespace b1056 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				unsigned short num;
+				int ans = 0;
+				for(int i = 0; i < n; i++) {
+					cin >> num;
+					ans += num * (n - 1) * 11;
+				}
+				cout << ans;
+				return 0;
+			}
+		}// namespace b1056
 	}    // namespace b
 
 	namespace a {}
