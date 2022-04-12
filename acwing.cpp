@@ -6627,4 +6627,33 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing800
+
+	namespace acwing2816 {
+		int main(istream &cin, ostream &cout) {
+			int n, m;
+			cin >> n >> m;
+			vector<int> a(n);
+			vector<int> b(m);
+			for(int i = 0; i < n; i++) {
+				cin >> a[i];
+			}
+			for(int i = 0; i < m; i++) {
+				cin >> b[i];
+			}
+			int pa = 0;
+			int pb = 0;
+			for(; pa < n; ++pa) {
+				while(pb < m && b[pb] != a[pa]) {
+					++pb;
+				}
+				if(pb == m) {
+					cout << "No";
+					return 0;
+				}
+				++pb;
+			}
+			cout << "Yes";
+			return 0;
+		}
+	}// namespace acwing2816
 }// namespace acwing

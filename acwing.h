@@ -1989,5 +1989,10 @@ namespace acwing {
 	namespace acwing800 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 2816. 判断子序列
+	namespace acwing2816 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

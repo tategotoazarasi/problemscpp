@@ -3079,4 +3079,16 @@ namespace acwing {
 			ASSERT_EQ("1 1", ans);
 		}
 	}// namespace acwing800
+
+	namespace acwing2816 {
+		TEST(acwing2816, case1) {
+			istringstream in("3 5\n"
+			                 "1 3 5\n"
+			                 "1 2 3 4 5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("Yes", ans);
+		}
+	}// namespace acwing2816
 }// namespace acwing
