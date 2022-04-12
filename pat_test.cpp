@@ -833,6 +833,29 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1054
+
+		namespace b1055 {
+			TEST(b1055, case1) {
+				istringstream in("10 3\n"
+				                 "Tom 188\n"
+				                 "Mike 170\n"
+				                 "Eva 168\n"
+				                 "Tim 160\n"
+				                 "Joe 190\n"
+				                 "Ann 168\n"
+				                 "Bob 175\n"
+				                 "Nick 186\n"
+				                 "Amy 160\n"
+				                 "John 159");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Bob Tom Joe Nick\n"
+				          "Ann Mike Eva\n"
+				          "Tim Amy John",
+				          out.str());
+			}
+		}// namespace b1055
 	}    // namespace b
 
 	namespace a {}

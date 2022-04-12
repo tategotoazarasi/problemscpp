@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <cmath>
 #include <cstring>
+#include <deque>
 #include <iomanip>
 #include <map>
 #include <sstream>
@@ -1901,6 +1902,67 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1054
+
+		namespace b1055 {
+			int main(istream &cin, ostream &cout) {
+				int n, k;
+				cin >> n >> k;
+				vector<Person> vec(n);
+				for(int i = 0; i < n; i++) {
+					string name;
+					int height;
+					cin >> name >> height;
+					Person p = Person{name, height};
+					vec[i]   = p;
+				}
+				sort(vec.begin(), vec.end());
+				vector<deque<Person>> deq(k);
+				for(int i = 0; i < n / k + n % k; i++) {
+					if(i % 2 == 1) {
+						deq[k - 1].push_front(vec.back());
+					} else {
+						deq[k - 1].push_back(vec.back());
+					}
+					vec.pop_back();
+				}
+				for(int i = k - 2; i >= 0; i--) {
+					for(int j = 0; j < n / k; j++) {
+						if(j % 2 == 1) {
+							deq[i].push_front(vec.back());
+						} else {
+							deq[i].push_back(vec.back());
+						}
+						vec.pop_back();
+					}
+				}
+				for(int i = k - 1; i >= 0; i--) {
+					for(int j = 0; j < deq[i].size(); j++) {
+						cout << deq[i][j].name;
+						if(j != deq[i].size() - 1) {
+							cout << ' ';
+						}
+					}
+					if(i != 0) {
+						cout << endl;
+					}
+				}
+				return 0;
+			}
+
+			bool Person::operator<(const Person &p) const {
+				if(this->height < p.height) {
+					return true;
+				}
+				if(this->height > p.height) {
+					return false;
+				}
+				if(this->name > p.name) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		}// namespace b1055
 	}    // namespace b
 
 	namespace a {}

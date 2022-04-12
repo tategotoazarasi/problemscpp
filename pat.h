@@ -323,7 +323,18 @@ namespace pat {
 		namespace b1054 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1055 集体照
+		namespace b1055 {
+			struct Person {
+				string name;
+				int height;
+
+				bool operator<(const Person &p) const;
+			};
+			int main(istream &cin, ostream &cout);
+		}// namespace b1055
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}
