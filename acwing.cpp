@@ -6570,4 +6570,27 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1842
+
+	namespace acwing1824 {
+		int main(istream &cin, ostream &cout) {
+			int n, k;
+			cin >> n >> k;
+			vector<int> vec(10010, 0);
+			unsigned int size;
+			for(int i = 0; i < n; i++) {
+				cin >> size;
+				vec[size]++;
+			}
+			vector<int> sum(10010, 0);
+			for(int i = 1; i < 10010; i++) {
+				sum[i] = sum[i - 1] + vec[i];
+			}
+			int ans = 0;
+			for(int i = 1; i + k < 10010; i++) {
+				ans = max(ans, sum[i + k] - sum[i - 1]);
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing1824
 }// namespace acwing

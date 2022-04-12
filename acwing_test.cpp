@@ -3044,7 +3044,7 @@ namespace acwing {
 	}// namespace acwing4397
 
 	namespace acwing1842 {
-		TEST(acwing1842, case2) {
+		TEST(acwing1842, case1) {
 			istringstream in("17 25 77");
 			auto out = ostringstream();
 			main(in, out);
@@ -3052,4 +3052,19 @@ namespace acwing {
 			ASSERT_EQ("76", ans);
 		}
 	}// namespace acwing1842
+
+	namespace acwing1824 {
+		TEST(acwing1824, case1) {
+			istringstream in("5 3\n"
+			                 "1\n"
+			                 "6\n"
+			                 "4\n"
+			                 "3\n"
+			                 "1");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("4", ans);
+		}
+	}// namespace acwing1824
 }// namespace acwing

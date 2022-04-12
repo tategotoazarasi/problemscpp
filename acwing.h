@@ -1979,5 +1979,10 @@ namespace acwing {
 	namespace acwing1842 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 1824. 钻石收藏家
+	namespace acwing1824 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
