@@ -6593,4 +6593,38 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1824
+
+	namespace acwing800 {
+		int main(istream &cin, ostream &cout) {
+			int n, m, x;
+			cin >> n >> m >> x;
+			vector<int> a(n);
+			vector<int> b(m);
+			for(int i = 0; i < n; i++) {
+				cin >> a[i];
+			}
+			for(int i = 0; i < m; i++) {
+				cin >> b[i];
+			}
+			int pa = 0;
+			int pb = m - 1;
+			while(a[pa] + b[pb] < x) {
+				++pa;
+			}
+			for(; pa < n; pa++) {
+				if(a[pa] + b[pb] == x) {
+					cout << pa << ' ' << pb;
+					return 0;
+				}
+				while(a[pa] + b[pb] > x) {
+					--pb;
+					if(a[pa] + b[pb] == x) {
+						cout << pa << ' ' << pb;
+						return 0;
+					}
+				}
+			}
+			return 0;
+		}
+	}// namespace acwing800
 }// namespace acwing

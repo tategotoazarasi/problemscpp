@@ -1984,5 +1984,10 @@ namespace acwing {
 	namespace acwing1824 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 800. 数组元素的目标和
+	namespace acwing800 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
