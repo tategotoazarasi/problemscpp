@@ -5908,4 +5908,19 @@ namespace leetcode {
 			return ans + 1;
 		}
 	}// namespace count_numbers_with_unique_digits
+
+	namespace number_of_lines_to_write_string {
+		vector<int> Solution::numberOfLines(vector<int> &widths, string s) {
+			int lines   = 1;
+			int current = 0;
+			for(int i = 0; i < s.length(); i++) {
+				if(current + widths[s[i] - 'a'] > 100) {
+					current = 0;
+					lines++;
+				}
+				current += widths[s[i] - 'a'];
+			}
+			return {lines, current};
+		}
+	}// namespace number_of_lines_to_write_string
 }// namespace leetcode

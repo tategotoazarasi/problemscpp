@@ -2810,4 +2810,18 @@ namespace leetcode {
 			ASSERT_EQ(1, Solution::countNumbersWithUniqueDigits(0));
 		}
 	}// namespace count_numbers_with_unique_digits
+
+	namespace number_of_lines_to_write_string {
+		TEST(number_of_lines_to_write_string, case1) {
+			vector width  = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+			vector output = {3, 60};
+			ASSERT_EQ(output, Solution::numberOfLines(width, "abcdefghijklmnopqrstuvwxyz"));
+		}
+
+		TEST(number_of_lines_to_write_string, case2) {
+			vector width  = {4, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+			vector output = {2, 4};
+			ASSERT_EQ(output, Solution::numberOfLines(width, "bbbcccdddaaa"));
+		}
+	}// namespace number_of_lines_to_write_string
 }// namespace leetcode

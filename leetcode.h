@@ -2175,6 +2175,14 @@ namespace leetcode {
 			static int countNumbersWithUniqueDigits(int n);
 		};
 	}// namespace count_numbers_with_unique_digits
+
+	/// \brief 806. Number of Lines To Write String
+	namespace number_of_lines_to_write_string {
+		class Solution {
+		public:
+			static vector<int> numberOfLines(vector<int> &widths, string s);
+		};
+	}// namespace number_of_lines_to_write_string
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
