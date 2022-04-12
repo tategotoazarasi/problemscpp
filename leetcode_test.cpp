@@ -2834,7 +2834,7 @@ namespace leetcode {
 			ASSERT_FALSE(Solution::checkInclusion("ab", "eidboaoo"));
 		}
 
-		TEST(permutation_in_string, case2) {
+		TEST(permutation_in_string, case3) {
 			ASSERT_FALSE(Solution::checkInclusion("dinitrophenylhydrazine", "dimethylhydrazine"));
 		}
 	}// namespace permutation_in_string
