@@ -7,6 +7,7 @@
 #include <functional>
 #include <map>
 #include <queue>
+#include <random>
 #include <set>
 #include <sstream>
 #include <string>
@@ -2191,6 +2192,28 @@ namespace leetcode {
 			static bool checkInclusion(string s1, string s2);
 		};
 	}// namespace permutation_in_string
+
+	/// \brief 380. Insert Delete GetRandom O(1)
+	namespace insert_delete_getrandom_o1 {
+		class RandomizedSet {
+			unordered_map<int, int> map;
+			vector<int> nums;
+			default_random_engine generator;
+			uniform_int_distribution<int> distribution;
+
+		public:
+			/// \brief Initializes the RandomizedSet object.
+			RandomizedSet();
+			/// \brief Inserts an item val into the set if not present.
+			/// \return Returns true if the item was not present, false otherwise.
+			bool insert(int val);
+			/// \brief Removes an item val from the set if present.
+			/// \return Returns true if the item was present, false otherwise.
+			bool remove(int val);
+			/// \brief Returns a random element from the current set of elements (it's guaranteed that at least one element exists when this method is called). Each element must have the same probability of being returned.
+			int getRandom();
+		};
+	}// namespace insert_delete_getrandom_o1
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

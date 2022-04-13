@@ -5953,4 +5953,37 @@ namespace leetcode {
 			return false;
 		}
 	}// namespace permutation_in_string
+
+	namespace insert_delete_getrandom_o1 {
+		RandomizedSet::RandomizedSet() {
+			generator    = default_random_engine(time(nullptr));
+			distribution = uniform_int_distribution<int>(0, INT_MAX);
+		}
+
+		bool RandomizedSet::insert(int val) {
+			if(map.count(val)) {
+				return false;
+			}
+			nums.push_back(val);
+			map[val] = nums.size() - 1;
+			return true;
+		}
+
+		bool RandomizedSet::remove(int val) {
+			if(!map.count(val)) {
+				return false;
+			}
+			int index   = map[val];
+			int last    = nums.back();
+			nums[index] = last;
+			map[last]   = index;
+			nums.pop_back();
+			map.erase(val);
+			return true;
+		}
+
+		int RandomizedSet::getRandom() {
+			return nums[distribution(generator) % nums.size()];
+		}
+	}// namespace insert_delete_getrandom_o1
 }// namespace leetcode
