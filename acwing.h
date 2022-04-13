@@ -2004,5 +2004,11 @@ namespace acwing {
 	namespace acwing3302 {
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing3302
+
+	/// \brief 831. KMP字符串
+	namespace acwing831 {
+		vector<int> get_next(const string &str);
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing831
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

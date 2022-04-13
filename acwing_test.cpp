@@ -3131,4 +3131,57 @@ namespace acwing {
 			ASSERT_EQ("-965", ans);
 		}
 	}// namespace acwing3302
+
+	namespace acwing831 {
+		TEST(acwing831, case1) {
+			istringstream in("3\n"
+			                 "aba\n"
+			                 "5\n"
+			                 "ababa");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("0 2 ", ans);
+		}
+
+		TEST(acwing831, case2) {
+			istringstream in("10\n"
+			                 "jNNNNjNNNN\n"
+			                 "30\n"
+			                 "jNNPw9NNNNnNMANTNHGNjNNNNjNNNN");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("20 ", ans);
+		}
+
+		TEST(acwing831, case3) {
+			istringstream in("7\n"
+			                 "aabaaaa\n"
+			                 "11\n"
+			                 "aabaaabaaaa");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("4 ", ans);
+		}
+
+		TEST(get_next, case1) {
+			string str       = "ababaa";
+			vector<int> next = {0, 0, 1, 2, 3, 1};
+			ASSERT_EQ(next, get_next(str));
+		}
+
+		TEST(get_next, case2) {
+			string str       = "ababaaababaa";
+			vector<int> next = {0, 0, 1, 2, 3, 1, 1, 2, 3, 4, 5, 6};
+			ASSERT_EQ(next, get_next(str));
+		}
+
+		TEST(get_next, case3) {
+			string str       = "aabaaaa";
+			vector<int> next = {0, 1, 0, 1, 2, 2, 2};
+			ASSERT_EQ(next, get_next(str));
+		}
+	}// namespace acwing831
 }// namespace acwing

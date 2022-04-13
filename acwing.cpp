@@ -6775,4 +6775,60 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3302
+
+	namespace acwing831 {
+		int main(istream &cin, ostream &cout) {
+			int n, m;
+			string p, s;
+			cin >> n >> p >> m >> s;
+			vector<int> next = get_next(p);
+			int ip           = 0;
+			int is           = 0;
+			while(ip < n && is < m) {
+				if(p[ip] == s[is]) {
+					if(ip == n - 1) {
+						//整串匹配成功
+						cout << is - n + 1 << ' ';
+						ip = next[ip - 1];
+						continue;
+					} else {
+						//当前匹配成功
+						ip++;
+						is++;
+						continue;
+					}
+				} else {
+					if(ip == 0) {
+						//开头就匹配失败
+						is++;
+						continue;
+					} else {
+						//匹配失败，但不在开头
+						ip = next[ip - 1];
+						continue;
+					}
+				}
+			}
+			return 0;
+		}
+
+		vector<int> get_next(const string &str) {
+			const int n = str.length();
+			vector<int> next(n, 0);
+			int i = 1;
+			int j = 0;
+			while(i < n && j < n) {
+				if(j > 0 && str[i] != str[j]) {
+					j = next[j - 1];
+					continue;
+				}
+				if(str[i] == str[j]) {
+					j++;
+				}
+				next[i] = j;
+				i++;
+			}
+			return next;
+		}
+	}// namespace acwing831
 }// namespace acwing
