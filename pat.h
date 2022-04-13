@@ -2,6 +2,7 @@
 #define PROBLEMSCPP_PAT_H
 
 #include <iostream>
+#include <unordered_set>
 
 using namespace std;
 
@@ -345,7 +346,20 @@ namespace pat {
 		namespace b1057 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1058 选择题
+		namespace b1058 {
+			struct Problem {
+				int score;
+				int num;
+				int correct_num;
+				unordered_set<char> correct_choices;
+				int error_count;
+			};
+
+			int main(istream &cin, ostream &cout);
+		}// namespace b1058
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}

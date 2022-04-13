@@ -876,6 +876,27 @@ namespace pat {
 				ASSERT_EQ("3 4", out.str());
 			}
 		}// namespace b1057
+
+		namespace b1058 {
+			TEST(b1058, case1) {
+				istringstream in("3 4 \n"
+				                 "3 4 2 a c\n"
+				                 "2 5 1 b\n"
+				                 "5 3 2 b c\n"
+				                 "1 5 4 a b d e\n"
+				                 "(2 a c) (2 b d) (2 a c) (3 a b e)\n"
+				                 "(2 a c) (1 b) (2 a b) (4 a b d e)\n"
+				                 "(2 b d) (1 e) (2 b c) (4 a b c d)");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("3\n"
+				          "6\n"
+				          "5\n"
+				          "2 2 3 4",
+				          out.str());
+			}
+		}// namespace b1058
 	}    // namespace b
 
 	namespace a {}

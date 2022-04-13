@@ -2006,6 +2006,70 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1057
+
+		namespace b1058 {
+			int main(istream &cin, ostream &cout) {
+				int n, m;
+				cin >> n >> m;
+				int max_error = 0;
+				vector<Problem> problems(m);
+				for(int i = 0; i < m; i++) {
+					Problem p;
+					cin >> p.score;
+					cin >> p.num;
+					cin >> p.correct_num;
+					p.correct_choices = unordered_set<char>();
+					for(int j = 0; j < p.correct_num; j++) {
+						char choice;
+						cin >> choice;
+						p.correct_choices.insert(choice);
+					}
+					p.error_count = 0;
+					problems[i]   = p;
+				}
+				for(int i = 0; i < n; i++) {
+					int score = 0;
+					for(int j = 0; j < m; j++) {
+						char ch;
+						cin >> ch;
+						int num;
+						cin >> num;
+						unordered_set<char> answer;
+						for(int k = 0; k < num; k++) {
+							char choice;
+							cin >> choice;
+							answer.insert(choice);
+						}
+						if(answer == problems[j].correct_choices) {
+							score += problems[j].score;
+						} else {
+							problems[j].error_count++;
+							max_error = max(max_error, problems[j].error_count);
+						}
+						cin >> ch;
+					}
+					cout << score << endl;
+				}
+				if(max_error == 0) {
+					cout << "Too simple";
+				} else {
+					vector<int> max_problems;
+					cout << max_error << ' ';
+					for(int i = 0; i < m; i++) {
+						if(problems[i].error_count == max_error) {
+							max_problems.push_back(i + 1);
+						}
+					}
+					for(int i = 0; i < max_problems.size(); i++) {
+						cout << max_problems[i];
+						if(i != max_problems.size() - 1) {
+							cout << ' ';
+						}
+					}
+				}
+				return 0;
+			}
+		}// namespace b1058
 	}    // namespace b
 
 	namespace a {}
