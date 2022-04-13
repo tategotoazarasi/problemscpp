@@ -3105,4 +3105,30 @@ namespace acwing {
 			ASSERT_EQ("14", ans);
 		}
 	}// namespace acwing1902
+
+	namespace acwing3302 {
+		TEST(acwing3302, case1) {
+			istringstream in("(2+2)*(1+1)");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("8", ans);
+		}
+
+		TEST(acwing3302, case2) {
+			istringstream in("(3+5*4/2+2*(1+1)*(2+2))");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("29", ans);
+		}
+
+		TEST(acwing3302, case3) {
+			istringstream in("2*10-1000+24-(5*3)+(3*2)");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("-965", ans);
+		}
+	}// namespace acwing3302
 }// namespace acwing

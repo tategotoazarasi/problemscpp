@@ -6687,4 +6687,92 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1902
+
+	namespace acwing3302 {
+		int main(istream &cin, ostream &cout) {
+			stack<int> nums;
+			stack<char> ops;
+			char ch;
+			int num;
+			while((ch = cin.peek()) > 0) {
+				if(isdigit(ch)) {
+					cin >> num;
+					if(!ops.empty() && ops.top() == '*') {
+						num = nums.top() * num;
+						nums.pop();
+						nums.push(num);
+						ops.pop();
+					} else if(!ops.empty() && ops.top() == '/') {
+						num = nums.top() / num;
+						nums.pop();
+						nums.push(num);
+						ops.pop();
+					} else {
+						nums.push(num);
+					}
+				} else {
+					cin >> ch;
+					if(ch == ')') {
+						vector<char> vec_op;
+						vector<int> vec_num;
+						vec_num.push_back(nums.top());
+						nums.pop();
+						while(ops.top() != '(') {
+							vec_op.push_back(ops.top());
+							vec_num.push_back(nums.top());
+							ops.pop();
+							nums.pop();
+						}
+						ops.pop();
+						for(int i = vec_op.size() - 1; i >= 0; --i) {
+							if(vec_op[i] == '+') {
+								vec_num.back() += vec_num[i];
+							} else if(vec_op[i] == '-') {
+								vec_num.back() -= vec_num[i];
+							} else {
+								return 1;
+							}
+						}
+						num = vec_num.back();
+						if(!ops.empty() && ops.top() == '*') {
+							num = nums.top() * num;
+							nums.pop();
+							nums.push(num);
+							ops.pop();
+						} else if(!ops.empty() && ops.top() == '/') {
+							num = nums.top() / num;
+							nums.pop();
+							nums.push(num);
+							ops.pop();
+						} else {
+							nums.push(num);
+						}
+					} else {
+						ops.push(ch);
+					}
+				}
+			}
+			vector<char> vec_op;
+			vector<int> vec_num;
+			vec_num.push_back(nums.top());
+			nums.pop();
+			while(!ops.empty()) {
+				vec_op.push_back(ops.top());
+				vec_num.push_back(nums.top());
+				ops.pop();
+				nums.pop();
+			}
+			for(int i = vec_op.size() - 1; i >= 0; --i) {
+				if(vec_op[i] == '+') {
+					vec_num.back() += vec_num[i];
+				} else if(vec_op[i] == '-') {
+					vec_num.back() -= vec_num[i];
+				} else {
+					return 1;
+				}
+			}
+			cout << vec_num.back();
+			return 0;
+		}
+	}// namespace acwing3302
 }// namespace acwing

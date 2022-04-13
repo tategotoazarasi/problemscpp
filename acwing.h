@@ -1999,5 +1999,10 @@ namespace acwing {
 	namespace acwing1902 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 3302. 表达式求值
+	namespace acwing3302 {
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing3302
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
