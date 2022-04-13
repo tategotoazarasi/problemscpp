@@ -1994,5 +1994,10 @@ namespace acwing {
 	namespace acwing2816 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 1902. 马拉松
+	namespace acwing1902 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

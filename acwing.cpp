@@ -6656,4 +6656,35 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing2816
+
+	namespace acwing1902 {
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			vector<pair<int, int>> checkpoints(n);
+			vector<int> d(n - 1);
+			for(int i = 0; i < n; i++) {
+				int x, y;
+				cin >> x >> y;
+				checkpoints[i] = make_pair(x, y);
+			}
+			int sum = 0;
+			for(int i = 0; i < n - 1; i++) {
+				const auto &[x1, y1] = checkpoints[i];
+				const auto &[x2, y2] = checkpoints[i + 1];
+				d[i]                 = abs(x2 - x1) + abs(y2 - y1);
+				sum += d[i];
+			}
+			int max_diff = 0;
+			for(int i = 1; i < n - 1; i++) {
+				const auto &[x1, y1] = checkpoints[i - 1];
+				const auto &[x2, y2] = checkpoints[i + 1];
+				int dist             = abs(x2 - x1) + abs(y2 - y1);
+				int diff             = (d[i - 1] + d[i]) - dist;
+				max_diff             = max(max_diff, diff);
+			}
+			cout << sum - max_diff;
+			return 0;
+		}
+	}// namespace acwing1902
 }// namespace acwing
