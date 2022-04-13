@@ -6818,15 +6818,20 @@ namespace acwing {
 			int i = 1;
 			int j = 0;
 			while(i < n && j < n) {
-				if(j > 0 && str[i] != str[j]) {
-					j = next[j - 1];
-					continue;
-				}
 				if(str[i] == str[j]) {
+					//匹配成功
+					next[i] = j + 1;
 					j++;
+					i++;
+				} else {
+					if(j == 0) {
+						//开头就匹配失败
+						i++;
+					} else {
+						//匹配失败，但不在开头
+						j = next[j - 1];
+					}
 				}
-				next[i] = j;
-				i++;
 			}
 			return next;
 		}
