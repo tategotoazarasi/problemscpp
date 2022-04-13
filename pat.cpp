@@ -1,6 +1,7 @@
 #include "pat.h"
 #include "templates.h"
 #include <algorithm>
+#include <bit>
 #include <cmath>
 #include <cstring>
 #include <deque>
@@ -1978,6 +1979,33 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1056
+
+		namespace b1057 {
+			int main(istream &cin, ostream &cout) {
+				char str[100010];
+				cin.getline(str, 100010);
+				unsigned n = 0;
+				for(int i = 0; str[i] != '\0'; i++) {
+					if(isupper(str[i])) {
+						n += str[i] - 'A' + 1;
+					} else if(islower(str[i])) {
+						n += str[i] - 'a' + 1;
+					}
+				}
+				int one  = 0;
+				int zero = 0;
+				while(n != 0) {
+					if((n & 1) == 1) {
+						one++;
+					} else {
+						zero++;
+					}
+					n >>= 1;
+				}
+				cout << zero << ' ' << one;
+				return 0;
+			}
+		}// namespace b1057
 	}    // namespace b
 
 	namespace a {}

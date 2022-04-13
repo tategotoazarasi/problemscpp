@@ -340,6 +340,11 @@ namespace pat {
 		namespace b1056 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1057 数零壹
+		namespace b1057 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
