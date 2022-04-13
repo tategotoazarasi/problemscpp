@@ -2010,5 +2010,10 @@ namespace acwing {
 		vector<int> get_next(const string &str);
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing831
+
+	/// \brief 1892. 奶牛线路
+	namespace acwing1892 {
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing1892
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

@@ -3184,4 +3184,48 @@ namespace acwing {
 			ASSERT_EQ(next, get_next(str));
 		}
 	}// namespace acwing831
+
+	namespace acwing1892 {
+		TEST(acwing1892, case1) {
+			istringstream in("1 2 3\n"
+			                 "3 3\n"
+			                 "3 2 1\n"
+			                 "4 4\n"
+			                 "2 1 4 3\n"
+			                 "8 5\n"
+			                 "4 1 7 8 2");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("8", ans);
+		}
+
+		TEST(acwing1892, case2) {
+			istringstream in("10 4 10\n"
+			                 "580 5\n"
+			                 "5 3 10 4 7\n"
+			                 "282 10\n"
+			                 "2 6 4 8 9 3 5 10 7 1\n"
+			                 "273 8\n"
+			                 "10 6 5 9 7 3 8 4\n"
+			                 "379 5\n"
+			                 "7 6 10 4 9\n"
+			                 "953 3\n"
+			                 "2 10 1\n"
+			                 "203 5\n"
+			                 "9 8 1 6 10\n"
+			                 "831 4\n"
+			                 "5 10 3 8\n"
+			                 "561 8\n"
+			                 "7 10 8 2 5 3 6 4\n"
+			                 "732 3\n"
+			                 "8 2 1\n"
+			                 "428 6\n"
+			                 "1 7 3 4 2 5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("273", ans);
+		}
+	}// namespace acwing1892
 }// namespace acwing

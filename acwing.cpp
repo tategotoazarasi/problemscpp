@@ -6836,4 +6836,32 @@ namespace acwing {
 			return next;
 		}
 	}// namespace acwing831
+
+	namespace acwing1892 {
+		int main(istream &cin, ostream &cout) {
+			int a, b, n;
+			cin >> a >> b >> n;
+			int ans = 1001;
+			for(int i = 0; i < n; i++) {
+				int price, num;
+				bool flag = false;
+				cin >> price >> num;
+				int city;
+				for(int j = 0; j < num; j++) {
+					cin >> city;
+					if(city == a) {
+						flag = true;
+					} else if(flag && city == b) {
+						ans = min(ans, price);
+					}
+				}
+			}
+			if(ans == 1001) {
+				cout << -1;
+			} else {
+				cout << ans;
+			}
+			return 0;
+		}
+	}// namespace acwing1892
 }// namespace acwing
