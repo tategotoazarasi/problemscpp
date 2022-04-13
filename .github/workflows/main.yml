@@ -22,14 +22,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: work around permission issue
-        run: git config --global --add safe.directory /__w/problemscpp/problemscpp
-        
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
       - name: Gendoc
-        uses: langroodi/doxygenize@v1.5
+        uses: tategotoazarasi/doxygenize@master
         with:
           doxygenconf: './Doxyfile'
           htmloutput: './'
