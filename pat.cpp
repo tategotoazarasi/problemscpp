@@ -2111,6 +2111,26 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1059
+
+		namespace b1060 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				vector<int> vec(n + 1);
+				for(int i = 1; i <= n; i++) {
+					cin >> vec[i];
+				}
+				sort(vec.begin(), vec.end());
+				int e = 1;
+				int i = n;
+				while(e <= n && vec[i] > e) {
+					e++;
+					i--;
+				}
+				cout << e - 1;
+				return 0;
+			}
+		}// namespace b1060
 	}    // namespace b
 
 	namespace a {}

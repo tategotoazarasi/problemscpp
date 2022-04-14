@@ -365,7 +365,12 @@ namespace pat {
 			bool is_prime(int n);
 			int main(istream &cin, ostream &cout);
 		}// namespace b1059
-	}    // namespace b
+
+		/// \brief 1060 爱丁顿数
+		namespace b1060 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}

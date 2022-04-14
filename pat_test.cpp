@@ -922,10 +922,21 @@ namespace pat {
 				          "1111: Mystery Award\n"
 				          "2222: Are you kidding?\n"
 				          "8888: Checked\n"
-				          "2222: Are you kidding?",
+				          "2222: Are you kidding?\n",
 				          out.str());
 			}
 		}// namespace b1059
+
+		namespace b1060 {
+			TEST(b1060, case1) {
+				istringstream in("10\n"
+				                 "6 7 6 9 3 10 8 2 7 8");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("6", out.str());
+			}
+		}// namespace b1060
 	}    // namespace b
 
 	namespace a {}
