@@ -2070,6 +2070,47 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1058
+
+		namespace b1059 {
+			bool is_prime(int n) {
+				for(int i = 2; i <= sqrt(n); i++) {
+					if(n % i == 0) {
+						return false;
+					}
+				}
+				return true;
+			}
+
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				unordered_map<string, string> um;
+				for(int rank = 1; rank <= n; rank++) {
+					string id;
+					cin >> id;
+					if(rank == 1) {
+						um[id] = "Mystery Award";
+					} else if(is_prime(rank)) {
+						um[id] = "Minion";
+					} else {
+						um[id] = "Chocolate";
+					}
+				}
+				int k;
+				cin >> k;
+				while(k--) {
+					string id;
+					cin >> id;
+					if(!um.count(id)) {
+						cout << id << ": Are you kidding?" << endl;
+					} else {
+						cout << id << ": " << um[id] << endl;
+						um[id] = "Checked";
+					}
+				}
+				return 0;
+			}
+		}// namespace b1059
 	}    // namespace b
 
 	namespace a {}

@@ -897,6 +897,35 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1058
+
+		namespace b1059 {
+			TEST(b1059, case1) {
+				istringstream in("6\n"
+				                 "1111\n"
+				                 "6666\n"
+				                 "8888\n"
+				                 "1234\n"
+				                 "5555\n"
+				                 "0001\n"
+				                 "6\n"
+				                 "8888\n"
+				                 "0001\n"
+				                 "1111\n"
+				                 "2222\n"
+				                 "8888\n"
+				                 "2222");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("8888: Minion\n"
+				          "0001: Chocolate\n"
+				          "1111: Mystery Award\n"
+				          "2222: Are you kidding?\n"
+				          "8888: Checked\n"
+				          "2222: Are you kidding?",
+				          out.str());
+			}
+		}// namespace b1059
 	}    // namespace b
 
 	namespace a {}

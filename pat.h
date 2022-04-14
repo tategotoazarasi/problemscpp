@@ -359,6 +359,12 @@ namespace pat {
 
 			int main(istream &cin, ostream &cout);
 		}// namespace b1058
+
+		/// \brief 1059 C语言竞赛
+		namespace b1059 {
+			bool is_prime(int n);
+			int main(istream &cin, ostream &cout);
+		}// namespace b1059
 	}    // namespace b
 
 	/// \brief 甲级
