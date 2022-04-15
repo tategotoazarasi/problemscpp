@@ -370,6 +370,11 @@ namespace pat {
 		namespace b1060 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1061 判断题
+		namespace b1061 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

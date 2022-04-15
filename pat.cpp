@@ -2131,6 +2131,33 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1060
+
+		namespace b1061 {
+			int main(istream &cin, ostream &cout) {
+				int n, m;
+				cin >> n >> m;
+				vector<int> scores(m);
+				for(int i = 0; i < m; i++) {
+					cin >> scores[i];
+				}
+				vector<int> correct_answer(m);
+				for(int i = 0; i < m; i++) {
+					cin >> correct_answer[i];
+				}
+				for(int i = 0; i < n; i++) {
+					int score = 0;
+					for(int j = 0; j < m; j++) {
+						int answer;
+						cin >> answer;
+						if(answer == correct_answer[j]) {
+							score += scores[j];
+						}
+					}
+					cout << score << endl;
+				}
+				return 0;
+			}
+		}// namespace b1061
 	}    // namespace b
 
 	namespace a {}
