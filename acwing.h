@@ -2015,5 +2015,10 @@ namespace acwing {
 	namespace acwing1892 {
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing1892
+
+	/// \brief 1883. 删减
+	namespace acwing1883 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

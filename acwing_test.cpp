@@ -3228,4 +3228,15 @@ namespace acwing {
 			ASSERT_EQ("273", ans);
 		}
 	}// namespace acwing1892
+
+	namespace acwing1883 {
+		TEST(acwing1883, case2) {
+			istringstream in("whatthemomooofun\n"
+			                 "moo");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("whatthefun", ans);
+		}
+	}// namespace acwing1883
 }// namespace acwing

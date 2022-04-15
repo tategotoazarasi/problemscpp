@@ -6864,4 +6864,24 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1892
+
+	namespace acwing1883 {
+		int main(istream &cin, ostream &cout) {
+			string s, t, res;
+			cin >> s >> t;
+			int slen = s.length(), tlen = t.length();
+			//一边添加一边判断
+			for(int i = 0; i < slen; i++) {
+				res += s[i];
+				//当添加到长度大于等于t字符串时，开始比较
+				//每次从末尾向前匹配
+				while(res.length() >= tlen && res.substr(res.length() - tlen, tlen) == t) {
+					//存在t字符串，则删除
+					res.erase(res.begin() + res.length() - tlen, res.end());
+				}
+			}
+			cout << res << endl;
+			return 0;
+		}
+	}// namespace acwing1883
 }// namespace acwing
