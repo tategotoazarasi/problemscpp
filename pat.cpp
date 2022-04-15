@@ -7,6 +7,7 @@
 #include <deque>
 #include <iomanip>
 #include <map>
+#include <numeric>
 #include <sstream>
 #include <tuple>
 #include <unordered_map>
@@ -2158,6 +2159,35 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1061
+
+		namespace b1062 {
+			int main(istream &cin, ostream &cout) {
+				char ch;
+				double n1, n2;
+				int m1, m2, k;
+				cin >> n1 >> ch >> m1 >> n2 >> ch >> m2 >> k;
+				n1 *= k;
+				n1 /= m1;
+				n2 *= k;
+				n2 /= m2;
+				if(n1 > n2) {
+					swap(n1, n2);
+				}
+				bool flag = true;
+				for(int i = ceil(n1) == n1 ? n1 + 1 : ceil(n1); i < n2; i++) {
+					int f = gcd(i, k);
+					if(f == 1) {
+						if(flag) {
+							cout << i / f << '/' << k;
+							flag = false;
+						} else {
+							cout << ' ' << i / f << '/' << k;
+						}
+					}
+				}
+				return 0;
+			}
+		}// namespace b1062
 	}    // namespace b
 
 	namespace a {}

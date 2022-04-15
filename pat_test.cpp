@@ -955,6 +955,24 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1061
+
+		namespace b1062 {
+			TEST(b1062, case1) {
+				istringstream in("7/18 13/20 12");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("5/12 7/12", out.str());
+			}
+
+			TEST(b1062, case2) {
+				istringstream in("26/5 7/20 13");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("5/13 6/13 7/13 8/13 9/13 10/13 11/13 12/13 14/13 15/13 16/13 17/13 18/13 19/13 20/13 21/13 22/13 23/13 24/13 25/13 27/13 28/13 29/13 30/13 31/13 32/13 33/13 34/13 35/13 36/13 37/13 38/13 40/13 41/13 42/13 43/13 44/13 45/13 46/13 47/13 48/13 49/13 50/13 51/13 53/13 54/13 55/13 56/13 57/13 58/13 59/13 60/13 61/13 62/13 63/13 64/13 66/13 67/13", out.str());
+			}
+		}// namespace b1062
 	}    // namespace b
 
 	namespace a {}

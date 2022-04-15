@@ -375,6 +375,11 @@ namespace pat {
 		namespace b1061 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1062 最简分数
+		namespace b1062 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
