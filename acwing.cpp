@@ -6558,7 +6558,9 @@ namespace acwing {
 
 	namespace acwing1842 {
 		int main(istream &cin, ostream &cout) {
-			int x, y, m;
+			int x;
+			int y;
+			int m;
 			cin >> x >> y >> m;
 			int ans = 0;
 			for(int i = 0; y * i <= m; ++i) {
@@ -6573,15 +6575,16 @@ namespace acwing {
 
 	namespace acwing1824 {
 		int main(istream &cin, ostream &cout) {
-			int n, k;
+			int n;
+			int k;
 			cin >> n >> k;
-			vector<int> vec(10010, 0);
+			vector vec(10010, 0);
 			unsigned int size;
 			for(int i = 0; i < n; i++) {
 				cin >> size;
 				vec[size]++;
 			}
-			vector<int> sum(10010, 0);
+			vector sum(10010, 0);
 			for(int i = 1; i < 10010; i++) {
 				sum[i] = sum[i - 1] + vec[i];
 			}
@@ -6596,7 +6599,9 @@ namespace acwing {
 
 	namespace acwing800 {
 		int main(istream &cin, ostream &cout) {
-			int n, m, x;
+			int n;
+			int m;
+			int x;
 			cin >> n >> m >> x;
 			vector<int> a(n);
 			vector<int> b(m);
@@ -6630,7 +6635,8 @@ namespace acwing {
 
 	namespace acwing2816 {
 		int main(istream &cin, ostream &cout) {
-			int n, m;
+			int n;
+			int m;
 			cin >> n >> m;
 			vector<int> a(n);
 			vector<int> b(m);
@@ -6664,7 +6670,8 @@ namespace acwing {
 			vector<pair<int, int>> checkpoints(n);
 			vector<int> d(n - 1);
 			for(int i = 0; i < n; i++) {
-				int x, y;
+				int x;
+				int y;
 				cin >> x >> y;
 				checkpoints[i] = make_pair(x, y);
 			}
@@ -6679,8 +6686,8 @@ namespace acwing {
 			for(int i = 1; i < n - 1; i++) {
 				const auto &[x1, y1] = checkpoints[i - 1];
 				const auto &[x2, y2] = checkpoints[i + 1];
-				int dist             = abs(x2 - x1) + abs(y2 - y1);
-				int diff             = (d[i - 1] + d[i]) - dist;
+				const int dist       = abs(x2 - x1) + abs(y2 - y1);
+				int diff             = d[i - 1] + d[i] - dist;
 				max_diff             = max(max_diff, diff);
 			}
 			cout << sum - max_diff;
@@ -6695,7 +6702,7 @@ namespace acwing {
 			char ch;
 			int num;
 			while((ch = cin.peek()) > 0) {
-				if(isdigit(ch)) {
+				if(isdigit(ch) != 0) {
 					cin >> num;
 					if(!ops.empty() && ops.top() == '*') {
 						num = nums.top() * num;
@@ -6778,34 +6785,32 @@ namespace acwing {
 
 	namespace acwing831 {
 		int main(istream &cin, ostream &cout) {
-			int n, m;
-			string p, s;
+			int n;
+			int m;
+			string p;
+			string s;
 			cin >> n >> p >> m >> s;
-			vector<int> next = get_next(p);
-			int ip           = 0;
-			int is           = 0;
+			const vector<int> next = get_next(p);
+			int ip                 = 0;
+			int is                 = 0;
 			while(ip < n && is < m) {
 				if(p[ip] == s[is]) {
 					if(ip == n - 1) {
 						//整串匹配成功
 						cout << is - n + 1 << ' ';
 						ip = next[ip - 1];
-						continue;
 					} else {
 						//当前匹配成功
 						ip++;
 						is++;
-						continue;
 					}
 				} else {
 					if(ip == 0) {
 						//开头就匹配失败
 						is++;
-						continue;
 					} else {
 						//匹配失败，但不在开头
 						ip = next[ip - 1];
-						continue;
 					}
 				}
 			}
@@ -6814,7 +6819,7 @@ namespace acwing {
 
 		vector<int> get_next(const string &str) {
 			const int n = str.length();
-			vector<int> next(n, 0);
+			vector next(n, 0);
 			int i = 1;
 			int j = 0;
 			while(i < n && j < n) {
@@ -6839,11 +6844,14 @@ namespace acwing {
 
 	namespace acwing1892 {
 		int main(istream &cin, ostream &cout) {
-			int a, b, n;
+			int a;
+			int b;
+			int n;
 			cin >> a >> b >> n;
 			int ans = 1001;
 			for(int i = 0; i < n; i++) {
-				int price, num;
+				int price;
+				int num;
 				bool flag = false;
 				cin >> price >> num;
 				int city;
@@ -6867,9 +6875,12 @@ namespace acwing {
 
 	namespace acwing1883 {
 		int main(istream &cin, ostream &cout) {
-			string s, t, res;
+			string s;
+			string t;
+			string res;
 			cin >> s >> t;
-			int slen = s.length(), tlen = t.length();
+			const int slen = s.length();
+			const int tlen = t.length();
 			//一边添加一边判断
 			for(int i = 0; i < slen; i++) {
 				res += s[i];
@@ -6880,7 +6891,7 @@ namespace acwing {
 					res.erase(res.begin() + res.length() - tlen, res.end());
 				}
 			}
-			cout << res << endl;
+			cout << res;
 			return 0;
 		}
 	}// namespace acwing1883

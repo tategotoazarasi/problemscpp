@@ -2189,7 +2189,7 @@ namespace leetcode {
 	namespace permutation_in_string {
 		class Solution {
 		public:
-			static bool checkInclusion(string s1, string s2);
+			static bool checkInclusion(const string &s1, string s2);
 		};
 	}// namespace permutation_in_string
 

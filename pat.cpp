@@ -1,7 +1,6 @@
 #include "pat.h"
 #include "templates.h"
 #include <algorithm>
-#include <bit>
 #include <cmath>
 #include <cstring>
 #include <deque>
@@ -1822,8 +1821,8 @@ namespace pat {
 						}
 					}
 				}
-				double ans1 = static_cast<double>(cnt1) / n * 100;
-				double ans2 = static_cast<double>(cnt2) / n * 100;
+				const double ans1 = static_cast<double>(cnt1) / n * 100;
+				const double ans2 = static_cast<double>(cnt2) / n * 100;
 				cout << fixed << setprecision(1) << ans1 << "% " << fixed << setprecision(1) << ans2 << '%';
 				return 0;
 			}
@@ -1836,7 +1835,7 @@ namespace pat {
 				string x;
 				long double sum = 0;
 				int k           = 0;
-				while(n--) {
+				while((n--) != 0) {
 					cin >> x;
 					bool flag = true;
 					int start = 0;
@@ -1850,7 +1849,7 @@ namespace pat {
 					if(x.length() > 8) {
 						goto ERROR;
 					}
-					if(isdigit(x[start])) {
+					if(isdigit(x[start]) != 0) {
 						int pos = -1;
 						for(int i = start + 1; i < x.length(); ++i) {
 							if(x[i] == '.') {
@@ -1860,7 +1859,7 @@ namespace pat {
 								} else {
 									goto ERROR;
 								}
-							} else if(!isdigit(x[i])) {
+							} else if(isdigit(x[i]) == 0) {
 								goto ERROR;
 							}
 						}
@@ -1898,7 +1897,7 @@ namespace pat {
 				if(k == 0) {
 					cout << "The average of 0 numbers is Undefined" << endl;
 				} else {
-					long double y = sum / k;
+					const long double y = sum / k;
 					cout << "The average of " << k << " number" << (k == 1 ? "" : "s") << " is " << fixed << setprecision(2) << y << endl;
 				}
 				return 0;
@@ -1907,15 +1906,16 @@ namespace pat {
 
 		namespace b1055 {
 			int main(istream &cin, ostream &cout) {
-				int n, k;
+				int n;
+				int k;
 				cin >> n >> k;
 				vector<Person> vec(n);
 				for(int i = 0; i < n; i++) {
 					string name;
 					int height;
 					cin >> name >> height;
-					Person p = Person{name, height};
-					vec[i]   = p;
+					const auto p = Person{name, height};
+					vec[i]       = p;
 				}
 				sort(vec.begin(), vec.end());
 				vector<deque<Person>> deq(k);
@@ -1958,11 +1958,8 @@ namespace pat {
 				if(this->height > p.height) {
 					return false;
 				}
-				if(this->name > p.name) {
-					return true;
-				} else {
-					return false;
-				}
+				return this->name > p.name;
+				return false;
 			}
 		}// namespace b1055
 
@@ -1987,9 +1984,9 @@ namespace pat {
 				cin.getline(str, 100010);
 				unsigned n = 0;
 				for(int i = 0; str[i] != '\0'; i++) {
-					if(isupper(str[i])) {
+					if(isupper(str[i]) != 0) {
 						n += str[i] - 'A' + 1;
-					} else if(islower(str[i])) {
+					} else if(islower(str[i]) != 0) {
 						n += str[i] - 'a' + 1;
 					}
 				}
@@ -2010,7 +2007,8 @@ namespace pat {
 
 		namespace b1058 {
 			int main(istream &cin, ostream &cout) {
-				int n, m;
+				int n;
+				int m;
 				cin >> n >> m;
 				int max_error = 0;
 				vector<Problem> problems(m);
@@ -2099,10 +2097,10 @@ namespace pat {
 				}
 				int k;
 				cin >> k;
-				while(k--) {
+				while((k--) != 0) {
 					string id;
 					cin >> id;
-					if(!um.count(id)) {
+					if(um.contains(id) == 0u) {
 						cout << id << ": Are you kidding?" << endl;
 					} else {
 						cout << id << ": " << um[id] << endl;
@@ -2135,7 +2133,8 @@ namespace pat {
 
 		namespace b1061 {
 			int main(istream &cin, ostream &cout) {
-				int n, m;
+				int n;
+				int m;
 				cin >> n >> m;
 				vector<int> scores(m);
 				for(int i = 0; i < m; i++) {
@@ -2163,8 +2162,11 @@ namespace pat {
 		namespace b1062 {
 			int main(istream &cin, ostream &cout) {
 				char ch;
-				double n1, n2;
-				int m1, m2, k;
+				double n1;
+				double n2;
+				int m1;
+				int m2;
+				int k;
 				cin >> n1 >> ch >> m1 >> n2 >> ch >> m2 >> k;
 				n1 *= k;
 				n1 /= m1;
@@ -2175,7 +2177,7 @@ namespace pat {
 				}
 				bool flag = true;
 				for(int i = ceil(n1) == n1 ? n1 + 1 : ceil(n1); i < n2; i++) {
-					int f = gcd(i, k);
+					const int f = gcd(i, k);
 					if(f == 1) {
 						if(flag) {
 							cout << i / f << '/' << k;

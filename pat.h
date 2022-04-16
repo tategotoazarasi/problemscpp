@@ -329,7 +329,7 @@ namespace pat {
 		namespace b1055 {
 			struct Person {
 				string name;
-				int height;
+				int height{};
 
 				bool operator<(const Person &p) const;
 			};
@@ -350,11 +350,11 @@ namespace pat {
 		/// \brief 1058 选择题
 		namespace b1058 {
 			struct Problem {
-				int score;
-				int num;
-				int correct_num;
+				int score{};
+				int num{};
+				int correct_num{};
 				unordered_set<char> correct_choices;
-				int error_count;
+				int error_count{};
 			};
 
 			int main(istream &cin, ostream &cout);

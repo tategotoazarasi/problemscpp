@@ -3167,20 +3167,20 @@ namespace acwing {
 		}
 
 		TEST(get_next, case1) {
-			string str       = "ababaa";
-			vector<int> next = {0, 0, 1, 2, 3, 1};
+			const string str  = "ababaa";
+			const vector next = {0, 0, 1, 2, 3, 1};
 			ASSERT_EQ(next, get_next(str));
 		}
 
 		TEST(get_next, case2) {
-			string str       = "ababaaababaa";
-			vector<int> next = {0, 0, 1, 2, 3, 1, 1, 2, 3, 4, 5, 6};
+			const string str  = "ababaaababaa";
+			const vector next = {0, 0, 1, 2, 3, 1, 1, 2, 3, 4, 5, 6};
 			ASSERT_EQ(next, get_next(str));
 		}
 
 		TEST(get_next, case3) {
-			string str       = "aabaaaa";
-			vector<int> next = {0, 1, 0, 1, 2, 2, 2};
+			const string str  = "aabaaaa";
+			const vector next = {0, 1, 0, 1, 2, 2, 2};
 			ASSERT_EQ(next, get_next(str));
 		}
 	}// namespace acwing831
