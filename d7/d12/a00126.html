@@ -117,33 +117,34 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">acwing.cpp</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l06632">6632</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l06632" name="l06632"></a><span class="lineno"> 6632</span>                                              {</div>
-<div class="line"><a id="l06633" name="l06633"></a><span class="lineno"> 6633</span>            <span class="keywordtype">int</span> n, m;</div>
-<div class="line"><a id="l06634" name="l06634"></a><span class="lineno"> 6634</span>            cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l06635" name="l06635"></a><span class="lineno"> 6635</span>            vector&lt;int&gt; a(n);</div>
-<div class="line"><a id="l06636" name="l06636"></a><span class="lineno"> 6636</span>            vector&lt;int&gt; b(m);</div>
-<div class="line"><a id="l06637" name="l06637"></a><span class="lineno"> 6637</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l06638" name="l06638"></a><span class="lineno"> 6638</span>                cin &gt;&gt; a[i];</div>
-<div class="line"><a id="l06639" name="l06639"></a><span class="lineno"> 6639</span>            }</div>
-<div class="line"><a id="l06640" name="l06640"></a><span class="lineno"> 6640</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l06641" name="l06641"></a><span class="lineno"> 6641</span>                cin &gt;&gt; b[i];</div>
-<div class="line"><a id="l06642" name="l06642"></a><span class="lineno"> 6642</span>            }</div>
-<div class="line"><a id="l06643" name="l06643"></a><span class="lineno"> 6643</span>            <span class="keywordtype">int</span> pa = 0;</div>
-<div class="line"><a id="l06644" name="l06644"></a><span class="lineno"> 6644</span>            <span class="keywordtype">int</span> pb = 0;</div>
-<div class="line"><a id="l06645" name="l06645"></a><span class="lineno"> 6645</span>            <span class="keywordflow">for</span>(; pa &lt; n; ++pa) {</div>
-<div class="line"><a id="l06646" name="l06646"></a><span class="lineno"> 6646</span>                <span class="keywordflow">while</span>(pb &lt; m &amp;&amp; b[pb] != a[pa]) {</div>
-<div class="line"><a id="l06647" name="l06647"></a><span class="lineno"> 6647</span>                    ++pb;</div>
-<div class="line"><a id="l06648" name="l06648"></a><span class="lineno"> 6648</span>                }</div>
-<div class="line"><a id="l06649" name="l06649"></a><span class="lineno"> 6649</span>                <span class="keywordflow">if</span>(pb == m) {</div>
-<div class="line"><a id="l06650" name="l06650"></a><span class="lineno"> 6650</span>                    cout &lt;&lt; <span class="stringliteral">&quot;No&quot;</span>;</div>
-<div class="line"><a id="l06651" name="l06651"></a><span class="lineno"> 6651</span>                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l06652" name="l06652"></a><span class="lineno"> 6652</span>                }</div>
-<div class="line"><a id="l06653" name="l06653"></a><span class="lineno"> 6653</span>                ++pb;</div>
-<div class="line"><a id="l06654" name="l06654"></a><span class="lineno"> 6654</span>            }</div>
-<div class="line"><a id="l06655" name="l06655"></a><span class="lineno"> 6655</span>            cout &lt;&lt; <span class="stringliteral">&quot;Yes&quot;</span>;</div>
-<div class="line"><a id="l06656" name="l06656"></a><span class="lineno"> 6656</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l06657" name="l06657"></a><span class="lineno"> 6657</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">acwing.cpp</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l06637">6637</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l06637" name="l06637"></a><span class="lineno"> 6637</span>                                              {</div>
+<div class="line"><a id="l06638" name="l06638"></a><span class="lineno"> 6638</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l06639" name="l06639"></a><span class="lineno"> 6639</span>            <span class="keywordtype">int</span> m;</div>
+<div class="line"><a id="l06640" name="l06640"></a><span class="lineno"> 6640</span>            cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l06641" name="l06641"></a><span class="lineno"> 6641</span>            vector&lt;int&gt; a(n);</div>
+<div class="line"><a id="l06642" name="l06642"></a><span class="lineno"> 6642</span>            vector&lt;int&gt; b(m);</div>
+<div class="line"><a id="l06643" name="l06643"></a><span class="lineno"> 6643</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l06644" name="l06644"></a><span class="lineno"> 6644</span>                cin &gt;&gt; a[i];</div>
+<div class="line"><a id="l06645" name="l06645"></a><span class="lineno"> 6645</span>            }</div>
+<div class="line"><a id="l06646" name="l06646"></a><span class="lineno"> 6646</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l06647" name="l06647"></a><span class="lineno"> 6647</span>                cin &gt;&gt; b[i];</div>
+<div class="line"><a id="l06648" name="l06648"></a><span class="lineno"> 6648</span>            }</div>
+<div class="line"><a id="l06649" name="l06649"></a><span class="lineno"> 6649</span>            <span class="keywordtype">int</span> pa = 0;</div>
+<div class="line"><a id="l06650" name="l06650"></a><span class="lineno"> 6650</span>            <span class="keywordtype">int</span> pb = 0;</div>
+<div class="line"><a id="l06651" name="l06651"></a><span class="lineno"> 6651</span>            <span class="keywordflow">for</span>(; pa &lt; n; ++pa) {</div>
+<div class="line"><a id="l06652" name="l06652"></a><span class="lineno"> 6652</span>                <span class="keywordflow">while</span>(pb &lt; m &amp;&amp; b[pb] != a[pa]) {</div>
+<div class="line"><a id="l06653" name="l06653"></a><span class="lineno"> 6653</span>                    ++pb;</div>
+<div class="line"><a id="l06654" name="l06654"></a><span class="lineno"> 6654</span>                }</div>
+<div class="line"><a id="l06655" name="l06655"></a><span class="lineno"> 6655</span>                <span class="keywordflow">if</span>(pb == m) {</div>
+<div class="line"><a id="l06656" name="l06656"></a><span class="lineno"> 6656</span>                    cout &lt;&lt; <span class="stringliteral">&quot;No&quot;</span>;</div>
+<div class="line"><a id="l06657" name="l06657"></a><span class="lineno"> 6657</span>                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l06658" name="l06658"></a><span class="lineno"> 6658</span>                }</div>
+<div class="line"><a id="l06659" name="l06659"></a><span class="lineno"> 6659</span>                ++pb;</div>
+<div class="line"><a id="l06660" name="l06660"></a><span class="lineno"> 6660</span>            }</div>
+<div class="line"><a id="l06661" name="l06661"></a><span class="lineno"> 6661</span>            cout &lt;&lt; <span class="stringliteral">&quot;Yes&quot;</span>;</div>
+<div class="line"><a id="l06662" name="l06662"></a><span class="lineno"> 6662</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l06663" name="l06663"></a><span class="lineno"> 6663</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d5/de0/a00050_source.html#l03084">TEST()</a>.</p>
 
@@ -187,7 +188,7 @@ $(function() {
 <div class="line"><a id="l03092" name="l03092"></a><span class="lineno"> 3092</span>        }</div>
 <div class="ttc" id="aa00026_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d9/d2e/a00056_source.html#l06632">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d9/d2e/a00056_source.html#l06637">main()</a>.</p>
 
 </div>
 </div>
