@@ -5984,4 +5984,37 @@ namespace leetcode {
 
 		int RandomizedSet::getRandom() { return nums[distribution(generator) % nums.size()]; }
 	}// namespace insert_delete_getrandom_o1
+
+	namespace projection_area_of_3d_shapes {
+		int Solution::projectionArea(vector<vector<int>> &grid) {
+			int n                       = grid.size();
+			int xy                      = 0;
+			int xz                      = 0;
+			int yz                      = 0;
+			vector<vector<int>> grid_xz = vector<vector<int>>(51, vector<int>(51, 0));
+			vector<vector<int>> grid_yz = vector<vector<int>>(51, vector<int>(51, 0));
+			for(int i = 0; i < n; i++) {
+				for(int j = 0; j < n; j++) {
+					if(grid[i][j] != 0) {
+						xy++;
+					}
+					for(int k = 0; k < grid[i][j]; k++) {
+						grid_xz[i][k] = 1;
+						grid_yz[j][k] = 1;
+					}
+				}
+			}
+			for(int i = 0; i < 51; i++) {
+				for(int j = 0; j < 51; j++) {
+					if(grid_xz[i][j] != 0) {
+						xz++;
+					}
+					if(grid_yz[i][j] != 0) {
+						yz++;
+					}
+				}
+			}
+			return xy + yz + xz;
+		}
+	}// namespace projection_area_of_3d_shapes
 }// namespace leetcode

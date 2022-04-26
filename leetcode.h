@@ -2214,6 +2214,14 @@ namespace leetcode {
 			int getRandom();
 		};
 	}// namespace insert_delete_getrandom_o1
+
+	/// \brief 883. Projection Area of 3D Shapes
+	namespace projection_area_of_3d_shapes {
+		class Solution {
+		public:
+			static int projectionArea(vector<vector<int>> &grid);
+		};
+	}// namespace projection_area_of_3d_shapes
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

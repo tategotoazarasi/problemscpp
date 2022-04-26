@@ -2653,15 +2653,15 @@ namespace leetcode {
 	namespace find_players_with_zero_or_one_losses {
 		TEST(find_players_with_zero_or_one_losses, case1) {
 			vector<vector<int>> matches      = {{1, 3},
-                                           {2, 3},
-                                           {3, 6},
-                                           {5, 6},
-                                           {5, 7},
-                                           {4, 5},
-                                           {4, 8},
-                                           {4, 9},
-                                           {10, 4},
-                                           {10, 9}};
+			                                    {2, 3},
+			                                    {3, 6},
+			                                    {5, 6},
+			                                    {5, 7},
+			                                    {4, 5},
+			                                    {4, 8},
+			                                    {4, 9},
+			                                    {10, 4},
+			                                    {10, 9}};
 			const vector<vector<int>> output = {{1, 2, 10}, {4, 5, 7, 8}};
 			ASSERT_EQ(output, Solution::findWinners(matches));
 		}
@@ -2838,4 +2838,21 @@ namespace leetcode {
 			ASSERT_FALSE(Solution::checkInclusion("dinitrophenylhydrazine", "dimethylhydrazine"));
 		}
 	}// namespace permutation_in_string
+
+	namespace projection_area_of_3d_shapes {
+		TEST(projection_area_of_3d_shapes, case1) {
+			vector<vector<int>> grid = {{1, 2}, {3, 4}};
+			ASSERT_EQ(17, Solution::projectionArea(grid));
+		}
+
+		TEST(projection_area_of_3d_shapes, case2) {
+			vector<vector<int>> grid = {{2}};
+			ASSERT_EQ(5, Solution::projectionArea(grid));
+		}
+
+		TEST(projection_area_of_3d_shapes, case3) {
+			vector<vector<int>> grid = {{1, 0}, {0, 2}};
+			ASSERT_EQ(8, Solution::projectionArea(grid));
+		}
+	}// namespace projection_area_of_3d_shapes
 }// namespace leetcode
