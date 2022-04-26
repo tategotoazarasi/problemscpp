@@ -385,6 +385,11 @@ namespace pat {
 		namespace b1063 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1064 朋友数
+		namespace b1064 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

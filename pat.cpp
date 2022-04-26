@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <map>
 #include <numeric>
+#include <set>
 #include <sstream>
 #include <tuple>
 #include <unordered_map>
@@ -2205,6 +2206,31 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1063
+
+		namespace b1064 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				set<int> s;
+				while(n--) {
+					string str;
+					cin >> str;
+					int sum = 0;
+					for(char ch: str) {
+						sum += ch - '0';
+					}
+					s.insert(sum);
+				}
+				cout << s.size() << endl;
+				for(auto i = s.begin(); i != s.end(); ++i) {
+					cout << *i;
+					if(*i != *s.rbegin()) {
+						cout << ' ';
+					}
+				}
+				return 0;
+			}
+		}// namespace b1064
 	}    // namespace b
 
 	namespace a {}

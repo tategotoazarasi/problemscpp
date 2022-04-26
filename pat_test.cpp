@@ -988,6 +988,19 @@ namespace pat {
 				ASSERT_EQ("4.24", out.str());
 			}
 		}// namespace b1063
+
+		namespace b1064 {
+			TEST(b1064, case1) {
+				istringstream in("8\n"
+				                 "123 899 51 998 27 33 36 12");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("4\n"
+				          "3 6 9 26",
+				          out.str());
+			}
+		}// namespace b1064
 	}    // namespace b
 
 	namespace a {}
