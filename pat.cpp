@@ -2190,6 +2190,21 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1062
+
+		namespace b1063 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				double ans = 0;
+				while(n--) {
+					int a, b;
+					cin >> a >> b;
+					ans = max(ans, sqrt(a * a + b * b));
+				}
+				cout << fixed << setprecision(2) << ans;
+				return 0;
+			}
+		}// namespace b1063
 	}    // namespace b
 
 	namespace a {}

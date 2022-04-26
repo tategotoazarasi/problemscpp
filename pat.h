@@ -380,6 +380,11 @@ namespace pat {
 		namespace b1062 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1063 计算谱半径
+		namespace b1063 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
