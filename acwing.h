@@ -2020,5 +2020,10 @@ namespace acwing {
 	namespace acwing1883 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 1995. 见面与问候
+	namespace acwing1995 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

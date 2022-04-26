@@ -3239,4 +3239,23 @@ namespace acwing {
 			ASSERT_EQ("whatthefun", ans);
 		}
 	}// namespace acwing1883
+
+	namespace acwing1995 {
+		TEST(acwing1995, case1) {
+			istringstream in("4 5\n"
+			                 "3 L\n"
+			                 "5 R\n"
+			                 "1 L\n"
+			                 "2 R\n"
+			                 "4 R\n"
+			                 "1 L\n"
+			                 "3 L\n"
+			                 "4 R\n"
+			                 "2 L");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3", ans);
+		}
+	}// namespace acwing1995
 }// namespace acwing

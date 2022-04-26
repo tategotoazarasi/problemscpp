@@ -5773,8 +5773,8 @@ namespace acwing {
 	namespace acwing1695 {
 		int main(istream &cin, ostream &cout) {
 			bool nuts[3][3]         = {{true, false, false},
-                               {false, true, false},
-                               {false, false, true}};
+			                           {false, true, false},
+			                           {false, false, true}};
 			unsigned short score[3] = {0, 0, 0};
 			unsigned short ans      = 0;
 			unsigned short n;
@@ -6895,4 +6895,60 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1883
+
+	namespace acwing1995 {
+		int main(istream &cin, ostream &cout) {
+			int b, e;
+			cin >> b >> e;
+			vector<int> pos_b;
+			vector<int> pos_e;
+			pos_b.push_back(0);
+			pos_e.push_back(0);
+			while(b--) {
+				char dir;
+				int dist;
+				cin >> dist >> dir;
+				if(dir == 'L') {
+					for(int i = 0; i < dist; i++) {
+						pos_b.push_back(pos_b.back() - 1);
+					}
+				} else {
+					for(int i = 0; i < dist; i++) {
+						pos_b.push_back(pos_b.back() + 1);
+					}
+				}
+			}
+			while(e--) {
+				char dir;
+				int dist;
+				cin >> dist >> dir;
+				if(dir == 'L') {
+					for(int i = 0; i < dist; i++) {
+						pos_e.push_back(pos_e.back() - 1);
+					}
+				} else {
+					for(int i = 0; i < dist; i++) {
+						pos_e.push_back(pos_e.back() + 1);
+					}
+				}
+			}
+			int t     = max(pos_e.size(), pos_b.size());
+			int ans   = 0;
+			bool flag = true;
+			for(int i = 0; i < t; i++) {
+				int pe = i < pos_e.size() ? pos_e[i] : pos_e.back();
+				int pb = i < pos_b.size() ? pos_b[i] : pos_b.back();
+				if(pe == pb) {
+					if(!flag) {
+						ans++;
+					}
+					flag = true;
+				} else {
+					flag = false;
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing1995
 }// namespace acwing
