@@ -2256,6 +2256,40 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1066
+
+		namespace b1065 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				unordered_map<string, string> um;
+				set<string> s;
+				for(int i = 0; i < n; i++) {
+					string id1, id2;
+					cin >> id1 >> id2;
+					um[id1] = id2;
+					um[id2] = id1;
+				}
+				int m;
+				cin >> m;
+				for(int i = 0; i < m; i++) {
+					string id;
+					cin >> id;
+					if(um.count(id) && s.count(um[id])) {
+						s.erase(um[id]);
+					} else {
+						s.insert(id);
+					}
+				}
+				cout << s.size() << endl;
+				for(auto it = s.begin(); it != s.end(); ++it) {
+					cout << *it;
+					if(*it != *s.rbegin()) {
+						cout << ' ';
+					}
+				}
+				return 0;
+			}
+		}// namespace b1065
 	}    // namespace b
 
 	namespace a {}

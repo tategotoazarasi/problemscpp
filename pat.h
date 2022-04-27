@@ -395,6 +395,11 @@ namespace pat {
 		namespace b1066 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1065 单身狗
+		namespace b1065 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
