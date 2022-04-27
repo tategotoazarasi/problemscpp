@@ -1001,6 +1001,22 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1064
+
+		namespace b1066 {
+			TEST(b1066, case1) {
+				istringstream in("3 5 100 150 0\n"
+				                 "3 189 254 101 119\n"
+				                 "150 233 151 99 100\n"
+				                 "88 123 149 0 255");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("003 189 254 000 000\n"
+				          "000 233 151 099 000\n"
+				          "088 000 000 000 255",
+				          out.str());
+			}
+		}// namespace b1066
 	}    // namespace b
 
 	namespace a {}

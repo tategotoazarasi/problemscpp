@@ -2231,6 +2231,31 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1064
+
+		namespace b1066 {
+			int main(istream &cin, ostream &cout) {
+				int m, n, a, b, g;
+				cin >> m >> n >> a >> b >> g;
+				for(int i = 0; i < m; i++) {
+					for(int j = 0; j < n; j++) {
+						int v;
+						cin >> v;
+						if(a <= v && v <= b) {
+							cout << setw(3) << right << setfill('0') << g;
+						} else {
+							cout << setw(3) << right << setfill('0') << v;
+						}
+						if(j != n - 1) {
+							cout << ' ';
+						}
+					}
+					if(i != m - 1) {
+						cout << endl;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1066
 	}    // namespace b
 
 	namespace a {}

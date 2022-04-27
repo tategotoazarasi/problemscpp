@@ -390,6 +390,11 @@ namespace pat {
 		namespace b1064 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1066 图像过滤
+		namespace b1066 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
