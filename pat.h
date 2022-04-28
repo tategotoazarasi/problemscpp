@@ -400,6 +400,11 @@ namespace pat {
 		namespace b1065 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1067 试密码
+		namespace b1067 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

@@ -1034,6 +1034,41 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1065
+
+		namespace b1067 {
+			TEST(b1067, case1) {
+				istringstream in("Correct%pw 3\n"
+				                 "correct%pw\n"
+				                 "Correct@PW\n"
+				                 "whatisthepassword!\n"
+				                 "Correct%pw\n"
+				                 "#");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Wrong password: correct%pw\n"
+				          "Wrong password: Correct@PW\n"
+				          "Wrong password: whatisthepassword!\n"
+				          "Account locked",
+				          out.str());
+			}
+
+			TEST(b1067, case2) {
+				istringstream in("cool@gplt 3\n"
+				                 "coolman@gplt\n"
+				                 "coollady@gplt\n"
+				                 "cool@gplt\n"
+				                 "try again\n"
+				                 "#");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Wrong password: coolman@gplt\n"
+				          "Wrong password: coollady@gplt\n"
+				          "Welcome in",
+				          out.str());
+			}
+		}// namespace b1067
 	}    // namespace b
 
 	namespace a {}

@@ -2290,6 +2290,41 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1065
+
+		namespace b1067 {
+			int main(istream &cin, ostream &cout) {
+				string pwd;
+				int n;
+				cin >> pwd >> n;
+				string str;
+				int cnt = 0;
+				char s[1024];
+				cin.getline(s, 1024);
+				while(true) {
+					cin.getline(s, 1024);
+					str = string(s);
+					if(str == "#") {
+						return 0;
+					}
+					if(cnt == n) {
+						cout << "Account locked";
+						return 0;
+					}
+					if(str != pwd) {
+						cout << "Wrong password: " << str << endl;
+						cnt++;
+						if(cnt == n) {
+							cout << "Account locked";
+							return 0;
+						}
+					} else {
+						cout << "Welcome in";
+						return 0;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1067
 	}    // namespace b
 
 	namespace a {}
