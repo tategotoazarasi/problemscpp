@@ -2325,6 +2325,65 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1067
+
+		namespace b1068 {
+			int main(istream &cin, ostream &cout) {
+				long m, n, tol;
+				cin >> m >> n >> tol;
+				vector<vector<long>> grid(n, vector<long>(m));
+				unordered_map<long, unsigned long> um_cnt;
+				unordered_map<long, long> um_x;
+				unordered_map<long, long> um_y;
+				for(int i = 0; i < n; i++) {
+					for(int j = 0; j < m; j++) {
+						cin >> grid[i][j];
+						um_cnt[grid[i][j]]++;
+						um_x[grid[i][j]] = i;
+						um_y[grid[i][j]] = j;
+					}
+				}
+				long ans_x;
+				long ans_y;
+				long ans_v;
+				bool has_ans = false;
+				for(auto [v, cnt]: um_cnt) {
+					if(cnt == 1) {
+						long x                           = um_x[v];
+						long y                           = um_y[v];
+						pair<long, long> surroundings[8] = {make_pair(x - 1, y - 1), make_pair(x - 1, y), make_pair(x - 1, y + 1),
+						                                    make_pair(x, y - 1), make_pair(x, y + 1),
+						                                    make_pair(x + 1, y - 1), make_pair(x + 1, y), make_pair(x + 1, y + 1)};
+						bool flag                        = true;
+						for(auto [s_x, s_y]: surroundings) {
+							if(s_x >= 0 && s_x < n && s_y >= 0 && s_y < m) {
+								long dist = abs(v - grid[s_x][s_y]);
+								if(dist <= tol) {
+									flag = false;
+									break;
+								}
+							}
+						}
+						if(flag) {
+							if(!has_ans) {
+								ans_x   = x + 1;
+								ans_y   = y + 1;
+								ans_v   = v;
+								has_ans = true;
+							} else {
+								cout << "Not Unique";
+								return 0;
+							}
+						}
+					}
+				}
+				if(has_ans) {
+					cout << '(' << ans_y << ", " << ans_x << "): " << ans_v;
+				} else {
+					cout << "Not Exist";
+				}
+				return 0;
+			}
+		}// namespace b1068
 	}    // namespace b
 
 	namespace a {}

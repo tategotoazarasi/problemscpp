@@ -405,6 +405,11 @@ namespace pat {
 		namespace b1067 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1068 万绿丛中一点红
+		namespace b1068 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

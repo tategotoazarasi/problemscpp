@@ -1069,6 +1069,46 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1067
+
+		namespace b1068 {
+			TEST(b1068, case1) {
+				istringstream in("8 6 200\n"
+				                 "0 \t 0 \t  0 \t   0\t    0 \t     0 \t      0        0\n"
+				                 "65280 \t 65280    65280    16711479 65280    65280    65280    65280\n"
+				                 "16711479 65280    65280    65280    16711680 65280    65280    65280\n"
+				                 "65280 \t 65280    65280    65280    65280    65280    165280   165280\n"
+				                 "65280 \t 65280 \t  16777015 65280    65280    165280   65480    165280\n"
+				                 "16777215 16777215 16777215 16777215 16777215 16777215 16777215 16777215");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("(5, 3): 16711680", out.str());
+			}
+
+			TEST(b1068, case2) {
+				istringstream in("4 5 2\n"
+				                 "0 0 0 0\n"
+				                 "0 0 3 0\n"
+				                 "0 0 0 0\n"
+				                 "0 5 0 0\n"
+				                 "0 0 0 0");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Not Unique", out.str());
+			}
+
+			TEST(b1068, case3) {
+				istringstream in("3 3 5\n"
+				                 "1 2 3\n"
+				                 "3 4 5\n"
+				                 "5 6 7");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Not Exist", out.str());
+			}
+		}// namespace b1068
 	}    // namespace b
 
 	namespace a {}
