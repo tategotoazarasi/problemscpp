@@ -415,6 +415,11 @@ namespace pat {
 		namespace b1069 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1070 结绳
+		namespace b1070 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

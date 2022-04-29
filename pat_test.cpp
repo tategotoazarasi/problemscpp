@@ -1141,6 +1141,17 @@ namespace pat {
 				ASSERT_EQ("Keep going...", out.str());
 			}
 		}// namespace b1069
+
+		namespace b1070 {
+			TEST(b1070, case1) {
+				istringstream in("8\n"
+				                 "10 15 12 3 4 13 1 15");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("14", out.str());
+			}
+		}// namespace b1070
 	}    // namespace b
 
 	namespace a {}

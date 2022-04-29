@@ -2414,6 +2414,24 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1069
+
+		namespace b1070 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				vector<int> vec(n);
+				for(int i = 0; i < n; i++) {
+					cin >> vec[i];
+				}
+				sort(vec.begin(), vec.end());
+				int current = vec[0];
+				for(int i = 1; i < n; i++) {
+					current = (current + vec[i]) / 2;
+				}
+				cout << current;
+				return 0;
+			}
+		}// namespace b1070
 	}    // namespace b
 
 	namespace a {}
