@@ -1109,6 +1109,38 @@ namespace pat {
 				ASSERT_EQ("Not Exist", out.str());
 			}
 		}// namespace b1068
+
+		namespace b1069 {
+			TEST(b1069, case1) {
+				istringstream in("9 3 2\n"
+				                 "Imgonnawin!\n"
+				                 "PickMe\n"
+				                 "PickMe\n"
+				                 "LookHere\n"
+				                 "Imgonnawin!\n"
+				                 "TryAgainAgain\n"
+				                 "TryAgainAgain\n"
+				                 "Imgonnawin!\n"
+				                 "TryAgainAgain");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("PickMe\n"
+				          "Imgonnawin!\n"
+				          "TryAgainAgain\n",
+				          out.str());
+			}
+
+			TEST(b1069, case2) {
+				istringstream in("2 3 5\n"
+				                 "Imgonnawin!\n"
+				                 "PickMe\n");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Keep going...", out.str());
+			}
+		}// namespace b1069
 	}    // namespace b
 
 	namespace a {}

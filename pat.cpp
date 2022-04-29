@@ -2384,6 +2384,36 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1068
+
+		namespace b1069 {
+			int main(istream &cin, ostream &cout) {
+				int m, n, s;
+				cin >> m >> n >> s;
+				string name;
+				unordered_set<string> names;
+				vector<string> list(m);
+				int cnt = 0;
+				for(int i = 0; i < m; i++) {
+					cin >> list[i];
+				}
+				for(int i = s - 1; i < m;) {
+					if(names.count(list[i])) {
+						i++;
+						continue;
+					} else {
+						names.insert(list[i]);
+						cout << list[i] << endl;
+						cnt++;
+						i += n;
+						continue;
+					}
+				}
+				if(cnt == 0) {
+					cout << "Keep going...";
+				}
+				return 0;
+			}
+		}// namespace b1069
 	}    // namespace b
 
 	namespace a {}

@@ -410,6 +410,11 @@ namespace pat {
 		namespace b1068 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1069 微博转发抽奖
+		namespace b1069 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
