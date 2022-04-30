@@ -1152,6 +1152,39 @@ namespace pat {
 				ASSERT_EQ("14", out.str());
 			}
 		}// namespace b1070
+
+		namespace b1071 {
+			TEST(b1071, case1) {
+				istringstream in("100 4\n"
+				                 "8 0 100 2\n"
+				                 "3 1 50 1\n"
+				                 "5 1 200 6\n"
+				                 "7 0 200 8");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Win 100!  Total = 200.\n"
+				          "Lose 50.  Total = 150.\n"
+				          "Not enough tokens.  Total = 150.\n"
+				          "Not enough tokens.  Total = 150.\n",
+				          out.str());
+			}
+
+			TEST(b1071, case2) {
+				istringstream in("100 4\n"
+				                 "8 0 100 2\n"
+				                 "3 1 200 1\n"
+				                 "5 1 200 6\n"
+				                 "7 0 200 8");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Win 100!  Total = 200.\n"
+				          "Lose 200.  Total = 0.\n"
+				          "Game Over.",
+				          out.str());
+			}
+		}// namespace b1071
 	}    // namespace b
 
 	namespace a {}

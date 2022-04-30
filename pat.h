@@ -420,6 +420,11 @@ namespace pat {
 		namespace b1070 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1071 小赌怡情
+		namespace b1071 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

@@ -2432,6 +2432,33 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1070
+
+		namespace b1071 {
+			int main(istream &cin, ostream &cout) {
+				int t, k;
+				cin >> t >> k;
+				while(k--) {
+					int n1, b, tt, n2;
+					cin >> n1 >> b >> tt >> n2;
+					if(tt > t) {
+						cout << "Not enough tokens.  Total = " << t << '.' << endl;
+						continue;
+					}
+					if(n2 > n1 == b) {
+						t += tt;
+						cout << "Win " << tt << "!  Total = " << t << '.' << endl;
+					} else {
+						t -= tt;
+						cout << "Lose " << tt << ".  Total = " << t << '.' << endl;
+					}
+					if(t == 0) {
+						cout << "Game Over.";
+						return 0;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1071
 	}    // namespace b
 
 	namespace a {}
