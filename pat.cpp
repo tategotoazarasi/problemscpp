@@ -2459,6 +2459,45 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1071
+
+		namespace b1072 {
+			int main(istream &cin, ostream &cout) {
+				int n, m;
+				cin >> n >> m;
+				unordered_set<string> items;
+				int stu_cnt  = 0;
+				int item_cnt = 0;
+				while(m--) {
+					string item;
+					cin >> item;
+					items.insert(item);
+				}
+				for(int i = 0; i < n; i++) {
+					string name;
+					int k;
+					cin >> name >> k;
+					vector<string> vec;
+					for(int j = 0; j < k; j++) {
+						string item;
+						cin >> item;
+						if(items.count(item)) {
+							vec.push_back(item);
+						}
+					}
+					item_cnt += vec.size();
+					if(vec.size() != 0) {
+						stu_cnt++;
+						cout << name << ':';
+						for(auto item: vec) {
+							cout << ' ' << item;
+						}
+						cout << endl;
+					}
+				}
+				cout << stu_cnt << ' ' << item_cnt;
+				return 0;
+			}
+		}// namespace b1072
 	}    // namespace b
 
 	namespace a {}

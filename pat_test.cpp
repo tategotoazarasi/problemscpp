@@ -1185,6 +1185,25 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1071
+
+		namespace b1072 {
+			TEST(b1071, case1) {
+				istringstream in("4 2\n"
+				                 "2333 6666\n"
+				                 "CYLL 3 1234 2345 3456\n"
+				                 "U 4 9966 6666 8888 6666\n"
+				                 "GG 2 2333 7777\n"
+				                 "JJ 3 0012 6666 2333");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("U: 6666 6666\n"
+				          "GG: 2333\n"
+				          "JJ: 6666 2333\n"
+				          "3 5",
+				          out.str());
+			}
+		}// namespace b1072
 	}    // namespace b
 
 	namespace a {}
