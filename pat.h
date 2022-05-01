@@ -445,7 +445,12 @@ namespace pat {
 
 			int main(istream &cin, ostream &cout);
 		}// namespace b1073
-	}    // namespace b
+
+		/// \brief 1074 宇宙无敌加法器
+		namespace b1074 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}

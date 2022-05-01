@@ -2568,6 +2568,47 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1073
+
+		namespace b1074 {
+			int main(istream &cin, ostream &cout) {
+				string str_n, str_a, str_b;
+				cin >> str_n >> str_a >> str_b;
+				vector<int> n;
+				vector<int> a;
+				vector<int> b;
+				vector<int> ans;
+				for(int i = str_n.length() - 1; i >= 0; i--) {
+					if(str_n[i] == '0') {
+						n.push_back(10);
+					} else {
+						n.push_back(str_n[i] - '0');
+					}
+				}
+				for(int i = str_a.length() - 1; i >= 0; i--) {
+					a.push_back(str_a[i] - '0');
+				}
+				for(int i = str_b.length() - 1; i >= 0; i--) {
+					b.push_back(str_b[i] - '0');
+				}
+				int carry = 0;
+				for(int i = 0; i < max(a.size(), b.size()) || carry != 0; i++) {
+					int radix = i < n.size() ? n[i] : 10;
+					int num_a = i < a.size() ? a[i] : 0;
+					int num_b = i < b.size() ? b[i] : 0;
+					int sum   = num_a + num_b + carry;
+					ans.push_back(sum % radix);
+					carry = sum / radix;
+				}
+				int i = ans.size() - 1;
+				while(ans[i] == 0 && i > 0) {
+					i--;
+				}
+				for(; i >= 0; i--) {
+					cout << ans[i];
+				}
+				return 0;
+			}
+		}// namespace b1074
 	}    // namespace b
 
 	namespace a {}

@@ -1223,7 +1223,7 @@ namespace pat {
 				          "2.5\n"
 				          "2 2-e\n"
 				          "2 3-a\n"
-				          "2 3-b",
+				          "2 3-b\n",
 				          out.str());
 			}
 
@@ -1242,6 +1242,19 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1073
+
+		namespace b1074 {
+			TEST(b1074, case1) {
+				istringstream in("30527\n"
+				                 "06203\n"
+				                 "415");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("7201",
+				          out.str());
+			}
+		}// namespace b1074
 	}    // namespace b
 
 	namespace a {}
