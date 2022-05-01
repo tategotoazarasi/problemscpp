@@ -2498,6 +2498,76 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1072
+
+		namespace b1073 {
+			int main(istream &cin, ostream &cout) {
+				int n, m;
+				cin >> n >> m;
+				vector<problem> problems(m);
+				map<pair<int, char>, int> noe;
+				int max_cnt = 0;
+				for(int i = 0; i < m; i++) {
+					problem p;
+					p.id = i + 1;
+					cin >> p.score >> p.noa >> p.noca;
+					p.ca = unordered_set<char>();
+					for(int j = 0; j < p.noca; j++) {
+						char ca;
+						cin >> ca;
+						p.ca.insert(ca);
+					}
+					problems[i] = p;
+				}
+				char ch;
+				for(int i = 0; i < n; i++) {
+					double score = 0;
+					for(int j = 0; j < m; j++) {
+						unordered_set<char> as;
+						cin >> ch;
+						int noa;
+						cin >> noa;
+						bool flag = true;
+						for(int k = 0; k < noa; k++) {
+							char a;
+							cin >> a;
+							as.insert(a);
+							if(!problems[j].ca.count(a)) {
+								noe[make_pair(problems[j].id, a)]++;
+								max_cnt = max(max_cnt, noe[make_pair(problems[j].id, a)]);
+								flag    = false;
+							}
+						}
+						cin >> ch;
+						for(auto a: problems[j].ca) {
+							if(!as.count(a)) {
+								noe[make_pair(problems[j].id, a)]++;
+								max_cnt = max(max_cnt, noe[make_pair(problems[j].id, a)]);
+							}
+						}
+						if(!flag) {
+							continue;
+						}
+						if(noa == problems[j].noca) {
+							score += problems[j].score;
+						} else {
+							score += static_cast<double>(problems[j].score) / 2;
+						}
+					}
+					cout << fixed << setprecision(1) << score << endl;
+				}
+				if(noe.empty()) {
+					cout << "Too simple";
+				} else {
+					for(const auto &[k, cnt]: noe) {
+						if(cnt == max_cnt) {
+							const auto &[id, a] = k;
+							cout << cnt << ' ' << id << '-' << a << endl;
+						}
+					}
+				}
+				return 0;
+			}
+		}// namespace b1073
 	}    // namespace b
 
 	namespace a {}

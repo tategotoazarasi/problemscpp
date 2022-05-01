@@ -1204,6 +1204,44 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1072
+
+		namespace b1073 {
+			TEST(b1073, case1) {
+				istringstream in("3 4 \n"
+				                 "3 4 2 a c\n"
+				                 "2 5 1 b\n"
+				                 "5 3 2 b c\n"
+				                 "1 5 4 a b d e\n"
+				                 "(2 a c) (3 b d e) (2 a c) (3 a b e)\n"
+				                 "(2 a c) (1 b) (2 a b) (4 a b d e)\n"
+				                 "(2 b d) (1 e) (1 c) (4 a b c d)");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("3.5\n"
+				          "6.0\n"
+				          "2.5\n"
+				          "2 2-e\n"
+				          "2 3-a\n"
+				          "2 3-b",
+				          out.str());
+			}
+
+			TEST(b1073, case2) {
+				istringstream in("2 2 \n"
+				                 "3 4 2 a c\n"
+				                 "2 5 1 b\n"
+				                 "(2 a c) (1 b)\n"
+				                 "(2 a c) (1 b)");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("5.0\n"
+				          "5.0\n"
+				          "Too simple",
+				          out.str());
+			}
+		}// namespace b1073
 	}    // namespace b
 
 	namespace a {}

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <unordered_set>
+#include <vector>
 
 using namespace std;
 
@@ -430,7 +431,21 @@ namespace pat {
 		namespace b1072 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1073 多选题常见计分法
+		namespace b1073 {
+			/// \brief 多选题
+			struct problem {
+				int id;                ///< 编号
+				int score;             ///< 满分值
+				int noa;               ///< 选项个数
+				int noca;              ///< 正确选项个数
+				unordered_set<char> ca;///< 正确选项
+			};
+
+			int main(istream &cin, ostream &cout);
+		}// namespace b1073
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}
