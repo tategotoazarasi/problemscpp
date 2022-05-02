@@ -1282,6 +1282,24 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1075
+
+		namespace b1076 {
+			TEST(b1076, case1) {
+				istringstream in("8\n"
+				                 "A-T B-F C-F D-F\n"
+				                 "C-T B-F A-F D-F\n"
+				                 "A-F D-F C-F B-T\n"
+				                 "B-T A-F C-F D-F\n"
+				                 "B-F D-T A-F C-F\n"
+				                 "A-T C-F B-F D-F\n"
+				                 "D-T B-F C-F A-F\n"
+				                 "C-T A-F B-F D-F");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("13224143", out.str());
+			}
+		}// namespace b1076
 	}    // namespace b
 
 	namespace a {}

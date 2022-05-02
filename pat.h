@@ -460,7 +460,12 @@ namespace pat {
 			};
 			int main(istream &cin, ostream &cout);
 		}// namespace b1075
-	}    // namespace b
+
+		/// \brief 1076 Wifi密码
+		namespace b1076 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}

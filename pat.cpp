@@ -2646,6 +2646,25 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1075
+
+		namespace b1076 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				stringstream ss;
+				for(int i = 0; i < n; i++) {
+					for(int j = 0; j < 4; j++) {
+						char a, b, c;
+						cin >> a >> b >> c;
+						if(c == 'T') {
+							ss << int(a - 'A' + 1);
+						}
+					}
+				}
+				cout << ss.str();
+				return 0;
+			}
+		}// namespace b1076
 	}    // namespace b
 
 	namespace a {}
