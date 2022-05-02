@@ -1251,10 +1251,37 @@ namespace pat {
 				auto out = ostringstream();
 				main(in, out);
 				const auto ans = out.str();
-				ASSERT_EQ("7201",
-				          out.str());
+				ASSERT_EQ("7201", out.str());
 			}
 		}// namespace b1074
+
+		namespace b1075 {
+			TEST(b1075, case1) {
+				istringstream in("00100 9 10\n"
+				                 "23333 10 27777\n"
+				                 "00000 0 99999\n"
+				                 "00100 18 12309\n"
+				                 "68237 -6 23333\n"
+				                 "33218 -4 00000\n"
+				                 "48652 -2 -1\n"
+				                 "99999 5 68237\n"
+				                 "27777 11 48652\n"
+				                 "12309 7 33218");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("33218 -4 68237\n"
+				          "68237 -6 48652\n"
+				          "48652 -2 12309\n"
+				          "12309 7 00000\n"
+				          "00000 0 99999\n"
+				          "99999 5 23333\n"
+				          "23333 10 00100\n"
+				          "00100 18 27777\n"
+				          "27777 11 -1\n",
+				          out.str());
+			}
+		}// namespace b1075
 	}    // namespace b
 
 	namespace a {}

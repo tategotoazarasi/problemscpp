@@ -2609,6 +2609,43 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1074
+
+		namespace b1075 {
+			int main(istream &cin, ostream &cout) {
+				string current;
+				int n, k;
+				cin >> current >> n >> k;
+				unordered_map<string, Node> um;
+				for(int i = 0; i < n; i++) {
+					Node node;
+					cin >> node.addr;
+					cin >> node.data;
+					cin >> node.next;
+					um[node.addr] = node;
+				}
+				vector<Node> vec1, vec2, vec3;
+				while(current != "-1") {
+					Node node = um[current];
+					if(node.data < 0) {
+						vec1.push_back(node);
+					} else if(node.data <= k) {
+						vec2.push_back(node);
+					} else {
+						vec3.push_back(node);
+					}
+					current = node.next;
+				}
+				vector<Node> vec;
+				vec.insert(vec.end(), vec1.begin(), vec1.end());
+				vec.insert(vec.end(), vec2.begin(), vec2.end());
+				vec.insert(vec.end(), vec3.begin(), vec3.end());
+				for(int i = 0; i < vec.size(); i++) {
+					Node node = vec[i];
+					cout << node.addr << ' ' << node.data << ' ' << ((i + 1 < vec.size()) ? vec[i + 1].addr : "-1") << endl;
+				}
+				return 0;
+			}
+		}// namespace b1075
 	}    // namespace b
 
 	namespace a {}

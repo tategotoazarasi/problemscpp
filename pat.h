@@ -450,7 +450,17 @@ namespace pat {
 		namespace b1074 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1075 链表元素分类
+		namespace b1075 {
+			struct Node {
+				string addr;
+				int data;
+				string next;
+			};
+			int main(istream &cin, ostream &cout);
+		}// namespace b1075
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}
