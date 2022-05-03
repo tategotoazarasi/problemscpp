@@ -1,19 +1,19 @@
 var searchData=
 [
-  ['m_0',['m',['../d5/d54/a00938.html#a6e5d007d92b9d19e589ca19f5a000245',1,'acwing::acwing4298::m()'],['../de/d5c/a01358.html#ad5f954429d13b3ae0e324807dc3f1523',1,'leetcode::majority_element::Solution::m()'],['../d0/d21/a01582.html#a61173cf20b689991c7b2e3cb43958e22',1,'leetcode::stock_price_fluctuation::StockPrice::m()'],['../d5/dd7/a01970.html#a8649a665108d6de45e1caa971b5cd6f3',1,'leetcode::max_area_of_island::UnionFind::m()'],['../d8/dcb/a00706.html#ad727aadba3ae32c473dffc35008bf5bd',1,'acwing::acwing1929::Solution::m()']]],
-  ['main_1',['main',['../dc/de0/a01302.html#ade1977a43b802ae57394f3b5883aa46e',1,'acwing::acwing20::MyQueue']]],
-  ['map_2',['map',['../d0/db2/a02194.html#a56905defcba7896ee498681133998774',1,'leetcode::insert_delete_getrandom_o1::RandomizedSet']]],
-  ['mask_5fmax_3',['mask_max',['../d0/d4f/a01830.html#aab91738a234849ccbda5f56782910af3',1,'leetcode::the_number_of_good_subsets::Solution']]],
-  ['match_4',['match',['../d5/d54/a00938.html#a70a95417e2f12317e215e2c724ddca6b',1,'acwing::acwing4298']]],
-  ['max_5',['max',['../d9/de8/a02006.html#ae65dc21094d4dfd4add47c62cd365013',1,'leetcode::all_oone_data_structure::AllOne']]],
-  ['max_5fsize_6',['max_size',['../d4/d99/a01634.html#a6e3f9cf227c2a4cb28e5133fa2587000',1,'leetcode::groups_of_strings::Solution']]],
+  ['m_0',['m',['../d7/db6/a00940.html#a6e5d007d92b9d19e589ca19f5a000245',1,'acwing::acwing4298::m()'],['../d9/d79/a01360.html#ad5f954429d13b3ae0e324807dc3f1523',1,'leetcode::majority_element::Solution::m()'],['../d8/d22/a01584.html#a61173cf20b689991c7b2e3cb43958e22',1,'leetcode::stock_price_fluctuation::StockPrice::m()'],['../db/d9d/a01972.html#a8649a665108d6de45e1caa971b5cd6f3',1,'leetcode::max_area_of_island::UnionFind::m()'],['../da/d6b/a00708.html#ad727aadba3ae32c473dffc35008bf5bd',1,'acwing::acwing1929::Solution::m()']]],
+  ['main_1',['main',['../d6/dae/a01304.html#ade1977a43b802ae57394f3b5883aa46e',1,'acwing::acwing20::MyQueue']]],
+  ['map_2',['map',['../d8/db0/a02196.html#a56905defcba7896ee498681133998774',1,'leetcode::insert_delete_getrandom_o1::RandomizedSet']]],
+  ['mask_5fmax_3',['mask_max',['../dc/d06/a01832.html#aab91738a234849ccbda5f56782910af3',1,'leetcode::the_number_of_good_subsets::Solution']]],
+  ['match_4',['match',['../d7/db6/a00940.html#a70a95417e2f12317e215e2c724ddca6b',1,'acwing::acwing4298']]],
+  ['max_5',['max',['../d5/d6e/a02008.html#ae65dc21094d4dfd4add47c62cd365013',1,'leetcode::all_oone_data_structure::AllOne']]],
+  ['max_5fsize_6',['max_size',['../dd/d40/a01636.html#a6e3f9cf227c2a4cb28e5133fa2587000',1,'leetcode::groups_of_strings::Solution']]],
   ['maxn_7',['MAXN',['../da/d1e/a00149.html#a0a71b7e2a5c82a9ab3444d10a7fa5c91',1,'leetcode::cat_and_mouse']]],
-  ['min_8',['min',['../d9/de8/a02006.html#a32ea758ed3fc691cd087a9e238677fa9',1,'leetcode::all_oone_data_structure::AllOne']]],
-  ['mirrors_9',['mirrors',['../d8/dcb/a00706.html#a07e6f6810fb7e332c12b3b40c1779c23',1,'acwing::acwing1929::Solution']]],
-  ['mod_10',['mod',['../d0/d4f/a01830.html#afe7c8491af49ff89f66665b232acb30f',1,'leetcode::the_number_of_good_subsets::Solution']]],
-  ['month_11',['month',['../d5/dc3/a02674.html#af885889f1e7b7a43059af8fcaecb4451',1,'pat::b::b1028::Person']]],
-  ['morality_12',['morality',['../d1/d0c/a02666.html#ae1df164650279c2424efaf98d74f23ca',1,'pat::b::b1015::student']]],
+  ['min_8',['min',['../d5/d6e/a02008.html#a32ea758ed3fc691cd087a9e238677fa9',1,'leetcode::all_oone_data_structure::AllOne']]],
+  ['mirrors_9',['mirrors',['../da/d6b/a00708.html#a07e6f6810fb7e332c12b3b40c1779c23',1,'acwing::acwing1929::Solution']]],
+  ['mod_10',['mod',['../dc/d06/a01832.html#afe7c8491af49ff89f66665b232acb30f',1,'leetcode::the_number_of_good_subsets::Solution']]],
+  ['month_11',['month',['../df/d97/a02676.html#af885889f1e7b7a43059af8fcaecb4451',1,'pat::b::b1028::Person']]],
+  ['morality_12',['morality',['../d9/d5b/a02668.html#ae1df164650279c2424efaf98d74f23ca',1,'pat::b::b1015::student']]],
   ['mouse_5fwin_13',['MOUSE_WIN',['../da/d1e/a00149.html#ae68fb24f26d1729119604748b3b20490',1,'leetcode::cat_and_mouse']]],
-  ['mp_14',['mp',['../db/df6/a02138.html#affe210d928a7a43b3c7a7fafe09cb73f',1,'leetcode::encrypt_and_decrypt_strings::Encrypter']]],
-  ['ms_15',['ms',['../d0/d21/a01582.html#a6851d53f741e2449b0f63cdcf69a1458',1,'leetcode::stock_price_fluctuation::StockPrice::ms()'],['../d3/da5/a01598.html#a204e26a914a8b55a6260017b12c8eabb',1,'leetcode::detect_squares::DetectSquares::ms()']]]
+  ['mp_14',['mp',['../de/d81/a02140.html#affe210d928a7a43b3c7a7fafe09cb73f',1,'leetcode::encrypt_and_decrypt_strings::Encrypter']]],
+  ['ms_15',['ms',['../d8/d22/a01584.html#a6851d53f741e2449b0f63cdcf69a1458',1,'leetcode::stock_price_fluctuation::StockPrice::ms()'],['../d4/d3f/a01600.html#a204e26a914a8b55a6260017b12c8eabb',1,'leetcode::detect_squares::DetectSquares::ms()']]]
 ];
