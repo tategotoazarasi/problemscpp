@@ -2709,6 +2709,36 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1078
+
+		namespace b1077 {
+			int main(istream &cin, ostream &cout) {
+				int n, m;
+				cin >> n >> m;
+				for(int i = 0; i < n; i++) {
+					int s_teacher;
+					cin >> s_teacher;
+					vector<int> scores;
+					for(int j = 1; j < n; j++) {
+						int score;
+						cin >> score;
+						if(0 <= score && score <= m) {
+							scores.push_back(score);
+						}
+					}
+					sort(scores.begin(), scores.end());
+					scores.erase(scores.begin());
+					scores.erase(--scores.end());
+					int sum = 0;
+					for(int j = 0; j < scores.size(); j++) {
+						sum += scores[j];
+					}
+					double avg = static_cast<double>(sum) / scores.size();
+					int final  = static_cast<int>((avg + s_teacher) / 2 + 0.5);
+					cout << final << endl;
+				}
+				return 0;
+			}
+		}// namespace b1077
 	}    // namespace b
 
 	namespace a {}

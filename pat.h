@@ -470,6 +470,11 @@ namespace pat {
 		namespace b1078 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1077 互评成绩计算
+		namespace b1077 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

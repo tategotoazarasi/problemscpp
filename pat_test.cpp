@@ -1320,6 +1320,28 @@ namespace pat {
 				ASSERT_EQ("TTTTThhiiiis isssss a   tesssst CAaaa asZZZZZZZZZZ", out.str());
 			}
 		}// namespace b1078
+
+		namespace b1077 {
+			TEST(b1077, case1) {
+				istringstream in("6 50\n"
+				                 "42 49 49 35 38 41\n"
+				                 "36 51 50 28 -1 30\n"
+				                 "40 36 41 33 47 49\n"
+				                 "30 250 -25 27 45 31\n"
+				                 "48 0 0 50 50 1234\n"
+				                 "43 41 36 29 42 29");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("42\n"
+				          "33\n"
+				          "41\n"
+				          "31\n"
+				          "37\n"
+				          "39\n",
+				          out.str());
+			}
+		}// namespace b1077
 	}    // namespace b
 
 	namespace a {}
