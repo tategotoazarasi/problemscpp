@@ -2665,6 +2665,50 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1076
+
+		namespace b1077 {
+			int main(istream &cin, ostream &cout) {
+				char op;
+				cin >> op;
+				char str[1024];
+				cin.getline(str, 1024);
+				cin.getline(str, 1024);
+				if(op == 'C') {
+					for(int i = 0; i < strlen(str); i++) {
+						int n = 1;
+						while(i + 1 < strlen(str) && str[i] == str[i + 1]) {
+							n++;
+							i++;
+						}
+						if(n > 1) {
+							cout << n;
+						}
+						cout << str[i];
+					}
+				} else {//op=='D'
+					for(int i = 0; i < strlen(str); i++) {
+						if(isdigit(str[i])) {
+							stringstream ss;
+							for(; i < strlen(str); i++) {
+								if(isdigit(str[i])) {
+									ss << str[i];
+								} else {
+									break;
+								}
+							}
+							int n;
+							ss >> n;
+							for(int j = 0; j < n; j++) {
+								cout << str[i];
+							}
+						} else {
+							cout << str[i];
+						}
+					}
+				}
+				return 0;
+			}
+		}// namespace b1077
 	}    // namespace b
 
 	namespace a {}

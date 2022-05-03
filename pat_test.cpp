@@ -1300,6 +1300,26 @@ namespace pat {
 				ASSERT_EQ("13224143", out.str());
 			}
 		}// namespace b1076
+
+		namespace b1077 {
+			TEST(b1077, case1) {
+				istringstream in("C\n"
+				                 "TTTTThhiiiis isssss a   tesssst CAaaa as");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("5T2h4is i5s a3 te4st CA3a as", out.str());
+			}
+
+			TEST(b1078, case2) {
+				istringstream in("D\n"
+				                 "5T2h4is i5s a3 te4st CA3a as10Z");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("TTTTThhiiiis isssss a   tesssst CAaaa asZZZZZZZZZZ", out.str());
+			}
+		}// namespace b1077
 	}    // namespace b
 
 	namespace a {}
