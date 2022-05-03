@@ -1301,8 +1301,8 @@ namespace pat {
 			}
 		}// namespace b1076
 
-		namespace b1077 {
-			TEST(b1077, case1) {
+		namespace b1078 {
+			TEST(b1078, case1) {
 				istringstream in("C\n"
 				                 "TTTTThhiiiis isssss a   tesssst CAaaa as");
 				auto out = ostringstream();
@@ -1319,7 +1319,7 @@ namespace pat {
 				const auto ans = out.str();
 				ASSERT_EQ("TTTTThhiiiis isssss a   tesssst CAaaa asZZZZZZZZZZ", out.str());
 			}
-		}// namespace b1077
+		}// namespace b1078
 	}    // namespace b
 
 	namespace a {}

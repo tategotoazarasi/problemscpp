@@ -466,8 +466,8 @@ namespace pat {
 			int main(istream &cin, ostream &cout);
 		}
 
-		/// \brief 1077 互评成绩计算
-		namespace b1077 {
+		/// \brief 1078 字符串压缩与解压
+		namespace b1078 {
 			int main(istream &cin, ostream &cout);
 		}
 	}// namespace b

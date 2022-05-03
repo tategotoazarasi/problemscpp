@@ -2666,7 +2666,7 @@ namespace pat {
 			}
 		}// namespace b1076
 
-		namespace b1077 {
+		namespace b1078 {
 			int main(istream &cin, ostream &cout) {
 				char op;
 				cin >> op;
@@ -2708,7 +2708,7 @@ namespace pat {
 				}
 				return 0;
 			}
-		}// namespace b1077
+		}// namespace b1078
 	}    // namespace b
 
 	namespace a {}
