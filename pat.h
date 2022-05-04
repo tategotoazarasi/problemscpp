@@ -475,7 +475,13 @@ namespace pat {
 		namespace b1077 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1079 延迟的回文数
+		namespace b1079 {
+			bool is_palindromic(string str);
+			int main(istream &cin, ostream &cout);
+		}// namespace b1079
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}

@@ -1342,6 +1342,54 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1077
+
+		namespace b1079 {
+			TEST(b1079, case1) {
+				istringstream in("97152");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("97152 + 25179 = 122331\n"
+				          "122331 + 133221 = 255552\n"
+				          "255552 is a palindromic number.",
+				          out.str());
+			}
+
+			TEST(b1079, case2) {
+				istringstream in("196");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("196 + 691 = 887\n"
+				          "887 + 788 = 1675\n"
+				          "1675 + 5761 = 7436\n"
+				          "7436 + 6347 = 13783\n"
+				          "13783 + 38731 = 52514\n"
+				          "52514 + 41525 = 94039\n"
+				          "94039 + 93049 = 187088\n"
+				          "187088 + 880781 = 1067869\n"
+				          "1067869 + 9687601 = 10755470\n"
+				          "10755470 + 07455701 = 18211171\n"
+				          "Not found in 10 iterations.",
+				          out.str());
+			}
+
+			TEST(is_palindromic, case1) {
+				ASSERT_TRUE(is_palindromic("12321"));
+			}
+
+			TEST(is_palindromic, case2) {
+				ASSERT_TRUE(is_palindromic("123321"));
+			}
+
+			TEST(is_palindromic, case3) {
+				ASSERT_FALSE(is_palindromic("1233210"));
+			}
+
+			TEST(is_palindromic, case4) {
+				ASSERT_FALSE(is_palindromic("123421"));
+			}
+		}// namespace b1079
 	}    // namespace b
 
 	namespace a {}

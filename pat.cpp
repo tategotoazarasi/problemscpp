@@ -2739,6 +2739,39 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1077
+
+		namespace b1079 {
+			bool is_palindromic(string str) {
+				for(int i = 0; i < str.length() / 2; i++) {
+					if(str[i] != str[str.length() - 1 - i]) {
+						return false;
+					}
+				}
+				return true;
+			}
+
+			int main(istream &cin, ostream &cout) {
+				string str;
+				cin >> str;
+				BigInt bi(str);
+				for(int i = 0; i < 10; i++) {
+					stringstream ss;
+					ss << bi;
+					str = ss.str();
+					if(is_palindromic(str)) {
+						cout << bi << " is a palindromic number.";
+						return 0;
+					}
+					string str_b = string(str.rbegin(), str.rend());
+					BigInt bi_b(str_b);
+					BigInt c = bi + bi_b;
+					cout << str << " + " << str_b << " = " << c << endl;
+					bi = c;
+				}
+				cout << "Not found in 10 iterations.";
+				return 0;
+			}
+		}// namespace b1079
 	}    // namespace b
 
 	namespace a {}
