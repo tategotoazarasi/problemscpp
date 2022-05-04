@@ -2772,6 +2772,57 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1079
+
+		namespace b1080 {
+			int main(istream &cin, ostream &cout) {
+				int p, m, n;
+				cin >> p >> m >> n;
+				unordered_map<string, student> um;
+				for(int i = 0; i < p; i++) {
+					string id;
+					cin >> id >> um[id].p;
+				}
+				for(int i = 0; i < m; i++) {
+					string id;
+					cin >> id >> um[id].mid_term;
+				}
+				for(int i = 0; i < n; i++) {
+					string id;
+					cin >> id >> um[id].final;
+				}
+				vector<student> vec;
+				for(auto &[id, stu]: um) {
+					stu.id    = id;
+					stu.score = stu.get_score();
+					if(stu.p >= 200 && stu.score >= 60) {
+						vec.push_back(stu);
+					}
+				}
+				sort(vec.begin(), vec.end());
+				for(const auto &stu: vec) {
+					cout << stu.id << ' ' << stu.p << ' ' << stu.mid_term << ' ' << stu.final << ' ' << stu.score << endl;
+				}
+				return 0;
+			}
+
+			int student::get_score() {
+				int mt = mid_term == -1 ? 0 : mid_term;
+				int f  = final == -1 ? 0 : final;
+				if(mt > f) {
+					return static_cast<int>((mt * 0.4 + f * 0.6) + 0.5);
+				} else {
+					return f;
+				}
+			}
+
+			bool student::operator<(const student &stu) const {
+				if(this->score != stu.score) {
+					return this->score > stu.score;
+				} else {
+					return this->id < stu.id;
+				}
+			}
+		}// namespace b1080
 	}    // namespace b
 
 	namespace a {}

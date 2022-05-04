@@ -481,6 +481,20 @@ namespace pat {
 			bool is_palindromic(string str);
 			int main(istream &cin, ostream &cout);
 		}// namespace b1079
+
+		/// \brief 1080 MOOC期终成绩
+		namespace b1080 {
+			struct student {
+				string id;
+				int p        = -1;
+				int mid_term = -1;
+				int final    = -1;
+				int score;
+				int get_score();
+				bool operator<(const student &) const;
+			};
+			int main(istream &cin, ostream &cout);
+		}// namespace b1080
 	}    // namespace b
 
 	/// \brief 甲级

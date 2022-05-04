@@ -1390,6 +1390,39 @@ namespace pat {
 				ASSERT_FALSE(is_palindromic("123421"));
 			}
 		}// namespace b1079
+
+		namespace b1080 {
+			TEST(b1080, case1) {
+				istringstream in("6 6 7\n"
+				                 "01234 880\n"
+				                 "a1903 199\n"
+				                 "ydjh2 200\n"
+				                 "wehu8 300\n"
+				                 "dx86w 220\n"
+				                 "missing 400\n"
+				                 "ydhfu77 99\n"
+				                 "wehu8 55\n"
+				                 "ydjh2 98\n"
+				                 "dx86w 88\n"
+				                 "a1903 86\n"
+				                 "01234 39\n"
+				                 "ydhfu77 88\n"
+				                 "a1903 66\n"
+				                 "01234 58\n"
+				                 "wehu8 84\n"
+				                 "ydjh2 82\n"
+				                 "missing 99\n"
+				                 "dx86w 81");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("missing 400 -1 99 99\n"
+				          "ydjh2 200 98 82 88\n"
+				          "dx86w 220 88 81 84\n"
+				          "wehu8 300 55 84 84\n",
+				          out.str());
+			}
+		}// namespace b1080
 	}    // namespace b
 
 	namespace a {}
