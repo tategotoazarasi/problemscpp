@@ -1410,12 +1410,93 @@ $(function() {
 <div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span>                          out.str());</div>
 <div class="line"><a id="l01343" name="l01343"></a><span class="lineno"> 1343</span>            }</div>
 <div class="line"><a id="l01344" name="l01344"></a><span class="lineno"> 1344</span>        }<span class="comment">// namespace b1077</span></div>
-<div class="line"><a id="l01345" name="l01345"></a><span class="lineno"> 1345</span>    }    <span class="comment">// namespace b</span></div>
-<div class="line"><a id="l01346" name="l01346"></a><span class="lineno"> 1346</span> </div>
-<div class="line"><a id="l01347" name="l01347"></a><span class="lineno"> 1347</span>    <span class="keyword">namespace </span>a {}</div>
-<div class="line"><a id="l01348" name="l01348"></a><span class="lineno"> 1348</span> </div>
-<div class="line"><a id="l01349" name="l01349"></a><span class="lineno"> 1349</span>    <span class="keyword">namespace </span>top {}</div>
-<div class="line"><a id="l01350" name="l01350"></a><span class="lineno"> 1350</span>}<span class="comment">// namespace pat</span></div>
+<div class="line"><a id="l01345" name="l01345"></a><span class="lineno"> 1345</span> </div>
+<div class="line"><a id="l01346" name="l01346"></a><span class="lineno"> 1346</span>        <span class="keyword">namespace </span>b1079 {</div>
+<div class="line"><a id="l01347" name="l01347"></a><span class="lineno"><a class="line" href="../../db/d43/a00422.html#af8b6f49fe6745f01c119d70e438fa9e0"> 1347</a></span>            <a class="code hl_function" href="../../db/d43/a00422.html#af8b6f49fe6745f01c119d70e438fa9e0">TEST</a>(b1079, case1) {</div>
+<div class="line"><a id="l01348" name="l01348"></a><span class="lineno"> 1348</span>                istringstream in(<span class="stringliteral">&quot;97152&quot;</span>);</div>
+<div class="line"><a id="l01349" name="l01349"></a><span class="lineno"> 1349</span>                <span class="keyword">auto</span> out = ostringstream();</div>
+<div class="line"><a id="l01350" name="l01350"></a><span class="lineno"> 1350</span>                <a class="code hl_function" href="../../db/d43/a00422.html#aed5c383bee3a09d6719ea7b74ffa7c73">main</a>(in, out);</div>
+<div class="line"><a id="l01351" name="l01351"></a><span class="lineno"> 1351</span>                <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
+<div class="line"><a id="l01352" name="l01352"></a><span class="lineno"> 1352</span>                ASSERT_EQ(<span class="stringliteral">&quot;97152 + 25179 = 122331\n&quot;</span></div>
+<div class="line"><a id="l01353" name="l01353"></a><span class="lineno"> 1353</span>                          <span class="stringliteral">&quot;122331 + 133221 = 255552\n&quot;</span></div>
+<div class="line"><a id="l01354" name="l01354"></a><span class="lineno"> 1354</span>                          <span class="stringliteral">&quot;255552 is a palindromic number.&quot;</span>,</div>
+<div class="line"><a id="l01355" name="l01355"></a><span class="lineno"> 1355</span>                          out.str());</div>
+<div class="line"><a id="l01356" name="l01356"></a><span class="lineno"> 1356</span>            }</div>
+<div class="line"><a id="l01357" name="l01357"></a><span class="lineno"> 1357</span> </div>
+<div class="line"><a id="l01358" name="l01358"></a><span class="lineno"><a class="line" href="../../db/d43/a00422.html#a434eccc84ca2a6b6c65c25e50275a3e9"> 1358</a></span>            <a class="code hl_function" href="../../db/d43/a00422.html#af8b6f49fe6745f01c119d70e438fa9e0">TEST</a>(b1079, case2) {</div>
+<div class="line"><a id="l01359" name="l01359"></a><span class="lineno"> 1359</span>                istringstream in(<span class="stringliteral">&quot;196&quot;</span>);</div>
+<div class="line"><a id="l01360" name="l01360"></a><span class="lineno"> 1360</span>                <span class="keyword">auto</span> out = ostringstream();</div>
+<div class="line"><a id="l01361" name="l01361"></a><span class="lineno"> 1361</span>                <a class="code hl_function" href="../../db/d43/a00422.html#aed5c383bee3a09d6719ea7b74ffa7c73">main</a>(in, out);</div>
+<div class="line"><a id="l01362" name="l01362"></a><span class="lineno"> 1362</span>                <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
+<div class="line"><a id="l01363" name="l01363"></a><span class="lineno"> 1363</span>                ASSERT_EQ(<span class="stringliteral">&quot;196 + 691 = 887\n&quot;</span></div>
+<div class="line"><a id="l01364" name="l01364"></a><span class="lineno"> 1364</span>                          <span class="stringliteral">&quot;887 + 788 = 1675\n&quot;</span></div>
+<div class="line"><a id="l01365" name="l01365"></a><span class="lineno"> 1365</span>                          <span class="stringliteral">&quot;1675 + 5761 = 7436\n&quot;</span></div>
+<div class="line"><a id="l01366" name="l01366"></a><span class="lineno"> 1366</span>                          <span class="stringliteral">&quot;7436 + 6347 = 13783\n&quot;</span></div>
+<div class="line"><a id="l01367" name="l01367"></a><span class="lineno"> 1367</span>                          <span class="stringliteral">&quot;13783 + 38731 = 52514\n&quot;</span></div>
+<div class="line"><a id="l01368" name="l01368"></a><span class="lineno"> 1368</span>                          <span class="stringliteral">&quot;52514 + 41525 = 94039\n&quot;</span></div>
+<div class="line"><a id="l01369" name="l01369"></a><span class="lineno"> 1369</span>                          <span class="stringliteral">&quot;94039 + 93049 = 187088\n&quot;</span></div>
+<div class="line"><a id="l01370" name="l01370"></a><span class="lineno"> 1370</span>                          <span class="stringliteral">&quot;187088 + 880781 = 1067869\n&quot;</span></div>
+<div class="line"><a id="l01371" name="l01371"></a><span class="lineno"> 1371</span>                          <span class="stringliteral">&quot;1067869 + 9687601 = 10755470\n&quot;</span></div>
+<div class="line"><a id="l01372" name="l01372"></a><span class="lineno"> 1372</span>                          <span class="stringliteral">&quot;10755470 + 07455701 = 18211171\n&quot;</span></div>
+<div class="line"><a id="l01373" name="l01373"></a><span class="lineno"> 1373</span>                          <span class="stringliteral">&quot;Not found in 10 iterations.&quot;</span>,</div>
+<div class="line"><a id="l01374" name="l01374"></a><span class="lineno"> 1374</span>                          out.str());</div>
+<div class="line"><a id="l01375" name="l01375"></a><span class="lineno"> 1375</span>            }</div>
+<div class="line"><a id="l01376" name="l01376"></a><span class="lineno"> 1376</span> </div>
+<div class="line"><a id="l01377" name="l01377"></a><span class="lineno"><a class="line" href="../../db/d43/a00422.html#a46c7a1e5de646a939f2abff51aecddea"> 1377</a></span>            <a class="code hl_function" href="../../db/d43/a00422.html#af8b6f49fe6745f01c119d70e438fa9e0">TEST</a>(<a class="code hl_function" href="../../db/d43/a00422.html#a6e7f766dccf4185dd9dcbfc93281fdc7">is_palindromic</a>, case1) {</div>
+<div class="line"><a id="l01378" name="l01378"></a><span class="lineno"> 1378</span>                ASSERT_TRUE(<a class="code hl_function" href="../../db/d43/a00422.html#a6e7f766dccf4185dd9dcbfc93281fdc7">is_palindromic</a>(<span class="stringliteral">&quot;12321&quot;</span>));</div>
+<div class="line"><a id="l01379" name="l01379"></a><span class="lineno"> 1379</span>            }</div>
+<div class="line"><a id="l01380" name="l01380"></a><span class="lineno"> 1380</span> </div>
+<div class="line"><a id="l01381" name="l01381"></a><span class="lineno"><a class="line" href="../../db/d43/a00422.html#aeafde8442558d9f8ff1932724f295c72"> 1381</a></span>            <a class="code hl_function" href="../../db/d43/a00422.html#af8b6f49fe6745f01c119d70e438fa9e0">TEST</a>(<a class="code hl_function" href="../../db/d43/a00422.html#a6e7f766dccf4185dd9dcbfc93281fdc7">is_palindromic</a>, case2) {</div>
+<div class="line"><a id="l01382" name="l01382"></a><span class="lineno"> 1382</span>                ASSERT_TRUE(<a class="code hl_function" href="../../db/d43/a00422.html#a6e7f766dccf4185dd9dcbfc93281fdc7">is_palindromic</a>(<span class="stringliteral">&quot;123321&quot;</span>));</div>
+<div class="line"><a id="l01383" name="l01383"></a><span class="lineno"> 1383</span>            }</div>
+<div class="line"><a id="l01384" name="l01384"></a><span class="lineno"> 1384</span> </div>
+<div class="line"><a id="l01385" name="l01385"></a><span class="lineno"><a class="line" href="../../db/d43/a00422.html#ad77129c00c0c9c1d157babbfe9157a62"> 1385</a></span>            <a class="code hl_function" href="../../db/d43/a00422.html#af8b6f49fe6745f01c119d70e438fa9e0">TEST</a>(<a class="code hl_function" href="../../db/d43/a00422.html#a6e7f766dccf4185dd9dcbfc93281fdc7">is_palindromic</a>, case3) {</div>
+<div class="line"><a id="l01386" name="l01386"></a><span class="lineno"> 1386</span>                ASSERT_FALSE(<a class="code hl_function" href="../../db/d43/a00422.html#a6e7f766dccf4185dd9dcbfc93281fdc7">is_palindromic</a>(<span class="stringliteral">&quot;1233210&quot;</span>));</div>
+<div class="line"><a id="l01387" name="l01387"></a><span class="lineno"> 1387</span>            }</div>
+<div class="line"><a id="l01388" name="l01388"></a><span class="lineno"> 1388</span> </div>
+<div class="line"><a id="l01389" name="l01389"></a><span class="lineno"><a class="line" href="../../db/d43/a00422.html#a575e853aac972f8a01fab50a4a99b4a5"> 1389</a></span>            <a class="code hl_function" href="../../db/d43/a00422.html#af8b6f49fe6745f01c119d70e438fa9e0">TEST</a>(<a class="code hl_function" href="../../db/d43/a00422.html#a6e7f766dccf4185dd9dcbfc93281fdc7">is_palindromic</a>, case4) {</div>
+<div class="line"><a id="l01390" name="l01390"></a><span class="lineno"> 1390</span>                ASSERT_FALSE(<a class="code hl_function" href="../../db/d43/a00422.html#a6e7f766dccf4185dd9dcbfc93281fdc7">is_palindromic</a>(<span class="stringliteral">&quot;123421&quot;</span>));</div>
+<div class="line"><a id="l01391" name="l01391"></a><span class="lineno"> 1391</span>            }</div>
+<div class="line"><a id="l01392" name="l01392"></a><span class="lineno"> 1392</span>        }<span class="comment">// namespace b1079</span></div>
+<div class="line"><a id="l01393" name="l01393"></a><span class="lineno"> 1393</span> </div>
+<div class="line"><a id="l01394" name="l01394"></a><span class="lineno"> 1394</span>        <span class="keyword">namespace </span>b1080 {</div>
+<div class="line"><a id="l01395" name="l01395"></a><span class="lineno"><a class="line" href="../../d1/d05/a00423.html#ad12a727cd50ee48079f576b83e0a53fb"> 1395</a></span>            <a class="code hl_function" href="../../d1/d05/a00423.html#ad12a727cd50ee48079f576b83e0a53fb">TEST</a>(b1080, case1) {</div>
+<div class="line"><a id="l01396" name="l01396"></a><span class="lineno"> 1396</span>                istringstream in(<span class="stringliteral">&quot;6 6 7\n&quot;</span></div>
+<div class="line"><a id="l01397" name="l01397"></a><span class="lineno"> 1397</span>                                 <span class="stringliteral">&quot;01234 880\n&quot;</span></div>
+<div class="line"><a id="l01398" name="l01398"></a><span class="lineno"> 1398</span>                                 <span class="stringliteral">&quot;a1903 199\n&quot;</span></div>
+<div class="line"><a id="l01399" name="l01399"></a><span class="lineno"> 1399</span>                                 <span class="stringliteral">&quot;ydjh2 200\n&quot;</span></div>
+<div class="line"><a id="l01400" name="l01400"></a><span class="lineno"> 1400</span>                                 <span class="stringliteral">&quot;wehu8 300\n&quot;</span></div>
+<div class="line"><a id="l01401" name="l01401"></a><span class="lineno"> 1401</span>                                 <span class="stringliteral">&quot;dx86w 220\n&quot;</span></div>
+<div class="line"><a id="l01402" name="l01402"></a><span class="lineno"> 1402</span>                                 <span class="stringliteral">&quot;missing 400\n&quot;</span></div>
+<div class="line"><a id="l01403" name="l01403"></a><span class="lineno"> 1403</span>                                 <span class="stringliteral">&quot;ydhfu77 99\n&quot;</span></div>
+<div class="line"><a id="l01404" name="l01404"></a><span class="lineno"> 1404</span>                                 <span class="stringliteral">&quot;wehu8 55\n&quot;</span></div>
+<div class="line"><a id="l01405" name="l01405"></a><span class="lineno"> 1405</span>                                 <span class="stringliteral">&quot;ydjh2 98\n&quot;</span></div>
+<div class="line"><a id="l01406" name="l01406"></a><span class="lineno"> 1406</span>                                 <span class="stringliteral">&quot;dx86w 88\n&quot;</span></div>
+<div class="line"><a id="l01407" name="l01407"></a><span class="lineno"> 1407</span>                                 <span class="stringliteral">&quot;a1903 86\n&quot;</span></div>
+<div class="line"><a id="l01408" name="l01408"></a><span class="lineno"> 1408</span>                                 <span class="stringliteral">&quot;01234 39\n&quot;</span></div>
+<div class="line"><a id="l01409" name="l01409"></a><span class="lineno"> 1409</span>                                 <span class="stringliteral">&quot;ydhfu77 88\n&quot;</span></div>
+<div class="line"><a id="l01410" name="l01410"></a><span class="lineno"> 1410</span>                                 <span class="stringliteral">&quot;a1903 66\n&quot;</span></div>
+<div class="line"><a id="l01411" name="l01411"></a><span class="lineno"> 1411</span>                                 <span class="stringliteral">&quot;01234 58\n&quot;</span></div>
+<div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>                                 <span class="stringliteral">&quot;wehu8 84\n&quot;</span></div>
+<div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span>                                 <span class="stringliteral">&quot;ydjh2 82\n&quot;</span></div>
+<div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>                                 <span class="stringliteral">&quot;missing 99\n&quot;</span></div>
+<div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span>                                 <span class="stringliteral">&quot;dx86w 81&quot;</span>);</div>
+<div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span>                <span class="keyword">auto</span> out = ostringstream();</div>
+<div class="line"><a id="l01417" name="l01417"></a><span class="lineno"> 1417</span>                <a class="code hl_function" href="../../d1/d05/a00423.html#a9d16033242459e3e71a372663da29287">main</a>(in, out);</div>
+<div class="line"><a id="l01418" name="l01418"></a><span class="lineno"> 1418</span>                <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
+<div class="line"><a id="l01419" name="l01419"></a><span class="lineno"> 1419</span>                ASSERT_EQ(<span class="stringliteral">&quot;missing 400 -1 99 99\n&quot;</span></div>
+<div class="line"><a id="l01420" name="l01420"></a><span class="lineno"> 1420</span>                          <span class="stringliteral">&quot;ydjh2 200 98 82 88\n&quot;</span></div>
+<div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>                          <span class="stringliteral">&quot;dx86w 220 88 81 84\n&quot;</span></div>
+<div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span>                          <span class="stringliteral">&quot;wehu8 300 55 84 84\n&quot;</span>,</div>
+<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span>                          out.str());</div>
+<div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>            }</div>
+<div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>        }<span class="comment">// namespace b1080</span></div>
+<div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span>    }    <span class="comment">// namespace b</span></div>
+<div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span> </div>
+<div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>    <span class="keyword">namespace </span>a {}</div>
+<div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span> </div>
+<div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>    <span class="keyword">namespace </span>top {}</div>
+<div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>}<span class="comment">// namespace pat</span></div>
 <div class="ttc" id="aa00011_html"><div class="ttname"><a href="../../da/d45/a00011.html">pat.h</a></div></div>
 <div class="ttc" id="aa00343_html"><div class="ttname"><a href="../../d0/dc5/a00343.html">pat</a></div><div class="ttdoc">计算机程序设计能力考试</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00019">pat.cpp:19</a></div></div>
 <div class="ttc" id="aa00345_html_a0ff1f392ecdb84d8774f190199218448"><div class="ttname"><a href="../../d9/d48/a00345.html#a0ff1f392ecdb84d8774f190199218448">pat::b::b1001::TEST</a></div><div class="ttdeci">TEST(b1001, case1)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00009">pat_test.cpp:9</a></div></div>
@@ -1572,6 +1653,11 @@ $(function() {
 <div class="ttc" id="aa00420_html_ac0703c68af4fafff2475cb5b4324bdff"><div class="ttname"><a href="../../db/d4f/a00420.html#ac0703c68af4fafff2475cb5b4324bdff">pat::b::b1078::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l02670">pat.cpp:2670</a></div></div>
 <div class="ttc" id="aa00421_html_a0547a449fe52fe6c017c9e33e9437674"><div class="ttname"><a href="../../d2/de1/a00421.html#a0547a449fe52fe6c017c9e33e9437674">pat::b::b1077::TEST</a></div><div class="ttdeci">TEST(b1077, case1)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l01325">pat_test.cpp:1325</a></div></div>
 <div class="ttc" id="aa00421_html_ad3d70ddc733c87924bf7530c23d34618"><div class="ttname"><a href="../../d2/de1/a00421.html#ad3d70ddc733c87924bf7530c23d34618">pat::b::b1077::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l02714">pat.cpp:2714</a></div></div>
+<div class="ttc" id="aa00422_html_a6e7f766dccf4185dd9dcbfc93281fdc7"><div class="ttname"><a href="../../db/d43/a00422.html#a6e7f766dccf4185dd9dcbfc93281fdc7">pat::b::b1079::is_palindromic</a></div><div class="ttdeci">bool is_palindromic(string str)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l02744">pat.cpp:2744</a></div></div>
+<div class="ttc" id="aa00422_html_aed5c383bee3a09d6719ea7b74ffa7c73"><div class="ttname"><a href="../../db/d43/a00422.html#aed5c383bee3a09d6719ea7b74ffa7c73">pat::b::b1079::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l02753">pat.cpp:2753</a></div></div>
+<div class="ttc" id="aa00422_html_af8b6f49fe6745f01c119d70e438fa9e0"><div class="ttname"><a href="../../db/d43/a00422.html#af8b6f49fe6745f01c119d70e438fa9e0">pat::b::b1079::TEST</a></div><div class="ttdeci">TEST(b1079, case1)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l01347">pat_test.cpp:1347</a></div></div>
+<div class="ttc" id="aa00423_html_a9d16033242459e3e71a372663da29287"><div class="ttname"><a href="../../d1/d05/a00423.html#a9d16033242459e3e71a372663da29287">pat::b::b1080::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l02777">pat.cpp:2777</a></div></div>
+<div class="ttc" id="aa00423_html_ad12a727cd50ee48079f576b83e0a53fb"><div class="ttname"><a href="../../d1/d05/a00423.html#ad12a727cd50ee48079f576b83e0a53fb">pat::b::b1080::TEST</a></div><div class="ttdeci">TEST(b1080, case1)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l01395">pat_test.cpp:1395</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
