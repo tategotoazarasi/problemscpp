@@ -495,7 +495,12 @@ namespace pat {
 			};
 			int main(istream &cin, ostream &cout);
 		}// namespace b1080
-	}    // namespace b
+
+		/// \brief 1081 检查密码
+		namespace b1081 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}

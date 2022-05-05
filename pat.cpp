@@ -2823,6 +2823,50 @@ namespace pat {
 				}
 			}
 		}// namespace b1080
+
+		namespace b1081 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				char str[1024];
+				cin.getline(str, 1024);
+				while(n--) {
+					cin.getline(str, 1024);
+					string password = string(str);
+					bool alpha      = false;
+					bool digit      = false;
+					bool ok         = true;
+					if(password.length() < 6) {
+						cout << "Your password is tai duan le." << endl;
+					} else {
+						for(char ch: password) {
+							if(isdigit(ch)) {
+								digit = true;
+							} else if(isalpha(ch)) {
+								alpha = true;
+							} else if(ch != '.') {
+								ok = false;
+								cout << "Your password is tai luan le." << endl;
+								break;
+							}
+						}
+						if(!ok) {
+							continue;
+						}
+						if(alpha && !digit) {
+							cout << "Your password needs shu zi." << endl;
+						} else if(!alpha && digit) {
+							cout << "Your password needs zi mu." << endl;
+						} else if(alpha && digit) {
+							cout << "Your password is wan mei." << endl;
+						} else {
+							return 1;
+						}
+					}
+				}
+				return 0;
+			}
+		}// namespace b1081
 	}    // namespace b
 
 	namespace a {}

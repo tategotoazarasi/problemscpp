@@ -1423,6 +1423,26 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1080
+
+		namespace b1081 {
+			TEST(b1081, case1) {
+				istringstream in("5\n"
+				                 "123s\n"
+				                 "zheshi.wodepw\n"
+				                 "1234.5678\n"
+				                 "WanMei23333\n"
+				                 "pass*word.6");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Your password is tai duan le.\n"
+				          "Your password needs shu zi.\n"
+				          "Your password needs zi mu.\n"
+				          "Your password is wan mei.\n"
+				          "Your password is tai luan le.\n",
+				          out.str());
+			}
+		}// namespace b1081
 	}    // namespace b
 
 	namespace a {}
