@@ -1443,6 +1443,19 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1081
+
+		namespace b1082 {
+			TEST(b1082, case1) {
+				istringstream in("3\n"
+				                 "0001 5 7\n"
+				                 "1020 -1 3\n"
+				                 "0233 0 -1");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("0233 0001", out.str());
+			}
+		}// namespace b1082
 	}    // namespace b
 
 	namespace a {}

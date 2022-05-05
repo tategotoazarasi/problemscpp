@@ -2867,6 +2867,28 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1081
+
+		namespace b1082 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				vector<player> vec(n);
+				for(int i = 0; i < n; i++) {
+					cin >> vec[i].id >> vec[i].x >> vec[i].y;
+				}
+				sort(vec.begin(), vec.end());
+				cout << (*vec.begin()).id << ' ' << (*vec.rbegin()).id;
+				return 0;
+			}
+
+			int player::get_dist() const {
+				return x * x + y * y;
+			}
+
+			bool player::operator<(const player &p) const {
+				return this->get_dist() < p.get_dist();
+			}
+		}// namespace b1082
 	}    // namespace b
 
 	namespace a {}

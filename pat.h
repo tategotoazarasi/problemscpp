@@ -500,7 +500,19 @@ namespace pat {
 		namespace b1081 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1082 射击比赛
+		namespace b1082 {
+			struct player {
+				string id;
+				int x;
+				int y;
+				int get_dist() const;
+				bool operator<(const player &) const;
+			};
+			int main(istream &cin, ostream &cout);
+		}// namespace b1082
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}
