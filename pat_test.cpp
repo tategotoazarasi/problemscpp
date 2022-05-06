@@ -1470,6 +1470,16 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1083
+
+		namespace b1084 {
+			TEST(b1084, case1) {
+				istringstream in("1 8");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("1123123111", out.str());
+			}
+		}// namespace b1084
 	}    // namespace b
 
 	namespace a {}

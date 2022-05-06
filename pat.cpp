@@ -2908,6 +2908,32 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1083
+
+		namespace b1084 {
+			int main(istream &cin, ostream &cout) {
+				string str;
+				int n;
+				cin >> str >> n;
+				for(int i = 1; i < n; i++) {
+					char ch = str[0];
+					ostringstream oss;
+					int count = 1;
+					for(int j = 1; j < str.length(); j++) {
+						if(str[j] == ch) {
+							count++;
+						} else {
+							oss << ch << count;
+							count = 1;
+							ch    = str[j];
+						}
+					}
+					oss << ch << count;
+					str = oss.str();
+				}
+				cout << str;
+				return 0;
+			}
+		}// namespace b1084
 	}    // namespace b
 
 	namespace a {}

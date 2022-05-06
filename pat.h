@@ -517,6 +517,11 @@ namespace pat {
 		namespace b1083 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1084 外观数列
+		namespace b1084 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
