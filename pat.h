@@ -512,7 +512,12 @@ namespace pat {
 			};
 			int main(istream &cin, ostream &cout);
 		}// namespace b1082
-	}    // namespace b
+
+		/// \brief 1083 是否存在相等的差
+		namespace b1083 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}

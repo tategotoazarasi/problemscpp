@@ -1456,6 +1456,20 @@ namespace pat {
 				ASSERT_EQ("0233 0001", out.str());
 			}
 		}// namespace b1082
+
+		namespace b1083 {
+			TEST(b1083, case1) {
+				istringstream in("8\n"
+				                 "3 5 8 6 2 1 4 7");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("5 2\n"
+				          "3 3\n"
+				          "2 2\n",
+				          out.str());
+			}
+		}// namespace b1083
 	}    // namespace b
 
 	namespace a {}

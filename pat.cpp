@@ -2889,6 +2889,25 @@ namespace pat {
 				return this->get_dist() < p.get_dist();
 			}
 		}// namespace b1082
+
+		namespace b1083 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				map<int, int, greater<>> m;
+				for(int i = 1; i <= n; i++) {
+					int val;
+					cin >> val;
+					m[abs(i - val)]++;
+				}
+				for(auto [k, v]: m) {
+					if(v > 1) {
+						cout << k << ' ' << v << endl;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1083
 	}    // namespace b
 
 	namespace a {}
