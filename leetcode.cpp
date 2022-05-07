@@ -6061,4 +6061,19 @@ namespace leetcode {
 			return pref_sum[right] - (left - 1 >= 0 ? pref_sum[left - 1] : 0);
 		}
 	}// namespace range_sum_query_immutable
+
+	namespace house_robber {
+		int Solution::rob(vector<int> &nums) {
+			if(nums.size() == 1) {
+				return nums[0];
+			}
+			vector<int> dp(nums.size());
+			dp[0] = nums[0];
+			dp[1] = max(nums[0], nums[1]);
+			for(int i = 2; i < nums.size(); i++) {
+				dp[i] = max(dp[i - 2] + nums[i], dp[i - 1]);
+			}
+			return dp[nums.size() - 1];
+		}
+	}// namespace house_robber
 }// namespace leetcode

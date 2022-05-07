@@ -2255,6 +2255,14 @@ namespace leetcode {
 			int sumRange(int left, int right);
 		};
 	}// namespace range_sum_query_immutable
+
+	/// \brief 198. House Robber
+	namespace house_robber {
+		class Solution {
+		public:
+			static int rob(vector<int> &nums);
+		};
+	}// namespace house_robber
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

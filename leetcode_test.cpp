@@ -2855,4 +2855,16 @@ namespace leetcode {
 			ASSERT_EQ(8, Solution::projectionArea(grid));
 		}
 	}// namespace projection_area_of_3d_shapes
+
+	namespace house_robber {
+		TEST(house_robber, case1) {
+			vector<int> nums = {1, 2, 3, 1};
+			ASSERT_EQ(4, Solution::rob(nums));
+		}
+
+		TEST(house_robber, case2) {
+			vector<int> nums = {2, 7, 9, 3, 1};
+			ASSERT_EQ(12, Solution::rob(nums));
+		}
+	}// namespace house_robber
 }// namespace leetcode
