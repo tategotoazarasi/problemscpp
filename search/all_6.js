@@ -14,7 +14,7 @@ var searchData=
   ['get_5fparent_11',['get_parent',['../d9/d4f/a01968.html#a109b03c956f468a1de1c90c982cebf98',1,'leetcode::count_nodes_with_the_highest_score::TreeNode']]],
   ['get_5fprefix_12',['get_prefix',['../da/dc7/a01548.html#acdc9cf94b149e0c296ad1661cd2cda19',1,'leetcode::UhWRSj::TrieNode']]],
   ['get_5frecord_13',['get_record',['../dc/d14/a00720.html#ac1b6d59f72a71b44175656e631088dac',1,'acwing::acwing1929::Solution']]],
-  ['get_5fscore_14',['get_score',['../da/dd3/a02736.html#aa5d2e920b1cdf8d2887ca08c3a09e353',1,'pat::b::b1085::school::get_score()'],['../db/d59/a02728.html#ade95c84fc5bd2959effbe15c00a9617c',1,'pat::b::b1080::student::get_score()']]],
+  ['get_5fscore_14',['get_score',['../da/dd3/a02736.html#aa5d2e920b1cdf8d2887ca08c3a09e353',1,'pat::b::b1085::school::get_score()'],['../db/d59/a02728.html#a414eb16254c4646299122b0716c316e7',1,'pat::b::b1080::student::get_score()']]],
   ['get_5fsize_15',['get_size',['../d0/d38/a01984.html#a330fcd9ade24e471b31ff5a1e8306f74',1,'leetcode::max_area_of_island::UnionFind::get_size()'],['../d5/dc7/a02744.html#a1f416b0240756bc9f78c5589339636e6',1,'BigInt::get_size()']]],
   ['get_5fsum_16',['get_sum',['../d2/d7b/a01672.html#a3559487a7ab9ce0e68bc080e0c3cef7f',1,'leetcode::path_with_maximum_gold::Solution::get_sum()'],['../d1/dcc/a01392.html#a0b5b1537d7c97dc523a3de2c8eb04426',1,'leetcode::convert_bst_to_greater_tree::Solution::get_sum()']]],
   ['get_5funique_5fcount_17',['get_unique_count',['../d9/d31/a01208.html#ac3a600f5e29b7e599553757db6be582b',1,'acwing::acwing817']]],

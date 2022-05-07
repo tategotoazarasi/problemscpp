@@ -4071,7 +4071,7 @@ $(function() {
 <div class="line"><a id="l04003" name="l04003"></a><span class="lineno"> 4003</span><span class="stringliteral">        cin.getline(str, 101);</span></div>
 <div class="line"><a id="l04004" name="l04004"></a><span class="lineno"> 4004</span><span class="stringliteral">        cin.getline(to_be_replaced, 101);</span></div>
 <div class="line"><a id="l04005" name="l04005"></a><span class="lineno"> 4005</span><span class="stringliteral">        cin.getline(replacement, 101);</span></div>
-<div class="line"><a id="l04006" name="l04006"></a><span class="lineno"> 4006</span><span class="stringliteral">        for(char *word = strtok(str, &quot; &quot;); word != nullptr; word = strtok(nullptr, &quot; &quot;)) {</span></div>
+<div class="line"><a id="l04006" name="l04006"></a><span class="lineno"> 4006</span><span class="stringliteral">        for(const char *word = strtok(str, &quot; &quot;); word != nullptr; word = strtok(nullptr, &quot; &quot;)) {</span></div>
 <div class="line"><a id="l04007" name="l04007"></a><span class="lineno"> 4007</span><span class="stringliteral">            if(strcmp(word, to_be_replaced) == 0) {</span></div>
 <div class="line"><a id="l04008" name="l04008"></a><span class="lineno"> 4008</span><span class="stringliteral">                cout.write(replacement, strlen(replacement));</span></div>
 <div class="line"><a id="l04009" name="l04009"></a><span class="lineno"> 4009</span><span class="stringliteral">            } else {</span></div>
@@ -4203,7 +4203,7 @@ $(function() {
 <div class="line"><a id="l04135" name="l04135"></a><span class="lineno"> 4135</span><span class="stringliteral">        str[strlen(str) - 1]     = &#39;</span>\0<span class="stringliteral">&#39;;</span></div>
 <div class="line"><a id="l04136" name="l04136"></a><span class="lineno"> 4136</span><span class="stringliteral">        const char *longest_word = nullptr;</span></div>
 <div class="line"><a id="l04137" name="l04137"></a><span class="lineno"> 4137</span><span class="stringliteral">        int max_len              = 0;</span></div>
-<div class="line"><a id="l04138" name="l04138"></a><span class="lineno"> 4138</span><span class="stringliteral">        for(char *word = strtok(str, &quot; &quot;); word != nullptr; word = strtok(nullptr, &quot; &quot;)) {</span></div>
+<div class="line"><a id="l04138" name="l04138"></a><span class="lineno"> 4138</span><span class="stringliteral">        for(const char *word = strtok(str, &quot; &quot;); word != nullptr; word = strtok(nullptr, &quot; &quot;)) {</span></div>
 <div class="line"><a id="l04139" name="l04139"></a><span class="lineno"> 4139</span><span class="stringliteral">            if(max_len &lt; strlen(word)) {</span></div>
 <div class="line"><a id="l04140" name="l04140"></a><span class="lineno"> 4140</span><span class="stringliteral">                max_len      = strlen(word);</span></div>
 <div class="line"><a id="l04141" name="l04141"></a><span class="lineno"> 4141</span><span class="stringliteral">                longest_word = word;</span></div>
@@ -4294,8 +4294,8 @@ $(function() {
 <div class="line"><a id="l04226" name="l04226"></a><span class="lineno"> 4226</span><span class="stringliteral">        string s1;</span></div>
 <div class="line"><a id="l04227" name="l04227"></a><span class="lineno"> 4227</span><span class="stringliteral">        string s2;</span></div>
 <div class="line"><a id="l04228" name="l04228"></a><span class="lineno"> 4228</span><span class="stringliteral">        cin &gt;&gt; s1 &gt;&gt; s2;</span></div>
-<div class="line"><a id="l04229" name="l04229"></a><span class="lineno"> 4229</span><span class="stringliteral">        string s11 = s1 + s1;</span></div>
-<div class="line"><a id="l04230" name="l04230"></a><span class="lineno"> 4230</span><span class="stringliteral">        string s22 = s2 + s2;</span></div>
+<div class="line"><a id="l04229" name="l04229"></a><span class="lineno"> 4229</span><span class="stringliteral">        const string s11 = s1 + s1;</span></div>
+<div class="line"><a id="l04230" name="l04230"></a><span class="lineno"> 4230</span><span class="stringliteral">        const string s22 = s2 + s2;</span></div>
 <div class="line"><a id="l04231" name="l04231"></a><span class="lineno"> 4231</span><span class="stringliteral">        cout &lt;&lt; boolalpha &lt;&lt; (s11.find(s2) != string::npos || s22.find(s1) != string::npos);</span></div>
 <div class="line"><a id="l04232" name="l04232"></a><span class="lineno"> 4232</span><span class="stringliteral">        return 0;</span></div>
 <div class="line"><a id="l04233" name="l04233"></a><span class="lineno"> 4233</span><span class="stringliteral">    }</span></div>
@@ -5277,7 +5277,7 @@ $(function() {
 <div class="line"><a id="l05210" name="l05210"></a><span class="lineno"><a class="line" href="../../db/dab/a00089.html"> 5210</a></span><span class="stringliteral">    namespace acwing17 {</span></div>
 <div class="line"><a id="l05211" name="l05211"></a><span class="lineno"><a class="line" href="../../d1/d56/a01308.html#a2ef262a3b93cac804f7cc4c8dafd8d3b"> 5211</a></span><span class="stringliteral">        vector&lt;int&gt; Solution::printListReversingly(ListNode *head) {</span></div>
 <div class="line"><a id="l05212" name="l05212"></a><span class="lineno"> 5212</span><span class="stringliteral">            deque&lt;int&gt; deq;</span></div>
-<div class="line"><a id="l05213" name="l05213"></a><span class="lineno"> 5213</span><span class="stringliteral">            for(auto *current = head; current != nullptr; current = current-&gt;next) {</span></div>
+<div class="line"><a id="l05213" name="l05213"></a><span class="lineno"> 5213</span><span class="stringliteral">            for(const auto *current = head; current != nullptr; current = current-&gt;next) {</span></div>
 <div class="line"><a id="l05214" name="l05214"></a><span class="lineno"> 5214</span><span class="stringliteral">                deq.push_front(current-&gt;val);</span></div>
 <div class="line"><a id="l05215" name="l05215"></a><span class="lineno"> 5215</span><span class="stringliteral">            }</span></div>
 <div class="line"><a id="l05216" name="l05216"></a><span class="lineno"> 5216</span><span class="stringliteral">            return vector(deq.begin(), deq.end());</span></div>
@@ -5548,7 +5548,7 @@ $(function() {
 <div class="line"><a id="l05481" name="l05481"></a><span class="lineno"> 5481</span><span class="stringliteral">        }</span></div>
 <div class="line"><a id="l05482" name="l05482"></a><span class="lineno"> 5482</span><span class="stringliteral"></span> </div>
 <div class="line"><a id="l05483" name="l05483"></a><span class="lineno"><a class="line" href="../../df/d93/a01336.html#a78647c2e0c70f04c2c72a5119506c4af"> 5483</a></span><span class="stringliteral">        cow::cow(string name, int val, int zodiac) {</span></div>
-<div class="line"><a id="l05484" name="l05484"></a><span class="lineno"> 5484</span><span class="stringliteral">            this-&gt;name     = name;</span></div>
+<div class="line"><a id="l05484" name="l05484"></a><span class="lineno"> 5484</span><span class="stringliteral">            this-&gt;name     = std::move(name);</span></div>
 <div class="line"><a id="l05485" name="l05485"></a><span class="lineno"> 5485</span><span class="stringliteral">            this-&gt;val      = val;</span></div>
 <div class="line"><a id="l05486" name="l05486"></a><span class="lineno"> 5486</span><span class="stringliteral">            this-&gt;zodiac   = zodiac;</span></div>
 <div class="line"><a id="l05487" name="l05487"></a><span class="lineno"> 5487</span><span class="stringliteral">            this-&gt;previous = vector&lt;cow *&gt;();</span></div>
@@ -5840,8 +5840,8 @@ $(function() {
 <div class="line"><a id="l05773" name="l05773"></a><span class="lineno"><a class="line" href="../../d9/dcc/a00102.html"> 5773</a></span>    <span class="keyword">namespace </span>acwing1695 {</div>
 <div class="line"><a id="l05774" name="l05774"></a><span class="lineno"><a class="line" href="../../d9/dcc/a00102.html#a5333ec699e340eaf7bdaf6bd90a6276b"> 5774</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d9/dcc/a00102.html#a5333ec699e340eaf7bdaf6bd90a6276b">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
 <div class="line"><a id="l05775" name="l05775"></a><span class="lineno"> 5775</span>            <span class="keywordtype">bool</span> nuts[3][3]         = {{<span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>},</div>
-<div class="line"><a id="l05776" name="l05776"></a><span class="lineno"> 5776</span>                                       {<span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>},</div>
-<div class="line"><a id="l05777" name="l05777"></a><span class="lineno"> 5777</span>                                       {<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>}};</div>
+<div class="line"><a id="l05776" name="l05776"></a><span class="lineno"> 5776</span>                               {<span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>},</div>
+<div class="line"><a id="l05777" name="l05777"></a><span class="lineno"> 5777</span>                               {<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>}};</div>
 <div class="line"><a id="l05778" name="l05778"></a><span class="lineno"> 5778</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> score[3] = {0, 0, 0};</div>
 <div class="line"><a id="l05779" name="l05779"></a><span class="lineno"> 5779</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> ans      = 0;</div>
 <div class="line"><a id="l05780" name="l05780"></a><span class="lineno"> 5780</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> n;</div>
@@ -6611,7 +6611,7 @@ $(function() {
 <div class="line"><a id="l06545" name="l06545"></a><span class="lineno"> 6545</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; q; i++) {</div>
 <div class="line"><a id="l06546" name="l06546"></a><span class="lineno"> 6546</span>                <span class="keywordtype">string</span> s;</div>
 <div class="line"><a id="l06547" name="l06547"></a><span class="lineno"> 6547</span>                cin &gt;&gt; s;</div>
-<div class="line"><a id="l06548" name="l06548"></a><span class="lineno"> 6548</span>                <a class="code hl_struct" href="../../dc/d54/a01344.html">TrieNode</a> *node = tn.<a class="code hl_function" href="../../dc/d54/a01344.html#a1f67635ef99a1c887c5ea6ed78420387">search</a>(s, 0);</div>
+<div class="line"><a id="l06548" name="l06548"></a><span class="lineno"> 6548</span>                <span class="keyword">const</span> <a class="code hl_struct" href="../../dc/d54/a01344.html">TrieNode</a> *node = tn.<a class="code hl_function" href="../../dc/d54/a01344.html#a1f67635ef99a1c887c5ea6ed78420387">search</a>(s, 0);</div>
 <div class="line"><a id="l06549" name="l06549"></a><span class="lineno"> 6549</span>                <span class="keywordflow">if</span>(node == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l06550" name="l06550"></a><span class="lineno"> 6550</span>                    cout &lt;&lt; <span class="stringliteral">&quot;0 -&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a id="l06551" name="l06551"></a><span class="lineno"> 6551</span>                } <span class="keywordflow">else</span> {</div>
@@ -6964,60 +6964,61 @@ $(function() {
 <div class="line"><a id="l06898" name="l06898"></a><span class="lineno"> 6898</span> </div>
 <div class="line"><a id="l06899" name="l06899"></a><span class="lineno"><a class="line" href="../../d5/deb/a00132.html"> 6899</a></span>    <span class="keyword">namespace </span>acwing1995 {</div>
 <div class="line"><a id="l06900" name="l06900"></a><span class="lineno"><a class="line" href="../../d5/deb/a00132.html#a51aaa05157e649be04ac4bdf30343c18"> 6900</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d5/deb/a00132.html#a51aaa05157e649be04ac4bdf30343c18">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l06901" name="l06901"></a><span class="lineno"> 6901</span>            <span class="keywordtype">int</span> b, e;</div>
-<div class="line"><a id="l06902" name="l06902"></a><span class="lineno"> 6902</span>            cin &gt;&gt; b &gt;&gt; e;</div>
-<div class="line"><a id="l06903" name="l06903"></a><span class="lineno"> 6903</span>            vector&lt;int&gt; pos_b;</div>
-<div class="line"><a id="l06904" name="l06904"></a><span class="lineno"> 6904</span>            vector&lt;int&gt; pos_e;</div>
-<div class="line"><a id="l06905" name="l06905"></a><span class="lineno"> 6905</span>            pos_b.push_back(0);</div>
-<div class="line"><a id="l06906" name="l06906"></a><span class="lineno"> 6906</span>            pos_e.push_back(0);</div>
-<div class="line"><a id="l06907" name="l06907"></a><span class="lineno"> 6907</span>            <span class="keywordflow">while</span>(b--) {</div>
-<div class="line"><a id="l06908" name="l06908"></a><span class="lineno"> 6908</span>                <span class="keywordtype">char</span> dir;</div>
-<div class="line"><a id="l06909" name="l06909"></a><span class="lineno"> 6909</span>                <span class="keywordtype">int</span> dist;</div>
-<div class="line"><a id="l06910" name="l06910"></a><span class="lineno"> 6910</span>                cin &gt;&gt; dist &gt;&gt; dir;</div>
-<div class="line"><a id="l06911" name="l06911"></a><span class="lineno"> 6911</span>                <span class="keywordflow">if</span>(dir == <span class="charliteral">&#39;L&#39;</span>) {</div>
-<div class="line"><a id="l06912" name="l06912"></a><span class="lineno"> 6912</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; dist; i++) {</div>
-<div class="line"><a id="l06913" name="l06913"></a><span class="lineno"> 6913</span>                        pos_b.push_back(pos_b.back() - 1);</div>
-<div class="line"><a id="l06914" name="l06914"></a><span class="lineno"> 6914</span>                    }</div>
-<div class="line"><a id="l06915" name="l06915"></a><span class="lineno"> 6915</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l06916" name="l06916"></a><span class="lineno"> 6916</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; dist; i++) {</div>
-<div class="line"><a id="l06917" name="l06917"></a><span class="lineno"> 6917</span>                        pos_b.push_back(pos_b.back() + 1);</div>
-<div class="line"><a id="l06918" name="l06918"></a><span class="lineno"> 6918</span>                    }</div>
-<div class="line"><a id="l06919" name="l06919"></a><span class="lineno"> 6919</span>                }</div>
-<div class="line"><a id="l06920" name="l06920"></a><span class="lineno"> 6920</span>            }</div>
-<div class="line"><a id="l06921" name="l06921"></a><span class="lineno"> 6921</span>            <span class="keywordflow">while</span>(e--) {</div>
-<div class="line"><a id="l06922" name="l06922"></a><span class="lineno"> 6922</span>                <span class="keywordtype">char</span> dir;</div>
-<div class="line"><a id="l06923" name="l06923"></a><span class="lineno"> 6923</span>                <span class="keywordtype">int</span> dist;</div>
-<div class="line"><a id="l06924" name="l06924"></a><span class="lineno"> 6924</span>                cin &gt;&gt; dist &gt;&gt; dir;</div>
-<div class="line"><a id="l06925" name="l06925"></a><span class="lineno"> 6925</span>                <span class="keywordflow">if</span>(dir == <span class="charliteral">&#39;L&#39;</span>) {</div>
-<div class="line"><a id="l06926" name="l06926"></a><span class="lineno"> 6926</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; dist; i++) {</div>
-<div class="line"><a id="l06927" name="l06927"></a><span class="lineno"> 6927</span>                        pos_e.push_back(pos_e.back() - 1);</div>
-<div class="line"><a id="l06928" name="l06928"></a><span class="lineno"> 6928</span>                    }</div>
-<div class="line"><a id="l06929" name="l06929"></a><span class="lineno"> 6929</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l06930" name="l06930"></a><span class="lineno"> 6930</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; dist; i++) {</div>
-<div class="line"><a id="l06931" name="l06931"></a><span class="lineno"> 6931</span>                        pos_e.push_back(pos_e.back() + 1);</div>
-<div class="line"><a id="l06932" name="l06932"></a><span class="lineno"> 6932</span>                    }</div>
-<div class="line"><a id="l06933" name="l06933"></a><span class="lineno"> 6933</span>                }</div>
-<div class="line"><a id="l06934" name="l06934"></a><span class="lineno"> 6934</span>            }</div>
-<div class="line"><a id="l06935" name="l06935"></a><span class="lineno"> 6935</span>            <span class="keywordtype">int</span> t     = max(pos_e.size(), pos_b.size());</div>
-<div class="line"><a id="l06936" name="l06936"></a><span class="lineno"> 6936</span>            <span class="keywordtype">int</span> ans   = 0;</div>
-<div class="line"><a id="l06937" name="l06937"></a><span class="lineno"> 6937</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l06938" name="l06938"></a><span class="lineno"> 6938</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; t; i++) {</div>
-<div class="line"><a id="l06939" name="l06939"></a><span class="lineno"> 6939</span>                <span class="keywordtype">int</span> pe = i &lt; pos_e.size() ? pos_e[i] : pos_e.back();</div>
-<div class="line"><a id="l06940" name="l06940"></a><span class="lineno"> 6940</span>                <span class="keywordtype">int</span> pb = i &lt; pos_b.size() ? pos_b[i] : pos_b.back();</div>
-<div class="line"><a id="l06941" name="l06941"></a><span class="lineno"> 6941</span>                <span class="keywordflow">if</span>(pe == pb) {</div>
-<div class="line"><a id="l06942" name="l06942"></a><span class="lineno"> 6942</span>                    <span class="keywordflow">if</span>(!flag) {</div>
-<div class="line"><a id="l06943" name="l06943"></a><span class="lineno"> 6943</span>                        ans++;</div>
-<div class="line"><a id="l06944" name="l06944"></a><span class="lineno"> 6944</span>                    }</div>
-<div class="line"><a id="l06945" name="l06945"></a><span class="lineno"> 6945</span>                    flag = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l06946" name="l06946"></a><span class="lineno"> 6946</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l06947" name="l06947"></a><span class="lineno"> 6947</span>                    flag = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l06948" name="l06948"></a><span class="lineno"> 6948</span>                }</div>
-<div class="line"><a id="l06949" name="l06949"></a><span class="lineno"> 6949</span>            }</div>
-<div class="line"><a id="l06950" name="l06950"></a><span class="lineno"> 6950</span>            cout &lt;&lt; ans;</div>
-<div class="line"><a id="l06951" name="l06951"></a><span class="lineno"> 6951</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l06952" name="l06952"></a><span class="lineno"> 6952</span>        }</div>
-<div class="line"><a id="l06953" name="l06953"></a><span class="lineno"> 6953</span>    }<span class="comment">// namespace acwing1995</span></div>
-<div class="line"><a id="l06954" name="l06954"></a><span class="lineno"> 6954</span>}<span class="comment">// namespace acwing</span></div>
+<div class="line"><a id="l06901" name="l06901"></a><span class="lineno"> 6901</span>            <span class="keywordtype">int</span> b;</div>
+<div class="line"><a id="l06902" name="l06902"></a><span class="lineno"> 6902</span>            <span class="keywordtype">int</span> e;</div>
+<div class="line"><a id="l06903" name="l06903"></a><span class="lineno"> 6903</span>            cin &gt;&gt; b &gt;&gt; e;</div>
+<div class="line"><a id="l06904" name="l06904"></a><span class="lineno"> 6904</span>            vector&lt;int&gt; pos_b;</div>
+<div class="line"><a id="l06905" name="l06905"></a><span class="lineno"> 6905</span>            vector&lt;int&gt; pos_e;</div>
+<div class="line"><a id="l06906" name="l06906"></a><span class="lineno"> 6906</span>            pos_b.push_back(0);</div>
+<div class="line"><a id="l06907" name="l06907"></a><span class="lineno"> 6907</span>            pos_e.push_back(0);</div>
+<div class="line"><a id="l06908" name="l06908"></a><span class="lineno"> 6908</span>            <span class="keywordflow">while</span>((b--) != 0) {</div>
+<div class="line"><a id="l06909" name="l06909"></a><span class="lineno"> 6909</span>                <span class="keywordtype">char</span> dir;</div>
+<div class="line"><a id="l06910" name="l06910"></a><span class="lineno"> 6910</span>                <span class="keywordtype">int</span> dist;</div>
+<div class="line"><a id="l06911" name="l06911"></a><span class="lineno"> 6911</span>                cin &gt;&gt; dist &gt;&gt; dir;</div>
+<div class="line"><a id="l06912" name="l06912"></a><span class="lineno"> 6912</span>                <span class="keywordflow">if</span>(dir == <span class="charliteral">&#39;L&#39;</span>) {</div>
+<div class="line"><a id="l06913" name="l06913"></a><span class="lineno"> 6913</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; dist; i++) {</div>
+<div class="line"><a id="l06914" name="l06914"></a><span class="lineno"> 6914</span>                        pos_b.push_back(pos_b.back() - 1);</div>
+<div class="line"><a id="l06915" name="l06915"></a><span class="lineno"> 6915</span>                    }</div>
+<div class="line"><a id="l06916" name="l06916"></a><span class="lineno"> 6916</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l06917" name="l06917"></a><span class="lineno"> 6917</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; dist; i++) {</div>
+<div class="line"><a id="l06918" name="l06918"></a><span class="lineno"> 6918</span>                        pos_b.push_back(pos_b.back() + 1);</div>
+<div class="line"><a id="l06919" name="l06919"></a><span class="lineno"> 6919</span>                    }</div>
+<div class="line"><a id="l06920" name="l06920"></a><span class="lineno"> 6920</span>                }</div>
+<div class="line"><a id="l06921" name="l06921"></a><span class="lineno"> 6921</span>            }</div>
+<div class="line"><a id="l06922" name="l06922"></a><span class="lineno"> 6922</span>            <span class="keywordflow">while</span>((e--) != 0) {</div>
+<div class="line"><a id="l06923" name="l06923"></a><span class="lineno"> 6923</span>                <span class="keywordtype">char</span> dir;</div>
+<div class="line"><a id="l06924" name="l06924"></a><span class="lineno"> 6924</span>                <span class="keywordtype">int</span> dist;</div>
+<div class="line"><a id="l06925" name="l06925"></a><span class="lineno"> 6925</span>                cin &gt;&gt; dist &gt;&gt; dir;</div>
+<div class="line"><a id="l06926" name="l06926"></a><span class="lineno"> 6926</span>                <span class="keywordflow">if</span>(dir == <span class="charliteral">&#39;L&#39;</span>) {</div>
+<div class="line"><a id="l06927" name="l06927"></a><span class="lineno"> 6927</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; dist; i++) {</div>
+<div class="line"><a id="l06928" name="l06928"></a><span class="lineno"> 6928</span>                        pos_e.push_back(pos_e.back() - 1);</div>
+<div class="line"><a id="l06929" name="l06929"></a><span class="lineno"> 6929</span>                    }</div>
+<div class="line"><a id="l06930" name="l06930"></a><span class="lineno"> 6930</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l06931" name="l06931"></a><span class="lineno"> 6931</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; dist; i++) {</div>
+<div class="line"><a id="l06932" name="l06932"></a><span class="lineno"> 6932</span>                        pos_e.push_back(pos_e.back() + 1);</div>
+<div class="line"><a id="l06933" name="l06933"></a><span class="lineno"> 6933</span>                    }</div>
+<div class="line"><a id="l06934" name="l06934"></a><span class="lineno"> 6934</span>                }</div>
+<div class="line"><a id="l06935" name="l06935"></a><span class="lineno"> 6935</span>            }</div>
+<div class="line"><a id="l06936" name="l06936"></a><span class="lineno"> 6936</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> t = max(pos_e.size(), pos_b.size());</div>
+<div class="line"><a id="l06937" name="l06937"></a><span class="lineno"> 6937</span>            <span class="keywordtype">int</span> ans     = 0;</div>
+<div class="line"><a id="l06938" name="l06938"></a><span class="lineno"> 6938</span>            <span class="keywordtype">bool</span> flag   = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l06939" name="l06939"></a><span class="lineno"> 6939</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; t; i++) {</div>
+<div class="line"><a id="l06940" name="l06940"></a><span class="lineno"> 6940</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> pe = i &lt; pos_e.size() ? pos_e[i] : pos_e.back();</div>
+<div class="line"><a id="l06941" name="l06941"></a><span class="lineno"> 6941</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> pb = i &lt; pos_b.size() ? pos_b[i] : pos_b.back();</div>
+<div class="line"><a id="l06942" name="l06942"></a><span class="lineno"> 6942</span>                <span class="keywordflow">if</span>(pe == pb) {</div>
+<div class="line"><a id="l06943" name="l06943"></a><span class="lineno"> 6943</span>                    <span class="keywordflow">if</span>(!flag) {</div>
+<div class="line"><a id="l06944" name="l06944"></a><span class="lineno"> 6944</span>                        ans++;</div>
+<div class="line"><a id="l06945" name="l06945"></a><span class="lineno"> 6945</span>                    }</div>
+<div class="line"><a id="l06946" name="l06946"></a><span class="lineno"> 6946</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l06947" name="l06947"></a><span class="lineno"> 6947</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l06948" name="l06948"></a><span class="lineno"> 6948</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l06949" name="l06949"></a><span class="lineno"> 6949</span>                }</div>
+<div class="line"><a id="l06950" name="l06950"></a><span class="lineno"> 6950</span>            }</div>
+<div class="line"><a id="l06951" name="l06951"></a><span class="lineno"> 6951</span>            cout &lt;&lt; ans;</div>
+<div class="line"><a id="l06952" name="l06952"></a><span class="lineno"> 6952</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l06953" name="l06953"></a><span class="lineno"> 6953</span>        }</div>
+<div class="line"><a id="l06954" name="l06954"></a><span class="lineno"> 6954</span>    }<span class="comment">// namespace acwing1995</span></div>
+<div class="line"><a id="l06955" name="l06955"></a><span class="lineno"> 6955</span>}<span class="comment">// namespace acwing</span></div>
 <div class="ttc" id="aa00053_html"><div class="ttname"><a href="../../dc/dee/a00053.html">acwing.h</a></div></div>
 <div class="ttc" id="aa00059_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d3/d8b/a00059.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l00005">main.cpp:5</a></div></div>
 <div class="ttc" id="aa00065_html"><div class="ttname"><a href="../../de/de1/a00065.html">acwing</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d41/a00038_source.html#l00021">acwing.cpp:21</a></div></div>

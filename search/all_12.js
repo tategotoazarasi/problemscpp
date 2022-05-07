@@ -47,7 +47,7 @@ var searchData=
   ['sum_44',['sum',['../d0/d36/a01388.html#a8d4ce27ae9f2b5865f1ed413b376caef',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::sum()'],['../dd/d3f/a02156.html#a1291da745b9f9d73a81bd34662d4885c',1,'leetcode::range_sum_query_mutable::NumArray::sum()'],['../d9/d5b/a02668.html#a2cd9150b979b515c0d20646fccbacdf2',1,'luogu::P5742::Student::sum()'],['../d9/d42/a01156.html#ac29d8e6fd3bbc975d0e9f554b893637c',1,'acwing::acwing807::sum()']]],
   ['sumofthree_45',['sumOfThree',['../d1/d42/a01800.html#a95d7706a053a0cd3bc657d95b453fbd9',1,'leetcode::find_three_consecutive_integers_that_sum_to_a_given_number::Solution']]],
   ['sumofunique_46',['sumOfUnique',['../da/dc4/a01692.html#a05da7801ddeb727ef31c9617578a9644',1,'leetcode::sum_of_unique_elements::Solution']]],
-  ['sumrange_47',['sumRange',['../dd/d3f/a02156.html#afcb9c6380210f2acfb4eff504679c8f9',1,'leetcode::range_sum_query_mutable::NumArray::sumRange()'],['../d5/de0/a02220.html#a104c310479361584ae3a411271e757b3',1,'leetcode::range_sum_query_immutable::NumArray::sumRange()']]],
+  ['sumrange_47',['sumRange',['../dd/d3f/a02156.html#afcb9c6380210f2acfb4eff504679c8f9',1,'leetcode::range_sum_query_mutable::NumArray::sumRange()'],['../d5/de0/a02220.html#a2ec6e0b94b477120081f437e48ad11a2',1,'leetcode::range_sum_query_immutable::NumArray::sumRange()']]],
   ['sumscores_48',['sumScores',['../db/ddd/a02136.html#a7d5a5a0c7fec6234aa5d10f2b5456b76',1,'leetcode::sum_of_scores_of_built_strings::Solution']]],
   ['swap_49',['swap',['../da/d20/a01160.html#a99de500bde58476ab518bd2beeb820ca',1,'acwing::acwing811']]]
 ];

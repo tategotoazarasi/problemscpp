@@ -131,7 +131,7 @@ $(function() {
 <div class="line"><a id="l04003" name="l04003"></a><span class="lineno"> 4003</span>        cin.getline(str, 101);</div>
 <div class="line"><a id="l04004" name="l04004"></a><span class="lineno"> 4004</span>        cin.getline(to_be_replaced, 101);</div>
 <div class="line"><a id="l04005" name="l04005"></a><span class="lineno"> 4005</span>        cin.getline(replacement, 101);</div>
-<div class="line"><a id="l04006" name="l04006"></a><span class="lineno"> 4006</span>        <span class="keywordflow">for</span>(<span class="keywordtype">char</span> *word = strtok(str, <span class="stringliteral">&quot; &quot;</span>); word != <span class="keyword">nullptr</span>; word = strtok(<span class="keyword">nullptr</span>, <span class="stringliteral">&quot; &quot;</span>)) {</div>
+<div class="line"><a id="l04006" name="l04006"></a><span class="lineno"> 4006</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> *word = strtok(str, <span class="stringliteral">&quot; &quot;</span>); word != <span class="keyword">nullptr</span>; word = strtok(<span class="keyword">nullptr</span>, <span class="stringliteral">&quot; &quot;</span>)) {</div>
 <div class="line"><a id="l04007" name="l04007"></a><span class="lineno"> 4007</span>            <span class="keywordflow">if</span>(strcmp(word, to_be_replaced) == 0) {</div>
 <div class="line"><a id="l04008" name="l04008"></a><span class="lineno"> 4008</span>                cout.write(replacement, strlen(replacement));</div>
 <div class="line"><a id="l04009" name="l04009"></a><span class="lineno"> 4009</span>            } <span class="keywordflow">else</span> {</div>

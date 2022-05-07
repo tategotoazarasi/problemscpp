@@ -167,7 +167,7 @@ $(function() {
 <div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>                start.insert(bin);</div>
 <div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>            }</div>
 <div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;word: targetWords) {</div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>                <span class="keyword">auto</span> bin = <a class="code hl_function" href="../../dd/d1c/a01452.html#a3529c8b2de62b69f70f078ff9bd265f9">str2bin</a>(word);</div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>                <span class="keyword">const</span> <span class="keyword">auto</span> bin = <a class="code hl_function" href="../../dd/d1c/a01452.html#a3529c8b2de62b69f70f078ff9bd265f9">str2bin</a>(word);</div>
 <div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
 <div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>                    <span class="keywordflow">if</span>((bin &amp; 1 &lt;&lt; i) != 0 &amp;&amp; start.contains(bin - (1 &lt;&lt; i))) {</div>
 <div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>                        <span class="comment">//bin有第i个字母且bin去掉第i个字母在start中仍然存在</span></div>

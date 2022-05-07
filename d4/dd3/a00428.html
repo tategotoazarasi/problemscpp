@@ -112,50 +112,50 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">pat.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l02828">2828</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02828" name="l02828"></a><span class="lineno"> 2828</span>                                                  {</div>
-<div class="line"><a id="l02829" name="l02829"></a><span class="lineno"> 2829</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l02830" name="l02830"></a><span class="lineno"> 2830</span>                cin &gt;&gt; n;</div>
-<div class="line"><a id="l02831" name="l02831"></a><span class="lineno"> 2831</span>                <span class="keywordtype">char</span> str[1024];</div>
-<div class="line"><a id="l02832" name="l02832"></a><span class="lineno"> 2832</span>                cin.getline(str, 1024);</div>
-<div class="line"><a id="l02833" name="l02833"></a><span class="lineno"> 2833</span>                <span class="keywordflow">while</span>(n--) {</div>
-<div class="line"><a id="l02834" name="l02834"></a><span class="lineno"> 2834</span>                    cin.getline(str, 1024);</div>
-<div class="line"><a id="l02835" name="l02835"></a><span class="lineno"> 2835</span>                    <span class="keywordtype">string</span> password = string(str);</div>
-<div class="line"><a id="l02836" name="l02836"></a><span class="lineno"> 2836</span>                    <span class="keywordtype">bool</span> alpha      = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l02837" name="l02837"></a><span class="lineno"> 2837</span>                    <span class="keywordtype">bool</span> digit      = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l02838" name="l02838"></a><span class="lineno"> 2838</span>                    <span class="keywordtype">bool</span> ok         = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l02839" name="l02839"></a><span class="lineno"> 2839</span>                    <span class="keywordflow">if</span>(password.length() &lt; 6) {</div>
-<div class="line"><a id="l02840" name="l02840"></a><span class="lineno"> 2840</span>                        cout &lt;&lt; <span class="stringliteral">&quot;Your password is tai duan le.&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l02841" name="l02841"></a><span class="lineno"> 2841</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02842" name="l02842"></a><span class="lineno"> 2842</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: password) {</div>
-<div class="line"><a id="l02843" name="l02843"></a><span class="lineno"> 2843</span>                            <span class="keywordflow">if</span>(isdigit(ch)) {</div>
-<div class="line"><a id="l02844" name="l02844"></a><span class="lineno"> 2844</span>                                digit = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l02845" name="l02845"></a><span class="lineno"> 2845</span>                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(isalpha(ch)) {</div>
-<div class="line"><a id="l02846" name="l02846"></a><span class="lineno"> 2846</span>                                alpha = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l02847" name="l02847"></a><span class="lineno"> 2847</span>                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ch != <span class="charliteral">&#39;.&#39;</span>) {</div>
-<div class="line"><a id="l02848" name="l02848"></a><span class="lineno"> 2848</span>                                ok = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l02849" name="l02849"></a><span class="lineno"> 2849</span>                                cout &lt;&lt; <span class="stringliteral">&quot;Your password is tai luan le.&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l02850" name="l02850"></a><span class="lineno"> 2850</span>                                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l02851" name="l02851"></a><span class="lineno"> 2851</span>                            }</div>
-<div class="line"><a id="l02852" name="l02852"></a><span class="lineno"> 2852</span>                        }</div>
-<div class="line"><a id="l02853" name="l02853"></a><span class="lineno"> 2853</span>                        <span class="keywordflow">if</span>(!ok) {</div>
-<div class="line"><a id="l02854" name="l02854"></a><span class="lineno"> 2854</span>                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l02855" name="l02855"></a><span class="lineno"> 2855</span>                        }</div>
-<div class="line"><a id="l02856" name="l02856"></a><span class="lineno"> 2856</span>                        <span class="keywordflow">if</span>(alpha &amp;&amp; !digit) {</div>
-<div class="line"><a id="l02857" name="l02857"></a><span class="lineno"> 2857</span>                            cout &lt;&lt; <span class="stringliteral">&quot;Your password needs shu zi.&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l02858" name="l02858"></a><span class="lineno"> 2858</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!alpha &amp;&amp; digit) {</div>
-<div class="line"><a id="l02859" name="l02859"></a><span class="lineno"> 2859</span>                            cout &lt;&lt; <span class="stringliteral">&quot;Your password needs zi mu.&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l02860" name="l02860"></a><span class="lineno"> 2860</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(alpha &amp;&amp; digit) {</div>
-<div class="line"><a id="l02861" name="l02861"></a><span class="lineno"> 2861</span>                            cout &lt;&lt; <span class="stringliteral">&quot;Your password is wan mei.&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l02862" name="l02862"></a><span class="lineno"> 2862</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02863" name="l02863"></a><span class="lineno"> 2863</span>                            <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l02864" name="l02864"></a><span class="lineno"> 2864</span>                        }</div>
-<div class="line"><a id="l02865" name="l02865"></a><span class="lineno"> 2865</span>                    }</div>
-<div class="line"><a id="l02866" name="l02866"></a><span class="lineno"> 2866</span>                }</div>
-<div class="line"><a id="l02867" name="l02867"></a><span class="lineno"> 2867</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02868" name="l02868"></a><span class="lineno"> 2868</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">pat.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l02848">2848</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02848" name="l02848"></a><span class="lineno"> 2848</span>                                                  {</div>
+<div class="line"><a id="l02849" name="l02849"></a><span class="lineno"> 2849</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l02850" name="l02850"></a><span class="lineno"> 2850</span>                cin &gt;&gt; n;</div>
+<div class="line"><a id="l02851" name="l02851"></a><span class="lineno"> 2851</span>                <span class="keywordtype">char</span> str[1024];</div>
+<div class="line"><a id="l02852" name="l02852"></a><span class="lineno"> 2852</span>                cin.getline(str, 1024);</div>
+<div class="line"><a id="l02853" name="l02853"></a><span class="lineno"> 2853</span>                <span class="keywordflow">while</span>((n--) != 0) {</div>
+<div class="line"><a id="l02854" name="l02854"></a><span class="lineno"> 2854</span>                    cin.getline(str, 1024);</div>
+<div class="line"><a id="l02855" name="l02855"></a><span class="lineno"> 2855</span>                    <span class="keyword">auto</span> password = string(str);</div>
+<div class="line"><a id="l02856" name="l02856"></a><span class="lineno"> 2856</span>                    <span class="keywordtype">bool</span> alpha    = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l02857" name="l02857"></a><span class="lineno"> 2857</span>                    <span class="keywordtype">bool</span> digit    = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l02858" name="l02858"></a><span class="lineno"> 2858</span>                    <span class="keywordtype">bool</span> ok       = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l02859" name="l02859"></a><span class="lineno"> 2859</span>                    <span class="keywordflow">if</span>(password.length() &lt; 6) {</div>
+<div class="line"><a id="l02860" name="l02860"></a><span class="lineno"> 2860</span>                        cout &lt;&lt; <span class="stringliteral">&quot;Your password is tai duan le.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l02861" name="l02861"></a><span class="lineno"> 2861</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02862" name="l02862"></a><span class="lineno"> 2862</span>                        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: password) {</div>
+<div class="line"><a id="l02863" name="l02863"></a><span class="lineno"> 2863</span>                            <span class="keywordflow">if</span>(isdigit(ch) != 0) {</div>
+<div class="line"><a id="l02864" name="l02864"></a><span class="lineno"> 2864</span>                                digit = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l02865" name="l02865"></a><span class="lineno"> 2865</span>                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(isalpha(ch) != 0) {</div>
+<div class="line"><a id="l02866" name="l02866"></a><span class="lineno"> 2866</span>                                alpha = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l02867" name="l02867"></a><span class="lineno"> 2867</span>                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ch != <span class="charliteral">&#39;.&#39;</span>) {</div>
+<div class="line"><a id="l02868" name="l02868"></a><span class="lineno"> 2868</span>                                ok = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l02869" name="l02869"></a><span class="lineno"> 2869</span>                                cout &lt;&lt; <span class="stringliteral">&quot;Your password is tai luan le.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l02870" name="l02870"></a><span class="lineno"> 2870</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l02871" name="l02871"></a><span class="lineno"> 2871</span>                            }</div>
+<div class="line"><a id="l02872" name="l02872"></a><span class="lineno"> 2872</span>                        }</div>
+<div class="line"><a id="l02873" name="l02873"></a><span class="lineno"> 2873</span>                        <span class="keywordflow">if</span>(!ok) {</div>
+<div class="line"><a id="l02874" name="l02874"></a><span class="lineno"> 2874</span>                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l02875" name="l02875"></a><span class="lineno"> 2875</span>                        }</div>
+<div class="line"><a id="l02876" name="l02876"></a><span class="lineno"> 2876</span>                        <span class="keywordflow">if</span>(alpha &amp;&amp; !digit) {</div>
+<div class="line"><a id="l02877" name="l02877"></a><span class="lineno"> 2877</span>                            cout &lt;&lt; <span class="stringliteral">&quot;Your password needs shu zi.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l02878" name="l02878"></a><span class="lineno"> 2878</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!alpha &amp;&amp; digit) {</div>
+<div class="line"><a id="l02879" name="l02879"></a><span class="lineno"> 2879</span>                            cout &lt;&lt; <span class="stringliteral">&quot;Your password needs zi mu.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l02880" name="l02880"></a><span class="lineno"> 2880</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(alpha &amp;&amp; digit) {</div>
+<div class="line"><a id="l02881" name="l02881"></a><span class="lineno"> 2881</span>                            cout &lt;&lt; <span class="stringliteral">&quot;Your password is wan mei.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l02882" name="l02882"></a><span class="lineno"> 2882</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02883" name="l02883"></a><span class="lineno"> 2883</span>                            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l02884" name="l02884"></a><span class="lineno"> 2884</span>                        }</div>
+<div class="line"><a id="l02885" name="l02885"></a><span class="lineno"> 2885</span>                    }</div>
+<div class="line"><a id="l02886" name="l02886"></a><span class="lineno"> 2886</span>                }</div>
+<div class="line"><a id="l02887" name="l02887"></a><span class="lineno"> 2887</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02888" name="l02888"></a><span class="lineno"> 2888</span>            }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l01428">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l01411">TEST()</a>.</p>
 
 </div>
 </div>
@@ -185,27 +185,27 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat_test.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l01428">1428</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>                               {</div>
-<div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>                istringstream in(<span class="stringliteral">&quot;5\n&quot;</span></div>
-<div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>                                 <span class="stringliteral">&quot;123s\n&quot;</span></div>
-<div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>                                 <span class="stringliteral">&quot;zheshi.wodepw\n&quot;</span></div>
-<div class="line"><a id="l01432" name="l01432"></a><span class="lineno"> 1432</span>                                 <span class="stringliteral">&quot;1234.5678\n&quot;</span></div>
-<div class="line"><a id="l01433" name="l01433"></a><span class="lineno"> 1433</span>                                 <span class="stringliteral">&quot;WanMei23333\n&quot;</span></div>
-<div class="line"><a id="l01434" name="l01434"></a><span class="lineno"> 1434</span>                                 <span class="stringliteral">&quot;pass*word.6&quot;</span>);</div>
-<div class="line"><a id="l01435" name="l01435"></a><span class="lineno"> 1435</span>                <span class="keyword">auto</span> out = ostringstream();</div>
-<div class="line"><a id="l01436" name="l01436"></a><span class="lineno"> 1436</span>                <a class="code hl_function" href="../../d3/d8b/a00059.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
-<div class="line"><a id="l01437" name="l01437"></a><span class="lineno"> 1437</span>                <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
-<div class="line"><a id="l01438" name="l01438"></a><span class="lineno"> 1438</span>                ASSERT_EQ(<span class="stringliteral">&quot;Your password is tai duan le.\n&quot;</span></div>
-<div class="line"><a id="l01439" name="l01439"></a><span class="lineno"> 1439</span>                          <span class="stringliteral">&quot;Your password needs shu zi.\n&quot;</span></div>
-<div class="line"><a id="l01440" name="l01440"></a><span class="lineno"> 1440</span>                          <span class="stringliteral">&quot;Your password needs zi mu.\n&quot;</span></div>
-<div class="line"><a id="l01441" name="l01441"></a><span class="lineno"> 1441</span>                          <span class="stringliteral">&quot;Your password is wan mei.\n&quot;</span></div>
-<div class="line"><a id="l01442" name="l01442"></a><span class="lineno"> 1442</span>                          <span class="stringliteral">&quot;Your password is tai luan le.\n&quot;</span>,</div>
-<div class="line"><a id="l01443" name="l01443"></a><span class="lineno"> 1443</span>                          out.str());</div>
-<div class="line"><a id="l01444" name="l01444"></a><span class="lineno"> 1444</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat_test.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l01411">1411</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01411" name="l01411"></a><span class="lineno"> 1411</span>                               {</div>
+<div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>                istringstream in(<span class="stringliteral">&quot;5\n&quot;</span></div>
+<div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span>                                 <span class="stringliteral">&quot;123s\n&quot;</span></div>
+<div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>                                 <span class="stringliteral">&quot;zheshi.wodepw\n&quot;</span></div>
+<div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span>                                 <span class="stringliteral">&quot;1234.5678\n&quot;</span></div>
+<div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span>                                 <span class="stringliteral">&quot;WanMei23333\n&quot;</span></div>
+<div class="line"><a id="l01417" name="l01417"></a><span class="lineno"> 1417</span>                                 <span class="stringliteral">&quot;pass*word.6&quot;</span>);</div>
+<div class="line"><a id="l01418" name="l01418"></a><span class="lineno"> 1418</span>                <span class="keyword">auto</span> out = ostringstream();</div>
+<div class="line"><a id="l01419" name="l01419"></a><span class="lineno"> 1419</span>                <a class="code hl_function" href="../../d3/d8b/a00059.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
+<div class="line"><a id="l01420" name="l01420"></a><span class="lineno"> 1420</span>                <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
+<div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>                ASSERT_EQ(<span class="stringliteral">&quot;Your password is tai duan le.\n&quot;</span></div>
+<div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span>                          <span class="stringliteral">&quot;Your password needs shu zi.\n&quot;</span></div>
+<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span>                          <span class="stringliteral">&quot;Your password needs zi mu.\n&quot;</span></div>
+<div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>                          <span class="stringliteral">&quot;Your password is wan mei.\n&quot;</span></div>
+<div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>                          <span class="stringliteral">&quot;Your password is tai luan le.\n&quot;</span>,</div>
+<div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span>                          out.str());</div>
+<div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span>            }</div>
 <div class="ttc" id="aa00059_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d3/d8b/a00059.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l02828">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l02848">main()</a>.</p>
 
 </div>
 </div>
