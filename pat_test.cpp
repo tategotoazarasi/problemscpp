@@ -1480,6 +1480,32 @@ namespace pat {
 				ASSERT_EQ("1123123111", out.str());
 			}
 		}// namespace b1084
+
+		namespace b1085 {
+			TEST(b1085, case1) {
+				istringstream in("10\n"
+				                 "A57908 85 Au\n"
+				                 "B57908 54 LanX\n"
+				                 "A37487 60 au\n"
+				                 "T28374 67 CMU\n"
+				                 "T32486 24 hypu\n"
+				                 "A66734 92 cmu\n"
+				                 "B76378 71 AU\n"
+				                 "A47780 45 lanx\n"
+				                 "A72809 100 pku\n"
+				                 "A03274 45 hypu");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("5\n"
+				          "1 cmu 192 2\n"
+				          "1 au 192 3\n"
+				          "3 pku 100 1\n"
+				          "4 hypu 81 2\n"
+				          "4 lanx 81 2\n",
+				          out.str());
+			}
+		}// namespace b1085
 	}    // namespace b
 
 	namespace a {}

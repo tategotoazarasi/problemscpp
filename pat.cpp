@@ -2934,6 +2934,72 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1084
+
+		namespace b1085 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				unordered_map<string, school> schools;
+				for(int i = 0; i < n; i++) {
+					string id, sc;
+					int score;
+					cin >> id >> score >> sc;
+					stringstream ss;
+					for(char ch: sc) {
+						ss << char(tolower(ch));
+					}
+					sc = ss.str();
+					if(!schools.count(sc)) {
+						schools[sc] = school(sc);
+					}
+					schools[sc].count++;
+					switch(id[0]) {
+						case 'A':
+							schools[sc].a_sum += score;
+							break;
+						case 'B':
+							schools[sc].b_sum += score;
+							break;
+						case 'T':
+							schools[sc].t_sum += score;
+							break;
+						default:
+							return 1;
+					}
+				}
+				vector<school> vec;
+				for(const auto &[id, sc]: schools) {
+					vec.push_back(sc);
+				}
+				sort(vec.rbegin(), vec.rend());
+				unordered_map<int, int> score_rank;
+				for(int i = vec.size() - 1; i >= 0; i--) {
+					score_rank[vec[i].get_score()] = i + 1;
+				}
+				cout << vec.size() << endl;
+				for(int i = 0; i < vec.size(); i++) {
+					const auto &sc = vec[i];
+					cout << score_rank[sc.get_score()] << ' ' << sc.id << ' ' << sc.get_score() << ' ' << sc.count << endl;
+				}
+				return 0;
+			}
+
+			int school::get_score() const {
+				return static_cast<int>(a_sum + b_sum / 1.5 + t_sum * 1.5);
+			}
+
+			bool school::operator<(const school &sc) const {
+				int score1 = this->get_score();
+				int score2 = sc.get_score();
+				if(score1 != score2) {
+					return score1 < score2;
+				} else if(count != sc.count) {
+					return count > sc.count;
+				} else {
+					return id > sc.id;
+				}
+			}
+		}// namespace b1085
 	}    // namespace b
 
 	namespace a {}

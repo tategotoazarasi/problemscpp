@@ -522,7 +522,23 @@ namespace pat {
 		namespace b1084 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1085 PAT单位排行
+		namespace b1085 {
+			struct school {
+				string id;
+				int a_sum = 0;
+				int b_sum = 0;
+				int t_sum = 0;
+				int count = 0;
+				school()  = default;
+				school(string id): id(id){};
+				int get_score() const;
+				bool operator<(const school &) const;
+			};
+			int main(istream &cin, ostream &cout);
+		}// namespace b1085
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}
