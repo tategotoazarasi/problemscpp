@@ -2222,6 +2222,26 @@ namespace leetcode {
 			static int projectionArea(vector<vector<int>> &grid);
 		};
 	}// namespace projection_area_of_3d_shapes
+
+	/// \brief 1603. Design Parking System
+	namespace design_parking_system {
+		class ParkingSystem {
+			int big;   ///< The number of slots for big parking space
+			int medium;///< The number of slots for medium parking space
+			int small; ///< The number of slots for small parking space
+
+		public:
+			/// \brief Initializes object of the ParkingSystem class.
+			/// \param big The number of slots for big parking space
+			/// \param medium The number of slots for medium parking space
+			/// \param small The number of slots for small parking space
+			ParkingSystem(int big, int medium, int small);
+			/// \brief Checks whether there is a parking space of carType for the car that wants to get into the parking lot.
+			/// \param carType carType can be of three kinds: big, medium, or small, which are represented by 1, 2, and 3 respectively. A car can only park in a parking space of its carType.
+			/// \return If there is no space available, return false, else park the car in that size space and return true.
+			bool addCar(int carType);
+		};
+	}// namespace design_parking_system
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

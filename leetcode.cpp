@@ -6017,4 +6017,35 @@ namespace leetcode {
 			return xy + yz + xz;
 		}
 	}// namespace projection_area_of_3d_shapes
+
+	namespace design_parking_system {
+		ParkingSystem::ParkingSystem(int big, int medium, int small): big(big), medium(medium), small(small) {}
+		bool ParkingSystem::addCar(int carType) {
+			switch(carType) {
+				case 1:
+					if(big > 0) {
+						big--;
+						return true;
+					} else {
+						return false;
+					}
+				case 2:
+					if(medium > 0) {
+						medium--;
+						return true;
+					} else {
+						return false;
+					}
+				case 3:
+					if(small > 0) {
+						small--;
+						return true;
+					} else {
+						return false;
+					}
+				default:
+					return false;
+			}
+		}
+	}// namespace design_parking_system
 }// namespace leetcode
