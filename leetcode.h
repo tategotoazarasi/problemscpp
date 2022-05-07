@@ -2242,6 +2242,19 @@ namespace leetcode {
 			bool addCar(int carType);
 		};
 	}// namespace design_parking_system
+
+	/// \brief 303. Range Sum Query - Immutable
+	namespace range_sum_query_immutable {
+		class NumArray {
+			vector<int> pref_sum;
+
+		public:
+			/// \brief Initializes the object with the integer array nums.
+			NumArray(vector<int> &nums);
+			/// \brief Returns the sum of the elements of nums between indices left and right inclusive (i.e. nums[left] + nums[left + 1] + ... + nums[right]).
+			int sumRange(int left, int right);
+		};
+	}// namespace range_sum_query_immutable
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

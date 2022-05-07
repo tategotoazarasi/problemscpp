@@ -6048,4 +6048,17 @@ namespace leetcode {
 			}
 		}
 	}// namespace design_parking_system
+
+	namespace range_sum_query_immutable {
+		NumArray::NumArray(vector<int> &nums) {
+			pref_sum    = vector<int>(nums.size());
+			pref_sum[0] = nums[0];
+			for(int i = 1; i < nums.size(); i++) {
+				pref_sum[i] = pref_sum[i - 1] + nums[i];
+			}
+		}
+		int NumArray::sumRange(int left, int right) {
+			return pref_sum[right] - (left - 1 >= 0 ? pref_sum[left - 1] : 0);
+		}
+	}// namespace range_sum_query_immutable
 }// namespace leetcode
