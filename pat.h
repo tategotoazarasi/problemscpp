@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <unordered_set>
-#include <vector>
+#include <utility>
 
 using namespace std;
 
@@ -436,10 +436,10 @@ namespace pat {
 		namespace b1073 {
 			/// \brief 多选题
 			struct problem {
-				int id;                ///< 编号
-				int score;             ///< 满分值
-				int noa;               ///< 选项个数
-				int noca;              ///< 正确选项个数
+				int id{};              ///< 编号
+				int score{};           ///< 满分值
+				int noa{};             ///< 选项个数
+				int noca{};            ///< 正确选项个数
 				unordered_set<char> ca;///< 正确选项
 			};
 
@@ -455,9 +455,10 @@ namespace pat {
 		namespace b1075 {
 			struct Node {
 				string addr;
-				int data;
+				int data{};
 				string next;
 			};
+
 			int main(istream &cin, ostream &cout);
 		}// namespace b1075
 
@@ -489,10 +490,11 @@ namespace pat {
 				int p        = -1;
 				int mid_term = -1;
 				int final    = -1;
-				int score;
-				int get_score();
-				bool operator<(const student &) const;
+				int score{};
+				[[nodiscard]] int get_score() const;
+				bool operator<(const student & /*stu*/) const;
 			};
+
 			int main(istream &cin, ostream &cout);
 		}// namespace b1080
 
@@ -505,11 +507,12 @@ namespace pat {
 		namespace b1082 {
 			struct player {
 				string id;
-				int x;
-				int y;
-				int get_dist() const;
-				bool operator<(const player &) const;
+				int x{};
+				int y{};
+				[[nodiscard]] int get_dist() const;
+				bool operator<(const player & /*p*/) const;
 			};
+
 			int main(istream &cin, ostream &cout);
 		}// namespace b1082
 
@@ -532,10 +535,13 @@ namespace pat {
 				int t_sum = 0;
 				int count = 0;
 				school()  = default;
-				school(string id): id(id){};
-				int get_score() const;
-				bool operator<(const school &) const;
+
+				explicit school(string id)
+				    : id(std::move(std::move(id))){};
+				[[nodiscard]] int get_score() const;
+				bool operator<(const school & /*sc*/) const;
 			};
+
 			int main(istream &cin, ostream &cout);
 		}// namespace b1085
 

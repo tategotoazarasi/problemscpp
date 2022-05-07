@@ -1018,23 +1018,6 @@ namespace pat {
 			}
 		}// namespace b1066
 
-		namespace b1065 {
-			TEST(b1065, case1) {
-				istringstream in("3\n"
-				                 "11111 22222\n"
-				                 "33333 44444\n"
-				                 "55555 66666\n"
-				                 "7\n"
-				                 "55555 44444 10000 88888 22222 11111 23333");
-				auto out = ostringstream();
-				main(in, out);
-				const auto ans = out.str();
-				ASSERT_EQ("5\n"
-				          "10000 23333 44444 55555 88888",
-				          out.str());
-			}
-		}// namespace b1065
-
 		namespace b1067 {
 			TEST(b1067, case1) {
 				istringstream in("Correct%pw 3\n"

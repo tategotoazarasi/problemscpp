@@ -4003,7 +4003,7 @@ namespace acwing {
 		cin.getline(str, 101);
 		cin.getline(to_be_replaced, 101);
 		cin.getline(replacement, 101);
-		for(char *word = strtok(str, " "); word != nullptr; word = strtok(nullptr, " ")) {
+		for(const char *word = strtok(str, " "); word != nullptr; word = strtok(nullptr, " ")) {
 			if(strcmp(word, to_be_replaced) == 0) {
 				cout.write(replacement, strlen(replacement));
 			} else {
@@ -4135,7 +4135,7 @@ namespace acwing {
 		str[strlen(str) - 1]     = '\0';
 		const char *longest_word = nullptr;
 		int max_len              = 0;
-		for(char *word = strtok(str, " "); word != nullptr; word = strtok(nullptr, " ")) {
+		for(const char *word = strtok(str, " "); word != nullptr; word = strtok(nullptr, " ")) {
 			if(max_len < strlen(word)) {
 				max_len      = strlen(word);
 				longest_word = word;
@@ -4226,8 +4226,8 @@ namespace acwing {
 		string s1;
 		string s2;
 		cin >> s1 >> s2;
-		string s11 = s1 + s1;
-		string s22 = s2 + s2;
+		const string s11 = s1 + s1;
+		const string s22 = s2 + s2;
 		cout << boolalpha << (s11.find(s2) != string::npos || s22.find(s1) != string::npos);
 		return 0;
 	}
@@ -5210,7 +5210,7 @@ namespace acwing {
 	namespace acwing17 {
 		vector<int> Solution::printListReversingly(ListNode *head) {
 			deque<int> deq;
-			for(auto *current = head; current != nullptr; current = current->next) {
+			for(const auto *current = head; current != nullptr; current = current->next) {
 				deq.push_front(current->val);
 			}
 			return vector(deq.begin(), deq.end());
@@ -5481,7 +5481,7 @@ namespace acwing {
 		}
 
 		cow::cow(string name, int val, int zodiac) {
-			this->name     = name;
+			this->name     = std::move(name);
 			this->val      = val;
 			this->zodiac   = zodiac;
 			this->previous = vector<cow *>();
@@ -5773,8 +5773,8 @@ namespace acwing {
 	namespace acwing1695 {
 		int main(istream &cin, ostream &cout) {
 			bool nuts[3][3]         = {{true, false, false},
-			                           {false, true, false},
-			                           {false, false, true}};
+                               {false, true, false},
+                               {false, false, true}};
 			unsigned short score[3] = {0, 0, 0};
 			unsigned short ans      = 0;
 			unsigned short n;
@@ -6545,7 +6545,7 @@ namespace acwing {
 			for(int i = 0; i < q; i++) {
 				string s;
 				cin >> s;
-				TrieNode *node = tn.search(s, 0);
+				const TrieNode *node = tn.search(s, 0);
 				if(node == nullptr) {
 					cout << "0 -" << endl;
 				} else {
@@ -6898,13 +6898,14 @@ namespace acwing {
 
 	namespace acwing1995 {
 		int main(istream &cin, ostream &cout) {
-			int b, e;
+			int b;
+			int e;
 			cin >> b >> e;
 			vector<int> pos_b;
 			vector<int> pos_e;
 			pos_b.push_back(0);
 			pos_e.push_back(0);
-			while(b--) {
+			while((b--) != 0) {
 				char dir;
 				int dist;
 				cin >> dist >> dir;
@@ -6918,7 +6919,7 @@ namespace acwing {
 					}
 				}
 			}
-			while(e--) {
+			while((e--) != 0) {
 				char dir;
 				int dist;
 				cin >> dist >> dir;
@@ -6932,12 +6933,12 @@ namespace acwing {
 					}
 				}
 			}
-			int t     = max(pos_e.size(), pos_b.size());
-			int ans   = 0;
-			bool flag = true;
+			const int t = max(pos_e.size(), pos_b.size());
+			int ans     = 0;
+			bool flag   = true;
 			for(int i = 0; i < t; i++) {
-				int pe = i < pos_e.size() ? pos_e[i] : pos_e.back();
-				int pb = i < pos_b.size() ? pos_b[i] : pos_b.back();
+				const int pe = i < pos_e.size() ? pos_e[i] : pos_e.back();
+				const int pb = i < pos_b.size() ? pos_b[i] : pos_b.back();
 				if(pe == pb) {
 					if(!flag) {
 						ans++;

@@ -78,7 +78,7 @@ namespace leetcode {
 		bool TrieNode::dfs(TrieNode *root, const string &str, int start, bool flag) const {
 			if(this->ch == 0) {
 				//根节点
-				auto *const node = this->nexts[str[start] - 'a'];
+				const auto *const node = this->nexts[str[start] - 'a'];
 				if(node == nullptr) {
 					return false;
 				}
@@ -95,7 +95,7 @@ namespace leetcode {
 					return true;
 				}
 			}
-			TrieNode *node = nullptr;
+			const TrieNode *node = nullptr;
 			if(str[start + 1] - 'a' >= 0) {
 				node = this->nexts[str[start + 1] - 'a'];
 			}
@@ -697,7 +697,7 @@ namespace leetcode {
 				start.insert(bin);
 			}
 			for(const string &word: targetWords) {
-				auto bin = str2bin(word);
+				const auto bin = str2bin(word);
 				for(int i = 0; i < 26; i++) {
 					if((bin & 1 << i) != 0 && start.contains(bin - (1 << i))) {
 						//bin有第i个字母且bin去掉第i个字母在start中仍然存在
@@ -1034,7 +1034,7 @@ namespace leetcode {
 		int Solution::getRandom() const {
 			int i   = 1;
 			int ans = 0;
-			for(auto *node = head; node != nullptr; node = node->next, i++) {
+			for(const auto *node = head; node != nullptr; node = node->next, i++) {
 				if(rand() % i == 0) {
 					// 1/i 的概率选中（替换为答案）
 					ans = node->val;
@@ -1718,7 +1718,7 @@ namespace leetcode {
 			auto *str = new char[sentence.length() + 1];
 			strcpy(str, sentence.c_str());
 			int count = 0;///< 有效单词数
-			for(char *token = strtok(str, " "); token != nullptr; token = strtok(nullptr, " ")) {
+			for(const char *token = strtok(str, " "); token != nullptr; token = strtok(nullptr, " ")) {
 				bool is_valid = true; ///< 是否是有效单词
 				bool hyphen   = false;///< 是否已经存在连接符'-'
 				for(int i = 0; token[i] != '\0'; i++) {
@@ -2880,7 +2880,7 @@ namespace leetcode {
 					if((status & 1 << next_slot) == 0) {
 						// next_slot是空的
 						const int next_status              = status | 1 << next_slot;                                                                              ///< 加上next_slot之后的状态
-						auto slot_num                      = next_slot / 2 + 1;                                                                                    ///< slot编号
+						const auto slot_num                = next_slot / 2 + 1;                                                                                    ///< slot编号
 						max_and_sum_of_status[next_status] = max(max_and_sum_of_status[next_status], max_and_sum_of_status[status] + (slot_num & nums[one_count]));//放置第onecount个数字
 						ans                                = max(ans, max_and_sum_of_status[next_status]);
 					}
@@ -5961,7 +5961,7 @@ namespace leetcode {
 		}
 
 		bool RandomizedSet::insert(int val) {
-			if(map.contains(val) != 0u) {
+			if(static_cast<unsigned int>(map.contains(val)) != 0U) {
 				return false;
 			}
 			nums.push_back(val);
@@ -5970,7 +5970,7 @@ namespace leetcode {
 		}
 
 		bool RandomizedSet::remove(int val) {
-			if(map.contains(val) == 0u) {
+			if(static_cast<unsigned int>(map.contains(val)) == 0U) {
 				return false;
 			}
 			const int index = map[val];
@@ -5987,12 +5987,12 @@ namespace leetcode {
 
 	namespace projection_area_of_3d_shapes {
 		int Solution::projectionArea(vector<vector<int>> &grid) {
-			int n                       = grid.size();
-			int xy                      = 0;
-			int xz                      = 0;
-			int yz                      = 0;
-			vector<vector<int>> grid_xz = vector<vector<int>>(51, vector<int>(51, 0));
-			vector<vector<int>> grid_yz = vector<vector<int>>(51, vector<int>(51, 0));
+			const int n  = grid.size();
+			int xy       = 0;
+			int xz       = 0;
+			int yz       = 0;
+			auto grid_xz = vector(51, vector(51, 0));
+			auto grid_yz = vector(51, vector(51, 0));
 			for(int i = 0; i < n; i++) {
 				for(int j = 0; j < n; j++) {
 					if(grid[i][j] != 0) {
@@ -6019,32 +6019,33 @@ namespace leetcode {
 	}// namespace projection_area_of_3d_shapes
 
 	namespace design_parking_system {
-		ParkingSystem::ParkingSystem(int big, int medium, int small): big(big), medium(medium), small(small) {}
+		ParkingSystem::ParkingSystem(int big, int medium, int small)
+		    : big(big), medium(medium), small(small) {}
+
 		bool ParkingSystem::addCar(int carType) {
 			switch(carType) {
-				case 1:
+				case 1: {
 					if(big > 0) {
 						big--;
 						return true;
-					} else {
-						return false;
 					}
-				case 2:
+					return false;
+				}
+				case 2: {
 					if(medium > 0) {
 						medium--;
 						return true;
-					} else {
-						return false;
 					}
-				case 3:
+					return false;
+				}
+				case 3: {
 					if(small > 0) {
 						small--;
 						return true;
-					} else {
-						return false;
 					}
-				default:
 					return false;
+				}
+				default: return false;
 			}
 		}
 	}// namespace design_parking_system
@@ -6057,9 +6058,8 @@ namespace leetcode {
 				pref_sum[i] = pref_sum[i - 1] + nums[i];
 			}
 		}
-		int NumArray::sumRange(int left, int right) {
-			return pref_sum[right] - (left - 1 >= 0 ? pref_sum[left - 1] : 0);
-		}
+
+		int NumArray::sumRange(int left, int right) const { return pref_sum[right] - (left - 1 >= 0 ? pref_sum[left - 1] : 0); }
 	}// namespace range_sum_query_immutable
 
 	namespace house_robber {

@@ -2250,9 +2250,9 @@ namespace leetcode {
 
 		public:
 			/// \brief Initializes the object with the integer array nums.
-			NumArray(vector<int> &nums);
+			explicit NumArray(vector<int> &nums);
 			/// \brief Returns the sum of the elements of nums between indices left and right inclusive (i.e. nums[left] + nums[left + 1] + ... + nums[right]).
-			int sumRange(int left, int right);
+			int sumRange(int left, int right) const;
 		};
 	}// namespace range_sum_query_immutable
 

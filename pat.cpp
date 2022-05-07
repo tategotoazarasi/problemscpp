@@ -1836,7 +1836,7 @@ namespace pat {
 				string x;
 				long double sum = 0;
 				int k           = 0;
-				while((n--) != 0) {
+				while(n-- != 0) {
 					cin >> x;
 					bool flag = true;
 					int start = 0;
@@ -1960,7 +1960,6 @@ namespace pat {
 					return false;
 				}
 				return this->name > p.name;
-				return false;
 			}
 		}// namespace b1055
 
@@ -2098,10 +2097,10 @@ namespace pat {
 				}
 				int k;
 				cin >> k;
-				while((k--) != 0) {
+				while(k-- != 0) {
 					string id;
 					cin >> id;
-					if(um.contains(id) == 0u) {
+					if(static_cast<unsigned int>(um.contains(id)) == 0U) {
 						cout << id << ": Are you kidding?" << endl;
 					} else {
 						cout << id << ": " << um[id] << endl;
@@ -2197,8 +2196,9 @@ namespace pat {
 				int n;
 				cin >> n;
 				double ans = 0;
-				while(n--) {
-					int a, b;
+				while((n--) != 0) {
+					int a;
+					int b;
 					cin >> a >> b;
 					ans = max(ans, sqrt(a * a + b * b));
 				}
@@ -2212,11 +2212,11 @@ namespace pat {
 				int n;
 				cin >> n;
 				set<int> s;
-				while(n--) {
+				while((n--) != 0) {
 					string str;
 					cin >> str;
 					int sum = 0;
-					for(char ch: str) {
+					for(const char ch: str) {
 						sum += ch - '0';
 					}
 					s.insert(sum);
@@ -2234,7 +2234,11 @@ namespace pat {
 
 		namespace b1066 {
 			int main(istream &cin, ostream &cout) {
-				int m, n, a, b, g;
+				int m;
+				int n;
+				int a;
+				int b;
+				int g;
 				cin >> m >> n >> a >> b >> g;
 				for(int i = 0; i < m; i++) {
 					for(int j = 0; j < n; j++) {
@@ -2264,7 +2268,8 @@ namespace pat {
 				unordered_map<string, string> um;
 				set<string> s;
 				for(int i = 0; i < n; i++) {
-					string id1, id2;
+					string id1;
+					string id2;
 					cin >> id1 >> id2;
 					um[id1] = id2;
 					um[id2] = id1;
@@ -2274,7 +2279,7 @@ namespace pat {
 				for(int i = 0; i < m; i++) {
 					string id;
 					cin >> id;
-					if(um.count(id) && s.count(um[id])) {
+					if(um.contains(id)) {
 						s.erase(um[id]);
 					} else {
 						s.insert(id);
@@ -2296,13 +2301,12 @@ namespace pat {
 				string pwd;
 				int n;
 				cin >> pwd >> n;
-				string str;
 				int cnt = 0;
 				char s[1024];
 				cin.getline(s, 1024);
 				while(true) {
 					cin.getline(s, 1024);
-					str = string(s);
+					auto str = string(s);
 					if(str == "#") {
 						return 0;
 					}
@@ -2322,15 +2326,16 @@ namespace pat {
 						return 0;
 					}
 				}
-				return 0;
 			}
 		}// namespace b1067
 
 		namespace b1068 {
 			int main(istream &cin, ostream &cout) {
-				long m, n, tol;
+				long m;
+				long n;
+				long tol;
 				cin >> m >> n >> tol;
-				vector<vector<long>> grid(n, vector<long>(m));
+				vector grid(n, vector<long>(m));
 				unordered_map<long, unsigned long> um_cnt;
 				unordered_map<long, long> um_x;
 				unordered_map<long, long> um_y;
@@ -2356,7 +2361,7 @@ namespace pat {
 						bool flag                        = true;
 						for(auto [s_x, s_y]: surroundings) {
 							if(s_x >= 0 && s_x < n && s_y >= 0 && s_y < m) {
-								long dist = abs(v - grid[s_x][s_y]);
+								const long dist = abs(v - grid[s_x][s_y]);
 								if(dist <= tol) {
 									flag = false;
 									break;
@@ -2387,7 +2392,9 @@ namespace pat {
 
 		namespace b1069 {
 			int main(istream &cin, ostream &cout) {
-				int m, n, s;
+				int m;
+				int n;
+				int s;
 				cin >> m >> n >> s;
 				string name;
 				unordered_set<string> names;
@@ -2397,16 +2404,14 @@ namespace pat {
 					cin >> list[i];
 				}
 				for(int i = s - 1; i < m;) {
-					if(names.count(list[i])) {
+					if(names.contains(list[i])) {
 						i++;
 						continue;
-					} else {
-						names.insert(list[i]);
-						cout << list[i] << endl;
-						cnt++;
-						i += n;
-						continue;
 					}
+					names.insert(list[i]);
+					cout << list[i] << endl;
+					cnt++;
+					i += n;
 				}
 				if(cnt == 0) {
 					cout << "Keep going...";
@@ -2435,16 +2440,20 @@ namespace pat {
 
 		namespace b1071 {
 			int main(istream &cin, ostream &cout) {
-				int t, k;
+				int t;
+				int k;
 				cin >> t >> k;
-				while(k--) {
-					int n1, b, tt, n2;
+				while((k--) != 0) {
+					int n1;
+					int b;
+					int tt;
+					int n2;
 					cin >> n1 >> b >> tt >> n2;
 					if(tt > t) {
 						cout << "Not enough tokens.  Total = " << t << '.' << endl;
 						continue;
 					}
-					if(n2 > n1 == b) {
+					if(static_cast<int>(n2 > n1) == b) {
 						t += tt;
 						cout << "Win " << tt << "!  Total = " << t << '.' << endl;
 					} else {
@@ -2462,12 +2471,13 @@ namespace pat {
 
 		namespace b1072 {
 			int main(istream &cin, ostream &cout) {
-				int n, m;
+				int n;
+				int m;
 				cin >> n >> m;
 				unordered_set<string> items;
 				int stu_cnt  = 0;
 				int item_cnt = 0;
-				while(m--) {
+				while((m--) != 0) {
 					string item;
 					cin >> item;
 					items.insert(item);
@@ -2480,15 +2490,15 @@ namespace pat {
 					for(int j = 0; j < k; j++) {
 						string item;
 						cin >> item;
-						if(items.count(item)) {
+						if(items.contains(item)) {
 							vec.push_back(item);
 						}
 					}
 					item_cnt += vec.size();
-					if(vec.size() != 0) {
+					if(!vec.empty()) {
 						stu_cnt++;
 						cout << name << ':';
-						for(auto item: vec) {
+						for(const auto &item: vec) {
 							cout << ' ' << item;
 						}
 						cout << endl;
@@ -2501,7 +2511,8 @@ namespace pat {
 
 		namespace b1073 {
 			int main(istream &cin, ostream &cout) {
-				int n, m;
+				int n;
+				int m;
 				cin >> n >> m;
 				vector<problem> problems(m);
 				map<pair<int, char>, int> noe;
@@ -2531,7 +2542,7 @@ namespace pat {
 							char a;
 							cin >> a;
 							as.insert(a);
-							if(!problems[j].ca.count(a)) {
+							if(!problems[j].ca.contains(a)) {
 								noe[make_pair(problems[j].id, a)]++;
 								max_cnt = max(max_cnt, noe[make_pair(problems[j].id, a)]);
 								flag    = false;
@@ -2539,7 +2550,7 @@ namespace pat {
 						}
 						cin >> ch;
 						for(auto a: problems[j].ca) {
-							if(!as.count(a)) {
+							if(!as.contains(a)) {
 								noe[make_pair(problems[j].id, a)]++;
 								max_cnt = max(max_cnt, noe[make_pair(problems[j].id, a)]);
 							}
@@ -2571,7 +2582,9 @@ namespace pat {
 
 		namespace b1074 {
 			int main(istream &cin, ostream &cout) {
-				string str_n, str_a, str_b;
+				string str_n;
+				string str_a;
+				string str_b;
 				cin >> str_n >> str_a >> str_b;
 				vector<int> n;
 				vector<int> a;
@@ -2592,10 +2605,10 @@ namespace pat {
 				}
 				int carry = 0;
 				for(int i = 0; i < max(a.size(), b.size()) || carry != 0; i++) {
-					int radix = i < n.size() ? n[i] : 10;
-					int num_a = i < a.size() ? a[i] : 0;
-					int num_b = i < b.size() ? b[i] : 0;
-					int sum   = num_a + num_b + carry;
+					const int radix = i < n.size() ? n[i] : 10;
+					const int num_a = i < a.size() ? a[i] : 0;
+					const int num_b = i < b.size() ? b[i] : 0;
+					const int sum   = num_a + num_b + carry;
 					ans.push_back(sum % radix);
 					carry = sum / radix;
 				}
@@ -2613,7 +2626,8 @@ namespace pat {
 		namespace b1075 {
 			int main(istream &cin, ostream &cout) {
 				string current;
-				int n, k;
+				int n;
+				int k;
 				cin >> current >> n >> k;
 				unordered_map<string, Node> um;
 				for(int i = 0; i < n; i++) {
@@ -2623,7 +2637,9 @@ namespace pat {
 					cin >> node.next;
 					um[node.addr] = node;
 				}
-				vector<Node> vec1, vec2, vec3;
+				vector<Node> vec1;
+				vector<Node> vec2;
+				vector<Node> vec3;
 				while(current != "-1") {
 					Node node = um[current];
 					if(node.data < 0) {
@@ -2641,7 +2657,7 @@ namespace pat {
 				vec.insert(vec.end(), vec3.begin(), vec3.end());
 				for(int i = 0; i < vec.size(); i++) {
 					Node node = vec[i];
-					cout << node.addr << ' ' << node.data << ' ' << ((i + 1 < vec.size()) ? vec[i + 1].addr : "-1") << endl;
+					cout << node.addr << ' ' << node.data << ' ' << (i + 1 < vec.size() ? vec[i + 1].addr : "-1") << endl;
 				}
 				return 0;
 			}
@@ -2654,10 +2670,12 @@ namespace pat {
 				stringstream ss;
 				for(int i = 0; i < n; i++) {
 					for(int j = 0; j < 4; j++) {
-						char a, b, c;
+						char a;
+						char b;
+						char c;
 						cin >> a >> b >> c;
 						if(c == 'T') {
-							ss << int(a - 'A' + 1);
+							ss << a - 'A' + 1;
 						}
 					}
 				}
@@ -2685,12 +2703,13 @@ namespace pat {
 						}
 						cout << str[i];
 					}
-				} else {//op=='D'
+				} else {
+					//op=='D'
 					for(int i = 0; i < strlen(str); i++) {
-						if(isdigit(str[i])) {
+						if(isdigit(str[i]) != 0) {
 							stringstream ss;
 							for(; i < strlen(str); i++) {
-								if(isdigit(str[i])) {
+								if(isdigit(str[i]) != 0) {
 									ss << str[i];
 								} else {
 									break;
@@ -2712,7 +2731,8 @@ namespace pat {
 
 		namespace b1077 {
 			int main(istream &cin, ostream &cout) {
-				int n, m;
+				int n;
+				int m;
 				cin >> n >> m;
 				for(int i = 0; i < n; i++) {
 					int s_teacher;
@@ -2732,8 +2752,8 @@ namespace pat {
 					for(int j = 0; j < scores.size(); j++) {
 						sum += scores[j];
 					}
-					double avg = static_cast<double>(sum) / scores.size();
-					int final  = static_cast<int>((avg + s_teacher) / 2 + 0.5);
+					const double avg = static_cast<double>(sum) / scores.size();
+					const int final  = static_cast<int>((avg + s_teacher) / 2 + 0.5);
 					cout << final << endl;
 				}
 				return 0;
@@ -2762,7 +2782,7 @@ namespace pat {
 						cout << bi << " is a palindromic number.";
 						return 0;
 					}
-					string str_b = string(str.rbegin(), str.rend());
+					auto str_b = string(str.rbegin(), str.rend());
 					BigInt bi_b(str_b);
 					BigInt c = bi + bi_b;
 					cout << str << " + " << str_b << " = " << c << endl;
@@ -2775,7 +2795,9 @@ namespace pat {
 
 		namespace b1080 {
 			int main(istream &cin, ostream &cout) {
-				int p, m, n;
+				int p;
+				int m;
+				int n;
 				cin >> p >> m >> n;
 				unordered_map<string, student> um;
 				for(int i = 0; i < p; i++) {
@@ -2805,22 +2827,20 @@ namespace pat {
 				return 0;
 			}
 
-			int student::get_score() {
-				int mt = mid_term == -1 ? 0 : mid_term;
-				int f  = final == -1 ? 0 : final;
+			int student::get_score() const const {
+				const int mt = mid_term == -1 ? 0 : mid_term;
+				const int f  = final == -1 ? 0 : final;
 				if(mt > f) {
-					return static_cast<int>((mt * 0.4 + f * 0.6) + 0.5);
-				} else {
-					return f;
+					return static_cast<int>(mt * 0.4 + f * 0.6 + 0.5);
 				}
+				return f;
 			}
 
 			bool student::operator<(const student &stu) const {
 				if(this->score != stu.score) {
 					return this->score > stu.score;
-				} else {
-					return this->id < stu.id;
 				}
+				return this->id < stu.id;
 			}
 		}// namespace b1080
 
@@ -2830,19 +2850,19 @@ namespace pat {
 				cin >> n;
 				char str[1024];
 				cin.getline(str, 1024);
-				while(n--) {
+				while((n--) != 0) {
 					cin.getline(str, 1024);
-					string password = string(str);
-					bool alpha      = false;
-					bool digit      = false;
-					bool ok         = true;
+					auto password = string(str);
+					bool alpha    = false;
+					bool digit    = false;
+					bool ok       = true;
 					if(password.length() < 6) {
 						cout << "Your password is tai duan le." << endl;
 					} else {
-						for(char ch: password) {
-							if(isdigit(ch)) {
+						for(const char ch: password) {
+							if(isdigit(ch) != 0) {
 								digit = true;
-							} else if(isalpha(ch)) {
+							} else if(isalpha(ch) != 0) {
 								alpha = true;
 							} else if(ch != '.') {
 								ok = false;
@@ -2881,13 +2901,9 @@ namespace pat {
 				return 0;
 			}
 
-			int player::get_dist() const {
-				return x * x + y * y;
-			}
+			int player::get_dist() const { return x * x + y * y; }
 
-			bool player::operator<(const player &p) const {
-				return this->get_dist() < p.get_dist();
-			}
+			bool player::operator<(const player &p) const { return this->get_dist() < p.get_dist(); }
 		}// namespace b1082
 
 		namespace b1083 {
@@ -2941,15 +2957,16 @@ namespace pat {
 				cin >> n;
 				unordered_map<string, school> schools;
 				for(int i = 0; i < n; i++) {
-					string id, sc;
+					string id;
+					string sc;
 					int score;
 					cin >> id >> score >> sc;
 					stringstream ss;
 					for(char ch: sc) {
-						ss << char(tolower(ch));
+						ss << static_cast<char>(tolower(ch));
 					}
 					sc = ss.str();
-					if(!schools.count(sc)) {
+					if(!schools.contains(sc)) {
 						schools[sc] = school(sc);
 					}
 					schools[sc].count++;
@@ -2963,11 +2980,11 @@ namespace pat {
 						case 'T':
 							schools[sc].t_sum += score;
 							break;
-						default:
-							return 1;
+						default: return 1;
 					}
 				}
 				vector<school> vec;
+				vec.reserve(schools.size());
 				for(const auto &[id, sc]: schools) {
 					vec.push_back(sc);
 				}
@@ -2984,26 +3001,25 @@ namespace pat {
 				return 0;
 			}
 
-			int school::get_score() const {
-				return static_cast<int>(a_sum + b_sum / 1.5 + t_sum * 1.5);
-			}
+			int school::get_score() const { return static_cast<int>(a_sum + b_sum / 1.5 + t_sum * 1.5); }
 
 			bool school::operator<(const school &sc) const {
-				int score1 = this->get_score();
-				int score2 = sc.get_score();
+				const int score1 = this->get_score();
+				const int score2 = sc.get_score();
 				if(score1 != score2) {
 					return score1 < score2;
-				} else if(count != sc.count) {
-					return count > sc.count;
-				} else {
-					return id > sc.id;
 				}
+				if(count != sc.count) {
+					return count > sc.count;
+				}
+				return id > sc.id;
 			}
 		}// namespace b1085
 
 		namespace b1086 {
 			int main(istream &cin, ostream &cout) {
-				unsigned a, b;
+				unsigned a;
+				unsigned b;
 				cin >> a >> b;
 				ostringstream oss;
 				oss << a * b;
