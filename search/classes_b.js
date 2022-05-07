@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['randomizedset_0',['RandomizedSet',['../df/d4a/a02204.html',1,'leetcode::insert_delete_getrandom_o1']]]
+  ['randomizedset_0',['RandomizedSet',['../d8/d1e/a02208.html',1,'leetcode::insert_delete_getrandom_o1']]]
 ];
