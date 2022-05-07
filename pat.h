@@ -538,7 +538,12 @@ namespace pat {
 			};
 			int main(istream &cin, ostream &cout);
 		}// namespace b1085
-	}    // namespace b
+
+		/// \brief 1086 就不告诉你
+		namespace b1086 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}

@@ -3000,6 +3000,24 @@ namespace pat {
 				}
 			}
 		}// namespace b1085
+
+		namespace b1086 {
+			int main(istream &cin, ostream &cout) {
+				unsigned a, b;
+				cin >> a >> b;
+				ostringstream oss;
+				oss << a * b;
+				string str = oss.str();
+				stringstream ss;
+				for(auto it = str.rbegin(); it != str.rend(); ++it) {
+					ss << *it;
+				}
+				unsigned ans;
+				ss >> ans;
+				cout << ans;
+				return 0;
+			}
+		}// namespace b1086
 	}    // namespace b
 
 	namespace a {}
