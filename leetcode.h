@@ -2263,6 +2263,14 @@ namespace leetcode {
 			static int rob(vector<int> &nums);
 		};
 	}// namespace house_robber
+
+	/// \brief 120. Triangle
+	namespace triangle {
+		class Solution {
+		public:
+			static int minimumTotal(vector<vector<int>> &triangle);
+		};
+	}// namespace triangle
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

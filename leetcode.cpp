@@ -6076,4 +6076,26 @@ namespace leetcode {
 			return dp[nums.size() - 1];
 		}
 	}// namespace house_robber
+
+	namespace triangle {
+		int Solution::minimumTotal(vector<vector<int>> &triangle) {
+			vector<vector<int>> dp = triangle;
+			for(int i = 1; i < triangle.size(); i++) {
+				for(int j = 0; j < triangle[i].size(); j++) {
+					if(j == 0) {
+						dp[i][j] = dp[i - 1][j] + triangle[i][j];
+					} else if(j == triangle[i].size() - 1) {
+						dp[i][j] = dp[i - 1][j - 1] + triangle[i][j];
+					} else {
+						dp[i][j] = min(dp[i - 1][j], dp[i - 1][j - 1]) + triangle[i][j];
+					}
+				}
+			}
+			int ans = dp.back()[0];
+			for(int i = 0; i < dp.back().size(); i++) {
+				ans = min(ans, dp.back()[i]);
+			}
+			return ans;
+		}
+	}// namespace triangle
 }// namespace leetcode

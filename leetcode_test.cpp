@@ -2867,4 +2867,16 @@ namespace leetcode {
 			ASSERT_EQ(12, Solution::rob(nums));
 		}
 	}// namespace house_robber
+
+	namespace triangle {
+		TEST(triangle, case1) {
+			vector<vector<int>> triangle = {{2}, {3, 4}, {6, 5, 7}, {4, 1, 8, 3}};
+			ASSERT_EQ(11, Solution::minimumTotal(triangle));
+		}
+
+		TEST(triangle, case2) {
+			vector<vector<int>> triangle = {{-10}};
+			ASSERT_EQ(-10, Solution::minimumTotal(triangle));
+		}
+	}// namespace triangle
 }// namespace leetcode
