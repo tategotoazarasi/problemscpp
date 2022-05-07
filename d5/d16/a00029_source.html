@@ -1548,12 +1548,48 @@ $(function() {
 <div class="line"><a id="l01480" name="l01480"></a><span class="lineno"> 1480</span>                ASSERT_EQ(<span class="stringliteral">&quot;1123123111&quot;</span>, out.str());</div>
 <div class="line"><a id="l01481" name="l01481"></a><span class="lineno"> 1481</span>            }</div>
 <div class="line"><a id="l01482" name="l01482"></a><span class="lineno"> 1482</span>        }<span class="comment">// namespace b1084</span></div>
-<div class="line"><a id="l01483" name="l01483"></a><span class="lineno"> 1483</span>    }    <span class="comment">// namespace b</span></div>
-<div class="line"><a id="l01484" name="l01484"></a><span class="lineno"> 1484</span> </div>
-<div class="line"><a id="l01485" name="l01485"></a><span class="lineno"> 1485</span>    <span class="keyword">namespace </span>a {}</div>
-<div class="line"><a id="l01486" name="l01486"></a><span class="lineno"> 1486</span> </div>
-<div class="line"><a id="l01487" name="l01487"></a><span class="lineno"> 1487</span>    <span class="keyword">namespace </span>top {}</div>
-<div class="line"><a id="l01488" name="l01488"></a><span class="lineno"> 1488</span>}<span class="comment">// namespace pat</span></div>
+<div class="line"><a id="l01483" name="l01483"></a><span class="lineno"> 1483</span> </div>
+<div class="line"><a id="l01484" name="l01484"></a><span class="lineno"> 1484</span>        <span class="keyword">namespace </span>b1085 {</div>
+<div class="line"><a id="l01485" name="l01485"></a><span class="lineno"><a class="line" href="../../d4/dd3/a00428.html#a4c316b17708c50426a9b41a4aa9e2b6d"> 1485</a></span>            <a class="code hl_function" href="../../d4/dd3/a00428.html#a4c316b17708c50426a9b41a4aa9e2b6d">TEST</a>(b1085, case1) {</div>
+<div class="line"><a id="l01486" name="l01486"></a><span class="lineno"> 1486</span>                istringstream in(<span class="stringliteral">&quot;10\n&quot;</span></div>
+<div class="line"><a id="l01487" name="l01487"></a><span class="lineno"> 1487</span>                                 <span class="stringliteral">&quot;A57908 85 Au\n&quot;</span></div>
+<div class="line"><a id="l01488" name="l01488"></a><span class="lineno"> 1488</span>                                 <span class="stringliteral">&quot;B57908 54 LanX\n&quot;</span></div>
+<div class="line"><a id="l01489" name="l01489"></a><span class="lineno"> 1489</span>                                 <span class="stringliteral">&quot;A37487 60 au\n&quot;</span></div>
+<div class="line"><a id="l01490" name="l01490"></a><span class="lineno"> 1490</span>                                 <span class="stringliteral">&quot;T28374 67 CMU\n&quot;</span></div>
+<div class="line"><a id="l01491" name="l01491"></a><span class="lineno"> 1491</span>                                 <span class="stringliteral">&quot;T32486 24 hypu\n&quot;</span></div>
+<div class="line"><a id="l01492" name="l01492"></a><span class="lineno"> 1492</span>                                 <span class="stringliteral">&quot;A66734 92 cmu\n&quot;</span></div>
+<div class="line"><a id="l01493" name="l01493"></a><span class="lineno"> 1493</span>                                 <span class="stringliteral">&quot;B76378 71 AU\n&quot;</span></div>
+<div class="line"><a id="l01494" name="l01494"></a><span class="lineno"> 1494</span>                                 <span class="stringliteral">&quot;A47780 45 lanx\n&quot;</span></div>
+<div class="line"><a id="l01495" name="l01495"></a><span class="lineno"> 1495</span>                                 <span class="stringliteral">&quot;A72809 100 pku\n&quot;</span></div>
+<div class="line"><a id="l01496" name="l01496"></a><span class="lineno"> 1496</span>                                 <span class="stringliteral">&quot;A03274 45 hypu&quot;</span>);</div>
+<div class="line"><a id="l01497" name="l01497"></a><span class="lineno"> 1497</span>                <span class="keyword">auto</span> out = ostringstream();</div>
+<div class="line"><a id="l01498" name="l01498"></a><span class="lineno"> 1498</span>                <a class="code hl_function" href="../../d4/dd3/a00428.html#a4b8e9cfd1090a43f4014f2d54f031d72">main</a>(in, out);</div>
+<div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span>                <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
+<div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span>                ASSERT_EQ(<span class="stringliteral">&quot;5\n&quot;</span></div>
+<div class="line"><a id="l01501" name="l01501"></a><span class="lineno"> 1501</span>                          <span class="stringliteral">&quot;1 cmu 192 2\n&quot;</span></div>
+<div class="line"><a id="l01502" name="l01502"></a><span class="lineno"> 1502</span>                          <span class="stringliteral">&quot;1 au 192 3\n&quot;</span></div>
+<div class="line"><a id="l01503" name="l01503"></a><span class="lineno"> 1503</span>                          <span class="stringliteral">&quot;3 pku 100 1\n&quot;</span></div>
+<div class="line"><a id="l01504" name="l01504"></a><span class="lineno"> 1504</span>                          <span class="stringliteral">&quot;4 hypu 81 2\n&quot;</span></div>
+<div class="line"><a id="l01505" name="l01505"></a><span class="lineno"> 1505</span>                          <span class="stringliteral">&quot;4 lanx 81 2\n&quot;</span>,</div>
+<div class="line"><a id="l01506" name="l01506"></a><span class="lineno"> 1506</span>                          out.str());</div>
+<div class="line"><a id="l01507" name="l01507"></a><span class="lineno"> 1507</span>            }</div>
+<div class="line"><a id="l01508" name="l01508"></a><span class="lineno"> 1508</span>        }<span class="comment">// namespace b1085</span></div>
+<div class="line"><a id="l01509" name="l01509"></a><span class="lineno"> 1509</span> </div>
+<div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span>        <span class="keyword">namespace </span>b1086 {</div>
+<div class="line"><a id="l01511" name="l01511"></a><span class="lineno"><a class="line" href="../../d4/d53/a00429.html#a541bf694e3e273b2845995f56409314a"> 1511</a></span>            <a class="code hl_function" href="../../d4/d53/a00429.html#a541bf694e3e273b2845995f56409314a">TEST</a>(b1086, case1) {</div>
+<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>                istringstream in(<span class="stringliteral">&quot;5 7&quot;</span>);</div>
+<div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span>                <span class="keyword">auto</span> out = ostringstream();</div>
+<div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span>                <a class="code hl_function" href="../../d4/d53/a00429.html#ab4821cd07bd59e48ad3de697dececea6">main</a>(in, out);</div>
+<div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span>                <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
+<div class="line"><a id="l01516" name="l01516"></a><span class="lineno"> 1516</span>                ASSERT_EQ(<span class="stringliteral">&quot;53&quot;</span>, out.str());</div>
+<div class="line"><a id="l01517" name="l01517"></a><span class="lineno"> 1517</span>            }</div>
+<div class="line"><a id="l01518" name="l01518"></a><span class="lineno"> 1518</span>        }<span class="comment">// namespace b1086</span></div>
+<div class="line"><a id="l01519" name="l01519"></a><span class="lineno"> 1519</span>    }    <span class="comment">// namespace b</span></div>
+<div class="line"><a id="l01520" name="l01520"></a><span class="lineno"> 1520</span> </div>
+<div class="line"><a id="l01521" name="l01521"></a><span class="lineno"> 1521</span>    <span class="keyword">namespace </span>a {}</div>
+<div class="line"><a id="l01522" name="l01522"></a><span class="lineno"> 1522</span> </div>
+<div class="line"><a id="l01523" name="l01523"></a><span class="lineno"> 1523</span>    <span class="keyword">namespace </span>top {}</div>
+<div class="line"><a id="l01524" name="l01524"></a><span class="lineno"> 1524</span>}<span class="comment">// namespace pat</span></div>
 <div class="ttc" id="aa00011_html"><div class="ttname"><a href="../../da/d45/a00011.html">pat.h</a></div></div>
 <div class="ttc" id="aa00343_html"><div class="ttname"><a href="../../d0/dc5/a00343.html">pat</a></div><div class="ttdoc">计算机程序设计能力考试</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00019">pat.cpp:19</a></div></div>
 <div class="ttc" id="aa00345_html_a0ff1f392ecdb84d8774f190199218448"><div class="ttname"><a href="../../d9/d48/a00345.html#a0ff1f392ecdb84d8774f190199218448">pat::b::b1001::TEST</a></div><div class="ttdeci">TEST(b1001, case1)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00009">pat_test.cpp:9</a></div></div>
@@ -1723,6 +1759,10 @@ $(function() {
 <div class="ttc" id="aa00426_html_ab03bad66c534ca35e5bbbbea3fdd61b6"><div class="ttname"><a href="../../d7/db9/a00426.html#ab03bad66c534ca35e5bbbbea3fdd61b6">pat::b::b1083::TEST</a></div><div class="ttdeci">TEST(b1083, case1)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l01461">pat_test.cpp:1461</a></div></div>
 <div class="ttc" id="aa00427_html_a8f5f6f940638c2b7c34ba9d25bfbec03"><div class="ttname"><a href="../../da/db6/a00427.html#a8f5f6f940638c2b7c34ba9d25bfbec03">pat::b::b1084::TEST</a></div><div class="ttdeci">TEST(b1084, case1)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l01475">pat_test.cpp:1475</a></div></div>
 <div class="ttc" id="aa00427_html_ac273bdbb94bea588ddc3b4af0be502b0"><div class="ttname"><a href="../../da/db6/a00427.html#ac273bdbb94bea588ddc3b4af0be502b0">pat::b::b1084::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l02913">pat.cpp:2913</a></div></div>
+<div class="ttc" id="aa00428_html_a4b8e9cfd1090a43f4014f2d54f031d72"><div class="ttname"><a href="../../d4/dd3/a00428.html#a4b8e9cfd1090a43f4014f2d54f031d72">pat::b::b1085::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l02939">pat.cpp:2939</a></div></div>
+<div class="ttc" id="aa00428_html_a4c316b17708c50426a9b41a4aa9e2b6d"><div class="ttname"><a href="../../d4/dd3/a00428.html#a4c316b17708c50426a9b41a4aa9e2b6d">pat::b::b1085::TEST</a></div><div class="ttdeci">TEST(b1085, case1)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l01485">pat_test.cpp:1485</a></div></div>
+<div class="ttc" id="aa00429_html_a541bf694e3e273b2845995f56409314a"><div class="ttname"><a href="../../d4/d53/a00429.html#a541bf694e3e273b2845995f56409314a">pat::b::b1086::TEST</a></div><div class="ttdeci">TEST(b1086, case1)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l01511">pat_test.cpp:1511</a></div></div>
+<div class="ttc" id="aa00429_html_ab4821cd07bd59e48ad3de697dececea6"><div class="ttname"><a href="../../d4/d53/a00429.html#ab4821cd07bd59e48ad3de697dececea6">pat::b::b1086::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l03005">pat.cpp:3005</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
