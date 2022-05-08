@@ -2827,7 +2827,7 @@ namespace pat {
 				return 0;
 			}
 
-			int student::get_score() const const {
+			int student::get_score() const {
 				const int mt = mid_term == -1 ? 0 : mid_term;
 				const int f  = final == -1 ? 0 : final;
 				if(mt > f) {
