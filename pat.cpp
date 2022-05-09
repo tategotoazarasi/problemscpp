@@ -3039,13 +3039,7 @@ namespace pat {
 			int main(istream &cin, ostream &cout) {
 				int n;
 				cin >> n;
-				int ans = 1;
-				for(int i = 1; i <= n; i++) {
-					if(i % 2 == 0 || i % 3 == 0 || i % 5 == 0) {
-						ans++;
-					}
-				}
-				cout << ans;
+				cout << n / 2 + n / 3 + n / 5 - n / 6 - n / 10 - n / 15 + n / 30 + 1;
 				return 0;
 			}
 		}// namespace b1087
