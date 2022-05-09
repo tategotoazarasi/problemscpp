@@ -1509,6 +1509,24 @@ namespace pat {
 				ASSERT_EQ("1480", out.str());
 			}
 		}// namespace b1087
+
+		namespace b1088 {
+			TEST(b1088, case1) {
+				istringstream in("48 3 7");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("48 Ping Cong Gai", out.str());
+			}
+
+			TEST(b1088, case2) {
+				istringstream in("48 11 6");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("No Solution", out.str());
+			}
+		}// namespace b1088
 	}    // namespace b
 
 	namespace a {}

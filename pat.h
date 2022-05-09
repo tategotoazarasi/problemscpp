@@ -554,6 +554,11 @@ namespace pat {
 		namespace b1087 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1088 三人行
+		namespace b1088 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

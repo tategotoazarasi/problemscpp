@@ -3043,6 +3043,63 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1087
+
+		namespace b1088 {
+			int main(istream &cin, ostream &cout) {
+				int m, x, y;
+				cin >> m >> x >> y;
+				int a, b;
+				double c;
+				int a_f;
+				int b_f;
+				double c_f;
+				bool no_solution = true;
+				for(a = 10; a <= 99; a++) {
+					ostringstream oss;
+					oss << a;
+					string str_a = oss.str();
+					stringstream ss;
+					for(auto it = str_a.rbegin(); it != str_a.rend(); ++it) {
+						ss << *it;
+					}
+					ss >> b;
+					c = static_cast<double>(b) / y;
+					if(c * x == abs(a - b)) {
+						no_solution = false;
+						a_f         = a;
+						b_f         = b;
+						c_f         = c;
+					}
+				}
+				if(no_solution) {
+					cout << "No Solution";
+					return 0;
+				}
+				cout << a_f << ' ';
+				if(a_f < m) {
+					cout << "Gai ";
+				} else if(a_f == m) {
+					cout << "Ping ";
+				} else {
+					cout << "Cong ";
+				}
+				if(b_f < m) {
+					cout << "Gai ";
+				} else if(b_f == m) {
+					cout << "Ping ";
+				} else {
+					cout << "Cong ";
+				}
+				if(c_f < m) {
+					cout << "Gai";
+				} else if(c_f == m) {
+					cout << "Ping";
+				} else {
+					cout << "Cong";
+				}
+				return 0;
+			}
+		}// namespace b1088
 	}    // namespace b
 
 	namespace a {}
