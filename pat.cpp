@@ -3034,6 +3034,21 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1086
+
+		namespace b1087 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				int ans = 1;
+				for(int i = 1; i <= n; i++) {
+					if(i % 2 == 0 || i % 3 == 0 || i % 5 == 0) {
+						ans++;
+					}
+				}
+				cout << ans;
+				return 0;
+			}
+		}// namespace b1087
 	}    // namespace b
 
 	namespace a {}

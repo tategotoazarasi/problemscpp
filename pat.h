@@ -549,6 +549,11 @@ namespace pat {
 		namespace b1086 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1087 有多少不同的值
+		namespace b1087 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

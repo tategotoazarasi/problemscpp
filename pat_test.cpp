@@ -1499,6 +1499,16 @@ namespace pat {
 				ASSERT_EQ("53", out.str());
 			}
 		}// namespace b1086
+
+		namespace b1087 {
+			TEST(b1087, case1) {
+				istringstream in("2017");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("1480", out.str());
+			}
+		}// namespace b1087
 	}    // namespace b
 
 	namespace a {}
