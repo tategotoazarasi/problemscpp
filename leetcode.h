@@ -2271,6 +2271,25 @@ namespace leetcode {
 			static int minimumTotal(vector<vector<int>> &triangle);
 		};
 	}// namespace triangle
+
+	/// \brief 235. Lowest Common Ancestor of a Binary Search Tree
+	namespace lowest_common_ancestor_of_a_binary_search_tree {
+		struct TreeNodeP {
+			int val;
+			TreeNodeP *left;
+			TreeNodeP *right;
+			TreeNodeP *parent;
+			TreeNode *mirror;
+			bool ed;
+			TreeNodeP(int x): val(x), left(nullptr), right(nullptr), parent(nullptr), ed(false) {}
+		};
+
+		class Solution {
+		public:
+			TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q);
+			void copy(TreeNode *tn, TreeNodeP *tnp, int low, int high, TreeNodeP **p, TreeNodeP **q);
+		};
+	}// namespace lowest_common_ancestor_of_a_binary_search_tree
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

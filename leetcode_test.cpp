@@ -2653,15 +2653,15 @@ namespace leetcode {
 	namespace find_players_with_zero_or_one_losses {
 		TEST(find_players_with_zero_or_one_losses, case1) {
 			vector<vector<int>> matches      = {{1, 3},
-                                           {2, 3},
-                                           {3, 6},
-                                           {5, 6},
-                                           {5, 7},
-                                           {4, 5},
-                                           {4, 8},
-                                           {4, 9},
-                                           {10, 4},
-                                           {10, 9}};
+			                                    {2, 3},
+			                                    {3, 6},
+			                                    {5, 6},
+			                                    {5, 7},
+			                                    {4, 5},
+			                                    {4, 8},
+			                                    {4, 9},
+			                                    {10, 4},
+			                                    {10, 9}};
 			const vector<vector<int>> output = {{1, 2, 10}, {4, 5, 7, 8}};
 			ASSERT_EQ(output, Solution::findWinners(matches));
 		}
@@ -2879,4 +2879,20 @@ namespace leetcode {
 			ASSERT_EQ(-10, Solution::minimumTotal(triangle));
 		}
 	}// namespace triangle
+
+	namespace lowest_common_ancestor_of_a_binary_search_tree {
+		TEST(lowest_common_ancestor_of_a_binary_search_tree, case1) {
+			TreeNode *root           = new TreeNode(6);
+			root->left               = new TreeNode(2);
+			root->right              = new TreeNode(8);
+			root->left->left         = new TreeNode(0);
+			root->left->right        = new TreeNode(4);
+			root->left->right->left  = new TreeNode(3);
+			root->left->right->right = new TreeNode(5);
+			root->right->left        = new TreeNode(7);
+			root->right->right       = new TreeNode(9);
+			Solution s;
+			ASSERT_EQ(6, s.lowestCommonAncestor(root, root->left, root->right)->val);
+		}
+	}// namespace lowest_common_ancestor_of_a_binary_search_tree
 }// namespace leetcode

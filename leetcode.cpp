@@ -6098,4 +6098,44 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace triangle
+
+	namespace lowest_common_ancestor_of_a_binary_search_tree {
+		TreeNode *Solution::lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
+			TreeNodeP *tnp = new TreeNodeP(root->val);
+			TreeNodeP *pp, *qq;
+			copy(root, tnp, p->val, q->val, &pp, &qq);
+			TreeNodeP *current = pp;
+			while(current != nullptr) {
+				current->ed = true;
+				current     = current->parent;
+			}
+			current = qq;
+			while(current != nullptr) {
+				if(current->ed) {
+					return current->mirror;
+				}
+				current = current->parent;
+			}
+			return root;
+		}
+
+		void Solution::copy(TreeNode *tn, TreeNodeP *tnp, int low, int high, TreeNodeP **p, TreeNodeP **q) {
+			tnp->mirror = tn;
+			if(tn->val == low) {
+				*p = tnp;
+			} else if(tn->val == high) {
+				*q = tnp;
+			}
+			if(tn->left != nullptr) {
+				tnp->left         = new TreeNodeP(tn->left->val);
+				tnp->left->parent = tnp;
+				copy(tn->left, tnp->left, low, high, p, q);
+			}
+			if(tn->right != nullptr) {
+				tnp->right         = new TreeNodeP(tn->right->val);
+				tnp->right->parent = tnp;
+				copy(tn->right, tnp->right, low, high, p, q);
+			}
+		}
+	}// namespace lowest_common_ancestor_of_a_binary_search_tree
 }// namespace leetcode
