@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::reverse_only_letters::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,82 +63,18 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../de/d76/a00134.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d6/d82/a00243.html">reverse_only_letters</a></li><li class="navelem"><a class="el" href="../../da/d4b/a01848.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../de/d76/a00134.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d6/d82/a00243.html">reverse_only_letters</a></li><li class="navelem"><a class="el" href="../../d2/d3e/a01851.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="../../da/d8c/a01845.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::reverse_only_letters::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::reverse_only_letters::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d6/d2d/a00047_source.html">leetcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a58e7f066fd64a33f5ef53c46dfcc515d"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d4b/a01848.html#a58e7f066fd64a33f5ef53c46dfcc515d">reverseOnlyLetters</a> (string s)</td></tr>
-<tr class="separator:a58e7f066fd64a33f5ef53c46dfcc515d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d6/d2d/a00047_source.html">leetcode.h</a> 第 <a class="el" href="../../d6/d2d/a00047_source.html#l01316">1316</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="a58e7f066fd64a33f5ef53c46dfcc515d" name="a58e7f066fd64a33f5ef53c46dfcc515d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58e7f066fd64a33f5ef53c46dfcc515d">&#9670;&nbsp;</a></span>reverseOnlyLetters()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string leetcode::reverse_only_letters::Solution::reverseOnlyLetters </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l03441">3441</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03441" name="l03441"></a><span class="lineno"> 3441</span>                                                    {</div>
-<div class="line"><a id="l03442" name="l03442"></a><span class="lineno"> 3442</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0, j = s.length() - 1; i &lt; j &amp;&amp; i &lt; s.length() &amp;&amp; j &gt;= 0;) {</div>
-<div class="line"><a id="l03443" name="l03443"></a><span class="lineno"> 3443</span>                <span class="keywordflow">if</span>(isalpha(s[i]) != 0 &amp;&amp; isalpha(s[j]) != 0) {</div>
-<div class="line"><a id="l03444" name="l03444"></a><span class="lineno"> 3444</span>                    <span class="keyword">const</span> <span class="keywordtype">char</span> temp = s[i];</div>
-<div class="line"><a id="l03445" name="l03445"></a><span class="lineno"> 3445</span>                    s[i]            = s[j];</div>
-<div class="line"><a id="l03446" name="l03446"></a><span class="lineno"> 3446</span>                    s[j]            = temp;</div>
-<div class="line"><a id="l03447" name="l03447"></a><span class="lineno"> 3447</span>                    i++;</div>
-<div class="line"><a id="l03448" name="l03448"></a><span class="lineno"> 3448</span>                    j--;</div>
-<div class="line"><a id="l03449" name="l03449"></a><span class="lineno"> 3449</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03450" name="l03450"></a><span class="lineno"> 3450</span>                    <span class="keywordflow">while</span>(i &lt; s.length() &amp;&amp; isalpha(s[i]) == 0) {</div>
-<div class="line"><a id="l03451" name="l03451"></a><span class="lineno"> 3451</span>                        i++;</div>
-<div class="line"><a id="l03452" name="l03452"></a><span class="lineno"> 3452</span>                    }</div>
-<div class="line"><a id="l03453" name="l03453"></a><span class="lineno"> 3453</span>                    <span class="keywordflow">while</span>(j &gt;= 0 &amp;&amp; isalpha(s[j]) == 0) {</div>
-<div class="line"><a id="l03454" name="l03454"></a><span class="lineno"> 3454</span>                        j--;</div>
-<div class="line"><a id="l03455" name="l03455"></a><span class="lineno"> 3455</span>                    }</div>
-<div class="line"><a id="l03456" name="l03456"></a><span class="lineno"> 3456</span>                }</div>
-<div class="line"><a id="l03457" name="l03457"></a><span class="lineno"> 3457</span>            }</div>
-<div class="line"><a id="l03458" name="l03458"></a><span class="lineno"> 3458</span>            <span class="keywordflow">return</span> s;</div>
-<div class="line"><a id="l03459" name="l03459"></a><span class="lineno"> 3459</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d4/d8c/a00035_source.html#l01734">leetcode::reverse_only_letters::TEST()</a>.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../d6/d2d/a00047_source.html">leetcode.h</a></li>
-<li><a class="el" href="../../d4/d51/a00017_source.html">leetcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="../../d2/d3e/a01851.html">leetcode::reverse_only_letters::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../d2/d3e/a01851.html#a58e7f066fd64a33f5ef53c46dfcc515d">reverseOnlyLetters</a>(string s)</td><td class="entry"><a class="el" href="../../d2/d3e/a01851.html">leetcode::reverse_only_letters::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
