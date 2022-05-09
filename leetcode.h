@@ -2252,7 +2252,7 @@ namespace leetcode {
 			/// \brief Initializes the object with the integer array nums.
 			explicit NumArray(vector<int> &nums);
 			/// \brief Returns the sum of the elements of nums between indices left and right inclusive (i.e. nums[left] + nums[left + 1] + ... + nums[right]).
-			int sumRange(int left, int right) const;
+			[[nodiscard]] int sumRange(int left, int right) const;
 		};
 	}// namespace range_sum_query_immutable
 
@@ -2279,15 +2279,17 @@ namespace leetcode {
 			TreeNodeP *left;
 			TreeNodeP *right;
 			TreeNodeP *parent;
-			TreeNode *mirror;
+			TreeNode *mirror{};
 			bool ed;
-			TreeNodeP(int x): val(x), left(nullptr), right(nullptr), parent(nullptr), ed(false) {}
+
+			explicit TreeNodeP(int x)
+			    : val(x), left(nullptr), right(nullptr), parent(nullptr), ed(false) {}
 		};
 
 		class Solution {
 		public:
 			TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q);
-			void copy(TreeNode *tn, TreeNodeP *tnp, int low, int high, TreeNodeP **p, TreeNodeP **q);
+			static void copy(TreeNode *tn, TreeNodeP *tnp, int low, int high, TreeNodeP **p, TreeNodeP **q);
 		};
 	}// namespace lowest_common_ancestor_of_a_binary_search_tree
 }// namespace leetcode
