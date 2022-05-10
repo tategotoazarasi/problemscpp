@@ -1569,6 +1569,28 @@ namespace pat {
 				ASSERT_EQ("No Solution", out.str());
 			}
 		}// namespace b1089
+
+		namespace b1090 {
+			TEST(b1089, case1) {
+				istringstream in("6 3\n"
+				                 "20001 20002\n"
+				                 "20003 20004\n"
+				                 "20005 20006\n"
+				                 "20003 20001\n"
+				                 "20005 20004\n"
+				                 "20004 20006\n"
+				                 "4 00001 20004 00002 20003\n"
+				                 "5 98823 20002 20003 20006 10010\n"
+				                 "3 12345 67890 23333");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("No\n"
+				          "Yes\n"
+				          "Yes\n",
+				          out.str());
+			}
+		}// namespace b1090
 	}    // namespace b
 
 	namespace a {}

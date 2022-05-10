@@ -3143,6 +3143,48 @@ namespace pat {
 				return wolf_lie;
 			}
 		}// namespace b1089
+
+		namespace b1090 {
+			int main(istream &cin, ostream &cout) {
+				int n, m;
+				cin >> n >> m;
+				unordered_map<string, unordered_set<string>> um;
+				for(int i = 0; i < n; i++) {
+					string a, b;
+					cin >> a >> b;
+					um[a].insert(b);
+					um[b].insert(a);
+				}
+				for(int i = 0; i < m; i++) {
+					int k;
+					cin >> k;
+					bool ok = true;
+					unordered_set<string> us;
+					for(int j = 0; j < k; j++) {
+						string g;
+						cin >> g;
+						us.insert(g);
+					}
+					for(const auto &g: us) {
+						for(const auto &nc: um[g]) {
+							if(us.count(nc)) {
+								ok = false;
+								break;
+							}
+						}
+						if(!ok) {
+							break;
+						}
+					}
+					if(ok) {
+						cout << "Yes" << endl;
+					} else {
+						cout << "No" << endl;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1090
 	}    // namespace b
 
 	namespace a {}

@@ -566,7 +566,12 @@ namespace pat {
 			bool is_true(const vector<int> &vec, int wolf1, int wolf2);
 			int main(istream &cin, ostream &cout);
 		}// namespace b1089
-	}    // namespace b
+
+		/// \brief 1090 危险品装箱
+		namespace b1090 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}
