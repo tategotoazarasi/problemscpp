@@ -4,6 +4,7 @@
 #include <iostream>
 #include <unordered_set>
 #include <utility>
+#include <vector>
 
 using namespace std;
 
@@ -559,7 +560,13 @@ namespace pat {
 		namespace b1088 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1089 狼人杀-简单版
+		namespace b1089 {
+			bool is_true(const vector<int> &vec, int wolf1, int wolf2);
+			int main(istream &cin, ostream &cout);
+		}// namespace b1089
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}

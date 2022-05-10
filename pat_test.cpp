@@ -1527,6 +1527,48 @@ namespace pat {
 				ASSERT_EQ("No Solution", out.str());
 			}
 		}// namespace b1088
+
+		namespace b1089 {
+			TEST(b1089, case1) {
+				istringstream in("5\n"
+				                 "-2\n"
+				                 "+3\n"
+				                 "-4\n"
+				                 "+5\n"
+				                 "+4");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("1 4", out.str());
+			}
+
+			TEST(b1089, case2) {
+				istringstream in("6\n"
+				                 "+6\n"
+				                 "+3\n"
+				                 "+1\n"
+				                 "-5\n"
+				                 "-2\n"
+				                 "+4");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("1 5", out.str());
+			}
+
+			TEST(b1089, case3) {
+				istringstream in("5\n"
+				                 "-2\n"
+				                 "-3\n"
+				                 "-4\n"
+				                 "-5\n"
+				                 "-1");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("No Solution", out.str());
+			}
+		}// namespace b1089
 	}    // namespace b
 
 	namespace a {}

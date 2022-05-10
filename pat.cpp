@@ -3100,6 +3100,49 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1088
+
+		namespace b1089 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				vector<int> vec(n);
+				for(int i = 0; i < n; i++) {
+					cin >> vec[i];
+				}
+				for(int i = 0; i + 1 < n; i++) {
+					for(int j = i + 1; j < n; j++) {
+						if(is_true(vec, i, j)) {
+							cout << i + 1 << ' ' << j + 1;
+							return 0;
+						}
+					}
+				}
+				cout << "No Solution";
+				return 0;
+			}
+
+			bool is_true(const vector<int> &vec, int wolf1, int wolf2) {
+				int lie_count = 0;
+				bool wolf_lie = false;
+				for(int i = 0; i < vec.size(); i++) {
+					bool is_wolf = vec[i] < 0;
+					int target   = abs(vec[i]) - 1;
+					if((is_wolf && !(target == wolf1 || target == wolf2)) || (!is_wolf && (target == wolf1 || target == wolf2))) {
+						lie_count++;
+						if(i == wolf1 || i == wolf2) {
+							if(wolf_lie) {
+								return false;
+							}
+							wolf_lie = true;
+						}
+					}
+					if(lie_count > 2) {
+						return false;
+					}
+				}
+				return wolf_lie;
+			}
+		}// namespace b1089
 	}    // namespace b
 
 	namespace a {}
