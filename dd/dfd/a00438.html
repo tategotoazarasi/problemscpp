@@ -112,46 +112,48 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">pat.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l03148">3148</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03148" name="l03148"></a><span class="lineno"> 3148</span>                                                  {</div>
-<div class="line"><a id="l03149" name="l03149"></a><span class="lineno"> 3149</span>                <span class="keywordtype">int</span> n, m;</div>
-<div class="line"><a id="l03150" name="l03150"></a><span class="lineno"> 3150</span>                cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l03151" name="l03151"></a><span class="lineno"> 3151</span>                unordered_map&lt;string, unordered_set&lt;string&gt;&gt; um;</div>
-<div class="line"><a id="l03152" name="l03152"></a><span class="lineno"> 3152</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l03153" name="l03153"></a><span class="lineno"> 3153</span>                    <span class="keywordtype">string</span> a, b;</div>
-<div class="line"><a id="l03154" name="l03154"></a><span class="lineno"> 3154</span>                    cin &gt;&gt; a &gt;&gt; b;</div>
-<div class="line"><a id="l03155" name="l03155"></a><span class="lineno"> 3155</span>                    um[a].insert(b);</div>
-<div class="line"><a id="l03156" name="l03156"></a><span class="lineno"> 3156</span>                    um[b].insert(a);</div>
-<div class="line"><a id="l03157" name="l03157"></a><span class="lineno"> 3157</span>                }</div>
-<div class="line"><a id="l03158" name="l03158"></a><span class="lineno"> 3158</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l03159" name="l03159"></a><span class="lineno"> 3159</span>                    <span class="keywordtype">int</span> k;</div>
-<div class="line"><a id="l03160" name="l03160"></a><span class="lineno"> 3160</span>                    cin &gt;&gt; k;</div>
-<div class="line"><a id="l03161" name="l03161"></a><span class="lineno"> 3161</span>                    <span class="keywordtype">bool</span> ok = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l03162" name="l03162"></a><span class="lineno"> 3162</span>                    unordered_set&lt;string&gt; us;</div>
-<div class="line"><a id="l03163" name="l03163"></a><span class="lineno"> 3163</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; k; j++) {</div>
-<div class="line"><a id="l03164" name="l03164"></a><span class="lineno"> 3164</span>                        <span class="keywordtype">string</span> g;</div>
-<div class="line"><a id="l03165" name="l03165"></a><span class="lineno"> 3165</span>                        cin &gt;&gt; g;</div>
-<div class="line"><a id="l03166" name="l03166"></a><span class="lineno"> 3166</span>                        us.insert(g);</div>
-<div class="line"><a id="l03167" name="l03167"></a><span class="lineno"> 3167</span>                    }</div>
-<div class="line"><a id="l03168" name="l03168"></a><span class="lineno"> 3168</span>                    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;g: us) {</div>
-<div class="line"><a id="l03169" name="l03169"></a><span class="lineno"> 3169</span>                        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;nc: um[g]) {</div>
-<div class="line"><a id="l03170" name="l03170"></a><span class="lineno"> 3170</span>                            <span class="keywordflow">if</span>(us.count(nc)) {</div>
-<div class="line"><a id="l03171" name="l03171"></a><span class="lineno"> 3171</span>                                ok = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l03172" name="l03172"></a><span class="lineno"> 3172</span>                                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03173" name="l03173"></a><span class="lineno"> 3173</span>                            }</div>
-<div class="line"><a id="l03174" name="l03174"></a><span class="lineno"> 3174</span>                        }</div>
-<div class="line"><a id="l03175" name="l03175"></a><span class="lineno"> 3175</span>                        <span class="keywordflow">if</span>(!ok) {</div>
-<div class="line"><a id="l03176" name="l03176"></a><span class="lineno"> 3176</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l03177" name="l03177"></a><span class="lineno"> 3177</span>                        }</div>
-<div class="line"><a id="l03178" name="l03178"></a><span class="lineno"> 3178</span>                    }</div>
-<div class="line"><a id="l03179" name="l03179"></a><span class="lineno"> 3179</span>                    <span class="keywordflow">if</span>(ok) {</div>
-<div class="line"><a id="l03180" name="l03180"></a><span class="lineno"> 3180</span>                        cout &lt;&lt; <span class="stringliteral">&quot;Yes&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l03181" name="l03181"></a><span class="lineno"> 3181</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03182" name="l03182"></a><span class="lineno"> 3182</span>                        cout &lt;&lt; <span class="stringliteral">&quot;No&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l03183" name="l03183"></a><span class="lineno"> 3183</span>                    }</div>
-<div class="line"><a id="l03184" name="l03184"></a><span class="lineno"> 3184</span>                }</div>
-<div class="line"><a id="l03185" name="l03185"></a><span class="lineno"> 3185</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l03186" name="l03186"></a><span class="lineno"> 3186</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">pat.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l03150">3150</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03150" name="l03150"></a><span class="lineno"> 3150</span>                                                  {</div>
+<div class="line"><a id="l03151" name="l03151"></a><span class="lineno"> 3151</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l03152" name="l03152"></a><span class="lineno"> 3152</span>                <span class="keywordtype">int</span> m;</div>
+<div class="line"><a id="l03153" name="l03153"></a><span class="lineno"> 3153</span>                cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l03154" name="l03154"></a><span class="lineno"> 3154</span>                unordered_map&lt;string, unordered_set&lt;string&gt;&gt; um;</div>
+<div class="line"><a id="l03155" name="l03155"></a><span class="lineno"> 3155</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l03156" name="l03156"></a><span class="lineno"> 3156</span>                    <span class="keywordtype">string</span> a;</div>
+<div class="line"><a id="l03157" name="l03157"></a><span class="lineno"> 3157</span>                    <span class="keywordtype">string</span> b;</div>
+<div class="line"><a id="l03158" name="l03158"></a><span class="lineno"> 3158</span>                    cin &gt;&gt; a &gt;&gt; b;</div>
+<div class="line"><a id="l03159" name="l03159"></a><span class="lineno"> 3159</span>                    um[a].insert(b);</div>
+<div class="line"><a id="l03160" name="l03160"></a><span class="lineno"> 3160</span>                    um[b].insert(a);</div>
+<div class="line"><a id="l03161" name="l03161"></a><span class="lineno"> 3161</span>                }</div>
+<div class="line"><a id="l03162" name="l03162"></a><span class="lineno"> 3162</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l03163" name="l03163"></a><span class="lineno"> 3163</span>                    <span class="keywordtype">int</span> k;</div>
+<div class="line"><a id="l03164" name="l03164"></a><span class="lineno"> 3164</span>                    cin &gt;&gt; k;</div>
+<div class="line"><a id="l03165" name="l03165"></a><span class="lineno"> 3165</span>                    <span class="keywordtype">bool</span> ok = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l03166" name="l03166"></a><span class="lineno"> 3166</span>                    unordered_set&lt;string&gt; us;</div>
+<div class="line"><a id="l03167" name="l03167"></a><span class="lineno"> 3167</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; k; j++) {</div>
+<div class="line"><a id="l03168" name="l03168"></a><span class="lineno"> 3168</span>                        <span class="keywordtype">string</span> g;</div>
+<div class="line"><a id="l03169" name="l03169"></a><span class="lineno"> 3169</span>                        cin &gt;&gt; g;</div>
+<div class="line"><a id="l03170" name="l03170"></a><span class="lineno"> 3170</span>                        us.insert(g);</div>
+<div class="line"><a id="l03171" name="l03171"></a><span class="lineno"> 3171</span>                    }</div>
+<div class="line"><a id="l03172" name="l03172"></a><span class="lineno"> 3172</span>                    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;g: us) {</div>
+<div class="line"><a id="l03173" name="l03173"></a><span class="lineno"> 3173</span>                        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;nc: um[g]) {</div>
+<div class="line"><a id="l03174" name="l03174"></a><span class="lineno"> 3174</span>                            <span class="keywordflow">if</span>(us.contains(nc) != 0u) {</div>
+<div class="line"><a id="l03175" name="l03175"></a><span class="lineno"> 3175</span>                                ok = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l03176" name="l03176"></a><span class="lineno"> 3176</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l03177" name="l03177"></a><span class="lineno"> 3177</span>                            }</div>
+<div class="line"><a id="l03178" name="l03178"></a><span class="lineno"> 3178</span>                        }</div>
+<div class="line"><a id="l03179" name="l03179"></a><span class="lineno"> 3179</span>                        <span class="keywordflow">if</span>(!ok) {</div>
+<div class="line"><a id="l03180" name="l03180"></a><span class="lineno"> 3180</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l03181" name="l03181"></a><span class="lineno"> 3181</span>                        }</div>
+<div class="line"><a id="l03182" name="l03182"></a><span class="lineno"> 3182</span>                    }</div>
+<div class="line"><a id="l03183" name="l03183"></a><span class="lineno"> 3183</span>                    <span class="keywordflow">if</span>(ok) {</div>
+<div class="line"><a id="l03184" name="l03184"></a><span class="lineno"> 3184</span>                        cout &lt;&lt; <span class="stringliteral">&quot;Yes&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l03185" name="l03185"></a><span class="lineno"> 3185</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l03186" name="l03186"></a><span class="lineno"> 3186</span>                        cout &lt;&lt; <span class="stringliteral">&quot;No&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l03187" name="l03187"></a><span class="lineno"> 3187</span>                    }</div>
+<div class="line"><a id="l03188" name="l03188"></a><span class="lineno"> 3188</span>                }</div>
+<div class="line"><a id="l03189" name="l03189"></a><span class="lineno"> 3189</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l03190" name="l03190"></a><span class="lineno"> 3190</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l01574">TEST()</a>.</p>
 
@@ -205,7 +207,7 @@ $(function() {
 <div class="line"><a id="l01592" name="l01592"></a><span class="lineno"> 1592</span>            }</div>
 <div class="ttc" id="aa00059_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d3/d8b/a00059.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l03148">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l03150">main()</a>.</p>
 
 </div>
 </div>
