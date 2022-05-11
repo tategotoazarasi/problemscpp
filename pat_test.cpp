@@ -1605,6 +1605,21 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1091
+
+		namespace b1092 {
+			TEST(b1092, case1) {
+				istringstream in("5 3\n"
+				                 "1001 992 0 233 6\n"
+				                 "8 0 2018 0 2008\n"
+				                 "36 18 0 1024 4");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("2018\n"
+				          "3 5",
+				          out.str());
+			}
+		}// namespace b1092
 	}    // namespace b
 
 	namespace a {}

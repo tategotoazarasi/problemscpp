@@ -3214,6 +3214,40 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1091
+
+		namespace b1092 {
+			int main(istream &cin, ostream &cout) {
+				int n, m;
+				cin >> n >> m;
+				vector<int> sales(n, 0);
+				for(int j = 0; j < m; j++) {
+					for(int i = 0; i < n; i++) {
+						unsigned sale;
+						cin >> sale;
+						sales[i] += sale;
+					}
+				}
+				int maximum = 0;
+				for(auto sale: sales) {
+					maximum = max(maximum, sale);
+				}
+				cout << maximum << endl;
+				int i = 0;
+				for(i = 0; i < n; i++) {
+					if(sales[i] == maximum) {
+						cout << i + 1;
+						break;
+					}
+				}
+				i++;
+				for(; i < n; i++) {
+					if(sales[i] == maximum) {
+						cout << ' ' << i + 1;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1092
 	}    // namespace b
 
 	namespace a {}

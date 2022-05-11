@@ -576,6 +576,11 @@ namespace pat {
 		namespace b1091 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1092 最好吃的月饼
+		namespace b1092 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
