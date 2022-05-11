@@ -2040,5 +2040,16 @@ namespace acwing {
 	namespace acwing837 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 240. 食物链
+	namespace acwing240 {
+		struct UnionFind {
+			UnionFind(int n);
+			vector<int> parent;
+			vector<int> dist;
+			int find(int x);
+		};
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing240
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

@@ -3287,4 +3287,21 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing837
+
+	namespace acwing240 {
+		TEST(acwing240, case1) {
+			istringstream in("100 7\n"
+			                 "1 101 1 \n"
+			                 "2 1 2\n"
+			                 "2 2 3 \n"
+			                 "2 3 3 \n"
+			                 "1 1 3 \n"
+			                 "2 3 1 \n"
+			                 "1 5 5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3", ans);
+		}
+	}// namespace acwing240
 }// namespace acwing

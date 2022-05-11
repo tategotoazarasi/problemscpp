@@ -7024,4 +7024,70 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing837
+
+	namespace acwing240 {
+		int main(istream &cin, ostream &cout) {
+			int n, k;
+			cin >> n >> k;
+			UnionFind uf(n);
+			int ans = 0;
+			while(k--) {
+				char d;
+				int x, y;
+				cin >> d >> x >> y;
+				if(x > n || y > n) {
+					ans++;
+					continue;
+				}
+				x--;
+				y--;
+				int px = uf.find(x);
+				int py = uf.find(y);
+				if(d == '1') {
+					if(px == py) {
+						if((uf.dist[x] - uf.dist[y]) % 3 != 0) {
+							ans++;
+							continue;
+						}
+					} else {
+						uf.parent[px] = py;
+						uf.dist[px]   = uf.dist[y] - uf.dist[x];
+					}
+				} else {
+					if(x == y) {
+						ans++;
+						continue;
+					}
+					if(px == py) {
+						if((uf.dist[x] - uf.dist[y] - 1) % 3 != 0) {
+							ans++;
+							continue;
+						}
+					} else {
+						uf.parent[px] = py;
+						uf.dist[px]   = uf.dist[y] - uf.dist[x] + 1;
+					}
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+
+		UnionFind::UnionFind(int n) {
+			parent = vector<int>(n);
+			dist   = vector<int>(n, 0);
+			for(int i = 0; i < n; i++) {
+				parent[i] = i;
+			}
+		}
+
+		int UnionFind::find(int x) {
+			if(parent[x] != x) {
+				int tmp = find(parent[x]);
+				dist[x] += dist[parent[x]];
+				parent[x] = tmp;
+			}
+			return parent[x];
+		}
+	}// namespace acwing240
 }// namespace acwing
