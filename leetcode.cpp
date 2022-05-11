@@ -6101,8 +6101,9 @@ namespace leetcode {
 
 	namespace lowest_common_ancestor_of_a_binary_search_tree {
 		TreeNode *Solution::lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
-			TreeNodeP *tnp = new TreeNodeP(root->val);
-			TreeNodeP *pp, *qq;
+			auto *const tnp = new TreeNodeP(root->val);
+			TreeNodeP *pp;
+			TreeNodeP *qq;
 			copy(root, tnp, p->val, q->val, &pp, &qq);
 			TreeNodeP *current = pp;
 			while(current != nullptr) {

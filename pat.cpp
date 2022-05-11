@@ -2196,7 +2196,7 @@ namespace pat {
 				int n;
 				cin >> n;
 				double ans = 0;
-				while((n--) != 0) {
+				while(n-- != 0) {
 					int a;
 					int b;
 					cin >> a >> b;
@@ -2212,7 +2212,7 @@ namespace pat {
 				int n;
 				cin >> n;
 				set<int> s;
-				while((n--) != 0) {
+				while(n-- != 0) {
 					string str;
 					cin >> str;
 					int sum = 0;
@@ -2443,7 +2443,7 @@ namespace pat {
 				int t;
 				int k;
 				cin >> t >> k;
-				while((k--) != 0) {
+				while(k-- != 0) {
 					int n1;
 					int b;
 					int tt;
@@ -2477,7 +2477,7 @@ namespace pat {
 				unordered_set<string> items;
 				int stu_cnt  = 0;
 				int item_cnt = 0;
-				while((m--) != 0) {
+				while(m-- != 0) {
 					string item;
 					cin >> item;
 					items.insert(item);
@@ -2850,7 +2850,7 @@ namespace pat {
 				cin >> n;
 				char str[1024];
 				cin.getline(str, 1024);
-				while((n--) != 0) {
+				while(n-- != 0) {
 					cin.getline(str, 1024);
 					auto password = string(str);
 					bool alpha    = false;
@@ -3046,15 +3046,17 @@ namespace pat {
 
 		namespace b1088 {
 			int main(istream &cin, ostream &cout) {
-				int m, x, y;
+				int m;
+				int x;
+				int y;
 				cin >> m >> x >> y;
-				int a, b;
-				double c;
+				int a;
+				int b;
 				int a_f;
 				int b_f;
 				double c_f;
 				bool no_solution = true;
-				for(a = 10; a <= 99; a++) {
+				for(int a = 10; a <= 99; a++) {
 					ostringstream oss;
 					oss << a;
 					string str_a = oss.str();
@@ -3063,7 +3065,7 @@ namespace pat {
 						ss << *it;
 					}
 					ss >> b;
-					c = static_cast<double>(b) / y;
+					double c = static_cast<double>(b) / y;
 					if(c * x == abs(a - b)) {
 						no_solution = false;
 						a_f         = a;
@@ -3125,9 +3127,9 @@ namespace pat {
 				int lie_count = 0;
 				bool wolf_lie = false;
 				for(int i = 0; i < vec.size(); i++) {
-					bool is_wolf = vec[i] < 0;
-					int target   = abs(vec[i]) - 1;
-					if((is_wolf && !(target == wolf1 || target == wolf2)) || (!is_wolf && (target == wolf1 || target == wolf2))) {
+					const bool is_wolf = vec[i] < 0;
+					const int target   = abs(vec[i]) - 1;
+					if(is_wolf && !(target == wolf1 || target == wolf2) || !is_wolf && (target == wolf1 || target == wolf2)) {
 						lie_count++;
 						if(i == wolf1 || i == wolf2) {
 							if(wolf_lie) {
@@ -3146,11 +3148,13 @@ namespace pat {
 
 		namespace b1090 {
 			int main(istream &cin, ostream &cout) {
-				int n, m;
+				int n;
+				int m;
 				cin >> n >> m;
 				unordered_map<string, unordered_set<string>> um;
 				for(int i = 0; i < n; i++) {
-					string a, b;
+					string a;
+					string b;
 					cin >> a >> b;
 					um[a].insert(b);
 					um[b].insert(a);
@@ -3167,7 +3171,7 @@ namespace pat {
 					}
 					for(const auto &g: us) {
 						for(const auto &nc: um[g]) {
-							if(us.count(nc)) {
+							if(us.contains(nc) != 0u) {
 								ok = false;
 								break;
 							}
