@@ -3185,6 +3185,35 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1090
+
+		namespace b1091 {
+			int main(istream &cin, ostream &cout) {
+				int m;
+				cin >> m;
+				while(m--) {
+					unsigned k;
+					cin >> k;
+					unsigned k2 = k * k;
+					unsigned q  = 1;
+					while(k / q != 0) {
+						q *= 10;
+					}
+					bool ok = false;
+					for(unsigned n = 1; n < 10; n++) {
+						unsigned nk2 = n * k2;
+						if(nk2 % q == k) {
+							ok = true;
+							cout << n << ' ' << nk2 << endl;
+							break;
+						}
+					}
+					if(!ok) {
+						cout << "No" << endl;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1091
 	}    // namespace b
 
 	namespace a {}

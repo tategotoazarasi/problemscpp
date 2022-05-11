@@ -571,6 +571,11 @@ namespace pat {
 		namespace b1090 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1091 N-自守数
+		namespace b1091 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
