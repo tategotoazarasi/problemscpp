@@ -2025,5 +2025,15 @@ namespace acwing {
 	namespace acwing1995 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 143. 最大异或对
+	namespace acwing143 {
+		struct TrieNode {
+			TrieNode *next[2] = {nullptr, nullptr};
+			int val;
+			void insert(const string &str, int i);
+		};
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing143
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

@@ -5773,8 +5773,8 @@ namespace acwing {
 	namespace acwing1695 {
 		int main(istream &cin, ostream &cout) {
 			bool nuts[3][3]         = {{true, false, false},
-                               {false, true, false},
-                               {false, false, true}};
+			                           {false, true, false},
+			                           {false, false, true}};
 			unsigned short score[3] = {0, 0, 0};
 			unsigned short ans      = 0;
 			unsigned short n;
@@ -6952,4 +6952,51 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1995
+
+	namespace acwing143 {
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			vector<string> vec(n);
+			TrieNode tn;
+			for(int j = 0; j < n; j++) {
+				unsigned a;
+				cin >> a;
+				ostringstream oss;
+				for(int i = 30; i >= 0; i--) {
+					oss << ((a & (1 << i)) ? '1' : '0');
+				}
+				string str = oss.str();
+				vec[j]     = str;
+				tn.insert(str, 0);
+			}
+			unsigned maximum = 0;
+			for(const auto &str: vec) {
+				TrieNode *current = &tn;
+				unsigned ans      = 0;
+				for(int i = 0; i <= 30; i++) {
+					ans <<= 1;
+					if(current->next[!(str[i] - '0')] != nullptr) {
+						current = current->next[!(str[i] - '0')];
+						ans += 1;
+					} else {
+						current = current->next[str[i] - '0'];
+					}
+				}
+				maximum = max(maximum, ans);
+			}
+			cout << maximum;
+			return 0;
+		}
+
+		void TrieNode::insert(const string &str, int i) {
+			if(this->next[str[i] - '0'] == nullptr) {
+				this->next[str[i] - '0']      = new TrieNode();
+				this->next[str[i] - '0']->val = str[i] - '0';
+			}
+			if(i + 1 < str.length()) {
+				this->next[str[i] - '0']->insert(str, i + 1);
+			}
+		}
+	}// namespace acwing143
 }// namespace acwing
