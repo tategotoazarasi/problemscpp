@@ -117,46 +117,46 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l05897">5897</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l05897" name="l05897"></a><span class="lineno"> 5897</span>                                              {</div>
-<div class="line"><a id="l05898" name="l05898"></a><span class="lineno"> 5898</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l05899" name="l05899"></a><span class="lineno"> 5899</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k;</div>
-<div class="line"><a id="l05900" name="l05900"></a><span class="lineno"> 5900</span>            cin &gt;&gt; n &gt;&gt; k;</div>
-<div class="line"><a id="l05901" name="l05901"></a><span class="lineno"> 5901</span>            vector&lt;unsigned int&gt; a(n);</div>
-<div class="line"><a id="l05902" name="l05902"></a><span class="lineno"> 5902</span>            vector&lt;vector&lt;pair&lt;unsigned int, unsigned int&gt;&gt;&gt; factors(n);</div>
-<div class="line"><a id="l05903" name="l05903"></a><span class="lineno"> 5903</span>            map&lt;vector&lt;pair&lt;unsigned int, unsigned int&gt;&gt;, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&gt; factor_status_count;</div>
-<div class="line"><a id="l05904" name="l05904"></a><span class="lineno"> 5904</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l05905" name="l05905"></a><span class="lineno"> 5905</span>                cin &gt;&gt; a[i];</div>
-<div class="line"><a id="l05906" name="l05906"></a><span class="lineno"> 5906</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> factor = 2; factor * factor &lt;= a[i]; factor++) {</div>
-<div class="line"><a id="l05907" name="l05907"></a><span class="lineno"> 5907</span>                    <span class="keywordflow">if</span>(a[i] % factor != 0U) {</div>
-<div class="line"><a id="l05908" name="l05908"></a><span class="lineno"> 5908</span>                        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l05909" name="l05909"></a><span class="lineno"> 5909</span>                    }</div>
-<div class="line"><a id="l05910" name="l05910"></a><span class="lineno"> 5910</span>                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><a id="l05911" name="l05911"></a><span class="lineno"> 5911</span>                    <span class="keywordflow">while</span>(a[i] % factor == 0) {</div>
-<div class="line"><a id="l05912" name="l05912"></a><span class="lineno"> 5912</span>                        a[i] /= factor;</div>
-<div class="line"><a id="l05913" name="l05913"></a><span class="lineno"> 5913</span>                        ++count;</div>
-<div class="line"><a id="l05914" name="l05914"></a><span class="lineno"> 5914</span>                    }</div>
-<div class="line"><a id="l05915" name="l05915"></a><span class="lineno"> 5915</span>                    count %= k;</div>
-<div class="line"><a id="l05916" name="l05916"></a><span class="lineno"> 5916</span>                    <span class="keywordflow">if</span>(count != 0) {</div>
-<div class="line"><a id="l05917" name="l05917"></a><span class="lineno"> 5917</span>                        factors[i].emplace_back(factor, count);</div>
-<div class="line"><a id="l05918" name="l05918"></a><span class="lineno"> 5918</span>                    }</div>
-<div class="line"><a id="l05919" name="l05919"></a><span class="lineno"> 5919</span>                }</div>
-<div class="line"><a id="l05920" name="l05920"></a><span class="lineno"> 5920</span>                <span class="keywordflow">if</span>(a[i] != 1) {</div>
-<div class="line"><a id="l05921" name="l05921"></a><span class="lineno"> 5921</span>                    factors[i].emplace_back(a[i], 1);</div>
-<div class="line"><a id="l05922" name="l05922"></a><span class="lineno"> 5922</span>                }</div>
-<div class="line"><a id="l05923" name="l05923"></a><span class="lineno"> 5923</span>            }</div>
-<div class="line"><a id="l05924" name="l05924"></a><span class="lineno"> 5924</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans = 0;</div>
-<div class="line"><a id="l05925" name="l05925"></a><span class="lineno"> 5925</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l05926" name="l05926"></a><span class="lineno"> 5926</span>                vector&lt;pair&lt;unsigned int, unsigned int&gt;&gt; factor_status;</div>
-<div class="line"><a id="l05927" name="l05927"></a><span class="lineno"> 5927</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> [factor, count]: factors[i]) {</div>
-<div class="line"><a id="l05928" name="l05928"></a><span class="lineno"> 5928</span>                    factor_status.emplace_back(factor, k - count);</div>
-<div class="line"><a id="l05929" name="l05929"></a><span class="lineno"> 5929</span>                }</div>
-<div class="line"><a id="l05930" name="l05930"></a><span class="lineno"> 5930</span>                ans += factor_status_count[factor_status];</div>
-<div class="line"><a id="l05931" name="l05931"></a><span class="lineno"> 5931</span>                ++factor_status_count[factors[i]];</div>
-<div class="line"><a id="l05932" name="l05932"></a><span class="lineno"> 5932</span>            }</div>
-<div class="line"><a id="l05933" name="l05933"></a><span class="lineno"> 5933</span>            cout &lt;&lt; ans;</div>
-<div class="line"><a id="l05934" name="l05934"></a><span class="lineno"> 5934</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l05935" name="l05935"></a><span class="lineno"> 5935</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l05898">5898</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l05898" name="l05898"></a><span class="lineno"> 5898</span>                                              {</div>
+<div class="line"><a id="l05899" name="l05899"></a><span class="lineno"> 5899</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l05900" name="l05900"></a><span class="lineno"> 5900</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k;</div>
+<div class="line"><a id="l05901" name="l05901"></a><span class="lineno"> 5901</span>            cin &gt;&gt; n &gt;&gt; k;</div>
+<div class="line"><a id="l05902" name="l05902"></a><span class="lineno"> 5902</span>            vector&lt;unsigned int&gt; a(n);</div>
+<div class="line"><a id="l05903" name="l05903"></a><span class="lineno"> 5903</span>            vector&lt;vector&lt;pair&lt;unsigned int, unsigned int&gt;&gt;&gt; factors(n);</div>
+<div class="line"><a id="l05904" name="l05904"></a><span class="lineno"> 5904</span>            map&lt;vector&lt;pair&lt;unsigned int, unsigned int&gt;&gt;, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&gt; factor_status_count;</div>
+<div class="line"><a id="l05905" name="l05905"></a><span class="lineno"> 5905</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l05906" name="l05906"></a><span class="lineno"> 5906</span>                cin &gt;&gt; a[i];</div>
+<div class="line"><a id="l05907" name="l05907"></a><span class="lineno"> 5907</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> factor = 2; factor * factor &lt;= a[i]; factor++) {</div>
+<div class="line"><a id="l05908" name="l05908"></a><span class="lineno"> 5908</span>                    <span class="keywordflow">if</span>(a[i] % factor != 0U) {</div>
+<div class="line"><a id="l05909" name="l05909"></a><span class="lineno"> 5909</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l05910" name="l05910"></a><span class="lineno"> 5910</span>                    }</div>
+<div class="line"><a id="l05911" name="l05911"></a><span class="lineno"> 5911</span>                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l05912" name="l05912"></a><span class="lineno"> 5912</span>                    <span class="keywordflow">while</span>(a[i] % factor == 0) {</div>
+<div class="line"><a id="l05913" name="l05913"></a><span class="lineno"> 5913</span>                        a[i] /= factor;</div>
+<div class="line"><a id="l05914" name="l05914"></a><span class="lineno"> 5914</span>                        ++count;</div>
+<div class="line"><a id="l05915" name="l05915"></a><span class="lineno"> 5915</span>                    }</div>
+<div class="line"><a id="l05916" name="l05916"></a><span class="lineno"> 5916</span>                    count %= k;</div>
+<div class="line"><a id="l05917" name="l05917"></a><span class="lineno"> 5917</span>                    <span class="keywordflow">if</span>(count != 0) {</div>
+<div class="line"><a id="l05918" name="l05918"></a><span class="lineno"> 5918</span>                        factors[i].emplace_back(factor, count);</div>
+<div class="line"><a id="l05919" name="l05919"></a><span class="lineno"> 5919</span>                    }</div>
+<div class="line"><a id="l05920" name="l05920"></a><span class="lineno"> 5920</span>                }</div>
+<div class="line"><a id="l05921" name="l05921"></a><span class="lineno"> 5921</span>                <span class="keywordflow">if</span>(a[i] != 1) {</div>
+<div class="line"><a id="l05922" name="l05922"></a><span class="lineno"> 5922</span>                    factors[i].emplace_back(a[i], 1);</div>
+<div class="line"><a id="l05923" name="l05923"></a><span class="lineno"> 5923</span>                }</div>
+<div class="line"><a id="l05924" name="l05924"></a><span class="lineno"> 5924</span>            }</div>
+<div class="line"><a id="l05925" name="l05925"></a><span class="lineno"> 5925</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans = 0;</div>
+<div class="line"><a id="l05926" name="l05926"></a><span class="lineno"> 5926</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l05927" name="l05927"></a><span class="lineno"> 5927</span>                vector&lt;pair&lt;unsigned int, unsigned int&gt;&gt; factor_status;</div>
+<div class="line"><a id="l05928" name="l05928"></a><span class="lineno"> 5928</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> [factor, count]: factors[i]) {</div>
+<div class="line"><a id="l05929" name="l05929"></a><span class="lineno"> 5929</span>                    factor_status.emplace_back(factor, k - count);</div>
+<div class="line"><a id="l05930" name="l05930"></a><span class="lineno"> 5930</span>                }</div>
+<div class="line"><a id="l05931" name="l05931"></a><span class="lineno"> 5931</span>                ans += factor_status_count[factor_status];</div>
+<div class="line"><a id="l05932" name="l05932"></a><span class="lineno"> 5932</span>                ++factor_status_count[factors[i]];</div>
+<div class="line"><a id="l05933" name="l05933"></a><span class="lineno"> 5933</span>            }</div>
+<div class="line"><a id="l05934" name="l05934"></a><span class="lineno"> 5934</span>            cout &lt;&lt; ans;</div>
+<div class="line"><a id="l05935" name="l05935"></a><span class="lineno"> 5935</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l05936" name="l05936"></a><span class="lineno"> 5936</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l02790">TEST()</a>.</p>
 
@@ -198,7 +198,7 @@ $(function() {
 <div class="line"><a id="l02796" name="l02796"></a><span class="lineno"> 2796</span>        }</div>
 <div class="ttc" id="aa00059_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d3/d8b/a00059.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05897">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05898">main()</a>.</p>
 
 </div>
 </div>

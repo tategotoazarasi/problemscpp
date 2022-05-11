@@ -116,26 +116,26 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l05612">5612</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l05612" name="l05612"></a><span class="lineno"> 5612</span>                                              {</div>
-<div class="line"><a id="l05613" name="l05613"></a><span class="lineno"> 5613</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> n;</div>
-<div class="line"><a id="l05614" name="l05614"></a><span class="lineno"> 5614</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> s;</div>
-<div class="line"><a id="l05615" name="l05615"></a><span class="lineno"> 5615</span>            cin &gt;&gt; n &gt;&gt; s;</div>
-<div class="line"><a id="l05616" name="l05616"></a><span class="lineno"> 5616</span>            vector&lt;long long&gt; a(n);</div>
-<div class="line"><a id="l05617" name="l05617"></a><span class="lineno"> 5617</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> a_sum = 0;</div>
-<div class="line"><a id="l05618" name="l05618"></a><span class="lineno"> 5618</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l05619" name="l05619"></a><span class="lineno"> 5619</span>                cin &gt;&gt; a[i];</div>
-<div class="line"><a id="l05620" name="l05620"></a><span class="lineno"> 5620</span>                a_sum += a[i];</div>
-<div class="line"><a id="l05621" name="l05621"></a><span class="lineno"> 5621</span>            }</div>
-<div class="line"><a id="l05622" name="l05622"></a><span class="lineno"> 5622</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l05623" name="l05623"></a><span class="lineno"> 5623</span>                <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> low  = max(<span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(1), s - (a_sum - a[i]));</div>
-<div class="line"><a id="l05624" name="l05624"></a><span class="lineno"> 5624</span>                <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> high = min(a[i], s - (n - 1));</div>
-<div class="line"><a id="l05625" name="l05625"></a><span class="lineno"> 5625</span>                <span class="keywordflow">if</span>(low &lt;= high) {</div>
-<div class="line"><a id="l05626" name="l05626"></a><span class="lineno"> 5626</span>                    cout &lt;&lt; a[i] - (high - low + 1) &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a id="l05627" name="l05627"></a><span class="lineno"> 5627</span>                }</div>
-<div class="line"><a id="l05628" name="l05628"></a><span class="lineno"> 5628</span>            }</div>
-<div class="line"><a id="l05629" name="l05629"></a><span class="lineno"> 5629</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l05630" name="l05630"></a><span class="lineno"> 5630</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l05613">5613</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l05613" name="l05613"></a><span class="lineno"> 5613</span>                                              {</div>
+<div class="line"><a id="l05614" name="l05614"></a><span class="lineno"> 5614</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> n;</div>
+<div class="line"><a id="l05615" name="l05615"></a><span class="lineno"> 5615</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> s;</div>
+<div class="line"><a id="l05616" name="l05616"></a><span class="lineno"> 5616</span>            cin &gt;&gt; n &gt;&gt; s;</div>
+<div class="line"><a id="l05617" name="l05617"></a><span class="lineno"> 5617</span>            vector&lt;long long&gt; a(n);</div>
+<div class="line"><a id="l05618" name="l05618"></a><span class="lineno"> 5618</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> a_sum = 0;</div>
+<div class="line"><a id="l05619" name="l05619"></a><span class="lineno"> 5619</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l05620" name="l05620"></a><span class="lineno"> 5620</span>                cin &gt;&gt; a[i];</div>
+<div class="line"><a id="l05621" name="l05621"></a><span class="lineno"> 5621</span>                a_sum += a[i];</div>
+<div class="line"><a id="l05622" name="l05622"></a><span class="lineno"> 5622</span>            }</div>
+<div class="line"><a id="l05623" name="l05623"></a><span class="lineno"> 5623</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l05624" name="l05624"></a><span class="lineno"> 5624</span>                <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> low  = max(<span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(1), s - (a_sum - a[i]));</div>
+<div class="line"><a id="l05625" name="l05625"></a><span class="lineno"> 5625</span>                <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> high = min(a[i], s - (n - 1));</div>
+<div class="line"><a id="l05626" name="l05626"></a><span class="lineno"> 5626</span>                <span class="keywordflow">if</span>(low &lt;= high) {</div>
+<div class="line"><a id="l05627" name="l05627"></a><span class="lineno"> 5627</span>                    cout &lt;&lt; a[i] - (high - low + 1) &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a id="l05628" name="l05628"></a><span class="lineno"> 5628</span>                }</div>
+<div class="line"><a id="l05629" name="l05629"></a><span class="lineno"> 5629</span>            }</div>
+<div class="line"><a id="l05630" name="l05630"></a><span class="lineno"> 5630</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l05631" name="l05631"></a><span class="lineno"> 5631</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l02682">TEST()</a>.</p>
 
@@ -177,7 +177,7 @@ $(function() {
 <div class="line"><a id="l02688" name="l02688"></a><span class="lineno"> 2688</span>        }</div>
 <div class="ttc" id="aa00059_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d3/d8b/a00059.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05612">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05613">main()</a>.</p>
 
 </div>
 </div>
@@ -216,7 +216,7 @@ $(function() {
 <div class="line"><a id="l02695" name="l02695"></a><span class="lineno"> 2695</span>            ASSERT_EQ(<span class="stringliteral">&quot;4 &quot;</span>, ans);</div>
 <div class="line"><a id="l02696" name="l02696"></a><span class="lineno"> 2696</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05612">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05613">main()</a>.</p>
 
 </div>
 </div>
@@ -255,7 +255,7 @@ $(function() {
 <div class="line"><a id="l02703" name="l02703"></a><span class="lineno"> 2703</span>            ASSERT_EQ(<span class="stringliteral">&quot;0 1 &quot;</span>, ans);</div>
 <div class="line"><a id="l02704" name="l02704"></a><span class="lineno"> 2704</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05612">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05613">main()</a>.</p>
 
 </div>
 </div>

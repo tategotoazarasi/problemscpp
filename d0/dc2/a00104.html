@@ -119,74 +119,74 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l05827">5827</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l05827" name="l05827"></a><span class="lineno"> 5827</span>                                              {</div>
-<div class="line"><a id="l05828" name="l05828"></a><span class="lineno"> 5828</span>            <span class="keywordtype">int</span> x = 0;</div>
-<div class="line"><a id="l05829" name="l05829"></a><span class="lineno"> 5829</span>            <span class="keywordtype">int</span> y = 0;</div>
-<div class="line"><a id="l05830" name="l05830"></a><span class="lineno"> 5830</span>            <span class="keywordtype">char</span> op;</div>
-<div class="line"><a id="l05831" name="l05831"></a><span class="lineno"> 5831</span>            <span class="keywordtype">int</span> step = 0;</div>
-<div class="line"><a id="l05832" name="l05832"></a><span class="lineno"> 5832</span>            set&lt;pair&lt;int, int&gt;&gt; s;</div>
-<div class="line"><a id="l05833" name="l05833"></a><span class="lineno"> 5833</span>            s.insert(make_pair(0, 0));</div>
-<div class="line"><a id="l05834" name="l05834"></a><span class="lineno"> 5834</span>            <span class="keywordflow">while</span>(cin &gt;&gt; op) {</div>
-<div class="line"><a id="l05835" name="l05835"></a><span class="lineno"> 5835</span>                step++;</div>
-<div class="line"><a id="l05836" name="l05836"></a><span class="lineno"> 5836</span>                <span class="keywordflow">switch</span>(op) {</div>
-<div class="line"><a id="l05837" name="l05837"></a><span class="lineno"> 5837</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;U&#39;</span>:</div>
-<div class="line"><a id="l05838" name="l05838"></a><span class="lineno"> 5838</span>                        x--;</div>
-<div class="line"><a id="l05839" name="l05839"></a><span class="lineno"> 5839</span>                        <span class="keywordflow">if</span>(s.contains(make_pair(x, y)) ||</div>
-<div class="line"><a id="l05840" name="l05840"></a><span class="lineno"> 5840</span>                           s.contains(make_pair(x - 1, y)) ||</div>
-<div class="line"><a id="l05841" name="l05841"></a><span class="lineno"> 5841</span>                           s.contains(make_pair(x, y + 1)) ||</div>
-<div class="line"><a id="l05842" name="l05842"></a><span class="lineno"> 5842</span>                           s.contains(make_pair(x, y - 1))) {</div>
-<div class="line"><a id="l05843" name="l05843"></a><span class="lineno"> 5843</span>                            cout &lt;&lt; <span class="stringliteral">&quot;NO&quot;</span>;</div>
-<div class="line"><a id="l05844" name="l05844"></a><span class="lineno"> 5844</span>                            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l05845" name="l05845"></a><span class="lineno"> 5845</span>                        }</div>
-<div class="line"><a id="l05846" name="l05846"></a><span class="lineno"> 5846</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l05847" name="l05847"></a><span class="lineno"> 5847</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:</div>
-<div class="line"><a id="l05848" name="l05848"></a><span class="lineno"> 5848</span>                        x++;</div>
-<div class="line"><a id="l05849" name="l05849"></a><span class="lineno"> 5849</span>                        <span class="keywordflow">if</span>(s.contains(make_pair(x, y)) ||</div>
-<div class="line"><a id="l05850" name="l05850"></a><span class="lineno"> 5850</span>                           s.contains(make_pair(x + 1, y)) ||</div>
-<div class="line"><a id="l05851" name="l05851"></a><span class="lineno"> 5851</span>                           s.contains(make_pair(x, y + 1)) ||</div>
-<div class="line"><a id="l05852" name="l05852"></a><span class="lineno"> 5852</span>                           s.contains(make_pair(x, y - 1))) {</div>
-<div class="line"><a id="l05853" name="l05853"></a><span class="lineno"> 5853</span>                            cout &lt;&lt; <span class="stringliteral">&quot;NO&quot;</span>;</div>
-<div class="line"><a id="l05854" name="l05854"></a><span class="lineno"> 5854</span>                            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l05855" name="l05855"></a><span class="lineno"> 5855</span>                        }</div>
-<div class="line"><a id="l05856" name="l05856"></a><span class="lineno"> 5856</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l05857" name="l05857"></a><span class="lineno"> 5857</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;L&#39;</span>:</div>
-<div class="line"><a id="l05858" name="l05858"></a><span class="lineno"> 5858</span>                        y--;</div>
-<div class="line"><a id="l05859" name="l05859"></a><span class="lineno"> 5859</span>                        <span class="keywordflow">if</span>(s.contains(make_pair(x, y)) ||</div>
-<div class="line"><a id="l05860" name="l05860"></a><span class="lineno"> 5860</span>                           s.contains(make_pair(x, y - 1)) ||</div>
-<div class="line"><a id="l05861" name="l05861"></a><span class="lineno"> 5861</span>                           s.contains(make_pair(x + 1, y)) ||</div>
-<div class="line"><a id="l05862" name="l05862"></a><span class="lineno"> 5862</span>                           s.contains(make_pair(x - 1, y))) {</div>
-<div class="line"><a id="l05863" name="l05863"></a><span class="lineno"> 5863</span>                            cout &lt;&lt; <span class="stringliteral">&quot;NO&quot;</span>;</div>
-<div class="line"><a id="l05864" name="l05864"></a><span class="lineno"> 5864</span>                            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l05865" name="l05865"></a><span class="lineno"> 5865</span>                        }</div>
-<div class="line"><a id="l05866" name="l05866"></a><span class="lineno"> 5866</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l05867" name="l05867"></a><span class="lineno"> 5867</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;R&#39;</span>:</div>
-<div class="line"><a id="l05868" name="l05868"></a><span class="lineno"> 5868</span>                        y++;</div>
-<div class="line"><a id="l05869" name="l05869"></a><span class="lineno"> 5869</span>                        <span class="keywordflow">if</span>(s.contains(make_pair(x, y)) ||</div>
-<div class="line"><a id="l05870" name="l05870"></a><span class="lineno"> 5870</span>                           s.contains(make_pair(x, y + 1)) ||</div>
-<div class="line"><a id="l05871" name="l05871"></a><span class="lineno"> 5871</span>                           s.contains(make_pair(x + 1, y)) ||</div>
-<div class="line"><a id="l05872" name="l05872"></a><span class="lineno"> 5872</span>                           s.contains(make_pair(x - 1, y))) {</div>
-<div class="line"><a id="l05873" name="l05873"></a><span class="lineno"> 5873</span>                            cout &lt;&lt; <span class="stringliteral">&quot;NO&quot;</span>;</div>
-<div class="line"><a id="l05874" name="l05874"></a><span class="lineno"> 5874</span>                            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l05875" name="l05875"></a><span class="lineno"> 5875</span>                        }</div>
-<div class="line"><a id="l05876" name="l05876"></a><span class="lineno"> 5876</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l05877" name="l05877"></a><span class="lineno"> 5877</span>                    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l05878" name="l05878"></a><span class="lineno"> 5878</span>                        step--;</div>
-<div class="line"><a id="l05879" name="l05879"></a><span class="lineno"> 5879</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l05880" name="l05880"></a><span class="lineno"> 5880</span>                }</div>
-<div class="line"><a id="l05881" name="l05881"></a><span class="lineno"> 5881</span>                s.insert(make_pair(x, y));</div>
-<div class="line"><a id="l05882" name="l05882"></a><span class="lineno"> 5882</span>            }</div>
-<div class="line"><a id="l05883" name="l05883"></a><span class="lineno"> 5883</span>            <span class="keywordflow">if</span>(step == 1) {</div>
-<div class="line"><a id="l05884" name="l05884"></a><span class="lineno"> 5884</span>                cout &lt;&lt; <span class="stringliteral">&quot;YES&quot;</span>;</div>
-<div class="line"><a id="l05885" name="l05885"></a><span class="lineno"> 5885</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l05886" name="l05886"></a><span class="lineno"> 5886</span>            }</div>
-<div class="line"><a id="l05887" name="l05887"></a><span class="lineno"> 5887</span>            <span class="keywordflow">if</span>(abs(x) &lt;= 1 &amp;&amp; y == 0 || x == 0 &amp;&amp; abs(y) &lt;= 1) {</div>
-<div class="line"><a id="l05888" name="l05888"></a><span class="lineno"> 5888</span>                cout &lt;&lt; <span class="stringliteral">&quot;NO&quot;</span>;</div>
-<div class="line"><a id="l05889" name="l05889"></a><span class="lineno"> 5889</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l05890" name="l05890"></a><span class="lineno"> 5890</span>                cout &lt;&lt; <span class="stringliteral">&quot;YES&quot;</span>;</div>
-<div class="line"><a id="l05891" name="l05891"></a><span class="lineno"> 5891</span>            }</div>
-<div class="line"><a id="l05892" name="l05892"></a><span class="lineno"> 5892</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l05893" name="l05893"></a><span class="lineno"> 5893</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l05828">5828</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l05828" name="l05828"></a><span class="lineno"> 5828</span>                                              {</div>
+<div class="line"><a id="l05829" name="l05829"></a><span class="lineno"> 5829</span>            <span class="keywordtype">int</span> x = 0;</div>
+<div class="line"><a id="l05830" name="l05830"></a><span class="lineno"> 5830</span>            <span class="keywordtype">int</span> y = 0;</div>
+<div class="line"><a id="l05831" name="l05831"></a><span class="lineno"> 5831</span>            <span class="keywordtype">char</span> op;</div>
+<div class="line"><a id="l05832" name="l05832"></a><span class="lineno"> 5832</span>            <span class="keywordtype">int</span> step = 0;</div>
+<div class="line"><a id="l05833" name="l05833"></a><span class="lineno"> 5833</span>            set&lt;pair&lt;int, int&gt;&gt; s;</div>
+<div class="line"><a id="l05834" name="l05834"></a><span class="lineno"> 5834</span>            s.insert(make_pair(0, 0));</div>
+<div class="line"><a id="l05835" name="l05835"></a><span class="lineno"> 5835</span>            <span class="keywordflow">while</span>(cin &gt;&gt; op) {</div>
+<div class="line"><a id="l05836" name="l05836"></a><span class="lineno"> 5836</span>                step++;</div>
+<div class="line"><a id="l05837" name="l05837"></a><span class="lineno"> 5837</span>                <span class="keywordflow">switch</span>(op) {</div>
+<div class="line"><a id="l05838" name="l05838"></a><span class="lineno"> 5838</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;U&#39;</span>:</div>
+<div class="line"><a id="l05839" name="l05839"></a><span class="lineno"> 5839</span>                        x--;</div>
+<div class="line"><a id="l05840" name="l05840"></a><span class="lineno"> 5840</span>                        <span class="keywordflow">if</span>(s.contains(make_pair(x, y)) ||</div>
+<div class="line"><a id="l05841" name="l05841"></a><span class="lineno"> 5841</span>                           s.contains(make_pair(x - 1, y)) ||</div>
+<div class="line"><a id="l05842" name="l05842"></a><span class="lineno"> 5842</span>                           s.contains(make_pair(x, y + 1)) ||</div>
+<div class="line"><a id="l05843" name="l05843"></a><span class="lineno"> 5843</span>                           s.contains(make_pair(x, y - 1))) {</div>
+<div class="line"><a id="l05844" name="l05844"></a><span class="lineno"> 5844</span>                            cout &lt;&lt; <span class="stringliteral">&quot;NO&quot;</span>;</div>
+<div class="line"><a id="l05845" name="l05845"></a><span class="lineno"> 5845</span>                            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l05846" name="l05846"></a><span class="lineno"> 5846</span>                        }</div>
+<div class="line"><a id="l05847" name="l05847"></a><span class="lineno"> 5847</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l05848" name="l05848"></a><span class="lineno"> 5848</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:</div>
+<div class="line"><a id="l05849" name="l05849"></a><span class="lineno"> 5849</span>                        x++;</div>
+<div class="line"><a id="l05850" name="l05850"></a><span class="lineno"> 5850</span>                        <span class="keywordflow">if</span>(s.contains(make_pair(x, y)) ||</div>
+<div class="line"><a id="l05851" name="l05851"></a><span class="lineno"> 5851</span>                           s.contains(make_pair(x + 1, y)) ||</div>
+<div class="line"><a id="l05852" name="l05852"></a><span class="lineno"> 5852</span>                           s.contains(make_pair(x, y + 1)) ||</div>
+<div class="line"><a id="l05853" name="l05853"></a><span class="lineno"> 5853</span>                           s.contains(make_pair(x, y - 1))) {</div>
+<div class="line"><a id="l05854" name="l05854"></a><span class="lineno"> 5854</span>                            cout &lt;&lt; <span class="stringliteral">&quot;NO&quot;</span>;</div>
+<div class="line"><a id="l05855" name="l05855"></a><span class="lineno"> 5855</span>                            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l05856" name="l05856"></a><span class="lineno"> 5856</span>                        }</div>
+<div class="line"><a id="l05857" name="l05857"></a><span class="lineno"> 5857</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l05858" name="l05858"></a><span class="lineno"> 5858</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;L&#39;</span>:</div>
+<div class="line"><a id="l05859" name="l05859"></a><span class="lineno"> 5859</span>                        y--;</div>
+<div class="line"><a id="l05860" name="l05860"></a><span class="lineno"> 5860</span>                        <span class="keywordflow">if</span>(s.contains(make_pair(x, y)) ||</div>
+<div class="line"><a id="l05861" name="l05861"></a><span class="lineno"> 5861</span>                           s.contains(make_pair(x, y - 1)) ||</div>
+<div class="line"><a id="l05862" name="l05862"></a><span class="lineno"> 5862</span>                           s.contains(make_pair(x + 1, y)) ||</div>
+<div class="line"><a id="l05863" name="l05863"></a><span class="lineno"> 5863</span>                           s.contains(make_pair(x - 1, y))) {</div>
+<div class="line"><a id="l05864" name="l05864"></a><span class="lineno"> 5864</span>                            cout &lt;&lt; <span class="stringliteral">&quot;NO&quot;</span>;</div>
+<div class="line"><a id="l05865" name="l05865"></a><span class="lineno"> 5865</span>                            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l05866" name="l05866"></a><span class="lineno"> 5866</span>                        }</div>
+<div class="line"><a id="l05867" name="l05867"></a><span class="lineno"> 5867</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l05868" name="l05868"></a><span class="lineno"> 5868</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;R&#39;</span>:</div>
+<div class="line"><a id="l05869" name="l05869"></a><span class="lineno"> 5869</span>                        y++;</div>
+<div class="line"><a id="l05870" name="l05870"></a><span class="lineno"> 5870</span>                        <span class="keywordflow">if</span>(s.contains(make_pair(x, y)) ||</div>
+<div class="line"><a id="l05871" name="l05871"></a><span class="lineno"> 5871</span>                           s.contains(make_pair(x, y + 1)) ||</div>
+<div class="line"><a id="l05872" name="l05872"></a><span class="lineno"> 5872</span>                           s.contains(make_pair(x + 1, y)) ||</div>
+<div class="line"><a id="l05873" name="l05873"></a><span class="lineno"> 5873</span>                           s.contains(make_pair(x - 1, y))) {</div>
+<div class="line"><a id="l05874" name="l05874"></a><span class="lineno"> 5874</span>                            cout &lt;&lt; <span class="stringliteral">&quot;NO&quot;</span>;</div>
+<div class="line"><a id="l05875" name="l05875"></a><span class="lineno"> 5875</span>                            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l05876" name="l05876"></a><span class="lineno"> 5876</span>                        }</div>
+<div class="line"><a id="l05877" name="l05877"></a><span class="lineno"> 5877</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l05878" name="l05878"></a><span class="lineno"> 5878</span>                    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l05879" name="l05879"></a><span class="lineno"> 5879</span>                        step--;</div>
+<div class="line"><a id="l05880" name="l05880"></a><span class="lineno"> 5880</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l05881" name="l05881"></a><span class="lineno"> 5881</span>                }</div>
+<div class="line"><a id="l05882" name="l05882"></a><span class="lineno"> 5882</span>                s.insert(make_pair(x, y));</div>
+<div class="line"><a id="l05883" name="l05883"></a><span class="lineno"> 5883</span>            }</div>
+<div class="line"><a id="l05884" name="l05884"></a><span class="lineno"> 5884</span>            <span class="keywordflow">if</span>(step == 1) {</div>
+<div class="line"><a id="l05885" name="l05885"></a><span class="lineno"> 5885</span>                cout &lt;&lt; <span class="stringliteral">&quot;YES&quot;</span>;</div>
+<div class="line"><a id="l05886" name="l05886"></a><span class="lineno"> 5886</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l05887" name="l05887"></a><span class="lineno"> 5887</span>            }</div>
+<div class="line"><a id="l05888" name="l05888"></a><span class="lineno"> 5888</span>            <span class="keywordflow">if</span>(abs(x) &lt;= 1 &amp;&amp; y == 0 || x == 0 &amp;&amp; abs(y) &lt;= 1) {</div>
+<div class="line"><a id="l05889" name="l05889"></a><span class="lineno"> 5889</span>                cout &lt;&lt; <span class="stringliteral">&quot;NO&quot;</span>;</div>
+<div class="line"><a id="l05890" name="l05890"></a><span class="lineno"> 5890</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l05891" name="l05891"></a><span class="lineno"> 5891</span>                cout &lt;&lt; <span class="stringliteral">&quot;YES&quot;</span>;</div>
+<div class="line"><a id="l05892" name="l05892"></a><span class="lineno"> 5892</span>            }</div>
+<div class="line"><a id="l05893" name="l05893"></a><span class="lineno"> 5893</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l05894" name="l05894"></a><span class="lineno"> 5894</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l02772">TEST()</a>.</p>
 
@@ -228,7 +228,7 @@ $(function() {
 <div class="line"><a id="l02778" name="l02778"></a><span class="lineno"> 2778</span>        }</div>
 <div class="ttc" id="aa00059_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d3/d8b/a00059.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05827">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05828">main()</a>.</p>
 
 </div>
 </div>
@@ -267,7 +267,7 @@ $(function() {
 <div class="line"><a id="l02785" name="l02785"></a><span class="lineno"> 2785</span>            ASSERT_EQ(<span class="stringliteral">&quot;NO&quot;</span>, ans);</div>
 <div class="line"><a id="l02786" name="l02786"></a><span class="lineno"> 2786</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05827">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05828">main()</a>.</p>
 
 </div>
 </div>

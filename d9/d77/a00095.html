@@ -112,34 +112,34 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l05535">5535</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l05535" name="l05535"></a><span class="lineno"> 5535</span>                                              {</div>
-<div class="line"><a id="l05536" name="l05536"></a><span class="lineno"> 5536</span>            <span class="keywordtype">int</span> k;</div>
-<div class="line"><a id="l05537" name="l05537"></a><span class="lineno"> 5537</span>            <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l05538" name="l05538"></a><span class="lineno"> 5538</span>            cin &gt;&gt; k &gt;&gt; n;</div>
-<div class="line"><a id="l05539" name="l05539"></a><span class="lineno"> 5539</span>            <span class="keyword">auto</span> hash = [](<span class="keyword">const</span> pair&lt;int, int&gt; p) -&gt; <span class="keywordtype">int</span> { <span class="keywordflow">return</span> p.first * 20 + p.second; };</div>
-<div class="line"><a id="l05540" name="l05540"></a><span class="lineno"> 5540</span>            unordered_set&lt;pair&lt;int, int&gt;, <span class="keyword">decltype</span>(hash)&gt; pairs;</div>
-<div class="line"><a id="l05541" name="l05541"></a><span class="lineno"> 5541</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
-<div class="line"><a id="l05542" name="l05542"></a><span class="lineno"> 5542</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= n; j++) {</div>
-<div class="line"><a id="l05543" name="l05543"></a><span class="lineno"> 5543</span>                    <span class="keywordflow">if</span>(i != j) {</div>
-<div class="line"><a id="l05544" name="l05544"></a><span class="lineno"> 5544</span>                        pairs.insert(make_pair(i, j));</div>
-<div class="line"><a id="l05545" name="l05545"></a><span class="lineno"> 5545</span>                    }</div>
-<div class="line"><a id="l05546" name="l05546"></a><span class="lineno"> 5546</span>                }</div>
-<div class="line"><a id="l05547" name="l05547"></a><span class="lineno"> 5547</span>            }</div>
-<div class="line"><a id="l05548" name="l05548"></a><span class="lineno"> 5548</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; k; i++) {</div>
-<div class="line"><a id="l05549" name="l05549"></a><span class="lineno"> 5549</span>                vector&lt;int&gt; vec(n);</div>
-<div class="line"><a id="l05550" name="l05550"></a><span class="lineno"> 5550</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l05551" name="l05551"></a><span class="lineno"> 5551</span>                    cin &gt;&gt; vec[j];</div>
-<div class="line"><a id="l05552" name="l05552"></a><span class="lineno"> 5552</span>                }</div>
-<div class="line"><a id="l05553" name="l05553"></a><span class="lineno"> 5553</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j + 1 &lt; n; j++) {</div>
-<div class="line"><a id="l05554" name="l05554"></a><span class="lineno"> 5554</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> l = j + 1; l &lt; n; l++) {</div>
-<div class="line"><a id="l05555" name="l05555"></a><span class="lineno"> 5555</span>                        pairs.erase(make_pair(vec[j], vec[l]));</div>
-<div class="line"><a id="l05556" name="l05556"></a><span class="lineno"> 5556</span>                    }</div>
-<div class="line"><a id="l05557" name="l05557"></a><span class="lineno"> 5557</span>                }</div>
-<div class="line"><a id="l05558" name="l05558"></a><span class="lineno"> 5558</span>            }</div>
-<div class="line"><a id="l05559" name="l05559"></a><span class="lineno"> 5559</span>            cout &lt;&lt; pairs.size();</div>
-<div class="line"><a id="l05560" name="l05560"></a><span class="lineno"> 5560</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l05561" name="l05561"></a><span class="lineno"> 5561</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l05536">5536</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l05536" name="l05536"></a><span class="lineno"> 5536</span>                                              {</div>
+<div class="line"><a id="l05537" name="l05537"></a><span class="lineno"> 5537</span>            <span class="keywordtype">int</span> k;</div>
+<div class="line"><a id="l05538" name="l05538"></a><span class="lineno"> 5538</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l05539" name="l05539"></a><span class="lineno"> 5539</span>            cin &gt;&gt; k &gt;&gt; n;</div>
+<div class="line"><a id="l05540" name="l05540"></a><span class="lineno"> 5540</span>            <span class="keyword">auto</span> hash = [](<span class="keyword">const</span> pair&lt;int, int&gt; p) -&gt; <span class="keywordtype">int</span> { <span class="keywordflow">return</span> p.first * 20 + p.second; };</div>
+<div class="line"><a id="l05541" name="l05541"></a><span class="lineno"> 5541</span>            unordered_set&lt;pair&lt;int, int&gt;, <span class="keyword">decltype</span>(hash)&gt; pairs;</div>
+<div class="line"><a id="l05542" name="l05542"></a><span class="lineno"> 5542</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
+<div class="line"><a id="l05543" name="l05543"></a><span class="lineno"> 5543</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= n; j++) {</div>
+<div class="line"><a id="l05544" name="l05544"></a><span class="lineno"> 5544</span>                    <span class="keywordflow">if</span>(i != j) {</div>
+<div class="line"><a id="l05545" name="l05545"></a><span class="lineno"> 5545</span>                        pairs.insert(make_pair(i, j));</div>
+<div class="line"><a id="l05546" name="l05546"></a><span class="lineno"> 5546</span>                    }</div>
+<div class="line"><a id="l05547" name="l05547"></a><span class="lineno"> 5547</span>                }</div>
+<div class="line"><a id="l05548" name="l05548"></a><span class="lineno"> 5548</span>            }</div>
+<div class="line"><a id="l05549" name="l05549"></a><span class="lineno"> 5549</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; k; i++) {</div>
+<div class="line"><a id="l05550" name="l05550"></a><span class="lineno"> 5550</span>                vector&lt;int&gt; vec(n);</div>
+<div class="line"><a id="l05551" name="l05551"></a><span class="lineno"> 5551</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><a id="l05552" name="l05552"></a><span class="lineno"> 5552</span>                    cin &gt;&gt; vec[j];</div>
+<div class="line"><a id="l05553" name="l05553"></a><span class="lineno"> 5553</span>                }</div>
+<div class="line"><a id="l05554" name="l05554"></a><span class="lineno"> 5554</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j + 1 &lt; n; j++) {</div>
+<div class="line"><a id="l05555" name="l05555"></a><span class="lineno"> 5555</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> l = j + 1; l &lt; n; l++) {</div>
+<div class="line"><a id="l05556" name="l05556"></a><span class="lineno"> 5556</span>                        pairs.erase(make_pair(vec[j], vec[l]));</div>
+<div class="line"><a id="l05557" name="l05557"></a><span class="lineno"> 5557</span>                    }</div>
+<div class="line"><a id="l05558" name="l05558"></a><span class="lineno"> 5558</span>                }</div>
+<div class="line"><a id="l05559" name="l05559"></a><span class="lineno"> 5559</span>            }</div>
+<div class="line"><a id="l05560" name="l05560"></a><span class="lineno"> 5560</span>            cout &lt;&lt; pairs.size();</div>
+<div class="line"><a id="l05561" name="l05561"></a><span class="lineno"> 5561</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l05562" name="l05562"></a><span class="lineno"> 5562</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l02634">TEST()</a>.</p>
 
@@ -184,7 +184,7 @@ $(function() {
 <div class="line"><a id="l02643" name="l02643"></a><span class="lineno"> 2643</span>        }</div>
 <div class="ttc" id="aa00059_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d3/d8b/a00059.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05535">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05536">main()</a>.</p>
 
 </div>
 </div>

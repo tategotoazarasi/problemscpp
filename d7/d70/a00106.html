@@ -82,7 +82,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/deb/a01345.html">status</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d61/a01350.html">status</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -123,42 +123,42 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l05939">5939</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l05939" name="l05939"></a><span class="lineno"> 5939</span>                                              {</div>
-<div class="line"><a id="l05940" name="l05940"></a><span class="lineno"> 5940</span>            <span class="keywordtype">char</span> farm[10][10] = {};</div>
-<div class="line"><a id="l05941" name="l05941"></a><span class="lineno"> 5941</span>            pair&lt;int, int&gt; b;</div>
-<div class="line"><a id="l05942" name="l05942"></a><span class="lineno"> 5942</span>            pair&lt;int, int&gt; l;</div>
-<div class="line"><a id="l05943" name="l05943"></a><span class="lineno"> 5943</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 10; i++) {</div>
-<div class="line"><a id="l05944" name="l05944"></a><span class="lineno"> 5944</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 10; j++) {</div>
-<div class="line"><a id="l05945" name="l05945"></a><span class="lineno"> 5945</span>                    cin &gt;&gt; farm[i][j];</div>
-<div class="line"><a id="l05946" name="l05946"></a><span class="lineno"> 5946</span>                    <span class="keywordflow">if</span>(farm[i][j] == <span class="charliteral">&#39;B&#39;</span>) {</div>
-<div class="line"><a id="l05947" name="l05947"></a><span class="lineno"> 5947</span>                        b = make_pair(i, j);</div>
-<div class="line"><a id="l05948" name="l05948"></a><span class="lineno"> 5948</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(farm[i][j] == <span class="charliteral">&#39;L&#39;</span>) {</div>
-<div class="line"><a id="l05949" name="l05949"></a><span class="lineno"> 5949</span>                        l = make_pair(i, j);</div>
-<div class="line"><a id="l05950" name="l05950"></a><span class="lineno"> 5950</span>                    }</div>
-<div class="line"><a id="l05951" name="l05951"></a><span class="lineno"> 5951</span>                }</div>
-<div class="line"><a id="l05952" name="l05952"></a><span class="lineno"> 5952</span>            }</div>
-<div class="line"><a id="l05953" name="l05953"></a><span class="lineno"> 5953</span>            priority_queue&lt;status&gt; pq;</div>
-<div class="line"><a id="l05954" name="l05954"></a><span class="lineno"> 5954</span>            pq.push(status(0, l, b));</div>
-<div class="line"><a id="l05955" name="l05955"></a><span class="lineno"> 5955</span>            <span class="keywordflow">while</span>(!pq.empty()) {</div>
-<div class="line"><a id="l05956" name="l05956"></a><span class="lineno"> 5956</span>                status s = pq.top();</div>
-<div class="line"><a id="l05957" name="l05957"></a><span class="lineno"> 5957</span>                pq.pop();</div>
-<div class="line"><a id="l05958" name="l05958"></a><span class="lineno"> 5958</span>                <span class="keywordflow">if</span>(s.current == b) {</div>
-<div class="line"><a id="l05959" name="l05959"></a><span class="lineno"> 5959</span>                    cout &lt;&lt; s.len - 1;</div>
-<div class="line"><a id="l05960" name="l05960"></a><span class="lineno"> 5960</span>                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l05961" name="l05961"></a><span class="lineno"> 5961</span>                }</div>
-<div class="line"><a id="l05962" name="l05962"></a><span class="lineno"> 5962</span>                pair&lt;int, int&gt; nexts[4] = {make_pair(s.current.first + 1, s.current.second),</div>
-<div class="line"><a id="l05963" name="l05963"></a><span class="lineno"> 5963</span>                                           make_pair(s.current.first - 1, s.current.second),</div>
-<div class="line"><a id="l05964" name="l05964"></a><span class="lineno"> 5964</span>                                           make_pair(s.current.first, s.current.second + 1),</div>
-<div class="line"><a id="l05965" name="l05965"></a><span class="lineno"> 5965</span>                                           make_pair(s.current.first, s.current.second - 1)};</div>
-<div class="line"><a id="l05966" name="l05966"></a><span class="lineno"> 5966</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> next: nexts) {</div>
-<div class="line"><a id="l05967" name="l05967"></a><span class="lineno"> 5967</span>                    <span class="keywordflow">if</span>(0 &lt;= next.first &amp;&amp; next.first &lt; 10 &amp;&amp; 0 &lt;= next.second &amp;&amp; next.second &lt; 10 &amp;&amp; farm[next.first][next.second] != <span class="charliteral">&#39;R&#39;</span>) {</div>
-<div class="line"><a id="l05968" name="l05968"></a><span class="lineno"> 5968</span>                        pq.push(status(s.len + 1, next, b));</div>
-<div class="line"><a id="l05969" name="l05969"></a><span class="lineno"> 5969</span>                    }</div>
-<div class="line"><a id="l05970" name="l05970"></a><span class="lineno"> 5970</span>                }</div>
-<div class="line"><a id="l05971" name="l05971"></a><span class="lineno"> 5971</span>            }</div>
-<div class="line"><a id="l05972" name="l05972"></a><span class="lineno"> 5972</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l05973" name="l05973"></a><span class="lineno"> 5973</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l05940">5940</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l05940" name="l05940"></a><span class="lineno"> 5940</span>                                              {</div>
+<div class="line"><a id="l05941" name="l05941"></a><span class="lineno"> 5941</span>            <span class="keywordtype">char</span> farm[10][10] = {};</div>
+<div class="line"><a id="l05942" name="l05942"></a><span class="lineno"> 5942</span>            pair&lt;int, int&gt; b;</div>
+<div class="line"><a id="l05943" name="l05943"></a><span class="lineno"> 5943</span>            pair&lt;int, int&gt; l;</div>
+<div class="line"><a id="l05944" name="l05944"></a><span class="lineno"> 5944</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 10; i++) {</div>
+<div class="line"><a id="l05945" name="l05945"></a><span class="lineno"> 5945</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 10; j++) {</div>
+<div class="line"><a id="l05946" name="l05946"></a><span class="lineno"> 5946</span>                    cin &gt;&gt; farm[i][j];</div>
+<div class="line"><a id="l05947" name="l05947"></a><span class="lineno"> 5947</span>                    <span class="keywordflow">if</span>(farm[i][j] == <span class="charliteral">&#39;B&#39;</span>) {</div>
+<div class="line"><a id="l05948" name="l05948"></a><span class="lineno"> 5948</span>                        b = make_pair(i, j);</div>
+<div class="line"><a id="l05949" name="l05949"></a><span class="lineno"> 5949</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(farm[i][j] == <span class="charliteral">&#39;L&#39;</span>) {</div>
+<div class="line"><a id="l05950" name="l05950"></a><span class="lineno"> 5950</span>                        l = make_pair(i, j);</div>
+<div class="line"><a id="l05951" name="l05951"></a><span class="lineno"> 5951</span>                    }</div>
+<div class="line"><a id="l05952" name="l05952"></a><span class="lineno"> 5952</span>                }</div>
+<div class="line"><a id="l05953" name="l05953"></a><span class="lineno"> 5953</span>            }</div>
+<div class="line"><a id="l05954" name="l05954"></a><span class="lineno"> 5954</span>            priority_queue&lt;status&gt; pq;</div>
+<div class="line"><a id="l05955" name="l05955"></a><span class="lineno"> 5955</span>            pq.push(status(0, l, b));</div>
+<div class="line"><a id="l05956" name="l05956"></a><span class="lineno"> 5956</span>            <span class="keywordflow">while</span>(!pq.empty()) {</div>
+<div class="line"><a id="l05957" name="l05957"></a><span class="lineno"> 5957</span>                status s = pq.top();</div>
+<div class="line"><a id="l05958" name="l05958"></a><span class="lineno"> 5958</span>                pq.pop();</div>
+<div class="line"><a id="l05959" name="l05959"></a><span class="lineno"> 5959</span>                <span class="keywordflow">if</span>(s.current == b) {</div>
+<div class="line"><a id="l05960" name="l05960"></a><span class="lineno"> 5960</span>                    cout &lt;&lt; s.len - 1;</div>
+<div class="line"><a id="l05961" name="l05961"></a><span class="lineno"> 5961</span>                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l05962" name="l05962"></a><span class="lineno"> 5962</span>                }</div>
+<div class="line"><a id="l05963" name="l05963"></a><span class="lineno"> 5963</span>                pair&lt;int, int&gt; nexts[4] = {make_pair(s.current.first + 1, s.current.second),</div>
+<div class="line"><a id="l05964" name="l05964"></a><span class="lineno"> 5964</span>                                           make_pair(s.current.first - 1, s.current.second),</div>
+<div class="line"><a id="l05965" name="l05965"></a><span class="lineno"> 5965</span>                                           make_pair(s.current.first, s.current.second + 1),</div>
+<div class="line"><a id="l05966" name="l05966"></a><span class="lineno"> 5966</span>                                           make_pair(s.current.first, s.current.second - 1)};</div>
+<div class="line"><a id="l05967" name="l05967"></a><span class="lineno"> 5967</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> next: nexts) {</div>
+<div class="line"><a id="l05968" name="l05968"></a><span class="lineno"> 5968</span>                    <span class="keywordflow">if</span>(0 &lt;= next.first &amp;&amp; next.first &lt; 10 &amp;&amp; 0 &lt;= next.second &amp;&amp; next.second &lt; 10 &amp;&amp; farm[next.first][next.second] != <span class="charliteral">&#39;R&#39;</span>) {</div>
+<div class="line"><a id="l05969" name="l05969"></a><span class="lineno"> 5969</span>                        pq.push(status(s.len + 1, next, b));</div>
+<div class="line"><a id="l05970" name="l05970"></a><span class="lineno"> 5970</span>                    }</div>
+<div class="line"><a id="l05971" name="l05971"></a><span class="lineno"> 5971</span>                }</div>
+<div class="line"><a id="l05972" name="l05972"></a><span class="lineno"> 5972</span>            }</div>
+<div class="line"><a id="l05973" name="l05973"></a><span class="lineno"> 5973</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l05974" name="l05974"></a><span class="lineno"> 5974</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l01859">acwing::acwing1470::status::current</a> , 以及 <a class="el" href="../../dc/dee/a00053_source.html#l01858">acwing::acwing1470::status::len</a>.</p>
 
@@ -211,7 +211,7 @@ $(function() {
 <div class="line"><a id="l02815" name="l02815"></a><span class="lineno"> 2815</span>        }</div>
 <div class="ttc" id="aa00059_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d3/d8b/a00059.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05939">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05940">main()</a>.</p>
 
 </div>
 </div>

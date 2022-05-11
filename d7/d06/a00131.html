@@ -117,27 +117,27 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l06877">6877</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l06877" name="l06877"></a><span class="lineno"> 6877</span>                                              {</div>
-<div class="line"><a id="l06878" name="l06878"></a><span class="lineno"> 6878</span>            <span class="keywordtype">string</span> s;</div>
-<div class="line"><a id="l06879" name="l06879"></a><span class="lineno"> 6879</span>            <span class="keywordtype">string</span> t;</div>
-<div class="line"><a id="l06880" name="l06880"></a><span class="lineno"> 6880</span>            <span class="keywordtype">string</span> res;</div>
-<div class="line"><a id="l06881" name="l06881"></a><span class="lineno"> 6881</span>            cin &gt;&gt; s &gt;&gt; t;</div>
-<div class="line"><a id="l06882" name="l06882"></a><span class="lineno"> 6882</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> slen = s.length();</div>
-<div class="line"><a id="l06883" name="l06883"></a><span class="lineno"> 6883</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> tlen = t.length();</div>
-<div class="line"><a id="l06884" name="l06884"></a><span class="lineno"> 6884</span>            <span class="comment">//一边添加一边判断</span></div>
-<div class="line"><a id="l06885" name="l06885"></a><span class="lineno"> 6885</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; slen; i++) {</div>
-<div class="line"><a id="l06886" name="l06886"></a><span class="lineno"> 6886</span>                res += s[i];</div>
-<div class="line"><a id="l06887" name="l06887"></a><span class="lineno"> 6887</span>                <span class="comment">//当添加到长度大于等于t字符串时，开始比较</span></div>
-<div class="line"><a id="l06888" name="l06888"></a><span class="lineno"> 6888</span>                <span class="comment">//每次从末尾向前匹配</span></div>
-<div class="line"><a id="l06889" name="l06889"></a><span class="lineno"> 6889</span>                <span class="keywordflow">while</span>(res.length() &gt;= tlen &amp;&amp; res.substr(res.length() - tlen, tlen) == t) {</div>
-<div class="line"><a id="l06890" name="l06890"></a><span class="lineno"> 6890</span>                    <span class="comment">//存在t字符串，则删除</span></div>
-<div class="line"><a id="l06891" name="l06891"></a><span class="lineno"> 6891</span>                    res.erase(res.begin() + res.length() - tlen, res.end());</div>
-<div class="line"><a id="l06892" name="l06892"></a><span class="lineno"> 6892</span>                }</div>
-<div class="line"><a id="l06893" name="l06893"></a><span class="lineno"> 6893</span>            }</div>
-<div class="line"><a id="l06894" name="l06894"></a><span class="lineno"> 6894</span>            cout &lt;&lt; res;</div>
-<div class="line"><a id="l06895" name="l06895"></a><span class="lineno"> 6895</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l06896" name="l06896"></a><span class="lineno"> 6896</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l06878">6878</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l06878" name="l06878"></a><span class="lineno"> 6878</span>                                              {</div>
+<div class="line"><a id="l06879" name="l06879"></a><span class="lineno"> 6879</span>            <span class="keywordtype">string</span> s;</div>
+<div class="line"><a id="l06880" name="l06880"></a><span class="lineno"> 6880</span>            <span class="keywordtype">string</span> t;</div>
+<div class="line"><a id="l06881" name="l06881"></a><span class="lineno"> 6881</span>            <span class="keywordtype">string</span> res;</div>
+<div class="line"><a id="l06882" name="l06882"></a><span class="lineno"> 6882</span>            cin &gt;&gt; s &gt;&gt; t;</div>
+<div class="line"><a id="l06883" name="l06883"></a><span class="lineno"> 6883</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> slen = s.length();</div>
+<div class="line"><a id="l06884" name="l06884"></a><span class="lineno"> 6884</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> tlen = t.length();</div>
+<div class="line"><a id="l06885" name="l06885"></a><span class="lineno"> 6885</span>            <span class="comment">//一边添加一边判断</span></div>
+<div class="line"><a id="l06886" name="l06886"></a><span class="lineno"> 6886</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; slen; i++) {</div>
+<div class="line"><a id="l06887" name="l06887"></a><span class="lineno"> 6887</span>                res += s[i];</div>
+<div class="line"><a id="l06888" name="l06888"></a><span class="lineno"> 6888</span>                <span class="comment">//当添加到长度大于等于t字符串时，开始比较</span></div>
+<div class="line"><a id="l06889" name="l06889"></a><span class="lineno"> 6889</span>                <span class="comment">//每次从末尾向前匹配</span></div>
+<div class="line"><a id="l06890" name="l06890"></a><span class="lineno"> 6890</span>                <span class="keywordflow">while</span>(res.length() &gt;= tlen &amp;&amp; res.substr(res.length() - tlen, tlen) == t) {</div>
+<div class="line"><a id="l06891" name="l06891"></a><span class="lineno"> 6891</span>                    <span class="comment">//存在t字符串，则删除</span></div>
+<div class="line"><a id="l06892" name="l06892"></a><span class="lineno"> 6892</span>                    res.erase(res.begin() + res.length() - tlen, res.end());</div>
+<div class="line"><a id="l06893" name="l06893"></a><span class="lineno"> 6893</span>                }</div>
+<div class="line"><a id="l06894" name="l06894"></a><span class="lineno"> 6894</span>            }</div>
+<div class="line"><a id="l06895" name="l06895"></a><span class="lineno"> 6895</span>            cout &lt;&lt; res;</div>
+<div class="line"><a id="l06896" name="l06896"></a><span class="lineno"> 6896</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l06897" name="l06897"></a><span class="lineno"> 6897</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l03233">TEST()</a>.</p>
 
@@ -180,7 +180,7 @@ $(function() {
 <div class="line"><a id="l03240" name="l03240"></a><span class="lineno"> 3240</span>        }</div>
 <div class="ttc" id="aa00059_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d3/d8b/a00059.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l06877">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l06878">main()</a>.</p>
 
 </div>
 </div>

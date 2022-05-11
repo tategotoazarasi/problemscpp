@@ -117,30 +117,30 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l05634">5634</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l05634" name="l05634"></a><span class="lineno"> 5634</span>                                              {</div>
-<div class="line"><a id="l05635" name="l05635"></a><span class="lineno"> 5635</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l05636" name="l05636"></a><span class="lineno"> 5636</span>            unordered_map&lt;int, set&lt;int&gt;&gt; col;</div>
-<div class="line"><a id="l05637" name="l05637"></a><span class="lineno"> 5637</span>            unordered_map&lt;int, set&lt;int&gt;&gt; row;</div>
-<div class="line"><a id="l05638" name="l05638"></a><span class="lineno"> 5638</span>            set&lt;pair&lt;int, int&gt;&gt; us;</div>
-<div class="line"><a id="l05639" name="l05639"></a><span class="lineno"> 5639</span>            <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l05640" name="l05640"></a><span class="lineno"> 5640</span>            cin &gt;&gt; n;</div>
-<div class="line"><a id="l05641" name="l05641"></a><span class="lineno"> 5641</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l05642" name="l05642"></a><span class="lineno"> 5642</span>                <span class="keywordtype">int</span> x;</div>
-<div class="line"><a id="l05643" name="l05643"></a><span class="lineno"> 5643</span>                <span class="keywordtype">int</span> y;</div>
-<div class="line"><a id="l05644" name="l05644"></a><span class="lineno"> 5644</span>                cin &gt;&gt; x &gt;&gt; y;</div>
-<div class="line"><a id="l05645" name="l05645"></a><span class="lineno"> 5645</span>                us.insert(make_pair(x, y));</div>
-<div class="line"><a id="l05646" name="l05646"></a><span class="lineno"> 5646</span>                row[x].insert(y);</div>
-<div class="line"><a id="l05647" name="l05647"></a><span class="lineno"> 5647</span>                col[y].insert(x);</div>
-<div class="line"><a id="l05648" name="l05648"></a><span class="lineno"> 5648</span>            }</div>
-<div class="line"><a id="l05649" name="l05649"></a><span class="lineno"> 5649</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> [x, y]: us) {</div>
-<div class="line"><a id="l05650" name="l05650"></a><span class="lineno"> 5650</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> max_width  = max(abs(*row[x].begin() - y), abs(*row[x].rbegin() - y));</div>
-<div class="line"><a id="l05651" name="l05651"></a><span class="lineno"> 5651</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> max_height = max(abs(*col[y].begin() - x), abs(*col[y].rbegin() - x));</div>
-<div class="line"><a id="l05652" name="l05652"></a><span class="lineno"> 5652</span>                ans                  = max(ans, max_width * max_height);</div>
-<div class="line"><a id="l05653" name="l05653"></a><span class="lineno"> 5653</span>            }</div>
-<div class="line"><a id="l05654" name="l05654"></a><span class="lineno"> 5654</span>            cout &lt;&lt; ans;</div>
-<div class="line"><a id="l05655" name="l05655"></a><span class="lineno"> 5655</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l05656" name="l05656"></a><span class="lineno"> 5656</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l05635">5635</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l05635" name="l05635"></a><span class="lineno"> 5635</span>                                              {</div>
+<div class="line"><a id="l05636" name="l05636"></a><span class="lineno"> 5636</span>            <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l05637" name="l05637"></a><span class="lineno"> 5637</span>            unordered_map&lt;int, set&lt;int&gt;&gt; col;</div>
+<div class="line"><a id="l05638" name="l05638"></a><span class="lineno"> 5638</span>            unordered_map&lt;int, set&lt;int&gt;&gt; row;</div>
+<div class="line"><a id="l05639" name="l05639"></a><span class="lineno"> 5639</span>            set&lt;pair&lt;int, int&gt;&gt; us;</div>
+<div class="line"><a id="l05640" name="l05640"></a><span class="lineno"> 5640</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l05641" name="l05641"></a><span class="lineno"> 5641</span>            cin &gt;&gt; n;</div>
+<div class="line"><a id="l05642" name="l05642"></a><span class="lineno"> 5642</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l05643" name="l05643"></a><span class="lineno"> 5643</span>                <span class="keywordtype">int</span> x;</div>
+<div class="line"><a id="l05644" name="l05644"></a><span class="lineno"> 5644</span>                <span class="keywordtype">int</span> y;</div>
+<div class="line"><a id="l05645" name="l05645"></a><span class="lineno"> 5645</span>                cin &gt;&gt; x &gt;&gt; y;</div>
+<div class="line"><a id="l05646" name="l05646"></a><span class="lineno"> 5646</span>                us.insert(make_pair(x, y));</div>
+<div class="line"><a id="l05647" name="l05647"></a><span class="lineno"> 5647</span>                row[x].insert(y);</div>
+<div class="line"><a id="l05648" name="l05648"></a><span class="lineno"> 5648</span>                col[y].insert(x);</div>
+<div class="line"><a id="l05649" name="l05649"></a><span class="lineno"> 5649</span>            }</div>
+<div class="line"><a id="l05650" name="l05650"></a><span class="lineno"> 5650</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> [x, y]: us) {</div>
+<div class="line"><a id="l05651" name="l05651"></a><span class="lineno"> 5651</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> max_width  = max(abs(*row[x].begin() - y), abs(*row[x].rbegin() - y));</div>
+<div class="line"><a id="l05652" name="l05652"></a><span class="lineno"> 5652</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> max_height = max(abs(*col[y].begin() - x), abs(*col[y].rbegin() - x));</div>
+<div class="line"><a id="l05653" name="l05653"></a><span class="lineno"> 5653</span>                ans                  = max(ans, max_width * max_height);</div>
+<div class="line"><a id="l05654" name="l05654"></a><span class="lineno"> 5654</span>            }</div>
+<div class="line"><a id="l05655" name="l05655"></a><span class="lineno"> 5655</span>            cout &lt;&lt; ans;</div>
+<div class="line"><a id="l05656" name="l05656"></a><span class="lineno"> 5656</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l05657" name="l05657"></a><span class="lineno"> 5657</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l02708">TEST()</a>.</p>
 
@@ -186,7 +186,7 @@ $(function() {
 <div class="line"><a id="l02718" name="l02718"></a><span class="lineno"> 2718</span>        }</div>
 <div class="ttc" id="aa00059_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d3/d8b/a00059.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05634">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05635">main()</a>.</p>
 
 </div>
 </div>

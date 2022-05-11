@@ -117,26 +117,26 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l06253">6253</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l06253" name="l06253"></a><span class="lineno"> 6253</span>                                              {</div>
-<div class="line"><a id="l06254" name="l06254"></a><span class="lineno"> 6254</span>            <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l06255" name="l06255"></a><span class="lineno"> 6255</span>            unordered_map&lt;int, int&gt; um;</div>
-<div class="line"><a id="l06256" name="l06256"></a><span class="lineno"> 6256</span>            cin &gt;&gt; n;</div>
-<div class="line"><a id="l06257" name="l06257"></a><span class="lineno"> 6257</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l06258" name="l06258"></a><span class="lineno"> 6258</span>            <span class="keywordflow">while</span>(n-- != 0) {</div>
-<div class="line"><a id="l06259" name="l06259"></a><span class="lineno"> 6259</span>                <span class="keywordtype">int</span> id;</div>
-<div class="line"><a id="l06260" name="l06260"></a><span class="lineno"> 6260</span>                <span class="keywordtype">int</span> side;</div>
-<div class="line"><a id="l06261" name="l06261"></a><span class="lineno"> 6261</span>                cin &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; side;</div>
-<div class="line"><a id="l06262" name="l06262"></a><span class="lineno"> 6262</span>                <span class="keywordflow">if</span>(!um.contains(<span class="keywordtype">id</span>)) {</div>
-<div class="line"><a id="l06263" name="l06263"></a><span class="lineno"> 6263</span>                    um[id] = side;</div>
-<div class="line"><a id="l06264" name="l06264"></a><span class="lineno"> 6264</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(um[<span class="keywordtype">id</span>] != side) {</div>
-<div class="line"><a id="l06265" name="l06265"></a><span class="lineno"> 6265</span>                    ans++;</div>
-<div class="line"><a id="l06266" name="l06266"></a><span class="lineno"> 6266</span>                    um[id] = side;</div>
-<div class="line"><a id="l06267" name="l06267"></a><span class="lineno"> 6267</span>                }</div>
-<div class="line"><a id="l06268" name="l06268"></a><span class="lineno"> 6268</span>            }</div>
-<div class="line"><a id="l06269" name="l06269"></a><span class="lineno"> 6269</span>            cout &lt;&lt; ans;</div>
-<div class="line"><a id="l06270" name="l06270"></a><span class="lineno"> 6270</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l06271" name="l06271"></a><span class="lineno"> 6271</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l06254">6254</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l06254" name="l06254"></a><span class="lineno"> 6254</span>                                              {</div>
+<div class="line"><a id="l06255" name="l06255"></a><span class="lineno"> 6255</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l06256" name="l06256"></a><span class="lineno"> 6256</span>            unordered_map&lt;int, int&gt; um;</div>
+<div class="line"><a id="l06257" name="l06257"></a><span class="lineno"> 6257</span>            cin &gt;&gt; n;</div>
+<div class="line"><a id="l06258" name="l06258"></a><span class="lineno"> 6258</span>            <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l06259" name="l06259"></a><span class="lineno"> 6259</span>            <span class="keywordflow">while</span>(n-- != 0) {</div>
+<div class="line"><a id="l06260" name="l06260"></a><span class="lineno"> 6260</span>                <span class="keywordtype">int</span> id;</div>
+<div class="line"><a id="l06261" name="l06261"></a><span class="lineno"> 6261</span>                <span class="keywordtype">int</span> side;</div>
+<div class="line"><a id="l06262" name="l06262"></a><span class="lineno"> 6262</span>                cin &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; side;</div>
+<div class="line"><a id="l06263" name="l06263"></a><span class="lineno"> 6263</span>                <span class="keywordflow">if</span>(!um.contains(<span class="keywordtype">id</span>)) {</div>
+<div class="line"><a id="l06264" name="l06264"></a><span class="lineno"> 6264</span>                    um[id] = side;</div>
+<div class="line"><a id="l06265" name="l06265"></a><span class="lineno"> 6265</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(um[<span class="keywordtype">id</span>] != side) {</div>
+<div class="line"><a id="l06266" name="l06266"></a><span class="lineno"> 6266</span>                    ans++;</div>
+<div class="line"><a id="l06267" name="l06267"></a><span class="lineno"> 6267</span>                    um[id] = side;</div>
+<div class="line"><a id="l06268" name="l06268"></a><span class="lineno"> 6268</span>                }</div>
+<div class="line"><a id="l06269" name="l06269"></a><span class="lineno"> 6269</span>            }</div>
+<div class="line"><a id="l06270" name="l06270"></a><span class="lineno"> 6270</span>            cout &lt;&lt; ans;</div>
+<div class="line"><a id="l06271" name="l06271"></a><span class="lineno"> 6271</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l06272" name="l06272"></a><span class="lineno"> 6272</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l02940">TEST()</a>.</p>
 
@@ -186,7 +186,7 @@ $(function() {
 <div class="line"><a id="l02954" name="l02954"></a><span class="lineno"> 2954</span>        }</div>
 <div class="ttc" id="aa00059_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d3/d8b/a00059.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l06253">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l06254">main()</a>.</p>
 
 </div>
 </div>

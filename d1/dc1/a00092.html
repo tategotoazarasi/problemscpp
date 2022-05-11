@@ -112,25 +112,25 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l05375">5375</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l05375" name="l05375"></a><span class="lineno"> 5375</span>                                              {</div>
-<div class="line"><a id="l05376" name="l05376"></a><span class="lineno"> 5376</span>            <span class="keywordtype">int</span> char_pos[26] = {};</div>
-<div class="line"><a id="l05377" name="l05377"></a><span class="lineno"> 5377</span>            <span class="keywordtype">char</span> ch;</div>
-<div class="line"><a id="l05378" name="l05378"></a><span class="lineno"> 5378</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
-<div class="line"><a id="l05379" name="l05379"></a><span class="lineno"> 5379</span>                cin &gt;&gt; ch;</div>
-<div class="line"><a id="l05380" name="l05380"></a><span class="lineno"> 5380</span>                char_pos[ch - <span class="charliteral">&#39;a&#39;</span>] = i;</div>
-<div class="line"><a id="l05381" name="l05381"></a><span class="lineno"> 5381</span>            }</div>
-<div class="line"><a id="l05382" name="l05382"></a><span class="lineno"> 5382</span>            <span class="keywordtype">int</span> ans     = 1;</div>
-<div class="line"><a id="l05383" name="l05383"></a><span class="lineno"> 5383</span>            <span class="keywordtype">int</span> current = -1;</div>
-<div class="line"><a id="l05384" name="l05384"></a><span class="lineno"> 5384</span>            <span class="keywordflow">while</span>(cin &gt;&gt; ch) {</div>
-<div class="line"><a id="l05385" name="l05385"></a><span class="lineno"> 5385</span>                <span class="keywordflow">if</span>(char_pos[ch - <span class="charliteral">&#39;a&#39;</span>] &lt;= current) {</div>
-<div class="line"><a id="l05386" name="l05386"></a><span class="lineno"> 5386</span>                    ans++;</div>
-<div class="line"><a id="l05387" name="l05387"></a><span class="lineno"> 5387</span>                }</div>
-<div class="line"><a id="l05388" name="l05388"></a><span class="lineno"> 5388</span>                current = char_pos[ch - <span class="charliteral">&#39;a&#39;</span>];</div>
-<div class="line"><a id="l05389" name="l05389"></a><span class="lineno"> 5389</span>            }</div>
-<div class="line"><a id="l05390" name="l05390"></a><span class="lineno"> 5390</span>            cout &lt;&lt; ans;</div>
-<div class="line"><a id="l05391" name="l05391"></a><span class="lineno"> 5391</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l05392" name="l05392"></a><span class="lineno"> 5392</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l05376">5376</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l05376" name="l05376"></a><span class="lineno"> 5376</span>                                              {</div>
+<div class="line"><a id="l05377" name="l05377"></a><span class="lineno"> 5377</span>            <span class="keywordtype">int</span> char_pos[26] = {};</div>
+<div class="line"><a id="l05378" name="l05378"></a><span class="lineno"> 5378</span>            <span class="keywordtype">char</span> ch;</div>
+<div class="line"><a id="l05379" name="l05379"></a><span class="lineno"> 5379</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
+<div class="line"><a id="l05380" name="l05380"></a><span class="lineno"> 5380</span>                cin &gt;&gt; ch;</div>
+<div class="line"><a id="l05381" name="l05381"></a><span class="lineno"> 5381</span>                char_pos[ch - <span class="charliteral">&#39;a&#39;</span>] = i;</div>
+<div class="line"><a id="l05382" name="l05382"></a><span class="lineno"> 5382</span>            }</div>
+<div class="line"><a id="l05383" name="l05383"></a><span class="lineno"> 5383</span>            <span class="keywordtype">int</span> ans     = 1;</div>
+<div class="line"><a id="l05384" name="l05384"></a><span class="lineno"> 5384</span>            <span class="keywordtype">int</span> current = -1;</div>
+<div class="line"><a id="l05385" name="l05385"></a><span class="lineno"> 5385</span>            <span class="keywordflow">while</span>(cin &gt;&gt; ch) {</div>
+<div class="line"><a id="l05386" name="l05386"></a><span class="lineno"> 5386</span>                <span class="keywordflow">if</span>(char_pos[ch - <span class="charliteral">&#39;a&#39;</span>] &lt;= current) {</div>
+<div class="line"><a id="l05387" name="l05387"></a><span class="lineno"> 5387</span>                    ans++;</div>
+<div class="line"><a id="l05388" name="l05388"></a><span class="lineno"> 5388</span>                }</div>
+<div class="line"><a id="l05389" name="l05389"></a><span class="lineno"> 5389</span>                current = char_pos[ch - <span class="charliteral">&#39;a&#39;</span>];</div>
+<div class="line"><a id="l05390" name="l05390"></a><span class="lineno"> 5390</span>            }</div>
+<div class="line"><a id="l05391" name="l05391"></a><span class="lineno"> 5391</span>            cout &lt;&lt; ans;</div>
+<div class="line"><a id="l05392" name="l05392"></a><span class="lineno"> 5392</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l05393" name="l05393"></a><span class="lineno"> 5393</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l02512">TEST()</a>.</p>
 
@@ -173,7 +173,7 @@ $(function() {
 <div class="line"><a id="l02519" name="l02519"></a><span class="lineno"> 2519</span>        }</div>
 <div class="ttc" id="aa00059_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d3/d8b/a00059.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05375">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l05376">main()</a>.</p>
 
 </div>
 </div>
