@@ -1,4 +1,5 @@
 #include "acwing.h"
+#include "templates.h"
 
 #include <algorithm>
 #include <bitset>
@@ -6999,4 +7000,28 @@ namespace acwing {
 			}
 		}
 	}// namespace acwing143
+
+	namespace acwing837 {
+		int main(istream &cin, ostream &cout) {
+			int n, m;
+			cin >> n >> m;
+			UnionFind uf(n);
+			while(m--) {
+				string op;
+				int a, b;
+				cin >> op;
+				if(op == "C") {
+					cin >> a >> b;
+					uf.unite(a - 1, b - 1);
+				} else if(op == "Q1") {
+					cin >> a >> b;
+					cout << (uf.same(a - 1, b - 1) ? "Yes" : "No") << endl;
+				} else {
+					cin >> a;
+					cout << uf.get_size(a - 1) << endl;
+				}
+			}
+			return 0;
+		}
+	}// namespace acwing837
 }// namespace acwing

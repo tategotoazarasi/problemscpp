@@ -86,6 +86,7 @@ public:
 	friend ostream &operator<<(ostream &os, const Fraction &frac);
 };
 
+/// \brief 并查集
 class UnionFind {
 private:
 	vector<int> parent;
@@ -97,4 +98,5 @@ public:
 	int find(int x);
 	void unite(int x, int y);
 	bool same(int x, int y);
+	int get_size(int x);
 };

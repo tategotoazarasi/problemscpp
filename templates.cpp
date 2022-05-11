@@ -466,3 +466,7 @@ void UnionFind::unite(int x, int y) {
 }
 
 bool UnionFind::same(int x, int y) { return find(x) == find(y); }
+
+int UnionFind::get_size(int x) {
+	return size[find(x)];
+}

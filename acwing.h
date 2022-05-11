@@ -2035,5 +2035,10 @@ namespace acwing {
 		};
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing143
+
+	/// \brief 837. 连通块中点的数量
+	namespace acwing837 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
