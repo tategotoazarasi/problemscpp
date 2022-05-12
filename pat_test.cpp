@@ -1631,6 +1631,26 @@ namespace pat {
 				ASSERT_EQ("This ampletowyu_Hrk", out.str());
 			}
 		}// namespace b1093
+
+		namespace b1094 {
+			TEST(b1094, case1) {
+				istringstream in("20 5\n"
+				                 "23654987725541023819");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("49877", out.str());
+			}
+
+			TEST(b1094, case2) {
+				istringstream in("10 3\n"
+				                 "2468001680");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("404", out.str());
+			}
+		}// namespace b1094
 	}    // namespace b
 
 	namespace a {}

@@ -586,7 +586,13 @@ namespace pat {
 		namespace b1093 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1094 谷歌的招聘
+		namespace b1094 {
+			bool is_prime(unsigned int n);
+			int main(istream &cin, ostream &cout);
+		}// namespace b1094
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}

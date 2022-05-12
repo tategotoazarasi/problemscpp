@@ -3277,6 +3277,45 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1093
+
+		namespace b1094 {
+			int main(istream &cin, ostream &cout) {
+				int l, k;
+				cin >> l >> k;
+				vector<char> n(l);
+				for(int i = 0; i < l; i++) {
+					cin >> n[i];
+					n[i] -= '0';
+				}
+				for(int i = 0, j = k - 1; j < l; i++, j++) {
+					unsigned int ans = 0;
+					for(int m = i; m <= j; m++) {
+						ans *= 10;
+						ans += n[m];
+					}
+					if(is_prime(ans)) {
+						for(int m = i; m <= j; m++) {
+							cout << char(n[m] + '0');
+						}
+						return 0;
+					}
+				}
+				cout << 404;
+				return 0;
+			}
+
+			bool is_prime(unsigned int n) {
+				if(n < 2) {
+					return false;
+				}
+				for(int i = 2; i <= sqrt(n); i++) {
+					if(n % i == 0) {
+						return false;
+					}
+				}
+				return true;
+			}
+		}// namespace b1094
 	}    // namespace b
 
 	namespace a {}
