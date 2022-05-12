@@ -3252,6 +3252,31 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1092
+
+		namespace b1093 {
+			int main(istream &cin, ostream &cout) {
+				char a[1000010], b[1000010];
+				cin.getline(a, 1000010);
+				cin.getline(b, 1000010);
+				bool has[127];
+				unordered_set<char> us;
+				for(int i = 0; i < strlen(a); i++) {
+					char ch = a[i];
+					if(!has[ch]) {
+						cout << ch;
+						has[ch] = true;
+					}
+				}
+				for(int i = 0; i < strlen(b); i++) {
+					char ch = b[i];
+					if(!has[ch]) {
+						cout << ch;
+						has[ch] = true;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1093
 	}    // namespace b
 
 	namespace a {}

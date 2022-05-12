@@ -581,6 +581,11 @@ namespace pat {
 		namespace b1092 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1093 字符串A+B
+		namespace b1093 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

@@ -1620,6 +1620,17 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1092
+
+		namespace b1093 {
+			TEST(b1093, case1) {
+				istringstream in("This is a sample test\n"
+				                 "to show you_How it works");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("This ampletowyu_Hrk", out.str());
+			}
+		}// namespace b1093
 	}    // namespace b
 
 	namespace a {}
