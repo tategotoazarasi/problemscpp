@@ -1651,6 +1651,40 @@ namespace pat {
 				ASSERT_EQ("404", out.str());
 			}
 		}// namespace b1094
+
+		namespace b1095 {
+			TEST(b1095, case1) {
+				istringstream in("8 4\n"
+				                 "B123180908127 99\n"
+				                 "B102180908003 86\n"
+				                 "A112180318002 98\n"
+				                 "T107150310127 62\n"
+				                 "A107180908108 100\n"
+				                 "T123180908010 78\n"
+				                 "B112160918035 88\n"
+				                 "A107180908021 98\n"
+				                 "1 A\n"
+				                 "2 107\n"
+				                 "3 180908\n"
+				                 "2 999");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Case 1: 1 A\n"
+				          "A107180908108 100\n"
+				          "A107180908021 98\n"
+				          "A112180318002 98\n"
+				          "Case 2: 2 107\n"
+				          "3 260\n"
+				          "Case 3: 3 180908\n"
+				          "107 2\n"
+				          "123 2\n"
+				          "102 1\n"
+				          "Case 4: 2 999\n"
+				          "NA\n",
+				          out.str());
+			}
+		}// namespace b1095
 	}    // namespace b
 
 	namespace a {}

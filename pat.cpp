@@ -3316,6 +3316,93 @@ namespace pat {
 				return true;
 			}
 		}// namespace b1094
+
+		namespace b1095 {
+			int main(istream &cin, ostream &cout) {
+				int n, m;
+				cin >> n >> m;
+				unordered_map<string, room> rooms;
+				unordered_map<char, unordered_set<student *>> levels;
+				unordered_map<string, unordered_map<string, int>> dates;
+				for(int i = 0; i < n; i++) {
+					student *stu = new student();
+					cin >> stu->id >> stu->grade;
+					stu->level = stu->id[0];
+					stu->room  = stu->id.substr(1, 3);
+					stu->date  = stu->id.substr(4, 6);
+					rooms[stu->room].sum += stu->grade;
+					rooms[stu->room].count++;
+					levels[stu->level].insert(stu);
+					dates[stu->date][stu->room]++;
+				}
+				for(int i = 0; i < m; i++) {
+					int typ;
+					cin >> typ;
+					cout << "Case " << i + 1 << ": " << typ << ' ';
+					if(typ == 1) {
+						char l;
+						cin >> l;
+						cout << l << endl;
+						if(levels.count(l)) {
+							vector<student *> vec;
+							for(const auto pstu: levels[l]) {
+								vec.emplace_back(pstu);
+							}
+							sort(vec.begin(), vec.end(), p_stu_comp());
+							for(auto stu: vec) {
+								cout << stu->id << ' ' << stu->grade << endl;
+							}
+						} else {
+							cout << "NA" << endl;
+						}
+					} else if(typ == 2) {
+						string room_id;
+						cin >> room_id;
+						cout << room_id << endl;
+						if(rooms.count(room_id)) {
+							cout << rooms[room_id].count << ' ' << rooms[room_id].sum << endl;
+						} else {
+							cout << "NA" << endl;
+						}
+					} else if(typ == 3) {
+						string date;
+						cin >> date;
+						cout << date << endl;
+						if(dates[date].empty()) {
+							cout << "NA" << endl;
+							continue;
+						}
+						vector<pair<string, int>> vec;
+						for(const auto &room_cnt: dates[date]) {
+							vec.emplace_back(room_cnt);
+						}
+						sort(vec.begin(), vec.end(), room_cnt_comp());
+						for(const auto &[id, cnt]: vec) {
+							cout << id << ' ' << cnt << endl;
+						}
+					} else {
+						string op;
+						cout << op << endl;
+						cout << "NA" << endl;
+					}
+				}
+				return 0;
+			}
+
+			bool p_stu_comp::operator()(const student *stu1, const student *stu2) const {
+				if(stu1->grade != stu2->grade) {
+					return stu1->grade > stu2->grade;
+				}
+				return stu1->id < stu2->id;
+			}
+
+			bool room_cnt_comp::operator()(const pair<string, int> &p1, const pair<string, int> &p2) const {
+				if(p1.second != p2.second) {
+					return p1.second > p2.second;
+				}
+				return p1.first < p2.first;
+			}
+		}// namespace b1095
 	}    // namespace b
 
 	namespace a {}
