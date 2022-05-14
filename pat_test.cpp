@@ -1621,17 +1621,6 @@ namespace pat {
 			}
 		}// namespace b1092
 
-		namespace b1093 {
-			TEST(b1093, case1) {
-				istringstream in("This is a sample test\n"
-				                 "to show you_How it works");
-				auto out = ostringstream();
-				main(in, out);
-				const auto ans = out.str();
-				ASSERT_EQ("This ampletowyu_Hrk", out.str());
-			}
-		}// namespace b1093
-
 		namespace b1094 {
 			TEST(b1094, case1) {
 				istringstream in("20 5\n"
