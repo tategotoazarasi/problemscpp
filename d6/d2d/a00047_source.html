@@ -5841,8 +5841,8 @@ $(function() {
 <div class="line"><a id="l05774" name="l05774"></a><span class="lineno"><a class="line" href="../../d9/dcc/a00102.html"> 5774</a></span>    <span class="keyword">namespace </span>acwing1695 {</div>
 <div class="line"><a id="l05775" name="l05775"></a><span class="lineno"><a class="line" href="../../d9/dcc/a00102.html#a5333ec699e340eaf7bdaf6bd90a6276b"> 5775</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d9/dcc/a00102.html#a5333ec699e340eaf7bdaf6bd90a6276b">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
 <div class="line"><a id="l05776" name="l05776"></a><span class="lineno"> 5776</span>            <span class="keywordtype">bool</span> nuts[3][3]         = {{<span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>},</div>
-<div class="line"><a id="l05777" name="l05777"></a><span class="lineno"> 5777</span>                                       {<span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>},</div>
-<div class="line"><a id="l05778" name="l05778"></a><span class="lineno"> 5778</span>                                       {<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>}};</div>
+<div class="line"><a id="l05777" name="l05777"></a><span class="lineno"> 5777</span>                               {<span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>},</div>
+<div class="line"><a id="l05778" name="l05778"></a><span class="lineno"> 5778</span>                               {<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>}};</div>
 <div class="line"><a id="l05779" name="l05779"></a><span class="lineno"> 5779</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> score[3] = {0, 0, 0};</div>
 <div class="line"><a id="l05780" name="l05780"></a><span class="lineno"> 5780</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> ans      = 0;</div>
 <div class="line"><a id="l05781" name="l05781"></a><span class="lineno"> 5781</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> n;</div>
@@ -6972,7 +6972,7 @@ $(function() {
 <div class="line"><a id="l06906" name="l06906"></a><span class="lineno"> 6906</span>            vector&lt;int&gt; pos_e;</div>
 <div class="line"><a id="l06907" name="l06907"></a><span class="lineno"> 6907</span>            pos_b.push_back(0);</div>
 <div class="line"><a id="l06908" name="l06908"></a><span class="lineno"> 6908</span>            pos_e.push_back(0);</div>
-<div class="line"><a id="l06909" name="l06909"></a><span class="lineno"> 6909</span>            <span class="keywordflow">while</span>((b--) != 0) {</div>
+<div class="line"><a id="l06909" name="l06909"></a><span class="lineno"> 6909</span>            <span class="keywordflow">while</span>(b-- != 0) {</div>
 <div class="line"><a id="l06910" name="l06910"></a><span class="lineno"> 6910</span>                <span class="keywordtype">char</span> dir;</div>
 <div class="line"><a id="l06911" name="l06911"></a><span class="lineno"> 6911</span>                <span class="keywordtype">int</span> dist;</div>
 <div class="line"><a id="l06912" name="l06912"></a><span class="lineno"> 6912</span>                cin &gt;&gt; dist &gt;&gt; dir;</div>
@@ -6986,7 +6986,7 @@ $(function() {
 <div class="line"><a id="l06920" name="l06920"></a><span class="lineno"> 6920</span>                    }</div>
 <div class="line"><a id="l06921" name="l06921"></a><span class="lineno"> 6921</span>                }</div>
 <div class="line"><a id="l06922" name="l06922"></a><span class="lineno"> 6922</span>            }</div>
-<div class="line"><a id="l06923" name="l06923"></a><span class="lineno"> 6923</span>            <span class="keywordflow">while</span>((e--) != 0) {</div>
+<div class="line"><a id="l06923" name="l06923"></a><span class="lineno"> 6923</span>            <span class="keywordflow">while</span>(e-- != 0) {</div>
 <div class="line"><a id="l06924" name="l06924"></a><span class="lineno"> 6924</span>                <span class="keywordtype">char</span> dir;</div>
 <div class="line"><a id="l06925" name="l06925"></a><span class="lineno"> 6925</span>                <span class="keywordtype">int</span> dist;</div>
 <div class="line"><a id="l06926" name="l06926"></a><span class="lineno"> 6926</span>                cin &gt;&gt; dist &gt;&gt; dir;</div>
@@ -7031,7 +7031,7 @@ $(function() {
 <div class="line"><a id="l06965" name="l06965"></a><span class="lineno"> 6965</span>                cin &gt;&gt; a;</div>
 <div class="line"><a id="l06966" name="l06966"></a><span class="lineno"> 6966</span>                ostringstream oss;</div>
 <div class="line"><a id="l06967" name="l06967"></a><span class="lineno"> 6967</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 30; i &gt;= 0; i--) {</div>
-<div class="line"><a id="l06968" name="l06968"></a><span class="lineno"> 6968</span>                    oss &lt;&lt; ((a &amp; (1 &lt;&lt; i)) ? <span class="charliteral">&#39;1&#39;</span> : <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><a id="l06968" name="l06968"></a><span class="lineno"> 6968</span>                    oss &lt;&lt; ((a &amp; 1 &lt;&lt; i) != 0u ? <span class="charliteral">&#39;1&#39;</span> : <span class="charliteral">&#39;0&#39;</span>);</div>
 <div class="line"><a id="l06969" name="l06969"></a><span class="lineno"> 6969</span>                }</div>
 <div class="line"><a id="l06970" name="l06970"></a><span class="lineno"> 6970</span>                <span class="keywordtype">string</span> str = oss.str();</div>
 <div class="line"><a id="l06971" name="l06971"></a><span class="lineno"> 6971</span>                vec[j]     = str;</div>
@@ -7039,12 +7039,12 @@ $(function() {
 <div class="line"><a id="l06973" name="l06973"></a><span class="lineno"> 6973</span>            }</div>
 <div class="line"><a id="l06974" name="l06974"></a><span class="lineno"> 6974</span>            <span class="keywordtype">unsigned</span> maximum = 0;</div>
 <div class="line"><a id="l06975" name="l06975"></a><span class="lineno"> 6975</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;str: vec) {</div>
-<div class="line"><a id="l06976" name="l06976"></a><span class="lineno"> 6976</span>                <a class="code hl_struct" href="../../da/dab/a01362.html">TrieNode</a> *current = &amp;tn;</div>
-<div class="line"><a id="l06977" name="l06977"></a><span class="lineno"> 6977</span>                <span class="keywordtype">unsigned</span> ans      = 0;</div>
+<div class="line"><a id="l06976" name="l06976"></a><span class="lineno"> 6976</span>                <span class="keyword">const</span> <a class="code hl_struct" href="../../da/dab/a01362.html">TrieNode</a> *current = &amp;tn;</div>
+<div class="line"><a id="l06977" name="l06977"></a><span class="lineno"> 6977</span>                <span class="keywordtype">unsigned</span> ans            = 0;</div>
 <div class="line"><a id="l06978" name="l06978"></a><span class="lineno"> 6978</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt;= 30; i++) {</div>
 <div class="line"><a id="l06979" name="l06979"></a><span class="lineno"> 6979</span>                    ans &lt;&lt;= 1;</div>
-<div class="line"><a id="l06980" name="l06980"></a><span class="lineno"> 6980</span>                    <span class="keywordflow">if</span>(current-&gt;<a class="code hl_variable" href="../../da/dab/a01362.html#a63e415cf10785fea5d86249e66cb24f3">next</a>[!(str[i] - <span class="charliteral">&#39;0&#39;</span>)] != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l06981" name="l06981"></a><span class="lineno"> 6981</span>                        current = current-&gt;<a class="code hl_variable" href="../../da/dab/a01362.html#a63e415cf10785fea5d86249e66cb24f3">next</a>[!(str[i] - <span class="charliteral">&#39;0&#39;</span>)];</div>
+<div class="line"><a id="l06980" name="l06980"></a><span class="lineno"> 6980</span>                    <span class="keywordflow">if</span>(current-&gt;<a class="code hl_variable" href="../../da/dab/a01362.html#a63e415cf10785fea5d86249e66cb24f3">next</a>[(str[i] - <span class="charliteral">&#39;0&#39;</span>) == 0] != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l06981" name="l06981"></a><span class="lineno"> 6981</span>                        current = current-&gt;<a class="code hl_variable" href="../../da/dab/a01362.html#a63e415cf10785fea5d86249e66cb24f3">next</a>[(str[i] - <span class="charliteral">&#39;0&#39;</span>) == 0];</div>
 <div class="line"><a id="l06982" name="l06982"></a><span class="lineno"> 6982</span>                        ans += 1;</div>
 <div class="line"><a id="l06983" name="l06983"></a><span class="lineno"> 6983</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l06984" name="l06984"></a><span class="lineno"> 6984</span>                        current = current-&gt;<a class="code hl_variable" href="../../da/dab/a01362.html#a63e415cf10785fea5d86249e66cb24f3">next</a>[str[i] - <span class="charliteral">&#39;0&#39;</span>];</div>
@@ -7069,94 +7069,96 @@ $(function() {
 <div class="line"><a id="l07003" name="l07003"></a><span class="lineno"> 7003</span> </div>
 <div class="line"><a id="l07004" name="l07004"></a><span class="lineno"><a class="line" href="../../de/d76/a00134.html"> 7004</a></span>    <span class="keyword">namespace </span>acwing837 {</div>
 <div class="line"><a id="l07005" name="l07005"></a><span class="lineno"><a class="line" href="../../de/d76/a00134.html#a79d37f13f1fcebabfc085d681be45c10"> 7005</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d76/a00134.html#a79d37f13f1fcebabfc085d681be45c10">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l07006" name="l07006"></a><span class="lineno"> 7006</span>            <span class="keywordtype">int</span> n, m;</div>
-<div class="line"><a id="l07007" name="l07007"></a><span class="lineno"> 7007</span>            cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l07008" name="l07008"></a><span class="lineno"> 7008</span>            <a class="code hl_class" href="../../d9/da4/a02798.html">UnionFind</a> uf(n);</div>
-<div class="line"><a id="l07009" name="l07009"></a><span class="lineno"> 7009</span>            <span class="keywordflow">while</span>(m--) {</div>
-<div class="line"><a id="l07010" name="l07010"></a><span class="lineno"> 7010</span>                <span class="keywordtype">string</span> op;</div>
-<div class="line"><a id="l07011" name="l07011"></a><span class="lineno"> 7011</span>                <span class="keywordtype">int</span> a, b;</div>
-<div class="line"><a id="l07012" name="l07012"></a><span class="lineno"> 7012</span>                cin &gt;&gt; op;</div>
-<div class="line"><a id="l07013" name="l07013"></a><span class="lineno"> 7013</span>                <span class="keywordflow">if</span>(op == <span class="stringliteral">&quot;C&quot;</span>) {</div>
-<div class="line"><a id="l07014" name="l07014"></a><span class="lineno"> 7014</span>                    cin &gt;&gt; a &gt;&gt; b;</div>
-<div class="line"><a id="l07015" name="l07015"></a><span class="lineno"> 7015</span>                    uf.<a class="code hl_function" href="../../d9/da4/a02798.html#a36a27b936dbdeb53749e32a71554c3ed">unite</a>(a - 1, b - 1);</div>
-<div class="line"><a id="l07016" name="l07016"></a><span class="lineno"> 7016</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(op == <span class="stringliteral">&quot;Q1&quot;</span>) {</div>
-<div class="line"><a id="l07017" name="l07017"></a><span class="lineno"> 7017</span>                    cin &gt;&gt; a &gt;&gt; b;</div>
-<div class="line"><a id="l07018" name="l07018"></a><span class="lineno"> 7018</span>                    cout &lt;&lt; (uf.<a class="code hl_function" href="../../d9/da4/a02798.html#aa1580fa407277914913231a7d752c7d8">same</a>(a - 1, b - 1) ? <span class="stringliteral">&quot;Yes&quot;</span> : <span class="stringliteral">&quot;No&quot;</span>) &lt;&lt; endl;</div>
-<div class="line"><a id="l07019" name="l07019"></a><span class="lineno"> 7019</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07020" name="l07020"></a><span class="lineno"> 7020</span>                    cin &gt;&gt; a;</div>
-<div class="line"><a id="l07021" name="l07021"></a><span class="lineno"> 7021</span>                    cout &lt;&lt; uf.<a class="code hl_function" href="../../d9/da4/a02798.html#a841370ab42669c1e8db9ade92ca098a1">get_size</a>(a - 1) &lt;&lt; endl;</div>
-<div class="line"><a id="l07022" name="l07022"></a><span class="lineno"> 7022</span>                }</div>
-<div class="line"><a id="l07023" name="l07023"></a><span class="lineno"> 7023</span>            }</div>
-<div class="line"><a id="l07024" name="l07024"></a><span class="lineno"> 7024</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07025" name="l07025"></a><span class="lineno"> 7025</span>        }</div>
-<div class="line"><a id="l07026" name="l07026"></a><span class="lineno"> 7026</span>    }<span class="comment">// namespace acwing837</span></div>
-<div class="line"><a id="l07027" name="l07027"></a><span class="lineno"> 7027</span> </div>
-<div class="line"><a id="l07028" name="l07028"></a><span class="lineno"><a class="line" href="../../d5/d5b/a00135.html"> 7028</a></span>    <span class="keyword">namespace </span>acwing240 {</div>
-<div class="line"><a id="l07029" name="l07029"></a><span class="lineno"><a class="line" href="../../d5/d5b/a00135.html#aa9450f24eb9863c299602f501f861848"> 7029</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d5/d5b/a00135.html#aa9450f24eb9863c299602f501f861848">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l07030" name="l07030"></a><span class="lineno"> 7030</span>            <span class="keywordtype">int</span> n, k;</div>
-<div class="line"><a id="l07031" name="l07031"></a><span class="lineno"> 7031</span>            cin &gt;&gt; n &gt;&gt; k;</div>
-<div class="line"><a id="l07032" name="l07032"></a><span class="lineno"> 7032</span>            <a class="code hl_struct" href="../../d6/dfe/a01366.html">UnionFind</a> uf(n);</div>
-<div class="line"><a id="l07033" name="l07033"></a><span class="lineno"> 7033</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l07034" name="l07034"></a><span class="lineno"> 7034</span>            <span class="keywordflow">while</span>(k--) {</div>
-<div class="line"><a id="l07035" name="l07035"></a><span class="lineno"> 7035</span>                <span class="keywordtype">char</span> d;</div>
-<div class="line"><a id="l07036" name="l07036"></a><span class="lineno"> 7036</span>                <span class="keywordtype">int</span> x, y;</div>
-<div class="line"><a id="l07037" name="l07037"></a><span class="lineno"> 7037</span>                cin &gt;&gt; d &gt;&gt; x &gt;&gt; y;</div>
-<div class="line"><a id="l07038" name="l07038"></a><span class="lineno"> 7038</span>                <span class="keywordflow">if</span>(x &gt; n || y &gt; n) {</div>
-<div class="line"><a id="l07039" name="l07039"></a><span class="lineno"> 7039</span>                    ans++;</div>
-<div class="line"><a id="l07040" name="l07040"></a><span class="lineno"> 7040</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l07041" name="l07041"></a><span class="lineno"> 7041</span>                }</div>
-<div class="line"><a id="l07042" name="l07042"></a><span class="lineno"> 7042</span>                x--;</div>
-<div class="line"><a id="l07043" name="l07043"></a><span class="lineno"> 7043</span>                y--;</div>
-<div class="line"><a id="l07044" name="l07044"></a><span class="lineno"> 7044</span>                <span class="keywordtype">int</span> px = uf.<a class="code hl_function" href="../../d6/dfe/a01366.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a>(x);</div>
-<div class="line"><a id="l07045" name="l07045"></a><span class="lineno"> 7045</span>                <span class="keywordtype">int</span> py = uf.<a class="code hl_function" href="../../d6/dfe/a01366.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a>(y);</div>
-<div class="line"><a id="l07046" name="l07046"></a><span class="lineno"> 7046</span>                <span class="keywordflow">if</span>(d == <span class="charliteral">&#39;1&#39;</span>) {</div>
-<div class="line"><a id="l07047" name="l07047"></a><span class="lineno"> 7047</span>                    <span class="keywordflow">if</span>(px == py) {</div>
-<div class="line"><a id="l07048" name="l07048"></a><span class="lineno"> 7048</span>                        <span class="keywordflow">if</span>((uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[x] - uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[y]) % 3 != 0) {</div>
-<div class="line"><a id="l07049" name="l07049"></a><span class="lineno"> 7049</span>                            ans++;</div>
-<div class="line"><a id="l07050" name="l07050"></a><span class="lineno"> 7050</span>                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l07051" name="l07051"></a><span class="lineno"> 7051</span>                        }</div>
-<div class="line"><a id="l07052" name="l07052"></a><span class="lineno"> 7052</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07053" name="l07053"></a><span class="lineno"> 7053</span>                        uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[px] = py;</div>
-<div class="line"><a id="l07054" name="l07054"></a><span class="lineno"> 7054</span>                        uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[px]   = uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[y] - uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[x];</div>
-<div class="line"><a id="l07055" name="l07055"></a><span class="lineno"> 7055</span>                    }</div>
-<div class="line"><a id="l07056" name="l07056"></a><span class="lineno"> 7056</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07057" name="l07057"></a><span class="lineno"> 7057</span>                    <span class="keywordflow">if</span>(x == y) {</div>
-<div class="line"><a id="l07058" name="l07058"></a><span class="lineno"> 7058</span>                        ans++;</div>
-<div class="line"><a id="l07059" name="l07059"></a><span class="lineno"> 7059</span>                        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l07060" name="l07060"></a><span class="lineno"> 7060</span>                    }</div>
-<div class="line"><a id="l07061" name="l07061"></a><span class="lineno"> 7061</span>                    <span class="keywordflow">if</span>(px == py) {</div>
-<div class="line"><a id="l07062" name="l07062"></a><span class="lineno"> 7062</span>                        <span class="keywordflow">if</span>((uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[x] - uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[y] - 1) % 3 != 0) {</div>
-<div class="line"><a id="l07063" name="l07063"></a><span class="lineno"> 7063</span>                            ans++;</div>
-<div class="line"><a id="l07064" name="l07064"></a><span class="lineno"> 7064</span>                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l07065" name="l07065"></a><span class="lineno"> 7065</span>                        }</div>
-<div class="line"><a id="l07066" name="l07066"></a><span class="lineno"> 7066</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07067" name="l07067"></a><span class="lineno"> 7067</span>                        uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[px] = py;</div>
-<div class="line"><a id="l07068" name="l07068"></a><span class="lineno"> 7068</span>                        uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[px]   = uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[y] - uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[x] + 1;</div>
-<div class="line"><a id="l07069" name="l07069"></a><span class="lineno"> 7069</span>                    }</div>
-<div class="line"><a id="l07070" name="l07070"></a><span class="lineno"> 7070</span>                }</div>
-<div class="line"><a id="l07071" name="l07071"></a><span class="lineno"> 7071</span>            }</div>
-<div class="line"><a id="l07072" name="l07072"></a><span class="lineno"> 7072</span>            cout &lt;&lt; ans;</div>
-<div class="line"><a id="l07073" name="l07073"></a><span class="lineno"> 7073</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07074" name="l07074"></a><span class="lineno"> 7074</span>        }</div>
-<div class="line"><a id="l07075" name="l07075"></a><span class="lineno"> 7075</span> </div>
-<div class="line"><a id="l07076" name="l07076"></a><span class="lineno"><a class="line" href="../../d6/dfe/a01366.html#aab2b783c6c2b20c187844788e3f3dd0a"> 7076</a></span>        <a class="code hl_function" href="../../d6/dfe/a01366.html#aab2b783c6c2b20c187844788e3f3dd0a">UnionFind::UnionFind</a>(<span class="keywordtype">int</span> n) {</div>
-<div class="line"><a id="l07077" name="l07077"></a><span class="lineno"> 7077</span>            <a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a> = vector&lt;int&gt;(n);</div>
-<div class="line"><a id="l07078" name="l07078"></a><span class="lineno"> 7078</span>            <a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>   = vector&lt;int&gt;(n, 0);</div>
-<div class="line"><a id="l07079" name="l07079"></a><span class="lineno"> 7079</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l07080" name="l07080"></a><span class="lineno"> 7080</span>                <a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[i] = i;</div>
-<div class="line"><a id="l07081" name="l07081"></a><span class="lineno"> 7081</span>            }</div>
-<div class="line"><a id="l07082" name="l07082"></a><span class="lineno"> 7082</span>        }</div>
-<div class="line"><a id="l07083" name="l07083"></a><span class="lineno"> 7083</span> </div>
-<div class="line"><a id="l07084" name="l07084"></a><span class="lineno"><a class="line" href="../../d6/dfe/a01366.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea"> 7084</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d6/dfe/a01366.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">UnionFind::find</a>(<span class="keywordtype">int</span> x) {</div>
-<div class="line"><a id="l07085" name="l07085"></a><span class="lineno"> 7085</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[x] != x) {</div>
-<div class="line"><a id="l07086" name="l07086"></a><span class="lineno"> 7086</span>                <span class="keywordtype">int</span> tmp = <a class="code hl_function" href="../../d6/dfe/a01366.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a>(<a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[x]);</div>
-<div class="line"><a id="l07087" name="l07087"></a><span class="lineno"> 7087</span>                <a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[x] += <a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[<a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[x]];</div>
-<div class="line"><a id="l07088" name="l07088"></a><span class="lineno"> 7088</span>                <a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[x] = tmp;</div>
-<div class="line"><a id="l07089" name="l07089"></a><span class="lineno"> 7089</span>            }</div>
-<div class="line"><a id="l07090" name="l07090"></a><span class="lineno"> 7090</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[x];</div>
-<div class="line"><a id="l07091" name="l07091"></a><span class="lineno"> 7091</span>        }</div>
-<div class="line"><a id="l07092" name="l07092"></a><span class="lineno"> 7092</span>    }<span class="comment">// namespace acwing240</span></div>
-<div class="line"><a id="l07093" name="l07093"></a><span class="lineno"> 7093</span>}<span class="comment">// namespace acwing</span></div>
+<div class="line"><a id="l07006" name="l07006"></a><span class="lineno"> 7006</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l07007" name="l07007"></a><span class="lineno"> 7007</span>            <span class="keywordtype">int</span> m;</div>
+<div class="line"><a id="l07008" name="l07008"></a><span class="lineno"> 7008</span>            cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l07009" name="l07009"></a><span class="lineno"> 7009</span>            <a class="code hl_class" href="../../d9/da4/a02798.html">UnionFind</a> uf(n);</div>
+<div class="line"><a id="l07010" name="l07010"></a><span class="lineno"> 7010</span>            <span class="keywordflow">while</span>((m--) != 0) {</div>
+<div class="line"><a id="l07011" name="l07011"></a><span class="lineno"> 7011</span>                <span class="keywordtype">string</span> op;</div>
+<div class="line"><a id="l07012" name="l07012"></a><span class="lineno"> 7012</span>                <span class="keywordtype">int</span> a;</div>
+<div class="line"><a id="l07013" name="l07013"></a><span class="lineno"> 7013</span>                <span class="keywordtype">int</span> b;</div>
+<div class="line"><a id="l07014" name="l07014"></a><span class="lineno"> 7014</span>                cin &gt;&gt; op;</div>
+<div class="line"><a id="l07015" name="l07015"></a><span class="lineno"> 7015</span>                <span class="keywordflow">if</span>(op == <span class="stringliteral">&quot;C&quot;</span>) {</div>
+<div class="line"><a id="l07016" name="l07016"></a><span class="lineno"> 7016</span>                    cin &gt;&gt; a &gt;&gt; b;</div>
+<div class="line"><a id="l07017" name="l07017"></a><span class="lineno"> 7017</span>                    uf.<a class="code hl_function" href="../../d9/da4/a02798.html#a36a27b936dbdeb53749e32a71554c3ed">unite</a>(a - 1, b - 1);</div>
+<div class="line"><a id="l07018" name="l07018"></a><span class="lineno"> 7018</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(op == <span class="stringliteral">&quot;Q1&quot;</span>) {</div>
+<div class="line"><a id="l07019" name="l07019"></a><span class="lineno"> 7019</span>                    cin &gt;&gt; a &gt;&gt; b;</div>
+<div class="line"><a id="l07020" name="l07020"></a><span class="lineno"> 7020</span>                    cout &lt;&lt; (uf.<a class="code hl_function" href="../../d9/da4/a02798.html#aa1580fa407277914913231a7d752c7d8">same</a>(a - 1, b - 1) ? <span class="stringliteral">&quot;Yes&quot;</span> : <span class="stringliteral">&quot;No&quot;</span>) &lt;&lt; endl;</div>
+<div class="line"><a id="l07021" name="l07021"></a><span class="lineno"> 7021</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07022" name="l07022"></a><span class="lineno"> 7022</span>                    cin &gt;&gt; a;</div>
+<div class="line"><a id="l07023" name="l07023"></a><span class="lineno"> 7023</span>                    cout &lt;&lt; uf.<a class="code hl_function" href="../../d9/da4/a02798.html#a841370ab42669c1e8db9ade92ca098a1">get_size</a>(a - 1) &lt;&lt; endl;</div>
+<div class="line"><a id="l07024" name="l07024"></a><span class="lineno"> 7024</span>                }</div>
+<div class="line"><a id="l07025" name="l07025"></a><span class="lineno"> 7025</span>            }</div>
+<div class="line"><a id="l07026" name="l07026"></a><span class="lineno"> 7026</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07027" name="l07027"></a><span class="lineno"> 7027</span>        }</div>
+<div class="line"><a id="l07028" name="l07028"></a><span class="lineno"> 7028</span>    }<span class="comment">// namespace acwing837</span></div>
+<div class="line"><a id="l07029" name="l07029"></a><span class="lineno"> 7029</span> </div>
+<div class="line"><a id="l07030" name="l07030"></a><span class="lineno"><a class="line" href="../../d5/d5b/a00135.html"> 7030</a></span>    <span class="keyword">namespace </span>acwing240 {</div>
+<div class="line"><a id="l07031" name="l07031"></a><span class="lineno"><a class="line" href="../../d5/d5b/a00135.html#aa9450f24eb9863c299602f501f861848"> 7031</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d5/d5b/a00135.html#aa9450f24eb9863c299602f501f861848">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l07032" name="l07032"></a><span class="lineno"> 7032</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l07033" name="l07033"></a><span class="lineno"> 7033</span>            <span class="keywordtype">int</span> k;</div>
+<div class="line"><a id="l07034" name="l07034"></a><span class="lineno"> 7034</span>            cin &gt;&gt; n &gt;&gt; k;</div>
+<div class="line"><a id="l07035" name="l07035"></a><span class="lineno"> 7035</span>            <a class="code hl_struct" href="../../d6/dfe/a01366.html">UnionFind</a> uf(n);</div>
+<div class="line"><a id="l07036" name="l07036"></a><span class="lineno"> 7036</span>            <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l07037" name="l07037"></a><span class="lineno"> 7037</span>            <span class="keywordflow">while</span>((k--) != 0) {</div>
+<div class="line"><a id="l07038" name="l07038"></a><span class="lineno"> 7038</span>                <span class="keywordtype">char</span> d;</div>
+<div class="line"><a id="l07039" name="l07039"></a><span class="lineno"> 7039</span>                <span class="keywordtype">int</span> x;</div>
+<div class="line"><a id="l07040" name="l07040"></a><span class="lineno"> 7040</span>                <span class="keywordtype">int</span> y;</div>
+<div class="line"><a id="l07041" name="l07041"></a><span class="lineno"> 7041</span>                cin &gt;&gt; d &gt;&gt; x &gt;&gt; y;</div>
+<div class="line"><a id="l07042" name="l07042"></a><span class="lineno"> 7042</span>                <span class="keywordflow">if</span>(x &gt; n || y &gt; n) {</div>
+<div class="line"><a id="l07043" name="l07043"></a><span class="lineno"> 7043</span>                    ans++;</div>
+<div class="line"><a id="l07044" name="l07044"></a><span class="lineno"> 7044</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l07045" name="l07045"></a><span class="lineno"> 7045</span>                }</div>
+<div class="line"><a id="l07046" name="l07046"></a><span class="lineno"> 7046</span>                x--;</div>
+<div class="line"><a id="l07047" name="l07047"></a><span class="lineno"> 7047</span>                y--;</div>
+<div class="line"><a id="l07048" name="l07048"></a><span class="lineno"> 7048</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> px = uf.<a class="code hl_function" href="../../d6/dfe/a01366.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a>(x);</div>
+<div class="line"><a id="l07049" name="l07049"></a><span class="lineno"> 7049</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> py = uf.<a class="code hl_function" href="../../d6/dfe/a01366.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a>(y);</div>
+<div class="line"><a id="l07050" name="l07050"></a><span class="lineno"> 7050</span>                <span class="keywordflow">if</span>(d == <span class="charliteral">&#39;1&#39;</span>) {</div>
+<div class="line"><a id="l07051" name="l07051"></a><span class="lineno"> 7051</span>                    <span class="keywordflow">if</span>(px == py) {</div>
+<div class="line"><a id="l07052" name="l07052"></a><span class="lineno"> 7052</span>                        <span class="keywordflow">if</span>((uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[x] - uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[y]) % 3 != 0) {</div>
+<div class="line"><a id="l07053" name="l07053"></a><span class="lineno"> 7053</span>                            ans++;</div>
+<div class="line"><a id="l07054" name="l07054"></a><span class="lineno"> 7054</span>                        }</div>
+<div class="line"><a id="l07055" name="l07055"></a><span class="lineno"> 7055</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07056" name="l07056"></a><span class="lineno"> 7056</span>                        uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[px] = py;</div>
+<div class="line"><a id="l07057" name="l07057"></a><span class="lineno"> 7057</span>                        uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[px]   = uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[y] - uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[x];</div>
+<div class="line"><a id="l07058" name="l07058"></a><span class="lineno"> 7058</span>                    }</div>
+<div class="line"><a id="l07059" name="l07059"></a><span class="lineno"> 7059</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07060" name="l07060"></a><span class="lineno"> 7060</span>                    <span class="keywordflow">if</span>(x == y) {</div>
+<div class="line"><a id="l07061" name="l07061"></a><span class="lineno"> 7061</span>                        ans++;</div>
+<div class="line"><a id="l07062" name="l07062"></a><span class="lineno"> 7062</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l07063" name="l07063"></a><span class="lineno"> 7063</span>                    }</div>
+<div class="line"><a id="l07064" name="l07064"></a><span class="lineno"> 7064</span>                    <span class="keywordflow">if</span>(px == py) {</div>
+<div class="line"><a id="l07065" name="l07065"></a><span class="lineno"> 7065</span>                        <span class="keywordflow">if</span>((uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[x] - uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[y] - 1) % 3 != 0) {</div>
+<div class="line"><a id="l07066" name="l07066"></a><span class="lineno"> 7066</span>                            ans++;</div>
+<div class="line"><a id="l07067" name="l07067"></a><span class="lineno"> 7067</span>                        }</div>
+<div class="line"><a id="l07068" name="l07068"></a><span class="lineno"> 7068</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07069" name="l07069"></a><span class="lineno"> 7069</span>                        uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[px] = py;</div>
+<div class="line"><a id="l07070" name="l07070"></a><span class="lineno"> 7070</span>                        uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[px]   = uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[y] - uf.<a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[x] + 1;</div>
+<div class="line"><a id="l07071" name="l07071"></a><span class="lineno"> 7071</span>                    }</div>
+<div class="line"><a id="l07072" name="l07072"></a><span class="lineno"> 7072</span>                }</div>
+<div class="line"><a id="l07073" name="l07073"></a><span class="lineno"> 7073</span>            }</div>
+<div class="line"><a id="l07074" name="l07074"></a><span class="lineno"> 7074</span>            cout &lt;&lt; ans;</div>
+<div class="line"><a id="l07075" name="l07075"></a><span class="lineno"> 7075</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07076" name="l07076"></a><span class="lineno"> 7076</span>        }</div>
+<div class="line"><a id="l07077" name="l07077"></a><span class="lineno"> 7077</span> </div>
+<div class="line"><a id="l07078" name="l07078"></a><span class="lineno"><a class="line" href="../../d6/dfe/a01366.html#aab2b783c6c2b20c187844788e3f3dd0a"> 7078</a></span>        <a class="code hl_function" href="../../d6/dfe/a01366.html#aab2b783c6c2b20c187844788e3f3dd0a">UnionFind::UnionFind</a>(<span class="keywordtype">int</span> n) {</div>
+<div class="line"><a id="l07079" name="l07079"></a><span class="lineno"> 7079</span>            <a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a> = vector&lt;int&gt;(n);</div>
+<div class="line"><a id="l07080" name="l07080"></a><span class="lineno"> 7080</span>            <a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>   = vector(n, 0);</div>
+<div class="line"><a id="l07081" name="l07081"></a><span class="lineno"> 7081</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l07082" name="l07082"></a><span class="lineno"> 7082</span>                <a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[i] = i;</div>
+<div class="line"><a id="l07083" name="l07083"></a><span class="lineno"> 7083</span>            }</div>
+<div class="line"><a id="l07084" name="l07084"></a><span class="lineno"> 7084</span>        }</div>
+<div class="line"><a id="l07085" name="l07085"></a><span class="lineno"> 7085</span> </div>
+<div class="line"><a id="l07086" name="l07086"></a><span class="lineno"><a class="line" href="../../d6/dfe/a01366.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea"> 7086</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d6/dfe/a01366.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">UnionFind::find</a>(<span class="keywordtype">int</span> x) {</div>
+<div class="line"><a id="l07087" name="l07087"></a><span class="lineno"> 7087</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[x] != x) {</div>
+<div class="line"><a id="l07088" name="l07088"></a><span class="lineno"> 7088</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> tmp = <a class="code hl_function" href="../../d6/dfe/a01366.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a>(<a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[x]);</div>
+<div class="line"><a id="l07089" name="l07089"></a><span class="lineno"> 7089</span>                <a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[x] += <a class="code hl_variable" href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">dist</a>[<a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[x]];</div>
+<div class="line"><a id="l07090" name="l07090"></a><span class="lineno"> 7090</span>                <a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[x] = tmp;</div>
+<div class="line"><a id="l07091" name="l07091"></a><span class="lineno"> 7091</span>            }</div>
+<div class="line"><a id="l07092" name="l07092"></a><span class="lineno"> 7092</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">parent</a>[x];</div>
+<div class="line"><a id="l07093" name="l07093"></a><span class="lineno"> 7093</span>        }</div>
+<div class="line"><a id="l07094" name="l07094"></a><span class="lineno"> 7094</span>    }<span class="comment">// namespace acwing240</span></div>
+<div class="line"><a id="l07095" name="l07095"></a><span class="lineno"> 7095</span>}<span class="comment">// namespace acwing</span></div>
 <div class="ttc" id="aa00020_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../db/db2/a00020.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l00005">main.cpp:5</a></div></div>
 <div class="ttc" id="aa00023_html"><div class="ttname"><a href="../../d3/d52/a00023.html">acwing.h</a></div></div>
 <div class="ttc" id="aa00038_html"><div class="ttname"><a href="../../d8/d41/a00038.html">templates.h</a></div></div>
@@ -7211,7 +7213,7 @@ $(function() {
 <div class="ttc" id="aa00132_html_a51aaa05157e649be04ac4bdf30343c18"><div class="ttname"><a href="../../d5/deb/a00132.html#a51aaa05157e649be04ac4bdf30343c18">acwing::acwing1995::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l06901">acwing.cpp:6901</a></div></div>
 <div class="ttc" id="aa00133_html_a16c66bcb26773ef601938b4f70cede89"><div class="ttname"><a href="../../d0/de8/a00133.html#a16c66bcb26773ef601938b4f70cede89">acwing::acwing143::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l06958">acwing.cpp:6958</a></div></div>
 <div class="ttc" id="aa00134_html_a79d37f13f1fcebabfc085d681be45c10"><div class="ttname"><a href="../../de/d76/a00134.html#a79d37f13f1fcebabfc085d681be45c10">acwing::acwing837::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l07005">acwing.cpp:7005</a></div></div>
-<div class="ttc" id="aa00135_html_aa9450f24eb9863c299602f501f861848"><div class="ttname"><a href="../../d5/d5b/a00135.html#aa9450f24eb9863c299602f501f861848">acwing::acwing240::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l07029">acwing.cpp:7029</a></div></div>
+<div class="ttc" id="aa00135_html_aa9450f24eb9863c299602f501f861848"><div class="ttname"><a href="../../d5/d5b/a00135.html#aa9450f24eb9863c299602f501f861848">acwing::acwing240::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l07031">acwing.cpp:7031</a></div></div>
 <div class="ttc" id="aa00458_html_a03de3190c7b5be0f165eceab6a5a5f85"><div class="ttname"><a href="../../da/d65/a00458.html#a03de3190c7b5be0f165eceab6a5a5f85">acwing::acwing1::main</a></div><div class="ttdeci">static int main(istream &amp;, ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l00023">acwing.cpp:23</a></div></div>
 <div class="ttc" id="aa00462_html_a2654e0c7c514dde18cc76326b77d931a"><div class="ttname"><a href="../../de/dcb/a00462.html#a2654e0c7c514dde18cc76326b77d931a">acwing::acwing4200::main</a></div><div class="ttdeci">static int main(istream &amp;, ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l00031">acwing.cpp:31</a></div></div>
 <div class="ttc" id="aa00466_html_a01648403be79a56a4beb930d77bc2501"><div class="ttname"><a href="../../db/d2c/a00466.html#a01648403be79a56a4beb930d77bc2501">acwing::acwing4201::main</a></div><div class="ttdeci">static int main(istream &amp;, ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l00048">acwing.cpp:48</a></div></div>
@@ -7421,11 +7423,11 @@ $(function() {
 <div class="ttc" id="aa01362_html_a63e415cf10785fea5d86249e66cb24f3"><div class="ttname"><a href="../../da/dab/a01362.html#a63e415cf10785fea5d86249e66cb24f3">acwing::acwing143::TrieNode::next</a></div><div class="ttdeci">TrieNode * next[2]</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l02032">acwing.h:2032</a></div></div>
 <div class="ttc" id="aa01362_html_a81f03a102d994deb5643fdb548561764"><div class="ttname"><a href="../../da/dab/a01362.html#a81f03a102d994deb5643fdb548561764">acwing::acwing143::TrieNode::val</a></div><div class="ttdeci">int val</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l02033">acwing.h:2033</a></div></div>
 <div class="ttc" id="aa01362_html_ad302b8769f3f0096a77b51a6ee49014b"><div class="ttname"><a href="../../da/dab/a01362.html#ad302b8769f3f0096a77b51a6ee49014b">acwing::acwing143::TrieNode::insert</a></div><div class="ttdeci">void insert(const string &amp;str, int i)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l06993">acwing.cpp:6993</a></div></div>
-<div class="ttc" id="aa01366_html"><div class="ttname"><a href="../../d6/dfe/a01366.html">acwing::acwing240::UnionFind</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l02046">acwing.h:2046</a></div></div>
-<div class="ttc" id="aa01366_html_aa3fe04bfd2e9ce2e33c3edf8c91c3aea"><div class="ttname"><a href="../../d6/dfe/a01366.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">acwing::acwing240::UnionFind::find</a></div><div class="ttdeci">int find(int x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l07084">acwing.cpp:7084</a></div></div>
-<div class="ttc" id="aa01366_html_aab2b783c6c2b20c187844788e3f3dd0a"><div class="ttname"><a href="../../d6/dfe/a01366.html#aab2b783c6c2b20c187844788e3f3dd0a">acwing::acwing240::UnionFind::UnionFind</a></div><div class="ttdeci">UnionFind(int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l07076">acwing.cpp:7076</a></div></div>
-<div class="ttc" id="aa01366_html_ab40c36b6bf474896b3ea57880113726a"><div class="ttname"><a href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">acwing::acwing240::UnionFind::parent</a></div><div class="ttdeci">vector&lt; int &gt; parent</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l02048">acwing.h:2048</a></div></div>
-<div class="ttc" id="aa01366_html_ac8e669b28140fdb0c7dec04ad0465935"><div class="ttname"><a href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">acwing::acwing240::UnionFind::dist</a></div><div class="ttdeci">vector&lt; int &gt; dist</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l02049">acwing.h:2049</a></div></div>
+<div class="ttc" id="aa01366_html"><div class="ttname"><a href="../../d6/dfe/a01366.html">acwing::acwing240::UnionFind</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l02047">acwing.h:2047</a></div></div>
+<div class="ttc" id="aa01366_html_aa3fe04bfd2e9ce2e33c3edf8c91c3aea"><div class="ttname"><a href="../../d6/dfe/a01366.html#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">acwing::acwing240::UnionFind::find</a></div><div class="ttdeci">int find(int x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l07086">acwing.cpp:7086</a></div></div>
+<div class="ttc" id="aa01366_html_aab2b783c6c2b20c187844788e3f3dd0a"><div class="ttname"><a href="../../d6/dfe/a01366.html#aab2b783c6c2b20c187844788e3f3dd0a">acwing::acwing240::UnionFind::UnionFind</a></div><div class="ttdeci">UnionFind(int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l07078">acwing.cpp:7078</a></div></div>
+<div class="ttc" id="aa01366_html_ab40c36b6bf474896b3ea57880113726a"><div class="ttname"><a href="../../d6/dfe/a01366.html#ab40c36b6bf474896b3ea57880113726a">acwing::acwing240::UnionFind::parent</a></div><div class="ttdeci">vector&lt; int &gt; parent</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l02049">acwing.h:2049</a></div></div>
+<div class="ttc" id="aa01366_html_ac8e669b28140fdb0c7dec04ad0465935"><div class="ttname"><a href="../../d6/dfe/a01366.html#ac8e669b28140fdb0c7dec04ad0465935">acwing::acwing240::UnionFind::dist</a></div><div class="ttdeci">vector&lt; int &gt; dist</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l02050">acwing.h:2050</a></div></div>
 <div class="ttc" id="aa02798_html"><div class="ttname"><a href="../../d9/da4/a02798.html">UnionFind</a></div><div class="ttdoc">并查集</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d41/a00038_source.html#l00090">templates.h:90</a></div></div>
 <div class="ttc" id="aa02798_html_a36a27b936dbdeb53749e32a71554c3ed"><div class="ttname"><a href="../../d9/da4/a02798.html#a36a27b936dbdeb53749e32a71554c3ed">UnionFind::unite</a></div><div class="ttdeci">void unite(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l00450">templates.cpp:450</a></div></div>
 <div class="ttc" id="aa02798_html_a841370ab42669c1e8db9ade92ca098a1"><div class="ttname"><a href="../../d9/da4/a02798.html#a841370ab42669c1e8db9ade92ca098a1">UnionFind::get_size</a></div><div class="ttdeci">int get_size(int x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l00470">templates.cpp:470</a></div></div>

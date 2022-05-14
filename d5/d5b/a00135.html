@@ -123,56 +123,56 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d6/d2d/a00047_source.html">acwing.cpp</a> 第 <a class="el" href="../../d6/d2d/a00047_source.html#l07029">7029</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07029" name="l07029"></a><span class="lineno"> 7029</span>                                              {</div>
-<div class="line"><a id="l07030" name="l07030"></a><span class="lineno"> 7030</span>            <span class="keywordtype">int</span> n, k;</div>
-<div class="line"><a id="l07031" name="l07031"></a><span class="lineno"> 7031</span>            cin &gt;&gt; n &gt;&gt; k;</div>
-<div class="line"><a id="l07032" name="l07032"></a><span class="lineno"> 7032</span>            <a class="code hl_struct" href="../../d6/dfe/a01366.html">UnionFind</a> uf(n);</div>
-<div class="line"><a id="l07033" name="l07033"></a><span class="lineno"> 7033</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l07034" name="l07034"></a><span class="lineno"> 7034</span>            <span class="keywordflow">while</span>(k--) {</div>
-<div class="line"><a id="l07035" name="l07035"></a><span class="lineno"> 7035</span>                <span class="keywordtype">char</span> d;</div>
-<div class="line"><a id="l07036" name="l07036"></a><span class="lineno"> 7036</span>                <span class="keywordtype">int</span> x, y;</div>
-<div class="line"><a id="l07037" name="l07037"></a><span class="lineno"> 7037</span>                cin &gt;&gt; d &gt;&gt; x &gt;&gt; y;</div>
-<div class="line"><a id="l07038" name="l07038"></a><span class="lineno"> 7038</span>                <span class="keywordflow">if</span>(x &gt; n || y &gt; n) {</div>
-<div class="line"><a id="l07039" name="l07039"></a><span class="lineno"> 7039</span>                    ans++;</div>
-<div class="line"><a id="l07040" name="l07040"></a><span class="lineno"> 7040</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l07041" name="l07041"></a><span class="lineno"> 7041</span>                }</div>
-<div class="line"><a id="l07042" name="l07042"></a><span class="lineno"> 7042</span>                x--;</div>
-<div class="line"><a id="l07043" name="l07043"></a><span class="lineno"> 7043</span>                y--;</div>
-<div class="line"><a id="l07044" name="l07044"></a><span class="lineno"> 7044</span>                <span class="keywordtype">int</span> px = uf.find(x);</div>
-<div class="line"><a id="l07045" name="l07045"></a><span class="lineno"> 7045</span>                <span class="keywordtype">int</span> py = uf.find(y);</div>
-<div class="line"><a id="l07046" name="l07046"></a><span class="lineno"> 7046</span>                <span class="keywordflow">if</span>(d == <span class="charliteral">&#39;1&#39;</span>) {</div>
-<div class="line"><a id="l07047" name="l07047"></a><span class="lineno"> 7047</span>                    <span class="keywordflow">if</span>(px == py) {</div>
-<div class="line"><a id="l07048" name="l07048"></a><span class="lineno"> 7048</span>                        <span class="keywordflow">if</span>((uf.dist[x] - uf.dist[y]) % 3 != 0) {</div>
-<div class="line"><a id="l07049" name="l07049"></a><span class="lineno"> 7049</span>                            ans++;</div>
-<div class="line"><a id="l07050" name="l07050"></a><span class="lineno"> 7050</span>                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l07051" name="l07051"></a><span class="lineno"> 7051</span>                        }</div>
-<div class="line"><a id="l07052" name="l07052"></a><span class="lineno"> 7052</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07053" name="l07053"></a><span class="lineno"> 7053</span>                        uf.parent[px] = py;</div>
-<div class="line"><a id="l07054" name="l07054"></a><span class="lineno"> 7054</span>                        uf.dist[px]   = uf.dist[y] - uf.dist[x];</div>
-<div class="line"><a id="l07055" name="l07055"></a><span class="lineno"> 7055</span>                    }</div>
-<div class="line"><a id="l07056" name="l07056"></a><span class="lineno"> 7056</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07057" name="l07057"></a><span class="lineno"> 7057</span>                    <span class="keywordflow">if</span>(x == y) {</div>
-<div class="line"><a id="l07058" name="l07058"></a><span class="lineno"> 7058</span>                        ans++;</div>
-<div class="line"><a id="l07059" name="l07059"></a><span class="lineno"> 7059</span>                        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l07060" name="l07060"></a><span class="lineno"> 7060</span>                    }</div>
-<div class="line"><a id="l07061" name="l07061"></a><span class="lineno"> 7061</span>                    <span class="keywordflow">if</span>(px == py) {</div>
-<div class="line"><a id="l07062" name="l07062"></a><span class="lineno"> 7062</span>                        <span class="keywordflow">if</span>((uf.dist[x] - uf.dist[y] - 1) % 3 != 0) {</div>
-<div class="line"><a id="l07063" name="l07063"></a><span class="lineno"> 7063</span>                            ans++;</div>
-<div class="line"><a id="l07064" name="l07064"></a><span class="lineno"> 7064</span>                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l07065" name="l07065"></a><span class="lineno"> 7065</span>                        }</div>
-<div class="line"><a id="l07066" name="l07066"></a><span class="lineno"> 7066</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07067" name="l07067"></a><span class="lineno"> 7067</span>                        uf.parent[px] = py;</div>
-<div class="line"><a id="l07068" name="l07068"></a><span class="lineno"> 7068</span>                        uf.dist[px]   = uf.dist[y] - uf.dist[x] + 1;</div>
-<div class="line"><a id="l07069" name="l07069"></a><span class="lineno"> 7069</span>                    }</div>
-<div class="line"><a id="l07070" name="l07070"></a><span class="lineno"> 7070</span>                }</div>
-<div class="line"><a id="l07071" name="l07071"></a><span class="lineno"> 7071</span>            }</div>
-<div class="line"><a id="l07072" name="l07072"></a><span class="lineno"> 7072</span>            cout &lt;&lt; ans;</div>
-<div class="line"><a id="l07073" name="l07073"></a><span class="lineno"> 7073</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07074" name="l07074"></a><span class="lineno"> 7074</span>        }</div>
-<div class="ttc" id="aa01366_html"><div class="ttname"><a href="../../d6/dfe/a01366.html">acwing::acwing240::UnionFind</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l02046">acwing.h:2046</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d6/d2d/a00047_source.html">acwing.cpp</a> 第 <a class="el" href="../../d6/d2d/a00047_source.html#l07031">7031</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07031" name="l07031"></a><span class="lineno"> 7031</span>                                              {</div>
+<div class="line"><a id="l07032" name="l07032"></a><span class="lineno"> 7032</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l07033" name="l07033"></a><span class="lineno"> 7033</span>            <span class="keywordtype">int</span> k;</div>
+<div class="line"><a id="l07034" name="l07034"></a><span class="lineno"> 7034</span>            cin &gt;&gt; n &gt;&gt; k;</div>
+<div class="line"><a id="l07035" name="l07035"></a><span class="lineno"> 7035</span>            <a class="code hl_struct" href="../../d6/dfe/a01366.html">UnionFind</a> uf(n);</div>
+<div class="line"><a id="l07036" name="l07036"></a><span class="lineno"> 7036</span>            <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l07037" name="l07037"></a><span class="lineno"> 7037</span>            <span class="keywordflow">while</span>((k--) != 0) {</div>
+<div class="line"><a id="l07038" name="l07038"></a><span class="lineno"> 7038</span>                <span class="keywordtype">char</span> d;</div>
+<div class="line"><a id="l07039" name="l07039"></a><span class="lineno"> 7039</span>                <span class="keywordtype">int</span> x;</div>
+<div class="line"><a id="l07040" name="l07040"></a><span class="lineno"> 7040</span>                <span class="keywordtype">int</span> y;</div>
+<div class="line"><a id="l07041" name="l07041"></a><span class="lineno"> 7041</span>                cin &gt;&gt; d &gt;&gt; x &gt;&gt; y;</div>
+<div class="line"><a id="l07042" name="l07042"></a><span class="lineno"> 7042</span>                <span class="keywordflow">if</span>(x &gt; n || y &gt; n) {</div>
+<div class="line"><a id="l07043" name="l07043"></a><span class="lineno"> 7043</span>                    ans++;</div>
+<div class="line"><a id="l07044" name="l07044"></a><span class="lineno"> 7044</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l07045" name="l07045"></a><span class="lineno"> 7045</span>                }</div>
+<div class="line"><a id="l07046" name="l07046"></a><span class="lineno"> 7046</span>                x--;</div>
+<div class="line"><a id="l07047" name="l07047"></a><span class="lineno"> 7047</span>                y--;</div>
+<div class="line"><a id="l07048" name="l07048"></a><span class="lineno"> 7048</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> px = uf.find(x);</div>
+<div class="line"><a id="l07049" name="l07049"></a><span class="lineno"> 7049</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> py = uf.find(y);</div>
+<div class="line"><a id="l07050" name="l07050"></a><span class="lineno"> 7050</span>                <span class="keywordflow">if</span>(d == <span class="charliteral">&#39;1&#39;</span>) {</div>
+<div class="line"><a id="l07051" name="l07051"></a><span class="lineno"> 7051</span>                    <span class="keywordflow">if</span>(px == py) {</div>
+<div class="line"><a id="l07052" name="l07052"></a><span class="lineno"> 7052</span>                        <span class="keywordflow">if</span>((uf.dist[x] - uf.dist[y]) % 3 != 0) {</div>
+<div class="line"><a id="l07053" name="l07053"></a><span class="lineno"> 7053</span>                            ans++;</div>
+<div class="line"><a id="l07054" name="l07054"></a><span class="lineno"> 7054</span>                        }</div>
+<div class="line"><a id="l07055" name="l07055"></a><span class="lineno"> 7055</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07056" name="l07056"></a><span class="lineno"> 7056</span>                        uf.parent[px] = py;</div>
+<div class="line"><a id="l07057" name="l07057"></a><span class="lineno"> 7057</span>                        uf.dist[px]   = uf.dist[y] - uf.dist[x];</div>
+<div class="line"><a id="l07058" name="l07058"></a><span class="lineno"> 7058</span>                    }</div>
+<div class="line"><a id="l07059" name="l07059"></a><span class="lineno"> 7059</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07060" name="l07060"></a><span class="lineno"> 7060</span>                    <span class="keywordflow">if</span>(x == y) {</div>
+<div class="line"><a id="l07061" name="l07061"></a><span class="lineno"> 7061</span>                        ans++;</div>
+<div class="line"><a id="l07062" name="l07062"></a><span class="lineno"> 7062</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l07063" name="l07063"></a><span class="lineno"> 7063</span>                    }</div>
+<div class="line"><a id="l07064" name="l07064"></a><span class="lineno"> 7064</span>                    <span class="keywordflow">if</span>(px == py) {</div>
+<div class="line"><a id="l07065" name="l07065"></a><span class="lineno"> 7065</span>                        <span class="keywordflow">if</span>((uf.dist[x] - uf.dist[y] - 1) % 3 != 0) {</div>
+<div class="line"><a id="l07066" name="l07066"></a><span class="lineno"> 7066</span>                            ans++;</div>
+<div class="line"><a id="l07067" name="l07067"></a><span class="lineno"> 7067</span>                        }</div>
+<div class="line"><a id="l07068" name="l07068"></a><span class="lineno"> 7068</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07069" name="l07069"></a><span class="lineno"> 7069</span>                        uf.parent[px] = py;</div>
+<div class="line"><a id="l07070" name="l07070"></a><span class="lineno"> 7070</span>                        uf.dist[px]   = uf.dist[y] - uf.dist[x] + 1;</div>
+<div class="line"><a id="l07071" name="l07071"></a><span class="lineno"> 7071</span>                    }</div>
+<div class="line"><a id="l07072" name="l07072"></a><span class="lineno"> 7072</span>                }</div>
+<div class="line"><a id="l07073" name="l07073"></a><span class="lineno"> 7073</span>            }</div>
+<div class="line"><a id="l07074" name="l07074"></a><span class="lineno"> 7074</span>            cout &lt;&lt; ans;</div>
+<div class="line"><a id="l07075" name="l07075"></a><span class="lineno"> 7075</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07076" name="l07076"></a><span class="lineno"> 7076</span>        }</div>
+<div class="ttc" id="aa01366_html"><div class="ttname"><a href="../../d6/dfe/a01366.html">acwing::acwing240::UnionFind</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l02047">acwing.h:2047</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l02049">acwing::acwing240::UnionFind::dist</a>, <a class="el" href="../../d6/d2d/a00047_source.html#l07084">acwing::acwing240::UnionFind::find()</a> , 以及 <a class="el" href="../../d3/d52/a00023_source.html#l02048">acwing::acwing240::UnionFind::parent</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l02050">acwing::acwing240::UnionFind::dist</a>, <a class="el" href="../../d6/d2d/a00047_source.html#l07086">acwing::acwing240::UnionFind::find()</a> , 以及 <a class="el" href="../../d3/d52/a00023_source.html#l02049">acwing::acwing240::UnionFind::parent</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../df/d03/a00062_source.html#l03292">TEST()</a>.</p>
 
@@ -221,7 +221,7 @@ $(function() {
 <div class="line"><a id="l03305" name="l03305"></a><span class="lineno"> 3305</span>        }</div>
 <div class="ttc" id="aa00020_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../db/db2/a00020.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l07029">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l07031">main()</a>.</p>
 
 </div>
 </div>
