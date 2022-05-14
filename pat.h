@@ -616,7 +616,12 @@ namespace pat {
 			};
 			int main(istream &cin, ostream &cout);
 		}// namespace b1095
-	}    // namespace b
+
+		/// \brief 1096 大美数
+		namespace b1096 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}

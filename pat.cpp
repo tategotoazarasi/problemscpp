@@ -3403,6 +3403,52 @@ namespace pat {
 				return p1.first < p2.first;
 			}
 		}// namespace b1095
+
+		namespace b1096 {
+			int main(istream &cin, ostream &cout) {
+				int k;
+				cin >> k;
+				for(int i = 0; i < k; i++) {
+					unsigned num;
+					cin >> num;
+					unordered_set<unsigned> fs;
+					for(unsigned f = 1; f <= num; f++) {
+						if(num % f == 0) {
+							fs.insert(f);
+						}
+					}
+					vector<unsigned> vec(fs.size());
+					int fi = 0;
+					for(auto f: fs) {
+						vec[fi++] = f;
+					}
+					if(vec.size() < 4) {
+						cout << "No" << endl;
+						continue;
+					}
+					bool ok = false;
+					for(auto i1 = 0; i1 + 3 < vec.size(); i1++) {
+						for(auto i2 = i1 + 1; i2 + 2 < vec.size(); i2++) {
+							for(auto i3 = i2 + 1; i3 + 1 < vec.size(); i3++) {
+								for(auto i4 = i3 + 1; i4 < vec.size(); i4++) {
+									if((vec[i1] + vec[i2] + vec[i3] + vec[i4]) % num == 0) {
+										ok = true;
+										goto LOOP_END;
+									}
+								}
+							}
+						}
+					}
+				LOOP_END:
+					if(ok) {
+						cout << "Yes" << endl;
+					} else {
+						cout << "No" << endl;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1096
 	}    // namespace b
 
 	namespace a {}
