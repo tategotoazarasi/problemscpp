@@ -5774,8 +5774,8 @@ namespace acwing {
 	namespace acwing1695 {
 		int main(istream &cin, ostream &cout) {
 			bool nuts[3][3]         = {{true, false, false},
-			                           {false, true, false},
-			                           {false, false, true}};
+                               {false, true, false},
+                               {false, false, true}};
 			unsigned short score[3] = {0, 0, 0};
 			unsigned short ans      = 0;
 			unsigned short n;
@@ -6906,7 +6906,7 @@ namespace acwing {
 			vector<int> pos_e;
 			pos_b.push_back(0);
 			pos_e.push_back(0);
-			while((b--) != 0) {
+			while(b-- != 0) {
 				char dir;
 				int dist;
 				cin >> dist >> dir;
@@ -6920,7 +6920,7 @@ namespace acwing {
 					}
 				}
 			}
-			while((e--) != 0) {
+			while(e-- != 0) {
 				char dir;
 				int dist;
 				cin >> dist >> dir;
@@ -6965,7 +6965,7 @@ namespace acwing {
 				cin >> a;
 				ostringstream oss;
 				for(int i = 30; i >= 0; i--) {
-					oss << ((a & (1 << i)) ? '1' : '0');
+					oss << ((a & 1 << i) != 0u ? '1' : '0');
 				}
 				string str = oss.str();
 				vec[j]     = str;
@@ -6973,12 +6973,12 @@ namespace acwing {
 			}
 			unsigned maximum = 0;
 			for(const auto &str: vec) {
-				TrieNode *current = &tn;
-				unsigned ans      = 0;
+				const TrieNode *current = &tn;
+				unsigned ans            = 0;
 				for(int i = 0; i <= 30; i++) {
 					ans <<= 1;
-					if(current->next[!(str[i] - '0')] != nullptr) {
-						current = current->next[!(str[i] - '0')];
+					if(current->next[(str[i] - '0') == 0] != nullptr) {
+						current = current->next[(str[i] - '0') == 0];
 						ans += 1;
 					} else {
 						current = current->next[str[i] - '0'];
@@ -7003,12 +7003,14 @@ namespace acwing {
 
 	namespace acwing837 {
 		int main(istream &cin, ostream &cout) {
-			int n, m;
+			int n;
+			int m;
 			cin >> n >> m;
 			UnionFind uf(n);
-			while(m--) {
+			while((m--) != 0) {
 				string op;
-				int a, b;
+				int a;
+				int b;
 				cin >> op;
 				if(op == "C") {
 					cin >> a >> b;
@@ -7027,13 +7029,15 @@ namespace acwing {
 
 	namespace acwing240 {
 		int main(istream &cin, ostream &cout) {
-			int n, k;
+			int n;
+			int k;
 			cin >> n >> k;
 			UnionFind uf(n);
 			int ans = 0;
-			while(k--) {
+			while((k--) != 0) {
 				char d;
-				int x, y;
+				int x;
+				int y;
 				cin >> d >> x >> y;
 				if(x > n || y > n) {
 					ans++;
@@ -7041,13 +7045,12 @@ namespace acwing {
 				}
 				x--;
 				y--;
-				int px = uf.find(x);
-				int py = uf.find(y);
+				const int px = uf.find(x);
+				const int py = uf.find(y);
 				if(d == '1') {
 					if(px == py) {
 						if((uf.dist[x] - uf.dist[y]) % 3 != 0) {
 							ans++;
-							continue;
 						}
 					} else {
 						uf.parent[px] = py;
@@ -7061,7 +7064,6 @@ namespace acwing {
 					if(px == py) {
 						if((uf.dist[x] - uf.dist[y] - 1) % 3 != 0) {
 							ans++;
-							continue;
 						}
 					} else {
 						uf.parent[px] = py;
@@ -7075,7 +7077,7 @@ namespace acwing {
 
 		UnionFind::UnionFind(int n) {
 			parent = vector<int>(n);
-			dist   = vector<int>(n, 0);
+			dist   = vector(n, 0);
 			for(int i = 0; i < n; i++) {
 				parent[i] = i;
 			}
@@ -7083,7 +7085,7 @@ namespace acwing {
 
 		int UnionFind::find(int x) {
 			if(parent[x] != x) {
-				int tmp = find(parent[x]);
+				const int tmp = find(parent[x]);
 				dist[x] += dist[parent[x]];
 				parent[x] = tmp;
 			}

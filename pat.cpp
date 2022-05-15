@@ -3065,7 +3065,7 @@ namespace pat {
 						ss << *it;
 					}
 					ss >> b;
-					double c = static_cast<double>(b) / y;
+					const double c = static_cast<double>(b) / y;
 					if(c * x == abs(a - b)) {
 						no_solution = false;
 						a_f         = a;
@@ -3171,7 +3171,7 @@ namespace pat {
 					}
 					for(const auto &g: us) {
 						for(const auto &nc: um[g]) {
-							if(us.contains(nc) != 0u) {
+							if(static_cast<unsigned int>(us.contains(nc)) != 0U) {
 								ok = false;
 								break;
 							}
@@ -3194,17 +3194,17 @@ namespace pat {
 			int main(istream &cin, ostream &cout) {
 				int m;
 				cin >> m;
-				while(m--) {
+				while((m--) != 0) {
 					unsigned k;
 					cin >> k;
-					unsigned k2 = k * k;
-					unsigned q  = 1;
+					const unsigned k2 = k * k;
+					unsigned q        = 1;
 					while(k / q != 0) {
 						q *= 10;
 					}
 					bool ok = false;
 					for(unsigned n = 1; n < 10; n++) {
-						unsigned nk2 = n * k2;
+						const unsigned nk2 = n * k2;
 						if(nk2 % q == k) {
 							ok = true;
 							cout << n << ' ' << nk2 << endl;
@@ -3221,9 +3221,10 @@ namespace pat {
 
 		namespace b1092 {
 			int main(istream &cin, ostream &cout) {
-				int n, m;
+				int n;
+				int m;
 				cin >> n >> m;
-				vector<int> sales(n, 0);
+				vector sales(n, 0);
 				for(int j = 0; j < m; j++) {
 					for(int i = 0; i < n; i++) {
 						unsigned sale;
@@ -3255,20 +3256,21 @@ namespace pat {
 
 		namespace b1093 {
 			int main(istream &cin, ostream &cout) {
-				char a[1000010], b[1000010];
+				char a[1000010];
+				char b[1000010];
 				cin.getline(a, 1000010);
 				cin.getline(b, 1000010);
 				bool has[127];
 				unordered_set<char> us;
 				for(int i = 0; i < strlen(a); i++) {
-					char ch = a[i];
+					const char ch = a[i];
 					if(!has[ch]) {
 						cout << ch;
 						has[ch] = true;
 					}
 				}
 				for(int i = 0; i < strlen(b); i++) {
-					char ch = b[i];
+					const char ch = b[i];
 					if(!has[ch]) {
 						cout << ch;
 						has[ch] = true;
@@ -3280,7 +3282,8 @@ namespace pat {
 
 		namespace b1094 {
 			int main(istream &cin, ostream &cout) {
-				int l, k;
+				int l;
+				int k;
 				cin >> l >> k;
 				vector<char> n(l);
 				for(int i = 0; i < l; i++) {
@@ -3295,7 +3298,7 @@ namespace pat {
 					}
 					if(is_prime(ans)) {
 						for(int m = i; m <= j; m++) {
-							cout << char(n[m] + '0');
+							cout << static_cast<char>(n[m] + '0');
 						}
 						return 0;
 					}
@@ -3319,13 +3322,14 @@ namespace pat {
 
 		namespace b1095 {
 			int main(istream &cin, ostream &cout) {
-				int n, m;
+				int n;
+				int m;
 				cin >> n >> m;
 				unordered_map<string, room> rooms;
 				unordered_map<char, unordered_set<student *>> levels;
 				unordered_map<string, unordered_map<string, int>> dates;
 				for(int i = 0; i < n; i++) {
-					student *stu = new student();
+					auto stu = new student();
 					cin >> stu->id >> stu->grade;
 					stu->level = stu->id[0];
 					stu->room  = stu->id.substr(1, 3);
@@ -3343,13 +3347,13 @@ namespace pat {
 						char l;
 						cin >> l;
 						cout << l << endl;
-						if(levels.count(l)) {
+						if(levels.contains(l) != 0u) {
 							vector<student *> vec;
-							for(const auto pstu: levels[l]) {
+							for(auto *const pstu: levels[l]) {
 								vec.emplace_back(pstu);
 							}
 							sort(vec.begin(), vec.end(), p_stu_comp());
-							for(auto stu: vec) {
+							for(auto *stu: vec) {
 								cout << stu->id << ' ' << stu->grade << endl;
 							}
 						} else {
@@ -3359,7 +3363,7 @@ namespace pat {
 						string room_id;
 						cin >> room_id;
 						cout << room_id << endl;
-						if(rooms.count(room_id)) {
+						if(rooms.contains(room_id) != 0u) {
 							cout << rooms[room_id].count << ' ' << rooms[room_id].sum << endl;
 						} else {
 							cout << "NA" << endl;
@@ -3419,7 +3423,7 @@ namespace pat {
 					}
 					vector<unsigned> vec(fs.size());
 					int fi = 0;
-					for(auto f: fs) {
+					for(const auto f: fs) {
 						vec[fi++] = f;
 					}
 					if(vec.size() < 4) {

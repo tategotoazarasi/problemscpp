@@ -2030,9 +2030,10 @@ namespace acwing {
 	namespace acwing143 {
 		struct TrieNode {
 			TrieNode *next[2] = {nullptr, nullptr};
-			int val;
+			int val{};
 			void insert(const string &str, int i);
 		};
+
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing143
 
@@ -2044,11 +2045,12 @@ namespace acwing {
 	/// \brief 240. 食物链
 	namespace acwing240 {
 		struct UnionFind {
-			UnionFind(int n);
+			explicit UnionFind(int n);
 			vector<int> parent;
 			vector<int> dist;
 			int find(int x);
 		};
+
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing240
 }// namespace acwing

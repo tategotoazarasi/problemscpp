@@ -599,21 +599,25 @@ namespace pat {
 				string id;
 				string date;
 				string room;
-				char level;
-				int grade;
+				char level{};
+				int grade{};
 			};
+
 			struct room {
 				string id;
 				unordered_set<student *> students;
 				int count = 0;
 				int sum   = 0;
 			};
+
 			struct p_stu_comp {
 				bool operator()(const student *stu1, const student *stu2) const;
 			};
+
 			struct room_cnt_comp {
 				bool operator()(const pair<string, int> &p1, const pair<string, int> &p2) const;
 			};
+
 			int main(istream &cin, ostream &cout);
 		}// namespace b1095
 
