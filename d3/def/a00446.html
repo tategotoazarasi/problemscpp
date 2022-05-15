@@ -133,7 +133,7 @@ $(function() {
 <div class="line"><a id="l03329" name="l03329"></a><span class="lineno"> 3329</span>                unordered_map&lt;char, unordered_set&lt;student *&gt;&gt; levels;</div>
 <div class="line"><a id="l03330" name="l03330"></a><span class="lineno"> 3330</span>                unordered_map&lt;string, unordered_map&lt;string, int&gt;&gt; dates;</div>
 <div class="line"><a id="l03331" name="l03331"></a><span class="lineno"> 3331</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l03332" name="l03332"></a><span class="lineno"> 3332</span>                    <span class="keyword">auto</span> stu = <span class="keyword">new</span> <a class="code hl_struct" href="../../d9/d4a/a02772.html">student</a>();</div>
+<div class="line"><a id="l03332" name="l03332"></a><span class="lineno"> 3332</span>                    <span class="keyword">auto</span> *stu = <span class="keyword">new</span> <a class="code hl_struct" href="../../d9/d4a/a02772.html">student</a>();</div>
 <div class="line"><a id="l03333" name="l03333"></a><span class="lineno"> 3333</span>                    cin &gt;&gt; stu-&gt;id &gt;&gt; stu-&gt;grade;</div>
 <div class="line"><a id="l03334" name="l03334"></a><span class="lineno"> 3334</span>                    stu-&gt;level = stu-&gt;id[0];</div>
 <div class="line"><a id="l03335" name="l03335"></a><span class="lineno"> 3335</span>                    stu-&gt;room  = stu-&gt;id.substr(1, 3);</div>
@@ -151,7 +151,7 @@ $(function() {
 <div class="line"><a id="l03347" name="l03347"></a><span class="lineno"> 3347</span>                        <span class="keywordtype">char</span> l;</div>
 <div class="line"><a id="l03348" name="l03348"></a><span class="lineno"> 3348</span>                        cin &gt;&gt; l;</div>
 <div class="line"><a id="l03349" name="l03349"></a><span class="lineno"> 3349</span>                        cout &lt;&lt; l &lt;&lt; endl;</div>
-<div class="line"><a id="l03350" name="l03350"></a><span class="lineno"> 3350</span>                        <span class="keywordflow">if</span>(levels.contains(l) != 0u) {</div>
+<div class="line"><a id="l03350" name="l03350"></a><span class="lineno"> 3350</span>                        <span class="keywordflow">if</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(levels.contains(l)) != 0U) {</div>
 <div class="line"><a id="l03351" name="l03351"></a><span class="lineno"> 3351</span>                            vector&lt;student *&gt; vec;</div>
 <div class="line"><a id="l03352" name="l03352"></a><span class="lineno"> 3352</span>                            <span class="keywordflow">for</span>(<span class="keyword">auto</span> *<span class="keyword">const</span> pstu: levels[l]) {</div>
 <div class="line"><a id="l03353" name="l03353"></a><span class="lineno"> 3353</span>                                vec.emplace_back(pstu);</div>
@@ -167,7 +167,7 @@ $(function() {
 <div class="line"><a id="l03363" name="l03363"></a><span class="lineno"> 3363</span>                        <span class="keywordtype">string</span> room_id;</div>
 <div class="line"><a id="l03364" name="l03364"></a><span class="lineno"> 3364</span>                        cin &gt;&gt; room_id;</div>
 <div class="line"><a id="l03365" name="l03365"></a><span class="lineno"> 3365</span>                        cout &lt;&lt; room_id &lt;&lt; endl;</div>
-<div class="line"><a id="l03366" name="l03366"></a><span class="lineno"> 3366</span>                        <span class="keywordflow">if</span>(rooms.contains(room_id) != 0u) {</div>
+<div class="line"><a id="l03366" name="l03366"></a><span class="lineno"> 3366</span>                        <span class="keywordflow">if</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(rooms.contains(room_id)) != 0U) {</div>
 <div class="line"><a id="l03367" name="l03367"></a><span class="lineno"> 3367</span>                            cout &lt;&lt; rooms[room_id].count &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; rooms[room_id].sum &lt;&lt; endl;</div>
 <div class="line"><a id="l03368" name="l03368"></a><span class="lineno"> 3368</span>                        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l03369" name="l03369"></a><span class="lineno"> 3369</span>                            cout &lt;&lt; <span class="stringliteral">&quot;NA&quot;</span> &lt;&lt; endl;</div>
