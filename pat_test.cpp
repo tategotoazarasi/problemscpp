@@ -1716,6 +1716,28 @@ namespace pat {
 				ASSERT_EQ("529 481 479 263 417 342 343", out.str());
 			}
 		}// namespace b1097
+
+		namespace b1098 {
+			TEST(b1098, case1) {
+				istringstream in("11\n"
+				                 "7 6 5 5 6 5 4 5 5 4 4\n"
+				                 "3 2 2 2 2 3 3 2 1 2 3");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Yes 1", out.str());
+			}
+
+			TEST(b1098, case2) {
+				istringstream in("11\n"
+				                 "7 6 5 5 6 5 4 5 5 4 4\n"
+				                 "3 2 2 2 3 4 3 2 1 2 3");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("No 1", out.str());
+			}
+		}// namespace b1098
 	}    // namespace b
 
 	namespace a {}

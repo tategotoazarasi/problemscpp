@@ -626,6 +626,11 @@ namespace pat {
 		namespace b1097 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1098 岩洞施工
+		namespace b1098 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

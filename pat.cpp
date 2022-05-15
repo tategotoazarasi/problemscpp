@@ -3483,6 +3483,31 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1097
+
+		namespace b1098 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				int top    = 1000;
+				int bottom = 0;
+				for(int i = 0; i < n; i++) {
+					int v;
+					cin >> v;
+					top = min(top, v);
+				}
+				for(int i = 0; i < n; i++) {
+					int v;
+					cin >> v;
+					bottom = max(bottom, v);
+				}
+				if(top <= bottom) {
+					cout << "No " << bottom - top + 1;
+				} else {
+					cout << "Yes " << top - bottom;
+				}
+				return 0;
+			}
+		}// namespace b1098
 	}    // namespace b
 
 	namespace a {}
