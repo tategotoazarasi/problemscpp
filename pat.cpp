@@ -3194,7 +3194,7 @@ namespace pat {
 			int main(istream &cin, ostream &cout) {
 				int m;
 				cin >> m;
-				while((m--) != 0) {
+				while(m-- != 0) {
 					unsigned k;
 					cin >> k;
 					const unsigned k2 = k * k;
@@ -3329,7 +3329,7 @@ namespace pat {
 				unordered_map<char, unordered_set<student *>> levels;
 				unordered_map<string, unordered_map<string, int>> dates;
 				for(int i = 0; i < n; i++) {
-					auto stu = new student();
+					auto *stu = new student();
 					cin >> stu->id >> stu->grade;
 					stu->level = stu->id[0];
 					stu->room  = stu->id.substr(1, 3);
@@ -3347,7 +3347,7 @@ namespace pat {
 						char l;
 						cin >> l;
 						cout << l << endl;
-						if(levels.contains(l) != 0u) {
+						if(static_cast<unsigned int>(levels.contains(l)) != 0U) {
 							vector<student *> vec;
 							for(auto *const pstu: levels[l]) {
 								vec.emplace_back(pstu);
@@ -3363,7 +3363,7 @@ namespace pat {
 						string room_id;
 						cin >> room_id;
 						cout << room_id << endl;
-						if(rooms.contains(room_id) != 0u) {
+						if(static_cast<unsigned int>(rooms.contains(room_id)) != 0U) {
 							cout << rooms[room_id].count << ' ' << rooms[room_id].sum << endl;
 						} else {
 							cout << "NA" << endl;
@@ -3456,9 +3456,11 @@ namespace pat {
 
 		namespace b1097 {
 			int main(istream &cin, ostream &cout) {
-				int n, k, x;
+				int n;
+				int k;
+				int x;
 				cin >> n >> k >> x;
-				vector<vector<int>> grid(n, vector<int>(n));
+				vector grid(n, vector<int>(n));
 				for(int i = 0; i < n; i++) {
 					for(int j = 0; j < n; j++) {
 						cin >> grid[i][j];
@@ -3467,7 +3469,7 @@ namespace pat {
 				int indent = 1;
 				for(int i = 0; i < n; i += 2) {
 					for(int j = n - 1; j >= 0; j--) {
-						grid[i][j] = ((j - indent >= 0) ? grid[i][j - indent] : x);
+						grid[i][j] = j - indent >= 0 ? grid[i][j - indent] : x;
 					}
 					indent++;
 					if(indent == k + 1) {
