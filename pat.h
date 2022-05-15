@@ -621,6 +621,11 @@ namespace pat {
 		namespace b1096 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1097 矩阵行平移
+		namespace b1097 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

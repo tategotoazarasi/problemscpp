@@ -1699,6 +1699,23 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1096
+
+		namespace b1097 {
+			TEST(b1097, case1) {
+				istringstream in("7 2 99\n"
+				                 "11 87 23 67 20 75 89\n"
+				                 "37 94 27 91 63 50 11\n"
+				                 "44 38 50 26 40 26 24\n"
+				                 "73 85 63 28 62 18 68\n"
+				                 "15 83 27 97 88 25 43\n"
+				                 "23 78 98 20 30 81 99\n"
+				                 "77 36 48 59 25 34 22");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("529 481 479 263 417 342 343", out.str());
+			}
+		}// namespace b1097
 	}    // namespace b
 
 	namespace a {}

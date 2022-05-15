@@ -3449,6 +3449,40 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1096
+
+		namespace b1097 {
+			int main(istream &cin, ostream &cout) {
+				int n, k, x;
+				cin >> n >> k >> x;
+				vector<vector<int>> grid(n, vector<int>(n));
+				for(int i = 0; i < n; i++) {
+					for(int j = 0; j < n; j++) {
+						cin >> grid[i][j];
+					}
+				}
+				int indent = 1;
+				for(int i = 0; i < n; i += 2) {
+					for(int j = n - 1; j >= 0; j--) {
+						grid[i][j] = ((j - indent >= 0) ? grid[i][j - indent] : x);
+					}
+					indent++;
+					if(indent == k + 1) {
+						indent = 1;
+					}
+				}
+				for(int j = 0; j < n; j++) {
+					int sum = 0;
+					for(int i = 0; i < n; i++) {
+						sum += grid[i][j];
+					}
+					cout << sum;
+					if(j != n - 1) {
+						cout << ' ';
+					}
+				}
+				return 0;
+			}
+		}// namespace b1097
 	}    // namespace b
 
 	namespace a {}
