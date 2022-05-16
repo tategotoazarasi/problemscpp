@@ -641,6 +641,14 @@ namespace pat {
 			bool is_prime(unsigned int n);
 			int main(istream &cin, ostream &cout);
 		}// namespace b1099
+
+		/// \brief 1100 校庆
+		namespace b1100 {
+			struct comp {
+				bool operator()(const string &s1, const string &s2) const;
+			};
+			int main(istream &cin, ostream &cout);
+		}// namespace b1100
 	}    // namespace b
 
 	/// \brief 甲级

@@ -1749,6 +1749,30 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1099
+
+		namespace b1100 {
+			TEST(b1100, case1) {
+				istringstream in("5\n"
+				                 "372928196906118710\n"
+				                 "610481197806202213\n"
+				                 "440684198612150417\n"
+				                 "13072819571002001X\n"
+				                 "150702193604190912\n"
+				                 "6\n"
+				                 "530125197901260019\n"
+				                 "150702193604190912\n"
+				                 "220221196701020034\n"
+				                 "610481197806202213\n"
+				                 "440684198612150417\n"
+				                 "370205198709275042");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("3\n"
+				          "150702193604190912",
+				          out.str());
+			}
+		}// namespace b1100
 	}    // namespace b
 
 	namespace a {}

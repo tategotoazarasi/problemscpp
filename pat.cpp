@@ -3558,6 +3558,47 @@ namespace pat {
 				return true;
 			}
 		}// namespace b1099
+
+		namespace b1100 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				unordered_set<string> alumnuses;
+				for(int i = 0; i < n; i++) {
+					string id;
+					cin >> id;
+					alumnuses.insert(id);
+				}
+				int m;
+				cin >> m;
+				unsigned cnt = 0;
+				unordered_set<string> guests;
+				for(int i = 0; i < m; i++) {
+					string id;
+					cin >> id;
+					cnt += alumnuses.count(id);
+					guests.insert(id);
+				}
+				cout << cnt << endl;
+				vector<string> vec;
+				if(cnt > 0) {
+					for(const auto &id: guests) {
+						if(alumnuses.count(id)) {
+							vec.emplace_back(id);
+						}
+					}
+				} else {
+					vec = vector<string>(guests.begin(), guests.end());
+				}
+				sort(vec.begin(), vec.end(), comp());
+				cout << *vec.begin();
+				return 0;
+			}
+
+			bool comp::operator()(const string &s1, const string &s2) const {
+				return s1.substr(6, 8) < s2.substr(6, 8);
+			}
+		}// namespace b1100
 	}    // namespace b
 
 	namespace a {}
