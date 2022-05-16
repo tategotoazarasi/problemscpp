@@ -635,7 +635,13 @@ namespace pat {
 		namespace b1098 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1099 性感素数
+		namespace b1099 {
+			bool is_prime(unsigned int n);
+			int main(istream &cin, ostream &cout);
+		}// namespace b1099
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}

@@ -3514,6 +3514,50 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1098
+
+		namespace b1099 {
+			int main(istream &cin, ostream &cout) {
+				unsigned int n;
+				cin >> n;
+				if(is_prime(n)) {
+					if(n > 7 && is_prime(n - 6)) {
+						cout << "Yes" << endl
+						     << n - 6;
+						return 0;
+					} else if(is_prime(n + 6)) {
+						cout << "Yes" << endl
+						     << n + 6;
+						return 0;
+					}
+				}
+				for(unsigned int i = n + 1;; i++) {
+					if(is_prime(i)) {
+						if(i > 7 && is_prime(i - 6)) {
+							cout << "No" << endl
+							     << i;
+							return 0;
+						} else if(is_prime(i + 6)) {
+							cout << "No" << endl
+							     << i;
+							return 0;
+						}
+					}
+				}
+				return 0;
+			}
+
+			bool is_prime(unsigned int n) {
+				if(n == 1) {
+					return false;
+				}
+				for(unsigned int i = 2; i <= sqrt(n); i++) {
+					if(n % i == 0) {
+						return false;
+					}
+				}
+				return true;
+			}
+		}// namespace b1099
 	}    // namespace b
 
 	namespace a {}

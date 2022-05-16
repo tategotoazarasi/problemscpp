@@ -1727,6 +1727,28 @@ namespace pat {
 				ASSERT_EQ("No 1", out.str());
 			}
 		}// namespace b1098
+
+		namespace b1099 {
+			TEST(b1099, case1) {
+				istringstream in("47");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Yes\n"
+				          "41",
+				          out.str());
+			}
+
+			TEST(b1099, case2) {
+				istringstream in("21");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("No\n"
+				          "23",
+				          out.str());
+			}
+		}// namespace b1099
 	}    // namespace b
 
 	namespace a {}
