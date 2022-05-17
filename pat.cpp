@@ -3613,6 +3613,32 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1101
+
+		namespace b1102 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				vector<paper> vec(n);
+				for(int i = 0; i < n; i++) {
+					cin >> vec[i].id;
+					cin >> vec[i].price;
+					cin >> vec[i].sale;
+				}
+				sort(vec.rbegin(), vec.rend(), comp_sale());
+				cout << vec.begin()->id << ' ' << vec.begin()->sale << endl;
+				sort(vec.rbegin(), vec.rend(), comp_total());
+				cout << vec.begin()->id << ' ' << vec.begin()->price * vec.begin()->sale;
+				return 0;
+			}
+
+			bool comp_sale::operator()(const paper &p1, const paper &p2) const {
+				return p1.sale < p2.sale;
+			}
+
+			bool comp_total::operator()(const paper &p1, const paper &p2) const {
+				return p1.sale * p1.price < p2.sale * p2.price;
+			}
+		}// namespace b1102
 	}    // namespace b
 
 	namespace a {}

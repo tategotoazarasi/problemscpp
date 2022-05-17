@@ -654,7 +654,23 @@ namespace pat {
 		namespace b1101 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1102 教超冠军卷
+		namespace b1102 {
+			struct paper {
+				string id;
+				int sale;
+				int price;
+			};
+			struct comp_sale {
+				bool operator()(const paper &p1, const paper &p2) const;
+			};
+			struct comp_total {
+				bool operator()(const paper &p1, const paper &p2) const;
+			};
+			int main(istream &cin, ostream &cout);
+		}// namespace b1102
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}

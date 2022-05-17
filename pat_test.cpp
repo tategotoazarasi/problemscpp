@@ -1791,6 +1791,22 @@ namespace pat {
 				ASSERT_EQ("1.00", out.str());
 			}
 		}// namespace b1101
+
+		namespace b1102 {
+			TEST(b1102, case1) {
+				istringstream in("4\n"
+				                 "zju007 39 10\n"
+				                 "pku2019 9 332\n"
+				                 "pat2018 95 79\n"
+				                 "qdu106 19 38");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("pku2019 332\n"
+				          "pat2018 7505",
+				          out.str());
+			}
+		}// namespace b1102
 	}    // namespace b
 
 	namespace a {}
