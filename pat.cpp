@@ -3599,6 +3599,20 @@ namespace pat {
 				return s1.substr(6, 8) < s2.substr(6, 8);
 			}
 		}// namespace b1100
+
+		namespace b1101 {
+			int main(istream &cin, ostream &cout) {
+				string a;
+				int d;
+				cin >> a >> d;
+				stringstream ss;
+				ss << a.substr(a.length() - d, d) << a.substr(0, a.length() - d);
+				double b;
+				ss >> b;
+				cout << fixed << setprecision(2) << b / stoi(a);
+				return 0;
+			}
+		}// namespace b1101
 	}    // namespace b
 
 	namespace a {}

@@ -1773,6 +1773,24 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1100
+
+		namespace b1101 {
+			TEST(b1101, case1) {
+				istringstream in("12345 2");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("3.66", out.str());
+			}
+
+			TEST(b1101, case2) {
+				istringstream in("12345 5");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("1.00", out.str());
+			}
+		}// namespace b1101
 	}    // namespace b
 
 	namespace a {}

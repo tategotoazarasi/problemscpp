@@ -649,7 +649,12 @@ namespace pat {
 			};
 			int main(istream &cin, ostream &cout);
 		}// namespace b1100
-	}    // namespace b
+
+		/// \brief 1101 B是A的多少倍
+		namespace b1101 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}
