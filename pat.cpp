@@ -3666,6 +3666,73 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1103
+
+		namespace b1104 {
+			int main(istream &cin, ostream &cout) {
+				int N;
+				cin >> N;
+				vector<int> diff(10);
+				for(int i = 0; i < 10; i++) {
+					diff[i] = 1 - i * 9;
+				}
+				for(int i = 1; i <= N; i++) {
+					bool ok = false;
+					int k, m;
+					cin >> k >> m;
+					cout << "Case " << i << endl;
+					for(int j = k; j >= 1; j--) {
+						int n = m + diff[j];
+						int g = gcd(m, n);
+						if(n > 0 && g > 2 && is_prime(gcd(m, n))) {
+							vector<string> ans;
+							dfs("", 1, m, k, 0, j, ans);
+							if(!ans.empty()) {
+								ok = true;
+								for(const auto &str: ans) {
+									cout << m + diff[j] << ' ' << str << endl;
+								}
+							}
+						}
+					}
+					if(!ok) {
+						cout << "No Solution" << endl;
+					}
+				}
+				return 0;
+			}
+
+			bool is_prime(int n) {
+				if(n == 1) {
+					return false;
+				}
+				for(int i = 2; i <= sqrt(n); i++) {
+					if(n % i == 0) {
+						return false;
+					}
+				}
+				return true;
+			}
+
+			void dfs(string str, const int current_i, const int m, const int k, const int current_sum, const int cnt9, vector<string> &ans) {
+				if(current_i + cnt9 == k) {
+					if(int r = m - current_sum - cnt9 * 9; ((current_i > 1 && r >= 0) || (current_i == 1 && r > 0)) && r < 9) {
+						str += char(r + '0');
+					} else {
+						return;
+					}
+					for(int i = 0; i < cnt9; i++) {
+						str += '9';
+					}
+					ans.emplace_back(str);
+					return;
+				}
+				for(int i = current_i == 1 ? 1 : 0; i <= 9; i++) {
+					if(!((current_sum + i + cnt9 * 9 > m) || (current_sum + i + (k - current_i) * 9 - 1 < m))) {
+						dfs(str + char(i + '0'), current_i + 1, m, k, current_sum + i, cnt9, ans);
+					}
+				}
+			}
+		}// namespace b1104
 	}    // namespace b
 
 	namespace a {}

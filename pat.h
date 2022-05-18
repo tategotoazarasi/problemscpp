@@ -675,7 +675,14 @@ namespace pat {
 		namespace b1103 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1104 天长地久
+		namespace b1104 {
+			bool is_prime(int n);
+			void dfs(string str, const int current_i, const int m, const int k, const int current_sum, const int cnt9, vector<string> &ans);
+			int main(istream &cin, ostream &cout);
+		}// namespace b1104
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}

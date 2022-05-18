@@ -1827,6 +1827,30 @@ namespace pat {
 				ASSERT_EQ("No Solution", out.str());
 			}
 		}// namespace b1103
+
+		namespace b1104 {
+			TEST(b1104, case1) {
+				istringstream in("2\n"
+				                 "6 45\n"
+				                 "7 80");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("Case 1\n"
+				          "10 189999\n"
+				          "10 279999\n"
+				          "10 369999\n"
+				          "10 459999\n"
+				          "10 549999\n"
+				          "10 639999\n"
+				          "10 729999\n"
+				          "10 819999\n"
+				          "10 909999\n"
+				          "Case 2\n"
+				          "No Solution\n",
+				          out.str());
+			}
+		}// namespace b1104
 	}    // namespace b
 
 	namespace a {}
