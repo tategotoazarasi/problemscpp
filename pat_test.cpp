@@ -1807,6 +1807,26 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1102
+
+		namespace b1103 {
+			TEST(b1103, case1) {
+				istringstream in("8 200");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("8 3\n"
+				          "105 10\n",
+				          out.str());
+			}
+
+			TEST(b1103, case2) {
+				istringstream in("9 100");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("No Solution", out.str());
+			}
+		}// namespace b1103
 	}    // namespace b
 
 	namespace a {}

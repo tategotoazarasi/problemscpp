@@ -3639,6 +3639,33 @@ namespace pat {
 				return p1.sale * p1.price < p2.sale * p2.price;
 			}
 		}// namespace b1102
+
+		namespace b1103 {
+			int main(istream &cin, ostream &cout) {
+				unsigned m, n;
+				cin >> m >> n;
+				unordered_map<unsigned, unsigned> c2a;
+				unsigned max_c2 = 0;
+				for(unsigned a = m; a <= n; a++) {
+					unsigned c2 = 3 * a * (a - 1) + 1;
+					max_c2      = c2;
+					c2a[c2]     = a;
+				}
+				bool ok     = false;
+				unsigned c2 = 0;
+				for(unsigned b = 1; c2 <= max_c2; b++) {
+					c2 = (b * b + (b - 1) * (b - 1)) * (b * b + (b - 1) * (b - 1));
+					if(c2a.count(c2) && c2a[c2] != b) {
+						ok = true;
+						cout << c2a[c2] << ' ' << b << endl;
+					}
+				}
+				if(!ok) {
+					cout << "No Solution";
+				}
+				return 0;
+			}
+		}// namespace b1103
 	}    // namespace b
 
 	namespace a {}

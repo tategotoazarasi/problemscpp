@@ -670,7 +670,12 @@ namespace pat {
 			};
 			int main(istream &cin, ostream &cout);
 		}// namespace b1102
-	}    // namespace b
+
+		/// \brief 1103 缘分数
+		namespace b1103 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}
