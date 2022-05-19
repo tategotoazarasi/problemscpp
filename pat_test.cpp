@@ -1875,6 +1875,16 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1105
+
+		namespace b1106 {
+			TEST(b1106, case1) {
+				istringstream in("10");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("2019224758", out.str());
+			}
+		}// namespace b1106
 	}    // namespace b
 
 	namespace a {}

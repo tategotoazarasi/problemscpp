@@ -3775,6 +3775,28 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1105
+
+		namespace b1106 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				vector<unsigned> vec(n);
+				vec[0]           = 2;
+				vec[1]           = 0;
+				vec[2]           = 1;
+				vec[3]           = 9;
+				unsigned current = 2 + 0 + 1 + 9;
+				for(int i = 4; i < n; i++) {
+					vec[i] = current % 10;
+					current -= vec[i - 4];
+					current += vec[i];
+				}
+				for(auto num: vec) {
+					cout << num;
+				}
+				return 0;
+			}
+		}// namespace b1106
 	}    // namespace b
 
 	namespace a {}

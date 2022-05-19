@@ -692,7 +692,12 @@ namespace pat {
 			};
 			int main(istream &cin, ostream &cout);
 		}// namespace b1105
-	}    // namespace b
+
+		/// \brief 1106 2019数列
+		namespace b1106 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {}
