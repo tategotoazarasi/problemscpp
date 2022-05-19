@@ -3733,6 +3733,48 @@ namespace pat {
 				}
 			}
 		}// namespace b1104
+
+		namespace b1105 {
+			int main(istream &cin, ostream &cout) {
+				string h1, h2;
+				int n;
+				cin >> h1 >> h2 >> n;
+				unordered_map<string, node> um;
+				for(int i = 0; i < n; i++) {
+					string address;
+					cin >> address;
+					um[address].address = address;
+					cin >> um[address].data >> um[address].next;
+				}
+				vector<node> l1, l2;
+				for(string addr = h1; addr != "-1"; addr = um[addr].next) {
+					l1.push_back(um[addr]);
+				}
+				for(string addr = h2; addr != "-1"; addr = um[addr].next) {
+					l2.push_back(um[addr]);
+				}
+				if(l1.size() < l2.size()) {
+					swap(l1, l2);
+				}
+				l2 = vector<node>(l2.rbegin(), l2.rend());
+				vector<node> ans;
+				for(int cnt = 0, i1 = 0, i2 = 0; i1 < l1.size() || i2 < l2.size(); cnt++, cnt %= 3) {
+					if(cnt <= 1) {
+						if(i1 < l1.size()) {
+							ans.push_back(l1[i1++]);
+						}
+					} else {
+						if(i2 < l2.size()) {
+							ans.push_back(l2[i2++]);
+						}
+					}
+				}
+				for(int i = 0; i < ans.size(); i++) {
+					cout << ans[i].address << ' ' << ans[i].data << ' ' << ((i + 1 < ans.size()) ? ans[i + 1].address : "-1") << endl;
+				}
+				return 0;
+			}
+		}// namespace b1105
 	}    // namespace b
 
 	namespace a {}

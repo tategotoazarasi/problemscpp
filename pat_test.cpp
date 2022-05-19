@@ -1851,6 +1851,30 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1104
+
+		namespace b1105 {
+			TEST(b1105, case1) {
+				istringstream in("00100 01000 7\n"
+				                 "02233 2 34891\n"
+				                 "00100 6 00001\n"
+				                 "34891 3 10086\n"
+				                 "01000 1 02233\n"
+				                 "00033 5 -1\n"
+				                 "10086 4 00033\n"
+				                 "00001 7 -1");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("01000 1 02233\n"
+				          "02233 2 00001\n"
+				          "00001 7 34891\n"
+				          "34891 3 10086\n"
+				          "10086 4 00100\n"
+				          "00100 6 00033\n"
+				          "00033 5 -1\n",
+				          out.str());
+			}
+		}// namespace b1105
 	}    // namespace b
 
 	namespace a {}

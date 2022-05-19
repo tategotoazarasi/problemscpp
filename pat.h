@@ -682,6 +682,16 @@ namespace pat {
 			void dfs(string str, const int current_i, const int m, const int k, const int current_sum, const int cnt9, vector<string> &ans);
 			int main(istream &cin, ostream &cout);
 		}// namespace b1104
+
+		/// \brief 1105 链表合并
+		namespace b1105 {
+			struct node {
+				string address;
+				unsigned data;
+				string next;
+			};
+			int main(istream &cin, ostream &cout);
+		}// namespace b1105
 	}    // namespace b
 
 	/// \brief 甲级
