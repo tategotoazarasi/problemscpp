@@ -3797,6 +3797,30 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1106
+
+		namespace b1107 {
+			int main(istream &cin, ostream &cout) {
+				int n, m;
+				cin >> n >> m;
+				int champion = 0;
+				for(int i = 0; i < n; i++) {
+					int maximum = 0;
+					for(int j = 0; j < m; j++) {
+						int weight;
+						cin >> weight;
+						maximum = max(maximum, weight);
+					}
+					cout << maximum;
+					if(i != n - 1) {
+						cout << ' ';
+					}
+					champion = max(champion, maximum);
+				}
+				cout << endl
+				     << champion;
+				return 0;
+			}
+		}// namespace b1107
 	}    // namespace b
 
 	namespace a {}

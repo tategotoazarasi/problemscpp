@@ -1885,6 +1885,21 @@ namespace pat {
 				ASSERT_EQ("2019224758", out.str());
 			}
 		}// namespace b1106
+
+		namespace b1107 {
+			TEST(b1107, case1) {
+				istringstream in("3 5\n"
+				                 "62 53 88 72 81\n"
+				                 "12 31 9 0 2\n"
+				                 "91 42 39 6 48");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("88 31 91\n"
+				          "91",
+				          out.str());
+			}
+		}// namespace b1107
 	}    // namespace b
 
 	namespace a {}

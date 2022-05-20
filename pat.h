@@ -697,6 +697,11 @@ namespace pat {
 		namespace b1106 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1107 老鼠爱大米
+		namespace b1107 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级
