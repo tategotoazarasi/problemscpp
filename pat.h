@@ -702,6 +702,11 @@ namespace pat {
 		namespace b1107 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1108 String复读机
+		namespace b1108 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

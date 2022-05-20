@@ -1900,6 +1900,16 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1107
+
+		namespace b1108 {
+			TEST(b1108, case1) {
+				istringstream in("sTRidlinSayBingStrropriiSHSiRiagIgtSSr");
+				auto out = ostringstream();
+				main(in, out);
+				const auto ans = out.str();
+				ASSERT_EQ("StringStringSrigSriSiSii", out.str());
+			}
+		}// namespace b1108
 	}    // namespace b
 
 	namespace a {}

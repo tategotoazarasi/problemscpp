@@ -3821,6 +3821,28 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1107
+
+		namespace b1108 {
+			int main(istream &cin, ostream &cout) {
+				unordered_map<char, int> um;
+				char ch;
+				while(cin >> ch) {
+					um[ch]++;
+				}
+				char word[6] = {'S', 't', 'r', 'i', 'n', 'g'};
+				int cnt      = 0;
+				for(int i = 0; cnt < 6; i++, i %= 6) {
+					if(um[word[i]] > 0) {
+						cout << word[i];
+						um[word[i]]--;
+						cnt = 0;
+					} else {
+						cnt++;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1108
 	}    // namespace b
 
 	namespace a {}
