@@ -3899,6 +3899,45 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1109
+
+		namespace b1110 {
+			int main(istream &cin, ostream &cout) {
+				string head;
+				int n, k;
+				cin >> head >> n >> k;
+				unordered_map<string, node> um;
+				for(int i = 0; i < n; i++) {
+					string address;
+					cin >> address;
+					um[address].address = address;
+					cin >> um[address].data >> um[address].next;
+				}
+				deque<vector<node>> deq;
+				vector<node> block;
+				string current = head;
+				while(current != "-1") {
+					block.emplace_back(um[current]);
+					if(block.size() == k) {
+						deq.emplace_front(block);
+						block.clear();
+					}
+					current = um[current].next;
+				}
+				if(!block.empty()) {
+					deq.emplace_front(block);
+				}
+				block.clear();
+				for(const auto &blk: deq) {
+					for(const auto &nd: blk) {
+						block.emplace_back(nd);
+					}
+				}
+				for(int i = 0; i < block.size(); i++) {
+					cout << block[i].address << " " << block[i].data << " " << (i + 1 < block.size() ? block[i + 1].address : "-1") << endl;
+				}
+				return 0;
+			}
+		}// namespace b1110
 	}    // namespace b
 
 	namespace a {}

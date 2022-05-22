@@ -712,7 +712,17 @@ namespace pat {
 		namespace b1109 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace b
+
+		/// \brief 1110 区块反转
+		namespace b1110 {
+			struct node {
+				string address;
+				int data;
+				string next;
+			};
+			int main(istream &cin, ostream &cout);
+		}// namespace b1110
+	}    // namespace b
 
 	/// \brief 甲级
 	namespace a {}
