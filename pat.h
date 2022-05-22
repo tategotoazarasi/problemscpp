@@ -707,6 +707,11 @@ namespace pat {
 		namespace b1108 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1109 擅长C
+		namespace b1109 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace b
 
 	/// \brief 甲级

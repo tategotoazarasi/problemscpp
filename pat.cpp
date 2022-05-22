@@ -3843,6 +3843,62 @@ namespace pat {
 				return 0;
 			}
 		}// namespace b1108
+
+		namespace b1109 {
+			int main(istream &cin, ostream &cout) {
+				char matrix[26][7][5];
+				for(int i = 0; i < 26; i++) {
+					for(int j = 0; j < 7; j++) {
+						for(int k = 0; k < 5; k++) {
+							cin >> matrix[i][j][k];
+						}
+					}
+				}
+				vector<string> vec;
+				ostringstream oss;
+				char ch;
+				cin >> noskipws;
+				while(cin >> ch) {
+					if(isupper(ch)) {
+						oss << ch;
+					} else {
+						if(!oss.str().empty()) {
+							vec.emplace_back(oss.str());
+						}
+						oss = ostringstream();
+					}
+				}
+				if(!oss.str().empty()) {
+					vec.emplace_back(oss.str());
+				}
+				int cnt = 0;
+				for(const auto &str: vec) {
+					int w = str.length() * 6 - 1;
+					vector<vector<char>> output(7, vector<char>(w, ' '));
+					for(int i = 0; i < str.length(); i++) {
+						char c = str[i];
+						for(int j = 0; j < 7; j++) {
+							for(int k = 0; k < 5; k++) {
+								output[j][i * 6 + k] = matrix[c - 'A'][j][k];
+							}
+						}
+					}
+					for(int i = 0; i < 7; i++) {
+						for(int j = 0; j < w; j++) {
+							cout << output[i][j];
+						}
+						if(i != 6) {
+							cout << endl;
+						}
+					}
+					if(cnt++ != vec.size() - 1) {
+						cout << endl
+						     << endl;
+					}
+				}
+				return 0;
+			}
+		}// namespace b1109
 	}    // namespace b
 
 	namespace a {}
