@@ -2292,6 +2292,21 @@ namespace leetcode {
 			static void copy(TreeNode *tn, TreeNodeP *tnp, int low, int high, TreeNodeP **p, TreeNodeP **q);
 		};
 	}// namespace lowest_common_ancestor_of_a_binary_search_tree
+
+	/// \brief 384. Shuffle an Array
+	namespace shuffle_an_array {
+		class Solution {
+			vector<int> nums;
+
+		public:
+			/// \brief Initializes the object with the integer array nums.
+			Solution(vector<int> &nums);
+			/// \brief Resets the array to its original configuration and returns it.
+			vector<int> reset();
+			/// \brief Returns a random shuffling of the array.
+			vector<int> shuffle();
+		};
+	}// namespace shuffle_an_array
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

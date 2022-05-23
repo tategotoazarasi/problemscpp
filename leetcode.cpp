@@ -6139,4 +6139,25 @@ namespace leetcode {
 			}
 		}
 	}// namespace lowest_common_ancestor_of_a_binary_search_tree
+
+	namespace shuffle_an_array {
+		vector<int> Solution::reset() {
+			return nums;
+		}
+
+		vector<int> Solution::shuffle() {
+			vector<int> ans;
+			vector<int> cpy = nums;
+			while(!cpy.empty()) {
+				int idx = rand() % cpy.size();
+				ans.emplace_back(cpy[idx]);
+				cpy.erase(cpy.begin() + idx);
+			}
+			return ans;
+		}
+
+		Solution::Solution(vector<int> &nums): nums(nums) {
+			srand(time(0));
+		}
+	}// namespace shuffle_an_array
 }// namespace leetcode
