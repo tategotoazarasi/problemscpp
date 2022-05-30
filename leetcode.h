@@ -2307,6 +2307,14 @@ namespace leetcode {
 			vector<int> shuffle();
 		};
 	}// namespace shuffle_an_array
+
+	/// \brief 438. Find All Anagrams in a String
+	namespace find_all_anagrams_in_a_string {
+		class Solution {
+		public:
+			static vector<int> findAnagrams(string s, string p);
+		};
+	}// namespace find_all_anagrams_in_a_string
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

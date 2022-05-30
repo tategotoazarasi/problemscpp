@@ -2653,15 +2653,15 @@ namespace leetcode {
 	namespace find_players_with_zero_or_one_losses {
 		TEST(find_players_with_zero_or_one_losses, case1) {
 			vector<vector<int>> matches      = {{1, 3},
-                                           {2, 3},
-                                           {3, 6},
-                                           {5, 6},
-                                           {5, 7},
-                                           {4, 5},
-                                           {4, 8},
-                                           {4, 9},
-                                           {10, 4},
-                                           {10, 9}};
+			                                    {2, 3},
+			                                    {3, 6},
+			                                    {5, 6},
+			                                    {5, 7},
+			                                    {4, 5},
+			                                    {4, 8},
+			                                    {4, 9},
+			                                    {10, 4},
+			                                    {10, 9}};
 			const vector<vector<int>> output = {{1, 2, 10}, {4, 5, 7, 8}};
 			ASSERT_EQ(output, Solution::findWinners(matches));
 		}
@@ -2895,4 +2895,20 @@ namespace leetcode {
 			ASSERT_EQ(6, s.lowestCommonAncestor(root, root->left, root->right)->val);
 		}
 	}// namespace lowest_common_ancestor_of_a_binary_search_tree
+
+	namespace find_all_anagrams_in_a_string {
+		TEST(find_all_anagrams_in_a_string, case1) {
+			string s             = "cbaebabacd";
+			string p             = "abc";
+			vector<int> expected = {0, 6};
+			ASSERT_EQ(expected, Solution::findAnagrams(s, p));
+		}
+
+		TEST(find_all_anagrams_in_a_string, case2) {
+			string s             = "abab";
+			string p             = "ab";
+			vector<int> expected = {0, 1, 2};
+			ASSERT_EQ(expected, Solution::findAnagrams(s, p));
+		}
+	}// namespace find_all_anagrams_in_a_string
 }// namespace leetcode

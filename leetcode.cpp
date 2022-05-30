@@ -6160,4 +6160,32 @@ namespace leetcode {
 			srand(time(0));
 		}
 	}// namespace shuffle_an_array
+
+	namespace find_all_anagrams_in_a_string {
+		vector<int> Solution::findAnagrams(string s, string p) {
+			vector<int> ans;
+			unordered_map<char, int> um_p;
+			for(char ch: p) {
+				um_p[ch]++;
+			}
+			unordered_map<char, int> um_s;
+			for(int i = 0; i < p.length(); i++) {
+				um_s[s[i]]++;
+			}
+			if(um_s == um_p) {
+				ans.emplace_back(0);
+			}
+			for(int i = p.length(); i < s.length(); i++) {
+				um_s[s[i]]++;
+				um_s[s[i - p.length()]]--;
+				if(um_s[s[i - p.length()]] == 0) {
+					um_s.erase(s[i - p.length()]);
+				}
+				if(um_s == um_p) {
+					ans.emplace_back(i - p.length() + 1);
+				}
+			}
+			return ans;
+		}
+	}// namespace find_all_anagrams_in_a_string
 }// namespace leetcode
