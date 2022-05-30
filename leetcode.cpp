@@ -6188,4 +6188,20 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace find_all_anagrams_in_a_string
+
+	namespace subarray_product_less_than_k {
+		int Solution::numSubarrayProductLessThanK(vector<int> &nums, int k) {
+			int ans  = 0;
+			int prod = 1, i = 0;
+			for(int j = 0; j < nums.size(); j++) {
+				prod *= nums[j];
+				while(i <= j && prod >= k) {
+					prod /= nums[i];
+					i++;
+				}
+				ans += j - i + 1;
+			}
+			return ans;
+		}
+	}// namespace subarray_product_less_than_k
 }// namespace leetcode

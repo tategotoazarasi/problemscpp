@@ -2911,4 +2911,18 @@ namespace leetcode {
 			ASSERT_EQ(expected, Solution::findAnagrams(s, p));
 		}
 	}// namespace find_all_anagrams_in_a_string
+
+	namespace subarray_product_less_than_k {
+		TEST(subarray_product_less_than_k, case1) {
+			vector<int> nums = {10, 5, 2, 6};
+			int k            = 100;
+			ASSERT_EQ(8, Solution::numSubarrayProductLessThanK(nums, k));
+		}
+
+		TEST(subarray_product_less_than_k, case2) {
+			vector<int> nums = {1, 2, 3};
+			int k            = 0;
+			ASSERT_EQ(0, Solution::numSubarrayProductLessThanK(nums, k));
+		}
+	}// namespace subarray_product_less_than_k
 }// namespace leetcode

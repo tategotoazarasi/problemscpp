@@ -2315,6 +2315,14 @@ namespace leetcode {
 			static vector<int> findAnagrams(string s, string p);
 		};
 	}// namespace find_all_anagrams_in_a_string
+
+	/// \brief 713. Subarray Product Less Than K
+	namespace subarray_product_less_than_k {
+		class Solution {
+		public:
+			static int numSubarrayProductLessThanK(vector<int> &nums, int k);
+		};
+	}// namespace subarray_product_less_than_k
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
