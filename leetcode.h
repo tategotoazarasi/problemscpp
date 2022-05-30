@@ -2323,6 +2323,14 @@ namespace leetcode {
 			static int numSubarrayProductLessThanK(vector<int> &nums, int k);
 		};
 	}// namespace subarray_product_less_than_k
+
+	/// \brief 209. Minimum Size Subarray Sum
+	namespace minimum_size_subarray_sum {
+		class Solution {
+		public:
+			static int minSubArrayLen(int target, vector<int> &nums);
+		};
+	}// namespace minimum_size_subarray_sum
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

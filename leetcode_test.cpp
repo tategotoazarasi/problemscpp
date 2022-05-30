@@ -2925,4 +2925,36 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::numSubarrayProductLessThanK(nums, k));
 		}
 	}// namespace subarray_product_less_than_k
+
+	namespace minimum_size_subarray_sum {
+		TEST(minimum_size_subarray_sum, case1) {
+			vector<int> nums = {2, 3, 1, 2, 4, 3};
+			int target       = 7;
+			ASSERT_EQ(2, Solution::minSubArrayLen(target, nums));
+		}
+
+		TEST(minimum_size_subarray_sum, case2) {
+			vector<int> nums = {1, 4, 4};
+			int target       = 4;
+			ASSERT_EQ(1, Solution::minSubArrayLen(target, nums));
+		}
+
+		TEST(minimum_size_subarray_sum, case3) {
+			vector<int> nums = {1, 1, 1, 1, 1, 1, 1, 1};
+			int target       = 11;
+			ASSERT_EQ(0, Solution::minSubArrayLen(target, nums));
+		}
+
+		TEST(minimum_size_subarray_sum, case4) {
+			vector<int> nums = {5, 1, 3, 5, 10, 7, 4, 9, 2, 8};
+			int target       = 15;
+			ASSERT_EQ(2, Solution::minSubArrayLen(target, nums));
+		}
+
+		TEST(minimum_size_subarray_sum, case5) {
+			vector<int> nums = {10, 5, 13, 4, 8, 4, 5, 11, 14, 9, 16, 10, 20, 8};
+			int target       = 80;
+			ASSERT_EQ(6, Solution::minSubArrayLen(target, nums));
+		}
+	}// namespace minimum_size_subarray_sum
 }// namespace leetcode

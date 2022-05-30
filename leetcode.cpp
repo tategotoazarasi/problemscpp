@@ -6204,4 +6204,39 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace subarray_product_less_than_k
+
+	namespace minimum_size_subarray_sum {
+		int Solution::minSubArrayLen(int target, vector<int> &nums) {
+			int r   = nums.size() - 1;
+			int l   = r;
+			int sum = nums[r];
+			int ans = 0;
+			while(l >= 0 && l <= r) {
+				if(nums[l] >= target) {
+					return 1;
+				}
+				while(l - 1 >= 0 && sum + nums[l - 1] < target) {
+					sum += nums[--l];
+				}
+				if(l - 1 >= 0) {
+					l--;
+					sum += nums[l];
+					if(ans == 0) {
+						ans = r - l + 1;
+					} else {
+						ans = min(ans, r - l + 1);
+					}
+				} else {
+					break;
+				}
+				do {
+					sum -= nums[r--];
+					if(sum >= target) {
+						ans = min(ans, r - l + 1);
+					}
+				} while(sum >= target && r >= l);
+			}
+			return ans;
+		}
+	}// namespace minimum_size_subarray_sum
 }// namespace leetcode
