@@ -6272,4 +6272,47 @@ namespace leetcode {
 			return root;
 		}
 	}// namespace populating_next_right_pointers_in_each_node_ii
+
+	namespace subtree_of_another_tree {
+		bool Solution::isSubtree(TreeNode *root, TreeNode *subRoot) {
+			if(root == nullptr) {
+				return false;
+			}
+			queue<TreeNode *> q;
+			q.push(root);
+			while(!q.empty()) {
+				auto node = q.front();
+				q.pop();
+				if(equal(node, subRoot)) {
+					return true;
+				}
+				if(node->left != nullptr) {
+					q.push(node->left);
+				}
+				if(node->right != nullptr) {
+					q.push(node->right);
+				}
+			}
+			return false;
+		}
+
+		bool Solution::equal(TreeNode *tn1, TreeNode *tn2) {
+			if(((tn1 == nullptr) + (tn2 == nullptr)) == 1) {
+				return false;
+			}
+			if(tn1 == nullptr && tn2 == nullptr) {
+				return true;
+			}
+			if(tn1->val != tn2->val) {
+				return false;
+			}
+			if(((tn1->left == nullptr) + (tn2->left == nullptr)) == 1) {
+				return false;
+			}
+			if(((tn1->right == nullptr) + (tn2->right == nullptr)) == 1) {
+				return false;
+			}
+			return equal(tn1->left, tn2->left) && equal(tn1->right, tn2->right);
+		}
+	}// namespace subtree_of_another_tree
 }// namespace leetcode

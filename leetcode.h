@@ -2354,6 +2354,15 @@ namespace leetcode {
 			static Node *connect(Node *root);
 		};
 	}// namespace populating_next_right_pointers_in_each_node_ii
+
+	/// \brief 572. Subtree of Another Tree
+	namespace subtree_of_another_tree {
+		class Solution {
+		public:
+			static bool isSubtree(TreeNode *root, TreeNode *subRoot);
+			static bool equal(TreeNode *tn1, TreeNode *tn2);
+		};
+	}// namespace subtree_of_another_tree
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
