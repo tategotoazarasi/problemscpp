@@ -51,6 +51,21 @@ namespace leetcode {
 		    : val(x), next(next){};
 	};
 
+	class Node {
+	public:
+		int val;
+		Node *left;
+		Node *right;
+		Node *next;
+
+		Node(): val(0), left(nullptr), right(nullptr), next(nullptr) {}
+
+		Node(int _val): val(_val), left(nullptr), right(nullptr), next(nullptr) {}
+
+		Node(int _val, Node *_left, Node *_right, Node *_next)
+		    : val(_val), left(_left), right(_right), next(_next) {}
+	};
+
 	namespace concatenated_words {
 		class Solution {
 		public:
@@ -2331,6 +2346,14 @@ namespace leetcode {
 			static int minSubArrayLen(int target, vector<int> &nums);
 		};
 	}// namespace minimum_size_subarray_sum
+
+	/// \brief 117. Populating Next Right Pointers in Each Node II
+	namespace populating_next_right_pointers_in_each_node_ii {
+		class Solution {
+		public:
+			static Node *connect(Node *root);
+		};
+	}// namespace populating_next_right_pointers_in_each_node_ii
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

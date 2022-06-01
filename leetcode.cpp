@@ -6239,4 +6239,37 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace minimum_size_subarray_sum
+
+	namespace populating_next_right_pointers_in_each_node_ii {
+		Node *Solution::connect(Node *root) {
+			if(root == nullptr) {
+				return nullptr;
+			}
+			int prev_level  = 0;
+			Node *prev_node = root;
+			queue<pair<int, Node *>> q;
+			if(root->left != nullptr) {
+				q.emplace(1, root->left);
+			}
+			if(root->right != nullptr) {
+				q.emplace(1, root->right);
+			}
+			while(!q.empty()) {
+				auto [level, node] = q.front();
+				q.pop();
+				if(level == prev_level) {
+					prev_node->next = node;
+				}
+				prev_level = level;
+				prev_node  = node;
+				if(node->left != nullptr) {
+					q.emplace(level + 1, node->left);
+				}
+				if(node->right != nullptr) {
+					q.emplace(level + 1, node->right);
+				}
+			}
+			return root;
+		}
+	}// namespace populating_next_right_pointers_in_each_node_ii
 }// namespace leetcode
