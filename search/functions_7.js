@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['halvearray_0',['halveArray',['../d6/d0c/a02080.html#a8b6d8af4c6d483a917d9ffd9564d48a2',1,'leetcode::minimum_operations_to_halve_array_sum::Solution']]],
-  ['hasalternatingbits_1',['hasAlternatingBits',['../dc/d29/a02144.html#a51c5b051628687d977e80333f7e8fa05',1,'leetcode::binary_number_with_alternating_bits::Solution']]],
-  ['highestpeak_2',['highestPeak',['../d7/d47/a01668.html#abb9f9e1158e8b78d5fd3da458bfa04ee',1,'leetcode::map_of_highest_peak::Solution']]],
-  ['highestrankedkitems_3',['highestRankedKItems',['../db/dfd/a01608.html#a9eb14c6a78e5ca4b6d333b512fe3eebd',1,'leetcode::k_highest_ranked_items_within_a_price_range::Solution']]]
+  ['halvearray_0',['halveArray',['../df/d4d/a02086.html#a8b6d8af4c6d483a917d9ffd9564d48a2',1,'leetcode::minimum_operations_to_halve_array_sum::Solution']]],
+  ['hasalternatingbits_1',['hasAlternatingBits',['../d4/d5d/a02150.html#a51c5b051628687d977e80333f7e8fa05',1,'leetcode::binary_number_with_alternating_bits::Solution']]],
+  ['highestpeak_2',['highestPeak',['../dc/d42/a01674.html#abb9f9e1158e8b78d5fd3da458bfa04ee',1,'leetcode::map_of_highest_peak::Solution']]],
+  ['highestrankedkitems_3',['highestRankedKItems',['../db/d7c/a01614.html#a9eb14c6a78e5ca4b6d333b512fe3eebd',1,'leetcode::k_highest_ranked_items_within_a_price_range::Solution']]]
 ];
