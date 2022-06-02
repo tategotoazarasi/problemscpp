@@ -5,7 +5,7 @@ var searchData=
   ['search_2',['search',['../da/d77/a01381.html#a1f67635ef99a1c887c5ea6ed78420387',1,'acwing::acwing4398::TrieNode::search()'],['../db/de9/a01525.html#aa7c228a1c6b22a07281eae6a14c2e72f',1,'leetcode::escape_a_large_maze::Solution::search()']]],
   ['secondminimum_3',['secondMinimum',['../d1/d03/a01653.html#ac5c774924a4831a756486a1718a7b82b',1,'leetcode::second_minimum_time_to_reach_destination::Solution']]],
   ['selfdividingnumbers_4',['selfDividingNumbers',['../de/d08/a02169.html#a60e690b237f0625c94698ba9410ed0af',1,'leetcode::self_dividing_numbers::Solution']]],
-  ['set_5fstack_5flimit_5',['set_stack_limit',['../d6/d5b/a00026.html#a90d105b4f65d447ebdd2269060a02d32',1,'set_stack_limit(int):&#160;set_stack_limit.cpp'],['../d5/d16/a00029.html#a4d5e31141ea8d871e02a1520af4cbb69',1,'set_stack_limit(int stack_size):&#160;set_stack_limit.cpp']]],
+  ['set_5fstack_5flimit_5',['set_stack_limit',['../d6/d5b/a00026.html#a90d105b4f65d447ebdd2269060a02d32',1,'set_stack_limit(int):&#160;set_stack_limit.cpp'],['../db/db2/a00020.html#a4d5e31141ea8d871e02a1520af4cbb69',1,'set_stack_limit(int stack_size):&#160;set_stack_limit.cpp']]],
   ['shortestpathbinarymatrix_6',['shortestPathBinaryMatrix',['../d4/d16/a02313.html#a7a68a0021b63d516e666075155fecb46',1,'leetcode::shortest_path_in_binary_matrix::Solution']]],
   ['shuffle_7',['shuffle',['../de/d4e/a02289.html#a704cff85b89cc5898d7c903c8fad3671',1,'leetcode::shuffle_an_array::Solution']]],
   ['simplifiedfractions_8',['simplifiedFractions',['../d5/d36/a01773.html#a3c0427cd9935cb8eca1417d197a7fb15',1,'leetcode::simplified_fractions::Solution']]],
