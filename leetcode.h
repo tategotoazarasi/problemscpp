@@ -2371,6 +2371,15 @@ namespace leetcode {
 			static int shortestPathBinaryMatrix(vector<vector<int>> &grid);
 		};
 	}// namespace shortest_path_in_binary_matrix
+
+	/// \brief 130. Surrounded Regions
+	namespace surrounded_regions {
+		class Solution {
+		public:
+			static void dfs(vector<vector<char>> &board, int x, int y);
+			static void solve(vector<vector<char>> &board);
+		};
+	}// namespace surrounded_regions
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

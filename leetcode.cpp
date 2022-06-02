@@ -6358,4 +6358,49 @@ namespace leetcode {
 			return -1;
 		}
 	}// namespace shortest_path_in_binary_matrix
+
+	namespace surrounded_regions {
+		void Solution::solve(vector<vector<char>> &board) {
+			int m = board.size();
+			int n = board[0].size();
+			for(int i = 0; i < n; i++) {
+				if(board[0][i] == 'O') {
+					dfs(board, 0, i);
+				}
+				if(board[m - 1][i] == 'O') {
+					dfs(board, m - 1, i);
+				}
+			}
+			for(int j = 0; j < m; j++) {
+				if(board[j][0] == 'O') {
+					dfs(board, j, 0);
+				}
+				if(board[j][n - 1] == 'O') {
+					dfs(board, j, n - 1);
+				}
+			}
+			for(int i = 0; i < m; i++) {
+				for(int j = 0; j < n; j++) {
+					if(board[i][j] == 'O') {
+						board[i][j] = 'X';
+					}
+					if(board[i][j] == 'D') {
+						board[i][j] = 'O';
+					}
+				}
+			}
+		}
+
+		void Solution::dfs(vector<vector<char>> &board, int x, int y) {
+			board[x][y]             = 'D';
+			int m                   = board.size();
+			int n                   = board[0].size();
+			pair<int, int> nexts[4] = {{x - 1, y}, {x + 1, y}, {x, y - 1}, {x, y + 1}};
+			for(auto [next_x, next_y]: nexts) {
+				if(next_x >= 0 && next_x < m && next_y >= 0 && next_y < n && board[next_x][next_y] == 'O') {
+					dfs(board, next_x, next_y);
+				}
+			}
+		}
+	}// namespace surrounded_regions
 }// namespace leetcode
