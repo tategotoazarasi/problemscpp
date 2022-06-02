@@ -6315,4 +6315,47 @@ namespace leetcode {
 			return equal(tn1->left, tn2->left) && equal(tn1->right, tn2->right);
 		}
 	}// namespace subtree_of_another_tree
+
+	namespace shortest_path_in_binary_matrix {
+		int Solution::shortestPathBinaryMatrix(vector<vector<int>> &grid) {
+			int n                      = grid.size();
+			vector<vector<int>> levels = vector<vector<int>>(n, vector<int>(n, -1));
+			auto cmp                   = [&n](const tuple<int, int, int> &t1, const tuple<int, int, int> &t2) {
+                const auto &[level1, x1, y1] = t1;
+                const auto &[level2, x2, y2] = t2;
+                int dx1                      = abs(n - 1 - x1);
+                int dy1                      = abs(n - 1 - y1);
+                int dx2                      = abs(n - 1 - x2);
+                int dy2                      = abs(n - 1 - y2);
+                return (level1 + dx1 + dy1 - min(dx1, dy1)) > (level2 + dx2 + dy2 - min(dx2, dy2));
+			};
+			priority_queue<tuple<int, int, int>, vector<tuple<int, int, int>>, decltype(cmp)> pq(cmp);
+			if(grid[0][0] == 0 && grid[n - 1][n - 1] == 0) {
+				pq.push(make_tuple(1, 0, 0));
+			} else {
+				return -1;
+			}
+			while(!pq.empty()) {
+				auto [level, x, y] = pq.top();
+				if(x == n - 1 && y == n - 1) {
+					return level;
+				}
+				pq.pop();
+				if(levels[x][y] == -1 || levels[x][y] > level) {
+					levels[x][y] = level;
+				} else {
+					continue;
+				}
+				pair<int, int> nexts[8] = {make_pair(x - 1, y - 1), make_pair(x - 1, y), make_pair(x - 1, y + 1),
+				                           make_pair(x, y - 1), make_pair(x, y + 1),
+				                           make_pair(x + 1, y - 1), make_pair(x + 1, y), make_pair(x + 1, y + 1)};
+				for(auto [next_x, next_y]: nexts) {
+					if(next_x >= 0 && next_x < n && next_y >= 0 && next_y < n && grid[next_x][next_y] == 0 && (levels[next_x][next_y] == -1 || levels[next_x][next_y] > level + 1)) {
+						pq.push(make_tuple(level + 1, next_x, next_y));
+					}
+				}
+			}
+			return -1;
+		}
+	}// namespace shortest_path_in_binary_matrix
 }// namespace leetcode

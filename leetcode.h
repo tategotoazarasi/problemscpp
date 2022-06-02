@@ -2363,6 +2363,14 @@ namespace leetcode {
 			static bool equal(TreeNode *tn1, TreeNode *tn2);
 		};
 	}// namespace subtree_of_another_tree
+
+	/// \brief 1091. Shortest Path in Binary Matrix
+	namespace shortest_path_in_binary_matrix {
+		class Solution {
+		public:
+			static int shortestPathBinaryMatrix(vector<vector<int>> &grid);
+		};
+	}// namespace shortest_path_in_binary_matrix
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
