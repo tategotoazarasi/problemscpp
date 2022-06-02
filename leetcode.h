@@ -2380,6 +2380,15 @@ namespace leetcode {
 			static void solve(vector<vector<char>> &board);
 		};
 	}// namespace surrounded_regions
+
+	/// \brief 797. All Paths From Source to Target
+	namespace all_paths_from_source_to_target {
+		class Solution {
+		public:
+			static int dfs(vector<vector<int>> &graph, vector<vector<int>> &ans, int cur);
+			static vector<vector<int>> allPathsSourceTarget(vector<vector<int>> &graph);
+		};
+	}// namespace all_paths_from_source_to_target
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

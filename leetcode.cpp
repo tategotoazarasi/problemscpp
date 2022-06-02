@@ -6403,4 +6403,32 @@ namespace leetcode {
 			}
 		}
 	}// namespace surrounded_regions
+
+	namespace all_paths_from_source_to_target {
+		vector<vector<int>> Solution::allPathsSourceTarget(vector<vector<int>> &graph) {
+			vector<vector<int>> ans;
+			dfs(graph, ans, 0);
+			for(auto &path: ans) {
+				path.push_back(0);
+				path = vector<int>(path.rbegin(), path.rend());
+			}
+			return ans;
+		}
+
+		int Solution::dfs(vector<vector<int>> &graph, vector<vector<int>> &ans, int cur) {
+			int ret = 0;
+			if(cur == graph.size() - 1) {
+				ans.emplace_back(vector<int>(1, cur));
+				return 1;
+			}
+			for(auto next: graph[cur]) {
+				int n = dfs(graph, ans, next);
+				ret += n;
+				for(int i = ans.size() - 1, j = 0; j < n; i--, j++) {
+					ans[i].emplace_back(cur);
+				}
+			}
+			return ret;
+		}
+	}// namespace all_paths_from_source_to_target
 }// namespace leetcode
