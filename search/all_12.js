@@ -10,7 +10,7 @@ var searchData=
   ['secondminimum_7',['secondMinimum',['../d1/d03/a01653.html#ac5c774924a4831a756486a1718a7b82b',1,'leetcode::second_minimum_time_to_reach_destination::Solution']]],
   ['selfdividingnumbers_8',['selfDividingNumbers',['../de/d08/a02169.html#a60e690b237f0625c94698ba9410ed0af',1,'leetcode::self_dividing_numbers::Solution']]],
   ['server_5findex_9',['server_index',['../df/dbf/a02161.html#a3c14f5fa2c69cabe9b2f668b25cf5dbe',1,'leetcode::find_servers_that_handled_most_number_of_requests::event']]],
-  ['set_5fstack_5flimit_10',['set_stack_limit',['../d6/d5b/a00026.html#a90d105b4f65d447ebdd2269060a02d32',1,'set_stack_limit(int):&#160;set_stack_limit.cpp'],['../db/db2/a00020.html#a4d5e31141ea8d871e02a1520af4cbb69',1,'set_stack_limit(int stack_size):&#160;set_stack_limit.cpp']]],
+  ['set_5fstack_5flimit_10',['set_stack_limit',['../d6/d5b/a00026.html#a90d105b4f65d447ebdd2269060a02d32',1,'set_stack_limit(int):&#160;set_stack_limit.cpp'],['../d5/d16/a00029.html#a4d5e31141ea8d871e02a1520af4cbb69',1,'set_stack_limit(int stack_size):&#160;set_stack_limit.cpp']]],
   ['set_5fstack_5flimit_2ecpp_11',['set_stack_limit.cpp',['../d6/d5b/a00026.html',1,'']]],
   ['shortestpathbinarymatrix_12',['shortestPathBinaryMatrix',['../d4/d16/a02313.html#a7a68a0021b63d516e666075155fecb46',1,'leetcode::shortest_path_in_binary_matrix::Solution']]],
   ['shuffle_13',['shuffle',['../de/d4e/a02289.html#a704cff85b89cc5898d7c903c8fad3671',1,'leetcode::shuffle_an_array::Solution']]],
