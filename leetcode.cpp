@@ -6457,4 +6457,28 @@ namespace leetcode {
 			}
 		}
 	}// namespace permutations_ii
+
+	namespace combination_sum {
+		vector<vector<int>> Solution::combinationSum(vector<int> &candidates, int target) {
+			sort(candidates.begin(), candidates.end());
+			return recurse(candidates, target, 0);
+		}
+
+		vector<vector<int>> Solution::recurse(vector<int> &candidates, int target, int index) {
+			vector<vector<int>> ans;
+			for(int i = index; i < candidates.size(); i++) {
+				auto &candidate = candidates[i];
+				if(candidate == target) {
+					ans.emplace_back(vector<int>(1, candidate));
+				} else if(target - candidate >= 1) {
+					auto res = recurse(candidates, target - candidate, i);
+					for(auto &vec: res) {
+						vec.push_back(candidate);
+						ans.push_back(vec);
+					}
+				}
+			}
+			return ans;
+		}
+	}// namespace combination_sum
 }// namespace leetcode

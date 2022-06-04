@@ -2398,6 +2398,15 @@ namespace leetcode {
 			static vector<vector<int>> permuteUnique(vector<int> &nums);
 		};
 	}// namespace permutations_ii
+
+	/// \brief 39. Combination Sum
+	namespace combination_sum {
+		class Solution {
+		public:
+			static vector<vector<int>> recurse(vector<int> &candidates, int target, int index);
+			static vector<vector<int>> combinationSum(vector<int> &candidates, int target);
+		};
+	}// namespace combination_sum
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
