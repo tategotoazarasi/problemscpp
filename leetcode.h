@@ -2389,6 +2389,15 @@ namespace leetcode {
 			static vector<vector<int>> allPathsSourceTarget(vector<vector<int>> &graph);
 		};
 	}// namespace all_paths_from_source_to_target
+
+	/// \brief 47. Permutations II
+	namespace permutations_ii {
+		class Solution {
+		public:
+			static void dfs(set<vector<int>> &s, vector<int> current, vector<int> rest);
+			static vector<vector<int>> permuteUnique(vector<int> &nums);
+		};
+	}// namespace permutations_ii
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

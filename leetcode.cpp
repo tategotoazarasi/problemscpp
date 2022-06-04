@@ -6431,4 +6431,30 @@ namespace leetcode {
 			return ret;
 		}
 	}// namespace all_paths_from_source_to_target
+
+	namespace permutations_ii {
+		vector<vector<int>> Solution::permuteUnique(vector<int> &nums) {
+			vector<vector<int>> ans;
+			set<vector<int>> s;
+			dfs(s, vector<int>(), nums);
+			for(auto vec: s) {
+				ans.emplace_back(vec);
+			}
+			return ans;
+		}
+
+		void Solution::dfs(set<vector<int>> &s, vector<int> current, vector<int> rest) {
+			if(rest.empty()) {
+				s.insert(current);
+				return;
+			}
+			for(auto it = rest.begin(); it != rest.end(); ++it) {
+				vector<int> next_current = current;
+				vector<int> next_rest    = rest;
+				next_current.push_back(*it);
+				next_rest.erase(next_rest.begin() + (it - rest.begin()));
+				dfs(s, next_current, next_rest);
+			}
+		}
+	}// namespace permutations_ii
 }// namespace leetcode
