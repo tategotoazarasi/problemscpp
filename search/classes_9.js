@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['node_0',['Node',['../d4/dc0/a02225.html',1,'leetcode::n_ary_tree_level_order_traversal::Node'],['../da/d3e/a02025.html',1,'leetcode::n_ary_tree_postorder_traversal::Node'],['../d8/d98/a02009.html',1,'leetcode::n_ary_tree_preorder_traversal::Node'],['../dc/df4/a01401.html',1,'leetcode::Node'],['../d7/d16/a02109.html',1,'leetcode::the_time_when_the_network_becomes_idle::Node'],['../df/d9c/a02793.html',1,'pat::b::b1025::Node'],['../db/d27/a02817.html',1,'pat::b::b1075::Node']]],
-  ['node_1',['node',['../de/d4b/a02865.html',1,'pat::b::b1105::node'],['../d4/d69/a02869.html',1,'pat::b::b1110::node']]],
-  ['numarray_2',['NumArray',['../de/d1b/a02269.html',1,'leetcode::range_sum_query_immutable::NumArray'],['../dc/d43/a02205.html',1,'leetcode::range_sum_query_mutable::NumArray']]]
+  ['node_0',['Node',['../de/dfd/a02228.html',1,'leetcode::n_ary_tree_level_order_traversal::Node'],['../db/d68/a02028.html',1,'leetcode::n_ary_tree_postorder_traversal::Node'],['../d5/d2c/a02012.html',1,'leetcode::n_ary_tree_preorder_traversal::Node'],['../d2/d82/a01404.html',1,'leetcode::Node'],['../d8/d84/a02112.html',1,'leetcode::the_time_when_the_network_becomes_idle::Node'],['../d1/dd0/a02808.html',1,'pat::b::b1025::Node'],['../dd/d9b/a02832.html',1,'pat::b::b1075::Node']]],
+  ['node_1',['node',['../d7/d35/a02880.html',1,'pat::b::b1105::node'],['../d8/d93/a02884.html',1,'pat::b::b1110::node']]],
+  ['numarray_2',['NumArray',['../d5/dc0/a02272.html',1,'leetcode::range_sum_query_immutable::NumArray'],['../d8/d1e/a02208.html',1,'leetcode::range_sum_query_mutable::NumArray']]]
 ];

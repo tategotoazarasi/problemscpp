@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::sum_of_subarray_ranges::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,76 +63,18 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d2/df5/a00137.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d0/d2f/a00259.html">sum_of_subarray_ranges</a></li><li class="navelem"><a class="el" href="../../dd/d2e/a01949.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d2/df5/a00137.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d0/d2f/a00259.html">sum_of_subarray_ranges</a></li><li class="navelem"><a class="el" href="../../d4/dec/a01952.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="../../d0/dce/a01946.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::sum_of_subarray_ranges::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::sum_of_subarray_ranges::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d3/d52/a00023_source.html">leetcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a7d8102cd09e4f27b6ffc33b8d3c03a8f"><td class="memItemLeft" align="right" valign="top">static long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2e/a01949.html#a7d8102cd09e4f27b6ffc33b8d3c03a8f">subArrayRanges</a> (vector&lt; int &gt; &amp;nums)</td></tr>
-<tr class="separator:a7d8102cd09e4f27b6ffc33b8d3c03a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">leetcode.h</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l01445">1445</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="a7d8102cd09e4f27b6ffc33b8d3c03a8f" name="a7d8102cd09e4f27b6ffc33b8d3c03a8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d8102cd09e4f27b6ffc33b8d3c03a8f">&#9670;&nbsp;</a></span>subArrayRanges()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long leetcode::sum_of_subarray_ranges::Solution::subArrayRanges </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>nums</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l03792">3792</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03792" name="l03792"></a><span class="lineno"> 3792</span>                                                            {</div>
-<div class="line"><a id="l03793" name="l03793"></a><span class="lineno"> 3793</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans = 0;</div>
-<div class="line"><a id="l03794" name="l03794"></a><span class="lineno"> 3794</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i + 1 &lt; nums.size(); i++) {</div>
-<div class="line"><a id="l03795" name="l03795"></a><span class="lineno"> 3795</span>                <span class="keywordtype">int</span> minimum = nums[i];</div>
-<div class="line"><a id="l03796" name="l03796"></a><span class="lineno"> 3796</span>                <span class="keywordtype">int</span> maximum = nums[i];</div>
-<div class="line"><a id="l03797" name="l03797"></a><span class="lineno"> 3797</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i + 1; j &lt; nums.size(); j++) {</div>
-<div class="line"><a id="l03798" name="l03798"></a><span class="lineno"> 3798</span>                    minimum = min(minimum, nums[j]);</div>
-<div class="line"><a id="l03799" name="l03799"></a><span class="lineno"> 3799</span>                    maximum = max(maximum, nums[j]);</div>
-<div class="line"><a id="l03800" name="l03800"></a><span class="lineno"> 3800</span>                    ans += maximum - minimum;</div>
-<div class="line"><a id="l03801" name="l03801"></a><span class="lineno"> 3801</span>                }</div>
-<div class="line"><a id="l03802" name="l03802"></a><span class="lineno"> 3802</span>            }</div>
-<div class="line"><a id="l03803" name="l03803"></a><span class="lineno"> 3803</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l03804" name="l03804"></a><span class="lineno"> 3804</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d4/d8c/a00035_source.html#l01942">leetcode::sum_of_subarray_ranges::TEST()</a>.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../d3/d52/a00023_source.html">leetcode.h</a></li>
-<li><a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="../../d4/dec/a01952.html">leetcode::sum_of_subarray_ranges::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../d4/dec/a01952.html#a7d8102cd09e4f27b6ffc33b8d3c03a8f">subArrayRanges</a>(vector&lt; int &gt; &amp;nums)</td><td class="entry"><a class="el" href="../../d4/dec/a01952.html">leetcode::sum_of_subarray_ranges::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
