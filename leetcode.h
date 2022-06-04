@@ -2407,6 +2407,15 @@ namespace leetcode {
 			static vector<vector<int>> combinationSum(vector<int> &candidates, int target);
 		};
 	}// namespace combination_sum
+
+	/// \brief 40. Combination Sum II
+	namespace combination_sum_ii {
+		class Solution {
+		public:
+			static vector<vector<int>> recurse(vector<int> &candidates, int target, int index);
+			static vector<vector<int>> combinationSum2(vector<int> &candidates, int target);
+		};
+	}// namespace combination_sum_ii
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

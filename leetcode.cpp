@@ -6481,4 +6481,38 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace combination_sum
+
+	namespace combination_sum_ii {
+		vector<vector<int>> Solution::combinationSum2(vector<int> &candidates, int target) {
+			sort(candidates.begin(), candidates.end());
+			auto ret = recurse(candidates, target, -10);
+			vector<vector<int>> ans(ret.size());
+			for(int i = 0; i < ret.size(); i++) {
+				ans[i] = vector<int>(ret[i].size());
+				for(int j = 0; j < ret[i].size(); j++) {
+					ans[i][j] = candidates[ret[i][j]];
+				}
+			}
+			return ans;
+		}
+
+		vector<vector<int>> Solution::recurse(vector<int> &candidates, int target, int index) {
+			vector<vector<int>> ans;
+			for(int i = max(0, index + 1); i < candidates.size(); i++) {
+				if(!(i > 0 && candidates[i] == candidates[i - 1] && index != i - 1)) {
+					auto &candidate = candidates[i];
+					if(candidate == target) {
+						ans.emplace_back(vector<int>(1, i));
+					} else if(target - candidate >= 1) {
+						auto res = recurse(candidates, target - candidate, i);
+						for(auto &vec: res) {
+							vec.push_back(i);
+							ans.push_back(vec);
+						}
+					}
+				}
+			}
+			return ans;
+		}
+	}// namespace combination_sum_ii
 }// namespace leetcode
