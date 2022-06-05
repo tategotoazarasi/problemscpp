@@ -7031,7 +7031,7 @@ $(function() {
 <div class="line"><a id="l06965" name="l06965"></a><span class="lineno"> 6965</span>                cin &gt;&gt; a;</div>
 <div class="line"><a id="l06966" name="l06966"></a><span class="lineno"> 6966</span>                ostringstream oss;</div>
 <div class="line"><a id="l06967" name="l06967"></a><span class="lineno"> 6967</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 30; i &gt;= 0; i--) {</div>
-<div class="line"><a id="l06968" name="l06968"></a><span class="lineno"> 6968</span>                    oss &lt;&lt; ((a &amp; 1 &lt;&lt; i) != 0u ? <span class="charliteral">&#39;1&#39;</span> : <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><a id="l06968" name="l06968"></a><span class="lineno"> 6968</span>                    oss &lt;&lt; ((a &amp; 1 &lt;&lt; i) != 0U ? <span class="charliteral">&#39;1&#39;</span> : <span class="charliteral">&#39;0&#39;</span>);</div>
 <div class="line"><a id="l06969" name="l06969"></a><span class="lineno"> 6969</span>                }</div>
 <div class="line"><a id="l06970" name="l06970"></a><span class="lineno"> 6970</span>                <span class="keywordtype">string</span> str = oss.str();</div>
 <div class="line"><a id="l06971" name="l06971"></a><span class="lineno"> 6971</span>                vec[j]     = str;</div>
@@ -7043,8 +7043,8 @@ $(function() {
 <div class="line"><a id="l06977" name="l06977"></a><span class="lineno"> 6977</span>                <span class="keywordtype">unsigned</span> ans            = 0;</div>
 <div class="line"><a id="l06978" name="l06978"></a><span class="lineno"> 6978</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt;= 30; i++) {</div>
 <div class="line"><a id="l06979" name="l06979"></a><span class="lineno"> 6979</span>                    ans &lt;&lt;= 1;</div>
-<div class="line"><a id="l06980" name="l06980"></a><span class="lineno"> 6980</span>                    <span class="keywordflow">if</span>(current-&gt;<a class="code hl_variable" href="../../d0/d36/a01388.html#a63e415cf10785fea5d86249e66cb24f3">next</a>[(str[i] - <span class="charliteral">&#39;0&#39;</span>) == 0] != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l06981" name="l06981"></a><span class="lineno"> 6981</span>                        current = current-&gt;<a class="code hl_variable" href="../../d0/d36/a01388.html#a63e415cf10785fea5d86249e66cb24f3">next</a>[(str[i] - <span class="charliteral">&#39;0&#39;</span>) == 0];</div>
+<div class="line"><a id="l06980" name="l06980"></a><span class="lineno"> 6980</span>                    <span class="keywordflow">if</span>(current-&gt;<a class="code hl_variable" href="../../d0/d36/a01388.html#a63e415cf10785fea5d86249e66cb24f3">next</a>[str[i] - <span class="charliteral">&#39;0&#39;</span> == 0] != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l06981" name="l06981"></a><span class="lineno"> 6981</span>                        current = current-&gt;<a class="code hl_variable" href="../../d0/d36/a01388.html#a63e415cf10785fea5d86249e66cb24f3">next</a>[str[i] - <span class="charliteral">&#39;0&#39;</span> == 0];</div>
 <div class="line"><a id="l06982" name="l06982"></a><span class="lineno"> 6982</span>                        ans += 1;</div>
 <div class="line"><a id="l06983" name="l06983"></a><span class="lineno"> 6983</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l06984" name="l06984"></a><span class="lineno"> 6984</span>                        current = current-&gt;<a class="code hl_variable" href="../../d0/d36/a01388.html#a63e415cf10785fea5d86249e66cb24f3">next</a>[str[i] - <span class="charliteral">&#39;0&#39;</span>];</div>
@@ -7073,7 +7073,7 @@ $(function() {
 <div class="line"><a id="l07007" name="l07007"></a><span class="lineno"> 7007</span>            <span class="keywordtype">int</span> m;</div>
 <div class="line"><a id="l07008" name="l07008"></a><span class="lineno"> 7008</span>            cin &gt;&gt; n &gt;&gt; m;</div>
 <div class="line"><a id="l07009" name="l07009"></a><span class="lineno"> 7009</span>            <a class="code hl_class" href="../../d3/d5d/a02900.html">UnionFind</a> uf(n);</div>
-<div class="line"><a id="l07010" name="l07010"></a><span class="lineno"> 7010</span>            <span class="keywordflow">while</span>((m--) != 0) {</div>
+<div class="line"><a id="l07010" name="l07010"></a><span class="lineno"> 7010</span>            <span class="keywordflow">while</span>(m-- != 0) {</div>
 <div class="line"><a id="l07011" name="l07011"></a><span class="lineno"> 7011</span>                <span class="keywordtype">string</span> op;</div>
 <div class="line"><a id="l07012" name="l07012"></a><span class="lineno"> 7012</span>                <span class="keywordtype">int</span> a;</div>
 <div class="line"><a id="l07013" name="l07013"></a><span class="lineno"> 7013</span>                <span class="keywordtype">int</span> b;</div>
@@ -7100,7 +7100,7 @@ $(function() {
 <div class="line"><a id="l07034" name="l07034"></a><span class="lineno"> 7034</span>            cin &gt;&gt; n &gt;&gt; k;</div>
 <div class="line"><a id="l07035" name="l07035"></a><span class="lineno"> 7035</span>            <a class="code hl_struct" href="../../d1/dcc/a01392.html">UnionFind</a> uf(n);</div>
 <div class="line"><a id="l07036" name="l07036"></a><span class="lineno"> 7036</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l07037" name="l07037"></a><span class="lineno"> 7037</span>            <span class="keywordflow">while</span>((k--) != 0) {</div>
+<div class="line"><a id="l07037" name="l07037"></a><span class="lineno"> 7037</span>            <span class="keywordflow">while</span>(k-- != 0) {</div>
 <div class="line"><a id="l07038" name="l07038"></a><span class="lineno"> 7038</span>                <span class="keywordtype">char</span> d;</div>
 <div class="line"><a id="l07039" name="l07039"></a><span class="lineno"> 7039</span>                <span class="keywordtype">int</span> x;</div>
 <div class="line"><a id="l07040" name="l07040"></a><span class="lineno"> 7040</span>                <span class="keywordtype">int</span> y;</div>

@@ -7,7 +7,7 @@ var searchData=
   ['selfdividingnumbers_4',['selfDividingNumbers',['../d9/d03/a02172.html#a60e690b237f0625c94698ba9410ed0af',1,'leetcode::self_dividing_numbers::Solution']]],
   ['set_5fstack_5flimit_5',['set_stack_limit',['../d6/d5b/a00026.html#a90d105b4f65d447ebdd2269060a02d32',1,'set_stack_limit(int):&#160;set_stack_limit.cpp'],['../d5/d16/a00029.html#a4d5e31141ea8d871e02a1520af4cbb69',1,'set_stack_limit(int stack_size):&#160;set_stack_limit.cpp']]],
   ['shortestpathbinarymatrix_6',['shortestPathBinaryMatrix',['../d3/d01/a02316.html#a7a68a0021b63d516e666075155fecb46',1,'leetcode::shortest_path_in_binary_matrix::Solution']]],
-  ['shuffle_7',['shuffle',['../d4/d8c/a02292.html#a704cff85b89cc5898d7c903c8fad3671',1,'leetcode::shuffle_an_array::Solution']]],
+  ['shuffle_7',['shuffle',['../d4/d8c/a02292.html#a5a9a0b60ce5e0e462509eb81a783bec8',1,'leetcode::shuffle_an_array::Solution']]],
   ['simplifiedfractions_8',['simplifiedFractions',['../dd/d00/a01776.html#a3c0427cd9935cb8eca1417d197a7fb15',1,'leetcode::simplified_fractions::Solution']]],
   ['simplify_9',['simplify',['../de/dd8/a02896.html#a6a5092eb855dac602718b19eb7fe0d6d',1,'Fraction']]],
   ['simplifypath_10',['simplifyPath',['../d2/d21/a01484.html#a3997d52996bb978fe668ebfa788ba0fe',1,'leetcode::simplify_path::Solution']]],

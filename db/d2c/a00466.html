@@ -116,29 +116,30 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">pat.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l03644">3644</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l03644" name="l03644"></a><span class="lineno"> 3644</span>                                                  {</div>
-<div class="line"><a id="l03645" name="l03645"></a><span class="lineno"> 3645</span>                <span class="keywordtype">unsigned</span> m, n;</div>
-<div class="line"><a id="l03646" name="l03646"></a><span class="lineno"> 3646</span>                cin &gt;&gt; m &gt;&gt; n;</div>
-<div class="line"><a id="l03647" name="l03647"></a><span class="lineno"> 3647</span>                unordered_map&lt;unsigned, unsigned&gt; c2a;</div>
-<div class="line"><a id="l03648" name="l03648"></a><span class="lineno"> 3648</span>                <span class="keywordtype">unsigned</span> max_c2 = 0;</div>
-<div class="line"><a id="l03649" name="l03649"></a><span class="lineno"> 3649</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> a = m; a &lt;= n; a++) {</div>
-<div class="line"><a id="l03650" name="l03650"></a><span class="lineno"> 3650</span>                    <span class="keywordtype">unsigned</span> c2 = 3 * a * (a - 1) + 1;</div>
-<div class="line"><a id="l03651" name="l03651"></a><span class="lineno"> 3651</span>                    max_c2      = c2;</div>
-<div class="line"><a id="l03652" name="l03652"></a><span class="lineno"> 3652</span>                    c2a[c2]     = a;</div>
-<div class="line"><a id="l03653" name="l03653"></a><span class="lineno"> 3653</span>                }</div>
-<div class="line"><a id="l03654" name="l03654"></a><span class="lineno"> 3654</span>                <span class="keywordtype">bool</span> ok     = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l03655" name="l03655"></a><span class="lineno"> 3655</span>                <span class="keywordtype">unsigned</span> c2 = 0;</div>
-<div class="line"><a id="l03656" name="l03656"></a><span class="lineno"> 3656</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> b = 1; c2 &lt;= max_c2; b++) {</div>
-<div class="line"><a id="l03657" name="l03657"></a><span class="lineno"> 3657</span>                    c2 = (b * b + (b - 1) * (b - 1)) * (b * b + (b - 1) * (b - 1));</div>
-<div class="line"><a id="l03658" name="l03658"></a><span class="lineno"> 3658</span>                    <span class="keywordflow">if</span>(c2a.count(c2) &amp;&amp; c2a[c2] != b) {</div>
-<div class="line"><a id="l03659" name="l03659"></a><span class="lineno"> 3659</span>                        ok = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l03660" name="l03660"></a><span class="lineno"> 3660</span>                        cout &lt;&lt; c2a[c2] &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; b &lt;&lt; endl;</div>
-<div class="line"><a id="l03661" name="l03661"></a><span class="lineno"> 3661</span>                    }</div>
-<div class="line"><a id="l03662" name="l03662"></a><span class="lineno"> 3662</span>                }</div>
-<div class="line"><a id="l03663" name="l03663"></a><span class="lineno"> 3663</span>                <span class="keywordflow">if</span>(!ok) {</div>
-<div class="line"><a id="l03664" name="l03664"></a><span class="lineno"> 3664</span>                    cout &lt;&lt; <span class="stringliteral">&quot;No Solution&quot;</span>;</div>
-<div class="line"><a id="l03665" name="l03665"></a><span class="lineno"> 3665</span>                }</div>
-<div class="line"><a id="l03666" name="l03666"></a><span class="lineno"> 3666</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l03667" name="l03667"></a><span class="lineno"> 3667</span>            }</div>
+<div class="line"><a id="l03645" name="l03645"></a><span class="lineno"> 3645</span>                <span class="keywordtype">unsigned</span> m;</div>
+<div class="line"><a id="l03646" name="l03646"></a><span class="lineno"> 3646</span>                <span class="keywordtype">unsigned</span> n;</div>
+<div class="line"><a id="l03647" name="l03647"></a><span class="lineno"> 3647</span>                cin &gt;&gt; m &gt;&gt; n;</div>
+<div class="line"><a id="l03648" name="l03648"></a><span class="lineno"> 3648</span>                unordered_map&lt;unsigned, unsigned&gt; c2a;</div>
+<div class="line"><a id="l03649" name="l03649"></a><span class="lineno"> 3649</span>                <span class="keywordtype">unsigned</span> max_c2 = 0;</div>
+<div class="line"><a id="l03650" name="l03650"></a><span class="lineno"> 3650</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> a = m; a &lt;= n; a++) {</div>
+<div class="line"><a id="l03651" name="l03651"></a><span class="lineno"> 3651</span>                    <span class="keywordtype">unsigned</span> c2 = 3 * a * (a - 1) + 1;</div>
+<div class="line"><a id="l03652" name="l03652"></a><span class="lineno"> 3652</span>                    max_c2      = c2;</div>
+<div class="line"><a id="l03653" name="l03653"></a><span class="lineno"> 3653</span>                    c2a[c2]     = a;</div>
+<div class="line"><a id="l03654" name="l03654"></a><span class="lineno"> 3654</span>                }</div>
+<div class="line"><a id="l03655" name="l03655"></a><span class="lineno"> 3655</span>                <span class="keywordtype">bool</span> ok     = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l03656" name="l03656"></a><span class="lineno"> 3656</span>                <span class="keywordtype">unsigned</span> c2 = 0;</div>
+<div class="line"><a id="l03657" name="l03657"></a><span class="lineno"> 3657</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> b = 1; c2 &lt;= max_c2; b++) {</div>
+<div class="line"><a id="l03658" name="l03658"></a><span class="lineno"> 3658</span>                    c2 = (b * b + (b - 1) * (b - 1)) * (b * b + (b - 1) * (b - 1));</div>
+<div class="line"><a id="l03659" name="l03659"></a><span class="lineno"> 3659</span>                    <span class="keywordflow">if</span>(c2a.contains(c2)) {</div>
+<div class="line"><a id="l03660" name="l03660"></a><span class="lineno"> 3660</span>                        ok = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l03661" name="l03661"></a><span class="lineno"> 3661</span>                        cout &lt;&lt; c2a[c2] &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; b &lt;&lt; endl;</div>
+<div class="line"><a id="l03662" name="l03662"></a><span class="lineno"> 3662</span>                    }</div>
+<div class="line"><a id="l03663" name="l03663"></a><span class="lineno"> 3663</span>                }</div>
+<div class="line"><a id="l03664" name="l03664"></a><span class="lineno"> 3664</span>                <span class="keywordflow">if</span>(!ok) {</div>
+<div class="line"><a id="l03665" name="l03665"></a><span class="lineno"> 3665</span>                    cout &lt;&lt; <span class="stringliteral">&quot;No Solution&quot;</span>;</div>
+<div class="line"><a id="l03666" name="l03666"></a><span class="lineno"> 3666</span>                }</div>
+<div class="line"><a id="l03667" name="l03667"></a><span class="lineno"> 3667</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l03668" name="l03668"></a><span class="lineno"> 3668</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d4/d8c/a00035_source.html#l01812">TEST()</a>.</p>
 

@@ -118,43 +118,44 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">pat.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l03904">3904</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03904" name="l03904"></a><span class="lineno"> 3904</span>                                                  {</div>
-<div class="line"><a id="l03905" name="l03905"></a><span class="lineno"> 3905</span>                <span class="keywordtype">string</span> head;</div>
-<div class="line"><a id="l03906" name="l03906"></a><span class="lineno"> 3906</span>                <span class="keywordtype">int</span> n, k;</div>
-<div class="line"><a id="l03907" name="l03907"></a><span class="lineno"> 3907</span>                cin &gt;&gt; head &gt;&gt; n &gt;&gt; k;</div>
-<div class="line"><a id="l03908" name="l03908"></a><span class="lineno"> 3908</span>                unordered_map&lt;string, node&gt; um;</div>
-<div class="line"><a id="l03909" name="l03909"></a><span class="lineno"> 3909</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l03910" name="l03910"></a><span class="lineno"> 3910</span>                    <span class="keywordtype">string</span> address;</div>
-<div class="line"><a id="l03911" name="l03911"></a><span class="lineno"> 3911</span>                    cin &gt;&gt; address;</div>
-<div class="line"><a id="l03912" name="l03912"></a><span class="lineno"> 3912</span>                    um[address].address = address;</div>
-<div class="line"><a id="l03913" name="l03913"></a><span class="lineno"> 3913</span>                    cin &gt;&gt; um[address].data &gt;&gt; um[address].next;</div>
-<div class="line"><a id="l03914" name="l03914"></a><span class="lineno"> 3914</span>                }</div>
-<div class="line"><a id="l03915" name="l03915"></a><span class="lineno"> 3915</span>                deque&lt;vector&lt;node&gt;&gt; deq;</div>
-<div class="line"><a id="l03916" name="l03916"></a><span class="lineno"> 3916</span>                vector&lt;node&gt; block;</div>
-<div class="line"><a id="l03917" name="l03917"></a><span class="lineno"> 3917</span>                <span class="keywordtype">string</span> current = head;</div>
-<div class="line"><a id="l03918" name="l03918"></a><span class="lineno"> 3918</span>                <span class="keywordflow">while</span>(current != <span class="stringliteral">&quot;-1&quot;</span>) {</div>
-<div class="line"><a id="l03919" name="l03919"></a><span class="lineno"> 3919</span>                    block.emplace_back(um[current]);</div>
-<div class="line"><a id="l03920" name="l03920"></a><span class="lineno"> 3920</span>                    <span class="keywordflow">if</span>(block.size() == k) {</div>
-<div class="line"><a id="l03921" name="l03921"></a><span class="lineno"> 3921</span>                        deq.emplace_front(block);</div>
-<div class="line"><a id="l03922" name="l03922"></a><span class="lineno"> 3922</span>                        block.clear();</div>
-<div class="line"><a id="l03923" name="l03923"></a><span class="lineno"> 3923</span>                    }</div>
-<div class="line"><a id="l03924" name="l03924"></a><span class="lineno"> 3924</span>                    current = um[current].next;</div>
-<div class="line"><a id="l03925" name="l03925"></a><span class="lineno"> 3925</span>                }</div>
-<div class="line"><a id="l03926" name="l03926"></a><span class="lineno"> 3926</span>                <span class="keywordflow">if</span>(!block.empty()) {</div>
-<div class="line"><a id="l03927" name="l03927"></a><span class="lineno"> 3927</span>                    deq.emplace_front(block);</div>
-<div class="line"><a id="l03928" name="l03928"></a><span class="lineno"> 3928</span>                }</div>
-<div class="line"><a id="l03929" name="l03929"></a><span class="lineno"> 3929</span>                block.clear();</div>
-<div class="line"><a id="l03930" name="l03930"></a><span class="lineno"> 3930</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;blk: deq) {</div>
-<div class="line"><a id="l03931" name="l03931"></a><span class="lineno"> 3931</span>                    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;nd: blk) {</div>
-<div class="line"><a id="l03932" name="l03932"></a><span class="lineno"> 3932</span>                        block.emplace_back(nd);</div>
-<div class="line"><a id="l03933" name="l03933"></a><span class="lineno"> 3933</span>                    }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">pat.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l03909">3909</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03909" name="l03909"></a><span class="lineno"> 3909</span>                                                  {</div>
+<div class="line"><a id="l03910" name="l03910"></a><span class="lineno"> 3910</span>                <span class="keywordtype">string</span> head;</div>
+<div class="line"><a id="l03911" name="l03911"></a><span class="lineno"> 3911</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l03912" name="l03912"></a><span class="lineno"> 3912</span>                <span class="keywordtype">int</span> k;</div>
+<div class="line"><a id="l03913" name="l03913"></a><span class="lineno"> 3913</span>                cin &gt;&gt; head &gt;&gt; n &gt;&gt; k;</div>
+<div class="line"><a id="l03914" name="l03914"></a><span class="lineno"> 3914</span>                unordered_map&lt;string, node&gt; um;</div>
+<div class="line"><a id="l03915" name="l03915"></a><span class="lineno"> 3915</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l03916" name="l03916"></a><span class="lineno"> 3916</span>                    <span class="keywordtype">string</span> address;</div>
+<div class="line"><a id="l03917" name="l03917"></a><span class="lineno"> 3917</span>                    cin &gt;&gt; address;</div>
+<div class="line"><a id="l03918" name="l03918"></a><span class="lineno"> 3918</span>                    um[address].address = address;</div>
+<div class="line"><a id="l03919" name="l03919"></a><span class="lineno"> 3919</span>                    cin &gt;&gt; um[address].data &gt;&gt; um[address].next;</div>
+<div class="line"><a id="l03920" name="l03920"></a><span class="lineno"> 3920</span>                }</div>
+<div class="line"><a id="l03921" name="l03921"></a><span class="lineno"> 3921</span>                deque&lt;vector&lt;node&gt;&gt; deq;</div>
+<div class="line"><a id="l03922" name="l03922"></a><span class="lineno"> 3922</span>                vector&lt;node&gt; block;</div>
+<div class="line"><a id="l03923" name="l03923"></a><span class="lineno"> 3923</span>                <span class="keywordtype">string</span> current = head;</div>
+<div class="line"><a id="l03924" name="l03924"></a><span class="lineno"> 3924</span>                <span class="keywordflow">while</span>(current != <span class="stringliteral">&quot;-1&quot;</span>) {</div>
+<div class="line"><a id="l03925" name="l03925"></a><span class="lineno"> 3925</span>                    block.emplace_back(um[current]);</div>
+<div class="line"><a id="l03926" name="l03926"></a><span class="lineno"> 3926</span>                    <span class="keywordflow">if</span>(block.size() == k) {</div>
+<div class="line"><a id="l03927" name="l03927"></a><span class="lineno"> 3927</span>                        deq.emplace_front(block);</div>
+<div class="line"><a id="l03928" name="l03928"></a><span class="lineno"> 3928</span>                        block.clear();</div>
+<div class="line"><a id="l03929" name="l03929"></a><span class="lineno"> 3929</span>                    }</div>
+<div class="line"><a id="l03930" name="l03930"></a><span class="lineno"> 3930</span>                    current = um[current].next;</div>
+<div class="line"><a id="l03931" name="l03931"></a><span class="lineno"> 3931</span>                }</div>
+<div class="line"><a id="l03932" name="l03932"></a><span class="lineno"> 3932</span>                <span class="keywordflow">if</span>(!block.empty()) {</div>
+<div class="line"><a id="l03933" name="l03933"></a><span class="lineno"> 3933</span>                    deq.emplace_front(block);</div>
 <div class="line"><a id="l03934" name="l03934"></a><span class="lineno"> 3934</span>                }</div>
-<div class="line"><a id="l03935" name="l03935"></a><span class="lineno"> 3935</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; block.size(); i++) {</div>
-<div class="line"><a id="l03936" name="l03936"></a><span class="lineno"> 3936</span>                    cout &lt;&lt; block[i].address &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; block[i].data &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; (i + 1 &lt; block.size() ? block[i + 1].address : <span class="stringliteral">&quot;-1&quot;</span>) &lt;&lt; endl;</div>
-<div class="line"><a id="l03937" name="l03937"></a><span class="lineno"> 3937</span>                }</div>
-<div class="line"><a id="l03938" name="l03938"></a><span class="lineno"> 3938</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l03939" name="l03939"></a><span class="lineno"> 3939</span>            }</div>
+<div class="line"><a id="l03935" name="l03935"></a><span class="lineno"> 3935</span>                block.clear();</div>
+<div class="line"><a id="l03936" name="l03936"></a><span class="lineno"> 3936</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;blk: deq) {</div>
+<div class="line"><a id="l03937" name="l03937"></a><span class="lineno"> 3937</span>                    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;nd: blk) {</div>
+<div class="line"><a id="l03938" name="l03938"></a><span class="lineno"> 3938</span>                        block.emplace_back(nd);</div>
+<div class="line"><a id="l03939" name="l03939"></a><span class="lineno"> 3939</span>                    }</div>
+<div class="line"><a id="l03940" name="l03940"></a><span class="lineno"> 3940</span>                }</div>
+<div class="line"><a id="l03941" name="l03941"></a><span class="lineno"> 3941</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; block.size(); i++) {</div>
+<div class="line"><a id="l03942" name="l03942"></a><span class="lineno"> 3942</span>                    cout &lt;&lt; block[i].address &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; block[i].data &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; (i + 1 &lt; block.size() ? block[i + 1].address : <span class="stringliteral">&quot;-1&quot;</span>) &lt;&lt; endl;</div>
+<div class="line"><a id="l03943" name="l03943"></a><span class="lineno"> 3943</span>                }</div>
+<div class="line"><a id="l03944" name="l03944"></a><span class="lineno"> 3944</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l03945" name="l03945"></a><span class="lineno"> 3945</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d4/d8c/a00035_source.html#l01940">TEST()</a>.</p>
 
@@ -212,7 +213,7 @@ $(function() {
 <div class="line"><a id="l01962" name="l01962"></a><span class="lineno"> 1962</span>            }</div>
 <div class="ttc" id="aa00029_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d5/d16/a00029.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l03904">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l03909">main()</a>.</p>
 
 </div>
 </div>
