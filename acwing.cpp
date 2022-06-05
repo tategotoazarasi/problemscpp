@@ -6965,7 +6965,7 @@ namespace acwing {
 				cin >> a;
 				ostringstream oss;
 				for(int i = 30; i >= 0; i--) {
-					oss << ((a & 1 << i) != 0u ? '1' : '0');
+					oss << ((a & 1 << i) != 0U ? '1' : '0');
 				}
 				string str = oss.str();
 				vec[j]     = str;
@@ -6977,8 +6977,8 @@ namespace acwing {
 				unsigned ans            = 0;
 				for(int i = 0; i <= 30; i++) {
 					ans <<= 1;
-					if(current->next[(str[i] - '0') == 0] != nullptr) {
-						current = current->next[(str[i] - '0') == 0];
+					if(current->next[str[i] - '0' == 0] != nullptr) {
+						current = current->next[str[i] - '0' == 0];
 						ans += 1;
 					} else {
 						current = current->next[str[i] - '0'];
@@ -7007,7 +7007,7 @@ namespace acwing {
 			int m;
 			cin >> n >> m;
 			UnionFind uf(n);
-			while((m--) != 0) {
+			while(m-- != 0) {
 				string op;
 				int a;
 				int b;
@@ -7034,7 +7034,7 @@ namespace acwing {
 			cin >> n >> k;
 			UnionFind uf(n);
 			int ans = 0;
-			while((k--) != 0) {
+			while(k-- != 0) {
 				char d;
 				int x;
 				int y;

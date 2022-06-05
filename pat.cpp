@@ -3524,7 +3524,8 @@ namespace pat {
 						cout << "Yes" << endl
 						     << n - 6;
 						return 0;
-					} else if(is_prime(n + 6)) {
+					}
+					if(is_prime(n + 6)) {
 						cout << "Yes" << endl
 						     << n + 6;
 						return 0;
@@ -3536,14 +3537,19 @@ namespace pat {
 							cout << "No" << endl
 							     << i;
 							return 0;
-						} else if(is_prime(i + 6)) {
+						}
+						if(is_prime(i + 6)) {
+							cout << "No" << endl
+							     << i;
+							return 0;
+						}
+						if(is_prime(i + 6)) {
 							cout << "No" << endl
 							     << i;
 							return 0;
 						}
 					}
 				}
-				return 0;
 			}
 
 			bool is_prime(unsigned int n) {
@@ -3583,21 +3589,19 @@ namespace pat {
 				vector<string> vec;
 				if(cnt > 0) {
 					for(const auto &id: guests) {
-						if(alumnuses.count(id)) {
+						if(alumnuses.contains(id)) {
 							vec.emplace_back(id);
 						}
 					}
 				} else {
-					vec = vector<string>(guests.begin(), guests.end());
+					vec = vector(guests.begin(), guests.end());
 				}
 				sort(vec.begin(), vec.end(), comp());
 				cout << *vec.begin();
 				return 0;
 			}
 
-			bool comp::operator()(const string &s1, const string &s2) const {
-				return s1.substr(6, 8) < s2.substr(6, 8);
-			}
+			bool comp::operator()(const string &s1, const string &s2) const { return s1.substr(6, 8) < s2.substr(6, 8); }
 		}// namespace b1100
 
 		namespace b1101 {
@@ -3631,18 +3635,15 @@ namespace pat {
 				return 0;
 			}
 
-			bool comp_sale::operator()(const paper &p1, const paper &p2) const {
-				return p1.sale < p2.sale;
-			}
+			bool comp_sale::operator()(const paper &p1, const paper &p2) const { return p1.sale < p2.sale; }
 
-			bool comp_total::operator()(const paper &p1, const paper &p2) const {
-				return p1.sale * p1.price < p2.sale * p2.price;
-			}
+			bool comp_total::operator()(const paper &p1, const paper &p2) const { return p1.sale * p1.price < p2.sale * p2.price; }
 		}// namespace b1102
 
 		namespace b1103 {
 			int main(istream &cin, ostream &cout) {
-				unsigned m, n;
+				unsigned m;
+				unsigned n;
 				cin >> m >> n;
 				unordered_map<unsigned, unsigned> c2a;
 				unsigned max_c2 = 0;
@@ -3655,7 +3656,7 @@ namespace pat {
 				unsigned c2 = 0;
 				for(unsigned b = 1; c2 <= max_c2; b++) {
 					c2 = (b * b + (b - 1) * (b - 1)) * (b * b + (b - 1) * (b - 1));
-					if(c2a.count(c2) && c2a[c2] != b) {
+					if(c2a.contains(c2)) {
 						ok = true;
 						cout << c2a[c2] << ' ' << b << endl;
 					}
@@ -3677,12 +3678,13 @@ namespace pat {
 				}
 				for(int i = 1; i <= N; i++) {
 					bool ok = false;
-					int k, m;
+					int k;
+					int m;
 					cin >> k >> m;
 					cout << "Case " << i << endl;
 					for(int j = k; j >= 1; j--) {
-						int n = m + diff[j];
-						int g = gcd(m, n);
+						const int n = m + diff[j];
+						const int g = gcd(m, n);
 						if(n > 0 && g > 2 && is_prime(gcd(m, n))) {
 							vector<string> ans;
 							dfs("", 1, m, k, 0, j, ans);
@@ -3715,8 +3717,8 @@ namespace pat {
 
 			void dfs(string str, const int current_i, const int m, const int k, const int current_sum, const int cnt9, vector<string> &ans) {
 				if(current_i + cnt9 == k) {
-					if(int r = m - current_sum - cnt9 * 9; ((current_i > 1 && r >= 0) || (current_i == 1 && r > 0)) && r < 9) {
-						str += char(r + '0');
+					if(const int r = m - current_sum - cnt9 * 9; (current_i > 1 && r >= 0 || current_i == 1 && r > 0) && r < 9) {
+						str += static_cast<char>(r + '0');
 					} else {
 						return;
 					}
@@ -3727,8 +3729,8 @@ namespace pat {
 					return;
 				}
 				for(int i = current_i == 1 ? 1 : 0; i <= 9; i++) {
-					if(!((current_sum + i + cnt9 * 9 > m) || (current_sum + i + (k - current_i) * 9 - 1 < m))) {
-						dfs(str + char(i + '0'), current_i + 1, m, k, current_sum + i, cnt9, ans);
+					if(!(current_sum + i + cnt9 * 9 > m || current_sum + i + (k - current_i) * 9 - 1 < m)) {
+						dfs(str + static_cast<char>(i + '0'), current_i + 1, m, k, current_sum + i, cnt9, ans);
 					}
 				}
 			}
@@ -3736,7 +3738,8 @@ namespace pat {
 
 		namespace b1105 {
 			int main(istream &cin, ostream &cout) {
-				string h1, h2;
+				string h1;
+				string h2;
 				int n;
 				cin >> h1 >> h2 >> n;
 				unordered_map<string, node> um;
@@ -3746,7 +3749,8 @@ namespace pat {
 					um[address].address = address;
 					cin >> um[address].data >> um[address].next;
 				}
-				vector<node> l1, l2;
+				vector<node> l1;
+				vector<node> l2;
 				for(string addr = h1; addr != "-1"; addr = um[addr].next) {
 					l1.push_back(um[addr]);
 				}
@@ -3756,7 +3760,7 @@ namespace pat {
 				if(l1.size() < l2.size()) {
 					swap(l1, l2);
 				}
-				l2 = vector<node>(l2.rbegin(), l2.rend());
+				l2 = vector(l2.rbegin(), l2.rend());
 				vector<node> ans;
 				for(int cnt = 0, i1 = 0, i2 = 0; i1 < l1.size() || i2 < l2.size(); cnt++, cnt %= 3) {
 					if(cnt <= 1) {
@@ -3770,7 +3774,7 @@ namespace pat {
 					}
 				}
 				for(int i = 0; i < ans.size(); i++) {
-					cout << ans[i].address << ' ' << ans[i].data << ' ' << ((i + 1 < ans.size()) ? ans[i + 1].address : "-1") << endl;
+					cout << ans[i].address << ' ' << ans[i].data << ' ' << (i + 1 < ans.size() ? ans[i + 1].address : "-1") << endl;
 				}
 				return 0;
 			}
@@ -3791,7 +3795,7 @@ namespace pat {
 					current -= vec[i - 4];
 					current += vec[i];
 				}
-				for(auto num: vec) {
+				for(const auto num: vec) {
 					cout << num;
 				}
 				return 0;
@@ -3800,7 +3804,8 @@ namespace pat {
 
 		namespace b1107 {
 			int main(istream &cin, ostream &cout) {
-				int n, m;
+				int n;
+				int m;
 				cin >> n >> m;
 				int champion = 0;
 				for(int i = 0; i < n; i++) {
@@ -3829,8 +3834,8 @@ namespace pat {
 				while(cin >> ch) {
 					um[ch]++;
 				}
-				char word[6] = {'S', 't', 'r', 'i', 'n', 'g'};
-				int cnt      = 0;
+				const char word[6] = {'S', 't', 'r', 'i', 'n', 'g'};
+				int cnt            = 0;
 				for(int i = 0; cnt < 6; i++, i %= 6) {
 					if(um[word[i]] > 0) {
 						cout << word[i];
@@ -3859,7 +3864,7 @@ namespace pat {
 				char ch;
 				cin >> noskipws;
 				while(cin >> ch) {
-					if(isupper(ch)) {
+					if(isupper(ch) != 0) {
 						oss << ch;
 					} else {
 						if(!oss.str().empty()) {
@@ -3873,10 +3878,10 @@ namespace pat {
 				}
 				int cnt = 0;
 				for(const auto &str: vec) {
-					int w = str.length() * 6 - 1;
-					vector<vector<char>> output(7, vector<char>(w, ' '));
+					const int w = str.length() * 6 - 1;
+					vector output(7, vector(w, ' '));
 					for(int i = 0; i < str.length(); i++) {
-						char c = str[i];
+						const char c = str[i];
 						for(int j = 0; j < 7; j++) {
 							for(int k = 0; k < 5; k++) {
 								output[j][i * 6 + k] = matrix[c - 'A'][j][k];
@@ -3903,7 +3908,8 @@ namespace pat {
 		namespace b1110 {
 			int main(istream &cin, ostream &cout) {
 				string head;
-				int n, k;
+				int n;
+				int k;
 				cin >> head >> n >> k;
 				unordered_map<string, node> um;
 				for(int i = 0; i < n; i++) {

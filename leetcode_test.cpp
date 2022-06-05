@@ -2653,15 +2653,15 @@ namespace leetcode {
 	namespace find_players_with_zero_or_one_losses {
 		TEST(find_players_with_zero_or_one_losses, case1) {
 			vector<vector<int>> matches      = {{1, 3},
-			                                    {2, 3},
-			                                    {3, 6},
-			                                    {5, 6},
-			                                    {5, 7},
-			                                    {4, 5},
-			                                    {4, 8},
-			                                    {4, 9},
-			                                    {10, 4},
-			                                    {10, 9}};
+                                           {2, 3},
+                                           {3, 6},
+                                           {5, 6},
+                                           {5, 7},
+                                           {4, 5},
+                                           {4, 8},
+                                           {4, 9},
+                                           {10, 4},
+                                           {10, 9}};
 			const vector<vector<int>> output = {{1, 2, 10}, {4, 5, 7, 8}};
 			ASSERT_EQ(output, Solution::findWinners(matches));
 		}
@@ -2882,7 +2882,7 @@ namespace leetcode {
 
 	namespace lowest_common_ancestor_of_a_binary_search_tree {
 		TEST(lowest_common_ancestor_of_a_binary_search_tree, case1) {
-			auto root                = new TreeNode(6);
+			auto *root               = new TreeNode(6);
 			root->left               = new TreeNode(2);
 			root->right              = new TreeNode(8);
 			root->left->left         = new TreeNode(0);
@@ -2898,62 +2898,62 @@ namespace leetcode {
 
 	namespace find_all_anagrams_in_a_string {
 		TEST(find_all_anagrams_in_a_string, case1) {
-			string s             = "cbaebabacd";
-			string p             = "abc";
-			vector<int> expected = {0, 6};
+			const string s        = "cbaebabacd";
+			const string p        = "abc";
+			const vector expected = {0, 6};
 			ASSERT_EQ(expected, Solution::findAnagrams(s, p));
 		}
 
 		TEST(find_all_anagrams_in_a_string, case2) {
-			string s             = "abab";
-			string p             = "ab";
-			vector<int> expected = {0, 1, 2};
+			const string s        = "abab";
+			const string p        = "ab";
+			const vector expected = {0, 1, 2};
 			ASSERT_EQ(expected, Solution::findAnagrams(s, p));
 		}
 	}// namespace find_all_anagrams_in_a_string
 
 	namespace subarray_product_less_than_k {
 		TEST(subarray_product_less_than_k, case1) {
-			vector<int> nums = {10, 5, 2, 6};
-			int k            = 100;
+			vector nums = {10, 5, 2, 6};
+			const int k = 100;
 			ASSERT_EQ(8, Solution::numSubarrayProductLessThanK(nums, k));
 		}
 
 		TEST(subarray_product_less_than_k, case2) {
-			vector<int> nums = {1, 2, 3};
-			int k            = 0;
+			vector nums = {1, 2, 3};
+			const int k = 0;
 			ASSERT_EQ(0, Solution::numSubarrayProductLessThanK(nums, k));
 		}
 	}// namespace subarray_product_less_than_k
 
 	namespace minimum_size_subarray_sum {
 		TEST(minimum_size_subarray_sum, case1) {
-			vector<int> nums = {2, 3, 1, 2, 4, 3};
-			int target       = 7;
+			vector nums      = {2, 3, 1, 2, 4, 3};
+			const int target = 7;
 			ASSERT_EQ(2, Solution::minSubArrayLen(target, nums));
 		}
 
 		TEST(minimum_size_subarray_sum, case2) {
-			vector<int> nums = {1, 4, 4};
-			int target       = 4;
+			vector nums      = {1, 4, 4};
+			const int target = 4;
 			ASSERT_EQ(1, Solution::minSubArrayLen(target, nums));
 		}
 
 		TEST(minimum_size_subarray_sum, case3) {
-			vector<int> nums = {1, 1, 1, 1, 1, 1, 1, 1};
-			int target       = 11;
+			vector nums      = {1, 1, 1, 1, 1, 1, 1, 1};
+			const int target = 11;
 			ASSERT_EQ(0, Solution::minSubArrayLen(target, nums));
 		}
 
 		TEST(minimum_size_subarray_sum, case4) {
-			vector<int> nums = {5, 1, 3, 5, 10, 7, 4, 9, 2, 8};
-			int target       = 15;
+			vector nums      = {5, 1, 3, 5, 10, 7, 4, 9, 2, 8};
+			const int target = 15;
 			ASSERT_EQ(2, Solution::minSubArrayLen(target, nums));
 		}
 
 		TEST(minimum_size_subarray_sum, case5) {
-			vector<int> nums = {10, 5, 13, 4, 8, 4, 5, 11, 14, 9, 16, 10, 20, 8};
-			int target       = 80;
+			vector nums      = {10, 5, 13, 4, 8, 4, 5, 11, 14, 9, 16, 10, 20, 8};
+			const int target = 80;
 			ASSERT_EQ(6, Solution::minSubArrayLen(target, nums));
 		}
 	}// namespace minimum_size_subarray_sum

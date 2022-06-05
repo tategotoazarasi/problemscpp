@@ -647,6 +647,7 @@ namespace pat {
 			struct comp {
 				bool operator()(const string &s1, const string &s2) const;
 			};
+
 			int main(istream &cin, ostream &cout);
 		}// namespace b1100
 
@@ -659,15 +660,18 @@ namespace pat {
 		namespace b1102 {
 			struct paper {
 				string id;
-				int sale;
-				int price;
+				int sale{};
+				int price{};
 			};
+
 			struct comp_sale {
 				bool operator()(const paper &p1, const paper &p2) const;
 			};
+
 			struct comp_total {
 				bool operator()(const paper &p1, const paper &p2) const;
 			};
+
 			int main(istream &cin, ostream &cout);
 		}// namespace b1102
 
@@ -679,7 +683,7 @@ namespace pat {
 		/// \brief 1104 天长地久
 		namespace b1104 {
 			bool is_prime(int n);
-			void dfs(string str, const int current_i, const int m, const int k, const int current_sum, const int cnt9, vector<string> &ans);
+			void dfs(string str, int current_i, int m, int k, int current_sum, int cnt9, vector<string> &ans);
 			int main(istream &cin, ostream &cout);
 		}// namespace b1104
 
@@ -687,9 +691,10 @@ namespace pat {
 		namespace b1105 {
 			struct node {
 				string address;
-				unsigned data;
+				unsigned data{};
 				string next;
 			};
+
 			int main(istream &cin, ostream &cout);
 		}// namespace b1105
 
@@ -717,9 +722,10 @@ namespace pat {
 		namespace b1110 {
 			struct node {
 				string address;
-				int data;
+				int data{};
 				string next;
 			};
+
 			int main(istream &cin, ostream &cout);
 		}// namespace b1110
 	}    // namespace b

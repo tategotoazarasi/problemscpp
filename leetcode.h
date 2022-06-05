@@ -58,9 +58,11 @@ namespace leetcode {
 		Node *right;
 		Node *next;
 
-		Node(): val(0), left(nullptr), right(nullptr), next(nullptr) {}
+		Node()
+		    : val(0), left(nullptr), right(nullptr), next(nullptr) {}
 
-		Node(int _val): val(_val), left(nullptr), right(nullptr), next(nullptr) {}
+		explicit Node(int _val)
+		    : val(_val), left(nullptr), right(nullptr), next(nullptr) {}
 
 		Node(int _val, Node *_left, Node *_right, Node *_next)
 		    : val(_val), left(_left), right(_right), next(_next) {}
@@ -2303,7 +2305,7 @@ namespace leetcode {
 
 		class Solution {
 		public:
-			TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q);
+			static TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q);
 			static void copy(TreeNode *tn, TreeNodeP *tnp, int low, int high, TreeNodeP **p, TreeNodeP **q);
 		};
 	}// namespace lowest_common_ancestor_of_a_binary_search_tree
@@ -2315,11 +2317,11 @@ namespace leetcode {
 
 		public:
 			/// \brief Initializes the object with the integer array nums.
-			Solution(vector<int> &nums);
+			explicit Solution(vector<int> &nums);
 			/// \brief Resets the array to its original configuration and returns it.
 			vector<int> reset();
 			/// \brief Returns a random shuffling of the array.
-			vector<int> shuffle();
+			[[nodiscard]] vector<int> shuffle() const;
 		};
 	}// namespace shuffle_an_array
 
@@ -2327,7 +2329,7 @@ namespace leetcode {
 	namespace find_all_anagrams_in_a_string {
 		class Solution {
 		public:
-			static vector<int> findAnagrams(string s, string p);
+			static vector<int> findAnagrams(string s, const string &p);
 		};
 	}// namespace find_all_anagrams_in_a_string
 
@@ -2394,7 +2396,7 @@ namespace leetcode {
 	namespace permutations_ii {
 		class Solution {
 		public:
-			static void dfs(set<vector<int>> &s, vector<int> current, vector<int> rest);
+			static void dfs(set<vector<int>> &s, const vector<int> &current, vector<int> rest);
 			static vector<vector<int>> permuteUnique(vector<int> &nums);
 		};
 	}// namespace permutations_ii

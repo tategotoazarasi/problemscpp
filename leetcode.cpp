@@ -6141,28 +6141,25 @@ namespace leetcode {
 	}// namespace lowest_common_ancestor_of_a_binary_search_tree
 
 	namespace shuffle_an_array {
-		vector<int> Solution::reset() {
-			return nums;
-		}
+		vector<int> Solution::reset() { return nums; }
 
-		vector<int> Solution::shuffle() {
+		vector<int> Solution::shuffle() const {
 			vector<int> ans;
 			vector<int> cpy = nums;
 			while(!cpy.empty()) {
-				int idx = rand() % cpy.size();
+				const int idx = rand() % cpy.size();
 				ans.emplace_back(cpy[idx]);
 				cpy.erase(cpy.begin() + idx);
 			}
 			return ans;
 		}
 
-		Solution::Solution(vector<int> &nums): nums(nums) {
-			srand(time(0));
-		}
+		Solution::Solution(vector<int> &nums)
+		    : nums(nums) { srand(time(nullptr)); }
 	}// namespace shuffle_an_array
 
 	namespace find_all_anagrams_in_a_string {
-		vector<int> Solution::findAnagrams(string s, string p) {
+		vector<int> Solution::findAnagrams(string s, const string &p) {
 			vector<int> ans;
 			unordered_map<char, int> um_p;
 			for(char ch: p) {
@@ -6192,7 +6189,8 @@ namespace leetcode {
 	namespace subarray_product_less_than_k {
 		int Solution::numSubarrayProductLessThanK(vector<int> &nums, int k) {
 			int ans  = 0;
-			int prod = 1, i = 0;
+			int prod = 1;
+			int i    = 0;
 			for(int j = 0; j < nums.size(); j++) {
 				prod *= nums[j];
 				while(i <= j && prod >= k) {
@@ -6281,7 +6279,7 @@ namespace leetcode {
 			queue<TreeNode *> q;
 			q.push(root);
 			while(!q.empty()) {
-				auto node = q.front();
+				auto *const node = q.front();
 				q.pop();
 				if(equal(node, subRoot)) {
 					return true;
@@ -6297,7 +6295,7 @@ namespace leetcode {
 		}
 
 		bool Solution::equal(TreeNode *tn1, TreeNode *tn2) {
-			if(((tn1 == nullptr) + (tn2 == nullptr)) == 1) {
+			if(static_cast<int>(tn1 == nullptr) + static_cast<int>(tn2 == nullptr) == 1) {
 				return false;
 			}
 			if(tn1 == nullptr && tn2 == nullptr) {
@@ -6306,10 +6304,10 @@ namespace leetcode {
 			if(tn1->val != tn2->val) {
 				return false;
 			}
-			if(((tn1->left == nullptr) + (tn2->left == nullptr)) == 1) {
+			if(static_cast<int>(tn1->left == nullptr) + static_cast<int>(tn2->left == nullptr) == 1) {
 				return false;
 			}
-			if(((tn1->right == nullptr) + (tn2->right == nullptr)) == 1) {
+			if(static_cast<int>(tn1->right == nullptr) + static_cast<int>(tn2->right == nullptr) == 1) {
 				return false;
 			}
 			return equal(tn1->left, tn2->left) && equal(tn1->right, tn2->right);
@@ -6318,16 +6316,16 @@ namespace leetcode {
 
 	namespace shortest_path_in_binary_matrix {
 		int Solution::shortestPathBinaryMatrix(vector<vector<int>> &grid) {
-			int n                      = grid.size();
-			vector<vector<int>> levels = vector<vector<int>>(n, vector<int>(n, -1));
-			auto cmp                   = [&n](const tuple<int, int, int> &t1, const tuple<int, int, int> &t2) {
+			int n       = grid.size();
+			auto levels = vector(n, vector(n, -1));
+			auto cmp    = [&n](const tuple<int, int, int> &t1, const tuple<int, int, int> &t2) {
                 const auto &[level1, x1, y1] = t1;
                 const auto &[level2, x2, y2] = t2;
-                int dx1                      = abs(n - 1 - x1);
-                int dy1                      = abs(n - 1 - y1);
-                int dx2                      = abs(n - 1 - x2);
-                int dy2                      = abs(n - 1 - y2);
-                return (level1 + dx1 + dy1 - min(dx1, dy1)) > (level2 + dx2 + dy2 - min(dx2, dy2));
+                const int dx1                = abs(n - 1 - x1);
+                const int dy1                = abs(n - 1 - y1);
+                const int dx2                = abs(n - 1 - x2);
+                const int dy2                = abs(n - 1 - y2);
+                return level1 + dx1 + dy1 - min(dx1, dy1) > level2 + dx2 + dy2 - min(dx2, dy2);
 			};
 			priority_queue<tuple<int, int, int>, vector<tuple<int, int, int>>, decltype(cmp)> pq(cmp);
 			if(grid[0][0] == 0 && grid[n - 1][n - 1] == 0) {
@@ -6361,8 +6359,8 @@ namespace leetcode {
 
 	namespace surrounded_regions {
 		void Solution::solve(vector<vector<char>> &board) {
-			int m = board.size();
-			int n = board[0].size();
+			const int m = board.size();
+			const int n = board[0].size();
 			for(int i = 0; i < n; i++) {
 				if(board[0][i] == 'O') {
 					dfs(board, 0, i);
@@ -6393,8 +6391,8 @@ namespace leetcode {
 
 		void Solution::dfs(vector<vector<char>> &board, int x, int y) {
 			board[x][y]             = 'D';
-			int m                   = board.size();
-			int n                   = board[0].size();
+			const int m             = board.size();
+			const int n             = board[0].size();
 			pair<int, int> nexts[4] = {{x - 1, y}, {x + 1, y}, {x, y - 1}, {x, y + 1}};
 			for(auto [next_x, next_y]: nexts) {
 				if(next_x >= 0 && next_x < m && next_y >= 0 && next_y < n && board[next_x][next_y] == 'O') {
@@ -6410,7 +6408,7 @@ namespace leetcode {
 			dfs(graph, ans, 0);
 			for(auto &path: ans) {
 				path.push_back(0);
-				path = vector<int>(path.rbegin(), path.rend());
+				path = vector(path.rbegin(), path.rend());
 			}
 			return ans;
 		}
@@ -6418,11 +6416,11 @@ namespace leetcode {
 		int Solution::dfs(vector<vector<int>> &graph, vector<vector<int>> &ans, int cur) {
 			int ret = 0;
 			if(cur == graph.size() - 1) {
-				ans.emplace_back(vector<int>(1, cur));
+				ans.emplace_back(vector(1, cur));
 				return 1;
 			}
-			for(auto next: graph[cur]) {
-				int n = dfs(graph, ans, next);
+			for(const auto next: graph[cur]) {
+				const int n = dfs(graph, ans, next);
 				ret += n;
 				for(int i = ans.size() - 1, j = 0; j < n; i--, j++) {
 					ans[i].emplace_back(cur);
@@ -6437,13 +6435,14 @@ namespace leetcode {
 			vector<vector<int>> ans;
 			set<vector<int>> s;
 			dfs(s, vector<int>(), nums);
-			for(auto vec: s) {
+			ans.reserve(s.size());
+			for(const auto &vec: s) {
 				ans.emplace_back(vec);
 			}
 			return ans;
 		}
 
-		void Solution::dfs(set<vector<int>> &s, vector<int> current, vector<int> rest) {
+		void Solution::dfs(set<vector<int>> &s, const vector<int> &current, vector<int> rest) {
 			if(rest.empty()) {
 				s.insert(current);
 				return;
@@ -6469,7 +6468,7 @@ namespace leetcode {
 			for(int i = index; i < candidates.size(); i++) {
 				auto &candidate = candidates[i];
 				if(candidate == target) {
-					ans.emplace_back(vector<int>(1, candidate));
+					ans.emplace_back(vector(1, candidate));
 				} else if(target - candidate >= 1) {
 					auto res = recurse(candidates, target - candidate, i);
 					for(auto &vec: res) {
@@ -6485,7 +6484,7 @@ namespace leetcode {
 	namespace combination_sum_ii {
 		vector<vector<int>> Solution::combinationSum2(vector<int> &candidates, int target) {
 			sort(candidates.begin(), candidates.end());
-			auto ret = recurse(candidates, target, -10);
+			const auto ret = recurse(candidates, target, -10);
 			vector<vector<int>> ans(ret.size());
 			for(int i = 0; i < ret.size(); i++) {
 				ans[i] = vector<int>(ret[i].size());
@@ -6500,9 +6499,9 @@ namespace leetcode {
 			vector<vector<int>> ans;
 			for(int i = max(0, index + 1); i < candidates.size(); i++) {
 				if(!(i > 0 && candidates[i] == candidates[i - 1] && index != i - 1)) {
-					auto &candidate = candidates[i];
+					const auto &candidate = candidates[i];
 					if(candidate == target) {
-						ans.emplace_back(vector<int>(1, i));
+						ans.emplace_back(vector(1, i));
 					} else if(target - candidate >= 1) {
 						auto res = recurse(candidates, target - candidate, i);
 						for(auto &vec: res) {
