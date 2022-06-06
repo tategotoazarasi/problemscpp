@@ -6514,4 +6514,15 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace combination_sum_ii
+
+	namespace house_robber_ii {
+		int Solution::rob(vector<int> &nums) {
+			if(nums.size() == 1) {
+				return nums[0];
+			}
+			vector<int> vec1 = vector<int>(nums.begin(), nums.end() - 1);
+			vector<int> vec2 = vector<int>(nums.begin() + 1, nums.end());
+			return max(house_robber::Solution::rob(vec1), house_robber::Solution::rob(vec2));
+		}
+	}// namespace house_robber_ii
 }// namespace leetcode

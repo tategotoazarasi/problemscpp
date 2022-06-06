@@ -2653,15 +2653,15 @@ namespace leetcode {
 	namespace find_players_with_zero_or_one_losses {
 		TEST(find_players_with_zero_or_one_losses, case1) {
 			vector<vector<int>> matches      = {{1, 3},
-                                           {2, 3},
-                                           {3, 6},
-                                           {5, 6},
-                                           {5, 7},
-                                           {4, 5},
-                                           {4, 8},
-                                           {4, 9},
-                                           {10, 4},
-                                           {10, 9}};
+			                                    {2, 3},
+			                                    {3, 6},
+			                                    {5, 6},
+			                                    {5, 7},
+			                                    {4, 5},
+			                                    {4, 8},
+			                                    {4, 9},
+			                                    {10, 4},
+			                                    {10, 9}};
 			const vector<vector<int>> output = {{1, 2, 10}, {4, 5, 7, 8}};
 			ASSERT_EQ(output, Solution::findWinners(matches));
 		}
@@ -2957,4 +2957,21 @@ namespace leetcode {
 			ASSERT_EQ(6, Solution::minSubArrayLen(target, nums));
 		}
 	}// namespace minimum_size_subarray_sum
+
+	namespace house_robber_ii {
+		TEST(house_robber_ii, case1) {
+			vector<int> nums = {2, 3, 2};
+			ASSERT_EQ(3, Solution::rob(nums));
+		}
+
+		TEST(house_robber_ii, case2) {
+			vector<int> nums = {1, 2, 3, 1};
+			ASSERT_EQ(4, Solution::rob(nums));
+		}
+
+		TEST(house_robber_ii, case3) {
+			vector<int> nums = {1, 2, 3};
+			ASSERT_EQ(3, Solution::rob(nums));
+		}
+	}// namespace house_robber_ii
 }// namespace leetcode

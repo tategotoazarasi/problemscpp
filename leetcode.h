@@ -2418,6 +2418,14 @@ namespace leetcode {
 			static vector<vector<int>> combinationSum2(vector<int> &candidates, int target);
 		};
 	}// namespace combination_sum_ii
+
+	/// \brief 213. House Robber II
+	namespace house_robber_ii {
+		class Solution {
+		public:
+			static int rob(vector<int> &nums);
+		};
+	}// namespace house_robber_ii
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
