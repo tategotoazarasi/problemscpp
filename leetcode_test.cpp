@@ -2974,4 +2974,16 @@ namespace leetcode {
 			ASSERT_EQ(3, Solution::rob(nums));
 		}
 	}// namespace house_robber_ii
+
+	namespace jump_game {
+		TEST(jump_game, case1) {
+			vector<int> nums = {2, 3, 1, 1, 4};
+			ASSERT_TRUE(Solution::canJump(nums));
+		}
+
+		TEST(jump_game, case2) {
+			vector<int> nums = {3, 2, 1, 0, 4};
+			ASSERT_FALSE(Solution::canJump(nums));
+		}
+	}// namespace jump_game
 }// namespace leetcode

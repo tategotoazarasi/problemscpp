@@ -6525,4 +6525,21 @@ namespace leetcode {
 			return max(house_robber::Solution::rob(vec1), house_robber::Solution::rob(vec2));
 		}
 	}// namespace house_robber_ii
+
+	namespace jump_game {
+		bool Solution::canJump(vector<int> &nums) {
+			vector<bool> can(nums.size(), false);
+			can[0]   = true;
+			int last = 0;
+			for(int i = 0; i < nums.size(); i++) {
+				if(can[i] && min(i + nums[i], static_cast<int>(nums.size() - 1)) > last) {
+					for(int j = last + 1; j <= i + nums[i] && j < nums.size(); j++) {
+						can[j] = true;
+					}
+					last = min(i + nums[i], static_cast<int>(nums.size() - 1));
+				}
+			}
+			return can.back();
+		}
+	}// namespace jump_game
 }// namespace leetcode

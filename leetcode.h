@@ -2426,6 +2426,14 @@ namespace leetcode {
 			static int rob(vector<int> &nums);
 		};
 	}// namespace house_robber_ii
+
+	/// \brief 55. Jump Game
+	namespace jump_game {
+		class Solution {
+		public:
+			static bool canJump(vector<int> &nums);
+		};
+	}// namespace jump_game
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
