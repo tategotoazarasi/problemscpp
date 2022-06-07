@@ -2442,6 +2442,14 @@ namespace leetcode {
 			static int jump(vector<int> &nums);
 		};
 	}// namespace jump_game_ii
+
+	/// \brief 62. Unique Paths
+	namespace unique_paths {
+		class Solution {
+		public:
+			static int uniquePaths(int m, int n);
+		};
+	}// namespace unique_paths
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

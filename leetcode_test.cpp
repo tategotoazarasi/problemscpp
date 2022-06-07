@@ -2998,4 +2998,14 @@ namespace leetcode {
 			ASSERT_EQ(2, Solution::jump(nums));
 		}
 	}// namespace jump_game_ii
+
+	namespace unique_paths {
+		TEST(unique_paths, case1) {
+			ASSERT_EQ(28, Solution::uniquePaths(3, 7));
+		}
+
+		TEST(unique_paths, case2) {
+			ASSERT_EQ(3, Solution::uniquePaths(3, 2));
+		}
+	}// namespace unique_paths
 }// namespace leetcode
