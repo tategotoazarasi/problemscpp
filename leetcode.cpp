@@ -6542,4 +6542,22 @@ namespace leetcode {
 			return can.back();
 		}
 	}// namespace jump_game
+
+	namespace jump_game_ii {
+		int Solution::jump(vector<int> &nums) {
+			int n    = nums.size();
+			int ans  = 0;
+			int last = n - 1;
+			while(last != 0) {
+				for(int i = 0; i < n; i++) {
+					if(i + nums[i] >= last) {
+						last = i;
+						ans++;
+						break;
+					}
+				}
+			}
+			return ans;
+		}
+	}// namespace jump_game_ii
 }// namespace leetcode

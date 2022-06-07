@@ -2986,4 +2986,16 @@ namespace leetcode {
 			ASSERT_FALSE(Solution::canJump(nums));
 		}
 	}// namespace jump_game
+
+	namespace jump_game_ii {
+		TEST(jump_game_ii, case1) {
+			vector<int> nums = {2, 3, 1, 1, 4};
+			ASSERT_EQ(2, Solution::jump(nums));
+		}
+
+		TEST(jump_game_ii, case2) {
+			vector<int> nums = {2, 3, 0, 1, 4};
+			ASSERT_EQ(2, Solution::jump(nums));
+		}
+	}// namespace jump_game_ii
 }// namespace leetcode
