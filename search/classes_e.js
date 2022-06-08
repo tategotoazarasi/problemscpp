@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unionfind_0',['UnionFind',['../d9/d45/a01396.html',1,'acwing::acwing240::UnionFind'],['../d4/ddd/a02040.html',1,'leetcode::max_area_of_island::UnionFind'],['../d1/d77/a02920.html',1,'UnionFind']]]
+  ['unionfind_0',['UnionFind',['../da/de3/a01398.html',1,'acwing::acwing240::UnionFind'],['../d1/dc4/a02042.html',1,'leetcode::max_area_of_island::UnionFind'],['../d6/d41/a02930.html',1,'UnionFind']]]
 ];
