@@ -6626,4 +6626,34 @@ namespace leetcode {
 			return s.substr(begin, maxLen);
 		}
 	}// namespace longest_palindromic_substring
+
+	namespace arithmetic_slices {
+		int Solution::numberOfArithmeticSlices(vector<int> &nums) {
+			int n = nums.size();
+			vector<int> diff(n - 1);
+			for(int i = 0; i < n - 1; i++) {
+				diff[i] = nums[i + 1] - nums[i];
+			}
+			vector<int> consecutive;
+			int prev = 0;
+			int cnt  = 0;
+			for(int i = 0; i < n - 1; i++) {
+				if(diff[i] == diff[prev]) {
+					cnt++;
+				} else {
+					consecutive.emplace_back(cnt);
+					prev = i;
+					cnt  = 1;
+				}
+			}
+			consecutive.emplace_back(cnt);
+			int ans = 0;
+			for(auto num: consecutive) {
+				if(num >= 2) {
+					ans += (num - 1) * num / 2;
+				}
+			}
+			return ans;
+		}
+	}// namespace arithmetic_slices
 }// namespace leetcode

@@ -2458,6 +2458,14 @@ namespace leetcode {
 			static string longestPalindrome(string s);
 		};
 	}// namespace longest_palindromic_substring
+
+	/// \brief 413. Arithmetic Slices
+	namespace arithmetic_slices {
+		class Solution {
+		public:
+			static int numberOfArithmeticSlices(vector<int> &nums);
+		};
+	}// namespace arithmetic_slices
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

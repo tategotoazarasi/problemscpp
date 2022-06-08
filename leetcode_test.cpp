@@ -3034,4 +3034,16 @@ namespace leetcode {
 			ASSERT_EQ("anana", Solution::longestPalindrome("bananas"));
 		}
 	}// namespace longest_palindromic_substring
+
+	namespace arithmetic_slices {
+		TEST(arithmetic_slices, case1) {
+			vector<int> nums = {1, 2, 3, 4};
+			ASSERT_EQ(3, Solution::numberOfArithmeticSlices(nums));
+		}
+
+		TEST(arithmetic_slices, case2) {
+			vector<int> nums = {1};
+			ASSERT_EQ(0, Solution::numberOfArithmeticSlices(nums));
+		}
+	}// namespace arithmetic_slices
 }// namespace leetcode
