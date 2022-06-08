@@ -3008,4 +3008,30 @@ namespace leetcode {
 			ASSERT_EQ(3, Solution::uniquePaths(3, 2));
 		}
 	}// namespace unique_paths
+
+	namespace longest_palindromic_substring {
+		TEST(longest_palindromic_substring, case1) {
+			ASSERT_EQ("bab", Solution::longestPalindrome("babad"));
+		}
+
+		TEST(longest_palindromic_substring, case2) {
+			ASSERT_EQ("bb", Solution::longestPalindrome("cbbd"));
+		}
+
+		TEST(longest_palindromic_substring, case3) {
+			ASSERT_EQ("aaabbaaa", Solution::longestPalindrome("aaabbaaaa"));
+		}
+
+		TEST(longest_palindromic_substring, case4) {
+			ASSERT_EQ("ccc", Solution::longestPalindrome("ccc"));
+		}
+
+		TEST(longest_palindromic_substring, case5) {
+			ASSERT_EQ("bbbb", Solution::longestPalindrome("bbbb"));
+		}
+
+		TEST(longest_palindromic_substring, case6) {
+			ASSERT_EQ("anana", Solution::longestPalindrome("bananas"));
+		}
+	}// namespace longest_palindromic_substring
 }// namespace leetcode

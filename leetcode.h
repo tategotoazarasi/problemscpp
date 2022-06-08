@@ -2450,6 +2450,14 @@ namespace leetcode {
 			static int uniquePaths(int m, int n);
 		};
 	}// namespace unique_paths
+
+	/// \brief 5. Longest Palindromic Substring
+	namespace longest_palindromic_substring {
+		class Solution {
+		public:
+			static string longestPalindrome(string s);
+		};
+	}// namespace longest_palindromic_substring
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
