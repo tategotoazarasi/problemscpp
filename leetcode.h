@@ -2466,6 +2466,14 @@ namespace leetcode {
 			static int numberOfArithmeticSlices(vector<int> &nums);
 		};
 	}// namespace arithmetic_slices
+
+	/// \brief 91. Decode Ways
+	namespace decode_ways {
+		class Solution {
+		public:
+			static int numDecodings(string s);
+		};
+	}// namespace decode_ways
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

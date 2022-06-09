@@ -3046,4 +3046,22 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::numberOfArithmeticSlices(nums));
 		}
 	}// namespace arithmetic_slices
+
+	namespace decode_ways {
+		TEST(decode_ways, case1) {
+			ASSERT_EQ(2, Solution::numDecodings("12"));
+		}
+
+		TEST(decode_ways, case2) {
+			ASSERT_EQ(3, Solution::numDecodings("226"));
+		}
+
+		TEST(decode_ways, case3) {
+			ASSERT_EQ(0, Solution::numDecodings("06"));
+		}
+
+		TEST(decode_ways, case4) {
+			ASSERT_EQ(1, Solution::numDecodings("27"));
+		}
+	}// namespace decode_ways
 }// namespace leetcode

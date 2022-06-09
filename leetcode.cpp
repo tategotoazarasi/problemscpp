@@ -6656,4 +6656,25 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace arithmetic_slices
+
+	namespace decode_ways {
+		int Solution::numDecodings(string s) {
+			vector<int> dp(s.length(), 0);
+			for(int i = 0; i < dp.size(); i++) {
+				bool ok = false;
+				if('1' <= s[i] && s[i] <= '9') {
+					dp[i] += i - 1 >= 0 ? dp[i - 1] : 1;
+					ok = true;
+				}
+				if(i - 1 >= 0 && ((s[i - 1] == '1' && '0' <= s[i] && s[i] <= '9') || (s[i - 1] == '2' && '0' <= s[i] && s[i] <= '6'))) {
+					dp[i] += i - 2 >= 0 ? dp[i - 2] : 1;
+					ok = true;
+				}
+				if(!ok) {
+					return 0;
+				}
+			}
+			return dp.back();
+		}
+	}// namespace decode_ways
 }// namespace leetcode
