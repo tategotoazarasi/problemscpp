@@ -3064,4 +3064,24 @@ namespace leetcode {
 			ASSERT_EQ(1, Solution::numDecodings("27"));
 		}
 	}// namespace decode_ways
+
+	namespace word_break {
+		TEST(word_break, case1) {
+			vector<string> wordDict = {"leet", "code"};
+			string s                = "leetcode";
+			ASSERT_TRUE(Solution::wordBreak(s, wordDict));
+		}
+
+		TEST(word_break, case2) {
+			vector<string> wordDict = {"apple", "pen"};
+			string s                = "applepenapple";
+			ASSERT_TRUE(Solution::wordBreak(s, wordDict));
+		}
+
+		TEST(word_break, case3) {
+			vector<string> wordDict = {"cats", "dog", "sand", "and", "cat"};
+			string s                = "catsandog";
+			ASSERT_FALSE(Solution::wordBreak(s, wordDict));
+		}
+	}// namespace word_break
 }// namespace leetcode

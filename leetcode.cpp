@@ -6677,4 +6677,37 @@ namespace leetcode {
 			return dp.back();
 		}
 	}// namespace decode_ways
+
+	namespace word_break {
+		bool Solution::wordBreak(string s, vector<string> &wordDict) {
+			vector<bool> end(s.length(), false);
+			TrieNode tn(0);
+			for(const auto &word: wordDict) {
+				tn.insert(word);
+			}
+			search(&tn, s, 0, end);
+			for(int i = 1; i < s.length(); i++) {
+				if(end[i - 1]) {
+					search(&tn, s, i, end);
+					if(end.back()) {
+						return true;
+					}
+				}
+			}
+			return end.back();
+		}
+
+		void Solution::search(TrieNode const *tn, const string &s, int i, vector<bool> &end) {
+			TrieNode const *node = tn;
+			for(; i < s.length(); i++) {
+				node = node->nexts[s[i] - 'a'];
+				if(node == nullptr) {
+					return;
+				}
+				if(node->end_of_word) {
+					end[i] = true;
+				}
+			}
+		}
+	}// namespace word_break
 }// namespace leetcode

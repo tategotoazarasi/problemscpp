@@ -2474,6 +2474,15 @@ namespace leetcode {
 			static int numDecodings(string s);
 		};
 	}// namespace decode_ways
+
+	/// \brief 139. Word Break
+	namespace word_break {
+		class Solution {
+		public:
+			static void search(TrieNode const *tn, const string &s, int i, vector<bool> &end);
+			static bool wordBreak(string s, vector<string> &wordDict);
+		};
+	}// namespace word_break
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
