@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['u_0',['u',['../da/dc7/a01548.html#a0fe022ca955920947e43e36545b039da',1,'leetcode::find_k_pairs_with_smallest_sums::pair']]],
-  ['um_1',['um',['../d6/dae/a01304.html#adfdb2dd1c68428264c88bbbb03e33e26',1,'acwing::acwing4310::acwing4310::um()'],['../da/d4b/a01848.html#a0b0bb6157b22775f4ecc5a6969d25954',1,'leetcode::knight_probability_in_chessboard::Solution::um()']]],
-  ['up_5fmap_2',['up_map',['../d8/d20/a00768.html#abe667ade1897a4f28346557eb0cef949',1,'acwing::acwing1929::Solution']]]
+  ['u_0',['u',['../d8/daf/a01550.html#a0fe022ca955920947e43e36545b039da',1,'leetcode::find_k_pairs_with_smallest_sums::pair']]],
+  ['um_1',['um',['../d7/d8c/a01306.html#adfdb2dd1c68428264c88bbbb03e33e26',1,'acwing::acwing4310::acwing4310::um()'],['../da/d18/a01850.html#a0b0bb6157b22775f4ecc5a6969d25954',1,'leetcode::knight_probability_in_chessboard::Solution::um()']]],
+  ['up_5fmap_2',['up_map',['../d0/d7e/a00770.html#abe667ade1897a4f28346557eb0cef949',1,'acwing::acwing1929::Solution']]]
 ];
