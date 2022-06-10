@@ -3101,4 +3101,16 @@ namespace leetcode {
 			ASSERT_EQ(1, Solution::lengthOfLIS(nums));
 		}
 	}// namespace longest_increasing_subsequence
+
+	namespace number_of_longest_increasing_subsequence {
+		TEST(number_of_longest_increasing_subsequence, case1) {
+			vector<int> nums = {1, 3, 5, 4, 7};
+			ASSERT_EQ(2, Solution::findNumberOfLIS(nums));
+		}
+
+		TEST(number_of_longest_increasing_subsequence, case2) {
+			vector<int> nums = {2, 2, 2, 2, 2};
+			ASSERT_EQ(5, Solution::findNumberOfLIS(nums));
+		}
+	}// namespace number_of_longest_increasing_subsequence
 }// namespace leetcode

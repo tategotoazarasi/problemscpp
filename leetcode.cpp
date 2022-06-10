@@ -6727,4 +6727,29 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace longest_increasing_subsequence
+
+	namespace number_of_longest_increasing_subsequence {
+		int Solution::findNumberOfLIS(vector<int> &nums) {
+			int n = nums.size();
+			vector<map<unsigned, unsigned>> dp(n, map<unsigned, unsigned>());//dp[i][j] = number of increasing subsequence end with i, length is j
+			for(int i = 0; i < n; i++) {
+				dp[i][1] = 1;
+			}
+			unsigned max_len = 1;
+			for(int i = 0; i < n; i++) {
+				for(int j = i + 1; j < n; j++) {
+					auto &[len, cnt] = *dp[i].rbegin();
+					if(nums[j] > nums[i]) {
+						dp[j][len + 1] += cnt;
+						max_len = max(max_len, len + 1);
+					}
+				}
+			}
+			unsigned ans = 0;
+			for(int i = 0; i < n; i++) {
+				ans += dp[i][max_len];
+			}
+			return ans;
+		}
+	}// namespace number_of_longest_increasing_subsequence
 }// namespace leetcode

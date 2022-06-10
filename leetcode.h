@@ -2491,6 +2491,14 @@ namespace leetcode {
 			static int lengthOfLIS(vector<int> &nums);
 		};
 	}// namespace longest_increasing_subsequence
+
+	/// \brief 673. Number of Longest Increasing Subsequence
+	namespace number_of_longest_increasing_subsequence {
+		class Solution {
+		public:
+			static int findNumberOfLIS(vector<int> &nums);
+		};
+	}// namespace number_of_longest_increasing_subsequence
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
