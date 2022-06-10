@@ -3084,4 +3084,21 @@ namespace leetcode {
 			ASSERT_FALSE(Solution::wordBreak(s, wordDict));
 		}
 	}// namespace word_break
+
+	namespace longest_increasing_subsequence {
+		TEST(longest_increasing_subsequence, case1) {
+			vector<int> nums = {10, 9, 2, 5, 3, 7, 101, 18};
+			ASSERT_EQ(4, Solution::lengthOfLIS(nums));
+		}
+
+		TEST(longest_increasing_subsequence, case2) {
+			vector<int> nums = {0, 1, 0, 3, 2, 3};
+			ASSERT_EQ(4, Solution::lengthOfLIS(nums));
+		}
+
+		TEST(longest_increasing_subsequence, case3) {
+			vector<int> nums = {7, 7, 7, 7, 7, 7, 7};
+			ASSERT_EQ(1, Solution::lengthOfLIS(nums));
+		}
+	}// namespace longest_increasing_subsequence
 }// namespace leetcode

@@ -6710,4 +6710,21 @@ namespace leetcode {
 			}
 		}
 	}// namespace word_break
+
+	namespace longest_increasing_subsequence {
+		int Solution::lengthOfLIS(vector<int> &nums) {
+			int n   = nums.size();
+			int ans = 1;
+			vector<int> dp(n, 1);//length of longest increasing subsequence end with i
+			for(int i = 0; i < n; i++) {
+				for(int j = i + 1; j < n; j++) {
+					if(nums[j] > nums[i]) {
+						dp[j] = max(dp[j], dp[i] + 1);
+					}
+				}
+				ans = max(ans, dp[i]);
+			}
+			return ans;
+		}
+	}// namespace longest_increasing_subsequence
 }// namespace leetcode

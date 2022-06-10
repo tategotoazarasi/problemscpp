@@ -2483,6 +2483,14 @@ namespace leetcode {
 			static bool wordBreak(string s, vector<string> &wordDict);
 		};
 	}// namespace word_break
+
+	/// \brief 300. Longest Increasing Subsequence
+	namespace longest_increasing_subsequence {
+		class Solution {
+		public:
+			static int lengthOfLIS(vector<int> &nums);
+		};
+	}// namespace longest_increasing_subsequence
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
