@@ -3139,4 +3139,18 @@ namespace leetcode {
 			ASSERT_EQ(3, Solution::longestCommonSubsequence(text1, text2));
 		}
 	}// namespace longest_common_subsequence
+
+	namespace delete_operation_for_two_strings {
+		TEST(delete_operation_for_two_strings, case1) {
+			string s1 = "sea";
+			string s2 = "eat";
+			ASSERT_EQ(2, Solution::minDistance(s1, s2));
+		}
+
+		TEST(delete_operation_for_two_strings, case2) {
+			string s1 = "leetcode";
+			string s2 = "etco";
+			ASSERT_EQ(4, Solution::minDistance(s1, s2));
+		}
+	}// namespace delete_operation_for_two_strings
 }// namespace leetcode

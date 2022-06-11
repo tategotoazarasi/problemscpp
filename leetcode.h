@@ -2507,6 +2507,14 @@ namespace leetcode {
 			static int longestCommonSubsequence(string text1, string text2);
 		};
 	}// namespace longest_common_subsequence
+
+	/// \brief 583. Delete Operation for Two Strings
+	namespace delete_operation_for_two_strings {
+		class Solution {
+		public:
+			static int minDistance(string word1, string word2);
+		};
+	}// namespace delete_operation_for_two_strings
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

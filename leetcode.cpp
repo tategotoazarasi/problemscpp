@@ -6768,4 +6768,11 @@ namespace leetcode {
 			return dp.back().back();
 		}
 	}// namespace longest_common_subsequence
+
+	namespace delete_operation_for_two_strings {
+		int Solution::minDistance(string word1, string word2) {
+			int lcs = longest_common_subsequence::Solution::longestCommonSubsequence(word1, word2);
+			return word1.length() + word2.length() - 2 * lcs;
+		}
+	}// namespace delete_operation_for_two_strings
 }// namespace leetcode
