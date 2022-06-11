@@ -6752,4 +6752,20 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace number_of_longest_increasing_subsequence
+
+	namespace longest_common_subsequence {
+		int Solution::longestCommonSubsequence(string text1, string text2) {
+			vector<vector<int>> dp(text1.length(), vector<int>(text2.length(), 0));///< dp[i][j] = longest common subsequence of text1 end with i and text2 end with j
+			for(int i = 0; i < text1.length(); i++) {
+				for(int j = 0; j < text2.length(); j++) {
+					if(text1[i] == text2[j]) {
+						dp[i][j] = ((i - 1 < 0 || j - 1 < 0) ? 0 : dp[i - 1][j - 1]) + 1;
+					} else {
+						dp[i][j] = max(i - 1 >= 0 ? dp[i - 1][j] : 0, j - 1 >= 0 ? dp[i][j - 1] : 0);
+					}
+				}
+			}
+			return dp.back().back();
+		}
+	}// namespace longest_common_subsequence
 }// namespace leetcode

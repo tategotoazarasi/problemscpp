@@ -3113,4 +3113,30 @@ namespace leetcode {
 			ASSERT_EQ(5, Solution::findNumberOfLIS(nums));
 		}
 	}// namespace number_of_longest_increasing_subsequence
+
+	namespace longest_common_subsequence {
+		TEST(longest_common_subsequence, case1) {
+			string text1 = "abcde";
+			string text2 = "ace";
+			ASSERT_EQ(3, Solution::longestCommonSubsequence(text1, text2));
+		}
+
+		TEST(longest_common_subsequence, case2) {
+			string text1 = "abc";
+			string text2 = "abc";
+			ASSERT_EQ(3, Solution::longestCommonSubsequence(text1, text2));
+		}
+
+		TEST(longest_common_subsequence, case3) {
+			string text1 = "abc";
+			string text2 = "def";
+			ASSERT_EQ(0, Solution::longestCommonSubsequence(text1, text2));
+		}
+
+		TEST(longest_common_subsequence, case4) {
+			string text1 = "abcde";
+			string text2 = "akccle";
+			ASSERT_EQ(3, Solution::longestCommonSubsequence(text1, text2));
+		}
+	}// namespace longest_common_subsequence
 }// namespace leetcode

@@ -2499,6 +2499,14 @@ namespace leetcode {
 			static int findNumberOfLIS(vector<int> &nums);
 		};
 	}// namespace number_of_longest_increasing_subsequence
+
+	/// \brief 1143. Longest Common Subsequence
+	namespace longest_common_subsequence {
+		class Solution {
+		public:
+			static int longestCommonSubsequence(string text1, string text2);
+		};
+	}// namespace longest_common_subsequence
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
