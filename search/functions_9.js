@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['judgecircle_0',['judgeCircle',['../d8/da6/a02410.html#a9ef53a28bd3fe0b90d3eed6fd9ad125d',1,'lintcode::judge_circle::Solution']]],
-  ['jump_1',['jump',['../d9/d94/a02358.html#ab1ee6e042a177b1b8781e11eca9893a6',1,'leetcode::jump_game_ii::Solution']]]
+  ['judgecircle_0',['judgeCircle',['../d5/d2b/a02420.html#a9ef53a28bd3fe0b90d3eed6fd9ad125d',1,'lintcode::judge_circle::Solution']]],
+  ['jump_1',['jump',['../d3/d35/a02360.html#ab1ee6e042a177b1b8781e11eca9893a6',1,'leetcode::jump_game_ii::Solution']]]
 ];
