@@ -2479,8 +2479,8 @@ namespace leetcode {
 	namespace word_break {
 		class Solution {
 		public:
-			static void search(TrieNode const *tn, const string &s, int i, vector<bool> &end);
-			static bool wordBreak(string s, vector<string> &wordDict);
+			static void search(const TrieNode *tn, const string &s, int i, vector<bool> &end);
+			static bool wordBreak(const string &s, vector<string> &wordDict);
 		};
 	}// namespace word_break
 
@@ -2512,7 +2512,7 @@ namespace leetcode {
 	namespace delete_operation_for_two_strings {
 		class Solution {
 		public:
-			static int minDistance(string word1, string word2);
+			static int minDistance(const string &word1, const string &word2);
 		};
 	}// namespace delete_operation_for_two_strings
 

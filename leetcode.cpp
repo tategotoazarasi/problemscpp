@@ -6520,15 +6520,15 @@ namespace leetcode {
 			if(nums.size() == 1) {
 				return nums[0];
 			}
-			vector<int> vec1 = vector<int>(nums.begin(), nums.end() - 1);
-			vector<int> vec2 = vector<int>(nums.begin() + 1, nums.end());
+			auto vec1 = vector(nums.begin(), nums.end() - 1);
+			auto vec2 = vector(nums.begin() + 1, nums.end());
 			return max(house_robber::Solution::rob(vec1), house_robber::Solution::rob(vec2));
 		}
 	}// namespace house_robber_ii
 
 	namespace jump_game {
 		bool Solution::canJump(vector<int> &nums) {
-			vector<bool> can(nums.size(), false);
+			vector can(nums.size(), false);
 			can[0]   = true;
 			int last = 0;
 			for(int i = 0; i < nums.size(); i++) {
@@ -6545,9 +6545,9 @@ namespace leetcode {
 
 	namespace jump_game_ii {
 		int Solution::jump(vector<int> &nums) {
-			int n    = nums.size();
-			int ans  = 0;
-			int last = n - 1;
+			const int n = nums.size();
+			int ans     = 0;
+			int last    = n - 1;
 			while(last != 0) {
 				for(int i = 0; i < n; i++) {
 					if(i + nums[i] >= last) {
@@ -6563,7 +6563,7 @@ namespace leetcode {
 
 	namespace unique_paths {
 		int Solution::uniquePaths(int m, int n) {
-			vector<vector<int>> dp(m, vector<int>(n, 0));
+			vector dp(m, vector(n, 0));
 			dp[m - 1][n - 1] = 1;
 			for(int i = m - 1; i >= 0; i--) {
 				for(int j = n - 1; j >= 0; j--) {
@@ -6581,7 +6581,7 @@ namespace leetcode {
 
 	namespace longest_palindromic_substring {
 		string Solution::longestPalindrome(string s) {
-			int n = s.size();
+			const int n = s.size();
 			if(n < 2) {
 				return s;
 			}
@@ -6589,10 +6589,10 @@ namespace leetcode {
 			int maxLen = 1;
 			int begin  = 0;
 			// dp[i][j] 表示 s[i..j] 是否是回文串
-			vector<vector<int>> dp(n, vector<int>(n));
+			vector dp(n, vector<int>(n));
 			// 初始化：所有长度为 1 的子串都是回文串
 			for(int i = 0; i < n; i++) {
-				dp[i][i] = true;
+				dp[i][i] = 1;
 			}
 			// 递推开始
 			// 先枚举子串长度
@@ -6600,24 +6600,24 @@ namespace leetcode {
 				// 枚举左边界，左边界的上限设置可以宽松一些
 				for(int i = 0; i < n; i++) {
 					// 由 L 和 i 可以确定右边界，即 j - i + 1 = L 得
-					int j = L + i - 1;
+					const int j = L + i - 1;
 					// 如果右边界越界，就可以退出当前循环
 					if(j >= n) {
 						break;
 					}
 
 					if(s[i] != s[j]) {
-						dp[i][j] = false;
+						dp[i][j] = 0;
 					} else {
 						if(j - i < 3) {
-							dp[i][j] = true;
+							dp[i][j] = 1;
 						} else {
 							dp[i][j] = dp[i + 1][j - 1];
 						}
 					}
 
 					// 只要 dp[i][L] == true 成立，就表示子串 s[i..L] 是回文，此时记录回文长度和起始位置
-					if(dp[i][j] && j - i + 1 > maxLen) {
+					if((dp[i][j] != 0) && j - i + 1 > maxLen) {
 						maxLen = j - i + 1;
 						begin  = i;
 					}
@@ -6629,7 +6629,7 @@ namespace leetcode {
 
 	namespace arithmetic_slices {
 		int Solution::numberOfArithmeticSlices(vector<int> &nums) {
-			int n = nums.size();
+			const int n = nums.size();
 			vector<int> diff(n - 1);
 			for(int i = 0; i < n - 1; i++) {
 				diff[i] = nums[i + 1] - nums[i];
@@ -6648,7 +6648,7 @@ namespace leetcode {
 			}
 			consecutive.emplace_back(cnt);
 			int ans = 0;
-			for(auto num: consecutive) {
+			for(const auto num: consecutive) {
 				if(num >= 2) {
 					ans += (num - 1) * num / 2;
 				}
@@ -6659,14 +6659,14 @@ namespace leetcode {
 
 	namespace decode_ways {
 		int Solution::numDecodings(string s) {
-			vector<int> dp(s.length(), 0);
+			vector dp(s.length(), 0);
 			for(int i = 0; i < dp.size(); i++) {
 				bool ok = false;
 				if('1' <= s[i] && s[i] <= '9') {
 					dp[i] += i - 1 >= 0 ? dp[i - 1] : 1;
 					ok = true;
 				}
-				if(i - 1 >= 0 && ((s[i - 1] == '1' && '0' <= s[i] && s[i] <= '9') || (s[i - 1] == '2' && '0' <= s[i] && s[i] <= '6'))) {
+				if(i - 1 >= 0 && (s[i - 1] == '1' && '0' <= s[i] && s[i] <= '9' || s[i - 1] == '2' && '0' <= s[i] && s[i] <= '6')) {
 					dp[i] += i - 2 >= 0 ? dp[i - 2] : 1;
 					ok = true;
 				}
@@ -6679,8 +6679,8 @@ namespace leetcode {
 	}// namespace decode_ways
 
 	namespace word_break {
-		bool Solution::wordBreak(string s, vector<string> &wordDict) {
-			vector<bool> end(s.length(), false);
+		bool Solution::wordBreak(const string &s, vector<string> &wordDict) {
+			vector end(s.length(), false);
 			TrieNode tn(0);
 			for(const auto &word: wordDict) {
 				tn.insert(word);
@@ -6697,8 +6697,8 @@ namespace leetcode {
 			return end.back();
 		}
 
-		void Solution::search(TrieNode const *tn, const string &s, int i, vector<bool> &end) {
-			TrieNode const *node = tn;
+		void Solution::search(const TrieNode *tn, const string &s, int i, vector<bool> &end) {
+			const TrieNode *node = tn;
 			for(; i < s.length(); i++) {
 				node = node->nexts[s[i] - 'a'];
 				if(node == nullptr) {
@@ -6713,9 +6713,9 @@ namespace leetcode {
 
 	namespace longest_increasing_subsequence {
 		int Solution::lengthOfLIS(vector<int> &nums) {
-			int n   = nums.size();
-			int ans = 1;
-			vector<int> dp(n, 1);//length of longest increasing subsequence end with i
+			const int n = nums.size();
+			int ans     = 1;
+			vector dp(n, 1);//length of longest increasing subsequence end with i
 			for(int i = 0; i < n; i++) {
 				for(int j = i + 1; j < n; j++) {
 					if(nums[j] > nums[i]) {
@@ -6730,8 +6730,8 @@ namespace leetcode {
 
 	namespace number_of_longest_increasing_subsequence {
 		int Solution::findNumberOfLIS(vector<int> &nums) {
-			int n = nums.size();
-			vector<map<unsigned, unsigned>> dp(n, map<unsigned, unsigned>());//dp[i][j] = number of increasing subsequence end with i, length is j
+			const int n = nums.size();
+			vector dp(n, map<unsigned, unsigned>());//dp[i][j] = number of increasing subsequence end with i, length is j
 			for(int i = 0; i < n; i++) {
 				dp[i][1] = 1;
 			}
@@ -6755,11 +6755,11 @@ namespace leetcode {
 
 	namespace longest_common_subsequence {
 		int Solution::longestCommonSubsequence(string text1, string text2) {
-			vector<vector<int>> dp(text1.length(), vector<int>(text2.length(), 0));///< dp[i][j] = longest common subsequence of text1 end with i and text2 end with j
+			vector dp(text1.length(), vector(text2.length(), 0));///< dp[i][j] = longest common subsequence of text1 end with i and text2 end with j
 			for(int i = 0; i < text1.length(); i++) {
 				for(int j = 0; j < text2.length(); j++) {
 					if(text1[i] == text2[j]) {
-						dp[i][j] = ((i - 1 < 0 || j - 1 < 0) ? 0 : dp[i - 1][j - 1]) + 1;
+						dp[i][j] = (i - 1 < 0 || j - 1 < 0 ? 0 : dp[i - 1][j - 1]) + 1;
 					} else {
 						dp[i][j] = max(i - 1 >= 0 ? dp[i - 1][j] : 0, j - 1 >= 0 ? dp[i][j - 1] : 0);
 					}
@@ -6770,8 +6770,8 @@ namespace leetcode {
 	}// namespace longest_common_subsequence
 
 	namespace delete_operation_for_two_strings {
-		int Solution::minDistance(string word1, string word2) {
-			int lcs = longest_common_subsequence::Solution::longestCommonSubsequence(word1, word2);
+		int Solution::minDistance(const string &word1, const string &word2) {
+			const int lcs = longest_common_subsequence::Solution::longestCommonSubsequence(word1, word2);
 			return word1.length() + word2.length() - 2 * lcs;
 		}
 	}// namespace delete_operation_for_two_strings
@@ -6779,7 +6779,7 @@ namespace leetcode {
 	namespace edit_distance {
 		int Solution::minDistance(string word1, string word2) {
 			// dp[i][j] is the minimum number of operations required to convert word1[0..i] to word2[0..j]
-			vector<vector<int>> dp(word1.length() + 1, vector<int>(word2.length() + 1));
+			vector dp(word1.length() + 1, vector<int>(word2.length() + 1));
 			// if word[i] == word2[j], dp[i][j] = dp[i-1][j-1]; else dp[i][j] = min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1
 			for(int j = 0; j <= word2.length(); j++) {
 				dp[0][j] = j;
@@ -6802,16 +6802,16 @@ namespace leetcode {
 
 	namespace coin_change {
 		int Solution::coinChange(vector<int> &coins, int amount) {
-			vector<int> dp(amount + 1, -1);
+			vector dp(amount + 1, -1);
 			dp[0] = 0;
-			for(auto &coin: coins) {
+			for(const auto &coin: coins) {
 				if(coin <= amount) {
 					dp[coin] = 1;
 				}
 			}
 			for(unsigned i = 0; i <= amount; i++) {
 				if(dp[i] > 0) {
-					for(auto &coin: coins) {
+					for(const auto &coin: coins) {
 						if(i + coin <= static_cast<unsigned>(amount)) {
 							if(dp[i + coin] == -1) {
 								dp[i + coin] = dp[i] + 1;

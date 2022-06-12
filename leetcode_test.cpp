@@ -2653,15 +2653,15 @@ namespace leetcode {
 	namespace find_players_with_zero_or_one_losses {
 		TEST(find_players_with_zero_or_one_losses, case1) {
 			vector<vector<int>> matches      = {{1, 3},
-			                                    {2, 3},
-			                                    {3, 6},
-			                                    {5, 6},
-			                                    {5, 7},
-			                                    {4, 5},
-			                                    {4, 8},
-			                                    {4, 9},
-			                                    {10, 4},
-			                                    {10, 9}};
+                                           {2, 3},
+                                           {3, 6},
+                                           {5, 6},
+                                           {5, 7},
+                                           {4, 5},
+                                           {4, 8},
+                                           {4, 9},
+                                           {10, 4},
+                                           {10, 9}};
 			const vector<vector<int>> output = {{1, 2, 10}, {4, 5, 7, 8}};
 			ASSERT_EQ(output, Solution::findWinners(matches));
 		}
@@ -2960,41 +2960,41 @@ namespace leetcode {
 
 	namespace house_robber_ii {
 		TEST(house_robber_ii, case1) {
-			vector<int> nums = {2, 3, 2};
+			vector nums = {2, 3, 2};
 			ASSERT_EQ(3, Solution::rob(nums));
 		}
 
 		TEST(house_robber_ii, case2) {
-			vector<int> nums = {1, 2, 3, 1};
+			vector nums = {1, 2, 3, 1};
 			ASSERT_EQ(4, Solution::rob(nums));
 		}
 
 		TEST(house_robber_ii, case3) {
-			vector<int> nums = {1, 2, 3};
+			vector nums = {1, 2, 3};
 			ASSERT_EQ(3, Solution::rob(nums));
 		}
 	}// namespace house_robber_ii
 
 	namespace jump_game {
 		TEST(jump_game, case1) {
-			vector<int> nums = {2, 3, 1, 1, 4};
+			vector nums = {2, 3, 1, 1, 4};
 			ASSERT_TRUE(Solution::canJump(nums));
 		}
 
 		TEST(jump_game, case2) {
-			vector<int> nums = {3, 2, 1, 0, 4};
+			vector nums = {3, 2, 1, 0, 4};
 			ASSERT_FALSE(Solution::canJump(nums));
 		}
 	}// namespace jump_game
 
 	namespace jump_game_ii {
 		TEST(jump_game_ii, case1) {
-			vector<int> nums = {2, 3, 1, 1, 4};
+			vector nums = {2, 3, 1, 1, 4};
 			ASSERT_EQ(2, Solution::jump(nums));
 		}
 
 		TEST(jump_game_ii, case2) {
-			vector<int> nums = {2, 3, 0, 1, 4};
+			vector nums = {2, 3, 0, 1, 4};
 			ASSERT_EQ(2, Solution::jump(nums));
 		}
 	}// namespace jump_game_ii
@@ -3037,12 +3037,12 @@ namespace leetcode {
 
 	namespace arithmetic_slices {
 		TEST(arithmetic_slices, case1) {
-			vector<int> nums = {1, 2, 3, 4};
+			vector nums = {1, 2, 3, 4};
 			ASSERT_EQ(3, Solution::numberOfArithmeticSlices(nums));
 		}
 
 		TEST(arithmetic_slices, case2) {
-			vector<int> nums = {1};
+			vector nums = {1};
 			ASSERT_EQ(0, Solution::numberOfArithmeticSlices(nums));
 		}
 	}// namespace arithmetic_slices
@@ -3068,146 +3068,146 @@ namespace leetcode {
 	namespace word_break {
 		TEST(word_break, case1) {
 			vector<string> wordDict = {"leet", "code"};
-			string s                = "leetcode";
+			const string s          = "leetcode";
 			ASSERT_TRUE(Solution::wordBreak(s, wordDict));
 		}
 
 		TEST(word_break, case2) {
 			vector<string> wordDict = {"apple", "pen"};
-			string s                = "applepenapple";
+			const string s          = "applepenapple";
 			ASSERT_TRUE(Solution::wordBreak(s, wordDict));
 		}
 
 		TEST(word_break, case3) {
 			vector<string> wordDict = {"cats", "dog", "sand", "and", "cat"};
-			string s                = "catsandog";
+			const string s          = "catsandog";
 			ASSERT_FALSE(Solution::wordBreak(s, wordDict));
 		}
 	}// namespace word_break
 
 	namespace longest_increasing_subsequence {
 		TEST(longest_increasing_subsequence, case1) {
-			vector<int> nums = {10, 9, 2, 5, 3, 7, 101, 18};
+			vector nums = {10, 9, 2, 5, 3, 7, 101, 18};
 			ASSERT_EQ(4, Solution::lengthOfLIS(nums));
 		}
 
 		TEST(longest_increasing_subsequence, case2) {
-			vector<int> nums = {0, 1, 0, 3, 2, 3};
+			vector nums = {0, 1, 0, 3, 2, 3};
 			ASSERT_EQ(4, Solution::lengthOfLIS(nums));
 		}
 
 		TEST(longest_increasing_subsequence, case3) {
-			vector<int> nums = {7, 7, 7, 7, 7, 7, 7};
+			vector nums = {7, 7, 7, 7, 7, 7, 7};
 			ASSERT_EQ(1, Solution::lengthOfLIS(nums));
 		}
 	}// namespace longest_increasing_subsequence
 
 	namespace number_of_longest_increasing_subsequence {
 		TEST(number_of_longest_increasing_subsequence, case1) {
-			vector<int> nums = {1, 3, 5, 4, 7};
+			vector nums = {1, 3, 5, 4, 7};
 			ASSERT_EQ(2, Solution::findNumberOfLIS(nums));
 		}
 
 		TEST(number_of_longest_increasing_subsequence, case2) {
-			vector<int> nums = {2, 2, 2, 2, 2};
+			vector nums = {2, 2, 2, 2, 2};
 			ASSERT_EQ(5, Solution::findNumberOfLIS(nums));
 		}
 	}// namespace number_of_longest_increasing_subsequence
 
 	namespace longest_common_subsequence {
 		TEST(longest_common_subsequence, case1) {
-			string text1 = "abcde";
-			string text2 = "ace";
+			const string text1 = "abcde";
+			const string text2 = "ace";
 			ASSERT_EQ(3, Solution::longestCommonSubsequence(text1, text2));
 		}
 
 		TEST(longest_common_subsequence, case2) {
-			string text1 = "abc";
-			string text2 = "abc";
+			const string text1 = "abc";
+			const string text2 = "abc";
 			ASSERT_EQ(3, Solution::longestCommonSubsequence(text1, text2));
 		}
 
 		TEST(longest_common_subsequence, case3) {
-			string text1 = "abc";
-			string text2 = "def";
+			const string text1 = "abc";
+			const string text2 = "def";
 			ASSERT_EQ(0, Solution::longestCommonSubsequence(text1, text2));
 		}
 
 		TEST(longest_common_subsequence, case4) {
-			string text1 = "abcde";
-			string text2 = "akccle";
+			const string text1 = "abcde";
+			const string text2 = "akccle";
 			ASSERT_EQ(3, Solution::longestCommonSubsequence(text1, text2));
 		}
 	}// namespace longest_common_subsequence
 
 	namespace delete_operation_for_two_strings {
 		TEST(delete_operation_for_two_strings, case1) {
-			string s1 = "sea";
-			string s2 = "eat";
+			const string s1 = "sea";
+			const string s2 = "eat";
 			ASSERT_EQ(2, Solution::minDistance(s1, s2));
 		}
 
 		TEST(delete_operation_for_two_strings, case2) {
-			string s1 = "leetcode";
-			string s2 = "etco";
+			const string s1 = "leetcode";
+			const string s2 = "etco";
 			ASSERT_EQ(4, Solution::minDistance(s1, s2));
 		}
 	}// namespace delete_operation_for_two_strings
 
 	namespace edit_distance {
 		TEST(edit_distance, case1) {
-			string word1 = "horse";
-			string word2 = "ros";
+			const string word1 = "horse";
+			const string word2 = "ros";
 			ASSERT_EQ(3, Solution::minDistance(word1, word2));
 		}
 
 		TEST(edit_distance, case2) {
-			string word1 = "intention";
-			string word2 = "execution";
+			const string word1 = "intention";
+			const string word2 = "execution";
 			ASSERT_EQ(5, Solution::minDistance(word1, word2));
 		}
 	}// namespace edit_distance
 
 	namespace coin_change {
 		TEST(coin_change, case1) {
-			vector<int> coins = {1, 2, 5};
-			int amount        = 11;
+			vector coins     = {1, 2, 5};
+			const int amount = 11;
 			ASSERT_EQ(3, Solution::coinChange(coins, amount));
 		}
 
 		TEST(coin_change, case2) {
-			vector<int> coins = {2};
-			int amount        = 3;
+			vector coins     = {2};
+			const int amount = 3;
 			ASSERT_EQ(-1, Solution::coinChange(coins, amount));
 		}
 
 		TEST(coin_change, case3) {
-			vector<int> coins = {1};
-			int amount        = 0;
+			vector coins     = {1};
+			const int amount = 0;
 			ASSERT_EQ(0, Solution::coinChange(coins, amount));
 		}
 
 		TEST(coin_change, case4) {
-			vector<int> coins = {186, 419, 83, 408};
-			int amount        = 6249;
+			vector coins     = {186, 419, 83, 408};
+			const int amount = 6249;
 			ASSERT_EQ(20, Solution::coinChange(coins, amount));
 		}
 
 		TEST(coin_change, case5) {
-			vector<int> coins = {2};
-			int amount        = 3;
+			vector coins     = {2};
+			const int amount = 3;
 			ASSERT_EQ(-1, Solution::coinChange(coins, amount));
 		}
 	}// namespace coin_change
 
 	namespace integer_break {
 		TEST(integer_break, case1) {
-			int n = 2;
+			const int n = 2;
 			ASSERT_EQ(1, Solution::integerBreak(n));
 		}
 
 		TEST(integer_break, case2) {
-			int n = 10;
+			const int n = 10;
 			ASSERT_EQ(36, Solution::integerBreak(n));
 		}
 	}// namespace integer_break
