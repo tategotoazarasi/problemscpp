@@ -3167,4 +3167,36 @@ namespace leetcode {
 			ASSERT_EQ(5, Solution::minDistance(word1, word2));
 		}
 	}// namespace edit_distance
+
+	namespace coin_change {
+		TEST(coin_change, case1) {
+			vector<int> coins = {1, 2, 5};
+			int amount        = 11;
+			ASSERT_EQ(3, Solution::coinChange(coins, amount));
+		}
+
+		TEST(coin_change, case2) {
+			vector<int> coins = {2};
+			int amount        = 3;
+			ASSERT_EQ(-1, Solution::coinChange(coins, amount));
+		}
+
+		TEST(coin_change, case3) {
+			vector<int> coins = {1};
+			int amount        = 0;
+			ASSERT_EQ(0, Solution::coinChange(coins, amount));
+		}
+
+		TEST(coin_change, case4) {
+			vector<int> coins = {186, 419, 83, 408};
+			int amount        = 6249;
+			ASSERT_EQ(20, Solution::coinChange(coins, amount));
+		}
+
+		TEST(coin_change, case5) {
+			vector<int> coins = {2};
+			int amount        = 3;
+			ASSERT_EQ(-1, Solution::coinChange(coins, amount));
+		}
+	}// namespace coin_change
 }// namespace leetcode

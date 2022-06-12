@@ -6799,4 +6799,30 @@ namespace leetcode {
 			return dp.back().back();
 		}
 	}// namespace edit_distance
+
+	namespace coin_change {
+		int Solution::coinChange(vector<int> &coins, int amount) {
+			vector<int> dp(amount + 1, -1);
+			dp[0] = 0;
+			for(auto &coin: coins) {
+				if(coin <= amount) {
+					dp[coin] = 1;
+				}
+			}
+			for(unsigned i = 0; i <= amount; i++) {
+				if(dp[i] > 0) {
+					for(auto &coin: coins) {
+						if(i + coin <= static_cast<unsigned>(amount)) {
+							if(dp[i + coin] == -1) {
+								dp[i + coin] = dp[i] + 1;
+							} else {
+								dp[i + coin] = min(dp[i + coin], dp[i] + 1);
+							}
+						}
+					}
+				}
+			}
+			return dp[amount];
+		}
+	}// namespace coin_change
 }// namespace leetcode

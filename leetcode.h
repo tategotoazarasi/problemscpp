@@ -2523,6 +2523,14 @@ namespace leetcode {
 			static int minDistance(string word1, string word2);
 		};
 	}// namespace edit_distance
+
+	/// \brief 322. Coin Change
+	namespace coin_change {
+		class Solution {
+		public:
+			static int coinChange(vector<int> &coins, int amount);
+		};
+	}// namespace coin_change
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
