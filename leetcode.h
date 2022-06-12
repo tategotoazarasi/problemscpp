@@ -2515,6 +2515,14 @@ namespace leetcode {
 			static int minDistance(string word1, string word2);
 		};
 	}// namespace delete_operation_for_two_strings
+
+	/// \brief 72. Edit Distance
+	namespace edit_distance {
+		class Solution {
+		public:
+			static int minDistance(string word1, string word2);
+		};
+	}// namespace edit_distance
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

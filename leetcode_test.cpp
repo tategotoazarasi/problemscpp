@@ -3153,4 +3153,18 @@ namespace leetcode {
 			ASSERT_EQ(4, Solution::minDistance(s1, s2));
 		}
 	}// namespace delete_operation_for_two_strings
+
+	namespace edit_distance {
+		TEST(edit_distance, case1) {
+			string word1 = "horse";
+			string word2 = "ros";
+			ASSERT_EQ(3, Solution::minDistance(word1, word2));
+		}
+
+		TEST(edit_distance, case2) {
+			string word1 = "intention";
+			string word2 = "execution";
+			ASSERT_EQ(5, Solution::minDistance(word1, word2));
+		}
+	}// namespace edit_distance
 }// namespace leetcode
