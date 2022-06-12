@@ -2531,6 +2531,14 @@ namespace leetcode {
 			static int coinChange(vector<int> &coins, int amount);
 		};
 	}// namespace coin_change
+
+	/// \brief 343. Integer Break
+	namespace integer_break {
+		class Solution {
+		public:
+			static int integerBreak(int n);
+		};
+	}// namespace integer_break
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

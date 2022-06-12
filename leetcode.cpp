@@ -6825,4 +6825,23 @@ namespace leetcode {
 			return dp[amount];
 		}
 	}// namespace coin_change
+
+	namespace integer_break {
+		int Solution::integerBreak(int n) {
+			// dp[i] is the maximum product of i
+			vector<int> dp(n + 1);
+			// dp[i] = max(dp[i], dp[j] * dp[i - j])
+			dp[2] = 1;
+			dp[1] = 1;
+			for(int i = 3; i <= n; i++) {
+				for(int j = 1; j < i; j++) {
+					dp[i] = max(dp[i], dp[j] * dp[i - j]);
+					dp[i] = max(dp[i], j * dp[i - j]);
+					dp[i] = max(dp[i], dp[j] * (i - j));
+					dp[i] = max(dp[i], j * (i - j));
+				}
+			}
+			return dp[n];
+		}
+	}// namespace integer_break
 }// namespace leetcode

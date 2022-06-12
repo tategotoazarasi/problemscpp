@@ -3199,4 +3199,16 @@ namespace leetcode {
 			ASSERT_EQ(-1, Solution::coinChange(coins, amount));
 		}
 	}// namespace coin_change
+
+	namespace integer_break {
+		TEST(integer_break, case1) {
+			int n = 2;
+			ASSERT_EQ(1, Solution::integerBreak(n));
+		}
+
+		TEST(integer_break, case2) {
+			int n = 10;
+			ASSERT_EQ(36, Solution::integerBreak(n));
+		}
+	}// namespace integer_break
 }// namespace leetcode
