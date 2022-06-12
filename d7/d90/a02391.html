@@ -111,8 +111,8 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l06732">6732</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l06732" name="l06732"></a><span class="lineno"> 6732</span>                                                       {</div>
-<div class="line"><a id="l06733" name="l06733"></a><span class="lineno"> 6733</span>            <span class="keywordtype">int</span> n = nums.size();</div>
-<div class="line"><a id="l06734" name="l06734"></a><span class="lineno"> 6734</span>            vector&lt;map&lt;unsigned, unsigned&gt;&gt; dp(n, map&lt;unsigned, unsigned&gt;());<span class="comment">//dp[i][j] = number of increasing subsequence end with i, length is j</span></div>
+<div class="line"><a id="l06733" name="l06733"></a><span class="lineno"> 6733</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = nums.size();</div>
+<div class="line"><a id="l06734" name="l06734"></a><span class="lineno"> 6734</span>            vector dp(n, map&lt;unsigned, unsigned&gt;());<span class="comment">//dp[i][j] = number of increasing subsequence end with i, length is j</span></div>
 <div class="line"><a id="l06735" name="l06735"></a><span class="lineno"> 6735</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l06736" name="l06736"></a><span class="lineno"> 6736</span>                dp[i][1] = 1;</div>
 <div class="line"><a id="l06737" name="l06737"></a><span class="lineno"> 6737</span>            }</div>

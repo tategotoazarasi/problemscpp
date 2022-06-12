@@ -37,7 +37,7 @@ var searchData=
   ['mincostsettime_34',['minCostSetTime',['../d5/db3/a01751.html#ad91b39aae2018064e4f61abe046f547b',1,'leetcode::minimum_cost_to_set_cooking_time::Solution']]],
   ['mindeletion_35',['minDeletion',['../d4/d9b/a02159.html#a1bc1b49ee39d5e3bfea8fddbb9ea5921',1,'leetcode::minimum_deletions_to_make_array_beautiful::Solution']]],
   ['mindiffinbst_36',['minDiffInBST',['../dc/d5c/a02459.html#a9be648f179d413e04e25eb5a88e278bb',1,'lintcode::min_diff_in_BST::Solution']]],
-  ['mindistance_37',['minDistance',['../da/d11/a02399.html#ae261f7125665dfd8a0d5c0859678ee55',1,'leetcode::delete_operation_for_two_strings::Solution::minDistance()'],['../df/d06/a02403.html#a874af568c4ddbe8664574f205d115666',1,'leetcode::edit_distance::Solution::minDistance()']]],
+  ['mindistance_37',['minDistance',['../da/d11/a02399.html#a7a3ca92ba907e6f9a08cadabf8e56e21',1,'leetcode::delete_operation_for_two_strings::Solution::minDistance()'],['../df/d06/a02403.html#a874af568c4ddbe8664574f205d115666',1,'leetcode::edit_distance::Solution::minDistance()']]],
   ['minimalksum_38',['minimalKSum',['../de/d25/a01999.html#a83f152e8aafe1ade449b6aaba1e1e982',1,'leetcode::append_k_integers_with_minimal_sum::Solution']]],
   ['minimum_39',['minimum',['../dd/d38/a01663.html#a1a0b588ace0cb06ee11ec05daab3c47e',1,'leetcode::stock_price_fluctuation::StockPrice']]],
   ['minimumcost_40',['minimumCost',['../d2/dcc/a01623.html#a8f73bc0a9aca7cfd50a526c0dd7028b5',1,'leetcode::minimum_cost_of_buying_candies_with_discount::Solution']]],

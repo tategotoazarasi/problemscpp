@@ -114,8 +114,8 @@ $(function() {
 <div class="line"><a id="l06520" name="l06520"></a><span class="lineno"> 6520</span>            <span class="keywordflow">if</span>(nums.size() == 1) {</div>
 <div class="line"><a id="l06521" name="l06521"></a><span class="lineno"> 6521</span>                <span class="keywordflow">return</span> nums[0];</div>
 <div class="line"><a id="l06522" name="l06522"></a><span class="lineno"> 6522</span>            }</div>
-<div class="line"><a id="l06523" name="l06523"></a><span class="lineno"> 6523</span>            vector&lt;int&gt; vec1 = vector&lt;int&gt;(nums.begin(), nums.end() - 1);</div>
-<div class="line"><a id="l06524" name="l06524"></a><span class="lineno"> 6524</span>            vector&lt;int&gt; vec2 = vector&lt;int&gt;(nums.begin() + 1, nums.end());</div>
+<div class="line"><a id="l06523" name="l06523"></a><span class="lineno"> 6523</span>            <span class="keyword">auto</span> vec1 = vector(nums.begin(), nums.end() - 1);</div>
+<div class="line"><a id="l06524" name="l06524"></a><span class="lineno"> 6524</span>            <span class="keyword">auto</span> vec2 = vector(nums.begin() + 1, nums.end());</div>
 <div class="line"><a id="l06525" name="l06525"></a><span class="lineno"> 6525</span>            <span class="keywordflow">return</span> max(<a class="code hl_function" href="../../dd/d3b/a02291.html#aefd78c55e4bb4ca8b06c831d522f2f2e">house_robber::Solution::rob</a>(vec1), <a class="code hl_function" href="../../dd/d3b/a02291.html#aefd78c55e4bb4ca8b06c831d522f2f2e">house_robber::Solution::rob</a>(vec2));</div>
 <div class="line"><a id="l06526" name="l06526"></a><span class="lineno"> 6526</span>        }</div>
 <div class="ttc" id="aa02291_html_aefd78c55e4bb4ca8b06c831d522f2f2e"><div class="ttname"><a href="../../dd/d3b/a02291.html#aefd78c55e4bb4ca8b06c831d522f2f2e">leetcode::house_robber::Solution::rob</a></div><div class="ttdeci">static int rob(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06066">leetcode.cpp:6066</a></div></div>

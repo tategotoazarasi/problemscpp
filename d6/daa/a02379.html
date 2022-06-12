@@ -111,14 +111,14 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l06661">6661</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l06661" name="l06661"></a><span class="lineno"> 6661</span>                                           {</div>
-<div class="line"><a id="l06662" name="l06662"></a><span class="lineno"> 6662</span>            vector&lt;int&gt; dp(s.length(), 0);</div>
+<div class="line"><a id="l06662" name="l06662"></a><span class="lineno"> 6662</span>            vector dp(s.length(), 0);</div>
 <div class="line"><a id="l06663" name="l06663"></a><span class="lineno"> 6663</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; dp.size(); i++) {</div>
 <div class="line"><a id="l06664" name="l06664"></a><span class="lineno"> 6664</span>                <span class="keywordtype">bool</span> ok = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l06665" name="l06665"></a><span class="lineno"> 6665</span>                <span class="keywordflow">if</span>(<span class="charliteral">&#39;1&#39;</span> &lt;= s[i] &amp;&amp; s[i] &lt;= <span class="charliteral">&#39;9&#39;</span>) {</div>
 <div class="line"><a id="l06666" name="l06666"></a><span class="lineno"> 6666</span>                    dp[i] += i - 1 &gt;= 0 ? dp[i - 1] : 1;</div>
 <div class="line"><a id="l06667" name="l06667"></a><span class="lineno"> 6667</span>                    ok = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l06668" name="l06668"></a><span class="lineno"> 6668</span>                }</div>
-<div class="line"><a id="l06669" name="l06669"></a><span class="lineno"> 6669</span>                <span class="keywordflow">if</span>(i - 1 &gt;= 0 &amp;&amp; ((s[i - 1] == <span class="charliteral">&#39;1&#39;</span> &amp;&amp; <span class="charliteral">&#39;0&#39;</span> &lt;= s[i] &amp;&amp; s[i] &lt;= <span class="charliteral">&#39;9&#39;</span>) || (s[i - 1] == <span class="charliteral">&#39;2&#39;</span> &amp;&amp; <span class="charliteral">&#39;0&#39;</span> &lt;= s[i] &amp;&amp; s[i] &lt;= <span class="charliteral">&#39;6&#39;</span>))) {</div>
+<div class="line"><a id="l06669" name="l06669"></a><span class="lineno"> 6669</span>                <span class="keywordflow">if</span>(i - 1 &gt;= 0 &amp;&amp; (s[i - 1] == <span class="charliteral">&#39;1&#39;</span> &amp;&amp; <span class="charliteral">&#39;0&#39;</span> &lt;= s[i] &amp;&amp; s[i] &lt;= <span class="charliteral">&#39;9&#39;</span> || s[i - 1] == <span class="charliteral">&#39;2&#39;</span> &amp;&amp; <span class="charliteral">&#39;0&#39;</span> &lt;= s[i] &amp;&amp; s[i] &lt;= <span class="charliteral">&#39;6&#39;</span>)) {</div>
 <div class="line"><a id="l06670" name="l06670"></a><span class="lineno"> 6670</span>                    dp[i] += i - 2 &gt;= 0 ? dp[i - 2] : 1;</div>
 <div class="line"><a id="l06671" name="l06671"></a><span class="lineno"> 6671</span>                    ok = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l06672" name="l06672"></a><span class="lineno"> 6672</span>                }</div>

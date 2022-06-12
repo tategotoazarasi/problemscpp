@@ -111,7 +111,7 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l06583">6583</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l06583" name="l06583"></a><span class="lineno"> 6583</span>                                                   {</div>
-<div class="line"><a id="l06584" name="l06584"></a><span class="lineno"> 6584</span>            <span class="keywordtype">int</span> n = s.size();</div>
+<div class="line"><a id="l06584" name="l06584"></a><span class="lineno"> 6584</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = s.size();</div>
 <div class="line"><a id="l06585" name="l06585"></a><span class="lineno"> 6585</span>            <span class="keywordflow">if</span>(n &lt; 2) {</div>
 <div class="line"><a id="l06586" name="l06586"></a><span class="lineno"> 6586</span>                <span class="keywordflow">return</span> s;</div>
 <div class="line"><a id="l06587" name="l06587"></a><span class="lineno"> 6587</span>            }</div>
@@ -119,10 +119,10 @@ $(function() {
 <div class="line"><a id="l06589" name="l06589"></a><span class="lineno"> 6589</span>            <span class="keywordtype">int</span> maxLen = 1;</div>
 <div class="line"><a id="l06590" name="l06590"></a><span class="lineno"> 6590</span>            <span class="keywordtype">int</span> begin  = 0;</div>
 <div class="line"><a id="l06591" name="l06591"></a><span class="lineno"> 6591</span>            <span class="comment">// dp[i][j] 表示 s[i..j] 是否是回文串</span></div>
-<div class="line"><a id="l06592" name="l06592"></a><span class="lineno"> 6592</span>            vector&lt;vector&lt;int&gt;&gt; dp(n, vector&lt;int&gt;(n));</div>
+<div class="line"><a id="l06592" name="l06592"></a><span class="lineno"> 6592</span>            vector dp(n, vector&lt;int&gt;(n));</div>
 <div class="line"><a id="l06593" name="l06593"></a><span class="lineno"> 6593</span>            <span class="comment">// 初始化：所有长度为 1 的子串都是回文串</span></div>
 <div class="line"><a id="l06594" name="l06594"></a><span class="lineno"> 6594</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l06595" name="l06595"></a><span class="lineno"> 6595</span>                dp[i][i] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l06595" name="l06595"></a><span class="lineno"> 6595</span>                dp[i][i] = 1;</div>
 <div class="line"><a id="l06596" name="l06596"></a><span class="lineno"> 6596</span>            }</div>
 <div class="line"><a id="l06597" name="l06597"></a><span class="lineno"> 6597</span>            <span class="comment">// 递推开始</span></div>
 <div class="line"><a id="l06598" name="l06598"></a><span class="lineno"> 6598</span>            <span class="comment">// 先枚举子串长度</span></div>
@@ -130,24 +130,24 @@ $(function() {
 <div class="line"><a id="l06600" name="l06600"></a><span class="lineno"> 6600</span>                <span class="comment">// 枚举左边界，左边界的上限设置可以宽松一些</span></div>
 <div class="line"><a id="l06601" name="l06601"></a><span class="lineno"> 6601</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l06602" name="l06602"></a><span class="lineno"> 6602</span>                    <span class="comment">// 由 L 和 i 可以确定右边界，即 j - i + 1 = L 得</span></div>
-<div class="line"><a id="l06603" name="l06603"></a><span class="lineno"> 6603</span>                    <span class="keywordtype">int</span> j = L + i - 1;</div>
+<div class="line"><a id="l06603" name="l06603"></a><span class="lineno"> 6603</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> j = L + i - 1;</div>
 <div class="line"><a id="l06604" name="l06604"></a><span class="lineno"> 6604</span>                    <span class="comment">// 如果右边界越界，就可以退出当前循环</span></div>
 <div class="line"><a id="l06605" name="l06605"></a><span class="lineno"> 6605</span>                    <span class="keywordflow">if</span>(j &gt;= n) {</div>
 <div class="line"><a id="l06606" name="l06606"></a><span class="lineno"> 6606</span>                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l06607" name="l06607"></a><span class="lineno"> 6607</span>                    }</div>
 <div class="line"><a id="l06608" name="l06608"></a><span class="lineno"> 6608</span> </div>
 <div class="line"><a id="l06609" name="l06609"></a><span class="lineno"> 6609</span>                    <span class="keywordflow">if</span>(s[i] != s[j]) {</div>
-<div class="line"><a id="l06610" name="l06610"></a><span class="lineno"> 6610</span>                        dp[i][j] = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l06610" name="l06610"></a><span class="lineno"> 6610</span>                        dp[i][j] = 0;</div>
 <div class="line"><a id="l06611" name="l06611"></a><span class="lineno"> 6611</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l06612" name="l06612"></a><span class="lineno"> 6612</span>                        <span class="keywordflow">if</span>(j - i &lt; 3) {</div>
-<div class="line"><a id="l06613" name="l06613"></a><span class="lineno"> 6613</span>                            dp[i][j] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l06613" name="l06613"></a><span class="lineno"> 6613</span>                            dp[i][j] = 1;</div>
 <div class="line"><a id="l06614" name="l06614"></a><span class="lineno"> 6614</span>                        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l06615" name="l06615"></a><span class="lineno"> 6615</span>                            dp[i][j] = dp[i + 1][j - 1];</div>
 <div class="line"><a id="l06616" name="l06616"></a><span class="lineno"> 6616</span>                        }</div>
 <div class="line"><a id="l06617" name="l06617"></a><span class="lineno"> 6617</span>                    }</div>
 <div class="line"><a id="l06618" name="l06618"></a><span class="lineno"> 6618</span> </div>
 <div class="line"><a id="l06619" name="l06619"></a><span class="lineno"> 6619</span>                    <span class="comment">// 只要 dp[i][L] == true 成立，就表示子串 s[i..L] 是回文，此时记录回文长度和起始位置</span></div>
-<div class="line"><a id="l06620" name="l06620"></a><span class="lineno"> 6620</span>                    <span class="keywordflow">if</span>(dp[i][j] &amp;&amp; j - i + 1 &gt; maxLen) {</div>
+<div class="line"><a id="l06620" name="l06620"></a><span class="lineno"> 6620</span>                    <span class="keywordflow">if</span>((dp[i][j] != 0) &amp;&amp; j - i + 1 &gt; maxLen) {</div>
 <div class="line"><a id="l06621" name="l06621"></a><span class="lineno"> 6621</span>                        maxLen = j - i + 1;</div>
 <div class="line"><a id="l06622" name="l06622"></a><span class="lineno"> 6622</span>                        begin  = i;</div>
 <div class="line"><a id="l06623" name="l06623"></a><span class="lineno"> 6623</span>                    }</div>

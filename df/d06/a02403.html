@@ -122,7 +122,7 @@ $(function() {
 <p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l06780">6780</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l06780" name="l06780"></a><span class="lineno"> 6780</span>                                                            {</div>
 <div class="line"><a id="l06781" name="l06781"></a><span class="lineno"> 6781</span>            <span class="comment">// dp[i][j] is the minimum number of operations required to convert word1[0..i] to word2[0..j]</span></div>
-<div class="line"><a id="l06782" name="l06782"></a><span class="lineno"> 6782</span>            vector&lt;vector&lt;int&gt;&gt; dp(word1.length() + 1, vector&lt;int&gt;(word2.length() + 1));</div>
+<div class="line"><a id="l06782" name="l06782"></a><span class="lineno"> 6782</span>            vector dp(word1.length() + 1, vector&lt;int&gt;(word2.length() + 1));</div>
 <div class="line"><a id="l06783" name="l06783"></a><span class="lineno"> 6783</span>            <span class="comment">// if word[i] == word2[j], dp[i][j] = dp[i-1][j-1]; else dp[i][j] = min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1</span></div>
 <div class="line"><a id="l06784" name="l06784"></a><span class="lineno"> 6784</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt;= word2.length(); j++) {</div>
 <div class="line"><a id="l06785" name="l06785"></a><span class="lineno"> 6785</span>                dp[0][j] = j;</div>

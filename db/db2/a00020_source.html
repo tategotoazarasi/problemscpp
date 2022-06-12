@@ -6575,15 +6575,15 @@ $(function() {
 <div class="line"><a id="l06520" name="l06520"></a><span class="lineno"> 6520</span>            <span class="keywordflow">if</span>(nums.size() == 1) {</div>
 <div class="line"><a id="l06521" name="l06521"></a><span class="lineno"> 6521</span>                <span class="keywordflow">return</span> nums[0];</div>
 <div class="line"><a id="l06522" name="l06522"></a><span class="lineno"> 6522</span>            }</div>
-<div class="line"><a id="l06523" name="l06523"></a><span class="lineno"> 6523</span>            vector&lt;int&gt; vec1 = vector&lt;int&gt;(nums.begin(), nums.end() - 1);</div>
-<div class="line"><a id="l06524" name="l06524"></a><span class="lineno"> 6524</span>            vector&lt;int&gt; vec2 = vector&lt;int&gt;(nums.begin() + 1, nums.end());</div>
+<div class="line"><a id="l06523" name="l06523"></a><span class="lineno"> 6523</span>            <span class="keyword">auto</span> vec1 = vector(nums.begin(), nums.end() - 1);</div>
+<div class="line"><a id="l06524" name="l06524"></a><span class="lineno"> 6524</span>            <span class="keyword">auto</span> vec2 = vector(nums.begin() + 1, nums.end());</div>
 <div class="line"><a id="l06525" name="l06525"></a><span class="lineno"> 6525</span>            <span class="keywordflow">return</span> max(<a class="code hl_function" href="../../dd/d3b/a02291.html#aefd78c55e4bb4ca8b06c831d522f2f2e">house_robber::Solution::rob</a>(vec1), <a class="code hl_function" href="../../dd/d3b/a02291.html#aefd78c55e4bb4ca8b06c831d522f2f2e">house_robber::Solution::rob</a>(vec2));</div>
 <div class="line"><a id="l06526" name="l06526"></a><span class="lineno"> 6526</span>        }</div>
 <div class="line"><a id="l06527" name="l06527"></a><span class="lineno"> 6527</span>    }<span class="comment">// namespace house_robber_ii</span></div>
 <div class="line"><a id="l06528" name="l06528"></a><span class="lineno"> 6528</span> </div>
 <div class="line"><a id="l06529" name="l06529"></a><span class="lineno"><a class="line" href="../../df/d03/a00348.html"> 6529</a></span>    <span class="keyword">namespace </span>jump_game {</div>
 <div class="line"><a id="l06530" name="l06530"></a><span class="lineno"><a class="line" href="../../d4/d8c/a02359.html#a9a2676507e1040aab2d77f525c367ba5"> 6530</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d4/d8c/a02359.html#a9a2676507e1040aab2d77f525c367ba5">Solution::canJump</a>(vector&lt;int&gt; &amp;nums) {</div>
-<div class="line"><a id="l06531" name="l06531"></a><span class="lineno"> 6531</span>            vector&lt;bool&gt; can(nums.size(), <span class="keyword">false</span>);</div>
+<div class="line"><a id="l06531" name="l06531"></a><span class="lineno"> 6531</span>            vector can(nums.size(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l06532" name="l06532"></a><span class="lineno"> 6532</span>            can[0]   = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l06533" name="l06533"></a><span class="lineno"> 6533</span>            <span class="keywordtype">int</span> last = 0;</div>
 <div class="line"><a id="l06534" name="l06534"></a><span class="lineno"> 6534</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nums.size(); i++) {</div>
@@ -6600,9 +6600,9 @@ $(function() {
 <div class="line"><a id="l06545" name="l06545"></a><span class="lineno"> 6545</span> </div>
 <div class="line"><a id="l06546" name="l06546"></a><span class="lineno"><a class="line" href="../../d7/dfc/a00349.html"> 6546</a></span>    <span class="keyword">namespace </span>jump_game_ii {</div>
 <div class="line"><a id="l06547" name="l06547"></a><span class="lineno"><a class="line" href="../../d9/d27/a02363.html#ab1ee6e042a177b1b8781e11eca9893a6"> 6547</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d9/d27/a02363.html#ab1ee6e042a177b1b8781e11eca9893a6">Solution::jump</a>(vector&lt;int&gt; &amp;nums) {</div>
-<div class="line"><a id="l06548" name="l06548"></a><span class="lineno"> 6548</span>            <span class="keywordtype">int</span> n    = nums.size();</div>
-<div class="line"><a id="l06549" name="l06549"></a><span class="lineno"> 6549</span>            <span class="keywordtype">int</span> ans  = 0;</div>
-<div class="line"><a id="l06550" name="l06550"></a><span class="lineno"> 6550</span>            <span class="keywordtype">int</span> last = n - 1;</div>
+<div class="line"><a id="l06548" name="l06548"></a><span class="lineno"> 6548</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = nums.size();</div>
+<div class="line"><a id="l06549" name="l06549"></a><span class="lineno"> 6549</span>            <span class="keywordtype">int</span> ans     = 0;</div>
+<div class="line"><a id="l06550" name="l06550"></a><span class="lineno"> 6550</span>            <span class="keywordtype">int</span> last    = n - 1;</div>
 <div class="line"><a id="l06551" name="l06551"></a><span class="lineno"> 6551</span>            <span class="keywordflow">while</span>(last != 0) {</div>
 <div class="line"><a id="l06552" name="l06552"></a><span class="lineno"> 6552</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l06553" name="l06553"></a><span class="lineno"> 6553</span>                    <span class="keywordflow">if</span>(i + nums[i] &gt;= last) {</div>
@@ -6618,7 +6618,7 @@ $(function() {
 <div class="line"><a id="l06563" name="l06563"></a><span class="lineno"> 6563</span> </div>
 <div class="line"><a id="l06564" name="l06564"></a><span class="lineno"><a class="line" href="../../db/d10/a00350.html"> 6564</a></span>    <span class="keyword">namespace </span>unique_paths {</div>
 <div class="line"><a id="l06565" name="l06565"></a><span class="lineno"><a class="line" href="../../d2/daa/a02367.html#a30c24bdc68edd039c08e4c9522b8babc"> 6565</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d2/daa/a02367.html#a30c24bdc68edd039c08e4c9522b8babc">Solution::uniquePaths</a>(<span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n) {</div>
-<div class="line"><a id="l06566" name="l06566"></a><span class="lineno"> 6566</span>            vector&lt;vector&lt;int&gt;&gt; dp(m, vector&lt;int&gt;(n, 0));</div>
+<div class="line"><a id="l06566" name="l06566"></a><span class="lineno"> 6566</span>            vector dp(m, vector(n, 0));</div>
 <div class="line"><a id="l06567" name="l06567"></a><span class="lineno"> 6567</span>            dp[m - 1][n - 1] = 1;</div>
 <div class="line"><a id="l06568" name="l06568"></a><span class="lineno"> 6568</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = m - 1; i &gt;= 0; i--) {</div>
 <div class="line"><a id="l06569" name="l06569"></a><span class="lineno"> 6569</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = n - 1; j &gt;= 0; j--) {</div>
@@ -6636,7 +6636,7 @@ $(function() {
 <div class="line"><a id="l06581" name="l06581"></a><span class="lineno"> 6581</span> </div>
 <div class="line"><a id="l06582" name="l06582"></a><span class="lineno"><a class="line" href="../../d0/d48/a00351.html"> 6582</a></span>    <span class="keyword">namespace </span>longest_palindromic_substring {</div>
 <div class="line"><a id="l06583" name="l06583"></a><span class="lineno"><a class="line" href="../../d4/dcc/a02371.html#a717064618d0a81a2c64e3cf5e3c3fbf4"> 6583</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="../../d4/dcc/a02371.html#a717064618d0a81a2c64e3cf5e3c3fbf4">Solution::longestPalindrome</a>(<span class="keywordtype">string</span> s) {</div>
-<div class="line"><a id="l06584" name="l06584"></a><span class="lineno"> 6584</span>            <span class="keywordtype">int</span> n = s.size();</div>
+<div class="line"><a id="l06584" name="l06584"></a><span class="lineno"> 6584</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = s.size();</div>
 <div class="line"><a id="l06585" name="l06585"></a><span class="lineno"> 6585</span>            <span class="keywordflow">if</span>(n &lt; 2) {</div>
 <div class="line"><a id="l06586" name="l06586"></a><span class="lineno"> 6586</span>                <span class="keywordflow">return</span> s;</div>
 <div class="line"><a id="l06587" name="l06587"></a><span class="lineno"> 6587</span>            }</div>
@@ -6644,10 +6644,10 @@ $(function() {
 <div class="line"><a id="l06589" name="l06589"></a><span class="lineno"> 6589</span>            <span class="keywordtype">int</span> maxLen = 1;</div>
 <div class="line"><a id="l06590" name="l06590"></a><span class="lineno"> 6590</span>            <span class="keywordtype">int</span> begin  = 0;</div>
 <div class="line"><a id="l06591" name="l06591"></a><span class="lineno"> 6591</span>            <span class="comment">// dp[i][j] 表示 s[i..j] 是否是回文串</span></div>
-<div class="line"><a id="l06592" name="l06592"></a><span class="lineno"> 6592</span>            vector&lt;vector&lt;int&gt;&gt; dp(n, vector&lt;int&gt;(n));</div>
+<div class="line"><a id="l06592" name="l06592"></a><span class="lineno"> 6592</span>            vector dp(n, vector&lt;int&gt;(n));</div>
 <div class="line"><a id="l06593" name="l06593"></a><span class="lineno"> 6593</span>            <span class="comment">// 初始化：所有长度为 1 的子串都是回文串</span></div>
 <div class="line"><a id="l06594" name="l06594"></a><span class="lineno"> 6594</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l06595" name="l06595"></a><span class="lineno"> 6595</span>                dp[i][i] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l06595" name="l06595"></a><span class="lineno"> 6595</span>                dp[i][i] = 1;</div>
 <div class="line"><a id="l06596" name="l06596"></a><span class="lineno"> 6596</span>            }</div>
 <div class="line"><a id="l06597" name="l06597"></a><span class="lineno"> 6597</span>            <span class="comment">// 递推开始</span></div>
 <div class="line"><a id="l06598" name="l06598"></a><span class="lineno"> 6598</span>            <span class="comment">// 先枚举子串长度</span></div>
@@ -6655,24 +6655,24 @@ $(function() {
 <div class="line"><a id="l06600" name="l06600"></a><span class="lineno"> 6600</span>                <span class="comment">// 枚举左边界，左边界的上限设置可以宽松一些</span></div>
 <div class="line"><a id="l06601" name="l06601"></a><span class="lineno"> 6601</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l06602" name="l06602"></a><span class="lineno"> 6602</span>                    <span class="comment">// 由 L 和 i 可以确定右边界，即 j - i + 1 = L 得</span></div>
-<div class="line"><a id="l06603" name="l06603"></a><span class="lineno"> 6603</span>                    <span class="keywordtype">int</span> j = L + i - 1;</div>
+<div class="line"><a id="l06603" name="l06603"></a><span class="lineno"> 6603</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> j = L + i - 1;</div>
 <div class="line"><a id="l06604" name="l06604"></a><span class="lineno"> 6604</span>                    <span class="comment">// 如果右边界越界，就可以退出当前循环</span></div>
 <div class="line"><a id="l06605" name="l06605"></a><span class="lineno"> 6605</span>                    <span class="keywordflow">if</span>(j &gt;= n) {</div>
 <div class="line"><a id="l06606" name="l06606"></a><span class="lineno"> 6606</span>                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l06607" name="l06607"></a><span class="lineno"> 6607</span>                    }</div>
 <div class="line"><a id="l06608" name="l06608"></a><span class="lineno"> 6608</span> </div>
 <div class="line"><a id="l06609" name="l06609"></a><span class="lineno"> 6609</span>                    <span class="keywordflow">if</span>(s[i] != s[j]) {</div>
-<div class="line"><a id="l06610" name="l06610"></a><span class="lineno"> 6610</span>                        dp[i][j] = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l06610" name="l06610"></a><span class="lineno"> 6610</span>                        dp[i][j] = 0;</div>
 <div class="line"><a id="l06611" name="l06611"></a><span class="lineno"> 6611</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l06612" name="l06612"></a><span class="lineno"> 6612</span>                        <span class="keywordflow">if</span>(j - i &lt; 3) {</div>
-<div class="line"><a id="l06613" name="l06613"></a><span class="lineno"> 6613</span>                            dp[i][j] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l06613" name="l06613"></a><span class="lineno"> 6613</span>                            dp[i][j] = 1;</div>
 <div class="line"><a id="l06614" name="l06614"></a><span class="lineno"> 6614</span>                        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l06615" name="l06615"></a><span class="lineno"> 6615</span>                            dp[i][j] = dp[i + 1][j - 1];</div>
 <div class="line"><a id="l06616" name="l06616"></a><span class="lineno"> 6616</span>                        }</div>
 <div class="line"><a id="l06617" name="l06617"></a><span class="lineno"> 6617</span>                    }</div>
 <div class="line"><a id="l06618" name="l06618"></a><span class="lineno"> 6618</span> </div>
 <div class="line"><a id="l06619" name="l06619"></a><span class="lineno"> 6619</span>                    <span class="comment">// 只要 dp[i][L] == true 成立，就表示子串 s[i..L] 是回文，此时记录回文长度和起始位置</span></div>
-<div class="line"><a id="l06620" name="l06620"></a><span class="lineno"> 6620</span>                    <span class="keywordflow">if</span>(dp[i][j] &amp;&amp; j - i + 1 &gt; maxLen) {</div>
+<div class="line"><a id="l06620" name="l06620"></a><span class="lineno"> 6620</span>                    <span class="keywordflow">if</span>((dp[i][j] != 0) &amp;&amp; j - i + 1 &gt; maxLen) {</div>
 <div class="line"><a id="l06621" name="l06621"></a><span class="lineno"> 6621</span>                        maxLen = j - i + 1;</div>
 <div class="line"><a id="l06622" name="l06622"></a><span class="lineno"> 6622</span>                        begin  = i;</div>
 <div class="line"><a id="l06623" name="l06623"></a><span class="lineno"> 6623</span>                    }</div>
@@ -6684,7 +6684,7 @@ $(function() {
 <div class="line"><a id="l06629" name="l06629"></a><span class="lineno"> 6629</span> </div>
 <div class="line"><a id="l06630" name="l06630"></a><span class="lineno"><a class="line" href="../../d6/d9c/a00352.html"> 6630</a></span>    <span class="keyword">namespace </span>arithmetic_slices {</div>
 <div class="line"><a id="l06631" name="l06631"></a><span class="lineno"><a class="line" href="../../d6/dd7/a02375.html#ab945e1b31d4e743406174e575166fcf4"> 6631</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d6/dd7/a02375.html#ab945e1b31d4e743406174e575166fcf4">Solution::numberOfArithmeticSlices</a>(vector&lt;int&gt; &amp;nums) {</div>
-<div class="line"><a id="l06632" name="l06632"></a><span class="lineno"> 6632</span>            <span class="keywordtype">int</span> n = nums.size();</div>
+<div class="line"><a id="l06632" name="l06632"></a><span class="lineno"> 6632</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = nums.size();</div>
 <div class="line"><a id="l06633" name="l06633"></a><span class="lineno"> 6633</span>            vector&lt;int&gt; diff(n - 1);</div>
 <div class="line"><a id="l06634" name="l06634"></a><span class="lineno"> 6634</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n - 1; i++) {</div>
 <div class="line"><a id="l06635" name="l06635"></a><span class="lineno"> 6635</span>                diff[i] = nums[i + 1] - nums[i];</div>
@@ -6703,7 +6703,7 @@ $(function() {
 <div class="line"><a id="l06648" name="l06648"></a><span class="lineno"> 6648</span>            }</div>
 <div class="line"><a id="l06649" name="l06649"></a><span class="lineno"> 6649</span>            consecutive.emplace_back(cnt);</div>
 <div class="line"><a id="l06650" name="l06650"></a><span class="lineno"> 6650</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l06651" name="l06651"></a><span class="lineno"> 6651</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> num: consecutive) {</div>
+<div class="line"><a id="l06651" name="l06651"></a><span class="lineno"> 6651</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> num: consecutive) {</div>
 <div class="line"><a id="l06652" name="l06652"></a><span class="lineno"> 6652</span>                <span class="keywordflow">if</span>(num &gt;= 2) {</div>
 <div class="line"><a id="l06653" name="l06653"></a><span class="lineno"> 6653</span>                    ans += (num - 1) * num / 2;</div>
 <div class="line"><a id="l06654" name="l06654"></a><span class="lineno"> 6654</span>                }</div>
@@ -6714,14 +6714,14 @@ $(function() {
 <div class="line"><a id="l06659" name="l06659"></a><span class="lineno"> 6659</span> </div>
 <div class="line"><a id="l06660" name="l06660"></a><span class="lineno"><a class="line" href="../../db/ddc/a00353.html"> 6660</a></span>    <span class="keyword">namespace </span>decode_ways {</div>
 <div class="line"><a id="l06661" name="l06661"></a><span class="lineno"><a class="line" href="../../d6/daa/a02379.html#ae8ede7560768293afa354fbdbcd072e5"> 6661</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d6/daa/a02379.html#ae8ede7560768293afa354fbdbcd072e5">Solution::numDecodings</a>(<span class="keywordtype">string</span> s) {</div>
-<div class="line"><a id="l06662" name="l06662"></a><span class="lineno"> 6662</span>            vector&lt;int&gt; dp(s.length(), 0);</div>
+<div class="line"><a id="l06662" name="l06662"></a><span class="lineno"> 6662</span>            vector dp(s.length(), 0);</div>
 <div class="line"><a id="l06663" name="l06663"></a><span class="lineno"> 6663</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; dp.size(); i++) {</div>
 <div class="line"><a id="l06664" name="l06664"></a><span class="lineno"> 6664</span>                <span class="keywordtype">bool</span> ok = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l06665" name="l06665"></a><span class="lineno"> 6665</span>                <span class="keywordflow">if</span>(<span class="charliteral">&#39;1&#39;</span> &lt;= s[i] &amp;&amp; s[i] &lt;= <span class="charliteral">&#39;9&#39;</span>) {</div>
 <div class="line"><a id="l06666" name="l06666"></a><span class="lineno"> 6666</span>                    dp[i] += i - 1 &gt;= 0 ? dp[i - 1] : 1;</div>
 <div class="line"><a id="l06667" name="l06667"></a><span class="lineno"> 6667</span>                    ok = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l06668" name="l06668"></a><span class="lineno"> 6668</span>                }</div>
-<div class="line"><a id="l06669" name="l06669"></a><span class="lineno"> 6669</span>                <span class="keywordflow">if</span>(i - 1 &gt;= 0 &amp;&amp; ((s[i - 1] == <span class="charliteral">&#39;1&#39;</span> &amp;&amp; <span class="charliteral">&#39;0&#39;</span> &lt;= s[i] &amp;&amp; s[i] &lt;= <span class="charliteral">&#39;9&#39;</span>) || (s[i - 1] == <span class="charliteral">&#39;2&#39;</span> &amp;&amp; <span class="charliteral">&#39;0&#39;</span> &lt;= s[i] &amp;&amp; s[i] &lt;= <span class="charliteral">&#39;6&#39;</span>))) {</div>
+<div class="line"><a id="l06669" name="l06669"></a><span class="lineno"> 6669</span>                <span class="keywordflow">if</span>(i - 1 &gt;= 0 &amp;&amp; (s[i - 1] == <span class="charliteral">&#39;1&#39;</span> &amp;&amp; <span class="charliteral">&#39;0&#39;</span> &lt;= s[i] &amp;&amp; s[i] &lt;= <span class="charliteral">&#39;9&#39;</span> || s[i - 1] == <span class="charliteral">&#39;2&#39;</span> &amp;&amp; <span class="charliteral">&#39;0&#39;</span> &lt;= s[i] &amp;&amp; s[i] &lt;= <span class="charliteral">&#39;6&#39;</span>)) {</div>
 <div class="line"><a id="l06670" name="l06670"></a><span class="lineno"> 6670</span>                    dp[i] += i - 2 &gt;= 0 ? dp[i - 2] : 1;</div>
 <div class="line"><a id="l06671" name="l06671"></a><span class="lineno"> 6671</span>                    ok = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l06672" name="l06672"></a><span class="lineno"> 6672</span>                }</div>
@@ -6734,16 +6734,16 @@ $(function() {
 <div class="line"><a id="l06679" name="l06679"></a><span class="lineno"> 6679</span>    }<span class="comment">// namespace decode_ways</span></div>
 <div class="line"><a id="l06680" name="l06680"></a><span class="lineno"> 6680</span> </div>
 <div class="line"><a id="l06681" name="l06681"></a><span class="lineno"><a class="line" href="../../d0/dc3/a00354.html"> 6681</a></span>    <span class="keyword">namespace </span>word_break {</div>
-<div class="line"><a id="l06682" name="l06682"></a><span class="lineno"><a class="line" href="../../db/dd4/a02383.html#aacd8672416bd865d5a9a631b5774ea3e"> 6682</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/a02383.html#aacd8672416bd865d5a9a631b5774ea3e">Solution::wordBreak</a>(<span class="keywordtype">string</span> s, vector&lt;string&gt; &amp;wordDict) {</div>
-<div class="line"><a id="l06683" name="l06683"></a><span class="lineno"> 6683</span>            vector&lt;bool&gt; end(s.length(), <span class="keyword">false</span>);</div>
+<div class="line"><a id="l06682" name="l06682"></a><span class="lineno"><a class="line" href="../../db/dd4/a02383.html#aee6a9a9a9345c714dbbe6a03d44d5694"> 6682</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dd4/a02383.html#aee6a9a9a9345c714dbbe6a03d44d5694">Solution::wordBreak</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;s, vector&lt;string&gt; &amp;wordDict) {</div>
+<div class="line"><a id="l06683" name="l06683"></a><span class="lineno"> 6683</span>            vector end(s.length(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l06684" name="l06684"></a><span class="lineno"> 6684</span>            <a class="code hl_struct" href="../../d7/dc1/a02963.html">TrieNode</a> tn(0);</div>
 <div class="line"><a id="l06685" name="l06685"></a><span class="lineno"> 6685</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;word: wordDict) {</div>
 <div class="line"><a id="l06686" name="l06686"></a><span class="lineno"> 6686</span>                tn.<a class="code hl_function" href="../../d7/dc1/a02963.html#a9845dc41b755ffd1e9c7e2acc08893f2">insert</a>(word);</div>
 <div class="line"><a id="l06687" name="l06687"></a><span class="lineno"> 6687</span>            }</div>
-<div class="line"><a id="l06688" name="l06688"></a><span class="lineno"> 6688</span>            <a class="code hl_function" href="../../db/dd4/a02383.html#aec049a681944cfaf35caa17fbb6c83bb">search</a>(&amp;tn, s, 0, end);</div>
+<div class="line"><a id="l06688" name="l06688"></a><span class="lineno"> 6688</span>            <a class="code hl_function" href="../../db/dd4/a02383.html#a83bb5eed1d4805fa9a25155f6255060a">search</a>(&amp;tn, s, 0, end);</div>
 <div class="line"><a id="l06689" name="l06689"></a><span class="lineno"> 6689</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; s.length(); i++) {</div>
 <div class="line"><a id="l06690" name="l06690"></a><span class="lineno"> 6690</span>                <span class="keywordflow">if</span>(end[i - 1]) {</div>
-<div class="line"><a id="l06691" name="l06691"></a><span class="lineno"> 6691</span>                    <a class="code hl_function" href="../../db/dd4/a02383.html#aec049a681944cfaf35caa17fbb6c83bb">search</a>(&amp;tn, s, i, end);</div>
+<div class="line"><a id="l06691" name="l06691"></a><span class="lineno"> 6691</span>                    <a class="code hl_function" href="../../db/dd4/a02383.html#a83bb5eed1d4805fa9a25155f6255060a">search</a>(&amp;tn, s, i, end);</div>
 <div class="line"><a id="l06692" name="l06692"></a><span class="lineno"> 6692</span>                    <span class="keywordflow">if</span>(end.back()) {</div>
 <div class="line"><a id="l06693" name="l06693"></a><span class="lineno"> 6693</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l06694" name="l06694"></a><span class="lineno"> 6694</span>                    }</div>
@@ -6752,8 +6752,8 @@ $(function() {
 <div class="line"><a id="l06697" name="l06697"></a><span class="lineno"> 6697</span>            <span class="keywordflow">return</span> end.back();</div>
 <div class="line"><a id="l06698" name="l06698"></a><span class="lineno"> 6698</span>        }</div>
 <div class="line"><a id="l06699" name="l06699"></a><span class="lineno"> 6699</span> </div>
-<div class="line"><a id="l06700" name="l06700"></a><span class="lineno"><a class="line" href="../../db/dd4/a02383.html#aec049a681944cfaf35caa17fbb6c83bb"> 6700</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/dd4/a02383.html#aec049a681944cfaf35caa17fbb6c83bb">Solution::search</a>(<a class="code hl_struct" href="../../d7/dc1/a02963.html">TrieNode</a> <span class="keyword">const</span> *tn, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;s, <span class="keywordtype">int</span> i, vector&lt;bool&gt; &amp;end) {</div>
-<div class="line"><a id="l06701" name="l06701"></a><span class="lineno"> 6701</span>            <a class="code hl_struct" href="../../d7/dc1/a02963.html">TrieNode</a> <span class="keyword">const</span> *node = tn;</div>
+<div class="line"><a id="l06700" name="l06700"></a><span class="lineno"><a class="line" href="../../db/dd4/a02383.html#a83bb5eed1d4805fa9a25155f6255060a"> 6700</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/dd4/a02383.html#a83bb5eed1d4805fa9a25155f6255060a">Solution::search</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d7/dc1/a02963.html">TrieNode</a> *tn, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;s, <span class="keywordtype">int</span> i, vector&lt;bool&gt; &amp;end) {</div>
+<div class="line"><a id="l06701" name="l06701"></a><span class="lineno"> 6701</span>            <span class="keyword">const</span> <a class="code hl_struct" href="../../d7/dc1/a02963.html">TrieNode</a> *node = tn;</div>
 <div class="line"><a id="l06702" name="l06702"></a><span class="lineno"> 6702</span>            <span class="keywordflow">for</span>(; i &lt; s.length(); i++) {</div>
 <div class="line"><a id="l06703" name="l06703"></a><span class="lineno"> 6703</span>                node = node-&gt;<a class="code hl_variable" href="../../d7/dc1/a02963.html#a07d53b17d0b024afcbabb556c9964bbd">nexts</a>[s[i] - <span class="charliteral">&#39;a&#39;</span>];</div>
 <div class="line"><a id="l06704" name="l06704"></a><span class="lineno"> 6704</span>                <span class="keywordflow">if</span>(node == <span class="keyword">nullptr</span>) {</div>
@@ -6768,9 +6768,9 @@ $(function() {
 <div class="line"><a id="l06713" name="l06713"></a><span class="lineno"> 6713</span> </div>
 <div class="line"><a id="l06714" name="l06714"></a><span class="lineno"><a class="line" href="../../d3/dc9/a00355.html"> 6714</a></span>    <span class="keyword">namespace </span>longest_increasing_subsequence {</div>
 <div class="line"><a id="l06715" name="l06715"></a><span class="lineno"><a class="line" href="../../d8/deb/a02387.html#a9e0e01e8abab9c10748f1ae1ed3c77c4"> 6715</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d8/deb/a02387.html#a9e0e01e8abab9c10748f1ae1ed3c77c4">Solution::lengthOfLIS</a>(vector&lt;int&gt; &amp;nums) {</div>
-<div class="line"><a id="l06716" name="l06716"></a><span class="lineno"> 6716</span>            <span class="keywordtype">int</span> n   = nums.size();</div>
-<div class="line"><a id="l06717" name="l06717"></a><span class="lineno"> 6717</span>            <span class="keywordtype">int</span> ans = 1;</div>
-<div class="line"><a id="l06718" name="l06718"></a><span class="lineno"> 6718</span>            vector&lt;int&gt; dp(n, 1);<span class="comment">//length of longest increasing subsequence end with i</span></div>
+<div class="line"><a id="l06716" name="l06716"></a><span class="lineno"> 6716</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = nums.size();</div>
+<div class="line"><a id="l06717" name="l06717"></a><span class="lineno"> 6717</span>            <span class="keywordtype">int</span> ans     = 1;</div>
+<div class="line"><a id="l06718" name="l06718"></a><span class="lineno"> 6718</span>            vector dp(n, 1);<span class="comment">//length of longest increasing subsequence end with i</span></div>
 <div class="line"><a id="l06719" name="l06719"></a><span class="lineno"> 6719</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l06720" name="l06720"></a><span class="lineno"> 6720</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i + 1; j &lt; n; j++) {</div>
 <div class="line"><a id="l06721" name="l06721"></a><span class="lineno"> 6721</span>                    <span class="keywordflow">if</span>(nums[j] &gt; nums[i]) {</div>
@@ -6785,8 +6785,8 @@ $(function() {
 <div class="line"><a id="l06730" name="l06730"></a><span class="lineno"> 6730</span> </div>
 <div class="line"><a id="l06731" name="l06731"></a><span class="lineno"><a class="line" href="../../d6/de1/a00356.html"> 6731</a></span>    <span class="keyword">namespace </span>number_of_longest_increasing_subsequence {</div>
 <div class="line"><a id="l06732" name="l06732"></a><span class="lineno"><a class="line" href="../../d7/d90/a02391.html#a4b6af9799eec313f937bc5006af09c27"> 6732</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d7/d90/a02391.html#a4b6af9799eec313f937bc5006af09c27">Solution::findNumberOfLIS</a>(vector&lt;int&gt; &amp;nums) {</div>
-<div class="line"><a id="l06733" name="l06733"></a><span class="lineno"> 6733</span>            <span class="keywordtype">int</span> n = nums.size();</div>
-<div class="line"><a id="l06734" name="l06734"></a><span class="lineno"> 6734</span>            vector&lt;map&lt;unsigned, unsigned&gt;&gt; dp(n, map&lt;unsigned, unsigned&gt;());<span class="comment">//dp[i][j] = number of increasing subsequence end with i, length is j</span></div>
+<div class="line"><a id="l06733" name="l06733"></a><span class="lineno"> 6733</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = nums.size();</div>
+<div class="line"><a id="l06734" name="l06734"></a><span class="lineno"> 6734</span>            vector dp(n, map&lt;unsigned, unsigned&gt;());<span class="comment">//dp[i][j] = number of increasing subsequence end with i, length is j</span></div>
 <div class="line"><a id="l06735" name="l06735"></a><span class="lineno"> 6735</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l06736" name="l06736"></a><span class="lineno"> 6736</span>                dp[i][1] = 1;</div>
 <div class="line"><a id="l06737" name="l06737"></a><span class="lineno"> 6737</span>            }</div>
@@ -6810,11 +6810,11 @@ $(function() {
 <div class="line"><a id="l06755" name="l06755"></a><span class="lineno"> 6755</span> </div>
 <div class="line"><a id="l06756" name="l06756"></a><span class="lineno"><a class="line" href="../../df/df1/a00357.html"> 6756</a></span>    <span class="keyword">namespace </span>longest_common_subsequence {</div>
 <div class="line"><a id="l06757" name="l06757"></a><span class="lineno"><a class="line" href="../../d3/d62/a02395.html#a2bb46ed3a8be851f858de98de8158fd8"> 6757</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d3/d62/a02395.html#a2bb46ed3a8be851f858de98de8158fd8">Solution::longestCommonSubsequence</a>(<span class="keywordtype">string</span> text1, <span class="keywordtype">string</span> text2) {</div>
-<div class="line"><a id="l06758" name="l06758"></a><span class="lineno"> 6758</span>            vector&lt;vector&lt;int&gt;&gt; dp(text1.length(), vector&lt;int&gt;(text2.length(), 0));</div>
+<div class="line"><a id="l06758" name="l06758"></a><span class="lineno"> 6758</span>            vector dp(text1.length(), vector(text2.length(), 0));</div>
 <div class="line"><a id="l06759" name="l06759"></a><span class="lineno"> 6759</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; text1.length(); i++) {</div>
 <div class="line"><a id="l06760" name="l06760"></a><span class="lineno"> 6760</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; text2.length(); j++) {</div>
 <div class="line"><a id="l06761" name="l06761"></a><span class="lineno"> 6761</span>                    <span class="keywordflow">if</span>(text1[i] == text2[j]) {</div>
-<div class="line"><a id="l06762" name="l06762"></a><span class="lineno"> 6762</span>                        dp[i][j] = ((i - 1 &lt; 0 || j - 1 &lt; 0) ? 0 : dp[i - 1][j - 1]) + 1;</div>
+<div class="line"><a id="l06762" name="l06762"></a><span class="lineno"> 6762</span>                        dp[i][j] = (i - 1 &lt; 0 || j - 1 &lt; 0 ? 0 : dp[i - 1][j - 1]) + 1;</div>
 <div class="line"><a id="l06763" name="l06763"></a><span class="lineno"> 6763</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l06764" name="l06764"></a><span class="lineno"> 6764</span>                        dp[i][j] = max(i - 1 &gt;= 0 ? dp[i - 1][j] : 0, j - 1 &gt;= 0 ? dp[i][j - 1] : 0);</div>
 <div class="line"><a id="l06765" name="l06765"></a><span class="lineno"> 6765</span>                    }</div>
@@ -6825,8 +6825,8 @@ $(function() {
 <div class="line"><a id="l06770" name="l06770"></a><span class="lineno"> 6770</span>    }<span class="comment">// namespace longest_common_subsequence</span></div>
 <div class="line"><a id="l06771" name="l06771"></a><span class="lineno"> 6771</span> </div>
 <div class="line"><a id="l06772" name="l06772"></a><span class="lineno"><a class="line" href="../../df/d73/a00358.html"> 6772</a></span>    <span class="keyword">namespace </span>delete_operation_for_two_strings {</div>
-<div class="line"><a id="l06773" name="l06773"></a><span class="lineno"><a class="line" href="../../da/d11/a02399.html#ae261f7125665dfd8a0d5c0859678ee55"> 6773</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../da/d11/a02399.html#ae261f7125665dfd8a0d5c0859678ee55">Solution::minDistance</a>(<span class="keywordtype">string</span> word1, <span class="keywordtype">string</span> word2) {</div>
-<div class="line"><a id="l06774" name="l06774"></a><span class="lineno"> 6774</span>            <span class="keywordtype">int</span> lcs = <a class="code hl_function" href="../../d3/d62/a02395.html#a2bb46ed3a8be851f858de98de8158fd8">longest_common_subsequence::Solution::longestCommonSubsequence</a>(word1, word2);</div>
+<div class="line"><a id="l06773" name="l06773"></a><span class="lineno"><a class="line" href="../../da/d11/a02399.html#a7a3ca92ba907e6f9a08cadabf8e56e21"> 6773</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../da/d11/a02399.html#a7a3ca92ba907e6f9a08cadabf8e56e21">Solution::minDistance</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;word1, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;word2) {</div>
+<div class="line"><a id="l06774" name="l06774"></a><span class="lineno"> 6774</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> lcs = <a class="code hl_function" href="../../d3/d62/a02395.html#a2bb46ed3a8be851f858de98de8158fd8">longest_common_subsequence::Solution::longestCommonSubsequence</a>(word1, word2);</div>
 <div class="line"><a id="l06775" name="l06775"></a><span class="lineno"> 6775</span>            <span class="keywordflow">return</span> word1.length() + word2.length() - 2 * lcs;</div>
 <div class="line"><a id="l06776" name="l06776"></a><span class="lineno"> 6776</span>        }</div>
 <div class="line"><a id="l06777" name="l06777"></a><span class="lineno"> 6777</span>    }<span class="comment">// namespace delete_operation_for_two_strings</span></div>
@@ -6834,7 +6834,7 @@ $(function() {
 <div class="line"><a id="l06779" name="l06779"></a><span class="lineno"><a class="line" href="../../d4/def/a00359.html"> 6779</a></span>    <span class="keyword">namespace </span>edit_distance {</div>
 <div class="line"><a id="l06780" name="l06780"></a><span class="lineno"><a class="line" href="../../df/d06/a02403.html#a874af568c4ddbe8664574f205d115666"> 6780</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../df/d06/a02403.html#a874af568c4ddbe8664574f205d115666">Solution::minDistance</a>(<span class="keywordtype">string</span> word1, <span class="keywordtype">string</span> word2) {</div>
 <div class="line"><a id="l06781" name="l06781"></a><span class="lineno"> 6781</span>            <span class="comment">// dp[i][j] is the minimum number of operations required to convert word1[0..i] to word2[0..j]</span></div>
-<div class="line"><a id="l06782" name="l06782"></a><span class="lineno"> 6782</span>            vector&lt;vector&lt;int&gt;&gt; dp(word1.length() + 1, vector&lt;int&gt;(word2.length() + 1));</div>
+<div class="line"><a id="l06782" name="l06782"></a><span class="lineno"> 6782</span>            vector dp(word1.length() + 1, vector&lt;int&gt;(word2.length() + 1));</div>
 <div class="line"><a id="l06783" name="l06783"></a><span class="lineno"> 6783</span>            <span class="comment">// if word[i] == word2[j], dp[i][j] = dp[i-1][j-1]; else dp[i][j] = min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1</span></div>
 <div class="line"><a id="l06784" name="l06784"></a><span class="lineno"> 6784</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt;= word2.length(); j++) {</div>
 <div class="line"><a id="l06785" name="l06785"></a><span class="lineno"> 6785</span>                dp[0][j] = j;</div>
@@ -6857,16 +6857,16 @@ $(function() {
 <div class="line"><a id="l06802" name="l06802"></a><span class="lineno"> 6802</span> </div>
 <div class="line"><a id="l06803" name="l06803"></a><span class="lineno"><a class="line" href="../../d0/d65/a00360.html"> 6803</a></span>    <span class="keyword">namespace </span>coin_change {</div>
 <div class="line"><a id="l06804" name="l06804"></a><span class="lineno"><a class="line" href="../../d4/dad/a02407.html#a61d68b7ca1272676c5c7862dd7a8a781"> 6804</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d4/dad/a02407.html#a61d68b7ca1272676c5c7862dd7a8a781">Solution::coinChange</a>(vector&lt;int&gt; &amp;coins, <span class="keywordtype">int</span> amount) {</div>
-<div class="line"><a id="l06805" name="l06805"></a><span class="lineno"> 6805</span>            vector&lt;int&gt; dp(amount + 1, -1);</div>
+<div class="line"><a id="l06805" name="l06805"></a><span class="lineno"> 6805</span>            vector dp(amount + 1, -1);</div>
 <div class="line"><a id="l06806" name="l06806"></a><span class="lineno"> 6806</span>            dp[0] = 0;</div>
-<div class="line"><a id="l06807" name="l06807"></a><span class="lineno"> 6807</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;coin: coins) {</div>
+<div class="line"><a id="l06807" name="l06807"></a><span class="lineno"> 6807</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;coin: coins) {</div>
 <div class="line"><a id="l06808" name="l06808"></a><span class="lineno"> 6808</span>                <span class="keywordflow">if</span>(coin &lt;= amount) {</div>
 <div class="line"><a id="l06809" name="l06809"></a><span class="lineno"> 6809</span>                    dp[coin] = 1;</div>
 <div class="line"><a id="l06810" name="l06810"></a><span class="lineno"> 6810</span>                }</div>
 <div class="line"><a id="l06811" name="l06811"></a><span class="lineno"> 6811</span>            }</div>
 <div class="line"><a id="l06812" name="l06812"></a><span class="lineno"> 6812</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt;= amount; i++) {</div>
 <div class="line"><a id="l06813" name="l06813"></a><span class="lineno"> 6813</span>                <span class="keywordflow">if</span>(dp[i] &gt; 0) {</div>
-<div class="line"><a id="l06814" name="l06814"></a><span class="lineno"> 6814</span>                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;coin: coins) {</div>
+<div class="line"><a id="l06814" name="l06814"></a><span class="lineno"> 6814</span>                    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;coin: coins) {</div>
 <div class="line"><a id="l06815" name="l06815"></a><span class="lineno"> 6815</span>                        <span class="keywordflow">if</span>(i + coin &lt;= <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(amount)) {</div>
 <div class="line"><a id="l06816" name="l06816"></a><span class="lineno"> 6816</span>                            <span class="keywordflow">if</span>(dp[i + coin] == -1) {</div>
 <div class="line"><a id="l06817" name="l06817"></a><span class="lineno"> 6817</span>                                dp[i + coin] = dp[i] + 1;</div>
@@ -7346,12 +7346,12 @@ $(function() {
 <div class="ttc" id="aa02371_html_a717064618d0a81a2c64e3cf5e3c3fbf4"><div class="ttname"><a href="../../d4/dcc/a02371.html#a717064618d0a81a2c64e3cf5e3c3fbf4">leetcode::longest_palindromic_substring::Solution::longestPalindrome</a></div><div class="ttdeci">static string longestPalindrome(string s)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06583">leetcode.cpp:6583</a></div></div>
 <div class="ttc" id="aa02375_html_ab945e1b31d4e743406174e575166fcf4"><div class="ttname"><a href="../../d6/dd7/a02375.html#ab945e1b31d4e743406174e575166fcf4">leetcode::arithmetic_slices::Solution::numberOfArithmeticSlices</a></div><div class="ttdeci">static int numberOfArithmeticSlices(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06631">leetcode.cpp:6631</a></div></div>
 <div class="ttc" id="aa02379_html_ae8ede7560768293afa354fbdbcd072e5"><div class="ttname"><a href="../../d6/daa/a02379.html#ae8ede7560768293afa354fbdbcd072e5">leetcode::decode_ways::Solution::numDecodings</a></div><div class="ttdeci">static int numDecodings(string s)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06661">leetcode.cpp:6661</a></div></div>
-<div class="ttc" id="aa02383_html_aacd8672416bd865d5a9a631b5774ea3e"><div class="ttname"><a href="../../db/dd4/a02383.html#aacd8672416bd865d5a9a631b5774ea3e">leetcode::word_break::Solution::wordBreak</a></div><div class="ttdeci">static bool wordBreak(string s, vector&lt; string &gt; &amp;wordDict)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06682">leetcode.cpp:6682</a></div></div>
-<div class="ttc" id="aa02383_html_aec049a681944cfaf35caa17fbb6c83bb"><div class="ttname"><a href="../../db/dd4/a02383.html#aec049a681944cfaf35caa17fbb6c83bb">leetcode::word_break::Solution::search</a></div><div class="ttdeci">static void search(TrieNode const *tn, const string &amp;s, int i, vector&lt; bool &gt; &amp;end)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06700">leetcode.cpp:6700</a></div></div>
+<div class="ttc" id="aa02383_html_a83bb5eed1d4805fa9a25155f6255060a"><div class="ttname"><a href="../../db/dd4/a02383.html#a83bb5eed1d4805fa9a25155f6255060a">leetcode::word_break::Solution::search</a></div><div class="ttdeci">static void search(const TrieNode *tn, const string &amp;s, int i, vector&lt; bool &gt; &amp;end)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06700">leetcode.cpp:6700</a></div></div>
+<div class="ttc" id="aa02383_html_aee6a9a9a9345c714dbbe6a03d44d5694"><div class="ttname"><a href="../../db/dd4/a02383.html#aee6a9a9a9345c714dbbe6a03d44d5694">leetcode::word_break::Solution::wordBreak</a></div><div class="ttdeci">static bool wordBreak(const string &amp;s, vector&lt; string &gt; &amp;wordDict)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06682">leetcode.cpp:6682</a></div></div>
 <div class="ttc" id="aa02387_html_a9e0e01e8abab9c10748f1ae1ed3c77c4"><div class="ttname"><a href="../../d8/deb/a02387.html#a9e0e01e8abab9c10748f1ae1ed3c77c4">leetcode::longest_increasing_subsequence::Solution::lengthOfLIS</a></div><div class="ttdeci">static int lengthOfLIS(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06715">leetcode.cpp:6715</a></div></div>
 <div class="ttc" id="aa02391_html_a4b6af9799eec313f937bc5006af09c27"><div class="ttname"><a href="../../d7/d90/a02391.html#a4b6af9799eec313f937bc5006af09c27">leetcode::number_of_longest_increasing_subsequence::Solution::findNumberOfLIS</a></div><div class="ttdeci">static int findNumberOfLIS(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06732">leetcode.cpp:6732</a></div></div>
 <div class="ttc" id="aa02395_html_a2bb46ed3a8be851f858de98de8158fd8"><div class="ttname"><a href="../../d3/d62/a02395.html#a2bb46ed3a8be851f858de98de8158fd8">leetcode::longest_common_subsequence::Solution::longestCommonSubsequence</a></div><div class="ttdeci">static int longestCommonSubsequence(string text1, string text2)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06757">leetcode.cpp:6757</a></div></div>
-<div class="ttc" id="aa02399_html_ae261f7125665dfd8a0d5c0859678ee55"><div class="ttname"><a href="../../da/d11/a02399.html#ae261f7125665dfd8a0d5c0859678ee55">leetcode::delete_operation_for_two_strings::Solution::minDistance</a></div><div class="ttdeci">static int minDistance(string word1, string word2)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06773">leetcode.cpp:6773</a></div></div>
+<div class="ttc" id="aa02399_html_a7a3ca92ba907e6f9a08cadabf8e56e21"><div class="ttname"><a href="../../da/d11/a02399.html#a7a3ca92ba907e6f9a08cadabf8e56e21">leetcode::delete_operation_for_two_strings::Solution::minDistance</a></div><div class="ttdeci">static int minDistance(const string &amp;word1, const string &amp;word2)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06773">leetcode.cpp:6773</a></div></div>
 <div class="ttc" id="aa02403_html_a874af568c4ddbe8664574f205d115666"><div class="ttname"><a href="../../df/d06/a02403.html#a874af568c4ddbe8664574f205d115666">leetcode::edit_distance::Solution::minDistance</a></div><div class="ttdeci">static int minDistance(string word1, string word2)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06780">leetcode.cpp:6780</a></div></div>
 <div class="ttc" id="aa02407_html_a61d68b7ca1272676c5c7862dd7a8a781"><div class="ttname"><a href="../../d4/dad/a02407.html#a61d68b7ca1272676c5c7862dd7a8a781">leetcode::coin_change::Solution::coinChange</a></div><div class="ttdeci">static int coinChange(vector&lt; int &gt; &amp;coins, int amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06804">leetcode.cpp:6804</a></div></div>
 <div class="ttc" id="aa02411_html_a77950b7d9c5193ee4c3ff4f2ab5f0b45"><div class="ttname"><a href="../../d8/df6/a02411.html#a77950b7d9c5193ee4c3ff4f2ab5f0b45">leetcode::integer_break::Solution::integerBreak</a></div><div class="ttdeci">static int integerBreak(int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l06830">leetcode.cpp:6830</a></div></div>

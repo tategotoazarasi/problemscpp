@@ -2,7 +2,7 @@ var searchData=
 [
   ['same_0',['same',['../d1/d24/a02975.html#aa1580fa407277914913231a7d752c7d8',1,'UnionFind::same()'],['../d4/d2e/a02051.html#a32d65bac78f42427388eb8f114873af3',1,'leetcode::max_area_of_island::UnionFind::same()']]],
   ['school_1',['school',['../db/da5/a02919.html#a1387c68f4fde3852c5f35b8d32e1ce7d',1,'pat::b::b1085::school::school()=default'],['../db/da5/a02919.html#af87db1cd1c458a3fec6eeed5da59ac6a',1,'pat::b::b1085::school::school(string id)']]],
-  ['search_2',['search',['../d6/d64/a01399.html#a1f67635ef99a1c887c5ea6ed78420387',1,'acwing::acwing4398::TrieNode::search()'],['../db/d08/a01543.html#aa7c228a1c6b22a07281eae6a14c2e72f',1,'leetcode::escape_a_large_maze::Solution::search()'],['../db/dd4/a02383.html#aec049a681944cfaf35caa17fbb6c83bb',1,'leetcode::word_break::Solution::search()']]],
+  ['search_2',['search',['../d6/d64/a01399.html#a1f67635ef99a1c887c5ea6ed78420387',1,'acwing::acwing4398::TrieNode::search()'],['../db/d08/a01543.html#aa7c228a1c6b22a07281eae6a14c2e72f',1,'leetcode::escape_a_large_maze::Solution::search()'],['../db/dd4/a02383.html#a83bb5eed1d4805fa9a25155f6255060a',1,'leetcode::word_break::Solution::search()']]],
   ['secondminimum_3',['secondMinimum',['../d4/d3c/a01671.html#ac5c774924a4831a756486a1718a7b82b',1,'leetcode::second_minimum_time_to_reach_destination::Solution']]],
   ['selfdividingnumbers_4',['selfDividingNumbers',['../de/d1b/a02187.html#a60e690b237f0625c94698ba9410ed0af',1,'leetcode::self_dividing_numbers::Solution']]],
   ['set_5fstack_5flimit_5',['set_stack_limit',['../d6/d5b/a00026.html#a90d105b4f65d447ebdd2269060a02d32',1,'set_stack_limit(int):&#160;set_stack_limit.cpp'],['../d5/d16/a00029.html#a4d5e31141ea8d871e02a1520af4cbb69',1,'set_stack_limit(int stack_size):&#160;set_stack_limit.cpp']]],
