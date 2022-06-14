@@ -6844,4 +6844,26 @@ namespace leetcode {
 			return dp[n];
 		}
 	}// namespace integer_break
+
+	namespace max_points_on_a_line {
+		int Solution::maxPoints(vector<vector<int>> &points) {
+			int ans = 0;
+			for(auto &p1: points) {
+				unordered_map<long double, int> us;
+				int cnt = 0;
+				for(auto &p2: points) {
+					if(p2[0] != p1[0]) {
+						us[static_cast<long double>(p2[1] - p1[1]) / static_cast<long double>(p2[0] - p1[0])]++;
+					} else {
+						cnt++;
+					}
+				}
+				for(auto &[k, v]: us) {
+					cnt = max(cnt, v + 1);
+				}
+				ans = max(ans, cnt);
+			}
+			return ans;
+		}
+	}// namespace max_points_on_a_line
 }// namespace leetcode

@@ -2539,6 +2539,14 @@ namespace leetcode {
 			static int integerBreak(int n);
 		};
 	}// namespace integer_break
+
+	/// \brief 149. Max Points on a Line
+	namespace max_points_on_a_line {
+		class Solution {
+		public:
+			static int maxPoints(vector<vector<int>> &points);
+		};
+	}// namespace max_points_on_a_line
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

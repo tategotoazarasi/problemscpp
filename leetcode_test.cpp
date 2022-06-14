@@ -2653,15 +2653,15 @@ namespace leetcode {
 	namespace find_players_with_zero_or_one_losses {
 		TEST(find_players_with_zero_or_one_losses, case1) {
 			vector<vector<int>> matches      = {{1, 3},
-                                           {2, 3},
-                                           {3, 6},
-                                           {5, 6},
-                                           {5, 7},
-                                           {4, 5},
-                                           {4, 8},
-                                           {4, 9},
-                                           {10, 4},
-                                           {10, 9}};
+			                                    {2, 3},
+			                                    {3, 6},
+			                                    {5, 6},
+			                                    {5, 7},
+			                                    {4, 5},
+			                                    {4, 8},
+			                                    {4, 9},
+			                                    {10, 4},
+			                                    {10, 9}};
 			const vector<vector<int>> output = {{1, 2, 10}, {4, 5, 7, 8}};
 			ASSERT_EQ(output, Solution::findWinners(matches));
 		}
@@ -3211,4 +3211,16 @@ namespace leetcode {
 			ASSERT_EQ(36, Solution::integerBreak(n));
 		}
 	}// namespace integer_break
+
+	namespace max_points_on_a_line {
+		TEST(max_points_on_a_line, case1) {
+			vector<vector<int>> points = {{1, 1}, {2, 2}, {3, 3}};
+			ASSERT_EQ(3, Solution::maxPoints(points));
+		}
+
+		TEST(max_points_on_a_line, case2) {
+			vector<vector<int>> points = {{1, 1}, {3, 2}, {5, 3}, {4, 1}, {2, 3}, {1, 4}};
+			ASSERT_EQ(4, Solution::maxPoints(points));
+		}
+	}// namespace max_points_on_a_line
 }// namespace leetcode
