@@ -6866,4 +6866,25 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace max_points_on_a_line
+
+	namespace group_anagrams {
+		vector<vector<string>> Solution::groupAnagrams(vector<string> &strs) {
+			vector<string> strs_sorted = strs;
+			unordered_map<string, vector<string>> um;
+			for(auto &str: strs_sorted) {
+				sort(str.begin(), str.end());
+				if(!um.count(str)) {
+					um[str] = vector<string>();
+				}
+			}
+			for(int i = 0; i < strs.size(); i++) {
+				um[strs_sorted[i]].emplace_back(strs[i]);
+			}
+			vector<vector<string>> ans;
+			for(auto &[k, v]: um) {
+				ans.emplace_back(v);
+			}
+			return ans;
+		}
+	}// namespace group_anagrams
 }// namespace leetcode

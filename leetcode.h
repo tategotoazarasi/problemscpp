@@ -2547,6 +2547,14 @@ namespace leetcode {
 			static int maxPoints(vector<vector<int>> &points);
 		};
 	}// namespace max_points_on_a_line
+
+	/// \brief 49. Group Anagrams
+	namespace group_anagrams {
+		class Solution {
+		public:
+			static vector<vector<string>> groupAnagrams(vector<string> &strs);
+		};
+	}// namespace group_anagrams
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
