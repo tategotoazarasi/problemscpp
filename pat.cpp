@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <map>
 #include <numeric>
+#include <queue>
 #include <set>
 #include <sstream>
 #include <tuple>
@@ -3946,7 +3947,65 @@ namespace pat {
 		}// namespace b1110
 	}    // namespace b
 
-	namespace a {}
+	namespace a {
+		namespace a1003 {
+			int main(istream &cin, ostream &cout) {
+				int N, M, C1, C2;
+				cin >> N >> M >> C1 >> C2;
+				int max_d = 0;
+				vector<int> rescue(N);
+				vector<vector<int>> grid(N, vector<int>(N, 0));
+				for(int i = 0; i < N; i++) {
+					cin >> rescue[i];
+				}
+				for(int i = 0; i < M; i++) {
+					int c1, c2, L;
+					cin >> c1 >> c2 >> L;
+					grid[c1][c2] = L;
+					grid[c2][c1] = L;
+					max_d += L;
+				}
+				vector<int> shortest_cnt(N, 0);    ///< shortest_cnt[i] = number of shortest path from C1 to i
+				vector<int> shortest(N, max_d + 1);///< shortest[i] = shortest distance from C1 to i
+				vector<int> max_rescue(N, 0);      ///< max_rescue[i] = max rescue sum from C1 to i in shortest path
+				priority_queue<tuple<int, int, int>, vector<tuple<int, int, int>>, comp> pq;
+				pq.push(make_tuple(C1, 0, rescue[C1]));
+				while(!pq.empty()) {
+					auto [c, d, s] = pq.top();
+					pq.pop();
+					if(d < shortest[c]) {
+						shortest[c]     = d;
+						shortest_cnt[c] = 1;
+						max_rescue[c]   = s;
+					} else if(d == shortest[c]) {
+						shortest_cnt[c]++;
+					} else {
+						continue;
+					}
+					if(s > max_rescue[c]) {
+						max_rescue[c] = s;
+					}
+					for(int i = 0; i < N; i++) {
+						if(grid[c][i] > 0 && d + grid[c][i] <= shortest[i]) {
+							pq.push(make_tuple(i, d + grid[c][i], s + rescue[i]));
+						}
+					}
+				}
+				cout << shortest_cnt[C2] << ' ' << max_rescue[C2];
+				return 0;
+			}
+
+			bool comp::operator()(const tuple<int, int, int> &a, const tuple<int, int, int> &b) const {
+				auto [a1, a2, a3] = a;
+				auto [b1, b2, b3] = b;
+				if(a2 != b2) {
+					return a2 > b2;
+				} else {
+					return a3 < b3;
+				}
+			}
+		}// namespace a1003
+	}    // namespace a
 
 	namespace top {}
 }// namespace pat

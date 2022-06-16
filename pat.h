@@ -731,7 +731,15 @@ namespace pat {
 	}    // namespace b
 
 	/// \brief 甲级
-	namespace a {}
+	namespace a {
+		/// \brief 1003 Emergency
+		namespace a1003 {
+			struct comp {
+				bool operator()(const tuple<int, int, int> &a, const tuple<int, int, int> &b) const;
+			};
+			int main(istream &cin, ostream &cout);
+		}// namespace a1003
+	}    // namespace a
 
 	/// \brief 顶级
 	namespace top {}

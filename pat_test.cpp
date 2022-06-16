@@ -1963,7 +1963,23 @@ namespace pat {
 		}// namespace b1110
 	}    // namespace b
 
-	namespace a {}
+	namespace a {
+		namespace a1003 {
+			TEST(a1003, case1) {
+				istringstream in("5 6 0 2\n"
+				                 "1 2 1 5 3\n"
+				                 "0 1 1\n"
+				                 "0 2 2\n"
+				                 "0 3 1\n"
+				                 "1 2 1\n"
+				                 "2 4 1\n"
+				                 "3 4 1");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("2 4", out.str());
+			}
+		}// namespace a1003
+	}    // namespace a
 
 	namespace top {}
 }// namespace pat
