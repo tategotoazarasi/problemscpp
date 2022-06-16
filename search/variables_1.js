@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['b_0',['b',['../d5/d39/a00676.html#a567a53696628ec73eb65cabd484946a3',1,'acwing::acwing1978::path::b()'],['../dc/d2b/a00936.html#a7c26d176f2224e6ba3633990af031358',1,'acwing::acwing4217::b()'],['../dd/dac/a01008.html#adbe67de05abc4c41c2a1f0da190a1219',1,'acwing::acwing4298::b()']]],
-  ['b_5fsum_1',['b_sum',['../d9/dc5/a02924.html#a842cf41e087a79bf1301cc2aedd2573a',1,'pat::b::b1085::school']]],
-  ['back_2',['back',['../dc/d2b/a00936.html#a9f75fcdc8bb6d3c92ad13531a572f3fc',1,'acwing::acwing4217']]],
-  ['big_3',['big',['../d3/d81/a02284.html#a946b80b4797c17c4ab3ce498c536a05c',1,'leetcode::design_parking_system::ParkingSystem']]]
+  ['b_0',['b',['../da/d31/a00678.html#a567a53696628ec73eb65cabd484946a3',1,'acwing::acwing1978::path::b()'],['../d5/d54/a00938.html#a7c26d176f2224e6ba3633990af031358',1,'acwing::acwing4217::b()'],['../d0/d2b/a01010.html#adbe67de05abc4c41c2a1f0da190a1219',1,'acwing::acwing4298::b()']]],
+  ['b_5fsum_1',['b_sum',['../d6/d41/a02930.html#a842cf41e087a79bf1301cc2aedd2573a',1,'pat::b::b1085::school']]],
+  ['back_2',['back',['../d5/d54/a00938.html#a9f75fcdc8bb6d3c92ad13531a572f3fc',1,'acwing::acwing4217']]],
+  ['big_3',['big',['../db/d2d/a02286.html#a946b80b4797c17c4ab3ce498c536a05c',1,'leetcode::design_parking_system::ParkingSystem']]]
 ];
