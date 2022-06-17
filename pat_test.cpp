@@ -1989,6 +1989,15 @@ namespace pat {
 				ASSERT_EQ("0 1", out.str());
 			}
 		}// namespace a1004
+
+		namespace a1005 {
+			TEST(a1005, case1) {
+				istringstream in("12345");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("one five", out.str());
+			}
+		}// namespace a1005
 	}    // namespace a
 
 	namespace top {}

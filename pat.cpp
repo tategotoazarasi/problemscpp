@@ -4061,6 +4061,62 @@ namespace pat {
 				return 0;
 			}
 		}// namespace a1004
+
+		namespace a1005 {
+			int main(istream &cin, ostream &cout) {
+				unsigned long n = 0;
+				string s;
+				cin >> s;
+				for(char ch: s) {
+					n += ch - '0';
+				}
+				ostringstream oss = ostringstream();
+				oss << n;
+				s          = oss.str();
+				bool first = true;
+				for(char ch: s) {
+					if(!first) {
+						cout << ' ';
+					}
+					first = false;
+					switch(ch) {
+						case '0':
+							cout << "zero";
+							break;
+						case '1':
+							cout << "one";
+							break;
+						case '2':
+							cout << "two";
+							break;
+						case '3':
+							cout << "three";
+							break;
+						case '4':
+							cout << "four";
+							break;
+						case '5':
+							cout << "five";
+							break;
+						case '6':
+							cout << "six";
+							break;
+						case '7':
+							cout << "seven";
+							break;
+						case '8':
+							cout << "eight";
+							break;
+						case '9':
+							cout << "nine";
+							break;
+						default:
+							return -1;
+					}
+				}
+				return 0;
+			}
+		}// namespace a1005
 	}    // namespace a
 
 	namespace top {}

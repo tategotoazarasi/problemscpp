@@ -750,7 +750,12 @@ namespace pat {
 			};
 			int main(istream &cin, ostream &cout);
 		}// namespace a1004
-	}    // namespace a
+
+		/// \brief 1005 Spell It Right
+		namespace a1005 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace a
 
 	/// \brief 顶级
 	namespace top {}
