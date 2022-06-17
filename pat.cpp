@@ -4117,6 +4117,38 @@ namespace pat {
 				return 0;
 			}
 		}// namespace a1005
+
+		namespace a1006 {
+			int main(istream &cin, ostream &cout) {
+				int m;
+				cin >> m;
+				vector<tuple<string, string, string>> vec(m);
+				vector<string> seq;
+				for(int i = 0; i < m; i++) {
+					string id;
+					string sign_in_time;
+					string sign_out_time;
+					cin >> id >> sign_in_time >> sign_out_time;
+					vec[i] = make_tuple(id, sign_in_time, sign_out_time);
+					seq.push_back(sign_in_time);
+					seq.push_back(sign_out_time);
+				}
+				sort(seq.begin(), seq.end());
+				for(auto &[id, in, out]: vec) {
+					if(in == seq[0]) {
+						cout << id << ' ';
+						break;
+					}
+				}
+				for(auto &[id, in, out]: vec) {
+					if(out == seq.back()) {
+						cout << id;
+						break;
+					}
+				}
+				return 0;
+			}
+		}// namespace a1006
 	}    // namespace a
 
 	namespace top {}

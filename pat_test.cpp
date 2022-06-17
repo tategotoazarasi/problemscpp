@@ -1998,6 +1998,18 @@ namespace pat {
 				ASSERT_EQ("one five", out.str());
 			}
 		}// namespace a1005
+
+		namespace a1006 {
+			TEST(a1006, case1) {
+				istringstream in("3\n"
+				                 "CS301111 15:30:28 17:00:10\n"
+				                 "SC3021234 08:00:00 11:25:25\n"
+				                 "CS301133 21:45:00 21:58:40");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("SC3021234 CS301133", out.str());
+			}
+		}// namespace a1006
 	}    // namespace a
 
 	namespace top {}

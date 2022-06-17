@@ -755,6 +755,11 @@ namespace pat {
 		namespace a1005 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1006 Sign In and Sign Out
+		namespace a1006 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace a
 
 	/// \brief 顶级
