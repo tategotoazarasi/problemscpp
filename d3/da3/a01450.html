@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::hand_of_straights::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,96 +63,20 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d2/df5/a00137.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d7/dce/a00143.html">hand_of_straights</a></li><li class="navelem"><a class="el" href="../../d3/da3/a01450.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d4/ddd/a00138.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d2/d82/a00142.html">majority_element</a></li><li class="navelem"><a class="el" href="../../d9/dae/a01453.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="../../df/d75/a01447.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::hand_of_straights::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::majority_element::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d9/d2e/a00056_source.html">leetcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:aaa9e63f5e810760226b4921275ae8869"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da3/a01450.html#aaa9e63f5e810760226b4921275ae8869">isNStraightHand</a> (vector&lt; int &gt; &amp;hand, int groupSize)</td></tr>
-<tr class="separator:aaa9e63f5e810760226b4921275ae8869"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">leetcode.h</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l00130">130</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="aaa9e63f5e810760226b4921275ae8869" name="aaa9e63f5e810760226b4921275ae8869"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa9e63f5e810760226b4921275ae8869">&#9670;&nbsp;</a></span>isNStraightHand()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool leetcode::hand_of_straights::Solution::isNStraightHand </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>hand</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>groupSize</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l00191">191</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                                                                       {</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            <span class="keywordflow">if</span>(hand.size() % groupSize != 0) {</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            }</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            <span class="keywordflow">if</span>(groupSize == 1) {</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            }</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            sort(hand.begin(), hand.end());</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            <span class="keyword">const</span> <span class="keyword">auto</span> len = hand.size() / groupSize;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; len; i++) {</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                <span class="keywordtype">int</span> current = *hand.begin();</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                hand.erase(hand.begin());</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt; groupSize; j++) {</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                    <span class="keyword">auto</span> next = find(hand.begin(), hand.end(), current + 1);</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                    <span class="keywordflow">if</span>(next == hand.end()) {</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                    }</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                    current = *next;</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                    hand.erase(next);</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                }</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            }</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d5/de0/a00050_source.html#l00146">leetcode::hand_of_straights::TEST()</a>.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../d9/d2e/a00056_source.html">leetcode.h</a></li>
-<li><a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="../../d9/dae/a01453.html">leetcode::majority_element::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/dae/a01453.html#ad5f954429d13b3ae0e324807dc3f1523">m</a></td><td class="entry"><a class="el" href="../../d9/dae/a01453.html">leetcode::majority_element::Solution</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d9/dae/a01453.html#a4b9b775bb733e482181496affdeb10b1">majorityElement</a>(vector&lt; int &gt; &amp;nums)</td><td class="entry"><a class="el" href="../../d9/dae/a01453.html">leetcode::majority_element::Solution</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/dae/a01453.html#a79e75864eba3b92653318e8c6fb1526d">Solution</a>()</td><td class="entry"><a class="el" href="../../d9/dae/a01453.html">leetcode::majority_element::Solution</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2

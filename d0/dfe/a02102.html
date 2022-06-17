@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::construct_string_from_binary_tree::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,79 +63,19 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d2/df5/a00137.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d6/d7f/a00287.html">construct_string_from_binary_tree</a></li><li class="navelem"><a class="el" href="../../d0/dfe/a02102.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d4/ddd/a00138.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d5/d7b/a00286.html">longest_word_in_dictionary</a></li><li class="navelem"><a class="el" href="../../db/d7a/a02105.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="../../d9/dff/a02099.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::construct_string_from_binary_tree::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::longest_word_in_dictionary::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d9/d2e/a00056_source.html">leetcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a24204a26c286d868493d0f1677285515"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfe/a02102.html#a24204a26c286d868493d0f1677285515">tree2str</a> (<a class="el" href="../../d8/df1/a01414.html">TreeNode</a> *root)</td></tr>
-<tr class="separator:a24204a26c286d868493d0f1677285515"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">leetcode.h</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l01799">1799</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="a24204a26c286d868493d0f1677285515" name="a24204a26c286d868493d0f1677285515"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24204a26c286d868493d0f1677285515">&#9670;&nbsp;</a></span>tree2str()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string leetcode::construct_string_from_binary_tree::Solution::tree2str </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d8/df1/a01414.html">TreeNode</a> *&#160;</td>
-          <td class="paramname"><em>root</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l04684">4684</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04684" name="l04684"></a><span class="lineno"> 4684</span>                                                {</div>
-<div class="line"><a id="l04685" name="l04685"></a><span class="lineno"> 4685</span>            ostringstream oss;</div>
-<div class="line"><a id="l04686" name="l04686"></a><span class="lineno"> 4686</span>            oss &lt;&lt; root-&gt;val;</div>
-<div class="line"><a id="l04687" name="l04687"></a><span class="lineno"> 4687</span>            <span class="keywordflow">if</span>(root-&gt;left != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l04688" name="l04688"></a><span class="lineno"> 4688</span>                oss &lt;&lt; <span class="charliteral">&#39;(&#39;</span> &lt;&lt; <a class="code hl_function" href="../../d0/dfe/a02102.html#a24204a26c286d868493d0f1677285515">tree2str</a>(root-&gt;left) &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
-<div class="line"><a id="l04689" name="l04689"></a><span class="lineno"> 4689</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(root-&gt;right != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l04690" name="l04690"></a><span class="lineno"> 4690</span>                oss &lt;&lt; <span class="stringliteral">&quot;()&quot;</span>;</div>
-<div class="line"><a id="l04691" name="l04691"></a><span class="lineno"> 4691</span>            }</div>
-<div class="line"><a id="l04692" name="l04692"></a><span class="lineno"> 4692</span>            <span class="keywordflow">if</span>(root-&gt;right != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l04693" name="l04693"></a><span class="lineno"> 4693</span>                oss &lt;&lt; <span class="charliteral">&#39;(&#39;</span> &lt;&lt; <a class="code hl_function" href="../../d0/dfe/a02102.html#a24204a26c286d868493d0f1677285515">tree2str</a>(root-&gt;right) &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
-<div class="line"><a id="l04694" name="l04694"></a><span class="lineno"> 4694</span>            }</div>
-<div class="line"><a id="l04695" name="l04695"></a><span class="lineno"> 4695</span>            <span class="keywordflow">return</span> oss.str();</div>
-<div class="line"><a id="l04696" name="l04696"></a><span class="lineno"> 4696</span>        }</div>
-<div class="ttc" id="aa02102_html_a24204a26c286d868493d0f1677285515"><div class="ttname"><a href="../../d0/dfe/a02102.html#a24204a26c286d868493d0f1677285515">leetcode::construct_string_from_binary_tree::Solution::tree2str</a></div><div class="ttdeci">static string tree2str(TreeNode *root)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l04684">leetcode.cpp:4684</a></div></div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d9/d2e/a00056_source.html#l00023">leetcode::TreeNode::left</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00024">leetcode::TreeNode::right</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l04684">tree2str()</a> , 以及 <a class="el" href="../../d9/d2e/a00056_source.html#l00022">leetcode::TreeNode::val</a>.</p>
-
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d8b/a00059_source.html#l04684">tree2str()</a>.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../d9/d2e/a00056_source.html">leetcode.h</a></li>
-<li><a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="../../db/d7a/a02105.html">leetcode::longest_word_in_dictionary::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../db/d7a/a02105.html#aa491dcdfd32d316cb88797693295b04c">dfs</a>(const string &amp;str, TrieNode *node)</td><td class="entry"><a class="el" href="../../db/d7a/a02105.html">leetcode::longest_word_in_dictionary::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../db/d7a/a02105.html#a8712cc34126553d49b84fa6b4c22b7a1">longestWord</a>(vector&lt; string &gt; &amp;words)</td><td class="entry"><a class="el" href="../../db/d7a/a02105.html">leetcode::longest_word_in_dictionary::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2

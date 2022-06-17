@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::integer_break::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,79 +63,18 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d2/df5/a00137.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d7/ddb/a00361.html">integer_break</a></li><li class="navelem"><a class="el" href="../../de/dc9/a02414.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d4/ddd/a00138.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d0/d65/a00360.html">edit_distance</a></li><li class="navelem"><a class="el" href="../../de/d76/a02417.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="../../d8/df6/a02411.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::integer_break::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::edit_distance::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d9/d2e/a00056_source.html">leetcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a77950b7d9c5193ee4c3ff4f2ab5f0b45"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dc9/a02414.html#a77950b7d9c5193ee4c3ff4f2ab5f0b45">integerBreak</a> (int n)</td></tr>
-<tr class="separator:a77950b7d9c5193ee4c3ff4f2ab5f0b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">leetcode.h</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l02537">2537</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="a77950b7d9c5193ee4c3ff4f2ab5f0b45" name="a77950b7d9c5193ee4c3ff4f2ab5f0b45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77950b7d9c5193ee4c3ff4f2ab5f0b45">&#9670;&nbsp;</a></span>integerBreak()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int leetcode::integer_break::Solution::integerBreak </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l06830">6830</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l06830" name="l06830"></a><span class="lineno"> 6830</span>                                        {</div>
-<div class="line"><a id="l06831" name="l06831"></a><span class="lineno"> 6831</span>            <span class="comment">// dp[i] is the maximum product of i</span></div>
-<div class="line"><a id="l06832" name="l06832"></a><span class="lineno"> 6832</span>            vector&lt;int&gt; dp(n + 1);</div>
-<div class="line"><a id="l06833" name="l06833"></a><span class="lineno"> 6833</span>            <span class="comment">// dp[i] = max(dp[i], dp[j] * dp[i - j])</span></div>
-<div class="line"><a id="l06834" name="l06834"></a><span class="lineno"> 6834</span>            dp[2] = 1;</div>
-<div class="line"><a id="l06835" name="l06835"></a><span class="lineno"> 6835</span>            dp[1] = 1;</div>
-<div class="line"><a id="l06836" name="l06836"></a><span class="lineno"> 6836</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 3; i &lt;= n; i++) {</div>
-<div class="line"><a id="l06837" name="l06837"></a><span class="lineno"> 6837</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt; i; j++) {</div>
-<div class="line"><a id="l06838" name="l06838"></a><span class="lineno"> 6838</span>                    dp[i] = max(dp[i], dp[j] * dp[i - j]);</div>
-<div class="line"><a id="l06839" name="l06839"></a><span class="lineno"> 6839</span>                    dp[i] = max(dp[i], j * dp[i - j]);</div>
-<div class="line"><a id="l06840" name="l06840"></a><span class="lineno"> 6840</span>                    dp[i] = max(dp[i], dp[j] * (i - j));</div>
-<div class="line"><a id="l06841" name="l06841"></a><span class="lineno"> 6841</span>                    dp[i] = max(dp[i], j * (i - j));</div>
-<div class="line"><a id="l06842" name="l06842"></a><span class="lineno"> 6842</span>                }</div>
-<div class="line"><a id="l06843" name="l06843"></a><span class="lineno"> 6843</span>            }</div>
-<div class="line"><a id="l06844" name="l06844"></a><span class="lineno"> 6844</span>            <span class="keywordflow">return</span> dp[n];</div>
-<div class="line"><a id="l06845" name="l06845"></a><span class="lineno"> 6845</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d5/de0/a00050_source.html#l03204">leetcode::integer_break::TEST()</a>.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../d9/d2e/a00056_source.html">leetcode.h</a></li>
-<li><a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="../../de/d76/a02417.html">leetcode::edit_distance::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../de/d76/a02417.html#a874af568c4ddbe8664574f205d115666">minDistance</a>(string word1, string word2)</td><td class="entry"><a class="el" href="../../de/d76/a02417.html">leetcode::edit_distance::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
