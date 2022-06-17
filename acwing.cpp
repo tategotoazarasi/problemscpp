@@ -5774,8 +5774,8 @@ namespace acwing {
 	namespace acwing1695 {
 		int main(istream &cin, ostream &cout) {
 			bool nuts[3][3]         = {{true, false, false},
-                               {false, true, false},
-                               {false, false, true}};
+			                           {false, true, false},
+			                           {false, false, true}};
 			unsigned short score[3] = {0, 0, 0};
 			unsigned short ans      = 0;
 			unsigned short n;
@@ -7092,4 +7092,63 @@ namespace acwing {
 			return parent[x];
 		}
 	}// namespace acwing240
+
+	namespace acwing845 {
+		int main(istream &cin, ostream &cout) {
+			array<array<char, 3>, 3> target{};
+			array<array<char, 3>, 3> grid{};
+			unordered_set<array<array<char, 3>, 3>, hash> us;
+			int start_x, start_y;
+			for(int i = 0; i < 9; i++) {
+				cin >> grid[i / 3][i % 3];
+				if(grid[i / 3][i % 3] == 'x') {
+					start_x = i / 3;
+					start_y = i % 3;
+				}
+				target[i / 3][i % 3] = i + '1';
+			}
+			target[2][2] = 'x';
+			queue<tuple<array<array<char, 3>, 3>, int, int, int>> q;
+			q.push(make_tuple(grid, 0, start_x, start_y));
+			us.insert(grid);
+			while(!q.empty()) {
+				auto [g, step, x, y] = q.front();
+				q.pop();
+				if(g == target) {
+					cout << step;
+					return 0;
+				}
+				pair<int, int> nexts[4] = {
+				        make_pair(x, y + 1),
+				        make_pair(x, y - 1),
+				        make_pair(x + 1, y),
+				        make_pair(x - 1, y)};
+				for(auto &[nx, ny]: nexts) {
+					if(nx >= 0 && nx < 3 && ny >= 0 && ny < 3) {
+						swap(g[nx][ny], g[x][y]);
+						if(!us.count(g)) {
+							us.insert(g);
+							q.push(make_tuple(g, step + 1, nx, ny));
+						}
+						swap(g[nx][ny], g[x][y]);
+					}
+				}
+			}
+			cout << -1;
+			return 0;
+		}
+
+		unsigned int hash::operator()(const array<array<char, 3>, 3> &g) const {
+			unsigned int ret = 0;
+			for(int i = 0; i < 9; i++) {
+				char v = g[i / 3][i % 3];
+				if(v == 'x') {
+					v = '0';
+				}
+				ret *= 10;
+				ret += v - '0';
+			}
+			return ret;
+		}
+	}// namespace acwing845
 }// namespace acwing

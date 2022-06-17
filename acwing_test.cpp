@@ -3304,4 +3304,22 @@ namespace acwing {
 			ASSERT_EQ("3", ans);
 		}
 	}// namespace acwing240
+
+	namespace acwing845 {
+		TEST(acwing845, case1) {
+			istringstream in("2  3  4  1  5  x  7  6  8");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("19", ans);
+		}
+
+		TEST(acwing845, case2) {
+			istringstream in("6 4 7 8 5 x 3 2 1");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("31", ans);
+		}
+	}// namespace acwing845
 }// namespace acwing

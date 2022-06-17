@@ -2053,5 +2053,13 @@ namespace acwing {
 
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing240
+
+	/// \brief 845. 八数码
+	namespace acwing845 {
+		struct hash {
+			unsigned int operator()(const array<array<char, 3>, 3> &g) const;
+		};
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing845
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
