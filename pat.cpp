@@ -4005,6 +4005,62 @@ namespace pat {
 				}
 			}
 		}// namespace a1003
+
+		namespace a1004 {
+			int main(istream &cin, ostream &cout) {
+				int n, m;
+				cin >> n >> m;
+				if(n == 0) {
+					return 0;
+				}
+				unordered_map<string, node *> um;
+				for(int i = 0; i < m; i++) {
+					string id;
+					int k;
+					cin >> id >> k;
+					if(!um.count(id)) {
+						um[id] = new node(id);
+					}
+					auto nd = um[id];
+					for(int j = 0; j < k; j++) {
+						string cid;
+						cin >> cid;
+						if(!um.count(cid)) {
+							um[cid] = new node(cid);
+						}
+						nd->children.insert(um[cid]);
+					}
+				}
+				queue<pair<node *, int>> q;
+				q.push(make_pair(um["01"], 0));
+				if(um["01"] == nullptr) {
+					cout << 1;
+					return 0;
+				}
+				int current_level = 0;
+				int leaf_cnt      = 0;
+				while(!q.empty()) {
+					auto [nd, level] = q.front();
+					q.pop();
+					if(level != current_level) {
+						if(current_level != 0) {
+							cout << ' ';
+						}
+						current_level = level;
+						cout << leaf_cnt;
+						leaf_cnt = 0;
+					}
+					if(nd->children.empty()) {
+						leaf_cnt++;
+					}
+					for(auto c: nd->children) {
+						q.push(make_pair(c, level + 1));
+					}
+				}
+				cout << ' ' << leaf_cnt;
+				return 0;
+			}
+		}// namespace a1004
 	}    // namespace a
 
 	namespace top {}

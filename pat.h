@@ -739,6 +739,17 @@ namespace pat {
 			};
 			int main(istream &cin, ostream &cout);
 		}// namespace a1003
+
+		/// \brief 1004 Counting Leaves
+		namespace a1004 {
+			struct node {
+				string id;
+				unordered_set<node *> children;
+
+				explicit node(string id): id(std::move(id)) {}
+			};
+			int main(istream &cin, ostream &cout);
+		}// namespace a1004
 	}    // namespace a
 
 	/// \brief 顶级

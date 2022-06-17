@@ -1979,6 +1979,16 @@ namespace pat {
 				ASSERT_EQ("2 4", out.str());
 			}
 		}// namespace a1003
+
+		namespace a1004 {
+			TEST(a1004, case1) {
+				istringstream in("2 1\n"
+				                 "01 1 02");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("0 1", out.str());
+			}
+		}// namespace a1004
 	}    // namespace a
 
 	namespace top {}
