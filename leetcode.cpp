@@ -6939,4 +6939,11 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace top_k_frequent_elements
+
+	namespace kth_largest_element_in_an_array {
+		int Solution::findKthLargest(vector<int> &nums, int k) {
+			sort(nums.rbegin(), nums.rend());
+			return nums[k - 1];
+		}
+	}// namespace kth_largest_element_in_an_array
 }// namespace leetcode

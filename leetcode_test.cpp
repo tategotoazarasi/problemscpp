@@ -3239,4 +3239,16 @@ namespace leetcode {
 			ASSERT_EQ(expected, nums);
 		}
 	}// namespace sort_colors
+
+	namespace kth_largest_element_in_an_array {
+		TEST(kth_largest_element_in_an_array, case1) {
+			vector<int> nums = {3, 2, 1, 5, 6, 4};
+			ASSERT_EQ(5, Solution::findKthLargest(nums, 2));
+		}
+
+		TEST(kth_largest_element_in_an_array, case2) {
+			vector<int> nums = {3, 2, 3, 1, 2, 4, 5, 5, 6};
+			ASSERT_EQ(4, Solution::findKthLargest(nums, 4));
+		}
+	}// namespace kth_largest_element_in_an_array
 }// namespace leetcode

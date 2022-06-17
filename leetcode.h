@@ -2572,6 +2572,14 @@ namespace leetcode {
 			static vector<int> topKFrequent(vector<int> &nums, int k);
 		};
 	}// namespace top_k_frequent_elements
+
+	/// \brief 215. Kth Largest Element in an Array
+	namespace kth_largest_element_in_an_array {
+		class Solution {
+		public:
+			static int findKthLargest(vector<int> &nums, int k);
+		};
+	}// namespace kth_largest_element_in_an_array
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
