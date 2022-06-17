@@ -2564,6 +2564,14 @@ namespace leetcode {
 			static void sortColors(vector<int> &nums);
 		};
 	}// namespace sort_colors
+
+	/// \brief 347. Top K Frequent Elements
+	namespace top_k_frequent_elements {
+		class Solution {
+		public:
+			static vector<int> topKFrequent(vector<int> &nums, int k);
+		};
+	}// namespace top_k_frequent_elements
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

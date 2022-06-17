@@ -6913,4 +6913,30 @@ namespace leetcode {
 			qsort(nums, rp + 1, r);
 		}
 	}// namespace sort_colors
+
+	namespace top_k_frequent_elements {
+		vector<int> Solution::topKFrequent(vector<int> &nums, int k) {
+			unordered_map<int, int> um;
+			for(auto num: nums) {
+				um[num]++;
+			}
+			vector<int> vec(um.size());
+			int i = 0;
+			for(auto &[_, v]: um) {
+				vec[i++] = v;
+			}
+			sort(vec.rbegin(), vec.rend());
+			unordered_set<int> us;
+			for(i = 0; i < k; i++) {
+				us.insert(vec[i]);
+			}
+			vector<int> ans;
+			for(auto [num, v]: um) {
+				if(us.count(v)) {
+					ans.emplace_back(num);
+				}
+			}
+			return ans;
+		}
+	}// namespace top_k_frequent_elements
 }// namespace leetcode
