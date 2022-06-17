@@ -2555,6 +2555,15 @@ namespace leetcode {
 			static vector<vector<string>> groupAnagrams(vector<string> &strs);
 		};
 	}// namespace group_anagrams
+
+	/// \brief 75. Sort Colors
+	namespace sort_colors {
+		class Solution {
+		public:
+			static void qsort(vector<int> &nums, int l, int r);
+			static void sortColors(vector<int> &nums);
+		};
+	}// namespace sort_colors
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

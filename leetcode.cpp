@@ -6887,4 +6887,30 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace group_anagrams
+
+	namespace sort_colors {
+		void Solution::sortColors(vector<int> &nums) {
+			qsort(nums, 0, nums.size() - 1);
+		}
+
+		void Solution::qsort(vector<int> &nums, int l, int r) {
+			if(l >= r) {
+				return;
+			}
+			int lp    = l - 1;
+			int rp    = r + 1;
+			int pivot = nums[(l + r) / 2];
+			while(lp < rp) {
+				while(nums[++lp] < pivot)
+					;
+				while(nums[--rp] > pivot)
+					;
+				if(lp < rp) {
+					swap(nums[lp], nums[rp]);
+				}
+			}
+			qsort(nums, l, rp);
+			qsort(nums, rp + 1, r);
+		}
+	}// namespace sort_colors
 }// namespace leetcode

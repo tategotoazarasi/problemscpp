@@ -3223,4 +3223,20 @@ namespace leetcode {
 			ASSERT_EQ(4, Solution::maxPoints(points));
 		}
 	}// namespace max_points_on_a_line
+
+	namespace sort_colors {
+		TEST(sort_colors, case1) {
+			vector<int> nums = {2, 0, 2, 1, 1, 0};
+			Solution::sortColors(nums);
+			vector<int> expected = {0, 0, 1, 1, 2, 2};
+			ASSERT_EQ(expected, nums);
+		}
+
+		TEST(sort_colors, case2) {
+			vector<int> nums = {2, 0, 1};
+			Solution::sortColors(nums);
+			vector<int> expected = {0, 1, 2};
+			ASSERT_EQ(expected, nums);
+		}
+	}// namespace sort_colors
 }// namespace leetcode
