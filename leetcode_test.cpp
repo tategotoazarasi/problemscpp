@@ -2653,15 +2653,15 @@ namespace leetcode {
 	namespace find_players_with_zero_or_one_losses {
 		TEST(find_players_with_zero_or_one_losses, case1) {
 			vector<vector<int>> matches      = {{1, 3},
-			                                    {2, 3},
-			                                    {3, 6},
-			                                    {5, 6},
-			                                    {5, 7},
-			                                    {4, 5},
-			                                    {4, 8},
-			                                    {4, 9},
-			                                    {10, 4},
-			                                    {10, 9}};
+                                           {2, 3},
+                                           {3, 6},
+                                           {5, 6},
+                                           {5, 7},
+                                           {4, 5},
+                                           {4, 8},
+                                           {4, 9},
+                                           {10, 4},
+                                           {10, 9}};
 			const vector<vector<int>> output = {{1, 2, 10}, {4, 5, 7, 8}};
 			ASSERT_EQ(output, Solution::findWinners(matches));
 		}
@@ -3226,28 +3226,28 @@ namespace leetcode {
 
 	namespace sort_colors {
 		TEST(sort_colors, case1) {
-			vector<int> nums = {2, 0, 2, 1, 1, 0};
+			vector nums = {2, 0, 2, 1, 1, 0};
 			Solution::sortColors(nums);
-			vector<int> expected = {0, 0, 1, 1, 2, 2};
+			const vector expected = {0, 0, 1, 1, 2, 2};
 			ASSERT_EQ(expected, nums);
 		}
 
 		TEST(sort_colors, case2) {
-			vector<int> nums = {2, 0, 1};
+			vector nums = {2, 0, 1};
 			Solution::sortColors(nums);
-			vector<int> expected = {0, 1, 2};
+			const vector expected = {0, 1, 2};
 			ASSERT_EQ(expected, nums);
 		}
 	}// namespace sort_colors
 
 	namespace kth_largest_element_in_an_array {
 		TEST(kth_largest_element_in_an_array, case1) {
-			vector<int> nums = {3, 2, 1, 5, 6, 4};
+			vector nums = {3, 2, 1, 5, 6, 4};
 			ASSERT_EQ(5, Solution::findKthLargest(nums, 2));
 		}
 
 		TEST(kth_largest_element_in_an_array, case2) {
-			vector<int> nums = {3, 2, 3, 1, 2, 4, 5, 5, 6};
+			vector nums = {3, 2, 3, 1, 2, 4, 5, 5, 6};
 			ASSERT_EQ(4, Solution::findKthLargest(nums, 4));
 		}
 	}// namespace kth_largest_element_in_an_array

@@ -737,6 +737,7 @@ namespace pat {
 			struct comp {
 				bool operator()(const tuple<int, int, int> &a, const tuple<int, int, int> &b) const;
 			};
+
 			int main(istream &cin, ostream &cout);
 		}// namespace a1003
 
@@ -746,8 +747,10 @@ namespace pat {
 				string id;
 				unordered_set<node *> children;
 
-				explicit node(string id): id(std::move(id)) {}
+				explicit node(string id)
+				    : id(std::move(id)) {}
 			};
+
 			int main(istream &cin, ostream &cout);
 		}// namespace a1004
 
