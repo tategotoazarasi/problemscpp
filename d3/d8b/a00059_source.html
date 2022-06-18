@@ -6672,7 +6672,7 @@ $(function() {
 <div class="line"><a id="l06617" name="l06617"></a><span class="lineno"> 6617</span>                    }</div>
 <div class="line"><a id="l06618" name="l06618"></a><span class="lineno"> 6618</span> </div>
 <div class="line"><a id="l06619" name="l06619"></a><span class="lineno"> 6619</span>                    <span class="comment">// 只要 dp[i][L] == true 成立，就表示子串 s[i..L] 是回文，此时记录回文长度和起始位置</span></div>
-<div class="line"><a id="l06620" name="l06620"></a><span class="lineno"> 6620</span>                    <span class="keywordflow">if</span>((dp[i][j] != 0) &amp;&amp; j - i + 1 &gt; maxLen) {</div>
+<div class="line"><a id="l06620" name="l06620"></a><span class="lineno"> 6620</span>                    <span class="keywordflow">if</span>(dp[i][j] != 0 &amp;&amp; j - i + 1 &gt; maxLen) {</div>
 <div class="line"><a id="l06621" name="l06621"></a><span class="lineno"> 6621</span>                        maxLen = j - i + 1;</div>
 <div class="line"><a id="l06622" name="l06622"></a><span class="lineno"> 6622</span>                        begin  = i;</div>
 <div class="line"><a id="l06623" name="l06623"></a><span class="lineno"> 6623</span>                    }</div>
@@ -6928,7 +6928,7 @@ $(function() {
 <div class="line"><a id="l06873" name="l06873"></a><span class="lineno"> 6873</span>            unordered_map&lt;string, vector&lt;string&gt;&gt; um;</div>
 <div class="line"><a id="l06874" name="l06874"></a><span class="lineno"> 6874</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;str: strs_sorted) {</div>
 <div class="line"><a id="l06875" name="l06875"></a><span class="lineno"> 6875</span>                sort(str.begin(), str.end());</div>
-<div class="line"><a id="l06876" name="l06876"></a><span class="lineno"> 6876</span>                <span class="keywordflow">if</span>(!um.count(str)) {</div>
+<div class="line"><a id="l06876" name="l06876"></a><span class="lineno"> 6876</span>                <span class="keywordflow">if</span>(!um.contains(str)) {</div>
 <div class="line"><a id="l06877" name="l06877"></a><span class="lineno"> 6877</span>                    um[str] = vector&lt;string&gt;();</div>
 <div class="line"><a id="l06878" name="l06878"></a><span class="lineno"> 6878</span>                }</div>
 <div class="line"><a id="l06879" name="l06879"></a><span class="lineno"> 6879</span>            }</div>
@@ -6936,72 +6936,71 @@ $(function() {
 <div class="line"><a id="l06881" name="l06881"></a><span class="lineno"> 6881</span>                um[strs_sorted[i]].emplace_back(strs[i]);</div>
 <div class="line"><a id="l06882" name="l06882"></a><span class="lineno"> 6882</span>            }</div>
 <div class="line"><a id="l06883" name="l06883"></a><span class="lineno"> 6883</span>            vector&lt;vector&lt;string&gt;&gt; ans;</div>
-<div class="line"><a id="l06884" name="l06884"></a><span class="lineno"> 6884</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[k, v]: um) {</div>
-<div class="line"><a id="l06885" name="l06885"></a><span class="lineno"> 6885</span>                ans.emplace_back(v);</div>
-<div class="line"><a id="l06886" name="l06886"></a><span class="lineno"> 6886</span>            }</div>
-<div class="line"><a id="l06887" name="l06887"></a><span class="lineno"> 6887</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l06888" name="l06888"></a><span class="lineno"> 6888</span>        }</div>
-<div class="line"><a id="l06889" name="l06889"></a><span class="lineno"> 6889</span>    }<span class="comment">// namespace group_anagrams</span></div>
-<div class="line"><a id="l06890" name="l06890"></a><span class="lineno"> 6890</span> </div>
-<div class="line"><a id="l06891" name="l06891"></a><span class="lineno"><a class="line" href="../../dd/db5/a00365.html"> 6891</a></span>    <span class="keyword">namespace </span>sort_colors {</div>
-<div class="line"><a id="l06892" name="l06892"></a><span class="lineno"><a class="line" href="../../de/da0/a02437.html#acef135e312551d7cdeebbd0e1cc5bca4"> 6892</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/da0/a02437.html#acef135e312551d7cdeebbd0e1cc5bca4">Solution::sortColors</a>(vector&lt;int&gt; &amp;nums) {</div>
-<div class="line"><a id="l06893" name="l06893"></a><span class="lineno"> 6893</span>            <a class="code hl_function" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">qsort</a>(nums, 0, nums.size() - 1);</div>
-<div class="line"><a id="l06894" name="l06894"></a><span class="lineno"> 6894</span>        }</div>
-<div class="line"><a id="l06895" name="l06895"></a><span class="lineno"> 6895</span> </div>
-<div class="line"><a id="l06896" name="l06896"></a><span class="lineno"><a class="line" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0"> 6896</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">Solution::qsort</a>(vector&lt;int&gt; &amp;nums, <span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r) {</div>
-<div class="line"><a id="l06897" name="l06897"></a><span class="lineno"> 6897</span>            <span class="keywordflow">if</span>(l &gt;= r) {</div>
-<div class="line"><a id="l06898" name="l06898"></a><span class="lineno"> 6898</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l06899" name="l06899"></a><span class="lineno"> 6899</span>            }</div>
-<div class="line"><a id="l06900" name="l06900"></a><span class="lineno"> 6900</span>            <span class="keywordtype">int</span> lp    = l - 1;</div>
-<div class="line"><a id="l06901" name="l06901"></a><span class="lineno"> 6901</span>            <span class="keywordtype">int</span> rp    = r + 1;</div>
-<div class="line"><a id="l06902" name="l06902"></a><span class="lineno"> 6902</span>            <span class="keywordtype">int</span> pivot = nums[(l + r) / 2];</div>
-<div class="line"><a id="l06903" name="l06903"></a><span class="lineno"> 6903</span>            <span class="keywordflow">while</span>(lp &lt; rp) {</div>
-<div class="line"><a id="l06904" name="l06904"></a><span class="lineno"> 6904</span>                <span class="keywordflow">while</span>(nums[++lp] &lt; pivot)</div>
-<div class="line"><a id="l06905" name="l06905"></a><span class="lineno"> 6905</span>                    ;</div>
-<div class="line"><a id="l06906" name="l06906"></a><span class="lineno"> 6906</span>                <span class="keywordflow">while</span>(nums[--rp] &gt; pivot)</div>
-<div class="line"><a id="l06907" name="l06907"></a><span class="lineno"> 6907</span>                    ;</div>
-<div class="line"><a id="l06908" name="l06908"></a><span class="lineno"> 6908</span>                <span class="keywordflow">if</span>(lp &lt; rp) {</div>
-<div class="line"><a id="l06909" name="l06909"></a><span class="lineno"> 6909</span>                    swap(nums[lp], nums[rp]);</div>
-<div class="line"><a id="l06910" name="l06910"></a><span class="lineno"> 6910</span>                }</div>
-<div class="line"><a id="l06911" name="l06911"></a><span class="lineno"> 6911</span>            }</div>
-<div class="line"><a id="l06912" name="l06912"></a><span class="lineno"> 6912</span>            <a class="code hl_function" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">qsort</a>(nums, l, rp);</div>
-<div class="line"><a id="l06913" name="l06913"></a><span class="lineno"> 6913</span>            <a class="code hl_function" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">qsort</a>(nums, rp + 1, r);</div>
-<div class="line"><a id="l06914" name="l06914"></a><span class="lineno"> 6914</span>        }</div>
-<div class="line"><a id="l06915" name="l06915"></a><span class="lineno"> 6915</span>    }<span class="comment">// namespace sort_colors</span></div>
-<div class="line"><a id="l06916" name="l06916"></a><span class="lineno"> 6916</span> </div>
-<div class="line"><a id="l06917" name="l06917"></a><span class="lineno"><a class="line" href="../../d2/d3e/a00366.html"> 6917</a></span>    <span class="keyword">namespace </span>top_k_frequent_elements {</div>
-<div class="line"><a id="l06918" name="l06918"></a><span class="lineno"><a class="line" href="../../d9/dd6/a02441.html#a769c56ca1e01bc495f60a93b90f29aa5"> 6918</a></span>        vector&lt;int&gt; <a class="code hl_function" href="../../d9/dd6/a02441.html#a769c56ca1e01bc495f60a93b90f29aa5">Solution::topKFrequent</a>(vector&lt;int&gt; &amp;nums, <span class="keywordtype">int</span> k) {</div>
-<div class="line"><a id="l06919" name="l06919"></a><span class="lineno"> 6919</span>            unordered_map&lt;int, int&gt; um;</div>
-<div class="line"><a id="l06920" name="l06920"></a><span class="lineno"> 6920</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> num: nums) {</div>
-<div class="line"><a id="l06921" name="l06921"></a><span class="lineno"> 6921</span>                um[num]++;</div>
-<div class="line"><a id="l06922" name="l06922"></a><span class="lineno"> 6922</span>            }</div>
-<div class="line"><a id="l06923" name="l06923"></a><span class="lineno"> 6923</span>            vector&lt;int&gt; vec(um.size());</div>
-<div class="line"><a id="l06924" name="l06924"></a><span class="lineno"> 6924</span>            <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><a id="l06925" name="l06925"></a><span class="lineno"> 6925</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[_, v]: um) {</div>
-<div class="line"><a id="l06926" name="l06926"></a><span class="lineno"> 6926</span>                vec[i++] = v;</div>
-<div class="line"><a id="l06927" name="l06927"></a><span class="lineno"> 6927</span>            }</div>
-<div class="line"><a id="l06928" name="l06928"></a><span class="lineno"> 6928</span>            sort(vec.rbegin(), vec.rend());</div>
-<div class="line"><a id="l06929" name="l06929"></a><span class="lineno"> 6929</span>            unordered_set&lt;int&gt; us;</div>
-<div class="line"><a id="l06930" name="l06930"></a><span class="lineno"> 6930</span>            <span class="keywordflow">for</span>(i = 0; i &lt; k; i++) {</div>
-<div class="line"><a id="l06931" name="l06931"></a><span class="lineno"> 6931</span>                us.insert(vec[i]);</div>
-<div class="line"><a id="l06932" name="l06932"></a><span class="lineno"> 6932</span>            }</div>
-<div class="line"><a id="l06933" name="l06933"></a><span class="lineno"> 6933</span>            vector&lt;int&gt; ans;</div>
-<div class="line"><a id="l06934" name="l06934"></a><span class="lineno"> 6934</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> [num, v]: um) {</div>
-<div class="line"><a id="l06935" name="l06935"></a><span class="lineno"> 6935</span>                <span class="keywordflow">if</span>(us.count(v)) {</div>
-<div class="line"><a id="l06936" name="l06936"></a><span class="lineno"> 6936</span>                    ans.emplace_back(num);</div>
-<div class="line"><a id="l06937" name="l06937"></a><span class="lineno"> 6937</span>                }</div>
-<div class="line"><a id="l06938" name="l06938"></a><span class="lineno"> 6938</span>            }</div>
-<div class="line"><a id="l06939" name="l06939"></a><span class="lineno"> 6939</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l06940" name="l06940"></a><span class="lineno"> 6940</span>        }</div>
-<div class="line"><a id="l06941" name="l06941"></a><span class="lineno"> 6941</span>    }<span class="comment">// namespace top_k_frequent_elements</span></div>
-<div class="line"><a id="l06942" name="l06942"></a><span class="lineno"> 6942</span> </div>
-<div class="line"><a id="l06943" name="l06943"></a><span class="lineno"><a class="line" href="../../df/dc2/a00367.html"> 6943</a></span>    <span class="keyword">namespace </span>kth_largest_element_in_an_array {</div>
-<div class="line"><a id="l06944" name="l06944"></a><span class="lineno"><a class="line" href="../../dd/d26/a02445.html#ab25e4d428be3721db527e4ca39a4963e"> 6944</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../dd/d26/a02445.html#ab25e4d428be3721db527e4ca39a4963e">Solution::findKthLargest</a>(vector&lt;int&gt; &amp;nums, <span class="keywordtype">int</span> k) {</div>
-<div class="line"><a id="l06945" name="l06945"></a><span class="lineno"> 6945</span>            sort(nums.rbegin(), nums.rend());</div>
-<div class="line"><a id="l06946" name="l06946"></a><span class="lineno"> 6946</span>            <span class="keywordflow">return</span> nums[k - 1];</div>
-<div class="line"><a id="l06947" name="l06947"></a><span class="lineno"> 6947</span>        }</div>
-<div class="line"><a id="l06948" name="l06948"></a><span class="lineno"> 6948</span>    }<span class="comment">// namespace kth_largest_element_in_an_array</span></div>
-<div class="line"><a id="l06949" name="l06949"></a><span class="lineno"> 6949</span>}<span class="comment">// namespace leetcode</span></div>
+<div class="line"><a id="l06884" name="l06884"></a><span class="lineno"> 6884</span>            ans.reserve(um.size());</div>
+<div class="line"><a id="l06885" name="l06885"></a><span class="lineno"> 6885</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[k, v]: um) {</div>
+<div class="line"><a id="l06886" name="l06886"></a><span class="lineno"> 6886</span>                ans.emplace_back(v);</div>
+<div class="line"><a id="l06887" name="l06887"></a><span class="lineno"> 6887</span>            }</div>
+<div class="line"><a id="l06888" name="l06888"></a><span class="lineno"> 6888</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l06889" name="l06889"></a><span class="lineno"> 6889</span>        }</div>
+<div class="line"><a id="l06890" name="l06890"></a><span class="lineno"> 6890</span>    }<span class="comment">// namespace group_anagrams</span></div>
+<div class="line"><a id="l06891" name="l06891"></a><span class="lineno"> 6891</span> </div>
+<div class="line"><a id="l06892" name="l06892"></a><span class="lineno"><a class="line" href="../../dd/db5/a00365.html"> 6892</a></span>    <span class="keyword">namespace </span>sort_colors {</div>
+<div class="line"><a id="l06893" name="l06893"></a><span class="lineno"><a class="line" href="../../de/da0/a02437.html#acef135e312551d7cdeebbd0e1cc5bca4"> 6893</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/da0/a02437.html#acef135e312551d7cdeebbd0e1cc5bca4">Solution::sortColors</a>(vector&lt;int&gt; &amp;nums) { <a class="code hl_function" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">qsort</a>(nums, 0, nums.size() - 1); }</div>
+<div class="line"><a id="l06894" name="l06894"></a><span class="lineno"> 6894</span> </div>
+<div class="line"><a id="l06895" name="l06895"></a><span class="lineno"><a class="line" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0"> 6895</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">Solution::qsort</a>(vector&lt;int&gt; &amp;nums, <span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r) {</div>
+<div class="line"><a id="l06896" name="l06896"></a><span class="lineno"> 6896</span>            <span class="keywordflow">if</span>(l &gt;= r) {</div>
+<div class="line"><a id="l06897" name="l06897"></a><span class="lineno"> 6897</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l06898" name="l06898"></a><span class="lineno"> 6898</span>            }</div>
+<div class="line"><a id="l06899" name="l06899"></a><span class="lineno"> 6899</span>            <span class="keywordtype">int</span> lp          = l - 1;</div>
+<div class="line"><a id="l06900" name="l06900"></a><span class="lineno"> 6900</span>            <span class="keywordtype">int</span> rp          = r + 1;</div>
+<div class="line"><a id="l06901" name="l06901"></a><span class="lineno"> 6901</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> pivot = nums[(l + r) / 2];</div>
+<div class="line"><a id="l06902" name="l06902"></a><span class="lineno"> 6902</span>            <span class="keywordflow">while</span>(lp &lt; rp) {</div>
+<div class="line"><a id="l06903" name="l06903"></a><span class="lineno"> 6903</span>                <span class="keywordflow">while</span>(nums[++lp] &lt; pivot)</div>
+<div class="line"><a id="l06904" name="l06904"></a><span class="lineno"> 6904</span>                    ;</div>
+<div class="line"><a id="l06905" name="l06905"></a><span class="lineno"> 6905</span>                <span class="keywordflow">while</span>(nums[--rp] &gt; pivot)</div>
+<div class="line"><a id="l06906" name="l06906"></a><span class="lineno"> 6906</span>                    ;</div>
+<div class="line"><a id="l06907" name="l06907"></a><span class="lineno"> 6907</span>                <span class="keywordflow">if</span>(lp &lt; rp) {</div>
+<div class="line"><a id="l06908" name="l06908"></a><span class="lineno"> 6908</span>                    swap(nums[lp], nums[rp]);</div>
+<div class="line"><a id="l06909" name="l06909"></a><span class="lineno"> 6909</span>                }</div>
+<div class="line"><a id="l06910" name="l06910"></a><span class="lineno"> 6910</span>            }</div>
+<div class="line"><a id="l06911" name="l06911"></a><span class="lineno"> 6911</span>            <a class="code hl_function" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">qsort</a>(nums, l, rp);</div>
+<div class="line"><a id="l06912" name="l06912"></a><span class="lineno"> 6912</span>            <a class="code hl_function" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">qsort</a>(nums, rp + 1, r);</div>
+<div class="line"><a id="l06913" name="l06913"></a><span class="lineno"> 6913</span>        }</div>
+<div class="line"><a id="l06914" name="l06914"></a><span class="lineno"> 6914</span>    }<span class="comment">// namespace sort_colors</span></div>
+<div class="line"><a id="l06915" name="l06915"></a><span class="lineno"> 6915</span> </div>
+<div class="line"><a id="l06916" name="l06916"></a><span class="lineno"><a class="line" href="../../d2/d3e/a00366.html"> 6916</a></span>    <span class="keyword">namespace </span>top_k_frequent_elements {</div>
+<div class="line"><a id="l06917" name="l06917"></a><span class="lineno"><a class="line" href="../../d9/dd6/a02441.html#a769c56ca1e01bc495f60a93b90f29aa5"> 6917</a></span>        vector&lt;int&gt; <a class="code hl_function" href="../../d9/dd6/a02441.html#a769c56ca1e01bc495f60a93b90f29aa5">Solution::topKFrequent</a>(vector&lt;int&gt; &amp;nums, <span class="keywordtype">int</span> k) {</div>
+<div class="line"><a id="l06918" name="l06918"></a><span class="lineno"> 6918</span>            unordered_map&lt;int, int&gt; um;</div>
+<div class="line"><a id="l06919" name="l06919"></a><span class="lineno"> 6919</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> num: nums) {</div>
+<div class="line"><a id="l06920" name="l06920"></a><span class="lineno"> 6920</span>                um[num]++;</div>
+<div class="line"><a id="l06921" name="l06921"></a><span class="lineno"> 6921</span>            }</div>
+<div class="line"><a id="l06922" name="l06922"></a><span class="lineno"> 6922</span>            vector&lt;int&gt; vec(um.size());</div>
+<div class="line"><a id="l06923" name="l06923"></a><span class="lineno"> 6923</span>            <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a id="l06924" name="l06924"></a><span class="lineno"> 6924</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[_, v]: um) {</div>
+<div class="line"><a id="l06925" name="l06925"></a><span class="lineno"> 6925</span>                vec[i++] = v;</div>
+<div class="line"><a id="l06926" name="l06926"></a><span class="lineno"> 6926</span>            }</div>
+<div class="line"><a id="l06927" name="l06927"></a><span class="lineno"> 6927</span>            sort(vec.rbegin(), vec.rend());</div>
+<div class="line"><a id="l06928" name="l06928"></a><span class="lineno"> 6928</span>            unordered_set&lt;int&gt; us;</div>
+<div class="line"><a id="l06929" name="l06929"></a><span class="lineno"> 6929</span>            <span class="keywordflow">for</span>(i = 0; i &lt; k; i++) {</div>
+<div class="line"><a id="l06930" name="l06930"></a><span class="lineno"> 6930</span>                us.insert(vec[i]);</div>
+<div class="line"><a id="l06931" name="l06931"></a><span class="lineno"> 6931</span>            }</div>
+<div class="line"><a id="l06932" name="l06932"></a><span class="lineno"> 6932</span>            vector&lt;int&gt; ans;</div>
+<div class="line"><a id="l06933" name="l06933"></a><span class="lineno"> 6933</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> [num, v]: um) {</div>
+<div class="line"><a id="l06934" name="l06934"></a><span class="lineno"> 6934</span>                <span class="keywordflow">if</span>(us.contains(v)) {</div>
+<div class="line"><a id="l06935" name="l06935"></a><span class="lineno"> 6935</span>                    ans.emplace_back(num);</div>
+<div class="line"><a id="l06936" name="l06936"></a><span class="lineno"> 6936</span>                }</div>
+<div class="line"><a id="l06937" name="l06937"></a><span class="lineno"> 6937</span>            }</div>
+<div class="line"><a id="l06938" name="l06938"></a><span class="lineno"> 6938</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l06939" name="l06939"></a><span class="lineno"> 6939</span>        }</div>
+<div class="line"><a id="l06940" name="l06940"></a><span class="lineno"> 6940</span>    }<span class="comment">// namespace top_k_frequent_elements</span></div>
+<div class="line"><a id="l06941" name="l06941"></a><span class="lineno"> 6941</span> </div>
+<div class="line"><a id="l06942" name="l06942"></a><span class="lineno"><a class="line" href="../../df/dc2/a00367.html"> 6942</a></span>    <span class="keyword">namespace </span>kth_largest_element_in_an_array {</div>
+<div class="line"><a id="l06943" name="l06943"></a><span class="lineno"><a class="line" href="../../dd/d26/a02445.html#ab25e4d428be3721db527e4ca39a4963e"> 6943</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../dd/d26/a02445.html#ab25e4d428be3721db527e4ca39a4963e">Solution::findKthLargest</a>(vector&lt;int&gt; &amp;nums, <span class="keywordtype">int</span> k) {</div>
+<div class="line"><a id="l06944" name="l06944"></a><span class="lineno"> 6944</span>            sort(nums.rbegin(), nums.rend());</div>
+<div class="line"><a id="l06945" name="l06945"></a><span class="lineno"> 6945</span>            <span class="keywordflow">return</span> nums[k - 1];</div>
+<div class="line"><a id="l06946" name="l06946"></a><span class="lineno"> 6946</span>        }</div>
+<div class="line"><a id="l06947" name="l06947"></a><span class="lineno"> 6947</span>    }<span class="comment">// namespace kth_largest_element_in_an_array</span></div>
+<div class="line"><a id="l06948" name="l06948"></a><span class="lineno"> 6948</span>}<span class="comment">// namespace leetcode</span></div>
 <div class="ttc" id="aa00002_html"><div class="ttname"><a href="../../d7/d46/a00002.html">templates.h</a></div></div>
 <div class="ttc" id="aa00056_html"><div class="ttname"><a href="../../d9/d2e/a00056.html">leetcode.h</a></div></div>
 <div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">acwing::acwing1929::left</a></div><div class="ttdeci">@ left</div><div class="ttdoc">左</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l00554">acwing.h:554</a></div></div>
@@ -7459,10 +7458,10 @@ $(function() {
 <div class="ttc" id="aa02425_html_a77950b7d9c5193ee4c3ff4f2ab5f0b45"><div class="ttname"><a href="../../d9/d9d/a02425.html#a77950b7d9c5193ee4c3ff4f2ab5f0b45">leetcode::integer_break::Solution::integerBreak</a></div><div class="ttdeci">static int integerBreak(int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06830">leetcode.cpp:6830</a></div></div>
 <div class="ttc" id="aa02429_html_a066b356f154729bebacd8f766efd08aa"><div class="ttname"><a href="../../dc/d09/a02429.html#a066b356f154729bebacd8f766efd08aa">leetcode::max_points_on_a_line::Solution::maxPoints</a></div><div class="ttdeci">static int maxPoints(vector&lt; vector&lt; int &gt; &gt; &amp;points)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06849">leetcode.cpp:6849</a></div></div>
 <div class="ttc" id="aa02433_html_a83e641cff9d865d4d2ae6653acd03ee5"><div class="ttname"><a href="../../d7/d18/a02433.html#a83e641cff9d865d4d2ae6653acd03ee5">leetcode::group_anagrams::Solution::groupAnagrams</a></div><div class="ttdeci">static vector&lt; vector&lt; string &gt; &gt; groupAnagrams(vector&lt; string &gt; &amp;strs)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06871">leetcode.cpp:6871</a></div></div>
-<div class="ttc" id="aa02437_html_ac960a9d1add7006e7a5b765fb57fadd0"><div class="ttname"><a href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">leetcode::sort_colors::Solution::qsort</a></div><div class="ttdeci">static void qsort(vector&lt; int &gt; &amp;nums, int l, int r)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06896">leetcode.cpp:6896</a></div></div>
-<div class="ttc" id="aa02437_html_acef135e312551d7cdeebbd0e1cc5bca4"><div class="ttname"><a href="../../de/da0/a02437.html#acef135e312551d7cdeebbd0e1cc5bca4">leetcode::sort_colors::Solution::sortColors</a></div><div class="ttdeci">static void sortColors(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06892">leetcode.cpp:6892</a></div></div>
-<div class="ttc" id="aa02441_html_a769c56ca1e01bc495f60a93b90f29aa5"><div class="ttname"><a href="../../d9/dd6/a02441.html#a769c56ca1e01bc495f60a93b90f29aa5">leetcode::top_k_frequent_elements::Solution::topKFrequent</a></div><div class="ttdeci">static vector&lt; int &gt; topKFrequent(vector&lt; int &gt; &amp;nums, int k)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06918">leetcode.cpp:6918</a></div></div>
-<div class="ttc" id="aa02445_html_ab25e4d428be3721db527e4ca39a4963e"><div class="ttname"><a href="../../dd/d26/a02445.html#ab25e4d428be3721db527e4ca39a4963e">leetcode::kth_largest_element_in_an_array::Solution::findKthLargest</a></div><div class="ttdeci">static int findKthLargest(vector&lt; int &gt; &amp;nums, int k)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06944">leetcode.cpp:6944</a></div></div>
+<div class="ttc" id="aa02437_html_ac960a9d1add7006e7a5b765fb57fadd0"><div class="ttname"><a href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">leetcode::sort_colors::Solution::qsort</a></div><div class="ttdeci">static void qsort(vector&lt; int &gt; &amp;nums, int l, int r)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06895">leetcode.cpp:6895</a></div></div>
+<div class="ttc" id="aa02437_html_acef135e312551d7cdeebbd0e1cc5bca4"><div class="ttname"><a href="../../de/da0/a02437.html#acef135e312551d7cdeebbd0e1cc5bca4">leetcode::sort_colors::Solution::sortColors</a></div><div class="ttdeci">static void sortColors(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06893">leetcode.cpp:6893</a></div></div>
+<div class="ttc" id="aa02441_html_a769c56ca1e01bc495f60a93b90f29aa5"><div class="ttname"><a href="../../d9/dd6/a02441.html#a769c56ca1e01bc495f60a93b90f29aa5">leetcode::top_k_frequent_elements::Solution::topKFrequent</a></div><div class="ttdeci">static vector&lt; int &gt; topKFrequent(vector&lt; int &gt; &amp;nums, int k)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06917">leetcode.cpp:6917</a></div></div>
+<div class="ttc" id="aa02445_html_ab25e4d428be3721db527e4ca39a4963e"><div class="ttname"><a href="../../dd/d26/a02445.html#ab25e4d428be3721db527e4ca39a4963e">leetcode::kth_largest_element_in_an_array::Solution::findKthLargest</a></div><div class="ttdeci">static int findKthLargest(vector&lt; int &gt; &amp;nums, int k)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06943">leetcode.cpp:6943</a></div></div>
 <div class="ttc" id="aa03005_html"><div class="ttname"><a href="../../de/da4/a03005.html">TrieNode</a></div><div class="ttdoc">字典树节点</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l00009">templates.h:9</a></div></div>
 <div class="ttc" id="aa03005_html_a07d53b17d0b024afcbabb556c9964bbd"><div class="ttname"><a href="../../de/da4/a03005.html#a07d53b17d0b024afcbabb556c9964bbd">TrieNode::nexts</a></div><div class="ttdeci">array&lt; TrieNode *, 26 &gt; nexts</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l00011">templates.h:11</a></div></div>
 <div class="ttc" id="aa03005_html_a9845dc41b755ffd1e9c7e2acc08893f2"><div class="ttname"><a href="../../de/da4/a03005.html#a9845dc41b755ffd1e9c7e2acc08893f2">TrieNode::insert</a></div><div class="ttdeci">void insert(const string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00008">templates.cpp:8</a></div></div>

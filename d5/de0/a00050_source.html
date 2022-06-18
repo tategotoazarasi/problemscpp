@@ -2721,15 +2721,15 @@ $(function() {
 <div class="line"><a id="l02653" name="l02653"></a><span class="lineno"> 2653</span>    <span class="keyword">namespace </span>find_players_with_zero_or_one_losses {</div>
 <div class="line"><a id="l02654" name="l02654"></a><span class="lineno"><a class="line" href="../../d0/d39/a00314.html#a530efac59526b8b2c71543680e84dfb8"> 2654</a></span>        <a class="code hl_function" href="../../d0/d39/a00314.html#a530efac59526b8b2c71543680e84dfb8">TEST</a>(find_players_with_zero_or_one_losses, case1) {</div>
 <div class="line"><a id="l02655" name="l02655"></a><span class="lineno"> 2655</span>            vector&lt;vector&lt;int&gt;&gt; matches      = {{1, 3},</div>
-<div class="line"><a id="l02656" name="l02656"></a><span class="lineno"> 2656</span>                                                {2, 3},</div>
-<div class="line"><a id="l02657" name="l02657"></a><span class="lineno"> 2657</span>                                                {3, 6},</div>
-<div class="line"><a id="l02658" name="l02658"></a><span class="lineno"> 2658</span>                                                {5, 6},</div>
-<div class="line"><a id="l02659" name="l02659"></a><span class="lineno"> 2659</span>                                                {5, 7},</div>
-<div class="line"><a id="l02660" name="l02660"></a><span class="lineno"> 2660</span>                                                {4, 5},</div>
-<div class="line"><a id="l02661" name="l02661"></a><span class="lineno"> 2661</span>                                                {4, 8},</div>
-<div class="line"><a id="l02662" name="l02662"></a><span class="lineno"> 2662</span>                                                {4, 9},</div>
-<div class="line"><a id="l02663" name="l02663"></a><span class="lineno"> 2663</span>                                                {10, 4},</div>
-<div class="line"><a id="l02664" name="l02664"></a><span class="lineno"> 2664</span>                                                {10, 9}};</div>
+<div class="line"><a id="l02656" name="l02656"></a><span class="lineno"> 2656</span>                                           {2, 3},</div>
+<div class="line"><a id="l02657" name="l02657"></a><span class="lineno"> 2657</span>                                           {3, 6},</div>
+<div class="line"><a id="l02658" name="l02658"></a><span class="lineno"> 2658</span>                                           {5, 6},</div>
+<div class="line"><a id="l02659" name="l02659"></a><span class="lineno"> 2659</span>                                           {5, 7},</div>
+<div class="line"><a id="l02660" name="l02660"></a><span class="lineno"> 2660</span>                                           {4, 5},</div>
+<div class="line"><a id="l02661" name="l02661"></a><span class="lineno"> 2661</span>                                           {4, 8},</div>
+<div class="line"><a id="l02662" name="l02662"></a><span class="lineno"> 2662</span>                                           {4, 9},</div>
+<div class="line"><a id="l02663" name="l02663"></a><span class="lineno"> 2663</span>                                           {10, 4},</div>
+<div class="line"><a id="l02664" name="l02664"></a><span class="lineno"> 2664</span>                                           {10, 9}};</div>
 <div class="line"><a id="l02665" name="l02665"></a><span class="lineno"> 2665</span>            <span class="keyword">const</span> vector&lt;vector&lt;int&gt;&gt; output = {{1, 2, 10}, {4, 5, 7, 8}};</div>
 <div class="line"><a id="l02666" name="l02666"></a><span class="lineno"> 2666</span>            ASSERT_EQ(output, <a class="code hl_function" href="../../d4/dc0/a02225.html#a4812670b14aa5a311c6d80268501dec2">Solution::findWinners</a>(matches));</div>
 <div class="line"><a id="l02667" name="l02667"></a><span class="lineno"> 2667</span>        }</div>
@@ -3294,28 +3294,28 @@ $(function() {
 <div class="line"><a id="l03226" name="l03226"></a><span class="lineno"> 3226</span> </div>
 <div class="line"><a id="l03227" name="l03227"></a><span class="lineno"> 3227</span>    <span class="keyword">namespace </span>sort_colors {</div>
 <div class="line"><a id="l03228" name="l03228"></a><span class="lineno"><a class="line" href="../../dd/db5/a00365.html#a603e5cc6dc5637b3f5eb80c147579ea7"> 3228</a></span>        <a class="code hl_function" href="../../dd/db5/a00365.html#a603e5cc6dc5637b3f5eb80c147579ea7">TEST</a>(sort_colors, case1) {</div>
-<div class="line"><a id="l03229" name="l03229"></a><span class="lineno"> 3229</span>            vector&lt;int&gt; nums = {2, 0, 2, 1, 1, 0};</div>
+<div class="line"><a id="l03229" name="l03229"></a><span class="lineno"> 3229</span>            vector nums = {2, 0, 2, 1, 1, 0};</div>
 <div class="line"><a id="l03230" name="l03230"></a><span class="lineno"> 3230</span>            <a class="code hl_function" href="../../de/da0/a02437.html#acef135e312551d7cdeebbd0e1cc5bca4">Solution::sortColors</a>(nums);</div>
-<div class="line"><a id="l03231" name="l03231"></a><span class="lineno"> 3231</span>            vector&lt;int&gt; expected = {0, 0, 1, 1, 2, 2};</div>
+<div class="line"><a id="l03231" name="l03231"></a><span class="lineno"> 3231</span>            <span class="keyword">const</span> vector expected = {0, 0, 1, 1, 2, 2};</div>
 <div class="line"><a id="l03232" name="l03232"></a><span class="lineno"> 3232</span>            ASSERT_EQ(expected, nums);</div>
 <div class="line"><a id="l03233" name="l03233"></a><span class="lineno"> 3233</span>        }</div>
 <div class="line"><a id="l03234" name="l03234"></a><span class="lineno"> 3234</span> </div>
 <div class="line"><a id="l03235" name="l03235"></a><span class="lineno"><a class="line" href="../../dd/db5/a00365.html#a3e6c4c32f80ce530111ee13b124b55fc"> 3235</a></span>        <a class="code hl_function" href="../../dd/db5/a00365.html#a603e5cc6dc5637b3f5eb80c147579ea7">TEST</a>(sort_colors, case2) {</div>
-<div class="line"><a id="l03236" name="l03236"></a><span class="lineno"> 3236</span>            vector&lt;int&gt; nums = {2, 0, 1};</div>
+<div class="line"><a id="l03236" name="l03236"></a><span class="lineno"> 3236</span>            vector nums = {2, 0, 1};</div>
 <div class="line"><a id="l03237" name="l03237"></a><span class="lineno"> 3237</span>            <a class="code hl_function" href="../../de/da0/a02437.html#acef135e312551d7cdeebbd0e1cc5bca4">Solution::sortColors</a>(nums);</div>
-<div class="line"><a id="l03238" name="l03238"></a><span class="lineno"> 3238</span>            vector&lt;int&gt; expected = {0, 1, 2};</div>
+<div class="line"><a id="l03238" name="l03238"></a><span class="lineno"> 3238</span>            <span class="keyword">const</span> vector expected = {0, 1, 2};</div>
 <div class="line"><a id="l03239" name="l03239"></a><span class="lineno"> 3239</span>            ASSERT_EQ(expected, nums);</div>
 <div class="line"><a id="l03240" name="l03240"></a><span class="lineno"> 3240</span>        }</div>
 <div class="line"><a id="l03241" name="l03241"></a><span class="lineno"> 3241</span>    }<span class="comment">// namespace sort_colors</span></div>
 <div class="line"><a id="l03242" name="l03242"></a><span class="lineno"> 3242</span> </div>
 <div class="line"><a id="l03243" name="l03243"></a><span class="lineno"> 3243</span>    <span class="keyword">namespace </span>kth_largest_element_in_an_array {</div>
 <div class="line"><a id="l03244" name="l03244"></a><span class="lineno"><a class="line" href="../../df/dc2/a00367.html#a750122c3c5b9270c7e2423635146fa47"> 3244</a></span>        <a class="code hl_function" href="../../df/dc2/a00367.html#a750122c3c5b9270c7e2423635146fa47">TEST</a>(kth_largest_element_in_an_array, case1) {</div>
-<div class="line"><a id="l03245" name="l03245"></a><span class="lineno"> 3245</span>            vector&lt;int&gt; nums = {3, 2, 1, 5, 6, 4};</div>
+<div class="line"><a id="l03245" name="l03245"></a><span class="lineno"> 3245</span>            vector nums = {3, 2, 1, 5, 6, 4};</div>
 <div class="line"><a id="l03246" name="l03246"></a><span class="lineno"> 3246</span>            ASSERT_EQ(5, <a class="code hl_function" href="../../dd/d26/a02445.html#ab25e4d428be3721db527e4ca39a4963e">Solution::findKthLargest</a>(nums, 2));</div>
 <div class="line"><a id="l03247" name="l03247"></a><span class="lineno"> 3247</span>        }</div>
 <div class="line"><a id="l03248" name="l03248"></a><span class="lineno"> 3248</span> </div>
 <div class="line"><a id="l03249" name="l03249"></a><span class="lineno"><a class="line" href="../../df/dc2/a00367.html#ac575626cc119e2201c4e846eec32258f"> 3249</a></span>        <a class="code hl_function" href="../../df/dc2/a00367.html#a750122c3c5b9270c7e2423635146fa47">TEST</a>(kth_largest_element_in_an_array, case2) {</div>
-<div class="line"><a id="l03250" name="l03250"></a><span class="lineno"> 3250</span>            vector&lt;int&gt; nums = {3, 2, 3, 1, 2, 4, 5, 5, 6};</div>
+<div class="line"><a id="l03250" name="l03250"></a><span class="lineno"> 3250</span>            vector nums = {3, 2, 3, 1, 2, 4, 5, 5, 6};</div>
 <div class="line"><a id="l03251" name="l03251"></a><span class="lineno"> 3251</span>            ASSERT_EQ(4, <a class="code hl_function" href="../../dd/d26/a02445.html#ab25e4d428be3721db527e4ca39a4963e">Solution::findKthLargest</a>(nums, 4));</div>
 <div class="line"><a id="l03252" name="l03252"></a><span class="lineno"> 3252</span>        }</div>
 <div class="line"><a id="l03253" name="l03253"></a><span class="lineno"> 3253</span>    }<span class="comment">// namespace kth_largest_element_in_an_array</span></div>
@@ -3703,8 +3703,8 @@ $(function() {
 <div class="ttc" id="aa02421_html_a61d68b7ca1272676c5c7862dd7a8a781"><div class="ttname"><a href="../../da/d18/a02421.html#a61d68b7ca1272676c5c7862dd7a8a781">leetcode::coin_change::Solution::coinChange</a></div><div class="ttdeci">static int coinChange(vector&lt; int &gt; &amp;coins, int amount)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06804">leetcode.cpp:6804</a></div></div>
 <div class="ttc" id="aa02425_html_a77950b7d9c5193ee4c3ff4f2ab5f0b45"><div class="ttname"><a href="../../d9/d9d/a02425.html#a77950b7d9c5193ee4c3ff4f2ab5f0b45">leetcode::integer_break::Solution::integerBreak</a></div><div class="ttdeci">static int integerBreak(int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06830">leetcode.cpp:6830</a></div></div>
 <div class="ttc" id="aa02429_html_a066b356f154729bebacd8f766efd08aa"><div class="ttname"><a href="../../dc/d09/a02429.html#a066b356f154729bebacd8f766efd08aa">leetcode::max_points_on_a_line::Solution::maxPoints</a></div><div class="ttdeci">static int maxPoints(vector&lt; vector&lt; int &gt; &gt; &amp;points)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06849">leetcode.cpp:6849</a></div></div>
-<div class="ttc" id="aa02437_html_acef135e312551d7cdeebbd0e1cc5bca4"><div class="ttname"><a href="../../de/da0/a02437.html#acef135e312551d7cdeebbd0e1cc5bca4">leetcode::sort_colors::Solution::sortColors</a></div><div class="ttdeci">static void sortColors(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06892">leetcode.cpp:6892</a></div></div>
-<div class="ttc" id="aa02445_html_ab25e4d428be3721db527e4ca39a4963e"><div class="ttname"><a href="../../dd/d26/a02445.html#ab25e4d428be3721db527e4ca39a4963e">leetcode::kth_largest_element_in_an_array::Solution::findKthLargest</a></div><div class="ttdeci">static int findKthLargest(vector&lt; int &gt; &amp;nums, int k)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06944">leetcode.cpp:6944</a></div></div>
+<div class="ttc" id="aa02437_html_acef135e312551d7cdeebbd0e1cc5bca4"><div class="ttname"><a href="../../de/da0/a02437.html#acef135e312551d7cdeebbd0e1cc5bca4">leetcode::sort_colors::Solution::sortColors</a></div><div class="ttdeci">static void sortColors(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06893">leetcode.cpp:6893</a></div></div>
+<div class="ttc" id="aa02445_html_ab25e4d428be3721db527e4ca39a4963e"><div class="ttname"><a href="../../dd/d26/a02445.html#ab25e4d428be3721db527e4ca39a4963e">leetcode::kth_largest_element_in_an_array::Solution::findKthLargest</a></div><div class="ttdeci">static int findKthLargest(vector&lt; int &gt; &amp;nums, int k)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06943">leetcode.cpp:6943</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

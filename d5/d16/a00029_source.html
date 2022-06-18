@@ -5841,8 +5841,8 @@ $(function() {
 <div class="line"><a id="l05774" name="l05774"></a><span class="lineno"><a class="line" href="../../d9/dcc/a00102.html"> 5774</a></span>    <span class="keyword">namespace </span>acwing1695 {</div>
 <div class="line"><a id="l05775" name="l05775"></a><span class="lineno"><a class="line" href="../../d9/dcc/a00102.html#a5333ec699e340eaf7bdaf6bd90a6276b"> 5775</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d9/dcc/a00102.html#a5333ec699e340eaf7bdaf6bd90a6276b">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
 <div class="line"><a id="l05776" name="l05776"></a><span class="lineno"> 5776</span>            <span class="keywordtype">bool</span> nuts[3][3]         = {{<span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>},</div>
-<div class="line"><a id="l05777" name="l05777"></a><span class="lineno"> 5777</span>                                       {<span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>},</div>
-<div class="line"><a id="l05778" name="l05778"></a><span class="lineno"> 5778</span>                                       {<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>}};</div>
+<div class="line"><a id="l05777" name="l05777"></a><span class="lineno"> 5777</span>                               {<span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>},</div>
+<div class="line"><a id="l05778" name="l05778"></a><span class="lineno"> 5778</span>                               {<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>}};</div>
 <div class="line"><a id="l05779" name="l05779"></a><span class="lineno"> 5779</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> score[3] = {0, 0, 0};</div>
 <div class="line"><a id="l05780" name="l05780"></a><span class="lineno"> 5780</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> ans      = 0;</div>
 <div class="line"><a id="l05781" name="l05781"></a><span class="lineno"> 5781</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> n;</div>
@@ -7192,7 +7192,7 @@ $(function() {
 <div class="line"><a id="l07126" name="l07126"></a><span class="lineno"> 7126</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[nx, ny]: nexts) {</div>
 <div class="line"><a id="l07127" name="l07127"></a><span class="lineno"> 7127</span>                    <span class="keywordflow">if</span>(nx &gt;= 0 &amp;&amp; nx &lt; 3 &amp;&amp; ny &gt;= 0 &amp;&amp; ny &lt; 3) {</div>
 <div class="line"><a id="l07128" name="l07128"></a><span class="lineno"> 7128</span>                        swap(g[nx][ny], g[x][y]);</div>
-<div class="line"><a id="l07129" name="l07129"></a><span class="lineno"> 7129</span>                        <span class="keywordflow">if</span>(!us.count(g)) {</div>
+<div class="line"><a id="l07129" name="l07129"></a><span class="lineno"> 7129</span>                        <span class="keywordflow">if</span>(!us.contains(g)) {</div>
 <div class="line"><a id="l07130" name="l07130"></a><span class="lineno"> 7130</span>                            us.insert(g);</div>
 <div class="line"><a id="l07131" name="l07131"></a><span class="lineno"> 7131</span>                            q.push(make_tuple(g, step + 1, nx, ny));</div>
 <div class="line"><a id="l07132" name="l07132"></a><span class="lineno"> 7132</span>                        }</div>

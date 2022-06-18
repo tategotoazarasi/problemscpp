@@ -4022,7 +4022,7 @@ $(function() {
 <div class="line"><a id="l03954" name="l03954"></a><span class="lineno"> 3954</span>                cin &gt;&gt; <a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a> &gt;&gt; M &gt;&gt; C1 &gt;&gt; C2;</div>
 <div class="line"><a id="l03955" name="l03955"></a><span class="lineno"> 3955</span>                <span class="keywordtype">int</span> max_d = 0;</div>
 <div class="line"><a id="l03956" name="l03956"></a><span class="lineno"> 3956</span>                vector&lt;int&gt; rescue(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>);</div>
-<div class="line"><a id="l03957" name="l03957"></a><span class="lineno"> 3957</span>                vector&lt;vector&lt;int&gt;&gt; grid(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, vector&lt;int&gt;(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, 0));</div>
+<div class="line"><a id="l03957" name="l03957"></a><span class="lineno"> 3957</span>                vector grid(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, vector(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, 0));</div>
 <div class="line"><a id="l03958" name="l03958"></a><span class="lineno"> 3958</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>; i++) {</div>
 <div class="line"><a id="l03959" name="l03959"></a><span class="lineno"> 3959</span>                    cin &gt;&gt; rescue[i];</div>
 <div class="line"><a id="l03960" name="l03960"></a><span class="lineno"> 3960</span>                }</div>
@@ -4033,9 +4033,9 @@ $(function() {
 <div class="line"><a id="l03965" name="l03965"></a><span class="lineno"> 3965</span>                    grid[c2][c1] = L;</div>
 <div class="line"><a id="l03966" name="l03966"></a><span class="lineno"> 3966</span>                    max_d += L;</div>
 <div class="line"><a id="l03967" name="l03967"></a><span class="lineno"> 3967</span>                }</div>
-<div class="line"><a id="l03968" name="l03968"></a><span class="lineno"> 3968</span>                vector&lt;int&gt; shortest_cnt(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, 0);    </div>
-<div class="line"><a id="l03969" name="l03969"></a><span class="lineno"> 3969</span>                vector&lt;int&gt; shortest(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, max_d + 1);</div>
-<div class="line"><a id="l03970" name="l03970"></a><span class="lineno"> 3970</span>                vector&lt;int&gt; max_rescue(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, 0);      </div>
+<div class="line"><a id="l03968" name="l03968"></a><span class="lineno"> 3968</span>                vector shortest_cnt(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, 0);    </div>
+<div class="line"><a id="l03969" name="l03969"></a><span class="lineno"> 3969</span>                vector shortest(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, max_d + 1);</div>
+<div class="line"><a id="l03970" name="l03970"></a><span class="lineno"> 3970</span>                vector max_rescue(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, 0);      </div>
 <div class="line"><a id="l03971" name="l03971"></a><span class="lineno"> 3971</span>                priority_queue&lt;tuple&lt;int, int, int&gt;, vector&lt;tuple&lt;int, int, int&gt;&gt;, <a class="code hl_struct" href="../../d2/daa/a02997.html">comp</a>&gt; pq;</div>
 <div class="line"><a id="l03972" name="l03972"></a><span class="lineno"> 3972</span>                pq.push(make_tuple(C1, 0, rescue[C1]));</div>
 <div class="line"><a id="l03973" name="l03973"></a><span class="lineno"> 3973</span>                <span class="keywordflow">while</span>(!pq.empty()) {</div>
@@ -4068,159 +4068,157 @@ $(function() {
 <div class="line"><a id="l04000" name="l04000"></a><span class="lineno"> 4000</span>                <span class="keyword">auto</span> [b1, b2, b3] = b;</div>
 <div class="line"><a id="l04001" name="l04001"></a><span class="lineno"> 4001</span>                <span class="keywordflow">if</span>(a2 != b2) {</div>
 <div class="line"><a id="l04002" name="l04002"></a><span class="lineno"> 4002</span>                    <span class="keywordflow">return</span> a2 &gt; b2;</div>
-<div class="line"><a id="l04003" name="l04003"></a><span class="lineno"> 4003</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l04004" name="l04004"></a><span class="lineno"> 4004</span>                    <span class="keywordflow">return</span> a3 &lt; b3;</div>
-<div class="line"><a id="l04005" name="l04005"></a><span class="lineno"> 4005</span>                }</div>
-<div class="line"><a id="l04006" name="l04006"></a><span class="lineno"> 4006</span>            }</div>
-<div class="line"><a id="l04007" name="l04007"></a><span class="lineno"> 4007</span>        }<span class="comment">// namespace a1003</span></div>
-<div class="line"><a id="l04008" name="l04008"></a><span class="lineno"> 4008</span> </div>
-<div class="line"><a id="l04009" name="l04009"></a><span class="lineno"><a class="line" href="../../d4/d1e/a00497.html"> 4009</a></span>        <span class="keyword">namespace </span>a1004 {</div>
-<div class="line"><a id="l04010" name="l04010"></a><span class="lineno"><a class="line" href="../../d4/d1e/a00497.html#a11745d0dea7acc2aa4f3e8f8317efe53"> 4010</a></span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../d4/d1e/a00497.html#a11745d0dea7acc2aa4f3e8f8317efe53">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l04011" name="l04011"></a><span class="lineno"> 4011</span>                <span class="keywordtype">int</span> n, m;</div>
-<div class="line"><a id="l04012" name="l04012"></a><span class="lineno"> 4012</span>                cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l04013" name="l04013"></a><span class="lineno"> 4013</span>                <span class="keywordflow">if</span>(n == 0) {</div>
-<div class="line"><a id="l04014" name="l04014"></a><span class="lineno"> 4014</span>                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l04015" name="l04015"></a><span class="lineno"> 4015</span>                }</div>
-<div class="line"><a id="l04016" name="l04016"></a><span class="lineno"> 4016</span>                unordered_map&lt;string, node *&gt; um;</div>
-<div class="line"><a id="l04017" name="l04017"></a><span class="lineno"> 4017</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l04018" name="l04018"></a><span class="lineno"> 4018</span>                    <span class="keywordtype">string</span> id;</div>
-<div class="line"><a id="l04019" name="l04019"></a><span class="lineno"> 4019</span>                    <span class="keywordtype">int</span> k;</div>
-<div class="line"><a id="l04020" name="l04020"></a><span class="lineno"> 4020</span>                    cin &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; k;</div>
-<div class="line"><a id="l04021" name="l04021"></a><span class="lineno"> 4021</span>                    <span class="keywordflow">if</span>(!um.count(<span class="keywordtype">id</span>)) {</div>
-<div class="line"><a id="l04022" name="l04022"></a><span class="lineno"> 4022</span>                        um[id] = <span class="keyword">new</span> <a class="code hl_struct" href="../../d0/db8/a03001.html">node</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l04023" name="l04023"></a><span class="lineno"> 4023</span>                    }</div>
-<div class="line"><a id="l04024" name="l04024"></a><span class="lineno"> 4024</span>                    <span class="keyword">auto</span> nd = um[id];</div>
-<div class="line"><a id="l04025" name="l04025"></a><span class="lineno"> 4025</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; k; j++) {</div>
-<div class="line"><a id="l04026" name="l04026"></a><span class="lineno"> 4026</span>                        <span class="keywordtype">string</span> cid;</div>
-<div class="line"><a id="l04027" name="l04027"></a><span class="lineno"> 4027</span>                        cin &gt;&gt; cid;</div>
-<div class="line"><a id="l04028" name="l04028"></a><span class="lineno"> 4028</span>                        <span class="keywordflow">if</span>(!um.count(cid)) {</div>
-<div class="line"><a id="l04029" name="l04029"></a><span class="lineno"> 4029</span>                            um[cid] = <span class="keyword">new</span> <a class="code hl_struct" href="../../d0/db8/a03001.html">node</a>(cid);</div>
-<div class="line"><a id="l04030" name="l04030"></a><span class="lineno"> 4030</span>                        }</div>
-<div class="line"><a id="l04031" name="l04031"></a><span class="lineno"> 4031</span>                        nd-&gt;children.insert(um[cid]);</div>
-<div class="line"><a id="l04032" name="l04032"></a><span class="lineno"> 4032</span>                    }</div>
-<div class="line"><a id="l04033" name="l04033"></a><span class="lineno"> 4033</span>                }</div>
-<div class="line"><a id="l04034" name="l04034"></a><span class="lineno"> 4034</span>                queue&lt;pair&lt;node *, int&gt;&gt; q;</div>
-<div class="line"><a id="l04035" name="l04035"></a><span class="lineno"> 4035</span>                q.push(make_pair(um[<span class="stringliteral">&quot;01&quot;</span>], 0));</div>
-<div class="line"><a id="l04036" name="l04036"></a><span class="lineno"> 4036</span>                <span class="keywordflow">if</span>(um[<span class="stringliteral">&quot;01&quot;</span>] == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l04037" name="l04037"></a><span class="lineno"> 4037</span>                    cout &lt;&lt; 1;</div>
-<div class="line"><a id="l04038" name="l04038"></a><span class="lineno"> 4038</span>                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l04039" name="l04039"></a><span class="lineno"> 4039</span>                }</div>
-<div class="line"><a id="l04040" name="l04040"></a><span class="lineno"> 4040</span>                <span class="keywordtype">int</span> current_level = 0;</div>
-<div class="line"><a id="l04041" name="l04041"></a><span class="lineno"> 4041</span>                <span class="keywordtype">int</span> leaf_cnt      = 0;</div>
-<div class="line"><a id="l04042" name="l04042"></a><span class="lineno"> 4042</span>                <span class="keywordflow">while</span>(!q.empty()) {</div>
-<div class="line"><a id="l04043" name="l04043"></a><span class="lineno"> 4043</span>                    <span class="keyword">auto</span> [nd, level] = q.front();</div>
-<div class="line"><a id="l04044" name="l04044"></a><span class="lineno"> 4044</span>                    q.pop();</div>
-<div class="line"><a id="l04045" name="l04045"></a><span class="lineno"> 4045</span>                    <span class="keywordflow">if</span>(level != current_level) {</div>
-<div class="line"><a id="l04046" name="l04046"></a><span class="lineno"> 4046</span>                        <span class="keywordflow">if</span>(current_level != 0) {</div>
-<div class="line"><a id="l04047" name="l04047"></a><span class="lineno"> 4047</span>                            cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a id="l04048" name="l04048"></a><span class="lineno"> 4048</span>                        }</div>
-<div class="line"><a id="l04049" name="l04049"></a><span class="lineno"> 4049</span>                        current_level = level;</div>
-<div class="line"><a id="l04050" name="l04050"></a><span class="lineno"> 4050</span>                        cout &lt;&lt; leaf_cnt;</div>
-<div class="line"><a id="l04051" name="l04051"></a><span class="lineno"> 4051</span>                        leaf_cnt = 0;</div>
-<div class="line"><a id="l04052" name="l04052"></a><span class="lineno"> 4052</span>                    }</div>
-<div class="line"><a id="l04053" name="l04053"></a><span class="lineno"> 4053</span>                    <span class="keywordflow">if</span>(nd-&gt;children.empty()) {</div>
-<div class="line"><a id="l04054" name="l04054"></a><span class="lineno"> 4054</span>                        leaf_cnt++;</div>
-<div class="line"><a id="l04055" name="l04055"></a><span class="lineno"> 4055</span>                    }</div>
-<div class="line"><a id="l04056" name="l04056"></a><span class="lineno"> 4056</span>                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> c: nd-&gt;children) {</div>
-<div class="line"><a id="l04057" name="l04057"></a><span class="lineno"> 4057</span>                        q.push(make_pair(c, level + 1));</div>
-<div class="line"><a id="l04058" name="l04058"></a><span class="lineno"> 4058</span>                    }</div>
-<div class="line"><a id="l04059" name="l04059"></a><span class="lineno"> 4059</span>                }</div>
-<div class="line"><a id="l04060" name="l04060"></a><span class="lineno"> 4060</span>                cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; leaf_cnt;</div>
-<div class="line"><a id="l04061" name="l04061"></a><span class="lineno"> 4061</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l04062" name="l04062"></a><span class="lineno"> 4062</span>            }</div>
-<div class="line"><a id="l04063" name="l04063"></a><span class="lineno"> 4063</span>        }<span class="comment">// namespace a1004</span></div>
-<div class="line"><a id="l04064" name="l04064"></a><span class="lineno"> 4064</span> </div>
-<div class="line"><a id="l04065" name="l04065"></a><span class="lineno"><a class="line" href="../../d8/d57/a00498.html"> 4065</a></span>        <span class="keyword">namespace </span>a1005 {</div>
-<div class="line"><a id="l04066" name="l04066"></a><span class="lineno"><a class="line" href="../../d8/d57/a00498.html#a4dee93bb316b8daa50395e6492cb5898"> 4066</a></span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../d8/d57/a00498.html#a4dee93bb316b8daa50395e6492cb5898">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l04067" name="l04067"></a><span class="lineno"> 4067</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> n = 0;</div>
-<div class="line"><a id="l04068" name="l04068"></a><span class="lineno"> 4068</span>                <span class="keywordtype">string</span> s;</div>
-<div class="line"><a id="l04069" name="l04069"></a><span class="lineno"> 4069</span>                cin &gt;&gt; s;</div>
-<div class="line"><a id="l04070" name="l04070"></a><span class="lineno"> 4070</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: s) {</div>
-<div class="line"><a id="l04071" name="l04071"></a><span class="lineno"> 4071</span>                    n += ch - <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l04072" name="l04072"></a><span class="lineno"> 4072</span>                }</div>
-<div class="line"><a id="l04073" name="l04073"></a><span class="lineno"> 4073</span>                ostringstream oss = ostringstream();</div>
-<div class="line"><a id="l04074" name="l04074"></a><span class="lineno"> 4074</span>                oss &lt;&lt; n;</div>
-<div class="line"><a id="l04075" name="l04075"></a><span class="lineno"> 4075</span>                s          = oss.str();</div>
-<div class="line"><a id="l04076" name="l04076"></a><span class="lineno"> 4076</span>                <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l04077" name="l04077"></a><span class="lineno"> 4077</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: s) {</div>
-<div class="line"><a id="l04078" name="l04078"></a><span class="lineno"> 4078</span>                    <span class="keywordflow">if</span>(!first) {</div>
-<div class="line"><a id="l04079" name="l04079"></a><span class="lineno"> 4079</span>                        cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a id="l04080" name="l04080"></a><span class="lineno"> 4080</span>                    }</div>
-<div class="line"><a id="l04081" name="l04081"></a><span class="lineno"> 4081</span>                    first = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04082" name="l04082"></a><span class="lineno"> 4082</span>                    <span class="keywordflow">switch</span>(ch) {</div>
-<div class="line"><a id="l04083" name="l04083"></a><span class="lineno"> 4083</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;0&#39;</span>:</div>
-<div class="line"><a id="l04084" name="l04084"></a><span class="lineno"> 4084</span>                            cout &lt;&lt; <span class="stringliteral">&quot;zero&quot;</span>;</div>
-<div class="line"><a id="l04085" name="l04085"></a><span class="lineno"> 4085</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04086" name="l04086"></a><span class="lineno"> 4086</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;1&#39;</span>:</div>
-<div class="line"><a id="l04087" name="l04087"></a><span class="lineno"> 4087</span>                            cout &lt;&lt; <span class="stringliteral">&quot;one&quot;</span>;</div>
-<div class="line"><a id="l04088" name="l04088"></a><span class="lineno"> 4088</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04089" name="l04089"></a><span class="lineno"> 4089</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;2&#39;</span>:</div>
-<div class="line"><a id="l04090" name="l04090"></a><span class="lineno"> 4090</span>                            cout &lt;&lt; <span class="stringliteral">&quot;two&quot;</span>;</div>
-<div class="line"><a id="l04091" name="l04091"></a><span class="lineno"> 4091</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04092" name="l04092"></a><span class="lineno"> 4092</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;3&#39;</span>:</div>
-<div class="line"><a id="l04093" name="l04093"></a><span class="lineno"> 4093</span>                            cout &lt;&lt; <span class="stringliteral">&quot;three&quot;</span>;</div>
-<div class="line"><a id="l04094" name="l04094"></a><span class="lineno"> 4094</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04095" name="l04095"></a><span class="lineno"> 4095</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;4&#39;</span>:</div>
-<div class="line"><a id="l04096" name="l04096"></a><span class="lineno"> 4096</span>                            cout &lt;&lt; <span class="stringliteral">&quot;four&quot;</span>;</div>
-<div class="line"><a id="l04097" name="l04097"></a><span class="lineno"> 4097</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04098" name="l04098"></a><span class="lineno"> 4098</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;5&#39;</span>:</div>
-<div class="line"><a id="l04099" name="l04099"></a><span class="lineno"> 4099</span>                            cout &lt;&lt; <span class="stringliteral">&quot;five&quot;</span>;</div>
-<div class="line"><a id="l04100" name="l04100"></a><span class="lineno"> 4100</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04101" name="l04101"></a><span class="lineno"> 4101</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;6&#39;</span>:</div>
-<div class="line"><a id="l04102" name="l04102"></a><span class="lineno"> 4102</span>                            cout &lt;&lt; <span class="stringliteral">&quot;six&quot;</span>;</div>
-<div class="line"><a id="l04103" name="l04103"></a><span class="lineno"> 4103</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04104" name="l04104"></a><span class="lineno"> 4104</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;7&#39;</span>:</div>
-<div class="line"><a id="l04105" name="l04105"></a><span class="lineno"> 4105</span>                            cout &lt;&lt; <span class="stringliteral">&quot;seven&quot;</span>;</div>
-<div class="line"><a id="l04106" name="l04106"></a><span class="lineno"> 4106</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04107" name="l04107"></a><span class="lineno"> 4107</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;8&#39;</span>:</div>
-<div class="line"><a id="l04108" name="l04108"></a><span class="lineno"> 4108</span>                            cout &lt;&lt; <span class="stringliteral">&quot;eight&quot;</span>;</div>
-<div class="line"><a id="l04109" name="l04109"></a><span class="lineno"> 4109</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04110" name="l04110"></a><span class="lineno"> 4110</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;9&#39;</span>:</div>
-<div class="line"><a id="l04111" name="l04111"></a><span class="lineno"> 4111</span>                            cout &lt;&lt; <span class="stringliteral">&quot;nine&quot;</span>;</div>
-<div class="line"><a id="l04112" name="l04112"></a><span class="lineno"> 4112</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04113" name="l04113"></a><span class="lineno"> 4113</span>                        <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l04114" name="l04114"></a><span class="lineno"> 4114</span>                            <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l04115" name="l04115"></a><span class="lineno"> 4115</span>                    }</div>
-<div class="line"><a id="l04116" name="l04116"></a><span class="lineno"> 4116</span>                }</div>
-<div class="line"><a id="l04117" name="l04117"></a><span class="lineno"> 4117</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l04118" name="l04118"></a><span class="lineno"> 4118</span>            }</div>
-<div class="line"><a id="l04119" name="l04119"></a><span class="lineno"> 4119</span>        }<span class="comment">// namespace a1005</span></div>
-<div class="line"><a id="l04120" name="l04120"></a><span class="lineno"> 4120</span> </div>
-<div class="line"><a id="l04121" name="l04121"></a><span class="lineno"><a class="line" href="../../d8/d67/a00499.html"> 4121</a></span>        <span class="keyword">namespace </span>a1006 {</div>
-<div class="line"><a id="l04122" name="l04122"></a><span class="lineno"><a class="line" href="../../d8/d67/a00499.html#a864f4937888d1b373102a56a234e54c8"> 4122</a></span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../d8/d67/a00499.html#a864f4937888d1b373102a56a234e54c8">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
-<div class="line"><a id="l04123" name="l04123"></a><span class="lineno"> 4123</span>                <span class="keywordtype">int</span> m;</div>
-<div class="line"><a id="l04124" name="l04124"></a><span class="lineno"> 4124</span>                cin &gt;&gt; m;</div>
-<div class="line"><a id="l04125" name="l04125"></a><span class="lineno"> 4125</span>                vector&lt;tuple&lt;string, string, string&gt;&gt; vec(m);</div>
-<div class="line"><a id="l04126" name="l04126"></a><span class="lineno"> 4126</span>                vector&lt;string&gt; seq;</div>
-<div class="line"><a id="l04127" name="l04127"></a><span class="lineno"> 4127</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l04128" name="l04128"></a><span class="lineno"> 4128</span>                    <span class="keywordtype">string</span> id;</div>
-<div class="line"><a id="l04129" name="l04129"></a><span class="lineno"> 4129</span>                    <span class="keywordtype">string</span> sign_in_time;</div>
-<div class="line"><a id="l04130" name="l04130"></a><span class="lineno"> 4130</span>                    <span class="keywordtype">string</span> sign_out_time;</div>
-<div class="line"><a id="l04131" name="l04131"></a><span class="lineno"> 4131</span>                    cin &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; sign_in_time &gt;&gt; sign_out_time;</div>
-<div class="line"><a id="l04132" name="l04132"></a><span class="lineno"> 4132</span>                    vec[i] = make_tuple(<span class="keywordtype">id</span>, sign_in_time, sign_out_time);</div>
-<div class="line"><a id="l04133" name="l04133"></a><span class="lineno"> 4133</span>                    seq.push_back(sign_in_time);</div>
-<div class="line"><a id="l04134" name="l04134"></a><span class="lineno"> 4134</span>                    seq.push_back(sign_out_time);</div>
-<div class="line"><a id="l04135" name="l04135"></a><span class="lineno"> 4135</span>                }</div>
-<div class="line"><a id="l04136" name="l04136"></a><span class="lineno"> 4136</span>                sort(seq.begin(), seq.end());</div>
-<div class="line"><a id="l04137" name="l04137"></a><span class="lineno"> 4137</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[<span class="keywordtype">id</span>, in, out]: vec) {</div>
-<div class="line"><a id="l04138" name="l04138"></a><span class="lineno"> 4138</span>                    <span class="keywordflow">if</span>(in == seq[0]) {</div>
-<div class="line"><a id="l04139" name="l04139"></a><span class="lineno"> 4139</span>                        cout &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a id="l04140" name="l04140"></a><span class="lineno"> 4140</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04141" name="l04141"></a><span class="lineno"> 4141</span>                    }</div>
-<div class="line"><a id="l04142" name="l04142"></a><span class="lineno"> 4142</span>                }</div>
-<div class="line"><a id="l04143" name="l04143"></a><span class="lineno"> 4143</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[<span class="keywordtype">id</span>, in, out]: vec) {</div>
-<div class="line"><a id="l04144" name="l04144"></a><span class="lineno"> 4144</span>                    <span class="keywordflow">if</span>(out == seq.back()) {</div>
-<div class="line"><a id="l04145" name="l04145"></a><span class="lineno"> 4145</span>                        cout &lt;&lt; id;</div>
-<div class="line"><a id="l04146" name="l04146"></a><span class="lineno"> 4146</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04147" name="l04147"></a><span class="lineno"> 4147</span>                    }</div>
-<div class="line"><a id="l04148" name="l04148"></a><span class="lineno"> 4148</span>                }</div>
-<div class="line"><a id="l04149" name="l04149"></a><span class="lineno"> 4149</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l04150" name="l04150"></a><span class="lineno"> 4150</span>            }</div>
-<div class="line"><a id="l04151" name="l04151"></a><span class="lineno"> 4151</span>        }<span class="comment">// namespace a1006</span></div>
-<div class="line"><a id="l04152" name="l04152"></a><span class="lineno"> 4152</span>    }    <span class="comment">// namespace a</span></div>
-<div class="line"><a id="l04153" name="l04153"></a><span class="lineno"> 4153</span> </div>
-<div class="line"><a id="l04154" name="l04154"></a><span class="lineno"><a class="line" href="../../de/d4e/a00500.html"> 4154</a></span>    <span class="keyword">namespace </span>top {}</div>
-<div class="line"><a id="l04155" name="l04155"></a><span class="lineno"> 4155</span>}<span class="comment">// namespace pat</span></div>
+<div class="line"><a id="l04003" name="l04003"></a><span class="lineno"> 4003</span>                }</div>
+<div class="line"><a id="l04004" name="l04004"></a><span class="lineno"> 4004</span>                <span class="keywordflow">return</span> a3 &lt; b3;</div>
+<div class="line"><a id="l04005" name="l04005"></a><span class="lineno"> 4005</span>            }</div>
+<div class="line"><a id="l04006" name="l04006"></a><span class="lineno"> 4006</span>        }<span class="comment">// namespace a1003</span></div>
+<div class="line"><a id="l04007" name="l04007"></a><span class="lineno"> 4007</span> </div>
+<div class="line"><a id="l04008" name="l04008"></a><span class="lineno"><a class="line" href="../../d4/d1e/a00497.html"> 4008</a></span>        <span class="keyword">namespace </span>a1004 {</div>
+<div class="line"><a id="l04009" name="l04009"></a><span class="lineno"><a class="line" href="../../d4/d1e/a00497.html#a11745d0dea7acc2aa4f3e8f8317efe53"> 4009</a></span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../d4/d1e/a00497.html#a11745d0dea7acc2aa4f3e8f8317efe53">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l04010" name="l04010"></a><span class="lineno"> 4010</span>                <span class="keywordtype">int</span> n, m;</div>
+<div class="line"><a id="l04011" name="l04011"></a><span class="lineno"> 4011</span>                cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l04012" name="l04012"></a><span class="lineno"> 4012</span>                <span class="keywordflow">if</span>(n == 0) {</div>
+<div class="line"><a id="l04013" name="l04013"></a><span class="lineno"> 4013</span>                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l04014" name="l04014"></a><span class="lineno"> 4014</span>                }</div>
+<div class="line"><a id="l04015" name="l04015"></a><span class="lineno"> 4015</span>                unordered_map&lt;string, node *&gt; um;</div>
+<div class="line"><a id="l04016" name="l04016"></a><span class="lineno"> 4016</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l04017" name="l04017"></a><span class="lineno"> 4017</span>                    <span class="keywordtype">string</span> id;</div>
+<div class="line"><a id="l04018" name="l04018"></a><span class="lineno"> 4018</span>                    <span class="keywordtype">int</span> k;</div>
+<div class="line"><a id="l04019" name="l04019"></a><span class="lineno"> 4019</span>                    cin &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; k;</div>
+<div class="line"><a id="l04020" name="l04020"></a><span class="lineno"> 4020</span>                    <span class="keywordflow">if</span>(!um.contains(<span class="keywordtype">id</span>)) {</div>
+<div class="line"><a id="l04021" name="l04021"></a><span class="lineno"> 4021</span>                        um[id] = <span class="keyword">new</span> <a class="code hl_struct" href="../../d0/db8/a03001.html">node</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l04022" name="l04022"></a><span class="lineno"> 4022</span>                    }</div>
+<div class="line"><a id="l04023" name="l04023"></a><span class="lineno"> 4023</span>                    <span class="keyword">const</span> <span class="keyword">auto</span> nd = um[id];</div>
+<div class="line"><a id="l04024" name="l04024"></a><span class="lineno"> 4024</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; k; j++) {</div>
+<div class="line"><a id="l04025" name="l04025"></a><span class="lineno"> 4025</span>                        <span class="keywordtype">string</span> cid;</div>
+<div class="line"><a id="l04026" name="l04026"></a><span class="lineno"> 4026</span>                        cin &gt;&gt; cid;</div>
+<div class="line"><a id="l04027" name="l04027"></a><span class="lineno"> 4027</span>                        <span class="keywordflow">if</span>(!um.contains(cid)) {</div>
+<div class="line"><a id="l04028" name="l04028"></a><span class="lineno"> 4028</span>                            um[cid] = <span class="keyword">new</span> <a class="code hl_struct" href="../../d0/db8/a03001.html">node</a>(cid);</div>
+<div class="line"><a id="l04029" name="l04029"></a><span class="lineno"> 4029</span>                        }</div>
+<div class="line"><a id="l04030" name="l04030"></a><span class="lineno"> 4030</span>                        nd-&gt;children.insert(um[cid]);</div>
+<div class="line"><a id="l04031" name="l04031"></a><span class="lineno"> 4031</span>                    }</div>
+<div class="line"><a id="l04032" name="l04032"></a><span class="lineno"> 4032</span>                }</div>
+<div class="line"><a id="l04033" name="l04033"></a><span class="lineno"> 4033</span>                queue&lt;pair&lt;node *, int&gt;&gt; q;</div>
+<div class="line"><a id="l04034" name="l04034"></a><span class="lineno"> 4034</span>                q.push(make_pair(um[<span class="stringliteral">&quot;01&quot;</span>], 0));</div>
+<div class="line"><a id="l04035" name="l04035"></a><span class="lineno"> 4035</span>                <span class="keywordflow">if</span>(um[<span class="stringliteral">&quot;01&quot;</span>] == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l04036" name="l04036"></a><span class="lineno"> 4036</span>                    cout &lt;&lt; 1;</div>
+<div class="line"><a id="l04037" name="l04037"></a><span class="lineno"> 4037</span>                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l04038" name="l04038"></a><span class="lineno"> 4038</span>                }</div>
+<div class="line"><a id="l04039" name="l04039"></a><span class="lineno"> 4039</span>                <span class="keywordtype">int</span> current_level = 0;</div>
+<div class="line"><a id="l04040" name="l04040"></a><span class="lineno"> 4040</span>                <span class="keywordtype">int</span> leaf_cnt      = 0;</div>
+<div class="line"><a id="l04041" name="l04041"></a><span class="lineno"> 4041</span>                <span class="keywordflow">while</span>(!q.empty()) {</div>
+<div class="line"><a id="l04042" name="l04042"></a><span class="lineno"> 4042</span>                    <span class="keyword">auto</span> [nd, level] = q.front();</div>
+<div class="line"><a id="l04043" name="l04043"></a><span class="lineno"> 4043</span>                    q.pop();</div>
+<div class="line"><a id="l04044" name="l04044"></a><span class="lineno"> 4044</span>                    <span class="keywordflow">if</span>(level != current_level) {</div>
+<div class="line"><a id="l04045" name="l04045"></a><span class="lineno"> 4045</span>                        <span class="keywordflow">if</span>(current_level != 0) {</div>
+<div class="line"><a id="l04046" name="l04046"></a><span class="lineno"> 4046</span>                            cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a id="l04047" name="l04047"></a><span class="lineno"> 4047</span>                        }</div>
+<div class="line"><a id="l04048" name="l04048"></a><span class="lineno"> 4048</span>                        current_level = level;</div>
+<div class="line"><a id="l04049" name="l04049"></a><span class="lineno"> 4049</span>                        cout &lt;&lt; leaf_cnt;</div>
+<div class="line"><a id="l04050" name="l04050"></a><span class="lineno"> 4050</span>                        leaf_cnt = 0;</div>
+<div class="line"><a id="l04051" name="l04051"></a><span class="lineno"> 4051</span>                    }</div>
+<div class="line"><a id="l04052" name="l04052"></a><span class="lineno"> 4052</span>                    <span class="keywordflow">if</span>(nd-&gt;children.empty()) {</div>
+<div class="line"><a id="l04053" name="l04053"></a><span class="lineno"> 4053</span>                        leaf_cnt++;</div>
+<div class="line"><a id="l04054" name="l04054"></a><span class="lineno"> 4054</span>                    }</div>
+<div class="line"><a id="l04055" name="l04055"></a><span class="lineno"> 4055</span>                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> c: nd-&gt;children) {</div>
+<div class="line"><a id="l04056" name="l04056"></a><span class="lineno"> 4056</span>                        q.push(make_pair(c, level + 1));</div>
+<div class="line"><a id="l04057" name="l04057"></a><span class="lineno"> 4057</span>                    }</div>
+<div class="line"><a id="l04058" name="l04058"></a><span class="lineno"> 4058</span>                }</div>
+<div class="line"><a id="l04059" name="l04059"></a><span class="lineno"> 4059</span>                cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; leaf_cnt;</div>
+<div class="line"><a id="l04060" name="l04060"></a><span class="lineno"> 4060</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l04061" name="l04061"></a><span class="lineno"> 4061</span>            }</div>
+<div class="line"><a id="l04062" name="l04062"></a><span class="lineno"> 4062</span>        }<span class="comment">// namespace a1004</span></div>
+<div class="line"><a id="l04063" name="l04063"></a><span class="lineno"> 4063</span> </div>
+<div class="line"><a id="l04064" name="l04064"></a><span class="lineno"><a class="line" href="../../d8/d57/a00498.html"> 4064</a></span>        <span class="keyword">namespace </span>a1005 {</div>
+<div class="line"><a id="l04065" name="l04065"></a><span class="lineno"><a class="line" href="../../d8/d57/a00498.html#a4dee93bb316b8daa50395e6492cb5898"> 4065</a></span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../d8/d57/a00498.html#a4dee93bb316b8daa50395e6492cb5898">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l04066" name="l04066"></a><span class="lineno"> 4066</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> n = 0;</div>
+<div class="line"><a id="l04067" name="l04067"></a><span class="lineno"> 4067</span>                <span class="keywordtype">string</span> s;</div>
+<div class="line"><a id="l04068" name="l04068"></a><span class="lineno"> 4068</span>                cin &gt;&gt; s;</div>
+<div class="line"><a id="l04069" name="l04069"></a><span class="lineno"> 4069</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: s) {</div>
+<div class="line"><a id="l04070" name="l04070"></a><span class="lineno"> 4070</span>                    n += ch - <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l04071" name="l04071"></a><span class="lineno"> 4071</span>                }</div>
+<div class="line"><a id="l04072" name="l04072"></a><span class="lineno"> 4072</span>                <span class="keyword">auto</span> oss = ostringstream();</div>
+<div class="line"><a id="l04073" name="l04073"></a><span class="lineno"> 4073</span>                oss &lt;&lt; n;</div>
+<div class="line"><a id="l04074" name="l04074"></a><span class="lineno"> 4074</span>                s          = oss.str();</div>
+<div class="line"><a id="l04075" name="l04075"></a><span class="lineno"> 4075</span>                <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l04076" name="l04076"></a><span class="lineno"> 4076</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: s) {</div>
+<div class="line"><a id="l04077" name="l04077"></a><span class="lineno"> 4077</span>                    <span class="keywordflow">if</span>(!first) {</div>
+<div class="line"><a id="l04078" name="l04078"></a><span class="lineno"> 4078</span>                        cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a id="l04079" name="l04079"></a><span class="lineno"> 4079</span>                    }</div>
+<div class="line"><a id="l04080" name="l04080"></a><span class="lineno"> 4080</span>                    first = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04081" name="l04081"></a><span class="lineno"> 4081</span>                    <span class="keywordflow">switch</span>(ch) {</div>
+<div class="line"><a id="l04082" name="l04082"></a><span class="lineno"> 4082</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;0&#39;</span>:</div>
+<div class="line"><a id="l04083" name="l04083"></a><span class="lineno"> 4083</span>                            cout &lt;&lt; <span class="stringliteral">&quot;zero&quot;</span>;</div>
+<div class="line"><a id="l04084" name="l04084"></a><span class="lineno"> 4084</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04085" name="l04085"></a><span class="lineno"> 4085</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;1&#39;</span>:</div>
+<div class="line"><a id="l04086" name="l04086"></a><span class="lineno"> 4086</span>                            cout &lt;&lt; <span class="stringliteral">&quot;one&quot;</span>;</div>
+<div class="line"><a id="l04087" name="l04087"></a><span class="lineno"> 4087</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04088" name="l04088"></a><span class="lineno"> 4088</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;2&#39;</span>:</div>
+<div class="line"><a id="l04089" name="l04089"></a><span class="lineno"> 4089</span>                            cout &lt;&lt; <span class="stringliteral">&quot;two&quot;</span>;</div>
+<div class="line"><a id="l04090" name="l04090"></a><span class="lineno"> 4090</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04091" name="l04091"></a><span class="lineno"> 4091</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;3&#39;</span>:</div>
+<div class="line"><a id="l04092" name="l04092"></a><span class="lineno"> 4092</span>                            cout &lt;&lt; <span class="stringliteral">&quot;three&quot;</span>;</div>
+<div class="line"><a id="l04093" name="l04093"></a><span class="lineno"> 4093</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04094" name="l04094"></a><span class="lineno"> 4094</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;4&#39;</span>:</div>
+<div class="line"><a id="l04095" name="l04095"></a><span class="lineno"> 4095</span>                            cout &lt;&lt; <span class="stringliteral">&quot;four&quot;</span>;</div>
+<div class="line"><a id="l04096" name="l04096"></a><span class="lineno"> 4096</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04097" name="l04097"></a><span class="lineno"> 4097</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;5&#39;</span>:</div>
+<div class="line"><a id="l04098" name="l04098"></a><span class="lineno"> 4098</span>                            cout &lt;&lt; <span class="stringliteral">&quot;five&quot;</span>;</div>
+<div class="line"><a id="l04099" name="l04099"></a><span class="lineno"> 4099</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04100" name="l04100"></a><span class="lineno"> 4100</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;6&#39;</span>:</div>
+<div class="line"><a id="l04101" name="l04101"></a><span class="lineno"> 4101</span>                            cout &lt;&lt; <span class="stringliteral">&quot;six&quot;</span>;</div>
+<div class="line"><a id="l04102" name="l04102"></a><span class="lineno"> 4102</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04103" name="l04103"></a><span class="lineno"> 4103</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;7&#39;</span>:</div>
+<div class="line"><a id="l04104" name="l04104"></a><span class="lineno"> 4104</span>                            cout &lt;&lt; <span class="stringliteral">&quot;seven&quot;</span>;</div>
+<div class="line"><a id="l04105" name="l04105"></a><span class="lineno"> 4105</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04106" name="l04106"></a><span class="lineno"> 4106</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;8&#39;</span>:</div>
+<div class="line"><a id="l04107" name="l04107"></a><span class="lineno"> 4107</span>                            cout &lt;&lt; <span class="stringliteral">&quot;eight&quot;</span>;</div>
+<div class="line"><a id="l04108" name="l04108"></a><span class="lineno"> 4108</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04109" name="l04109"></a><span class="lineno"> 4109</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;9&#39;</span>:</div>
+<div class="line"><a id="l04110" name="l04110"></a><span class="lineno"> 4110</span>                            cout &lt;&lt; <span class="stringliteral">&quot;nine&quot;</span>;</div>
+<div class="line"><a id="l04111" name="l04111"></a><span class="lineno"> 4111</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04112" name="l04112"></a><span class="lineno"> 4112</span>                        <span class="keywordflow">default</span>: <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l04113" name="l04113"></a><span class="lineno"> 4113</span>                    }</div>
+<div class="line"><a id="l04114" name="l04114"></a><span class="lineno"> 4114</span>                }</div>
+<div class="line"><a id="l04115" name="l04115"></a><span class="lineno"> 4115</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l04116" name="l04116"></a><span class="lineno"> 4116</span>            }</div>
+<div class="line"><a id="l04117" name="l04117"></a><span class="lineno"> 4117</span>        }<span class="comment">// namespace a1005</span></div>
+<div class="line"><a id="l04118" name="l04118"></a><span class="lineno"> 4118</span> </div>
+<div class="line"><a id="l04119" name="l04119"></a><span class="lineno"><a class="line" href="../../d8/d67/a00499.html"> 4119</a></span>        <span class="keyword">namespace </span>a1006 {</div>
+<div class="line"><a id="l04120" name="l04120"></a><span class="lineno"><a class="line" href="../../d8/d67/a00499.html#a864f4937888d1b373102a56a234e54c8"> 4120</a></span>            <span class="keywordtype">int</span> <a class="code hl_function" href="../../d8/d67/a00499.html#a864f4937888d1b373102a56a234e54c8">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l04121" name="l04121"></a><span class="lineno"> 4121</span>                <span class="keywordtype">int</span> m;</div>
+<div class="line"><a id="l04122" name="l04122"></a><span class="lineno"> 4122</span>                cin &gt;&gt; m;</div>
+<div class="line"><a id="l04123" name="l04123"></a><span class="lineno"> 4123</span>                vector&lt;tuple&lt;string, string, string&gt;&gt; vec(m);</div>
+<div class="line"><a id="l04124" name="l04124"></a><span class="lineno"> 4124</span>                vector&lt;string&gt; seq;</div>
+<div class="line"><a id="l04125" name="l04125"></a><span class="lineno"> 4125</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l04126" name="l04126"></a><span class="lineno"> 4126</span>                    <span class="keywordtype">string</span> id;</div>
+<div class="line"><a id="l04127" name="l04127"></a><span class="lineno"> 4127</span>                    <span class="keywordtype">string</span> sign_in_time;</div>
+<div class="line"><a id="l04128" name="l04128"></a><span class="lineno"> 4128</span>                    <span class="keywordtype">string</span> sign_out_time;</div>
+<div class="line"><a id="l04129" name="l04129"></a><span class="lineno"> 4129</span>                    cin &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; sign_in_time &gt;&gt; sign_out_time;</div>
+<div class="line"><a id="l04130" name="l04130"></a><span class="lineno"> 4130</span>                    vec[i] = make_tuple(<span class="keywordtype">id</span>, sign_in_time, sign_out_time);</div>
+<div class="line"><a id="l04131" name="l04131"></a><span class="lineno"> 4131</span>                    seq.push_back(sign_in_time);</div>
+<div class="line"><a id="l04132" name="l04132"></a><span class="lineno"> 4132</span>                    seq.push_back(sign_out_time);</div>
+<div class="line"><a id="l04133" name="l04133"></a><span class="lineno"> 4133</span>                }</div>
+<div class="line"><a id="l04134" name="l04134"></a><span class="lineno"> 4134</span>                sort(seq.begin(), seq.end());</div>
+<div class="line"><a id="l04135" name="l04135"></a><span class="lineno"> 4135</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[<span class="keywordtype">id</span>, in, out]: vec) {</div>
+<div class="line"><a id="l04136" name="l04136"></a><span class="lineno"> 4136</span>                    <span class="keywordflow">if</span>(in == seq[0]) {</div>
+<div class="line"><a id="l04137" name="l04137"></a><span class="lineno"> 4137</span>                        cout &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a id="l04138" name="l04138"></a><span class="lineno"> 4138</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04139" name="l04139"></a><span class="lineno"> 4139</span>                    }</div>
+<div class="line"><a id="l04140" name="l04140"></a><span class="lineno"> 4140</span>                }</div>
+<div class="line"><a id="l04141" name="l04141"></a><span class="lineno"> 4141</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[<span class="keywordtype">id</span>, in, out]: vec) {</div>
+<div class="line"><a id="l04142" name="l04142"></a><span class="lineno"> 4142</span>                    <span class="keywordflow">if</span>(out == seq.back()) {</div>
+<div class="line"><a id="l04143" name="l04143"></a><span class="lineno"> 4143</span>                        cout &lt;&lt; id;</div>
+<div class="line"><a id="l04144" name="l04144"></a><span class="lineno"> 4144</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04145" name="l04145"></a><span class="lineno"> 4145</span>                    }</div>
+<div class="line"><a id="l04146" name="l04146"></a><span class="lineno"> 4146</span>                }</div>
+<div class="line"><a id="l04147" name="l04147"></a><span class="lineno"> 4147</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l04148" name="l04148"></a><span class="lineno"> 4148</span>            }</div>
+<div class="line"><a id="l04149" name="l04149"></a><span class="lineno"> 4149</span>        }<span class="comment">// namespace a1006</span></div>
+<div class="line"><a id="l04150" name="l04150"></a><span class="lineno"> 4150</span>    }    <span class="comment">// namespace a</span></div>
+<div class="line"><a id="l04151" name="l04151"></a><span class="lineno"> 4151</span> </div>
+<div class="line"><a id="l04152" name="l04152"></a><span class="lineno"><a class="line" href="../../de/d4e/a00500.html"> 4152</a></span>    <span class="keyword">namespace </span>top {}</div>
+<div class="line"><a id="l04153" name="l04153"></a><span class="lineno"> 4153</span>}<span class="comment">// namespace pat</span></div>
 <div class="ttc" id="aa00002_html"><div class="ttname"><a href="../../d7/d46/a00002.html">templates.h</a></div></div>
 <div class="ttc" id="aa00011_html"><div class="ttname"><a href="../../da/d45/a00011.html">pat.h</a></div></div>
 <div class="ttc" id="aa00067_html_ab0d0f3a698d2eb3fdc6107c07ccfdbe8"><div class="ttname"><a href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">acwing::acwing2019::N</a></div><div class="ttdeci">const int N</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l00146">acwing.h:146</a></div></div>
@@ -4345,9 +4343,9 @@ $(function() {
 <div class="ttc" id="aa00493_html_a869e7b1c6afb6150aad847d1c371a15b"><div class="ttname"><a href="../../d9/da5/a00493.html#a869e7b1c6afb6150aad847d1c371a15b">pat::b::b1109::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l03854">pat.cpp:3854</a></div></div>
 <div class="ttc" id="aa00494_html_acea7215269bde2592e28770ea5afd95e"><div class="ttname"><a href="../../d5/d0f/a00494.html#acea7215269bde2592e28770ea5afd95e">pat::b::b1110::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l03910">pat.cpp:3910</a></div></div>
 <div class="ttc" id="aa00496_html_ad2a14dbc67b6641e8a836e837ee24856"><div class="ttname"><a href="../../d3/dad/a00496.html#ad2a14dbc67b6641e8a836e837ee24856">pat::a::a1003::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l03952">pat.cpp:3952</a></div></div>
-<div class="ttc" id="aa00497_html_a11745d0dea7acc2aa4f3e8f8317efe53"><div class="ttname"><a href="../../d4/d1e/a00497.html#a11745d0dea7acc2aa4f3e8f8317efe53">pat::a::a1004::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l04010">pat.cpp:4010</a></div></div>
-<div class="ttc" id="aa00498_html_a4dee93bb316b8daa50395e6492cb5898"><div class="ttname"><a href="../../d8/d57/a00498.html#a4dee93bb316b8daa50395e6492cb5898">pat::a::a1005::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l04066">pat.cpp:4066</a></div></div>
-<div class="ttc" id="aa00499_html_a864f4937888d1b373102a56a234e54c8"><div class="ttname"><a href="../../d8/d67/a00499.html#a864f4937888d1b373102a56a234e54c8">pat::a::a1006::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l04122">pat.cpp:4122</a></div></div>
+<div class="ttc" id="aa00497_html_a11745d0dea7acc2aa4f3e8f8317efe53"><div class="ttname"><a href="../../d4/d1e/a00497.html#a11745d0dea7acc2aa4f3e8f8317efe53">pat::a::a1004::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l04009">pat.cpp:4009</a></div></div>
+<div class="ttc" id="aa00498_html_a4dee93bb316b8daa50395e6492cb5898"><div class="ttname"><a href="../../d8/d57/a00498.html#a4dee93bb316b8daa50395e6492cb5898">pat::a::a1005::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l04065">pat.cpp:4065</a></div></div>
+<div class="ttc" id="aa00499_html_a864f4937888d1b373102a56a234e54c8"><div class="ttname"><a href="../../d8/d67/a00499.html#a864f4937888d1b373102a56a234e54c8">pat::a::a1006::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l04120">pat.cpp:4120</a></div></div>
 <div class="ttc" id="aa02913_html"><div class="ttname"><a href="../../d8/dea/a02913.html">pat::b::b1015::student</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00087">pat.h:87</a></div></div>
 <div class="ttc" id="aa02913_html_a34f0536bf9cd2d1751bc5b94096518fd"><div class="ttname"><a href="../../d8/dea/a02913.html#a34f0536bf9cd2d1751bc5b94096518fd">pat::b::b1015::student::ability</a></div><div class="ttdeci">int ability</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00090">pat.h:90</a></div></div>
 <div class="ttc" id="aa02913_html_a42c601c940726d2e4acfc2e940352d84"><div class="ttname"><a href="../../d8/dea/a02913.html#a42c601c940726d2e4acfc2e940352d84">pat::b::b1015::student::id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00088">pat.h:88</a></div></div>
@@ -4420,7 +4418,7 @@ $(function() {
 <div class="ttc" id="aa02985_html_adf4e91a0493760aa767ed6227438c938"><div class="ttname"><a href="../../dd/d5c/a02985.html#adf4e91a0493760aa767ed6227438c938">pat::b::b1102::comp_total::operator()</a></div><div class="ttdeci">bool operator()(const paper &amp;p1, const paper &amp;p2) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l03641">pat.cpp:3641</a></div></div>
 <div class="ttc" id="aa02997_html"><div class="ttname"><a href="../../d2/daa/a02997.html">pat::a::a1003::comp</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00737">pat.h:737</a></div></div>
 <div class="ttc" id="aa02997_html_af9fec24dbe17e173ee9a9e50191984ef"><div class="ttname"><a href="../../d2/daa/a02997.html#af9fec24dbe17e173ee9a9e50191984ef">pat::a::a1003::comp::operator()</a></div><div class="ttdeci">bool operator()(const tuple&lt; int, int, int &gt; &amp;a, const tuple&lt; int, int, int &gt; &amp;b) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l03998">pat.cpp:3998</a></div></div>
-<div class="ttc" id="aa03001_html"><div class="ttname"><a href="../../d0/db8/a03001.html">pat::a::a1004::node</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00745">pat.h:745</a></div></div>
+<div class="ttc" id="aa03001_html"><div class="ttname"><a href="../../d0/db8/a03001.html">pat::a::a1004::node</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00746">pat.h:746</a></div></div>
 <div class="ttc" id="aa03009_html"><div class="ttname"><a href="../../db/dc5/a03009.html">BigInt</a></div><div class="ttdoc">高精度整数</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l00023">templates.h:23</a></div></div>
 <div class="ttc" id="aa03013_html"><div class="ttname"><a href="../../d1/db3/a03013.html">Fraction</a></div><div class="ttdoc">分数</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l00070">templates.h:70</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

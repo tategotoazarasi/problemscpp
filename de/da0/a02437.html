@@ -127,31 +127,31 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l06896">6896</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l06896" name="l06896"></a><span class="lineno"> 6896</span>                                                            {</div>
-<div class="line"><a id="l06897" name="l06897"></a><span class="lineno"> 6897</span>            <span class="keywordflow">if</span>(l &gt;= r) {</div>
-<div class="line"><a id="l06898" name="l06898"></a><span class="lineno"> 6898</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l06899" name="l06899"></a><span class="lineno"> 6899</span>            }</div>
-<div class="line"><a id="l06900" name="l06900"></a><span class="lineno"> 6900</span>            <span class="keywordtype">int</span> lp    = l - 1;</div>
-<div class="line"><a id="l06901" name="l06901"></a><span class="lineno"> 6901</span>            <span class="keywordtype">int</span> rp    = r + 1;</div>
-<div class="line"><a id="l06902" name="l06902"></a><span class="lineno"> 6902</span>            <span class="keywordtype">int</span> pivot = nums[(l + r) / 2];</div>
-<div class="line"><a id="l06903" name="l06903"></a><span class="lineno"> 6903</span>            <span class="keywordflow">while</span>(lp &lt; rp) {</div>
-<div class="line"><a id="l06904" name="l06904"></a><span class="lineno"> 6904</span>                <span class="keywordflow">while</span>(nums[++lp] &lt; pivot)</div>
-<div class="line"><a id="l06905" name="l06905"></a><span class="lineno"> 6905</span>                    ;</div>
-<div class="line"><a id="l06906" name="l06906"></a><span class="lineno"> 6906</span>                <span class="keywordflow">while</span>(nums[--rp] &gt; pivot)</div>
-<div class="line"><a id="l06907" name="l06907"></a><span class="lineno"> 6907</span>                    ;</div>
-<div class="line"><a id="l06908" name="l06908"></a><span class="lineno"> 6908</span>                <span class="keywordflow">if</span>(lp &lt; rp) {</div>
-<div class="line"><a id="l06909" name="l06909"></a><span class="lineno"> 6909</span>                    swap(nums[lp], nums[rp]);</div>
-<div class="line"><a id="l06910" name="l06910"></a><span class="lineno"> 6910</span>                }</div>
-<div class="line"><a id="l06911" name="l06911"></a><span class="lineno"> 6911</span>            }</div>
-<div class="line"><a id="l06912" name="l06912"></a><span class="lineno"> 6912</span>            <a class="code hl_function" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">qsort</a>(nums, l, rp);</div>
-<div class="line"><a id="l06913" name="l06913"></a><span class="lineno"> 6913</span>            <a class="code hl_function" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">qsort</a>(nums, rp + 1, r);</div>
-<div class="line"><a id="l06914" name="l06914"></a><span class="lineno"> 6914</span>        }</div>
-<div class="ttc" id="aa02437_html_ac960a9d1add7006e7a5b765fb57fadd0"><div class="ttname"><a href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">leetcode::sort_colors::Solution::qsort</a></div><div class="ttdeci">static void qsort(vector&lt; int &gt; &amp;nums, int l, int r)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06896">leetcode.cpp:6896</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l06895">6895</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l06895" name="l06895"></a><span class="lineno"> 6895</span>                                                            {</div>
+<div class="line"><a id="l06896" name="l06896"></a><span class="lineno"> 6896</span>            <span class="keywordflow">if</span>(l &gt;= r) {</div>
+<div class="line"><a id="l06897" name="l06897"></a><span class="lineno"> 6897</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l06898" name="l06898"></a><span class="lineno"> 6898</span>            }</div>
+<div class="line"><a id="l06899" name="l06899"></a><span class="lineno"> 6899</span>            <span class="keywordtype">int</span> lp          = l - 1;</div>
+<div class="line"><a id="l06900" name="l06900"></a><span class="lineno"> 6900</span>            <span class="keywordtype">int</span> rp          = r + 1;</div>
+<div class="line"><a id="l06901" name="l06901"></a><span class="lineno"> 6901</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> pivot = nums[(l + r) / 2];</div>
+<div class="line"><a id="l06902" name="l06902"></a><span class="lineno"> 6902</span>            <span class="keywordflow">while</span>(lp &lt; rp) {</div>
+<div class="line"><a id="l06903" name="l06903"></a><span class="lineno"> 6903</span>                <span class="keywordflow">while</span>(nums[++lp] &lt; pivot)</div>
+<div class="line"><a id="l06904" name="l06904"></a><span class="lineno"> 6904</span>                    ;</div>
+<div class="line"><a id="l06905" name="l06905"></a><span class="lineno"> 6905</span>                <span class="keywordflow">while</span>(nums[--rp] &gt; pivot)</div>
+<div class="line"><a id="l06906" name="l06906"></a><span class="lineno"> 6906</span>                    ;</div>
+<div class="line"><a id="l06907" name="l06907"></a><span class="lineno"> 6907</span>                <span class="keywordflow">if</span>(lp &lt; rp) {</div>
+<div class="line"><a id="l06908" name="l06908"></a><span class="lineno"> 6908</span>                    swap(nums[lp], nums[rp]);</div>
+<div class="line"><a id="l06909" name="l06909"></a><span class="lineno"> 6909</span>                }</div>
+<div class="line"><a id="l06910" name="l06910"></a><span class="lineno"> 6910</span>            }</div>
+<div class="line"><a id="l06911" name="l06911"></a><span class="lineno"> 6911</span>            <a class="code hl_function" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">qsort</a>(nums, l, rp);</div>
+<div class="line"><a id="l06912" name="l06912"></a><span class="lineno"> 6912</span>            <a class="code hl_function" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">qsort</a>(nums, rp + 1, r);</div>
+<div class="line"><a id="l06913" name="l06913"></a><span class="lineno"> 6913</span>        }</div>
+<div class="ttc" id="aa02437_html_ac960a9d1add7006e7a5b765fb57fadd0"><div class="ttname"><a href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">leetcode::sort_colors::Solution::qsort</a></div><div class="ttdeci">static void qsort(vector&lt; int &gt; &amp;nums, int l, int r)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d8b/a00059_source.html#l06895">leetcode.cpp:6895</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l06896">qsort()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l06895">qsort()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d8b/a00059_source.html#l06896">qsort()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l06892">sortColors()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d3/d8b/a00059_source.html#l06895">qsort()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l06893">sortColors()</a>.</p>
 
 </div>
 </div>
@@ -179,12 +179,10 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l06892">6892</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l06892" name="l06892"></a><span class="lineno"> 6892</span>                                                   {</div>
-<div class="line"><a id="l06893" name="l06893"></a><span class="lineno"> 6893</span>            <a class="code hl_function" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">qsort</a>(nums, 0, nums.size() - 1);</div>
-<div class="line"><a id="l06894" name="l06894"></a><span class="lineno"> 6894</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l06893">6893</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l06893" name="l06893"></a><span class="lineno"> 6893</span>{ <a class="code hl_function" href="../../de/da0/a02437.html#ac960a9d1add7006e7a5b765fb57fadd0">qsort</a>(nums, 0, nums.size() - 1); }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l06896">qsort()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l06895">qsort()</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../d5/de0/a00050_source.html#l03228">leetcode::sort_colors::TEST()</a>.</p>
 

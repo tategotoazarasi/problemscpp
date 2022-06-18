@@ -127,7 +127,7 @@ $(function() {
 <div class="line"><a id="l03954" name="l03954"></a><span class="lineno"> 3954</span>                cin &gt;&gt; <a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a> &gt;&gt; M &gt;&gt; C1 &gt;&gt; C2;</div>
 <div class="line"><a id="l03955" name="l03955"></a><span class="lineno"> 3955</span>                <span class="keywordtype">int</span> max_d = 0;</div>
 <div class="line"><a id="l03956" name="l03956"></a><span class="lineno"> 3956</span>                vector&lt;int&gt; rescue(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>);</div>
-<div class="line"><a id="l03957" name="l03957"></a><span class="lineno"> 3957</span>                vector&lt;vector&lt;int&gt;&gt; grid(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, vector&lt;int&gt;(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, 0));</div>
+<div class="line"><a id="l03957" name="l03957"></a><span class="lineno"> 3957</span>                vector grid(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, vector(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, 0));</div>
 <div class="line"><a id="l03958" name="l03958"></a><span class="lineno"> 3958</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>; i++) {</div>
 <div class="line"><a id="l03959" name="l03959"></a><span class="lineno"> 3959</span>                    cin &gt;&gt; rescue[i];</div>
 <div class="line"><a id="l03960" name="l03960"></a><span class="lineno"> 3960</span>                }</div>
@@ -138,9 +138,9 @@ $(function() {
 <div class="line"><a id="l03965" name="l03965"></a><span class="lineno"> 3965</span>                    grid[c2][c1] = L;</div>
 <div class="line"><a id="l03966" name="l03966"></a><span class="lineno"> 3966</span>                    max_d += L;</div>
 <div class="line"><a id="l03967" name="l03967"></a><span class="lineno"> 3967</span>                }</div>
-<div class="line"><a id="l03968" name="l03968"></a><span class="lineno"> 3968</span>                vector&lt;int&gt; shortest_cnt(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, 0);    </div>
-<div class="line"><a id="l03969" name="l03969"></a><span class="lineno"> 3969</span>                vector&lt;int&gt; shortest(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, max_d + 1);</div>
-<div class="line"><a id="l03970" name="l03970"></a><span class="lineno"> 3970</span>                vector&lt;int&gt; max_rescue(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, 0);      </div>
+<div class="line"><a id="l03968" name="l03968"></a><span class="lineno"> 3968</span>                vector shortest_cnt(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, 0);    </div>
+<div class="line"><a id="l03969" name="l03969"></a><span class="lineno"> 3969</span>                vector shortest(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, max_d + 1);</div>
+<div class="line"><a id="l03970" name="l03970"></a><span class="lineno"> 3970</span>                vector max_rescue(<a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>, 0);      </div>
 <div class="line"><a id="l03971" name="l03971"></a><span class="lineno"> 3971</span>                priority_queue&lt;tuple&lt;int, int, int&gt;, vector&lt;tuple&lt;int, int, int&gt;&gt;, comp&gt; pq;</div>
 <div class="line"><a id="l03972" name="l03972"></a><span class="lineno"> 3972</span>                pq.push(make_tuple(C1, 0, rescue[C1]));</div>
 <div class="line"><a id="l03973" name="l03973"></a><span class="lineno"> 3973</span>                <span class="keywordflow">while</span>(!pq.empty()) {</div>

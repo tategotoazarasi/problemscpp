@@ -158,7 +158,7 @@ $(function() {
 <div class="line"><a id="l07126" name="l07126"></a><span class="lineno"> 7126</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[nx, ny]: nexts) {</div>
 <div class="line"><a id="l07127" name="l07127"></a><span class="lineno"> 7127</span>                    <span class="keywordflow">if</span>(nx &gt;= 0 &amp;&amp; nx &lt; 3 &amp;&amp; ny &gt;= 0 &amp;&amp; ny &lt; 3) {</div>
 <div class="line"><a id="l07128" name="l07128"></a><span class="lineno"> 7128</span>                        swap(g[nx][ny], g[x][y]);</div>
-<div class="line"><a id="l07129" name="l07129"></a><span class="lineno"> 7129</span>                        <span class="keywordflow">if</span>(!us.count(g)) {</div>
+<div class="line"><a id="l07129" name="l07129"></a><span class="lineno"> 7129</span>                        <span class="keywordflow">if</span>(!us.contains(g)) {</div>
 <div class="line"><a id="l07130" name="l07130"></a><span class="lineno"> 7130</span>                            us.insert(g);</div>
 <div class="line"><a id="l07131" name="l07131"></a><span class="lineno"> 7131</span>                            q.push(make_tuple(g, step + 1, nx, ny));</div>
 <div class="line"><a id="l07132" name="l07132"></a><span class="lineno"> 7132</span>                        }</div>
