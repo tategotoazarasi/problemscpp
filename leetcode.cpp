@@ -6946,4 +6946,27 @@ namespace leetcode {
 			return nums[k - 1];
 		}
 	}// namespace kth_largest_element_in_an_array
+
+	namespace merge_intervals {
+		vector<vector<int>> Solution::merge(vector<vector<int>> &intervals) {
+			vector<vector<int>> ans;
+			auto comp = [](const vector<int> &a, const vector<int> &b) {
+				return a[0] < b[0];
+			};
+			sort(intervals.begin(), intervals.end(), comp);
+			int start = intervals[0][0];
+			int end   = intervals[0][1];
+			for(int i = 1; i < intervals.size(); i++) {
+				if(intervals[i][0] <= end) {
+					end = max(end, intervals[i][1]);
+				} else {
+					ans.emplace_back(vector<int>{start, end});
+					start = intervals[i][0];
+					end   = intervals[i][1];
+				}
+			}
+			ans.emplace_back(vector<int>{start, end});
+			return ans;
+		}
+	}// namespace merge_intervals
 }// namespace leetcode

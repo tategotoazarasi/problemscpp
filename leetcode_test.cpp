@@ -3251,4 +3251,19 @@ namespace leetcode {
 			ASSERT_EQ(4, Solution::findKthLargest(nums, 4));
 		}
 	}// namespace kth_largest_element_in_an_array
+
+	namespace merge_intervals {
+		TEST(merge_intervals, case1) {
+			vector<vector<int>> intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+			vector<vector<int>> expected  = {{1, 6}, {8, 10}, {15, 18}};
+			ASSERT_EQ(expected, Solution::merge(intervals));
+		}
+
+		TEST(merge_intervals, case2) {
+			vector<vector<int>> intervals = {{1, 4}, {4, 5}};
+			vector<vector<int>> expected  = {{1, 5}};
+			ASSERT_EQ(expected, Solution::merge(intervals));
+		}
+
+	}// namespace merge_intervals
 }// namespace leetcode

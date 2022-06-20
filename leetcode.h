@@ -2580,6 +2580,14 @@ namespace leetcode {
 			static int findKthLargest(vector<int> &nums, int k);
 		};
 	}// namespace kth_largest_element_in_an_array
+
+	/// \brief 56. Merge Intervals
+	namespace merge_intervals {
+		class Solution {
+		public:
+			static vector<vector<int>> merge(vector<vector<int>> &intervals);
+		};
+	}// namespace merge_intervals
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
