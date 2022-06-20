@@ -5774,8 +5774,8 @@ namespace acwing {
 	namespace acwing1695 {
 		int main(istream &cin, ostream &cout) {
 			bool nuts[3][3]         = {{true, false, false},
-                               {false, true, false},
-                               {false, false, true}};
+			                           {false, true, false},
+			                           {false, false, true}};
 			unsigned short score[3] = {0, 0, 0};
 			unsigned short ans      = 0;
 			unsigned short n;
@@ -7151,4 +7151,48 @@ namespace acwing {
 			return ret;
 		}
 	}// namespace acwing845
+
+	namespace acwing849 {
+		bool comp::operator()(const pair<int, int> &p1, const pair<int, int> &p2) {
+			return p1.second > p2.second;
+		}
+
+		int main(istream &cin, ostream &cout) {
+			int n, m;
+			cin >> n >> m;
+			vector<unordered_map<int, int>> vec(n + 1);
+			unordered_set<int> ed;
+			for(int i = 0; i < m; i++) {
+				int x, y, z;
+				cin >> x >> y >> z;
+				if(vec[x][y] == 0) {
+					vec[x][y] = z;
+				} else {
+					vec[x][y] = min(vec[x][y], z);
+				}
+			}
+			priority_queue<pair<int, int>, vector<pair<int, int>>, comp> pq;
+			pq.push(make_pair(1, 0));
+			while(!pq.empty()) {
+				auto [node, dist] = pq.top();
+				pq.pop();
+				if(ed.count(node)) {
+					continue;
+				} else {
+					ed.insert(node);
+				}
+				if(node == n) {
+					cout << dist;
+					return 0;
+				}
+				for(auto [next_node, d]: vec[node]) {
+					if(!ed.count(next_node)) {
+						pq.push(make_pair(next_node, dist + d));
+					}
+				}
+			}
+			cout << -1;
+			return 0;
+		}
+	}// namespace acwing849
 }// namespace acwing

@@ -2062,5 +2062,13 @@ namespace acwing {
 
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing845
+
+	/// \brief 849. Dijkstra求最短路 I
+	namespace acwing849 {
+		struct comp {
+			bool operator()(const pair<int, int> &p1, const pair<int, int> &p2);
+		};
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing849
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
