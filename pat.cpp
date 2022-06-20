@@ -4188,6 +4188,30 @@ namespace pat {
 				return 0;
 			}
 		}// namespace a1007
+
+		namespace a1008 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				vector<int> vec(n);
+				for(int i = 0; i < n; i++) {
+					cin >> vec[i];
+				}
+				int level = 0;
+				int sum   = 0;
+				for(auto &v: vec) {
+					if(v > level) {
+						sum += (v - level) * 6;
+					} else {
+						sum += (level - v) * 4;
+					}
+					sum += 5;
+					level = v;
+				}
+				cout << sum;
+				return 0;
+			}
+		}// namespace a1008
 	}    // namespace a
 
 	namespace top {}

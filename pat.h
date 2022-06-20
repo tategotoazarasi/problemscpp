@@ -765,6 +765,11 @@ namespace pat {
 		namespace a1007 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1008 Elevator
+		namespace a1008 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace a
 
 	/// \brief 顶级

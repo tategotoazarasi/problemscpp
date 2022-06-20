@@ -2020,6 +2020,15 @@ namespace pat {
 				ASSERT_EQ("10 1 4", out.str());
 			}
 		}// namespace a1007
+
+		namespace a1008 {
+			TEST(a1008, case1) {
+				istringstream in("3 2 3 1");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("41", out.str());
+			}
+		}// namespace a1008
 	}    // namespace a
 
 	namespace top {}
