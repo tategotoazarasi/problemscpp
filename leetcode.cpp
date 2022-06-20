@@ -6617,7 +6617,7 @@ namespace leetcode {
 					}
 
 					// 只要 dp[i][L] == true 成立，就表示子串 s[i..L] 是回文，此时记录回文长度和起始位置
-					if((dp[i][j] != 0) && j - i + 1 > maxLen) {
+					if(dp[i][j] != 0 && j - i + 1 > maxLen) {
 						maxLen = j - i + 1;
 						begin  = i;
 					}
@@ -6873,7 +6873,7 @@ namespace leetcode {
 			unordered_map<string, vector<string>> um;
 			for(auto &str: strs_sorted) {
 				sort(str.begin(), str.end());
-				if(!um.count(str)) {
+				if(!um.contains(str)) {
 					um[str] = vector<string>();
 				}
 			}
@@ -6881,6 +6881,7 @@ namespace leetcode {
 				um[strs_sorted[i]].emplace_back(strs[i]);
 			}
 			vector<vector<string>> ans;
+			ans.reserve(um.size());
 			for(auto &[k, v]: um) {
 				ans.emplace_back(v);
 			}
@@ -6889,17 +6890,15 @@ namespace leetcode {
 	}// namespace group_anagrams
 
 	namespace sort_colors {
-		void Solution::sortColors(vector<int> &nums) {
-			qsort(nums, 0, nums.size() - 1);
-		}
+		void Solution::sortColors(vector<int> &nums) { qsort(nums, 0, nums.size() - 1); }
 
 		void Solution::qsort(vector<int> &nums, int l, int r) {
 			if(l >= r) {
 				return;
 			}
-			int lp    = l - 1;
-			int rp    = r + 1;
-			int pivot = nums[(l + r) / 2];
+			int lp          = l - 1;
+			int rp          = r + 1;
+			const int pivot = nums[(l + r) / 2];
 			while(lp < rp) {
 				while(nums[++lp] < pivot)
 					;
@@ -6932,7 +6931,7 @@ namespace leetcode {
 			}
 			vector<int> ans;
 			for(auto [num, v]: um) {
-				if(us.count(v)) {
+				if(us.contains(v)) {
 					ans.emplace_back(num);
 				}
 			}

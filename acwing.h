@@ -2059,6 +2059,7 @@ namespace acwing {
 		struct hash {
 			unsigned int operator()(const array<array<char, 3>, 3> &g) const;
 		};
+
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing845
 }// namespace acwing

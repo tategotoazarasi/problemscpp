@@ -5774,8 +5774,8 @@ namespace acwing {
 	namespace acwing1695 {
 		int main(istream &cin, ostream &cout) {
 			bool nuts[3][3]         = {{true, false, false},
-			                           {false, true, false},
-			                           {false, false, true}};
+                               {false, true, false},
+                               {false, false, true}};
 			unsigned short score[3] = {0, 0, 0};
 			unsigned short ans      = 0;
 			unsigned short n;
@@ -7126,7 +7126,7 @@ namespace acwing {
 				for(auto &[nx, ny]: nexts) {
 					if(nx >= 0 && nx < 3 && ny >= 0 && ny < 3) {
 						swap(g[nx][ny], g[x][y]);
-						if(!us.count(g)) {
+						if(!us.contains(g)) {
 							us.insert(g);
 							q.push(make_tuple(g, step + 1, nx, ny));
 						}

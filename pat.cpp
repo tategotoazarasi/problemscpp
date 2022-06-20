@@ -3954,7 +3954,7 @@ namespace pat {
 				cin >> N >> M >> C1 >> C2;
 				int max_d = 0;
 				vector<int> rescue(N);
-				vector<vector<int>> grid(N, vector<int>(N, 0));
+				vector grid(N, vector(N, 0));
 				for(int i = 0; i < N; i++) {
 					cin >> rescue[i];
 				}
@@ -3965,9 +3965,9 @@ namespace pat {
 					grid[c2][c1] = L;
 					max_d += L;
 				}
-				vector<int> shortest_cnt(N, 0);    ///< shortest_cnt[i] = number of shortest path from C1 to i
-				vector<int> shortest(N, max_d + 1);///< shortest[i] = shortest distance from C1 to i
-				vector<int> max_rescue(N, 0);      ///< max_rescue[i] = max rescue sum from C1 to i in shortest path
+				vector shortest_cnt(N, 0);    ///< shortest_cnt[i] = number of shortest path from C1 to i
+				vector shortest(N, max_d + 1);///< shortest[i] = shortest distance from C1 to i
+				vector max_rescue(N, 0);      ///< max_rescue[i] = max rescue sum from C1 to i in shortest path
 				priority_queue<tuple<int, int, int>, vector<tuple<int, int, int>>, comp> pq;
 				pq.push(make_tuple(C1, 0, rescue[C1]));
 				while(!pq.empty()) {
@@ -4000,9 +4000,8 @@ namespace pat {
 				auto [b1, b2, b3] = b;
 				if(a2 != b2) {
 					return a2 > b2;
-				} else {
-					return a3 < b3;
 				}
+				return a3 < b3;
 			}
 		}// namespace a1003
 
@@ -4018,14 +4017,14 @@ namespace pat {
 					string id;
 					int k;
 					cin >> id >> k;
-					if(!um.count(id)) {
+					if(!um.contains(id)) {
 						um[id] = new node(id);
 					}
-					auto nd = um[id];
+					const auto nd = um[id];
 					for(int j = 0; j < k; j++) {
 						string cid;
 						cin >> cid;
-						if(!um.count(cid)) {
+						if(!um.contains(cid)) {
 							um[cid] = new node(cid);
 						}
 						nd->children.insert(um[cid]);
@@ -4067,14 +4066,14 @@ namespace pat {
 				unsigned long n = 0;
 				string s;
 				cin >> s;
-				for(char ch: s) {
+				for(const char ch: s) {
 					n += ch - '0';
 				}
-				ostringstream oss = ostringstream();
+				auto oss = ostringstream();
 				oss << n;
 				s          = oss.str();
 				bool first = true;
-				for(char ch: s) {
+				for(const char ch: s) {
 					if(!first) {
 						cout << ' ';
 					}
@@ -4110,8 +4109,7 @@ namespace pat {
 						case '9':
 							cout << "nine";
 							break;
-						default:
-							return -1;
+						default: return -1;
 					}
 				}
 				return 0;
