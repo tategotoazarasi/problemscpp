@@ -770,6 +770,11 @@ namespace pat {
 		namespace a1008 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1009 Product of Polynomials
+		namespace a1009 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace a
 
 	/// \brief 顶级

@@ -4212,6 +4212,46 @@ namespace pat {
 				return 0;
 			}
 		}// namespace a1008
+
+		namespace a1009 {
+			int main(istream &cin, ostream &cout) {
+				map<int, double> A, B;
+				int n;
+				cin >> n;
+				for(int i = 0; i < n; i++) {
+					int exponent;
+					double coefficient;
+					cin >> exponent >> coefficient;
+					A[exponent] = coefficient;
+				}
+				cin >> n;
+				for(int i = 0; i < n; i++) {
+					int exponent;
+					double coefficient;
+					cin >> exponent >> coefficient;
+					B[exponent] = coefficient;
+				}
+				map<int, double> C;
+				for(auto &[exponent, coefficient]: A) {
+					for(auto &[exponent2, coefficient2]: B) {
+						C[exponent + exponent2] += coefficient * coefficient2;
+					}
+				}
+				int cnt = 0;
+				for(auto &[exponent, coefficient]: C) {
+					if(coefficient != 0) {
+						cnt++;
+					}
+				}
+				cout << cnt;
+				for(auto it = C.rbegin(); it != C.rend(); ++it) {
+					if(it->second != 0) {
+						cout << ' ' << it->first << ' ' << fixed << setprecision(1) << it->second;
+					}
+				}
+				return 0;
+			}
+		}// namespace a1009
 	}    // namespace a
 
 	namespace top {}

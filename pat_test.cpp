@@ -2029,6 +2029,16 @@ namespace pat {
 				ASSERT_EQ("41", out.str());
 			}
 		}// namespace a1008
+
+		namespace a1009 {
+			TEST(a1009, case1) {
+				istringstream in("2 1 2.4 0 3.2\n"
+				                 "2 2 1.5 1 0.5");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("3 3 3.6 2 6.0 1 1.6", out.str());
+			}
+		}// namespace a1009
 	}    // namespace a
 
 	namespace top {}
