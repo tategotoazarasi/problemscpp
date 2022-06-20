@@ -3353,4 +3353,45 @@ namespace acwing {
 			ASSERT_EQ("12", ans);
 		}
 	}// namespace acwing849
+
+	namespace acwing853 {
+		TEST(acwing853, case1) {
+			istringstream in("3 3 1\n"
+			                 "1 2 1\n"
+			                 "2 3 1\n"
+			                 "1 3 3");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3", ans);
+		}
+
+		TEST(acwing853, case2) {
+			istringstream in("10 20 8\n"
+			                 "4 2 7\n"
+			                 "8 7 10\n"
+			                 "1 3 1\n"
+			                 "7 6 1\n"
+			                 "4 5 8\n"
+			                 "8 7 5\n"
+			                 "5 7 1\n"
+			                 "6 10 2\n"
+			                 "3 1 9\n"
+			                 "5 4 4\n"
+			                 "4 7 1\n"
+			                 "9 9 9\n"
+			                 "8 1 8\n"
+			                 "5 4 5\n"
+			                 "7 6 5\n"
+			                 "3 7 7\n"
+			                 "4 9 1\n"
+			                 "2 1 9\n"
+			                 "2 9 9\n"
+			                 "6 1 -2");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("11", ans);
+		}
+	}// namespace acwing853
 }// namespace acwing

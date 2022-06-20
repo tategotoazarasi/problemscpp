@@ -7195,4 +7195,31 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing849
+
+	namespace acwing853 {
+		int main(istream &cin, ostream &cout) {
+			int n, m, k;
+			cin >> n >> m >> k;
+			vector<tuple<int, int, int>> vec(m);
+			vector<int> shortest(n + 1, 0x3f3f3f);
+			shortest[1] = 0;
+			for(int i = 0; i < m; i++) {
+				int x, y, z;
+				cin >> x >> y >> z;
+				vec[i] = make_tuple(x, y, z);
+			}
+			for(int i = 0; i < k; i++) {
+				vector<int> shortest_cpy = shortest;
+				for(auto [x, y, z]: vec) {
+					shortest[y] = min(shortest[y], shortest_cpy[x] + z);
+				}
+			}
+			if(shortest[n] > 0x3f3f3f / 2) {
+				cout << "impossible";
+			} else {
+				cout << shortest[n];
+			}
+			return 0;
+		}
+	}// namespace acwing853
 }// namespace acwing

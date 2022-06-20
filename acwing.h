@@ -2070,5 +2070,10 @@ namespace acwing {
 		};
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing849
+
+	/// \brief 853. 有边数限制的最短路
+	namespace acwing853 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
