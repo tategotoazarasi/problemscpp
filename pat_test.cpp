@@ -2010,6 +2010,16 @@ namespace pat {
 				ASSERT_EQ("SC3021234 CS301133", out.str());
 			}
 		}// namespace a1006
+
+		namespace a1007 {
+			TEST(a1007, case1) {
+				istringstream in("10\n"
+				                 "-10 1 2 3 4 -5 -23 3 7 -21");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("10 1 4", out.str());
+			}
+		}// namespace a1007
 	}    // namespace a
 
 	namespace top {}

@@ -760,6 +760,11 @@ namespace pat {
 		namespace a1006 {
 			int main(istream &cin, ostream &cout);
 		}
+
+		/// \brief 1007 Maximum Subsequence Sum
+		namespace a1007 {
+			int main(istream &cin, ostream &cout);
+		}
 	}// namespace a
 
 	/// \brief 顶级

@@ -4149,6 +4149,45 @@ namespace pat {
 				return 0;
 			}
 		}// namespace a1006
+
+		namespace a1007 {
+			int main(istream &cin, ostream &cout) {
+				int k;
+				cin >> k;
+				vector<int> vec(k);
+				bool flag = false;
+				for(int i = 0; i < k; i++) {
+					cin >> vec[i];
+					if(vec[i] >= 0) {
+						flag = true;
+					}
+				}
+				if(!flag) {
+					cout << "0 " << vec[0] << ' ' << vec[k - 1];
+					return 0;
+				}
+				vector<int> pref_sum(k);
+				pref_sum[0] = vec[0];
+				for(int i = 1; i < k; i++) {
+					pref_sum[i] = pref_sum[i - 1] + vec[i];
+				}
+				int max_sum   = pref_sum[k - 1];
+				int max_start = 0;
+				int max_end   = k - 1;
+				for(int i = 0; i < k; i++) {
+					for(int j = i; j < k; j++) {
+						int sum = pref_sum[j] - pref_sum[i] + vec[i];
+						if(sum > max_sum) {
+							max_sum   = sum;
+							max_start = i;
+							max_end   = j;
+						}
+					}
+				}
+				cout << max_sum << ' ' << vec[max_start] << ' ' << vec[max_end];
+				return 0;
+			}
+		}// namespace a1007
 	}    // namespace a
 
 	namespace top {}
