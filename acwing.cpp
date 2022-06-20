@@ -7222,4 +7222,50 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing853
+
+	namespace acwing851 {
+		int main(istream &cin, ostream &cout) {
+			int n, m;
+			cin >> n >> m;
+			vector<unordered_map<int, int>> g(n + 1);
+			vector<bool> reachable(n + 1, false);
+			vector<int> shortest(n + 1, 0x3f3f3f);
+			for(int i = 0; i < m; i++) {
+				int x, y, z;
+				cin >> x >> y >> z;
+				if(g[x][y] == 0) {
+					g[x][y] = z;
+				} else {
+					g[x][y] = min(g[x][y], z);
+				}
+			}
+			queue<int> q;
+			unordered_set<int> us;
+			us.insert(1);
+			q.push(1);
+			shortest[1]  = 0;
+			reachable[1] = true;
+			while(!q.empty()) {
+				int node = q.front();
+				q.pop();
+				us.erase(node);
+				for(auto [next_node, d]: g[node]) {
+					reachable[next_node] = true;
+					if(shortest[next_node] > shortest[node] + d) {
+						shortest[next_node] = shortest[node] + d;
+						if(!us.count(next_node)) {
+							q.push(next_node);
+							us.insert(next_node);
+						}
+					}
+				}
+			}
+			if(!reachable[n]) {
+				cout << "impossible";
+			} else {
+				cout << shortest[n];
+			}
+			return 0;
+		}
+	}// namespace acwing851
 }// namespace acwing

@@ -2075,5 +2075,10 @@ namespace acwing {
 	namespace acwing853 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 851. spfa求最短路
+	namespace acwing851 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
