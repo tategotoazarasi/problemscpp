@@ -41,6 +41,7 @@ var menudata={children:[
 {text:"o",url:"namespacemembers_o.html#index_o"},
 {text:"q",url:"namespacemembers_q.html#index_q"},
 {text:"r",url:"namespacemembers_r.html#index_r"},
+{text:"s",url:"namespacemembers_s.html#index_s"},
 {text:"t",url:"namespacemembers_t.html#index_t"},
 {text:"u",url:"namespacemembers_u.html#index_u"}]},
 {text:"函数",url:"namespacemembers_func.html",children:[
@@ -54,6 +55,7 @@ var menudata={children:[
 {text:"o",url:"namespacemembers_func_o.html#index_o"},
 {text:"q",url:"namespacemembers_func_q.html#index_q"},
 {text:"r",url:"namespacemembers_func_r.html#index_r"},
+{text:"s",url:"namespacemembers_func_s.html#index_s"},
 {text:"t",url:"namespacemembers_func_t.html#index_t"}]},
 {text:"变量",url:"namespacemembers_vars.html"},
 {text:"枚举",url:"namespacemembers_enum.html"},
