@@ -2597,6 +2597,18 @@ namespace leetcode {
 			static bool searchMatrix(vector<vector<int>> &matrix, int target);
 		};
 	}// namespace search_a_2d_matrix_ii
+
+	/// \brief 297. Serialize and Deserialize Binary Tree
+	namespace serialize_and_deserialize_binary_tree {
+		class Codec {
+		public:
+			/// \brief Encodes a tree to a single string.
+			string serialize(TreeNode *root);
+
+			/// \brief Decodes your encoded data to tree.
+			TreeNode *deserialize(string data);
+		};
+	}// namespace serialize_and_deserialize_binary_tree
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

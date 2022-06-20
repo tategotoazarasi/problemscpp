@@ -7014,4 +7014,67 @@ namespace leetcode {
 			return false;
 		}
 	}// namespace search_a_2d_matrix_ii
+
+	namespace serialize_and_deserialize_binary_tree {
+		string Codec::serialize(TreeNode *root) {
+			if(root == nullptr) {
+				return "[]";
+			}
+			vector<string> vec;
+			ostringstream oss;
+			oss << '[';
+			queue<TreeNode *> q;
+			q.push(root);
+			while(!q.empty()) {
+				TreeNode *node = q.front();
+				q.pop();
+				if(node == nullptr) {
+					vec.emplace_back("null");
+					continue;
+				} else {
+					vec.emplace_back(to_string(node->val));
+				}
+				q.push(node->left);
+				q.push(node->right);
+			}
+			int end = vec.size() - 1;
+			while(vec[end] == "null" && end > 0) {
+				end--;
+			}
+			oss << vec[0];
+			for(int i = 1; i <= end; i++) {
+				oss << ',' << vec[i];
+			}
+			oss << ']';
+			return oss.str();
+		}
+
+		TreeNode *Codec::deserialize(string data) {
+			if(data == "[]") {
+				return nullptr;
+			}
+			vector<string> vec;
+			data      = data.substr(1, data.size() - 2);
+			char *str = (char *) malloc((data.length() + 1) * sizeof(char));
+			memcpy(str, data.c_str(), (data.length() + 1) * sizeof(char));
+			for(const char *item = strtok(str, " "); item != nullptr; item = strtok(nullptr, " ")) {
+				vec.emplace_back(string(item));
+			}
+			queue<TreeNode **> q;
+			TreeNode *root = new TreeNode(stoi(vec[0]));
+			q.push(&root);
+			for(const auto &str: vec) {
+				auto node = q.front();
+				q.pop();
+				if(str == "null") {
+					*node = nullptr;
+				} else {
+					*node = new TreeNode(stoi(str));
+					q.push(&((*node)->left));
+					q.push(&((*node)->right));
+				}
+			}
+			return root;
+		}
+	}// namespace serialize_and_deserialize_binary_tree
 }// namespace leetcode
