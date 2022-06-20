@@ -6969,4 +6969,49 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace merge_intervals
+
+	namespace search_a_2d_matrix_ii {
+		bool Solution::searchMatrix(vector<vector<int>> &matrix, int target) {
+			return search(matrix, target, 0, matrix.size() - 1, 0, matrix[0].size() - 1);
+		}
+
+		bool Solution::search(const vector<vector<int>> &matrix, int target, int x_start, int x_end, int y_start, int y_end) {
+			int minimum = min(x_end - x_start, y_end - y_start);
+			vector<int> diag1(minimum + 1);
+			for(int i = 0; i <= minimum; i++) {
+				diag1[i] = matrix[x_start + i][y_start + i];
+			}
+			auto it = lower_bound(diag1.begin(), diag1.end(), target);
+			int x   = x_start + it - diag1.begin();
+			int y   = y_start + it - diag1.begin();
+			if(it != diag1.end()) {
+				if(*it == target) {
+					return true;
+				}
+				if(it == diag1.begin()) {
+					return false;
+				}
+				if(search(matrix, target, x_start, x - 1, y, y_end)) {
+					return true;
+				}
+				if(search(matrix, target, x, x_end, y_start, y - 1)) {
+					return true;
+				}
+				if(search(matrix, target, x, x_end, y, y_end)) {
+					return true;
+				}
+			} else {
+				if(x > x_end && y > y_end) {
+					return false;
+				}
+				if(x > x_end && search(matrix, target, x_start, x_end, y, y_end)) {
+					return true;
+				}
+				if(y > y_end && search(matrix, target, x, x_end, y_start, y_end)) {
+					return true;
+				}
+			}
+			return false;
+		}
+	}// namespace search_a_2d_matrix_ii
 }// namespace leetcode

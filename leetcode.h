@@ -2588,6 +2588,15 @@ namespace leetcode {
 			static vector<vector<int>> merge(vector<vector<int>> &intervals);
 		};
 	}// namespace merge_intervals
+
+	/// \brief 240. Search a 2D Matrix II
+	namespace search_a_2d_matrix_ii {
+		class Solution {
+		public:
+			static bool search(const vector<vector<int>> &matrix, int target, int x_start, int x_end, int y_start, int y_end);
+			static bool searchMatrix(vector<vector<int>> &matrix, int target);
+		};
+	}// namespace search_a_2d_matrix_ii
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

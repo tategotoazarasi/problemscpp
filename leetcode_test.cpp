@@ -3266,4 +3266,31 @@ namespace leetcode {
 		}
 
 	}// namespace merge_intervals
+
+	namespace search_a_2d_matrix_ii {
+		TEST(search_a_2d_matrix_ii, case1) {
+			vector<vector<int>> matrix = {{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}};
+			ASSERT_TRUE(Solution::searchMatrix(matrix, 5));
+		}
+
+		TEST(search_a_2d_matrix_ii, case2) {
+			vector<vector<int>> matrix = {{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}};
+			ASSERT_FALSE(Solution::searchMatrix(matrix, 20));
+		}
+
+		TEST(search_a_2d_matrix_ii, case3) {
+			vector<vector<int>> matrix = {{1, 1}};
+			ASSERT_FALSE(Solution::searchMatrix(matrix, 0));
+		}
+
+		TEST(search_a_2d_matrix_ii, case4) {
+			vector<vector<int>> matrix = {{1, 2, 3, 4, 5}, {6, 7, 8, 9, 10}, {11, 12, 13, 14, 15}, {16, 17, 18, 19, 20}, {21, 22, 23, 24, 25}};
+			ASSERT_TRUE(Solution::searchMatrix(matrix, 15));
+		}
+
+		TEST(search_a_2d_matrix_ii, case5) {
+			vector<vector<int>> matrix = {{5, 6, 10, 14}, {6, 10, 13, 18}, {10, 13, 18, 19}};
+			ASSERT_TRUE(Solution::searchMatrix(matrix, 14));
+		}
+	}// namespace search_a_2d_matrix_ii
 }// namespace leetcode
