@@ -2086,5 +2086,10 @@ namespace acwing {
 		bool spfa(const vector<unordered_map<int, int>> &g, int m, int n);
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing852
+
+	/// \brief 854. Floyd求最短路
+	namespace acwing854 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

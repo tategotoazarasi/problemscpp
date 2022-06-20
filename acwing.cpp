@@ -7325,4 +7325,37 @@ namespace acwing {
 			return false;
 		}
 	}// namespace acwing852
+
+	namespace acwing854 {
+		int main(istream &cin, ostream &cout) {
+			int n, m, k;
+			cin >> n >> m >> k;
+			vector<vector<int>> g(n + 1, vector<int>(n + 1, 1e9));
+			for(int i = 0; i < m; i++) {
+				int x, y, z;
+				cin >> x >> y >> z;
+				g[x][y] = min(g[x][y], z);
+			}
+			for(int i = 1; i <= n; i++) {
+				g[i][i] = 0;
+			}
+			for(int l = 1; l <= n; l++) {
+				for(int i = 1; i <= n; i++) {
+					for(int j = 1; j <= n; j++) {
+						g[i][j] = min(g[i][j], g[i][l] + g[l][j]);
+					}
+				}
+			}
+			for(int i = 0; i < k; i++) {
+				int x, y;
+				cin >> x >> y;
+				if(g[x][y] > 1e9 / 2) {
+					cout << "impossible" << endl;
+				} else {
+					cout << g[x][y] << endl;
+				}
+			}
+			return 0;
+		}
+	}// namespace acwing854
 }// namespace acwing

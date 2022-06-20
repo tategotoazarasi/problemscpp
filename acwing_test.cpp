@@ -3432,4 +3432,69 @@ namespace acwing {
 			ASSERT_EQ("Yes", ans);
 		}
 	}// namespace acwing852
+
+	namespace acwing854 {
+		TEST(acwing854, case1) {
+			istringstream in("3 3 2\n"
+			                 "1 2 1\n"
+			                 "2 3 2\n"
+			                 "1 3 1\n"
+			                 "2 1\n"
+			                 "1 3\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("impossible\n"
+			          "1\n",
+			          ans);
+		}
+
+		TEST(acwing854, case2) {
+			istringstream in("10 20 10\n"
+			                 "1 2 6\n"
+			                 "4 9 5\n"
+			                 "10 3 10\n"
+			                 "10 4 5\n"
+			                 "1 4 10\n"
+			                 "1 10 0\n"
+			                 "9 7 8\n"
+			                 "1 5 8\n"
+			                 "4 4 9\n"
+			                 "10 4 4\n"
+			                 "4 7 6\n"
+			                 "9 1 10\n"
+			                 "6 8 -3\n"
+			                 "2 3 10\n"
+			                 "2 8 1\n"
+			                 "7 6 6\n"
+			                 "4 4 5\n"
+			                 "8 9 8\n"
+			                 "6 1 8\n"
+			                 "6 8 7\n"
+			                 "7 4\n"
+			                 "2 10\n"
+			                 "4 4\n"
+			                 "4 1\n"
+			                 "8 3\n"
+			                 "3 7\n"
+			                 "10 9\n"
+			                 "3 10\n"
+			                 "6 10\n"
+			                 "9 5\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("18\n"
+			          "19\n"
+			          "0\n"
+			          "15\n"
+			          "28\n"
+			          "impossible\n"
+			          "9\n"
+			          "impossible\n"
+			          "8\n"
+			          "18\n",
+			          ans);
+		}
+	}// namespace acwing854
 }// namespace acwing
