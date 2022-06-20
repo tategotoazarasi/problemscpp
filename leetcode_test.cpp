@@ -3293,4 +3293,41 @@ namespace leetcode {
 			ASSERT_TRUE(Solution::searchMatrix(matrix, 14));
 		}
 	}// namespace search_a_2d_matrix_ii
+
+	namespace serialize_and_deserialize_binary_tree {
+		TEST(serialize_and_deserialize_binary_tree, case1) {
+			Codec c           = Codec();
+			string serialized = "[1,2,3,null,null,4,5]";
+			TreeNode *root    = c.deserialize(serialized);
+			ASSERT_EQ(serialized, c.serialize(root));
+		}
+
+		TEST(serialize_and_deserialize_binary_tree, case2) {
+			Codec c           = Codec();
+			string serialized = "[]";
+			TreeNode *root    = c.deserialize(serialized);
+			ASSERT_EQ(serialized, c.serialize(root));
+		}
+
+		TEST(serialize_and_deserialize_binary_tree, case3) {
+			Codec c           = Codec();
+			string serialized = "[1,null,2,3]";
+			TreeNode *root    = c.deserialize(serialized);
+			ASSERT_EQ(serialized, c.serialize(root));
+		}
+
+		TEST(serialize_and_deserialize_binary_tree, case4) {
+			Codec c           = Codec();
+			string serialized = "[1,2,3]";
+			TreeNode *root    = c.deserialize(serialized);
+			ASSERT_EQ(serialized, c.serialize(root));
+		}
+
+		TEST(serialize_and_deserialize_binary_tree, case5) {
+			Codec c           = Codec();
+			string serialized = "[5,4,7,3,null,2,null,-1,null,9]";
+			TreeNode *root    = c.deserialize(serialized);
+			ASSERT_EQ(serialized, c.serialize(root));
+		}
+	}// namespace serialize_and_deserialize_binary_tree
 }// namespace leetcode

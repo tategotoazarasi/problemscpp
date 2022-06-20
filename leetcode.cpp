@@ -7057,7 +7057,7 @@ namespace leetcode {
 			data      = data.substr(1, data.size() - 2);
 			char *str = (char *) malloc((data.length() + 1) * sizeof(char));
 			memcpy(str, data.c_str(), (data.length() + 1) * sizeof(char));
-			for(const char *item = strtok(str, " "); item != nullptr; item = strtok(nullptr, " ")) {
+			for(const char *item = strtok(str, ","); item != nullptr; item = strtok(nullptr, ",")) {
 				vec.emplace_back(string(item));
 			}
 			queue<TreeNode **> q;
