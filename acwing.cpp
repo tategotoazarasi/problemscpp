@@ -7268,4 +7268,61 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing851
+
+	namespace acwing852 {
+		int main(istream &cin, ostream &cout) {
+			int n, m;
+			cin >> n >> m;
+			vector<unordered_map<int, int>> g(n + 1);
+			vector<int> cnt(n + 1, 0);
+			vector<int> shortest(n + 1, 0x3f3f3f);
+			for(int i = 0; i < m; i++) {
+				int x, y, z;
+				cin >> x >> y >> z;
+				if(g[x][y] == 0) {
+					g[x][y] = z;
+				} else {
+					g[x][y] = min(g[x][y], z);
+				}
+			}
+			for(int i = 1; i <= n; i++) {
+				g[0][i] = 0;
+			}
+			if(spfa(g, m, n)) {
+				cout << "Yes";
+			} else {
+				cout << "No";
+			}
+			return 0;
+		}
+
+		bool spfa(const vector<unordered_map<int, int>> &g, int m, int n) {
+			vector<int> cnt(n + 1, 0);
+			vector<int> shortest(n + 1, 0x3f3f3f);
+			queue<int> q;
+			unordered_set<int> us;
+			q.push(0);
+			us.insert(0);
+			shortest[0] = 0;
+			while(!q.empty()) {
+				int node = q.front();
+				q.pop();
+				us.erase(node);
+				for(auto [next_node, d]: g[node]) {
+					if(shortest[next_node] > shortest[node] + d) {
+						shortest[next_node] = shortest[node] + d;
+						cnt[next_node]      = cnt[node] + 1;
+						if(cnt[next_node] >= n + 1) {
+							return true;
+						}
+						if(!us.count(next_node)) {
+							q.push(next_node);
+							us.insert(next_node);
+						}
+					}
+				}
+			}
+			return false;
+		}
+	}// namespace acwing852
 }// namespace acwing

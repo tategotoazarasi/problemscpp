@@ -2080,5 +2080,11 @@ namespace acwing {
 	namespace acwing851 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 852. spfa判断负环
+	namespace acwing852 {
+		bool spfa(const vector<unordered_map<int, int>> &g, int m, int n);
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing852
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H
