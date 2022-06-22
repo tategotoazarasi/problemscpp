@@ -7076,4 +7076,46 @@ namespace leetcode {
 			return root;
 		}
 	}// namespace serialize_and_deserialize_binary_tree
+
+	namespace task_scheduler {
+		int Solution::leastInterval(vector<char> &tasks, int n) {
+			if(n == 0) {
+				return tasks.size();
+			}
+			int maximum = 0;
+			int cycle   = 0;
+			unordered_map<char, int> task_cnt;
+			unordered_map<char, int> processing;
+			for(char task: tasks) {
+				task_cnt[task]++;
+			}
+			while(true) {
+				bool finished = true;
+				maximum       = 0;
+				for(const auto &[task, cnt]: task_cnt) {
+					if(cnt > 0) {
+						finished = false;
+					}
+					if(processing[task] <= 0) {
+						maximum = max(maximum, cnt);
+					}
+				}
+				if(finished) {
+					return cycle;
+				}
+				for(auto &[task, rest]: processing) {
+					rest--;
+				}
+				for(auto &[task, cnt]: task_cnt) {
+					if(maximum == cnt && processing[task] <= 0) {
+						cnt--;
+						processing[task] = n;
+						break;
+					}
+				}
+				cycle++;
+			}
+			return cycle;
+		}
+	}// namespace task_scheduler
 }// namespace leetcode

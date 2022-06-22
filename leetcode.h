@@ -2609,6 +2609,14 @@ namespace leetcode {
 			TreeNode *deserialize(string data);
 		};
 	}// namespace serialize_and_deserialize_binary_tree
+
+	/// \brief 621. Task Scheduler
+	namespace task_scheduler {
+		class Solution {
+		public:
+			static int leastInterval(vector<char> &tasks, int n);
+		};
+	}// namespace task_scheduler
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

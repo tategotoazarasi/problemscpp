@@ -2653,15 +2653,15 @@ namespace leetcode {
 	namespace find_players_with_zero_or_one_losses {
 		TEST(find_players_with_zero_or_one_losses, case1) {
 			vector<vector<int>> matches      = {{1, 3},
-                                           {2, 3},
-                                           {3, 6},
-                                           {5, 6},
-                                           {5, 7},
-                                           {4, 5},
-                                           {4, 8},
-                                           {4, 9},
-                                           {10, 4},
-                                           {10, 9}};
+			                                    {2, 3},
+			                                    {3, 6},
+			                                    {5, 6},
+			                                    {5, 7},
+			                                    {4, 5},
+			                                    {4, 8},
+			                                    {4, 9},
+			                                    {10, 4},
+			                                    {10, 9}};
 			const vector<vector<int>> output = {{1, 2, 10}, {4, 5, 7, 8}};
 			ASSERT_EQ(output, Solution::findWinners(matches));
 		}
@@ -3330,4 +3330,31 @@ namespace leetcode {
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 	}// namespace serialize_and_deserialize_binary_tree
+
+	namespace task_scheduler {
+		TEST(task_scheduler, case1) {
+			vector<char> tasks = {'A', 'A', 'A', 'B', 'B', 'B'};
+			ASSERT_EQ(8, Solution::leastInterval(tasks, 2));
+		}
+
+		TEST(task_scheduler, case2) {
+			vector<char> tasks = {'A', 'A', 'A', 'B', 'B', 'B'};
+			ASSERT_EQ(6, Solution::leastInterval(tasks, 0));
+		}
+
+		TEST(task_scheduler, case3) {
+			vector<char> tasks = {'A', 'A', 'A', 'A', 'A', 'A', 'B', 'C', 'D', 'E', 'F', 'G'};
+			ASSERT_EQ(16, Solution::leastInterval(tasks, 2));
+		}
+
+		TEST(task_scheduler, case4) {
+			vector<char> tasks = {'A', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+			ASSERT_EQ(31, Solution::leastInterval(tasks, 29));
+		}
+
+		TEST(task_scheduler, case5) {
+			vector<char> tasks = {'A', 'B', 'C', 'A'};
+			ASSERT_EQ(8, Solution::leastInterval(tasks, 6));
+		}
+	}// namespace task_scheduler
 }// namespace leetcode
