@@ -2070,6 +2070,21 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace a1014
+
+		namespace a1015 {
+			TEST(a1015, case1) {
+				istringstream in("73 10\n"
+				                 "23 2\n"
+				                 "23 10\n"
+				                 "-2");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("Yes\n"
+				          "Yes\n"
+				          "No\n",
+				          out.str());
+			}
+		}// namespace a1015
 	}    // namespace a
 
 	namespace top {}

@@ -10,6 +10,7 @@
 #include <queue>
 #include <set>
 #include <sstream>
+#include <stack>
 #include <tuple>
 #include <unordered_map>
 #include <unordered_set>
@@ -4385,6 +4386,52 @@ namespace pat {
 				return 0;
 			}
 		}// namespace a1014
+
+		namespace a1015 {
+			int main(istream &cin, ostream &cout) {
+				unsigned n;
+				unsigned d;
+				while(cin >> n && cin >> d) {
+					if(is_prime(n) && is_prime(reverse(n, d))) {
+						cout << "Yes";
+					} else {
+						cout << "No";
+					}
+					cout << endl;
+				}
+				return 0;
+			}
+
+			unsigned get_num(string n, unsigned int d) {
+				unsigned ans = 0;
+				for(char ch: n) {
+					ans *= d;
+					ans += ch - '0';
+				}
+				return ans;
+			}
+
+			bool is_prime(unsigned int n) {
+				if(n < 2) {
+					return false;
+				}
+				for(unsigned i = 2; i <= sqrt(n); i++) {
+					if(n % i == 0) {
+						return false;
+					}
+				}
+				return true;
+			}
+
+			unsigned reverse(unsigned int n, unsigned int d) {
+				ostringstream oss;
+				while(n != 0) {
+					oss << n % d;
+					n /= d;
+				}
+				return get_num(oss.str(), d);
+			}
+		}// namespace a1015
 	}    // namespace a
 
 	namespace top {}

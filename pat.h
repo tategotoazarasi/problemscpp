@@ -789,7 +789,15 @@ namespace pat {
 		namespace a1014 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace a
+
+		/// \brief 1015 Reversible Primes
+		namespace a1015 {
+			unsigned reverse(unsigned n, unsigned d);
+			bool is_prime(unsigned n);
+			unsigned get_num(string n, unsigned d);
+			int main(istream &cin, ostream &cout);
+		}// namespace a1015
+	}    // namespace a
 
 	/// \brief 顶级
 	namespace top {}
