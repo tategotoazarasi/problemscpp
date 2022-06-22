@@ -4293,6 +4293,98 @@ namespace pat {
 				}
 			}
 		}// namespace a1013
+
+		namespace a1014 {
+			int main(istream &cin, ostream &cout) {
+				int n, m, k, q;
+				cin >> n >> m >> k >> q;
+				vector<int> t(k + 1);
+				vector<int> end_time(k + 1, -1);
+				vector<int> rest(n, -1);
+				for(int i = 1; i <= k; i++) {
+					cin >> t[i];
+				}
+				vector<queue<int>> qs(n);
+				int next = 1;
+				for(int i = 0; i < n && i < k; i++) {
+					rest[i] = t[i + 1];
+				}
+				for(int i = 0; i < n * m && i < k; i++, next++) {
+					qs[i % n].push(i + 1);
+				}
+				int current_time = 0;
+				while(next <= k && current_time < 540) {
+					int minimum = -1;
+					for(int i = 0; i < n; i++) {
+						if(rest[i] != -1) {
+							if(minimum == -1) {
+								minimum = rest[i];
+							} else {
+								minimum = min(minimum, rest[i]);
+							}
+						}
+					}
+					if(minimum != -1) {
+						if(current_time + minimum >= 540) {
+							break;
+						}
+						current_time += minimum;
+						for(int i = 0; i < n; i++) {
+							if(rest[i] != -1) {
+								rest[i] -= minimum;
+							}
+							if(rest[i] == 0) {
+								end_time[qs[i].front()] = current_time;
+								qs[i].pop();
+								rest[i] = qs[i].empty() ? -1 : t[qs[i].front()];
+							}
+						}
+					}
+					minimum = m;
+					for(int i = 0; i < n; i++) {
+						minimum = min(minimum, static_cast<int>(qs[i].size()));
+					}
+					for(int i = 0; i < n && next <= k; i++) {
+						if(qs[i].size() == minimum) {
+							if(qs[i].empty()) {
+								rest[i] = t[next];
+							}
+							qs[i].push(next);
+							next++;
+						}
+					}
+				}
+				for(int i = 0; i < n; i++) {
+					int queue_time = current_time;
+					while(!qs[i].empty() && queue_time < 540) {
+						if(rest[i] != -1) {
+							queue_time += rest[i];
+							rest[i] = -1;
+						} else {
+							queue_time += t[qs[i].front()];
+						}
+						end_time[qs[i].front()] = queue_time;
+						qs[i].pop();
+					}
+				}
+				for(int i = 0; i < q; i++) {
+					int query;
+					cin >> query;
+					int time = end_time[query];
+					if(time == -1) {
+						cout << "Sorry" << endl;
+					} else {
+						int h = time / 60;
+						int m = time % 60;
+						cout << setw(2) << right << setfill('0') << h + 8
+						     << ':'
+						     << setw(2) << right << setfill('0') << m
+						     << endl;
+					}
+				}
+				return 0;
+			}
+		}// namespace a1014
 	}    // namespace a
 
 	namespace top {}

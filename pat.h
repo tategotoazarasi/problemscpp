@@ -784,7 +784,12 @@ namespace pat {
 			void dfs(int i, const vector<unordered_set<int>> &g, int occupied, unordered_set<int> &marked);
 			int main(istream &cin, ostream &cout);
 		}// namespace a1013
-	}    // namespace a
+
+		/// \brief 1014 Waiting in Line
+		namespace a1014 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace a
 
 	/// \brief 顶级
 	namespace top {}

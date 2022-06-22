@@ -2054,6 +2054,22 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace a1013
+
+		namespace a1014 {
+			TEST(a1014, case1) {
+				istringstream in("2 2 7 5\n"
+				                 "1 2 6 4 3 534 2\n"
+				                 "3 4 5 6 7");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("08:07\n"
+				          "08:06\n"
+				          "08:10\n"
+				          "17:00\n"
+				          "Sorry\n",
+				          out.str());
+			}
+		}// namespace a1014
 	}    // namespace a
 
 	namespace top {}
