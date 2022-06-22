@@ -4250,6 +4250,49 @@ namespace pat {
 				return 0;
 			}
 		}// namespace a1009
+
+		namespace a1013 {
+			int main(istream &cin, ostream &cout) {
+				int n, m, k;
+				cin >> n >> m >> k;
+				unordered_map<int, int> ans;
+				vector<unordered_set<int>> g(n + 1);
+				for(int i = 0; i < m; i++) {
+					int a, b;
+					cin >> a >> b;
+					g[a].insert(b);
+					g[b].insert(a);
+				}
+				for(int i = 0; i < k; i++) {
+					int a;
+					cin >> a;
+					if(ans.count(a)) {
+						cout << ans[a] << endl;
+						continue;
+					}
+					unordered_set<int> marked;
+					int cnt = 0;
+					for(int j = 1; j <= n; j++) {
+						if(j != a && !marked.count(j)) {
+							cnt++;
+							dfs(j, g, a, marked);
+						}
+					}
+					cout << cnt - 1 << endl;
+					ans[a] = cnt - 1;
+				}
+				return 0;
+			}
+
+			void dfs(int i, const vector<unordered_set<int>> &g, int occupied, unordered_set<int> &marked) {
+				marked.insert(i);
+				for(auto nxt: g[i]) {
+					if(!marked.count(nxt) && nxt != occupied) {
+						dfs(nxt, g, occupied, marked);
+					}
+				}
+			}
+		}// namespace a1013
 	}    // namespace a
 
 	namespace top {}
