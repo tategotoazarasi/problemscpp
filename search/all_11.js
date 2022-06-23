@@ -3,7 +3,7 @@ var searchData=
   ['randomizedset_0',['RandomizedSet',['../db/d77/a02304.html',1,'leetcode::insert_delete_getrandom_o1::RandomizedSet'],['../db/d77/a02304.html#a7785ad4e13c17459fd6dfcf2a5a5844b',1,'leetcode::insert_delete_getrandom_o1::RandomizedSet::RandomizedSet()']]],
   ['rank_1',['rank',['../d1/d04/a01744.html#a2263367cf0a4e66e52d348a3270611fa',1,'leetcode::groups_of_strings::Solution::rank()'],['../d6/d0c/a02080.html#a24e9b098711282dab910737b3c45ea72',1,'leetcode::max_area_of_island::UnionFind::rank()'],['../d7/d98/a03044.html#a769d9195e1d005bfe2c8fb99f2bdf6d9',1,'UnionFind::rank()']]],
   ['reachingpoints_2',['reachingPoints',['../da/d68/a02280.html#afbf430358ec2db5b6030f59e7101609d',1,'leetcode::reaching_points::Solution']]],
-  ['readme_2emd_3',['README.md',['../df/d03/a00062.html',1,'']]],
+  ['readme_2emd_3',['README.md',['../d3/d8b/a00059.html',1,'']]],
   ['rearrangearray_4',['rearrangeArray',['../de/d3e/a01676.html#a27e873181f1f9ab8d07d3d36f505738a',1,'leetcode::rearrange_array_elements_by_sign::Solution']]],
   ['recurse_5',['recurse',['../df/d46/a02376.html#aec61442b2b3f48862511bb5ee9d0c5e6',1,'leetcode::combination_sum::Solution::recurse()'],['../d8/d30/a02380.html#a9b8f65f09ce7558d3dd277a7a7231abe',1,'leetcode::combination_sum_ii::Solution::recurse()']]],
   ['reflect_6',['reflect',['../d2/db1/a00070.html#ade795c201255aa53c1a422998a109e2a',1,'acwing::acwing1929::reflect()'],['../d4/d97/a02816.html#a6c9eae7885e2cc9f1e65b8fcc01d64b8',1,'luogu::P1205::reflect()']]],

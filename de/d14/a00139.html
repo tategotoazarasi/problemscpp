@@ -117,52 +117,52 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l07227">7227</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07227" name="l07227"></a><span class="lineno"> 7227</span>                                              {</div>
-<div class="line"><a id="l07228" name="l07228"></a><span class="lineno"> 7228</span>            <span class="keywordtype">int</span> n, m;</div>
-<div class="line"><a id="l07229" name="l07229"></a><span class="lineno"> 7229</span>            cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l07230" name="l07230"></a><span class="lineno"> 7230</span>            vector&lt;unordered_map&lt;int, int&gt;&gt; g(n + 1);</div>
-<div class="line"><a id="l07231" name="l07231"></a><span class="lineno"> 7231</span>            vector&lt;bool&gt; reachable(n + 1, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l07232" name="l07232"></a><span class="lineno"> 7232</span>            vector&lt;int&gt; shortest(n + 1, 0x3f3f3f);</div>
-<div class="line"><a id="l07233" name="l07233"></a><span class="lineno"> 7233</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l07234" name="l07234"></a><span class="lineno"> 7234</span>                <span class="keywordtype">int</span> x, y, z;</div>
-<div class="line"><a id="l07235" name="l07235"></a><span class="lineno"> 7235</span>                cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</div>
-<div class="line"><a id="l07236" name="l07236"></a><span class="lineno"> 7236</span>                <span class="keywordflow">if</span>(g[x][y] == 0) {</div>
-<div class="line"><a id="l07237" name="l07237"></a><span class="lineno"> 7237</span>                    g[x][y] = z;</div>
-<div class="line"><a id="l07238" name="l07238"></a><span class="lineno"> 7238</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07239" name="l07239"></a><span class="lineno"> 7239</span>                    g[x][y] = min(g[x][y], z);</div>
-<div class="line"><a id="l07240" name="l07240"></a><span class="lineno"> 7240</span>                }</div>
-<div class="line"><a id="l07241" name="l07241"></a><span class="lineno"> 7241</span>            }</div>
-<div class="line"><a id="l07242" name="l07242"></a><span class="lineno"> 7242</span>            queue&lt;int&gt; q;</div>
-<div class="line"><a id="l07243" name="l07243"></a><span class="lineno"> 7243</span>            unordered_set&lt;int&gt; us;</div>
-<div class="line"><a id="l07244" name="l07244"></a><span class="lineno"> 7244</span>            us.insert(1);</div>
-<div class="line"><a id="l07245" name="l07245"></a><span class="lineno"> 7245</span>            q.push(1);</div>
-<div class="line"><a id="l07246" name="l07246"></a><span class="lineno"> 7246</span>            shortest[1]  = 0;</div>
-<div class="line"><a id="l07247" name="l07247"></a><span class="lineno"> 7247</span>            reachable[1] = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l07248" name="l07248"></a><span class="lineno"> 7248</span>            <span class="keywordflow">while</span>(!q.empty()) {</div>
-<div class="line"><a id="l07249" name="l07249"></a><span class="lineno"> 7249</span>                <span class="keywordtype">int</span> node = q.front();</div>
-<div class="line"><a id="l07250" name="l07250"></a><span class="lineno"> 7250</span>                q.pop();</div>
-<div class="line"><a id="l07251" name="l07251"></a><span class="lineno"> 7251</span>                us.erase(node);</div>
-<div class="line"><a id="l07252" name="l07252"></a><span class="lineno"> 7252</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> [next_node, d]: g[node]) {</div>
-<div class="line"><a id="l07253" name="l07253"></a><span class="lineno"> 7253</span>                    reachable[next_node] = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l07254" name="l07254"></a><span class="lineno"> 7254</span>                    <span class="keywordflow">if</span>(shortest[next_node] &gt; shortest[node] + d) {</div>
-<div class="line"><a id="l07255" name="l07255"></a><span class="lineno"> 7255</span>                        shortest[next_node] = shortest[node] + d;</div>
-<div class="line"><a id="l07256" name="l07256"></a><span class="lineno"> 7256</span>                        <span class="keywordflow">if</span>(!us.count(next_node)) {</div>
-<div class="line"><a id="l07257" name="l07257"></a><span class="lineno"> 7257</span>                            q.push(next_node);</div>
-<div class="line"><a id="l07258" name="l07258"></a><span class="lineno"> 7258</span>                            us.insert(next_node);</div>
-<div class="line"><a id="l07259" name="l07259"></a><span class="lineno"> 7259</span>                        }</div>
-<div class="line"><a id="l07260" name="l07260"></a><span class="lineno"> 7260</span>                    }</div>
-<div class="line"><a id="l07261" name="l07261"></a><span class="lineno"> 7261</span>                }</div>
-<div class="line"><a id="l07262" name="l07262"></a><span class="lineno"> 7262</span>            }</div>
-<div class="line"><a id="l07263" name="l07263"></a><span class="lineno"> 7263</span>            <span class="keywordflow">if</span>(!reachable[n]) {</div>
-<div class="line"><a id="l07264" name="l07264"></a><span class="lineno"> 7264</span>                cout &lt;&lt; <span class="stringliteral">&quot;impossible&quot;</span>;</div>
-<div class="line"><a id="l07265" name="l07265"></a><span class="lineno"> 7265</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07266" name="l07266"></a><span class="lineno"> 7266</span>                cout &lt;&lt; shortest[n];</div>
-<div class="line"><a id="l07267" name="l07267"></a><span class="lineno"> 7267</span>            }</div>
-<div class="line"><a id="l07268" name="l07268"></a><span class="lineno"> 7268</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07269" name="l07269"></a><span class="lineno"> 7269</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../df/d03/a00062_source.html">acwing.cpp</a> 第 <a class="el" href="../../df/d03/a00062_source.html#l07224">7224</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07224" name="l07224"></a><span class="lineno"> 7224</span>                                              {</div>
+<div class="line"><a id="l07225" name="l07225"></a><span class="lineno"> 7225</span>            <span class="keywordtype">int</span> n, m;</div>
+<div class="line"><a id="l07226" name="l07226"></a><span class="lineno"> 7226</span>            cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l07227" name="l07227"></a><span class="lineno"> 7227</span>            vector&lt;unordered_map&lt;int, int&gt;&gt; g(n + 1);</div>
+<div class="line"><a id="l07228" name="l07228"></a><span class="lineno"> 7228</span>            vector reachable(n + 1, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l07229" name="l07229"></a><span class="lineno"> 7229</span>            vector shortest(n + 1, 0x3f3f3f);</div>
+<div class="line"><a id="l07230" name="l07230"></a><span class="lineno"> 7230</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l07231" name="l07231"></a><span class="lineno"> 7231</span>                <span class="keywordtype">int</span> x, y, z;</div>
+<div class="line"><a id="l07232" name="l07232"></a><span class="lineno"> 7232</span>                cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</div>
+<div class="line"><a id="l07233" name="l07233"></a><span class="lineno"> 7233</span>                <span class="keywordflow">if</span>(g[x][y] == 0) {</div>
+<div class="line"><a id="l07234" name="l07234"></a><span class="lineno"> 7234</span>                    g[x][y] = z;</div>
+<div class="line"><a id="l07235" name="l07235"></a><span class="lineno"> 7235</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07236" name="l07236"></a><span class="lineno"> 7236</span>                    g[x][y] = min(g[x][y], z);</div>
+<div class="line"><a id="l07237" name="l07237"></a><span class="lineno"> 7237</span>                }</div>
+<div class="line"><a id="l07238" name="l07238"></a><span class="lineno"> 7238</span>            }</div>
+<div class="line"><a id="l07239" name="l07239"></a><span class="lineno"> 7239</span>            queue&lt;int&gt; q;</div>
+<div class="line"><a id="l07240" name="l07240"></a><span class="lineno"> 7240</span>            unordered_set&lt;int&gt; us;</div>
+<div class="line"><a id="l07241" name="l07241"></a><span class="lineno"> 7241</span>            us.insert(1);</div>
+<div class="line"><a id="l07242" name="l07242"></a><span class="lineno"> 7242</span>            q.push(1);</div>
+<div class="line"><a id="l07243" name="l07243"></a><span class="lineno"> 7243</span>            shortest[1]  = 0;</div>
+<div class="line"><a id="l07244" name="l07244"></a><span class="lineno"> 7244</span>            reachable[1] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l07245" name="l07245"></a><span class="lineno"> 7245</span>            <span class="keywordflow">while</span>(!q.empty()) {</div>
+<div class="line"><a id="l07246" name="l07246"></a><span class="lineno"> 7246</span>                <span class="keywordtype">int</span> node = q.front();</div>
+<div class="line"><a id="l07247" name="l07247"></a><span class="lineno"> 7247</span>                q.pop();</div>
+<div class="line"><a id="l07248" name="l07248"></a><span class="lineno"> 7248</span>                us.erase(node);</div>
+<div class="line"><a id="l07249" name="l07249"></a><span class="lineno"> 7249</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> [next_node, d]: g[node]) {</div>
+<div class="line"><a id="l07250" name="l07250"></a><span class="lineno"> 7250</span>                    reachable[next_node] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l07251" name="l07251"></a><span class="lineno"> 7251</span>                    <span class="keywordflow">if</span>(shortest[next_node] &gt; shortest[node] + d) {</div>
+<div class="line"><a id="l07252" name="l07252"></a><span class="lineno"> 7252</span>                        shortest[next_node] = shortest[node] + d;</div>
+<div class="line"><a id="l07253" name="l07253"></a><span class="lineno"> 7253</span>                        <span class="keywordflow">if</span>(!us.contains(next_node)) {</div>
+<div class="line"><a id="l07254" name="l07254"></a><span class="lineno"> 7254</span>                            q.push(next_node);</div>
+<div class="line"><a id="l07255" name="l07255"></a><span class="lineno"> 7255</span>                            us.insert(next_node);</div>
+<div class="line"><a id="l07256" name="l07256"></a><span class="lineno"> 7256</span>                        }</div>
+<div class="line"><a id="l07257" name="l07257"></a><span class="lineno"> 7257</span>                    }</div>
+<div class="line"><a id="l07258" name="l07258"></a><span class="lineno"> 7258</span>                }</div>
+<div class="line"><a id="l07259" name="l07259"></a><span class="lineno"> 7259</span>            }</div>
+<div class="line"><a id="l07260" name="l07260"></a><span class="lineno"> 7260</span>            <span class="keywordflow">if</span>(!reachable[n]) {</div>
+<div class="line"><a id="l07261" name="l07261"></a><span class="lineno"> 7261</span>                cout &lt;&lt; <span class="stringliteral">&quot;impossible&quot;</span>;</div>
+<div class="line"><a id="l07262" name="l07262"></a><span class="lineno"> 7262</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07263" name="l07263"></a><span class="lineno"> 7263</span>                cout &lt;&lt; shortest[n];</div>
+<div class="line"><a id="l07264" name="l07264"></a><span class="lineno"> 7264</span>            }</div>
+<div class="line"><a id="l07265" name="l07265"></a><span class="lineno"> 7265</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07266" name="l07266"></a><span class="lineno"> 7266</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d2/de7/a00014_source.html#l03399">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l03399">TEST()</a>.</p>
 
 </div>
 </div>
@@ -192,20 +192,20 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d2/de7/a00014_source.html">acwing_test.cpp</a> 第 <a class="el" href="../../d2/de7/a00014_source.html#l03399">3399</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">acwing_test.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l03399">3399</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l03399" name="l03399"></a><span class="lineno"> 3399</span>                               {</div>
 <div class="line"><a id="l03400" name="l03400"></a><span class="lineno"> 3400</span>            istringstream in(<span class="stringliteral">&quot;3 3\n&quot;</span></div>
 <div class="line"><a id="l03401" name="l03401"></a><span class="lineno"> 3401</span>                             <span class="stringliteral">&quot;1 2 5\n&quot;</span></div>
 <div class="line"><a id="l03402" name="l03402"></a><span class="lineno"> 3402</span>                             <span class="stringliteral">&quot;2 3 -3\n&quot;</span></div>
 <div class="line"><a id="l03403" name="l03403"></a><span class="lineno"> 3403</span>                             <span class="stringliteral">&quot;1 3 4&quot;</span>);</div>
 <div class="line"><a id="l03404" name="l03404"></a><span class="lineno"> 3404</span>            <span class="keyword">auto</span> out = ostringstream();</div>
-<div class="line"><a id="l03405" name="l03405"></a><span class="lineno"> 3405</span>            <a class="code hl_function" href="../../d5/df9/a00044.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
+<div class="line"><a id="l03405" name="l03405"></a><span class="lineno"> 3405</span>            <a class="code hl_function" href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
 <div class="line"><a id="l03406" name="l03406"></a><span class="lineno"> 3406</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><a id="l03407" name="l03407"></a><span class="lineno"> 3407</span>            ASSERT_EQ(<span class="stringliteral">&quot;2&quot;</span>, ans);</div>
 <div class="line"><a id="l03408" name="l03408"></a><span class="lineno"> 3408</span>        }</div>
-<div class="ttc" id="aa00044_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d5/df9/a00044.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00005">main.cpp:5</a></div></div>
+<div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l07227">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../df/d03/a00062_source.html#l07224">main()</a>.</p>
 
 </div>
 </div>

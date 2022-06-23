@@ -119,39 +119,39 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l07330">7330</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07330" name="l07330"></a><span class="lineno"> 7330</span>                                              {</div>
-<div class="line"><a id="l07331" name="l07331"></a><span class="lineno"> 7331</span>            <span class="keywordtype">int</span> n, m, k;</div>
-<div class="line"><a id="l07332" name="l07332"></a><span class="lineno"> 7332</span>            cin &gt;&gt; n &gt;&gt; m &gt;&gt; k;</div>
-<div class="line"><a id="l07333" name="l07333"></a><span class="lineno"> 7333</span>            vector&lt;vector&lt;int&gt;&gt; g(n + 1, vector&lt;int&gt;(n + 1, 1e9));</div>
-<div class="line"><a id="l07334" name="l07334"></a><span class="lineno"> 7334</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l07335" name="l07335"></a><span class="lineno"> 7335</span>                <span class="keywordtype">int</span> x, y, z;</div>
-<div class="line"><a id="l07336" name="l07336"></a><span class="lineno"> 7336</span>                cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</div>
-<div class="line"><a id="l07337" name="l07337"></a><span class="lineno"> 7337</span>                g[x][y] = min(g[x][y], z);</div>
+<p class="definition">在文件 <a class="el" href="../../df/d03/a00062_source.html">acwing.cpp</a> 第 <a class="el" href="../../df/d03/a00062_source.html#l07327">7327</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07327" name="l07327"></a><span class="lineno"> 7327</span>                                              {</div>
+<div class="line"><a id="l07328" name="l07328"></a><span class="lineno"> 7328</span>            <span class="keywordtype">int</span> n, m, k;</div>
+<div class="line"><a id="l07329" name="l07329"></a><span class="lineno"> 7329</span>            cin &gt;&gt; n &gt;&gt; m &gt;&gt; k;</div>
+<div class="line"><a id="l07330" name="l07330"></a><span class="lineno"> 7330</span>            vector g(n + 1, vector&lt;int&gt;(n + 1, 1e9));</div>
+<div class="line"><a id="l07331" name="l07331"></a><span class="lineno"> 7331</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l07332" name="l07332"></a><span class="lineno"> 7332</span>                <span class="keywordtype">int</span> x, y, z;</div>
+<div class="line"><a id="l07333" name="l07333"></a><span class="lineno"> 7333</span>                cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</div>
+<div class="line"><a id="l07334" name="l07334"></a><span class="lineno"> 7334</span>                g[x][y] = min(g[x][y], z);</div>
+<div class="line"><a id="l07335" name="l07335"></a><span class="lineno"> 7335</span>            }</div>
+<div class="line"><a id="l07336" name="l07336"></a><span class="lineno"> 7336</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
+<div class="line"><a id="l07337" name="l07337"></a><span class="lineno"> 7337</span>                g[i][i] = 0;</div>
 <div class="line"><a id="l07338" name="l07338"></a><span class="lineno"> 7338</span>            }</div>
-<div class="line"><a id="l07339" name="l07339"></a><span class="lineno"> 7339</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
-<div class="line"><a id="l07340" name="l07340"></a><span class="lineno"> 7340</span>                g[i][i] = 0;</div>
-<div class="line"><a id="l07341" name="l07341"></a><span class="lineno"> 7341</span>            }</div>
-<div class="line"><a id="l07342" name="l07342"></a><span class="lineno"> 7342</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> l = 1; l &lt;= n; l++) {</div>
-<div class="line"><a id="l07343" name="l07343"></a><span class="lineno"> 7343</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
-<div class="line"><a id="l07344" name="l07344"></a><span class="lineno"> 7344</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= n; j++) {</div>
-<div class="line"><a id="l07345" name="l07345"></a><span class="lineno"> 7345</span>                        g[i][j] = min(g[i][j], g[i][l] + g[l][j]);</div>
-<div class="line"><a id="l07346" name="l07346"></a><span class="lineno"> 7346</span>                    }</div>
-<div class="line"><a id="l07347" name="l07347"></a><span class="lineno"> 7347</span>                }</div>
-<div class="line"><a id="l07348" name="l07348"></a><span class="lineno"> 7348</span>            }</div>
-<div class="line"><a id="l07349" name="l07349"></a><span class="lineno"> 7349</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; k; i++) {</div>
-<div class="line"><a id="l07350" name="l07350"></a><span class="lineno"> 7350</span>                <span class="keywordtype">int</span> x, y;</div>
-<div class="line"><a id="l07351" name="l07351"></a><span class="lineno"> 7351</span>                cin &gt;&gt; x &gt;&gt; y;</div>
-<div class="line"><a id="l07352" name="l07352"></a><span class="lineno"> 7352</span>                <span class="keywordflow">if</span>(g[x][y] &gt; 1e9 / 2) {</div>
-<div class="line"><a id="l07353" name="l07353"></a><span class="lineno"> 7353</span>                    cout &lt;&lt; <span class="stringliteral">&quot;impossible&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l07354" name="l07354"></a><span class="lineno"> 7354</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07355" name="l07355"></a><span class="lineno"> 7355</span>                    cout &lt;&lt; g[x][y] &lt;&lt; endl;</div>
-<div class="line"><a id="l07356" name="l07356"></a><span class="lineno"> 7356</span>                }</div>
-<div class="line"><a id="l07357" name="l07357"></a><span class="lineno"> 7357</span>            }</div>
-<div class="line"><a id="l07358" name="l07358"></a><span class="lineno"> 7358</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07359" name="l07359"></a><span class="lineno"> 7359</span>        }</div>
+<div class="line"><a id="l07339" name="l07339"></a><span class="lineno"> 7339</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> l = 1; l &lt;= n; l++) {</div>
+<div class="line"><a id="l07340" name="l07340"></a><span class="lineno"> 7340</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
+<div class="line"><a id="l07341" name="l07341"></a><span class="lineno"> 7341</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= n; j++) {</div>
+<div class="line"><a id="l07342" name="l07342"></a><span class="lineno"> 7342</span>                        g[i][j] = min(g[i][j], g[i][l] + g[l][j]);</div>
+<div class="line"><a id="l07343" name="l07343"></a><span class="lineno"> 7343</span>                    }</div>
+<div class="line"><a id="l07344" name="l07344"></a><span class="lineno"> 7344</span>                }</div>
+<div class="line"><a id="l07345" name="l07345"></a><span class="lineno"> 7345</span>            }</div>
+<div class="line"><a id="l07346" name="l07346"></a><span class="lineno"> 7346</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; k; i++) {</div>
+<div class="line"><a id="l07347" name="l07347"></a><span class="lineno"> 7347</span>                <span class="keywordtype">int</span> x, y;</div>
+<div class="line"><a id="l07348" name="l07348"></a><span class="lineno"> 7348</span>                cin &gt;&gt; x &gt;&gt; y;</div>
+<div class="line"><a id="l07349" name="l07349"></a><span class="lineno"> 7349</span>                <span class="keywordflow">if</span>(g[x][y] &gt; 1e9 / 2) {</div>
+<div class="line"><a id="l07350" name="l07350"></a><span class="lineno"> 7350</span>                    cout &lt;&lt; <span class="stringliteral">&quot;impossible&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l07351" name="l07351"></a><span class="lineno"> 7351</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07352" name="l07352"></a><span class="lineno"> 7352</span>                    cout &lt;&lt; g[x][y] &lt;&lt; endl;</div>
+<div class="line"><a id="l07353" name="l07353"></a><span class="lineno"> 7353</span>                }</div>
+<div class="line"><a id="l07354" name="l07354"></a><span class="lineno"> 7354</span>            }</div>
+<div class="line"><a id="l07355" name="l07355"></a><span class="lineno"> 7355</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07356" name="l07356"></a><span class="lineno"> 7356</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d2/de7/a00014_source.html#l03437">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l03437">TEST()</a>.</p>
 
 </div>
 </div>
@@ -181,7 +181,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d2/de7/a00014_source.html">acwing_test.cpp</a> 第 <a class="el" href="../../d2/de7/a00014_source.html#l03437">3437</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">acwing_test.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l03437">3437</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l03437" name="l03437"></a><span class="lineno"> 3437</span>                               {</div>
 <div class="line"><a id="l03438" name="l03438"></a><span class="lineno"> 3438</span>            istringstream in(<span class="stringliteral">&quot;3 3 2\n&quot;</span></div>
 <div class="line"><a id="l03439" name="l03439"></a><span class="lineno"> 3439</span>                             <span class="stringliteral">&quot;1 2 1\n&quot;</span></div>
@@ -190,15 +190,15 @@ $(function() {
 <div class="line"><a id="l03442" name="l03442"></a><span class="lineno"> 3442</span>                             <span class="stringliteral">&quot;2 1\n&quot;</span></div>
 <div class="line"><a id="l03443" name="l03443"></a><span class="lineno"> 3443</span>                             <span class="stringliteral">&quot;1 3\n&quot;</span>);</div>
 <div class="line"><a id="l03444" name="l03444"></a><span class="lineno"> 3444</span>            <span class="keyword">auto</span> out = ostringstream();</div>
-<div class="line"><a id="l03445" name="l03445"></a><span class="lineno"> 3445</span>            <a class="code hl_function" href="../../d5/df9/a00044.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
+<div class="line"><a id="l03445" name="l03445"></a><span class="lineno"> 3445</span>            <a class="code hl_function" href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
 <div class="line"><a id="l03446" name="l03446"></a><span class="lineno"> 3446</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><a id="l03447" name="l03447"></a><span class="lineno"> 3447</span>            ASSERT_EQ(<span class="stringliteral">&quot;impossible\n&quot;</span></div>
 <div class="line"><a id="l03448" name="l03448"></a><span class="lineno"> 3448</span>                      <span class="stringliteral">&quot;1\n&quot;</span>,</div>
 <div class="line"><a id="l03449" name="l03449"></a><span class="lineno"> 3449</span>                      ans);</div>
 <div class="line"><a id="l03450" name="l03450"></a><span class="lineno"> 3450</span>        }</div>
-<div class="ttc" id="aa00044_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d5/df9/a00044.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00005">main.cpp:5</a></div></div>
+<div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l07330">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../df/d03/a00062_source.html#l07327">main()</a>.</p>
 
 </div>
 </div>
@@ -228,7 +228,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d2/de7/a00014_source.html">acwing_test.cpp</a> 第 <a class="el" href="../../d2/de7/a00014_source.html#l03452">3452</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">acwing_test.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l03452">3452</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l03452" name="l03452"></a><span class="lineno"> 3452</span>                               {</div>
 <div class="line"><a id="l03453" name="l03453"></a><span class="lineno"> 3453</span>            istringstream in(<span class="stringliteral">&quot;10 20 10\n&quot;</span></div>
 <div class="line"><a id="l03454" name="l03454"></a><span class="lineno"> 3454</span>                             <span class="stringliteral">&quot;1 2 6\n&quot;</span></div>
@@ -262,7 +262,7 @@ $(function() {
 <div class="line"><a id="l03482" name="l03482"></a><span class="lineno"> 3482</span>                             <span class="stringliteral">&quot;6 10\n&quot;</span></div>
 <div class="line"><a id="l03483" name="l03483"></a><span class="lineno"> 3483</span>                             <span class="stringliteral">&quot;9 5\n&quot;</span>);</div>
 <div class="line"><a id="l03484" name="l03484"></a><span class="lineno"> 3484</span>            <span class="keyword">auto</span> out = ostringstream();</div>
-<div class="line"><a id="l03485" name="l03485"></a><span class="lineno"> 3485</span>            <a class="code hl_function" href="../../d5/df9/a00044.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
+<div class="line"><a id="l03485" name="l03485"></a><span class="lineno"> 3485</span>            <a class="code hl_function" href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
 <div class="line"><a id="l03486" name="l03486"></a><span class="lineno"> 3486</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><a id="l03487" name="l03487"></a><span class="lineno"> 3487</span>            ASSERT_EQ(<span class="stringliteral">&quot;18\n&quot;</span></div>
 <div class="line"><a id="l03488" name="l03488"></a><span class="lineno"> 3488</span>                      <span class="stringliteral">&quot;19\n&quot;</span></div>
@@ -277,7 +277,7 @@ $(function() {
 <div class="line"><a id="l03497" name="l03497"></a><span class="lineno"> 3497</span>                      ans);</div>
 <div class="line"><a id="l03498" name="l03498"></a><span class="lineno"> 3498</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l07330">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../df/d03/a00062_source.html#l07327">main()</a>.</p>
 
 </div>
 </div>
