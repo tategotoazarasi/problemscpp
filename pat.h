@@ -2,6 +2,7 @@
 #define PROBLEMSCPP_PAT_H
 
 #include <iostream>
+#include <queue>
 #include <unordered_set>
 #include <utility>
 #include <vector>
@@ -833,6 +834,47 @@ namespace pat {
 
 			int main(istream &cin, ostream &cout);
 		}// namespace a1017
+
+		/**
+		 * \brief 1503. 乒乓球
+		 */
+		namespace a1026 {
+			const unsigned INF = 1000000;
+			struct player {
+				string arrival_time_str{};
+				unsigned arrival_time = 0;
+				unsigned p            = 0;
+				unsigned waiting_time = 0;
+				unsigned start_time   = 0;
+				bool vip              = false;
+
+				player() = default;
+				player(string arrival_time_str, unsigned p, unsigned tag);
+				bool operator<(const player &p) const;
+				bool operator>(const player &p) const;
+			};
+
+			struct table {
+				unsigned id   = 0;
+				unsigned end_time = 0;
+
+				bool operator>(const table &p) const;
+			};
+
+			struct player_cmp {
+				bool operator()(const player &p1, const player &p2) const;
+			};
+
+			struct table_cmp {
+				bool operator()(const table &t1, const table &t2) const;
+			};
+
+			string timefmt(unsigned t);
+
+			void assign(priority_queue<player, vector<player>, greater<player>> &players, priority_queue<table, vector<table>, greater<table>> &tables, vector<player> &vec, vector<unsigned> &table_cnt);
+
+			int main(istream &cin, ostream &cout);
+		}// namespace a1026
 	}    // namespace a
 
 	/// \brief 顶级

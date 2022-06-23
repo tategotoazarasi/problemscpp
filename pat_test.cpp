@@ -2064,6 +2064,16 @@ namespace pat {
 				ASSERT_EQ("25.0", out.str());
 			}
 		}// namespace a1017
+
+		
+		namespace a1026 {
+			TEST(a1026, case1) {
+				istringstream in("9\n20:52:00 10 0\n08:00:00 20 0\n08:02:00 30 0\n20:51:00 10 0\n08:10:00 5 0\n08:12:00 10 1\n20:50:00 10 0\n08:01:30 15 1\n20:53:00 10 1\n3 1\n2");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("08:00:00 08:00:00 0\n08:01:30 08:01:30 0\n08:02:00 08:02:00 0\n08:12:00 08:16:30 5\n08:10:00 08:20:00 10\n20:50:00 20:50:00 0\n20:51:00 20:51:00 0\n20:52:00 20:52:00 0\n3 3 2", out.str());
+			}
+		}// namespace a1026
 	}    // namespace a
 
 	namespace top {}

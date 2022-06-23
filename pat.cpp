@@ -4354,7 +4354,8 @@ namespace pat {
 					cnt++;
 					pq.push(start_time + c.p);
 				}
-				cout << fixed << setprecision(1) << static_cast<double>(total) / cnt / 60;
+				cout << fixed
+				     << setprecision(1) << static_cast<double>(total) / cnt / 60;
 				return 0;
 			}
 
@@ -4370,6 +4371,161 @@ namespace pat {
 
 			bool customer_comp_p::operator()(const customer &c1, const customer &c2) const { return c1.p > c2.p; }
 		}// namespace a1017
+
+		namespace a1026 {
+			string timefmt(unsigned t) {
+				ostringstream oss;
+				unsigned s = t % 60;
+				t /= 60;
+				unsigned m = t % 60;
+				t /= 60;
+				unsigned h = t;
+				oss << setw(2) << setfill('0') << right << h << ':'
+				    << setw(2) << setfill('0') << right << m << ':'
+				    << setw(2) << setfill('0') << right << s;
+				return oss.str();
+			}
+
+			void assign(priority_queue<player, vector<player>, greater<player>> &players, priority_queue<table, vector<table>, greater<table>> &tables, vector<player> &vec, vector<unsigned> &table_cnt) {
+				auto p = players.top();
+				players.pop();
+				auto t = tables.top();
+				tables.pop();
+				p.waiting_time = round((t.end_time - p.arrival_time) / 60.0);
+				p.start_time   = t.end_time;
+				table_cnt[t.id]++;
+				vec.push_back(p);
+				tables.push({t.id, t.end_time + p.p});
+			}
+
+			int main(istream &cin, ostream &cout) {
+				unsigned n;
+				cin >> n;
+				priority_queue<player, vector<player>, greater<player>> normal_players;
+				priority_queue<player, vector<player>, greater<player>> vip_players;
+				player nop;
+				nop.arrival_time = INF;
+				normal_players.push(nop);
+				vip_players.push(nop);
+				for(unsigned i = 0; i < n; i++) {
+					string arrival_time_str;
+					unsigned p, tag;
+					cin >> arrival_time_str >> p >> tag;
+					auto ply = player(arrival_time_str, p, tag);
+					if(ply.vip) {
+						vip_players.push(ply);
+					} else {
+						normal_players.push(ply);
+					}
+				}
+				unsigned k, m;
+				cin >> k >> m;
+				vector<unsigned> table_cnt(k + 1, 0);
+				priority_queue<table, vector<table>, greater<table>> normal_tables;
+				priority_queue<table, vector<table>, greater<table>> vip_tables;
+				normal_tables.push({0, INF});
+				vip_tables.push({0, INF});
+				unordered_set<unsigned> vipid;
+				for(unsigned i = 0; i < m; i++) {
+					unsigned id;
+					cin >> id;
+					vipid.insert(id);
+				}
+				for(unsigned i = 1; i <= k; i++) {
+					if(vipid.count(i)) {
+						vip_tables.push({i, 8 * 60 * 60});
+					} else {
+						normal_tables.push({i, 8 * 60 * 60});
+					}
+				}
+				vector<player> players;
+				while(normal_players.size() > 1 || vip_players.size() > 1) {
+					auto np              = normal_players.top();
+					auto vp              = vip_players.top();
+					unsigned arrive_time = min(np.arrival_time, vp.arrival_time);
+					while(normal_tables.top().end_time < arrive_time) {
+						auto t = normal_tables.top();
+						normal_tables.pop();
+						t.end_time = arrive_time;
+						normal_tables.push(t);
+					}
+					while(vip_tables.top().end_time < arrive_time) {
+						auto t = vip_tables.top();
+						vip_tables.pop();
+						t.end_time = arrive_time;
+						vip_tables.push(t);
+					}
+					auto nt           = normal_tables.top();
+					auto vt           = vip_tables.top();
+					unsigned end_time = min(nt.end_time, vt.end_time);
+
+					if(end_time >= 21 * 60 * 60) {
+						break;
+					}
+
+					if(vp.arrival_time <= end_time && vt.end_time == end_time) {
+						assign(vip_players, vip_tables, players, table_cnt);
+					} else if(np.arrival_time < vp.arrival_time) {
+						if(nt > vt) {
+							assign(normal_players, vip_tables, players, table_cnt);
+						} else {
+							assign(normal_players, normal_tables, players, table_cnt);
+						}
+					} else {
+						if(nt > vt) {
+							assign(vip_players, vip_tables, players, table_cnt);
+						} else {
+							assign(vip_players, normal_tables, players, table_cnt);
+						}
+					}
+				}
+				sort(players.begin(), players.end());
+				for(auto &player: players) {
+					cout << timefmt(player.arrival_time) << ' ' << timefmt(player.start_time) << ' ' << player.waiting_time << endl;
+				}
+				cout << table_cnt[1];
+				for(unsigned i = 2; i <= k; i++) {
+					cout << ' ' << table_cnt[i];
+				}
+				return 0;
+			}
+
+			player::player(string arrival_time_str, unsigned p, unsigned tag): arrival_time_str(arrival_time_str), p(min(120u, p) * 60), vip(tag == 1), waiting_time(0), start_time(0) {
+				int h        = stoi(arrival_time_str.substr(0, 2));
+				int m        = stoi(arrival_time_str.substr(3, 2));
+				int s        = stoi(arrival_time_str.substr(6, 2));
+				arrival_time = h * 60 * 60 + m * 60 + s;
+			}
+
+			bool player::operator<(const player &ply) const {
+				if(start_time != ply.start_time) {
+					return start_time < ply.start_time;
+				}
+				return arrival_time < ply.arrival_time;
+			}
+
+			bool player::operator>(const player &ply) const {
+				return arrival_time > ply.arrival_time;
+			}
+
+			bool table::operator>(const table &t) const {
+				if(end_time != t.end_time) {
+					return end_time > t.end_time;
+				}
+				return id > t.id;
+			}
+
+			bool player_cmp::operator()(const player &p1, const player &p2) const {
+				return p1.arrival_time < p2.arrival_time;
+			}
+
+			bool table_cmp::operator()(const table &t1, const table &t2) const {
+				if(t1.end_time != t2.end_time) {
+					return t1.end_time < t2.end_time;
+				}
+				return t1.id < t2.id;
+			}
+		}// namespace a1026
 	}    // namespace a
 
 	namespace top {}
