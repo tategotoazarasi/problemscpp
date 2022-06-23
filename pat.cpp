@@ -13,6 +13,7 @@
 #include <tuple>
 #include <unordered_map>
 #include <unordered_set>
+#include <utility>
 #include <vector>
 
 using namespace std;
@@ -4250,6 +4251,77 @@ namespace pat {
 				return 0;
 			}
 		}// namespace a1009
+
+		namespace a1016 {
+			int main(istream &cin, ostream &cout) {
+				map<string, customer> um;
+				double sum[M] = {};
+				array<unsigned, 24> cost{};
+				for(int i = 0; i < cost.size(); i++) {
+					cin >> cost[i];
+				}
+				for(unsigned i = 1; i < M; i++) {
+					sum[i] = sum[i - 1] + cost[(i - 1) % 1440 / 60] / 100.0;
+				}
+				unsigned int n;
+				cin >> n;
+				for(unsigned i = 0; i < n; i++) {
+					string name;
+					string time;
+					string online;
+					cin >> name >> time >> online;
+					auto r = record(name, time, online);
+					if(!um.contains(name)) {
+						um[name] = customer(name);
+					}
+					um[name].records.emplace_back(r);
+				}
+				for(auto &[name, c]: um) {
+					sort(c.records.begin(), c.records.end());
+					for(auto it = c.records.begin(); it != c.records.end();) {
+						if((*it).online && (it + 1 == c.records.end() || (*(it + 1)).online)) {
+							it = c.records.erase(it);
+						} else {
+							++it;
+						}
+					}
+					vector<record> new_vec;
+					bool looking_for_online = true;
+					for(const auto &record: c.records) {
+						if(looking_for_online == record.online) {
+							new_vec.emplace_back(record);
+							looking_for_online = !looking_for_online;
+						}
+					}
+					c.records = new_vec;
+					if(!c.records.empty()) {
+						cout << name << ' ' << setw(2) << setfill('0') << right << c.records[0].month << endl;
+						double total = 0;
+						for(int i = 0; i < c.records.size(); i += 2) {
+							const unsigned t2  = c.records[i + 1].get_minutes();
+							const unsigned t1  = c.records[i].get_minutes();
+							const double price = sum[t2] - sum[t1];
+							total += price;
+							cout << c.records[i].time.substr(3) << ' ' << c.records[i + 1].time.substr(3) << ' ' << t2 - t1 << " $" << fixed << setprecision(2) << price << endl;
+						}
+						cout << "Total amount: $" << fixed << setprecision(2) << total << endl;
+					}
+				}
+				return 0;
+			}
+
+			record::record(string name, const string &time, const string &online)
+			    : name(std::move(std::move(name))), time(time), online(online == "on-line") {
+				month  = stoi(time.substr(0, 2));
+				day    = stoi(time.substr(3, 2));
+				hour   = stoi(time.substr(6, 2));
+				minute = stoi(time.substr(9, 2));
+			}
+
+			bool record::operator<(const record &r) const { return this->time < r.time; }
+
+			unsigned record::get_minutes() const { return this->day * 24 * 60 + this->hour * 60 + this->minute; }
+		}// namespace a1016
 	}    // namespace a
 
 	namespace top {}

@@ -2039,6 +2039,15 @@ namespace pat {
 				ASSERT_EQ("3 3 3.6 2 6.0 1 1.6", out.str());
 			}
 		}// namespace a1009
+
+		namespace a1016 {
+			TEST(a1016, case1) {
+				istringstream in("10 10 10 10 10 10 20 20 20 15 15 15 15 15 15 15 20 30 20 15 15 10 10 10\n10\nCYLL 01:01:06:01 on-line\nCYLL 01:28:16:05 off-line\nCYJJ 01:01:07:00 off-line\nCYLL 01:01:08:03 off-line\nCYJJ 01:01:05:59 on-line\naaa 01:01:01:03 on-line\naaa 01:02:00:01 on-line\nCYLL 01:28:15:41 on-line\naaa 01:05:02:24 on-line\naaa 01:04:23:59 off-line\n");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("CYJJ 01\n01:05:59 01:07:00 61 $12.10\nTotal amount: $12.10\nCYLL 01\n01:06:01 01:08:03 122 $24.40\n28:15:41 28:16:05 24 $3.85\nTotal amount: $28.25\naaa 01\n02:00:01 04:23:59 4318 $638.80\nTotal amount: $638.80\n", out.str());
+			}
+		}// namespace a1016
 	}    // namespace a
 
 	namespace top {}

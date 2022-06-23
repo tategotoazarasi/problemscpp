@@ -778,7 +778,40 @@ namespace pat {
 		namespace a1009 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace a
+
+		/**
+		 * \brief 1016 Phone Bills
+		 */
+		namespace a1016 {
+			const unsigned M = 31 * 1440 + 10;
+
+			struct record {
+				string name;
+				string time;
+				bool online;
+				unsigned month;
+				unsigned day;
+				unsigned hour;
+				unsigned minute;
+
+				record(string name, const string &time, const string &online);
+				bool operator<(const record &r) const;
+				[[nodiscard]] unsigned get_minutes() const;
+			};
+
+			struct customer {
+				string name;
+				vector<record> records;
+
+				customer() = default;
+
+				customer(string name)
+				    : name(std::move(std::move(name))) {}
+			};
+
+			int main(istream &cin, ostream &cout);
+		}// namespace a1016
+	}    // namespace a
 
 	/// \brief 顶级
 	namespace top {}
