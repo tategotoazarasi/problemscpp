@@ -806,7 +806,7 @@ namespace pat {
 
 				customer() = default;
 
-				customer(string name)
+				explicit customer(string name)
 				    : name(std::move(std::move(name))) {}
 			};
 
@@ -840,6 +840,7 @@ namespace pat {
 		 */
 		namespace a1026 {
 			const unsigned INF = 1000000;
+
 			struct player {
 				string arrival_time_str{};
 				unsigned arrival_time = 0;
@@ -849,24 +850,16 @@ namespace pat {
 				bool vip              = false;
 
 				player() = default;
-				player(string arrival_time_str, unsigned p, unsigned tag);
+				player(const string &arrival_time_str, unsigned p, unsigned tag);
 				bool operator<(const player &p) const;
 				bool operator>(const player &p) const;
 			};
 
 			struct table {
-				unsigned id   = 0;
+				unsigned id       = 0;
 				unsigned end_time = 0;
 
 				bool operator>(const table &p) const;
-			};
-
-			struct player_cmp {
-				bool operator()(const player &p1, const player &p2) const;
-			};
-
-			struct table_cmp {
-				bool operator()(const table &t1, const table &t2) const;
 			};
 
 			string timefmt(unsigned t);

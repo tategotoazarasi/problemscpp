@@ -3951,7 +3951,10 @@ namespace pat {
 	namespace a {
 		namespace a1003 {
 			int main(istream &cin, ostream &cout) {
-				int N, M, C1, C2;
+				int N;
+				int M;
+				int C1;
+				int C2;
 				cin >> N >> M >> C1 >> C2;
 				int max_d = 0;
 				vector<int> rescue(N);
@@ -3960,7 +3963,9 @@ namespace pat {
 					cin >> rescue[i];
 				}
 				for(int i = 0; i < M; i++) {
-					int c1, c2, L;
+					int c1;
+					int c2;
+					int L;
 					cin >> c1 >> c2 >> L;
 					grid[c1][c2] = L;
 					grid[c2][c1] = L;
@@ -4008,7 +4013,8 @@ namespace pat {
 
 		namespace a1004 {
 			int main(istream &cin, ostream &cout) {
-				int n, m;
+				int n;
+				int m;
 				cin >> n >> m;
 				if(n == 0) {
 					return 0;
@@ -4021,7 +4027,7 @@ namespace pat {
 					if(!um.contains(id)) {
 						um[id] = new node(id);
 					}
-					const auto nd = um[id];
+					auto *const nd = um[id];
 					for(int j = 0; j < k; j++) {
 						string cid;
 						cin >> cid;
@@ -4053,7 +4059,7 @@ namespace pat {
 					if(nd->children.empty()) {
 						leaf_cnt++;
 					}
-					for(auto c: nd->children) {
+					for(auto *c: nd->children) {
 						q.push(make_pair(c, level + 1));
 					}
 				}
@@ -4214,7 +4220,8 @@ namespace pat {
 
 		namespace a1009 {
 			int main(istream &cin, ostream &cout) {
-				map<int, double> A, B;
+				map<int, double> A;
+				map<int, double> B;
 				int n;
 				cin >> n;
 				for(int i = 0; i < n; i++) {
@@ -4325,7 +4332,8 @@ namespace pat {
 
 		namespace a1017 {
 			int main(istream &cin, ostream &cout) {
-				unsigned n, k;
+				unsigned n;
+				unsigned k;
 				cin >> n >> k;
 				unsigned next    = 0;
 				unsigned current = 0;
@@ -4335,7 +4343,7 @@ namespace pat {
 					string time;
 					unsigned p;
 					cin >> time >> p;
-					customers[i] = customer(i, time, min(60u, p) * 60);
+					customers[i] = customer(i, time, min(60U, p) * 60);
 				}
 				sort(customers.begin(), customers.end());
 				for(unsigned i = 0; i < k; i++) {
@@ -4375,11 +4383,11 @@ namespace pat {
 		namespace a1026 {
 			string timefmt(unsigned t) {
 				ostringstream oss;
-				unsigned s = t % 60;
+				const unsigned s = t % 60;
 				t /= 60;
-				unsigned m = t % 60;
+				const unsigned m = t % 60;
 				t /= 60;
-				unsigned h = t;
+				const unsigned h = t;
 				oss << setw(2) << setfill('0') << right << h << ':'
 				    << setw(2) << setfill('0') << right << m << ':'
 				    << setw(2) << setfill('0') << right << s;
@@ -4389,7 +4397,7 @@ namespace pat {
 			void assign(priority_queue<player, vector<player>, greater<player>> &players, priority_queue<table, vector<table>, greater<table>> &tables, vector<player> &vec, vector<unsigned> &table_cnt) {
 				auto p = players.top();
 				players.pop();
-				auto t = tables.top();
+				const auto t = tables.top();
 				tables.pop();
 				p.waiting_time = round((t.end_time - p.arrival_time) / 60.0);
 				p.start_time   = t.end_time;
@@ -4409,7 +4417,8 @@ namespace pat {
 				vip_players.push(nop);
 				for(unsigned i = 0; i < n; i++) {
 					string arrival_time_str;
-					unsigned p, tag;
+					unsigned p;
+					unsigned tag;
 					cin >> arrival_time_str >> p >> tag;
 					auto ply = player(arrival_time_str, p, tag);
 					if(ply.vip) {
@@ -4418,7 +4427,8 @@ namespace pat {
 						normal_players.push(ply);
 					}
 				}
-				unsigned k, m;
+				unsigned k;
+				unsigned m;
 				cin >> k >> m;
 				vector<unsigned> table_cnt(k + 1, 0);
 				priority_queue<table, vector<table>, greater<table>> normal_tables;
@@ -4432,7 +4442,7 @@ namespace pat {
 					vipid.insert(id);
 				}
 				for(unsigned i = 1; i <= k; i++) {
-					if(vipid.count(i)) {
+					if(static_cast<unsigned int>(vipid.contains(i)) != 0U) {
 						vip_tables.push({i, 8 * 60 * 60});
 					} else {
 						normal_tables.push({i, 8 * 60 * 60});
@@ -4490,10 +4500,11 @@ namespace pat {
 				return 0;
 			}
 
-			player::player(string arrival_time_str, unsigned p, unsigned tag): arrival_time_str(arrival_time_str), p(min(120u, p) * 60), vip(tag == 1), waiting_time(0), start_time(0) {
-				int h        = stoi(arrival_time_str.substr(0, 2));
-				int m        = stoi(arrival_time_str.substr(3, 2));
-				int s        = stoi(arrival_time_str.substr(6, 2));
+			player::player(const string &arrival_time_str, unsigned p, unsigned tag)
+			    : arrival_time_str(arrival_time_str), p(min(120U, p) * 60), vip(tag == 1) {
+				const int h  = stoi(arrival_time_str.substr(0, 2));
+				const int m  = stoi(arrival_time_str.substr(3, 2));
+				const int s  = stoi(arrival_time_str.substr(6, 2));
 				arrival_time = h * 60 * 60 + m * 60 + s;
 			}
 
@@ -4504,26 +4515,13 @@ namespace pat {
 				return arrival_time < ply.arrival_time;
 			}
 
-			bool player::operator>(const player &ply) const {
-				return arrival_time > ply.arrival_time;
-			}
+			bool player::operator>(const player &ply) const { return arrival_time > ply.arrival_time; }
 
 			bool table::operator>(const table &t) const {
 				if(end_time != t.end_time) {
 					return end_time > t.end_time;
 				}
 				return id > t.id;
-			}
-
-			bool player_cmp::operator()(const player &p1, const player &p2) const {
-				return p1.arrival_time < p2.arrival_time;
-			}
-
-			bool table_cmp::operator()(const table &t1, const table &t2) const {
-				if(t1.end_time != t2.end_time) {
-					return t1.end_time < t2.end_time;
-				}
-				return t1.id < t2.id;
 			}
 		}// namespace a1026
 	}    // namespace a
