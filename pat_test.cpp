@@ -2048,6 +2048,22 @@ namespace pat {
 				ASSERT_EQ("CYJJ 01\n01:05:59 01:07:00 61 $12.10\nTotal amount: $12.10\nCYLL 01\n01:06:01 01:08:03 122 $24.40\n28:15:41 28:16:05 24 $3.85\nTotal amount: $28.25\naaa 01\n02:00:01 04:23:59 4318 $638.80\nTotal amount: $638.80\n", out.str());
 			}
 		}// namespace a1016
+
+		namespace a1017 {
+			TEST(a1017, case1) {
+				istringstream in("7 3\n07:55:00 16\n17:00:01 2\n07:59:59 15\n08:01:00 60\n08:00:00 30\n08:00:02 2\n08:03:00 10");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("8.2", out.str());
+			}
+
+			TEST(a1017, case2) {
+				istringstream in("2 1\n16:30:00 100\n16:40:00 10");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("25.0", out.str());
+			}
+		}// namespace a1017
 	}    // namespace a
 
 	namespace top {}

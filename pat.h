@@ -811,6 +811,28 @@ namespace pat {
 
 			int main(istream &cin, ostream &cout);
 		}// namespace a1016
+
+		/**
+		 * \brief 1494. 银行排队
+		 */
+		namespace a1017 {
+			struct customer {
+				unsigned id{};
+				string arrive_time_str;///< 客户的到达时间，用 HH:MM:SS 表示
+				unsigned arrive_time{};
+				unsigned p{};///< 客户的业务办理时间 P（单位：分钟）
+				unsigned start_time{};
+				bool operator<(const customer &b) const;
+				customer() = default;
+				customer(unsigned id, const string &arrive_time_str, unsigned p);
+			};
+
+			struct customer_comp_p {
+				bool operator()(const customer &c1, const customer &c2) const;
+			};
+
+			int main(istream &cin, ostream &cout);
+		}// namespace a1017
 	}    // namespace a
 
 	/// \brief 顶级

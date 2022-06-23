@@ -4322,6 +4322,54 @@ namespace pat {
 
 			unsigned record::get_minutes() const { return this->day * 24 * 60 + this->hour * 60 + this->minute; }
 		}// namespace a1016
+
+		namespace a1017 {
+			int main(istream &cin, ostream &cout) {
+				unsigned n, k;
+				cin >> n >> k;
+				unsigned next    = 0;
+				unsigned current = 0;
+				priority_queue<unsigned, vector<unsigned>, greater<unsigned>> pq;
+				vector<customer> customers(n);
+				for(unsigned i = 0; i < n; i++) {
+					string time;
+					unsigned p;
+					cin >> time >> p;
+					customers[i] = customer(i, time, min(60u, p) * 60);
+				}
+				sort(customers.begin(), customers.end());
+				for(unsigned i = 0; i < k; i++) {
+					pq.push(8 * 60 * 60);
+				}
+				unsigned total = 0;
+				unsigned cnt   = 0;
+				for(auto &c: customers) {
+					unsigned t = pq.top();
+					pq.pop();
+					if(c.arrive_time > 17 * 60 * 60) {
+						break;
+					}
+					const unsigned start_time = max(c.arrive_time, t);
+					total += start_time - c.arrive_time;
+					cnt++;
+					pq.push(start_time + c.p);
+				}
+				cout << fixed << setprecision(1) << static_cast<double>(total) / cnt / 60;
+				return 0;
+			}
+
+			bool customer::operator<(const customer &b) const { return this->arrive_time_str < b.arrive_time_str; }
+
+			customer::customer(unsigned id, const string &arrive_time_str, unsigned p)
+			    : id(id), arrive_time_str(arrive_time_str), p(p) {
+				const int h       = stoi(arrive_time_str.substr(0, 2));
+				const int m       = stoi(arrive_time_str.substr(3, 2));
+				const int s       = stoi(arrive_time_str.substr(6, 2));
+				this->arrive_time = h * 60 * 60 + m * 60 + s;
+			}
+
+			bool customer_comp_p::operator()(const customer &c1, const customer &c2) const { return c1.p > c2.p; }
+		}// namespace a1017
 	}    // namespace a
 
 	namespace top {}
