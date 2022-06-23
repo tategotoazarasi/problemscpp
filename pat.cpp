@@ -4174,7 +4174,7 @@ namespace pat {
 				int max_end   = k - 1;
 				for(int i = 0; i < k; i++) {
 					for(int j = i; j < k; j++) {
-						int sum = pref_sum[j] - pref_sum[i] + vec[i];
+						const int sum = pref_sum[j] - pref_sum[i] + vec[i];
 						if(sum > max_sum) {
 							max_sum   = sum;
 							max_start = i;
@@ -4197,7 +4197,7 @@ namespace pat {
 				}
 				int level = 0;
 				int sum   = 0;
-				for(auto &v: vec) {
+				for(const auto &v: vec) {
 					if(v > level) {
 						sum += (v - level) * 6;
 					} else {

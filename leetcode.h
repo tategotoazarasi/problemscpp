@@ -2603,10 +2603,10 @@ namespace leetcode {
 		class Codec {
 		public:
 			/// \brief Encodes a tree to a single string.
-			string serialize(TreeNode *root);
+			string serialize(TreeNode *root) const;
 
 			/// \brief Decodes your encoded data to tree.
-			TreeNode *deserialize(string data);
+			TreeNode *deserialize(string data) const;
 		};
 	}// namespace serialize_and_deserialize_binary_tree
 }// namespace leetcode

@@ -5774,8 +5774,8 @@ namespace acwing {
 	namespace acwing1695 {
 		int main(istream &cin, ostream &cout) {
 			bool nuts[3][3]         = {{true, false, false},
-			                           {false, true, false},
-			                           {false, false, true}};
+                               {false, true, false},
+                               {false, false, true}};
 			unsigned short score[3] = {0, 0, 0};
 			unsigned short ans      = 0;
 			unsigned short n;
@@ -7153,9 +7153,7 @@ namespace acwing {
 	}// namespace acwing845
 
 	namespace acwing849 {
-		bool comp::operator()(const pair<int, int> &p1, const pair<int, int> &p2) {
-			return p1.second > p2.second;
-		}
+		bool comp::operator()(const pair<int, int> &p1, const pair<int, int> &p2) const { return p1.second > p2.second; }
 
 		int main(istream &cin, ostream &cout) {
 			int n, m;
@@ -7176,17 +7174,16 @@ namespace acwing {
 			while(!pq.empty()) {
 				auto [node, dist] = pq.top();
 				pq.pop();
-				if(ed.count(node)) {
+				if(ed.contains(node)) {
 					continue;
-				} else {
-					ed.insert(node);
 				}
+				ed.insert(node);
 				if(node == n) {
 					cout << dist;
 					return 0;
 				}
 				for(auto [next_node, d]: vec[node]) {
-					if(!ed.count(next_node)) {
+					if(!ed.contains(next_node)) {
 						pq.push(make_pair(next_node, dist + d));
 					}
 				}
@@ -7201,7 +7198,7 @@ namespace acwing {
 			int n, m, k;
 			cin >> n >> m >> k;
 			vector<tuple<int, int, int>> vec(m);
-			vector<int> shortest(n + 1, 0x3f3f3f);
+			vector shortest(n + 1, 0x3f3f3f);
 			shortest[1] = 0;
 			for(int i = 0; i < m; i++) {
 				int x, y, z;
@@ -7228,8 +7225,8 @@ namespace acwing {
 			int n, m;
 			cin >> n >> m;
 			vector<unordered_map<int, int>> g(n + 1);
-			vector<bool> reachable(n + 1, false);
-			vector<int> shortest(n + 1, 0x3f3f3f);
+			vector reachable(n + 1, false);
+			vector shortest(n + 1, 0x3f3f3f);
 			for(int i = 0; i < m; i++) {
 				int x, y, z;
 				cin >> x >> y >> z;
@@ -7253,7 +7250,7 @@ namespace acwing {
 					reachable[next_node] = true;
 					if(shortest[next_node] > shortest[node] + d) {
 						shortest[next_node] = shortest[node] + d;
-						if(!us.count(next_node)) {
+						if(!us.contains(next_node)) {
 							q.push(next_node);
 							us.insert(next_node);
 						}
@@ -7274,8 +7271,8 @@ namespace acwing {
 			int n, m;
 			cin >> n >> m;
 			vector<unordered_map<int, int>> g(n + 1);
-			vector<int> cnt(n + 1, 0);
-			vector<int> shortest(n + 1, 0x3f3f3f);
+			vector cnt(n + 1, 0);
+			vector shortest(n + 1, 0x3f3f3f);
 			for(int i = 0; i < m; i++) {
 				int x, y, z;
 				cin >> x >> y >> z;
@@ -7297,8 +7294,8 @@ namespace acwing {
 		}
 
 		bool spfa(const vector<unordered_map<int, int>> &g, int m, int n) {
-			vector<int> cnt(n + 1, 0);
-			vector<int> shortest(n + 1, 0x3f3f3f);
+			vector cnt(n + 1, 0);
+			vector shortest(n + 1, 0x3f3f3f);
 			queue<int> q;
 			unordered_set<int> us;
 			q.push(0);
@@ -7315,7 +7312,7 @@ namespace acwing {
 						if(cnt[next_node] >= n + 1) {
 							return true;
 						}
-						if(!us.count(next_node)) {
+						if(!us.contains(next_node)) {
 							q.push(next_node);
 							us.insert(next_node);
 						}
@@ -7330,7 +7327,7 @@ namespace acwing {
 		int main(istream &cin, ostream &cout) {
 			int n, m, k;
 			cin >> n >> m >> k;
-			vector<vector<int>> g(n + 1, vector<int>(n + 1, 1e9));
+			vector g(n + 1, vector<int>(n + 1, 1e9));
 			for(int i = 0; i < m; i++) {
 				int x, y, z;
 				cin >> x >> y >> z;

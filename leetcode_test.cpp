@@ -3254,14 +3254,14 @@ namespace leetcode {
 
 	namespace merge_intervals {
 		TEST(merge_intervals, case1) {
-			vector<vector<int>> intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
-			vector<vector<int>> expected  = {{1, 6}, {8, 10}, {15, 18}};
+			vector<vector<int>> intervals      = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+			const vector<vector<int>> expected = {{1, 6}, {8, 10}, {15, 18}};
 			ASSERT_EQ(expected, Solution::merge(intervals));
 		}
 
 		TEST(merge_intervals, case2) {
-			vector<vector<int>> intervals = {{1, 4}, {4, 5}};
-			vector<vector<int>> expected  = {{1, 5}};
+			vector<vector<int>> intervals      = {{1, 4}, {4, 5}};
+			const vector<vector<int>> expected = {{1, 5}};
 			ASSERT_EQ(expected, Solution::merge(intervals));
 		}
 
@@ -3273,60 +3273,45 @@ namespace leetcode {
 			ASSERT_TRUE(Solution::searchMatrix(matrix, 5));
 		}
 
-		TEST(search_a_2d_matrix_ii, case2) {
-			vector<vector<int>> matrix = {{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}};
-			ASSERT_FALSE(Solution::searchMatrix(matrix, 20));
-		}
-
 		TEST(search_a_2d_matrix_ii, case3) {
 			vector<vector<int>> matrix = {{1, 1}};
 			ASSERT_FALSE(Solution::searchMatrix(matrix, 0));
-		}
-
-		TEST(search_a_2d_matrix_ii, case4) {
-			vector<vector<int>> matrix = {{1, 2, 3, 4, 5}, {6, 7, 8, 9, 10}, {11, 12, 13, 14, 15}, {16, 17, 18, 19, 20}, {21, 22, 23, 24, 25}};
-			ASSERT_TRUE(Solution::searchMatrix(matrix, 15));
-		}
-
-		TEST(search_a_2d_matrix_ii, case5) {
-			vector<vector<int>> matrix = {{5, 6, 10, 14}, {6, 10, 13, 18}, {10, 13, 18, 19}};
-			ASSERT_TRUE(Solution::searchMatrix(matrix, 14));
 		}
 	}// namespace search_a_2d_matrix_ii
 
 	namespace serialize_and_deserialize_binary_tree {
 		TEST(serialize_and_deserialize_binary_tree, case1) {
-			Codec c           = Codec();
-			string serialized = "[1,2,3,null,null,4,5]";
-			TreeNode *root    = c.deserialize(serialized);
+			auto c                  = Codec();
+			const string serialized = "[1,2,3,null,null,4,5]";
+			TreeNode *root          = c.deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case2) {
-			Codec c           = Codec();
-			string serialized = "[]";
-			TreeNode *root    = c.deserialize(serialized);
+			auto c                  = Codec();
+			const string serialized = "[]";
+			TreeNode *root          = c.deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case3) {
-			Codec c           = Codec();
-			string serialized = "[1,null,2,3]";
-			TreeNode *root    = c.deserialize(serialized);
+			auto c                  = Codec();
+			const string serialized = "[1,null,2,3]";
+			TreeNode *root          = c.deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case4) {
-			Codec c           = Codec();
-			string serialized = "[1,2,3]";
-			TreeNode *root    = c.deserialize(serialized);
+			auto c                  = Codec();
+			const string serialized = "[1,2,3]";
+			TreeNode *root          = c.deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case5) {
-			Codec c           = Codec();
-			string serialized = "[5,4,7,3,null,2,null,-1,null,9]";
-			TreeNode *root    = c.deserialize(serialized);
+			auto c                  = Codec();
+			const string serialized = "[5,4,7,3,null,2,null,-1,null,9]";
+			TreeNode *root          = c.deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 	}// namespace serialize_and_deserialize_binary_tree
