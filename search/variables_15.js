@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['y_0',['y',['../d8/d2e/a00588.html#a7cc1ae7bbad61542a27009eea419fecf',1,'acwing::acwing2060::point::y()'],['../d1/d8c/a00600.html#a907203fb6ce188e3e52f7d22b989f832',1,'acwing::acwing2019::point::y()'],['../d9/d00/a00784.html#ada38b57197bf006a785df93abb7cb190',1,'acwing::acwing1929::step::y()'],['../de/dd5/a01564.html#a8bceaeb02a938e820304bec2b44a770b',1,'leetcode::escape_a_large_maze::point::y()'],['../d3/dff/a02976.html#aa176606bd44f02ab3a991687bef3a219',1,'pat::b::b1082::player::y()']]],
-  ['year_1',['year',['../d2/d9c/a02948.html#a69b428c8ab34d951a9728cb5ddb9d24a',1,'pat::b::b1028::Person']]]
+  ['x_0',['x',['../d9/dad/a00591.html#a858de27a9ad7db2ce745e880b56299a6',1,'acwing::acwing2060::point::x()'],['../de/d94/a00603.html#acaa459e164175cdbde974462ea6cf4a8',1,'acwing::acwing2019::point::x()'],['../d8/d7f/a00787.html#a1a66c3669ad5d5a8e768b745d216cdec',1,'acwing::acwing1929::step::x()'],['../d7/dd6/a01167.html#a7c4c96e9aa013842e6065dd9f767760e',1,'acwing::acwing1660::cow::x()'],['../d7/d57/a01567.html#ab29729c4bc9255f281c6c238c61ca01d',1,'leetcode::escape_a_large_maze::point::x()'],['../d4/d2b/a02979.html#a27d07b317dd9c4679005910cf4d1ae18',1,'pat::b::b1082::player::x()']]]
 ];

@@ -112,26 +112,26 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03785">3785</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03785" name="l03785"></a><span class="lineno"> 3785</span>                                                  {</div>
-<div class="line"><a id="l03786" name="l03786"></a><span class="lineno"> 3786</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l03787" name="l03787"></a><span class="lineno"> 3787</span>                cin &gt;&gt; n;</div>
-<div class="line"><a id="l03788" name="l03788"></a><span class="lineno"> 3788</span>                vector&lt;unsigned&gt; vec(n);</div>
-<div class="line"><a id="l03789" name="l03789"></a><span class="lineno"> 3789</span>                vec[0]           = 2;</div>
-<div class="line"><a id="l03790" name="l03790"></a><span class="lineno"> 3790</span>                vec[1]           = 0;</div>
-<div class="line"><a id="l03791" name="l03791"></a><span class="lineno"> 3791</span>                vec[2]           = 1;</div>
-<div class="line"><a id="l03792" name="l03792"></a><span class="lineno"> 3792</span>                vec[3]           = 9;</div>
-<div class="line"><a id="l03793" name="l03793"></a><span class="lineno"> 3793</span>                <span class="keywordtype">unsigned</span> current = 2 + 0 + 1 + 9;</div>
-<div class="line"><a id="l03794" name="l03794"></a><span class="lineno"> 3794</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 4; i &lt; n; i++) {</div>
-<div class="line"><a id="l03795" name="l03795"></a><span class="lineno"> 3795</span>                    vec[i] = current % 10;</div>
-<div class="line"><a id="l03796" name="l03796"></a><span class="lineno"> 3796</span>                    current -= vec[i - 4];</div>
-<div class="line"><a id="l03797" name="l03797"></a><span class="lineno"> 3797</span>                    current += vec[i];</div>
-<div class="line"><a id="l03798" name="l03798"></a><span class="lineno"> 3798</span>                }</div>
-<div class="line"><a id="l03799" name="l03799"></a><span class="lineno"> 3799</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> num: vec) {</div>
-<div class="line"><a id="l03800" name="l03800"></a><span class="lineno"> 3800</span>                    cout &lt;&lt; num;</div>
-<div class="line"><a id="l03801" name="l03801"></a><span class="lineno"> 3801</span>                }</div>
-<div class="line"><a id="l03802" name="l03802"></a><span class="lineno"> 3802</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l03803" name="l03803"></a><span class="lineno"> 3803</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03786">3786</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03786" name="l03786"></a><span class="lineno"> 3786</span>                                                  {</div>
+<div class="line"><a id="l03787" name="l03787"></a><span class="lineno"> 3787</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l03788" name="l03788"></a><span class="lineno"> 3788</span>                cin &gt;&gt; n;</div>
+<div class="line"><a id="l03789" name="l03789"></a><span class="lineno"> 3789</span>                vector&lt;unsigned&gt; vec(n);</div>
+<div class="line"><a id="l03790" name="l03790"></a><span class="lineno"> 3790</span>                vec[0]           = 2;</div>
+<div class="line"><a id="l03791" name="l03791"></a><span class="lineno"> 3791</span>                vec[1]           = 0;</div>
+<div class="line"><a id="l03792" name="l03792"></a><span class="lineno"> 3792</span>                vec[2]           = 1;</div>
+<div class="line"><a id="l03793" name="l03793"></a><span class="lineno"> 3793</span>                vec[3]           = 9;</div>
+<div class="line"><a id="l03794" name="l03794"></a><span class="lineno"> 3794</span>                <span class="keywordtype">unsigned</span> current = 2 + 0 + 1 + 9;</div>
+<div class="line"><a id="l03795" name="l03795"></a><span class="lineno"> 3795</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 4; i &lt; n; i++) {</div>
+<div class="line"><a id="l03796" name="l03796"></a><span class="lineno"> 3796</span>                    vec[i] = current % 10;</div>
+<div class="line"><a id="l03797" name="l03797"></a><span class="lineno"> 3797</span>                    current -= vec[i - 4];</div>
+<div class="line"><a id="l03798" name="l03798"></a><span class="lineno"> 3798</span>                    current += vec[i];</div>
+<div class="line"><a id="l03799" name="l03799"></a><span class="lineno"> 3799</span>                }</div>
+<div class="line"><a id="l03800" name="l03800"></a><span class="lineno"> 3800</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> num: vec) {</div>
+<div class="line"><a id="l03801" name="l03801"></a><span class="lineno"> 3801</span>                    cout &lt;&lt; num;</div>
+<div class="line"><a id="l03802" name="l03802"></a><span class="lineno"> 3802</span>                }</div>
+<div class="line"><a id="l03803" name="l03803"></a><span class="lineno"> 3803</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l03804" name="l03804"></a><span class="lineno"> 3804</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l01880">TEST()</a>.</p>
 
@@ -173,7 +173,7 @@ $(function() {
 <div class="line"><a id="l01886" name="l01886"></a><span class="lineno"> 1886</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03785">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03786">main()</a>.</p>
 
 </div>
 </div>

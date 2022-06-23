@@ -146,31 +146,31 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03719">3719</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03719" name="l03719"></a><span class="lineno"> 3719</span>                                                                                                                                            {</div>
-<div class="line"><a id="l03720" name="l03720"></a><span class="lineno"> 3720</span>                <span class="keywordflow">if</span>(current_i + cnt9 == k) {</div>
-<div class="line"><a id="l03721" name="l03721"></a><span class="lineno"> 3721</span>                    <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keywordtype">int</span> r = m - current_sum - cnt9 * 9; (current_i &gt; 1 &amp;&amp; r &gt;= 0 || current_i == 1 &amp;&amp; r &gt; 0) &amp;&amp; r &lt; 9) {</div>
-<div class="line"><a id="l03722" name="l03722"></a><span class="lineno"> 3722</span>                        str += <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(r + <span class="charliteral">&#39;0&#39;</span>);</div>
-<div class="line"><a id="l03723" name="l03723"></a><span class="lineno"> 3723</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03724" name="l03724"></a><span class="lineno"> 3724</span>                        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l03725" name="l03725"></a><span class="lineno"> 3725</span>                    }</div>
-<div class="line"><a id="l03726" name="l03726"></a><span class="lineno"> 3726</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; cnt9; i++) {</div>
-<div class="line"><a id="l03727" name="l03727"></a><span class="lineno"> 3727</span>                        str += <span class="charliteral">&#39;9&#39;</span>;</div>
-<div class="line"><a id="l03728" name="l03728"></a><span class="lineno"> 3728</span>                    }</div>
-<div class="line"><a id="l03729" name="l03729"></a><span class="lineno"> 3729</span>                    ans.emplace_back(str);</div>
-<div class="line"><a id="l03730" name="l03730"></a><span class="lineno"> 3730</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l03731" name="l03731"></a><span class="lineno"> 3731</span>                }</div>
-<div class="line"><a id="l03732" name="l03732"></a><span class="lineno"> 3732</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = current_i == 1 ? 1 : 0; i &lt;= 9; i++) {</div>
-<div class="line"><a id="l03733" name="l03733"></a><span class="lineno"> 3733</span>                    <span class="keywordflow">if</span>(!(current_sum + i + cnt9 * 9 &gt; m || current_sum + i + (k - current_i) * 9 - 1 &lt; m)) {</div>
-<div class="line"><a id="l03734" name="l03734"></a><span class="lineno"> 3734</span>                        <a class="code hl_function" href="../../d3/dad/a00496.html#a97ac6533b87d0402a4b68a91120796e5">dfs</a>(str + <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(i + <span class="charliteral">&#39;0&#39;</span>), current_i + 1, m, k, current_sum + i, cnt9, ans);</div>
-<div class="line"><a id="l03735" name="l03735"></a><span class="lineno"> 3735</span>                    }</div>
-<div class="line"><a id="l03736" name="l03736"></a><span class="lineno"> 3736</span>                }</div>
-<div class="line"><a id="l03737" name="l03737"></a><span class="lineno"> 3737</span>            }</div>
-<div class="ttc" id="aa00496_html_a97ac6533b87d0402a4b68a91120796e5"><div class="ttname"><a href="../../d3/dad/a00496.html#a97ac6533b87d0402a4b68a91120796e5">pat::b::b1104::dfs</a></div><div class="ttdeci">void dfs(string str, const int current_i, const int m, const int k, const int current_sum, const int cnt9, vector&lt; string &gt; &amp;ans)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l03719">pat.cpp:3719</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03720">3720</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03720" name="l03720"></a><span class="lineno"> 3720</span>                                                                                                                                            {</div>
+<div class="line"><a id="l03721" name="l03721"></a><span class="lineno"> 3721</span>                <span class="keywordflow">if</span>(current_i + cnt9 == k) {</div>
+<div class="line"><a id="l03722" name="l03722"></a><span class="lineno"> 3722</span>                    <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keywordtype">int</span> r = m - current_sum - cnt9 * 9; (current_i &gt; 1 &amp;&amp; r &gt;= 0 || current_i == 1 &amp;&amp; r &gt; 0) &amp;&amp; r &lt; 9) {</div>
+<div class="line"><a id="l03723" name="l03723"></a><span class="lineno"> 3723</span>                        str += <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(r + <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><a id="l03724" name="l03724"></a><span class="lineno"> 3724</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l03725" name="l03725"></a><span class="lineno"> 3725</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l03726" name="l03726"></a><span class="lineno"> 3726</span>                    }</div>
+<div class="line"><a id="l03727" name="l03727"></a><span class="lineno"> 3727</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; cnt9; i++) {</div>
+<div class="line"><a id="l03728" name="l03728"></a><span class="lineno"> 3728</span>                        str += <span class="charliteral">&#39;9&#39;</span>;</div>
+<div class="line"><a id="l03729" name="l03729"></a><span class="lineno"> 3729</span>                    }</div>
+<div class="line"><a id="l03730" name="l03730"></a><span class="lineno"> 3730</span>                    ans.emplace_back(str);</div>
+<div class="line"><a id="l03731" name="l03731"></a><span class="lineno"> 3731</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l03732" name="l03732"></a><span class="lineno"> 3732</span>                }</div>
+<div class="line"><a id="l03733" name="l03733"></a><span class="lineno"> 3733</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = current_i == 1 ? 1 : 0; i &lt;= 9; i++) {</div>
+<div class="line"><a id="l03734" name="l03734"></a><span class="lineno"> 3734</span>                    <span class="keywordflow">if</span>(!(current_sum + i + cnt9 * 9 &gt; m || current_sum + i + (k - current_i) * 9 - 1 &lt; m)) {</div>
+<div class="line"><a id="l03735" name="l03735"></a><span class="lineno"> 3735</span>                        <a class="code hl_function" href="../../d3/dad/a00496.html#a97ac6533b87d0402a4b68a91120796e5">dfs</a>(str + <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(i + <span class="charliteral">&#39;0&#39;</span>), current_i + 1, m, k, current_sum + i, cnt9, ans);</div>
+<div class="line"><a id="l03736" name="l03736"></a><span class="lineno"> 3736</span>                    }</div>
+<div class="line"><a id="l03737" name="l03737"></a><span class="lineno"> 3737</span>                }</div>
+<div class="line"><a id="l03738" name="l03738"></a><span class="lineno"> 3738</span>            }</div>
+<div class="ttc" id="aa00496_html_a97ac6533b87d0402a4b68a91120796e5"><div class="ttname"><a href="../../d3/dad/a00496.html#a97ac6533b87d0402a4b68a91120796e5">pat::b::b1104::dfs</a></div><div class="ttdeci">void dfs(string str, const int current_i, const int m, const int k, const int current_sum, const int cnt9, vector&lt; string &gt; &amp;ans)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l03720">pat.cpp:3720</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03719">dfs()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03720">dfs()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l03719">dfs()</a> , 以及 <a class="el" href="../../d5/d16/a00029_source.html#l03673">main()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l03720">dfs()</a> , 以及 <a class="el" href="../../d5/d16/a00029_source.html#l03674">main()</a>.</p>
 
 </div>
 </div>
@@ -190,20 +190,20 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03707">3707</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03707" name="l03707"></a><span class="lineno"> 3707</span>                                 {</div>
-<div class="line"><a id="l03708" name="l03708"></a><span class="lineno"> 3708</span>                <span class="keywordflow">if</span>(n == 1) {</div>
-<div class="line"><a id="l03709" name="l03709"></a><span class="lineno"> 3709</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l03710" name="l03710"></a><span class="lineno"> 3710</span>                }</div>
-<div class="line"><a id="l03711" name="l03711"></a><span class="lineno"> 3711</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2; i &lt;= sqrt(n); i++) {</div>
-<div class="line"><a id="l03712" name="l03712"></a><span class="lineno"> 3712</span>                    <span class="keywordflow">if</span>(n % i == 0) {</div>
-<div class="line"><a id="l03713" name="l03713"></a><span class="lineno"> 3713</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l03714" name="l03714"></a><span class="lineno"> 3714</span>                    }</div>
-<div class="line"><a id="l03715" name="l03715"></a><span class="lineno"> 3715</span>                }</div>
-<div class="line"><a id="l03716" name="l03716"></a><span class="lineno"> 3716</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l03717" name="l03717"></a><span class="lineno"> 3717</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03708">3708</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03708" name="l03708"></a><span class="lineno"> 3708</span>                                 {</div>
+<div class="line"><a id="l03709" name="l03709"></a><span class="lineno"> 3709</span>                <span class="keywordflow">if</span>(n == 1) {</div>
+<div class="line"><a id="l03710" name="l03710"></a><span class="lineno"> 3710</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l03711" name="l03711"></a><span class="lineno"> 3711</span>                }</div>
+<div class="line"><a id="l03712" name="l03712"></a><span class="lineno"> 3712</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2; i &lt;= sqrt(n); i++) {</div>
+<div class="line"><a id="l03713" name="l03713"></a><span class="lineno"> 3713</span>                    <span class="keywordflow">if</span>(n % i == 0) {</div>
+<div class="line"><a id="l03714" name="l03714"></a><span class="lineno"> 3714</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l03715" name="l03715"></a><span class="lineno"> 3715</span>                    }</div>
+<div class="line"><a id="l03716" name="l03716"></a><span class="lineno"> 3716</span>                }</div>
+<div class="line"><a id="l03717" name="l03717"></a><span class="lineno"> 3717</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l03718" name="l03718"></a><span class="lineno"> 3718</span>            }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l00241">pat::b::b1007::main()</a>, <a class="el" href="../../d5/d16/a00029_source.html#l00415">pat::b::b1013::main()</a> , 以及 <a class="el" href="../../d5/d16/a00029_source.html#l03673">main()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l00242">pat::b::b1007::main()</a>, <a class="el" href="../../d5/d16/a00029_source.html#l00416">pat::b::b1013::main()</a> , 以及 <a class="el" href="../../d5/d16/a00029_source.html#l03674">main()</a>.</p>
 
 </div>
 </div>
@@ -233,44 +233,44 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03673">3673</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03673" name="l03673"></a><span class="lineno"> 3673</span>                                                  {</div>
-<div class="line"><a id="l03674" name="l03674"></a><span class="lineno"> 3674</span>                <span class="keywordtype">int</span> <a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>;</div>
-<div class="line"><a id="l03675" name="l03675"></a><span class="lineno"> 3675</span>                cin &gt;&gt; <a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>;</div>
-<div class="line"><a id="l03676" name="l03676"></a><span class="lineno"> 3676</span>                vector&lt;int&gt; diff(10);</div>
-<div class="line"><a id="l03677" name="l03677"></a><span class="lineno"> 3677</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 10; i++) {</div>
-<div class="line"><a id="l03678" name="l03678"></a><span class="lineno"> 3678</span>                    diff[i] = 1 - i * 9;</div>
-<div class="line"><a id="l03679" name="l03679"></a><span class="lineno"> 3679</span>                }</div>
-<div class="line"><a id="l03680" name="l03680"></a><span class="lineno"> 3680</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>; i++) {</div>
-<div class="line"><a id="l03681" name="l03681"></a><span class="lineno"> 3681</span>                    <span class="keywordtype">bool</span> ok = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l03682" name="l03682"></a><span class="lineno"> 3682</span>                    <span class="keywordtype">int</span> k;</div>
-<div class="line"><a id="l03683" name="l03683"></a><span class="lineno"> 3683</span>                    <span class="keywordtype">int</span> m;</div>
-<div class="line"><a id="l03684" name="l03684"></a><span class="lineno"> 3684</span>                    cin &gt;&gt; k &gt;&gt; m;</div>
-<div class="line"><a id="l03685" name="l03685"></a><span class="lineno"> 3685</span>                    cout &lt;&lt; <span class="stringliteral">&quot;Case &quot;</span> &lt;&lt; i &lt;&lt; endl;</div>
-<div class="line"><a id="l03686" name="l03686"></a><span class="lineno"> 3686</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = k; j &gt;= 1; j--) {</div>
-<div class="line"><a id="l03687" name="l03687"></a><span class="lineno"> 3687</span>                        <span class="keyword">const</span> <span class="keywordtype">int</span> n = m + diff[j];</div>
-<div class="line"><a id="l03688" name="l03688"></a><span class="lineno"> 3688</span>                        <span class="keyword">const</span> <span class="keywordtype">int</span> g = gcd(m, n);</div>
-<div class="line"><a id="l03689" name="l03689"></a><span class="lineno"> 3689</span>                        <span class="keywordflow">if</span>(n &gt; 0 &amp;&amp; g &gt; 2 &amp;&amp; <a class="code hl_function" href="../../d3/dad/a00496.html#a46700291657d5198e8c72aeb4535815a">is_prime</a>(gcd(m, n))) {</div>
-<div class="line"><a id="l03690" name="l03690"></a><span class="lineno"> 3690</span>                            vector&lt;string&gt; ans;</div>
-<div class="line"><a id="l03691" name="l03691"></a><span class="lineno"> 3691</span>                            <a class="code hl_function" href="../../d3/dad/a00496.html#a97ac6533b87d0402a4b68a91120796e5">dfs</a>(<span class="stringliteral">&quot;&quot;</span>, 1, m, k, 0, j, ans);</div>
-<div class="line"><a id="l03692" name="l03692"></a><span class="lineno"> 3692</span>                            <span class="keywordflow">if</span>(!ans.empty()) {</div>
-<div class="line"><a id="l03693" name="l03693"></a><span class="lineno"> 3693</span>                                ok = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l03694" name="l03694"></a><span class="lineno"> 3694</span>                                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;str: ans) {</div>
-<div class="line"><a id="l03695" name="l03695"></a><span class="lineno"> 3695</span>                                    cout &lt;&lt; m + diff[j] &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; str &lt;&lt; endl;</div>
-<div class="line"><a id="l03696" name="l03696"></a><span class="lineno"> 3696</span>                                }</div>
-<div class="line"><a id="l03697" name="l03697"></a><span class="lineno"> 3697</span>                            }</div>
-<div class="line"><a id="l03698" name="l03698"></a><span class="lineno"> 3698</span>                        }</div>
-<div class="line"><a id="l03699" name="l03699"></a><span class="lineno"> 3699</span>                    }</div>
-<div class="line"><a id="l03700" name="l03700"></a><span class="lineno"> 3700</span>                    <span class="keywordflow">if</span>(!ok) {</div>
-<div class="line"><a id="l03701" name="l03701"></a><span class="lineno"> 3701</span>                        cout &lt;&lt; <span class="stringliteral">&quot;No Solution&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l03702" name="l03702"></a><span class="lineno"> 3702</span>                    }</div>
-<div class="line"><a id="l03703" name="l03703"></a><span class="lineno"> 3703</span>                }</div>
-<div class="line"><a id="l03704" name="l03704"></a><span class="lineno"> 3704</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l03705" name="l03705"></a><span class="lineno"> 3705</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03674">3674</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03674" name="l03674"></a><span class="lineno"> 3674</span>                                                  {</div>
+<div class="line"><a id="l03675" name="l03675"></a><span class="lineno"> 3675</span>                <span class="keywordtype">int</span> <a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>;</div>
+<div class="line"><a id="l03676" name="l03676"></a><span class="lineno"> 3676</span>                cin &gt;&gt; <a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>;</div>
+<div class="line"><a id="l03677" name="l03677"></a><span class="lineno"> 3677</span>                vector&lt;int&gt; diff(10);</div>
+<div class="line"><a id="l03678" name="l03678"></a><span class="lineno"> 3678</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 10; i++) {</div>
+<div class="line"><a id="l03679" name="l03679"></a><span class="lineno"> 3679</span>                    diff[i] = 1 - i * 9;</div>
+<div class="line"><a id="l03680" name="l03680"></a><span class="lineno"> 3680</span>                }</div>
+<div class="line"><a id="l03681" name="l03681"></a><span class="lineno"> 3681</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code hl_variable" href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>; i++) {</div>
+<div class="line"><a id="l03682" name="l03682"></a><span class="lineno"> 3682</span>                    <span class="keywordtype">bool</span> ok = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l03683" name="l03683"></a><span class="lineno"> 3683</span>                    <span class="keywordtype">int</span> k;</div>
+<div class="line"><a id="l03684" name="l03684"></a><span class="lineno"> 3684</span>                    <span class="keywordtype">int</span> m;</div>
+<div class="line"><a id="l03685" name="l03685"></a><span class="lineno"> 3685</span>                    cin &gt;&gt; k &gt;&gt; m;</div>
+<div class="line"><a id="l03686" name="l03686"></a><span class="lineno"> 3686</span>                    cout &lt;&lt; <span class="stringliteral">&quot;Case &quot;</span> &lt;&lt; i &lt;&lt; endl;</div>
+<div class="line"><a id="l03687" name="l03687"></a><span class="lineno"> 3687</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = k; j &gt;= 1; j--) {</div>
+<div class="line"><a id="l03688" name="l03688"></a><span class="lineno"> 3688</span>                        <span class="keyword">const</span> <span class="keywordtype">int</span> n = m + diff[j];</div>
+<div class="line"><a id="l03689" name="l03689"></a><span class="lineno"> 3689</span>                        <span class="keyword">const</span> <span class="keywordtype">int</span> g = gcd(m, n);</div>
+<div class="line"><a id="l03690" name="l03690"></a><span class="lineno"> 3690</span>                        <span class="keywordflow">if</span>(n &gt; 0 &amp;&amp; g &gt; 2 &amp;&amp; <a class="code hl_function" href="../../d3/dad/a00496.html#a46700291657d5198e8c72aeb4535815a">is_prime</a>(gcd(m, n))) {</div>
+<div class="line"><a id="l03691" name="l03691"></a><span class="lineno"> 3691</span>                            vector&lt;string&gt; ans;</div>
+<div class="line"><a id="l03692" name="l03692"></a><span class="lineno"> 3692</span>                            <a class="code hl_function" href="../../d3/dad/a00496.html#a97ac6533b87d0402a4b68a91120796e5">dfs</a>(<span class="stringliteral">&quot;&quot;</span>, 1, m, k, 0, j, ans);</div>
+<div class="line"><a id="l03693" name="l03693"></a><span class="lineno"> 3693</span>                            <span class="keywordflow">if</span>(!ans.empty()) {</div>
+<div class="line"><a id="l03694" name="l03694"></a><span class="lineno"> 3694</span>                                ok = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l03695" name="l03695"></a><span class="lineno"> 3695</span>                                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;str: ans) {</div>
+<div class="line"><a id="l03696" name="l03696"></a><span class="lineno"> 3696</span>                                    cout &lt;&lt; m + diff[j] &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; str &lt;&lt; endl;</div>
+<div class="line"><a id="l03697" name="l03697"></a><span class="lineno"> 3697</span>                                }</div>
+<div class="line"><a id="l03698" name="l03698"></a><span class="lineno"> 3698</span>                            }</div>
+<div class="line"><a id="l03699" name="l03699"></a><span class="lineno"> 3699</span>                        }</div>
+<div class="line"><a id="l03700" name="l03700"></a><span class="lineno"> 3700</span>                    }</div>
+<div class="line"><a id="l03701" name="l03701"></a><span class="lineno"> 3701</span>                    <span class="keywordflow">if</span>(!ok) {</div>
+<div class="line"><a id="l03702" name="l03702"></a><span class="lineno"> 3702</span>                        cout &lt;&lt; <span class="stringliteral">&quot;No Solution&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l03703" name="l03703"></a><span class="lineno"> 3703</span>                    }</div>
+<div class="line"><a id="l03704" name="l03704"></a><span class="lineno"> 3704</span>                }</div>
+<div class="line"><a id="l03705" name="l03705"></a><span class="lineno"> 3705</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l03706" name="l03706"></a><span class="lineno"> 3706</span>            }</div>
 <div class="ttc" id="aa00067_html_ab0d0f3a698d2eb3fdc6107c07ccfdbe8"><div class="ttname"><a href="../../dc/ddf/a00067.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">acwing::acwing2019::N</a></div><div class="ttdeci">const int N</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00146">acwing.h:146</a></div></div>
-<div class="ttc" id="aa00496_html_a46700291657d5198e8c72aeb4535815a"><div class="ttname"><a href="../../d3/dad/a00496.html#a46700291657d5198e8c72aeb4535815a">pat::b::b1104::is_prime</a></div><div class="ttdeci">bool is_prime(int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l03707">pat.cpp:3707</a></div></div>
+<div class="ttc" id="aa00496_html_a46700291657d5198e8c72aeb4535815a"><div class="ttname"><a href="../../d3/dad/a00496.html#a46700291657d5198e8c72aeb4535815a">pat::b::b1104::is_prime</a></div><div class="ttdeci">bool is_prime(int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l03708">pat.cpp:3708</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03719">dfs()</a>, <a class="el" href="../../d5/d16/a00029_source.html#l03707">is_prime()</a> , 以及 <a class="el" href="../../d5/df9/a00044_source.html#l00146">acwing::acwing2019::N</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03720">dfs()</a>, <a class="el" href="../../d5/d16/a00029_source.html#l03708">is_prime()</a> , 以及 <a class="el" href="../../d5/df9/a00044_source.html#l00146">acwing::acwing2019::N</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l01832">TEST()</a>.</p>
 
@@ -326,7 +326,7 @@ $(function() {
 <div class="line"><a id="l01852" name="l01852"></a><span class="lineno"> 1852</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03673">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03674">main()</a>.</p>
 
 </div>
 </div>

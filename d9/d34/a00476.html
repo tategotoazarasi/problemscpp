@@ -112,30 +112,30 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02930">2930</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02930" name="l02930"></a><span class="lineno"> 2930</span>                                                  {</div>
-<div class="line"><a id="l02931" name="l02931"></a><span class="lineno"> 2931</span>                <span class="keywordtype">string</span> str;</div>
-<div class="line"><a id="l02932" name="l02932"></a><span class="lineno"> 2932</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l02933" name="l02933"></a><span class="lineno"> 2933</span>                cin &gt;&gt; str &gt;&gt; n;</div>
-<div class="line"><a id="l02934" name="l02934"></a><span class="lineno"> 2934</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; n; i++) {</div>
-<div class="line"><a id="l02935" name="l02935"></a><span class="lineno"> 2935</span>                    <span class="keywordtype">char</span> ch = str[0];</div>
-<div class="line"><a id="l02936" name="l02936"></a><span class="lineno"> 2936</span>                    ostringstream oss;</div>
-<div class="line"><a id="l02937" name="l02937"></a><span class="lineno"> 2937</span>                    <span class="keywordtype">int</span> count = 1;</div>
-<div class="line"><a id="l02938" name="l02938"></a><span class="lineno"> 2938</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt; str.length(); j++) {</div>
-<div class="line"><a id="l02939" name="l02939"></a><span class="lineno"> 2939</span>                        <span class="keywordflow">if</span>(str[j] == ch) {</div>
-<div class="line"><a id="l02940" name="l02940"></a><span class="lineno"> 2940</span>                            count++;</div>
-<div class="line"><a id="l02941" name="l02941"></a><span class="lineno"> 2941</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02942" name="l02942"></a><span class="lineno"> 2942</span>                            oss &lt;&lt; ch &lt;&lt; count;</div>
-<div class="line"><a id="l02943" name="l02943"></a><span class="lineno"> 2943</span>                            count = 1;</div>
-<div class="line"><a id="l02944" name="l02944"></a><span class="lineno"> 2944</span>                            ch    = str[j];</div>
-<div class="line"><a id="l02945" name="l02945"></a><span class="lineno"> 2945</span>                        }</div>
-<div class="line"><a id="l02946" name="l02946"></a><span class="lineno"> 2946</span>                    }</div>
-<div class="line"><a id="l02947" name="l02947"></a><span class="lineno"> 2947</span>                    oss &lt;&lt; ch &lt;&lt; count;</div>
-<div class="line"><a id="l02948" name="l02948"></a><span class="lineno"> 2948</span>                    str = oss.str();</div>
-<div class="line"><a id="l02949" name="l02949"></a><span class="lineno"> 2949</span>                }</div>
-<div class="line"><a id="l02950" name="l02950"></a><span class="lineno"> 2950</span>                cout &lt;&lt; str;</div>
-<div class="line"><a id="l02951" name="l02951"></a><span class="lineno"> 2951</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02952" name="l02952"></a><span class="lineno"> 2952</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02931">2931</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02931" name="l02931"></a><span class="lineno"> 2931</span>                                                  {</div>
+<div class="line"><a id="l02932" name="l02932"></a><span class="lineno"> 2932</span>                <span class="keywordtype">string</span> str;</div>
+<div class="line"><a id="l02933" name="l02933"></a><span class="lineno"> 2933</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l02934" name="l02934"></a><span class="lineno"> 2934</span>                cin &gt;&gt; str &gt;&gt; n;</div>
+<div class="line"><a id="l02935" name="l02935"></a><span class="lineno"> 2935</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; n; i++) {</div>
+<div class="line"><a id="l02936" name="l02936"></a><span class="lineno"> 2936</span>                    <span class="keywordtype">char</span> ch = str[0];</div>
+<div class="line"><a id="l02937" name="l02937"></a><span class="lineno"> 2937</span>                    ostringstream oss;</div>
+<div class="line"><a id="l02938" name="l02938"></a><span class="lineno"> 2938</span>                    <span class="keywordtype">int</span> count = 1;</div>
+<div class="line"><a id="l02939" name="l02939"></a><span class="lineno"> 2939</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt; str.length(); j++) {</div>
+<div class="line"><a id="l02940" name="l02940"></a><span class="lineno"> 2940</span>                        <span class="keywordflow">if</span>(str[j] == ch) {</div>
+<div class="line"><a id="l02941" name="l02941"></a><span class="lineno"> 2941</span>                            count++;</div>
+<div class="line"><a id="l02942" name="l02942"></a><span class="lineno"> 2942</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02943" name="l02943"></a><span class="lineno"> 2943</span>                            oss &lt;&lt; ch &lt;&lt; count;</div>
+<div class="line"><a id="l02944" name="l02944"></a><span class="lineno"> 2944</span>                            count = 1;</div>
+<div class="line"><a id="l02945" name="l02945"></a><span class="lineno"> 2945</span>                            ch    = str[j];</div>
+<div class="line"><a id="l02946" name="l02946"></a><span class="lineno"> 2946</span>                        }</div>
+<div class="line"><a id="l02947" name="l02947"></a><span class="lineno"> 2947</span>                    }</div>
+<div class="line"><a id="l02948" name="l02948"></a><span class="lineno"> 2948</span>                    oss &lt;&lt; ch &lt;&lt; count;</div>
+<div class="line"><a id="l02949" name="l02949"></a><span class="lineno"> 2949</span>                    str = oss.str();</div>
+<div class="line"><a id="l02950" name="l02950"></a><span class="lineno"> 2950</span>                }</div>
+<div class="line"><a id="l02951" name="l02951"></a><span class="lineno"> 2951</span>                cout &lt;&lt; str;</div>
+<div class="line"><a id="l02952" name="l02952"></a><span class="lineno"> 2952</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02953" name="l02953"></a><span class="lineno"> 2953</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l01458">TEST()</a>.</p>
 
@@ -177,7 +177,7 @@ $(function() {
 <div class="line"><a id="l01464" name="l01464"></a><span class="lineno"> 1464</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02930">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02931">main()</a>.</p>
 
 </div>
 </div>

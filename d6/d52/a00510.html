@@ -112,44 +112,45 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04215">4215</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04215" name="l04215"></a><span class="lineno"> 4215</span>                                                  {</div>
-<div class="line"><a id="l04216" name="l04216"></a><span class="lineno"> 4216</span>                map&lt;int, double&gt; A, B;</div>
-<div class="line"><a id="l04217" name="l04217"></a><span class="lineno"> 4217</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l04218" name="l04218"></a><span class="lineno"> 4218</span>                cin &gt;&gt; n;</div>
-<div class="line"><a id="l04219" name="l04219"></a><span class="lineno"> 4219</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l04220" name="l04220"></a><span class="lineno"> 4220</span>                    <span class="keywordtype">int</span> exponent;</div>
-<div class="line"><a id="l04221" name="l04221"></a><span class="lineno"> 4221</span>                    <span class="keywordtype">double</span> coefficient;</div>
-<div class="line"><a id="l04222" name="l04222"></a><span class="lineno"> 4222</span>                    cin &gt;&gt; exponent &gt;&gt; coefficient;</div>
-<div class="line"><a id="l04223" name="l04223"></a><span class="lineno"> 4223</span>                    A[exponent] = coefficient;</div>
-<div class="line"><a id="l04224" name="l04224"></a><span class="lineno"> 4224</span>                }</div>
-<div class="line"><a id="l04225" name="l04225"></a><span class="lineno"> 4225</span>                cin &gt;&gt; n;</div>
-<div class="line"><a id="l04226" name="l04226"></a><span class="lineno"> 4226</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l04227" name="l04227"></a><span class="lineno"> 4227</span>                    <span class="keywordtype">int</span> exponent;</div>
-<div class="line"><a id="l04228" name="l04228"></a><span class="lineno"> 4228</span>                    <span class="keywordtype">double</span> coefficient;</div>
-<div class="line"><a id="l04229" name="l04229"></a><span class="lineno"> 4229</span>                    cin &gt;&gt; exponent &gt;&gt; coefficient;</div>
-<div class="line"><a id="l04230" name="l04230"></a><span class="lineno"> 4230</span>                    B[exponent] = coefficient;</div>
-<div class="line"><a id="l04231" name="l04231"></a><span class="lineno"> 4231</span>                }</div>
-<div class="line"><a id="l04232" name="l04232"></a><span class="lineno"> 4232</span>                map&lt;int, double&gt; C;</div>
-<div class="line"><a id="l04233" name="l04233"></a><span class="lineno"> 4233</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[exponent, coefficient]: A) {</div>
-<div class="line"><a id="l04234" name="l04234"></a><span class="lineno"> 4234</span>                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[exponent2, coefficient2]: B) {</div>
-<div class="line"><a id="l04235" name="l04235"></a><span class="lineno"> 4235</span>                        C[exponent + exponent2] += coefficient * coefficient2;</div>
-<div class="line"><a id="l04236" name="l04236"></a><span class="lineno"> 4236</span>                    }</div>
-<div class="line"><a id="l04237" name="l04237"></a><span class="lineno"> 4237</span>                }</div>
-<div class="line"><a id="l04238" name="l04238"></a><span class="lineno"> 4238</span>                <span class="keywordtype">int</span> cnt = 0;</div>
-<div class="line"><a id="l04239" name="l04239"></a><span class="lineno"> 4239</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[exponent, coefficient]: C) {</div>
-<div class="line"><a id="l04240" name="l04240"></a><span class="lineno"> 4240</span>                    <span class="keywordflow">if</span>(coefficient != 0) {</div>
-<div class="line"><a id="l04241" name="l04241"></a><span class="lineno"> 4241</span>                        cnt++;</div>
-<div class="line"><a id="l04242" name="l04242"></a><span class="lineno"> 4242</span>                    }</div>
-<div class="line"><a id="l04243" name="l04243"></a><span class="lineno"> 4243</span>                }</div>
-<div class="line"><a id="l04244" name="l04244"></a><span class="lineno"> 4244</span>                cout &lt;&lt; cnt;</div>
-<div class="line"><a id="l04245" name="l04245"></a><span class="lineno"> 4245</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = C.rbegin(); it != C.rend(); ++it) {</div>
-<div class="line"><a id="l04246" name="l04246"></a><span class="lineno"> 4246</span>                    <span class="keywordflow">if</span>(it-&gt;second != 0) {</div>
-<div class="line"><a id="l04247" name="l04247"></a><span class="lineno"> 4247</span>                        cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; it-&gt;first &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; fixed &lt;&lt; setprecision(1) &lt;&lt; it-&gt;second;</div>
-<div class="line"><a id="l04248" name="l04248"></a><span class="lineno"> 4248</span>                    }</div>
-<div class="line"><a id="l04249" name="l04249"></a><span class="lineno"> 4249</span>                }</div>
-<div class="line"><a id="l04250" name="l04250"></a><span class="lineno"> 4250</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l04251" name="l04251"></a><span class="lineno"> 4251</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04222">4222</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04222" name="l04222"></a><span class="lineno"> 4222</span>                                                  {</div>
+<div class="line"><a id="l04223" name="l04223"></a><span class="lineno"> 4223</span>                map&lt;int, double&gt; A;</div>
+<div class="line"><a id="l04224" name="l04224"></a><span class="lineno"> 4224</span>                map&lt;int, double&gt; B;</div>
+<div class="line"><a id="l04225" name="l04225"></a><span class="lineno"> 4225</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l04226" name="l04226"></a><span class="lineno"> 4226</span>                cin &gt;&gt; n;</div>
+<div class="line"><a id="l04227" name="l04227"></a><span class="lineno"> 4227</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l04228" name="l04228"></a><span class="lineno"> 4228</span>                    <span class="keywordtype">int</span> exponent;</div>
+<div class="line"><a id="l04229" name="l04229"></a><span class="lineno"> 4229</span>                    <span class="keywordtype">double</span> coefficient;</div>
+<div class="line"><a id="l04230" name="l04230"></a><span class="lineno"> 4230</span>                    cin &gt;&gt; exponent &gt;&gt; coefficient;</div>
+<div class="line"><a id="l04231" name="l04231"></a><span class="lineno"> 4231</span>                    A[exponent] = coefficient;</div>
+<div class="line"><a id="l04232" name="l04232"></a><span class="lineno"> 4232</span>                }</div>
+<div class="line"><a id="l04233" name="l04233"></a><span class="lineno"> 4233</span>                cin &gt;&gt; n;</div>
+<div class="line"><a id="l04234" name="l04234"></a><span class="lineno"> 4234</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l04235" name="l04235"></a><span class="lineno"> 4235</span>                    <span class="keywordtype">int</span> exponent;</div>
+<div class="line"><a id="l04236" name="l04236"></a><span class="lineno"> 4236</span>                    <span class="keywordtype">double</span> coefficient;</div>
+<div class="line"><a id="l04237" name="l04237"></a><span class="lineno"> 4237</span>                    cin &gt;&gt; exponent &gt;&gt; coefficient;</div>
+<div class="line"><a id="l04238" name="l04238"></a><span class="lineno"> 4238</span>                    B[exponent] = coefficient;</div>
+<div class="line"><a id="l04239" name="l04239"></a><span class="lineno"> 4239</span>                }</div>
+<div class="line"><a id="l04240" name="l04240"></a><span class="lineno"> 4240</span>                map&lt;int, double&gt; C;</div>
+<div class="line"><a id="l04241" name="l04241"></a><span class="lineno"> 4241</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[exponent, coefficient]: A) {</div>
+<div class="line"><a id="l04242" name="l04242"></a><span class="lineno"> 4242</span>                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[exponent2, coefficient2]: B) {</div>
+<div class="line"><a id="l04243" name="l04243"></a><span class="lineno"> 4243</span>                        C[exponent + exponent2] += coefficient * coefficient2;</div>
+<div class="line"><a id="l04244" name="l04244"></a><span class="lineno"> 4244</span>                    }</div>
+<div class="line"><a id="l04245" name="l04245"></a><span class="lineno"> 4245</span>                }</div>
+<div class="line"><a id="l04246" name="l04246"></a><span class="lineno"> 4246</span>                <span class="keywordtype">int</span> cnt = 0;</div>
+<div class="line"><a id="l04247" name="l04247"></a><span class="lineno"> 4247</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[exponent, coefficient]: C) {</div>
+<div class="line"><a id="l04248" name="l04248"></a><span class="lineno"> 4248</span>                    <span class="keywordflow">if</span>(coefficient != 0) {</div>
+<div class="line"><a id="l04249" name="l04249"></a><span class="lineno"> 4249</span>                        cnt++;</div>
+<div class="line"><a id="l04250" name="l04250"></a><span class="lineno"> 4250</span>                    }</div>
+<div class="line"><a id="l04251" name="l04251"></a><span class="lineno"> 4251</span>                }</div>
+<div class="line"><a id="l04252" name="l04252"></a><span class="lineno"> 4252</span>                cout &lt;&lt; cnt;</div>
+<div class="line"><a id="l04253" name="l04253"></a><span class="lineno"> 4253</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = C.rbegin(); it != C.rend(); ++it) {</div>
+<div class="line"><a id="l04254" name="l04254"></a><span class="lineno"> 4254</span>                    <span class="keywordflow">if</span>(it-&gt;second != 0) {</div>
+<div class="line"><a id="l04255" name="l04255"></a><span class="lineno"> 4255</span>                        cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; it-&gt;first &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; fixed &lt;&lt; setprecision(1) &lt;&lt; it-&gt;second;</div>
+<div class="line"><a id="l04256" name="l04256"></a><span class="lineno"> 4256</span>                    }</div>
+<div class="line"><a id="l04257" name="l04257"></a><span class="lineno"> 4257</span>                }</div>
+<div class="line"><a id="l04258" name="l04258"></a><span class="lineno"> 4258</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l04259" name="l04259"></a><span class="lineno"> 4259</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l02034">TEST()</a>.</p>
 
@@ -191,7 +192,7 @@ $(function() {
 <div class="line"><a id="l02040" name="l02040"></a><span class="lineno"> 2040</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l04215">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l04222">main()</a>.</p>
 
 </div>
 </div>

@@ -112,36 +112,36 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l01294">1294</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01294" name="l01294"></a><span class="lineno"> 1294</span>                                                  {</div>
-<div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span>                <span class="keywordtype">string</span> str;</div>
-<div class="line"><a id="l01296" name="l01296"></a><span class="lineno"> 1296</span>                cin &gt;&gt; str;</div>
-<div class="line"><a id="l01297" name="l01297"></a><span class="lineno"> 1297</span>                vector&lt;unsigned long long&gt; p(str.length(), 0);</div>
-<div class="line"><a id="l01298" name="l01298"></a><span class="lineno"> 1298</span>                vector&lt;unsigned long long&gt; t(str.length(), 0);</div>
-<div class="line"><a id="l01299" name="l01299"></a><span class="lineno"> 1299</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> current_p = 0;</div>
-<div class="line"><a id="l01300" name="l01300"></a><span class="lineno"> 1300</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; p.size(); ++i) {</div>
-<div class="line"><a id="l01301" name="l01301"></a><span class="lineno"> 1301</span>                    p[i] = current_p;</div>
-<div class="line"><a id="l01302" name="l01302"></a><span class="lineno"> 1302</span>                    <span class="keywordflow">if</span>(str[i] == <span class="charliteral">&#39;P&#39;</span>) {</div>
-<div class="line"><a id="l01303" name="l01303"></a><span class="lineno"> 1303</span>                        current_p++;</div>
-<div class="line"><a id="l01304" name="l01304"></a><span class="lineno"> 1304</span>                    }</div>
-<div class="line"><a id="l01305" name="l01305"></a><span class="lineno"> 1305</span>                }</div>
-<div class="line"><a id="l01306" name="l01306"></a><span class="lineno"> 1306</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> current_t = 0;</div>
-<div class="line"><a id="l01307" name="l01307"></a><span class="lineno"> 1307</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = t.size() - 1; i &gt;= 0; --i) {</div>
-<div class="line"><a id="l01308" name="l01308"></a><span class="lineno"> 1308</span>                    t[i] = current_t;</div>
-<div class="line"><a id="l01309" name="l01309"></a><span class="lineno"> 1309</span>                    <span class="keywordflow">if</span>(str[i] == <span class="charliteral">&#39;T&#39;</span>) {</div>
-<div class="line"><a id="l01310" name="l01310"></a><span class="lineno"> 1310</span>                        current_t++;</div>
-<div class="line"><a id="l01311" name="l01311"></a><span class="lineno"> 1311</span>                    }</div>
-<div class="line"><a id="l01312" name="l01312"></a><span class="lineno"> 1312</span>                }</div>
-<div class="line"><a id="l01313" name="l01313"></a><span class="lineno"> 1313</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans = 0;</div>
-<div class="line"><a id="l01314" name="l01314"></a><span class="lineno"> 1314</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; p.size(); i++) {</div>
-<div class="line"><a id="l01315" name="l01315"></a><span class="lineno"> 1315</span>                    <span class="keywordflow">if</span>(str[i] == <span class="charliteral">&#39;A&#39;</span>) {</div>
-<div class="line"><a id="l01316" name="l01316"></a><span class="lineno"> 1316</span>                        ans += p[i] * t[i] % 1000000007;</div>
-<div class="line"><a id="l01317" name="l01317"></a><span class="lineno"> 1317</span>                        ans %= 1000000007;</div>
-<div class="line"><a id="l01318" name="l01318"></a><span class="lineno"> 1318</span>                    }</div>
-<div class="line"><a id="l01319" name="l01319"></a><span class="lineno"> 1319</span>                }</div>
-<div class="line"><a id="l01320" name="l01320"></a><span class="lineno"> 1320</span>                cout &lt;&lt; ans;</div>
-<div class="line"><a id="l01321" name="l01321"></a><span class="lineno"> 1321</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01322" name="l01322"></a><span class="lineno"> 1322</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l01295">1295</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span>                                                  {</div>
+<div class="line"><a id="l01296" name="l01296"></a><span class="lineno"> 1296</span>                <span class="keywordtype">string</span> str;</div>
+<div class="line"><a id="l01297" name="l01297"></a><span class="lineno"> 1297</span>                cin &gt;&gt; str;</div>
+<div class="line"><a id="l01298" name="l01298"></a><span class="lineno"> 1298</span>                vector&lt;unsigned long long&gt; p(str.length(), 0);</div>
+<div class="line"><a id="l01299" name="l01299"></a><span class="lineno"> 1299</span>                vector&lt;unsigned long long&gt; t(str.length(), 0);</div>
+<div class="line"><a id="l01300" name="l01300"></a><span class="lineno"> 1300</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> current_p = 0;</div>
+<div class="line"><a id="l01301" name="l01301"></a><span class="lineno"> 1301</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; p.size(); ++i) {</div>
+<div class="line"><a id="l01302" name="l01302"></a><span class="lineno"> 1302</span>                    p[i] = current_p;</div>
+<div class="line"><a id="l01303" name="l01303"></a><span class="lineno"> 1303</span>                    <span class="keywordflow">if</span>(str[i] == <span class="charliteral">&#39;P&#39;</span>) {</div>
+<div class="line"><a id="l01304" name="l01304"></a><span class="lineno"> 1304</span>                        current_p++;</div>
+<div class="line"><a id="l01305" name="l01305"></a><span class="lineno"> 1305</span>                    }</div>
+<div class="line"><a id="l01306" name="l01306"></a><span class="lineno"> 1306</span>                }</div>
+<div class="line"><a id="l01307" name="l01307"></a><span class="lineno"> 1307</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> current_t = 0;</div>
+<div class="line"><a id="l01308" name="l01308"></a><span class="lineno"> 1308</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = t.size() - 1; i &gt;= 0; --i) {</div>
+<div class="line"><a id="l01309" name="l01309"></a><span class="lineno"> 1309</span>                    t[i] = current_t;</div>
+<div class="line"><a id="l01310" name="l01310"></a><span class="lineno"> 1310</span>                    <span class="keywordflow">if</span>(str[i] == <span class="charliteral">&#39;T&#39;</span>) {</div>
+<div class="line"><a id="l01311" name="l01311"></a><span class="lineno"> 1311</span>                        current_t++;</div>
+<div class="line"><a id="l01312" name="l01312"></a><span class="lineno"> 1312</span>                    }</div>
+<div class="line"><a id="l01313" name="l01313"></a><span class="lineno"> 1313</span>                }</div>
+<div class="line"><a id="l01314" name="l01314"></a><span class="lineno"> 1314</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans = 0;</div>
+<div class="line"><a id="l01315" name="l01315"></a><span class="lineno"> 1315</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; p.size(); i++) {</div>
+<div class="line"><a id="l01316" name="l01316"></a><span class="lineno"> 1316</span>                    <span class="keywordflow">if</span>(str[i] == <span class="charliteral">&#39;A&#39;</span>) {</div>
+<div class="line"><a id="l01317" name="l01317"></a><span class="lineno"> 1317</span>                        ans += p[i] * t[i] % 1000000007;</div>
+<div class="line"><a id="l01318" name="l01318"></a><span class="lineno"> 1318</span>                        ans %= 1000000007;</div>
+<div class="line"><a id="l01319" name="l01319"></a><span class="lineno"> 1319</span>                    }</div>
+<div class="line"><a id="l01320" name="l01320"></a><span class="lineno"> 1320</span>                }</div>
+<div class="line"><a id="l01321" name="l01321"></a><span class="lineno"> 1321</span>                cout &lt;&lt; ans;</div>
+<div class="line"><a id="l01322" name="l01322"></a><span class="lineno"> 1322</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01323" name="l01323"></a><span class="lineno"> 1323</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l00617">TEST()</a>.</p>
 
@@ -183,7 +183,7 @@ $(function() {
 <div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l01294">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l01295">main()</a>.</p>
 
 </div>
 </div>

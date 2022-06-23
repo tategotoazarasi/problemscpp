@@ -110,39 +110,39 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02266">2266</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02266" name="l02266"></a><span class="lineno"> 2266</span>                                                  {</div>
-<div class="line"><a id="l02267" name="l02267"></a><span class="lineno"> 2267</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l02268" name="l02268"></a><span class="lineno"> 2268</span>                cin &gt;&gt; n;</div>
-<div class="line"><a id="l02269" name="l02269"></a><span class="lineno"> 2269</span>                unordered_map&lt;string, string&gt; um;</div>
-<div class="line"><a id="l02270" name="l02270"></a><span class="lineno"> 2270</span>                set&lt;string&gt; s;</div>
-<div class="line"><a id="l02271" name="l02271"></a><span class="lineno"> 2271</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l02272" name="l02272"></a><span class="lineno"> 2272</span>                    <span class="keywordtype">string</span> id1;</div>
-<div class="line"><a id="l02273" name="l02273"></a><span class="lineno"> 2273</span>                    <span class="keywordtype">string</span> id2;</div>
-<div class="line"><a id="l02274" name="l02274"></a><span class="lineno"> 2274</span>                    cin &gt;&gt; id1 &gt;&gt; id2;</div>
-<div class="line"><a id="l02275" name="l02275"></a><span class="lineno"> 2275</span>                    um[id1] = id2;</div>
-<div class="line"><a id="l02276" name="l02276"></a><span class="lineno"> 2276</span>                    um[id2] = id1;</div>
-<div class="line"><a id="l02277" name="l02277"></a><span class="lineno"> 2277</span>                }</div>
-<div class="line"><a id="l02278" name="l02278"></a><span class="lineno"> 2278</span>                <span class="keywordtype">int</span> m;</div>
-<div class="line"><a id="l02279" name="l02279"></a><span class="lineno"> 2279</span>                cin &gt;&gt; m;</div>
-<div class="line"><a id="l02280" name="l02280"></a><span class="lineno"> 2280</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l02281" name="l02281"></a><span class="lineno"> 2281</span>                    <span class="keywordtype">string</span> id;</div>
-<div class="line"><a id="l02282" name="l02282"></a><span class="lineno"> 2282</span>                    cin &gt;&gt; id;</div>
-<div class="line"><a id="l02283" name="l02283"></a><span class="lineno"> 2283</span>                    <span class="keywordflow">if</span>(um.contains(<span class="keywordtype">id</span>)) {</div>
-<div class="line"><a id="l02284" name="l02284"></a><span class="lineno"> 2284</span>                        s.erase(um[<span class="keywordtype">id</span>]);</div>
-<div class="line"><a id="l02285" name="l02285"></a><span class="lineno"> 2285</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02286" name="l02286"></a><span class="lineno"> 2286</span>                        s.insert(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l02287" name="l02287"></a><span class="lineno"> 2287</span>                    }</div>
-<div class="line"><a id="l02288" name="l02288"></a><span class="lineno"> 2288</span>                }</div>
-<div class="line"><a id="l02289" name="l02289"></a><span class="lineno"> 2289</span>                cout &lt;&lt; s.size() &lt;&lt; endl;</div>
-<div class="line"><a id="l02290" name="l02290"></a><span class="lineno"> 2290</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = s.begin(); it != s.end(); ++it) {</div>
-<div class="line"><a id="l02291" name="l02291"></a><span class="lineno"> 2291</span>                    cout &lt;&lt; *it;</div>
-<div class="line"><a id="l02292" name="l02292"></a><span class="lineno"> 2292</span>                    <span class="keywordflow">if</span>(*it != *s.rbegin()) {</div>
-<div class="line"><a id="l02293" name="l02293"></a><span class="lineno"> 2293</span>                        cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a id="l02294" name="l02294"></a><span class="lineno"> 2294</span>                    }</div>
-<div class="line"><a id="l02295" name="l02295"></a><span class="lineno"> 2295</span>                }</div>
-<div class="line"><a id="l02296" name="l02296"></a><span class="lineno"> 2296</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02297" name="l02297"></a><span class="lineno"> 2297</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02267">2267</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02267" name="l02267"></a><span class="lineno"> 2267</span>                                                  {</div>
+<div class="line"><a id="l02268" name="l02268"></a><span class="lineno"> 2268</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l02269" name="l02269"></a><span class="lineno"> 2269</span>                cin &gt;&gt; n;</div>
+<div class="line"><a id="l02270" name="l02270"></a><span class="lineno"> 2270</span>                unordered_map&lt;string, string&gt; um;</div>
+<div class="line"><a id="l02271" name="l02271"></a><span class="lineno"> 2271</span>                set&lt;string&gt; s;</div>
+<div class="line"><a id="l02272" name="l02272"></a><span class="lineno"> 2272</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l02273" name="l02273"></a><span class="lineno"> 2273</span>                    <span class="keywordtype">string</span> id1;</div>
+<div class="line"><a id="l02274" name="l02274"></a><span class="lineno"> 2274</span>                    <span class="keywordtype">string</span> id2;</div>
+<div class="line"><a id="l02275" name="l02275"></a><span class="lineno"> 2275</span>                    cin &gt;&gt; id1 &gt;&gt; id2;</div>
+<div class="line"><a id="l02276" name="l02276"></a><span class="lineno"> 2276</span>                    um[id1] = id2;</div>
+<div class="line"><a id="l02277" name="l02277"></a><span class="lineno"> 2277</span>                    um[id2] = id1;</div>
+<div class="line"><a id="l02278" name="l02278"></a><span class="lineno"> 2278</span>                }</div>
+<div class="line"><a id="l02279" name="l02279"></a><span class="lineno"> 2279</span>                <span class="keywordtype">int</span> m;</div>
+<div class="line"><a id="l02280" name="l02280"></a><span class="lineno"> 2280</span>                cin &gt;&gt; m;</div>
+<div class="line"><a id="l02281" name="l02281"></a><span class="lineno"> 2281</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l02282" name="l02282"></a><span class="lineno"> 2282</span>                    <span class="keywordtype">string</span> id;</div>
+<div class="line"><a id="l02283" name="l02283"></a><span class="lineno"> 2283</span>                    cin &gt;&gt; id;</div>
+<div class="line"><a id="l02284" name="l02284"></a><span class="lineno"> 2284</span>                    <span class="keywordflow">if</span>(um.contains(<span class="keywordtype">id</span>)) {</div>
+<div class="line"><a id="l02285" name="l02285"></a><span class="lineno"> 2285</span>                        s.erase(um[<span class="keywordtype">id</span>]);</div>
+<div class="line"><a id="l02286" name="l02286"></a><span class="lineno"> 2286</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02287" name="l02287"></a><span class="lineno"> 2287</span>                        s.insert(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l02288" name="l02288"></a><span class="lineno"> 2288</span>                    }</div>
+<div class="line"><a id="l02289" name="l02289"></a><span class="lineno"> 2289</span>                }</div>
+<div class="line"><a id="l02290" name="l02290"></a><span class="lineno"> 2290</span>                cout &lt;&lt; s.size() &lt;&lt; endl;</div>
+<div class="line"><a id="l02291" name="l02291"></a><span class="lineno"> 2291</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = s.begin(); it != s.end(); ++it) {</div>
+<div class="line"><a id="l02292" name="l02292"></a><span class="lineno"> 2292</span>                    cout &lt;&lt; *it;</div>
+<div class="line"><a id="l02293" name="l02293"></a><span class="lineno"> 2293</span>                    <span class="keywordflow">if</span>(*it != *s.rbegin()) {</div>
+<div class="line"><a id="l02294" name="l02294"></a><span class="lineno"> 2294</span>                        cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a id="l02295" name="l02295"></a><span class="lineno"> 2295</span>                    }</div>
+<div class="line"><a id="l02296" name="l02296"></a><span class="lineno"> 2296</span>                }</div>
+<div class="line"><a id="l02297" name="l02297"></a><span class="lineno"> 2297</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02298" name="l02298"></a><span class="lineno"> 2298</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>

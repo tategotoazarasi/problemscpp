@@ -112,30 +112,30 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l01073">1073</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>                                                  {</div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>                unordered_set&lt;char&gt; broken;</div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>                <span class="keywordtype">string</span> str1;</div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>                <span class="keywordtype">string</span> str2;</div>
-<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>                cin &gt;&gt; str1 &gt;&gt; str2;</div>
-<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>                <span class="keywordflow">if</span>(str2.empty()) {</div>
-<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>                    cout &lt;&lt; str1;</div>
-<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>                }</div>
-<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>                <span class="keywordtype">bool</span> shift = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: str1) {</div>
-<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>                    broken.insert(ch);</div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>                    <span class="keywordflow">if</span>(ch == <span class="charliteral">&#39;+&#39;</span>) {</div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>                        shift = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>                    }</div>
-<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>                }</div>
-<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: str2) {</div>
-<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>                    <span class="keywordflow">if</span>(!(broken.contains(toupper(ch)) || !shift &amp;&amp; isupper(ch) != 0)) {</div>
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>                        cout &lt;&lt; ch;</div>
-<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>                    }</div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>                }</div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l01074">1074</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>                                                  {</div>
+<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>                unordered_set&lt;char&gt; broken;</div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>                <span class="keywordtype">string</span> str1;</div>
+<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>                <span class="keywordtype">string</span> str2;</div>
+<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>                cin &gt;&gt; str1 &gt;&gt; str2;</div>
+<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>                <span class="keywordflow">if</span>(str2.empty()) {</div>
+<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>                    cout &lt;&lt; str1;</div>
+<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>                }</div>
+<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>                <span class="keywordtype">bool</span> shift = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> ch: str1) {</div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>                    broken.insert(ch);</div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>                    <span class="keywordflow">if</span>(ch == <span class="charliteral">&#39;+&#39;</span>) {</div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>                        shift = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>                    }</div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>                }</div>
+<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: str2) {</div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>                    <span class="keywordflow">if</span>(!(broken.contains(toupper(ch)) || !shift &amp;&amp; isupper(ch) != 0)) {</div>
+<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>                        cout &lt;&lt; ch;</div>
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>                    }</div>
+<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>                }</div>
+<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l00489">TEST()</a>.</p>
 
@@ -178,7 +178,7 @@ $(function() {
 <div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l01073">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l01074">main()</a>.</p>
 
 </div>
 </div>

@@ -112,40 +112,40 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03459">3459</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03459" name="l03459"></a><span class="lineno"> 3459</span>                                                  {</div>
-<div class="line"><a id="l03460" name="l03460"></a><span class="lineno"> 3460</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l03461" name="l03461"></a><span class="lineno"> 3461</span>                <span class="keywordtype">int</span> k;</div>
-<div class="line"><a id="l03462" name="l03462"></a><span class="lineno"> 3462</span>                <span class="keywordtype">int</span> x;</div>
-<div class="line"><a id="l03463" name="l03463"></a><span class="lineno"> 3463</span>                cin &gt;&gt; n &gt;&gt; k &gt;&gt; x;</div>
-<div class="line"><a id="l03464" name="l03464"></a><span class="lineno"> 3464</span>                vector grid(n, vector&lt;int&gt;(n));</div>
-<div class="line"><a id="l03465" name="l03465"></a><span class="lineno"> 3465</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l03466" name="l03466"></a><span class="lineno"> 3466</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l03467" name="l03467"></a><span class="lineno"> 3467</span>                        cin &gt;&gt; grid[i][j];</div>
-<div class="line"><a id="l03468" name="l03468"></a><span class="lineno"> 3468</span>                    }</div>
-<div class="line"><a id="l03469" name="l03469"></a><span class="lineno"> 3469</span>                }</div>
-<div class="line"><a id="l03470" name="l03470"></a><span class="lineno"> 3470</span>                <span class="keywordtype">int</span> indent = 1;</div>
-<div class="line"><a id="l03471" name="l03471"></a><span class="lineno"> 3471</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i += 2) {</div>
-<div class="line"><a id="l03472" name="l03472"></a><span class="lineno"> 3472</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = n - 1; j &gt;= 0; j--) {</div>
-<div class="line"><a id="l03473" name="l03473"></a><span class="lineno"> 3473</span>                        grid[i][j] = j - indent &gt;= 0 ? grid[i][j - indent] : x;</div>
-<div class="line"><a id="l03474" name="l03474"></a><span class="lineno"> 3474</span>                    }</div>
-<div class="line"><a id="l03475" name="l03475"></a><span class="lineno"> 3475</span>                    indent++;</div>
-<div class="line"><a id="l03476" name="l03476"></a><span class="lineno"> 3476</span>                    <span class="keywordflow">if</span>(indent == k + 1) {</div>
-<div class="line"><a id="l03477" name="l03477"></a><span class="lineno"> 3477</span>                        indent = 1;</div>
-<div class="line"><a id="l03478" name="l03478"></a><span class="lineno"> 3478</span>                    }</div>
-<div class="line"><a id="l03479" name="l03479"></a><span class="lineno"> 3479</span>                }</div>
-<div class="line"><a id="l03480" name="l03480"></a><span class="lineno"> 3480</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l03481" name="l03481"></a><span class="lineno"> 3481</span>                    <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><a id="l03482" name="l03482"></a><span class="lineno"> 3482</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l03483" name="l03483"></a><span class="lineno"> 3483</span>                        sum += grid[i][j];</div>
-<div class="line"><a id="l03484" name="l03484"></a><span class="lineno"> 3484</span>                    }</div>
-<div class="line"><a id="l03485" name="l03485"></a><span class="lineno"> 3485</span>                    cout &lt;&lt; sum;</div>
-<div class="line"><a id="l03486" name="l03486"></a><span class="lineno"> 3486</span>                    <span class="keywordflow">if</span>(j != n - 1) {</div>
-<div class="line"><a id="l03487" name="l03487"></a><span class="lineno"> 3487</span>                        cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a id="l03488" name="l03488"></a><span class="lineno"> 3488</span>                    }</div>
-<div class="line"><a id="l03489" name="l03489"></a><span class="lineno"> 3489</span>                }</div>
-<div class="line"><a id="l03490" name="l03490"></a><span class="lineno"> 3490</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l03491" name="l03491"></a><span class="lineno"> 3491</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03460">3460</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03460" name="l03460"></a><span class="lineno"> 3460</span>                                                  {</div>
+<div class="line"><a id="l03461" name="l03461"></a><span class="lineno"> 3461</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l03462" name="l03462"></a><span class="lineno"> 3462</span>                <span class="keywordtype">int</span> k;</div>
+<div class="line"><a id="l03463" name="l03463"></a><span class="lineno"> 3463</span>                <span class="keywordtype">int</span> x;</div>
+<div class="line"><a id="l03464" name="l03464"></a><span class="lineno"> 3464</span>                cin &gt;&gt; n &gt;&gt; k &gt;&gt; x;</div>
+<div class="line"><a id="l03465" name="l03465"></a><span class="lineno"> 3465</span>                vector grid(n, vector&lt;int&gt;(n));</div>
+<div class="line"><a id="l03466" name="l03466"></a><span class="lineno"> 3466</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l03467" name="l03467"></a><span class="lineno"> 3467</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><a id="l03468" name="l03468"></a><span class="lineno"> 3468</span>                        cin &gt;&gt; grid[i][j];</div>
+<div class="line"><a id="l03469" name="l03469"></a><span class="lineno"> 3469</span>                    }</div>
+<div class="line"><a id="l03470" name="l03470"></a><span class="lineno"> 3470</span>                }</div>
+<div class="line"><a id="l03471" name="l03471"></a><span class="lineno"> 3471</span>                <span class="keywordtype">int</span> indent = 1;</div>
+<div class="line"><a id="l03472" name="l03472"></a><span class="lineno"> 3472</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i += 2) {</div>
+<div class="line"><a id="l03473" name="l03473"></a><span class="lineno"> 3473</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = n - 1; j &gt;= 0; j--) {</div>
+<div class="line"><a id="l03474" name="l03474"></a><span class="lineno"> 3474</span>                        grid[i][j] = j - indent &gt;= 0 ? grid[i][j - indent] : x;</div>
+<div class="line"><a id="l03475" name="l03475"></a><span class="lineno"> 3475</span>                    }</div>
+<div class="line"><a id="l03476" name="l03476"></a><span class="lineno"> 3476</span>                    indent++;</div>
+<div class="line"><a id="l03477" name="l03477"></a><span class="lineno"> 3477</span>                    <span class="keywordflow">if</span>(indent == k + 1) {</div>
+<div class="line"><a id="l03478" name="l03478"></a><span class="lineno"> 3478</span>                        indent = 1;</div>
+<div class="line"><a id="l03479" name="l03479"></a><span class="lineno"> 3479</span>                    }</div>
+<div class="line"><a id="l03480" name="l03480"></a><span class="lineno"> 3480</span>                }</div>
+<div class="line"><a id="l03481" name="l03481"></a><span class="lineno"> 3481</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><a id="l03482" name="l03482"></a><span class="lineno"> 3482</span>                    <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><a id="l03483" name="l03483"></a><span class="lineno"> 3483</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l03484" name="l03484"></a><span class="lineno"> 3484</span>                        sum += grid[i][j];</div>
+<div class="line"><a id="l03485" name="l03485"></a><span class="lineno"> 3485</span>                    }</div>
+<div class="line"><a id="l03486" name="l03486"></a><span class="lineno"> 3486</span>                    cout &lt;&lt; sum;</div>
+<div class="line"><a id="l03487" name="l03487"></a><span class="lineno"> 3487</span>                    <span class="keywordflow">if</span>(j != n - 1) {</div>
+<div class="line"><a id="l03488" name="l03488"></a><span class="lineno"> 3488</span>                        cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a id="l03489" name="l03489"></a><span class="lineno"> 3489</span>                    }</div>
+<div class="line"><a id="l03490" name="l03490"></a><span class="lineno"> 3490</span>                }</div>
+<div class="line"><a id="l03491" name="l03491"></a><span class="lineno"> 3491</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l03492" name="l03492"></a><span class="lineno"> 3492</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l01693">TEST()</a>.</p>
 
@@ -194,7 +194,7 @@ $(function() {
 <div class="line"><a id="l01706" name="l01706"></a><span class="lineno"> 1706</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03459">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03460">main()</a>.</p>
 
 </div>
 </div>

@@ -79,8 +79,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/db9/a02964.html">problem</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">多选题  <a href="../../db/db9/a02964.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d81/a02967.html">problem</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">多选题  <a href="../../dd/d81/a02967.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -121,83 +121,83 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02514">2514</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02514" name="l02514"></a><span class="lineno"> 2514</span>                                                  {</div>
-<div class="line"><a id="l02515" name="l02515"></a><span class="lineno"> 2515</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l02516" name="l02516"></a><span class="lineno"> 2516</span>                <span class="keywordtype">int</span> m;</div>
-<div class="line"><a id="l02517" name="l02517"></a><span class="lineno"> 2517</span>                cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l02518" name="l02518"></a><span class="lineno"> 2518</span>                vector&lt;problem&gt; problems(m);</div>
-<div class="line"><a id="l02519" name="l02519"></a><span class="lineno"> 2519</span>                map&lt;pair&lt;int, char&gt;, <span class="keywordtype">int</span>&gt; noe;</div>
-<div class="line"><a id="l02520" name="l02520"></a><span class="lineno"> 2520</span>                <span class="keywordtype">int</span> max_cnt = 0;</div>
-<div class="line"><a id="l02521" name="l02521"></a><span class="lineno"> 2521</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l02522" name="l02522"></a><span class="lineno"> 2522</span>                    <a class="code hl_struct" href="../../db/db9/a02964.html">problem</a> p;</div>
-<div class="line"><a id="l02523" name="l02523"></a><span class="lineno"> 2523</span>                    p.<a class="code hl_variable" href="../../db/db9/a02964.html#a80027b5b8c7433ff2b3308120bdf57ce">id</a> = i + 1;</div>
-<div class="line"><a id="l02524" name="l02524"></a><span class="lineno"> 2524</span>                    cin &gt;&gt; p.<a class="code hl_variable" href="../../db/db9/a02964.html#a046c7a4ef444cec1d2522e9c0fbd87d3">score</a> &gt;&gt; p.<a class="code hl_variable" href="../../db/db9/a02964.html#abfa4f396f6d79fabbc0eb05007c86d7f">noa</a> &gt;&gt; p.<a class="code hl_variable" href="../../db/db9/a02964.html#ae59889b907fb2a620f5d8317191fc641">noca</a>;</div>
-<div class="line"><a id="l02525" name="l02525"></a><span class="lineno"> 2525</span>                    p.<a class="code hl_variable" href="../../db/db9/a02964.html#a56d29e2d96888a88f2f2be6e46642dbc">ca</a> = unordered_set&lt;char&gt;();</div>
-<div class="line"><a id="l02526" name="l02526"></a><span class="lineno"> 2526</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; p.<a class="code hl_variable" href="../../db/db9/a02964.html#ae59889b907fb2a620f5d8317191fc641">noca</a>; j++) {</div>
-<div class="line"><a id="l02527" name="l02527"></a><span class="lineno"> 2527</span>                        <span class="keywordtype">char</span> ca;</div>
-<div class="line"><a id="l02528" name="l02528"></a><span class="lineno"> 2528</span>                        cin &gt;&gt; ca;</div>
-<div class="line"><a id="l02529" name="l02529"></a><span class="lineno"> 2529</span>                        p.<a class="code hl_variable" href="../../db/db9/a02964.html#a56d29e2d96888a88f2f2be6e46642dbc">ca</a>.insert(ca);</div>
-<div class="line"><a id="l02530" name="l02530"></a><span class="lineno"> 2530</span>                    }</div>
-<div class="line"><a id="l02531" name="l02531"></a><span class="lineno"> 2531</span>                    problems[i] = p;</div>
-<div class="line"><a id="l02532" name="l02532"></a><span class="lineno"> 2532</span>                }</div>
-<div class="line"><a id="l02533" name="l02533"></a><span class="lineno"> 2533</span>                <span class="keywordtype">char</span> ch;</div>
-<div class="line"><a id="l02534" name="l02534"></a><span class="lineno"> 2534</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l02535" name="l02535"></a><span class="lineno"> 2535</span>                    <span class="keywordtype">double</span> score = 0;</div>
-<div class="line"><a id="l02536" name="l02536"></a><span class="lineno"> 2536</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; m; j++) {</div>
-<div class="line"><a id="l02537" name="l02537"></a><span class="lineno"> 2537</span>                        unordered_set&lt;char&gt; as;</div>
-<div class="line"><a id="l02538" name="l02538"></a><span class="lineno"> 2538</span>                        cin &gt;&gt; ch;</div>
-<div class="line"><a id="l02539" name="l02539"></a><span class="lineno"> 2539</span>                        <span class="keywordtype">int</span> noa;</div>
-<div class="line"><a id="l02540" name="l02540"></a><span class="lineno"> 2540</span>                        cin &gt;&gt; noa;</div>
-<div class="line"><a id="l02541" name="l02541"></a><span class="lineno"> 2541</span>                        <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l02542" name="l02542"></a><span class="lineno"> 2542</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 0; k &lt; noa; k++) {</div>
-<div class="line"><a id="l02543" name="l02543"></a><span class="lineno"> 2543</span>                            <span class="keywordtype">char</span> a;</div>
-<div class="line"><a id="l02544" name="l02544"></a><span class="lineno"> 2544</span>                            cin &gt;&gt; a;</div>
-<div class="line"><a id="l02545" name="l02545"></a><span class="lineno"> 2545</span>                            as.insert(a);</div>
-<div class="line"><a id="l02546" name="l02546"></a><span class="lineno"> 2546</span>                            <span class="keywordflow">if</span>(!problems[j].ca.contains(a)) {</div>
-<div class="line"><a id="l02547" name="l02547"></a><span class="lineno"> 2547</span>                                noe[make_pair(problems[j].<span class="keywordtype">id</span>, a)]++;</div>
-<div class="line"><a id="l02548" name="l02548"></a><span class="lineno"> 2548</span>                                max_cnt = max(max_cnt, noe[make_pair(problems[j].<span class="keywordtype">id</span>, a)]);</div>
-<div class="line"><a id="l02549" name="l02549"></a><span class="lineno"> 2549</span>                                flag    = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l02550" name="l02550"></a><span class="lineno"> 2550</span>                            }</div>
-<div class="line"><a id="l02551" name="l02551"></a><span class="lineno"> 2551</span>                        }</div>
-<div class="line"><a id="l02552" name="l02552"></a><span class="lineno"> 2552</span>                        cin &gt;&gt; ch;</div>
-<div class="line"><a id="l02553" name="l02553"></a><span class="lineno"> 2553</span>                        <span class="keywordflow">for</span>(<span class="keyword">auto</span> a: problems[j].ca) {</div>
-<div class="line"><a id="l02554" name="l02554"></a><span class="lineno"> 2554</span>                            <span class="keywordflow">if</span>(!as.contains(a)) {</div>
-<div class="line"><a id="l02555" name="l02555"></a><span class="lineno"> 2555</span>                                noe[make_pair(problems[j].<span class="keywordtype">id</span>, a)]++;</div>
-<div class="line"><a id="l02556" name="l02556"></a><span class="lineno"> 2556</span>                                max_cnt = max(max_cnt, noe[make_pair(problems[j].<span class="keywordtype">id</span>, a)]);</div>
-<div class="line"><a id="l02557" name="l02557"></a><span class="lineno"> 2557</span>                            }</div>
-<div class="line"><a id="l02558" name="l02558"></a><span class="lineno"> 2558</span>                        }</div>
-<div class="line"><a id="l02559" name="l02559"></a><span class="lineno"> 2559</span>                        <span class="keywordflow">if</span>(!flag) {</div>
-<div class="line"><a id="l02560" name="l02560"></a><span class="lineno"> 2560</span>                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l02561" name="l02561"></a><span class="lineno"> 2561</span>                        }</div>
-<div class="line"><a id="l02562" name="l02562"></a><span class="lineno"> 2562</span>                        <span class="keywordflow">if</span>(noa == problems[j].noca) {</div>
-<div class="line"><a id="l02563" name="l02563"></a><span class="lineno"> 2563</span>                            score += problems[j].score;</div>
-<div class="line"><a id="l02564" name="l02564"></a><span class="lineno"> 2564</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02565" name="l02565"></a><span class="lineno"> 2565</span>                            score += <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(problems[j].score) / 2;</div>
-<div class="line"><a id="l02566" name="l02566"></a><span class="lineno"> 2566</span>                        }</div>
-<div class="line"><a id="l02567" name="l02567"></a><span class="lineno"> 2567</span>                    }</div>
-<div class="line"><a id="l02568" name="l02568"></a><span class="lineno"> 2568</span>                    cout &lt;&lt; fixed &lt;&lt; setprecision(1) &lt;&lt; score &lt;&lt; endl;</div>
-<div class="line"><a id="l02569" name="l02569"></a><span class="lineno"> 2569</span>                }</div>
-<div class="line"><a id="l02570" name="l02570"></a><span class="lineno"> 2570</span>                <span class="keywordflow">if</span>(noe.empty()) {</div>
-<div class="line"><a id="l02571" name="l02571"></a><span class="lineno"> 2571</span>                    cout &lt;&lt; <span class="stringliteral">&quot;Too simple&quot;</span>;</div>
-<div class="line"><a id="l02572" name="l02572"></a><span class="lineno"> 2572</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02573" name="l02573"></a><span class="lineno"> 2573</span>                    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[k, cnt]: noe) {</div>
-<div class="line"><a id="l02574" name="l02574"></a><span class="lineno"> 2574</span>                        <span class="keywordflow">if</span>(cnt == max_cnt) {</div>
-<div class="line"><a id="l02575" name="l02575"></a><span class="lineno"> 2575</span>                            <span class="keyword">const</span> <span class="keyword">auto</span> &amp;[id, a] = k;</div>
-<div class="line"><a id="l02576" name="l02576"></a><span class="lineno"> 2576</span>                            cout &lt;&lt; cnt &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="charliteral">&#39;-&#39;</span> &lt;&lt; a &lt;&lt; endl;</div>
-<div class="line"><a id="l02577" name="l02577"></a><span class="lineno"> 2577</span>                        }</div>
-<div class="line"><a id="l02578" name="l02578"></a><span class="lineno"> 2578</span>                    }</div>
-<div class="line"><a id="l02579" name="l02579"></a><span class="lineno"> 2579</span>                }</div>
-<div class="line"><a id="l02580" name="l02580"></a><span class="lineno"> 2580</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02581" name="l02581"></a><span class="lineno"> 2581</span>            }</div>
-<div class="ttc" id="aa02964_html"><div class="ttname"><a href="../../db/db9/a02964.html">pat::b::b1073::problem</a></div><div class="ttdoc">多选题</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00439">pat.h:439</a></div></div>
-<div class="ttc" id="aa02964_html_a046c7a4ef444cec1d2522e9c0fbd87d3"><div class="ttname"><a href="../../db/db9/a02964.html#a046c7a4ef444cec1d2522e9c0fbd87d3">pat::b::b1073::problem::score</a></div><div class="ttdeci">int score</div><div class="ttdoc">满分值</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00441">pat.h:441</a></div></div>
-<div class="ttc" id="aa02964_html_a56d29e2d96888a88f2f2be6e46642dbc"><div class="ttname"><a href="../../db/db9/a02964.html#a56d29e2d96888a88f2f2be6e46642dbc">pat::b::b1073::problem::ca</a></div><div class="ttdeci">unordered_set&lt; char &gt; ca</div><div class="ttdoc">正确选项</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00444">pat.h:444</a></div></div>
-<div class="ttc" id="aa02964_html_a80027b5b8c7433ff2b3308120bdf57ce"><div class="ttname"><a href="../../db/db9/a02964.html#a80027b5b8c7433ff2b3308120bdf57ce">pat::b::b1073::problem::id</a></div><div class="ttdeci">int id</div><div class="ttdoc">编号</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00440">pat.h:440</a></div></div>
-<div class="ttc" id="aa02964_html_abfa4f396f6d79fabbc0eb05007c86d7f"><div class="ttname"><a href="../../db/db9/a02964.html#abfa4f396f6d79fabbc0eb05007c86d7f">pat::b::b1073::problem::noa</a></div><div class="ttdeci">int noa</div><div class="ttdoc">选项个数</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00442">pat.h:442</a></div></div>
-<div class="ttc" id="aa02964_html_ae59889b907fb2a620f5d8317191fc641"><div class="ttname"><a href="../../db/db9/a02964.html#ae59889b907fb2a620f5d8317191fc641">pat::b::b1073::problem::noca</a></div><div class="ttdeci">int noca</div><div class="ttdoc">正确选项个数</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00443">pat.h:443</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02515">2515</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02515" name="l02515"></a><span class="lineno"> 2515</span>                                                  {</div>
+<div class="line"><a id="l02516" name="l02516"></a><span class="lineno"> 2516</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l02517" name="l02517"></a><span class="lineno"> 2517</span>                <span class="keywordtype">int</span> m;</div>
+<div class="line"><a id="l02518" name="l02518"></a><span class="lineno"> 2518</span>                cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l02519" name="l02519"></a><span class="lineno"> 2519</span>                vector&lt;problem&gt; problems(m);</div>
+<div class="line"><a id="l02520" name="l02520"></a><span class="lineno"> 2520</span>                map&lt;pair&lt;int, char&gt;, <span class="keywordtype">int</span>&gt; noe;</div>
+<div class="line"><a id="l02521" name="l02521"></a><span class="lineno"> 2521</span>                <span class="keywordtype">int</span> max_cnt = 0;</div>
+<div class="line"><a id="l02522" name="l02522"></a><span class="lineno"> 2522</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l02523" name="l02523"></a><span class="lineno"> 2523</span>                    <a class="code hl_struct" href="../../dd/d81/a02967.html">problem</a> p;</div>
+<div class="line"><a id="l02524" name="l02524"></a><span class="lineno"> 2524</span>                    p.<a class="code hl_variable" href="../../dd/d81/a02967.html#a80027b5b8c7433ff2b3308120bdf57ce">id</a> = i + 1;</div>
+<div class="line"><a id="l02525" name="l02525"></a><span class="lineno"> 2525</span>                    cin &gt;&gt; p.<a class="code hl_variable" href="../../dd/d81/a02967.html#a046c7a4ef444cec1d2522e9c0fbd87d3">score</a> &gt;&gt; p.<a class="code hl_variable" href="../../dd/d81/a02967.html#abfa4f396f6d79fabbc0eb05007c86d7f">noa</a> &gt;&gt; p.<a class="code hl_variable" href="../../dd/d81/a02967.html#ae59889b907fb2a620f5d8317191fc641">noca</a>;</div>
+<div class="line"><a id="l02526" name="l02526"></a><span class="lineno"> 2526</span>                    p.<a class="code hl_variable" href="../../dd/d81/a02967.html#a56d29e2d96888a88f2f2be6e46642dbc">ca</a> = unordered_set&lt;char&gt;();</div>
+<div class="line"><a id="l02527" name="l02527"></a><span class="lineno"> 2527</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; p.<a class="code hl_variable" href="../../dd/d81/a02967.html#ae59889b907fb2a620f5d8317191fc641">noca</a>; j++) {</div>
+<div class="line"><a id="l02528" name="l02528"></a><span class="lineno"> 2528</span>                        <span class="keywordtype">char</span> ca;</div>
+<div class="line"><a id="l02529" name="l02529"></a><span class="lineno"> 2529</span>                        cin &gt;&gt; ca;</div>
+<div class="line"><a id="l02530" name="l02530"></a><span class="lineno"> 2530</span>                        p.<a class="code hl_variable" href="../../dd/d81/a02967.html#a56d29e2d96888a88f2f2be6e46642dbc">ca</a>.insert(ca);</div>
+<div class="line"><a id="l02531" name="l02531"></a><span class="lineno"> 2531</span>                    }</div>
+<div class="line"><a id="l02532" name="l02532"></a><span class="lineno"> 2532</span>                    problems[i] = p;</div>
+<div class="line"><a id="l02533" name="l02533"></a><span class="lineno"> 2533</span>                }</div>
+<div class="line"><a id="l02534" name="l02534"></a><span class="lineno"> 2534</span>                <span class="keywordtype">char</span> ch;</div>
+<div class="line"><a id="l02535" name="l02535"></a><span class="lineno"> 2535</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l02536" name="l02536"></a><span class="lineno"> 2536</span>                    <span class="keywordtype">double</span> score = 0;</div>
+<div class="line"><a id="l02537" name="l02537"></a><span class="lineno"> 2537</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; m; j++) {</div>
+<div class="line"><a id="l02538" name="l02538"></a><span class="lineno"> 2538</span>                        unordered_set&lt;char&gt; as;</div>
+<div class="line"><a id="l02539" name="l02539"></a><span class="lineno"> 2539</span>                        cin &gt;&gt; ch;</div>
+<div class="line"><a id="l02540" name="l02540"></a><span class="lineno"> 2540</span>                        <span class="keywordtype">int</span> noa;</div>
+<div class="line"><a id="l02541" name="l02541"></a><span class="lineno"> 2541</span>                        cin &gt;&gt; noa;</div>
+<div class="line"><a id="l02542" name="l02542"></a><span class="lineno"> 2542</span>                        <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l02543" name="l02543"></a><span class="lineno"> 2543</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 0; k &lt; noa; k++) {</div>
+<div class="line"><a id="l02544" name="l02544"></a><span class="lineno"> 2544</span>                            <span class="keywordtype">char</span> a;</div>
+<div class="line"><a id="l02545" name="l02545"></a><span class="lineno"> 2545</span>                            cin &gt;&gt; a;</div>
+<div class="line"><a id="l02546" name="l02546"></a><span class="lineno"> 2546</span>                            as.insert(a);</div>
+<div class="line"><a id="l02547" name="l02547"></a><span class="lineno"> 2547</span>                            <span class="keywordflow">if</span>(!problems[j].ca.contains(a)) {</div>
+<div class="line"><a id="l02548" name="l02548"></a><span class="lineno"> 2548</span>                                noe[make_pair(problems[j].<span class="keywordtype">id</span>, a)]++;</div>
+<div class="line"><a id="l02549" name="l02549"></a><span class="lineno"> 2549</span>                                max_cnt = max(max_cnt, noe[make_pair(problems[j].<span class="keywordtype">id</span>, a)]);</div>
+<div class="line"><a id="l02550" name="l02550"></a><span class="lineno"> 2550</span>                                flag    = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l02551" name="l02551"></a><span class="lineno"> 2551</span>                            }</div>
+<div class="line"><a id="l02552" name="l02552"></a><span class="lineno"> 2552</span>                        }</div>
+<div class="line"><a id="l02553" name="l02553"></a><span class="lineno"> 2553</span>                        cin &gt;&gt; ch;</div>
+<div class="line"><a id="l02554" name="l02554"></a><span class="lineno"> 2554</span>                        <span class="keywordflow">for</span>(<span class="keyword">auto</span> a: problems[j].ca) {</div>
+<div class="line"><a id="l02555" name="l02555"></a><span class="lineno"> 2555</span>                            <span class="keywordflow">if</span>(!as.contains(a)) {</div>
+<div class="line"><a id="l02556" name="l02556"></a><span class="lineno"> 2556</span>                                noe[make_pair(problems[j].<span class="keywordtype">id</span>, a)]++;</div>
+<div class="line"><a id="l02557" name="l02557"></a><span class="lineno"> 2557</span>                                max_cnt = max(max_cnt, noe[make_pair(problems[j].<span class="keywordtype">id</span>, a)]);</div>
+<div class="line"><a id="l02558" name="l02558"></a><span class="lineno"> 2558</span>                            }</div>
+<div class="line"><a id="l02559" name="l02559"></a><span class="lineno"> 2559</span>                        }</div>
+<div class="line"><a id="l02560" name="l02560"></a><span class="lineno"> 2560</span>                        <span class="keywordflow">if</span>(!flag) {</div>
+<div class="line"><a id="l02561" name="l02561"></a><span class="lineno"> 2561</span>                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l02562" name="l02562"></a><span class="lineno"> 2562</span>                        }</div>
+<div class="line"><a id="l02563" name="l02563"></a><span class="lineno"> 2563</span>                        <span class="keywordflow">if</span>(noa == problems[j].noca) {</div>
+<div class="line"><a id="l02564" name="l02564"></a><span class="lineno"> 2564</span>                            score += problems[j].score;</div>
+<div class="line"><a id="l02565" name="l02565"></a><span class="lineno"> 2565</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02566" name="l02566"></a><span class="lineno"> 2566</span>                            score += <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(problems[j].score) / 2;</div>
+<div class="line"><a id="l02567" name="l02567"></a><span class="lineno"> 2567</span>                        }</div>
+<div class="line"><a id="l02568" name="l02568"></a><span class="lineno"> 2568</span>                    }</div>
+<div class="line"><a id="l02569" name="l02569"></a><span class="lineno"> 2569</span>                    cout &lt;&lt; fixed &lt;&lt; setprecision(1) &lt;&lt; score &lt;&lt; endl;</div>
+<div class="line"><a id="l02570" name="l02570"></a><span class="lineno"> 2570</span>                }</div>
+<div class="line"><a id="l02571" name="l02571"></a><span class="lineno"> 2571</span>                <span class="keywordflow">if</span>(noe.empty()) {</div>
+<div class="line"><a id="l02572" name="l02572"></a><span class="lineno"> 2572</span>                    cout &lt;&lt; <span class="stringliteral">&quot;Too simple&quot;</span>;</div>
+<div class="line"><a id="l02573" name="l02573"></a><span class="lineno"> 2573</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02574" name="l02574"></a><span class="lineno"> 2574</span>                    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[k, cnt]: noe) {</div>
+<div class="line"><a id="l02575" name="l02575"></a><span class="lineno"> 2575</span>                        <span class="keywordflow">if</span>(cnt == max_cnt) {</div>
+<div class="line"><a id="l02576" name="l02576"></a><span class="lineno"> 2576</span>                            <span class="keyword">const</span> <span class="keyword">auto</span> &amp;[id, a] = k;</div>
+<div class="line"><a id="l02577" name="l02577"></a><span class="lineno"> 2577</span>                            cout &lt;&lt; cnt &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="charliteral">&#39;-&#39;</span> &lt;&lt; a &lt;&lt; endl;</div>
+<div class="line"><a id="l02578" name="l02578"></a><span class="lineno"> 2578</span>                        }</div>
+<div class="line"><a id="l02579" name="l02579"></a><span class="lineno"> 2579</span>                    }</div>
+<div class="line"><a id="l02580" name="l02580"></a><span class="lineno"> 2580</span>                }</div>
+<div class="line"><a id="l02581" name="l02581"></a><span class="lineno"> 2581</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02582" name="l02582"></a><span class="lineno"> 2582</span>            }</div>
+<div class="ttc" id="aa02967_html"><div class="ttname"><a href="../../dd/d81/a02967.html">pat::b::b1073::problem</a></div><div class="ttdoc">多选题</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00440">pat.h:440</a></div></div>
+<div class="ttc" id="aa02967_html_a046c7a4ef444cec1d2522e9c0fbd87d3"><div class="ttname"><a href="../../dd/d81/a02967.html#a046c7a4ef444cec1d2522e9c0fbd87d3">pat::b::b1073::problem::score</a></div><div class="ttdeci">int score</div><div class="ttdoc">满分值</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00442">pat.h:442</a></div></div>
+<div class="ttc" id="aa02967_html_a56d29e2d96888a88f2f2be6e46642dbc"><div class="ttname"><a href="../../dd/d81/a02967.html#a56d29e2d96888a88f2f2be6e46642dbc">pat::b::b1073::problem::ca</a></div><div class="ttdeci">unordered_set&lt; char &gt; ca</div><div class="ttdoc">正确选项</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00445">pat.h:445</a></div></div>
+<div class="ttc" id="aa02967_html_a80027b5b8c7433ff2b3308120bdf57ce"><div class="ttname"><a href="../../dd/d81/a02967.html#a80027b5b8c7433ff2b3308120bdf57ce">pat::b::b1073::problem::id</a></div><div class="ttdeci">int id</div><div class="ttdoc">编号</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00441">pat.h:441</a></div></div>
+<div class="ttc" id="aa02967_html_abfa4f396f6d79fabbc0eb05007c86d7f"><div class="ttname"><a href="../../dd/d81/a02967.html#abfa4f396f6d79fabbc0eb05007c86d7f">pat::b::b1073::problem::noa</a></div><div class="ttdeci">int noa</div><div class="ttdoc">选项个数</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00443">pat.h:443</a></div></div>
+<div class="ttc" id="aa02967_html_ae59889b907fb2a620f5d8317191fc641"><div class="ttname"><a href="../../dd/d81/a02967.html#ae59889b907fb2a620f5d8317191fc641">pat::b::b1073::problem::noca</a></div><div class="ttdeci">int noca</div><div class="ttdoc">正确选项个数</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00444">pat.h:444</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d9/d2e/a00056_source.html#l00444">pat::b::b1073::problem::ca</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00440">pat::b::b1073::problem::id</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00442">pat::b::b1073::problem::noa</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00443">pat::b::b1073::problem::noca</a> , 以及 <a class="el" href="../../d9/d2e/a00056_source.html#l00441">pat::b::b1073::problem::score</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d9/d2e/a00056_source.html#l00445">pat::b::b1073::problem::ca</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00441">pat::b::b1073::problem::id</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00443">pat::b::b1073::problem::noa</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00444">pat::b::b1073::problem::noca</a> , 以及 <a class="el" href="../../d9/d2e/a00056_source.html#l00442">pat::b::b1073::problem::score</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l01192">TEST()</a>.</p>
 
@@ -252,7 +252,7 @@ $(function() {
 <div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02514">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02515">main()</a>.</p>
 
 </div>
 </div>
@@ -298,7 +298,7 @@ $(function() {
 <div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>                          out.str());</div>
 <div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>            }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02514">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02515">main()</a>.</p>
 
 </div>
 </div>

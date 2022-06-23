@@ -112,40 +112,40 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l01489">1489</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01489" name="l01489"></a><span class="lineno"> 1489</span>                                                  {</div>
-<div class="line"><a id="l01490" name="l01490"></a><span class="lineno"> 1490</span>                <span class="keywordtype">unsigned</span> n;</div>
-<div class="line"><a id="l01491" name="l01491"></a><span class="lineno"> 1491</span>                cin &gt;&gt; n;</div>
-<div class="line"><a id="l01492" name="l01492"></a><span class="lineno"> 1492</span>                vector&lt;unsigned&gt; vec(n);</div>
-<div class="line"><a id="l01493" name="l01493"></a><span class="lineno"> 1493</span>                vector&lt;unsigned&gt; l_max(n);</div>
-<div class="line"><a id="l01494" name="l01494"></a><span class="lineno"> 1494</span>                vector&lt;unsigned&gt; r_min(n);</div>
-<div class="line"><a id="l01495" name="l01495"></a><span class="lineno"> 1495</span>                <span class="keywordtype">unsigned</span> current = 0;</div>
-<div class="line"><a id="l01496" name="l01496"></a><span class="lineno"> 1496</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; n; ++i) {</div>
-<div class="line"><a id="l01497" name="l01497"></a><span class="lineno"> 1497</span>                    cin &gt;&gt; vec[i];</div>
-<div class="line"><a id="l01498" name="l01498"></a><span class="lineno"> 1498</span>                    l_max[i] = current;</div>
-<div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span>                    current  = max(current, vec[i]);</div>
-<div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span>                }</div>
-<div class="line"><a id="l01501" name="l01501"></a><span class="lineno"> 1501</span>                current = 1000000001;</div>
-<div class="line"><a id="l01502" name="l01502"></a><span class="lineno"> 1502</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = n - 1; i &gt;= 0; --i) {</div>
-<div class="line"><a id="l01503" name="l01503"></a><span class="lineno"> 1503</span>                    r_min[i] = current;</div>
-<div class="line"><a id="l01504" name="l01504"></a><span class="lineno"> 1504</span>                    current  = min(current, vec[i]);</div>
-<div class="line"><a id="l01505" name="l01505"></a><span class="lineno"> 1505</span>                }</div>
-<div class="line"><a id="l01506" name="l01506"></a><span class="lineno"> 1506</span>                vector&lt;unsigned&gt; ans;</div>
-<div class="line"><a id="l01507" name="l01507"></a><span class="lineno"> 1507</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; n; ++i) {</div>
-<div class="line"><a id="l01508" name="l01508"></a><span class="lineno"> 1508</span>                    <span class="keywordflow">if</span>(vec[i] &gt; l_max[i] &amp;&amp; vec[i] &lt; r_min[i]) {</div>
-<div class="line"><a id="l01509" name="l01509"></a><span class="lineno"> 1509</span>                        ans.push_back(vec[i]);</div>
-<div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span>                    }</div>
-<div class="line"><a id="l01511" name="l01511"></a><span class="lineno"> 1511</span>                }</div>
-<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>                cout &lt;&lt; ans.size() &lt;&lt; endl;</div>
-<div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; ans.size(); i++) {</div>
-<div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span>                    cout &lt;&lt; ans[i];</div>
-<div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span>                    <span class="keywordflow">if</span>(i != ans.size() - 1) {</div>
-<div class="line"><a id="l01516" name="l01516"></a><span class="lineno"> 1516</span>                        cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a id="l01517" name="l01517"></a><span class="lineno"> 1517</span>                    }</div>
-<div class="line"><a id="l01518" name="l01518"></a><span class="lineno"> 1518</span>                }</div>
-<div class="line"><a id="l01519" name="l01519"></a><span class="lineno"> 1519</span>                cout &lt;&lt; endl;</div>
-<div class="line"><a id="l01520" name="l01520"></a><span class="lineno"> 1520</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01521" name="l01521"></a><span class="lineno"> 1521</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l01490">1490</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01490" name="l01490"></a><span class="lineno"> 1490</span>                                                  {</div>
+<div class="line"><a id="l01491" name="l01491"></a><span class="lineno"> 1491</span>                <span class="keywordtype">unsigned</span> n;</div>
+<div class="line"><a id="l01492" name="l01492"></a><span class="lineno"> 1492</span>                cin &gt;&gt; n;</div>
+<div class="line"><a id="l01493" name="l01493"></a><span class="lineno"> 1493</span>                vector&lt;unsigned&gt; vec(n);</div>
+<div class="line"><a id="l01494" name="l01494"></a><span class="lineno"> 1494</span>                vector&lt;unsigned&gt; l_max(n);</div>
+<div class="line"><a id="l01495" name="l01495"></a><span class="lineno"> 1495</span>                vector&lt;unsigned&gt; r_min(n);</div>
+<div class="line"><a id="l01496" name="l01496"></a><span class="lineno"> 1496</span>                <span class="keywordtype">unsigned</span> current = 0;</div>
+<div class="line"><a id="l01497" name="l01497"></a><span class="lineno"> 1497</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><a id="l01498" name="l01498"></a><span class="lineno"> 1498</span>                    cin &gt;&gt; vec[i];</div>
+<div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span>                    l_max[i] = current;</div>
+<div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span>                    current  = max(current, vec[i]);</div>
+<div class="line"><a id="l01501" name="l01501"></a><span class="lineno"> 1501</span>                }</div>
+<div class="line"><a id="l01502" name="l01502"></a><span class="lineno"> 1502</span>                current = 1000000001;</div>
+<div class="line"><a id="l01503" name="l01503"></a><span class="lineno"> 1503</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = n - 1; i &gt;= 0; --i) {</div>
+<div class="line"><a id="l01504" name="l01504"></a><span class="lineno"> 1504</span>                    r_min[i] = current;</div>
+<div class="line"><a id="l01505" name="l01505"></a><span class="lineno"> 1505</span>                    current  = min(current, vec[i]);</div>
+<div class="line"><a id="l01506" name="l01506"></a><span class="lineno"> 1506</span>                }</div>
+<div class="line"><a id="l01507" name="l01507"></a><span class="lineno"> 1507</span>                vector&lt;unsigned&gt; ans;</div>
+<div class="line"><a id="l01508" name="l01508"></a><span class="lineno"> 1508</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><a id="l01509" name="l01509"></a><span class="lineno"> 1509</span>                    <span class="keywordflow">if</span>(vec[i] &gt; l_max[i] &amp;&amp; vec[i] &lt; r_min[i]) {</div>
+<div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span>                        ans.push_back(vec[i]);</div>
+<div class="line"><a id="l01511" name="l01511"></a><span class="lineno"> 1511</span>                    }</div>
+<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>                }</div>
+<div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span>                cout &lt;&lt; ans.size() &lt;&lt; endl;</div>
+<div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; ans.size(); i++) {</div>
+<div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span>                    cout &lt;&lt; ans[i];</div>
+<div class="line"><a id="l01516" name="l01516"></a><span class="lineno"> 1516</span>                    <span class="keywordflow">if</span>(i != ans.size() - 1) {</div>
+<div class="line"><a id="l01517" name="l01517"></a><span class="lineno"> 1517</span>                        cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a id="l01518" name="l01518"></a><span class="lineno"> 1518</span>                    }</div>
+<div class="line"><a id="l01519" name="l01519"></a><span class="lineno"> 1519</span>                }</div>
+<div class="line"><a id="l01520" name="l01520"></a><span class="lineno"> 1520</span>                cout &lt;&lt; endl;</div>
+<div class="line"><a id="l01521" name="l01521"></a><span class="lineno"> 1521</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01522" name="l01522"></a><span class="lineno"> 1522</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l00701">TEST()</a>.</p>
 
@@ -190,7 +190,7 @@ $(function() {
 <div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l01489">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l01490">main()</a>.</p>
 
 </div>
 </div>

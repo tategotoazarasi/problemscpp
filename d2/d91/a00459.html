@@ -114,37 +114,37 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02301">2301</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02301" name="l02301"></a><span class="lineno"> 2301</span>                                                  {</div>
-<div class="line"><a id="l02302" name="l02302"></a><span class="lineno"> 2302</span>                <span class="keywordtype">string</span> pwd;</div>
-<div class="line"><a id="l02303" name="l02303"></a><span class="lineno"> 2303</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l02304" name="l02304"></a><span class="lineno"> 2304</span>                cin &gt;&gt; pwd &gt;&gt; n;</div>
-<div class="line"><a id="l02305" name="l02305"></a><span class="lineno"> 2305</span>                <span class="keywordtype">int</span> cnt = 0;</div>
-<div class="line"><a id="l02306" name="l02306"></a><span class="lineno"> 2306</span>                <span class="keywordtype">char</span> s[1024];</div>
-<div class="line"><a id="l02307" name="l02307"></a><span class="lineno"> 2307</span>                cin.getline(s, 1024);</div>
-<div class="line"><a id="l02308" name="l02308"></a><span class="lineno"> 2308</span>                <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
-<div class="line"><a id="l02309" name="l02309"></a><span class="lineno"> 2309</span>                    cin.getline(s, 1024);</div>
-<div class="line"><a id="l02310" name="l02310"></a><span class="lineno"> 2310</span>                    <span class="keyword">auto</span> str = string(s);</div>
-<div class="line"><a id="l02311" name="l02311"></a><span class="lineno"> 2311</span>                    <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;#&quot;</span>) {</div>
-<div class="line"><a id="l02312" name="l02312"></a><span class="lineno"> 2312</span>                        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02313" name="l02313"></a><span class="lineno"> 2313</span>                    }</div>
-<div class="line"><a id="l02314" name="l02314"></a><span class="lineno"> 2314</span>                    <span class="keywordflow">if</span>(cnt == n) {</div>
-<div class="line"><a id="l02315" name="l02315"></a><span class="lineno"> 2315</span>                        cout &lt;&lt; <span class="stringliteral">&quot;Account locked&quot;</span>;</div>
-<div class="line"><a id="l02316" name="l02316"></a><span class="lineno"> 2316</span>                        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02317" name="l02317"></a><span class="lineno"> 2317</span>                    }</div>
-<div class="line"><a id="l02318" name="l02318"></a><span class="lineno"> 2318</span>                    <span class="keywordflow">if</span>(str != pwd) {</div>
-<div class="line"><a id="l02319" name="l02319"></a><span class="lineno"> 2319</span>                        cout &lt;&lt; <span class="stringliteral">&quot;Wrong password: &quot;</span> &lt;&lt; str &lt;&lt; endl;</div>
-<div class="line"><a id="l02320" name="l02320"></a><span class="lineno"> 2320</span>                        cnt++;</div>
-<div class="line"><a id="l02321" name="l02321"></a><span class="lineno"> 2321</span>                        <span class="keywordflow">if</span>(cnt == n) {</div>
-<div class="line"><a id="l02322" name="l02322"></a><span class="lineno"> 2322</span>                            cout &lt;&lt; <span class="stringliteral">&quot;Account locked&quot;</span>;</div>
-<div class="line"><a id="l02323" name="l02323"></a><span class="lineno"> 2323</span>                            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02324" name="l02324"></a><span class="lineno"> 2324</span>                        }</div>
-<div class="line"><a id="l02325" name="l02325"></a><span class="lineno"> 2325</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02326" name="l02326"></a><span class="lineno"> 2326</span>                        cout &lt;&lt; <span class="stringliteral">&quot;Welcome in&quot;</span>;</div>
-<div class="line"><a id="l02327" name="l02327"></a><span class="lineno"> 2327</span>                        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02328" name="l02328"></a><span class="lineno"> 2328</span>                    }</div>
-<div class="line"><a id="l02329" name="l02329"></a><span class="lineno"> 2329</span>                }</div>
-<div class="line"><a id="l02330" name="l02330"></a><span class="lineno"> 2330</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02302">2302</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02302" name="l02302"></a><span class="lineno"> 2302</span>                                                  {</div>
+<div class="line"><a id="l02303" name="l02303"></a><span class="lineno"> 2303</span>                <span class="keywordtype">string</span> pwd;</div>
+<div class="line"><a id="l02304" name="l02304"></a><span class="lineno"> 2304</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l02305" name="l02305"></a><span class="lineno"> 2305</span>                cin &gt;&gt; pwd &gt;&gt; n;</div>
+<div class="line"><a id="l02306" name="l02306"></a><span class="lineno"> 2306</span>                <span class="keywordtype">int</span> cnt = 0;</div>
+<div class="line"><a id="l02307" name="l02307"></a><span class="lineno"> 2307</span>                <span class="keywordtype">char</span> s[1024];</div>
+<div class="line"><a id="l02308" name="l02308"></a><span class="lineno"> 2308</span>                cin.getline(s, 1024);</div>
+<div class="line"><a id="l02309" name="l02309"></a><span class="lineno"> 2309</span>                <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
+<div class="line"><a id="l02310" name="l02310"></a><span class="lineno"> 2310</span>                    cin.getline(s, 1024);</div>
+<div class="line"><a id="l02311" name="l02311"></a><span class="lineno"> 2311</span>                    <span class="keyword">auto</span> str = string(s);</div>
+<div class="line"><a id="l02312" name="l02312"></a><span class="lineno"> 2312</span>                    <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;#&quot;</span>) {</div>
+<div class="line"><a id="l02313" name="l02313"></a><span class="lineno"> 2313</span>                        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02314" name="l02314"></a><span class="lineno"> 2314</span>                    }</div>
+<div class="line"><a id="l02315" name="l02315"></a><span class="lineno"> 2315</span>                    <span class="keywordflow">if</span>(cnt == n) {</div>
+<div class="line"><a id="l02316" name="l02316"></a><span class="lineno"> 2316</span>                        cout &lt;&lt; <span class="stringliteral">&quot;Account locked&quot;</span>;</div>
+<div class="line"><a id="l02317" name="l02317"></a><span class="lineno"> 2317</span>                        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02318" name="l02318"></a><span class="lineno"> 2318</span>                    }</div>
+<div class="line"><a id="l02319" name="l02319"></a><span class="lineno"> 2319</span>                    <span class="keywordflow">if</span>(str != pwd) {</div>
+<div class="line"><a id="l02320" name="l02320"></a><span class="lineno"> 2320</span>                        cout &lt;&lt; <span class="stringliteral">&quot;Wrong password: &quot;</span> &lt;&lt; str &lt;&lt; endl;</div>
+<div class="line"><a id="l02321" name="l02321"></a><span class="lineno"> 2321</span>                        cnt++;</div>
+<div class="line"><a id="l02322" name="l02322"></a><span class="lineno"> 2322</span>                        <span class="keywordflow">if</span>(cnt == n) {</div>
+<div class="line"><a id="l02323" name="l02323"></a><span class="lineno"> 2323</span>                            cout &lt;&lt; <span class="stringliteral">&quot;Account locked&quot;</span>;</div>
+<div class="line"><a id="l02324" name="l02324"></a><span class="lineno"> 2324</span>                            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02325" name="l02325"></a><span class="lineno"> 2325</span>                        }</div>
+<div class="line"><a id="l02326" name="l02326"></a><span class="lineno"> 2326</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02327" name="l02327"></a><span class="lineno"> 2327</span>                        cout &lt;&lt; <span class="stringliteral">&quot;Welcome in&quot;</span>;</div>
+<div class="line"><a id="l02328" name="l02328"></a><span class="lineno"> 2328</span>                        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02329" name="l02329"></a><span class="lineno"> 2329</span>                    }</div>
+<div class="line"><a id="l02330" name="l02330"></a><span class="lineno"> 2330</span>                }</div>
+<div class="line"><a id="l02331" name="l02331"></a><span class="lineno"> 2331</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l01022">TEST()</a>.</p>
 
@@ -195,7 +195,7 @@ $(function() {
 <div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02301">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02302">main()</a>.</p>
 
 </div>
 </div>
@@ -242,7 +242,7 @@ $(function() {
 <div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>                          out.str());</div>
 <div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>            }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02301">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02302">main()</a>.</p>
 
 </div>
 </div>

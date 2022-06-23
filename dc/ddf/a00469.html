@@ -114,49 +114,49 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02689">2689</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02689" name="l02689"></a><span class="lineno"> 2689</span>                                                  {</div>
-<div class="line"><a id="l02690" name="l02690"></a><span class="lineno"> 2690</span>                <span class="keywordtype">char</span> op;</div>
-<div class="line"><a id="l02691" name="l02691"></a><span class="lineno"> 2691</span>                cin &gt;&gt; op;</div>
-<div class="line"><a id="l02692" name="l02692"></a><span class="lineno"> 2692</span>                <span class="keywordtype">char</span> str[1024];</div>
-<div class="line"><a id="l02693" name="l02693"></a><span class="lineno"> 2693</span>                cin.getline(str, 1024);</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02690">2690</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02690" name="l02690"></a><span class="lineno"> 2690</span>                                                  {</div>
+<div class="line"><a id="l02691" name="l02691"></a><span class="lineno"> 2691</span>                <span class="keywordtype">char</span> op;</div>
+<div class="line"><a id="l02692" name="l02692"></a><span class="lineno"> 2692</span>                cin &gt;&gt; op;</div>
+<div class="line"><a id="l02693" name="l02693"></a><span class="lineno"> 2693</span>                <span class="keywordtype">char</span> str[1024];</div>
 <div class="line"><a id="l02694" name="l02694"></a><span class="lineno"> 2694</span>                cin.getline(str, 1024);</div>
-<div class="line"><a id="l02695" name="l02695"></a><span class="lineno"> 2695</span>                <span class="keywordflow">if</span>(op == <span class="charliteral">&#39;C&#39;</span>) {</div>
-<div class="line"><a id="l02696" name="l02696"></a><span class="lineno"> 2696</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; strlen(str); i++) {</div>
-<div class="line"><a id="l02697" name="l02697"></a><span class="lineno"> 2697</span>                        <span class="keywordtype">int</span> n = 1;</div>
-<div class="line"><a id="l02698" name="l02698"></a><span class="lineno"> 2698</span>                        <span class="keywordflow">while</span>(i + 1 &lt; strlen(str) &amp;&amp; str[i] == str[i + 1]) {</div>
-<div class="line"><a id="l02699" name="l02699"></a><span class="lineno"> 2699</span>                            n++;</div>
-<div class="line"><a id="l02700" name="l02700"></a><span class="lineno"> 2700</span>                            i++;</div>
-<div class="line"><a id="l02701" name="l02701"></a><span class="lineno"> 2701</span>                        }</div>
-<div class="line"><a id="l02702" name="l02702"></a><span class="lineno"> 2702</span>                        <span class="keywordflow">if</span>(n &gt; 1) {</div>
-<div class="line"><a id="l02703" name="l02703"></a><span class="lineno"> 2703</span>                            cout &lt;&lt; n;</div>
-<div class="line"><a id="l02704" name="l02704"></a><span class="lineno"> 2704</span>                        }</div>
-<div class="line"><a id="l02705" name="l02705"></a><span class="lineno"> 2705</span>                        cout &lt;&lt; str[i];</div>
-<div class="line"><a id="l02706" name="l02706"></a><span class="lineno"> 2706</span>                    }</div>
-<div class="line"><a id="l02707" name="l02707"></a><span class="lineno"> 2707</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02708" name="l02708"></a><span class="lineno"> 2708</span>                    <span class="comment">//op==&#39;D&#39;</span></div>
-<div class="line"><a id="l02709" name="l02709"></a><span class="lineno"> 2709</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; strlen(str); i++) {</div>
-<div class="line"><a id="l02710" name="l02710"></a><span class="lineno"> 2710</span>                        <span class="keywordflow">if</span>(isdigit(str[i]) != 0) {</div>
-<div class="line"><a id="l02711" name="l02711"></a><span class="lineno"> 2711</span>                            stringstream ss;</div>
-<div class="line"><a id="l02712" name="l02712"></a><span class="lineno"> 2712</span>                            <span class="keywordflow">for</span>(; i &lt; strlen(str); i++) {</div>
-<div class="line"><a id="l02713" name="l02713"></a><span class="lineno"> 2713</span>                                <span class="keywordflow">if</span>(isdigit(str[i]) != 0) {</div>
-<div class="line"><a id="l02714" name="l02714"></a><span class="lineno"> 2714</span>                                    ss &lt;&lt; str[i];</div>
-<div class="line"><a id="l02715" name="l02715"></a><span class="lineno"> 2715</span>                                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02716" name="l02716"></a><span class="lineno"> 2716</span>                                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l02717" name="l02717"></a><span class="lineno"> 2717</span>                                }</div>
-<div class="line"><a id="l02718" name="l02718"></a><span class="lineno"> 2718</span>                            }</div>
-<div class="line"><a id="l02719" name="l02719"></a><span class="lineno"> 2719</span>                            <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l02720" name="l02720"></a><span class="lineno"> 2720</span>                            ss &gt;&gt; n;</div>
-<div class="line"><a id="l02721" name="l02721"></a><span class="lineno"> 2721</span>                            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l02722" name="l02722"></a><span class="lineno"> 2722</span>                                cout &lt;&lt; str[i];</div>
-<div class="line"><a id="l02723" name="l02723"></a><span class="lineno"> 2723</span>                            }</div>
-<div class="line"><a id="l02724" name="l02724"></a><span class="lineno"> 2724</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02725" name="l02725"></a><span class="lineno"> 2725</span>                            cout &lt;&lt; str[i];</div>
-<div class="line"><a id="l02726" name="l02726"></a><span class="lineno"> 2726</span>                        }</div>
-<div class="line"><a id="l02727" name="l02727"></a><span class="lineno"> 2727</span>                    }</div>
-<div class="line"><a id="l02728" name="l02728"></a><span class="lineno"> 2728</span>                }</div>
-<div class="line"><a id="l02729" name="l02729"></a><span class="lineno"> 2729</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02730" name="l02730"></a><span class="lineno"> 2730</span>            }</div>
+<div class="line"><a id="l02695" name="l02695"></a><span class="lineno"> 2695</span>                cin.getline(str, 1024);</div>
+<div class="line"><a id="l02696" name="l02696"></a><span class="lineno"> 2696</span>                <span class="keywordflow">if</span>(op == <span class="charliteral">&#39;C&#39;</span>) {</div>
+<div class="line"><a id="l02697" name="l02697"></a><span class="lineno"> 2697</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; strlen(str); i++) {</div>
+<div class="line"><a id="l02698" name="l02698"></a><span class="lineno"> 2698</span>                        <span class="keywordtype">int</span> n = 1;</div>
+<div class="line"><a id="l02699" name="l02699"></a><span class="lineno"> 2699</span>                        <span class="keywordflow">while</span>(i + 1 &lt; strlen(str) &amp;&amp; str[i] == str[i + 1]) {</div>
+<div class="line"><a id="l02700" name="l02700"></a><span class="lineno"> 2700</span>                            n++;</div>
+<div class="line"><a id="l02701" name="l02701"></a><span class="lineno"> 2701</span>                            i++;</div>
+<div class="line"><a id="l02702" name="l02702"></a><span class="lineno"> 2702</span>                        }</div>
+<div class="line"><a id="l02703" name="l02703"></a><span class="lineno"> 2703</span>                        <span class="keywordflow">if</span>(n &gt; 1) {</div>
+<div class="line"><a id="l02704" name="l02704"></a><span class="lineno"> 2704</span>                            cout &lt;&lt; n;</div>
+<div class="line"><a id="l02705" name="l02705"></a><span class="lineno"> 2705</span>                        }</div>
+<div class="line"><a id="l02706" name="l02706"></a><span class="lineno"> 2706</span>                        cout &lt;&lt; str[i];</div>
+<div class="line"><a id="l02707" name="l02707"></a><span class="lineno"> 2707</span>                    }</div>
+<div class="line"><a id="l02708" name="l02708"></a><span class="lineno"> 2708</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02709" name="l02709"></a><span class="lineno"> 2709</span>                    <span class="comment">//op==&#39;D&#39;</span></div>
+<div class="line"><a id="l02710" name="l02710"></a><span class="lineno"> 2710</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; strlen(str); i++) {</div>
+<div class="line"><a id="l02711" name="l02711"></a><span class="lineno"> 2711</span>                        <span class="keywordflow">if</span>(isdigit(str[i]) != 0) {</div>
+<div class="line"><a id="l02712" name="l02712"></a><span class="lineno"> 2712</span>                            stringstream ss;</div>
+<div class="line"><a id="l02713" name="l02713"></a><span class="lineno"> 2713</span>                            <span class="keywordflow">for</span>(; i &lt; strlen(str); i++) {</div>
+<div class="line"><a id="l02714" name="l02714"></a><span class="lineno"> 2714</span>                                <span class="keywordflow">if</span>(isdigit(str[i]) != 0) {</div>
+<div class="line"><a id="l02715" name="l02715"></a><span class="lineno"> 2715</span>                                    ss &lt;&lt; str[i];</div>
+<div class="line"><a id="l02716" name="l02716"></a><span class="lineno"> 2716</span>                                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02717" name="l02717"></a><span class="lineno"> 2717</span>                                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l02718" name="l02718"></a><span class="lineno"> 2718</span>                                }</div>
+<div class="line"><a id="l02719" name="l02719"></a><span class="lineno"> 2719</span>                            }</div>
+<div class="line"><a id="l02720" name="l02720"></a><span class="lineno"> 2720</span>                            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l02721" name="l02721"></a><span class="lineno"> 2721</span>                            ss &gt;&gt; n;</div>
+<div class="line"><a id="l02722" name="l02722"></a><span class="lineno"> 2722</span>                            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><a id="l02723" name="l02723"></a><span class="lineno"> 2723</span>                                cout &lt;&lt; str[i];</div>
+<div class="line"><a id="l02724" name="l02724"></a><span class="lineno"> 2724</span>                            }</div>
+<div class="line"><a id="l02725" name="l02725"></a><span class="lineno"> 2725</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l02726" name="l02726"></a><span class="lineno"> 2726</span>                            cout &lt;&lt; str[i];</div>
+<div class="line"><a id="l02727" name="l02727"></a><span class="lineno"> 2727</span>                        }</div>
+<div class="line"><a id="l02728" name="l02728"></a><span class="lineno"> 2728</span>                    }</div>
+<div class="line"><a id="l02729" name="l02729"></a><span class="lineno"> 2729</span>                }</div>
+<div class="line"><a id="l02730" name="l02730"></a><span class="lineno"> 2730</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02731" name="l02731"></a><span class="lineno"> 2731</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l01288">TEST()</a>.</p>
 
@@ -199,7 +199,7 @@ $(function() {
 <div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02689">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02690">main()</a>.</p>
 
 </div>
 </div>
@@ -239,7 +239,7 @@ $(function() {
 <div class="line"><a id="l01303" name="l01303"></a><span class="lineno"> 1303</span>                ASSERT_EQ(<span class="stringliteral">&quot;TTTTThhiiiis isssss a   tesssst CAaaa asZZZZZZZZZZ&quot;</span>, out.str());</div>
 <div class="line"><a id="l01304" name="l01304"></a><span class="lineno"> 1304</span>            }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02689">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02690">main()</a>.</p>
 
 </div>
 </div>

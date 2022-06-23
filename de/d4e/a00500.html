@@ -112,26 +112,26 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03832">3832</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03832" name="l03832"></a><span class="lineno"> 3832</span>                                                  {</div>
-<div class="line"><a id="l03833" name="l03833"></a><span class="lineno"> 3833</span>                unordered_map&lt;char, int&gt; um;</div>
-<div class="line"><a id="l03834" name="l03834"></a><span class="lineno"> 3834</span>                <span class="keywordtype">char</span> ch;</div>
-<div class="line"><a id="l03835" name="l03835"></a><span class="lineno"> 3835</span>                <span class="keywordflow">while</span>(cin &gt;&gt; ch) {</div>
-<div class="line"><a id="l03836" name="l03836"></a><span class="lineno"> 3836</span>                    um[ch]++;</div>
-<div class="line"><a id="l03837" name="l03837"></a><span class="lineno"> 3837</span>                }</div>
-<div class="line"><a id="l03838" name="l03838"></a><span class="lineno"> 3838</span>                <span class="keyword">const</span> <span class="keywordtype">char</span> word[6] = {<span class="charliteral">&#39;S&#39;</span>, <span class="charliteral">&#39;t&#39;</span>, <span class="charliteral">&#39;r&#39;</span>, <span class="charliteral">&#39;i&#39;</span>, <span class="charliteral">&#39;n&#39;</span>, <span class="charliteral">&#39;g&#39;</span>};</div>
-<div class="line"><a id="l03839" name="l03839"></a><span class="lineno"> 3839</span>                <span class="keywordtype">int</span> cnt            = 0;</div>
-<div class="line"><a id="l03840" name="l03840"></a><span class="lineno"> 3840</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; cnt &lt; 6; i++, i %= 6) {</div>
-<div class="line"><a id="l03841" name="l03841"></a><span class="lineno"> 3841</span>                    <span class="keywordflow">if</span>(um[word[i]] &gt; 0) {</div>
-<div class="line"><a id="l03842" name="l03842"></a><span class="lineno"> 3842</span>                        cout &lt;&lt; word[i];</div>
-<div class="line"><a id="l03843" name="l03843"></a><span class="lineno"> 3843</span>                        um[word[i]]--;</div>
-<div class="line"><a id="l03844" name="l03844"></a><span class="lineno"> 3844</span>                        cnt = 0;</div>
-<div class="line"><a id="l03845" name="l03845"></a><span class="lineno"> 3845</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03846" name="l03846"></a><span class="lineno"> 3846</span>                        cnt++;</div>
-<div class="line"><a id="l03847" name="l03847"></a><span class="lineno"> 3847</span>                    }</div>
-<div class="line"><a id="l03848" name="l03848"></a><span class="lineno"> 3848</span>                }</div>
-<div class="line"><a id="l03849" name="l03849"></a><span class="lineno"> 3849</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l03850" name="l03850"></a><span class="lineno"> 3850</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03833">3833</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l03833" name="l03833"></a><span class="lineno"> 3833</span>                                                  {</div>
+<div class="line"><a id="l03834" name="l03834"></a><span class="lineno"> 3834</span>                unordered_map&lt;char, int&gt; um;</div>
+<div class="line"><a id="l03835" name="l03835"></a><span class="lineno"> 3835</span>                <span class="keywordtype">char</span> ch;</div>
+<div class="line"><a id="l03836" name="l03836"></a><span class="lineno"> 3836</span>                <span class="keywordflow">while</span>(cin &gt;&gt; ch) {</div>
+<div class="line"><a id="l03837" name="l03837"></a><span class="lineno"> 3837</span>                    um[ch]++;</div>
+<div class="line"><a id="l03838" name="l03838"></a><span class="lineno"> 3838</span>                }</div>
+<div class="line"><a id="l03839" name="l03839"></a><span class="lineno"> 3839</span>                <span class="keyword">const</span> <span class="keywordtype">char</span> word[6] = {<span class="charliteral">&#39;S&#39;</span>, <span class="charliteral">&#39;t&#39;</span>, <span class="charliteral">&#39;r&#39;</span>, <span class="charliteral">&#39;i&#39;</span>, <span class="charliteral">&#39;n&#39;</span>, <span class="charliteral">&#39;g&#39;</span>};</div>
+<div class="line"><a id="l03840" name="l03840"></a><span class="lineno"> 3840</span>                <span class="keywordtype">int</span> cnt            = 0;</div>
+<div class="line"><a id="l03841" name="l03841"></a><span class="lineno"> 3841</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; cnt &lt; 6; i++, i %= 6) {</div>
+<div class="line"><a id="l03842" name="l03842"></a><span class="lineno"> 3842</span>                    <span class="keywordflow">if</span>(um[word[i]] &gt; 0) {</div>
+<div class="line"><a id="l03843" name="l03843"></a><span class="lineno"> 3843</span>                        cout &lt;&lt; word[i];</div>
+<div class="line"><a id="l03844" name="l03844"></a><span class="lineno"> 3844</span>                        um[word[i]]--;</div>
+<div class="line"><a id="l03845" name="l03845"></a><span class="lineno"> 3845</span>                        cnt = 0;</div>
+<div class="line"><a id="l03846" name="l03846"></a><span class="lineno"> 3846</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l03847" name="l03847"></a><span class="lineno"> 3847</span>                        cnt++;</div>
+<div class="line"><a id="l03848" name="l03848"></a><span class="lineno"> 3848</span>                    }</div>
+<div class="line"><a id="l03849" name="l03849"></a><span class="lineno"> 3849</span>                }</div>
+<div class="line"><a id="l03850" name="l03850"></a><span class="lineno"> 3850</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l03851" name="l03851"></a><span class="lineno"> 3851</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l01905">TEST()</a>.</p>
 
@@ -173,7 +173,7 @@ $(function() {
 <div class="line"><a id="l01911" name="l01911"></a><span class="lineno"> 1911</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03832">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03833">main()</a>.</p>
 
 </div>
 </div>

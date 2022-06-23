@@ -112,29 +112,29 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l00153">153</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                                                  {</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                cin &gt;&gt; n;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                vector&lt;tuple&lt;string, string, unsigned short&gt;&gt; vec(n);</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                    <span class="keywordtype">string</span> name;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                    <span class="keywordtype">string</span> id;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                    <span class="keywordtype">int</span> grade;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                    cin &gt;&gt; name &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; grade;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                    vec[i] = make_tuple(name, <span class="keywordtype">id</span>, grade);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                }</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                sort(vec.begin(), vec.end(), [](<span class="keyword">const</span> tuple&lt;string, string, unsigned short&gt; &amp;a, <span class="keyword">const</span> tuple&lt;string, string, unsigned short&gt; &amp;b) -&gt; <span class="keywordtype">bool</span> {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                    const auto &amp;[a_name, a_id, a_grade] = a;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                    const auto &amp;[b_name, b_id, b_grade] = b;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                    return a_grade &lt; b_grade;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                });</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                <span class="keyword">auto</span> [highest_name, highest_id, highest_grade] = vec.back();</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                <span class="keyword">auto</span> [lowest_name, lowest_id, lowest_grade]    = vec.front();</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                cout &lt;&lt; highest_name &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; highest_id &lt;&lt; endl</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                     &lt;&lt; lowest_name &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; lowest_id;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l00154">154</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                                                  {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                cin &gt;&gt; n;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                vector&lt;tuple&lt;string, string, unsigned short&gt;&gt; vec(n);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                    <span class="keywordtype">string</span> name;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                    <span class="keywordtype">string</span> id;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                    <span class="keywordtype">int</span> grade;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                    cin &gt;&gt; name &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; grade;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                    vec[i] = make_tuple(name, <span class="keywordtype">id</span>, grade);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                sort(vec.begin(), vec.end(), [](<span class="keyword">const</span> tuple&lt;string, string, unsigned short&gt; &amp;a, <span class="keyword">const</span> tuple&lt;string, string, unsigned short&gt; &amp;b) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                    const auto &amp;[a_name, a_id, a_grade] = a;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                    const auto &amp;[b_name, b_id, b_grade] = b;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                    return a_grade &lt; b_grade;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                });</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                <span class="keyword">auto</span> [highest_name, highest_id, highest_grade] = vec.back();</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                <span class="keyword">auto</span> [lowest_name, lowest_id, lowest_grade]    = vec.front();</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                cout &lt;&lt; highest_name &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; highest_id &lt;&lt; endl</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                     &lt;&lt; lowest_name &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; lowest_id;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l00059">TEST()</a>.</p>
 
@@ -181,7 +181,7 @@ $(function() {
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l00153">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l00154">main()</a>.</p>
 
 </div>
 </div>

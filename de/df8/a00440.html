@@ -112,46 +112,46 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l01576">1576</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01576" name="l01576"></a><span class="lineno"> 1576</span>                                                  {</div>
-<div class="line"><a id="l01577" name="l01577"></a><span class="lineno"> 1577</span>                <span class="keywordtype">string</span> a;</div>
-<div class="line"><a id="l01578" name="l01578"></a><span class="lineno"> 1578</span>                <span class="keywordtype">string</span> b;</div>
-<div class="line"><a id="l01579" name="l01579"></a><span class="lineno"> 1579</span>                cin &gt;&gt; a &gt;&gt; b;</div>
-<div class="line"><a id="l01580" name="l01580"></a><span class="lineno"> 1580</span>                vector&lt;char&gt; ans;</div>
-<div class="line"><a id="l01581" name="l01581"></a><span class="lineno"> 1581</span>                <span class="keywordtype">int</span> i = 1;</div>
-<div class="line"><a id="l01582" name="l01582"></a><span class="lineno"> 1582</span>                <span class="keywordflow">for</span>(; i &lt;= max(b.length(), a.length()); ++i) {</div>
-<div class="line"><a id="l01583" name="l01583"></a><span class="lineno"> 1583</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> bi = b.length() &gt;= i ? b[b.length() - i] - <span class="charliteral">&#39;0&#39;</span> : 0;</div>
-<div class="line"><a id="l01584" name="l01584"></a><span class="lineno"> 1584</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> ai = a.length() &gt;= i ? a[a.length() - i] - <span class="charliteral">&#39;0&#39;</span> : 0;</div>
-<div class="line"><a id="l01585" name="l01585"></a><span class="lineno"> 1585</span>                    <span class="keywordflow">if</span>(i % 2 != 0) {</div>
-<div class="line"><a id="l01586" name="l01586"></a><span class="lineno"> 1586</span>                        <span class="keywordtype">char</span> ret = (ai + bi) % 13;</div>
-<div class="line"><a id="l01587" name="l01587"></a><span class="lineno"> 1587</span>                        <span class="keywordflow">switch</span>(ret) {</div>
-<div class="line"><a id="l01588" name="l01588"></a><span class="lineno"> 1588</span>                            <span class="keywordflow">case</span> 10:</div>
-<div class="line"><a id="l01589" name="l01589"></a><span class="lineno"> 1589</span>                                ret = <span class="charliteral">&#39;J&#39;</span>;</div>
-<div class="line"><a id="l01590" name="l01590"></a><span class="lineno"> 1590</span>                                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l01591" name="l01591"></a><span class="lineno"> 1591</span>                            <span class="keywordflow">case</span> 11:</div>
-<div class="line"><a id="l01592" name="l01592"></a><span class="lineno"> 1592</span>                                ret = <span class="charliteral">&#39;Q&#39;</span>;</div>
-<div class="line"><a id="l01593" name="l01593"></a><span class="lineno"> 1593</span>                                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l01594" name="l01594"></a><span class="lineno"> 1594</span>                            <span class="keywordflow">case</span> 12:</div>
-<div class="line"><a id="l01595" name="l01595"></a><span class="lineno"> 1595</span>                                ret = <span class="charliteral">&#39;K&#39;</span>;</div>
-<div class="line"><a id="l01596" name="l01596"></a><span class="lineno"> 1596</span>                                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l01597" name="l01597"></a><span class="lineno"> 1597</span>                            <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l01598" name="l01598"></a><span class="lineno"> 1598</span>                                ret += <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l01599" name="l01599"></a><span class="lineno"> 1599</span>                                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l01600" name="l01600"></a><span class="lineno"> 1600</span>                        }</div>
-<div class="line"><a id="l01601" name="l01601"></a><span class="lineno"> 1601</span>                        ans.push_back(ret);</div>
-<div class="line"><a id="l01602" name="l01602"></a><span class="lineno"> 1602</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01603" name="l01603"></a><span class="lineno"> 1603</span>                        <span class="keywordtype">int</span> ret = bi - ai;</div>
-<div class="line"><a id="l01604" name="l01604"></a><span class="lineno"> 1604</span>                        <span class="keywordflow">if</span>(ret &lt; 0) {</div>
-<div class="line"><a id="l01605" name="l01605"></a><span class="lineno"> 1605</span>                            ret += 10;</div>
-<div class="line"><a id="l01606" name="l01606"></a><span class="lineno"> 1606</span>                        }</div>
-<div class="line"><a id="l01607" name="l01607"></a><span class="lineno"> 1607</span>                        ans.push_back(ret + <span class="charliteral">&#39;0&#39;</span>);</div>
-<div class="line"><a id="l01608" name="l01608"></a><span class="lineno"> 1608</span>                    }</div>
-<div class="line"><a id="l01609" name="l01609"></a><span class="lineno"> 1609</span>                }</div>
-<div class="line"><a id="l01610" name="l01610"></a><span class="lineno"> 1610</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = ans.rbegin(); it != ans.rend(); ++it) {</div>
-<div class="line"><a id="l01611" name="l01611"></a><span class="lineno"> 1611</span>                    cout &lt;&lt; *it;</div>
-<div class="line"><a id="l01612" name="l01612"></a><span class="lineno"> 1612</span>                }</div>
-<div class="line"><a id="l01613" name="l01613"></a><span class="lineno"> 1613</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01614" name="l01614"></a><span class="lineno"> 1614</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l01577">1577</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01577" name="l01577"></a><span class="lineno"> 1577</span>                                                  {</div>
+<div class="line"><a id="l01578" name="l01578"></a><span class="lineno"> 1578</span>                <span class="keywordtype">string</span> a;</div>
+<div class="line"><a id="l01579" name="l01579"></a><span class="lineno"> 1579</span>                <span class="keywordtype">string</span> b;</div>
+<div class="line"><a id="l01580" name="l01580"></a><span class="lineno"> 1580</span>                cin &gt;&gt; a &gt;&gt; b;</div>
+<div class="line"><a id="l01581" name="l01581"></a><span class="lineno"> 1581</span>                vector&lt;char&gt; ans;</div>
+<div class="line"><a id="l01582" name="l01582"></a><span class="lineno"> 1582</span>                <span class="keywordtype">int</span> i = 1;</div>
+<div class="line"><a id="l01583" name="l01583"></a><span class="lineno"> 1583</span>                <span class="keywordflow">for</span>(; i &lt;= max(b.length(), a.length()); ++i) {</div>
+<div class="line"><a id="l01584" name="l01584"></a><span class="lineno"> 1584</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> bi = b.length() &gt;= i ? b[b.length() - i] - <span class="charliteral">&#39;0&#39;</span> : 0;</div>
+<div class="line"><a id="l01585" name="l01585"></a><span class="lineno"> 1585</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> ai = a.length() &gt;= i ? a[a.length() - i] - <span class="charliteral">&#39;0&#39;</span> : 0;</div>
+<div class="line"><a id="l01586" name="l01586"></a><span class="lineno"> 1586</span>                    <span class="keywordflow">if</span>(i % 2 != 0) {</div>
+<div class="line"><a id="l01587" name="l01587"></a><span class="lineno"> 1587</span>                        <span class="keywordtype">char</span> ret = (ai + bi) % 13;</div>
+<div class="line"><a id="l01588" name="l01588"></a><span class="lineno"> 1588</span>                        <span class="keywordflow">switch</span>(ret) {</div>
+<div class="line"><a id="l01589" name="l01589"></a><span class="lineno"> 1589</span>                            <span class="keywordflow">case</span> 10:</div>
+<div class="line"><a id="l01590" name="l01590"></a><span class="lineno"> 1590</span>                                ret = <span class="charliteral">&#39;J&#39;</span>;</div>
+<div class="line"><a id="l01591" name="l01591"></a><span class="lineno"> 1591</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01592" name="l01592"></a><span class="lineno"> 1592</span>                            <span class="keywordflow">case</span> 11:</div>
+<div class="line"><a id="l01593" name="l01593"></a><span class="lineno"> 1593</span>                                ret = <span class="charliteral">&#39;Q&#39;</span>;</div>
+<div class="line"><a id="l01594" name="l01594"></a><span class="lineno"> 1594</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01595" name="l01595"></a><span class="lineno"> 1595</span>                            <span class="keywordflow">case</span> 12:</div>
+<div class="line"><a id="l01596" name="l01596"></a><span class="lineno"> 1596</span>                                ret = <span class="charliteral">&#39;K&#39;</span>;</div>
+<div class="line"><a id="l01597" name="l01597"></a><span class="lineno"> 1597</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01598" name="l01598"></a><span class="lineno"> 1598</span>                            <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l01599" name="l01599"></a><span class="lineno"> 1599</span>                                ret += <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l01600" name="l01600"></a><span class="lineno"> 1600</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01601" name="l01601"></a><span class="lineno"> 1601</span>                        }</div>
+<div class="line"><a id="l01602" name="l01602"></a><span class="lineno"> 1602</span>                        ans.push_back(ret);</div>
+<div class="line"><a id="l01603" name="l01603"></a><span class="lineno"> 1603</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01604" name="l01604"></a><span class="lineno"> 1604</span>                        <span class="keywordtype">int</span> ret = bi - ai;</div>
+<div class="line"><a id="l01605" name="l01605"></a><span class="lineno"> 1605</span>                        <span class="keywordflow">if</span>(ret &lt; 0) {</div>
+<div class="line"><a id="l01606" name="l01606"></a><span class="lineno"> 1606</span>                            ret += 10;</div>
+<div class="line"><a id="l01607" name="l01607"></a><span class="lineno"> 1607</span>                        }</div>
+<div class="line"><a id="l01608" name="l01608"></a><span class="lineno"> 1608</span>                        ans.push_back(ret + <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><a id="l01609" name="l01609"></a><span class="lineno"> 1609</span>                    }</div>
+<div class="line"><a id="l01610" name="l01610"></a><span class="lineno"> 1610</span>                }</div>
+<div class="line"><a id="l01611" name="l01611"></a><span class="lineno"> 1611</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = ans.rbegin(); it != ans.rend(); ++it) {</div>
+<div class="line"><a id="l01612" name="l01612"></a><span class="lineno"> 1612</span>                    cout &lt;&lt; *it;</div>
+<div class="line"><a id="l01613" name="l01613"></a><span class="lineno"> 1613</span>                }</div>
+<div class="line"><a id="l01614" name="l01614"></a><span class="lineno"> 1614</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01615" name="l01615"></a><span class="lineno"> 1615</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l00745">TEST()</a>.</p>
 
@@ -193,7 +193,7 @@ $(function() {
 <div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l01576">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l01577">main()</a>.</p>
 
 </div>
 </div>

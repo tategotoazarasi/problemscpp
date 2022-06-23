@@ -112,43 +112,43 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04152">4152</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04152" name="l04152"></a><span class="lineno"> 4152</span>                                                  {</div>
-<div class="line"><a id="l04153" name="l04153"></a><span class="lineno"> 4153</span>                <span class="keywordtype">int</span> k;</div>
-<div class="line"><a id="l04154" name="l04154"></a><span class="lineno"> 4154</span>                cin &gt;&gt; k;</div>
-<div class="line"><a id="l04155" name="l04155"></a><span class="lineno"> 4155</span>                vector&lt;int&gt; vec(k);</div>
-<div class="line"><a id="l04156" name="l04156"></a><span class="lineno"> 4156</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04157" name="l04157"></a><span class="lineno"> 4157</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; k; i++) {</div>
-<div class="line"><a id="l04158" name="l04158"></a><span class="lineno"> 4158</span>                    cin &gt;&gt; vec[i];</div>
-<div class="line"><a id="l04159" name="l04159"></a><span class="lineno"> 4159</span>                    <span class="keywordflow">if</span>(vec[i] &gt;= 0) {</div>
-<div class="line"><a id="l04160" name="l04160"></a><span class="lineno"> 4160</span>                        flag = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l04161" name="l04161"></a><span class="lineno"> 4161</span>                    }</div>
-<div class="line"><a id="l04162" name="l04162"></a><span class="lineno"> 4162</span>                }</div>
-<div class="line"><a id="l04163" name="l04163"></a><span class="lineno"> 4163</span>                <span class="keywordflow">if</span>(!flag) {</div>
-<div class="line"><a id="l04164" name="l04164"></a><span class="lineno"> 4164</span>                    cout &lt;&lt; <span class="stringliteral">&quot;0 &quot;</span> &lt;&lt; vec[0] &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; vec[k - 1];</div>
-<div class="line"><a id="l04165" name="l04165"></a><span class="lineno"> 4165</span>                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l04166" name="l04166"></a><span class="lineno"> 4166</span>                }</div>
-<div class="line"><a id="l04167" name="l04167"></a><span class="lineno"> 4167</span>                vector&lt;int&gt; pref_sum(k);</div>
-<div class="line"><a id="l04168" name="l04168"></a><span class="lineno"> 4168</span>                pref_sum[0] = vec[0];</div>
-<div class="line"><a id="l04169" name="l04169"></a><span class="lineno"> 4169</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; k; i++) {</div>
-<div class="line"><a id="l04170" name="l04170"></a><span class="lineno"> 4170</span>                    pref_sum[i] = pref_sum[i - 1] + vec[i];</div>
-<div class="line"><a id="l04171" name="l04171"></a><span class="lineno"> 4171</span>                }</div>
-<div class="line"><a id="l04172" name="l04172"></a><span class="lineno"> 4172</span>                <span class="keywordtype">int</span> max_sum   = pref_sum[k - 1];</div>
-<div class="line"><a id="l04173" name="l04173"></a><span class="lineno"> 4173</span>                <span class="keywordtype">int</span> max_start = 0;</div>
-<div class="line"><a id="l04174" name="l04174"></a><span class="lineno"> 4174</span>                <span class="keywordtype">int</span> max_end   = k - 1;</div>
-<div class="line"><a id="l04175" name="l04175"></a><span class="lineno"> 4175</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; k; i++) {</div>
-<div class="line"><a id="l04176" name="l04176"></a><span class="lineno"> 4176</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i; j &lt; k; j++) {</div>
-<div class="line"><a id="l04177" name="l04177"></a><span class="lineno"> 4177</span>                        <span class="keyword">const</span> <span class="keywordtype">int</span> sum = pref_sum[j] - pref_sum[i] + vec[i];</div>
-<div class="line"><a id="l04178" name="l04178"></a><span class="lineno"> 4178</span>                        <span class="keywordflow">if</span>(sum &gt; max_sum) {</div>
-<div class="line"><a id="l04179" name="l04179"></a><span class="lineno"> 4179</span>                            max_sum   = sum;</div>
-<div class="line"><a id="l04180" name="l04180"></a><span class="lineno"> 4180</span>                            max_start = i;</div>
-<div class="line"><a id="l04181" name="l04181"></a><span class="lineno"> 4181</span>                            max_end   = j;</div>
-<div class="line"><a id="l04182" name="l04182"></a><span class="lineno"> 4182</span>                        }</div>
-<div class="line"><a id="l04183" name="l04183"></a><span class="lineno"> 4183</span>                    }</div>
-<div class="line"><a id="l04184" name="l04184"></a><span class="lineno"> 4184</span>                }</div>
-<div class="line"><a id="l04185" name="l04185"></a><span class="lineno"> 4185</span>                cout &lt;&lt; max_sum &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; vec[max_start] &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; vec[max_end];</div>
-<div class="line"><a id="l04186" name="l04186"></a><span class="lineno"> 4186</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l04187" name="l04187"></a><span class="lineno"> 4187</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04159">4159</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04159" name="l04159"></a><span class="lineno"> 4159</span>                                                  {</div>
+<div class="line"><a id="l04160" name="l04160"></a><span class="lineno"> 4160</span>                <span class="keywordtype">int</span> k;</div>
+<div class="line"><a id="l04161" name="l04161"></a><span class="lineno"> 4161</span>                cin &gt;&gt; k;</div>
+<div class="line"><a id="l04162" name="l04162"></a><span class="lineno"> 4162</span>                vector&lt;int&gt; vec(k);</div>
+<div class="line"><a id="l04163" name="l04163"></a><span class="lineno"> 4163</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04164" name="l04164"></a><span class="lineno"> 4164</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; k; i++) {</div>
+<div class="line"><a id="l04165" name="l04165"></a><span class="lineno"> 4165</span>                    cin &gt;&gt; vec[i];</div>
+<div class="line"><a id="l04166" name="l04166"></a><span class="lineno"> 4166</span>                    <span class="keywordflow">if</span>(vec[i] &gt;= 0) {</div>
+<div class="line"><a id="l04167" name="l04167"></a><span class="lineno"> 4167</span>                        flag = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l04168" name="l04168"></a><span class="lineno"> 4168</span>                    }</div>
+<div class="line"><a id="l04169" name="l04169"></a><span class="lineno"> 4169</span>                }</div>
+<div class="line"><a id="l04170" name="l04170"></a><span class="lineno"> 4170</span>                <span class="keywordflow">if</span>(!flag) {</div>
+<div class="line"><a id="l04171" name="l04171"></a><span class="lineno"> 4171</span>                    cout &lt;&lt; <span class="stringliteral">&quot;0 &quot;</span> &lt;&lt; vec[0] &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; vec[k - 1];</div>
+<div class="line"><a id="l04172" name="l04172"></a><span class="lineno"> 4172</span>                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l04173" name="l04173"></a><span class="lineno"> 4173</span>                }</div>
+<div class="line"><a id="l04174" name="l04174"></a><span class="lineno"> 4174</span>                vector&lt;int&gt; pref_sum(k);</div>
+<div class="line"><a id="l04175" name="l04175"></a><span class="lineno"> 4175</span>                pref_sum[0] = vec[0];</div>
+<div class="line"><a id="l04176" name="l04176"></a><span class="lineno"> 4176</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; k; i++) {</div>
+<div class="line"><a id="l04177" name="l04177"></a><span class="lineno"> 4177</span>                    pref_sum[i] = pref_sum[i - 1] + vec[i];</div>
+<div class="line"><a id="l04178" name="l04178"></a><span class="lineno"> 4178</span>                }</div>
+<div class="line"><a id="l04179" name="l04179"></a><span class="lineno"> 4179</span>                <span class="keywordtype">int</span> max_sum   = pref_sum[k - 1];</div>
+<div class="line"><a id="l04180" name="l04180"></a><span class="lineno"> 4180</span>                <span class="keywordtype">int</span> max_start = 0;</div>
+<div class="line"><a id="l04181" name="l04181"></a><span class="lineno"> 4181</span>                <span class="keywordtype">int</span> max_end   = k - 1;</div>
+<div class="line"><a id="l04182" name="l04182"></a><span class="lineno"> 4182</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; k; i++) {</div>
+<div class="line"><a id="l04183" name="l04183"></a><span class="lineno"> 4183</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i; j &lt; k; j++) {</div>
+<div class="line"><a id="l04184" name="l04184"></a><span class="lineno"> 4184</span>                        <span class="keyword">const</span> <span class="keywordtype">int</span> sum = pref_sum[j] - pref_sum[i] + vec[i];</div>
+<div class="line"><a id="l04185" name="l04185"></a><span class="lineno"> 4185</span>                        <span class="keywordflow">if</span>(sum &gt; max_sum) {</div>
+<div class="line"><a id="l04186" name="l04186"></a><span class="lineno"> 4186</span>                            max_sum   = sum;</div>
+<div class="line"><a id="l04187" name="l04187"></a><span class="lineno"> 4187</span>                            max_start = i;</div>
+<div class="line"><a id="l04188" name="l04188"></a><span class="lineno"> 4188</span>                            max_end   = j;</div>
+<div class="line"><a id="l04189" name="l04189"></a><span class="lineno"> 4189</span>                        }</div>
+<div class="line"><a id="l04190" name="l04190"></a><span class="lineno"> 4190</span>                    }</div>
+<div class="line"><a id="l04191" name="l04191"></a><span class="lineno"> 4191</span>                }</div>
+<div class="line"><a id="l04192" name="l04192"></a><span class="lineno"> 4192</span>                cout &lt;&lt; max_sum &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; vec[max_start] &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; vec[max_end];</div>
+<div class="line"><a id="l04193" name="l04193"></a><span class="lineno"> 4193</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l04194" name="l04194"></a><span class="lineno"> 4194</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l02015">TEST()</a>.</p>
 
@@ -190,7 +190,7 @@ $(function() {
 <div class="line"><a id="l02021" name="l02021"></a><span class="lineno"> 2021</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l04152">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l04159">main()</a>.</p>
 
 </div>
 </div>

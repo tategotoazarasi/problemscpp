@@ -112,35 +112,35 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02734">2734</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02734" name="l02734"></a><span class="lineno"> 2734</span>                                                  {</div>
-<div class="line"><a id="l02735" name="l02735"></a><span class="lineno"> 2735</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l02736" name="l02736"></a><span class="lineno"> 2736</span>                <span class="keywordtype">int</span> m;</div>
-<div class="line"><a id="l02737" name="l02737"></a><span class="lineno"> 2737</span>                cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l02738" name="l02738"></a><span class="lineno"> 2738</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l02739" name="l02739"></a><span class="lineno"> 2739</span>                    <span class="keywordtype">int</span> s_teacher;</div>
-<div class="line"><a id="l02740" name="l02740"></a><span class="lineno"> 2740</span>                    cin &gt;&gt; s_teacher;</div>
-<div class="line"><a id="l02741" name="l02741"></a><span class="lineno"> 2741</span>                    vector&lt;int&gt; scores;</div>
-<div class="line"><a id="l02742" name="l02742"></a><span class="lineno"> 2742</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt; n; j++) {</div>
-<div class="line"><a id="l02743" name="l02743"></a><span class="lineno"> 2743</span>                        <span class="keywordtype">int</span> score;</div>
-<div class="line"><a id="l02744" name="l02744"></a><span class="lineno"> 2744</span>                        cin &gt;&gt; score;</div>
-<div class="line"><a id="l02745" name="l02745"></a><span class="lineno"> 2745</span>                        <span class="keywordflow">if</span>(0 &lt;= score &amp;&amp; score &lt;= m) {</div>
-<div class="line"><a id="l02746" name="l02746"></a><span class="lineno"> 2746</span>                            scores.push_back(score);</div>
-<div class="line"><a id="l02747" name="l02747"></a><span class="lineno"> 2747</span>                        }</div>
-<div class="line"><a id="l02748" name="l02748"></a><span class="lineno"> 2748</span>                    }</div>
-<div class="line"><a id="l02749" name="l02749"></a><span class="lineno"> 2749</span>                    sort(scores.begin(), scores.end());</div>
-<div class="line"><a id="l02750" name="l02750"></a><span class="lineno"> 2750</span>                    scores.erase(scores.begin());</div>
-<div class="line"><a id="l02751" name="l02751"></a><span class="lineno"> 2751</span>                    scores.erase(--scores.end());</div>
-<div class="line"><a id="l02752" name="l02752"></a><span class="lineno"> 2752</span>                    <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><a id="l02753" name="l02753"></a><span class="lineno"> 2753</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; scores.size(); j++) {</div>
-<div class="line"><a id="l02754" name="l02754"></a><span class="lineno"> 2754</span>                        sum += scores[j];</div>
-<div class="line"><a id="l02755" name="l02755"></a><span class="lineno"> 2755</span>                    }</div>
-<div class="line"><a id="l02756" name="l02756"></a><span class="lineno"> 2756</span>                    <span class="keyword">const</span> <span class="keywordtype">double</span> avg = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(sum) / scores.size();</div>
-<div class="line"><a id="l02757" name="l02757"></a><span class="lineno"> 2757</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keyword">final</span>  = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>((avg + s_teacher) / 2 + 0.5);</div>
-<div class="line"><a id="l02758" name="l02758"></a><span class="lineno"> 2758</span>                    cout &lt;&lt; <span class="keyword">final</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l02759" name="l02759"></a><span class="lineno"> 2759</span>                }</div>
-<div class="line"><a id="l02760" name="l02760"></a><span class="lineno"> 2760</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l02761" name="l02761"></a><span class="lineno"> 2761</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02735">2735</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l02735" name="l02735"></a><span class="lineno"> 2735</span>                                                  {</div>
+<div class="line"><a id="l02736" name="l02736"></a><span class="lineno"> 2736</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l02737" name="l02737"></a><span class="lineno"> 2737</span>                <span class="keywordtype">int</span> m;</div>
+<div class="line"><a id="l02738" name="l02738"></a><span class="lineno"> 2738</span>                cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l02739" name="l02739"></a><span class="lineno"> 2739</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l02740" name="l02740"></a><span class="lineno"> 2740</span>                    <span class="keywordtype">int</span> s_teacher;</div>
+<div class="line"><a id="l02741" name="l02741"></a><span class="lineno"> 2741</span>                    cin &gt;&gt; s_teacher;</div>
+<div class="line"><a id="l02742" name="l02742"></a><span class="lineno"> 2742</span>                    vector&lt;int&gt; scores;</div>
+<div class="line"><a id="l02743" name="l02743"></a><span class="lineno"> 2743</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt; n; j++) {</div>
+<div class="line"><a id="l02744" name="l02744"></a><span class="lineno"> 2744</span>                        <span class="keywordtype">int</span> score;</div>
+<div class="line"><a id="l02745" name="l02745"></a><span class="lineno"> 2745</span>                        cin &gt;&gt; score;</div>
+<div class="line"><a id="l02746" name="l02746"></a><span class="lineno"> 2746</span>                        <span class="keywordflow">if</span>(0 &lt;= score &amp;&amp; score &lt;= m) {</div>
+<div class="line"><a id="l02747" name="l02747"></a><span class="lineno"> 2747</span>                            scores.push_back(score);</div>
+<div class="line"><a id="l02748" name="l02748"></a><span class="lineno"> 2748</span>                        }</div>
+<div class="line"><a id="l02749" name="l02749"></a><span class="lineno"> 2749</span>                    }</div>
+<div class="line"><a id="l02750" name="l02750"></a><span class="lineno"> 2750</span>                    sort(scores.begin(), scores.end());</div>
+<div class="line"><a id="l02751" name="l02751"></a><span class="lineno"> 2751</span>                    scores.erase(scores.begin());</div>
+<div class="line"><a id="l02752" name="l02752"></a><span class="lineno"> 2752</span>                    scores.erase(--scores.end());</div>
+<div class="line"><a id="l02753" name="l02753"></a><span class="lineno"> 2753</span>                    <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><a id="l02754" name="l02754"></a><span class="lineno"> 2754</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; scores.size(); j++) {</div>
+<div class="line"><a id="l02755" name="l02755"></a><span class="lineno"> 2755</span>                        sum += scores[j];</div>
+<div class="line"><a id="l02756" name="l02756"></a><span class="lineno"> 2756</span>                    }</div>
+<div class="line"><a id="l02757" name="l02757"></a><span class="lineno"> 2757</span>                    <span class="keyword">const</span> <span class="keywordtype">double</span> avg = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(sum) / scores.size();</div>
+<div class="line"><a id="l02758" name="l02758"></a><span class="lineno"> 2758</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keyword">final</span>  = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>((avg + s_teacher) / 2 + 0.5);</div>
+<div class="line"><a id="l02759" name="l02759"></a><span class="lineno"> 2759</span>                    cout &lt;&lt; <span class="keyword">final</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l02760" name="l02760"></a><span class="lineno"> 2760</span>                }</div>
+<div class="line"><a id="l02761" name="l02761"></a><span class="lineno"> 2761</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l02762" name="l02762"></a><span class="lineno"> 2762</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l01308">TEST()</a>.</p>
 
@@ -194,7 +194,7 @@ $(function() {
 <div class="line"><a id="l01326" name="l01326"></a><span class="lineno"> 1326</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02734">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02735">main()</a>.</p>
 
 </div>
 </div>

@@ -112,59 +112,59 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04065">4065</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04065" name="l04065"></a><span class="lineno"> 4065</span>                                                  {</div>
-<div class="line"><a id="l04066" name="l04066"></a><span class="lineno"> 4066</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> n = 0;</div>
-<div class="line"><a id="l04067" name="l04067"></a><span class="lineno"> 4067</span>                <span class="keywordtype">string</span> s;</div>
-<div class="line"><a id="l04068" name="l04068"></a><span class="lineno"> 4068</span>                cin &gt;&gt; s;</div>
-<div class="line"><a id="l04069" name="l04069"></a><span class="lineno"> 4069</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: s) {</div>
-<div class="line"><a id="l04070" name="l04070"></a><span class="lineno"> 4070</span>                    n += ch - <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l04071" name="l04071"></a><span class="lineno"> 4071</span>                }</div>
-<div class="line"><a id="l04072" name="l04072"></a><span class="lineno"> 4072</span>                <span class="keyword">auto</span> oss = ostringstream();</div>
-<div class="line"><a id="l04073" name="l04073"></a><span class="lineno"> 4073</span>                oss &lt;&lt; n;</div>
-<div class="line"><a id="l04074" name="l04074"></a><span class="lineno"> 4074</span>                s          = oss.str();</div>
-<div class="line"><a id="l04075" name="l04075"></a><span class="lineno"> 4075</span>                <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04072">4072</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04072" name="l04072"></a><span class="lineno"> 4072</span>                                                  {</div>
+<div class="line"><a id="l04073" name="l04073"></a><span class="lineno"> 4073</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> n = 0;</div>
+<div class="line"><a id="l04074" name="l04074"></a><span class="lineno"> 4074</span>                <span class="keywordtype">string</span> s;</div>
+<div class="line"><a id="l04075" name="l04075"></a><span class="lineno"> 4075</span>                cin &gt;&gt; s;</div>
 <div class="line"><a id="l04076" name="l04076"></a><span class="lineno"> 4076</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: s) {</div>
-<div class="line"><a id="l04077" name="l04077"></a><span class="lineno"> 4077</span>                    <span class="keywordflow">if</span>(!first) {</div>
-<div class="line"><a id="l04078" name="l04078"></a><span class="lineno"> 4078</span>                        cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a id="l04079" name="l04079"></a><span class="lineno"> 4079</span>                    }</div>
-<div class="line"><a id="l04080" name="l04080"></a><span class="lineno"> 4080</span>                    first = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l04081" name="l04081"></a><span class="lineno"> 4081</span>                    <span class="keywordflow">switch</span>(ch) {</div>
-<div class="line"><a id="l04082" name="l04082"></a><span class="lineno"> 4082</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;0&#39;</span>:</div>
-<div class="line"><a id="l04083" name="l04083"></a><span class="lineno"> 4083</span>                            cout &lt;&lt; <span class="stringliteral">&quot;zero&quot;</span>;</div>
-<div class="line"><a id="l04084" name="l04084"></a><span class="lineno"> 4084</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04085" name="l04085"></a><span class="lineno"> 4085</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;1&#39;</span>:</div>
-<div class="line"><a id="l04086" name="l04086"></a><span class="lineno"> 4086</span>                            cout &lt;&lt; <span class="stringliteral">&quot;one&quot;</span>;</div>
-<div class="line"><a id="l04087" name="l04087"></a><span class="lineno"> 4087</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04088" name="l04088"></a><span class="lineno"> 4088</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;2&#39;</span>:</div>
-<div class="line"><a id="l04089" name="l04089"></a><span class="lineno"> 4089</span>                            cout &lt;&lt; <span class="stringliteral">&quot;two&quot;</span>;</div>
-<div class="line"><a id="l04090" name="l04090"></a><span class="lineno"> 4090</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04091" name="l04091"></a><span class="lineno"> 4091</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;3&#39;</span>:</div>
-<div class="line"><a id="l04092" name="l04092"></a><span class="lineno"> 4092</span>                            cout &lt;&lt; <span class="stringliteral">&quot;three&quot;</span>;</div>
-<div class="line"><a id="l04093" name="l04093"></a><span class="lineno"> 4093</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04094" name="l04094"></a><span class="lineno"> 4094</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;4&#39;</span>:</div>
-<div class="line"><a id="l04095" name="l04095"></a><span class="lineno"> 4095</span>                            cout &lt;&lt; <span class="stringliteral">&quot;four&quot;</span>;</div>
-<div class="line"><a id="l04096" name="l04096"></a><span class="lineno"> 4096</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04097" name="l04097"></a><span class="lineno"> 4097</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;5&#39;</span>:</div>
-<div class="line"><a id="l04098" name="l04098"></a><span class="lineno"> 4098</span>                            cout &lt;&lt; <span class="stringliteral">&quot;five&quot;</span>;</div>
-<div class="line"><a id="l04099" name="l04099"></a><span class="lineno"> 4099</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04100" name="l04100"></a><span class="lineno"> 4100</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;6&#39;</span>:</div>
-<div class="line"><a id="l04101" name="l04101"></a><span class="lineno"> 4101</span>                            cout &lt;&lt; <span class="stringliteral">&quot;six&quot;</span>;</div>
-<div class="line"><a id="l04102" name="l04102"></a><span class="lineno"> 4102</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04103" name="l04103"></a><span class="lineno"> 4103</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;7&#39;</span>:</div>
-<div class="line"><a id="l04104" name="l04104"></a><span class="lineno"> 4104</span>                            cout &lt;&lt; <span class="stringliteral">&quot;seven&quot;</span>;</div>
-<div class="line"><a id="l04105" name="l04105"></a><span class="lineno"> 4105</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04106" name="l04106"></a><span class="lineno"> 4106</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;8&#39;</span>:</div>
-<div class="line"><a id="l04107" name="l04107"></a><span class="lineno"> 4107</span>                            cout &lt;&lt; <span class="stringliteral">&quot;eight&quot;</span>;</div>
-<div class="line"><a id="l04108" name="l04108"></a><span class="lineno"> 4108</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04109" name="l04109"></a><span class="lineno"> 4109</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;9&#39;</span>:</div>
-<div class="line"><a id="l04110" name="l04110"></a><span class="lineno"> 4110</span>                            cout &lt;&lt; <span class="stringliteral">&quot;nine&quot;</span>;</div>
-<div class="line"><a id="l04111" name="l04111"></a><span class="lineno"> 4111</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04112" name="l04112"></a><span class="lineno"> 4112</span>                        <span class="keywordflow">default</span>: <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l04113" name="l04113"></a><span class="lineno"> 4113</span>                    }</div>
-<div class="line"><a id="l04114" name="l04114"></a><span class="lineno"> 4114</span>                }</div>
-<div class="line"><a id="l04115" name="l04115"></a><span class="lineno"> 4115</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l04116" name="l04116"></a><span class="lineno"> 4116</span>            }</div>
+<div class="line"><a id="l04077" name="l04077"></a><span class="lineno"> 4077</span>                    n += ch - <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l04078" name="l04078"></a><span class="lineno"> 4078</span>                }</div>
+<div class="line"><a id="l04079" name="l04079"></a><span class="lineno"> 4079</span>                <span class="keyword">auto</span> oss = ostringstream();</div>
+<div class="line"><a id="l04080" name="l04080"></a><span class="lineno"> 4080</span>                oss &lt;&lt; n;</div>
+<div class="line"><a id="l04081" name="l04081"></a><span class="lineno"> 4081</span>                s          = oss.str();</div>
+<div class="line"><a id="l04082" name="l04082"></a><span class="lineno"> 4082</span>                <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l04083" name="l04083"></a><span class="lineno"> 4083</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> ch: s) {</div>
+<div class="line"><a id="l04084" name="l04084"></a><span class="lineno"> 4084</span>                    <span class="keywordflow">if</span>(!first) {</div>
+<div class="line"><a id="l04085" name="l04085"></a><span class="lineno"> 4085</span>                        cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a id="l04086" name="l04086"></a><span class="lineno"> 4086</span>                    }</div>
+<div class="line"><a id="l04087" name="l04087"></a><span class="lineno"> 4087</span>                    first = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04088" name="l04088"></a><span class="lineno"> 4088</span>                    <span class="keywordflow">switch</span>(ch) {</div>
+<div class="line"><a id="l04089" name="l04089"></a><span class="lineno"> 4089</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;0&#39;</span>:</div>
+<div class="line"><a id="l04090" name="l04090"></a><span class="lineno"> 4090</span>                            cout &lt;&lt; <span class="stringliteral">&quot;zero&quot;</span>;</div>
+<div class="line"><a id="l04091" name="l04091"></a><span class="lineno"> 4091</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04092" name="l04092"></a><span class="lineno"> 4092</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;1&#39;</span>:</div>
+<div class="line"><a id="l04093" name="l04093"></a><span class="lineno"> 4093</span>                            cout &lt;&lt; <span class="stringliteral">&quot;one&quot;</span>;</div>
+<div class="line"><a id="l04094" name="l04094"></a><span class="lineno"> 4094</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04095" name="l04095"></a><span class="lineno"> 4095</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;2&#39;</span>:</div>
+<div class="line"><a id="l04096" name="l04096"></a><span class="lineno"> 4096</span>                            cout &lt;&lt; <span class="stringliteral">&quot;two&quot;</span>;</div>
+<div class="line"><a id="l04097" name="l04097"></a><span class="lineno"> 4097</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04098" name="l04098"></a><span class="lineno"> 4098</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;3&#39;</span>:</div>
+<div class="line"><a id="l04099" name="l04099"></a><span class="lineno"> 4099</span>                            cout &lt;&lt; <span class="stringliteral">&quot;three&quot;</span>;</div>
+<div class="line"><a id="l04100" name="l04100"></a><span class="lineno"> 4100</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04101" name="l04101"></a><span class="lineno"> 4101</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;4&#39;</span>:</div>
+<div class="line"><a id="l04102" name="l04102"></a><span class="lineno"> 4102</span>                            cout &lt;&lt; <span class="stringliteral">&quot;four&quot;</span>;</div>
+<div class="line"><a id="l04103" name="l04103"></a><span class="lineno"> 4103</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04104" name="l04104"></a><span class="lineno"> 4104</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;5&#39;</span>:</div>
+<div class="line"><a id="l04105" name="l04105"></a><span class="lineno"> 4105</span>                            cout &lt;&lt; <span class="stringliteral">&quot;five&quot;</span>;</div>
+<div class="line"><a id="l04106" name="l04106"></a><span class="lineno"> 4106</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04107" name="l04107"></a><span class="lineno"> 4107</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;6&#39;</span>:</div>
+<div class="line"><a id="l04108" name="l04108"></a><span class="lineno"> 4108</span>                            cout &lt;&lt; <span class="stringliteral">&quot;six&quot;</span>;</div>
+<div class="line"><a id="l04109" name="l04109"></a><span class="lineno"> 4109</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04110" name="l04110"></a><span class="lineno"> 4110</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;7&#39;</span>:</div>
+<div class="line"><a id="l04111" name="l04111"></a><span class="lineno"> 4111</span>                            cout &lt;&lt; <span class="stringliteral">&quot;seven&quot;</span>;</div>
+<div class="line"><a id="l04112" name="l04112"></a><span class="lineno"> 4112</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04113" name="l04113"></a><span class="lineno"> 4113</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;8&#39;</span>:</div>
+<div class="line"><a id="l04114" name="l04114"></a><span class="lineno"> 4114</span>                            cout &lt;&lt; <span class="stringliteral">&quot;eight&quot;</span>;</div>
+<div class="line"><a id="l04115" name="l04115"></a><span class="lineno"> 4115</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04116" name="l04116"></a><span class="lineno"> 4116</span>                        <span class="keywordflow">case</span> <span class="charliteral">&#39;9&#39;</span>:</div>
+<div class="line"><a id="l04117" name="l04117"></a><span class="lineno"> 4117</span>                            cout &lt;&lt; <span class="stringliteral">&quot;nine&quot;</span>;</div>
+<div class="line"><a id="l04118" name="l04118"></a><span class="lineno"> 4118</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04119" name="l04119"></a><span class="lineno"> 4119</span>                        <span class="keywordflow">default</span>: <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l04120" name="l04120"></a><span class="lineno"> 4120</span>                    }</div>
+<div class="line"><a id="l04121" name="l04121"></a><span class="lineno"> 4121</span>                }</div>
+<div class="line"><a id="l04122" name="l04122"></a><span class="lineno"> 4122</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l04123" name="l04123"></a><span class="lineno"> 4123</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l01994">TEST()</a>.</p>
 
@@ -205,7 +205,7 @@ $(function() {
 <div class="line"><a id="l01999" name="l01999"></a><span class="lineno"> 1999</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l04065">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l04072">main()</a>.</p>
 
 </div>
 </div>
