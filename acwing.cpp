@@ -7467,4 +7467,28 @@ namespace acwing {
 			return true;
 		}
 	}// namespace acwing860
+
+	namespace acwing861 {
+		int main(istream &cin, ostream &cout) {
+			int n1, n2, m;
+			cin >> n1 >> n2 >> m;
+			int ans = 0;
+			vector<unordered_set<int>> g(n1 + 1);
+			vector<int> match(n2 + 1, 0);
+			vector<bool> st(n2 + 1, false);
+			for(int i = 0; i < m; i++) {
+				int u, v;
+				cin >> u >> v;
+				g[u].insert(v);
+			}
+			for(int i = 1; i <= n1; i++) {
+				st = vector<bool>(n2 + 1, false);
+				if(find(g, i, st, match)) {
+					ans++;
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing861
 }// namespace acwing
