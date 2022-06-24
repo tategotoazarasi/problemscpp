@@ -888,6 +888,27 @@ namespace pat {
 
 			int main(istream &cin, ostream &cout);
 		}// namespace a1026
+
+		/// \brief 1018 Public Bike Management
+		namespace a1018 {
+			struct frame {
+				vector<unsigned> path;
+				unsigned node;
+				int bikes;
+				unsigned len;
+				unsigned start;
+
+				frame() = default;
+				frame(vector<unsigned> path, unsigned node, int bikes, unsigned len, unsigned start);
+				unsigned get_go() const;
+				unsigned get_back() const;
+			};
+
+			struct frame_cmp {
+				bool operator()(const frame &f1, const frame &f2) const;
+			};
+			int main(istream &cin, ostream &cout);
+		}// namespace a1018
 	}    // namespace a
 
 	/// \brief 顶级

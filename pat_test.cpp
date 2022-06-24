@@ -2119,6 +2119,52 @@ namespace pat {
 				ASSERT_EQ("08:00:00 08:00:00 0\n08:01:30 08:01:30 0\n08:02:00 08:02:00 0\n08:12:00 08:16:30 5\n08:10:00 08:20:00 10\n20:50:00 20:50:00 0\n20:51:00 20:51:00 0\n20:52:00 20:52:00 0\n3 3 2", out.str());
 			}
 		}// namespace a1026
+
+		namespace a1018 {
+			TEST(a1018, case1) {
+				istringstream in("10 3 3 5\n"
+				                 "6 7 0\n"
+				                 "0 1 1\n"
+				                 "0 2 1\n"
+				                 "0 3 3\n"
+				                 "1 3 1\n"
+				                 "2 3 1");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("3 0->2->3 0", out.str());
+			}
+
+			TEST(a1018, case2) {
+				istringstream in("10 5 5 7\n"
+				                 "4 8 4 9 10\n"
+				                 "0 1 1\n"
+				                 "0 3 1\n"
+				                 "0 5 4\n"
+				                 "1 2 1\n"
+				                 "3 4 1\n"
+				                 "2 5 1\n"
+				                 "4 5 1");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("1 0->1->2->5 8", out.str());
+			}
+
+			TEST(a1018, case3) {
+				istringstream in("10 7 7 8\n"
+				                 "2 9 3 5 9 1 0\n"
+				                 "0 1 1\n"
+				                 "1 2 1\n"
+				                 "0 3 1\n"
+				                 "3 4 1\n"
+				                 "2 5 1\n"
+				                 "4 5 1\n"
+				                 "5 6 1\n"
+				                 "6 7 1");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("4 0->1->2->5->6->7 0", out.str());
+			}
+		}// namespace a1018
 	}    // namespace a
 
 	namespace top {}

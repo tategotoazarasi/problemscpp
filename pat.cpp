@@ -4705,6 +4705,88 @@ namespace pat {
 				return id > t.id;
 			}
 		}// namespace a1026
+
+		namespace a1018 {
+			int main(istream &cin, ostream &cout) {
+				unsigned cmax;///< the maximum capacity of each station
+				unsigned n;   ///< the total number of stations
+				unsigned sp;  ///< the index of the problem station
+				unsigned m;   ///< the number of roads
+				auto fc = frame_cmp();
+				cin >> cmax >> n >> sp >> m;
+				vector<int> c(n + 1, 0);///< the node number of bikes at Si respectively
+				for(unsigned i = 1; i <= n; i++) {
+					int ci;
+					cin >> ci;
+					c[i] = ci - static_cast<int>(cmax / 2);
+				}
+				vector<unordered_map<unsigned, unsigned>> g(n + 1);
+				for(unsigned i = 0; i < m; i++) {
+					unsigned si, sj, tij;
+					cin >> si >> sj >> tij;
+					g[si][sj] = tij;
+					g[sj][si] = tij;
+				}
+				vector<int> shortest(n + 1, -1);
+				vector<int> min_go(n + 1, -1);
+				vector<int> min_back(n + 1, -1);
+				priority_queue<frame, vector<frame>, frame_cmp> pq;
+				shortest[0] = 0;
+				min_go[0]   = 0;
+				min_back[0] = 0;
+				pq.push(frame(vector<unsigned>(1, 0), 0u, 0, 0u, 0u));
+				while(!pq.empty()) {
+					frame f = pq.top();
+					pq.pop();
+					if(f.node == sp) {
+						cout << f.get_go() << ' ' << f.path[0];
+						for(int i = 1; i < f.path.size(); i++) {
+							cout << "->" << f.path[i];
+						}
+						cout << ' ' << f.get_back();
+						return 0;
+					}
+					for(auto &[node, d]: g[f.node]) {
+						if(find(f.path.begin(), f.path.end(), node) == f.path.end()) {
+							//if(shortest[node] == -1 || min_go[node] == -1 || min_back[node] == -1 || fc(frame(vector<unsigned>(), node, min_back[node], shortest[node], min_go[node]), frame(vector<unsigned>(), node, f.bikes + c[node], f.len + d, f.start))) {
+							vector<unsigned> path = f.path;
+							path.emplace_back(node);
+							frame next_f = frame(path, node, f.bikes + c[node], f.len + d, f.start);
+							pq.push(next_f);
+							//shortest[node] = next_f.len;
+							//min_go[node]   = next_f.get_go();
+							//min_back[node] = next_f.get_back();
+						}
+					}
+				}
+				return 0;
+			}
+
+			bool frame_cmp::operator()(const frame &f1, const frame &f2) const {
+				if(f1.len != f2.len) {
+					return f1.len > f2.len;
+				} else if(f1.get_go() != f2.get_go()) {
+					return f1.get_go() > f2.get_go();
+				} else {
+					return f1.get_back() > f2.get_back();
+				}
+			}
+
+			unsigned frame::get_go() const {
+				return start;
+			}
+
+			unsigned frame::get_back() const {
+				return bikes;
+			}
+
+			frame::frame(vector<unsigned> path, unsigned node, int bikes, unsigned len, unsigned start): path(std::move(path)), node(node), bikes(bikes), len(len), start(start) {
+				if(bikes < 0) {
+					this->start += -bikes;
+					this->bikes = 0;
+				}
+			}
+		}// namespace a1018
 	}    // namespace a
 
 	namespace top {}
