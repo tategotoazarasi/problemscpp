@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['waiting_5ftime_0',['waiting_time',['../da/d9e/a03059.html#a74778535059d3e483b41984330b8f71c',1,'pat::a::a1026::player']]]
+  ['w_0',['w',['../df/dc5/a01455.html#a6b08565b9a7435f4d28abc03a1adb84d',1,'acwing::acwing859::edge']]],
+  ['waiting_5ftime_1',['waiting_time',['../d3/dbd/a03075.html#a74778535059d3e483b41984330b8f71c',1,'pat::a::a1026::player']]]
 ];
