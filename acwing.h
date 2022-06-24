@@ -2118,18 +2118,7 @@ namespace acwing {
 
 	/// \brief 861. 二分图的最大匹配
 	namespace acwing861 {
-		bool find(vector<unordered_set<int>> &g, int x, vector<bool> &st, vector<int> &match) {
-			for(auto y: g[x]) {
-				if(!st[y]) {
-					st[y] = true;
-					if(match[y] == 0 || find(g, match[y], st, match)) {
-						match[y] = x;
-						return true;
-					}
-				}
-			}
-			return false;
-		}
+		bool find(vector<unordered_set<int>> &g, int x, vector<bool> &st, vector<int> &match);
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing861
 }// namespace acwing
