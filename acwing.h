@@ -2097,5 +2097,17 @@ namespace acwing {
 	namespace acwing858 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 859. Kruskal算法求最小生成树
+	namespace acwing859 {
+		struct edge {
+			int u;
+			int v;
+			int w;
+
+			bool operator<(const edge &e) const;
+		};
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing859
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

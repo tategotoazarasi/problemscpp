@@ -7395,4 +7395,37 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing858
+
+	namespace acwing859 {
+		int main(istream &cin, ostream &cout) {
+			int n, m;
+			cin >> n >> m;
+			int ans = 0;
+			int cnt = 1;
+			vector<edge> edges(m);
+			for(int i = 0; i < m; i++) {
+				int u, v, n;
+				cin >> edges[i].u >> edges[i].v >> edges[i].w;
+			}
+			sort(edges.begin(), edges.end());
+			UnionFind uf(n + 1);
+			for(auto &edge: edges) {
+				if(!uf.same(edge.u, edge.v)) {
+					cnt++;
+					uf.unite(edge.u, edge.v);
+					ans += edge.w;
+				}
+			}
+			if(cnt < n) {
+				cout << "impossible";
+			} else {
+				cout << ans;
+			}
+			return 0;
+		}
+
+		bool edge::operator<(const edge &e) const {
+			return w < e.w;
+		}
+	}// namespace acwing859
 }// namespace acwing
