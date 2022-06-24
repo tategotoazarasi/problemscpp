@@ -2109,5 +2109,11 @@ namespace acwing {
 		};
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing859
+
+	/// \brief 860. 染色法判定二分图
+	namespace acwing860 {
+		bool dfs(vector<unordered_set<int>> &g, int node, vector<int> &color, int c);
+		int main(istream &cin, ostream &cout);
+	}// namespace acwing860
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

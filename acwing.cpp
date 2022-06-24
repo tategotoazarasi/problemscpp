@@ -7428,4 +7428,43 @@ namespace acwing {
 			return w < e.w;
 		}
 	}// namespace acwing859
+
+	namespace acwing860 {
+		int main(istream &cin, ostream &cout) {
+			int n, m;
+			cin >> n >> m;
+			vector<unordered_set<int>> g(n + 1, unordered_set<int>());
+			vector<int> color(n + 1, 3);
+			for(int i = 0; i < m; i++) {
+				int u, v;
+				cin >> u >> v;
+				g[u].insert(v);
+				g[v].insert(u);
+			}
+			for(int i = 1; i <= n; i++) {
+				if(color[i] == 3) {
+					if(!dfs(g, i, color, 0)) {
+						cout << "No";
+						return 0;
+					}
+				}
+			}
+			cout << "Yes";
+			return 0;
+		}
+
+		bool dfs(vector<unordered_set<int>> &g, int node, vector<int> &color, int c) {
+			color[node] = c;
+			for(auto sibling: g[node]) {
+				if(color[sibling] == 3) {
+					if(!dfs(g, sibling, color, !c)) {
+						return false;
+					}
+				} else if(color[sibling] == c) {
+					return false;
+				}
+			}
+			return true;
+		}
+	}// namespace acwing860
 }// namespace acwing
