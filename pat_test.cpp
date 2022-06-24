@@ -2085,6 +2085,40 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace a1015
+		namespace a1016 {
+			TEST(a1016, case1) {
+				istringstream in("10 10 10 10 10 10 20 20 20 15 15 15 15 15 15 15 20 30 20 15 15 10 10 10\n10\nCYLL 01:01:06:01 on-line\nCYLL 01:28:16:05 off-line\nCYJJ 01:01:07:00 off-line\nCYLL 01:01:08:03 off-line\nCYJJ 01:01:05:59 on-line\naaa 01:01:01:03 on-line\naaa 01:02:00:01 on-line\nCYLL 01:28:15:41 on-line\naaa 01:05:02:24 on-line\naaa 01:04:23:59 off-line\n");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("CYJJ 01\n01:05:59 01:07:00 61 $12.10\nTotal amount: $12.10\nCYLL 01\n01:06:01 01:08:03 122 $24.40\n28:15:41 28:16:05 24 $3.85\nTotal amount: $28.25\naaa 01\n02:00:01 04:23:59 4318 $638.80\nTotal amount: $638.80\n", out.str());
+			}
+		}// namespace a1016
+
+		namespace a1017 {
+			TEST(a1017, case1) {
+				istringstream in("7 3\n07:55:00 16\n17:00:01 2\n07:59:59 15\n08:01:00 60\n08:00:00 30\n08:00:02 2\n08:03:00 10");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("8.2", out.str());
+			}
+
+			TEST(a1017, case2) {
+				istringstream in("2 1\n16:30:00 100\n16:40:00 10");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("25.0", out.str());
+			}
+		}// namespace a1017
+
+
+		namespace a1026 {
+			TEST(a1026, case1) {
+				istringstream in("9\n20:52:00 10 0\n08:00:00 20 0\n08:02:00 30 0\n20:51:00 10 0\n08:10:00 5 0\n08:12:00 10 1\n20:50:00 10 0\n08:01:30 15 1\n20:53:00 10 1\n3 1\n2");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("08:00:00 08:00:00 0\n08:01:30 08:01:30 0\n08:02:00 08:02:00 0\n08:12:00 08:16:30 5\n08:10:00 08:20:00 10\n20:50:00 20:50:00 0\n20:51:00 20:51:00 0\n20:52:00 20:52:00 0\n3 3 2", out.str());
+			}
+		}// namespace a1026
 	}    // namespace a
 
 	namespace top {}

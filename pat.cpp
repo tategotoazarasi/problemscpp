@@ -14,6 +14,7 @@
 #include <tuple>
 #include <unordered_map>
 #include <unordered_set>
+#include <utility>
 #include <vector>
 
 using namespace std;
@@ -3951,7 +3952,10 @@ namespace pat {
 	namespace a {
 		namespace a1003 {
 			int main(istream &cin, ostream &cout) {
-				int N, M, C1, C2;
+				int N;
+				int M;
+				int C1;
+				int C2;
 				cin >> N >> M >> C1 >> C2;
 				int max_d = 0;
 				vector<int> rescue(N);
@@ -3960,7 +3964,9 @@ namespace pat {
 					cin >> rescue[i];
 				}
 				for(int i = 0; i < M; i++) {
-					int c1, c2, L;
+					int c1;
+					int c2;
+					int L;
 					cin >> c1 >> c2 >> L;
 					grid[c1][c2] = L;
 					grid[c2][c1] = L;
@@ -4008,7 +4014,8 @@ namespace pat {
 
 		namespace a1004 {
 			int main(istream &cin, ostream &cout) {
-				int n, m;
+				int n;
+				int m;
 				cin >> n >> m;
 				if(n == 0) {
 					return 0;
@@ -4021,7 +4028,7 @@ namespace pat {
 					if(!um.contains(id)) {
 						um[id] = new node(id);
 					}
-					const auto nd = um[id];
+					auto *const nd = um[id];
 					for(int j = 0; j < k; j++) {
 						string cid;
 						cin >> cid;
@@ -4053,7 +4060,7 @@ namespace pat {
 					if(nd->children.empty()) {
 						leaf_cnt++;
 					}
-					for(auto c: nd->children) {
+					for(auto *c: nd->children) {
 						q.push(make_pair(c, level + 1));
 					}
 				}
@@ -4175,7 +4182,7 @@ namespace pat {
 				int max_end   = k - 1;
 				for(int i = 0; i < k; i++) {
 					for(int j = i; j < k; j++) {
-						int sum = pref_sum[j] - pref_sum[i] + vec[i];
+						const int sum = pref_sum[j] - pref_sum[i] + vec[i];
 						if(sum > max_sum) {
 							max_sum   = sum;
 							max_start = i;
@@ -4198,7 +4205,7 @@ namespace pat {
 				}
 				int level = 0;
 				int sum   = 0;
-				for(auto &v: vec) {
+				for(const auto &v: vec) {
 					if(v > level) {
 						sum += (v - level) * 6;
 					} else {
@@ -4214,7 +4221,8 @@ namespace pat {
 
 		namespace a1009 {
 			int main(istream &cin, ostream &cout) {
-				map<int, double> A, B;
+				map<int, double> A;
+				map<int, double> B;
 				int n;
 				cin >> n;
 				for(int i = 0; i < n; i++) {
@@ -4401,7 +4409,6 @@ namespace pat {
 				}
 				return 0;
 			}
-
 			unsigned get_num(string n, unsigned int d) {
 				unsigned ans = 0;
 				for(char ch: n) {
@@ -4432,6 +4439,272 @@ namespace pat {
 				return get_num(oss.str(), d);
 			}
 		}// namespace a1015
+
+		namespace a1016 {
+			int main(istream &cin, ostream &cout) {
+				map<string, customer> um;
+				double sum[M] = {};
+				array<unsigned, 24> cost{};
+				for(int i = 0; i < cost.size(); i++) {
+					cin >> cost[i];
+				}
+				for(unsigned i = 1; i < M; i++) {
+					sum[i] = sum[i - 1] + cost[(i - 1) % 1440 / 60] / 100.0;
+				}
+				unsigned int n;
+				cin >> n;
+				for(unsigned i = 0; i < n; i++) {
+					string name;
+					string time;
+					string online;
+					cin >> name >> time >> online;
+					auto r = record(name, time, online);
+					if(!um.contains(name)) {
+						um[name] = customer(name);
+					}
+					um[name].records.emplace_back(r);
+				}
+				for(auto &[name, c]: um) {
+					sort(c.records.begin(), c.records.end());
+					for(auto it = c.records.begin(); it != c.records.end();) {
+						if((*it).online && (it + 1 == c.records.end() || (*(it + 1)).online)) {
+							it = c.records.erase(it);
+						} else {
+							++it;
+						}
+					}
+					vector<record> new_vec;
+					bool looking_for_online = true;
+					for(const auto &record: c.records) {
+						if(looking_for_online == record.online) {
+							new_vec.emplace_back(record);
+							looking_for_online = !looking_for_online;
+						}
+					}
+					c.records = new_vec;
+					if(!c.records.empty()) {
+						cout << name << ' ' << setw(2) << setfill('0') << right << c.records[0].month << endl;
+						double total = 0;
+						for(int i = 0; i < c.records.size(); i += 2) {
+							const unsigned t2  = c.records[i + 1].get_minutes();
+							const unsigned t1  = c.records[i].get_minutes();
+							const double price = sum[t2] - sum[t1];
+							total += price;
+							cout << c.records[i].time.substr(3) << ' ' << c.records[i + 1].time.substr(3) << ' ' << t2 - t1 << " $" << fixed << setprecision(2) << price << endl;
+						}
+						cout << "Total amount: $" << fixed << setprecision(2) << total << endl;
+					}
+				}
+				return 0;
+			}
+
+
+			record::record(string name, const string &time, const string &online)
+			    : name(std::move(std::move(name))), time(time), online(online == "on-line") {
+				month  = stoi(time.substr(0, 2));
+				day    = stoi(time.substr(3, 2));
+				hour   = stoi(time.substr(6, 2));
+				minute = stoi(time.substr(9, 2));
+			}
+
+			bool record::operator<(const record &r) const { return this->time < r.time; }
+
+			unsigned record::get_minutes() const { return this->day * 24 * 60 + this->hour * 60 + this->minute; }
+		}// namespace a1016
+
+		namespace a1017 {
+			int main(istream &cin, ostream &cout) {
+				unsigned n;
+				unsigned k;
+				cin >> n >> k;
+				unsigned next    = 0;
+				unsigned current = 0;
+				priority_queue<unsigned, vector<unsigned>, greater<unsigned>> pq;
+				vector<customer> customers(n);
+				for(unsigned i = 0; i < n; i++) {
+					string time;
+					unsigned p;
+					cin >> time >> p;
+					customers[i] = customer(i, time, min(60U, p) * 60);
+				}
+				sort(customers.begin(), customers.end());
+				for(unsigned i = 0; i < k; i++) {
+					pq.push(8 * 60 * 60);
+				}
+				unsigned total = 0;
+				unsigned cnt   = 0;
+				for(auto &c: customers) {
+					unsigned t = pq.top();
+					pq.pop();
+					if(c.arrive_time > 17 * 60 * 60) {
+						break;
+					}
+					const unsigned start_time = max(c.arrive_time, t);
+					total += start_time - c.arrive_time;
+					cnt++;
+					pq.push(start_time + c.p);
+				}
+				cout << fixed
+				     << setprecision(1) << static_cast<double>(total) / cnt / 60;
+				return 0;
+			}
+
+			bool customer::operator<(const customer &b) const { return this->arrive_time_str < b.arrive_time_str; }
+
+			customer::customer(unsigned id, const string &arrive_time_str, unsigned p)
+			    : id(id), arrive_time_str(arrive_time_str), p(p) {
+				const int h       = stoi(arrive_time_str.substr(0, 2));
+				const int m       = stoi(arrive_time_str.substr(3, 2));
+				const int s       = stoi(arrive_time_str.substr(6, 2));
+				this->arrive_time = h * 60 * 60 + m * 60 + s;
+			}
+
+			bool customer_comp_p::operator()(const customer &c1, const customer &c2) const { return c1.p > c2.p; }
+		}// namespace a1017
+
+		namespace a1026 {
+			string timefmt(unsigned t) {
+				ostringstream oss;
+				const unsigned s = t % 60;
+				t /= 60;
+				const unsigned m = t % 60;
+				t /= 60;
+				const unsigned h = t;
+				oss << setw(2) << setfill('0') << right << h << ':'
+				    << setw(2) << setfill('0') << right << m << ':'
+				    << setw(2) << setfill('0') << right << s;
+				return oss.str();
+			}
+
+			void assign(priority_queue<player, vector<player>, greater<player>> &players, priority_queue<table, vector<table>, greater<table>> &tables, vector<player> &vec, vector<unsigned> &table_cnt) {
+				auto p = players.top();
+				players.pop();
+				const auto t = tables.top();
+				tables.pop();
+				p.waiting_time = round((t.end_time - p.arrival_time) / 60.0);
+				p.start_time   = t.end_time;
+				table_cnt[t.id]++;
+				vec.push_back(p);
+				tables.push({t.id, t.end_time + p.p});
+			}
+
+			int main(istream &cin, ostream &cout) {
+				unsigned n;
+				cin >> n;
+				priority_queue<player, vector<player>, greater<player>> normal_players;
+				priority_queue<player, vector<player>, greater<player>> vip_players;
+				player nop;
+				nop.arrival_time = INF;
+				normal_players.push(nop);
+				vip_players.push(nop);
+				for(unsigned i = 0; i < n; i++) {
+					string arrival_time_str;
+					unsigned p;
+					unsigned tag;
+					cin >> arrival_time_str >> p >> tag;
+					auto ply = player(arrival_time_str, p, tag);
+					if(ply.vip) {
+						vip_players.push(ply);
+					} else {
+						normal_players.push(ply);
+					}
+				}
+				unsigned k;
+				unsigned m;
+				cin >> k >> m;
+				vector<unsigned> table_cnt(k + 1, 0);
+				priority_queue<table, vector<table>, greater<table>> normal_tables;
+				priority_queue<table, vector<table>, greater<table>> vip_tables;
+				normal_tables.push({0, INF});
+				vip_tables.push({0, INF});
+				unordered_set<unsigned> vipid;
+				for(unsigned i = 0; i < m; i++) {
+					unsigned id;
+					cin >> id;
+					vipid.insert(id);
+				}
+				for(unsigned i = 1; i <= k; i++) {
+					if(static_cast<unsigned int>(vipid.contains(i)) != 0U) {
+						vip_tables.push({i, 8 * 60 * 60});
+					} else {
+						normal_tables.push({i, 8 * 60 * 60});
+					}
+				}
+				vector<player> players;
+				while(normal_players.size() > 1 || vip_players.size() > 1) {
+					auto np              = normal_players.top();
+					auto vp              = vip_players.top();
+					unsigned arrive_time = min(np.arrival_time, vp.arrival_time);
+					while(normal_tables.top().end_time < arrive_time) {
+						auto t = normal_tables.top();
+						normal_tables.pop();
+						t.end_time = arrive_time;
+						normal_tables.push(t);
+					}
+					while(vip_tables.top().end_time < arrive_time) {
+						auto t = vip_tables.top();
+						vip_tables.pop();
+						t.end_time = arrive_time;
+						vip_tables.push(t);
+					}
+					auto nt           = normal_tables.top();
+					auto vt           = vip_tables.top();
+					unsigned end_time = min(nt.end_time, vt.end_time);
+
+					if(end_time >= 21 * 60 * 60) {
+						break;
+					}
+
+					if(vp.arrival_time <= end_time && vt.end_time == end_time) {
+						assign(vip_players, vip_tables, players, table_cnt);
+					} else if(np.arrival_time < vp.arrival_time) {
+						if(nt > vt) {
+							assign(normal_players, vip_tables, players, table_cnt);
+						} else {
+							assign(normal_players, normal_tables, players, table_cnt);
+						}
+					} else {
+						if(nt > vt) {
+							assign(vip_players, vip_tables, players, table_cnt);
+						} else {
+							assign(vip_players, normal_tables, players, table_cnt);
+						}
+					}
+				}
+				sort(players.begin(), players.end());
+				for(auto &player: players) {
+					cout << timefmt(player.arrival_time) << ' ' << timefmt(player.start_time) << ' ' << player.waiting_time << endl;
+				}
+				cout << table_cnt[1];
+				for(unsigned i = 2; i <= k; i++) {
+					cout << ' ' << table_cnt[i];
+				}
+				return 0;
+			}
+			player::player(const string &arrival_time_str, unsigned p, unsigned tag)
+			    : arrival_time_str(arrival_time_str), p(min(120U, p) * 60), vip(tag == 1) {
+				const int h  = stoi(arrival_time_str.substr(0, 2));
+				const int m  = stoi(arrival_time_str.substr(3, 2));
+				const int s  = stoi(arrival_time_str.substr(6, 2));
+				arrival_time = h * 60 * 60 + m * 60 + s;
+			}
+
+			bool player::operator<(const player &ply) const {
+				if(start_time != ply.start_time) {
+					return start_time < ply.start_time;
+				}
+				return arrival_time < ply.arrival_time;
+			}
+
+			bool player::operator>(const player &ply) const { return arrival_time > ply.arrival_time; }
+
+			bool table::operator>(const table &t) const {
+				if(end_time != t.end_time) {
+					return end_time > t.end_time;
+				}
+				return id > t.id;
+			}
+		}// namespace a1026
 	}    // namespace a
 
 	namespace top {}

@@ -6949,9 +6949,7 @@ namespace leetcode {
 	namespace merge_intervals {
 		vector<vector<int>> Solution::merge(vector<vector<int>> &intervals) {
 			vector<vector<int>> ans;
-			auto comp = [](const vector<int> &a, const vector<int> &b) {
-				return a[0] < b[0];
-			};
+			auto comp = [](const vector<int> &a, const vector<int> &b) { return a[0] < b[0]; };
 			sort(intervals.begin(), intervals.end(), comp);
 			int start = intervals[0][0];
 			int end   = intervals[0][1];
@@ -6959,30 +6957,28 @@ namespace leetcode {
 				if(intervals[i][0] <= end) {
 					end = max(end, intervals[i][1]);
 				} else {
-					ans.emplace_back(vector<int>{start, end});
+					ans.emplace_back(vector{start, end});
 					start = intervals[i][0];
 					end   = intervals[i][1];
 				}
 			}
-			ans.emplace_back(vector<int>{start, end});
+			ans.emplace_back(vector{start, end});
 			return ans;
 		}
 	}// namespace merge_intervals
 
 	namespace search_a_2d_matrix_ii {
-		bool Solution::searchMatrix(vector<vector<int>> &matrix, int target) {
-			return search(matrix, target, 0, matrix.size() - 1, 0, matrix[0].size() - 1);
-		}
+		bool Solution::searchMatrix(vector<vector<int>> &matrix, int target) { return search(matrix, target, 0, matrix.size() - 1, 0, matrix[0].size() - 1); }
 
 		bool Solution::search(const vector<vector<int>> &matrix, int target, int x_start, int x_end, int y_start, int y_end) {
-			int minimum = min(x_end - x_start, y_end - y_start);
+			const int minimum = min(x_end - x_start, y_end - y_start);
 			vector<int> diag1(minimum + 1);
 			for(int i = 0; i <= minimum; i++) {
 				diag1[i] = matrix[x_start + i][y_start + i];
 			}
-			auto it = lower_bound(diag1.begin(), diag1.end(), target);
-			int x   = x_start + it - diag1.begin();
-			int y   = y_start + it - diag1.begin();
+			const auto it = lower_bound(diag1.begin(), diag1.end(), target);
+			const int x   = x_start + it - diag1.begin();
+			const int y   = y_start + it - diag1.begin();
 			if(it != diag1.end()) {
 				if(*it == target) {
 					return true;
@@ -7015,7 +7011,7 @@ namespace leetcode {
 	}// namespace search_a_2d_matrix_ii
 
 	namespace serialize_and_deserialize_binary_tree {
-		string Codec::serialize(TreeNode *root) {
+		string Codec::serialize(TreeNode *root) const {
 			if(root == nullptr) {
 				return "[]";
 			}
@@ -7025,14 +7021,13 @@ namespace leetcode {
 			queue<TreeNode *> q;
 			q.push(root);
 			while(!q.empty()) {
-				TreeNode *node = q.front();
+				const TreeNode *node = q.front();
 				q.pop();
 				if(node == nullptr) {
 					vec.emplace_back("null");
 					continue;
-				} else {
-					vec.emplace_back(to_string(node->val));
 				}
+				vec.emplace_back(to_string(node->val));
 				q.push(node->left);
 				q.push(node->right);
 			}
@@ -7048,29 +7043,29 @@ namespace leetcode {
 			return oss.str();
 		}
 
-		TreeNode *Codec::deserialize(string data) {
+		TreeNode *Codec::deserialize(string data) const {
 			if(data == "[]") {
 				return nullptr;
 			}
 			vector<string> vec;
-			data      = data.substr(1, data.size() - 2);
-			char *str = (char *) malloc((data.length() + 1) * sizeof(char));
+			data           = data.substr(1, data.size() - 2);
+			const auto str = static_cast<char *>(malloc((data.length() + 1) * sizeof(char)));
 			memcpy(str, data.c_str(), (data.length() + 1) * sizeof(char));
 			for(const char *item = strtok(str, ","); item != nullptr; item = strtok(nullptr, ",")) {
 				vec.emplace_back(string(item));
 			}
 			queue<TreeNode **> q;
-			TreeNode *root = new TreeNode(stoi(vec[0]));
+			auto root = new TreeNode(stoi(vec[0]));
 			q.push(&root);
 			for(const auto &str: vec) {
-				auto node = q.front();
+				const auto node = q.front();
 				q.pop();
 				if(str == "null") {
 					*node = nullptr;
 				} else {
 					*node = new TreeNode(stoi(str));
-					q.push(&((*node)->left));
-					q.push(&((*node)->right));
+					q.push(&(*node)->left);
+					q.push(&(*node)->right);
 				}
 			}
 			return root;

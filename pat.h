@@ -2,6 +2,7 @@
 #define PROBLEMSCPP_PAT_H
 
 #include <iostream>
+#include <queue>
 #include <unordered_set>
 #include <utility>
 #include <vector>
@@ -779,6 +780,7 @@ namespace pat {
 			int main(istream &cin, ostream &cout);
 		}
 
+
 		/// \brief 1013 Battle Over Cities
 		namespace a1013 {
 			void dfs(int i, const vector<unordered_set<int>> &g, int occupied, unordered_set<int> &marked);
@@ -797,6 +799,95 @@ namespace pat {
 			unsigned get_num(string n, unsigned d);
 			int main(istream &cin, ostream &cout);
 		}// namespace a1015
+
+		/**
+		 * \brief 1016 Phone Bills
+		 */
+		namespace a1016 {
+			const unsigned M = 31 * 1440 + 10;
+
+			struct record {
+				string name;
+				string time;
+				bool online;
+				unsigned month;
+				unsigned day;
+				unsigned hour;
+				unsigned minute;
+
+				record(string name, const string &time, const string &online);
+				bool operator<(const record &r) const;
+				[[nodiscard]] unsigned get_minutes() const;
+			};
+
+			struct customer {
+				string name;
+				vector<record> records;
+
+				customer() = default;
+
+				explicit customer(string name)
+				    : name(std::move(std::move(name))) {}
+			};
+
+			int main(istream &cin, ostream &cout);
+		}// namespace a1016
+
+		/**
+		 * \brief 1494. 银行排队
+		 */
+		namespace a1017 {
+			struct customer {
+				unsigned id{};
+				string arrive_time_str;///< 客户的到达时间，用 HH:MM:SS 表示
+				unsigned arrive_time{};
+				unsigned p{};///< 客户的业务办理时间 P（单位：分钟）
+				unsigned start_time{};
+				bool operator<(const customer &b) const;
+				customer() = default;
+				customer(unsigned id, const string &arrive_time_str, unsigned p);
+			};
+
+			struct customer_comp_p {
+				bool operator()(const customer &c1, const customer &c2) const;
+			};
+
+			int main(istream &cin, ostream &cout);
+		}// namespace a1017
+
+		/**
+		 * \brief 1503. 乒乓球
+		 */
+		namespace a1026 {
+			const unsigned INF = 1000000;
+
+			struct player {
+				string arrival_time_str{};
+				unsigned arrival_time = 0;
+				unsigned p            = 0;
+				unsigned waiting_time = 0;
+				unsigned start_time   = 0;
+				bool vip              = false;
+
+				player() = default;
+				player(const string &arrival_time_str, unsigned p, unsigned tag);
+				bool operator<(const player &p) const;
+				bool operator>(const player &p) const;
+			};
+
+			struct table {
+				unsigned id       = 0;
+				unsigned end_time = 0;
+
+				bool operator>(const table &p) const;
+			};
+
+			string timefmt(unsigned t);
+
+			void assign(priority_queue<player, vector<player>, greater<player>> &players, priority_queue<table, vector<table>, greater<table>> &tables, vector<player> &vec, vector<unsigned> &table_cnt);
+
+			int main(istream &cin, ostream &cout);
+		}// namespace a1026
 	}    // namespace a
 
 	/// \brief 顶级
