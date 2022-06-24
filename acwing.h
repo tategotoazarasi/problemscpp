@@ -2092,5 +2092,10 @@ namespace acwing {
 	namespace acwing854 {
 		int main(istream &cin, ostream &cout);
 	}
+
+	/// \brief 858. Prim算法求最小生成树
+	namespace acwing858 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
 #endif//PROBLEMSCPP_ACWING_H

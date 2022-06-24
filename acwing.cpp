@@ -5774,8 +5774,8 @@ namespace acwing {
 	namespace acwing1695 {
 		int main(istream &cin, ostream &cout) {
 			bool nuts[3][3]         = {{true, false, false},
-                               {false, true, false},
-                               {false, false, true}};
+			                           {false, true, false},
+			                           {false, false, true}};
 			unsigned short score[3] = {0, 0, 0};
 			unsigned short ans      = 0;
 			unsigned short n;
@@ -7355,4 +7355,44 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing854
+
+	namespace acwing858 {
+		int main(istream &cin, ostream &cout) {
+			unsigned n, m;
+			cin >> n >> m;
+			vector<vector<int>> g(n + 1, vector<int>(n + 1, INT_MAX));
+			vector<int> dist(n + 1, INT_MAX);
+			for(unsigned i = 0; i < m; i++) {
+				int u, v, w;
+				cin >> u >> v >> w;
+				w       = min(w, g[u][v]);
+				w       = min(w, g[v][u]);
+				g[u][v] = w;
+				g[v][u] = w;
+			}
+			unordered_set<int> us;
+			int ans = 0;
+			for(int i = 0; i < n; i++) {
+				int t = -1;
+				for(int j = 1; j <= n; j++) {
+					if(!us.count(j) && (t == -1 || dist[t] > dist[j])) {
+						t = j;
+					}
+				}
+				if(i > 0 && dist[t] == INT_MAX) {
+					cout << "impossible";
+					return 0;
+				}
+				if(i > 0) {
+					ans += dist[t];
+				}
+				for(int j = 1; j <= n; j++) {
+					dist[j] = min(dist[j], g[t][j]);
+				}
+				us.insert(t);
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing858
 }// namespace acwing
