@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <queue>
+#include <unordered_map>
 #include <unordered_set>
 #include <utility>
 #include <vector>
@@ -914,7 +915,24 @@ namespace pat {
 		namespace a1019 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace a
+
+		/// \brief 1020 Tree Traversals
+		namespace a1020 {
+			struct TreeNode {
+				unsigned key    = 0;
+				TreeNode *left  = nullptr;
+				TreeNode *right = nullptr;
+
+				TreeNode() = default;
+				TreeNode(unsigned key): key(key), left(nullptr), right(nullptr) {}
+				TreeNode(unsigned key, TreeNode *left, TreeNode *right): key(key), left(left), right(right) {}
+			};
+
+			TreeNode *parse(vector<unsigned int> post_order, vector<unsigned int> in_order);
+
+			int main(istream &cin, ostream &cout);
+		}// namespace a1020
+	}    // namespace a
 
 	/// \brief 顶级
 	namespace top {}

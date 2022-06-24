@@ -2194,6 +2194,17 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace a1019
+
+		namespace a1020 {
+			TEST(a1020, case1) {
+				istringstream in("7\n"
+				                 "2 3 1 5 7 6 4\n"
+				                 "1 2 3 4 5 6 7");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("4 1 6 3 5 7 2", out.str());
+			}
+		}// namespace a1020
 	}    // namespace a
 
 	namespace top {}

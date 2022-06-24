@@ -4816,6 +4816,79 @@ namespace pat {
 				return 0;
 			}
 		}// namespace a1019
+
+		namespace a1020 {
+			int main(istream &cin, ostream &cout) {
+				unsigned n;
+				cin >> n;
+				vector<unsigned> post_order(n);
+				vector<unsigned> in_order(n);
+				for(unsigned i = 0; i < n; i++) {
+					cin >> post_order[i];
+				}
+				for(unsigned i = 0; i < n; i++) {
+					cin >> in_order[i];
+				}
+				TreeNode *root = parse(post_order, in_order);
+				queue<TreeNode *> q;
+				q.push(root);
+				bool flag = true;
+				while(!q.empty()) {
+					auto node = q.front();
+					q.pop();
+					if(flag) {
+						flag = false;
+						cout << node->key;
+					} else {
+						cout << ' ' << node->key;
+					}
+					if(node->left != nullptr) {
+						q.push(node->left);
+					}
+					if(node->right != nullptr) {
+						q.push(node->right);
+					}
+				}
+				return 0;
+			}
+
+			TreeNode *parse(vector<unsigned int> post_order, vector<unsigned int> in_order) {
+				TreeNode *root = new TreeNode(post_order.back());
+				bool in_left   = true;
+				unordered_set<unsigned> left, right;
+				vector<unsigned> left_post, right_post, left_in, right_in;
+				for(auto node: in_order) {
+					if(in_left) {
+						if(node == root->key) {
+							in_left = false;
+						} else {
+							left.insert(node);
+							left_in.emplace_back(node);
+						}
+					} else {
+						right.insert(node);
+						right_in.emplace_back(node);
+					}
+				}
+				for(auto node: post_order) {
+					if(node == root->key) {
+						continue;
+					}
+					if(left.count(node)) {
+						left_post.emplace_back(node);
+					} else {
+						right_post.emplace_back(node);
+					}
+				}
+				if(!left.empty()) {
+					root->left = parse(left_post, left_in);
+				}
+				if(!right.empty()) {
+					root->right = parse(right_post, right_in);
+				}
+				return root;
+			}
+		}// namespace a1020
 	}    // namespace a
 
 	namespace top {}
