@@ -909,7 +909,12 @@ namespace pat {
 			};
 			int main(istream &cin, ostream &cout);
 		}// namespace a1018
-	}    // namespace a
+
+		/// \brief 1019 General Palindromic Number
+		namespace a1019 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace a
 
 	/// \brief 顶级
 	namespace top {}

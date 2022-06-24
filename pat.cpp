@@ -4787,6 +4787,35 @@ namespace pat {
 				}
 			}
 		}// namespace a1018
+
+		namespace a1019 {
+			int main(istream &cin, ostream &cout) {
+				unsigned long long n, b;
+				cin >> n >> b;
+				vector<unsigned long long> vec;
+				while(n != 0) {
+					vec.emplace_back(n % b);
+					n /= b;
+				}
+				bool ok = true;
+				for(int i = 0; i < vec.size() / 2; i++) {
+					if(vec[i] != vec[vec.size() - 1 - i]) {
+						ok = false;
+						break;
+					}
+				}
+				if(ok) {
+					cout << "Yes" << endl;
+				} else {
+					cout << "No" << endl;
+				}
+				cout << vec.back();
+				for(int i = vec.size() - 2; i >= 0; i--) {
+					cout << ' ' << vec[i];
+				}
+				return 0;
+			}
+		}// namespace a1019
 	}    // namespace a
 
 	namespace top {}

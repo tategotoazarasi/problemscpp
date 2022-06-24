@@ -2165,6 +2165,35 @@ namespace pat {
 				ASSERT_EQ("4 0->1->2->5->6->7 0", out.str());
 			}
 		}// namespace a1018
+
+		namespace a1019 {
+			TEST(a1019, case1) {
+				istringstream in("27 2");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("Yes\n"
+				          "1 1 0 1 1",
+				          out.str());
+			}
+
+			TEST(a1019, case2) {
+				istringstream in("121 5");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("No\n"
+				          "4 4 1",
+				          out.str());
+			}
+
+			TEST(a1019, case3) {
+				istringstream in("123212312 987654321");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("Yes\n"
+				          "123212312",
+				          out.str());
+			}
+		}// namespace a1019
 	}    // namespace a
 
 	namespace top {}
