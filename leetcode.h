@@ -5,6 +5,7 @@
 #include <array>
 #include <bitset>
 #include <functional>
+#include <list>
 #include <map>
 #include <queue>
 #include <random>
@@ -2617,6 +2618,27 @@ namespace leetcode {
 			static int leastInterval(vector<char> &tasks, int n);
 		};
 	}// namespace task_scheduler
+
+	/// \brief 706. Design HashMap
+	namespace design_hashmap {
+		class MyHashMap {
+			static const unsigned SZ = 1021;
+			array<list<pair<int, int>>, SZ> arr;
+
+		public:
+			/// \brief initializes the object with an empty map.
+			MyHashMap();
+
+			/// \brief inserts a (key, value) pair into the HashMap. If the key already exists in the map, update the corresponding value.
+			void put(int key, int value);
+
+			/// \return the value to which the specified key is mapped, or -1 if this map contains no mapping for the key.
+			int get(int key);
+
+			/// \brief removes the key and its corresponding value if the map contains the mapping for the key.
+			void remove(int key);
+		};
+	}// namespace design_hashmap
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

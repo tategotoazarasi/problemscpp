@@ -7113,4 +7113,44 @@ namespace leetcode {
 			return cycle;
 		}
 	}// namespace task_scheduler
+
+	namespace design_hashmap {
+		MyHashMap::MyHashMap() {
+			arr = array<list<pair<int, int>>, SZ>();
+			for(unsigned i = 0; i < SZ; i++) {
+				arr[i] = list<pair<int, int>>();
+			}
+		}
+
+		void MyHashMap::put(int key, int value) {
+			unsigned slot = static_cast<unsigned>(key) % SZ;
+			for(auto &[k, v]: arr[slot]) {
+				if(k == key) {
+					v = value;
+					return;
+				}
+			}
+			arr[slot].push_back(make_pair(key, value));
+		}
+
+		int MyHashMap::get(int key) {
+			unsigned slot = static_cast<unsigned>(key) % SZ;
+			for(auto &[k, v]: arr[slot]) {
+				if(k == key) {
+					return v;
+				}
+			}
+			return -1;
+		}
+
+		void MyHashMap::remove(int key) {
+			unsigned slot = static_cast<unsigned>(key) % SZ;
+			for(auto it = arr[slot].begin(); it != arr[slot].end(); ++it) {
+				if(it->first == key) {
+					arr[slot].erase(it);
+					return;
+				}
+			}
+		}
+	}// namespace design_hashmap
 }// namespace leetcode
