@@ -7153,4 +7153,45 @@ namespace leetcode {
 			}
 		}
 	}// namespace design_hashmap
+
+	namespace spiral_matrix_ii {
+		vector<vector<int>> Solution::generateMatrix(int n) {
+			vector<vector<int>> ans(n, vector<int>(n, 0));
+			int dir = 0;// 0-right 1-down 2-left 3->up
+			int c   = 1;
+			int x   = 0;
+			int y   = 0;
+			for(int i = 0; i < n * n; i++) {
+				ans[x][y] = c++;
+				bool flag = true;
+			SLCT:
+				int nx = x;
+				int ny = y;
+				switch(dir) {
+					case 0:
+						ny++;
+						break;
+					case 1:
+						nx++;
+						break;
+					case 2:
+						ny--;
+						break;
+					case 3:
+						nx--;
+						break;
+				}
+				if(flag && (nx < 0 || nx >= n || ny < 0 || ny >= n || ans[nx][ny] != 0)) {
+					dir++;
+					dir %= 4;
+					flag = false;
+					goto SLCT;
+				} else {
+					x = nx;
+					y = ny;
+				}
+			}
+			return ans;
+		}
+	}// namespace spiral_matrix_ii
 }// namespace leetcode

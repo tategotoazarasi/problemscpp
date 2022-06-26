@@ -2639,6 +2639,14 @@ namespace leetcode {
 			void remove(int key);
 		};
 	}// namespace design_hashmap
+
+	/// \brief 59. Spiral Matrix II
+	namespace spiral_matrix_ii {
+		class Solution {
+		public:
+			static vector<vector<int>> generateMatrix(int n);
+		};
+	}// namespace spiral_matrix_ii
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

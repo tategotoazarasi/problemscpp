@@ -3342,4 +3342,16 @@ namespace leetcode {
 			ASSERT_EQ(8, Solution::leastInterval(tasks, 6));
 		}
 	}// namespace task_scheduler
+
+	namespace spiral_matrix_ii {
+		TEST(spiral_matrix_ii, case1) {
+			vector<vector<int>> ans = {{1, 2, 3}, {8, 9, 4}, {7, 6, 5}};
+			ASSERT_EQ(ans, Solution::generateMatrix(3));
+		}
+
+		TEST(spiral_matrix_ii, case2) {
+			vector<vector<int>> ans = {{1}};
+			ASSERT_EQ(ans, Solution::generateMatrix(1));
+		}
+	}// namespace spiral_matrix_ii
 }// namespace leetcode
