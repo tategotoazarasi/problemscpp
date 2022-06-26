@@ -3354,4 +3354,31 @@ namespace leetcode {
 			ASSERT_EQ(ans, Solution::generateMatrix(1));
 		}
 	}// namespace spiral_matrix_ii
+
+	namespace non_overlapping_intervals {
+		TEST(non_overlapping_intervals, case1) {
+			vector<vector<int>> intervals = {{1, 2}, {2, 3}, {3, 4}, {1, 3}};
+			ASSERT_EQ(1, Solution::eraseOverlapIntervals(intervals));
+		}
+
+		TEST(non_overlapping_intervals, case2) {
+			vector<vector<int>> intervals = {{1, 2}, {1, 2}, {1, 2}};
+			ASSERT_EQ(2, Solution::eraseOverlapIntervals(intervals));
+		}
+
+		TEST(non_overlapping_intervals, case3) {
+			vector<vector<int>> intervals = {{1, 2}, {2, 3}};
+			ASSERT_EQ(0, Solution::eraseOverlapIntervals(intervals));
+		}
+
+		TEST(non_overlapping_intervals, case4) {
+			vector<vector<int>> intervals = {{-52, 31}, {-73, -26}, {82, 97}, {-65, -11}, {-62, -49}, {95, 99}, {58, 95}, {-31, 49}, {66, 98}, {-63, 2}, {30, 47}, {-40, -26}};
+			ASSERT_EQ(7, Solution::eraseOverlapIntervals(intervals));
+		}
+
+		TEST(non_overlapping_intervals, case5) {
+			vector<vector<int>> intervals = {{-25322, -4602}, {-35630, -28832}, {-33802, 29009}, {13393, 24550}, {-10655, 16361}, {-2835, 10053}, {-2290, 17156}, {1236, 14847}, {-45022, -1296}, {-34574, -1993}, {-14129, 15626}, {3010, 14502}, {42403, 45946}, {-22117, 13380}, {7337, 33635}, {-38153, 27794}, {47640, 49108}, {40578, 46264}, {-38497, -13790}, {-7530, 4977}, {-29009, 43543}, {-49069, 32526}, {21409, 43622}, {-28569, 16493}, {-28301, 34058}};
+			ASSERT_EQ(19, Solution::eraseOverlapIntervals(intervals));
+		}
+	}// namespace non_overlapping_intervals
 }// namespace leetcode

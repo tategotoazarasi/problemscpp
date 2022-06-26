@@ -2647,6 +2647,14 @@ namespace leetcode {
 			static vector<vector<int>> generateMatrix(int n);
 		};
 	}// namespace spiral_matrix_ii
+
+	/// \brief 435. Non-overlapping Intervals
+	namespace non_overlapping_intervals {
+		class Solution {
+		public:
+			static int eraseOverlapIntervals(vector<vector<int>> &intervals);
+		};
+	}// namespace non_overlapping_intervals
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
