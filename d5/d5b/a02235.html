@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::self_dividing_numbers::Solution类 参考</title>
+<title>problemscpp: leetcode::find_servers_that_handled_most_number_of_requests::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,14 +63,14 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d0/d4a/a00147.html">leetcode</a></li><li class="navelem"><a class="el" href="../../da/de0/a00317.html">self_dividing_numbers</a></li><li class="navelem"><a class="el" href="../../d5/d5b/a02235.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d0/d4a/a00147.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d3/db8/a00316.html">find_servers_that_handled_most_number_of_requests</a></li><li class="navelem"><a class="el" href="../../d5/d5b/a02235.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="../../db/d14/a02232.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::self_dividing_numbers::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::find_servers_that_handled_most_number_of_requests::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -78,15 +78,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a60e690b237f0625c94698ba9410ed0af"><td class="memItemLeft" align="right" valign="top">static vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5b/a02235.html#a60e690b237f0625c94698ba9410ed0af">selfDividingNumbers</a> (int left, int right)</td></tr>
-<tr class="separator:a60e690b237f0625c94698ba9410ed0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5fcbfafc848edf43f81f4f7c29634cc"><td class="memItemLeft" align="right" valign="top">static vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5b/a02235.html#ad5fcbfafc848edf43f81f4f7c29634cc">busiestServers</a> (int k, vector&lt; int &gt; &amp;arrival, vector&lt; int &gt; &amp;load)</td></tr>
+<tr class="separator:ad5fcbfafc848edf43f81f4f7c29634cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01990">1990</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01982">1982</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a60e690b237f0625c94698ba9410ed0af" name="a60e690b237f0625c94698ba9410ed0af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60e690b237f0625c94698ba9410ed0af">&#9670;&nbsp;</a></span>selfDividingNumbers()</h2>
+<a id="ad5fcbfafc848edf43f81f4f7c29634cc" name="ad5fcbfafc848edf43f81f4f7c29634cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5fcbfafc848edf43f81f4f7c29634cc">&#9670;&nbsp;</a></span>busiestServers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -95,16 +95,22 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt; int &gt; leetcode::self_dividing_numbers::Solution::selfDividingNumbers </td>
+          <td class="memname">vector&lt; int &gt; leetcode::find_servers_that_handled_most_number_of_requests::Solution::busiestServers </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>left</em>, </td>
+          <td class="paramname"><em>k</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>right</em>&#160;</td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arrival</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>load</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -119,37 +125,48 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../dc/d87/a00032_source.html">leetcode.cpp</a> 第 <a class="el" href="../../dc/d87/a00032_source.html#l05310">5310</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l05310" name="l05310"></a><span class="lineno"> 5310</span>                                                                     {</div>
-<div class="line"><a id="l05311" name="l05311"></a><span class="lineno"> 5311</span>            vector&lt;int&gt; ans;</div>
-<div class="line"><a id="l05312" name="l05312"></a><span class="lineno"> 5312</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>; i &lt;= <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>; ++i) {</div>
-<div class="line"><a id="l05313" name="l05313"></a><span class="lineno"> 5313</span>                stringstream ss;</div>
-<div class="line"><a id="l05314" name="l05314"></a><span class="lineno"> 5314</span>                ss &lt;&lt; i;</div>
-<div class="line"><a id="l05315" name="l05315"></a><span class="lineno"> 5315</span>                <span class="keywordtype">char</span> ch;</div>
-<div class="line"><a id="l05316" name="l05316"></a><span class="lineno"> 5316</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l05317" name="l05317"></a><span class="lineno"> 5317</span>                <span class="keywordflow">while</span>(ss &gt;&gt; ch) {</div>
-<div class="line"><a id="l05318" name="l05318"></a><span class="lineno"> 5318</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> num = ch - <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l05319" name="l05319"></a><span class="lineno"> 5319</span>                    <span class="keywordflow">if</span>(num == 0) {</div>
-<div class="line"><a id="l05320" name="l05320"></a><span class="lineno"> 5320</span>                        flag = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l05321" name="l05321"></a><span class="lineno"> 5321</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l05322" name="l05322"></a><span class="lineno"> 5322</span>                    }</div>
-<div class="line"><a id="l05323" name="l05323"></a><span class="lineno"> 5323</span>                    <span class="keywordflow">if</span>(i % num != 0) {</div>
-<div class="line"><a id="l05324" name="l05324"></a><span class="lineno"> 5324</span>                        flag = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l05325" name="l05325"></a><span class="lineno"> 5325</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l05326" name="l05326"></a><span class="lineno"> 5326</span>                    }</div>
-<div class="line"><a id="l05327" name="l05327"></a><span class="lineno"> 5327</span>                }</div>
-<div class="line"><a id="l05328" name="l05328"></a><span class="lineno"> 5328</span>                <span class="keywordflow">if</span>(flag) {</div>
-<div class="line"><a id="l05329" name="l05329"></a><span class="lineno"> 5329</span>                    ans.push_back(i);</div>
-<div class="line"><a id="l05330" name="l05330"></a><span class="lineno"> 5330</span>                }</div>
-<div class="line"><a id="l05331" name="l05331"></a><span class="lineno"> 5331</span>            }</div>
-<div class="line"><a id="l05332" name="l05332"></a><span class="lineno"> 5332</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l05333" name="l05333"></a><span class="lineno"> 5333</span>        }</div>
-<div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">acwing::acwing1929::left</a></div><div class="ttdeci">@ left</div><div class="ttdoc">左</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00554">acwing.h:554</a></div></div>
-<div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00556">acwing.h:556</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../dc/d87/a00032_source.html">leetcode.cpp</a> 第 <a class="el" href="../../dc/d87/a00032_source.html#l05261">5261</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l05261" name="l05261"></a><span class="lineno"> 5261</span>                                                                                           {</div>
+<div class="line"><a id="l05262" name="l05262"></a><span class="lineno"> 5262</span>            vector&lt;int&gt; ans;</div>
+<div class="line"><a id="l05263" name="l05263"></a><span class="lineno"> 5263</span>            vector count(k, 0);</div>
+<div class="line"><a id="l05264" name="l05264"></a><span class="lineno"> 5264</span>            set&lt;int&gt; available;</div>
+<div class="line"><a id="l05265" name="l05265"></a><span class="lineno"> 5265</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; k; i++) {</div>
+<div class="line"><a id="l05266" name="l05266"></a><span class="lineno"> 5266</span>                available.insert(i);</div>
+<div class="line"><a id="l05267" name="l05267"></a><span class="lineno"> 5267</span>            }</div>
+<div class="line"><a id="l05268" name="l05268"></a><span class="lineno"> 5268</span>            priority_queue&lt;event&gt; events;</div>
+<div class="line"><a id="l05269" name="l05269"></a><span class="lineno"> 5269</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; arrival.size(); i++) {</div>
+<div class="line"><a id="l05270" name="l05270"></a><span class="lineno"> 5270</span>                <span class="keyword">event</span> e = {arrival[i], <span class="keyword">true</span>, i};</div>
+<div class="line"><a id="l05271" name="l05271"></a><span class="lineno"> 5271</span>                events.push(e);</div>
+<div class="line"><a id="l05272" name="l05272"></a><span class="lineno"> 5272</span>            }</div>
+<div class="line"><a id="l05273" name="l05273"></a><span class="lineno"> 5273</span>            <span class="keywordflow">while</span>(!events.empty()) {</div>
+<div class="line"><a id="l05274" name="l05274"></a><span class="lineno"> 5274</span>                <span class="keyword">event</span> e = events.top();</div>
+<div class="line"><a id="l05275" name="l05275"></a><span class="lineno"> 5275</span>                events.pop();</div>
+<div class="line"><a id="l05276" name="l05276"></a><span class="lineno"> 5276</span>                <span class="keywordflow">if</span>(e.start) {</div>
+<div class="line"><a id="l05277" name="l05277"></a><span class="lineno"> 5277</span>                    <span class="keywordflow">if</span>(!available.empty()) {</div>
+<div class="line"><a id="l05278" name="l05278"></a><span class="lineno"> 5278</span>                        <span class="keyword">auto</span> it = available.lower_bound(e.index % k);</div>
+<div class="line"><a id="l05279" name="l05279"></a><span class="lineno"> 5279</span>                        <span class="keywordflow">if</span>(it == available.end()) {</div>
+<div class="line"><a id="l05280" name="l05280"></a><span class="lineno"> 5280</span>                            it = available.begin();</div>
+<div class="line"><a id="l05281" name="l05281"></a><span class="lineno"> 5281</span>                        }</div>
+<div class="line"><a id="l05282" name="l05282"></a><span class="lineno"> 5282</span>                        <span class="keyword">event</span> next = {e.time + load[e.index], <span class="keyword">false</span>, e.index, *it};</div>
+<div class="line"><a id="l05283" name="l05283"></a><span class="lineno"> 5283</span>                        events.push(next);</div>
+<div class="line"><a id="l05284" name="l05284"></a><span class="lineno"> 5284</span>                        available.erase(it);</div>
+<div class="line"><a id="l05285" name="l05285"></a><span class="lineno"> 5285</span>                    }</div>
+<div class="line"><a id="l05286" name="l05286"></a><span class="lineno"> 5286</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l05287" name="l05287"></a><span class="lineno"> 5287</span>                    <span class="comment">//end</span></div>
+<div class="line"><a id="l05288" name="l05288"></a><span class="lineno"> 5288</span>                    available.insert(e.server_index);</div>
+<div class="line"><a id="l05289" name="l05289"></a><span class="lineno"> 5289</span>                    count[e.server_index]++;</div>
+<div class="line"><a id="l05290" name="l05290"></a><span class="lineno"> 5290</span>                }</div>
+<div class="line"><a id="l05291" name="l05291"></a><span class="lineno"> 5291</span>            }</div>
+<div class="line"><a id="l05292" name="l05292"></a><span class="lineno"> 5292</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> maximum = *max_element(count.begin(), count.end());</div>
+<div class="line"><a id="l05293" name="l05293"></a><span class="lineno"> 5293</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; k; i++) {</div>
+<div class="line"><a id="l05294" name="l05294"></a><span class="lineno"> 5294</span>                <span class="keywordflow">if</span>(count[i] == maximum) {</div>
+<div class="line"><a id="l05295" name="l05295"></a><span class="lineno"> 5295</span>                    ans.push_back(i);</div>
+<div class="line"><a id="l05296" name="l05296"></a><span class="lineno"> 5296</span>                }</div>
+<div class="line"><a id="l05297" name="l05297"></a><span class="lineno"> 5297</span>            }</div>
+<div class="line"><a id="l05298" name="l05298"></a><span class="lineno"> 5298</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l05299" name="l05299"></a><span class="lineno"> 5299</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/df9/a00044_source.html#l00554">acwing::acwing1929::left</a> , 以及 <a class="el" href="../../d5/df9/a00044_source.html#l00556">acwing::acwing1929::right</a>.</p>
-
-<p class="reference">被这些函数引用 <a class="el" href="../../d2/de7/a00014_source.html#l02584">leetcode::self_dividing_numbers::TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d2/de7/a00014_source.html#l02554">leetcode::find_servers_that_handled_most_number_of_requests::TEST()</a>.</p>
 
 </div>
 </div>
