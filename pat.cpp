@@ -4889,6 +4889,39 @@ namespace pat {
 				return root;
 			}
 		}// namespace a1020
+
+		namespace a1023 {
+			int main(istream &cin, ostream &cout) {
+				string n;
+				cin >> n;
+				unordered_map<unsigned short, unsigned short> us1;
+				unordered_map<unsigned short, unsigned short> us2;
+				vector<unsigned short> vec;
+				unsigned short c = 0;
+				for(int i = n.length() - 1; i >= 0; i--) {
+					unsigned short ch = static_cast<unsigned short>(n[i]) - '0';
+					us1[ch]++;
+					ch *= 2;
+					ch += c;
+					c = ch / 10;
+					ch %= 10;
+					vec.emplace_back(ch);
+				}
+				if(c > 0) {
+					vec.emplace_back(c);
+				}
+				ostringstream oss;
+				for(auto it = vec.rbegin(); it != vec.rend(); ++it) {
+					unsigned num = *it;
+					oss << num;
+					us2[num]++;
+				}
+
+				cout << (us1 == us2 ? "Yes" : "No") << endl
+				     << oss.str();
+				return 0;
+			}
+		}// namespace a1023
 	}    // namespace a
 
 	namespace top {}

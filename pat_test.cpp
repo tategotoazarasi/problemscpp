@@ -2205,6 +2205,17 @@ namespace pat {
 				ASSERT_EQ("4 1 6 3 5 7 2", out.str());
 			}
 		}// namespace a1020
+
+		namespace a1023 {
+			TEST(a1023, case1) {
+				istringstream in("1234567899");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("Yes\n"
+				          "2469135798",
+				          out.str());
+			}
+		}// namespace a1023
 	}    // namespace a
 
 	namespace top {}

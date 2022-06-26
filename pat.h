@@ -932,7 +932,12 @@ namespace pat {
 
 			int main(istream &cin, ostream &cout);
 		}// namespace a1020
-	}    // namespace a
+
+		/// \brief 1023 Have Fun with Numbers
+		namespace a1023 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace a
 
 	/// \brief 顶级
 	namespace top {}
