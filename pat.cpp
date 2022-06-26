@@ -4922,6 +4922,77 @@ namespace pat {
 				return 0;
 			}
 		}// namespace a1023
+
+		namespace a1024 {
+			int main(istream &cin, ostream &cout) {
+				string n;
+				unsigned int k;
+				cin >> n >> k;
+				bi bn(n);
+				unsigned step = 0;
+				while(step <= k) {
+					if(bn.is_palindromic()) {
+						cout << bn << endl
+						     << step;
+						return 0;
+					}
+					if(step == k) {
+						break;
+					}
+					bi bn2 = bn;
+					bn2.reverse();
+					bn = bn + bn2;
+					step++;
+				}
+				cout << bn << endl
+				     << step;
+				return 0;
+			}
+
+			ostream &operator<<(ostream &os, bi &b) {
+				for(auto it = b.vec.rbegin(); it != b.vec.rend(); ++it) {
+					os << *it;
+				}
+				return os;
+			}
+
+			void bi::reverse() {
+				vec = vector<unsigned short>(vec.rbegin(), vec.rend());
+			}
+
+			bool bi::is_palindromic() {
+				for(int i = 0; i < vec.size() / 2; i++) {
+					if(vec[i] != vec[vec.size() - i - 1]) {
+						return false;
+					}
+				}
+				return true;
+			}
+
+			bi bi::operator+(const bi &n2) const {
+				vector<unsigned short> v;
+				unsigned short c = 0;
+				for(int i = 0; i < vec.size(); i++) {
+					unsigned short n = vec[i] + n2.vec[i];
+					n += c;
+					c = n / 10;
+					n %= 10;
+					v.emplace_back(n);
+				}
+				if(c > 0) {
+					v.emplace_back(c);
+				}
+				bi ans;
+				ans.vec = v;
+				return ans;
+			}
+
+			bi::bi(const string &str) {
+				for(int i = str.length() - 1; i >= 0; i--) {
+					vec.emplace_back(str[i] - '0');
+				}
+			}
+		}// namespace a1024
 	}    // namespace a
 
 	namespace top {}

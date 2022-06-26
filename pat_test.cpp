@@ -2216,6 +2216,35 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace a1023
+
+		namespace a1024 {
+			TEST(a1024, case1) {
+				istringstream in("67 3");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("484\n"
+				          "2",
+				          out.str());
+			}
+
+			TEST(a1024, case2) {
+				istringstream in("69 3");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("1353\n"
+				          "3",
+				          out.str());
+			}
+
+			TEST(a1024, case3) {
+				istringstream in("7237160004 37");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("93682709897533470989727738\n"
+				          "37",
+				          out.str());
+			}
+		}// namespace a1024
 	}    // namespace a
 
 	namespace top {}

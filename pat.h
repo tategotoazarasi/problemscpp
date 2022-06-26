@@ -937,7 +937,21 @@ namespace pat {
 		namespace a1023 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace a
+
+		/// \brief 1024 Palindromic Number
+		namespace a1024 {
+			struct bi {
+				vector<unsigned short> vec;
+				void reverse();
+				bool is_palindromic();
+				bi operator+(const bi &n2) const;
+				bi() = default;
+				bi(const string &str);
+			};
+			ostream &operator<<(ostream &os, bi &b);
+			int main(istream &cin, ostream &cout);
+		}// namespace a1024
+	}    // namespace a
 
 	/// \brief 顶级
 	namespace top {}
