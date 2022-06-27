@@ -2663,6 +2663,14 @@ namespace leetcode {
 			static vector<int> productExceptSelf(vector<int> &nums);
 		};
 	}// namespace product_of_array_except_self
+
+	/// \brief 560. Subarray Sum Equals K
+	namespace subarray_sum_equals_k {
+		class Solution {
+		public:
+			static int subarraySum(vector<int> &nums, int k);
+		};
+	}// namespace subarray_sum_equals_k
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

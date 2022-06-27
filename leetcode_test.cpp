@@ -3395,4 +3395,31 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::productExceptSelf(nums));
 		}
 	}// namespace product_of_array_except_self
+
+	namespace subarray_sum_equals_k {
+		TEST(subarray_sum_equals_k, case1) {
+			vector<int> nums = {1, 1, 1};
+			ASSERT_EQ(2, Solution::subarraySum(nums, 2));
+		}
+
+		TEST(subarray_sum_equals_k, case2) {
+			vector<int> nums = {1, 2, 3};
+			ASSERT_EQ(2, Solution::subarraySum(nums, 3));
+		}
+
+		TEST(subarray_sum_equals_k, case3) {
+			vector<int> nums = {1};
+			ASSERT_EQ(0, Solution::subarraySum(nums, 0));
+		}
+
+		TEST(subarray_sum_equals_k, case4) {
+			vector<int> nums = {-1, -1, 1};
+			ASSERT_EQ(1, Solution::subarraySum(nums, 0));
+		}
+
+		TEST(subarray_sum_equals_k, case5) {
+			vector<int> nums = {-1, -1, 1};
+			ASSERT_EQ(1, Solution::subarraySum(nums, 1));
+		}
+	}// namespace subarray_sum_equals_k
 }// namespace leetcode

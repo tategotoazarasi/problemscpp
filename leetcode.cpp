@@ -7239,4 +7239,19 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace product_of_array_except_self
+
+	namespace subarray_sum_equals_k {
+		int Solution::subarraySum(vector<int> &nums, int k) {
+			unordered_map<int, int> um;
+			um[0]     = 1;
+			int count = 0;
+			int ps    = 0;
+			for(auto &num: nums) {
+				ps += num;
+				count += um[ps - k];
+				um[ps]++;
+			}
+			return count;
+		}
+	}// namespace subarray_sum_equals_k
 }// namespace leetcode
