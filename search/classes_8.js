@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['listnode_0',['ListNode',['../d8/d6e/a00537.html',1,'acwing::ListNode'],['../d9/d8b/a01469.html',1,'leetcode::ListNode']]]
+  ['listnode_0',['ListNode',['../dd/d5a/a00538.html',1,'acwing::ListNode'],['../d0/da4/a01470.html',1,'leetcode::ListNode']]]
 ];
