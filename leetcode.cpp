@@ -7217,4 +7217,26 @@ namespace leetcode {
 			return n - ans;
 		}
 	}// namespace non_overlapping_intervals
+
+	namespace product_of_array_except_self {
+		vector<int> Solution::productExceptSelf(vector<int> &nums) {
+			vector<int> left(nums.size());
+			vector<int> right(nums.size());
+			int c = 1;
+			for(int i = 0; i < left.size(); i++) {
+				left[i] = c;
+				c *= nums[i];
+			}
+			c = 1;
+			for(int i = left.size() - 1; i >= 0; i--) {
+				right[i] = c;
+				c *= nums[i];
+			}
+			vector<int> ans(nums.size());
+			for(int i = 0; i < nums.size(); i++) {
+				ans[i] = left[i] * right[i];
+			}
+			return ans;
+		}
+	}// namespace product_of_array_except_self
 }// namespace leetcode

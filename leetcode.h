@@ -2655,6 +2655,14 @@ namespace leetcode {
 			static int eraseOverlapIntervals(vector<vector<int>> &intervals);
 		};
 	}// namespace non_overlapping_intervals
+
+	/// \brief 238. Product of Array Except Self
+	namespace product_of_array_except_self {
+		class Solution {
+		public:
+			static vector<int> productExceptSelf(vector<int> &nums);
+		};
+	}// namespace product_of_array_except_self
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -3381,4 +3381,18 @@ namespace leetcode {
 			ASSERT_EQ(19, Solution::eraseOverlapIntervals(intervals));
 		}
 	}// namespace non_overlapping_intervals
+
+	namespace product_of_array_except_self {
+		TEST(product_of_array_except_self, case1) {
+			vector<int> nums   = {1, 2, 3, 4};
+			vector<int> output = {24, 12, 8, 6};
+			ASSERT_EQ(output, Solution::productExceptSelf(nums));
+		}
+
+		TEST(product_of_array_except_self, case2) {
+			vector<int> nums   = {-1, 1, 0, -3, 3};
+			vector<int> output = {0, 0, 9, 0, 0};
+			ASSERT_EQ(output, Solution::productExceptSelf(nums));
+		}
+	}// namespace product_of_array_except_self
 }// namespace leetcode
