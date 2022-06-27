@@ -951,7 +951,12 @@ namespace pat {
 			ostream &operator<<(ostream &os, bi &b);
 			int main(istream &cin, ostream &cout);
 		}// namespace a1024
-	}    // namespace a
+
+		/// \brief 1027 Colors in Mars
+		namespace a1027 {
+			int main(istream &cin, ostream &cout);
+		}
+	}// namespace a
 
 	/// \brief 顶级
 	namespace top {}

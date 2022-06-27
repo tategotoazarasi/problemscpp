@@ -2245,6 +2245,15 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace a1024
+
+		namespace a1027 {
+			TEST(a1027, case1) {
+				istringstream in("15 43 71");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("#123456", out.str());
+			}
+		}// namespace a1027
 	}    // namespace a
 
 	namespace top {}

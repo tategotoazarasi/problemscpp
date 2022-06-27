@@ -4993,6 +4993,33 @@ namespace pat {
 				}
 			}
 		}// namespace a1024
+
+		namespace a1027 {
+			int main(istream &cin, ostream &cout) {
+				char num[13] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C'};
+				unsigned input[3];
+				cin >> input[0] >> input[1] >> input[2];
+				stack<char> stk;
+				ostringstream oss;
+				oss << '#';
+				for(int i = 0; i < 3; i++) {
+					unsigned color = input[i];
+					while(color != 0) {
+						stk.push(num[color % 13]);
+						color /= 13;
+					}
+					while(stk.size() < 2) {
+						stk.push('0');
+					}
+					while(!stk.empty()) {
+						oss << stk.top();
+						stk.pop();
+					}
+				}
+				cout << oss.str();
+				return 0;
+			}
+		}// namespace a1027
 	}    // namespace a
 
 	namespace top {}
