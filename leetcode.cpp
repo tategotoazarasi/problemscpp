@@ -7254,4 +7254,24 @@ namespace leetcode {
 			return count;
 		}
 	}// namespace subarray_sum_equals_k
+
+	namespace partition_labels {
+		vector<int> Solution::partitionLabels(string s) {
+			unordered_map<char, unsigned> last;
+			vector<int> ans;
+			for(int i = 0; i < s.length(); i++) {
+				last[s[i]] = i;
+			}
+			for(int i = 0; i < s.length();) {
+				unsigned last_pos = i;
+				char ch           = s[i];
+				for(int j = i; j <= last_pos; j++) {
+					last_pos = max(last_pos, last[s[j]]);
+				}
+				ans.emplace_back(last_pos - i + 1);
+				i = last_pos + 1;
+			}
+			return ans;
+		}
+	}// namespace partition_labels
 }// namespace leetcode

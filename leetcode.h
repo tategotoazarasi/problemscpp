@@ -2671,6 +2671,14 @@ namespace leetcode {
 			static int subarraySum(vector<int> &nums, int k);
 		};
 	}// namespace subarray_sum_equals_k
+
+	/// \brief 763. Partition Labels
+	namespace partition_labels {
+		class Solution {
+		public:
+			static vector<int> partitionLabels(string s);
+		};
+	}// namespace partition_labels
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -3422,4 +3422,16 @@ namespace leetcode {
 			ASSERT_EQ(1, Solution::subarraySum(nums, 1));
 		}
 	}// namespace subarray_sum_equals_k
+
+	namespace partition_labels {
+		TEST(partition_labels, case1) {
+			vector<int> output = {9, 7, 8};
+			ASSERT_EQ(output, Solution::partitionLabels("ababcbacadefegdehijhklij"));
+		}
+
+		TEST(partition_labels, case2) {
+			vector<int> output = {10};
+			ASSERT_EQ(output, Solution::partitionLabels("eccbbbbdec"));
+		}
+	}// namespace partition_labels
 }// namespace leetcode
