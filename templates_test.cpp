@@ -132,3 +132,36 @@ TEST(BigInt, minus5) {
 	ss >> ans;
 	ASSERT_EQ("-864197532", ans);
 }
+
+TEST(BigInt, multiply1) {
+	const BigInt bi1 = "123456789";
+	const BigInt bi2 = "987654321";
+	const BigInt bi  = bi1 * bi2;
+	stringstream ss;
+	ss << bi;
+	string ans;
+	ss >> ans;
+	ASSERT_EQ("121932631112635269", ans);
+}
+
+TEST(BigInt, multiply2) {
+	const BigInt bi1 = "73892532615";
+	const BigInt bi2 = "-544835983274";
+	const BigInt bi  = bi1 * bi2;
+	stringstream ss;
+	ss << bi;
+	string ans;
+	ss >> ans;
+	ASSERT_EQ("-40259310663899639481510", ans);
+}
+
+TEST(BigInt, multiply3) {
+	const BigInt bi1 = "-57843957920564789329632578432578924635789325423789";
+	const BigInt bi2 = "-5746578193211561278947328194319125";
+	const BigInt bi  = bi1 * bi2;
+	stringstream ss;
+	ss << bi;
+	string ans;
+	ss >> ans;
+	ASSERT_EQ("332404827195364786322355785444558091034080578559256965088672851184934586482932664625", ans);
+}

@@ -215,9 +215,50 @@ BigInt BigInt::operator-(const BigInt &bi) const {
 	return ret;
 }
 
-vector<unsigned short> BigInt::operator*(const unsigned short /*n*/) const { return {}; }
+vector<unsigned short> BigInt::operator*(const unsigned short n) const {
+	vector<unsigned short> res;
+	unsigned short c = 0;
+	for(auto v: this->vec) {
+		unsigned short num = n * v + c;
+		c                  = num / 10;
+		num %= 10;
+		res.emplace_back(num);
+	}
+	while(c > 0) {
+		res.emplace_back(c % 10);
+		c /= 10;
+	}
+	return res;
+}
 
-BigInt BigInt::operator*(const BigInt & /*bi*/) const { return *this; }
+BigInt BigInt::operator*(const BigInt &bi) const {
+	unsigned max_len = 0;
+	vector<vector<unsigned short>> vecs(bi.vec.size());
+	for(int i = 0; i < bi.vec.size(); i++) {
+		vector<unsigned short> vi(i, 0);
+		vector<unsigned short> ai = (*this) * bi.vec[i];
+		vi.insert(vi.end(), ai.begin(), ai.end());
+		vecs[i] = vi;
+		max_len = max(max_len, static_cast<unsigned>(vi.size()));
+	}
+	vector<unsigned short> ans;
+	unsigned short c = 0;
+	for(int i = 0; i < max_len; i++) {
+		unsigned int v = 0;
+		for(int j = 0; j < vecs.size(); j++) {
+			v += i < vecs[j].size() ? vecs[j][i] : 0;
+		}
+		v += c;
+		c = v / 10;
+		v %= 10;
+		ans.emplace_back(v);
+	}
+	while(c > 0) {
+		ans.emplace_back(c % 10);
+		c /= 10;
+	}
+	return BigInt(ans, (*this).positive == bi.positive);
+}
 
 BigInt BigInt::operator/(const BigInt & /*bi*/) const { return *this; }
 
