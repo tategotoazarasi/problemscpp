@@ -7274,4 +7274,53 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace partition_labels
+
+	namespace repeated_dna_sequences {
+		vector<string> Solution::findRepeatedDnaSequences(string s) {
+			vector<unsigned short> vec(s.length());
+			for(int i = 0; i < s.length(); i++) {
+				switch(s[i]) {
+					case 'A':
+						vec[i] = 0;
+						break;
+					case 'C':
+						vec[i] = 1;
+						break;
+					case 'G':
+						vec[i] = 2;
+						break;
+					case 'T':
+						vec[i] = 3;
+						break;
+				}
+			}
+			unsigned hsv = 0;
+			if(s.length() < 10) {
+				return {};
+			}
+			unordered_map<unsigned, string> um;
+			unordered_map<unsigned, unsigned> cnt;
+			for(int i = 0; i < 10; i++) {
+				hsv *= 4;
+				hsv += vec[i];
+			}
+			um[hsv]    = s.substr(0, 10);
+			cnt[hsv]   = 1;
+			unsigned f = 262144;
+			for(int i = 10; i < s.length(); i++) {
+				hsv -= vec[i - 10] * f;
+				hsv *= 4;
+				hsv += vec[i];
+				um[hsv] = s.substr(i - 9, 10);
+				cnt[hsv]++;
+			}
+			vector<string> ans;
+			for(auto &[k, v]: um) {
+				if(cnt[k] > 1) {
+					ans.emplace_back(v);
+				}
+			}
+			return ans;
+		}
+	}// namespace repeated_dna_sequences
 }// namespace leetcode

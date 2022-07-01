@@ -2679,6 +2679,14 @@ namespace leetcode {
 			static vector<int> partitionLabels(string s);
 		};
 	}// namespace partition_labels
+
+	/// \brief 187. Repeated DNA Sequences
+	namespace repeated_dna_sequences {
+		class Solution {
+		public:
+			static vector<string> findRepeatedDnaSequences(string s);
+		};
+	}// namespace repeated_dna_sequences
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
