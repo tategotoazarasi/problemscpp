@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['node_0',['Node',['../db/d90/a02299.html',1,'leetcode::n_ary_tree_level_order_traversal::Node'],['../d9/dff/a02099.html',1,'leetcode::n_ary_tree_postorder_traversal::Node'],['../d3/d79/a02083.html',1,'leetcode::n_ary_tree_preorder_traversal::Node'],['../d7/d1d/a01475.html',1,'leetcode::Node'],['../df/d14/a02183.html',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]],
-  ['node_1',['node',['../d5/dd8/a03083.html',1,'pat::a::a1004']]],
-  ['node_2',['Node',['../dc/d94/a02999.html',1,'pat::b::b1025::Node'],['../d9/df8/a03023.html',1,'pat::b::b1075::Node']]],
-  ['node_3',['node',['../df/d48/a03071.html',1,'pat::b::b1105::node'],['../d3/dbd/a03075.html',1,'pat::b::b1110::node']]],
-  ['numarray_4',['NumArray',['../da/db3/a02343.html',1,'leetcode::range_sum_query_immutable::NumArray'],['../d2/dd2/a02279.html',1,'leetcode::range_sum_query_mutable::NumArray']]]
+  ['node_0',['Node',['../d1/d47/a02300.html',1,'leetcode::n_ary_tree_level_order_traversal::Node'],['../de/dd1/a02100.html',1,'leetcode::n_ary_tree_postorder_traversal::Node'],['../da/dbe/a02084.html',1,'leetcode::n_ary_tree_preorder_traversal::Node'],['../d0/d38/a01476.html',1,'leetcode::Node'],['../d5/ddd/a02184.html',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]],
+  ['node_1',['node',['../dd/d50/a03088.html',1,'pat::a::a1004']]],
+  ['node_2',['Node',['../da/d96/a03004.html',1,'pat::b::b1025::Node'],['../de/dae/a03028.html',1,'pat::b::b1075::Node']]],
+  ['node_3',['node',['../d5/d83/a03076.html',1,'pat::b::b1105::node'],['../d1/d7a/a03080.html',1,'pat::b::b1110::node']]],
+  ['numarray_4',['NumArray',['../d6/d71/a02344.html',1,'leetcode::range_sum_query_immutable::NumArray'],['../da/d68/a02280.html',1,'leetcode::range_sum_query_mutable::NumArray']]]
 ];
