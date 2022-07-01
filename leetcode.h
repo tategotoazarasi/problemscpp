@@ -2607,7 +2607,7 @@ namespace leetcode {
 			string serialize(TreeNode *root) const;
 
 			/// \brief Decodes your encoded data to tree.
-			TreeNode *deserialize(string data) const;
+			[[nodiscard]] TreeNode *deserialize(string data) const;
 		};
 	}// namespace serialize_and_deserialize_binary_tree
 

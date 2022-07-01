@@ -4275,14 +4275,14 @@ namespace pat {
 				for(int i = 0; i < k; i++) {
 					int a;
 					cin >> a;
-					if(ans.count(a)) {
+					if(ans.contains(a)) {
 						cout << ans[a] << endl;
 						continue;
 					}
 					unordered_set<int> marked;
 					int cnt = 0;
 					for(int j = 1; j <= n; j++) {
-						if(j != a && !marked.count(j)) {
+						if(j != a && !marked.contains(j)) {
 							cnt++;
 							dfs(j, g, a, marked);
 						}
@@ -4296,7 +4296,7 @@ namespace pat {
 			void dfs(int i, const vector<unordered_set<int>> &g, int occupied, unordered_set<int> &marked) {
 				marked.insert(i);
 				for(auto nxt: g[i]) {
-					if(!marked.count(nxt) && nxt != occupied) {
+					if(!marked.contains(nxt) && nxt != occupied) {
 						dfs(nxt, g, occupied, marked);
 					}
 				}
@@ -4308,8 +4308,8 @@ namespace pat {
 				int n, m, k, q;
 				cin >> n >> m >> k >> q;
 				vector<int> t(k + 1);
-				vector<int> end_time(k + 1, -1);
-				vector<int> rest(n, -1);
+				vector end_time(k + 1, -1);
+				vector rest(n, -1);
 				for(int i = 1; i <= k; i++) {
 					cin >> t[i];
 				}
@@ -4379,12 +4379,12 @@ namespace pat {
 				for(int i = 0; i < q; i++) {
 					int query;
 					cin >> query;
-					int time = end_time[query];
+					const int time = end_time[query];
 					if(time == -1) {
 						cout << "Sorry" << endl;
 					} else {
-						int h = time / 60;
-						int m = time % 60;
+						const int h = time / 60;
+						const int m = time % 60;
 						cout << setw(2) << right << setfill('0') << h + 8
 						     << ':'
 						     << setw(2) << right << setfill('0') << m
@@ -4409,9 +4409,10 @@ namespace pat {
 				}
 				return 0;
 			}
-			unsigned get_num(string n, unsigned int d) {
+
+			unsigned get_num(const string &n, unsigned int d) {
 				unsigned ans = 0;
-				for(char ch: n) {
+				for(const char ch: n) {
 					ans *= d;
 					ans += ch - '0';
 				}
@@ -4681,6 +4682,7 @@ namespace pat {
 				}
 				return 0;
 			}
+
 			player::player(const string &arrival_time_str, unsigned p, unsigned tag)
 			    : arrival_time_str(arrival_time_str), p(min(120U, p) * 60), vip(tag == 1) {
 				const int h  = stoi(arrival_time_str.substr(0, 2));
@@ -4714,7 +4716,7 @@ namespace pat {
 				unsigned m;   ///< the number of roads
 				auto fc = frame_cmp();
 				cin >> cmax >> n >> sp >> m;
-				vector<int> c(n + 1, 0);///< the node number of bikes at Si respectively
+				vector c(n + 1, 0);///< the node number of bikes at Si respectively
 				for(unsigned i = 1; i <= n; i++) {
 					int ci;
 					cin >> ci;
@@ -4727,9 +4729,9 @@ namespace pat {
 					g[si][sj] = tij;
 					g[sj][si] = tij;
 				}
-				vector<int> shortest(n + 1, -1);
-				vector<int> min_go(n + 1, -1);
-				vector<int> min_back(n + 1, -1);
+				vector shortest(n + 1, -1);
+				vector min_go(n + 1, -1);
+				vector min_back(n + 1, -1);
 				priority_queue<frame, vector<frame>, frame_cmp> pq;
 				shortest[0] = 0;
 				min_go[0]   = 0;
@@ -4751,7 +4753,7 @@ namespace pat {
 							//if(shortest[node] == -1 || min_go[node] == -1 || min_back[node] == -1 || fc(frame(vector<unsigned>(), node, min_back[node], shortest[node], min_go[node]), frame(vector<unsigned>(), node, f.bikes + c[node], f.len + d, f.start))) {
 							vector<unsigned> path = f.path;
 							path.emplace_back(node);
-							frame next_f = frame(path, node, f.bikes + c[node], f.len + d, f.start);
+							auto next_f = frame(path, node, f.bikes + c[node], f.len + d, f.start);
 							pq.push(next_f);
 							//shortest[node] = next_f.len;
 							//min_go[node]   = next_f.get_go();
@@ -4765,22 +4767,19 @@ namespace pat {
 			bool frame_cmp::operator()(const frame &f1, const frame &f2) const {
 				if(f1.len != f2.len) {
 					return f1.len > f2.len;
-				} else if(f1.get_go() != f2.get_go()) {
-					return f1.get_go() > f2.get_go();
-				} else {
-					return f1.get_back() > f2.get_back();
 				}
+				if(f1.get_go() != f2.get_go()) {
+					return f1.get_go() > f2.get_go();
+				}
+				return f1.get_back() > f2.get_back();
 			}
 
-			unsigned frame::get_go() const {
-				return start;
-			}
+			unsigned frame::get_go() const { return start; }
 
-			unsigned frame::get_back() const {
-				return bikes;
-			}
+			unsigned frame::get_back() const { return bikes; }
 
-			frame::frame(vector<unsigned> path, unsigned node, int bikes, unsigned len, unsigned start): path(std::move(path)), node(node), bikes(bikes), len(len), start(start) {
+			frame::frame(vector<unsigned> path, unsigned node, int bikes, unsigned len, unsigned start)
+			    : path(std::move(path)), node(node), bikes(bikes), len(len), start(start) {
 				if(bikes < 0) {
 					this->start += -bikes;
 					this->bikes = 0;
@@ -4834,7 +4833,7 @@ namespace pat {
 				q.push(root);
 				bool flag = true;
 				while(!q.empty()) {
-					auto node = q.front();
+					const auto node = q.front();
 					q.pop();
 					if(flag) {
 						flag = false;
@@ -4852,9 +4851,9 @@ namespace pat {
 				return 0;
 			}
 
-			TreeNode *parse(vector<unsigned int> post_order, vector<unsigned int> in_order) {
-				TreeNode *root = new TreeNode(post_order.back());
-				bool in_left   = true;
+			TreeNode *parse(vector<unsigned int> post_order, const vector<unsigned int> &in_order) {
+				const auto root = new TreeNode(post_order.back());
+				bool in_left    = true;
 				unordered_set<unsigned> left, right;
 				vector<unsigned> left_post, right_post, left_in, right_in;
 				for(auto node: in_order) {
@@ -4874,7 +4873,7 @@ namespace pat {
 					if(node == root->key) {
 						continue;
 					}
-					if(left.count(node)) {
+					if(left.contains(node)) {
 						left_post.emplace_back(node);
 					} else {
 						right_post.emplace_back(node);
@@ -4956,11 +4955,9 @@ namespace pat {
 				return os;
 			}
 
-			void bi::reverse() {
-				vec = vector<unsigned short>(vec.rbegin(), vec.rend());
-			}
+			void bi::reverse() { vec = vector(vec.rbegin(), vec.rend()); }
 
-			bool bi::is_palindromic() {
+			bool bi::is_palindromic() const {
 				for(int i = 0; i < vec.size() / 2; i++) {
 					if(vec[i] != vec[vec.size() - i - 1]) {
 						return false;
@@ -4996,7 +4993,7 @@ namespace pat {
 
 		namespace a1027 {
 			int main(istream &cin, ostream &cout) {
-				char num[13] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C'};
+				const char num[13] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C'};
 				unsigned input[3];
 				cin >> input[0] >> input[1] >> input[2];
 				stack<char> stk;

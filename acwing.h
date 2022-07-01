@@ -2107,6 +2107,7 @@ namespace acwing {
 
 			bool operator<(const edge &e) const;
 		};
+
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing859
 

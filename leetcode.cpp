@@ -7110,7 +7110,6 @@ namespace leetcode {
 				}
 				cycle++;
 			}
-			return cycle;
 		}
 	}// namespace task_scheduler
 
@@ -7123,18 +7122,18 @@ namespace leetcode {
 		}
 
 		void MyHashMap::put(int key, int value) {
-			unsigned slot = static_cast<unsigned>(key) % SZ;
+			const unsigned slot = static_cast<unsigned>(key) % SZ;
 			for(auto &[k, v]: arr[slot]) {
 				if(k == key) {
 					v = value;
 					return;
 				}
 			}
-			arr[slot].push_back(make_pair(key, value));
+			arr[slot].emplace_back(key, value);
 		}
 
 		int MyHashMap::get(int key) {
-			unsigned slot = static_cast<unsigned>(key) % SZ;
+			const unsigned slot = static_cast<unsigned>(key) % SZ;
 			for(auto &[k, v]: arr[slot]) {
 				if(k == key) {
 					return v;
@@ -7144,7 +7143,7 @@ namespace leetcode {
 		}
 
 		void MyHashMap::remove(int key) {
-			unsigned slot = static_cast<unsigned>(key) % SZ;
+			const unsigned slot = static_cast<unsigned>(key) % SZ;
 			for(auto it = arr[slot].begin(); it != arr[slot].end(); ++it) {
 				if(it->first == key) {
 					arr[slot].erase(it);
@@ -7156,7 +7155,7 @@ namespace leetcode {
 
 	namespace spiral_matrix_ii {
 		vector<vector<int>> Solution::generateMatrix(int n) {
-			vector<vector<int>> ans(n, vector<int>(n, 0));
+			vector ans(n, vector(n, 0));
 			int dir = 0;// 0-right 1-down 2-left 3->up
 			int c   = 1;
 			int x   = 0;
@@ -7186,10 +7185,9 @@ namespace leetcode {
 					dir %= 4;
 					flag = false;
 					goto SLCT;
-				} else {
-					x = nx;
-					y = ny;
 				}
+				x = nx;
+				y = ny;
 			}
 			return ans;
 		}
@@ -7201,13 +7199,11 @@ namespace leetcode {
 				return 0;
 			}
 
-			sort(intervals.begin(), intervals.end(), [](const auto &u, const auto &v) {
-				return u[1] < v[1];
-			});
+			sort(intervals.begin(), intervals.end(), [](const auto &u, const auto &v) { return u[1] < v[1]; });
 
-			int n     = intervals.size();
-			int right = intervals[0][1];
-			int ans   = 1;
+			const int n = intervals.size();
+			int right   = intervals[0][1];
+			int ans     = 1;
 			for(int i = 1; i < n; ++i) {
 				if(intervals[i][0] >= right) {
 					++ans;
@@ -7246,7 +7242,7 @@ namespace leetcode {
 			um[0]     = 1;
 			int count = 0;
 			int ps    = 0;
-			for(auto &num: nums) {
+			for(const auto &num: nums) {
 				ps += num;
 				count += um[ps - k];
 				um[ps]++;
@@ -7304,9 +7300,9 @@ namespace leetcode {
 				hsv *= 4;
 				hsv += vec[i];
 			}
-			um[hsv]    = s.substr(0, 10);
-			cnt[hsv]   = 1;
-			unsigned f = 262144;
+			um[hsv]          = s.substr(0, 10);
+			cnt[hsv]         = 1;
+			const unsigned f = 262144;
 			for(int i = 10; i < s.length(); i++) {
 				hsv -= vec[i - 10] * f;
 				hsv *= 4;

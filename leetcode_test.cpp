@@ -2653,15 +2653,15 @@ namespace leetcode {
 	namespace find_players_with_zero_or_one_losses {
 		TEST(find_players_with_zero_or_one_losses, case1) {
 			vector<vector<int>> matches      = {{1, 3},
-			                                    {2, 3},
-			                                    {3, 6},
-			                                    {5, 6},
-			                                    {5, 7},
-			                                    {4, 5},
-			                                    {4, 8},
-			                                    {4, 9},
-			                                    {10, 4},
-			                                    {10, 9}};
+                                           {2, 3},
+                                           {3, 6},
+                                           {5, 6},
+                                           {5, 7},
+                                           {4, 5},
+                                           {4, 8},
+                                           {4, 9},
+                                           {10, 4},
+                                           {10, 9}};
 			const vector<vector<int>> output = {{1, 2, 10}, {4, 5, 7, 8}};
 			ASSERT_EQ(output, Solution::findWinners(matches));
 		}
@@ -3281,35 +3281,35 @@ namespace leetcode {
 
 	namespace serialize_and_deserialize_binary_tree {
 		TEST(serialize_and_deserialize_binary_tree, case1) {
-			auto c                  = Codec();
+			const auto c            = Codec();
 			const string serialized = "[1,2,3,null,null,4,5]";
 			TreeNode *root          = c.deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case2) {
-			auto c                  = Codec();
+			const auto c            = Codec();
 			const string serialized = "[]";
 			TreeNode *root          = c.deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case3) {
-			auto c                  = Codec();
+			const auto c            = Codec();
 			const string serialized = "[1,null,2,3]";
 			TreeNode *root          = c.deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case4) {
-			auto c                  = Codec();
+			const auto c            = Codec();
 			const string serialized = "[1,2,3]";
 			TreeNode *root          = c.deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case5) {
-			auto c                  = Codec();
+			const auto c            = Codec();
 			const string serialized = "[5,4,7,3,null,2,null,-1,null,9]";
 			TreeNode *root          = c.deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
@@ -3318,39 +3318,39 @@ namespace leetcode {
 
 	namespace task_scheduler {
 		TEST(task_scheduler, case1) {
-			vector<char> tasks = {'A', 'A', 'A', 'B', 'B', 'B'};
+			vector tasks = {'A', 'A', 'A', 'B', 'B', 'B'};
 			ASSERT_EQ(8, Solution::leastInterval(tasks, 2));
 		}
 
 		TEST(task_scheduler, case2) {
-			vector<char> tasks = {'A', 'A', 'A', 'B', 'B', 'B'};
+			vector tasks = {'A', 'A', 'A', 'B', 'B', 'B'};
 			ASSERT_EQ(6, Solution::leastInterval(tasks, 0));
 		}
 
 		TEST(task_scheduler, case3) {
-			vector<char> tasks = {'A', 'A', 'A', 'A', 'A', 'A', 'B', 'C', 'D', 'E', 'F', 'G'};
+			vector tasks = {'A', 'A', 'A', 'A', 'A', 'A', 'B', 'C', 'D', 'E', 'F', 'G'};
 			ASSERT_EQ(16, Solution::leastInterval(tasks, 2));
 		}
 
 		TEST(task_scheduler, case4) {
-			vector<char> tasks = {'A', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+			vector tasks = {'A', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
 			ASSERT_EQ(31, Solution::leastInterval(tasks, 29));
 		}
 
 		TEST(task_scheduler, case5) {
-			vector<char> tasks = {'A', 'B', 'C', 'A'};
+			vector tasks = {'A', 'B', 'C', 'A'};
 			ASSERT_EQ(8, Solution::leastInterval(tasks, 6));
 		}
 	}// namespace task_scheduler
 
 	namespace spiral_matrix_ii {
 		TEST(spiral_matrix_ii, case1) {
-			vector<vector<int>> ans = {{1, 2, 3}, {8, 9, 4}, {7, 6, 5}};
+			const vector<vector<int>> ans = {{1, 2, 3}, {8, 9, 4}, {7, 6, 5}};
 			ASSERT_EQ(ans, Solution::generateMatrix(3));
 		}
 
 		TEST(spiral_matrix_ii, case2) {
-			vector<vector<int>> ans = {{1}};
+			const vector<vector<int>> ans = {{1}};
 			ASSERT_EQ(ans, Solution::generateMatrix(1));
 		}
 	}// namespace spiral_matrix_ii
@@ -3384,53 +3384,53 @@ namespace leetcode {
 
 	namespace product_of_array_except_self {
 		TEST(product_of_array_except_self, case1) {
-			vector<int> nums   = {1, 2, 3, 4};
-			vector<int> output = {24, 12, 8, 6};
+			vector nums         = {1, 2, 3, 4};
+			const vector output = {24, 12, 8, 6};
 			ASSERT_EQ(output, Solution::productExceptSelf(nums));
 		}
 
 		TEST(product_of_array_except_self, case2) {
-			vector<int> nums   = {-1, 1, 0, -3, 3};
-			vector<int> output = {0, 0, 9, 0, 0};
+			vector nums         = {-1, 1, 0, -3, 3};
+			const vector output = {0, 0, 9, 0, 0};
 			ASSERT_EQ(output, Solution::productExceptSelf(nums));
 		}
 	}// namespace product_of_array_except_self
 
 	namespace subarray_sum_equals_k {
 		TEST(subarray_sum_equals_k, case1) {
-			vector<int> nums = {1, 1, 1};
+			vector nums = {1, 1, 1};
 			ASSERT_EQ(2, Solution::subarraySum(nums, 2));
 		}
 
 		TEST(subarray_sum_equals_k, case2) {
-			vector<int> nums = {1, 2, 3};
+			vector nums = {1, 2, 3};
 			ASSERT_EQ(2, Solution::subarraySum(nums, 3));
 		}
 
 		TEST(subarray_sum_equals_k, case3) {
-			vector<int> nums = {1};
+			vector nums = {1};
 			ASSERT_EQ(0, Solution::subarraySum(nums, 0));
 		}
 
 		TEST(subarray_sum_equals_k, case4) {
-			vector<int> nums = {-1, -1, 1};
+			vector nums = {-1, -1, 1};
 			ASSERT_EQ(1, Solution::subarraySum(nums, 0));
 		}
 
 		TEST(subarray_sum_equals_k, case5) {
-			vector<int> nums = {-1, -1, 1};
+			vector nums = {-1, -1, 1};
 			ASSERT_EQ(1, Solution::subarraySum(nums, 1));
 		}
 	}// namespace subarray_sum_equals_k
 
 	namespace partition_labels {
 		TEST(partition_labels, case1) {
-			vector<int> output = {9, 7, 8};
+			const vector output = {9, 7, 8};
 			ASSERT_EQ(output, Solution::partitionLabels("ababcbacadefegdehijhklij"));
 		}
 
 		TEST(partition_labels, case2) {
-			vector<int> output = {10};
+			const vector output = {10};
 			ASSERT_EQ(output, Solution::partitionLabels("eccbbbbdec"));
 		}
 	}// namespace partition_labels

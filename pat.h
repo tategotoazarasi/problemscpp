@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <queue>
-#include <unordered_map>
 #include <unordered_set>
 #include <utility>
 #include <vector>
@@ -797,7 +796,7 @@ namespace pat {
 		namespace a1015 {
 			unsigned reverse(unsigned n, unsigned d);
 			bool is_prime(unsigned n);
-			unsigned get_num(string n, unsigned d);
+			unsigned get_num(const string &n, unsigned d);
 			int main(istream &cin, ostream &cout);
 		}// namespace a1015
 
@@ -894,20 +893,21 @@ namespace pat {
 		namespace a1018 {
 			struct frame {
 				vector<unsigned> path;
-				unsigned node;
-				int bikes;
-				unsigned len;
-				unsigned start;
+				unsigned node{};
+				int bikes{};
+				unsigned len{};
+				unsigned start{};
 
 				frame() = default;
 				frame(vector<unsigned> path, unsigned node, int bikes, unsigned len, unsigned start);
-				unsigned get_go() const;
-				unsigned get_back() const;
+				[[nodiscard]] unsigned get_go() const;
+				[[nodiscard]] unsigned get_back() const;
 			};
 
 			struct frame_cmp {
 				bool operator()(const frame &f1, const frame &f2) const;
 			};
+
 			int main(istream &cin, ostream &cout);
 		}// namespace a1018
 
@@ -924,11 +924,15 @@ namespace pat {
 				TreeNode *right = nullptr;
 
 				TreeNode() = default;
-				TreeNode(unsigned key): key(key), left(nullptr), right(nullptr) {}
-				TreeNode(unsigned key, TreeNode *left, TreeNode *right): key(key), left(left), right(right) {}
+
+				TreeNode(unsigned key)
+				    : key(key) {}
+
+				TreeNode(unsigned key, TreeNode *left, TreeNode *right)
+				    : key(key), left(left), right(right) {}
 			};
 
-			TreeNode *parse(vector<unsigned int> post_order, vector<unsigned int> in_order);
+			TreeNode *parse(vector<unsigned int> post_order, const vector<unsigned int> &in_order);
 
 			int main(istream &cin, ostream &cout);
 		}// namespace a1020
@@ -943,11 +947,12 @@ namespace pat {
 			struct bi {
 				vector<unsigned short> vec;
 				void reverse();
-				bool is_palindromic();
+				bool is_palindromic() const;
 				bi operator+(const bi &n2) const;
 				bi() = default;
 				bi(const string &str);
 			};
+
 			ostream &operator<<(ostream &os, bi &b);
 			int main(istream &cin, ostream &cout);
 		}// namespace a1024

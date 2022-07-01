@@ -5774,8 +5774,8 @@ namespace acwing {
 	namespace acwing1695 {
 		int main(istream &cin, ostream &cout) {
 			bool nuts[3][3]         = {{true, false, false},
-			                           {false, true, false},
-			                           {false, false, true}};
+                               {false, true, false},
+                               {false, false, true}};
 			unsigned short score[3] = {0, 0, 0};
 			unsigned short ans      = 0;
 			unsigned short n;
@@ -7360,8 +7360,8 @@ namespace acwing {
 		int main(istream &cin, ostream &cout) {
 			unsigned n, m;
 			cin >> n >> m;
-			vector<vector<int>> g(n + 1, vector<int>(n + 1, INT_MAX));
-			vector<int> dist(n + 1, INT_MAX);
+			vector g(n + 1, vector(n + 1, INT_MAX));
+			vector dist(n + 1, INT_MAX);
 			for(unsigned i = 0; i < m; i++) {
 				int u, v, w;
 				cin >> u >> v >> w;
@@ -7375,7 +7375,7 @@ namespace acwing {
 			for(int i = 0; i < n; i++) {
 				int t = -1;
 				for(int j = 1; j <= n; j++) {
-					if(!us.count(j) && (t == -1 || dist[t] > dist[j])) {
+					if(!us.contains(j) && (t == -1 || dist[t] > dist[j])) {
 						t = j;
 					}
 				}
@@ -7409,7 +7409,7 @@ namespace acwing {
 			}
 			sort(edges.begin(), edges.end());
 			UnionFind uf(n + 1);
-			for(auto &edge: edges) {
+			for(const auto &edge: edges) {
 				if(!uf.same(edge.u, edge.v)) {
 					cnt++;
 					uf.unite(edge.u, edge.v);
@@ -7424,17 +7424,15 @@ namespace acwing {
 			return 0;
 		}
 
-		bool edge::operator<(const edge &e) const {
-			return w < e.w;
-		}
+		bool edge::operator<(const edge &e) const { return w < e.w; }
 	}// namespace acwing859
 
 	namespace acwing860 {
 		int main(istream &cin, ostream &cout) {
 			int n, m;
 			cin >> n >> m;
-			vector<unordered_set<int>> g(n + 1, unordered_set<int>());
-			vector<int> color(n + 1, 3);
+			vector g(n + 1, unordered_set<int>());
+			vector color(n + 1, 3);
 			for(int i = 0; i < m; i++) {
 				int u, v;
 				cin >> u >> v;
@@ -7455,7 +7453,7 @@ namespace acwing {
 
 		bool dfs(vector<unordered_set<int>> &g, int node, vector<int> &color, int c) {
 			color[node] = c;
-			for(auto sibling: g[node]) {
+			for(const auto sibling: g[node]) {
 				if(color[sibling] == 3) {
 					if(!dfs(g, sibling, color, !c)) {
 						return false;
@@ -7474,15 +7472,15 @@ namespace acwing {
 			cin >> n1 >> n2 >> m;
 			int ans = 0;
 			vector<unordered_set<int>> g(n1 + 1);
-			vector<int> match(n2 + 1, 0);
-			vector<bool> st(n2 + 1, false);
+			vector match(n2 + 1, 0);
+			vector st(n2 + 1, false);
 			for(int i = 0; i < m; i++) {
 				int u, v;
 				cin >> u >> v;
 				g[u].insert(v);
 			}
 			for(int i = 1; i <= n1; i++) {
-				st = vector<bool>(n2 + 1, false);
+				st = vector(n2 + 1, false);
 				if(find(g, i, st, match)) {
 					ans++;
 				}
@@ -7492,7 +7490,7 @@ namespace acwing {
 		}
 
 		bool find(vector<unordered_set<int>> &g, int x, vector<bool> &st, vector<int> &match) {
-			for(auto y: g[x]) {
+			for(const auto y: g[x]) {
 				if(!st[y]) {
 					st[y] = true;
 					if(match[y] == 0 || find(g, match[y], st, match)) {
