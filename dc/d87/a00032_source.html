@@ -7165,226 +7165,222 @@ $(function() {
 <div class="line"><a id="l07110" name="l07110"></a><span class="lineno"> 7110</span>                }</div>
 <div class="line"><a id="l07111" name="l07111"></a><span class="lineno"> 7111</span>                cycle++;</div>
 <div class="line"><a id="l07112" name="l07112"></a><span class="lineno"> 7112</span>            }</div>
-<div class="line"><a id="l07113" name="l07113"></a><span class="lineno"> 7113</span>            <span class="keywordflow">return</span> cycle;</div>
-<div class="line"><a id="l07114" name="l07114"></a><span class="lineno"> 7114</span>        }</div>
-<div class="line"><a id="l07115" name="l07115"></a><span class="lineno"> 7115</span>    }<span class="comment">// namespace task_scheduler</span></div>
-<div class="line"><a id="l07116" name="l07116"></a><span class="lineno"> 7116</span> </div>
-<div class="line"><a id="l07117" name="l07117"></a><span class="lineno"><a class="line" href="../../de/d08/a00381.html"> 7117</a></span>    <span class="keyword">namespace </span>design_hashmap {</div>
-<div class="line"><a id="l07118" name="l07118"></a><span class="lineno"><a class="line" href="../../d9/de2/a02508.html#a025ba1e271ade97705a7a4e6c9eab811"> 7118</a></span>        <a class="code hl_function" href="../../d9/de2/a02508.html#a025ba1e271ade97705a7a4e6c9eab811">MyHashMap::MyHashMap</a>() {</div>
-<div class="line"><a id="l07119" name="l07119"></a><span class="lineno"> 7119</span>            <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a> = array&lt;list&lt;pair&lt;int, int&gt;&gt;, <a class="code hl_variable" href="../../d9/de2/a02508.html#a971b728c4a3fcaed0a95d8a868070628">SZ</a>&gt;();</div>
-<div class="line"><a id="l07120" name="l07120"></a><span class="lineno"> 7120</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; <a class="code hl_variable" href="../../d9/de2/a02508.html#a971b728c4a3fcaed0a95d8a868070628">SZ</a>; i++) {</div>
-<div class="line"><a id="l07121" name="l07121"></a><span class="lineno"> 7121</span>                <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a>[i] = list&lt;pair&lt;int, int&gt;&gt;();</div>
-<div class="line"><a id="l07122" name="l07122"></a><span class="lineno"> 7122</span>            }</div>
-<div class="line"><a id="l07123" name="l07123"></a><span class="lineno"> 7123</span>        }</div>
-<div class="line"><a id="l07124" name="l07124"></a><span class="lineno"> 7124</span> </div>
-<div class="line"><a id="l07125" name="l07125"></a><span class="lineno"><a class="line" href="../../d9/de2/a02508.html#a96363b71869dc7a20bd0ec99d59787e3"> 7125</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/de2/a02508.html#a96363b71869dc7a20bd0ec99d59787e3">MyHashMap::put</a>(<span class="keywordtype">int</span> key, <span class="keywordtype">int</span> value) {</div>
-<div class="line"><a id="l07126" name="l07126"></a><span class="lineno"> 7126</span>            <span class="keywordtype">unsigned</span> slot = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(key) % <a class="code hl_variable" href="../../d9/de2/a02508.html#a971b728c4a3fcaed0a95d8a868070628">SZ</a>;</div>
-<div class="line"><a id="l07127" name="l07127"></a><span class="lineno"> 7127</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[k, v]: <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a>[slot]) {</div>
-<div class="line"><a id="l07128" name="l07128"></a><span class="lineno"> 7128</span>                <span class="keywordflow">if</span>(k == key) {</div>
-<div class="line"><a id="l07129" name="l07129"></a><span class="lineno"> 7129</span>                    v = value;</div>
-<div class="line"><a id="l07130" name="l07130"></a><span class="lineno"> 7130</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l07131" name="l07131"></a><span class="lineno"> 7131</span>                }</div>
-<div class="line"><a id="l07132" name="l07132"></a><span class="lineno"> 7132</span>            }</div>
-<div class="line"><a id="l07133" name="l07133"></a><span class="lineno"> 7133</span>            <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a>[slot].push_back(make_pair(key, value));</div>
-<div class="line"><a id="l07134" name="l07134"></a><span class="lineno"> 7134</span>        }</div>
-<div class="line"><a id="l07135" name="l07135"></a><span class="lineno"> 7135</span> </div>
-<div class="line"><a id="l07136" name="l07136"></a><span class="lineno"><a class="line" href="../../d9/de2/a02508.html#a803c440450d63209ca02d65dfb771af0"> 7136</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d9/de2/a02508.html#a803c440450d63209ca02d65dfb771af0">MyHashMap::get</a>(<span class="keywordtype">int</span> key) {</div>
-<div class="line"><a id="l07137" name="l07137"></a><span class="lineno"> 7137</span>            <span class="keywordtype">unsigned</span> slot = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(key) % <a class="code hl_variable" href="../../d9/de2/a02508.html#a971b728c4a3fcaed0a95d8a868070628">SZ</a>;</div>
-<div class="line"><a id="l07138" name="l07138"></a><span class="lineno"> 7138</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[k, v]: <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a>[slot]) {</div>
-<div class="line"><a id="l07139" name="l07139"></a><span class="lineno"> 7139</span>                <span class="keywordflow">if</span>(k == key) {</div>
-<div class="line"><a id="l07140" name="l07140"></a><span class="lineno"> 7140</span>                    <span class="keywordflow">return</span> v;</div>
-<div class="line"><a id="l07141" name="l07141"></a><span class="lineno"> 7141</span>                }</div>
-<div class="line"><a id="l07142" name="l07142"></a><span class="lineno"> 7142</span>            }</div>
-<div class="line"><a id="l07143" name="l07143"></a><span class="lineno"> 7143</span>            <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l07144" name="l07144"></a><span class="lineno"> 7144</span>        }</div>
-<div class="line"><a id="l07145" name="l07145"></a><span class="lineno"> 7145</span> </div>
-<div class="line"><a id="l07146" name="l07146"></a><span class="lineno"><a class="line" href="../../d9/de2/a02508.html#a9725d6d54e6ee31a9e66b775de4c514d"> 7146</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/de2/a02508.html#a9725d6d54e6ee31a9e66b775de4c514d">MyHashMap::remove</a>(<span class="keywordtype">int</span> key) {</div>
-<div class="line"><a id="l07147" name="l07147"></a><span class="lineno"> 7147</span>            <span class="keywordtype">unsigned</span> slot = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(key) % <a class="code hl_variable" href="../../d9/de2/a02508.html#a971b728c4a3fcaed0a95d8a868070628">SZ</a>;</div>
-<div class="line"><a id="l07148" name="l07148"></a><span class="lineno"> 7148</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a>[slot].begin(); it != <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a>[slot].end(); ++it) {</div>
-<div class="line"><a id="l07149" name="l07149"></a><span class="lineno"> 7149</span>                <span class="keywordflow">if</span>(it-&gt;first == key) {</div>
-<div class="line"><a id="l07150" name="l07150"></a><span class="lineno"> 7150</span>                    <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a>[slot].erase(it);</div>
-<div class="line"><a id="l07151" name="l07151"></a><span class="lineno"> 7151</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l07152" name="l07152"></a><span class="lineno"> 7152</span>                }</div>
-<div class="line"><a id="l07153" name="l07153"></a><span class="lineno"> 7153</span>            }</div>
-<div class="line"><a id="l07154" name="l07154"></a><span class="lineno"> 7154</span>        }</div>
-<div class="line"><a id="l07155" name="l07155"></a><span class="lineno"> 7155</span>    }<span class="comment">// namespace design_hashmap</span></div>
-<div class="line"><a id="l07156" name="l07156"></a><span class="lineno"> 7156</span> </div>
-<div class="line"><a id="l07157" name="l07157"></a><span class="lineno"><a class="line" href="../../d3/d45/a00382.html"> 7157</a></span>    <span class="keyword">namespace </span>spiral_matrix_ii {</div>
-<div class="line"><a id="l07158" name="l07158"></a><span class="lineno"><a class="line" href="../../db/da2/a02512.html#a2e96774d0ecaa5bd0ff04cd816cc7425"> 7158</a></span>        vector&lt;vector&lt;int&gt;&gt; <a class="code hl_function" href="../../db/da2/a02512.html#a2e96774d0ecaa5bd0ff04cd816cc7425">Solution::generateMatrix</a>(<span class="keywordtype">int</span> n) {</div>
-<div class="line"><a id="l07159" name="l07159"></a><span class="lineno"> 7159</span>            vector&lt;vector&lt;int&gt;&gt; ans(n, vector&lt;int&gt;(n, 0));</div>
-<div class="line"><a id="l07160" name="l07160"></a><span class="lineno"> 7160</span>            <span class="keywordtype">int</span> dir = 0;<span class="comment">// 0-right 1-down 2-left 3-&gt;up</span></div>
-<div class="line"><a id="l07161" name="l07161"></a><span class="lineno"> 7161</span>            <span class="keywordtype">int</span> c   = 1;</div>
-<div class="line"><a id="l07162" name="l07162"></a><span class="lineno"> 7162</span>            <span class="keywordtype">int</span> x   = 0;</div>
-<div class="line"><a id="l07163" name="l07163"></a><span class="lineno"> 7163</span>            <span class="keywordtype">int</span> y   = 0;</div>
-<div class="line"><a id="l07164" name="l07164"></a><span class="lineno"> 7164</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n * n; i++) {</div>
-<div class="line"><a id="l07165" name="l07165"></a><span class="lineno"> 7165</span>                ans[x][y] = c++;</div>
-<div class="line"><a id="l07166" name="l07166"></a><span class="lineno"> 7166</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l07167" name="l07167"></a><span class="lineno"> 7167</span>            SLCT:</div>
-<div class="line"><a id="l07168" name="l07168"></a><span class="lineno"> 7168</span>                <span class="keywordtype">int</span> nx = x;</div>
-<div class="line"><a id="l07169" name="l07169"></a><span class="lineno"> 7169</span>                <span class="keywordtype">int</span> ny = y;</div>
-<div class="line"><a id="l07170" name="l07170"></a><span class="lineno"> 7170</span>                <span class="keywordflow">switch</span>(dir) {</div>
-<div class="line"><a id="l07171" name="l07171"></a><span class="lineno"> 7171</span>                    <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a id="l07172" name="l07172"></a><span class="lineno"> 7172</span>                        ny++;</div>
-<div class="line"><a id="l07173" name="l07173"></a><span class="lineno"> 7173</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l07174" name="l07174"></a><span class="lineno"> 7174</span>                    <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a id="l07175" name="l07175"></a><span class="lineno"> 7175</span>                        nx++;</div>
-<div class="line"><a id="l07176" name="l07176"></a><span class="lineno"> 7176</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l07177" name="l07177"></a><span class="lineno"> 7177</span>                    <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a id="l07178" name="l07178"></a><span class="lineno"> 7178</span>                        ny--;</div>
-<div class="line"><a id="l07179" name="l07179"></a><span class="lineno"> 7179</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l07180" name="l07180"></a><span class="lineno"> 7180</span>                    <span class="keywordflow">case</span> 3:</div>
-<div class="line"><a id="l07181" name="l07181"></a><span class="lineno"> 7181</span>                        nx--;</div>
-<div class="line"><a id="l07182" name="l07182"></a><span class="lineno"> 7182</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l07183" name="l07183"></a><span class="lineno"> 7183</span>                }</div>
-<div class="line"><a id="l07184" name="l07184"></a><span class="lineno"> 7184</span>                <span class="keywordflow">if</span>(flag &amp;&amp; (nx &lt; 0 || nx &gt;= n || ny &lt; 0 || ny &gt;= n || ans[nx][ny] != 0)) {</div>
-<div class="line"><a id="l07185" name="l07185"></a><span class="lineno"> 7185</span>                    dir++;</div>
-<div class="line"><a id="l07186" name="l07186"></a><span class="lineno"> 7186</span>                    dir %= 4;</div>
-<div class="line"><a id="l07187" name="l07187"></a><span class="lineno"> 7187</span>                    flag = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l07188" name="l07188"></a><span class="lineno"> 7188</span>                    <span class="keywordflow">goto</span> SLCT;</div>
-<div class="line"><a id="l07189" name="l07189"></a><span class="lineno"> 7189</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07190" name="l07190"></a><span class="lineno"> 7190</span>                    x = nx;</div>
-<div class="line"><a id="l07191" name="l07191"></a><span class="lineno"> 7191</span>                    y = ny;</div>
-<div class="line"><a id="l07192" name="l07192"></a><span class="lineno"> 7192</span>                }</div>
-<div class="line"><a id="l07193" name="l07193"></a><span class="lineno"> 7193</span>            }</div>
-<div class="line"><a id="l07194" name="l07194"></a><span class="lineno"> 7194</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l07195" name="l07195"></a><span class="lineno"> 7195</span>        }</div>
-<div class="line"><a id="l07196" name="l07196"></a><span class="lineno"> 7196</span>    }<span class="comment">// namespace spiral_matrix_ii</span></div>
-<div class="line"><a id="l07197" name="l07197"></a><span class="lineno"> 7197</span> </div>
-<div class="line"><a id="l07198" name="l07198"></a><span class="lineno"><a class="line" href="../../da/dee/a00383.html"> 7198</a></span>    <span class="keyword">namespace </span>non_overlapping_intervals {</div>
-<div class="line"><a id="l07199" name="l07199"></a><span class="lineno"><a class="line" href="../../d2/dab/a02516.html#a74fca33f2ea3a835b7004629120b2c41"> 7199</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d2/dab/a02516.html#a74fca33f2ea3a835b7004629120b2c41">Solution::eraseOverlapIntervals</a>(vector&lt;vector&lt;int&gt;&gt; &amp;intervals) {</div>
-<div class="line"><a id="l07200" name="l07200"></a><span class="lineno"> 7200</span>            <span class="keywordflow">if</span>(intervals.empty()) {</div>
-<div class="line"><a id="l07201" name="l07201"></a><span class="lineno"> 7201</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07202" name="l07202"></a><span class="lineno"> 7202</span>            }</div>
+<div class="line"><a id="l07113" name="l07113"></a><span class="lineno"> 7113</span>        }</div>
+<div class="line"><a id="l07114" name="l07114"></a><span class="lineno"> 7114</span>    }<span class="comment">// namespace task_scheduler</span></div>
+<div class="line"><a id="l07115" name="l07115"></a><span class="lineno"> 7115</span> </div>
+<div class="line"><a id="l07116" name="l07116"></a><span class="lineno"><a class="line" href="../../de/d08/a00381.html"> 7116</a></span>    <span class="keyword">namespace </span>design_hashmap {</div>
+<div class="line"><a id="l07117" name="l07117"></a><span class="lineno"><a class="line" href="../../d9/de2/a02508.html#a025ba1e271ade97705a7a4e6c9eab811"> 7117</a></span>        <a class="code hl_function" href="../../d9/de2/a02508.html#a025ba1e271ade97705a7a4e6c9eab811">MyHashMap::MyHashMap</a>() {</div>
+<div class="line"><a id="l07118" name="l07118"></a><span class="lineno"> 7118</span>            <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a> = array&lt;list&lt;pair&lt;int, int&gt;&gt;, <a class="code hl_variable" href="../../d9/de2/a02508.html#a971b728c4a3fcaed0a95d8a868070628">SZ</a>&gt;();</div>
+<div class="line"><a id="l07119" name="l07119"></a><span class="lineno"> 7119</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; <a class="code hl_variable" href="../../d9/de2/a02508.html#a971b728c4a3fcaed0a95d8a868070628">SZ</a>; i++) {</div>
+<div class="line"><a id="l07120" name="l07120"></a><span class="lineno"> 7120</span>                <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a>[i] = list&lt;pair&lt;int, int&gt;&gt;();</div>
+<div class="line"><a id="l07121" name="l07121"></a><span class="lineno"> 7121</span>            }</div>
+<div class="line"><a id="l07122" name="l07122"></a><span class="lineno"> 7122</span>        }</div>
+<div class="line"><a id="l07123" name="l07123"></a><span class="lineno"> 7123</span> </div>
+<div class="line"><a id="l07124" name="l07124"></a><span class="lineno"><a class="line" href="../../d9/de2/a02508.html#a96363b71869dc7a20bd0ec99d59787e3"> 7124</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/de2/a02508.html#a96363b71869dc7a20bd0ec99d59787e3">MyHashMap::put</a>(<span class="keywordtype">int</span> key, <span class="keywordtype">int</span> value) {</div>
+<div class="line"><a id="l07125" name="l07125"></a><span class="lineno"> 7125</span>            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> slot = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(key) % <a class="code hl_variable" href="../../d9/de2/a02508.html#a971b728c4a3fcaed0a95d8a868070628">SZ</a>;</div>
+<div class="line"><a id="l07126" name="l07126"></a><span class="lineno"> 7126</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[k, v]: <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a>[slot]) {</div>
+<div class="line"><a id="l07127" name="l07127"></a><span class="lineno"> 7127</span>                <span class="keywordflow">if</span>(k == key) {</div>
+<div class="line"><a id="l07128" name="l07128"></a><span class="lineno"> 7128</span>                    v = value;</div>
+<div class="line"><a id="l07129" name="l07129"></a><span class="lineno"> 7129</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l07130" name="l07130"></a><span class="lineno"> 7130</span>                }</div>
+<div class="line"><a id="l07131" name="l07131"></a><span class="lineno"> 7131</span>            }</div>
+<div class="line"><a id="l07132" name="l07132"></a><span class="lineno"> 7132</span>            <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a>[slot].emplace_back(key, value);</div>
+<div class="line"><a id="l07133" name="l07133"></a><span class="lineno"> 7133</span>        }</div>
+<div class="line"><a id="l07134" name="l07134"></a><span class="lineno"> 7134</span> </div>
+<div class="line"><a id="l07135" name="l07135"></a><span class="lineno"><a class="line" href="../../d9/de2/a02508.html#a803c440450d63209ca02d65dfb771af0"> 7135</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d9/de2/a02508.html#a803c440450d63209ca02d65dfb771af0">MyHashMap::get</a>(<span class="keywordtype">int</span> key) {</div>
+<div class="line"><a id="l07136" name="l07136"></a><span class="lineno"> 7136</span>            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> slot = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(key) % <a class="code hl_variable" href="../../d9/de2/a02508.html#a971b728c4a3fcaed0a95d8a868070628">SZ</a>;</div>
+<div class="line"><a id="l07137" name="l07137"></a><span class="lineno"> 7137</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[k, v]: <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a>[slot]) {</div>
+<div class="line"><a id="l07138" name="l07138"></a><span class="lineno"> 7138</span>                <span class="keywordflow">if</span>(k == key) {</div>
+<div class="line"><a id="l07139" name="l07139"></a><span class="lineno"> 7139</span>                    <span class="keywordflow">return</span> v;</div>
+<div class="line"><a id="l07140" name="l07140"></a><span class="lineno"> 7140</span>                }</div>
+<div class="line"><a id="l07141" name="l07141"></a><span class="lineno"> 7141</span>            }</div>
+<div class="line"><a id="l07142" name="l07142"></a><span class="lineno"> 7142</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l07143" name="l07143"></a><span class="lineno"> 7143</span>        }</div>
+<div class="line"><a id="l07144" name="l07144"></a><span class="lineno"> 7144</span> </div>
+<div class="line"><a id="l07145" name="l07145"></a><span class="lineno"><a class="line" href="../../d9/de2/a02508.html#a9725d6d54e6ee31a9e66b775de4c514d"> 7145</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/de2/a02508.html#a9725d6d54e6ee31a9e66b775de4c514d">MyHashMap::remove</a>(<span class="keywordtype">int</span> key) {</div>
+<div class="line"><a id="l07146" name="l07146"></a><span class="lineno"> 7146</span>            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> slot = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(key) % <a class="code hl_variable" href="../../d9/de2/a02508.html#a971b728c4a3fcaed0a95d8a868070628">SZ</a>;</div>
+<div class="line"><a id="l07147" name="l07147"></a><span class="lineno"> 7147</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a>[slot].begin(); it != <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a>[slot].end(); ++it) {</div>
+<div class="line"><a id="l07148" name="l07148"></a><span class="lineno"> 7148</span>                <span class="keywordflow">if</span>(it-&gt;first == key) {</div>
+<div class="line"><a id="l07149" name="l07149"></a><span class="lineno"> 7149</span>                    <a class="code hl_variable" href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">arr</a>[slot].erase(it);</div>
+<div class="line"><a id="l07150" name="l07150"></a><span class="lineno"> 7150</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l07151" name="l07151"></a><span class="lineno"> 7151</span>                }</div>
+<div class="line"><a id="l07152" name="l07152"></a><span class="lineno"> 7152</span>            }</div>
+<div class="line"><a id="l07153" name="l07153"></a><span class="lineno"> 7153</span>        }</div>
+<div class="line"><a id="l07154" name="l07154"></a><span class="lineno"> 7154</span>    }<span class="comment">// namespace design_hashmap</span></div>
+<div class="line"><a id="l07155" name="l07155"></a><span class="lineno"> 7155</span> </div>
+<div class="line"><a id="l07156" name="l07156"></a><span class="lineno"><a class="line" href="../../d3/d45/a00382.html"> 7156</a></span>    <span class="keyword">namespace </span>spiral_matrix_ii {</div>
+<div class="line"><a id="l07157" name="l07157"></a><span class="lineno"><a class="line" href="../../db/da2/a02512.html#a2e96774d0ecaa5bd0ff04cd816cc7425"> 7157</a></span>        vector&lt;vector&lt;int&gt;&gt; <a class="code hl_function" href="../../db/da2/a02512.html#a2e96774d0ecaa5bd0ff04cd816cc7425">Solution::generateMatrix</a>(<span class="keywordtype">int</span> n) {</div>
+<div class="line"><a id="l07158" name="l07158"></a><span class="lineno"> 7158</span>            vector ans(n, vector(n, 0));</div>
+<div class="line"><a id="l07159" name="l07159"></a><span class="lineno"> 7159</span>            <span class="keywordtype">int</span> dir = 0;<span class="comment">// 0-right 1-down 2-left 3-&gt;up</span></div>
+<div class="line"><a id="l07160" name="l07160"></a><span class="lineno"> 7160</span>            <span class="keywordtype">int</span> c   = 1;</div>
+<div class="line"><a id="l07161" name="l07161"></a><span class="lineno"> 7161</span>            <span class="keywordtype">int</span> x   = 0;</div>
+<div class="line"><a id="l07162" name="l07162"></a><span class="lineno"> 7162</span>            <span class="keywordtype">int</span> y   = 0;</div>
+<div class="line"><a id="l07163" name="l07163"></a><span class="lineno"> 7163</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n * n; i++) {</div>
+<div class="line"><a id="l07164" name="l07164"></a><span class="lineno"> 7164</span>                ans[x][y] = c++;</div>
+<div class="line"><a id="l07165" name="l07165"></a><span class="lineno"> 7165</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l07166" name="l07166"></a><span class="lineno"> 7166</span>            SLCT:</div>
+<div class="line"><a id="l07167" name="l07167"></a><span class="lineno"> 7167</span>                <span class="keywordtype">int</span> nx = x;</div>
+<div class="line"><a id="l07168" name="l07168"></a><span class="lineno"> 7168</span>                <span class="keywordtype">int</span> ny = y;</div>
+<div class="line"><a id="l07169" name="l07169"></a><span class="lineno"> 7169</span>                <span class="keywordflow">switch</span>(dir) {</div>
+<div class="line"><a id="l07170" name="l07170"></a><span class="lineno"> 7170</span>                    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a id="l07171" name="l07171"></a><span class="lineno"> 7171</span>                        ny++;</div>
+<div class="line"><a id="l07172" name="l07172"></a><span class="lineno"> 7172</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l07173" name="l07173"></a><span class="lineno"> 7173</span>                    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l07174" name="l07174"></a><span class="lineno"> 7174</span>                        nx++;</div>
+<div class="line"><a id="l07175" name="l07175"></a><span class="lineno"> 7175</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l07176" name="l07176"></a><span class="lineno"> 7176</span>                    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a id="l07177" name="l07177"></a><span class="lineno"> 7177</span>                        ny--;</div>
+<div class="line"><a id="l07178" name="l07178"></a><span class="lineno"> 7178</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l07179" name="l07179"></a><span class="lineno"> 7179</span>                    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a id="l07180" name="l07180"></a><span class="lineno"> 7180</span>                        nx--;</div>
+<div class="line"><a id="l07181" name="l07181"></a><span class="lineno"> 7181</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l07182" name="l07182"></a><span class="lineno"> 7182</span>                }</div>
+<div class="line"><a id="l07183" name="l07183"></a><span class="lineno"> 7183</span>                <span class="keywordflow">if</span>(flag &amp;&amp; (nx &lt; 0 || nx &gt;= n || ny &lt; 0 || ny &gt;= n || ans[nx][ny] != 0)) {</div>
+<div class="line"><a id="l07184" name="l07184"></a><span class="lineno"> 7184</span>                    dir++;</div>
+<div class="line"><a id="l07185" name="l07185"></a><span class="lineno"> 7185</span>                    dir %= 4;</div>
+<div class="line"><a id="l07186" name="l07186"></a><span class="lineno"> 7186</span>                    flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l07187" name="l07187"></a><span class="lineno"> 7187</span>                    <span class="keywordflow">goto</span> SLCT;</div>
+<div class="line"><a id="l07188" name="l07188"></a><span class="lineno"> 7188</span>                }</div>
+<div class="line"><a id="l07189" name="l07189"></a><span class="lineno"> 7189</span>                x = nx;</div>
+<div class="line"><a id="l07190" name="l07190"></a><span class="lineno"> 7190</span>                y = ny;</div>
+<div class="line"><a id="l07191" name="l07191"></a><span class="lineno"> 7191</span>            }</div>
+<div class="line"><a id="l07192" name="l07192"></a><span class="lineno"> 7192</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l07193" name="l07193"></a><span class="lineno"> 7193</span>        }</div>
+<div class="line"><a id="l07194" name="l07194"></a><span class="lineno"> 7194</span>    }<span class="comment">// namespace spiral_matrix_ii</span></div>
+<div class="line"><a id="l07195" name="l07195"></a><span class="lineno"> 7195</span> </div>
+<div class="line"><a id="l07196" name="l07196"></a><span class="lineno"><a class="line" href="../../da/dee/a00383.html"> 7196</a></span>    <span class="keyword">namespace </span>non_overlapping_intervals {</div>
+<div class="line"><a id="l07197" name="l07197"></a><span class="lineno"><a class="line" href="../../d2/dab/a02516.html#a74fca33f2ea3a835b7004629120b2c41"> 7197</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d2/dab/a02516.html#a74fca33f2ea3a835b7004629120b2c41">Solution::eraseOverlapIntervals</a>(vector&lt;vector&lt;int&gt;&gt; &amp;intervals) {</div>
+<div class="line"><a id="l07198" name="l07198"></a><span class="lineno"> 7198</span>            <span class="keywordflow">if</span>(intervals.empty()) {</div>
+<div class="line"><a id="l07199" name="l07199"></a><span class="lineno"> 7199</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07200" name="l07200"></a><span class="lineno"> 7200</span>            }</div>
+<div class="line"><a id="l07201" name="l07201"></a><span class="lineno"> 7201</span> </div>
+<div class="line"><a id="l07202" name="l07202"></a><span class="lineno"> 7202</span>            sort(intervals.begin(), intervals.end(), [](<span class="keyword">const</span> <span class="keyword">auto</span> &amp;u, <span class="keyword">const</span> <span class="keyword">auto</span> &amp;v) { return u[1] &lt; v[1]; });</div>
 <div class="line"><a id="l07203" name="l07203"></a><span class="lineno"> 7203</span> </div>
-<div class="line"><a id="l07204" name="l07204"></a><span class="lineno"> 7204</span>            sort(intervals.begin(), intervals.end(), [](<span class="keyword">const</span> <span class="keyword">auto</span> &amp;u, <span class="keyword">const</span> <span class="keyword">auto</span> &amp;v) {</div>
-<div class="line"><a id="l07205" name="l07205"></a><span class="lineno"> 7205</span>                return u[1] &lt; v[1];</div>
-<div class="line"><a id="l07206" name="l07206"></a><span class="lineno"> 7206</span>            });</div>
-<div class="line"><a id="l07207" name="l07207"></a><span class="lineno"> 7207</span> </div>
-<div class="line"><a id="l07208" name="l07208"></a><span class="lineno"> 7208</span>            <span class="keywordtype">int</span> n     = intervals.size();</div>
-<div class="line"><a id="l07209" name="l07209"></a><span class="lineno"> 7209</span>            <span class="keywordtype">int</span> <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> = intervals[0][1];</div>
-<div class="line"><a id="l07210" name="l07210"></a><span class="lineno"> 7210</span>            <span class="keywordtype">int</span> ans   = 1;</div>
-<div class="line"><a id="l07211" name="l07211"></a><span class="lineno"> 7211</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; n; ++i) {</div>
-<div class="line"><a id="l07212" name="l07212"></a><span class="lineno"> 7212</span>                <span class="keywordflow">if</span>(intervals[i][0] &gt;= <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>) {</div>
-<div class="line"><a id="l07213" name="l07213"></a><span class="lineno"> 7213</span>                    ++ans;</div>
-<div class="line"><a id="l07214" name="l07214"></a><span class="lineno"> 7214</span>                    <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> = intervals[i][1];</div>
-<div class="line"><a id="l07215" name="l07215"></a><span class="lineno"> 7215</span>                }</div>
-<div class="line"><a id="l07216" name="l07216"></a><span class="lineno"> 7216</span>            }</div>
-<div class="line"><a id="l07217" name="l07217"></a><span class="lineno"> 7217</span>            <span class="keywordflow">return</span> n - ans;</div>
-<div class="line"><a id="l07218" name="l07218"></a><span class="lineno"> 7218</span>        }</div>
-<div class="line"><a id="l07219" name="l07219"></a><span class="lineno"> 7219</span>    }<span class="comment">// namespace non_overlapping_intervals</span></div>
-<div class="line"><a id="l07220" name="l07220"></a><span class="lineno"> 7220</span> </div>
-<div class="line"><a id="l07221" name="l07221"></a><span class="lineno"><a class="line" href="../../d2/d56/a00384.html"> 7221</a></span>    <span class="keyword">namespace </span>product_of_array_except_self {</div>
-<div class="line"><a id="l07222" name="l07222"></a><span class="lineno"><a class="line" href="../../dc/dbb/a02520.html#a710bfbef355ea54ccce5bead0124bfb0"> 7222</a></span>        vector&lt;int&gt; <a class="code hl_function" href="../../dc/dbb/a02520.html#a710bfbef355ea54ccce5bead0124bfb0">Solution::productExceptSelf</a>(vector&lt;int&gt; &amp;nums) {</div>
-<div class="line"><a id="l07223" name="l07223"></a><span class="lineno"> 7223</span>            vector&lt;int&gt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>(nums.size());</div>
-<div class="line"><a id="l07224" name="l07224"></a><span class="lineno"> 7224</span>            vector&lt;int&gt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>(nums.size());</div>
-<div class="line"><a id="l07225" name="l07225"></a><span class="lineno"> 7225</span>            <span class="keywordtype">int</span> c = 1;</div>
-<div class="line"><a id="l07226" name="l07226"></a><span class="lineno"> 7226</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>.size(); i++) {</div>
-<div class="line"><a id="l07227" name="l07227"></a><span class="lineno"> 7227</span>                <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i] = c;</div>
-<div class="line"><a id="l07228" name="l07228"></a><span class="lineno"> 7228</span>                c *= nums[i];</div>
-<div class="line"><a id="l07229" name="l07229"></a><span class="lineno"> 7229</span>            }</div>
-<div class="line"><a id="l07230" name="l07230"></a><span class="lineno"> 7230</span>            c = 1;</div>
-<div class="line"><a id="l07231" name="l07231"></a><span class="lineno"> 7231</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>.size() - 1; i &gt;= 0; i--) {</div>
-<div class="line"><a id="l07232" name="l07232"></a><span class="lineno"> 7232</span>                <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>[i] = c;</div>
-<div class="line"><a id="l07233" name="l07233"></a><span class="lineno"> 7233</span>                c *= nums[i];</div>
+<div class="line"><a id="l07204" name="l07204"></a><span class="lineno"> 7204</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = intervals.size();</div>
+<div class="line"><a id="l07205" name="l07205"></a><span class="lineno"> 7205</span>            <span class="keywordtype">int</span> <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>   = intervals[0][1];</div>
+<div class="line"><a id="l07206" name="l07206"></a><span class="lineno"> 7206</span>            <span class="keywordtype">int</span> ans     = 1;</div>
+<div class="line"><a id="l07207" name="l07207"></a><span class="lineno"> 7207</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; n; ++i) {</div>
+<div class="line"><a id="l07208" name="l07208"></a><span class="lineno"> 7208</span>                <span class="keywordflow">if</span>(intervals[i][0] &gt;= <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>) {</div>
+<div class="line"><a id="l07209" name="l07209"></a><span class="lineno"> 7209</span>                    ++ans;</div>
+<div class="line"><a id="l07210" name="l07210"></a><span class="lineno"> 7210</span>                    <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> = intervals[i][1];</div>
+<div class="line"><a id="l07211" name="l07211"></a><span class="lineno"> 7211</span>                }</div>
+<div class="line"><a id="l07212" name="l07212"></a><span class="lineno"> 7212</span>            }</div>
+<div class="line"><a id="l07213" name="l07213"></a><span class="lineno"> 7213</span>            <span class="keywordflow">return</span> n - ans;</div>
+<div class="line"><a id="l07214" name="l07214"></a><span class="lineno"> 7214</span>        }</div>
+<div class="line"><a id="l07215" name="l07215"></a><span class="lineno"> 7215</span>    }<span class="comment">// namespace non_overlapping_intervals</span></div>
+<div class="line"><a id="l07216" name="l07216"></a><span class="lineno"> 7216</span> </div>
+<div class="line"><a id="l07217" name="l07217"></a><span class="lineno"><a class="line" href="../../d2/d56/a00384.html"> 7217</a></span>    <span class="keyword">namespace </span>product_of_array_except_self {</div>
+<div class="line"><a id="l07218" name="l07218"></a><span class="lineno"><a class="line" href="../../dc/dbb/a02520.html#a710bfbef355ea54ccce5bead0124bfb0"> 7218</a></span>        vector&lt;int&gt; <a class="code hl_function" href="../../dc/dbb/a02520.html#a710bfbef355ea54ccce5bead0124bfb0">Solution::productExceptSelf</a>(vector&lt;int&gt; &amp;nums) {</div>
+<div class="line"><a id="l07219" name="l07219"></a><span class="lineno"> 7219</span>            vector&lt;int&gt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>(nums.size());</div>
+<div class="line"><a id="l07220" name="l07220"></a><span class="lineno"> 7220</span>            vector&lt;int&gt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>(nums.size());</div>
+<div class="line"><a id="l07221" name="l07221"></a><span class="lineno"> 7221</span>            <span class="keywordtype">int</span> c = 1;</div>
+<div class="line"><a id="l07222" name="l07222"></a><span class="lineno"> 7222</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>.size(); i++) {</div>
+<div class="line"><a id="l07223" name="l07223"></a><span class="lineno"> 7223</span>                <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i] = c;</div>
+<div class="line"><a id="l07224" name="l07224"></a><span class="lineno"> 7224</span>                c *= nums[i];</div>
+<div class="line"><a id="l07225" name="l07225"></a><span class="lineno"> 7225</span>            }</div>
+<div class="line"><a id="l07226" name="l07226"></a><span class="lineno"> 7226</span>            c = 1;</div>
+<div class="line"><a id="l07227" name="l07227"></a><span class="lineno"> 7227</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>.size() - 1; i &gt;= 0; i--) {</div>
+<div class="line"><a id="l07228" name="l07228"></a><span class="lineno"> 7228</span>                <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>[i] = c;</div>
+<div class="line"><a id="l07229" name="l07229"></a><span class="lineno"> 7229</span>                c *= nums[i];</div>
+<div class="line"><a id="l07230" name="l07230"></a><span class="lineno"> 7230</span>            }</div>
+<div class="line"><a id="l07231" name="l07231"></a><span class="lineno"> 7231</span>            vector&lt;int&gt; ans(nums.size());</div>
+<div class="line"><a id="l07232" name="l07232"></a><span class="lineno"> 7232</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nums.size(); i++) {</div>
+<div class="line"><a id="l07233" name="l07233"></a><span class="lineno"> 7233</span>                ans[i] = <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i] * <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>[i];</div>
 <div class="line"><a id="l07234" name="l07234"></a><span class="lineno"> 7234</span>            }</div>
-<div class="line"><a id="l07235" name="l07235"></a><span class="lineno"> 7235</span>            vector&lt;int&gt; ans(nums.size());</div>
-<div class="line"><a id="l07236" name="l07236"></a><span class="lineno"> 7236</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nums.size(); i++) {</div>
-<div class="line"><a id="l07237" name="l07237"></a><span class="lineno"> 7237</span>                ans[i] = <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i] * <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>[i];</div>
-<div class="line"><a id="l07238" name="l07238"></a><span class="lineno"> 7238</span>            }</div>
-<div class="line"><a id="l07239" name="l07239"></a><span class="lineno"> 7239</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l07240" name="l07240"></a><span class="lineno"> 7240</span>        }</div>
-<div class="line"><a id="l07241" name="l07241"></a><span class="lineno"> 7241</span>    }<span class="comment">// namespace product_of_array_except_self</span></div>
-<div class="line"><a id="l07242" name="l07242"></a><span class="lineno"> 7242</span> </div>
-<div class="line"><a id="l07243" name="l07243"></a><span class="lineno"><a class="line" href="../../d5/d05/a00385.html"> 7243</a></span>    <span class="keyword">namespace </span>subarray_sum_equals_k {</div>
-<div class="line"><a id="l07244" name="l07244"></a><span class="lineno"><a class="line" href="../../de/dec/a02524.html#a246b5c83ba0391615b0c3403e28d9f7e"> 7244</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/dec/a02524.html#a246b5c83ba0391615b0c3403e28d9f7e">Solution::subarraySum</a>(vector&lt;int&gt; &amp;nums, <span class="keywordtype">int</span> k) {</div>
-<div class="line"><a id="l07245" name="l07245"></a><span class="lineno"> 7245</span>            unordered_map&lt;int, int&gt; um;</div>
-<div class="line"><a id="l07246" name="l07246"></a><span class="lineno"> 7246</span>            um[0]     = 1;</div>
-<div class="line"><a id="l07247" name="l07247"></a><span class="lineno"> 7247</span>            <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><a id="l07248" name="l07248"></a><span class="lineno"> 7248</span>            <span class="keywordtype">int</span> ps    = 0;</div>
-<div class="line"><a id="l07249" name="l07249"></a><span class="lineno"> 7249</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;num: nums) {</div>
-<div class="line"><a id="l07250" name="l07250"></a><span class="lineno"> 7250</span>                ps += num;</div>
-<div class="line"><a id="l07251" name="l07251"></a><span class="lineno"> 7251</span>                count += um[ps - k];</div>
-<div class="line"><a id="l07252" name="l07252"></a><span class="lineno"> 7252</span>                um[ps]++;</div>
-<div class="line"><a id="l07253" name="l07253"></a><span class="lineno"> 7253</span>            }</div>
-<div class="line"><a id="l07254" name="l07254"></a><span class="lineno"> 7254</span>            <span class="keywordflow">return</span> count;</div>
-<div class="line"><a id="l07255" name="l07255"></a><span class="lineno"> 7255</span>        }</div>
-<div class="line"><a id="l07256" name="l07256"></a><span class="lineno"> 7256</span>    }<span class="comment">// namespace subarray_sum_equals_k</span></div>
-<div class="line"><a id="l07257" name="l07257"></a><span class="lineno"> 7257</span> </div>
-<div class="line"><a id="l07258" name="l07258"></a><span class="lineno"><a class="line" href="../../dd/df5/a00386.html"> 7258</a></span>    <span class="keyword">namespace </span>partition_labels {</div>
-<div class="line"><a id="l07259" name="l07259"></a><span class="lineno"><a class="line" href="../../d8/d65/a02528.html#a68212980c694aa4e0160ec23e53466f1"> 7259</a></span>        vector&lt;int&gt; <a class="code hl_function" href="../../d8/d65/a02528.html#a68212980c694aa4e0160ec23e53466f1">Solution::partitionLabels</a>(<span class="keywordtype">string</span> s) {</div>
-<div class="line"><a id="l07260" name="l07260"></a><span class="lineno"> 7260</span>            unordered_map&lt;char, unsigned&gt; last;</div>
-<div class="line"><a id="l07261" name="l07261"></a><span class="lineno"> 7261</span>            vector&lt;int&gt; ans;</div>
-<div class="line"><a id="l07262" name="l07262"></a><span class="lineno"> 7262</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; s.length(); i++) {</div>
-<div class="line"><a id="l07263" name="l07263"></a><span class="lineno"> 7263</span>                last[s[i]] = i;</div>
-<div class="line"><a id="l07264" name="l07264"></a><span class="lineno"> 7264</span>            }</div>
-<div class="line"><a id="l07265" name="l07265"></a><span class="lineno"> 7265</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; s.length();) {</div>
-<div class="line"><a id="l07266" name="l07266"></a><span class="lineno"> 7266</span>                <span class="keywordtype">unsigned</span> last_pos = i;</div>
-<div class="line"><a id="l07267" name="l07267"></a><span class="lineno"> 7267</span>                <span class="keywordtype">char</span> ch           = s[i];</div>
-<div class="line"><a id="l07268" name="l07268"></a><span class="lineno"> 7268</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i; j &lt;= last_pos; j++) {</div>
-<div class="line"><a id="l07269" name="l07269"></a><span class="lineno"> 7269</span>                    last_pos = max(last_pos, last[s[j]]);</div>
-<div class="line"><a id="l07270" name="l07270"></a><span class="lineno"> 7270</span>                }</div>
-<div class="line"><a id="l07271" name="l07271"></a><span class="lineno"> 7271</span>                ans.emplace_back(last_pos - i + 1);</div>
-<div class="line"><a id="l07272" name="l07272"></a><span class="lineno"> 7272</span>                i = last_pos + 1;</div>
-<div class="line"><a id="l07273" name="l07273"></a><span class="lineno"> 7273</span>            }</div>
-<div class="line"><a id="l07274" name="l07274"></a><span class="lineno"> 7274</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l07275" name="l07275"></a><span class="lineno"> 7275</span>        }</div>
-<div class="line"><a id="l07276" name="l07276"></a><span class="lineno"> 7276</span>    }<span class="comment">// namespace partition_labels</span></div>
-<div class="line"><a id="l07277" name="l07277"></a><span class="lineno"> 7277</span> </div>
-<div class="line"><a id="l07278" name="l07278"></a><span class="lineno"><a class="line" href="../../db/db9/a00387.html"> 7278</a></span>    <span class="keyword">namespace </span>repeated_dna_sequences {</div>
-<div class="line"><a id="l07279" name="l07279"></a><span class="lineno"><a class="line" href="../../d2/d08/a02532.html#aba3b1ed61d9fddff3465c829d8ad7c58"> 7279</a></span>        vector&lt;string&gt; <a class="code hl_function" href="../../d2/d08/a02532.html#aba3b1ed61d9fddff3465c829d8ad7c58">Solution::findRepeatedDnaSequences</a>(<span class="keywordtype">string</span> s) {</div>
-<div class="line"><a id="l07280" name="l07280"></a><span class="lineno"> 7280</span>            vector&lt;unsigned short&gt; vec(s.length());</div>
-<div class="line"><a id="l07281" name="l07281"></a><span class="lineno"> 7281</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; s.length(); i++) {</div>
-<div class="line"><a id="l07282" name="l07282"></a><span class="lineno"> 7282</span>                <span class="keywordflow">switch</span>(s[i]) {</div>
-<div class="line"><a id="l07283" name="l07283"></a><span class="lineno"> 7283</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;A&#39;</span>:</div>
-<div class="line"><a id="l07284" name="l07284"></a><span class="lineno"> 7284</span>                        vec[i] = 0;</div>
-<div class="line"><a id="l07285" name="l07285"></a><span class="lineno"> 7285</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l07286" name="l07286"></a><span class="lineno"> 7286</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;C&#39;</span>:</div>
-<div class="line"><a id="l07287" name="l07287"></a><span class="lineno"> 7287</span>                        vec[i] = 1;</div>
-<div class="line"><a id="l07288" name="l07288"></a><span class="lineno"> 7288</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l07289" name="l07289"></a><span class="lineno"> 7289</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;G&#39;</span>:</div>
-<div class="line"><a id="l07290" name="l07290"></a><span class="lineno"> 7290</span>                        vec[i] = 2;</div>
-<div class="line"><a id="l07291" name="l07291"></a><span class="lineno"> 7291</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l07292" name="l07292"></a><span class="lineno"> 7292</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;T&#39;</span>:</div>
-<div class="line"><a id="l07293" name="l07293"></a><span class="lineno"> 7293</span>                        vec[i] = 3;</div>
-<div class="line"><a id="l07294" name="l07294"></a><span class="lineno"> 7294</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l07295" name="l07295"></a><span class="lineno"> 7295</span>                }</div>
+<div class="line"><a id="l07235" name="l07235"></a><span class="lineno"> 7235</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l07236" name="l07236"></a><span class="lineno"> 7236</span>        }</div>
+<div class="line"><a id="l07237" name="l07237"></a><span class="lineno"> 7237</span>    }<span class="comment">// namespace product_of_array_except_self</span></div>
+<div class="line"><a id="l07238" name="l07238"></a><span class="lineno"> 7238</span> </div>
+<div class="line"><a id="l07239" name="l07239"></a><span class="lineno"><a class="line" href="../../d5/d05/a00385.html"> 7239</a></span>    <span class="keyword">namespace </span>subarray_sum_equals_k {</div>
+<div class="line"><a id="l07240" name="l07240"></a><span class="lineno"><a class="line" href="../../de/dec/a02524.html#a246b5c83ba0391615b0c3403e28d9f7e"> 7240</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/dec/a02524.html#a246b5c83ba0391615b0c3403e28d9f7e">Solution::subarraySum</a>(vector&lt;int&gt; &amp;nums, <span class="keywordtype">int</span> k) {</div>
+<div class="line"><a id="l07241" name="l07241"></a><span class="lineno"> 7241</span>            unordered_map&lt;int, int&gt; um;</div>
+<div class="line"><a id="l07242" name="l07242"></a><span class="lineno"> 7242</span>            um[0]     = 1;</div>
+<div class="line"><a id="l07243" name="l07243"></a><span class="lineno"> 7243</span>            <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l07244" name="l07244"></a><span class="lineno"> 7244</span>            <span class="keywordtype">int</span> ps    = 0;</div>
+<div class="line"><a id="l07245" name="l07245"></a><span class="lineno"> 7245</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;num: nums) {</div>
+<div class="line"><a id="l07246" name="l07246"></a><span class="lineno"> 7246</span>                ps += num;</div>
+<div class="line"><a id="l07247" name="l07247"></a><span class="lineno"> 7247</span>                count += um[ps - k];</div>
+<div class="line"><a id="l07248" name="l07248"></a><span class="lineno"> 7248</span>                um[ps]++;</div>
+<div class="line"><a id="l07249" name="l07249"></a><span class="lineno"> 7249</span>            }</div>
+<div class="line"><a id="l07250" name="l07250"></a><span class="lineno"> 7250</span>            <span class="keywordflow">return</span> count;</div>
+<div class="line"><a id="l07251" name="l07251"></a><span class="lineno"> 7251</span>        }</div>
+<div class="line"><a id="l07252" name="l07252"></a><span class="lineno"> 7252</span>    }<span class="comment">// namespace subarray_sum_equals_k</span></div>
+<div class="line"><a id="l07253" name="l07253"></a><span class="lineno"> 7253</span> </div>
+<div class="line"><a id="l07254" name="l07254"></a><span class="lineno"><a class="line" href="../../dd/df5/a00386.html"> 7254</a></span>    <span class="keyword">namespace </span>partition_labels {</div>
+<div class="line"><a id="l07255" name="l07255"></a><span class="lineno"><a class="line" href="../../d8/d65/a02528.html#a68212980c694aa4e0160ec23e53466f1"> 7255</a></span>        vector&lt;int&gt; <a class="code hl_function" href="../../d8/d65/a02528.html#a68212980c694aa4e0160ec23e53466f1">Solution::partitionLabels</a>(<span class="keywordtype">string</span> s) {</div>
+<div class="line"><a id="l07256" name="l07256"></a><span class="lineno"> 7256</span>            unordered_map&lt;char, unsigned&gt; last;</div>
+<div class="line"><a id="l07257" name="l07257"></a><span class="lineno"> 7257</span>            vector&lt;int&gt; ans;</div>
+<div class="line"><a id="l07258" name="l07258"></a><span class="lineno"> 7258</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; s.length(); i++) {</div>
+<div class="line"><a id="l07259" name="l07259"></a><span class="lineno"> 7259</span>                last[s[i]] = i;</div>
+<div class="line"><a id="l07260" name="l07260"></a><span class="lineno"> 7260</span>            }</div>
+<div class="line"><a id="l07261" name="l07261"></a><span class="lineno"> 7261</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; s.length();) {</div>
+<div class="line"><a id="l07262" name="l07262"></a><span class="lineno"> 7262</span>                <span class="keywordtype">unsigned</span> last_pos = i;</div>
+<div class="line"><a id="l07263" name="l07263"></a><span class="lineno"> 7263</span>                <span class="keywordtype">char</span> ch           = s[i];</div>
+<div class="line"><a id="l07264" name="l07264"></a><span class="lineno"> 7264</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i; j &lt;= last_pos; j++) {</div>
+<div class="line"><a id="l07265" name="l07265"></a><span class="lineno"> 7265</span>                    last_pos = max(last_pos, last[s[j]]);</div>
+<div class="line"><a id="l07266" name="l07266"></a><span class="lineno"> 7266</span>                }</div>
+<div class="line"><a id="l07267" name="l07267"></a><span class="lineno"> 7267</span>                ans.emplace_back(last_pos - i + 1);</div>
+<div class="line"><a id="l07268" name="l07268"></a><span class="lineno"> 7268</span>                i = last_pos + 1;</div>
+<div class="line"><a id="l07269" name="l07269"></a><span class="lineno"> 7269</span>            }</div>
+<div class="line"><a id="l07270" name="l07270"></a><span class="lineno"> 7270</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l07271" name="l07271"></a><span class="lineno"> 7271</span>        }</div>
+<div class="line"><a id="l07272" name="l07272"></a><span class="lineno"> 7272</span>    }<span class="comment">// namespace partition_labels</span></div>
+<div class="line"><a id="l07273" name="l07273"></a><span class="lineno"> 7273</span> </div>
+<div class="line"><a id="l07274" name="l07274"></a><span class="lineno"><a class="line" href="../../db/db9/a00387.html"> 7274</a></span>    <span class="keyword">namespace </span>repeated_dna_sequences {</div>
+<div class="line"><a id="l07275" name="l07275"></a><span class="lineno"><a class="line" href="../../d2/d08/a02532.html#aba3b1ed61d9fddff3465c829d8ad7c58"> 7275</a></span>        vector&lt;string&gt; <a class="code hl_function" href="../../d2/d08/a02532.html#aba3b1ed61d9fddff3465c829d8ad7c58">Solution::findRepeatedDnaSequences</a>(<span class="keywordtype">string</span> s) {</div>
+<div class="line"><a id="l07276" name="l07276"></a><span class="lineno"> 7276</span>            vector&lt;unsigned short&gt; vec(s.length());</div>
+<div class="line"><a id="l07277" name="l07277"></a><span class="lineno"> 7277</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; s.length(); i++) {</div>
+<div class="line"><a id="l07278" name="l07278"></a><span class="lineno"> 7278</span>                <span class="keywordflow">switch</span>(s[i]) {</div>
+<div class="line"><a id="l07279" name="l07279"></a><span class="lineno"> 7279</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;A&#39;</span>:</div>
+<div class="line"><a id="l07280" name="l07280"></a><span class="lineno"> 7280</span>                        vec[i] = 0;</div>
+<div class="line"><a id="l07281" name="l07281"></a><span class="lineno"> 7281</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l07282" name="l07282"></a><span class="lineno"> 7282</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;C&#39;</span>:</div>
+<div class="line"><a id="l07283" name="l07283"></a><span class="lineno"> 7283</span>                        vec[i] = 1;</div>
+<div class="line"><a id="l07284" name="l07284"></a><span class="lineno"> 7284</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l07285" name="l07285"></a><span class="lineno"> 7285</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;G&#39;</span>:</div>
+<div class="line"><a id="l07286" name="l07286"></a><span class="lineno"> 7286</span>                        vec[i] = 2;</div>
+<div class="line"><a id="l07287" name="l07287"></a><span class="lineno"> 7287</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l07288" name="l07288"></a><span class="lineno"> 7288</span>                    <span class="keywordflow">case</span> <span class="charliteral">&#39;T&#39;</span>:</div>
+<div class="line"><a id="l07289" name="l07289"></a><span class="lineno"> 7289</span>                        vec[i] = 3;</div>
+<div class="line"><a id="l07290" name="l07290"></a><span class="lineno"> 7290</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l07291" name="l07291"></a><span class="lineno"> 7291</span>                }</div>
+<div class="line"><a id="l07292" name="l07292"></a><span class="lineno"> 7292</span>            }</div>
+<div class="line"><a id="l07293" name="l07293"></a><span class="lineno"> 7293</span>            <span class="keywordtype">unsigned</span> hsv = 0;</div>
+<div class="line"><a id="l07294" name="l07294"></a><span class="lineno"> 7294</span>            <span class="keywordflow">if</span>(s.length() &lt; 10) {</div>
+<div class="line"><a id="l07295" name="l07295"></a><span class="lineno"> 7295</span>                <span class="keywordflow">return</span> {};</div>
 <div class="line"><a id="l07296" name="l07296"></a><span class="lineno"> 7296</span>            }</div>
-<div class="line"><a id="l07297" name="l07297"></a><span class="lineno"> 7297</span>            <span class="keywordtype">unsigned</span> hsv = 0;</div>
-<div class="line"><a id="l07298" name="l07298"></a><span class="lineno"> 7298</span>            <span class="keywordflow">if</span>(s.length() &lt; 10) {</div>
-<div class="line"><a id="l07299" name="l07299"></a><span class="lineno"> 7299</span>                <span class="keywordflow">return</span> {};</div>
-<div class="line"><a id="l07300" name="l07300"></a><span class="lineno"> 7300</span>            }</div>
-<div class="line"><a id="l07301" name="l07301"></a><span class="lineno"> 7301</span>            unordered_map&lt;unsigned, string&gt; um;</div>
-<div class="line"><a id="l07302" name="l07302"></a><span class="lineno"> 7302</span>            unordered_map&lt;unsigned, unsigned&gt; cnt;</div>
-<div class="line"><a id="l07303" name="l07303"></a><span class="lineno"> 7303</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 10; i++) {</div>
-<div class="line"><a id="l07304" name="l07304"></a><span class="lineno"> 7304</span>                hsv *= 4;</div>
-<div class="line"><a id="l07305" name="l07305"></a><span class="lineno"> 7305</span>                hsv += vec[i];</div>
-<div class="line"><a id="l07306" name="l07306"></a><span class="lineno"> 7306</span>            }</div>
-<div class="line"><a id="l07307" name="l07307"></a><span class="lineno"> 7307</span>            um[hsv]    = s.substr(0, 10);</div>
-<div class="line"><a id="l07308" name="l07308"></a><span class="lineno"> 7308</span>            cnt[hsv]   = 1;</div>
-<div class="line"><a id="l07309" name="l07309"></a><span class="lineno"> 7309</span>            <span class="keywordtype">unsigned</span> f = 262144;</div>
-<div class="line"><a id="l07310" name="l07310"></a><span class="lineno"> 7310</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 10; i &lt; s.length(); i++) {</div>
-<div class="line"><a id="l07311" name="l07311"></a><span class="lineno"> 7311</span>                hsv -= vec[i - 10] * f;</div>
-<div class="line"><a id="l07312" name="l07312"></a><span class="lineno"> 7312</span>                hsv *= 4;</div>
-<div class="line"><a id="l07313" name="l07313"></a><span class="lineno"> 7313</span>                hsv += vec[i];</div>
-<div class="line"><a id="l07314" name="l07314"></a><span class="lineno"> 7314</span>                um[hsv] = s.substr(i - 9, 10);</div>
-<div class="line"><a id="l07315" name="l07315"></a><span class="lineno"> 7315</span>                cnt[hsv]++;</div>
-<div class="line"><a id="l07316" name="l07316"></a><span class="lineno"> 7316</span>            }</div>
-<div class="line"><a id="l07317" name="l07317"></a><span class="lineno"> 7317</span>            vector&lt;string&gt; ans;</div>
-<div class="line"><a id="l07318" name="l07318"></a><span class="lineno"> 7318</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[k, v]: um) {</div>
-<div class="line"><a id="l07319" name="l07319"></a><span class="lineno"> 7319</span>                <span class="keywordflow">if</span>(cnt[k] &gt; 1) {</div>
-<div class="line"><a id="l07320" name="l07320"></a><span class="lineno"> 7320</span>                    ans.emplace_back(v);</div>
-<div class="line"><a id="l07321" name="l07321"></a><span class="lineno"> 7321</span>                }</div>
-<div class="line"><a id="l07322" name="l07322"></a><span class="lineno"> 7322</span>            }</div>
-<div class="line"><a id="l07323" name="l07323"></a><span class="lineno"> 7323</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l07324" name="l07324"></a><span class="lineno"> 7324</span>        }</div>
-<div class="line"><a id="l07325" name="l07325"></a><span class="lineno"> 7325</span>    }<span class="comment">// namespace repeated_dna_sequences</span></div>
-<div class="line"><a id="l07326" name="l07326"></a><span class="lineno"> 7326</span>}<span class="comment">// namespace leetcode</span></div>
+<div class="line"><a id="l07297" name="l07297"></a><span class="lineno"> 7297</span>            unordered_map&lt;unsigned, string&gt; um;</div>
+<div class="line"><a id="l07298" name="l07298"></a><span class="lineno"> 7298</span>            unordered_map&lt;unsigned, unsigned&gt; cnt;</div>
+<div class="line"><a id="l07299" name="l07299"></a><span class="lineno"> 7299</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 10; i++) {</div>
+<div class="line"><a id="l07300" name="l07300"></a><span class="lineno"> 7300</span>                hsv *= 4;</div>
+<div class="line"><a id="l07301" name="l07301"></a><span class="lineno"> 7301</span>                hsv += vec[i];</div>
+<div class="line"><a id="l07302" name="l07302"></a><span class="lineno"> 7302</span>            }</div>
+<div class="line"><a id="l07303" name="l07303"></a><span class="lineno"> 7303</span>            um[hsv]          = s.substr(0, 10);</div>
+<div class="line"><a id="l07304" name="l07304"></a><span class="lineno"> 7304</span>            cnt[hsv]         = 1;</div>
+<div class="line"><a id="l07305" name="l07305"></a><span class="lineno"> 7305</span>            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> f = 262144;</div>
+<div class="line"><a id="l07306" name="l07306"></a><span class="lineno"> 7306</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 10; i &lt; s.length(); i++) {</div>
+<div class="line"><a id="l07307" name="l07307"></a><span class="lineno"> 7307</span>                hsv -= vec[i - 10] * f;</div>
+<div class="line"><a id="l07308" name="l07308"></a><span class="lineno"> 7308</span>                hsv *= 4;</div>
+<div class="line"><a id="l07309" name="l07309"></a><span class="lineno"> 7309</span>                hsv += vec[i];</div>
+<div class="line"><a id="l07310" name="l07310"></a><span class="lineno"> 7310</span>                um[hsv] = s.substr(i - 9, 10);</div>
+<div class="line"><a id="l07311" name="l07311"></a><span class="lineno"> 7311</span>                cnt[hsv]++;</div>
+<div class="line"><a id="l07312" name="l07312"></a><span class="lineno"> 7312</span>            }</div>
+<div class="line"><a id="l07313" name="l07313"></a><span class="lineno"> 7313</span>            vector&lt;string&gt; ans;</div>
+<div class="line"><a id="l07314" name="l07314"></a><span class="lineno"> 7314</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[k, v]: um) {</div>
+<div class="line"><a id="l07315" name="l07315"></a><span class="lineno"> 7315</span>                <span class="keywordflow">if</span>(cnt[k] &gt; 1) {</div>
+<div class="line"><a id="l07316" name="l07316"></a><span class="lineno"> 7316</span>                    ans.emplace_back(v);</div>
+<div class="line"><a id="l07317" name="l07317"></a><span class="lineno"> 7317</span>                }</div>
+<div class="line"><a id="l07318" name="l07318"></a><span class="lineno"> 7318</span>            }</div>
+<div class="line"><a id="l07319" name="l07319"></a><span class="lineno"> 7319</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l07320" name="l07320"></a><span class="lineno"> 7320</span>        }</div>
+<div class="line"><a id="l07321" name="l07321"></a><span class="lineno"> 7321</span>    }<span class="comment">// namespace repeated_dna_sequences</span></div>
+<div class="line"><a id="l07322" name="l07322"></a><span class="lineno"> 7322</span>}<span class="comment">// namespace leetcode</span></div>
 <div class="ttc" id="aa00026_html"><div class="ttname"><a href="../../d6/d5b/a00026.html">templates.h</a></div></div>
 <div class="ttc" id="aa00050_html"><div class="ttname"><a href="../../d5/de0/a00050.html">leetcode.h</a></div></div>
 <div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">acwing::acwing1929::left</a></div><div class="ttdeci">@ left</div><div class="ttdoc">左</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00554">acwing.h:554</a></div></div>
 <div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00556">acwing.h:556</a></div></div>
 <div class="ttc" id="aa00121_html_a93ab66a86e434e6bd6959243ace9ddab"><div class="ttname"><a href="../../d8/dfa/a00121.html#a93ab66a86e434e6bd6959243ace9ddab">acwing::acwing4397::cmp</a></div><div class="ttdeci">bool cmp(const pair&lt; int, int &gt; &amp;a, const pair&lt; int, int &gt; &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d03/a00062_source.html#l06470">acwing.cpp:6470</a></div></div>
-<div class="ttc" id="aa00145_html_ab10f99b2dc87d12962d4016234de99e2"><div class="ttname"><a href="../../da/ddb/a00145.html#ab10f99b2dc87d12962d4016234de99e2">acwing::acwing861::find</a></div><div class="ttdeci">bool find(vector&lt; unordered_set&lt; int &gt; &gt; &amp;g, int x, vector&lt; bool &gt; &amp;st, vector&lt; int &gt; &amp;match)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d03/a00062_source.html#l07494">acwing.cpp:7494</a></div></div>
+<div class="ttc" id="aa00145_html_ab10f99b2dc87d12962d4016234de99e2"><div class="ttname"><a href="../../da/ddb/a00145.html#ab10f99b2dc87d12962d4016234de99e2">acwing::acwing861::find</a></div><div class="ttdeci">bool find(vector&lt; unordered_set&lt; int &gt; &gt; &amp;g, int x, vector&lt; bool &gt; &amp;st, vector&lt; int &gt; &amp;match)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d03/a00062_source.html#l07492">acwing.cpp:7492</a></div></div>
 <div class="ttc" id="aa00147_html"><div class="ttname"><a href="../../d0/d4a/a00147.html">leetcode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l00017">leetcode.cpp:17</a></div></div>
 <div class="ttc" id="aa00162_html_ae68fb24f26d1729119604748b3b20490"><div class="ttname"><a href="../../db/d44/a00162.html#ae68fb24f26d1729119604748b3b20490">leetcode::cat_and_mouse::MOUSE_WIN</a></div><div class="ttdeci">const int MOUSE_WIN</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00224">leetcode.h:224</a></div></div>
 <div class="ttc" id="aa00162_html_afbb37e8f376cda021e541e6d79a7b101"><div class="ttname"><a href="../../db/d44/a00162.html#afbb37e8f376cda021e541e6d79a7b101">leetcode::cat_and_mouse::DRAW</a></div><div class="ttdeci">const int DRAW</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00228">leetcode.h:228</a></div></div>
@@ -7847,18 +7843,18 @@ $(function() {
 <div class="ttc" id="aa02500_html_a1f8af31a6ed93a19469b7075f3062f3e"><div class="ttname"><a href="../../d4/dad/a02500.html#a1f8af31a6ed93a19469b7075f3062f3e">leetcode::serialize_and_deserialize_binary_tree::Codec::serialize</a></div><div class="ttdeci">string serialize(TreeNode *root) const</div><div class="ttdoc">Encodes a tree to a single string.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07014">leetcode.cpp:7014</a></div></div>
 <div class="ttc" id="aa02500_html_af9cbff54f5d6114bb9542fc49371d68d"><div class="ttname"><a href="../../d4/dad/a02500.html#af9cbff54f5d6114bb9542fc49371d68d">leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize</a></div><div class="ttdeci">TreeNode * deserialize(string data) const</div><div class="ttdoc">Decodes your encoded data to tree.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07046">leetcode.cpp:7046</a></div></div>
 <div class="ttc" id="aa02504_html_aa07de3f441a05c0d87ad7b2e855421c8"><div class="ttname"><a href="../../d3/df4/a02504.html#aa07de3f441a05c0d87ad7b2e855421c8">leetcode::task_scheduler::Solution::leastInterval</a></div><div class="ttdeci">static int leastInterval(vector&lt; char &gt; &amp;tasks, int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07076">leetcode.cpp:7076</a></div></div>
-<div class="ttc" id="aa02508_html_a025ba1e271ade97705a7a4e6c9eab811"><div class="ttname"><a href="../../d9/de2/a02508.html#a025ba1e271ade97705a7a4e6c9eab811">leetcode::design_hashmap::MyHashMap::MyHashMap</a></div><div class="ttdeci">MyHashMap()</div><div class="ttdoc">initializes the object with an empty map.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07118">leetcode.cpp:7118</a></div></div>
-<div class="ttc" id="aa02508_html_a803c440450d63209ca02d65dfb771af0"><div class="ttname"><a href="../../d9/de2/a02508.html#a803c440450d63209ca02d65dfb771af0">leetcode::design_hashmap::MyHashMap::get</a></div><div class="ttdeci">int get(int key)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07136">leetcode.cpp:7136</a></div></div>
-<div class="ttc" id="aa02508_html_a96363b71869dc7a20bd0ec99d59787e3"><div class="ttname"><a href="../../d9/de2/a02508.html#a96363b71869dc7a20bd0ec99d59787e3">leetcode::design_hashmap::MyHashMap::put</a></div><div class="ttdeci">void put(int key, int value)</div><div class="ttdoc">inserts a (key, value) pair into the HashMap. If the key already exists in the map,...</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07125">leetcode.cpp:7125</a></div></div>
+<div class="ttc" id="aa02508_html_a025ba1e271ade97705a7a4e6c9eab811"><div class="ttname"><a href="../../d9/de2/a02508.html#a025ba1e271ade97705a7a4e6c9eab811">leetcode::design_hashmap::MyHashMap::MyHashMap</a></div><div class="ttdeci">MyHashMap()</div><div class="ttdoc">initializes the object with an empty map.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07117">leetcode.cpp:7117</a></div></div>
+<div class="ttc" id="aa02508_html_a803c440450d63209ca02d65dfb771af0"><div class="ttname"><a href="../../d9/de2/a02508.html#a803c440450d63209ca02d65dfb771af0">leetcode::design_hashmap::MyHashMap::get</a></div><div class="ttdeci">int get(int key)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07135">leetcode.cpp:7135</a></div></div>
+<div class="ttc" id="aa02508_html_a96363b71869dc7a20bd0ec99d59787e3"><div class="ttname"><a href="../../d9/de2/a02508.html#a96363b71869dc7a20bd0ec99d59787e3">leetcode::design_hashmap::MyHashMap::put</a></div><div class="ttdeci">void put(int key, int value)</div><div class="ttdoc">inserts a (key, value) pair into the HashMap. If the key already exists in the map,...</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07124">leetcode.cpp:7124</a></div></div>
 <div class="ttc" id="aa02508_html_a971b728c4a3fcaed0a95d8a868070628"><div class="ttname"><a href="../../d9/de2/a02508.html#a971b728c4a3fcaed0a95d8a868070628">leetcode::design_hashmap::MyHashMap::SZ</a></div><div class="ttdeci">static const unsigned SZ</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l02625">leetcode.h:2625</a></div></div>
-<div class="ttc" id="aa02508_html_a9725d6d54e6ee31a9e66b775de4c514d"><div class="ttname"><a href="../../d9/de2/a02508.html#a9725d6d54e6ee31a9e66b775de4c514d">leetcode::design_hashmap::MyHashMap::remove</a></div><div class="ttdeci">void remove(int key)</div><div class="ttdoc">removes the key and its corresponding value if the map contains the mapping for the key.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07146">leetcode.cpp:7146</a></div></div>
+<div class="ttc" id="aa02508_html_a9725d6d54e6ee31a9e66b775de4c514d"><div class="ttname"><a href="../../d9/de2/a02508.html#a9725d6d54e6ee31a9e66b775de4c514d">leetcode::design_hashmap::MyHashMap::remove</a></div><div class="ttdeci">void remove(int key)</div><div class="ttdoc">removes the key and its corresponding value if the map contains the mapping for the key.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07145">leetcode.cpp:7145</a></div></div>
 <div class="ttc" id="aa02508_html_abfe5928fe4210252dab64d8d6fba1e67"><div class="ttname"><a href="../../d9/de2/a02508.html#abfe5928fe4210252dab64d8d6fba1e67">leetcode::design_hashmap::MyHashMap::arr</a></div><div class="ttdeci">array&lt; list&lt; pair&lt; int, int &gt; &gt;, SZ &gt; arr</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l02626">leetcode.h:2626</a></div></div>
-<div class="ttc" id="aa02512_html_a2e96774d0ecaa5bd0ff04cd816cc7425"><div class="ttname"><a href="../../db/da2/a02512.html#a2e96774d0ecaa5bd0ff04cd816cc7425">leetcode::spiral_matrix_ii::Solution::generateMatrix</a></div><div class="ttdeci">static vector&lt; vector&lt; int &gt; &gt; generateMatrix(int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07158">leetcode.cpp:7158</a></div></div>
-<div class="ttc" id="aa02516_html_a74fca33f2ea3a835b7004629120b2c41"><div class="ttname"><a href="../../d2/dab/a02516.html#a74fca33f2ea3a835b7004629120b2c41">leetcode::non_overlapping_intervals::Solution::eraseOverlapIntervals</a></div><div class="ttdeci">static int eraseOverlapIntervals(vector&lt; vector&lt; int &gt; &gt; &amp;intervals)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07199">leetcode.cpp:7199</a></div></div>
-<div class="ttc" id="aa02520_html_a710bfbef355ea54ccce5bead0124bfb0"><div class="ttname"><a href="../../dc/dbb/a02520.html#a710bfbef355ea54ccce5bead0124bfb0">leetcode::product_of_array_except_self::Solution::productExceptSelf</a></div><div class="ttdeci">static vector&lt; int &gt; productExceptSelf(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07222">leetcode.cpp:7222</a></div></div>
-<div class="ttc" id="aa02524_html_a246b5c83ba0391615b0c3403e28d9f7e"><div class="ttname"><a href="../../de/dec/a02524.html#a246b5c83ba0391615b0c3403e28d9f7e">leetcode::subarray_sum_equals_k::Solution::subarraySum</a></div><div class="ttdeci">static int subarraySum(vector&lt; int &gt; &amp;nums, int k)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07244">leetcode.cpp:7244</a></div></div>
-<div class="ttc" id="aa02528_html_a68212980c694aa4e0160ec23e53466f1"><div class="ttname"><a href="../../d8/d65/a02528.html#a68212980c694aa4e0160ec23e53466f1">leetcode::partition_labels::Solution::partitionLabels</a></div><div class="ttdeci">static vector&lt; int &gt; partitionLabels(string s)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07259">leetcode.cpp:7259</a></div></div>
-<div class="ttc" id="aa02532_html_aba3b1ed61d9fddff3465c829d8ad7c58"><div class="ttname"><a href="../../d2/d08/a02532.html#aba3b1ed61d9fddff3465c829d8ad7c58">leetcode::repeated_dna_sequences::Solution::findRepeatedDnaSequences</a></div><div class="ttdeci">static vector&lt; string &gt; findRepeatedDnaSequences(string s)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07279">leetcode.cpp:7279</a></div></div>
+<div class="ttc" id="aa02512_html_a2e96774d0ecaa5bd0ff04cd816cc7425"><div class="ttname"><a href="../../db/da2/a02512.html#a2e96774d0ecaa5bd0ff04cd816cc7425">leetcode::spiral_matrix_ii::Solution::generateMatrix</a></div><div class="ttdeci">static vector&lt; vector&lt; int &gt; &gt; generateMatrix(int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07157">leetcode.cpp:7157</a></div></div>
+<div class="ttc" id="aa02516_html_a74fca33f2ea3a835b7004629120b2c41"><div class="ttname"><a href="../../d2/dab/a02516.html#a74fca33f2ea3a835b7004629120b2c41">leetcode::non_overlapping_intervals::Solution::eraseOverlapIntervals</a></div><div class="ttdeci">static int eraseOverlapIntervals(vector&lt; vector&lt; int &gt; &gt; &amp;intervals)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07197">leetcode.cpp:7197</a></div></div>
+<div class="ttc" id="aa02520_html_a710bfbef355ea54ccce5bead0124bfb0"><div class="ttname"><a href="../../dc/dbb/a02520.html#a710bfbef355ea54ccce5bead0124bfb0">leetcode::product_of_array_except_self::Solution::productExceptSelf</a></div><div class="ttdeci">static vector&lt; int &gt; productExceptSelf(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07218">leetcode.cpp:7218</a></div></div>
+<div class="ttc" id="aa02524_html_a246b5c83ba0391615b0c3403e28d9f7e"><div class="ttname"><a href="../../de/dec/a02524.html#a246b5c83ba0391615b0c3403e28d9f7e">leetcode::subarray_sum_equals_k::Solution::subarraySum</a></div><div class="ttdeci">static int subarraySum(vector&lt; int &gt; &amp;nums, int k)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07240">leetcode.cpp:7240</a></div></div>
+<div class="ttc" id="aa02528_html_a68212980c694aa4e0160ec23e53466f1"><div class="ttname"><a href="../../d8/d65/a02528.html#a68212980c694aa4e0160ec23e53466f1">leetcode::partition_labels::Solution::partitionLabels</a></div><div class="ttdeci">static vector&lt; int &gt; partitionLabels(string s)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07255">leetcode.cpp:7255</a></div></div>
+<div class="ttc" id="aa02532_html_aba3b1ed61d9fddff3465c829d8ad7c58"><div class="ttname"><a href="../../d2/d08/a02532.html#aba3b1ed61d9fddff3465c829d8ad7c58">leetcode::repeated_dna_sequences::Solution::findRepeatedDnaSequences</a></div><div class="ttdeci">static vector&lt; string &gt; findRepeatedDnaSequences(string s)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l07275">leetcode.cpp:7275</a></div></div>
 <div class="ttc" id="aa03132_html"><div class="ttname"><a href="../../df/dbf/a03132.html">TrieNode</a></div><div class="ttdoc">字典树节点</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00009">templates.h:9</a></div></div>
 <div class="ttc" id="aa03132_html_a07d53b17d0b024afcbabb556c9964bbd"><div class="ttname"><a href="../../df/dbf/a03132.html#a07d53b17d0b024afcbabb556c9964bbd">TrieNode::nexts</a></div><div class="ttdeci">array&lt; TrieNode *, 26 &gt; nexts</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00011">templates.h:11</a></div></div>
 <div class="ttc" id="aa03132_html_a9845dc41b755ffd1e9c7e2acc08893f2"><div class="ttname"><a href="../../df/dbf/a03132.html#a9845dc41b755ffd1e9c7e2acc08893f2">TrieNode::insert</a></div><div class="ttdeci">void insert(const string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dee/a00008_source.html#l00008">templates.cpp:8</a></div></div>

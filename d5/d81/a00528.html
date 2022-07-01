@@ -147,20 +147,20 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04579">4579</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04579" name="l04579"></a><span class="lineno"> 4579</span>                                                                                                                                                                                                          {</div>
-<div class="line"><a id="l04580" name="l04580"></a><span class="lineno"> 4580</span>                <span class="keyword">auto</span> p = players.top();</div>
-<div class="line"><a id="l04581" name="l04581"></a><span class="lineno"> 4581</span>                players.pop();</div>
-<div class="line"><a id="l04582" name="l04582"></a><span class="lineno"> 4582</span>                <span class="keyword">const</span> <span class="keyword">auto</span> t = tables.top();</div>
-<div class="line"><a id="l04583" name="l04583"></a><span class="lineno"> 4583</span>                tables.pop();</div>
-<div class="line"><a id="l04584" name="l04584"></a><span class="lineno"> 4584</span>                p.waiting_time = round((t.end_time - p.arrival_time) / 60.0);</div>
-<div class="line"><a id="l04585" name="l04585"></a><span class="lineno"> 4585</span>                p.start_time   = t.end_time;</div>
-<div class="line"><a id="l04586" name="l04586"></a><span class="lineno"> 4586</span>                table_cnt[t.id]++;</div>
-<div class="line"><a id="l04587" name="l04587"></a><span class="lineno"> 4587</span>                vec.push_back(p);</div>
-<div class="line"><a id="l04588" name="l04588"></a><span class="lineno"> 4588</span>                tables.push({t.id, t.end_time + p.p});</div>
-<div class="line"><a id="l04589" name="l04589"></a><span class="lineno"> 4589</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04580">4580</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04580" name="l04580"></a><span class="lineno"> 4580</span>                                                                                                                                                                                                          {</div>
+<div class="line"><a id="l04581" name="l04581"></a><span class="lineno"> 4581</span>                <span class="keyword">auto</span> p = players.top();</div>
+<div class="line"><a id="l04582" name="l04582"></a><span class="lineno"> 4582</span>                players.pop();</div>
+<div class="line"><a id="l04583" name="l04583"></a><span class="lineno"> 4583</span>                <span class="keyword">const</span> <span class="keyword">auto</span> t = tables.top();</div>
+<div class="line"><a id="l04584" name="l04584"></a><span class="lineno"> 4584</span>                tables.pop();</div>
+<div class="line"><a id="l04585" name="l04585"></a><span class="lineno"> 4585</span>                p.waiting_time = round((t.end_time - p.arrival_time) / 60.0);</div>
+<div class="line"><a id="l04586" name="l04586"></a><span class="lineno"> 4586</span>                p.start_time   = t.end_time;</div>
+<div class="line"><a id="l04587" name="l04587"></a><span class="lineno"> 4587</span>                table_cnt[t.id]++;</div>
+<div class="line"><a id="l04588" name="l04588"></a><span class="lineno"> 4588</span>                vec.push_back(p);</div>
+<div class="line"><a id="l04589" name="l04589"></a><span class="lineno"> 4589</span>                tables.push({t.id, t.end_time + p.p});</div>
+<div class="line"><a id="l04590" name="l04590"></a><span class="lineno"> 4590</span>            }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l04591">main()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l04592">main()</a>.</p>
 
 </div>
 </div>
@@ -190,107 +190,107 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04591">4591</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04591" name="l04591"></a><span class="lineno"> 4591</span>                                                  {</div>
-<div class="line"><a id="l04592" name="l04592"></a><span class="lineno"> 4592</span>                <span class="keywordtype">unsigned</span> n;</div>
-<div class="line"><a id="l04593" name="l04593"></a><span class="lineno"> 4593</span>                cin &gt;&gt; n;</div>
-<div class="line"><a id="l04594" name="l04594"></a><span class="lineno"> 4594</span>                priority_queue&lt;player, vector&lt;player&gt;, greater&lt;player&gt;&gt; normal_players;</div>
-<div class="line"><a id="l04595" name="l04595"></a><span class="lineno"> 4595</span>                priority_queue&lt;player, vector&lt;player&gt;, greater&lt;player&gt;&gt; vip_players;</div>
-<div class="line"><a id="l04596" name="l04596"></a><span class="lineno"> 4596</span>                <a class="code hl_struct" href="../../da/dcd/a03108.html">player</a> nop;</div>
-<div class="line"><a id="l04597" name="l04597"></a><span class="lineno"> 4597</span>                nop.<a class="code hl_variable" href="../../da/dcd/a03108.html#abe872705e56477414738f5e69956cbe3">arrival_time</a> = <a class="code hl_variable" href="../../d5/d81/a00528.html#a8b17e1d64523b159f312029955c16977">INF</a>;</div>
-<div class="line"><a id="l04598" name="l04598"></a><span class="lineno"> 4598</span>                normal_players.push(nop);</div>
-<div class="line"><a id="l04599" name="l04599"></a><span class="lineno"> 4599</span>                vip_players.push(nop);</div>
-<div class="line"><a id="l04600" name="l04600"></a><span class="lineno"> 4600</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l04601" name="l04601"></a><span class="lineno"> 4601</span>                    <span class="keywordtype">string</span> arrival_time_str;</div>
-<div class="line"><a id="l04602" name="l04602"></a><span class="lineno"> 4602</span>                    <span class="keywordtype">unsigned</span> p;</div>
-<div class="line"><a id="l04603" name="l04603"></a><span class="lineno"> 4603</span>                    <span class="keywordtype">unsigned</span> tag;</div>
-<div class="line"><a id="l04604" name="l04604"></a><span class="lineno"> 4604</span>                    cin &gt;&gt; arrival_time_str &gt;&gt; p &gt;&gt; tag;</div>
-<div class="line"><a id="l04605" name="l04605"></a><span class="lineno"> 4605</span>                    <span class="keyword">auto</span> ply = <a class="code hl_struct" href="../../da/dcd/a03108.html">player</a>(arrival_time_str, p, tag);</div>
-<div class="line"><a id="l04606" name="l04606"></a><span class="lineno"> 4606</span>                    <span class="keywordflow">if</span>(ply.vip) {</div>
-<div class="line"><a id="l04607" name="l04607"></a><span class="lineno"> 4607</span>                        vip_players.push(ply);</div>
-<div class="line"><a id="l04608" name="l04608"></a><span class="lineno"> 4608</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l04609" name="l04609"></a><span class="lineno"> 4609</span>                        normal_players.push(ply);</div>
-<div class="line"><a id="l04610" name="l04610"></a><span class="lineno"> 4610</span>                    }</div>
-<div class="line"><a id="l04611" name="l04611"></a><span class="lineno"> 4611</span>                }</div>
-<div class="line"><a id="l04612" name="l04612"></a><span class="lineno"> 4612</span>                <span class="keywordtype">unsigned</span> k;</div>
-<div class="line"><a id="l04613" name="l04613"></a><span class="lineno"> 4613</span>                <span class="keywordtype">unsigned</span> m;</div>
-<div class="line"><a id="l04614" name="l04614"></a><span class="lineno"> 4614</span>                cin &gt;&gt; k &gt;&gt; m;</div>
-<div class="line"><a id="l04615" name="l04615"></a><span class="lineno"> 4615</span>                vector&lt;unsigned&gt; table_cnt(k + 1, 0);</div>
-<div class="line"><a id="l04616" name="l04616"></a><span class="lineno"> 4616</span>                priority_queue&lt;table, vector&lt;table&gt;, greater&lt;table&gt;&gt; normal_tables;</div>
-<div class="line"><a id="l04617" name="l04617"></a><span class="lineno"> 4617</span>                priority_queue&lt;table, vector&lt;table&gt;, greater&lt;table&gt;&gt; vip_tables;</div>
-<div class="line"><a id="l04618" name="l04618"></a><span class="lineno"> 4618</span>                normal_tables.push({0, <a class="code hl_variable" href="../../d5/d81/a00528.html#a8b17e1d64523b159f312029955c16977">INF</a>});</div>
-<div class="line"><a id="l04619" name="l04619"></a><span class="lineno"> 4619</span>                vip_tables.push({0, <a class="code hl_variable" href="../../d5/d81/a00528.html#a8b17e1d64523b159f312029955c16977">INF</a>});</div>
-<div class="line"><a id="l04620" name="l04620"></a><span class="lineno"> 4620</span>                unordered_set&lt;unsigned&gt; vipid;</div>
-<div class="line"><a id="l04621" name="l04621"></a><span class="lineno"> 4621</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l04622" name="l04622"></a><span class="lineno"> 4622</span>                    <span class="keywordtype">unsigned</span> id;</div>
-<div class="line"><a id="l04623" name="l04623"></a><span class="lineno"> 4623</span>                    cin &gt;&gt; id;</div>
-<div class="line"><a id="l04624" name="l04624"></a><span class="lineno"> 4624</span>                    vipid.insert(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l04625" name="l04625"></a><span class="lineno"> 4625</span>                }</div>
-<div class="line"><a id="l04626" name="l04626"></a><span class="lineno"> 4626</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 1; i &lt;= k; i++) {</div>
-<div class="line"><a id="l04627" name="l04627"></a><span class="lineno"> 4627</span>                    <span class="keywordflow">if</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(vipid.contains(i)) != 0U) {</div>
-<div class="line"><a id="l04628" name="l04628"></a><span class="lineno"> 4628</span>                        vip_tables.push({i, 8 * 60 * 60});</div>
-<div class="line"><a id="l04629" name="l04629"></a><span class="lineno"> 4629</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l04630" name="l04630"></a><span class="lineno"> 4630</span>                        normal_tables.push({i, 8 * 60 * 60});</div>
-<div class="line"><a id="l04631" name="l04631"></a><span class="lineno"> 4631</span>                    }</div>
-<div class="line"><a id="l04632" name="l04632"></a><span class="lineno"> 4632</span>                }</div>
-<div class="line"><a id="l04633" name="l04633"></a><span class="lineno"> 4633</span>                vector&lt;player&gt; players;</div>
-<div class="line"><a id="l04634" name="l04634"></a><span class="lineno"> 4634</span>                <span class="keywordflow">while</span>(normal_players.size() &gt; 1 || vip_players.size() &gt; 1) {</div>
-<div class="line"><a id="l04635" name="l04635"></a><span class="lineno"> 4635</span>                    <span class="keyword">auto</span> np              = normal_players.top();</div>
-<div class="line"><a id="l04636" name="l04636"></a><span class="lineno"> 4636</span>                    <span class="keyword">auto</span> vp              = vip_players.top();</div>
-<div class="line"><a id="l04637" name="l04637"></a><span class="lineno"> 4637</span>                    <span class="keywordtype">unsigned</span> arrive_time = min(np.arrival_time, vp.arrival_time);</div>
-<div class="line"><a id="l04638" name="l04638"></a><span class="lineno"> 4638</span>                    <span class="keywordflow">while</span>(normal_tables.top().end_time &lt; arrive_time) {</div>
-<div class="line"><a id="l04639" name="l04639"></a><span class="lineno"> 4639</span>                        <span class="keyword">auto</span> t = normal_tables.top();</div>
-<div class="line"><a id="l04640" name="l04640"></a><span class="lineno"> 4640</span>                        normal_tables.pop();</div>
-<div class="line"><a id="l04641" name="l04641"></a><span class="lineno"> 4641</span>                        t.end_time = arrive_time;</div>
-<div class="line"><a id="l04642" name="l04642"></a><span class="lineno"> 4642</span>                        normal_tables.push(t);</div>
-<div class="line"><a id="l04643" name="l04643"></a><span class="lineno"> 4643</span>                    }</div>
-<div class="line"><a id="l04644" name="l04644"></a><span class="lineno"> 4644</span>                    <span class="keywordflow">while</span>(vip_tables.top().end_time &lt; arrive_time) {</div>
-<div class="line"><a id="l04645" name="l04645"></a><span class="lineno"> 4645</span>                        <span class="keyword">auto</span> t = vip_tables.top();</div>
-<div class="line"><a id="l04646" name="l04646"></a><span class="lineno"> 4646</span>                        vip_tables.pop();</div>
-<div class="line"><a id="l04647" name="l04647"></a><span class="lineno"> 4647</span>                        t.end_time = arrive_time;</div>
-<div class="line"><a id="l04648" name="l04648"></a><span class="lineno"> 4648</span>                        vip_tables.push(t);</div>
-<div class="line"><a id="l04649" name="l04649"></a><span class="lineno"> 4649</span>                    }</div>
-<div class="line"><a id="l04650" name="l04650"></a><span class="lineno"> 4650</span>                    <span class="keyword">auto</span> nt           = normal_tables.top();</div>
-<div class="line"><a id="l04651" name="l04651"></a><span class="lineno"> 4651</span>                    <span class="keyword">auto</span> vt           = vip_tables.top();</div>
-<div class="line"><a id="l04652" name="l04652"></a><span class="lineno"> 4652</span>                    <span class="keywordtype">unsigned</span> end_time = min(nt.end_time, vt.end_time);</div>
-<div class="line"><a id="l04653" name="l04653"></a><span class="lineno"> 4653</span> </div>
-<div class="line"><a id="l04654" name="l04654"></a><span class="lineno"> 4654</span>                    <span class="keywordflow">if</span>(end_time &gt;= 21 * 60 * 60) {</div>
-<div class="line"><a id="l04655" name="l04655"></a><span class="lineno"> 4655</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l04656" name="l04656"></a><span class="lineno"> 4656</span>                    }</div>
-<div class="line"><a id="l04657" name="l04657"></a><span class="lineno"> 4657</span> </div>
-<div class="line"><a id="l04658" name="l04658"></a><span class="lineno"> 4658</span>                    <span class="keywordflow">if</span>(vp.arrival_time &lt;= end_time &amp;&amp; vt.end_time == end_time) {</div>
-<div class="line"><a id="l04659" name="l04659"></a><span class="lineno"> 4659</span>                        <a class="code hl_function" href="../../d5/d81/a00528.html#a3ad405cb11a0c764841830df77e854c5">assign</a>(vip_players, vip_tables, players, table_cnt);</div>
-<div class="line"><a id="l04660" name="l04660"></a><span class="lineno"> 4660</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(np.arrival_time &lt; vp.arrival_time) {</div>
-<div class="line"><a id="l04661" name="l04661"></a><span class="lineno"> 4661</span>                        <span class="keywordflow">if</span>(nt &gt; vt) {</div>
-<div class="line"><a id="l04662" name="l04662"></a><span class="lineno"> 4662</span>                            <a class="code hl_function" href="../../d5/d81/a00528.html#a3ad405cb11a0c764841830df77e854c5">assign</a>(normal_players, vip_tables, players, table_cnt);</div>
-<div class="line"><a id="l04663" name="l04663"></a><span class="lineno"> 4663</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l04664" name="l04664"></a><span class="lineno"> 4664</span>                            <a class="code hl_function" href="../../d5/d81/a00528.html#a3ad405cb11a0c764841830df77e854c5">assign</a>(normal_players, normal_tables, players, table_cnt);</div>
-<div class="line"><a id="l04665" name="l04665"></a><span class="lineno"> 4665</span>                        }</div>
-<div class="line"><a id="l04666" name="l04666"></a><span class="lineno"> 4666</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l04667" name="l04667"></a><span class="lineno"> 4667</span>                        <span class="keywordflow">if</span>(nt &gt; vt) {</div>
-<div class="line"><a id="l04668" name="l04668"></a><span class="lineno"> 4668</span>                            <a class="code hl_function" href="../../d5/d81/a00528.html#a3ad405cb11a0c764841830df77e854c5">assign</a>(vip_players, vip_tables, players, table_cnt);</div>
-<div class="line"><a id="l04669" name="l04669"></a><span class="lineno"> 4669</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l04670" name="l04670"></a><span class="lineno"> 4670</span>                            <a class="code hl_function" href="../../d5/d81/a00528.html#a3ad405cb11a0c764841830df77e854c5">assign</a>(vip_players, normal_tables, players, table_cnt);</div>
-<div class="line"><a id="l04671" name="l04671"></a><span class="lineno"> 4671</span>                        }</div>
-<div class="line"><a id="l04672" name="l04672"></a><span class="lineno"> 4672</span>                    }</div>
-<div class="line"><a id="l04673" name="l04673"></a><span class="lineno"> 4673</span>                }</div>
-<div class="line"><a id="l04674" name="l04674"></a><span class="lineno"> 4674</span>                sort(players.begin(), players.end());</div>
-<div class="line"><a id="l04675" name="l04675"></a><span class="lineno"> 4675</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;player: players) {</div>
-<div class="line"><a id="l04676" name="l04676"></a><span class="lineno"> 4676</span>                    cout &lt;&lt; <a class="code hl_function" href="../../d5/d81/a00528.html#a6242d140961d2ae30c05cfad6aa45921">timefmt</a>(player.arrival_time) &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_function" href="../../d5/d81/a00528.html#a6242d140961d2ae30c05cfad6aa45921">timefmt</a>(player.start_time) &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; player.waiting_time &lt;&lt; endl;</div>
-<div class="line"><a id="l04677" name="l04677"></a><span class="lineno"> 4677</span>                }</div>
-<div class="line"><a id="l04678" name="l04678"></a><span class="lineno"> 4678</span>                cout &lt;&lt; table_cnt[1];</div>
-<div class="line"><a id="l04679" name="l04679"></a><span class="lineno"> 4679</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 2; i &lt;= k; i++) {</div>
-<div class="line"><a id="l04680" name="l04680"></a><span class="lineno"> 4680</span>                    cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; table_cnt[i];</div>
-<div class="line"><a id="l04681" name="l04681"></a><span class="lineno"> 4681</span>                }</div>
-<div class="line"><a id="l04682" name="l04682"></a><span class="lineno"> 4682</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l04683" name="l04683"></a><span class="lineno"> 4683</span>            }</div>
-<div class="ttc" id="aa00528_html_a3ad405cb11a0c764841830df77e854c5"><div class="ttname"><a href="../../d5/d81/a00528.html#a3ad405cb11a0c764841830df77e854c5">pat::a::a1026::assign</a></div><div class="ttdeci">void assign(priority_queue&lt; player, vector&lt; player &gt;, greater&lt; player &gt; &gt; &amp;players, priority_queue&lt; table, vector&lt; table &gt;, greater&lt; table &gt; &gt; &amp;tables, vector&lt; player &gt; &amp;vec, vector&lt; unsigned &gt; &amp;table_cnt)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l04579">pat.cpp:4579</a></div></div>
-<div class="ttc" id="aa00528_html_a6242d140961d2ae30c05cfad6aa45921"><div class="ttname"><a href="../../d5/d81/a00528.html#a6242d140961d2ae30c05cfad6aa45921">pat::a::a1026::timefmt</a></div><div class="ttdeci">string timefmt(unsigned t)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l04566">pat.cpp:4566</a></div></div>
-<div class="ttc" id="aa00528_html_a8b17e1d64523b159f312029955c16977"><div class="ttname"><a href="../../d5/d81/a00528.html#a8b17e1d64523b159f312029955c16977">pat::a::a1026::INF</a></div><div class="ttdeci">const unsigned INF</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00863">pat.h:863</a></div></div>
-<div class="ttc" id="aa03108_html"><div class="ttname"><a href="../../da/dcd/a03108.html">pat::a::a1026::player</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00865">pat.h:865</a></div></div>
-<div class="ttc" id="aa03108_html_abe872705e56477414738f5e69956cbe3"><div class="ttname"><a href="../../da/dcd/a03108.html#abe872705e56477414738f5e69956cbe3">pat::a::a1026::player::arrival_time</a></div><div class="ttdeci">unsigned arrival_time</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00867">pat.h:867</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04592">4592</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04592" name="l04592"></a><span class="lineno"> 4592</span>                                                  {</div>
+<div class="line"><a id="l04593" name="l04593"></a><span class="lineno"> 4593</span>                <span class="keywordtype">unsigned</span> n;</div>
+<div class="line"><a id="l04594" name="l04594"></a><span class="lineno"> 4594</span>                cin &gt;&gt; n;</div>
+<div class="line"><a id="l04595" name="l04595"></a><span class="lineno"> 4595</span>                priority_queue&lt;player, vector&lt;player&gt;, greater&lt;player&gt;&gt; normal_players;</div>
+<div class="line"><a id="l04596" name="l04596"></a><span class="lineno"> 4596</span>                priority_queue&lt;player, vector&lt;player&gt;, greater&lt;player&gt;&gt; vip_players;</div>
+<div class="line"><a id="l04597" name="l04597"></a><span class="lineno"> 4597</span>                <a class="code hl_struct" href="../../da/dcd/a03108.html">player</a> nop;</div>
+<div class="line"><a id="l04598" name="l04598"></a><span class="lineno"> 4598</span>                nop.<a class="code hl_variable" href="../../da/dcd/a03108.html#abe872705e56477414738f5e69956cbe3">arrival_time</a> = <a class="code hl_variable" href="../../d5/d81/a00528.html#a8b17e1d64523b159f312029955c16977">INF</a>;</div>
+<div class="line"><a id="l04599" name="l04599"></a><span class="lineno"> 4599</span>                normal_players.push(nop);</div>
+<div class="line"><a id="l04600" name="l04600"></a><span class="lineno"> 4600</span>                vip_players.push(nop);</div>
+<div class="line"><a id="l04601" name="l04601"></a><span class="lineno"> 4601</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l04602" name="l04602"></a><span class="lineno"> 4602</span>                    <span class="keywordtype">string</span> arrival_time_str;</div>
+<div class="line"><a id="l04603" name="l04603"></a><span class="lineno"> 4603</span>                    <span class="keywordtype">unsigned</span> p;</div>
+<div class="line"><a id="l04604" name="l04604"></a><span class="lineno"> 4604</span>                    <span class="keywordtype">unsigned</span> tag;</div>
+<div class="line"><a id="l04605" name="l04605"></a><span class="lineno"> 4605</span>                    cin &gt;&gt; arrival_time_str &gt;&gt; p &gt;&gt; tag;</div>
+<div class="line"><a id="l04606" name="l04606"></a><span class="lineno"> 4606</span>                    <span class="keyword">auto</span> ply = <a class="code hl_struct" href="../../da/dcd/a03108.html">player</a>(arrival_time_str, p, tag);</div>
+<div class="line"><a id="l04607" name="l04607"></a><span class="lineno"> 4607</span>                    <span class="keywordflow">if</span>(ply.vip) {</div>
+<div class="line"><a id="l04608" name="l04608"></a><span class="lineno"> 4608</span>                        vip_players.push(ply);</div>
+<div class="line"><a id="l04609" name="l04609"></a><span class="lineno"> 4609</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l04610" name="l04610"></a><span class="lineno"> 4610</span>                        normal_players.push(ply);</div>
+<div class="line"><a id="l04611" name="l04611"></a><span class="lineno"> 4611</span>                    }</div>
+<div class="line"><a id="l04612" name="l04612"></a><span class="lineno"> 4612</span>                }</div>
+<div class="line"><a id="l04613" name="l04613"></a><span class="lineno"> 4613</span>                <span class="keywordtype">unsigned</span> k;</div>
+<div class="line"><a id="l04614" name="l04614"></a><span class="lineno"> 4614</span>                <span class="keywordtype">unsigned</span> m;</div>
+<div class="line"><a id="l04615" name="l04615"></a><span class="lineno"> 4615</span>                cin &gt;&gt; k &gt;&gt; m;</div>
+<div class="line"><a id="l04616" name="l04616"></a><span class="lineno"> 4616</span>                vector&lt;unsigned&gt; table_cnt(k + 1, 0);</div>
+<div class="line"><a id="l04617" name="l04617"></a><span class="lineno"> 4617</span>                priority_queue&lt;table, vector&lt;table&gt;, greater&lt;table&gt;&gt; normal_tables;</div>
+<div class="line"><a id="l04618" name="l04618"></a><span class="lineno"> 4618</span>                priority_queue&lt;table, vector&lt;table&gt;, greater&lt;table&gt;&gt; vip_tables;</div>
+<div class="line"><a id="l04619" name="l04619"></a><span class="lineno"> 4619</span>                normal_tables.push({0, <a class="code hl_variable" href="../../d5/d81/a00528.html#a8b17e1d64523b159f312029955c16977">INF</a>});</div>
+<div class="line"><a id="l04620" name="l04620"></a><span class="lineno"> 4620</span>                vip_tables.push({0, <a class="code hl_variable" href="../../d5/d81/a00528.html#a8b17e1d64523b159f312029955c16977">INF</a>});</div>
+<div class="line"><a id="l04621" name="l04621"></a><span class="lineno"> 4621</span>                unordered_set&lt;unsigned&gt; vipid;</div>
+<div class="line"><a id="l04622" name="l04622"></a><span class="lineno"> 4622</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l04623" name="l04623"></a><span class="lineno"> 4623</span>                    <span class="keywordtype">unsigned</span> id;</div>
+<div class="line"><a id="l04624" name="l04624"></a><span class="lineno"> 4624</span>                    cin &gt;&gt; id;</div>
+<div class="line"><a id="l04625" name="l04625"></a><span class="lineno"> 4625</span>                    vipid.insert(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l04626" name="l04626"></a><span class="lineno"> 4626</span>                }</div>
+<div class="line"><a id="l04627" name="l04627"></a><span class="lineno"> 4627</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 1; i &lt;= k; i++) {</div>
+<div class="line"><a id="l04628" name="l04628"></a><span class="lineno"> 4628</span>                    <span class="keywordflow">if</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(vipid.contains(i)) != 0U) {</div>
+<div class="line"><a id="l04629" name="l04629"></a><span class="lineno"> 4629</span>                        vip_tables.push({i, 8 * 60 * 60});</div>
+<div class="line"><a id="l04630" name="l04630"></a><span class="lineno"> 4630</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l04631" name="l04631"></a><span class="lineno"> 4631</span>                        normal_tables.push({i, 8 * 60 * 60});</div>
+<div class="line"><a id="l04632" name="l04632"></a><span class="lineno"> 4632</span>                    }</div>
+<div class="line"><a id="l04633" name="l04633"></a><span class="lineno"> 4633</span>                }</div>
+<div class="line"><a id="l04634" name="l04634"></a><span class="lineno"> 4634</span>                vector&lt;player&gt; players;</div>
+<div class="line"><a id="l04635" name="l04635"></a><span class="lineno"> 4635</span>                <span class="keywordflow">while</span>(normal_players.size() &gt; 1 || vip_players.size() &gt; 1) {</div>
+<div class="line"><a id="l04636" name="l04636"></a><span class="lineno"> 4636</span>                    <span class="keyword">auto</span> np              = normal_players.top();</div>
+<div class="line"><a id="l04637" name="l04637"></a><span class="lineno"> 4637</span>                    <span class="keyword">auto</span> vp              = vip_players.top();</div>
+<div class="line"><a id="l04638" name="l04638"></a><span class="lineno"> 4638</span>                    <span class="keywordtype">unsigned</span> arrive_time = min(np.arrival_time, vp.arrival_time);</div>
+<div class="line"><a id="l04639" name="l04639"></a><span class="lineno"> 4639</span>                    <span class="keywordflow">while</span>(normal_tables.top().end_time &lt; arrive_time) {</div>
+<div class="line"><a id="l04640" name="l04640"></a><span class="lineno"> 4640</span>                        <span class="keyword">auto</span> t = normal_tables.top();</div>
+<div class="line"><a id="l04641" name="l04641"></a><span class="lineno"> 4641</span>                        normal_tables.pop();</div>
+<div class="line"><a id="l04642" name="l04642"></a><span class="lineno"> 4642</span>                        t.end_time = arrive_time;</div>
+<div class="line"><a id="l04643" name="l04643"></a><span class="lineno"> 4643</span>                        normal_tables.push(t);</div>
+<div class="line"><a id="l04644" name="l04644"></a><span class="lineno"> 4644</span>                    }</div>
+<div class="line"><a id="l04645" name="l04645"></a><span class="lineno"> 4645</span>                    <span class="keywordflow">while</span>(vip_tables.top().end_time &lt; arrive_time) {</div>
+<div class="line"><a id="l04646" name="l04646"></a><span class="lineno"> 4646</span>                        <span class="keyword">auto</span> t = vip_tables.top();</div>
+<div class="line"><a id="l04647" name="l04647"></a><span class="lineno"> 4647</span>                        vip_tables.pop();</div>
+<div class="line"><a id="l04648" name="l04648"></a><span class="lineno"> 4648</span>                        t.end_time = arrive_time;</div>
+<div class="line"><a id="l04649" name="l04649"></a><span class="lineno"> 4649</span>                        vip_tables.push(t);</div>
+<div class="line"><a id="l04650" name="l04650"></a><span class="lineno"> 4650</span>                    }</div>
+<div class="line"><a id="l04651" name="l04651"></a><span class="lineno"> 4651</span>                    <span class="keyword">auto</span> nt           = normal_tables.top();</div>
+<div class="line"><a id="l04652" name="l04652"></a><span class="lineno"> 4652</span>                    <span class="keyword">auto</span> vt           = vip_tables.top();</div>
+<div class="line"><a id="l04653" name="l04653"></a><span class="lineno"> 4653</span>                    <span class="keywordtype">unsigned</span> end_time = min(nt.end_time, vt.end_time);</div>
+<div class="line"><a id="l04654" name="l04654"></a><span class="lineno"> 4654</span> </div>
+<div class="line"><a id="l04655" name="l04655"></a><span class="lineno"> 4655</span>                    <span class="keywordflow">if</span>(end_time &gt;= 21 * 60 * 60) {</div>
+<div class="line"><a id="l04656" name="l04656"></a><span class="lineno"> 4656</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l04657" name="l04657"></a><span class="lineno"> 4657</span>                    }</div>
+<div class="line"><a id="l04658" name="l04658"></a><span class="lineno"> 4658</span> </div>
+<div class="line"><a id="l04659" name="l04659"></a><span class="lineno"> 4659</span>                    <span class="keywordflow">if</span>(vp.arrival_time &lt;= end_time &amp;&amp; vt.end_time == end_time) {</div>
+<div class="line"><a id="l04660" name="l04660"></a><span class="lineno"> 4660</span>                        <a class="code hl_function" href="../../d5/d81/a00528.html#a3ad405cb11a0c764841830df77e854c5">assign</a>(vip_players, vip_tables, players, table_cnt);</div>
+<div class="line"><a id="l04661" name="l04661"></a><span class="lineno"> 4661</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(np.arrival_time &lt; vp.arrival_time) {</div>
+<div class="line"><a id="l04662" name="l04662"></a><span class="lineno"> 4662</span>                        <span class="keywordflow">if</span>(nt &gt; vt) {</div>
+<div class="line"><a id="l04663" name="l04663"></a><span class="lineno"> 4663</span>                            <a class="code hl_function" href="../../d5/d81/a00528.html#a3ad405cb11a0c764841830df77e854c5">assign</a>(normal_players, vip_tables, players, table_cnt);</div>
+<div class="line"><a id="l04664" name="l04664"></a><span class="lineno"> 4664</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l04665" name="l04665"></a><span class="lineno"> 4665</span>                            <a class="code hl_function" href="../../d5/d81/a00528.html#a3ad405cb11a0c764841830df77e854c5">assign</a>(normal_players, normal_tables, players, table_cnt);</div>
+<div class="line"><a id="l04666" name="l04666"></a><span class="lineno"> 4666</span>                        }</div>
+<div class="line"><a id="l04667" name="l04667"></a><span class="lineno"> 4667</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l04668" name="l04668"></a><span class="lineno"> 4668</span>                        <span class="keywordflow">if</span>(nt &gt; vt) {</div>
+<div class="line"><a id="l04669" name="l04669"></a><span class="lineno"> 4669</span>                            <a class="code hl_function" href="../../d5/d81/a00528.html#a3ad405cb11a0c764841830df77e854c5">assign</a>(vip_players, vip_tables, players, table_cnt);</div>
+<div class="line"><a id="l04670" name="l04670"></a><span class="lineno"> 4670</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l04671" name="l04671"></a><span class="lineno"> 4671</span>                            <a class="code hl_function" href="../../d5/d81/a00528.html#a3ad405cb11a0c764841830df77e854c5">assign</a>(vip_players, normal_tables, players, table_cnt);</div>
+<div class="line"><a id="l04672" name="l04672"></a><span class="lineno"> 4672</span>                        }</div>
+<div class="line"><a id="l04673" name="l04673"></a><span class="lineno"> 4673</span>                    }</div>
+<div class="line"><a id="l04674" name="l04674"></a><span class="lineno"> 4674</span>                }</div>
+<div class="line"><a id="l04675" name="l04675"></a><span class="lineno"> 4675</span>                sort(players.begin(), players.end());</div>
+<div class="line"><a id="l04676" name="l04676"></a><span class="lineno"> 4676</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;player: players) {</div>
+<div class="line"><a id="l04677" name="l04677"></a><span class="lineno"> 4677</span>                    cout &lt;&lt; <a class="code hl_function" href="../../d5/d81/a00528.html#a6242d140961d2ae30c05cfad6aa45921">timefmt</a>(player.arrival_time) &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_function" href="../../d5/d81/a00528.html#a6242d140961d2ae30c05cfad6aa45921">timefmt</a>(player.start_time) &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; player.waiting_time &lt;&lt; endl;</div>
+<div class="line"><a id="l04678" name="l04678"></a><span class="lineno"> 4678</span>                }</div>
+<div class="line"><a id="l04679" name="l04679"></a><span class="lineno"> 4679</span>                cout &lt;&lt; table_cnt[1];</div>
+<div class="line"><a id="l04680" name="l04680"></a><span class="lineno"> 4680</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 2; i &lt;= k; i++) {</div>
+<div class="line"><a id="l04681" name="l04681"></a><span class="lineno"> 4681</span>                    cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; table_cnt[i];</div>
+<div class="line"><a id="l04682" name="l04682"></a><span class="lineno"> 4682</span>                }</div>
+<div class="line"><a id="l04683" name="l04683"></a><span class="lineno"> 4683</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l04684" name="l04684"></a><span class="lineno"> 4684</span>            }</div>
+<div class="ttc" id="aa00528_html_a3ad405cb11a0c764841830df77e854c5"><div class="ttname"><a href="../../d5/d81/a00528.html#a3ad405cb11a0c764841830df77e854c5">pat::a::a1026::assign</a></div><div class="ttdeci">void assign(priority_queue&lt; player, vector&lt; player &gt;, greater&lt; player &gt; &gt; &amp;players, priority_queue&lt; table, vector&lt; table &gt;, greater&lt; table &gt; &gt; &amp;tables, vector&lt; player &gt; &amp;vec, vector&lt; unsigned &gt; &amp;table_cnt)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l04580">pat.cpp:4580</a></div></div>
+<div class="ttc" id="aa00528_html_a6242d140961d2ae30c05cfad6aa45921"><div class="ttname"><a href="../../d5/d81/a00528.html#a6242d140961d2ae30c05cfad6aa45921">pat::a::a1026::timefmt</a></div><div class="ttdeci">string timefmt(unsigned t)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l04567">pat.cpp:4567</a></div></div>
+<div class="ttc" id="aa00528_html_a8b17e1d64523b159f312029955c16977"><div class="ttname"><a href="../../d5/d81/a00528.html#a8b17e1d64523b159f312029955c16977">pat::a::a1026::INF</a></div><div class="ttdeci">const unsigned INF</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00862">pat.h:862</a></div></div>
+<div class="ttc" id="aa03108_html"><div class="ttname"><a href="../../da/dcd/a03108.html">pat::a::a1026::player</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00864">pat.h:864</a></div></div>
+<div class="ttc" id="aa03108_html_abe872705e56477414738f5e69956cbe3"><div class="ttname"><a href="../../da/dcd/a03108.html#abe872705e56477414738f5e69956cbe3">pat::a::a1026::player::arrival_time</a></div><div class="ttdeci">unsigned arrival_time</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00866">pat.h:866</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d9/d2e/a00056_source.html#l00867">pat::a::a1026::player::arrival_time</a>, <a class="el" href="../../d5/d16/a00029_source.html#l04579">assign()</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00863">INF</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00870">pat::a::a1026::player::start_time</a>, <a class="el" href="../../d5/d16/a00029_source.html#l04566">timefmt()</a> , 以及 <a class="el" href="../../d9/d2e/a00056_source.html#l00869">pat::a::a1026::player::waiting_time</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d9/d2e/a00056_source.html#l00866">pat::a::a1026::player::arrival_time</a>, <a class="el" href="../../d5/d16/a00029_source.html#l04580">assign()</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00862">INF</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00869">pat::a::a1026::player::start_time</a>, <a class="el" href="../../d5/d16/a00029_source.html#l04567">timefmt()</a> , 以及 <a class="el" href="../../d9/d2e/a00056_source.html#l00868">pat::a::a1026::player::waiting_time</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l02115">TEST()</a>.</p>
 
@@ -331,7 +331,7 @@ $(function() {
 <div class="line"><a id="l02120" name="l02120"></a><span class="lineno"> 2120</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l04591">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l04592">main()</a>.</p>
 
 </div>
 </div>
@@ -351,24 +351,24 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04566">4566</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04566" name="l04566"></a><span class="lineno"> 4566</span>                                       {</div>
-<div class="line"><a id="l04567" name="l04567"></a><span class="lineno"> 4567</span>                ostringstream oss;</div>
-<div class="line"><a id="l04568" name="l04568"></a><span class="lineno"> 4568</span>                <span class="keyword">const</span> <span class="keywordtype">unsigned</span> s = t % 60;</div>
-<div class="line"><a id="l04569" name="l04569"></a><span class="lineno"> 4569</span>                t /= 60;</div>
-<div class="line"><a id="l04570" name="l04570"></a><span class="lineno"> 4570</span>                <span class="keyword">const</span> <span class="keywordtype">unsigned</span> m = t % 60;</div>
-<div class="line"><a id="l04571" name="l04571"></a><span class="lineno"> 4571</span>                t /= 60;</div>
-<div class="line"><a id="l04572" name="l04572"></a><span class="lineno"> 4572</span>                <span class="keyword">const</span> <span class="keywordtype">unsigned</span> h = t;</div>
-<div class="line"><a id="l04573" name="l04573"></a><span class="lineno"> 4573</span>                oss &lt;&lt; setw(2) &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; h &lt;&lt; <span class="charliteral">&#39;:&#39;</span></div>
-<div class="line"><a id="l04574" name="l04574"></a><span class="lineno"> 4574</span>                    &lt;&lt; setw(2) &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; m &lt;&lt; <span class="charliteral">&#39;:&#39;</span></div>
-<div class="line"><a id="l04575" name="l04575"></a><span class="lineno"> 4575</span>                    &lt;&lt; setw(2) &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; s;</div>
-<div class="line"><a id="l04576" name="l04576"></a><span class="lineno"> 4576</span>                <span class="keywordflow">return</span> oss.str();</div>
-<div class="line"><a id="l04577" name="l04577"></a><span class="lineno"> 4577</span>            }</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04567">4567</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04567" name="l04567"></a><span class="lineno"> 4567</span>                                       {</div>
+<div class="line"><a id="l04568" name="l04568"></a><span class="lineno"> 4568</span>                ostringstream oss;</div>
+<div class="line"><a id="l04569" name="l04569"></a><span class="lineno"> 4569</span>                <span class="keyword">const</span> <span class="keywordtype">unsigned</span> s = t % 60;</div>
+<div class="line"><a id="l04570" name="l04570"></a><span class="lineno"> 4570</span>                t /= 60;</div>
+<div class="line"><a id="l04571" name="l04571"></a><span class="lineno"> 4571</span>                <span class="keyword">const</span> <span class="keywordtype">unsigned</span> m = t % 60;</div>
+<div class="line"><a id="l04572" name="l04572"></a><span class="lineno"> 4572</span>                t /= 60;</div>
+<div class="line"><a id="l04573" name="l04573"></a><span class="lineno"> 4573</span>                <span class="keyword">const</span> <span class="keywordtype">unsigned</span> h = t;</div>
+<div class="line"><a id="l04574" name="l04574"></a><span class="lineno"> 4574</span>                oss &lt;&lt; setw(2) &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; h &lt;&lt; <span class="charliteral">&#39;:&#39;</span></div>
+<div class="line"><a id="l04575" name="l04575"></a><span class="lineno"> 4575</span>                    &lt;&lt; setw(2) &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; m &lt;&lt; <span class="charliteral">&#39;:&#39;</span></div>
+<div class="line"><a id="l04576" name="l04576"></a><span class="lineno"> 4576</span>                    &lt;&lt; setw(2) &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; s;</div>
+<div class="line"><a id="l04577" name="l04577"></a><span class="lineno"> 4577</span>                <span class="keywordflow">return</span> oss.str();</div>
+<div class="line"><a id="l04578" name="l04578"></a><span class="lineno"> 4578</span>            }</div>
 <div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00556">acwing.h:556</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../d5/df9/a00044_source.html#l00556">acwing::acwing1929::right</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l04591">main()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l04592">main()</a>.</p>
 
 </div>
 </div>
@@ -385,9 +385,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">pat.h</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l00863">863</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">pat.h</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l00862">862</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l04591">main()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l04592">main()</a>.</p>
 
 </div>
 </div>

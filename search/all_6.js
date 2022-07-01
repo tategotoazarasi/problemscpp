@@ -14,7 +14,7 @@ var searchData=
   ['get_5fmin_11',['get_min',['../d2/dac/a00876.html#a8c68b98980f7b1a97f5cb5a134921973',1,'acwing::acwing4213']]],
   ['get_5fminutes_12',['get_minutes',['../d5/d37/a03092.html#a028d1b3d703b9168f35f1875990d7a91',1,'pat::a::a1016::record']]],
   ['get_5fnext_13',['get_next',['../de/d3d/a00748.html#a4cdd620d7cc50badd6d387f0c7ec6cb9',1,'acwing::acwing1960::get_next()'],['../d9/d47/a00129.html#ab3433798a8564cc42952337b4a55a1f0',1,'acwing::acwing831::get_next()']]],
-  ['get_5fnum_14',['get_num',['../d7/db7/a00525.html#ab849a7ba8e9bbc53fc67d5d49a2d824f',1,'pat::a::a1015::get_num(string n, unsigned d)'],['../d7/db7/a00525.html#a667659cde39349ea75ea10888701e1fe',1,'pat::a::a1015::get_num(string n, unsigned int d)']]],
+  ['get_5fnum_14',['get_num',['../d7/db7/a00525.html#a8afe76c7db4829641a6be01082f5ed39',1,'pat::a::a1015::get_num(const string &amp;n, unsigned d)'],['../d7/db7/a00525.html#a9049e8739446201189b247d804dd9ea2',1,'pat::a::a1015::get_num(const string &amp;n, unsigned int d)']]],
   ['get_5fnumerator_15',['get_numerator',['../da/d72/a03140.html#a5b3b0274013dc8b2c2298317b9276f17',1,'Fraction']]],
   ['get_5fp_16',['get_p',['../dc/d06/a01832.html#a055bdadb8743757ce5a8fdfa3400af4c',1,'leetcode::longest_happy_string::Solution']]],
   ['get_5fparent_17',['get_parent',['../d4/de0/a02092.html#a109b03c956f468a1de1c90c982cebf98',1,'leetcode::count_nodes_with_the_highest_score::TreeNode']]],

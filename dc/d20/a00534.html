@@ -112,31 +112,31 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04998">4998</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04998" name="l04998"></a><span class="lineno"> 4998</span>                                                  {</div>
-<div class="line"><a id="l04999" name="l04999"></a><span class="lineno"> 4999</span>                <span class="keywordtype">char</span> num[13] = {<span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;1&#39;</span>, <span class="charliteral">&#39;2&#39;</span>, <span class="charliteral">&#39;3&#39;</span>, <span class="charliteral">&#39;4&#39;</span>, <span class="charliteral">&#39;5&#39;</span>, <span class="charliteral">&#39;6&#39;</span>, <span class="charliteral">&#39;7&#39;</span>, <span class="charliteral">&#39;8&#39;</span>, <span class="charliteral">&#39;9&#39;</span>, <span class="charliteral">&#39;A&#39;</span>, <span class="charliteral">&#39;B&#39;</span>, <span class="charliteral">&#39;C&#39;</span>};</div>
-<div class="line"><a id="l05000" name="l05000"></a><span class="lineno"> 5000</span>                <span class="keywordtype">unsigned</span> input[3];</div>
-<div class="line"><a id="l05001" name="l05001"></a><span class="lineno"> 5001</span>                cin &gt;&gt; input[0] &gt;&gt; input[1] &gt;&gt; input[2];</div>
-<div class="line"><a id="l05002" name="l05002"></a><span class="lineno"> 5002</span>                stack&lt;char&gt; stk;</div>
-<div class="line"><a id="l05003" name="l05003"></a><span class="lineno"> 5003</span>                ostringstream oss;</div>
-<div class="line"><a id="l05004" name="l05004"></a><span class="lineno"> 5004</span>                oss &lt;&lt; <span class="charliteral">&#39;#&#39;</span>;</div>
-<div class="line"><a id="l05005" name="l05005"></a><span class="lineno"> 5005</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {</div>
-<div class="line"><a id="l05006" name="l05006"></a><span class="lineno"> 5006</span>                    <span class="keywordtype">unsigned</span> color = input[i];</div>
-<div class="line"><a id="l05007" name="l05007"></a><span class="lineno"> 5007</span>                    <span class="keywordflow">while</span>(color != 0) {</div>
-<div class="line"><a id="l05008" name="l05008"></a><span class="lineno"> 5008</span>                        stk.push(num[color % 13]);</div>
-<div class="line"><a id="l05009" name="l05009"></a><span class="lineno"> 5009</span>                        color /= 13;</div>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">pat.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l04995">4995</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04995" name="l04995"></a><span class="lineno"> 4995</span>                                                  {</div>
+<div class="line"><a id="l04996" name="l04996"></a><span class="lineno"> 4996</span>                <span class="keyword">const</span> <span class="keywordtype">char</span> num[13] = {<span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;1&#39;</span>, <span class="charliteral">&#39;2&#39;</span>, <span class="charliteral">&#39;3&#39;</span>, <span class="charliteral">&#39;4&#39;</span>, <span class="charliteral">&#39;5&#39;</span>, <span class="charliteral">&#39;6&#39;</span>, <span class="charliteral">&#39;7&#39;</span>, <span class="charliteral">&#39;8&#39;</span>, <span class="charliteral">&#39;9&#39;</span>, <span class="charliteral">&#39;A&#39;</span>, <span class="charliteral">&#39;B&#39;</span>, <span class="charliteral">&#39;C&#39;</span>};</div>
+<div class="line"><a id="l04997" name="l04997"></a><span class="lineno"> 4997</span>                <span class="keywordtype">unsigned</span> input[3];</div>
+<div class="line"><a id="l04998" name="l04998"></a><span class="lineno"> 4998</span>                cin &gt;&gt; input[0] &gt;&gt; input[1] &gt;&gt; input[2];</div>
+<div class="line"><a id="l04999" name="l04999"></a><span class="lineno"> 4999</span>                stack&lt;char&gt; stk;</div>
+<div class="line"><a id="l05000" name="l05000"></a><span class="lineno"> 5000</span>                ostringstream oss;</div>
+<div class="line"><a id="l05001" name="l05001"></a><span class="lineno"> 5001</span>                oss &lt;&lt; <span class="charliteral">&#39;#&#39;</span>;</div>
+<div class="line"><a id="l05002" name="l05002"></a><span class="lineno"> 5002</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {</div>
+<div class="line"><a id="l05003" name="l05003"></a><span class="lineno"> 5003</span>                    <span class="keywordtype">unsigned</span> color = input[i];</div>
+<div class="line"><a id="l05004" name="l05004"></a><span class="lineno"> 5004</span>                    <span class="keywordflow">while</span>(color != 0) {</div>
+<div class="line"><a id="l05005" name="l05005"></a><span class="lineno"> 5005</span>                        stk.push(num[color % 13]);</div>
+<div class="line"><a id="l05006" name="l05006"></a><span class="lineno"> 5006</span>                        color /= 13;</div>
+<div class="line"><a id="l05007" name="l05007"></a><span class="lineno"> 5007</span>                    }</div>
+<div class="line"><a id="l05008" name="l05008"></a><span class="lineno"> 5008</span>                    <span class="keywordflow">while</span>(stk.size() &lt; 2) {</div>
+<div class="line"><a id="l05009" name="l05009"></a><span class="lineno"> 5009</span>                        stk.push(<span class="charliteral">&#39;0&#39;</span>);</div>
 <div class="line"><a id="l05010" name="l05010"></a><span class="lineno"> 5010</span>                    }</div>
-<div class="line"><a id="l05011" name="l05011"></a><span class="lineno"> 5011</span>                    <span class="keywordflow">while</span>(stk.size() &lt; 2) {</div>
-<div class="line"><a id="l05012" name="l05012"></a><span class="lineno"> 5012</span>                        stk.push(<span class="charliteral">&#39;0&#39;</span>);</div>
-<div class="line"><a id="l05013" name="l05013"></a><span class="lineno"> 5013</span>                    }</div>
-<div class="line"><a id="l05014" name="l05014"></a><span class="lineno"> 5014</span>                    <span class="keywordflow">while</span>(!stk.empty()) {</div>
-<div class="line"><a id="l05015" name="l05015"></a><span class="lineno"> 5015</span>                        oss &lt;&lt; stk.top();</div>
-<div class="line"><a id="l05016" name="l05016"></a><span class="lineno"> 5016</span>                        stk.pop();</div>
-<div class="line"><a id="l05017" name="l05017"></a><span class="lineno"> 5017</span>                    }</div>
-<div class="line"><a id="l05018" name="l05018"></a><span class="lineno"> 5018</span>                }</div>
-<div class="line"><a id="l05019" name="l05019"></a><span class="lineno"> 5019</span>                cout &lt;&lt; oss.str();</div>
-<div class="line"><a id="l05020" name="l05020"></a><span class="lineno"> 5020</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l05021" name="l05021"></a><span class="lineno"> 5021</span>            }</div>
+<div class="line"><a id="l05011" name="l05011"></a><span class="lineno"> 5011</span>                    <span class="keywordflow">while</span>(!stk.empty()) {</div>
+<div class="line"><a id="l05012" name="l05012"></a><span class="lineno"> 5012</span>                        oss &lt;&lt; stk.top();</div>
+<div class="line"><a id="l05013" name="l05013"></a><span class="lineno"> 5013</span>                        stk.pop();</div>
+<div class="line"><a id="l05014" name="l05014"></a><span class="lineno"> 5014</span>                    }</div>
+<div class="line"><a id="l05015" name="l05015"></a><span class="lineno"> 5015</span>                }</div>
+<div class="line"><a id="l05016" name="l05016"></a><span class="lineno"> 5016</span>                cout &lt;&lt; oss.str();</div>
+<div class="line"><a id="l05017" name="l05017"></a><span class="lineno"> 5017</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l05018" name="l05018"></a><span class="lineno"> 5018</span>            }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l02250">TEST()</a>.</p>
 
@@ -177,7 +177,7 @@ $(function() {
 <div class="line"><a id="l02255" name="l02255"></a><span class="lineno"> 2255</span>            }</div>
 <div class="ttc" id="aa00053_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/dee/a00053.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l04998">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l04995">main()</a>.</p>
 
 </div>
 </div>

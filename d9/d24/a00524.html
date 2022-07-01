@@ -117,8 +117,8 @@ $(function() {
 <div class="line"><a id="l04308" name="l04308"></a><span class="lineno"> 4308</span>                <span class="keywordtype">int</span> n, m, k, q;</div>
 <div class="line"><a id="l04309" name="l04309"></a><span class="lineno"> 4309</span>                cin &gt;&gt; n &gt;&gt; m &gt;&gt; k &gt;&gt; q;</div>
 <div class="line"><a id="l04310" name="l04310"></a><span class="lineno"> 4310</span>                vector&lt;int&gt; t(k + 1);</div>
-<div class="line"><a id="l04311" name="l04311"></a><span class="lineno"> 4311</span>                vector&lt;int&gt; end_time(k + 1, -1);</div>
-<div class="line"><a id="l04312" name="l04312"></a><span class="lineno"> 4312</span>                vector&lt;int&gt; rest(n, -1);</div>
+<div class="line"><a id="l04311" name="l04311"></a><span class="lineno"> 4311</span>                vector end_time(k + 1, -1);</div>
+<div class="line"><a id="l04312" name="l04312"></a><span class="lineno"> 4312</span>                vector rest(n, -1);</div>
 <div class="line"><a id="l04313" name="l04313"></a><span class="lineno"> 4313</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= k; i++) {</div>
 <div class="line"><a id="l04314" name="l04314"></a><span class="lineno"> 4314</span>                    cin &gt;&gt; t[i];</div>
 <div class="line"><a id="l04315" name="l04315"></a><span class="lineno"> 4315</span>                }</div>
@@ -188,12 +188,12 @@ $(function() {
 <div class="line"><a id="l04379" name="l04379"></a><span class="lineno"> 4379</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; q; i++) {</div>
 <div class="line"><a id="l04380" name="l04380"></a><span class="lineno"> 4380</span>                    <span class="keywordtype">int</span> query;</div>
 <div class="line"><a id="l04381" name="l04381"></a><span class="lineno"> 4381</span>                    cin &gt;&gt; query;</div>
-<div class="line"><a id="l04382" name="l04382"></a><span class="lineno"> 4382</span>                    <span class="keywordtype">int</span> time = end_time[query];</div>
+<div class="line"><a id="l04382" name="l04382"></a><span class="lineno"> 4382</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> time = end_time[query];</div>
 <div class="line"><a id="l04383" name="l04383"></a><span class="lineno"> 4383</span>                    <span class="keywordflow">if</span>(time == -1) {</div>
 <div class="line"><a id="l04384" name="l04384"></a><span class="lineno"> 4384</span>                        cout &lt;&lt; <span class="stringliteral">&quot;Sorry&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a id="l04385" name="l04385"></a><span class="lineno"> 4385</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l04386" name="l04386"></a><span class="lineno"> 4386</span>                        <span class="keywordtype">int</span> h = time / 60;</div>
-<div class="line"><a id="l04387" name="l04387"></a><span class="lineno"> 4387</span>                        <span class="keywordtype">int</span> m = time % 60;</div>
+<div class="line"><a id="l04386" name="l04386"></a><span class="lineno"> 4386</span>                        <span class="keyword">const</span> <span class="keywordtype">int</span> h = time / 60;</div>
+<div class="line"><a id="l04387" name="l04387"></a><span class="lineno"> 4387</span>                        <span class="keyword">const</span> <span class="keywordtype">int</span> m = time % 60;</div>
 <div class="line"><a id="l04388" name="l04388"></a><span class="lineno"> 4388</span>                        cout &lt;&lt; setw(2) &lt;&lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; h + 8</div>
 <div class="line"><a id="l04389" name="l04389"></a><span class="lineno"> 4389</span>                             &lt;&lt; <span class="charliteral">&#39;:&#39;</span></div>
 <div class="line"><a id="l04390" name="l04390"></a><span class="lineno"> 4390</span>                             &lt;&lt; setw(2) &lt;&lt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; m</div>

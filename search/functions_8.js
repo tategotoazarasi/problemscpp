@@ -7,7 +7,7 @@ var searchData=
   ['integerbreak_4',['integerBreak',['../d2/d35/a02468.html#a77950b7d9c5193ee4c3ff4f2ab5f0b45',1,'leetcode::integer_break::Solution']]],
   ['intersection_5',['Intersection',['../d1/d03/a02560.html#a6fb29e5dd6576917ca992e6130d6dda5',1,'lintcode::intersection::Solution']]],
   ['is_5fintersected_6',['is_intersected',['../d1/d03/a02560.html#ac8369c191887848eae248a1e80b4ac0e',1,'lintcode::intersection::Solution']]],
-  ['is_5fpalindromic_7',['is_palindromic',['../db/d6b/a03128.html#a40ff0c8f1190464f13138432a0392b94',1,'pat::a::a1024::bi::is_palindromic()'],['../dc/da0/a00483.html#a6e7f766dccf4185dd9dcbfc93281fdc7',1,'pat::b::b1079::is_palindromic()']]],
+  ['is_5fpalindromic_7',['is_palindromic',['../db/d6b/a03128.html#a26981c51e81a04f0e8727b2e026b41eb',1,'pat::a::a1024::bi::is_palindromic()'],['../dc/da0/a00483.html#a6e7f766dccf4185dd9dcbfc93281fdc7',1,'pat::b::b1079::is_palindromic()']]],
   ['is_5fpositive_8',['is_positive',['../da/d72/a03140.html#a07d7e003385dcc19562ed415287be613',1,'Fraction']]],
   ['is_5fprime_9',['is_prime',['../d3/d5d/a00463.html#a4cc7e37ca1a72156ffae16651f7356dc',1,'pat::b::b1059::is_prime()'],['../d8/d57/a00498.html#a7f617186775326faf83efd53e1405758',1,'pat::b::b1094::is_prime()'],['../d4/de5/a00503.html#ad68acf0cc7498f852cd38176f2fa7f77',1,'pat::b::b1099::is_prime()'],['../dc/d30/a00508.html#a46700291657d5198e8c72aeb4535815a',1,'pat::b::b1104::is_prime()'],['../d7/db7/a00525.html#afc3dd7bf4e5f981a74467c38891c806c',1,'pat::a::a1015::is_prime(unsigned int n)'],['../d7/db7/a00525.html#aa582df9812ad8b7313c6cacf9ca47cec',1,'pat::a::a1015::is_prime(unsigned n)']]],
   ['is_5ftrue_10',['is_true',['../d9/da5/a00493.html#a9e25ed5e4ab4e44afcfae85f40469c89',1,'pat::b::b1089']]],

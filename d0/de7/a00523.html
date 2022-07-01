@@ -130,7 +130,7 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l04296" name="l04296"></a><span class="lineno"> 4296</span>                                                                                                           {</div>
 <div class="line"><a id="l04297" name="l04297"></a><span class="lineno"> 4297</span>                marked.insert(i);</div>
 <div class="line"><a id="l04298" name="l04298"></a><span class="lineno"> 4298</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> nxt: g[i]) {</div>
-<div class="line"><a id="l04299" name="l04299"></a><span class="lineno"> 4299</span>                    <span class="keywordflow">if</span>(!marked.count(nxt) &amp;&amp; nxt != occupied) {</div>
+<div class="line"><a id="l04299" name="l04299"></a><span class="lineno"> 4299</span>                    <span class="keywordflow">if</span>(!marked.contains(nxt) &amp;&amp; nxt != occupied) {</div>
 <div class="line"><a id="l04300" name="l04300"></a><span class="lineno"> 4300</span>                        <a class="code hl_function" href="../../d0/de7/a00523.html#a2aba411dececaa6174cc0d112592e52b">dfs</a>(nxt, g, occupied, marked);</div>
 <div class="line"><a id="l04301" name="l04301"></a><span class="lineno"> 4301</span>                    }</div>
 <div class="line"><a id="l04302" name="l04302"></a><span class="lineno"> 4302</span>                }</div>
@@ -184,14 +184,14 @@ $(function() {
 <div class="line"><a id="l04275" name="l04275"></a><span class="lineno"> 4275</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; k; i++) {</div>
 <div class="line"><a id="l04276" name="l04276"></a><span class="lineno"> 4276</span>                    <span class="keywordtype">int</span> a;</div>
 <div class="line"><a id="l04277" name="l04277"></a><span class="lineno"> 4277</span>                    cin &gt;&gt; a;</div>
-<div class="line"><a id="l04278" name="l04278"></a><span class="lineno"> 4278</span>                    <span class="keywordflow">if</span>(ans.count(a)) {</div>
+<div class="line"><a id="l04278" name="l04278"></a><span class="lineno"> 4278</span>                    <span class="keywordflow">if</span>(ans.contains(a)) {</div>
 <div class="line"><a id="l04279" name="l04279"></a><span class="lineno"> 4279</span>                        cout &lt;&lt; ans[a] &lt;&lt; endl;</div>
 <div class="line"><a id="l04280" name="l04280"></a><span class="lineno"> 4280</span>                        <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l04281" name="l04281"></a><span class="lineno"> 4281</span>                    }</div>
 <div class="line"><a id="l04282" name="l04282"></a><span class="lineno"> 4282</span>                    unordered_set&lt;int&gt; marked;</div>
 <div class="line"><a id="l04283" name="l04283"></a><span class="lineno"> 4283</span>                    <span class="keywordtype">int</span> cnt = 0;</div>
 <div class="line"><a id="l04284" name="l04284"></a><span class="lineno"> 4284</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= n; j++) {</div>
-<div class="line"><a id="l04285" name="l04285"></a><span class="lineno"> 4285</span>                        <span class="keywordflow">if</span>(j != a &amp;&amp; !marked.count(j)) {</div>
+<div class="line"><a id="l04285" name="l04285"></a><span class="lineno"> 4285</span>                        <span class="keywordflow">if</span>(j != a &amp;&amp; !marked.contains(j)) {</div>
 <div class="line"><a id="l04286" name="l04286"></a><span class="lineno"> 4286</span>                            cnt++;</div>
 <div class="line"><a id="l04287" name="l04287"></a><span class="lineno"> 4287</span>                            <a class="code hl_function" href="../../d0/de7/a00523.html#a2aba411dececaa6174cc0d112592e52b">dfs</a>(j, g, a, marked);</div>
 <div class="line"><a id="l04288" name="l04288"></a><span class="lineno"> 4288</span>                        }</div>
