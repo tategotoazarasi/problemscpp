@@ -131,11 +131,11 @@ $(function() {
 <div class="line"><a id="l04297" name="l04297"></a><span class="lineno"> 4297</span>                marked.insert(i);</div>
 <div class="line"><a id="l04298" name="l04298"></a><span class="lineno"> 4298</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> nxt: g[i]) {</div>
 <div class="line"><a id="l04299" name="l04299"></a><span class="lineno"> 4299</span>                    <span class="keywordflow">if</span>(!marked.contains(nxt) &amp;&amp; nxt != occupied) {</div>
-<div class="line"><a id="l04300" name="l04300"></a><span class="lineno"> 4300</span>                        <a class="code hl_function" href="../../d0/de7/a00523.html#a2aba411dececaa6174cc0d112592e52b">dfs</a>(nxt, g, occupied, marked);</div>
+<div class="line"><a id="l04300" name="l04300"></a><span class="lineno"> 4300</span>                        <a class="code hl_function" href="../../d7/d84/a00535.html#a02d5dd79f09dbd0fc2e06ba111cb00a3">dfs</a>(nxt, g, occupied, marked);</div>
 <div class="line"><a id="l04301" name="l04301"></a><span class="lineno"> 4301</span>                    }</div>
 <div class="line"><a id="l04302" name="l04302"></a><span class="lineno"> 4302</span>                }</div>
 <div class="line"><a id="l04303" name="l04303"></a><span class="lineno"> 4303</span>            }</div>
-<div class="ttc" id="aa00523_html_a2aba411dececaa6174cc0d112592e52b"><div class="ttname"><a href="../../d0/de7/a00523.html#a2aba411dececaa6174cc0d112592e52b">pat::a::a1013::dfs</a></div><div class="ttdeci">void dfs(int i, const vector&lt; unordered_set&lt; int &gt; &gt; &amp;g, int occupied, unordered_set&lt; int &gt; &amp;marked)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l04296">pat.cpp:4296</a></div></div>
+<div class="ttc" id="aa00535_html_a02d5dd79f09dbd0fc2e06ba111cb00a3"><div class="ttname"><a href="../../d7/d84/a00535.html#a02d5dd79f09dbd0fc2e06ba111cb00a3">pat::a::a1021::dfs</a></div><div class="ttdeci">int dfs(const vector&lt; unordered_set&lt; int &gt; &gt; &amp;g, int father, int nd)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l05022">pat.cpp:5022</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l04296">dfs()</a>.</p>
 
@@ -193,7 +193,7 @@ $(function() {
 <div class="line"><a id="l04284" name="l04284"></a><span class="lineno"> 4284</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= n; j++) {</div>
 <div class="line"><a id="l04285" name="l04285"></a><span class="lineno"> 4285</span>                        <span class="keywordflow">if</span>(j != a &amp;&amp; !marked.contains(j)) {</div>
 <div class="line"><a id="l04286" name="l04286"></a><span class="lineno"> 4286</span>                            cnt++;</div>
-<div class="line"><a id="l04287" name="l04287"></a><span class="lineno"> 4287</span>                            <a class="code hl_function" href="../../d0/de7/a00523.html#a2aba411dececaa6174cc0d112592e52b">dfs</a>(j, g, a, marked);</div>
+<div class="line"><a id="l04287" name="l04287"></a><span class="lineno"> 4287</span>                            <a class="code hl_function" href="../../d7/d84/a00535.html#a02d5dd79f09dbd0fc2e06ba111cb00a3">dfs</a>(j, g, a, marked);</div>
 <div class="line"><a id="l04288" name="l04288"></a><span class="lineno"> 4288</span>                        }</div>
 <div class="line"><a id="l04289" name="l04289"></a><span class="lineno"> 4289</span>                    }</div>
 <div class="line"><a id="l04290" name="l04290"></a><span class="lineno"> 4290</span>                    cout &lt;&lt; cnt - 1 &lt;&lt; endl;</div>
