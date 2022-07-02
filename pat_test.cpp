@@ -2254,6 +2254,53 @@ namespace pat {
 				ASSERT_EQ("#123456", out.str());
 			}
 		}// namespace a1027
+
+		namespace a1021 {
+			TEST(a1021, case1) {
+				istringstream in("5\n"
+				                 "1 2\n"
+				                 "1 3\n"
+				                 "1 4\n"
+				                 "2 5");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("3\n"
+				          "4\n"
+				          "5\n",
+				          out.str());
+			}
+
+			TEST(a1021, case2) {
+				istringstream in("5\n"
+				                 "1 3\n"
+				                 "1 4\n"
+				                 "2 5\n"
+				                 "3 4");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("Error: 2 components", out.str());
+			}
+
+			TEST(a1021, case3) {
+				istringstream in("10\n"
+				                 "1 2\n"
+				                 "1 3\n"
+				                 "3 4\n"
+				                 "1 5\n"
+				                 "5 6\n"
+				                 "5 7\n"
+				                 "2 8\n"
+				                 "7 9\n"
+				                 "6 10");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("4\n"
+				          "8\n"
+				          "9\n"
+				          "10\n",
+				          out.str());
+			}
+		}// namespace a1021
 	}    // namespace a
 
 	namespace top {}

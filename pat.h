@@ -961,7 +961,13 @@ namespace pat {
 		namespace a1027 {
 			int main(istream &cin, ostream &cout);
 		}
-	}// namespace a
+
+		/// \brief 1021 Deepest Root
+		namespace a1021 {
+			int dfs(int father, int nd);
+			int main(istream &cin, ostream &cout);
+		}// namespace a1021
+	}    // namespace a
 
 	/// \brief 顶级
 	namespace top {}

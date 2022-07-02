@@ -5017,6 +5017,52 @@ namespace pat {
 				return 0;
 			}
 		}// namespace a1027
+
+		namespace a1021 {
+			int dfs(const vector<unordered_set<int>> &g, int father, int nd) {
+				int maximum = 0;
+				for(auto child: g[nd]) {
+					if(child != father) {
+						maximum = max(maximum, dfs(g, nd, child));
+					}
+				}
+				return maximum + 1;
+			}
+
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				vector<unordered_set<int>> g = vector<unordered_set<int>>(n + 1);
+				vector<int> deep(n + 1, 0);
+				UnionFind uf(n + 1);
+				for(int i = 1; i < n; i++) {
+					int a, b;
+					cin >> a >> b;
+					uf.unite(a, b);
+					g[a].insert(b);
+					g[b].insert(a);
+				}
+				unordered_set<int> us;
+				for(int i = 1; i <= n; i++) {
+					us.insert(uf.find(i));
+				}
+				if(us.size() != 1) {
+					cout << "Error: " << us.size() << " components";
+					return 0;
+				}
+				int maximum = 0;
+				for(int i = 1; i <= n; i++) {
+					deep[i] = dfs(g, 0, i);
+					maximum = max(maximum, deep[i]);
+				}
+				for(int i = 1; i <= n; i++) {
+					if(deep[i] == maximum) {
+						cout << i << endl;
+					}
+				}
+				return 0;
+			}
+		}// namespace a1021
 	}    // namespace a
 
 	namespace top {}
