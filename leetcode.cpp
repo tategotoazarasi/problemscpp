@@ -7319,4 +7319,81 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace repeated_dna_sequences
+
+	namespace design_linked_list {
+		MyLinkedList::MyLinkedList() {
+			head = new ListNode();
+			tail = head;
+		}
+
+		int MyLinkedList::get(int index) {
+			index += 1;
+			if(index < 1) {
+				return -1;
+			}
+			ListNode *current = head;
+			for(int i = 0; i < index && current != nullptr; i++) {
+				current = current->next;
+			}
+			return current == nullptr ? -1 : current->val;
+		}
+
+		void MyLinkedList::addAtHead(int val) {
+			ListNode *node = new ListNode(val);
+			node->next     = head->next;
+			head->next     = node;
+			if(tail == head) {
+				tail = node;
+			}
+		}
+
+		void MyLinkedList::addAtTail(int val) {
+			ListNode *node = new ListNode(val);
+			tail->next     = node;
+			tail           = node;
+		}
+
+		void MyLinkedList::addAtIndex(int index, int val) {
+			index += 1;
+			if(index < 1) {
+				return;
+			}
+			ListNode *node    = new ListNode(val);
+			ListNode *current = head;
+			for(int i = 0; i < index - 1 && current != nullptr; i++) {
+				current = current->next;
+			}
+			if(current == nullptr) {
+				delete node;
+				return;
+			}
+			node->next    = current->next;
+			current->next = node;
+			if(current == tail) {
+				tail = node;
+			}
+		}
+
+		void MyLinkedList::deleteAtIndex(int index) {
+			index += 1;
+			if(index < 1) {
+				return;
+			}
+			ListNode *current = head;
+			for(int i = 0; i < index - 1 && current != nullptr; i++) {
+				current = current->next;
+			}
+			if(current == nullptr) {
+				return;
+			}
+			auto p = current->next;
+			if(p == tail) {
+				tail = current;
+			}
+			if(p != nullptr) {
+				current->next = current->next->next;
+				delete p;
+			}
+		}
+	}// namespace design_linked_list
 }// namespace leetcode

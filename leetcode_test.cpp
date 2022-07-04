@@ -2653,15 +2653,15 @@ namespace leetcode {
 	namespace find_players_with_zero_or_one_losses {
 		TEST(find_players_with_zero_or_one_losses, case1) {
 			vector<vector<int>> matches      = {{1, 3},
-                                           {2, 3},
-                                           {3, 6},
-                                           {5, 6},
-                                           {5, 7},
-                                           {4, 5},
-                                           {4, 8},
-                                           {4, 9},
-                                           {10, 4},
-                                           {10, 9}};
+			                                    {2, 3},
+			                                    {3, 6},
+			                                    {5, 6},
+			                                    {5, 7},
+			                                    {4, 5},
+			                                    {4, 8},
+			                                    {4, 9},
+			                                    {10, 4},
+			                                    {10, 9}};
 			const vector<vector<int>> output = {{1, 2, 10}, {4, 5, 7, 8}};
 			ASSERT_EQ(output, Solution::findWinners(matches));
 		}
@@ -3434,4 +3434,16 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::partitionLabels("eccbbbbdec"));
 		}
 	}// namespace partition_labels
+
+	namespace design_linked_list {
+		TEST(design_linked_list, case1) {
+			MyLinkedList mll;
+			mll.addAtHead(1);
+			mll.addAtTail(3);
+			mll.addAtIndex(1, 2);
+			ASSERT_EQ(2, mll.get(1));
+			mll.deleteAtIndex(1);
+			ASSERT_EQ(3, mll.get(1));
+		}
+	}// namespace design_linked_list
 }// namespace leetcode

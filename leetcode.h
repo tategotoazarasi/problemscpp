@@ -2687,6 +2687,32 @@ namespace leetcode {
 			static vector<string> findRepeatedDnaSequences(string s);
 		};
 	}// namespace repeated_dna_sequences
+
+	/// \brief 707. Design Linked List
+	namespace design_linked_list {
+		class MyLinkedList {
+			ListNode *head;
+			ListNode *tail;
+
+		public:
+			/// \brief Initializes the MyLinkedList object.
+			MyLinkedList();
+			/// \brief Get the value of the indexth node in the linked list. If the index is invalid, return -1.
+			int get(int index);
+			/// \brief Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
+			void addAtHead(int val);
+			/// \brief Append a node of value val as the last element of the linked list.
+			void addAtTail(int val);
+			/// \brief Add a node of value val before the indexth node in the linked list.
+			/// If index equals the length of the linked list,
+			/// the node will be appended to the end of the linked list.
+			/// If index is greater than the length,
+			/// the node will not be inserted.
+			void addAtIndex(int index, int val);
+			/// \brief Delete the indexth node in the linked list, if the index is valid.
+			void deleteAtIndex(int index);
+		};
+	}// namespace design_linked_list
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
