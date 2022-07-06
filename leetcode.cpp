@@ -7326,12 +7326,12 @@ namespace leetcode {
 			tail = head;
 		}
 
-		int MyLinkedList::get(int index) {
+		int MyLinkedList::get(int index) const {
 			index += 1;
 			if(index < 1) {
 				return -1;
 			}
-			ListNode *current = head;
+			const ListNode *current = head;
 			for(int i = 0; i < index && current != nullptr; i++) {
 				current = current->next;
 			}
@@ -7339,18 +7339,18 @@ namespace leetcode {
 		}
 
 		void MyLinkedList::addAtHead(int val) {
-			ListNode *node = new ListNode(val);
-			node->next     = head->next;
-			head->next     = node;
+			auto node  = new ListNode(val);
+			node->next = head->next;
+			head->next = node;
 			if(tail == head) {
 				tail = node;
 			}
 		}
 
 		void MyLinkedList::addAtTail(int val) {
-			ListNode *node = new ListNode(val);
-			tail->next     = node;
-			tail           = node;
+			auto node  = new ListNode(val);
+			tail->next = node;
+			tail       = node;
 		}
 
 		void MyLinkedList::addAtIndex(int index, int val) {
@@ -7358,7 +7358,7 @@ namespace leetcode {
 			if(index < 1) {
 				return;
 			}
-			ListNode *node    = new ListNode(val);
+			auto node         = new ListNode(val);
 			ListNode *current = head;
 			for(int i = 0; i < index - 1 && current != nullptr; i++) {
 				current = current->next;
@@ -7386,7 +7386,7 @@ namespace leetcode {
 			if(current == nullptr) {
 				return;
 			}
-			auto p = current->next;
+			const auto p = current->next;
 			if(p == tail) {
 				tail = current;
 			}

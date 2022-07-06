@@ -5021,7 +5021,7 @@ namespace pat {
 		namespace a1021 {
 			int dfs(const vector<unordered_set<int>> &g, int father, int nd) {
 				int maximum = 0;
-				for(auto child: g[nd]) {
+				for(const auto child: g[nd]) {
 					if(child != father) {
 						maximum = max(maximum, dfs(g, nd, child));
 					}
@@ -5032,8 +5032,8 @@ namespace pat {
 			int main(istream &cin, ostream &cout) {
 				int n;
 				cin >> n;
-				vector<unordered_set<int>> g = vector<unordered_set<int>>(n + 1);
-				vector<int> deep(n + 1, 0);
+				auto g = vector<unordered_set<int>>(n + 1);
+				vector deep(n + 1, 0);
 				UnionFind uf(n + 1);
 				for(int i = 1; i < n; i++) {
 					int a, b;

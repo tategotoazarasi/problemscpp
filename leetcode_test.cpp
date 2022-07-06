@@ -2653,15 +2653,15 @@ namespace leetcode {
 	namespace find_players_with_zero_or_one_losses {
 		TEST(find_players_with_zero_or_one_losses, case1) {
 			vector<vector<int>> matches      = {{1, 3},
-			                                    {2, 3},
-			                                    {3, 6},
-			                                    {5, 6},
-			                                    {5, 7},
-			                                    {4, 5},
-			                                    {4, 8},
-			                                    {4, 9},
-			                                    {10, 4},
-			                                    {10, 9}};
+                                           {2, 3},
+                                           {3, 6},
+                                           {5, 6},
+                                           {5, 7},
+                                           {4, 5},
+                                           {4, 8},
+                                           {4, 9},
+                                           {10, 4},
+                                           {10, 9}};
 			const vector<vector<int>> output = {{1, 2, 10}, {4, 5, 7, 8}};
 			ASSERT_EQ(output, Solution::findWinners(matches));
 		}
