@@ -3,7 +3,7 @@ var searchData=
   ['gcd_0',['gcd',['../da/d18/a01850.html#a66403ea1755364a6add4bb415ae6fd46',1,'leetcode::simplified_fractions::Solution::gcd()'],['../d1/dc1/a02706.html#a301a800653e37eb8974e6849eadcf829',1,'luogu::P1888::gcd()'],['../dc/d83/a01254.html#a361485924c4376bfbeadf002b2a5250f',1,'acwing::acwing808::gcd()']]],
   ['generatematrix_1',['generateMatrix',['../df/d9b/a02514.html#a2e96774d0ecaa5bd0ff04cd816cc7425',1,'leetcode::spiral_matrix_ii::Solution']]],
   ['generator_2',['generator',['../d3/d09/a02334.html#ab392f18a903209da71684bfae6ccd91d',1,'leetcode::insert_delete_getrandom_o1::RandomizedSet']]],
-  ['get_3',['get',['../dd/df4/a02510.html#a803c440450d63209ca02d65dfb771af0',1,'leetcode::design_hashmap::MyHashMap::get()'],['../d8/d5d/a02538.html#a8d68e323b406f97826895017d4314efc',1,'leetcode::design_linked_list::MyLinkedList::get()']]],
+  ['get_3',['get',['../dd/df4/a02510.html#a803c440450d63209ca02d65dfb771af0',1,'leetcode::design_hashmap::MyHashMap::get()'],['../d8/d5d/a02538.html#a0bcc6042e38f664b01bf64af5f15f333',1,'leetcode::design_linked_list::MyLinkedList::get()']]],
   ['get_5fback_4',['get_back',['../d8/dfb/a03122.html#a7618f50bbc8cec71d83dd0d66f49dccb',1,'pat::a::a1018::frame']]],
   ['get_5fchildren_5',['get_children',['../d6/db3/a02094.html#a8d4efd93a4ffa5803b6a43fb8e8f162e',1,'leetcode::count_nodes_with_the_highest_score::TreeNode']]],
   ['get_5fcost_6',['get_cost',['../df/d3a/a01810.html#a30331e11a86ffde67e8d06027fcb0408',1,'leetcode::minimum_cost_to_set_cooking_time::Solution']]],
