@@ -2713,6 +2713,19 @@ namespace leetcode {
 			void deleteAtIndex(int index);
 		};
 	}// namespace design_linked_list
+
+	/// \brief 450. Delete Node in a BST
+	namespace delete_node_in_a_bst {
+		class Solution {
+			TreeNode *prev;
+
+		public:
+			TreeNode *findMaximum(TreeNode *node);
+			TreeNode *findMinimum(TreeNode *node);
+			void remove(TreeNode *node);
+			TreeNode *deleteNode(TreeNode *root, int key);
+		};
+	}// namespace delete_node_in_a_bst
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

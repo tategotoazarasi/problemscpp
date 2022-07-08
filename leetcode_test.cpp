@@ -3446,4 +3446,56 @@ namespace leetcode {
 			ASSERT_EQ(3, mll.get(1));
 		}
 	}// namespace design_linked_list
+
+	namespace delete_node_in_a_bst {
+		bool equal(TreeNode *tn1, TreeNode *tn2) {
+			if((tn1 == nullptr) != (tn2 == nullptr)) {
+				return false;
+			}
+			if(tn1 != nullptr && tn2 != nullptr) {
+				if(tn1->val != tn2->val) {
+					return false;
+				}
+				if(!equal(tn1->left, tn2->left)) {
+					return false;
+				}
+				if(!equal(tn1->right, tn2->right)) {
+					return false;
+				}
+			}
+			return true;
+		}
+
+		TEST(delete_node_in_a_bst, case1) {
+			const auto c     = serialize_and_deserialize_binary_tree::Codec();
+			TreeNode *root   = c.deserialize("[5,3,6,2,4,null,7]");
+			TreeNode *output = c.deserialize("[5,4,6,2,null,null,7]");
+			Solution sol     = Solution();
+			ASSERT_TRUE(equal(output, sol.deleteNode(root, 3)));
+		}
+
+		TEST(delete_node_in_a_bst, case2) {
+			const auto c     = serialize_and_deserialize_binary_tree::Codec();
+			TreeNode *root   = c.deserialize("[5,3,6,2,4,null,7]");
+			TreeNode *output = c.deserialize("[5,3,6,2,4,null,7]");
+			Solution sol     = Solution();
+			ASSERT_TRUE(equal(output, sol.deleteNode(root, 0)));
+		}
+
+		TEST(delete_node_in_a_bst, case3) {
+			const auto c     = serialize_and_deserialize_binary_tree::Codec();
+			TreeNode *root   = c.deserialize("[]");
+			TreeNode *output = c.deserialize("[]");
+			Solution sol     = Solution();
+			ASSERT_TRUE(equal(output, sol.deleteNode(root, 0)));
+		}
+
+		TEST(delete_node_in_a_bst, case4) {
+			const auto c     = serialize_and_deserialize_binary_tree::Codec();
+			TreeNode *root   = c.deserialize("[3,2,5,null,null,4,10,null,null,8,15,7]");
+			TreeNode *output = c.deserialize("[3,2,7,null,null,4,10,null,null,8,15]");
+			Solution sol     = Solution();
+			ASSERT_TRUE(equal(output, sol.deleteNode(root, 5)));
+		}
+	}// namespace delete_node_in_a_bst
 }// namespace leetcode

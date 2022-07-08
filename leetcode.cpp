@@ -7396,4 +7396,77 @@ namespace leetcode {
 			}
 		}
 	}// namespace design_linked_list
+
+	namespace delete_node_in_a_bst {
+		TreeNode *Solution::findMaximum(TreeNode *node) {
+			TreeNode *current = node;
+			while(current->right != nullptr) {
+				prev    = current;
+				current = current->right;
+			}
+			return current;
+		}
+
+		TreeNode *Solution::findMinimum(TreeNode *node) {
+			TreeNode *current = node;
+			while(current->left != nullptr) {
+				prev    = current;
+				current = current->left;
+			}
+			return current;
+		}
+
+		void Solution::remove(TreeNode *node) {
+			if(node->right != nullptr) {
+				prev      = node;
+				auto rmin = findMinimum(node->right);
+				node->val = rmin->val;
+				remove(rmin);
+				return;
+			}
+			if(node->left != nullptr) {
+				prev      = node;
+				auto lmax = findMaximum(node->left);
+				node->val = lmax->val;
+				remove(lmax);
+				return;
+			}
+			if(prev != nullptr) {
+				if(prev->left != nullptr && prev->left->val == node->val) {
+					prev->left = nullptr;
+				} else if(prev->right != nullptr && prev->right->val == node->val) {
+					prev->right = nullptr;
+				}
+			} else {
+				exit(-1);
+			}
+			//delete node;
+		}
+
+		TreeNode *Solution::deleteNode(TreeNode *root, int key) {
+			if(root == nullptr) {
+				return root;
+			}
+			TreeNode *current = root;
+			while(current != nullptr && current->val != key) {
+				if(current->val == key) {
+					break;
+				}
+				prev = current;
+				if(current->val < key) {
+					current = current->right;
+				} else {
+					current = current->left;
+				}
+			}
+			if(current == nullptr) {
+				return root;
+			}
+			if(root->left == nullptr && root->right == nullptr) {
+				return nullptr;
+			}
+			remove(current);
+			return root;
+		}
+	}// namespace delete_node_in_a_bst
 }// namespace leetcode
