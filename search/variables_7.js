@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['head_0',['head',['../d3/d33/a01630.html#a4f57c3dd424723297e00af02450b7d55',1,'leetcode::linked_list_random_node::Solution::head()'],['../d8/d5d/a02538.html#a0374336358effe22a25a457e300101f3',1,'leetcode::design_linked_list::MyLinkedList::head()']]],
-  ['height_1',['height',['../d2/df4/a03022.html#a8fb7e727e3ecc817aaa5f7ccba9c8e74',1,'pat::b::b1055::Person']]],
-  ['hour_2',['hour',['../d8/db1/a03098.html#aad4cfab0e41b37e8c74e0bc64c421501',1,'pat::a::a1016::record']]]
+  ['head_0',['head',['../d0/da4/a01631.html#a4f57c3dd424723297e00af02450b7d55',1,'leetcode::linked_list_random_node::Solution::head()'],['../d3/d09/a02539.html#a0374336358effe22a25a457e300101f3',1,'leetcode::design_linked_list::MyLinkedList::head()']]],
+  ['height_1',['height',['../dd/da9/a03027.html#a8fb7e727e3ecc817aaa5f7ccba9c8e74',1,'pat::b::b1055::Person']]],
+  ['hour_2',['hour',['../d0/d9b/a03103.html#aad4cfab0e41b37e8c74e0bc64c421501',1,'pat::a::a1016::record']]]
 ];
