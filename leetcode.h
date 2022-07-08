@@ -2698,7 +2698,7 @@ namespace leetcode {
 			/// \brief Initializes the MyLinkedList object.
 			MyLinkedList();
 			/// \brief Get the value of the indexth node in the linked list. If the index is invalid, return -1.
-			int get(int index);
+			int get(int index) const;
 			/// \brief Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
 			void addAtHead(int val);
 			/// \brief Append a node of value val as the last element of the linked list.

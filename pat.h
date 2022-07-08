@@ -947,7 +947,7 @@ namespace pat {
 			struct bi {
 				vector<unsigned short> vec;
 				void reverse();
-				bool is_palindromic() const;
+				[[nodiscard]] bool is_palindromic() const;
 				bi operator+(const bi &n2) const;
 				bi() = default;
 				bi(const string &str);
