@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['left_0',['left',['../d2/d48/a01472.html#a03bca16cb19c3e93d15266a039523d4e',1,'leetcode::TreeNode::left()'],['../d1/d38/a01480.html#a060bf07762de1f68ec09abf7d676e875',1,'leetcode::Node::left()'],['../db/dbf/a01516.html#a527dd1073e87fbd3a0406ac26e038996',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::left()'],['../d3/d35/a02360.html#ad6713e5fe347142e4e219440435ae492',1,'leetcode::lowest_common_ancestor_of_a_binary_search_tree::TreeNodeP::left()'],['../de/d48/a02552.html#ac24be0ef8a477f2baac82561b3a906e0',1,'lintcode::TreeNode::left()'],['../da/d72/a03140.html#acf9a511ffb5bb3c7cd039d3022b34b22',1,'pat::a::a1020::TreeNode::left()']]],
-  ['left_5fmap_1',['left_map',['../d8/d1c/a00824.html#ae0ed96db182459f5342f080095ad9723',1,'acwing::acwing1929::Solution']]],
-  ['len_2',['len',['../d7/d32/a01444.html#af3151441b619d2b7f49045e01b2712f2',1,'acwing::acwing1470::status::len()'],['../df/dbf/a03132.html#a95e7be3436da347775ddbb58d8eb1482',1,'pat::a::a1018::frame::len()']]],
-  ['level_3',['level',['../d7/db8/a03060.html#a6357df6f19d6b340398ccfc139994056',1,'pat::b::b1095::student']]],
-  ['limit_4',['limit',['../dd/d20/a01936.html#a1ec4ba2d7adf9af5984cc0a43f28e37d',1,'leetcode::count_good_triplets_in_an_array::FenwickTree']]],
-  ['linked_5',['linked',['../dc/d3c/a02188.html#ae4985a0226209426b3d214953807decb',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]]
+  ['left_0',['left',['../de/d13/a01473.html#a03bca16cb19c3e93d15266a039523d4e',1,'leetcode::TreeNode::left()'],['../d1/de4/a01481.html#a060bf07762de1f68ec09abf7d676e875',1,'leetcode::Node::left()'],['../dc/d96/a01517.html#a527dd1073e87fbd3a0406ac26e038996',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::left()'],['../d5/db0/a02361.html#ad6713e5fe347142e4e219440435ae492',1,'leetcode::lowest_common_ancestor_of_a_binary_search_tree::TreeNodeP::left()'],['../dd/d98/a02557.html#ac24be0ef8a477f2baac82561b3a906e0',1,'lintcode::TreeNode::left()'],['../dd/d02/a03145.html#acf9a511ffb5bb3c7cd039d3022b34b22',1,'pat::a::a1020::TreeNode::left()']]],
+  ['left_5fmap_1',['left_map',['../dd/d5f/a00825.html#ae0ed96db182459f5342f080095ad9723',1,'acwing::acwing1929::Solution']]],
+  ['len_2',['len',['../d9/d6f/a01445.html#af3151441b619d2b7f49045e01b2712f2',1,'acwing::acwing1470::status::len()'],['../d2/d0f/a03137.html#a95e7be3436da347775ddbb58d8eb1482',1,'pat::a::a1018::frame::len()']]],
+  ['level_3',['level',['../d4/d44/a03065.html#a6357df6f19d6b340398ccfc139994056',1,'pat::b::b1095::student']]],
+  ['limit_4',['limit',['../d9/d17/a01937.html#a1ec4ba2d7adf9af5984cc0a43f28e37d',1,'leetcode::count_good_triplets_in_an_array::FenwickTree']]],
+  ['linked_5',['linked',['../d8/d85/a02189.html#ae4985a0226209426b3d214953807decb',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]]
 ];

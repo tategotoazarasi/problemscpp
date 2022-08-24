@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['abs_0',['abs',['../d4/dd5/a01244.html#aaba02b418d26b514fee805a430e5d9a5',1,'acwing::acwing810']]],
-  ['add_1',['add',['../d0/d33/a01252.html#a49765bf1414cfbb8dfb2db9d034047ed',1,'acwing::acwing806::add()'],['../df/d8f/a01740.html#a6c4d5f1e2fca3b9d4896fb728f62f2be',1,'leetcode::detect_squares::DetectSquares::add()']]],
-  ['add_5fchild_2',['add_child',['../dd/d77/a02096.html#a2f3f82c1823aacac7248e16ad406a369',1,'leetcode::count_nodes_with_the_highest_score::TreeNode']]],
-  ['addathead_3',['addAtHead',['../d4/db0/a02540.html#a32fd312bd0df9c7849f94192b880007b',1,'leetcode::design_linked_list::MyLinkedList']]],
-  ['addatindex_4',['addAtIndex',['../d4/db0/a02540.html#ab23f9d192b98a46abc8e7ca196538543',1,'leetcode::design_linked_list::MyLinkedList']]],
-  ['addattail_5',['addAtTail',['../d4/db0/a02540.html#a58a927f186e2f423ad71719d28419c1e',1,'leetcode::design_linked_list::MyLinkedList']]],
-  ['addcar_6',['addCar',['../d6/d71/a02344.html#aad19ddaec8b6db066f90e0f2e9d584ae',1,'leetcode::design_parking_system::ParkingSystem']]],
-  ['adddigits_7',['addDigits',['../d7/dbe/a02024.html#a51df825888fd36aba1dba2bea6b5d089',1,'leetcode::add_digits::Solution']]],
-  ['all_8',['all',['../dc/d06/a01832.html#a8d40567cb4874a37ffad8fe92ba8bee1',1,'leetcode::design_bitset::Bitset']]],
-  ['allone_9',['AllOne',['../d2/d08/a02148.html#a41f7ad8b372744848be2a3ac1d1b2c5b',1,'leetcode::all_oone_data_structure::AllOne']]],
-  ['allpathssourcetarget_10',['allPathsSourceTarget',['../d4/d41/a02400.html#aab9d8b7867d1e511bc5bf4f7f259669b',1,'leetcode::all_paths_from_source_to_target::Solution']]],
-  ['assign_11',['assign',['../d0/d2a/a00531.html#a3ad405cb11a0c764841830df77e854c5',1,'pat::a::a1026']]],
-  ['asteroidsdestroyed_12',['asteroidsDestroyed',['../d3/d4c/a01540.html#afb9382d1c309a7974aea07a0cd04f637',1,'leetcode::destroying_asteroids::Solution']]]
+  ['abs_0',['abs',['../d1/d31/a01245.html#aaba02b418d26b514fee805a430e5d9a5',1,'acwing::acwing810']]],
+  ['add_1',['add',['../d3/d0b/a01253.html#a49765bf1414cfbb8dfb2db9d034047ed',1,'acwing::acwing806::add()'],['../d0/d4e/a01741.html#a6c4d5f1e2fca3b9d4896fb728f62f2be',1,'leetcode::detect_squares::DetectSquares::add()']]],
+  ['add_5fchild_2',['add_child',['../d4/dbb/a02097.html#a2f3f82c1823aacac7248e16ad406a369',1,'leetcode::count_nodes_with_the_highest_score::TreeNode']]],
+  ['addathead_3',['addAtHead',['../de/dd4/a02541.html#a32fd312bd0df9c7849f94192b880007b',1,'leetcode::design_linked_list::MyLinkedList']]],
+  ['addatindex_4',['addAtIndex',['../de/dd4/a02541.html#ab23f9d192b98a46abc8e7ca196538543',1,'leetcode::design_linked_list::MyLinkedList']]],
+  ['addattail_5',['addAtTail',['../de/dd4/a02541.html#a58a927f186e2f423ad71719d28419c1e',1,'leetcode::design_linked_list::MyLinkedList']]],
+  ['addcar_6',['addCar',['../dc/d0a/a02345.html#aad19ddaec8b6db066f90e0f2e9d584ae',1,'leetcode::design_parking_system::ParkingSystem']]],
+  ['adddigits_7',['addDigits',['../da/d3e/a02025.html#a51df825888fd36aba1dba2bea6b5d089',1,'leetcode::add_digits::Solution']]],
+  ['all_8',['all',['../db/dd5/a01833.html#a8d40567cb4874a37ffad8fe92ba8bee1',1,'leetcode::design_bitset::Bitset']]],
+  ['allone_9',['AllOne',['../d2/da0/a02149.html#a41f7ad8b372744848be2a3ac1d1b2c5b',1,'leetcode::all_oone_data_structure::AllOne']]],
+  ['allpathssourcetarget_10',['allPathsSourceTarget',['../d2/d62/a02401.html#aab9d8b7867d1e511bc5bf4f7f259669b',1,'leetcode::all_paths_from_source_to_target::Solution']]],
+  ['assign_11',['assign',['../d7/d41/a00532.html#a3ad405cb11a0c764841830df77e854c5',1,'pat::a::a1026']]],
+  ['asteroidsdestroyed_12',['asteroidsDestroyed',['../d5/dc8/a01541.html#afb9382d1c309a7974aea07a0cd04f637',1,'leetcode::destroying_asteroids::Solution']]]
 ];
