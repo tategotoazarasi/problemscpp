@@ -7469,4 +7469,34 @@ namespace leetcode {
 			return root;
 		}
 	}// namespace delete_node_in_a_bst
+
+	namespace missing_element_in_sorted_array {
+		int Solution::missingElement(vector<int> &nums, int k) {
+			unordered_set<int> us;
+			for(auto num: nums) {
+				us.insert(num);
+			}
+			if(missing(nums, nums.size() - 1) < k) {
+				return nums[0] + k + nums.size() - 1;
+			}
+			int l = 0;
+			int r = nums.size() - 1;
+			while(l < r) {
+				if(r == l + 1) {
+					return nums[l] + k - missing(nums, l);
+				}
+				int m = (l + r) / 2;
+				if(missing(nums, m) < k) {
+					l = m;
+				} else if(missing(nums, m) >= k) {
+					r = m;
+				}
+			}
+			return 0;
+		}
+
+		unsigned Solution::missing(vector<int> &nums, int i) {
+			return nums[i] - nums[0] - i;
+		}
+	}// namespace missing_element_in_sorted_array
 }// namespace leetcode

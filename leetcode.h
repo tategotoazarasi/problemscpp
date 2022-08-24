@@ -2726,6 +2726,15 @@ namespace leetcode {
 			TreeNode *deleteNode(TreeNode *root, int key);
 		};
 	}// namespace delete_node_in_a_bst
+
+	/// \brief 1060. 有序数组中的缺失元素
+	namespace missing_element_in_sorted_array {
+		class Solution {
+		public:
+			static unsigned missing(vector<int> &nums, int i);
+			static int missingElement(vector<int> &nums, int k);
+		};
+	}// namespace missing_element_in_sorted_array
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

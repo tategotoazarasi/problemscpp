@@ -2653,15 +2653,15 @@ namespace leetcode {
 	namespace find_players_with_zero_or_one_losses {
 		TEST(find_players_with_zero_or_one_losses, case1) {
 			vector<vector<int>> matches      = {{1, 3},
-                                           {2, 3},
-                                           {3, 6},
-                                           {5, 6},
-                                           {5, 7},
-                                           {4, 5},
-                                           {4, 8},
-                                           {4, 9},
-                                           {10, 4},
-                                           {10, 9}};
+			                                    {2, 3},
+			                                    {3, 6},
+			                                    {5, 6},
+			                                    {5, 7},
+			                                    {4, 5},
+			                                    {4, 8},
+			                                    {4, 9},
+			                                    {10, 4},
+			                                    {10, 9}};
 			const vector<vector<int>> output = {{1, 2, 10}, {4, 5, 7, 8}};
 			ASSERT_EQ(output, Solution::findWinners(matches));
 		}
@@ -3498,4 +3498,21 @@ namespace leetcode {
 			ASSERT_TRUE(equal(output, sol.deleteNode(root, 5)));
 		}
 	}// namespace delete_node_in_a_bst
+
+	namespace missing_element_in_sorted_array {
+		TEST(missing_element_in_sorted_array, case1) {
+			vector nums = {4, 7, 9, 10};
+			ASSERT_EQ(Solution::missingElement(nums, 1), 5);
+		}
+
+		TEST(missing_element_in_sorted_array, case2) {
+			vector nums = {4, 7, 9, 10};
+			ASSERT_EQ(Solution::missingElement(nums, 3), 8);
+		}
+
+		TEST(missing_element_in_sorted_array, case3) {
+			vector nums = {1, 2, 4};
+			ASSERT_EQ(Solution::missingElement(nums, 3), 6);
+		}
+	}// namespace missing_element_in_sorted_array
 }// namespace leetcode
