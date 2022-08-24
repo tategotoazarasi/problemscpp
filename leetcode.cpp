@@ -7499,4 +7499,41 @@ namespace leetcode {
 			return nums[i] - nums[0] - i;
 		}
 	}// namespace missing_element_in_sorted_array
+
+	namespace find_a_peak_element_ii {
+		vector<int> Solution::findPeakGridLR(vector<vector<int>> &mat, int l, int r) {
+			int mid     = (l + r) / 2;
+			int max_col = mid;
+			int max_row = 0;
+			int maximum = -1;
+			for(int i = 0; i < mat.size(); i++) {
+				for(int j = mid - 1; j <= mid + 1; j++) {
+					if(maximum < get(mat, i, j)) {
+						maximum = get(mat, i, j);
+						max_col = j;
+						max_row = i;
+					}
+				}
+			}
+			if(max_col == mid || l + 1 == r) {
+				return {max_row, max_col};
+			} else if(max_col == mid + 1) {
+				return findPeakGridLR(mat, mid, r);
+			} else {
+				return findPeakGridLR(mat, l, mid);
+			}
+		}
+
+		vector<int> Solution::findPeakGrid(vector<vector<int>> &mat) {
+			return findPeakGridLR(mat, 0, mat[0].size() - 1);
+		}
+
+		int Solution::get(vector<vector<int>> &mat, int i, int j) {
+			if(i >= 0 && i < mat.size() && j >= 0 && j < mat[0].size()) {
+				return mat[i][j];
+			} else {
+				return -1;
+			}
+		}
+	}// namespace find_a_peak_element_ii
 }// namespace leetcode

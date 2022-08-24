@@ -3515,4 +3515,18 @@ namespace leetcode {
 			ASSERT_EQ(Solution::missingElement(nums, 3), 6);
 		}
 	}// namespace missing_element_in_sorted_array
+
+	namespace find_a_peak_element_ii {
+		TEST(find_a_peak_element_ii, case1) {
+			vector<vector<int>> mat = {{1, 4}, {3, 2}};
+			vector ans              = {0, 1};
+			ASSERT_EQ(Solution::findPeakGrid(mat), ans);
+		}
+
+		TEST(find_a_peak_element_ii, case2) {
+			vector<vector<int>> mat = {{10, 20, 15}, {21, 30, 14}, {7, 16, 32}};
+			vector ans              = {2, 2};
+			ASSERT_EQ(Solution::findPeakGrid(mat), ans);
+		}
+	}// namespace find_a_peak_element_ii
 }// namespace leetcode

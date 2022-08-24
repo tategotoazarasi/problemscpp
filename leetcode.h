@@ -2735,6 +2735,16 @@ namespace leetcode {
 			static int missingElement(vector<int> &nums, int k);
 		};
 	}// namespace missing_element_in_sorted_array
+
+	/// \brief 1901. 寻找峰值 II
+	namespace find_a_peak_element_ii {
+		class Solution {
+		public:
+			static int get(vector<vector<int>> &mat, int i, int j);
+			static vector<int> findPeakGridLR(vector<vector<int>> &mat, int l, int r);
+			static vector<int> findPeakGrid(vector<vector<int>> &mat);
+		};
+	}// namespace find_a_peak_element_ii
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
