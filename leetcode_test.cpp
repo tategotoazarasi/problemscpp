@@ -3529,4 +3529,21 @@ namespace leetcode {
 			ASSERT_EQ(Solution::findPeakGrid(mat), ans);
 		}
 	}// namespace find_a_peak_element_ii
+
+	namespace divide_chocolate {
+		TEST(divide_chocolate, case1) {
+			vector sweetness = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+			ASSERT_EQ(6, Solution::maximizeSweetness(sweetness, 5));
+		}
+
+		TEST(divide_chocolate, case2) {
+			vector sweetness = {5, 6, 7, 8, 9, 1, 2, 3, 4};
+			ASSERT_EQ(1, Solution::maximizeSweetness(sweetness, 8));
+		}
+
+		TEST(divide_chocolate, case3) {
+			vector sweetness = {1, 2, 2, 1, 2, 2, 1, 2, 2};
+			ASSERT_EQ(5, Solution::maximizeSweetness(sweetness, 2));
+		}
+	}// namespace divide_chocolate
 }// namespace leetcode

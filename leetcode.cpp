@@ -7536,4 +7536,41 @@ namespace leetcode {
 			}
 		}
 	}// namespace find_a_peak_element_ii
+
+	namespace divide_chocolate {
+		int Solution::maximizeSweetness(vector<int> &sweetness, int k) {
+			int l = sweetness[0];
+			int r = 0;
+			for(auto s: sweetness) {
+				l = min(l, s);
+				r += s;
+			}
+			while(l < r) {
+				if(l + 1 == r) {
+					return (count(sweetness, r) == k + 1) ? r : l;
+				}
+				int m = (l + r) / 2;
+				int c = count(sweetness, m);
+				if(c < k + 1) {
+					r = m - 1;
+				} else {
+					l = m;
+				}
+			}
+			return l;
+		}
+
+		int Solution::count(vector<int> &sweetness, int x) {
+			int ans     = 0;
+			int current = 0;
+			for(auto s: sweetness) {
+				current += s;
+				if(current >= x) {
+					current = 0;
+					ans++;
+				}
+			}
+			return ans;
+		}
+	}// namespace divide_chocolate
 }// namespace leetcode

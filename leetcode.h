@@ -2745,6 +2745,15 @@ namespace leetcode {
 			static vector<int> findPeakGrid(vector<vector<int>> &mat);
 		};
 	}// namespace find_a_peak_element_ii
+
+	/// \brief 1231. 分享巧克力
+	namespace divide_chocolate {
+		class Solution {
+		public:
+			static int count(vector<int> &sweetness, int x);
+			static int maximizeSweetness(vector<int> &sweetness, int k);
+		};
+	}// namespace divide_chocolate
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
