@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['ca_0',['ca',['../d1/df6/a03045.html#a56d29e2d96888a88f2f2be6e46642dbc',1,'pat::b::b1073::problem']]],
+  ['ca_0',['ca',['../d4/d47/a03050.html#a56d29e2d96888a88f2f2be6e46642dbc',1,'pat::b::b1073::problem']]],
   ['cat_5fwin_1',['CAT_WIN',['../db/d44/a00162.html#affa4958d0e6b2c6a54a333de3e6b5387',1,'leetcode::cat_and_mouse']]],
-  ['ch_2',['ch',['../d2/d95/a01449.html#aaa6bf8e35f26d9e132943b16ab2fd759',1,'acwing::acwing4398::TrieNode::ch()'],['../db/d44/a03153.html#a056d2c88a2e128b05422c9d834d7f8dd',1,'TrieNode::ch()'],['../d2/d44/a01677.html#aab3518041c9dd44264aba94c0c60e28d',1,'leetcode::UhWRSj::TrieNode::ch()'],['../d2/dac/a01489.html#ab41c3836f95142d0485d34e22a25e780',1,'leetcode::concatenated_words::TrieNode::ch()']]],
-  ['children_3',['children',['../db/ddd/a02089.html#a19a90648056c84e59caeb83c52560c7c',1,'leetcode::n_ary_tree_preorder_traversal::Node::children()'],['../d9/d5f/a03109.html#a1c4d991352e1dbb1d5d0038f8187116f',1,'pat::a::a1004::node::children()'],['../d7/dd6/a02305.html#a264b16512277edf2d20fd0dd572e3f14',1,'leetcode::n_ary_tree_level_order_traversal::Node::children()'],['../db/d7a/a02105.html#a1890a9b2a97905844259d5e73b79a268',1,'leetcode::n_ary_tree_postorder_traversal::Node::children()'],['../d4/dbb/a02097.html#aff7fe3dc058f821403219663a71b7331',1,'leetcode::count_nodes_with_the_highest_score::TreeNode::children()']]],
-  ['col_4',['col',['../dd/db4/a01693.html#ab62308de6a32f41172c0421ef56172e1',1,'leetcode::k_highest_ranked_items_within_a_price_range::item']]],
-  ['column_5',['column',['../d9/d65/a01905.html#a36a5d73d36868a8f96eb448b44718f88',1,'leetcode::knight_probability_in_chessboard::status']]],
-  ['composite_6',['composite',['../d6/d58/a02993.html#a37c6c6322e636df04e8db30bb39d340f',1,'luogu::P5742::Student']]],
-  ['connected_7',['connected',['../d2/db8/a01057.html#a34a130f77b77098643d62be5d347c5b9',1,'acwing::acwing4298']]],
-  ['correct_5fchoices_8',['correct_choices',['../dc/d23/a03041.html#a68dca0cd9800b22a42ef1f1bac6e7a28',1,'pat::b::b1058::Problem']]],
-  ['correct_5fnum_9',['correct_num',['../dc/d23/a03041.html#ab380530cf52afafb193de07aafdbeea0',1,'pat::b::b1058::Problem']]],
-  ['count_10',['count',['../d4/dbb/a02097.html#a71cb816808b95f691c0e937771b557c0',1,'leetcode::count_nodes_with_the_highest_score::TreeNode::count()'],['../d0/d80/a02281.html#abfc3d4e7d98f0319409e553efb047d54',1,'leetcode::encrypt_and_decrypt_strings::Encrypter::count()'],['../d6/deb/a03061.html#ad8fe2cdf084c837c668d1a4035e02308',1,'pat::b::b1085::school::count()'],['../d7/d5a/a03069.html#a91b08aef4c3bd52eaa683d763bdb11f8',1,'pat::b::b1095::room::count()'],['../db/d44/a03153.html#a62f4a9d15d01cc1a6ecd8e5d327b2044',1,'TrieNode::count()']]],
-  ['count_5fstr_11',['count_str',['../d2/da0/a02149.html#a821878c7609e4d0f0f9108422d859daf',1,'leetcode::all_oone_data_structure::AllOne']]],
-  ['current_12',['current',['../d9/d6f/a01445.html#a4a4e88df918cb6a82fd8d379314bd8da',1,'acwing::acwing1470::status']]]
+  ['ch_2',['ch',['../d3/da3/a01450.html#aaa6bf8e35f26d9e132943b16ab2fd759',1,'acwing::acwing4398::TrieNode::ch()'],['../da/d8d/a03158.html#a056d2c88a2e128b05422c9d834d7f8dd',1,'TrieNode::ch()'],['../d6/d26/a01678.html#aab3518041c9dd44264aba94c0c60e28d',1,'leetcode::UhWRSj::TrieNode::ch()'],['../de/d3c/a01490.html#ab41c3836f95142d0485d34e22a25e780',1,'leetcode::concatenated_words::TrieNode::ch()']]],
+  ['children_3',['children',['../d7/deb/a02090.html#a19a90648056c84e59caeb83c52560c7c',1,'leetcode::n_ary_tree_preorder_traversal::Node::children()'],['../db/dbc/a03114.html#a1c4d991352e1dbb1d5d0038f8187116f',1,'pat::a::a1004::node::children()'],['../d3/dc5/a02306.html#a264b16512277edf2d20fd0dd572e3f14',1,'leetcode::n_ary_tree_level_order_traversal::Node::children()'],['../d4/d18/a02106.html#a1890a9b2a97905844259d5e73b79a268',1,'leetcode::n_ary_tree_postorder_traversal::Node::children()'],['../d9/d6e/a02098.html#aff7fe3dc058f821403219663a71b7331',1,'leetcode::count_nodes_with_the_highest_score::TreeNode::children()']]],
+  ['col_4',['col',['../d4/d8e/a01694.html#ab62308de6a32f41172c0421ef56172e1',1,'leetcode::k_highest_ranked_items_within_a_price_range::item']]],
+  ['column_5',['column',['../d3/d1b/a01906.html#a36a5d73d36868a8f96eb448b44718f88',1,'leetcode::knight_probability_in_chessboard::status']]],
+  ['composite_6',['composite',['../d5/db8/a02998.html#a37c6c6322e636df04e8db30bb39d340f',1,'luogu::P5742::Student']]],
+  ['connected_7',['connected',['../d5/d4c/a01058.html#a34a130f77b77098643d62be5d347c5b9',1,'acwing::acwing4298']]],
+  ['correct_5fchoices_8',['correct_choices',['../d1/dff/a03046.html#a68dca0cd9800b22a42ef1f1bac6e7a28',1,'pat::b::b1058::Problem']]],
+  ['correct_5fnum_9',['correct_num',['../d1/dff/a03046.html#ab380530cf52afafb193de07aafdbeea0',1,'pat::b::b1058::Problem']]],
+  ['count_10',['count',['../d9/d6e/a02098.html#a71cb816808b95f691c0e937771b557c0',1,'leetcode::count_nodes_with_the_highest_score::TreeNode::count()'],['../d5/d49/a02282.html#abfc3d4e7d98f0319409e553efb047d54',1,'leetcode::encrypt_and_decrypt_strings::Encrypter::count()'],['../d4/df3/a03066.html#ad8fe2cdf084c837c668d1a4035e02308',1,'pat::b::b1085::school::count()'],['../d1/d44/a03074.html#a91b08aef4c3bd52eaa683d763bdb11f8',1,'pat::b::b1095::room::count()'],['../da/d8d/a03158.html#a62f4a9d15d01cc1a6ecd8e5d327b2044',1,'TrieNode::count()']]],
+  ['count_5fstr_11',['count_str',['../d4/d5d/a02150.html#a821878c7609e4d0f0f9108422d859daf',1,'leetcode::all_oone_data_structure::AllOne']]],
+  ['current_12',['current',['../d8/d22/a01446.html#a4a4e88df918cb6a82fd8d379314bd8da',1,'acwing::acwing1470::status']]]
 ];
