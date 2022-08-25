@@ -2754,6 +2754,14 @@ namespace leetcode {
 			static int maximizeSweetness(vector<int> &sweetness, int k);
 		};
 	}// namespace divide_chocolate
+
+	/// \brief 1182. 与目标颜色间的最短距离
+	namespace shortest_distance_to_target_color {
+		class Solution {
+		public:
+			static vector<int> shortestDistanceColor(vector<int> &colors, vector<vector<int>> &queries);
+		};
+	}// namespace shortest_distance_to_target_color
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

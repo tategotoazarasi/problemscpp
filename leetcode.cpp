@@ -7573,4 +7573,34 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace divide_chocolate
+
+	namespace shortest_distance_to_target_color {
+		vector<int> Solution::shortestDistanceColor(vector<int> &colors, vector<vector<int>> &queries) {
+			vector<int> ans;
+			unordered_map<int, vector<int>> um;
+			for(int i = 0; i < colors.size(); i++) {
+				um[colors[i]].emplace_back(i);
+			}
+			for(auto &[k, vec]: um) {
+				sort(vec.begin(), vec.end());
+			}
+			for(auto &query: queries) {
+				int &i           = query[0];
+				int &c           = query[1];
+				vector<int> &vec = um[c];
+				auto g           = lower_bound(vec.begin(), vec.end(), i, less<>());
+				auto l           = lower_bound(vec.rbegin(), vec.rend(), i, greater<>());
+				if(g == vec.end() && l == vec.rend()) {
+					ans.emplace_back(-1);
+				} else if(g == vec.end()) {
+					ans.emplace_back(abs(*l - i));
+				} else if(l == vec.rend()) {
+					ans.emplace_back(abs(*g - i));
+				} else {
+					ans.emplace_back(min(abs(*l - i), abs(*g - i)));
+				}
+			}
+			return ans;
+		}
+	}// namespace shortest_distance_to_target_color
 }// namespace leetcode

@@ -3546,4 +3546,20 @@ namespace leetcode {
 			ASSERT_EQ(5, Solution::maximizeSweetness(sweetness, 2));
 		}
 	}// namespace divide_chocolate
+
+	namespace shortest_distance_to_target_color {
+		TEST(shortest_distance_to_target_color, case1) {
+			vector colors               = {1, 1, 2, 1, 3, 2, 2, 3, 3};
+			vector<vector<int>> queries = {{1, 3}, {2, 2}, {6, 1}};
+			vector ans                  = {3, 0, 3};
+			ASSERT_EQ(ans, Solution::shortestDistanceColor(colors, queries));
+		}
+
+		TEST(shortest_distance_to_target_color, case2) {
+			vector colors               = {1, 2};
+			vector<vector<int>> queries = {{0, 3}};
+			vector ans                  = {-1};
+			ASSERT_EQ(ans, Solution::shortestDistanceColor(colors, queries));
+		}
+	}// namespace shortest_distance_to_target_color
 }// namespace leetcode
