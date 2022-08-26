@@ -2771,6 +2771,15 @@ namespace leetcode {
 			static vector<int> minAvailableDuration(vector<vector<int>> &slots1, vector<vector<int>> &slots2, int duration);
 		};
 	}// namespace meeting_scheduler
+
+	/// \brief 287. 寻找重复数
+	namespace find_the_duplicate_number {
+		class Solution {
+		public:
+			static int countInRange(vector<int> &nums, int l, int r);
+			static int findDuplicate(vector<int> &nums);
+		};
+	}// namespace find_the_duplicate_number
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

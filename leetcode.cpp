@@ -7633,4 +7633,39 @@ namespace leetcode {
 			return {max(vec1[0], vec2[0]), min(vec1[1], vec2[1])};
 		}
 	}// namespace meeting_scheduler
+
+	namespace find_the_duplicate_number {
+		int Solution::findDuplicate(vector<int> &nums) {
+			int maximum = nums[0];
+			int minimum = nums[0];
+			for(const auto &num: nums) {
+				maximum = max(maximum, num);
+				minimum = min(minimum, num);
+			}
+			int l = minimum;
+			int r = maximum;
+			while(l < r) {
+				int m = (l + r) / 2;
+				int c = countInRange(nums, l, m);
+				if(c == m - l + 1) {
+					l = m + 1;
+				} else if(c > m - l + 1) {
+					r = m;
+				} else {
+					l++;
+				}
+			}
+			return l;
+		}
+
+		int Solution::countInRange(vector<int> &nums, int l, int r) {
+			int ans = 0;
+			for(auto &num: nums) {
+				if(l <= num && num <= r) {
+					ans++;
+				}
+			}
+			return ans;
+		}
+	}// namespace find_the_duplicate_number
 }// namespace leetcode

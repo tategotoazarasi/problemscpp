@@ -3585,4 +3585,21 @@ namespace leetcode {
 			ASSERT_EQ(ans, Solution::minAvailableDuration(slots1, slots2, 8));
 		}
 	}// namespace meeting_scheduler
+
+	namespace find_the_duplicate_number {
+		TEST(find_the_duplicate_number, case1) {
+			vector nums = {1, 3, 4, 2, 2};
+			ASSERT_EQ(2, Solution::findDuplicate(nums));
+		}
+
+		TEST(find_the_duplicate_number, case2) {
+			vector nums = {3, 1, 3, 4, 2};
+			ASSERT_EQ(3, Solution::findDuplicate(nums));
+		}
+
+		TEST(find_the_duplicate_number, case3) {
+			vector nums = {1, 4, 4, 2, 4};
+			ASSERT_EQ(4, Solution::findDuplicate(nums));
+		}
+	}// namespace find_the_duplicate_number
 }// namespace leetcode
