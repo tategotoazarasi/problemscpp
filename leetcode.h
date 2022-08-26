@@ -2762,6 +2762,15 @@ namespace leetcode {
 			static vector<int> shortestDistanceColor(vector<int> &colors, vector<vector<int>> &queries);
 		};
 	}// namespace shortest_distance_to_target_color
+
+	/// \brief 1229. 安排会议日程
+	namespace meeting_scheduler {
+		class Solution {
+		public:
+			static pair<int, int> merge(const vector<int> &vec1, const vector<int> &vec2);
+			static vector<int> minAvailableDuration(vector<vector<int>> &slots1, vector<vector<int>> &slots2, int duration);
+		};
+	}// namespace meeting_scheduler
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

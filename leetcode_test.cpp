@@ -3562,4 +3562,27 @@ namespace leetcode {
 			ASSERT_EQ(ans, Solution::shortestDistanceColor(colors, queries));
 		}
 	}// namespace shortest_distance_to_target_color
+
+	namespace meeting_scheduler {
+		TEST(meeting_scheduler, case1) {
+			vector<vector<int>> slots1 = {{10, 50}, {60, 120}, {140, 210}};
+			vector<vector<int>> slots2 = {{0, 15}, {60, 70}};
+			vector ans                 = {60, 68};
+			ASSERT_EQ(ans, Solution::minAvailableDuration(slots1, slots2, 8));
+		}
+
+		TEST(meeting_scheduler, case2) {
+			vector<vector<int>> slots1 = {{10, 50}, {60, 120}, {140, 210}};
+			vector<vector<int>> slots2 = {{0, 15}, {60, 70}};
+			vector<int> ans            = {};
+			ASSERT_EQ(ans, Solution::minAvailableDuration(slots1, slots2, 12));
+		}
+
+		TEST(meeting_scheduler, case3) {
+			vector<vector<int>> slots1 = {{10, 60}};
+			vector<vector<int>> slots2 = {{12, 17}, {21, 50}};
+			vector<int> ans            = {21, 29};
+			ASSERT_EQ(ans, Solution::minAvailableDuration(slots1, slots2, 8));
+		}
+	}// namespace meeting_scheduler
 }// namespace leetcode

@@ -7603,4 +7603,34 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace shortest_distance_to_target_color
+
+	namespace meeting_scheduler {
+		vector<int> Solution::minAvailableDuration(vector<vector<int>> &slots1, vector<vector<int>> &slots2, int duration) {
+			vector<int> ans(2);
+			auto cmp = [](const vector<int> &vec1, const vector<int> &vec2) -> bool {
+				if(vec1[1] != vec2[1]) {
+					return vec1[1] < vec2[1];
+				} else {
+					return vec1[0] < vec2[0];
+				}
+			};
+			sort(slots1.begin(), slots1.end(), cmp);
+			sort(slots2.begin(), slots2.end(), cmp);
+			for(auto it1 = slots1.begin(), it2 = slots2.begin(); it1 != slots1.end() && it2 != slots2.end();) {
+				pair<int, int> p = merge(*it1, *it2);
+				if(p.second - p.first >= duration) {
+					return {p.first, p.first + duration};
+				} else if(cmp(*it1, *it2)) {
+					++it1;
+				} else {
+					++it2;
+				}
+			}
+			return {};
+		}
+
+		pair<int, int> Solution::merge(const vector<int> &vec1, const vector<int> &vec2) {
+			return {max(vec1[0], vec2[0]), min(vec1[1], vec2[1])};
+		}
+	}// namespace meeting_scheduler
 }// namespace leetcode
