@@ -3614,4 +3614,20 @@ namespace leetcode {
 			ASSERT_EQ(9, Solution::trap(height));
 		}
 	}// namespace trapping_rain_water
+
+	namespace product_of_two_run_length_encoded_arrays {
+		TEST(product_of_two_run_length_encoded_arrays, case1) {
+			vector<vector<int>> encoded1 = {{1, 3}, {2, 3}};
+			vector<vector<int>> encoded2 = {{6, 3}, {3, 3}};
+			vector<vector<int>> output   = {{6, 6}};
+			ASSERT_EQ(output, Solution::findRLEArray(encoded1, encoded2));
+		}
+
+		TEST(product_of_two_run_length_encoded_arrays, case2) {
+			vector<vector<int>> encoded1 = {{1, 3}, {2, 1}, {3, 2}};
+			vector<vector<int>> encoded2 = {{2, 3}, {3, 3}};
+			vector<vector<int>> output   = {{2, 3}, {6, 1}, {9, 2}};
+			ASSERT_EQ(output, Solution::findRLEArray(encoded1, encoded2));
+		}
+	}// namespace product_of_two_run_length_encoded_arrays
 }// namespace leetcode

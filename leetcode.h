@@ -2788,6 +2788,14 @@ namespace leetcode {
 			static int trap(vector<int> &height);
 		};
 	}// namespace trapping_rain_water
+
+	/// \brief 1868. 两个行程编码数组的积
+	namespace product_of_two_run_length_encoded_arrays {
+		class Solution {
+		public:
+			static vector<vector<int>> findRLEArray(vector<vector<int>> &encoded1, vector<vector<int>> &encoded2);
+		};
+	}// namespace product_of_two_run_length_encoded_arrays
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

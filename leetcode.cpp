@@ -7690,4 +7690,33 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace trapping_rain_water
+
+	namespace product_of_two_run_length_encoded_arrays {
+		vector<vector<int>> Solution::findRLEArray(vector<vector<int>> &encoded1, vector<vector<int>> &encoded2) {
+			vector<vector<int>> ans;
+			int p1 = 0;
+			int p2 = 0;
+			for(int i1 = 0, i2 = 0; i1 < encoded1.size() && i2 < encoded2.size();) {
+				int len = min(encoded1[i1][1] - p1, encoded2[i2][1] - p2);
+				int v   = encoded1[i1][0] * encoded2[i2][0];
+				if(!ans.empty() && ans.back()[0] == v) {
+					ans.back()[1] += len;
+				} else {
+					vector vec = {v, len};
+					ans.emplace_back(vec);
+				}
+				p1 += len;
+				p2 += len;
+				if(p1 >= encoded1[i1][1]) {
+					i1++;
+					p1 = 0;
+				}
+				if(p2 >= encoded2[i2][1]) {
+					i2++;
+					p2 = 0;
+				}
+			}
+			return ans;
+		}
+	}// namespace product_of_two_run_length_encoded_arrays
 }// namespace leetcode
