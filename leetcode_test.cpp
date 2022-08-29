@@ -3602,4 +3602,16 @@ namespace leetcode {
 			ASSERT_EQ(4, Solution::findDuplicate(nums));
 		}
 	}// namespace find_the_duplicate_number
+
+	namespace trapping_rain_water {
+		TEST(trapping_rain_water, case1) {
+			vector height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+			ASSERT_EQ(6, Solution::trap(height));
+		}
+
+		TEST(trapping_rain_water, case2) {
+			vector height = {4, 2, 0, 3, 2, 5};
+			ASSERT_EQ(9, Solution::trap(height));
+		}
+	}// namespace trapping_rain_water
 }// namespace leetcode

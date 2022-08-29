@@ -2780,6 +2780,14 @@ namespace leetcode {
 			static int findDuplicate(vector<int> &nums);
 		};
 	}// namespace find_the_duplicate_number
+
+	/// \brief 42. 接雨水
+	namespace trapping_rain_water {
+		class Solution {
+		public:
+			static int trap(vector<int> &height);
+		};
+	}// namespace trapping_rain_water
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

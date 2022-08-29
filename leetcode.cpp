@@ -7668,4 +7668,26 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace find_the_duplicate_number
+
+	namespace trapping_rain_water {
+		int Solution::trap(vector<int> &height) {
+			vector<int> lmax(height.size(), 0);
+			vector<int> rmax(height.size(), 0);
+			int maximum = height[0];
+			for(int i = 0; i < height.size(); i++) {
+				maximum = max(maximum, height[i]);
+				lmax[i] = maximum;
+			}
+			maximum = height.back();
+			for(int i = height.size() - 1; i >= 0; i--) {
+				maximum = max(maximum, height[i]);
+				rmax[i] = maximum;
+			}
+			int ans = 0;
+			for(int i = 0; i < height.size(); i++) {
+				ans += min(lmax[i], rmax[i]) - height[i];
+			}
+			return ans;
+		}
+	}// namespace trapping_rain_water
 }// namespace leetcode
