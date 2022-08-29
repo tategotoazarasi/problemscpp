@@ -7814,4 +7814,21 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace max_consecutive_ones_iii
+
+	namespace sliding_window_maximum {
+		vector<int> Solution::maxSlidingWindow(vector<int> &nums, int k) {
+			multiset<int> ms;
+			for(int i = 0; i < k; i++) {
+				ms.insert(nums[i]);
+			}
+			vector<int> ans;
+			for(int i = 0, j = k; j < nums.size(); i++, j++) {
+				ans.emplace_back(*ms.rbegin());
+				ms.erase(ms.lower_bound(nums[i]));
+				ms.insert(nums[j]);
+			}
+			ans.emplace_back(*ms.rbegin());
+			return ans;
+		}
+	}// namespace sliding_window_maximum
 }// namespace leetcode

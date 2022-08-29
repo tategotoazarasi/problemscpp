@@ -2822,6 +2822,14 @@ namespace leetcode {
 			static int longestOnes(vector<int> &nums, int k);
 		};
 	}// namespace max_consecutive_ones_iii
+
+	/// \brief 239. 滑动窗口最大值
+	namespace sliding_window_maximum {
+		class Solution {
+		public:
+			static vector<int> maxSlidingWindow(vector<int> &nums, int k);
+		};
+	}// namespace sliding_window_maximum
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

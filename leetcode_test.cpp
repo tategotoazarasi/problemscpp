@@ -3662,4 +3662,18 @@ namespace leetcode {
 			ASSERT_EQ(10, Solution::longestOnes(nums, 3));
 		}
 	}// namespace max_consecutive_ones_iii
+
+	namespace sliding_window_maximum {
+		TEST(sliding_window_maximum, case1) {
+			vector nums = {1, 3, -1, -3, 5, 3, 6, 7};
+			vector ans  = {3, 3, 5, 5, 6, 7};
+			ASSERT_EQ(ans, Solution::maxSlidingWindow(nums, 3));
+		}
+
+		TEST(sliding_window_maximum, case2) {
+			vector nums = {1};
+			vector ans  = {1};
+			ASSERT_EQ(ans, Solution::maxSlidingWindow(nums, 1));
+		}
+	}// namespace sliding_window_maximum
 }// namespace leetcode
