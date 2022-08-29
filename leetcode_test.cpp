@@ -3640,4 +3640,14 @@ namespace leetcode {
 			ASSERT_EQ(5, Solution::lengthOfLongestSubstringTwoDistinct("ccaabbb"));
 		}
 	}// namespace longest_substring_with_at_most_two_distinct_characters
+
+	namespace longest_substring_with_at_most_k_distinct_characters {
+		TEST(longest_substring_with_at_most_k_distinct_characters, case1) {
+			ASSERT_EQ(3, Solution::lengthOfLongestSubstringKDistinct("eceba", 2));
+		}
+
+		TEST(longest_substring_with_at_most_k_distinct_characters, case2) {
+			ASSERT_EQ(2, Solution::lengthOfLongestSubstringKDistinct("aa", 1));
+		}
+	}// namespace longest_substring_with_at_most_k_distinct_characters
 }// namespace leetcode

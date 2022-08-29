@@ -7753,4 +7753,24 @@ namespace leetcode {
 			return l;
 		}
 	}// namespace longest_substring_with_at_most_two_distinct_characters
+
+	namespace longest_substring_with_at_most_k_distinct_characters {
+		int Solution::lengthOfLongestSubstringKDistinct(string s, int k) {
+			if(k == 0) {
+				return 0;
+			}
+			int l = 1;
+			int r = s.length();
+			while(l < r) {
+				int mid = (l + r) / 2 + 1;
+				int res = longest_substring_with_at_most_two_distinct_characters::Solution::getMinUniqueCharCnt(s, mid);
+				if(res > k) {
+					r = mid - 1;
+				} else {
+					l = mid;
+				}
+			}
+			return l;
+		}
+	}// namespace longest_substring_with_at_most_k_distinct_characters
 }// namespace leetcode

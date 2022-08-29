@@ -2805,6 +2805,14 @@ namespace leetcode {
 			static int lengthOfLongestSubstringTwoDistinct(string s);
 		};
 	}// namespace longest_substring_with_at_most_two_distinct_characters
+
+	/// \brief 340. 至多包含 K 个不同字符的最长子串
+	namespace longest_substring_with_at_most_k_distinct_characters {
+		class Solution {
+		public:
+			static int lengthOfLongestSubstringKDistinct(string s, int k);
+		};
+	}// namespace longest_substring_with_at_most_k_distinct_characters
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
