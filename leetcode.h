@@ -2796,6 +2796,15 @@ namespace leetcode {
 			static vector<vector<int>> findRLEArray(vector<vector<int>> &encoded1, vector<vector<int>> &encoded2);
 		};
 	}// namespace product_of_two_run_length_encoded_arrays
+
+	/// \brief 159. 至多包含两个不同字符的最长子串
+	namespace longest_substring_with_at_most_two_distinct_characters {
+		class Solution {
+		public:
+			static int getMinUniqueCharCnt(const string &s, int len);
+			static int lengthOfLongestSubstringTwoDistinct(string s);
+		};
+	}// namespace longest_substring_with_at_most_two_distinct_characters
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

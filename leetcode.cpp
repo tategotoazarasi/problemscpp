@@ -7719,4 +7719,38 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace product_of_two_run_length_encoded_arrays
+
+	namespace longest_substring_with_at_most_two_distinct_characters {
+		int Solution::getMinUniqueCharCnt(const string &s, int len) {
+			unordered_map<char, int> um;
+			for(int i = 0; i < len; i++) {
+				um[s[i]]++;
+			}
+			size_t ans = um.size();
+			for(int i = 0, j = len; j < s.length(); i++, j++) {
+				um[s[i]]--;
+				um[s[j]]++;
+				if(um[s[i]] == 0) {
+					um.erase(s[i]);
+				}
+				ans = min(ans, um.size());
+			}
+			return ans;
+		}
+
+		int Solution::lengthOfLongestSubstringTwoDistinct(string s) {
+			int l = 1;
+			int r = s.length();
+			while(l < r) {
+				int mid = (l + r) / 2 + 1;
+				int res = getMinUniqueCharCnt(s, mid);
+				if(res > 2) {
+					r = mid - 1;
+				} else {
+					l = mid;
+				}
+			}
+			return l;
+		}
+	}// namespace longest_substring_with_at_most_two_distinct_characters
 }// namespace leetcode

@@ -3630,4 +3630,14 @@ namespace leetcode {
 			ASSERT_EQ(output, Solution::findRLEArray(encoded1, encoded2));
 		}
 	}// namespace product_of_two_run_length_encoded_arrays
+
+	namespace longest_substring_with_at_most_two_distinct_characters {
+		TEST(longest_substring_with_at_most_two_distinct_characters, case1) {
+			ASSERT_EQ(3, Solution::lengthOfLongestSubstringTwoDistinct("eceba"));
+		}
+
+		TEST(longest_substring_with_at_most_two_distinct_characters, case2) {
+			ASSERT_EQ(5, Solution::lengthOfLongestSubstringTwoDistinct("ccaabbb"));
+		}
+	}// namespace longest_substring_with_at_most_two_distinct_characters
 }// namespace leetcode
