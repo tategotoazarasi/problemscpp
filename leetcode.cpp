@@ -7831,4 +7831,47 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace sliding_window_maximum
+
+	namespace minimum_window_substring {
+		string Solution::minWindow(string s, string t) {
+			string ans = s;
+			int l      = 0;
+			int r      = 0;
+			unordered_map<char, int> umt;
+			unordered_map<char, int> ums;
+			ums[s[0]]++;
+			for(char ch: t) {
+				umt[ch]++;
+			}
+			bool flag = true;
+			while(l <= r && r < s.length() && l < s.length()) {
+				while(!valid(ums, umt) && r + 1 < s.length()) {
+					ums[s[++r]]++;
+				}
+				while(valid(ums, umt) && l < s.length()) {
+					flag = false;
+					if(r - l + 1 < ans.length()) {
+						ans = s.substr(l, r - l + 1);
+					}
+					ums[s[l++]]--;
+				}
+				if(flag) {
+					return "";
+				}
+				if(r == s.length() - 1) {
+					break;
+				}
+			}
+			return ans;
+		}
+
+		bool Solution::valid(unordered_map<char, int> &ums, const unordered_map<char, int> &umt) {
+			for(auto &[k, v]: umt) {
+				if(!ums.count(k) || ums[k] < v) {
+					return false;
+				}
+			}
+			return true;
+		}
+	}// namespace minimum_window_substring
 }// namespace leetcode

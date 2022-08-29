@@ -3676,4 +3676,18 @@ namespace leetcode {
 			ASSERT_EQ(ans, Solution::maxSlidingWindow(nums, 1));
 		}
 	}// namespace sliding_window_maximum
+
+	namespace minimum_window_substring {
+		TEST(minimum_window_substring, case1) {
+			ASSERT_EQ("BANC", Solution::minWindow("ADOBECODEBANC", "ABC"));
+		}
+
+		TEST(minimum_window_substring, case2) {
+			ASSERT_EQ("a", Solution::minWindow("a", "a"));
+		}
+
+		TEST(minimum_window_substring, case3) {
+			ASSERT_EQ("", Solution::minWindow("a", "aa"));
+		}
+	}// namespace minimum_window_substring
 }// namespace leetcode

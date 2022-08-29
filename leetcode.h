@@ -2830,6 +2830,15 @@ namespace leetcode {
 			static vector<int> maxSlidingWindow(vector<int> &nums, int k);
 		};
 	}// namespace sliding_window_maximum
+
+	/// \brief 76. 最小覆盖子串
+	namespace minimum_window_substring {
+		class Solution {
+		public:
+			static bool valid(unordered_map<char, int> &ums, const unordered_map<char, int> &umt);
+			static string minWindow(string s, string t);
+		};
+	}// namespace minimum_window_substring
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
