@@ -2813,6 +2813,15 @@ namespace leetcode {
 			static int lengthOfLongestSubstringKDistinct(string s, int k);
 		};
 	}// namespace longest_substring_with_at_most_k_distinct_characters
+
+	/// \brief 1004. 最大连续1的个数 III
+	namespace max_consecutive_ones_iii {
+		class Solution {
+		public:
+			static int cntMinFlip(vector<int> &nums, int len);
+			static int longestOnes(vector<int> &nums, int k);
+		};
+	}// namespace max_consecutive_ones_iii
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

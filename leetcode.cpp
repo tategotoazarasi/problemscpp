@@ -7773,4 +7773,45 @@ namespace leetcode {
 			return l;
 		}
 	}// namespace longest_substring_with_at_most_k_distinct_characters
+
+	namespace max_consecutive_ones_iii {
+		int Solution::longestOnes(vector<int> &nums, int k) {
+			int l = 0;
+			int r = nums.size();
+			while(l < r) {
+				int mid = (l + r) / 2 + 1;
+				int res = cntMinFlip(nums, mid);
+				if(res > k) {
+					r = mid - 1;
+				} else {
+					l = mid;
+				}
+			}
+			return l;
+		}
+
+		int Solution::cntMinFlip(vector<int> &nums, int len) {
+			if(len == 0) {
+				return 0;
+			}
+			int ans     = 0;
+			int current = 0;
+			for(int i = 0; i < len; i++) {
+				if(nums[i] == 0) {
+					current++;
+				}
+			}
+			ans = current;
+			for(int i = 0, j = len; j < nums.size(); i++, j++) {
+				if(nums[i] == 0) {
+					current--;
+				}
+				if(nums[j] == 0) {
+					current++;
+				}
+				ans = min(ans, current);
+			}
+			return ans;
+		}
+	}// namespace max_consecutive_ones_iii
 }// namespace leetcode

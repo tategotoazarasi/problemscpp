@@ -3650,4 +3650,16 @@ namespace leetcode {
 			ASSERT_EQ(2, Solution::lengthOfLongestSubstringKDistinct("aa", 1));
 		}
 	}// namespace longest_substring_with_at_most_k_distinct_characters
+
+	namespace max_consecutive_ones_iii {
+		TEST(max_consecutive_ones_iii, case1) {
+			vector nums = {1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0};
+			ASSERT_EQ(6, Solution::longestOnes(nums, 2));
+		}
+
+		TEST(max_consecutive_ones_iii, case2) {
+			vector nums = {0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1};
+			ASSERT_EQ(10, Solution::longestOnes(nums, 3));
+		}
+	}// namespace max_consecutive_ones_iii
 }// namespace leetcode
