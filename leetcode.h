@@ -2847,6 +2847,20 @@ namespace leetcode {
 			static void wallsAndGates(vector<vector<int>> &rooms);
 		};
 	}// namespace walls_and_gates
+
+	/// \brief 417. 太平洋大西洋水流问题
+	namespace pacific_atlantic_waterflow {
+		struct myhash {
+			size_t operator()(const pair<int, int> &p) const;
+		};
+		struct myeq {
+			bool operator()(const pair<int, int> &p1, const pair<int, int> &p2) const;
+		};
+		class Solution {
+		public:
+			static vector<vector<int>> pacificAtlantic(vector<vector<int>> &heights);
+		};
+	}// namespace pacific_atlantic_waterflow
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

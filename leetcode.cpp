@@ -7900,4 +7900,72 @@ namespace leetcode {
 			}
 		}
 	}// namespace walls_and_gates
+
+	namespace pacific_atlantic_waterflow {
+		vector<vector<int>> Solution::pacificAtlantic(vector<vector<int>> &heights) {
+			int m = heights.size();
+			int n = heights[0].size();
+			unordered_set<pair<int, int>, myhash, myeq> pacific;
+			unordered_set<pair<int, int>, myhash, myeq> atlantic;
+			queue<pair<int, int>> q;
+			vector<vector<int>> ans;
+
+			for(int i = 0; i < m; i++) {
+				q.push({i, 0});
+				pacific.insert({i, 0});
+			}
+			for(int i = 1; i < n; i++) {
+				q.push({0, i});
+				pacific.insert({0, i});
+			}
+			while(!q.empty()) {
+				auto [x, y] = q.front();
+				q.pop();
+				pair<int, int> nexts[4] = {{x + 1, y}, {x - 1, y}, {x, y + 1}, {x, y - 1}};
+				for(auto &[next_x, next_y]: nexts) {
+					if(next_x >= 0 && next_y >= 0 && next_x < m && next_y < n && heights[next_x][next_y] >= heights[x][y] && !pacific.count({next_x, next_y})) {
+						pacific.insert({next_x, next_y});
+						q.push({next_x, next_y});
+					}
+				}
+			}
+
+			for(int i = 0; i < m; i++) {
+				q.push({i, n - 1});
+				atlantic.insert({i, n - 1});
+			}
+			for(int i = 0; i < n - 1; i++) {
+				q.push({m - 1, i});
+				atlantic.insert({m - 1, i});
+			}
+			while(!q.empty()) {
+				auto [x, y] = q.front();
+				q.pop();
+				pair<int, int> nexts[4] = {{x + 1, y}, {x - 1, y}, {x, y + 1}, {x, y - 1}};
+				for(auto &[next_x, next_y]: nexts) {
+					if(next_x >= 0 && next_y >= 0 && next_x < m && next_y < n && heights[next_x][next_y] >= heights[x][y] && !atlantic.count({next_x, next_y})) {
+						atlantic.insert({next_x, next_y});
+						q.push({next_x, next_y});
+					}
+				}
+			}
+
+			for(auto &p: atlantic) {
+				if(pacific.count(p)) {
+					vector<int> vec = {p.first, p.second};
+					ans.emplace_back(vec);
+				}
+			}
+			sort(ans.begin(), ans.end());
+			return ans;
+		}
+
+		bool myeq::operator()(const pair<int, int> &p1, const pair<int, int> &p2) const {
+			return p1 == p2;
+		}
+
+		size_t myhash::operator()(const pair<int, int> &p) const {
+			return p.first * 200 + p.second;
+		}
+	}// namespace pacific_atlantic_waterflow
 }// namespace leetcode

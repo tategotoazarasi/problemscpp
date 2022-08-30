@@ -3713,4 +3713,18 @@ namespace leetcode {
 			ASSERT_EQ(ans, rooms);
 		}
 	}// namespace walls_and_gates
+
+	namespace pacific_atlantic_waterflow {
+		TEST(pacific_atlantic_waterflow, case1) {
+			vector<vector<int>> heights = {{1, 2, 2, 3, 5}, {3, 2, 3, 4, 4}, {2, 4, 5, 3, 1}, {6, 7, 1, 4, 5}, {5, 1, 1, 2, 4}};
+			vector<vector<int>> ans     = {{0, 4}, {1, 3}, {1, 4}, {2, 2}, {3, 0}, {3, 1}, {4, 0}};
+			ASSERT_EQ(ans, Solution::pacificAtlantic(heights));
+		}
+
+		TEST(pacific_atlantic_waterflow, case2) {
+			vector<vector<int>> heights = {{2, 1}, {1, 2}};
+			vector<vector<int>> ans     = {{0, 0}, {0, 1}, {1, 0}, {1, 1}};
+			ASSERT_EQ(ans, Solution::pacificAtlantic(heights));
+		}
+	}// namespace pacific_atlantic_waterflow
 }// namespace leetcode
