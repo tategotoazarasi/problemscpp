@@ -2839,6 +2839,14 @@ namespace leetcode {
 			static string minWindow(string s, string t);
 		};
 	}// namespace minimum_window_substring
+
+	/// \brief 286. 墙与门
+	namespace walls_and_gates {
+		class Solution {
+		public:
+			static void wallsAndGates(vector<vector<int>> &rooms);
+		};
+	}// namespace walls_and_gates
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

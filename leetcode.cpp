@@ -7874,4 +7874,30 @@ namespace leetcode {
 			return true;
 		}
 	}// namespace minimum_window_substring
+
+	namespace walls_and_gates {
+		void Solution::wallsAndGates(vector<vector<int>> &rooms) {
+			int m = rooms.size();
+			int n = rooms[0].size();
+			queue<tuple<int, int, int>> q;
+			for(int i = 0; i < m; i++) {
+				for(int j = 0; j < n; j++) {
+					if(rooms[i][j] == 0) {
+						q.push({0, i, j});
+					}
+				}
+			}
+			while(!q.empty()) {
+				auto [d, x, y] = q.front();
+				q.pop();
+				pair<int, int> nexts[4] = {{x + 1, y}, {x - 1, y}, {x, y + 1}, {x, y - 1}};
+				for(auto &[next_x, next_y]: nexts) {
+					if(next_x >= 0 && next_y >= 0 && next_x < m && next_y < n && rooms[next_x][next_y] != -1 && rooms[next_x][next_y] != 0 && (rooms[next_x][next_y] == INT_MAX || rooms[next_x][next_y] > d + 1)) {
+						rooms[next_x][next_y] = d + 1;
+						q.push({d + 1, next_x, next_y});
+					}
+				}
+			}
+		}
+	}// namespace walls_and_gates
 }// namespace leetcode

@@ -3690,4 +3690,27 @@ namespace leetcode {
 			ASSERT_EQ("", Solution::minWindow("a", "aa"));
 		}
 	}// namespace minimum_window_substring
+
+	namespace walls_and_gates {
+		TEST(walls_and_gates, case1) {
+			vector<vector<int>> rooms = {{2147483647, -1, 0, 2147483647}, {2147483647, 2147483647, 2147483647, -1}, {2147483647, -1, 2147483647, -1}, {0, -1, 2147483647, 2147483647}};
+			vector<vector<int>> ans   = {{3, -1, 0, 1}, {2, 2, 1, -1}, {1, -1, 2, -1}, {0, -1, 3, 4}};
+			Solution::wallsAndGates(rooms);
+			ASSERT_EQ(ans, rooms);
+		}
+
+		TEST(walls_and_gates, case2) {
+			vector<vector<int>> rooms = {{2147483647}};
+			vector<vector<int>> ans   = {{2147483647}};
+			Solution::wallsAndGates(rooms);
+			ASSERT_EQ(ans, rooms);
+		}
+
+		TEST(walls_and_gates, case3) {
+			vector<vector<int>> rooms = {{0}};
+			vector<vector<int>> ans   = {{0}};
+			Solution::wallsAndGates(rooms);
+			ASSERT_EQ(ans, rooms);
+		}
+	}// namespace walls_and_gates
 }// namespace leetcode
