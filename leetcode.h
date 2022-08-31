@@ -2861,6 +2861,14 @@ namespace leetcode {
 			static vector<vector<int>> pacificAtlantic(vector<vector<int>> &heights);
 		};
 	}// namespace pacific_atlantic_waterflow
+
+	/// \brief 1469. 寻找所有的独生节点
+	namespace find_all_the_lonely_nodes {
+		class Solution {
+		public:
+			static vector<int> getLonelyNodes(TreeNode *root);
+		};
+	}// namespace find_all_the_lonely_nodes
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

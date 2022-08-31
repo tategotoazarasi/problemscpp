@@ -7968,4 +7968,28 @@ namespace leetcode {
 			return p.first * 200 + p.second;
 		}
 	}// namespace pacific_atlantic_waterflow
+
+	namespace find_all_the_lonely_nodes {
+		vector<int> Solution::getLonelyNodes(TreeNode *root) {
+			vector<int> ans;
+			queue<TreeNode *> q;
+			q.push(root);
+			while(!q.empty()) {
+				TreeNode *node = q.front();
+				q.pop();
+				if(node->left == nullptr && node->right != nullptr) {
+					ans.emplace_back(node->right->val);
+				} else if(node->right == nullptr && node->left != nullptr) {
+					ans.emplace_back(node->left->val);
+				}
+				if(node->left != nullptr) {
+					q.push(node->left);
+				}
+				if(node->right != nullptr) {
+					q.push(node->right);
+				}
+			}
+			return ans;
+		}
+	}// namespace find_all_the_lonely_nodes
 }// namespace leetcode
