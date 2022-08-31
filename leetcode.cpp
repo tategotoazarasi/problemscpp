@@ -7992,4 +7992,30 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace find_all_the_lonely_nodes
+
+	namespace kill_process {
+		vector<int> Solution::killProcess(vector<int> &pid, vector<int> &ppid, int kill) {
+			unordered_map<int, Node *> um;
+			for(const auto &v: pid) {
+				um[v] = new Node(v);
+			}
+			for(int i = 0; i < pid.size(); i++) {
+				if(ppid[i] != 0) {
+					um[ppid[i]]->children.insert(um[pid[i]]);
+				}
+			}
+			vector<int> ans;
+			queue<Node *> q;
+			q.push(um[kill]);
+			while(!q.empty()) {
+				Node *node = q.front();
+				q.pop();
+				ans.emplace_back(node->val);
+				for(auto next: node->children) {
+					q.push(next);
+				}
+			}
+			return ans;
+		}
+	}// namespace kill_process
 }// namespace leetcode

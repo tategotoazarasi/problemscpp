@@ -2869,6 +2869,19 @@ namespace leetcode {
 			static vector<int> getLonelyNodes(TreeNode *root);
 		};
 	}// namespace find_all_the_lonely_nodes
+
+	/// \brief 582. 杀掉进程
+	namespace kill_process {
+		struct Node {
+			int val;
+			unordered_set<Node *> children;
+			Node(int val): val(val) {}
+		};
+		class Solution {
+		public:
+			static vector<int> killProcess(vector<int> &pid, vector<int> &ppid, int kill);
+		};
+	}// namespace kill_process
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

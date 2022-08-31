@@ -3727,4 +3727,20 @@ namespace leetcode {
 			ASSERT_EQ(ans, Solution::pacificAtlantic(heights));
 		}
 	}// namespace pacific_atlantic_waterflow
+
+	namespace kill_process {
+		TEST(kill_process, case1) {
+			vector pid  = {1, 3, 10, 5};
+			vector ppid = {3, 0, 5, 3};
+			vector ans  = {5, 10};
+			ASSERT_EQ(ans, Solution::killProcess(pid, ppid, 5));
+		}
+
+		TEST(kill_process, case2) {
+			vector pid  = {1};
+			vector ppid = {0};
+			vector ans  = {1};
+			ASSERT_EQ(ans, Solution::killProcess(pid, ppid, 1));
+		}
+	}// namespace kill_process
 }// namespace leetcode
