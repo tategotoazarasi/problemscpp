@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['y_0',['y',['../dc/d66/a00630.html#a7cc1ae7bbad61542a27009eea419fecf',1,'acwing::acwing2060::point::y()'],['../df/dcf/a00642.html#a907203fb6ce188e3e52f7d22b989f832',1,'acwing::acwing2019::point::y()'],['../da/d90/a00826.html#ada38b57197bf006a785df93abb7cb190',1,'acwing::acwing1929::step::y()'],['../d9/dfd/a01610.html#a8bceaeb02a938e820304bec2b44a770b',1,'leetcode::escape_a_large_maze::point::y()'],['../d5/dbf/a03130.html#aa176606bd44f02ab3a991687bef3a219',1,'pat::b::b1082::player::y()']]],
-  ['year_1',['year',['../d8/d4f/a03102.html#a69b428c8ab34d951a9728cb5ddb9d24a',1,'pat::b::b1028::Person']]]
+  ['y_0',['y',['../d4/d2a/a00632.html#a7cc1ae7bbad61542a27009eea419fecf',1,'acwing::acwing2060::point::y()'],['../d9/d0f/a00644.html#a907203fb6ce188e3e52f7d22b989f832',1,'acwing::acwing2019::point::y()'],['../d8/d64/a00828.html#ada38b57197bf006a785df93abb7cb190',1,'acwing::acwing1929::step::y()'],['../d5/d84/a01612.html#a8bceaeb02a938e820304bec2b44a770b',1,'leetcode::escape_a_large_maze::point::y()'],['../d2/d19/a03144.html#aa176606bd44f02ab3a991687bef3a219',1,'pat::b::b1082::player::y()']]],
+  ['year_1',['year',['../d8/d96/a03116.html#a69b428c8ab34d951a9728cb5ddb9d24a',1,'pat::b::b1028::Person']]]
 ];
