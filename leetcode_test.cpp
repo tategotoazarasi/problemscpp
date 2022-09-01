@@ -3743,4 +3743,21 @@ namespace leetcode {
 			ASSERT_EQ(ans, Solution::killProcess(pid, ppid, 1));
 		}
 	}// namespace kill_process
+
+	namespace open_the_lock {
+		TEST(open_the_lock, case1) {
+			vector<string> deadends = {"0201", "0101", "0102", "1212", "2002"};
+			ASSERT_EQ(6, Solution::openLock(deadends, "0202"));
+		}
+
+		TEST(open_the_lock, case2) {
+			vector<string> deadends = {"8888"};
+			ASSERT_EQ(1, Solution::openLock(deadends, "0009"));
+		}
+
+		TEST(open_the_lock, case3) {
+			vector<string> deadends = {"8887", "8889", "8878", "8898", "8788", "8988", "7888", "9888"};
+			ASSERT_EQ(-1, Solution::openLock(deadends, "8888"));
+		}
+	}// namespace open_the_lock
 }// namespace leetcode

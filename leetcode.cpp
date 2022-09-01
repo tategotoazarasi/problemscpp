@@ -8067,4 +8067,50 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace all_nodes_distance_k_in_binary_tree
+
+	namespace open_the_lock {
+		int Solution::openLock(vector<string> &deadends, string target) {
+			unordered_set<string> deads;
+			unordered_set<string> vis;
+			for(auto &deadend: deadends) {
+				deads.insert(deadend);
+			}
+			auto get_nexts = [](const string &code) {
+				vector<string> ans(8, code);
+				ans[0][0] = (ans[0][0] - '0' + 10 + 1) % 10 + '0';
+				ans[1][0] = (ans[1][0] - '0' + 10 - 1) % 10 + '0';
+				ans[2][1] = (ans[2][1] - '0' + 10 + 1) % 10 + '0';
+				ans[3][1] = (ans[3][1] - '0' + 10 - 1) % 10 + '0';
+				ans[4][2] = (ans[4][2] - '0' + 10 + 1) % 10 + '0';
+				ans[5][2] = (ans[5][2] - '0' + 10 - 1) % 10 + '0';
+				ans[6][3] = (ans[6][3] - '0' + 10 + 1) % 10 + '0';
+				ans[7][3] = (ans[7][3] - '0' + 10 - 1) % 10 + '0';
+				return ans;
+			};
+			queue<pair<int, string>> q;
+			q.push({0, "0000"});
+			while(!q.empty()) {
+				auto [step, code] = q.front();
+				if(code == target) {
+					return step;
+				}
+				vis.insert(code);
+				q.pop();
+				if(deads.count(code)) {
+					continue;
+				}
+				auto nexts = get_nexts(code);
+				for(auto &next: nexts) {
+					if(!vis.count(next)) {
+						vis.insert(next);
+						if(next == target) {
+							return step + 1;
+						}
+						q.push({step + 1, next});
+					}
+				}
+			}
+			return -1;
+		}
+	}// namespace open_the_lock
 }// namespace leetcode

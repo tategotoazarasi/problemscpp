@@ -2895,6 +2895,14 @@ namespace leetcode {
 			static vector<int> distanceK(TreeNode *root, TreeNode *target, int k);
 		};
 	}// namespace all_nodes_distance_k_in_binary_tree
+
+	/// \brief 752. 打开转盘锁
+	namespace open_the_lock {
+		class Solution {
+		public:
+			static int openLock(vector<string> &deadends, string target);
+		};
+	}// namespace open_the_lock
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
