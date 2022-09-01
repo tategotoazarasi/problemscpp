@@ -2882,6 +2882,19 @@ namespace leetcode {
 			static vector<int> killProcess(vector<int> &pid, vector<int> &ppid, int kill);
 		};
 	}// namespace kill_process
+
+	/// \brief 863. 二叉树中所有距离为 K 的结点
+	namespace all_nodes_distance_k_in_binary_tree {
+		struct Node {
+			int val;
+			unordered_set<Node *> siblings;
+			Node(int val): val(val) {}
+		};
+		class Solution {
+		public:
+			static vector<int> distanceK(TreeNode *root, TreeNode *target, int k);
+		};
+	}// namespace all_nodes_distance_k_in_binary_tree
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -8018,4 +8018,53 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace kill_process
+
+	namespace all_nodes_distance_k_in_binary_tree {
+		vector<int> Solution::distanceK(TreeNode *root, TreeNode *target, int k) {
+			if(k == 0) {
+				return {target->val};
+			}
+			unordered_map<TreeNode *, Node *> um;
+			vector<int> ans;
+			queue<TreeNode *> q1;
+			q1.push(root);
+			um[root] = new Node(root->val);
+			while(!q1.empty()) {
+				TreeNode *tn = q1.front();
+				q1.pop();
+				if(tn->left != nullptr) {
+					q1.push(tn->left);
+					um[tn->left] = new Node(tn->left->val);
+					um[tn->left]->siblings.insert(um[tn]);
+					um[tn]->siblings.insert(um[tn->left]);
+				}
+				if(tn->right != nullptr) {
+					q1.push(tn->right);
+					um[tn->right] = new Node(tn->right->val);
+					um[tn->right]->siblings.insert(um[tn]);
+					um[tn]->siblings.insert(um[tn->right]);
+				}
+			}
+			Node *node = um[target];
+			unordered_set<Node *> vis;
+			queue<pair<int, Node *>> q2;
+			q2.push({0, node});
+			while(!q2.empty()) {
+				auto [d, nd] = q2.front();
+				q2.pop();
+				vis.insert(nd);
+				for(auto sibling: nd->siblings) {
+					if(!vis.count(sibling)) {
+						vis.insert(sibling);
+						if(d + 1 == k) {
+							ans.emplace_back(sibling->val);
+						} else {
+							q2.push({d + 1, sibling});
+						}
+					}
+				}
+			}
+			return ans;
+		}
+	}// namespace all_nodes_distance_k_in_binary_tree
 }// namespace leetcode
