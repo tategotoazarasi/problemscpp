@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::trapping_rain_water::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,82 +63,18 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d0/d4a/a00147.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d9/da1/a00396.html">trapping_rain_water</a></li><li class="navelem"><a class="el" href="../../df/d57/a02590.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d0/d4a/a00147.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d9/da1/a00396.html">trapping_rain_water</a></li><li class="navelem"><a class="el" href="../../d6/dfc/a02593.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="../../d4/d9e/a02587.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::trapping_rain_water::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::trapping_rain_water::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a3a9d5bd484d5e346bb1a51cf127359a3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d57/a02590.html#a3a9d5bd484d5e346bb1a51cf127359a3">trap</a> (vector&lt; int &gt; &amp;height)</td></tr>
-<tr class="separator:a3a9d5bd484d5e346bb1a51cf127359a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02786">2786</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="a3a9d5bd484d5e346bb1a51cf127359a3" name="a3a9d5bd484d5e346bb1a51cf127359a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a9d5bd484d5e346bb1a51cf127359a3">&#9670;&nbsp;</a></span>trap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int leetcode::trapping_rain_water::Solution::trap </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>height</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07673">7673</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07673" name="l07673"></a><span class="lineno"> 7673</span>                                              {</div>
-<div class="line"><a id="l07674" name="l07674"></a><span class="lineno"> 7674</span>            vector&lt;int&gt; lmax(height.size(), 0);</div>
-<div class="line"><a id="l07675" name="l07675"></a><span class="lineno"> 7675</span>            vector&lt;int&gt; rmax(height.size(), 0);</div>
-<div class="line"><a id="l07676" name="l07676"></a><span class="lineno"> 7676</span>            <span class="keywordtype">int</span> maximum = height[0];</div>
-<div class="line"><a id="l07677" name="l07677"></a><span class="lineno"> 7677</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; height.size(); i++) {</div>
-<div class="line"><a id="l07678" name="l07678"></a><span class="lineno"> 7678</span>                maximum = max(maximum, height[i]);</div>
-<div class="line"><a id="l07679" name="l07679"></a><span class="lineno"> 7679</span>                lmax[i] = maximum;</div>
-<div class="line"><a id="l07680" name="l07680"></a><span class="lineno"> 7680</span>            }</div>
-<div class="line"><a id="l07681" name="l07681"></a><span class="lineno"> 7681</span>            maximum = height.back();</div>
-<div class="line"><a id="l07682" name="l07682"></a><span class="lineno"> 7682</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = height.size() - 1; i &gt;= 0; i--) {</div>
-<div class="line"><a id="l07683" name="l07683"></a><span class="lineno"> 7683</span>                maximum = max(maximum, height[i]);</div>
-<div class="line"><a id="l07684" name="l07684"></a><span class="lineno"> 7684</span>                rmax[i] = maximum;</div>
-<div class="line"><a id="l07685" name="l07685"></a><span class="lineno"> 7685</span>            }</div>
-<div class="line"><a id="l07686" name="l07686"></a><span class="lineno"> 7686</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l07687" name="l07687"></a><span class="lineno"> 7687</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; height.size(); i++) {</div>
-<div class="line"><a id="l07688" name="l07688"></a><span class="lineno"> 7688</span>                ans += min(lmax[i], rmax[i]) - height[i];</div>
-<div class="line"><a id="l07689" name="l07689"></a><span class="lineno"> 7689</span>            }</div>
-<div class="line"><a id="l07690" name="l07690"></a><span class="lineno"> 7690</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l07691" name="l07691"></a><span class="lineno"> 7691</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l03607">leetcode::trapping_rain_water::TEST()</a>.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a></li>
-<li><a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="../../d6/dfc/a02593.html">leetcode::trapping_rain_water::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../d6/dfc/a02593.html#a3a9d5bd484d5e346bb1a51cf127359a3">trap</a>(vector&lt; int &gt; &amp;height)</td><td class="entry"><a class="el" href="../../d6/dfc/a02593.html">leetcode::trapping_rain_water::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2

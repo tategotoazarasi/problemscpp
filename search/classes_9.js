@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['msg_0',['msg',['../d0/d1f/a01734.html',1,'leetcode::maximum_good_people_based_on_statements']]],
-  ['myeq_1',['myeq',['../db/d99/a02626.html',1,'leetcode::pacific_atlantic_waterflow']]],
-  ['myhash_2',['myhash',['../dc/ddf/a02622.html',1,'leetcode::pacific_atlantic_waterflow']]],
-  ['myhashmap_3',['MyHashMap',['../d3/d41/a02530.html',1,'leetcode::design_hashmap']]],
-  ['mylinkedlist_4',['MyLinkedList',['../df/d23/a02558.html',1,'leetcode::design_linked_list']]],
-  ['myqueue_5',['MyQueue',['../d5/dd0/a01438.html',1,'acwing::acwing20']]]
+  ['msg_0',['msg',['../df/d2e/a01737.html',1,'leetcode::maximum_good_people_based_on_statements']]],
+  ['mycmp_1',['mycmp',['../d6/dbb/a02669.html',1,'leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid']]],
+  ['myeq_2',['myeq',['../d8/d70/a02629.html',1,'leetcode::pacific_atlantic_waterflow']]],
+  ['myhash_3',['myhash',['../d5/d95/a02625.html',1,'leetcode::pacific_atlantic_waterflow']]],
+  ['myhashmap_4',['MyHashMap',['../dc/db6/a02533.html',1,'leetcode::design_hashmap']]],
+  ['mylinkedlist_5',['MyLinkedList',['../d1/d67/a02561.html',1,'leetcode::design_linked_list']]],
+  ['myqueue_6',['MyQueue',['../d5/df9/a01441.html',1,'acwing::acwing20']]]
 ];
