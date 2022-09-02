@@ -2903,6 +2903,15 @@ namespace leetcode {
 			static int openLock(vector<string> &deadends, string target);
 		};
 	}// namespace open_the_lock
+
+	/// \brief 1319. 连通网络的操作次数
+	namespace number_of_operations_to_make_network_connected {
+		class Solution {
+		public:
+			static void dfs(int &edge_cnt, int &node_cnt, unordered_set<int> &vis, int node, vector<unordered_set<int>> &g);
+			static int makeConnected(int n, vector<vector<int>> &connections);
+		};
+	}// namespace number_of_operations_to_make_network_connected
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -3760,4 +3760,26 @@ namespace leetcode {
 			ASSERT_EQ(-1, Solution::openLock(deadends, "8888"));
 		}
 	}// namespace open_the_lock
+
+	namespace number_of_operations_to_make_network_connected {
+		TEST(number_of_operations_to_make_network_connected, case1) {
+			vector<vector<int>> connections = {{0, 1}, {0, 2}, {1, 2}};
+			ASSERT_EQ(1, Solution::makeConnected(4, connections));
+		}
+
+		TEST(number_of_operations_to_make_network_connected, case2) {
+			vector<vector<int>> connections = {{0, 1}, {0, 2}, {0, 3}, {1, 2}, {1, 3}};
+			ASSERT_EQ(2, Solution::makeConnected(6, connections));
+		}
+
+		TEST(number_of_operations_to_make_network_connected, case3) {
+			vector<vector<int>> connections = {{0, 1}, {0, 2}, {0, 3}, {1, 2}};
+			ASSERT_EQ(-1, Solution::makeConnected(6, connections));
+		}
+
+		TEST(number_of_operations_to_make_network_connected, case4) {
+			vector<vector<int>> connections = {{0, 1}, {0, 2}, {3, 4}, {2, 3}};
+			ASSERT_EQ(0, Solution::makeConnected(5, connections));
+		}
+	}// namespace number_of_operations_to_make_network_connected
 }// namespace leetcode

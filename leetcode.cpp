@@ -8113,4 +8113,42 @@ namespace leetcode {
 			return -1;
 		}
 	}// namespace open_the_lock
+
+	namespace number_of_operations_to_make_network_connected {
+		int Solution::makeConnected(int n, vector<vector<int>> &connections) {
+			vector<unordered_set<int>> g(n);
+			for(auto &connection: connections) {
+				g[connection[0]].insert(connection[1]);
+				g[connection[1]].insert(connection[0]);
+			}
+			int group_cnt      = 0;
+			int free_edges_cnt = 0;
+			unordered_set<int> vis;
+			for(int i = 0; i < n; i++) {
+				if(!vis.count(i)) {
+					int edge_cnt = 0;
+					int node_cnt = 0;
+					dfs(edge_cnt, node_cnt, vis, i, g);
+					group_cnt++;
+					free_edges_cnt += edge_cnt / 2 - node_cnt + 1;
+				}
+			}
+			if(free_edges_cnt < group_cnt - 1) {
+				return -1;
+			} else {
+				return group_cnt - 1;
+			}
+		}
+
+		void Solution::dfs(int &edge_cnt, int &node_cnt, unordered_set<int> &vis, int node, vector<unordered_set<int>> &g) {
+			node_cnt++;
+			edge_cnt += g[node].size();
+			vis.insert(node);
+			for(auto next: g[node]) {
+				if(!vis.count(next)) {
+					dfs(edge_cnt, node_cnt, vis, next, g);
+				}
+			}
+		}
+	}// namespace number_of_operations_to_make_network_connected
 }// namespace leetcode
