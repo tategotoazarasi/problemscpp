@@ -3782,4 +3782,31 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::makeConnected(5, connections));
 		}
 	}// namespace number_of_operations_to_make_network_connected
+
+	namespace minimum_cost_to_make_at_least_one_valid_path_in_a_grid {
+		TEST(minimum_cost_to_make_at_least_one_valid_path_in_a_grid, case1) {
+			vector<vector<int>> grid = {{1, 1, 1, 1}, {2, 2, 2, 2}, {1, 1, 1, 1}, {2, 2, 2, 2}};
+			ASSERT_EQ(3, Solution::minCost(grid));
+		}
+
+		TEST(minimum_cost_to_make_at_least_one_valid_path_in_a_grid, case2) {
+			vector<vector<int>> grid = {{1, 1, 3}, {3, 2, 2}, {1, 1, 4}};
+			ASSERT_EQ(0, Solution::minCost(grid));
+		}
+
+		TEST(minimum_cost_to_make_at_least_one_valid_path_in_a_grid, case3) {
+			vector<vector<int>> grid = {{1, 2}, {4, 3}};
+			ASSERT_EQ(1, Solution::minCost(grid));
+		}
+
+		TEST(minimum_cost_to_make_at_least_one_valid_path_in_a_grid, case4) {
+			vector<vector<int>> grid = {{2, 2, 2}, {2, 2, 2}};
+			ASSERT_EQ(3, Solution::minCost(grid));
+		}
+
+		TEST(minimum_cost_to_make_at_least_one_valid_path_in_a_grid, case5) {
+			vector<vector<int>> grid = {{4}};
+			ASSERT_EQ(0, Solution::minCost(grid));
+		}
+	}// namespace minimum_cost_to_make_at_least_one_valid_path_in_a_grid
 }// namespace leetcode

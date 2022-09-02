@@ -8151,4 +8151,74 @@ namespace leetcode {
 			}
 		}
 	}// namespace number_of_operations_to_make_network_connected
+
+	namespace minimum_cost_to_make_at_least_one_valid_path_in_a_grid {
+		int Solution::minCost(vector<vector<int>> &grid) {
+			int m = grid.size();
+			int n = grid[0].size();
+			vector<vector<Node *>> g(m, vector<Node *>(n, nullptr));
+			for(int i = 0; i < m; i++) {
+				for(int j = 0; j < n; j++) {
+					g[i][j] = new Node(i, j);
+				}
+			}
+			for(int i = 0; i < m; i++) {
+				for(int j = 0; j < n; j++) {
+					pair<int, int> nexts[4] = {{i + 1, j}, {i - 1, j}, {i, j + 1}, {i, j - 1}};
+					for(auto [x, y]: nexts) {
+						if(x >= 0 && x < m && y >= 0 && y < n) {
+							g[i][j]->siblings.insert(make_pair(g[x][y], 1));
+						}
+					}
+					int x = i;
+					int y = j;
+					switch(grid[i][j]) {
+						case 1:
+							y++;
+							break;
+						case 2:
+							y--;
+							break;
+						case 3:
+							x++;
+							break;
+						case 4:
+							x--;
+							break;
+					}
+					if(x >= 0 && x < m && y >= 0 && y < n) {
+						g[i][j]->siblings[g[x][y]] = 0;
+					}
+				}
+			}
+			priority_queue<pair<int, Node *>, vector<pair<int, Node *>>, mycmp> pq;
+			unordered_set<Node *> vis;
+			pq.push({0, g[0][0]});
+			while(!pq.empty()) {
+				auto [cost, node] = pq.top();
+				pq.pop();
+				if(vis.count(node)) {
+					continue;
+				}
+				vis.insert(node);
+				if(node->x == m - 1 && node->y == n - 1) {
+					return cost;
+				}
+				for(auto [sibling, c]: node->siblings) {
+					if(!vis.count(sibling)) {
+						pq.push({cost + c, sibling});
+					}
+				}
+			}
+			return 0;
+		}
+
+		bool mycmp::operator()(const pair<int, Node *> &p1, const pair<int, Node *> &p2) const {
+			if(p1.first != p2.first) {
+				return p1.first > p2.first;
+			} else {
+				return (p1.second->x + p1.second->y) < (p2.second->x + p2.second->y);
+			}
+		}
+	}// namespace minimum_cost_to_make_at_least_one_valid_path_in_a_grid
 }// namespace leetcode

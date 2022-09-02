@@ -2912,6 +2912,23 @@ namespace leetcode {
 			static int makeConnected(int n, vector<vector<int>> &connections);
 		};
 	}// namespace number_of_operations_to_make_network_connected
+
+	/// \brief 1368. 使网格图至少有一条有效路径的最小代价
+	namespace minimum_cost_to_make_at_least_one_valid_path_in_a_grid {
+		struct Node {
+			int x;
+			int y;
+			unordered_map<Node *, int> siblings;
+			Node(int x, int y): x(x), y(y) {}
+		};
+		struct mycmp {
+			bool operator()(const pair<int, Node *> &p1, const pair<int, Node *> &p2) const;
+		};
+		class Solution {
+		public:
+			static int minCost(vector<vector<int>> &grid);
+		};
+	}// namespace minimum_cost_to_make_at_least_one_valid_path_in_a_grid
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
