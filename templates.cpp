@@ -2,6 +2,7 @@
 #include <cstring>
 #include <numeric>
 #include <sstream>
+#include <unordered_set>
 
 using namespace std;
 
@@ -510,4 +511,12 @@ bool UnionFind::same(int x, int y) { return find(x) == find(y); }
 
 int UnionFind::get_size(int x) {
 	return size[find(x)];
+}
+
+unsigned UnionFind::count() {
+	unordered_set<int> us;
+	for(int i = 0; i < size.size(); i++) {
+		us.insert(find(i));
+	}
+	return us.size();
 }

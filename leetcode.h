@@ -2929,6 +2929,15 @@ namespace leetcode {
 			static int minCost(vector<vector<int>> &grid);
 		};
 	}// namespace minimum_cost_to_make_at_least_one_valid_path_in_a_grid
+
+	/// \brief 1192. 查找集群内的「关键连接」
+	namespace critical_connections_in_a_network {
+		class Solution {
+		public:
+			static void tarjan(int prev, int &step, vector<int> &dfn, int node, vector<unordered_set<int>> &g, vector<int> &low, vector<vector<int>> &ans);
+			static vector<vector<int>> criticalConnections(int n, vector<vector<int>> &connections);
+		};
+	}// namespace critical_connections_in_a_network
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

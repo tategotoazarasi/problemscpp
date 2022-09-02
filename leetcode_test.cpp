@@ -3809,4 +3809,24 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::minCost(grid));
 		}
 	}// namespace minimum_cost_to_make_at_least_one_valid_path_in_a_grid
+
+	namespace critical_connections_in_a_network {
+		TEST(critical_connections_in_a_network, case1) {
+			vector<vector<int>> connections = {{0, 1}, {1, 2}, {2, 0}, {1, 3}};
+			vector<vector<int>> ans         = {{1, 3}};
+			ASSERT_EQ(ans, Solution::criticalConnections(4, connections));
+		}
+
+		TEST(critical_connections_in_a_network, case2) {
+			vector<vector<int>> connections = {{0, 1}};
+			vector<vector<int>> ans         = {{0, 1}};
+			ASSERT_EQ(ans, Solution::criticalConnections(2, connections));
+		}
+
+		TEST(critical_connections_in_a_network, case3) {
+			vector<vector<int>> connections = {{0, 1}, {1, 2}, {2, 0}, {1, 3}, {3, 4}, {4, 5}, {5, 3}};
+			vector<vector<int>> ans         = {{1, 3}};
+			ASSERT_EQ(ans, Solution::criticalConnections(6, connections));
+		}
+	}// namespace critical_connections_in_a_network
 }// namespace leetcode

@@ -99,4 +99,5 @@ public:
 	void unite(int x, int y);
 	bool same(int x, int y);
 	int get_size(int x);
+	unsigned count();
 };

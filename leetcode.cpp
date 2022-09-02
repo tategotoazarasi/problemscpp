@@ -8221,4 +8221,42 @@ namespace leetcode {
 			}
 		}
 	}// namespace minimum_cost_to_make_at_least_one_valid_path_in_a_grid
+
+	namespace critical_connections_in_a_network {
+		vector<vector<int>> Solution::criticalConnections(int n, vector<vector<int>> &connections) {
+			vector<unordered_set<int>> g(n);
+			for(auto &conn: connections) {
+				g[conn[0]].insert(conn[1]);
+				g[conn[1]].insert(conn[0]);
+			}
+			vector<vector<int>> ans;
+			vector<int> dfn(n, -1);
+			vector<int> low(n, -1);
+			unordered_set<int> vis;
+			int step = 0;
+			for(int i = 0; i < n; i++) {
+				if(dfn[i] == -1) {
+					step = 0;
+					tarjan(-1, step, dfn, i, g, low, ans);
+				}
+			}
+			return ans;
+		}
+
+		void Solution::tarjan(int prev, int &step, vector<int> &dfn, int node, vector<unordered_set<int>> &g, vector<int> &low, vector<vector<int>> &ans) {
+			dfn[node] = step;
+			low[node] = step;
+			for(auto &next: g[node]) {
+				if(dfn[next] == -1) {
+					tarjan(node, ++step, dfn, next, g, low, ans);
+				}
+				if(next != prev) {
+					low[node] = min(low[node], low[next]);
+				}
+				if(dfn[node] < low[next]) {
+					ans.push_back({node, next});
+				}
+			}
+		}
+	}// namespace critical_connections_in_a_network
 }// namespace leetcode
