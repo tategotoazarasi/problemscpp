@@ -2938,6 +2938,15 @@ namespace leetcode {
 			static vector<vector<int>> criticalConnections(int n, vector<vector<int>> &connections);
 		};
 	}// namespace critical_connections_in_a_network
+
+	/// \brief 254. 因子的组合
+	namespace factor_combinations {
+		class Solution {
+		public:
+			static vector<vector<int>> getFactorsWithMin(int n, int minimum);
+			static vector<vector<int>> getFactors(int n);
+		};
+	}// namespace factor_combinations
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

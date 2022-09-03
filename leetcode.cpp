@@ -8259,4 +8259,24 @@ namespace leetcode {
 			}
 		}
 	}// namespace critical_connections_in_a_network
+
+	namespace factor_combinations {
+		vector<vector<int>> Solution::getFactorsWithMin(int n, int minimum) {
+			vector<vector<int>> ans;
+			for(int i = minimum; i <= sqrt(n); i++) {
+				if(n % i == 0) {
+					ans.push_back({i, n / i});
+					auto res = getFactorsWithMin(n / i, i);
+					for(auto &vec: res) {
+						ans.push_back({i});
+						ans.back().insert(ans.back().end(), vec.begin(), vec.end());
+					}
+				}
+			}
+			return ans;
+		}
+		vector<vector<int>> Solution::getFactors(int n) {
+			return getFactorsWithMin(n, 2);
+		}
+	}// namespace factor_combinations
 }// namespace leetcode

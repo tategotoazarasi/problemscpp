@@ -3829,4 +3829,26 @@ namespace leetcode {
 			ASSERT_EQ(ans, Solution::criticalConnections(6, connections));
 		}
 	}// namespace critical_connections_in_a_network
+
+	namespace factor_combinations {
+		TEST(factor_combinations, case1) {
+			vector<vector<int>> ans = {};
+			ASSERT_EQ(ans, Solution::getFactors(1));
+		}
+
+		TEST(factor_combinations, case2) {
+			vector<vector<int>> ans = {};
+			ASSERT_EQ(ans, Solution::getFactors(37));
+		}
+
+		TEST(factor_combinations, case3) {
+			vector<vector<int>> ans = {{2, 6}, {2, 2, 3}, {3, 4}};
+			ASSERT_EQ(ans, Solution::getFactors(12));
+		}
+
+		TEST(factor_combinations, case4) {
+			vector<vector<int>> ans = {{2, 16}, {2, 2, 8}, {2, 2, 2, 4}, {2, 2, 2, 2, 2}, {2, 4, 4}, {4, 8}};
+			ASSERT_EQ(ans, Solution::getFactors(32));
+		}
+	}// namespace factor_combinations
 }// namespace leetcode
