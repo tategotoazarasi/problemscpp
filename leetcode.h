@@ -2947,6 +2947,14 @@ namespace leetcode {
 			static vector<vector<int>> getFactors(int n);
 		};
 	}// namespace factor_combinations
+
+	/// \brief 394. 字符串解码
+	namespace decode_string {
+		class Solution {
+		public:
+			static string decodeString(string s);
+		};
+	}// namespace decode_string
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

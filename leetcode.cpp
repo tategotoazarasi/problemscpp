@@ -8275,8 +8275,49 @@ namespace leetcode {
 			}
 			return ans;
 		}
+
 		vector<vector<int>> Solution::getFactors(int n) {
 			return getFactorsWithMin(n, 2);
 		}
 	}// namespace factor_combinations
+
+	namespace decode_string {
+		string Solution::decodeString(string s) {
+			int i = 0;
+			vector<int> cnt;
+			vector<string> strs;
+			while(i < s.length()) {
+				if(isalpha(s[i])) {
+					cnt.emplace_back(1);
+					strs.emplace_back(string(1, s[i]));
+					i++;
+				} else if(isdigit(s[i])) {
+					int j = i + 1;
+					while(j < s.length() && isdigit(s[j])) {
+						j++;
+					}
+					cnt.emplace_back(stoi(s.substr(i, j - i)));
+					i         = j;
+					int level = 1;
+					while(level > 0) {
+						j++;
+						if(s[j] == '[') {
+							level++;
+						} else if(s[j] == ']') {
+							level--;
+						}
+					}
+					strs.emplace_back(decodeString(s.substr(i + 1, j - i - 1)));
+					i = j + 1;
+				}
+			}
+			ostringstream oss;
+			for(i = 0; i < cnt.size(); i++) {
+				for(int j = 0; j < cnt[i]; j++) {
+					oss << strs[i];
+				}
+			}
+			return oss.str();
+		}
+	}// namespace decode_string
 }// namespace leetcode

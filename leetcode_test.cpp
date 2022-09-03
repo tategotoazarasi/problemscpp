@@ -3851,4 +3851,22 @@ namespace leetcode {
 			ASSERT_EQ(ans, Solution::getFactors(32));
 		}
 	}// namespace factor_combinations
+
+	namespace decode_string {
+		TEST(decode_string, case1) {
+			ASSERT_EQ("aaabcbc", Solution::decodeString("3[a]2[bc]"));
+		}
+
+		TEST(decode_string, case2) {
+			ASSERT_EQ("accaccacc", Solution::decodeString("3[a2[c]]"));
+		}
+
+		TEST(decode_string, case3) {
+			ASSERT_EQ("abcabccdcdcdef", Solution::decodeString("2[abc]3[cd]ef"));
+		}
+
+		TEST(decode_string, case4) {
+			ASSERT_EQ("abccdcdcdxyz", Solution::decodeString("abc3[cd]xyz"));
+		}
+	}// namespace decode_string
 }// namespace leetcode
