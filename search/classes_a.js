@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['node_0',['Node',['../d9/dfe/a02649.html',1,'leetcode::all_nodes_distance_k_in_binary_tree::Node'],['../de/d4c/a02641.html',1,'leetcode::kill_process::Node'],['../d3/d32/a02665.html',1,'leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::Node'],['../db/d2a/a02325.html',1,'leetcode::n_ary_tree_level_order_traversal::Node'],['../d8/db2/a02125.html',1,'leetcode::n_ary_tree_postorder_traversal::Node'],['../d7/d16/a02109.html',1,'leetcode::n_ary_tree_preorder_traversal::Node'],['../db/d2c/a01501.html',1,'leetcode::Node'],['../db/db1/a02209.html',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]],
-  ['node_1',['node',['../dd/d07/a03233.html',1,'pat::a::a1004']]],
-  ['node_2',['Node',['../d0/d74/a03149.html',1,'pat::b::b1025::Node'],['../d3/dcf/a03173.html',1,'pat::b::b1075::Node']]],
-  ['node_3',['node',['../d1/da3/a03221.html',1,'pat::b::b1105::node'],['../d5/da4/a03225.html',1,'pat::b::b1110::node']]],
-  ['numarray_4',['NumArray',['../df/def/a02369.html',1,'leetcode::range_sum_query_immutable::NumArray'],['../d7/dd6/a02305.html',1,'leetcode::range_sum_query_mutable::NumArray']]]
+  ['node_0',['Node',['../df/de4/a02651.html',1,'leetcode::all_nodes_distance_k_in_binary_tree::Node'],['../d8/dd7/a02643.html',1,'leetcode::kill_process::Node'],['../dc/d58/a02667.html',1,'leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::Node'],['../d1/da3/a02327.html',1,'leetcode::n_ary_tree_level_order_traversal::Node'],['../d1/d90/a02127.html',1,'leetcode::n_ary_tree_postorder_traversal::Node'],['../d4/d64/a02111.html',1,'leetcode::n_ary_tree_preorder_traversal::Node'],['../d6/df5/a01503.html',1,'leetcode::Node'],['../d3/dcb/a02211.html',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]],
+  ['node_1',['node',['../db/d36/a03243.html',1,'pat::a::a1004']]],
+  ['node_2',['Node',['../d4/dbc/a03159.html',1,'pat::b::b1025::Node'],['../d5/d27/a03183.html',1,'pat::b::b1075::Node']]],
+  ['node_3',['node',['../d4/d9c/a03231.html',1,'pat::b::b1105::node'],['../dd/d87/a03235.html',1,'pat::b::b1110::node']]],
+  ['numarray_4',['NumArray',['../d4/dcc/a02371.html',1,'leetcode::range_sum_query_immutable::NumArray'],['../d2/d40/a02307.html',1,'leetcode::range_sum_query_mutable::NumArray']]]
 ];
