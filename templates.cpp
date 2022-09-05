@@ -219,7 +219,7 @@ BigInt BigInt::operator-(const BigInt &bi) const {
 vector<unsigned short> BigInt::operator*(const unsigned short n) const {
 	vector<unsigned short> res;
 	unsigned short c = 0;
-	for(auto v: this->vec) {
+	for(const auto v: this->vec) {
 		unsigned short num = n * v + c;
 		c                  = num / 10;
 		num %= 10;
@@ -237,7 +237,7 @@ BigInt BigInt::operator*(const BigInt &bi) const {
 	vector<vector<unsigned short>> vecs(bi.vec.size());
 	for(int i = 0; i < bi.vec.size(); i++) {
 		vector<unsigned short> vi(i, 0);
-		vector<unsigned short> ai = (*this) * bi.vec[i];
+		vector<unsigned short> ai = *this * bi.vec[i];
 		vi.insert(vi.end(), ai.begin(), ai.end());
 		vecs[i] = vi;
 		max_len = max(max_len, static_cast<unsigned>(vi.size()));
@@ -370,13 +370,13 @@ BigInt &BigInt::operator--() {
 	return *this;
 }
 
-const BigInt BigInt::operator++(int) {
+BigInt BigInt::operator++(int) {
 	auto ret = BigInt(*this);
 	*this += 1;
 	return ret;
 }
 
-const BigInt BigInt::operator--(int) {
+BigInt BigInt::operator--(int) {
 	auto ret = BigInt(*this);
 	*this -= 1;
 	return ret;
@@ -509,9 +509,7 @@ void UnionFind::unite(int x, int y) {
 
 bool UnionFind::same(int x, int y) { return find(x) == find(y); }
 
-int UnionFind::get_size(int x) {
-	return size[find(x)];
-}
+int UnionFind::get_size(int x) { return size[find(x)]; }
 
 unsigned UnionFind::count() {
 	unordered_set<int> us;

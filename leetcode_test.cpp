@@ -3449,7 +3449,7 @@ namespace leetcode {
 
 	namespace delete_node_in_a_bst {
 		bool equal(TreeNode *tn1, TreeNode *tn2) {
-			if((tn1 == nullptr) != (tn2 == nullptr)) {
+			if(tn1 == nullptr != (tn2 == nullptr)) {
 				return false;
 			}
 			if(tn1 != nullptr && tn2 != nullptr) {
@@ -3470,7 +3470,7 @@ namespace leetcode {
 			const auto c     = serialize_and_deserialize_binary_tree::Codec();
 			TreeNode *root   = c.deserialize("[5,3,6,2,4,null,7]");
 			TreeNode *output = c.deserialize("[5,4,6,2,null,null,7]");
-			Solution sol     = Solution();
+			auto sol         = Solution();
 			ASSERT_TRUE(equal(output, sol.deleteNode(root, 3)));
 		}
 
@@ -3478,7 +3478,7 @@ namespace leetcode {
 			const auto c     = serialize_and_deserialize_binary_tree::Codec();
 			TreeNode *root   = c.deserialize("[5,3,6,2,4,null,7]");
 			TreeNode *output = c.deserialize("[5,3,6,2,4,null,7]");
-			Solution sol     = Solution();
+			auto sol         = Solution();
 			ASSERT_TRUE(equal(output, sol.deleteNode(root, 0)));
 		}
 
@@ -3486,7 +3486,7 @@ namespace leetcode {
 			const auto c     = serialize_and_deserialize_binary_tree::Codec();
 			TreeNode *root   = c.deserialize("[]");
 			TreeNode *output = c.deserialize("[]");
-			Solution sol     = Solution();
+			auto sol         = Solution();
 			ASSERT_TRUE(equal(output, sol.deleteNode(root, 0)));
 		}
 
@@ -3494,7 +3494,7 @@ namespace leetcode {
 			const auto c     = serialize_and_deserialize_binary_tree::Codec();
 			TreeNode *root   = c.deserialize("[3,2,5,null,null,4,10,null,null,8,15,7]");
 			TreeNode *output = c.deserialize("[3,2,7,null,null,4,10,null,null,8,15]");
-			Solution sol     = Solution();
+			auto sol         = Solution();
 			ASSERT_TRUE(equal(output, sol.deleteNode(root, 5)));
 		}
 	}// namespace delete_node_in_a_bst
@@ -3519,13 +3519,13 @@ namespace leetcode {
 	namespace find_a_peak_element_ii {
 		TEST(find_a_peak_element_ii, case1) {
 			vector<vector<int>> mat = {{1, 4}, {3, 2}};
-			vector ans              = {0, 1};
+			const vector ans        = {0, 1};
 			ASSERT_EQ(Solution::findPeakGrid(mat), ans);
 		}
 
 		TEST(find_a_peak_element_ii, case2) {
 			vector<vector<int>> mat = {{10, 20, 15}, {21, 30, 14}, {7, 16, 32}};
-			vector ans              = {2, 2};
+			const vector ans        = {2, 2};
 			ASSERT_EQ(Solution::findPeakGrid(mat), ans);
 		}
 	}// namespace find_a_peak_element_ii
@@ -3551,14 +3551,14 @@ namespace leetcode {
 		TEST(shortest_distance_to_target_color, case1) {
 			vector colors               = {1, 1, 2, 1, 3, 2, 2, 3, 3};
 			vector<vector<int>> queries = {{1, 3}, {2, 2}, {6, 1}};
-			vector ans                  = {3, 0, 3};
+			const vector ans            = {3, 0, 3};
 			ASSERT_EQ(ans, Solution::shortestDistanceColor(colors, queries));
 		}
 
 		TEST(shortest_distance_to_target_color, case2) {
 			vector colors               = {1, 2};
 			vector<vector<int>> queries = {{0, 3}};
-			vector ans                  = {-1};
+			const vector ans            = {-1};
 			ASSERT_EQ(ans, Solution::shortestDistanceColor(colors, queries));
 		}
 	}// namespace shortest_distance_to_target_color
@@ -3567,21 +3567,21 @@ namespace leetcode {
 		TEST(meeting_scheduler, case1) {
 			vector<vector<int>> slots1 = {{10, 50}, {60, 120}, {140, 210}};
 			vector<vector<int>> slots2 = {{0, 15}, {60, 70}};
-			vector ans                 = {60, 68};
+			const vector ans           = {60, 68};
 			ASSERT_EQ(ans, Solution::minAvailableDuration(slots1, slots2, 8));
 		}
 
 		TEST(meeting_scheduler, case2) {
 			vector<vector<int>> slots1 = {{10, 50}, {60, 120}, {140, 210}};
 			vector<vector<int>> slots2 = {{0, 15}, {60, 70}};
-			vector<int> ans            = {};
+			const vector<int> ans      = {};
 			ASSERT_EQ(ans, Solution::minAvailableDuration(slots1, slots2, 12));
 		}
 
 		TEST(meeting_scheduler, case3) {
 			vector<vector<int>> slots1 = {{10, 60}};
 			vector<vector<int>> slots2 = {{12, 17}, {21, 50}};
-			vector<int> ans            = {21, 29};
+			const vector ans           = {21, 29};
 			ASSERT_EQ(ans, Solution::minAvailableDuration(slots1, slots2, 8));
 		}
 	}// namespace meeting_scheduler
@@ -3617,16 +3617,16 @@ namespace leetcode {
 
 	namespace product_of_two_run_length_encoded_arrays {
 		TEST(product_of_two_run_length_encoded_arrays, case1) {
-			vector<vector<int>> encoded1 = {{1, 3}, {2, 3}};
-			vector<vector<int>> encoded2 = {{6, 3}, {3, 3}};
-			vector<vector<int>> output   = {{6, 6}};
+			vector<vector<int>> encoded1     = {{1, 3}, {2, 3}};
+			vector<vector<int>> encoded2     = {{6, 3}, {3, 3}};
+			const vector<vector<int>> output = {{6, 6}};
 			ASSERT_EQ(output, Solution::findRLEArray(encoded1, encoded2));
 		}
 
 		TEST(product_of_two_run_length_encoded_arrays, case2) {
-			vector<vector<int>> encoded1 = {{1, 3}, {2, 1}, {3, 2}};
-			vector<vector<int>> encoded2 = {{2, 3}, {3, 3}};
-			vector<vector<int>> output   = {{2, 3}, {6, 1}, {9, 2}};
+			vector<vector<int>> encoded1     = {{1, 3}, {2, 1}, {3, 2}};
+			vector<vector<int>> encoded2     = {{2, 3}, {3, 3}};
+			const vector<vector<int>> output = {{2, 3}, {6, 1}, {9, 2}};
 			ASSERT_EQ(output, Solution::findRLEArray(encoded1, encoded2));
 		}
 	}// namespace product_of_two_run_length_encoded_arrays
@@ -3665,14 +3665,14 @@ namespace leetcode {
 
 	namespace sliding_window_maximum {
 		TEST(sliding_window_maximum, case1) {
-			vector nums = {1, 3, -1, -3, 5, 3, 6, 7};
-			vector ans  = {3, 3, 5, 5, 6, 7};
+			vector nums      = {1, 3, -1, -3, 5, 3, 6, 7};
+			const vector ans = {3, 3, 5, 5, 6, 7};
 			ASSERT_EQ(ans, Solution::maxSlidingWindow(nums, 3));
 		}
 
 		TEST(sliding_window_maximum, case2) {
-			vector nums = {1};
-			vector ans  = {1};
+			vector nums      = {1};
+			const vector ans = {1};
 			ASSERT_EQ(ans, Solution::maxSlidingWindow(nums, 1));
 		}
 	}// namespace sliding_window_maximum
@@ -3693,22 +3693,22 @@ namespace leetcode {
 
 	namespace walls_and_gates {
 		TEST(walls_and_gates, case1) {
-			vector<vector<int>> rooms = {{2147483647, -1, 0, 2147483647}, {2147483647, 2147483647, 2147483647, -1}, {2147483647, -1, 2147483647, -1}, {0, -1, 2147483647, 2147483647}};
-			vector<vector<int>> ans   = {{3, -1, 0, 1}, {2, 2, 1, -1}, {1, -1, 2, -1}, {0, -1, 3, 4}};
+			vector<vector<int>> rooms     = {{2147483647, -1, 0, 2147483647}, {2147483647, 2147483647, 2147483647, -1}, {2147483647, -1, 2147483647, -1}, {0, -1, 2147483647, 2147483647}};
+			const vector<vector<int>> ans = {{3, -1, 0, 1}, {2, 2, 1, -1}, {1, -1, 2, -1}, {0, -1, 3, 4}};
 			Solution::wallsAndGates(rooms);
 			ASSERT_EQ(ans, rooms);
 		}
 
 		TEST(walls_and_gates, case2) {
-			vector<vector<int>> rooms = {{2147483647}};
-			vector<vector<int>> ans   = {{2147483647}};
+			vector<vector<int>> rooms     = {{2147483647}};
+			const vector<vector<int>> ans = {{2147483647}};
 			Solution::wallsAndGates(rooms);
 			ASSERT_EQ(ans, rooms);
 		}
 
 		TEST(walls_and_gates, case3) {
-			vector<vector<int>> rooms = {{0}};
-			vector<vector<int>> ans   = {{0}};
+			vector<vector<int>> rooms     = {{0}};
+			const vector<vector<int>> ans = {{0}};
 			Solution::wallsAndGates(rooms);
 			ASSERT_EQ(ans, rooms);
 		}
@@ -3716,30 +3716,30 @@ namespace leetcode {
 
 	namespace pacific_atlantic_waterflow {
 		TEST(pacific_atlantic_waterflow, case1) {
-			vector<vector<int>> heights = {{1, 2, 2, 3, 5}, {3, 2, 3, 4, 4}, {2, 4, 5, 3, 1}, {6, 7, 1, 4, 5}, {5, 1, 1, 2, 4}};
-			vector<vector<int>> ans     = {{0, 4}, {1, 3}, {1, 4}, {2, 2}, {3, 0}, {3, 1}, {4, 0}};
+			vector<vector<int>> heights   = {{1, 2, 2, 3, 5}, {3, 2, 3, 4, 4}, {2, 4, 5, 3, 1}, {6, 7, 1, 4, 5}, {5, 1, 1, 2, 4}};
+			const vector<vector<int>> ans = {{0, 4}, {1, 3}, {1, 4}, {2, 2}, {3, 0}, {3, 1}, {4, 0}};
 			ASSERT_EQ(ans, Solution::pacificAtlantic(heights));
 		}
 
 		TEST(pacific_atlantic_waterflow, case2) {
-			vector<vector<int>> heights = {{2, 1}, {1, 2}};
-			vector<vector<int>> ans     = {{0, 0}, {0, 1}, {1, 0}, {1, 1}};
+			vector<vector<int>> heights   = {{2, 1}, {1, 2}};
+			const vector<vector<int>> ans = {{0, 0}, {0, 1}, {1, 0}, {1, 1}};
 			ASSERT_EQ(ans, Solution::pacificAtlantic(heights));
 		}
 	}// namespace pacific_atlantic_waterflow
 
 	namespace kill_process {
 		TEST(kill_process, case1) {
-			vector pid  = {1, 3, 10, 5};
-			vector ppid = {3, 0, 5, 3};
-			vector ans  = {5, 10};
+			vector pid       = {1, 3, 10, 5};
+			vector ppid      = {3, 0, 5, 3};
+			const vector ans = {5, 10};
 			ASSERT_EQ(ans, Solution::killProcess(pid, ppid, 5));
 		}
 
 		TEST(kill_process, case2) {
-			vector pid  = {1};
-			vector ppid = {0};
-			vector ans  = {1};
+			vector pid       = {1};
+			vector ppid      = {0};
+			const vector ans = {1};
 			ASSERT_EQ(ans, Solution::killProcess(pid, ppid, 1));
 		}
 	}// namespace kill_process
@@ -3813,41 +3813,41 @@ namespace leetcode {
 	namespace critical_connections_in_a_network {
 		TEST(critical_connections_in_a_network, case1) {
 			vector<vector<int>> connections = {{0, 1}, {1, 2}, {2, 0}, {1, 3}};
-			vector<vector<int>> ans         = {{1, 3}};
+			const vector<vector<int>> ans   = {{1, 3}};
 			ASSERT_EQ(ans, Solution::criticalConnections(4, connections));
 		}
 
 		TEST(critical_connections_in_a_network, case2) {
 			vector<vector<int>> connections = {{0, 1}};
-			vector<vector<int>> ans         = {{0, 1}};
+			const vector<vector<int>> ans   = {{0, 1}};
 			ASSERT_EQ(ans, Solution::criticalConnections(2, connections));
 		}
 
 		TEST(critical_connections_in_a_network, case3) {
 			vector<vector<int>> connections = {{0, 1}, {1, 2}, {2, 0}, {1, 3}, {3, 4}, {4, 5}, {5, 3}};
-			vector<vector<int>> ans         = {{1, 3}};
+			const vector<vector<int>> ans   = {{1, 3}};
 			ASSERT_EQ(ans, Solution::criticalConnections(6, connections));
 		}
 	}// namespace critical_connections_in_a_network
 
 	namespace factor_combinations {
 		TEST(factor_combinations, case1) {
-			vector<vector<int>> ans = {};
+			const vector<vector<int>> ans = {};
 			ASSERT_EQ(ans, Solution::getFactors(1));
 		}
 
 		TEST(factor_combinations, case2) {
-			vector<vector<int>> ans = {};
+			const vector<vector<int>> ans = {};
 			ASSERT_EQ(ans, Solution::getFactors(37));
 		}
 
 		TEST(factor_combinations, case3) {
-			vector<vector<int>> ans = {{2, 6}, {2, 2, 3}, {3, 4}};
+			const vector<vector<int>> ans = {{2, 6}, {2, 2, 3}, {3, 4}};
 			ASSERT_EQ(ans, Solution::getFactors(12));
 		}
 
 		TEST(factor_combinations, case4) {
-			vector<vector<int>> ans = {{2, 16}, {2, 2, 8}, {2, 2, 2, 4}, {2, 2, 2, 2, 2}, {2, 4, 4}, {4, 8}};
+			const vector<vector<int>> ans = {{2, 16}, {2, 2, 8}, {2, 2, 2, 4}, {2, 2, 2, 2, 2}, {2, 4, 4}, {4, 8}};
 			ASSERT_EQ(ans, Solution::getFactors(32));
 		}
 	}// namespace factor_combinations

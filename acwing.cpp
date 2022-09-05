@@ -5774,8 +5774,8 @@ namespace acwing {
 	namespace acwing1695 {
 		int main(istream &cin, ostream &cout) {
 			bool nuts[3][3]         = {{true, false, false},
-                               {false, true, false},
-                               {false, false, true}};
+			                           {false, true, false},
+			                           {false, false, true}};
 			unsigned short score[3] = {0, 0, 0};
 			unsigned short ans      = 0;
 			unsigned short n;
@@ -7098,7 +7098,8 @@ namespace acwing {
 			array<array<char, 3>, 3> target{};
 			array<array<char, 3>, 3> grid{};
 			unordered_set<array<array<char, 3>, 3>, hash> us;
-			int start_x, start_y;
+			int start_x;
+			int start_y;
 			for(int i = 0; i < 9; i++) {
 				cin >> grid[i / 3][i % 3];
 				if(grid[i / 3][i % 3] == 'x') {
@@ -7156,12 +7157,15 @@ namespace acwing {
 		bool comp::operator()(const pair<int, int> &p1, const pair<int, int> &p2) const { return p1.second > p2.second; }
 
 		int main(istream &cin, ostream &cout) {
-			int n, m;
+			int n;
+			int m;
 			cin >> n >> m;
 			vector<unordered_map<int, int>> vec(n + 1);
 			unordered_set<int> ed;
 			for(int i = 0; i < m; i++) {
-				int x, y, z;
+				int x;
+				int y;
+				int z;
 				cin >> x >> y >> z;
 				if(vec[x][y] == 0) {
 					vec[x][y] = z;
@@ -7195,13 +7199,17 @@ namespace acwing {
 
 	namespace acwing853 {
 		int main(istream &cin, ostream &cout) {
-			int n, m, k;
+			int n;
+			int m;
+			int k;
 			cin >> n >> m >> k;
 			vector<tuple<int, int, int>> vec(m);
 			vector shortest(n + 1, 0x3f3f3f);
 			shortest[1] = 0;
 			for(int i = 0; i < m; i++) {
-				int x, y, z;
+				int x;
+				int y;
+				int z;
 				cin >> x >> y >> z;
 				vec[i] = make_tuple(x, y, z);
 			}
@@ -7222,13 +7230,16 @@ namespace acwing {
 
 	namespace acwing851 {
 		int main(istream &cin, ostream &cout) {
-			int n, m;
+			int n;
+			int m;
 			cin >> n >> m;
 			vector<unordered_map<int, int>> g(n + 1);
 			vector reachable(n + 1, false);
 			vector shortest(n + 1, 0x3f3f3f);
 			for(int i = 0; i < m; i++) {
-				int x, y, z;
+				int x;
+				int y;
+				int z;
 				cin >> x >> y >> z;
 				if(g[x][y] == 0) {
 					g[x][y] = z;
@@ -7268,13 +7279,16 @@ namespace acwing {
 
 	namespace acwing852 {
 		int main(istream &cin, ostream &cout) {
-			int n, m;
+			int n;
+			int m;
 			cin >> n >> m;
 			vector<unordered_map<int, int>> g(n + 1);
 			vector cnt(n + 1, 0);
 			vector shortest(n + 1, 0x3f3f3f);
 			for(int i = 0; i < m; i++) {
-				int x, y, z;
+				int x;
+				int y;
+				int z;
 				cin >> x >> y >> z;
 				if(g[x][y] == 0) {
 					g[x][y] = z;
@@ -7293,7 +7307,7 @@ namespace acwing {
 			return 0;
 		}
 
-		bool spfa(const vector<unordered_map<int, int>> &g, int m, int n) {
+		bool spfa(const vector<unordered_map<int, int>> &g, int /*m*/, int n) {
 			vector cnt(n + 1, 0);
 			vector shortest(n + 1, 0x3f3f3f);
 			queue<int> q;
@@ -7325,11 +7339,15 @@ namespace acwing {
 
 	namespace acwing854 {
 		int main(istream &cin, ostream &cout) {
-			int n, m, k;
+			int n;
+			int m;
+			int k;
 			cin >> n >> m >> k;
 			vector g(n + 1, vector<int>(n + 1, 1e9));
 			for(int i = 0; i < m; i++) {
-				int x, y, z;
+				int x;
+				int y;
+				int z;
 				cin >> x >> y >> z;
 				g[x][y] = min(g[x][y], z);
 			}
@@ -7344,7 +7362,8 @@ namespace acwing {
 				}
 			}
 			for(int i = 0; i < k; i++) {
-				int x, y;
+				int x;
+				int y;
 				cin >> x >> y;
 				if(g[x][y] > 1e9 / 2) {
 					cout << "impossible" << endl;
@@ -7358,12 +7377,15 @@ namespace acwing {
 
 	namespace acwing858 {
 		int main(istream &cin, ostream &cout) {
-			unsigned n, m;
+			unsigned n;
+			unsigned m;
 			cin >> n >> m;
 			vector g(n + 1, vector(n + 1, INT_MAX));
 			vector dist(n + 1, INT_MAX);
 			for(unsigned i = 0; i < m; i++) {
-				int u, v, w;
+				int u;
+				int v;
+				int w;
 				cin >> u >> v >> w;
 				w       = min(w, g[u][v]);
 				w       = min(w, g[v][u]);
@@ -7398,13 +7420,16 @@ namespace acwing {
 
 	namespace acwing859 {
 		int main(istream &cin, ostream &cout) {
-			int n, m;
+			int n;
+			int m;
 			cin >> n >> m;
 			int ans = 0;
 			int cnt = 1;
 			vector<edge> edges(m);
 			for(int i = 0; i < m; i++) {
-				int u, v, n;
+				int u;
+				int v;
+				int n;
 				cin >> edges[i].u >> edges[i].v >> edges[i].w;
 			}
 			sort(edges.begin(), edges.end());
@@ -7429,12 +7454,14 @@ namespace acwing {
 
 	namespace acwing860 {
 		int main(istream &cin, ostream &cout) {
-			int n, m;
+			int n;
+			int m;
 			cin >> n >> m;
 			vector g(n + 1, unordered_set<int>());
 			vector color(n + 1, 3);
 			for(int i = 0; i < m; i++) {
-				int u, v;
+				int u;
+				int v;
 				cin >> u >> v;
 				g[u].insert(v);
 				g[v].insert(u);
@@ -7455,7 +7482,7 @@ namespace acwing {
 			color[node] = c;
 			for(const auto sibling: g[node]) {
 				if(color[sibling] == 3) {
-					if(!dfs(g, sibling, color, !c)) {
+					if(!dfs(g, sibling, color, static_cast<int>(c == 0))) {
 						return false;
 					}
 				} else if(color[sibling] == c) {
@@ -7468,14 +7495,17 @@ namespace acwing {
 
 	namespace acwing861 {
 		int main(istream &cin, ostream &cout) {
-			int n1, n2, m;
+			int n1;
+			int n2;
+			int m;
 			cin >> n1 >> n2 >> m;
 			int ans = 0;
 			vector<unordered_set<int>> g(n1 + 1);
 			vector match(n2 + 1, 0);
 			vector st(n2 + 1, false);
 			for(int i = 0; i < m; i++) {
-				int u, v;
+				int u;
+				int v;
 				cin >> u >> v;
 				g[u].insert(v);
 			}

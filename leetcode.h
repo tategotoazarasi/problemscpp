@@ -2604,10 +2604,10 @@ namespace leetcode {
 		class Codec {
 		public:
 			/// \brief Encodes a tree to a single string.
-			string serialize(TreeNode *root) const;
+			static string serialize(TreeNode *root);
 
 			/// \brief Decodes your encoded data to tree.
-			[[nodiscard]] TreeNode *deserialize(string data) const;
+			[[nodiscard]] static TreeNode *deserialize(string data);
 		};
 	}// namespace serialize_and_deserialize_binary_tree
 
@@ -2698,7 +2698,7 @@ namespace leetcode {
 			/// \brief Initializes the MyLinkedList object.
 			MyLinkedList();
 			/// \brief Get the value of the indexth node in the linked list. If the index is invalid, return -1.
-			int get(int index) const;
+			[[nodiscard]] int get(int index) const;
 			/// \brief Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
 			void addAtHead(int val);
 			/// \brief Append a node of value val as the last element of the linked list.
@@ -2802,7 +2802,7 @@ namespace leetcode {
 		class Solution {
 		public:
 			static int getMinUniqueCharCnt(const string &s, int len);
-			static int lengthOfLongestSubstringTwoDistinct(string s);
+			static int lengthOfLongestSubstringTwoDistinct(const string &s);
 		};
 	}// namespace longest_substring_with_at_most_two_distinct_characters
 
@@ -2810,7 +2810,7 @@ namespace leetcode {
 	namespace longest_substring_with_at_most_k_distinct_characters {
 		class Solution {
 		public:
-			static int lengthOfLongestSubstringKDistinct(string s, int k);
+			static int lengthOfLongestSubstringKDistinct(const string &s, int k);
 		};
 	}// namespace longest_substring_with_at_most_k_distinct_characters
 
@@ -2836,7 +2836,7 @@ namespace leetcode {
 		class Solution {
 		public:
 			static bool valid(unordered_map<char, int> &ums, const unordered_map<char, int> &umt);
-			static string minWindow(string s, string t);
+			static string minWindow(string s, const string &t);
 		};
 	}// namespace minimum_window_substring
 
@@ -2853,9 +2853,11 @@ namespace leetcode {
 		struct myhash {
 			size_t operator()(const pair<int, int> &p) const;
 		};
+
 		struct myeq {
 			bool operator()(const pair<int, int> &p1, const pair<int, int> &p2) const;
 		};
+
 		class Solution {
 		public:
 			static vector<vector<int>> pacificAtlantic(vector<vector<int>> &heights);
@@ -2875,8 +2877,11 @@ namespace leetcode {
 		struct Node {
 			int val;
 			unordered_set<Node *> children;
-			Node(int val): val(val) {}
+
+			explicit Node(int val)
+			    : val(val) {}
 		};
+
 		class Solution {
 		public:
 			static vector<int> killProcess(vector<int> &pid, vector<int> &ppid, int kill);
@@ -2888,8 +2893,11 @@ namespace leetcode {
 		struct Node {
 			int val;
 			unordered_set<Node *> siblings;
-			Node(int val): val(val) {}
+
+			explicit Node(int val)
+			    : val(val) {}
 		};
+
 		class Solution {
 		public:
 			static vector<int> distanceK(TreeNode *root, TreeNode *target, int k);
@@ -2900,7 +2908,7 @@ namespace leetcode {
 	namespace open_the_lock {
 		class Solution {
 		public:
-			static int openLock(vector<string> &deadends, string target);
+			static int openLock(vector<string> &deadends, const string &target);
 		};
 	}// namespace open_the_lock
 
@@ -2919,11 +2927,15 @@ namespace leetcode {
 			int x;
 			int y;
 			unordered_map<Node *, int> siblings;
-			Node(int x, int y): x(x), y(y) {}
+
+			Node(int x, int y)
+			    : x(x), y(y) {}
 		};
+
 		struct mycmp {
 			bool operator()(const pair<int, Node *> &p1, const pair<int, Node *> &p2) const;
 		};
+
 		class Solution {
 		public:
 			static int minCost(vector<vector<int>> &grid);

@@ -54,8 +54,8 @@ public:
 	BigInt &operator%=(const BigInt &bi);
 	BigInt &operator++();
 	BigInt &operator--();
-	const BigInt operator++(int);
-	const BigInt operator--(int);
+	BigInt operator++(int);
+	BigInt operator--(int);
 	bool operator>(const BigInt &bi) const;
 	bool operator<(const BigInt &bi) const;
 	bool operator==(const BigInt &bi) const;
