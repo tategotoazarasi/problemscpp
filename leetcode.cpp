@@ -8459,4 +8459,48 @@ namespace leetcode {
 			return false;
 		}
 	}// namespace regular_expression_matching
+
+	namespace different_ways_to_add_parentheses {
+		vector<int> Solution::eval(const string &expr, int start, int end) {
+			vector<int> ans;
+			bool allDigit = true;
+			for(int i = start; i <= end; i++) {
+				if(!isdigit(expr[i])) {
+					allDigit     = false;
+					vector left  = eval(expr, start, i - 1);
+					vector right = eval(expr, i + 1, end);
+					for(auto &l: left) {
+						for(auto &r: right) {
+							switch(expr[i]) {
+								case '+':
+									ans.emplace_back(l + r);
+									break;
+								case '-':
+									ans.emplace_back(l - r);
+									break;
+								case '*':
+									ans.emplace_back(l * r);
+									break;
+							}
+						}
+					}
+				}
+			}
+			if(allDigit) {
+				int val = 0;
+				for(int i = start; i <= end; i++) {
+					val *= 10;
+					val += expr[i] - '0';
+				}
+				ans.emplace_back(val);
+			}
+			return ans;
+		}
+
+		vector<int> Solution::diffWaysToCompute(string expression) {
+			vector ans = eval(expression, 0, expression.length() - 1);
+			sort(ans.begin(), ans.end());
+			return ans;
+		}
+	}// namespace different_ways_to_add_parentheses
 }// namespace leetcode

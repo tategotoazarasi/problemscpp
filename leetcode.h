@@ -2999,6 +2999,15 @@ namespace leetcode {
 			static bool isMatch(string s, string p);
 		};
 	}// namespace regular_expression_matching
+
+	/// \brief 241. 为运算表达式设计优先级
+	namespace different_ways_to_add_parentheses {
+		class Solution {
+		public:
+			static vector<int> diffWaysToCompute(string expression);
+			static vector<int> eval(const string &expr, int start, int end);
+		};
+	}// namespace different_ways_to_add_parentheses
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

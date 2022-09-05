@@ -3909,4 +3909,16 @@ namespace leetcode {
 			ASSERT_TRUE(Solution::isMatch("a", "ab*"));
 		}
 	}// namespace regular_expression_matching
+
+	namespace different_ways_to_add_parentheses {
+		TEST(different_ways_to_add_parentheses, case1) {
+			vector<int> ans = {0, 2};
+			ASSERT_EQ(ans, Solution::diffWaysToCompute("2-1-1"));
+		}
+
+		TEST(different_ways_to_add_parentheses, case2) {
+			vector<int> ans = {-34, -14, -10, -10, 10};
+			ASSERT_EQ(ans, Solution::diffWaysToCompute("2*3-4*5"));
+		}
+	}// namespace different_ways_to_add_parentheses
 }// namespace leetcode
