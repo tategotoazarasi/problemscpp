@@ -2967,6 +2967,18 @@ namespace leetcode {
 			static string decodeString(string s);
 		};
 	}// namespace decode_string
+
+	/// \brief 51. N 皇后
+	namespace n_queens {
+		class Solution {
+			static void dfs(const vector<vector<bool>> &board, int line, int n, vector<vector<string>> &ans);
+			static bool valid(const vector<vector<bool>> &board, int n, int x, int y);
+			static vector<string> toStringVec(const vector<vector<bool>> &board);
+
+		public:
+			static vector<vector<string>> solveNQueens(int n);
+		};
+	}// namespace n_queens
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

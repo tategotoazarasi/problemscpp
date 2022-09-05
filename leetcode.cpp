@@ -8306,4 +8306,58 @@ namespace leetcode {
 			return oss.str();
 		}
 	}// namespace decode_string
+
+	namespace n_queens {
+		vector<vector<string>> Solution::solveNQueens(int n) {
+			vector<vector<string>> ans;
+			vector<vector<bool>> board(n, vector<bool>(n, false));
+			dfs(board, 0, n, ans);
+			return ans;
+		}
+
+		void Solution::dfs(const vector<vector<bool>> &board, int line, int n, vector<vector<string>> &ans) {
+			if(line == n) {
+				ans.emplace_back(toStringVec(board));
+				return;
+			}
+			for(int i = 0; i < n; i++) {
+				if(valid(board, n, line, i)) {
+					vector<vector<bool>> next = board;
+					next[line][i]             = true;
+					dfs(next, line + 1, n, ans);
+				}
+			}
+		}
+
+		bool Solution::valid(const vector<vector<bool>> &board, int n, int x, int y) {
+			for(int i = 0; i < x; i++) {
+				if(board[i][y]) {
+					return false;
+				}
+			}
+			for(int i = x, j = y; i >= 0 && i < n && j >= 0 && j < n; i--, j--) {
+				if(board[i][j]) {
+					return false;
+				}
+			}
+			for(int i = x, j = y; i >= 0 && i < n && j >= 0 && j < n; i--, j++) {
+				if(board[i][j]) {
+					return false;
+				}
+			}
+			return true;
+		}
+
+		vector<string> Solution::toStringVec(const vector<vector<bool>> &board) {
+			vector<string> ans(board.size());
+			for(int i = 0; i < board.size(); i++) {
+				ostringstream oss;
+				for(int j = 0; j < board[i].size(); j++) {
+					oss << (board[i][j] ? 'Q' : '.');
+				}
+				ans[i] = oss.str();
+			}
+			return ans;
+		}
+	}// namespace n_queens
 }// namespace leetcode

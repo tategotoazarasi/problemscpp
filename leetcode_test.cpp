@@ -3869,4 +3869,16 @@ namespace leetcode {
 			ASSERT_EQ("abccdcdcdxyz", Solution::decodeString("abc3[cd]xyz"));
 		}
 	}// namespace decode_string
+
+	namespace n_queens {
+		TEST(n_queens, case1) {
+			vector<vector<string>> ans = {{".Q..", "...Q", "Q...", "..Q."}, {"..Q.", "Q...", "...Q", ".Q.."}};
+			ASSERT_EQ(ans, Solution::solveNQueens(4));
+		}
+
+		TEST(n_queens, case2) {
+			vector<vector<string>> ans = {{"Q"}};
+			ASSERT_EQ(ans, Solution::solveNQueens(1));
+		}
+	}// namespace n_queens
 }// namespace leetcode
