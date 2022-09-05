@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: lintcode::distribute_candies::Solution类 参考</title>
+<title>problemscpp: leetcode::sudoku_solver::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,30 +63,38 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d0/dd6/a00415.html">lintcode</a></li><li class="navelem"><a class="el" href="../../d8/de7/a00417.html">distribute_candies</a></li><li class="navelem"><a class="el" href="../../dd/d9a/a02699.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d0/d4a/a00147.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d0/dd6/a00415.html">sudoku_solver</a></li><li class="navelem"><a class="el" href="../../dd/d9a/a02699.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
 <a href="../../d8/da6/a02696.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">lintcode::distribute_candies::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::sudoku_solver::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d4/dee/a00008_source.html">lintcode.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:adfb5613a5114d683f053b012f8757d66"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9a/a02699.html#adfb5613a5114d683f053b012f8757d66">distributeCandies</a> (vector&lt; int &gt; &amp;candies)</td></tr>
-<tr class="separator:adfb5613a5114d683f053b012f8757d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a869757db7776483b07164d05589b07df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9a/a02699.html#a869757db7776483b07164d05589b07df">solveSudoku</a> (vector&lt; vector&lt; char &gt; &gt; &amp;board)</td></tr>
+<tr class="separator:a869757db7776483b07164d05589b07df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a3a0c935717c748e0f0858f63d7e9219f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9a/a02699.html#a3a0c935717c748e0f0858f63d7e9219f">dfs</a> (const vector&lt; vector&lt; char &gt; &gt; &amp;board, vector&lt; vector&lt; char &gt; &gt; &amp;ans)</td></tr>
+<tr class="separator:a3a0c935717c748e0f0858f63d7e9219f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d63a1960a373184f87cd74ccf08d40b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9a/a02699.html#a2d63a1960a373184f87cd74ccf08d40b">valid</a> (const vector&lt; vector&lt; char &gt; &gt; &amp;board, int x, int y, char num)</td></tr>
+<tr class="separator:a2d63a1960a373184f87cd74ccf08d40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d4/dee/a00008_source.html">lintcode.h</a> 第 <a class="el" href="../../d4/dee/a00008_source.html#l00032">32</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02985">2985</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="adfb5613a5114d683f053b012f8757d66" name="adfb5613a5114d683f053b012f8757d66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfb5613a5114d683f053b012f8757d66">&#9670;&nbsp;</a></span>distributeCandies()</h2>
+<a id="a3a0c935717c748e0f0858f63d7e9219f" name="a3a0c935717c748e0f0858f63d7e9219f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a0c935717c748e0f0858f63d7e9219f">&#9670;&nbsp;</a></span>dfs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -95,63 +103,164 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int lintcode::distribute_candies::Solution::distributeCandies </td>
+          <td class="memname">bool leetcode::sudoku_solver::Solution::dfs </td>
           <td>(</td>
-          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>candies</em></td><td>)</td>
+          <td class="paramtype">const vector&lt; vector&lt; char &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>board</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">vector&lt; vector&lt; char &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ans</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">candies</td><td>a list of integers </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>: return a integer </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">lintcode.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l00056">56</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                                                            {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keyword">auto</span> m      = map&lt;long, int&gt;();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keyword">auto</span> ans    = set&lt;int&gt;();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(candies.size()) / 2;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordtype">int</span> sum     = 0;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> candy: candies) {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                m[candy]++;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">while</span>(sum &lt; n) {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> candy: m) {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    <span class="keywordflow">if</span>(candy.second != 0) {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                        <span class="keywordflow">if</span>(!ans.contains(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(candy.first))) {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                            ans.insert(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(candy.first));</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                            <span class="keywordflow">if</span>(ans.size() == m.size()) {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                                <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(ans.size());</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                            }</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                        }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                        candy.second--;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                        sum++;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    <span class="keywordflow">if</span>(sum &gt;= n) {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                    }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(ans.size());</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08370">8370</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08370" name="l08370"></a><span class="lineno"> 8370</span>                                                                                       {</div>
+<div class="line"><a id="l08371" name="l08371"></a><span class="lineno"> 8371</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 9; i++) {</div>
+<div class="line"><a id="l08372" name="l08372"></a><span class="lineno"> 8372</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 9; j++) {</div>
+<div class="line"><a id="l08373" name="l08373"></a><span class="lineno"> 8373</span>                    <span class="keywordflow">if</span>(board[i][j] == <span class="charliteral">&#39;.&#39;</span>) {</div>
+<div class="line"><a id="l08374" name="l08374"></a><span class="lineno"> 8374</span>                        <span class="keywordtype">bool</span> haveValid = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l08375" name="l08375"></a><span class="lineno"> 8375</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c = <span class="charliteral">&#39;1&#39;</span>; c &lt;= <span class="charliteral">&#39;9&#39;</span>; c++) {</div>
+<div class="line"><a id="l08376" name="l08376"></a><span class="lineno"> 8376</span>                            <span class="keywordflow">if</span>(<a class="code hl_function" href="../../dd/d9a/a02699.html#a2d63a1960a373184f87cd74ccf08d40b">valid</a>(board, i, j, c)) {</div>
+<div class="line"><a id="l08377" name="l08377"></a><span class="lineno"> 8377</span>                                haveValid                 = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l08378" name="l08378"></a><span class="lineno"> 8378</span>                                vector&lt;vector&lt;char&gt;&gt; next = board;</div>
+<div class="line"><a id="l08379" name="l08379"></a><span class="lineno"> 8379</span>                                next[i][j]                = c;</div>
+<div class="line"><a id="l08380" name="l08380"></a><span class="lineno"> 8380</span>                                <span class="keywordflow">if</span>(<a class="code hl_function" href="../../dd/d9a/a02699.html#a3a0c935717c748e0f0858f63d7e9219f">dfs</a>(next, ans)) {</div>
+<div class="line"><a id="l08381" name="l08381"></a><span class="lineno"> 8381</span>                                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l08382" name="l08382"></a><span class="lineno"> 8382</span>                                }</div>
+<div class="line"><a id="l08383" name="l08383"></a><span class="lineno"> 8383</span>                            }</div>
+<div class="line"><a id="l08384" name="l08384"></a><span class="lineno"> 8384</span>                        }</div>
+<div class="line"><a id="l08385" name="l08385"></a><span class="lineno"> 8385</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l08386" name="l08386"></a><span class="lineno"> 8386</span>                    }</div>
+<div class="line"><a id="l08387" name="l08387"></a><span class="lineno"> 8387</span>                }</div>
+<div class="line"><a id="l08388" name="l08388"></a><span class="lineno"> 8388</span>            }</div>
+<div class="line"><a id="l08389" name="l08389"></a><span class="lineno"> 8389</span>            ans = board;</div>
+<div class="line"><a id="l08390" name="l08390"></a><span class="lineno"> 8390</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l08391" name="l08391"></a><span class="lineno"> 8391</span>        }</div>
+<div class="ttc" id="aa02699_html_a2d63a1960a373184f87cd74ccf08d40b"><div class="ttname"><a href="../../dd/d9a/a02699.html#a2d63a1960a373184f87cd74ccf08d40b">leetcode::sudoku_solver::Solution::valid</a></div><div class="ttdeci">bool valid(const vector&lt; vector&lt; char &gt; &gt; &amp;board, int x, int y, char num)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08393">leetcode.cpp:8393</a></div></div>
+<div class="ttc" id="aa02699_html_a3a0c935717c748e0f0858f63d7e9219f"><div class="ttname"><a href="../../dd/d9a/a02699.html#a3a0c935717c748e0f0858f63d7e9219f">leetcode::sudoku_solver::Solution::dfs</a></div><div class="ttdeci">bool dfs(const vector&lt; vector&lt; char &gt; &gt; &amp;board, vector&lt; vector&lt; char &gt; &gt; &amp;ans)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08370">leetcode.cpp:8370</a></div></div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../dd/dad/a00005_source.html#l00021">lintcode::distribute_candies::TEST()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08370">dfs()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08393">valid()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08370">dfs()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08366">solveSudoku()</a>.</p>
+
+</div>
+</div>
+<a id="a869757db7776483b07164d05589b07df" name="a869757db7776483b07164d05589b07df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a869757db7776483b07164d05589b07df">&#9670;&nbsp;</a></span>solveSudoku()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void leetcode::sudoku_solver::Solution::solveSudoku </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; vector&lt; char &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>board</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08366">8366</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08366" name="l08366"></a><span class="lineno"> 8366</span>                                                              {</div>
+<div class="line"><a id="l08367" name="l08367"></a><span class="lineno"> 8367</span>            <a class="code hl_function" href="../../dd/d9a/a02699.html#a3a0c935717c748e0f0858f63d7e9219f">dfs</a>(board, board);</div>
+<div class="line"><a id="l08368" name="l08368"></a><span class="lineno"> 8368</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08370">dfs()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l03886">leetcode::sudoku_solver::TEST()</a>.</p>
+
+</div>
+</div>
+<a id="a2d63a1960a373184f87cd74ccf08d40b" name="a2d63a1960a373184f87cd74ccf08d40b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d63a1960a373184f87cd74ccf08d40b">&#9670;&nbsp;</a></span>valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool leetcode::sudoku_solver::Solution::valid </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; vector&lt; char &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>board</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08393">8393</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08393" name="l08393"></a><span class="lineno"> 8393</span>                                                                                      {</div>
+<div class="line"><a id="l08394" name="l08394"></a><span class="lineno"> 8394</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 9; i++) {</div>
+<div class="line"><a id="l08395" name="l08395"></a><span class="lineno"> 8395</span>                <span class="keywordflow">if</span>(board[i][y] == num) {</div>
+<div class="line"><a id="l08396" name="l08396"></a><span class="lineno"> 8396</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l08397" name="l08397"></a><span class="lineno"> 8397</span>                }</div>
+<div class="line"><a id="l08398" name="l08398"></a><span class="lineno"> 8398</span>            }</div>
+<div class="line"><a id="l08399" name="l08399"></a><span class="lineno"> 8399</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 9; j++) {</div>
+<div class="line"><a id="l08400" name="l08400"></a><span class="lineno"> 8400</span>                <span class="keywordflow">if</span>(board[x][j] == num) {</div>
+<div class="line"><a id="l08401" name="l08401"></a><span class="lineno"> 8401</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l08402" name="l08402"></a><span class="lineno"> 8402</span>                }</div>
+<div class="line"><a id="l08403" name="l08403"></a><span class="lineno"> 8403</span>            }</div>
+<div class="line"><a id="l08404" name="l08404"></a><span class="lineno"> 8404</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {</div>
+<div class="line"><a id="l08405" name="l08405"></a><span class="lineno"> 8405</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 3; j++) {</div>
+<div class="line"><a id="l08406" name="l08406"></a><span class="lineno"> 8406</span>                    <span class="keywordflow">if</span>(board[x / 3 * 3 + i][y / 3 * 3 + j] == num) {</div>
+<div class="line"><a id="l08407" name="l08407"></a><span class="lineno"> 8407</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l08408" name="l08408"></a><span class="lineno"> 8408</span>                    }</div>
+<div class="line"><a id="l08409" name="l08409"></a><span class="lineno"> 8409</span>                }</div>
+<div class="line"><a id="l08410" name="l08410"></a><span class="lineno"> 8410</span>            }</div>
+<div class="line"><a id="l08411" name="l08411"></a><span class="lineno"> 8411</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l08412" name="l08412"></a><span class="lineno"> 8412</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08370">dfs()</a>.</p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../d4/dee/a00008_source.html">lintcode.h</a></li>
-<li><a class="el" href="../../d4/d51/a00017_source.html">lintcode.cpp</a></li>
+<li><a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
