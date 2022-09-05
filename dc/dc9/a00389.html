@@ -131,7 +131,7 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../dc/d87/a00032_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../dc/d87/a00032_source.html#l03451">3451</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l03451" name="l03451"></a><span class="lineno"> 3451</span>                                                 {</div>
-<div class="line"><a id="l03452" name="l03452"></a><span class="lineno"> 3452</span>            <span class="keywordflow">if</span>((tn1 == <span class="keyword">nullptr</span>) != (tn2 == <span class="keyword">nullptr</span>)) {</div>
+<div class="line"><a id="l03452" name="l03452"></a><span class="lineno"> 3452</span>            <span class="keywordflow">if</span>(tn1 == <span class="keyword">nullptr</span> != (tn2 == <span class="keyword">nullptr</span>)) {</div>
 <div class="line"><a id="l03453" name="l03453"></a><span class="lineno"> 3453</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l03454" name="l03454"></a><span class="lineno"> 3454</span>            }</div>
 <div class="line"><a id="l03455" name="l03455"></a><span class="lineno"> 3455</span>            <span class="keywordflow">if</span>(tn1 != <span class="keyword">nullptr</span> &amp;&amp; tn2 != <span class="keyword">nullptr</span>) {</div>
@@ -189,15 +189,14 @@ $(function() {
 <div class="line"><a id="l03470" name="l03470"></a><span class="lineno"> 3470</span>            <span class="keyword">const</span> <span class="keyword">auto</span> c     = <a class="code hl_class" href="../../d7/d7d/a02527.html">serialize_and_deserialize_binary_tree::Codec</a>();</div>
 <div class="line"><a id="l03471" name="l03471"></a><span class="lineno"> 3471</span>            <a class="code hl_struct" href="../../d2/d36/a01495.html">TreeNode</a> *root   = c.deserialize(<span class="stringliteral">&quot;[5,3,6,2,4,null,7]&quot;</span>);</div>
 <div class="line"><a id="l03472" name="l03472"></a><span class="lineno"> 3472</span>            <a class="code hl_struct" href="../../d2/d36/a01495.html">TreeNode</a> *output = c.deserialize(<span class="stringliteral">&quot;[5,4,6,2,null,null,7]&quot;</span>);</div>
-<div class="line"><a id="l03473" name="l03473"></a><span class="lineno"> 3473</span>            <a class="code hl_class" href="../../db/dab/a02567.html">Solution</a> sol     = <a class="code hl_class" href="../../db/dab/a02567.html">Solution</a>();</div>
-<div class="line"><a id="l03474" name="l03474"></a><span class="lineno"> 3474</span>            ASSERT_TRUE(<a class="code hl_function" href="../../dc/dc9/a00389.html#af41063f1c943672963a235a0a8e158ab">equal</a>(output, sol.<a class="code hl_function" href="../../db/dab/a02567.html#a439014d9aef4aafc490c99ecb3771af3">deleteNode</a>(root, 3)));</div>
+<div class="line"><a id="l03473" name="l03473"></a><span class="lineno"> 3473</span>            <span class="keyword">auto</span> sol         = <a class="code hl_class" href="../../db/dab/a02567.html">Solution</a>();</div>
+<div class="line"><a id="l03474" name="l03474"></a><span class="lineno"> 3474</span>            ASSERT_TRUE(<a class="code hl_function" href="../../dc/dc9/a00389.html#af41063f1c943672963a235a0a8e158ab">equal</a>(output, sol.deleteNode(root, 3)));</div>
 <div class="line"><a id="l03475" name="l03475"></a><span class="lineno"> 3475</span>        }</div>
 <div class="ttc" id="aa01495_html"><div class="ttname"><a href="../../d2/d36/a01495.html">leetcode::TreeNode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00022">leetcode.h:22</a></div></div>
 <div class="ttc" id="aa02527_html"><div class="ttname"><a href="../../d7/d7d/a02527.html">leetcode::serialize_and_deserialize_binary_tree::Codec</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l02604">leetcode.h:2604</a></div></div>
 <div class="ttc" id="aa02567_html"><div class="ttname"><a href="../../db/dab/a02567.html">leetcode::delete_node_in_a_bst::Solution</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l02719">leetcode.h:2719</a></div></div>
-<div class="ttc" id="aa02567_html_a439014d9aef4aafc490c99ecb3771af3"><div class="ttname"><a href="../../db/dab/a02567.html#a439014d9aef4aafc490c99ecb3771af3">leetcode::delete_node_in_a_bst::Solution::deleteNode</a></div><div class="ttdeci">TreeNode * deleteNode(TreeNode *root, int key)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l07446">leetcode.cpp:7446</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l07446">leetcode::delete_node_in_a_bst::Solution::deleteNode()</a> , 以及 <a class="el" href="../../dc/d87/a00032_source.html#l03451">equal()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dc/d87/a00032_source.html#l03451">equal()</a>.</p>
 
 </div>
 </div>
@@ -232,11 +231,11 @@ $(function() {
 <div class="line"><a id="l03478" name="l03478"></a><span class="lineno"> 3478</span>            <span class="keyword">const</span> <span class="keyword">auto</span> c     = <a class="code hl_class" href="../../d7/d7d/a02527.html">serialize_and_deserialize_binary_tree::Codec</a>();</div>
 <div class="line"><a id="l03479" name="l03479"></a><span class="lineno"> 3479</span>            <a class="code hl_struct" href="../../d2/d36/a01495.html">TreeNode</a> *root   = c.deserialize(<span class="stringliteral">&quot;[5,3,6,2,4,null,7]&quot;</span>);</div>
 <div class="line"><a id="l03480" name="l03480"></a><span class="lineno"> 3480</span>            <a class="code hl_struct" href="../../d2/d36/a01495.html">TreeNode</a> *output = c.deserialize(<span class="stringliteral">&quot;[5,3,6,2,4,null,7]&quot;</span>);</div>
-<div class="line"><a id="l03481" name="l03481"></a><span class="lineno"> 3481</span>            <a class="code hl_class" href="../../db/dab/a02567.html">Solution</a> sol     = <a class="code hl_class" href="../../db/dab/a02567.html">Solution</a>();</div>
-<div class="line"><a id="l03482" name="l03482"></a><span class="lineno"> 3482</span>            ASSERT_TRUE(<a class="code hl_function" href="../../dc/dc9/a00389.html#af41063f1c943672963a235a0a8e158ab">equal</a>(output, sol.<a class="code hl_function" href="../../db/dab/a02567.html#a439014d9aef4aafc490c99ecb3771af3">deleteNode</a>(root, 0)));</div>
+<div class="line"><a id="l03481" name="l03481"></a><span class="lineno"> 3481</span>            <span class="keyword">auto</span> sol         = <a class="code hl_class" href="../../db/dab/a02567.html">Solution</a>();</div>
+<div class="line"><a id="l03482" name="l03482"></a><span class="lineno"> 3482</span>            ASSERT_TRUE(<a class="code hl_function" href="../../dc/dc9/a00389.html#af41063f1c943672963a235a0a8e158ab">equal</a>(output, sol.deleteNode(root, 0)));</div>
 <div class="line"><a id="l03483" name="l03483"></a><span class="lineno"> 3483</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l07446">leetcode::delete_node_in_a_bst::Solution::deleteNode()</a> , 以及 <a class="el" href="../../dc/d87/a00032_source.html#l03451">equal()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dc/d87/a00032_source.html#l03451">equal()</a>.</p>
 
 </div>
 </div>
@@ -271,11 +270,11 @@ $(function() {
 <div class="line"><a id="l03486" name="l03486"></a><span class="lineno"> 3486</span>            <span class="keyword">const</span> <span class="keyword">auto</span> c     = <a class="code hl_class" href="../../d7/d7d/a02527.html">serialize_and_deserialize_binary_tree::Codec</a>();</div>
 <div class="line"><a id="l03487" name="l03487"></a><span class="lineno"> 3487</span>            <a class="code hl_struct" href="../../d2/d36/a01495.html">TreeNode</a> *root   = c.deserialize(<span class="stringliteral">&quot;[]&quot;</span>);</div>
 <div class="line"><a id="l03488" name="l03488"></a><span class="lineno"> 3488</span>            <a class="code hl_struct" href="../../d2/d36/a01495.html">TreeNode</a> *output = c.deserialize(<span class="stringliteral">&quot;[]&quot;</span>);</div>
-<div class="line"><a id="l03489" name="l03489"></a><span class="lineno"> 3489</span>            <a class="code hl_class" href="../../db/dab/a02567.html">Solution</a> sol     = <a class="code hl_class" href="../../db/dab/a02567.html">Solution</a>();</div>
-<div class="line"><a id="l03490" name="l03490"></a><span class="lineno"> 3490</span>            ASSERT_TRUE(<a class="code hl_function" href="../../dc/dc9/a00389.html#af41063f1c943672963a235a0a8e158ab">equal</a>(output, sol.<a class="code hl_function" href="../../db/dab/a02567.html#a439014d9aef4aafc490c99ecb3771af3">deleteNode</a>(root, 0)));</div>
+<div class="line"><a id="l03489" name="l03489"></a><span class="lineno"> 3489</span>            <span class="keyword">auto</span> sol         = <a class="code hl_class" href="../../db/dab/a02567.html">Solution</a>();</div>
+<div class="line"><a id="l03490" name="l03490"></a><span class="lineno"> 3490</span>            ASSERT_TRUE(<a class="code hl_function" href="../../dc/dc9/a00389.html#af41063f1c943672963a235a0a8e158ab">equal</a>(output, sol.deleteNode(root, 0)));</div>
 <div class="line"><a id="l03491" name="l03491"></a><span class="lineno"> 3491</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l07446">leetcode::delete_node_in_a_bst::Solution::deleteNode()</a> , 以及 <a class="el" href="../../dc/d87/a00032_source.html#l03451">equal()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dc/d87/a00032_source.html#l03451">equal()</a>.</p>
 
 </div>
 </div>
@@ -310,11 +309,11 @@ $(function() {
 <div class="line"><a id="l03494" name="l03494"></a><span class="lineno"> 3494</span>            <span class="keyword">const</span> <span class="keyword">auto</span> c     = <a class="code hl_class" href="../../d7/d7d/a02527.html">serialize_and_deserialize_binary_tree::Codec</a>();</div>
 <div class="line"><a id="l03495" name="l03495"></a><span class="lineno"> 3495</span>            <a class="code hl_struct" href="../../d2/d36/a01495.html">TreeNode</a> *root   = c.deserialize(<span class="stringliteral">&quot;[3,2,5,null,null,4,10,null,null,8,15,7]&quot;</span>);</div>
 <div class="line"><a id="l03496" name="l03496"></a><span class="lineno"> 3496</span>            <a class="code hl_struct" href="../../d2/d36/a01495.html">TreeNode</a> *output = c.deserialize(<span class="stringliteral">&quot;[3,2,7,null,null,4,10,null,null,8,15]&quot;</span>);</div>
-<div class="line"><a id="l03497" name="l03497"></a><span class="lineno"> 3497</span>            <a class="code hl_class" href="../../db/dab/a02567.html">Solution</a> sol     = <a class="code hl_class" href="../../db/dab/a02567.html">Solution</a>();</div>
-<div class="line"><a id="l03498" name="l03498"></a><span class="lineno"> 3498</span>            ASSERT_TRUE(<a class="code hl_function" href="../../dc/dc9/a00389.html#af41063f1c943672963a235a0a8e158ab">equal</a>(output, sol.<a class="code hl_function" href="../../db/dab/a02567.html#a439014d9aef4aafc490c99ecb3771af3">deleteNode</a>(root, 5)));</div>
+<div class="line"><a id="l03497" name="l03497"></a><span class="lineno"> 3497</span>            <span class="keyword">auto</span> sol         = <a class="code hl_class" href="../../db/dab/a02567.html">Solution</a>();</div>
+<div class="line"><a id="l03498" name="l03498"></a><span class="lineno"> 3498</span>            ASSERT_TRUE(<a class="code hl_function" href="../../dc/dc9/a00389.html#af41063f1c943672963a235a0a8e158ab">equal</a>(output, sol.deleteNode(root, 5)));</div>
 <div class="line"><a id="l03499" name="l03499"></a><span class="lineno"> 3499</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l07446">leetcode::delete_node_in_a_bst::Solution::deleteNode()</a> , 以及 <a class="el" href="../../dc/d87/a00032_source.html#l03451">equal()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dc/d87/a00032_source.html#l03451">equal()</a>.</p>
 
 </div>
 </div>

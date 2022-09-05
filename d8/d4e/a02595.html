@@ -109,26 +109,26 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07673">7673</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07673" name="l07673"></a><span class="lineno"> 7673</span>                                              {</div>
-<div class="line"><a id="l07674" name="l07674"></a><span class="lineno"> 7674</span>            vector&lt;int&gt; lmax(height.size(), 0);</div>
-<div class="line"><a id="l07675" name="l07675"></a><span class="lineno"> 7675</span>            vector&lt;int&gt; rmax(height.size(), 0);</div>
-<div class="line"><a id="l07676" name="l07676"></a><span class="lineno"> 7676</span>            <span class="keywordtype">int</span> maximum = height[0];</div>
-<div class="line"><a id="l07677" name="l07677"></a><span class="lineno"> 7677</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; height.size(); i++) {</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07668">7668</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07668" name="l07668"></a><span class="lineno"> 7668</span>                                              {</div>
+<div class="line"><a id="l07669" name="l07669"></a><span class="lineno"> 7669</span>            vector lmax(height.size(), 0);</div>
+<div class="line"><a id="l07670" name="l07670"></a><span class="lineno"> 7670</span>            vector rmax(height.size(), 0);</div>
+<div class="line"><a id="l07671" name="l07671"></a><span class="lineno"> 7671</span>            <span class="keywordtype">int</span> maximum = height[0];</div>
+<div class="line"><a id="l07672" name="l07672"></a><span class="lineno"> 7672</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; height.size(); i++) {</div>
+<div class="line"><a id="l07673" name="l07673"></a><span class="lineno"> 7673</span>                maximum = max(maximum, height[i]);</div>
+<div class="line"><a id="l07674" name="l07674"></a><span class="lineno"> 7674</span>                lmax[i] = maximum;</div>
+<div class="line"><a id="l07675" name="l07675"></a><span class="lineno"> 7675</span>            }</div>
+<div class="line"><a id="l07676" name="l07676"></a><span class="lineno"> 7676</span>            maximum = height.back();</div>
+<div class="line"><a id="l07677" name="l07677"></a><span class="lineno"> 7677</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = height.size() - 1; i &gt;= 0; i--) {</div>
 <div class="line"><a id="l07678" name="l07678"></a><span class="lineno"> 7678</span>                maximum = max(maximum, height[i]);</div>
-<div class="line"><a id="l07679" name="l07679"></a><span class="lineno"> 7679</span>                lmax[i] = maximum;</div>
+<div class="line"><a id="l07679" name="l07679"></a><span class="lineno"> 7679</span>                rmax[i] = maximum;</div>
 <div class="line"><a id="l07680" name="l07680"></a><span class="lineno"> 7680</span>            }</div>
-<div class="line"><a id="l07681" name="l07681"></a><span class="lineno"> 7681</span>            maximum = height.back();</div>
-<div class="line"><a id="l07682" name="l07682"></a><span class="lineno"> 7682</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = height.size() - 1; i &gt;= 0; i--) {</div>
-<div class="line"><a id="l07683" name="l07683"></a><span class="lineno"> 7683</span>                maximum = max(maximum, height[i]);</div>
-<div class="line"><a id="l07684" name="l07684"></a><span class="lineno"> 7684</span>                rmax[i] = maximum;</div>
-<div class="line"><a id="l07685" name="l07685"></a><span class="lineno"> 7685</span>            }</div>
-<div class="line"><a id="l07686" name="l07686"></a><span class="lineno"> 7686</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l07687" name="l07687"></a><span class="lineno"> 7687</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; height.size(); i++) {</div>
-<div class="line"><a id="l07688" name="l07688"></a><span class="lineno"> 7688</span>                ans += min(lmax[i], rmax[i]) - height[i];</div>
-<div class="line"><a id="l07689" name="l07689"></a><span class="lineno"> 7689</span>            }</div>
-<div class="line"><a id="l07690" name="l07690"></a><span class="lineno"> 7690</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l07691" name="l07691"></a><span class="lineno"> 7691</span>        }</div>
+<div class="line"><a id="l07681" name="l07681"></a><span class="lineno"> 7681</span>            <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l07682" name="l07682"></a><span class="lineno"> 7682</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; height.size(); i++) {</div>
+<div class="line"><a id="l07683" name="l07683"></a><span class="lineno"> 7683</span>                ans += min(lmax[i], rmax[i]) - height[i];</div>
+<div class="line"><a id="l07684" name="l07684"></a><span class="lineno"> 7684</span>            }</div>
+<div class="line"><a id="l07685" name="l07685"></a><span class="lineno"> 7685</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l07686" name="l07686"></a><span class="lineno"> 7686</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l03607">leetcode::trapping_rain_water::TEST()</a>.</p>
 

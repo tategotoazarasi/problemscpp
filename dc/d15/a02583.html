@@ -119,34 +119,34 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07578">7578</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07578" name="l07578"></a><span class="lineno"> 7578</span>                                                                                                     {</div>
-<div class="line"><a id="l07579" name="l07579"></a><span class="lineno"> 7579</span>            vector&lt;int&gt; ans;</div>
-<div class="line"><a id="l07580" name="l07580"></a><span class="lineno"> 7580</span>            unordered_map&lt;int, vector&lt;int&gt;&gt; um;</div>
-<div class="line"><a id="l07581" name="l07581"></a><span class="lineno"> 7581</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; colors.size(); i++) {</div>
-<div class="line"><a id="l07582" name="l07582"></a><span class="lineno"> 7582</span>                um[colors[i]].emplace_back(i);</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07575">7575</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07575" name="l07575"></a><span class="lineno"> 7575</span>                                                                                                     {</div>
+<div class="line"><a id="l07576" name="l07576"></a><span class="lineno"> 7576</span>            vector&lt;int&gt; ans;</div>
+<div class="line"><a id="l07577" name="l07577"></a><span class="lineno"> 7577</span>            unordered_map&lt;int, vector&lt;int&gt;&gt; um;</div>
+<div class="line"><a id="l07578" name="l07578"></a><span class="lineno"> 7578</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; colors.size(); i++) {</div>
+<div class="line"><a id="l07579" name="l07579"></a><span class="lineno"> 7579</span>                um[colors[i]].emplace_back(i);</div>
+<div class="line"><a id="l07580" name="l07580"></a><span class="lineno"> 7580</span>            }</div>
+<div class="line"><a id="l07581" name="l07581"></a><span class="lineno"> 7581</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[k, vec]: um) {</div>
+<div class="line"><a id="l07582" name="l07582"></a><span class="lineno"> 7582</span>                sort(vec.begin(), vec.end());</div>
 <div class="line"><a id="l07583" name="l07583"></a><span class="lineno"> 7583</span>            }</div>
-<div class="line"><a id="l07584" name="l07584"></a><span class="lineno"> 7584</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[k, vec]: um) {</div>
-<div class="line"><a id="l07585" name="l07585"></a><span class="lineno"> 7585</span>                sort(vec.begin(), vec.end());</div>
-<div class="line"><a id="l07586" name="l07586"></a><span class="lineno"> 7586</span>            }</div>
-<div class="line"><a id="l07587" name="l07587"></a><span class="lineno"> 7587</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;query: queries) {</div>
-<div class="line"><a id="l07588" name="l07588"></a><span class="lineno"> 7588</span>                <span class="keywordtype">int</span> &amp;i           = query[0];</div>
-<div class="line"><a id="l07589" name="l07589"></a><span class="lineno"> 7589</span>                <span class="keywordtype">int</span> &amp;c           = query[1];</div>
-<div class="line"><a id="l07590" name="l07590"></a><span class="lineno"> 7590</span>                vector&lt;int&gt; &amp;vec = um[c];</div>
-<div class="line"><a id="l07591" name="l07591"></a><span class="lineno"> 7591</span>                <span class="keyword">auto</span> g           = lower_bound(vec.begin(), vec.end(), i, less&lt;&gt;());</div>
-<div class="line"><a id="l07592" name="l07592"></a><span class="lineno"> 7592</span>                <span class="keyword">auto</span> l           = lower_bound(vec.rbegin(), vec.rend(), i, greater&lt;&gt;());</div>
-<div class="line"><a id="l07593" name="l07593"></a><span class="lineno"> 7593</span>                <span class="keywordflow">if</span>(g == vec.end() &amp;&amp; l == vec.rend()) {</div>
-<div class="line"><a id="l07594" name="l07594"></a><span class="lineno"> 7594</span>                    ans.emplace_back(-1);</div>
-<div class="line"><a id="l07595" name="l07595"></a><span class="lineno"> 7595</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(g == vec.end()) {</div>
-<div class="line"><a id="l07596" name="l07596"></a><span class="lineno"> 7596</span>                    ans.emplace_back(abs(*l - i));</div>
-<div class="line"><a id="l07597" name="l07597"></a><span class="lineno"> 7597</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(l == vec.rend()) {</div>
-<div class="line"><a id="l07598" name="l07598"></a><span class="lineno"> 7598</span>                    ans.emplace_back(abs(*g - i));</div>
-<div class="line"><a id="l07599" name="l07599"></a><span class="lineno"> 7599</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07600" name="l07600"></a><span class="lineno"> 7600</span>                    ans.emplace_back(min(abs(*l - i), abs(*g - i)));</div>
-<div class="line"><a id="l07601" name="l07601"></a><span class="lineno"> 7601</span>                }</div>
-<div class="line"><a id="l07602" name="l07602"></a><span class="lineno"> 7602</span>            }</div>
-<div class="line"><a id="l07603" name="l07603"></a><span class="lineno"> 7603</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l07604" name="l07604"></a><span class="lineno"> 7604</span>        }</div>
+<div class="line"><a id="l07584" name="l07584"></a><span class="lineno"> 7584</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;query: queries) {</div>
+<div class="line"><a id="l07585" name="l07585"></a><span class="lineno"> 7585</span>                <span class="keywordtype">int</span> &amp;i           = query[0];</div>
+<div class="line"><a id="l07586" name="l07586"></a><span class="lineno"> 7586</span>                <span class="keywordtype">int</span> &amp;c           = query[1];</div>
+<div class="line"><a id="l07587" name="l07587"></a><span class="lineno"> 7587</span>                vector&lt;int&gt; &amp;vec = um[c];</div>
+<div class="line"><a id="l07588" name="l07588"></a><span class="lineno"> 7588</span>                <span class="keyword">auto</span> g           = lower_bound(vec.begin(), vec.end(), i, less());</div>
+<div class="line"><a id="l07589" name="l07589"></a><span class="lineno"> 7589</span>                <span class="keyword">auto</span> l           = lower_bound(vec.rbegin(), vec.rend(), i, greater());</div>
+<div class="line"><a id="l07590" name="l07590"></a><span class="lineno"> 7590</span>                <span class="keywordflow">if</span>(g == vec.end() &amp;&amp; l == vec.rend()) {</div>
+<div class="line"><a id="l07591" name="l07591"></a><span class="lineno"> 7591</span>                    ans.emplace_back(-1);</div>
+<div class="line"><a id="l07592" name="l07592"></a><span class="lineno"> 7592</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(g == vec.end()) {</div>
+<div class="line"><a id="l07593" name="l07593"></a><span class="lineno"> 7593</span>                    ans.emplace_back(abs(*l - i));</div>
+<div class="line"><a id="l07594" name="l07594"></a><span class="lineno"> 7594</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(l == vec.rend()) {</div>
+<div class="line"><a id="l07595" name="l07595"></a><span class="lineno"> 7595</span>                    ans.emplace_back(abs(*g - i));</div>
+<div class="line"><a id="l07596" name="l07596"></a><span class="lineno"> 7596</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07597" name="l07597"></a><span class="lineno"> 7597</span>                    ans.emplace_back(min(abs(*l - i), abs(*g - i)));</div>
+<div class="line"><a id="l07598" name="l07598"></a><span class="lineno"> 7598</span>                }</div>
+<div class="line"><a id="l07599" name="l07599"></a><span class="lineno"> 7599</span>            }</div>
+<div class="line"><a id="l07600" name="l07600"></a><span class="lineno"> 7600</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l07601" name="l07601"></a><span class="lineno"> 7601</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l03551">leetcode::shortest_distance_to_target_color::TEST()</a>.</p>
 

@@ -83,7 +83,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02880">2880</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02885">2885</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="ab3beea54500e469e44fa1e56871a8beb" name="ab3beea54500e469e44fa1e56871a8beb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3beea54500e469e44fa1e56871a8beb">&#9670;&nbsp;</a></span>killProcess()</h2>
@@ -125,32 +125,32 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07997">7997</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07997" name="l07997"></a><span class="lineno"> 7997</span>                                                                                       {</div>
-<div class="line"><a id="l07998" name="l07998"></a><span class="lineno"> 7998</span>            unordered_map&lt;int, Node *&gt; um;</div>
-<div class="line"><a id="l07999" name="l07999"></a><span class="lineno"> 7999</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;v: pid) {</div>
-<div class="line"><a id="l08000" name="l08000"></a><span class="lineno"> 8000</span>                um[v] = <span class="keyword">new</span> Node(v);</div>
-<div class="line"><a id="l08001" name="l08001"></a><span class="lineno"> 8001</span>            }</div>
-<div class="line"><a id="l08002" name="l08002"></a><span class="lineno"> 8002</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; pid.size(); i++) {</div>
-<div class="line"><a id="l08003" name="l08003"></a><span class="lineno"> 8003</span>                <span class="keywordflow">if</span>(ppid[i] != 0) {</div>
-<div class="line"><a id="l08004" name="l08004"></a><span class="lineno"> 8004</span>                    um[ppid[i]]-&gt;children.insert(um[pid[i]]);</div>
-<div class="line"><a id="l08005" name="l08005"></a><span class="lineno"> 8005</span>                }</div>
-<div class="line"><a id="l08006" name="l08006"></a><span class="lineno"> 8006</span>            }</div>
-<div class="line"><a id="l08007" name="l08007"></a><span class="lineno"> 8007</span>            vector&lt;int&gt; ans;</div>
-<div class="line"><a id="l08008" name="l08008"></a><span class="lineno"> 8008</span>            queue&lt;Node *&gt; q;</div>
-<div class="line"><a id="l08009" name="l08009"></a><span class="lineno"> 8009</span>            q.push(um[kill]);</div>
-<div class="line"><a id="l08010" name="l08010"></a><span class="lineno"> 8010</span>            <span class="keywordflow">while</span>(!q.empty()) {</div>
-<div class="line"><a id="l08011" name="l08011"></a><span class="lineno"> 8011</span>                Node *node = q.front();</div>
-<div class="line"><a id="l08012" name="l08012"></a><span class="lineno"> 8012</span>                q.pop();</div>
-<div class="line"><a id="l08013" name="l08013"></a><span class="lineno"> 8013</span>                ans.emplace_back(node-&gt;val);</div>
-<div class="line"><a id="l08014" name="l08014"></a><span class="lineno"> 8014</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> next: node-&gt;children) {</div>
-<div class="line"><a id="l08015" name="l08015"></a><span class="lineno"> 8015</span>                    q.push(next);</div>
-<div class="line"><a id="l08016" name="l08016"></a><span class="lineno"> 8016</span>                }</div>
-<div class="line"><a id="l08017" name="l08017"></a><span class="lineno"> 8017</span>            }</div>
-<div class="line"><a id="l08018" name="l08018"></a><span class="lineno"> 8018</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l08019" name="l08019"></a><span class="lineno"> 8019</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07987">7987</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07987" name="l07987"></a><span class="lineno"> 7987</span>                                                                                       {</div>
+<div class="line"><a id="l07988" name="l07988"></a><span class="lineno"> 7988</span>            unordered_map&lt;int, Node *&gt; um;</div>
+<div class="line"><a id="l07989" name="l07989"></a><span class="lineno"> 7989</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;v: pid) {</div>
+<div class="line"><a id="l07990" name="l07990"></a><span class="lineno"> 7990</span>                um[v] = <span class="keyword">new</span> Node(v);</div>
+<div class="line"><a id="l07991" name="l07991"></a><span class="lineno"> 7991</span>            }</div>
+<div class="line"><a id="l07992" name="l07992"></a><span class="lineno"> 7992</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; pid.size(); i++) {</div>
+<div class="line"><a id="l07993" name="l07993"></a><span class="lineno"> 7993</span>                <span class="keywordflow">if</span>(ppid[i] != 0) {</div>
+<div class="line"><a id="l07994" name="l07994"></a><span class="lineno"> 7994</span>                    um[ppid[i]]-&gt;children.insert(um[pid[i]]);</div>
+<div class="line"><a id="l07995" name="l07995"></a><span class="lineno"> 7995</span>                }</div>
+<div class="line"><a id="l07996" name="l07996"></a><span class="lineno"> 7996</span>            }</div>
+<div class="line"><a id="l07997" name="l07997"></a><span class="lineno"> 7997</span>            vector&lt;int&gt; ans;</div>
+<div class="line"><a id="l07998" name="l07998"></a><span class="lineno"> 7998</span>            queue&lt;Node *&gt; q;</div>
+<div class="line"><a id="l07999" name="l07999"></a><span class="lineno"> 7999</span>            q.push(um[kill]);</div>
+<div class="line"><a id="l08000" name="l08000"></a><span class="lineno"> 8000</span>            <span class="keywordflow">while</span>(!q.empty()) {</div>
+<div class="line"><a id="l08001" name="l08001"></a><span class="lineno"> 8001</span>                Node *node = q.front();</div>
+<div class="line"><a id="l08002" name="l08002"></a><span class="lineno"> 8002</span>                q.pop();</div>
+<div class="line"><a id="l08003" name="l08003"></a><span class="lineno"> 8003</span>                ans.emplace_back(node-&gt;val);</div>
+<div class="line"><a id="l08004" name="l08004"></a><span class="lineno"> 8004</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> *next: node-&gt;children) {</div>
+<div class="line"><a id="l08005" name="l08005"></a><span class="lineno"> 8005</span>                    q.push(next);</div>
+<div class="line"><a id="l08006" name="l08006"></a><span class="lineno"> 8006</span>                }</div>
+<div class="line"><a id="l08007" name="l08007"></a><span class="lineno"> 8007</span>            }</div>
+<div class="line"><a id="l08008" name="l08008"></a><span class="lineno"> 8008</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l08009" name="l08009"></a><span class="lineno"> 8009</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02877">leetcode::kill_process::Node::children</a> , 以及 <a class="el" href="../../d5/d16/a00029_source.html#l02876">leetcode::kill_process::Node::val</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l02879">leetcode::kill_process::Node::children</a> , 以及 <a class="el" href="../../d5/d16/a00029_source.html#l02878">leetcode::kill_process::Node::val</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l03732">leetcode::kill_process::TEST()</a>.</p>
 

@@ -119,19 +119,19 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07240">7240</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07240" name="l07240"></a><span class="lineno"> 7240</span>                                                          {</div>
-<div class="line"><a id="l07241" name="l07241"></a><span class="lineno"> 7241</span>            unordered_map&lt;int, int&gt; um;</div>
-<div class="line"><a id="l07242" name="l07242"></a><span class="lineno"> 7242</span>            um[0]     = 1;</div>
-<div class="line"><a id="l07243" name="l07243"></a><span class="lineno"> 7243</span>            <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><a id="l07244" name="l07244"></a><span class="lineno"> 7244</span>            <span class="keywordtype">int</span> ps    = 0;</div>
-<div class="line"><a id="l07245" name="l07245"></a><span class="lineno"> 7245</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;num: nums) {</div>
-<div class="line"><a id="l07246" name="l07246"></a><span class="lineno"> 7246</span>                ps += num;</div>
-<div class="line"><a id="l07247" name="l07247"></a><span class="lineno"> 7247</span>                count += um[ps - k];</div>
-<div class="line"><a id="l07248" name="l07248"></a><span class="lineno"> 7248</span>                um[ps]++;</div>
-<div class="line"><a id="l07249" name="l07249"></a><span class="lineno"> 7249</span>            }</div>
-<div class="line"><a id="l07250" name="l07250"></a><span class="lineno"> 7250</span>            <span class="keywordflow">return</span> count;</div>
-<div class="line"><a id="l07251" name="l07251"></a><span class="lineno"> 7251</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07242">7242</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07242" name="l07242"></a><span class="lineno"> 7242</span>                                                          {</div>
+<div class="line"><a id="l07243" name="l07243"></a><span class="lineno"> 7243</span>            unordered_map&lt;int, int&gt; um;</div>
+<div class="line"><a id="l07244" name="l07244"></a><span class="lineno"> 7244</span>            um[0]     = 1;</div>
+<div class="line"><a id="l07245" name="l07245"></a><span class="lineno"> 7245</span>            <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l07246" name="l07246"></a><span class="lineno"> 7246</span>            <span class="keywordtype">int</span> ps    = 0;</div>
+<div class="line"><a id="l07247" name="l07247"></a><span class="lineno"> 7247</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;num: nums) {</div>
+<div class="line"><a id="l07248" name="l07248"></a><span class="lineno"> 7248</span>                ps += num;</div>
+<div class="line"><a id="l07249" name="l07249"></a><span class="lineno"> 7249</span>                count += um[ps - k];</div>
+<div class="line"><a id="l07250" name="l07250"></a><span class="lineno"> 7250</span>                um[ps]++;</div>
+<div class="line"><a id="l07251" name="l07251"></a><span class="lineno"> 7251</span>            }</div>
+<div class="line"><a id="l07252" name="l07252"></a><span class="lineno"> 7252</span>            <span class="keywordflow">return</span> count;</div>
+<div class="line"><a id="l07253" name="l07253"></a><span class="lineno"> 7253</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l03400">leetcode::subarray_sum_equals_k::TEST()</a>.</p>
 

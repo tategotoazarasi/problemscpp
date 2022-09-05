@@ -125,33 +125,36 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">acwing.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l07400">7400</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07400" name="l07400"></a><span class="lineno"> 7400</span>                                              {</div>
-<div class="line"><a id="l07401" name="l07401"></a><span class="lineno"> 7401</span>            <span class="keywordtype">int</span> n, m;</div>
-<div class="line"><a id="l07402" name="l07402"></a><span class="lineno"> 7402</span>            cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l07403" name="l07403"></a><span class="lineno"> 7403</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l07404" name="l07404"></a><span class="lineno"> 7404</span>            <span class="keywordtype">int</span> cnt = 1;</div>
-<div class="line"><a id="l07405" name="l07405"></a><span class="lineno"> 7405</span>            vector&lt;edge&gt; edges(m);</div>
-<div class="line"><a id="l07406" name="l07406"></a><span class="lineno"> 7406</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l07407" name="l07407"></a><span class="lineno"> 7407</span>                <span class="keywordtype">int</span> u, v, n;</div>
-<div class="line"><a id="l07408" name="l07408"></a><span class="lineno"> 7408</span>                cin &gt;&gt; edges[i].u &gt;&gt; edges[i].v &gt;&gt; edges[i].w;</div>
-<div class="line"><a id="l07409" name="l07409"></a><span class="lineno"> 7409</span>            }</div>
-<div class="line"><a id="l07410" name="l07410"></a><span class="lineno"> 7410</span>            sort(edges.begin(), edges.end());</div>
-<div class="line"><a id="l07411" name="l07411"></a><span class="lineno"> 7411</span>            <a class="code hl_class" href="../../d8/de2/a03299.html">UnionFind</a> uf(n + 1);</div>
-<div class="line"><a id="l07412" name="l07412"></a><span class="lineno"> 7412</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;edge: edges) {</div>
-<div class="line"><a id="l07413" name="l07413"></a><span class="lineno"> 7413</span>                <span class="keywordflow">if</span>(!uf.same(edge.u, edge.v)) {</div>
-<div class="line"><a id="l07414" name="l07414"></a><span class="lineno"> 7414</span>                    cnt++;</div>
-<div class="line"><a id="l07415" name="l07415"></a><span class="lineno"> 7415</span>                    uf.unite(edge.u, edge.v);</div>
-<div class="line"><a id="l07416" name="l07416"></a><span class="lineno"> 7416</span>                    ans += edge.w;</div>
-<div class="line"><a id="l07417" name="l07417"></a><span class="lineno"> 7417</span>                }</div>
-<div class="line"><a id="l07418" name="l07418"></a><span class="lineno"> 7418</span>            }</div>
-<div class="line"><a id="l07419" name="l07419"></a><span class="lineno"> 7419</span>            <span class="keywordflow">if</span>(cnt &lt; n) {</div>
-<div class="line"><a id="l07420" name="l07420"></a><span class="lineno"> 7420</span>                cout &lt;&lt; <span class="stringliteral">&quot;impossible&quot;</span>;</div>
-<div class="line"><a id="l07421" name="l07421"></a><span class="lineno"> 7421</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07422" name="l07422"></a><span class="lineno"> 7422</span>                cout &lt;&lt; ans;</div>
-<div class="line"><a id="l07423" name="l07423"></a><span class="lineno"> 7423</span>            }</div>
-<div class="line"><a id="l07424" name="l07424"></a><span class="lineno"> 7424</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07425" name="l07425"></a><span class="lineno"> 7425</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">acwing.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l07422">7422</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07422" name="l07422"></a><span class="lineno"> 7422</span>                                              {</div>
+<div class="line"><a id="l07423" name="l07423"></a><span class="lineno"> 7423</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l07424" name="l07424"></a><span class="lineno"> 7424</span>            <span class="keywordtype">int</span> m;</div>
+<div class="line"><a id="l07425" name="l07425"></a><span class="lineno"> 7425</span>            cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l07426" name="l07426"></a><span class="lineno"> 7426</span>            <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l07427" name="l07427"></a><span class="lineno"> 7427</span>            <span class="keywordtype">int</span> cnt = 1;</div>
+<div class="line"><a id="l07428" name="l07428"></a><span class="lineno"> 7428</span>            vector&lt;edge&gt; edges(m);</div>
+<div class="line"><a id="l07429" name="l07429"></a><span class="lineno"> 7429</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l07430" name="l07430"></a><span class="lineno"> 7430</span>                <span class="keywordtype">int</span> u;</div>
+<div class="line"><a id="l07431" name="l07431"></a><span class="lineno"> 7431</span>                <span class="keywordtype">int</span> v;</div>
+<div class="line"><a id="l07432" name="l07432"></a><span class="lineno"> 7432</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l07433" name="l07433"></a><span class="lineno"> 7433</span>                cin &gt;&gt; edges[i].u &gt;&gt; edges[i].v &gt;&gt; edges[i].w;</div>
+<div class="line"><a id="l07434" name="l07434"></a><span class="lineno"> 7434</span>            }</div>
+<div class="line"><a id="l07435" name="l07435"></a><span class="lineno"> 7435</span>            sort(edges.begin(), edges.end());</div>
+<div class="line"><a id="l07436" name="l07436"></a><span class="lineno"> 7436</span>            <a class="code hl_class" href="../../d8/de2/a03299.html">UnionFind</a> uf(n + 1);</div>
+<div class="line"><a id="l07437" name="l07437"></a><span class="lineno"> 7437</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;edge: edges) {</div>
+<div class="line"><a id="l07438" name="l07438"></a><span class="lineno"> 7438</span>                <span class="keywordflow">if</span>(!uf.same(edge.u, edge.v)) {</div>
+<div class="line"><a id="l07439" name="l07439"></a><span class="lineno"> 7439</span>                    cnt++;</div>
+<div class="line"><a id="l07440" name="l07440"></a><span class="lineno"> 7440</span>                    uf.unite(edge.u, edge.v);</div>
+<div class="line"><a id="l07441" name="l07441"></a><span class="lineno"> 7441</span>                    ans += edge.w;</div>
+<div class="line"><a id="l07442" name="l07442"></a><span class="lineno"> 7442</span>                }</div>
+<div class="line"><a id="l07443" name="l07443"></a><span class="lineno"> 7443</span>            }</div>
+<div class="line"><a id="l07444" name="l07444"></a><span class="lineno"> 7444</span>            <span class="keywordflow">if</span>(cnt &lt; n) {</div>
+<div class="line"><a id="l07445" name="l07445"></a><span class="lineno"> 7445</span>                cout &lt;&lt; <span class="stringliteral">&quot;impossible&quot;</span>;</div>
+<div class="line"><a id="l07446" name="l07446"></a><span class="lineno"> 7446</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07447" name="l07447"></a><span class="lineno"> 7447</span>                cout &lt;&lt; ans;</div>
+<div class="line"><a id="l07448" name="l07448"></a><span class="lineno"> 7448</span>            }</div>
+<div class="line"><a id="l07449" name="l07449"></a><span class="lineno"> 7449</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07450" name="l07450"></a><span class="lineno"> 7450</span>        }</div>
 <div class="ttc" id="aa03299_html"><div class="ttname"><a href="../../d8/de2/a03299.html">UnionFind</a></div><div class="ttdoc">并查集</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00090">templates.h:90</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00510">UnionFind::same()</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l02104">acwing::acwing859::edge::u</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00492">UnionFind::unite()</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l02105">acwing::acwing859::edge::v</a> , 以及 <a class="el" href="../../d9/d2e/a00056_source.html#l02106">acwing::acwing859::edge::w</a>.</p>
@@ -201,7 +204,7 @@ $(function() {
 <div class="line"><a id="l03546" name="l03546"></a><span class="lineno"> 3546</span>        }</div>
 <div class="ttc" id="aa00026_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07400">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07422">main()</a>.</p>
 
 </div>
 </div>
@@ -260,7 +263,7 @@ $(function() {
 <div class="line"><a id="l03573" name="l03573"></a><span class="lineno"> 3573</span>            ASSERT_EQ(<span class="stringliteral">&quot;impossible&quot;</span>, ans);</div>
 <div class="line"><a id="l03574" name="l03574"></a><span class="lineno"> 3574</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07400">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07422">main()</a>.</p>
 
 </div>
 </div>

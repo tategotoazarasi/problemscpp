@@ -109,30 +109,30 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07879">7879</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07879" name="l07879"></a><span class="lineno"> 7879</span>                                                               {</div>
-<div class="line"><a id="l07880" name="l07880"></a><span class="lineno"> 7880</span>            <span class="keywordtype">int</span> m = rooms.size();</div>
-<div class="line"><a id="l07881" name="l07881"></a><span class="lineno"> 7881</span>            <span class="keywordtype">int</span> n = rooms[0].size();</div>
-<div class="line"><a id="l07882" name="l07882"></a><span class="lineno"> 7882</span>            queue&lt;tuple&lt;int, int, int&gt;&gt; q;</div>
-<div class="line"><a id="l07883" name="l07883"></a><span class="lineno"> 7883</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l07884" name="l07884"></a><span class="lineno"> 7884</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l07885" name="l07885"></a><span class="lineno"> 7885</span>                    <span class="keywordflow">if</span>(rooms[i][j] == 0) {</div>
-<div class="line"><a id="l07886" name="l07886"></a><span class="lineno"> 7886</span>                        q.push({0, i, j});</div>
-<div class="line"><a id="l07887" name="l07887"></a><span class="lineno"> 7887</span>                    }</div>
-<div class="line"><a id="l07888" name="l07888"></a><span class="lineno"> 7888</span>                }</div>
-<div class="line"><a id="l07889" name="l07889"></a><span class="lineno"> 7889</span>            }</div>
-<div class="line"><a id="l07890" name="l07890"></a><span class="lineno"> 7890</span>            <span class="keywordflow">while</span>(!q.empty()) {</div>
-<div class="line"><a id="l07891" name="l07891"></a><span class="lineno"> 7891</span>                <span class="keyword">auto</span> [d, x, y] = q.front();</div>
-<div class="line"><a id="l07892" name="l07892"></a><span class="lineno"> 7892</span>                q.pop();</div>
-<div class="line"><a id="l07893" name="l07893"></a><span class="lineno"> 7893</span>                pair&lt;int, int&gt; nexts[4] = {{x + 1, y}, {x - 1, y}, {x, y + 1}, {x, y - 1}};</div>
-<div class="line"><a id="l07894" name="l07894"></a><span class="lineno"> 7894</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[next_x, next_y]: nexts) {</div>
-<div class="line"><a id="l07895" name="l07895"></a><span class="lineno"> 7895</span>                    <span class="keywordflow">if</span>(next_x &gt;= 0 &amp;&amp; next_y &gt;= 0 &amp;&amp; next_x &lt; m &amp;&amp; next_y &lt; n &amp;&amp; rooms[next_x][next_y] != -1 &amp;&amp; rooms[next_x][next_y] != 0 &amp;&amp; (rooms[next_x][next_y] == INT_MAX || rooms[next_x][next_y] &gt; d + 1)) {</div>
-<div class="line"><a id="l07896" name="l07896"></a><span class="lineno"> 7896</span>                        rooms[next_x][next_y] = d + 1;</div>
-<div class="line"><a id="l07897" name="l07897"></a><span class="lineno"> 7897</span>                        q.push({d + 1, next_x, next_y});</div>
-<div class="line"><a id="l07898" name="l07898"></a><span class="lineno"> 7898</span>                    }</div>
-<div class="line"><a id="l07899" name="l07899"></a><span class="lineno"> 7899</span>                }</div>
-<div class="line"><a id="l07900" name="l07900"></a><span class="lineno"> 7900</span>            }</div>
-<div class="line"><a id="l07901" name="l07901"></a><span class="lineno"> 7901</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07873">7873</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07873" name="l07873"></a><span class="lineno"> 7873</span>                                                               {</div>
+<div class="line"><a id="l07874" name="l07874"></a><span class="lineno"> 7874</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> m = rooms.size();</div>
+<div class="line"><a id="l07875" name="l07875"></a><span class="lineno"> 7875</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = rooms[0].size();</div>
+<div class="line"><a id="l07876" name="l07876"></a><span class="lineno"> 7876</span>            queue&lt;tuple&lt;int, int, int&gt;&gt; q;</div>
+<div class="line"><a id="l07877" name="l07877"></a><span class="lineno"> 7877</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l07878" name="l07878"></a><span class="lineno"> 7878</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><a id="l07879" name="l07879"></a><span class="lineno"> 7879</span>                    <span class="keywordflow">if</span>(rooms[i][j] == 0) {</div>
+<div class="line"><a id="l07880" name="l07880"></a><span class="lineno"> 7880</span>                        q.push({0, i, j});</div>
+<div class="line"><a id="l07881" name="l07881"></a><span class="lineno"> 7881</span>                    }</div>
+<div class="line"><a id="l07882" name="l07882"></a><span class="lineno"> 7882</span>                }</div>
+<div class="line"><a id="l07883" name="l07883"></a><span class="lineno"> 7883</span>            }</div>
+<div class="line"><a id="l07884" name="l07884"></a><span class="lineno"> 7884</span>            <span class="keywordflow">while</span>(!q.empty()) {</div>
+<div class="line"><a id="l07885" name="l07885"></a><span class="lineno"> 7885</span>                <span class="keyword">auto</span> [d, x, y] = q.front();</div>
+<div class="line"><a id="l07886" name="l07886"></a><span class="lineno"> 7886</span>                q.pop();</div>
+<div class="line"><a id="l07887" name="l07887"></a><span class="lineno"> 7887</span>                pair&lt;int, int&gt; nexts[4] = {{x + 1, y}, {x - 1, y}, {x, y + 1}, {x, y - 1}};</div>
+<div class="line"><a id="l07888" name="l07888"></a><span class="lineno"> 7888</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[next_x, next_y]: nexts) {</div>
+<div class="line"><a id="l07889" name="l07889"></a><span class="lineno"> 7889</span>                    <span class="keywordflow">if</span>(next_x &gt;= 0 &amp;&amp; next_y &gt;= 0 &amp;&amp; next_x &lt; m &amp;&amp; next_y &lt; n &amp;&amp; rooms[next_x][next_y] != -1 &amp;&amp; rooms[next_x][next_y] != 0 &amp;&amp; (rooms[next_x][next_y] == INT_MAX || rooms[next_x][next_y] &gt; d + 1)) {</div>
+<div class="line"><a id="l07890" name="l07890"></a><span class="lineno"> 7890</span>                        rooms[next_x][next_y] = d + 1;</div>
+<div class="line"><a id="l07891" name="l07891"></a><span class="lineno"> 7891</span>                        q.push({d + 1, next_x, next_y});</div>
+<div class="line"><a id="l07892" name="l07892"></a><span class="lineno"> 7892</span>                    }</div>
+<div class="line"><a id="l07893" name="l07893"></a><span class="lineno"> 7893</span>                }</div>
+<div class="line"><a id="l07894" name="l07894"></a><span class="lineno"> 7894</span>            }</div>
+<div class="line"><a id="l07895" name="l07895"></a><span class="lineno"> 7895</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l03695">leetcode::walls_and_gates::TEST()</a>.</p>
 

@@ -85,7 +85,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02909">2909</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02917">2917</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="ab6a1f00395dfb572c3108c0dfc4c6124" name="ab6a1f00395dfb572c3108c0dfc4c6124"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab6a1f00395dfb572c3108c0dfc4c6124">&#9670;&nbsp;</a></span>dfs()</h2>
@@ -139,22 +139,22 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08143">8143</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08143" name="l08143"></a><span class="lineno"> 8143</span>                                                                                                                         {</div>
-<div class="line"><a id="l08144" name="l08144"></a><span class="lineno"> 8144</span>            node_cnt++;</div>
-<div class="line"><a id="l08145" name="l08145"></a><span class="lineno"> 8145</span>            edge_cnt += g[node].size();</div>
-<div class="line"><a id="l08146" name="l08146"></a><span class="lineno"> 8146</span>            vis.insert(node);</div>
-<div class="line"><a id="l08147" name="l08147"></a><span class="lineno"> 8147</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> next: g[node]) {</div>
-<div class="line"><a id="l08148" name="l08148"></a><span class="lineno"> 8148</span>                <span class="keywordflow">if</span>(!vis.count(next)) {</div>
-<div class="line"><a id="l08149" name="l08149"></a><span class="lineno"> 8149</span>                    <a class="code hl_function" href="../../db/d86/a02663.html#ab6a1f00395dfb572c3108c0dfc4c6124">dfs</a>(edge_cnt, node_cnt, vis, next, g);</div>
-<div class="line"><a id="l08150" name="l08150"></a><span class="lineno"> 8150</span>                }</div>
-<div class="line"><a id="l08151" name="l08151"></a><span class="lineno"> 8151</span>            }</div>
-<div class="line"><a id="l08152" name="l08152"></a><span class="lineno"> 8152</span>        }</div>
-<div class="ttc" id="aa02663_html_ab6a1f00395dfb572c3108c0dfc4c6124"><div class="ttname"><a href="../../db/d86/a02663.html#ab6a1f00395dfb572c3108c0dfc4c6124">leetcode::number_of_operations_to_make_network_connected::Solution::dfs</a></div><div class="ttdeci">static void dfs(int &amp;edge_cnt, int &amp;node_cnt, unordered_set&lt; int &gt; &amp;vis, int node, vector&lt; unordered_set&lt; int &gt; &gt; &amp;g)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08143">leetcode.cpp:8143</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08132">8132</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08132" name="l08132"></a><span class="lineno"> 8132</span>                                                                                                                         {</div>
+<div class="line"><a id="l08133" name="l08133"></a><span class="lineno"> 8133</span>            node_cnt++;</div>
+<div class="line"><a id="l08134" name="l08134"></a><span class="lineno"> 8134</span>            edge_cnt += g[node].size();</div>
+<div class="line"><a id="l08135" name="l08135"></a><span class="lineno"> 8135</span>            vis.insert(node);</div>
+<div class="line"><a id="l08136" name="l08136"></a><span class="lineno"> 8136</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> next: g[node]) {</div>
+<div class="line"><a id="l08137" name="l08137"></a><span class="lineno"> 8137</span>                <span class="keywordflow">if</span>(!vis.contains(next)) {</div>
+<div class="line"><a id="l08138" name="l08138"></a><span class="lineno"> 8138</span>                    <a class="code hl_function" href="../../db/d86/a02663.html#ab6a1f00395dfb572c3108c0dfc4c6124">dfs</a>(edge_cnt, node_cnt, vis, next, g);</div>
+<div class="line"><a id="l08139" name="l08139"></a><span class="lineno"> 8139</span>                }</div>
+<div class="line"><a id="l08140" name="l08140"></a><span class="lineno"> 8140</span>            }</div>
+<div class="line"><a id="l08141" name="l08141"></a><span class="lineno"> 8141</span>        }</div>
+<div class="ttc" id="aa02663_html_ab6a1f00395dfb572c3108c0dfc4c6124"><div class="ttname"><a href="../../db/d86/a02663.html#ab6a1f00395dfb572c3108c0dfc4c6124">leetcode::number_of_operations_to_make_network_connected::Solution::dfs</a></div><div class="ttdeci">static void dfs(int &amp;edge_cnt, int &amp;node_cnt, unordered_set&lt; int &gt; &amp;vis, int node, vector&lt; unordered_set&lt; int &gt; &gt; &amp;g)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08132">leetcode.cpp:8132</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08143">dfs()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08132">dfs()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08143">dfs()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08118">makeConnected()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08132">dfs()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08108">makeConnected()</a>.</p>
 
 </div>
 </div>
@@ -192,33 +192,32 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08118">8118</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08118" name="l08118"></a><span class="lineno"> 8118</span>                                                                           {</div>
-<div class="line"><a id="l08119" name="l08119"></a><span class="lineno"> 8119</span>            vector&lt;unordered_set&lt;int&gt;&gt; g(n);</div>
-<div class="line"><a id="l08120" name="l08120"></a><span class="lineno"> 8120</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;connection: connections) {</div>
-<div class="line"><a id="l08121" name="l08121"></a><span class="lineno"> 8121</span>                g[connection[0]].insert(connection[1]);</div>
-<div class="line"><a id="l08122" name="l08122"></a><span class="lineno"> 8122</span>                g[connection[1]].insert(connection[0]);</div>
-<div class="line"><a id="l08123" name="l08123"></a><span class="lineno"> 8123</span>            }</div>
-<div class="line"><a id="l08124" name="l08124"></a><span class="lineno"> 8124</span>            <span class="keywordtype">int</span> group_cnt      = 0;</div>
-<div class="line"><a id="l08125" name="l08125"></a><span class="lineno"> 8125</span>            <span class="keywordtype">int</span> free_edges_cnt = 0;</div>
-<div class="line"><a id="l08126" name="l08126"></a><span class="lineno"> 8126</span>            unordered_set&lt;int&gt; vis;</div>
-<div class="line"><a id="l08127" name="l08127"></a><span class="lineno"> 8127</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l08128" name="l08128"></a><span class="lineno"> 8128</span>                <span class="keywordflow">if</span>(!vis.count(i)) {</div>
-<div class="line"><a id="l08129" name="l08129"></a><span class="lineno"> 8129</span>                    <span class="keywordtype">int</span> edge_cnt = 0;</div>
-<div class="line"><a id="l08130" name="l08130"></a><span class="lineno"> 8130</span>                    <span class="keywordtype">int</span> node_cnt = 0;</div>
-<div class="line"><a id="l08131" name="l08131"></a><span class="lineno"> 8131</span>                    <a class="code hl_function" href="../../db/d86/a02663.html#ab6a1f00395dfb572c3108c0dfc4c6124">dfs</a>(edge_cnt, node_cnt, vis, i, g);</div>
-<div class="line"><a id="l08132" name="l08132"></a><span class="lineno"> 8132</span>                    group_cnt++;</div>
-<div class="line"><a id="l08133" name="l08133"></a><span class="lineno"> 8133</span>                    free_edges_cnt += edge_cnt / 2 - node_cnt + 1;</div>
-<div class="line"><a id="l08134" name="l08134"></a><span class="lineno"> 8134</span>                }</div>
-<div class="line"><a id="l08135" name="l08135"></a><span class="lineno"> 8135</span>            }</div>
-<div class="line"><a id="l08136" name="l08136"></a><span class="lineno"> 8136</span>            <span class="keywordflow">if</span>(free_edges_cnt &lt; group_cnt - 1) {</div>
-<div class="line"><a id="l08137" name="l08137"></a><span class="lineno"> 8137</span>                <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l08138" name="l08138"></a><span class="lineno"> 8138</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l08139" name="l08139"></a><span class="lineno"> 8139</span>                <span class="keywordflow">return</span> group_cnt - 1;</div>
-<div class="line"><a id="l08140" name="l08140"></a><span class="lineno"> 8140</span>            }</div>
-<div class="line"><a id="l08141" name="l08141"></a><span class="lineno"> 8141</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08108">8108</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08108" name="l08108"></a><span class="lineno"> 8108</span>                                                                           {</div>
+<div class="line"><a id="l08109" name="l08109"></a><span class="lineno"> 8109</span>            vector&lt;unordered_set&lt;int&gt;&gt; g(n);</div>
+<div class="line"><a id="l08110" name="l08110"></a><span class="lineno"> 8110</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;connection: connections) {</div>
+<div class="line"><a id="l08111" name="l08111"></a><span class="lineno"> 8111</span>                g[connection[0]].insert(connection[1]);</div>
+<div class="line"><a id="l08112" name="l08112"></a><span class="lineno"> 8112</span>                g[connection[1]].insert(connection[0]);</div>
+<div class="line"><a id="l08113" name="l08113"></a><span class="lineno"> 8113</span>            }</div>
+<div class="line"><a id="l08114" name="l08114"></a><span class="lineno"> 8114</span>            <span class="keywordtype">int</span> group_cnt      = 0;</div>
+<div class="line"><a id="l08115" name="l08115"></a><span class="lineno"> 8115</span>            <span class="keywordtype">int</span> free_edges_cnt = 0;</div>
+<div class="line"><a id="l08116" name="l08116"></a><span class="lineno"> 8116</span>            unordered_set&lt;int&gt; vis;</div>
+<div class="line"><a id="l08117" name="l08117"></a><span class="lineno"> 8117</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l08118" name="l08118"></a><span class="lineno"> 8118</span>                <span class="keywordflow">if</span>(!vis.contains(i)) {</div>
+<div class="line"><a id="l08119" name="l08119"></a><span class="lineno"> 8119</span>                    <span class="keywordtype">int</span> edge_cnt = 0;</div>
+<div class="line"><a id="l08120" name="l08120"></a><span class="lineno"> 8120</span>                    <span class="keywordtype">int</span> node_cnt = 0;</div>
+<div class="line"><a id="l08121" name="l08121"></a><span class="lineno"> 8121</span>                    <a class="code hl_function" href="../../db/d86/a02663.html#ab6a1f00395dfb572c3108c0dfc4c6124">dfs</a>(edge_cnt, node_cnt, vis, i, g);</div>
+<div class="line"><a id="l08122" name="l08122"></a><span class="lineno"> 8122</span>                    group_cnt++;</div>
+<div class="line"><a id="l08123" name="l08123"></a><span class="lineno"> 8123</span>                    free_edges_cnt += edge_cnt / 2 - node_cnt + 1;</div>
+<div class="line"><a id="l08124" name="l08124"></a><span class="lineno"> 8124</span>                }</div>
+<div class="line"><a id="l08125" name="l08125"></a><span class="lineno"> 8125</span>            }</div>
+<div class="line"><a id="l08126" name="l08126"></a><span class="lineno"> 8126</span>            <span class="keywordflow">if</span>(free_edges_cnt &lt; group_cnt - 1) {</div>
+<div class="line"><a id="l08127" name="l08127"></a><span class="lineno"> 8127</span>                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l08128" name="l08128"></a><span class="lineno"> 8128</span>            }</div>
+<div class="line"><a id="l08129" name="l08129"></a><span class="lineno"> 8129</span>            <span class="keywordflow">return</span> group_cnt - 1;</div>
+<div class="line"><a id="l08130" name="l08130"></a><span class="lineno"> 8130</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08143">dfs()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08132">dfs()</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l03765">leetcode::number_of_operations_to_make_network_connected::TEST()</a>.</p>
 

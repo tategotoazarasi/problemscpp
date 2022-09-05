@@ -1,7 +1,7 @@
 var searchData=
 [
   ['one_0',['one',['../d1/de9/a01855.html#a7c2f7ca01f811dafda8994e5207d98aa',1,'leetcode::design_bitset::Bitset']]],
-  ['openlock_1',['openLock',['../d3/d59/a02659.html#a454dd42c263ff4bcfbdb7e3b5c321933',1,'leetcode::open_the_lock::Solution']]],
+  ['openlock_1',['openLock',['../d3/d59/a02659.html#a6b55097c049193dc9eee68b27aede4cc',1,'leetcode::open_the_lock::Solution']]],
   ['operator_21_2',['operator!',['../d2/db1/a00070.html#a353cbd1fc2c186b3ebd397d2ca1d71bf',1,'acwing::acwing1929']]],
   ['operator_21_3d_3',['operator!=',['../da/dbb/a03291.html#a40b0de9a9cec989f94db6524265d0843',1,'BigInt::operator!=()'],['../d2/d36/a01495.html#ae4f53fc0e10e63669689b46eddf5793e',1,'leetcode::TreeNode::operator!=()']]],
   ['operator_25_4',['operator%',['../da/dbb/a03291.html#a7ca851028fe86d112b0aa4056bf69ef4',1,'BigInt']]],
@@ -10,10 +10,10 @@ var searchData=
   ['operator_2a_7',['operator*',['../da/dbb/a03291.html#a1766b8666a4b360078d6485ffb6ccb7d',1,'BigInt::operator*()'],['../d7/d35/a03295.html#ae8243b75fcc95ddd169ce53cbcd805ae',1,'Fraction::operator*()'],['../da/dbb/a03291.html#a5f03acae85136498b1b534ef9733cdcd',1,'BigInt::operator*(const BigInt &amp;bi) const']]],
   ['operator_2a_3d_8',['operator*=',['../da/dbb/a03291.html#a3a2f352f4d72a711a91d2c289c22eb32',1,'BigInt']]],
   ['operator_2b_9',['operator+',['../d2/dd0/a03283.html#ad293bc11d2be9a3a576c99d905510d30',1,'pat::a::a1024::bi::operator+()'],['../da/dbb/a03291.html#a10dcbf16dae8701172569f053212d862',1,'BigInt::operator+()'],['../d7/d35/a03295.html#a1b273c566cdb62bb3c0834027133038a',1,'Fraction::operator+()']]],
-  ['operator_2b_2b_10',['operator++',['../da/dbb/a03291.html#a0f1a8a43867f25c8df48e7747012536f',1,'BigInt::operator++()'],['../da/dbb/a03291.html#aca292f09bfa4ab9fbb71b3ab1dfe68e9',1,'BigInt::operator++(int)']]],
+  ['operator_2b_2b_10',['operator++',['../da/dbb/a03291.html#a0f1a8a43867f25c8df48e7747012536f',1,'BigInt::operator++()'],['../da/dbb/a03291.html#a7120696c07c413340246a61eb209a541',1,'BigInt::operator++(int)']]],
   ['operator_2b_3d_11',['operator+=',['../da/dbb/a03291.html#ae1b1d72dc1076528c0fdab9a67c28659',1,'BigInt']]],
   ['operator_2d_12',['operator-',['../da/dbb/a03291.html#a4a4ded170439fee88f133d0202b5c182',1,'BigInt::operator-() const'],['../da/dbb/a03291.html#a002d4c7a709bca582b94062ed18bcf4a',1,'BigInt::operator-(const BigInt &amp;bi) const'],['../d7/d35/a03295.html#a50b0598f2b289832e1b1c64ac8f0e533',1,'Fraction::operator-()']]],
-  ['operator_2d_2d_13',['operator--',['../da/dbb/a03291.html#aed992537fac59f8c794fc24d10baf199',1,'BigInt::operator--()'],['../da/dbb/a03291.html#a4fbbd40d6c73daa00a5a908a51e5af53',1,'BigInt::operator--(int)']]],
+  ['operator_2d_2d_13',['operator--',['../da/dbb/a03291.html#aed992537fac59f8c794fc24d10baf199',1,'BigInt::operator--()'],['../da/dbb/a03291.html#a6ef5639e9f2cb2226f8611bb39c6c663',1,'BigInt::operator--(int)']]],
   ['operator_2d_3d_14',['operator-=',['../da/dbb/a03291.html#a40506afe3528e6de90db7339870a5388',1,'BigInt']]],
   ['operator_2f_15',['operator/',['../da/dbb/a03291.html#a6ad84d14142e72660a69217ecd44397a',1,'BigInt::operator/()'],['../d7/d35/a03295.html#aa9ab636b9e40dedb8c181048d8b55a82',1,'Fraction::operator/()']]],
   ['operator_2f_3d_16',['operator/=',['../da/dbb/a03291.html#ace7b3a08d85245b3f1ddc80562c7606e',1,'BigInt']]],

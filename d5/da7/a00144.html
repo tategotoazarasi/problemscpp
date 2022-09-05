@@ -133,25 +133,25 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">acwing.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l07454">7454</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07454" name="l07454"></a><span class="lineno"> 7454</span>                                                                                     {</div>
-<div class="line"><a id="l07455" name="l07455"></a><span class="lineno"> 7455</span>            color[node] = c;</div>
-<div class="line"><a id="l07456" name="l07456"></a><span class="lineno"> 7456</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> sibling: g[node]) {</div>
-<div class="line"><a id="l07457" name="l07457"></a><span class="lineno"> 7457</span>                <span class="keywordflow">if</span>(color[sibling] == 3) {</div>
-<div class="line"><a id="l07458" name="l07458"></a><span class="lineno"> 7458</span>                    <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../d5/da7/a00144.html#a602038fb4c8d8b2ffb9428f2ca052f5c">dfs</a>(g, sibling, color, !c)) {</div>
-<div class="line"><a id="l07459" name="l07459"></a><span class="lineno"> 7459</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l07460" name="l07460"></a><span class="lineno"> 7460</span>                    }</div>
-<div class="line"><a id="l07461" name="l07461"></a><span class="lineno"> 7461</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(color[sibling] == c) {</div>
-<div class="line"><a id="l07462" name="l07462"></a><span class="lineno"> 7462</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l07463" name="l07463"></a><span class="lineno"> 7463</span>                }</div>
-<div class="line"><a id="l07464" name="l07464"></a><span class="lineno"> 7464</span>            }</div>
-<div class="line"><a id="l07465" name="l07465"></a><span class="lineno"> 7465</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l07466" name="l07466"></a><span class="lineno"> 7466</span>        }</div>
-<div class="ttc" id="aa00144_html_a602038fb4c8d8b2ffb9428f2ca052f5c"><div class="ttname"><a href="../../d5/da7/a00144.html#a602038fb4c8d8b2ffb9428f2ca052f5c">acwing::acwing860::dfs</a></div><div class="ttdeci">bool dfs(vector&lt; unordered_set&lt; int &gt; &gt; &amp;g, int node, vector&lt; int &gt; &amp;color, int c)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l07454">acwing.cpp:7454</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">acwing.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l07481">7481</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07481" name="l07481"></a><span class="lineno"> 7481</span>                                                                                     {</div>
+<div class="line"><a id="l07482" name="l07482"></a><span class="lineno"> 7482</span>            color[node] = c;</div>
+<div class="line"><a id="l07483" name="l07483"></a><span class="lineno"> 7483</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> sibling: g[node]) {</div>
+<div class="line"><a id="l07484" name="l07484"></a><span class="lineno"> 7484</span>                <span class="keywordflow">if</span>(color[sibling] == 3) {</div>
+<div class="line"><a id="l07485" name="l07485"></a><span class="lineno"> 7485</span>                    <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../d5/da7/a00144.html#a602038fb4c8d8b2ffb9428f2ca052f5c">dfs</a>(g, sibling, color, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(c == 0))) {</div>
+<div class="line"><a id="l07486" name="l07486"></a><span class="lineno"> 7486</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l07487" name="l07487"></a><span class="lineno"> 7487</span>                    }</div>
+<div class="line"><a id="l07488" name="l07488"></a><span class="lineno"> 7488</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(color[sibling] == c) {</div>
+<div class="line"><a id="l07489" name="l07489"></a><span class="lineno"> 7489</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l07490" name="l07490"></a><span class="lineno"> 7490</span>                }</div>
+<div class="line"><a id="l07491" name="l07491"></a><span class="lineno"> 7491</span>            }</div>
+<div class="line"><a id="l07492" name="l07492"></a><span class="lineno"> 7492</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l07493" name="l07493"></a><span class="lineno"> 7493</span>        }</div>
+<div class="ttc" id="aa00144_html_a602038fb4c8d8b2ffb9428f2ca052f5c"><div class="ttname"><a href="../../d5/da7/a00144.html#a602038fb4c8d8b2ffb9428f2ca052f5c">acwing::acwing860::dfs</a></div><div class="ttdeci">bool dfs(vector&lt; unordered_set&lt; int &gt; &gt; &amp;g, int node, vector&lt; int &gt; &amp;color, int c)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l07481">acwing.cpp:7481</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07454">dfs()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07481">dfs()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l07454">dfs()</a> , 以及 <a class="el" href="../../da/d45/a00011_source.html#l07431">main()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l07481">dfs()</a> , 以及 <a class="el" href="../../da/d45/a00011_source.html#l07456">main()</a>.</p>
 
 </div>
 </div>
@@ -181,31 +181,33 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">acwing.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l07431">7431</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07431" name="l07431"></a><span class="lineno"> 7431</span>                                              {</div>
-<div class="line"><a id="l07432" name="l07432"></a><span class="lineno"> 7432</span>            <span class="keywordtype">int</span> n, m;</div>
-<div class="line"><a id="l07433" name="l07433"></a><span class="lineno"> 7433</span>            cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l07434" name="l07434"></a><span class="lineno"> 7434</span>            vector g(n + 1, unordered_set&lt;int&gt;());</div>
-<div class="line"><a id="l07435" name="l07435"></a><span class="lineno"> 7435</span>            vector color(n + 1, 3);</div>
-<div class="line"><a id="l07436" name="l07436"></a><span class="lineno"> 7436</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l07437" name="l07437"></a><span class="lineno"> 7437</span>                <span class="keywordtype">int</span> u, v;</div>
-<div class="line"><a id="l07438" name="l07438"></a><span class="lineno"> 7438</span>                cin &gt;&gt; u &gt;&gt; v;</div>
-<div class="line"><a id="l07439" name="l07439"></a><span class="lineno"> 7439</span>                g[u].insert(v);</div>
-<div class="line"><a id="l07440" name="l07440"></a><span class="lineno"> 7440</span>                g[v].insert(u);</div>
-<div class="line"><a id="l07441" name="l07441"></a><span class="lineno"> 7441</span>            }</div>
-<div class="line"><a id="l07442" name="l07442"></a><span class="lineno"> 7442</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
-<div class="line"><a id="l07443" name="l07443"></a><span class="lineno"> 7443</span>                <span class="keywordflow">if</span>(color[i] == 3) {</div>
-<div class="line"><a id="l07444" name="l07444"></a><span class="lineno"> 7444</span>                    <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../d5/da7/a00144.html#a602038fb4c8d8b2ffb9428f2ca052f5c">dfs</a>(g, i, color, 0)) {</div>
-<div class="line"><a id="l07445" name="l07445"></a><span class="lineno"> 7445</span>                        cout &lt;&lt; <span class="stringliteral">&quot;No&quot;</span>;</div>
-<div class="line"><a id="l07446" name="l07446"></a><span class="lineno"> 7446</span>                        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07447" name="l07447"></a><span class="lineno"> 7447</span>                    }</div>
-<div class="line"><a id="l07448" name="l07448"></a><span class="lineno"> 7448</span>                }</div>
-<div class="line"><a id="l07449" name="l07449"></a><span class="lineno"> 7449</span>            }</div>
-<div class="line"><a id="l07450" name="l07450"></a><span class="lineno"> 7450</span>            cout &lt;&lt; <span class="stringliteral">&quot;Yes&quot;</span>;</div>
-<div class="line"><a id="l07451" name="l07451"></a><span class="lineno"> 7451</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07452" name="l07452"></a><span class="lineno"> 7452</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">acwing.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l07456">7456</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07456" name="l07456"></a><span class="lineno"> 7456</span>                                              {</div>
+<div class="line"><a id="l07457" name="l07457"></a><span class="lineno"> 7457</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l07458" name="l07458"></a><span class="lineno"> 7458</span>            <span class="keywordtype">int</span> m;</div>
+<div class="line"><a id="l07459" name="l07459"></a><span class="lineno"> 7459</span>            cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l07460" name="l07460"></a><span class="lineno"> 7460</span>            vector g(n + 1, unordered_set&lt;int&gt;());</div>
+<div class="line"><a id="l07461" name="l07461"></a><span class="lineno"> 7461</span>            vector color(n + 1, 3);</div>
+<div class="line"><a id="l07462" name="l07462"></a><span class="lineno"> 7462</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l07463" name="l07463"></a><span class="lineno"> 7463</span>                <span class="keywordtype">int</span> u;</div>
+<div class="line"><a id="l07464" name="l07464"></a><span class="lineno"> 7464</span>                <span class="keywordtype">int</span> v;</div>
+<div class="line"><a id="l07465" name="l07465"></a><span class="lineno"> 7465</span>                cin &gt;&gt; u &gt;&gt; v;</div>
+<div class="line"><a id="l07466" name="l07466"></a><span class="lineno"> 7466</span>                g[u].insert(v);</div>
+<div class="line"><a id="l07467" name="l07467"></a><span class="lineno"> 7467</span>                g[v].insert(u);</div>
+<div class="line"><a id="l07468" name="l07468"></a><span class="lineno"> 7468</span>            }</div>
+<div class="line"><a id="l07469" name="l07469"></a><span class="lineno"> 7469</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
+<div class="line"><a id="l07470" name="l07470"></a><span class="lineno"> 7470</span>                <span class="keywordflow">if</span>(color[i] == 3) {</div>
+<div class="line"><a id="l07471" name="l07471"></a><span class="lineno"> 7471</span>                    <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../d5/da7/a00144.html#a602038fb4c8d8b2ffb9428f2ca052f5c">dfs</a>(g, i, color, 0)) {</div>
+<div class="line"><a id="l07472" name="l07472"></a><span class="lineno"> 7472</span>                        cout &lt;&lt; <span class="stringliteral">&quot;No&quot;</span>;</div>
+<div class="line"><a id="l07473" name="l07473"></a><span class="lineno"> 7473</span>                        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07474" name="l07474"></a><span class="lineno"> 7474</span>                    }</div>
+<div class="line"><a id="l07475" name="l07475"></a><span class="lineno"> 7475</span>                }</div>
+<div class="line"><a id="l07476" name="l07476"></a><span class="lineno"> 7476</span>            }</div>
+<div class="line"><a id="l07477" name="l07477"></a><span class="lineno"> 7477</span>            cout &lt;&lt; <span class="stringliteral">&quot;Yes&quot;</span>;</div>
+<div class="line"><a id="l07478" name="l07478"></a><span class="lineno"> 7478</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07479" name="l07479"></a><span class="lineno"> 7479</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07454">dfs()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07481">dfs()</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l03578">TEST()</a>.</p>
 
@@ -251,7 +253,7 @@ $(function() {
 <div class="line"><a id="l03588" name="l03588"></a><span class="lineno"> 3588</span>        }</div>
 <div class="ttc" id="aa00026_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07431">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07456">main()</a>.</p>
 
 </div>
 </div>
@@ -297,7 +299,7 @@ $(function() {
 <div class="line"><a id="l03602" name="l03602"></a><span class="lineno"> 3602</span>            ASSERT_EQ(<span class="stringliteral">&quot;No&quot;</span>, ans);</div>
 <div class="line"><a id="l03603" name="l03603"></a><span class="lineno"> 3603</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07431">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07456">main()</a>.</p>
 
 </div>
 </div>

@@ -83,7 +83,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02953">2953</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02965">2965</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a1c939bfdcd3770a51f9f78f4c51ced38" name="a1c939bfdcd3770a51f9f78f4c51ced38"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c939bfdcd3770a51f9f78f4c51ced38">&#9670;&nbsp;</a></span>decodeString()</h2>
@@ -109,49 +109,49 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08285">8285</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08285" name="l08285"></a><span class="lineno"> 8285</span>                                              {</div>
-<div class="line"><a id="l08286" name="l08286"></a><span class="lineno"> 8286</span>            <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><a id="l08287" name="l08287"></a><span class="lineno"> 8287</span>            vector&lt;int&gt; cnt;</div>
-<div class="line"><a id="l08288" name="l08288"></a><span class="lineno"> 8288</span>            vector&lt;string&gt; strs;</div>
-<div class="line"><a id="l08289" name="l08289"></a><span class="lineno"> 8289</span>            <span class="keywordflow">while</span>(i &lt; s.length()) {</div>
-<div class="line"><a id="l08290" name="l08290"></a><span class="lineno"> 8290</span>                <span class="keywordflow">if</span>(isalpha(s[i])) {</div>
-<div class="line"><a id="l08291" name="l08291"></a><span class="lineno"> 8291</span>                    cnt.emplace_back(1);</div>
-<div class="line"><a id="l08292" name="l08292"></a><span class="lineno"> 8292</span>                    strs.emplace_back(<span class="keywordtype">string</span>(1, s[i]));</div>
-<div class="line"><a id="l08293" name="l08293"></a><span class="lineno"> 8293</span>                    i++;</div>
-<div class="line"><a id="l08294" name="l08294"></a><span class="lineno"> 8294</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(isdigit(s[i])) {</div>
-<div class="line"><a id="l08295" name="l08295"></a><span class="lineno"> 8295</span>                    <span class="keywordtype">int</span> j = i + 1;</div>
-<div class="line"><a id="l08296" name="l08296"></a><span class="lineno"> 8296</span>                    <span class="keywordflow">while</span>(j &lt; s.length() &amp;&amp; isdigit(s[j])) {</div>
-<div class="line"><a id="l08297" name="l08297"></a><span class="lineno"> 8297</span>                        j++;</div>
-<div class="line"><a id="l08298" name="l08298"></a><span class="lineno"> 8298</span>                    }</div>
-<div class="line"><a id="l08299" name="l08299"></a><span class="lineno"> 8299</span>                    cnt.emplace_back(stoi(s.substr(i, j - i)));</div>
-<div class="line"><a id="l08300" name="l08300"></a><span class="lineno"> 8300</span>                    i         = j;</div>
-<div class="line"><a id="l08301" name="l08301"></a><span class="lineno"> 8301</span>                    <span class="keywordtype">int</span> level = 1;</div>
-<div class="line"><a id="l08302" name="l08302"></a><span class="lineno"> 8302</span>                    <span class="keywordflow">while</span>(level &gt; 0) {</div>
-<div class="line"><a id="l08303" name="l08303"></a><span class="lineno"> 8303</span>                        j++;</div>
-<div class="line"><a id="l08304" name="l08304"></a><span class="lineno"> 8304</span>                        <span class="keywordflow">if</span>(s[j] == <span class="charliteral">&#39;[&#39;</span>) {</div>
-<div class="line"><a id="l08305" name="l08305"></a><span class="lineno"> 8305</span>                            level++;</div>
-<div class="line"><a id="l08306" name="l08306"></a><span class="lineno"> 8306</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(s[j] == <span class="charliteral">&#39;]&#39;</span>) {</div>
-<div class="line"><a id="l08307" name="l08307"></a><span class="lineno"> 8307</span>                            level--;</div>
-<div class="line"><a id="l08308" name="l08308"></a><span class="lineno"> 8308</span>                        }</div>
-<div class="line"><a id="l08309" name="l08309"></a><span class="lineno"> 8309</span>                    }</div>
-<div class="line"><a id="l08310" name="l08310"></a><span class="lineno"> 8310</span>                    strs.emplace_back(<a class="code hl_function" href="../../d5/d25/a02687.html#a1c939bfdcd3770a51f9f78f4c51ced38">decodeString</a>(s.substr(i + 1, j - i - 1)));</div>
-<div class="line"><a id="l08311" name="l08311"></a><span class="lineno"> 8311</span>                    i = j + 1;</div>
-<div class="line"><a id="l08312" name="l08312"></a><span class="lineno"> 8312</span>                }</div>
-<div class="line"><a id="l08313" name="l08313"></a><span class="lineno"> 8313</span>            }</div>
-<div class="line"><a id="l08314" name="l08314"></a><span class="lineno"> 8314</span>            ostringstream oss;</div>
-<div class="line"><a id="l08315" name="l08315"></a><span class="lineno"> 8315</span>            <span class="keywordflow">for</span>(i = 0; i &lt; cnt.size(); i++) {</div>
-<div class="line"><a id="l08316" name="l08316"></a><span class="lineno"> 8316</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; cnt[i]; j++) {</div>
-<div class="line"><a id="l08317" name="l08317"></a><span class="lineno"> 8317</span>                    oss &lt;&lt; strs[i];</div>
-<div class="line"><a id="l08318" name="l08318"></a><span class="lineno"> 8318</span>                }</div>
-<div class="line"><a id="l08319" name="l08319"></a><span class="lineno"> 8319</span>            }</div>
-<div class="line"><a id="l08320" name="l08320"></a><span class="lineno"> 8320</span>            <span class="keywordflow">return</span> oss.str();</div>
-<div class="line"><a id="l08321" name="l08321"></a><span class="lineno"> 8321</span>        }</div>
-<div class="ttc" id="aa02687_html_a1c939bfdcd3770a51f9f78f4c51ced38"><div class="ttname"><a href="../../d5/d25/a02687.html#a1c939bfdcd3770a51f9f78f4c51ced38">leetcode::decode_string::Solution::decodeString</a></div><div class="ttdeci">static string decodeString(string s)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08285">leetcode.cpp:8285</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08271">8271</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08271" name="l08271"></a><span class="lineno"> 8271</span>                                              {</div>
+<div class="line"><a id="l08272" name="l08272"></a><span class="lineno"> 8272</span>            <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a id="l08273" name="l08273"></a><span class="lineno"> 8273</span>            vector&lt;int&gt; cnt;</div>
+<div class="line"><a id="l08274" name="l08274"></a><span class="lineno"> 8274</span>            vector&lt;string&gt; strs;</div>
+<div class="line"><a id="l08275" name="l08275"></a><span class="lineno"> 8275</span>            <span class="keywordflow">while</span>(i &lt; s.length()) {</div>
+<div class="line"><a id="l08276" name="l08276"></a><span class="lineno"> 8276</span>                <span class="keywordflow">if</span>(isalpha(s[i]) != 0) {</div>
+<div class="line"><a id="l08277" name="l08277"></a><span class="lineno"> 8277</span>                    cnt.emplace_back(1);</div>
+<div class="line"><a id="l08278" name="l08278"></a><span class="lineno"> 8278</span>                    strs.emplace_back(<span class="keywordtype">string</span>(1, s[i]));</div>
+<div class="line"><a id="l08279" name="l08279"></a><span class="lineno"> 8279</span>                    i++;</div>
+<div class="line"><a id="l08280" name="l08280"></a><span class="lineno"> 8280</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(isdigit(s[i]) != 0) {</div>
+<div class="line"><a id="l08281" name="l08281"></a><span class="lineno"> 8281</span>                    <span class="keywordtype">int</span> j = i + 1;</div>
+<div class="line"><a id="l08282" name="l08282"></a><span class="lineno"> 8282</span>                    <span class="keywordflow">while</span>(j &lt; s.length() &amp;&amp; (isdigit(s[j]) != 0)) {</div>
+<div class="line"><a id="l08283" name="l08283"></a><span class="lineno"> 8283</span>                        j++;</div>
+<div class="line"><a id="l08284" name="l08284"></a><span class="lineno"> 8284</span>                    }</div>
+<div class="line"><a id="l08285" name="l08285"></a><span class="lineno"> 8285</span>                    cnt.emplace_back(stoi(s.substr(i, j - i)));</div>
+<div class="line"><a id="l08286" name="l08286"></a><span class="lineno"> 8286</span>                    i         = j;</div>
+<div class="line"><a id="l08287" name="l08287"></a><span class="lineno"> 8287</span>                    <span class="keywordtype">int</span> level = 1;</div>
+<div class="line"><a id="l08288" name="l08288"></a><span class="lineno"> 8288</span>                    <span class="keywordflow">while</span>(level &gt; 0) {</div>
+<div class="line"><a id="l08289" name="l08289"></a><span class="lineno"> 8289</span>                        j++;</div>
+<div class="line"><a id="l08290" name="l08290"></a><span class="lineno"> 8290</span>                        <span class="keywordflow">if</span>(s[j] == <span class="charliteral">&#39;[&#39;</span>) {</div>
+<div class="line"><a id="l08291" name="l08291"></a><span class="lineno"> 8291</span>                            level++;</div>
+<div class="line"><a id="l08292" name="l08292"></a><span class="lineno"> 8292</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(s[j] == <span class="charliteral">&#39;]&#39;</span>) {</div>
+<div class="line"><a id="l08293" name="l08293"></a><span class="lineno"> 8293</span>                            level--;</div>
+<div class="line"><a id="l08294" name="l08294"></a><span class="lineno"> 8294</span>                        }</div>
+<div class="line"><a id="l08295" name="l08295"></a><span class="lineno"> 8295</span>                    }</div>
+<div class="line"><a id="l08296" name="l08296"></a><span class="lineno"> 8296</span>                    strs.emplace_back(<a class="code hl_function" href="../../d5/d25/a02687.html#a1c939bfdcd3770a51f9f78f4c51ced38">decodeString</a>(s.substr(i + 1, j - i - 1)));</div>
+<div class="line"><a id="l08297" name="l08297"></a><span class="lineno"> 8297</span>                    i = j + 1;</div>
+<div class="line"><a id="l08298" name="l08298"></a><span class="lineno"> 8298</span>                }</div>
+<div class="line"><a id="l08299" name="l08299"></a><span class="lineno"> 8299</span>            }</div>
+<div class="line"><a id="l08300" name="l08300"></a><span class="lineno"> 8300</span>            ostringstream oss;</div>
+<div class="line"><a id="l08301" name="l08301"></a><span class="lineno"> 8301</span>            <span class="keywordflow">for</span>(i = 0; i &lt; cnt.size(); i++) {</div>
+<div class="line"><a id="l08302" name="l08302"></a><span class="lineno"> 8302</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; cnt[i]; j++) {</div>
+<div class="line"><a id="l08303" name="l08303"></a><span class="lineno"> 8303</span>                    oss &lt;&lt; strs[i];</div>
+<div class="line"><a id="l08304" name="l08304"></a><span class="lineno"> 8304</span>                }</div>
+<div class="line"><a id="l08305" name="l08305"></a><span class="lineno"> 8305</span>            }</div>
+<div class="line"><a id="l08306" name="l08306"></a><span class="lineno"> 8306</span>            <span class="keywordflow">return</span> oss.str();</div>
+<div class="line"><a id="l08307" name="l08307"></a><span class="lineno"> 8307</span>        }</div>
+<div class="ttc" id="aa02687_html_a1c939bfdcd3770a51f9f78f4c51ced38"><div class="ttname"><a href="../../d5/d25/a02687.html#a1c939bfdcd3770a51f9f78f4c51ced38">leetcode::decode_string::Solution::decodeString</a></div><div class="ttdeci">static string decodeString(string s)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08271">leetcode.cpp:8271</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08285">decodeString()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08271">decodeString()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08285">decodeString()</a> , 以及 <a class="el" href="../../dc/d87/a00032_source.html#l03856">leetcode::decode_string::TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08271">decodeString()</a> , 以及 <a class="el" href="../../dc/d87/a00032_source.html#l03856">leetcode::decode_string::TEST()</a>.</p>
 
 </div>
 </div>

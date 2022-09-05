@@ -119,21 +119,21 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07819">7819</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07819" name="l07819"></a><span class="lineno"> 7819</span>                                                                       {</div>
-<div class="line"><a id="l07820" name="l07820"></a><span class="lineno"> 7820</span>            multiset&lt;int&gt; <a class="code hl_function" href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">ms</a>;</div>
-<div class="line"><a id="l07821" name="l07821"></a><span class="lineno"> 7821</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; k; i++) {</div>
-<div class="line"><a id="l07822" name="l07822"></a><span class="lineno"> 7822</span>                <a class="code hl_function" href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">ms</a>.insert(nums[i]);</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07813">7813</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07813" name="l07813"></a><span class="lineno"> 7813</span>                                                                       {</div>
+<div class="line"><a id="l07814" name="l07814"></a><span class="lineno"> 7814</span>            multiset&lt;int&gt; <a class="code hl_function" href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">ms</a>;</div>
+<div class="line"><a id="l07815" name="l07815"></a><span class="lineno"> 7815</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; k; i++) {</div>
+<div class="line"><a id="l07816" name="l07816"></a><span class="lineno"> 7816</span>                <a class="code hl_function" href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">ms</a>.insert(nums[i]);</div>
+<div class="line"><a id="l07817" name="l07817"></a><span class="lineno"> 7817</span>            }</div>
+<div class="line"><a id="l07818" name="l07818"></a><span class="lineno"> 7818</span>            vector&lt;int&gt; ans;</div>
+<div class="line"><a id="l07819" name="l07819"></a><span class="lineno"> 7819</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0, j = k; j &lt; nums.size(); i++, j++) {</div>
+<div class="line"><a id="l07820" name="l07820"></a><span class="lineno"> 7820</span>                ans.emplace_back(*<a class="code hl_function" href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">ms</a>.rbegin());</div>
+<div class="line"><a id="l07821" name="l07821"></a><span class="lineno"> 7821</span>                <a class="code hl_function" href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">ms</a>.erase(<a class="code hl_function" href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">ms</a>.lower_bound(nums[i]));</div>
+<div class="line"><a id="l07822" name="l07822"></a><span class="lineno"> 7822</span>                <a class="code hl_function" href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">ms</a>.insert(nums[j]);</div>
 <div class="line"><a id="l07823" name="l07823"></a><span class="lineno"> 7823</span>            }</div>
-<div class="line"><a id="l07824" name="l07824"></a><span class="lineno"> 7824</span>            vector&lt;int&gt; ans;</div>
-<div class="line"><a id="l07825" name="l07825"></a><span class="lineno"> 7825</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0, j = k; j &lt; nums.size(); i++, j++) {</div>
-<div class="line"><a id="l07826" name="l07826"></a><span class="lineno"> 7826</span>                ans.emplace_back(*<a class="code hl_function" href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">ms</a>.rbegin());</div>
-<div class="line"><a id="l07827" name="l07827"></a><span class="lineno"> 7827</span>                <a class="code hl_function" href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">ms</a>.erase(<a class="code hl_function" href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">ms</a>.lower_bound(nums[i]));</div>
-<div class="line"><a id="l07828" name="l07828"></a><span class="lineno"> 7828</span>                <a class="code hl_function" href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">ms</a>.insert(nums[j]);</div>
-<div class="line"><a id="l07829" name="l07829"></a><span class="lineno"> 7829</span>            }</div>
-<div class="line"><a id="l07830" name="l07830"></a><span class="lineno"> 7830</span>            ans.emplace_back(*<a class="code hl_function" href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">ms</a>.rbegin());</div>
-<div class="line"><a id="l07831" name="l07831"></a><span class="lineno"> 7831</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l07832" name="l07832"></a><span class="lineno"> 7832</span>        }</div>
+<div class="line"><a id="l07824" name="l07824"></a><span class="lineno"> 7824</span>            ans.emplace_back(*<a class="code hl_function" href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">ms</a>.rbegin());</div>
+<div class="line"><a id="l07825" name="l07825"></a><span class="lineno"> 7825</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l07826" name="l07826"></a><span class="lineno"> 7826</span>        }</div>
 <div class="ttc" id="aa00117_html_a8a38da3becbca9bb9b7df88eef7ca2cb"><div class="ttname"><a href="../../d9/d4b/a00117.html#a8a38da3becbca9bb9b7df88eef7ca2cb">acwing::acwing788::ms</a></div><div class="ttdeci">void ms(vector&lt; int &gt; &amp;arr, int l, int r, int *ans)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l06334">acwing.cpp:6334</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l06334">acwing::acwing788::ms()</a>.</p>

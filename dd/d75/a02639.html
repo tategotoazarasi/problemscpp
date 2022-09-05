@@ -83,7 +83,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02867">2867</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02869">2869</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a08189ddc9304fd9d99d2d633ce6d234d" name="a08189ddc9304fd9d99d2d633ce6d234d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a08189ddc9304fd9d99d2d633ce6d234d">&#9670;&nbsp;</a></span>getLonelyNodes()</h2>
@@ -109,28 +109,28 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07973">7973</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07973" name="l07973"></a><span class="lineno"> 7973</span>                                                           {</div>
-<div class="line"><a id="l07974" name="l07974"></a><span class="lineno"> 7974</span>            vector&lt;int&gt; ans;</div>
-<div class="line"><a id="l07975" name="l07975"></a><span class="lineno"> 7975</span>            queue&lt;TreeNode *&gt; q;</div>
-<div class="line"><a id="l07976" name="l07976"></a><span class="lineno"> 7976</span>            q.push(root);</div>
-<div class="line"><a id="l07977" name="l07977"></a><span class="lineno"> 7977</span>            <span class="keywordflow">while</span>(!q.empty()) {</div>
-<div class="line"><a id="l07978" name="l07978"></a><span class="lineno"> 7978</span>                TreeNode *node = q.front();</div>
-<div class="line"><a id="l07979" name="l07979"></a><span class="lineno"> 7979</span>                q.pop();</div>
-<div class="line"><a id="l07980" name="l07980"></a><span class="lineno"> 7980</span>                <span class="keywordflow">if</span>(node-&gt;left == <span class="keyword">nullptr</span> &amp;&amp; node-&gt;right != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l07981" name="l07981"></a><span class="lineno"> 7981</span>                    ans.emplace_back(node-&gt;right-&gt;val);</div>
-<div class="line"><a id="l07982" name="l07982"></a><span class="lineno"> 7982</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(node-&gt;right == <span class="keyword">nullptr</span> &amp;&amp; node-&gt;left != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l07983" name="l07983"></a><span class="lineno"> 7983</span>                    ans.emplace_back(node-&gt;left-&gt;val);</div>
-<div class="line"><a id="l07984" name="l07984"></a><span class="lineno"> 7984</span>                }</div>
-<div class="line"><a id="l07985" name="l07985"></a><span class="lineno"> 7985</span>                <span class="keywordflow">if</span>(node-&gt;left != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l07986" name="l07986"></a><span class="lineno"> 7986</span>                    q.push(node-&gt;left);</div>
-<div class="line"><a id="l07987" name="l07987"></a><span class="lineno"> 7987</span>                }</div>
-<div class="line"><a id="l07988" name="l07988"></a><span class="lineno"> 7988</span>                <span class="keywordflow">if</span>(node-&gt;right != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l07989" name="l07989"></a><span class="lineno"> 7989</span>                    q.push(node-&gt;right);</div>
-<div class="line"><a id="l07990" name="l07990"></a><span class="lineno"> 7990</span>                }</div>
-<div class="line"><a id="l07991" name="l07991"></a><span class="lineno"> 7991</span>            }</div>
-<div class="line"><a id="l07992" name="l07992"></a><span class="lineno"> 7992</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l07993" name="l07993"></a><span class="lineno"> 7993</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07963">7963</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07963" name="l07963"></a><span class="lineno"> 7963</span>                                                           {</div>
+<div class="line"><a id="l07964" name="l07964"></a><span class="lineno"> 7964</span>            vector&lt;int&gt; ans;</div>
+<div class="line"><a id="l07965" name="l07965"></a><span class="lineno"> 7965</span>            queue&lt;TreeNode *&gt; q;</div>
+<div class="line"><a id="l07966" name="l07966"></a><span class="lineno"> 7966</span>            q.push(root);</div>
+<div class="line"><a id="l07967" name="l07967"></a><span class="lineno"> 7967</span>            <span class="keywordflow">while</span>(!q.empty()) {</div>
+<div class="line"><a id="l07968" name="l07968"></a><span class="lineno"> 7968</span>                <span class="keyword">const</span> TreeNode *node = q.front();</div>
+<div class="line"><a id="l07969" name="l07969"></a><span class="lineno"> 7969</span>                q.pop();</div>
+<div class="line"><a id="l07970" name="l07970"></a><span class="lineno"> 7970</span>                <span class="keywordflow">if</span>(node-&gt;left == <span class="keyword">nullptr</span> &amp;&amp; node-&gt;right != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l07971" name="l07971"></a><span class="lineno"> 7971</span>                    ans.emplace_back(node-&gt;right-&gt;val);</div>
+<div class="line"><a id="l07972" name="l07972"></a><span class="lineno"> 7972</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(node-&gt;right == <span class="keyword">nullptr</span> &amp;&amp; node-&gt;left != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l07973" name="l07973"></a><span class="lineno"> 7973</span>                    ans.emplace_back(node-&gt;left-&gt;val);</div>
+<div class="line"><a id="l07974" name="l07974"></a><span class="lineno"> 7974</span>                }</div>
+<div class="line"><a id="l07975" name="l07975"></a><span class="lineno"> 7975</span>                <span class="keywordflow">if</span>(node-&gt;left != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l07976" name="l07976"></a><span class="lineno"> 7976</span>                    q.push(node-&gt;left);</div>
+<div class="line"><a id="l07977" name="l07977"></a><span class="lineno"> 7977</span>                }</div>
+<div class="line"><a id="l07978" name="l07978"></a><span class="lineno"> 7978</span>                <span class="keywordflow">if</span>(node-&gt;right != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l07979" name="l07979"></a><span class="lineno"> 7979</span>                    q.push(node-&gt;right);</div>
+<div class="line"><a id="l07980" name="l07980"></a><span class="lineno"> 7980</span>                }</div>
+<div class="line"><a id="l07981" name="l07981"></a><span class="lineno"> 7981</span>            }</div>
+<div class="line"><a id="l07982" name="l07982"></a><span class="lineno"> 7982</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l07983" name="l07983"></a><span class="lineno"> 7983</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l00024">leetcode::TreeNode::left</a>, <a class="el" href="../../d5/d16/a00029_source.html#l00025">leetcode::TreeNode::right</a> , 以及 <a class="el" href="../../d5/d16/a00029_source.html#l00023">leetcode::TreeNode::val</a>.</p>
 

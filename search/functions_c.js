@@ -53,7 +53,7 @@ var searchData=
   ['minsteps_50',['minSteps',['../d6/d5d/a02023.html#a4354670a7fe55679973621ad589295da',1,'leetcode::minimum_number_of_steps_to_make_two_strings_anagram_ii::Solution']]],
   ['minsubarraylen_51',['minSubArrayLen',['../df/d06/a02403.html#aca8c3f68b37e855af77697b5b040417c',1,'leetcode::minimum_size_subarray_sum::Solution']]],
   ['minswaps_52',['minSwaps',['../d9/d13/a01599.html#a34b42b02393784f6c9a57bb3b583bd7f',1,'leetcode::minimum_swaps_to_group_all_1s_together_ii::Solution']]],
-  ['minwindow_53',['minWindow',['../da/dfd/a02619.html#abe9076338c0aea6edd1baeb746efc1c4',1,'leetcode::minimum_window_substring::Solution']]],
+  ['minwindow_53',['minWindow',['../da/dfd/a02619.html#a387bb6508ca490a0bb4e0a96ddaa90c0',1,'leetcode::minimum_window_substring::Solution']]],
   ['missing_54',['missing',['../d7/d12/a02571.html#a09e6d62e902c2b9b6e21ab4e04b2c77c',1,'leetcode::missing_element_in_sorted_array::Solution']]],
   ['missingelement_55',['missingElement',['../d7/d12/a02571.html#a4e602501f1efd85c3e71e5c6d36713b0',1,'leetcode::missing_element_in_sorted_array::Solution']]],
   ['missingrolls_56',['missingRolls',['../d1/d0c/a02251.html#a2e23d7e6ab7dba4e4543ef64117b2676',1,'leetcode::find_missing_observations::Solution']]],

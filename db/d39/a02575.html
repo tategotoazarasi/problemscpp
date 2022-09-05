@@ -114,9 +114,7 @@ $(function() {
 </div><div class="memdoc">
 
 <p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07527">7527</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07527" name="l07527"></a><span class="lineno"> 7527</span>                                                                   {</div>
-<div class="line"><a id="l07528" name="l07528"></a><span class="lineno"> 7528</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/d39/a02575.html#a1faf3a6be2a8caa25f00e0bf40ef7ab2">findPeakGridLR</a>(mat, 0, mat[0].size() - 1);</div>
-<div class="line"><a id="l07529" name="l07529"></a><span class="lineno"> 7529</span>        }</div>
+<div class="fragment"><div class="line"><a id="l07527" name="l07527"></a><span class="lineno"> 7527</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/d39/a02575.html#a1faf3a6be2a8caa25f00e0bf40ef7ab2">findPeakGridLR</a>(mat, 0, mat[0].size() - 1); }</div>
 <div class="ttc" id="aa02575_html_a1faf3a6be2a8caa25f00e0bf40ef7ab2"><div class="ttname"><a href="../../db/d39/a02575.html#a1faf3a6be2a8caa25f00e0bf40ef7ab2">leetcode::find_a_peak_element_ii::Solution::findPeakGridLR</a></div><div class="ttdeci">static vector&lt; int &gt; findPeakGridLR(vector&lt; vector&lt; int &gt; &gt; &amp;mat, int l, int r)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l07504">leetcode.cpp:7504</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l07504">findPeakGridLR()</a>.</p>
@@ -167,10 +165,10 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07504">7504</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l07504" name="l07504"></a><span class="lineno"> 7504</span>                                                                                   {</div>
-<div class="line"><a id="l07505" name="l07505"></a><span class="lineno"> 7505</span>            <span class="keywordtype">int</span> mid     = (l + r) / 2;</div>
-<div class="line"><a id="l07506" name="l07506"></a><span class="lineno"> 7506</span>            <span class="keywordtype">int</span> max_col = mid;</div>
-<div class="line"><a id="l07507" name="l07507"></a><span class="lineno"> 7507</span>            <span class="keywordtype">int</span> max_row = 0;</div>
-<div class="line"><a id="l07508" name="l07508"></a><span class="lineno"> 7508</span>            <span class="keywordtype">int</span> maximum = -1;</div>
+<div class="line"><a id="l07505" name="l07505"></a><span class="lineno"> 7505</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> mid = (l + r) / 2;</div>
+<div class="line"><a id="l07506" name="l07506"></a><span class="lineno"> 7506</span>            <span class="keywordtype">int</span> max_col   = mid;</div>
+<div class="line"><a id="l07507" name="l07507"></a><span class="lineno"> 7507</span>            <span class="keywordtype">int</span> max_row   = 0;</div>
+<div class="line"><a id="l07508" name="l07508"></a><span class="lineno"> 7508</span>            <span class="keywordtype">int</span> maximum   = -1;</div>
 <div class="line"><a id="l07509" name="l07509"></a><span class="lineno"> 7509</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; mat.size(); i++) {</div>
 <div class="line"><a id="l07510" name="l07510"></a><span class="lineno"> 7510</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = mid - 1; j &lt;= mid + 1; j++) {</div>
 <div class="line"><a id="l07511" name="l07511"></a><span class="lineno"> 7511</span>                    <span class="keywordflow">if</span>(maximum &lt; <a class="code hl_function" href="../../db/d39/a02575.html#a4aafda2e1862e977d8c852f6ae37e5fa">get</a>(mat, i, j)) {</div>
@@ -182,15 +180,15 @@ $(function() {
 <div class="line"><a id="l07517" name="l07517"></a><span class="lineno"> 7517</span>            }</div>
 <div class="line"><a id="l07518" name="l07518"></a><span class="lineno"> 7518</span>            <span class="keywordflow">if</span>(max_col == mid || l + 1 == r) {</div>
 <div class="line"><a id="l07519" name="l07519"></a><span class="lineno"> 7519</span>                <span class="keywordflow">return</span> {max_row, max_col};</div>
-<div class="line"><a id="l07520" name="l07520"></a><span class="lineno"> 7520</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(max_col == mid + 1) {</div>
-<div class="line"><a id="l07521" name="l07521"></a><span class="lineno"> 7521</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/d39/a02575.html#a1faf3a6be2a8caa25f00e0bf40ef7ab2">findPeakGridLR</a>(mat, mid, r);</div>
-<div class="line"><a id="l07522" name="l07522"></a><span class="lineno"> 7522</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07523" name="l07523"></a><span class="lineno"> 7523</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/d39/a02575.html#a1faf3a6be2a8caa25f00e0bf40ef7ab2">findPeakGridLR</a>(mat, l, mid);</div>
-<div class="line"><a id="l07524" name="l07524"></a><span class="lineno"> 7524</span>            }</div>
+<div class="line"><a id="l07520" name="l07520"></a><span class="lineno"> 7520</span>            }</div>
+<div class="line"><a id="l07521" name="l07521"></a><span class="lineno"> 7521</span>            <span class="keywordflow">if</span>(max_col == mid + 1) {</div>
+<div class="line"><a id="l07522" name="l07522"></a><span class="lineno"> 7522</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/d39/a02575.html#a1faf3a6be2a8caa25f00e0bf40ef7ab2">findPeakGridLR</a>(mat, mid, r);</div>
+<div class="line"><a id="l07523" name="l07523"></a><span class="lineno"> 7523</span>            }</div>
+<div class="line"><a id="l07524" name="l07524"></a><span class="lineno"> 7524</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/d39/a02575.html#a1faf3a6be2a8caa25f00e0bf40ef7ab2">findPeakGridLR</a>(mat, l, mid);</div>
 <div class="line"><a id="l07525" name="l07525"></a><span class="lineno"> 7525</span>        }</div>
-<div class="ttc" id="aa02575_html_a4aafda2e1862e977d8c852f6ae37e5fa"><div class="ttname"><a href="../../db/d39/a02575.html#a4aafda2e1862e977d8c852f6ae37e5fa">leetcode::find_a_peak_element_ii::Solution::get</a></div><div class="ttdeci">static int get(vector&lt; vector&lt; int &gt; &gt; &amp;mat, int i, int j)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l07531">leetcode.cpp:7531</a></div></div>
+<div class="ttc" id="aa02575_html_a4aafda2e1862e977d8c852f6ae37e5fa"><div class="ttname"><a href="../../db/d39/a02575.html#a4aafda2e1862e977d8c852f6ae37e5fa">leetcode::find_a_peak_element_ii::Solution::get</a></div><div class="ttdeci">static int get(vector&lt; vector&lt; int &gt; &gt; &amp;mat, int i, int j)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l07529">leetcode.cpp:7529</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l07504">findPeakGridLR()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l07531">get()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l07504">findPeakGridLR()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l07529">get()</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l07527">findPeakGrid()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l07504">findPeakGridLR()</a>.</p>
 
@@ -236,14 +234,13 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07531">7531</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07531" name="l07531"></a><span class="lineno"> 7531</span>                                                                {</div>
-<div class="line"><a id="l07532" name="l07532"></a><span class="lineno"> 7532</span>            <span class="keywordflow">if</span>(i &gt;= 0 &amp;&amp; i &lt; mat.size() &amp;&amp; j &gt;= 0 &amp;&amp; j &lt; mat[0].size()) {</div>
-<div class="line"><a id="l07533" name="l07533"></a><span class="lineno"> 7533</span>                <span class="keywordflow">return</span> mat[i][j];</div>
-<div class="line"><a id="l07534" name="l07534"></a><span class="lineno"> 7534</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07535" name="l07535"></a><span class="lineno"> 7535</span>                <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l07536" name="l07536"></a><span class="lineno"> 7536</span>            }</div>
-<div class="line"><a id="l07537" name="l07537"></a><span class="lineno"> 7537</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07529">7529</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07529" name="l07529"></a><span class="lineno"> 7529</span>                                                                {</div>
+<div class="line"><a id="l07530" name="l07530"></a><span class="lineno"> 7530</span>            <span class="keywordflow">if</span>(i &gt;= 0 &amp;&amp; i &lt; mat.size() &amp;&amp; j &gt;= 0 &amp;&amp; j &lt; mat[0].size()) {</div>
+<div class="line"><a id="l07531" name="l07531"></a><span class="lineno"> 7531</span>                <span class="keywordflow">return</span> mat[i][j];</div>
+<div class="line"><a id="l07532" name="l07532"></a><span class="lineno"> 7532</span>            }</div>
+<div class="line"><a id="l07533" name="l07533"></a><span class="lineno"> 7533</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l07534" name="l07534"></a><span class="lineno"> 7534</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l07504">findPeakGridLR()</a>.</p>
 

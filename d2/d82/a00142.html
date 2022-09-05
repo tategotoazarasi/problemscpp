@@ -119,44 +119,47 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">acwing.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l07360">7360</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07360" name="l07360"></a><span class="lineno"> 7360</span>                                              {</div>
-<div class="line"><a id="l07361" name="l07361"></a><span class="lineno"> 7361</span>            <span class="keywordtype">unsigned</span> n, m;</div>
-<div class="line"><a id="l07362" name="l07362"></a><span class="lineno"> 7362</span>            cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l07363" name="l07363"></a><span class="lineno"> 7363</span>            vector g(n + 1, vector(n + 1, INT_MAX));</div>
-<div class="line"><a id="l07364" name="l07364"></a><span class="lineno"> 7364</span>            vector dist(n + 1, INT_MAX);</div>
-<div class="line"><a id="l07365" name="l07365"></a><span class="lineno"> 7365</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l07366" name="l07366"></a><span class="lineno"> 7366</span>                <span class="keywordtype">int</span> u, v, w;</div>
-<div class="line"><a id="l07367" name="l07367"></a><span class="lineno"> 7367</span>                cin &gt;&gt; u &gt;&gt; v &gt;&gt; w;</div>
-<div class="line"><a id="l07368" name="l07368"></a><span class="lineno"> 7368</span>                w       = min(w, g[u][v]);</div>
-<div class="line"><a id="l07369" name="l07369"></a><span class="lineno"> 7369</span>                w       = min(w, g[v][u]);</div>
-<div class="line"><a id="l07370" name="l07370"></a><span class="lineno"> 7370</span>                g[u][v] = w;</div>
-<div class="line"><a id="l07371" name="l07371"></a><span class="lineno"> 7371</span>                g[v][u] = w;</div>
-<div class="line"><a id="l07372" name="l07372"></a><span class="lineno"> 7372</span>            }</div>
-<div class="line"><a id="l07373" name="l07373"></a><span class="lineno"> 7373</span>            unordered_set&lt;int&gt; us;</div>
-<div class="line"><a id="l07374" name="l07374"></a><span class="lineno"> 7374</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l07375" name="l07375"></a><span class="lineno"> 7375</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l07376" name="l07376"></a><span class="lineno"> 7376</span>                <span class="keywordtype">int</span> t = -1;</div>
-<div class="line"><a id="l07377" name="l07377"></a><span class="lineno"> 7377</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= n; j++) {</div>
-<div class="line"><a id="l07378" name="l07378"></a><span class="lineno"> 7378</span>                    <span class="keywordflow">if</span>(!us.contains(j) &amp;&amp; (t == -1 || dist[t] &gt; dist[j])) {</div>
-<div class="line"><a id="l07379" name="l07379"></a><span class="lineno"> 7379</span>                        t = j;</div>
-<div class="line"><a id="l07380" name="l07380"></a><span class="lineno"> 7380</span>                    }</div>
-<div class="line"><a id="l07381" name="l07381"></a><span class="lineno"> 7381</span>                }</div>
-<div class="line"><a id="l07382" name="l07382"></a><span class="lineno"> 7382</span>                <span class="keywordflow">if</span>(i &gt; 0 &amp;&amp; dist[t] == INT_MAX) {</div>
-<div class="line"><a id="l07383" name="l07383"></a><span class="lineno"> 7383</span>                    cout &lt;&lt; <span class="stringliteral">&quot;impossible&quot;</span>;</div>
-<div class="line"><a id="l07384" name="l07384"></a><span class="lineno"> 7384</span>                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07385" name="l07385"></a><span class="lineno"> 7385</span>                }</div>
-<div class="line"><a id="l07386" name="l07386"></a><span class="lineno"> 7386</span>                <span class="keywordflow">if</span>(i &gt; 0) {</div>
-<div class="line"><a id="l07387" name="l07387"></a><span class="lineno"> 7387</span>                    ans += dist[t];</div>
-<div class="line"><a id="l07388" name="l07388"></a><span class="lineno"> 7388</span>                }</div>
-<div class="line"><a id="l07389" name="l07389"></a><span class="lineno"> 7389</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= n; j++) {</div>
-<div class="line"><a id="l07390" name="l07390"></a><span class="lineno"> 7390</span>                    dist[j] = min(dist[j], g[t][j]);</div>
-<div class="line"><a id="l07391" name="l07391"></a><span class="lineno"> 7391</span>                }</div>
-<div class="line"><a id="l07392" name="l07392"></a><span class="lineno"> 7392</span>                us.insert(t);</div>
-<div class="line"><a id="l07393" name="l07393"></a><span class="lineno"> 7393</span>            }</div>
-<div class="line"><a id="l07394" name="l07394"></a><span class="lineno"> 7394</span>            cout &lt;&lt; ans;</div>
-<div class="line"><a id="l07395" name="l07395"></a><span class="lineno"> 7395</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07396" name="l07396"></a><span class="lineno"> 7396</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">acwing.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l07379">7379</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07379" name="l07379"></a><span class="lineno"> 7379</span>                                              {</div>
+<div class="line"><a id="l07380" name="l07380"></a><span class="lineno"> 7380</span>            <span class="keywordtype">unsigned</span> n;</div>
+<div class="line"><a id="l07381" name="l07381"></a><span class="lineno"> 7381</span>            <span class="keywordtype">unsigned</span> m;</div>
+<div class="line"><a id="l07382" name="l07382"></a><span class="lineno"> 7382</span>            cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l07383" name="l07383"></a><span class="lineno"> 7383</span>            vector g(n + 1, vector(n + 1, INT_MAX));</div>
+<div class="line"><a id="l07384" name="l07384"></a><span class="lineno"> 7384</span>            vector dist(n + 1, INT_MAX);</div>
+<div class="line"><a id="l07385" name="l07385"></a><span class="lineno"> 7385</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l07386" name="l07386"></a><span class="lineno"> 7386</span>                <span class="keywordtype">int</span> u;</div>
+<div class="line"><a id="l07387" name="l07387"></a><span class="lineno"> 7387</span>                <span class="keywordtype">int</span> v;</div>
+<div class="line"><a id="l07388" name="l07388"></a><span class="lineno"> 7388</span>                <span class="keywordtype">int</span> w;</div>
+<div class="line"><a id="l07389" name="l07389"></a><span class="lineno"> 7389</span>                cin &gt;&gt; u &gt;&gt; v &gt;&gt; w;</div>
+<div class="line"><a id="l07390" name="l07390"></a><span class="lineno"> 7390</span>                w       = min(w, g[u][v]);</div>
+<div class="line"><a id="l07391" name="l07391"></a><span class="lineno"> 7391</span>                w       = min(w, g[v][u]);</div>
+<div class="line"><a id="l07392" name="l07392"></a><span class="lineno"> 7392</span>                g[u][v] = w;</div>
+<div class="line"><a id="l07393" name="l07393"></a><span class="lineno"> 7393</span>                g[v][u] = w;</div>
+<div class="line"><a id="l07394" name="l07394"></a><span class="lineno"> 7394</span>            }</div>
+<div class="line"><a id="l07395" name="l07395"></a><span class="lineno"> 7395</span>            unordered_set&lt;int&gt; us;</div>
+<div class="line"><a id="l07396" name="l07396"></a><span class="lineno"> 7396</span>            <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l07397" name="l07397"></a><span class="lineno"> 7397</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l07398" name="l07398"></a><span class="lineno"> 7398</span>                <span class="keywordtype">int</span> t = -1;</div>
+<div class="line"><a id="l07399" name="l07399"></a><span class="lineno"> 7399</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= n; j++) {</div>
+<div class="line"><a id="l07400" name="l07400"></a><span class="lineno"> 7400</span>                    <span class="keywordflow">if</span>(!us.contains(j) &amp;&amp; (t == -1 || dist[t] &gt; dist[j])) {</div>
+<div class="line"><a id="l07401" name="l07401"></a><span class="lineno"> 7401</span>                        t = j;</div>
+<div class="line"><a id="l07402" name="l07402"></a><span class="lineno"> 7402</span>                    }</div>
+<div class="line"><a id="l07403" name="l07403"></a><span class="lineno"> 7403</span>                }</div>
+<div class="line"><a id="l07404" name="l07404"></a><span class="lineno"> 7404</span>                <span class="keywordflow">if</span>(i &gt; 0 &amp;&amp; dist[t] == INT_MAX) {</div>
+<div class="line"><a id="l07405" name="l07405"></a><span class="lineno"> 7405</span>                    cout &lt;&lt; <span class="stringliteral">&quot;impossible&quot;</span>;</div>
+<div class="line"><a id="l07406" name="l07406"></a><span class="lineno"> 7406</span>                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07407" name="l07407"></a><span class="lineno"> 7407</span>                }</div>
+<div class="line"><a id="l07408" name="l07408"></a><span class="lineno"> 7408</span>                <span class="keywordflow">if</span>(i &gt; 0) {</div>
+<div class="line"><a id="l07409" name="l07409"></a><span class="lineno"> 7409</span>                    ans += dist[t];</div>
+<div class="line"><a id="l07410" name="l07410"></a><span class="lineno"> 7410</span>                }</div>
+<div class="line"><a id="l07411" name="l07411"></a><span class="lineno"> 7411</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= n; j++) {</div>
+<div class="line"><a id="l07412" name="l07412"></a><span class="lineno"> 7412</span>                    dist[j] = min(dist[j], g[t][j]);</div>
+<div class="line"><a id="l07413" name="l07413"></a><span class="lineno"> 7413</span>                }</div>
+<div class="line"><a id="l07414" name="l07414"></a><span class="lineno"> 7414</span>                us.insert(t);</div>
+<div class="line"><a id="l07415" name="l07415"></a><span class="lineno"> 7415</span>            }</div>
+<div class="line"><a id="l07416" name="l07416"></a><span class="lineno"> 7416</span>            cout &lt;&lt; ans;</div>
+<div class="line"><a id="l07417" name="l07417"></a><span class="lineno"> 7417</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07418" name="l07418"></a><span class="lineno"> 7418</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l03502">TEST()</a>.</p>
 
@@ -203,7 +206,7 @@ $(function() {
 <div class="line"><a id="l03513" name="l03513"></a><span class="lineno"> 3513</span>        }</div>
 <div class="ttc" id="aa00026_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07360">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07379">main()</a>.</p>
 
 </div>
 </div>
@@ -252,7 +255,7 @@ $(function() {
 <div class="line"><a id="l03530" name="l03530"></a><span class="lineno"> 3530</span>            ASSERT_EQ(<span class="stringliteral">&quot;-9&quot;</span>, ans);</div>
 <div class="line"><a id="l03531" name="l03531"></a><span class="lineno"> 3531</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07360">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07379">main()</a>.</p>
 
 </div>
 </div>

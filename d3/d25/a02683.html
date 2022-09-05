@@ -85,7 +85,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02944">2944</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02956">2956</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a49920754a24756770f7271a61852bdca" name="a49920754a24756770f7271a61852bdca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49920754a24756770f7271a61852bdca">&#9670;&nbsp;</a></span>getFactors()</h2>
@@ -111,13 +111,11 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08279">8279</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08279" name="l08279"></a><span class="lineno"> 8279</span>                                                      {</div>
-<div class="line"><a id="l08280" name="l08280"></a><span class="lineno"> 8280</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/d25/a02683.html#a2eb6ab6c71f9d7c786626ef144bc7ceb">getFactorsWithMin</a>(n, 2);</div>
-<div class="line"><a id="l08281" name="l08281"></a><span class="lineno"> 8281</span>        }</div>
-<div class="ttc" id="aa02683_html_a2eb6ab6c71f9d7c786626ef144bc7ceb"><div class="ttname"><a href="../../d3/d25/a02683.html#a2eb6ab6c71f9d7c786626ef144bc7ceb">leetcode::factor_combinations::Solution::getFactorsWithMin</a></div><div class="ttdeci">static vector&lt; vector&lt; int &gt; &gt; getFactorsWithMin(int n, int minimum)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08264">leetcode.cpp:8264</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08267">8267</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08267" name="l08267"></a><span class="lineno"> 8267</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/d25/a02683.html#a2eb6ab6c71f9d7c786626ef144bc7ceb">getFactorsWithMin</a>(n, 2); }</div>
+<div class="ttc" id="aa02683_html_a2eb6ab6c71f9d7c786626ef144bc7ceb"><div class="ttname"><a href="../../d3/d25/a02683.html#a2eb6ab6c71f9d7c786626ef144bc7ceb">leetcode::factor_combinations::Solution::getFactorsWithMin</a></div><div class="ttdeci">static vector&lt; vector&lt; int &gt; &gt; getFactorsWithMin(int n, int minimum)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08252">leetcode.cpp:8252</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08264">getFactorsWithMin()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08252">getFactorsWithMin()</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l03834">leetcode::factor_combinations::TEST()</a>.</p>
 
@@ -157,25 +155,25 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08264">8264</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08264" name="l08264"></a><span class="lineno"> 8264</span>                                                                          {</div>
-<div class="line"><a id="l08265" name="l08265"></a><span class="lineno"> 8265</span>            vector&lt;vector&lt;int&gt;&gt; ans;</div>
-<div class="line"><a id="l08266" name="l08266"></a><span class="lineno"> 8266</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = minimum; i &lt;= sqrt(n); i++) {</div>
-<div class="line"><a id="l08267" name="l08267"></a><span class="lineno"> 8267</span>                <span class="keywordflow">if</span>(n % i == 0) {</div>
-<div class="line"><a id="l08268" name="l08268"></a><span class="lineno"> 8268</span>                    ans.push_back({i, n / i});</div>
-<div class="line"><a id="l08269" name="l08269"></a><span class="lineno"> 8269</span>                    <span class="keyword">auto</span> res = <a class="code hl_function" href="../../d3/d25/a02683.html#a2eb6ab6c71f9d7c786626ef144bc7ceb">getFactorsWithMin</a>(n / i, i);</div>
-<div class="line"><a id="l08270" name="l08270"></a><span class="lineno"> 8270</span>                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;vec: res) {</div>
-<div class="line"><a id="l08271" name="l08271"></a><span class="lineno"> 8271</span>                        ans.push_back({i});</div>
-<div class="line"><a id="l08272" name="l08272"></a><span class="lineno"> 8272</span>                        ans.back().insert(ans.back().end(), vec.begin(), vec.end());</div>
-<div class="line"><a id="l08273" name="l08273"></a><span class="lineno"> 8273</span>                    }</div>
-<div class="line"><a id="l08274" name="l08274"></a><span class="lineno"> 8274</span>                }</div>
-<div class="line"><a id="l08275" name="l08275"></a><span class="lineno"> 8275</span>            }</div>
-<div class="line"><a id="l08276" name="l08276"></a><span class="lineno"> 8276</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l08277" name="l08277"></a><span class="lineno"> 8277</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08252">8252</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08252" name="l08252"></a><span class="lineno"> 8252</span>                                                                          {</div>
+<div class="line"><a id="l08253" name="l08253"></a><span class="lineno"> 8253</span>            vector&lt;vector&lt;int&gt;&gt; ans;</div>
+<div class="line"><a id="l08254" name="l08254"></a><span class="lineno"> 8254</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = minimum; i &lt;= sqrt(n); i++) {</div>
+<div class="line"><a id="l08255" name="l08255"></a><span class="lineno"> 8255</span>                <span class="keywordflow">if</span>(n % i == 0) {</div>
+<div class="line"><a id="l08256" name="l08256"></a><span class="lineno"> 8256</span>                    ans.push_back({i, n / i});</div>
+<div class="line"><a id="l08257" name="l08257"></a><span class="lineno"> 8257</span>                    <span class="keyword">auto</span> res = <a class="code hl_function" href="../../d3/d25/a02683.html#a2eb6ab6c71f9d7c786626ef144bc7ceb">getFactorsWithMin</a>(n / i, i);</div>
+<div class="line"><a id="l08258" name="l08258"></a><span class="lineno"> 8258</span>                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;vec: res) {</div>
+<div class="line"><a id="l08259" name="l08259"></a><span class="lineno"> 8259</span>                        ans.push_back({i});</div>
+<div class="line"><a id="l08260" name="l08260"></a><span class="lineno"> 8260</span>                        ans.back().insert(ans.back().end(), vec.begin(), vec.end());</div>
+<div class="line"><a id="l08261" name="l08261"></a><span class="lineno"> 8261</span>                    }</div>
+<div class="line"><a id="l08262" name="l08262"></a><span class="lineno"> 8262</span>                }</div>
+<div class="line"><a id="l08263" name="l08263"></a><span class="lineno"> 8263</span>            }</div>
+<div class="line"><a id="l08264" name="l08264"></a><span class="lineno"> 8264</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l08265" name="l08265"></a><span class="lineno"> 8265</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08264">getFactorsWithMin()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08252">getFactorsWithMin()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08279">getFactors()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08264">getFactorsWithMin()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08267">getFactors()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08252">getFactorsWithMin()</a>.</p>
 
 </div>
 </div>

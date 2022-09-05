@@ -125,43 +125,46 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">acwing.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l07158">7158</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07158" name="l07158"></a><span class="lineno"> 7158</span>                                              {</div>
-<div class="line"><a id="l07159" name="l07159"></a><span class="lineno"> 7159</span>            <span class="keywordtype">int</span> n, m;</div>
-<div class="line"><a id="l07160" name="l07160"></a><span class="lineno"> 7160</span>            cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l07161" name="l07161"></a><span class="lineno"> 7161</span>            vector&lt;unordered_map&lt;int, int&gt;&gt; vec(n + 1);</div>
-<div class="line"><a id="l07162" name="l07162"></a><span class="lineno"> 7162</span>            unordered_set&lt;int&gt; ed;</div>
-<div class="line"><a id="l07163" name="l07163"></a><span class="lineno"> 7163</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l07164" name="l07164"></a><span class="lineno"> 7164</span>                <span class="keywordtype">int</span> x, y, z;</div>
-<div class="line"><a id="l07165" name="l07165"></a><span class="lineno"> 7165</span>                cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</div>
-<div class="line"><a id="l07166" name="l07166"></a><span class="lineno"> 7166</span>                <span class="keywordflow">if</span>(vec[x][y] == 0) {</div>
-<div class="line"><a id="l07167" name="l07167"></a><span class="lineno"> 7167</span>                    vec[x][y] = z;</div>
-<div class="line"><a id="l07168" name="l07168"></a><span class="lineno"> 7168</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07169" name="l07169"></a><span class="lineno"> 7169</span>                    vec[x][y] = min(vec[x][y], z);</div>
-<div class="line"><a id="l07170" name="l07170"></a><span class="lineno"> 7170</span>                }</div>
-<div class="line"><a id="l07171" name="l07171"></a><span class="lineno"> 7171</span>            }</div>
-<div class="line"><a id="l07172" name="l07172"></a><span class="lineno"> 7172</span>            priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, comp&gt; pq;</div>
-<div class="line"><a id="l07173" name="l07173"></a><span class="lineno"> 7173</span>            pq.push(make_pair(1, 0));</div>
-<div class="line"><a id="l07174" name="l07174"></a><span class="lineno"> 7174</span>            <span class="keywordflow">while</span>(!pq.empty()) {</div>
-<div class="line"><a id="l07175" name="l07175"></a><span class="lineno"> 7175</span>                <span class="keyword">auto</span> [node, dist] = pq.top();</div>
-<div class="line"><a id="l07176" name="l07176"></a><span class="lineno"> 7176</span>                pq.pop();</div>
-<div class="line"><a id="l07177" name="l07177"></a><span class="lineno"> 7177</span>                <span class="keywordflow">if</span>(ed.contains(node)) {</div>
-<div class="line"><a id="l07178" name="l07178"></a><span class="lineno"> 7178</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l07179" name="l07179"></a><span class="lineno"> 7179</span>                }</div>
-<div class="line"><a id="l07180" name="l07180"></a><span class="lineno"> 7180</span>                ed.insert(node);</div>
-<div class="line"><a id="l07181" name="l07181"></a><span class="lineno"> 7181</span>                <span class="keywordflow">if</span>(node == n) {</div>
-<div class="line"><a id="l07182" name="l07182"></a><span class="lineno"> 7182</span>                    cout &lt;&lt; dist;</div>
-<div class="line"><a id="l07183" name="l07183"></a><span class="lineno"> 7183</span>                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07184" name="l07184"></a><span class="lineno"> 7184</span>                }</div>
-<div class="line"><a id="l07185" name="l07185"></a><span class="lineno"> 7185</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> [next_node, d]: vec[node]) {</div>
-<div class="line"><a id="l07186" name="l07186"></a><span class="lineno"> 7186</span>                    <span class="keywordflow">if</span>(!ed.contains(next_node)) {</div>
-<div class="line"><a id="l07187" name="l07187"></a><span class="lineno"> 7187</span>                        pq.push(make_pair(next_node, dist + d));</div>
-<div class="line"><a id="l07188" name="l07188"></a><span class="lineno"> 7188</span>                    }</div>
-<div class="line"><a id="l07189" name="l07189"></a><span class="lineno"> 7189</span>                }</div>
-<div class="line"><a id="l07190" name="l07190"></a><span class="lineno"> 7190</span>            }</div>
-<div class="line"><a id="l07191" name="l07191"></a><span class="lineno"> 7191</span>            cout &lt;&lt; -1;</div>
-<div class="line"><a id="l07192" name="l07192"></a><span class="lineno"> 7192</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07193" name="l07193"></a><span class="lineno"> 7193</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">acwing.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l07159">7159</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07159" name="l07159"></a><span class="lineno"> 7159</span>                                              {</div>
+<div class="line"><a id="l07160" name="l07160"></a><span class="lineno"> 7160</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l07161" name="l07161"></a><span class="lineno"> 7161</span>            <span class="keywordtype">int</span> m;</div>
+<div class="line"><a id="l07162" name="l07162"></a><span class="lineno"> 7162</span>            cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l07163" name="l07163"></a><span class="lineno"> 7163</span>            vector&lt;unordered_map&lt;int, int&gt;&gt; vec(n + 1);</div>
+<div class="line"><a id="l07164" name="l07164"></a><span class="lineno"> 7164</span>            unordered_set&lt;int&gt; ed;</div>
+<div class="line"><a id="l07165" name="l07165"></a><span class="lineno"> 7165</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l07166" name="l07166"></a><span class="lineno"> 7166</span>                <span class="keywordtype">int</span> x;</div>
+<div class="line"><a id="l07167" name="l07167"></a><span class="lineno"> 7167</span>                <span class="keywordtype">int</span> y;</div>
+<div class="line"><a id="l07168" name="l07168"></a><span class="lineno"> 7168</span>                <span class="keywordtype">int</span> z;</div>
+<div class="line"><a id="l07169" name="l07169"></a><span class="lineno"> 7169</span>                cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</div>
+<div class="line"><a id="l07170" name="l07170"></a><span class="lineno"> 7170</span>                <span class="keywordflow">if</span>(vec[x][y] == 0) {</div>
+<div class="line"><a id="l07171" name="l07171"></a><span class="lineno"> 7171</span>                    vec[x][y] = z;</div>
+<div class="line"><a id="l07172" name="l07172"></a><span class="lineno"> 7172</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07173" name="l07173"></a><span class="lineno"> 7173</span>                    vec[x][y] = min(vec[x][y], z);</div>
+<div class="line"><a id="l07174" name="l07174"></a><span class="lineno"> 7174</span>                }</div>
+<div class="line"><a id="l07175" name="l07175"></a><span class="lineno"> 7175</span>            }</div>
+<div class="line"><a id="l07176" name="l07176"></a><span class="lineno"> 7176</span>            priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, comp&gt; pq;</div>
+<div class="line"><a id="l07177" name="l07177"></a><span class="lineno"> 7177</span>            pq.push(make_pair(1, 0));</div>
+<div class="line"><a id="l07178" name="l07178"></a><span class="lineno"> 7178</span>            <span class="keywordflow">while</span>(!pq.empty()) {</div>
+<div class="line"><a id="l07179" name="l07179"></a><span class="lineno"> 7179</span>                <span class="keyword">auto</span> [node, dist] = pq.top();</div>
+<div class="line"><a id="l07180" name="l07180"></a><span class="lineno"> 7180</span>                pq.pop();</div>
+<div class="line"><a id="l07181" name="l07181"></a><span class="lineno"> 7181</span>                <span class="keywordflow">if</span>(ed.contains(node)) {</div>
+<div class="line"><a id="l07182" name="l07182"></a><span class="lineno"> 7182</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l07183" name="l07183"></a><span class="lineno"> 7183</span>                }</div>
+<div class="line"><a id="l07184" name="l07184"></a><span class="lineno"> 7184</span>                ed.insert(node);</div>
+<div class="line"><a id="l07185" name="l07185"></a><span class="lineno"> 7185</span>                <span class="keywordflow">if</span>(node == n) {</div>
+<div class="line"><a id="l07186" name="l07186"></a><span class="lineno"> 7186</span>                    cout &lt;&lt; dist;</div>
+<div class="line"><a id="l07187" name="l07187"></a><span class="lineno"> 7187</span>                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07188" name="l07188"></a><span class="lineno"> 7188</span>                }</div>
+<div class="line"><a id="l07189" name="l07189"></a><span class="lineno"> 7189</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> [next_node, d]: vec[node]) {</div>
+<div class="line"><a id="l07190" name="l07190"></a><span class="lineno"> 7190</span>                    <span class="keywordflow">if</span>(!ed.contains(next_node)) {</div>
+<div class="line"><a id="l07191" name="l07191"></a><span class="lineno"> 7191</span>                        pq.push(make_pair(next_node, dist + d));</div>
+<div class="line"><a id="l07192" name="l07192"></a><span class="lineno"> 7192</span>                    }</div>
+<div class="line"><a id="l07193" name="l07193"></a><span class="lineno"> 7193</span>                }</div>
+<div class="line"><a id="l07194" name="l07194"></a><span class="lineno"> 7194</span>            }</div>
+<div class="line"><a id="l07195" name="l07195"></a><span class="lineno"> 7195</span>            cout &lt;&lt; -1;</div>
+<div class="line"><a id="l07196" name="l07196"></a><span class="lineno"> 7196</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07197" name="l07197"></a><span class="lineno"> 7197</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l03327">TEST()</a>.</p>
 
@@ -206,7 +209,7 @@ $(function() {
 <div class="line"><a id="l03336" name="l03336"></a><span class="lineno"> 3336</span>        }</div>
 <div class="ttc" id="aa00026_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07158">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07159">main()</a>.</p>
 
 </div>
 </div>
@@ -255,7 +258,7 @@ $(function() {
 <div class="line"><a id="l03353" name="l03353"></a><span class="lineno"> 3353</span>            ASSERT_EQ(<span class="stringliteral">&quot;12&quot;</span>, ans);</div>
 <div class="line"><a id="l03354" name="l03354"></a><span class="lineno"> 3354</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07158">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07159">main()</a>.</p>
 
 </div>
 </div>
