@@ -8360,4 +8360,54 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace n_queens
+
+	namespace sudoku_solver {
+		void Solution::solveSudoku(vector<vector<char>> &board) {
+			dfs(board, board);
+		}
+
+		bool Solution::dfs(const vector<vector<char>> &board, vector<vector<char>> &ans) {
+			for(int i = 0; i < 9; i++) {
+				for(int j = 0; j < 9; j++) {
+					if(board[i][j] == '.') {
+						bool haveValid = false;
+						for(char c = '1'; c <= '9'; c++) {
+							if(valid(board, i, j, c)) {
+								haveValid                 = true;
+								vector<vector<char>> next = board;
+								next[i][j]                = c;
+								if(dfs(next, ans)) {
+									return true;
+								}
+							}
+						}
+						return false;
+					}
+				}
+			}
+			ans = board;
+			return true;
+		}
+
+		bool Solution::valid(const vector<vector<char>> &board, int x, int y, char num) {
+			for(int i = 0; i < 9; i++) {
+				if(board[i][y] == num) {
+					return false;
+				}
+			}
+			for(int j = 0; j < 9; j++) {
+				if(board[x][j] == num) {
+					return false;
+				}
+			}
+			for(int i = 0; i < 3; i++) {
+				for(int j = 0; j < 3; j++) {
+					if(board[x / 3 * 3 + i][y / 3 * 3 + j] == num) {
+						return false;
+					}
+				}
+			}
+			return true;
+		}
+	}// namespace sudoku_solver
 }// namespace leetcode

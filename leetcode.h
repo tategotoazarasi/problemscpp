@@ -2979,6 +2979,17 @@ namespace leetcode {
 			static vector<vector<string>> solveNQueens(int n);
 		};
 	}// namespace n_queens
+
+	/// \brief 37. 解数独
+	namespace sudoku_solver {
+		class Solution {
+			bool dfs(const vector<vector<char>> &board, vector<vector<char>> &ans);
+			bool valid(const vector<vector<char>> &board, int x, int y, char num);
+
+		public:
+			void solveSudoku(vector<vector<char>> &board);
+		};
+	}// namespace sudoku_solver
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
