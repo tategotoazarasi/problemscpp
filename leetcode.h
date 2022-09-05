@@ -2990,6 +2990,15 @@ namespace leetcode {
 			void solveSudoku(vector<vector<char>> &board);
 		};
 	}// namespace sudoku_solver
+
+	/// \brief 10. 正则表达式匹配
+	namespace regular_expression_matching {
+		class Solution {
+		public:
+			static bool dfs(const string &s, const string &p, int si, int pi);
+			static bool isMatch(string s, string p);
+		};
+	}// namespace regular_expression_matching
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

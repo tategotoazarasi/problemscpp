@@ -8,6 +8,7 @@
 #include <cstring>
 #include <numeric>
 #include <queue>
+#include <regex>
 #include <sstream>
 #include <stack>
 #include <unordered_set>
@@ -8410,4 +8411,52 @@ namespace leetcode {
 			return true;
 		}
 	}// namespace sudoku_solver
+
+	namespace regular_expression_matching {
+		bool Solution::isMatch(string s, string p) {
+			return dfs(s, p, 0, 0);
+		}
+
+		bool Solution::dfs(const string &s, const string &p, int si, int pi) {
+			if(pi == p.length() && si == s.length()) {
+				return true;
+			} else if(pi == p.length()) {
+				return false;
+			}
+			char c        = p[pi++];
+			bool multiple = false;
+			if(pi < p.length() && p[pi] == '*') {
+				multiple = true;
+				pi++;
+			}
+			if(!multiple) {
+				if(si == s.length()) {
+					return false;
+				}
+				if(c == '.' || s[si] == c) {
+					return dfs(s, p, si + 1, pi);
+				} else {
+					return false;
+				}
+			} else {
+				if(c == '.') {
+					for(int i = si; i <= s.length(); i++) {
+						if(dfs(s, p, i, pi)) {
+							return true;
+						}
+					}
+					return false;
+				} else {
+					int i = si;
+					while(s[i] == c) {
+						if(dfs(s, p, ++i, pi)) {
+							return true;
+						}
+					}
+					return dfs(s, p, si, pi);
+				}
+			}
+			return false;
+		}
+	}// namespace regular_expression_matching
 }// namespace leetcode

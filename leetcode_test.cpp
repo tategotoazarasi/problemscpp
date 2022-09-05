@@ -3891,4 +3891,22 @@ namespace leetcode {
 			ASSERT_EQ(ans, board);
 		}
 	}// namespace sudoku_solver
+
+	namespace regular_expression_matching {
+		TEST(regular_expression_matching, case1) {
+			ASSERT_FALSE(Solution::isMatch("aa", "a"));
+		}
+
+		TEST(regular_expression_matching, case2) {
+			ASSERT_TRUE(Solution::isMatch("aa", "a*"));
+		}
+
+		TEST(regular_expression_matching, case3) {
+			ASSERT_TRUE(Solution::isMatch("ab", ".*"));
+		}
+
+		TEST(regular_expression_matching, case4) {
+			ASSERT_TRUE(Solution::isMatch("a", "ab*"));
+		}
+	}// namespace regular_expression_matching
 }// namespace leetcode
