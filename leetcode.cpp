@@ -8503,4 +8503,52 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace different_ways_to_add_parentheses
+
+	namespace remove_invalid_parentheses {
+		vector<string> Solution::removeInvalidParentheses(string s) {
+			vector<string> ans;
+			unordered_set<string> currSet;
+
+			currSet.insert(s);
+			while(true) {
+				for(auto &str: currSet) {
+					if(isValid(str))
+						ans.emplace_back(str);
+				}
+				if(ans.size() > 0) {
+					sort(ans.begin(), ans.end());
+					return ans;
+				}
+				unordered_set<string> nextSet;
+				for(auto &str: currSet) {
+					for(int i = 0; i < str.size(); i++) {
+						if(i > 0 && str[i] == str[i - 1]) {
+							continue;
+						}
+						if(str[i] == '(' || str[i] == ')') {
+							nextSet.insert(str.substr(0, i) + str.substr(i + 1, str.size()));
+						}
+					}
+				}
+				currSet = nextSet;
+			}
+		}
+
+		bool Solution::isValid(string str) {
+			int count = 0;
+
+			for(char c: str) {
+				if(c == '(') {
+					count++;
+				} else if(c == ')') {
+					count--;
+					if(count < 0) {
+						return false;
+					}
+				}
+			}
+
+			return count == 0;
+		}
+	}// namespace remove_invalid_parentheses
 }// namespace leetcode

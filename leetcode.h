@@ -3008,6 +3008,15 @@ namespace leetcode {
 			static vector<int> eval(const string &expr, int start, int end);
 		};
 	}// namespace different_ways_to_add_parentheses
+
+	/// \brief 301. 删除无效的括号
+	namespace remove_invalid_parentheses {
+		class Solution {
+		public:
+			static bool isValid(string str);
+			static vector<string> removeInvalidParentheses(string s);
+		};
+	}// namespace remove_invalid_parentheses
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -3921,4 +3921,31 @@ namespace leetcode {
 			ASSERT_EQ(ans, Solution::diffWaysToCompute("2*3-4*5"));
 		}
 	}// namespace different_ways_to_add_parentheses
+
+	namespace remove_invalid_parentheses {
+		TEST(remove_invalid_parentheses, case1) {
+			vector<string> ans = {"(())()", "()()()"};
+			ASSERT_EQ(ans, Solution::removeInvalidParentheses("()())()"));
+		}
+
+		TEST(remove_invalid_parentheses, case2) {
+			vector<string> ans = {"(a())()", "(a)()()"};
+			ASSERT_EQ(ans, Solution::removeInvalidParentheses("(a)())()"));
+		}
+
+		TEST(remove_invalid_parentheses, case3) {
+			vector<string> ans = {""};
+			ASSERT_EQ(ans, Solution::removeInvalidParentheses(")("));
+		}
+
+		TEST(remove_invalid_parentheses, case4) {
+			vector<string> ans = {"x"};
+			ASSERT_EQ(ans, Solution::removeInvalidParentheses("x("));
+		}
+
+		TEST(remove_invalid_parentheses, case5) {
+			vector<string> ans = {"aaaaa"};
+			ASSERT_EQ(ans, Solution::removeInvalidParentheses("((((((((((((((((((((aaaaa"));
+		}
+	}// namespace remove_invalid_parentheses
 }// namespace leetcode
