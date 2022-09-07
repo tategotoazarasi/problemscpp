@@ -3025,6 +3025,24 @@ namespace leetcode {
 			static double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2);
 		};
 	}// namespace median_of_two_sorted_arrays
+
+	/// \brief 315. 计算右侧小于当前元素的个数
+	namespace count_of_smaller_numbers_after_self {
+		class Solution {
+		private:
+			vector<int> c;
+			vector<int> a;
+			void Init(int length);
+			int LowBit(int x);
+			void Update(int pos);
+			int Query(int pos);
+			void Discretization(vector<int> &nums);
+			int getId(int x);
+
+		public:
+			vector<int> countSmaller(vector<int> &nums);
+		};
+	}// namespace count_of_smaller_numbers_after_self
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

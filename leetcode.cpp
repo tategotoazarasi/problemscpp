@@ -8589,4 +8589,60 @@ namespace leetcode {
 			return (m + n) % 2 == 0 ? (median1 + median2) / 2.0 : median1;
 		}
 	}// namespace median_of_two_sorted_arrays
+
+	namespace count_of_smaller_numbers_after_self {
+		vector<int> Solution::countSmaller(vector<int> &nums) {
+			vector<int> resultList;
+
+			Discretization(nums);
+
+			Init(nums.size() + 5);
+
+			for(int i = (int) nums.size() - 1; i >= 0; --i) {
+				int id = getId(nums[i]);
+				resultList.push_back(Query(id - 1));
+				Update(id);
+			}
+
+			reverse(resultList.begin(), resultList.end());
+
+			return resultList;
+		}
+
+		void Solution::Init(int length) {
+			c.resize(length, 0);
+		}
+
+		int Solution::LowBit(int x) {
+			return x & (-x);
+		}
+
+		void Solution::Update(int pos) {
+			while(pos < c.size()) {
+				c[pos] += 1;
+				pos += LowBit(pos);
+			}
+		}
+
+		int Solution::Query(int pos) {
+			int ret = 0;
+
+			while(pos > 0) {
+				ret += c[pos];
+				pos -= LowBit(pos);
+			}
+
+			return ret;
+		}
+
+		void Solution::Discretization(vector<int> &nums) {
+			a.assign(nums.begin(), nums.end());
+			sort(a.begin(), a.end());
+			a.erase(unique(a.begin(), a.end()), a.end());
+		}
+
+		int Solution::getId(int x) {
+			return lower_bound(a.begin(), a.end(), x) - a.begin() + 1;
+		}
+	}// namespace count_of_smaller_numbers_after_self
 }// namespace leetcode

@@ -3968,4 +3968,27 @@ namespace leetcode {
 			ASSERT_EQ(2.5, Solution::findMedianSortedArrays(nums1, nums2));
 		}
 	}// namespace median_of_two_sorted_arrays
+
+	namespace count_of_smaller_numbers_after_self {
+		TEST(count_of_smaller_numbers_after_self, case1) {
+			vector nums = {5, 2, 6, 1};
+			vector ans  = {2, 1, 1, 0};
+			Solution sol;
+			ASSERT_EQ(ans, sol.countSmaller(nums));
+		}
+
+		TEST(count_of_smaller_numbers_after_self, case2) {
+			vector nums = {-1};
+			vector ans  = {0};
+			Solution sol;
+			ASSERT_EQ(ans, sol.countSmaller(nums));
+		}
+
+		TEST(count_of_smaller_numbers_after_self, case3) {
+			vector nums = {-1, -1};
+			vector ans  = {0, 0};
+			Solution sol;
+			ASSERT_EQ(ans, sol.countSmaller(nums));
+		}
+	}// namespace count_of_smaller_numbers_after_self
 }// namespace leetcode
