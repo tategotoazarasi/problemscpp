@@ -3017,6 +3017,14 @@ namespace leetcode {
 			static vector<string> removeInvalidParentheses(string s);
 		};
 	}// namespace remove_invalid_parentheses
+
+	/// \brief 4. 寻找两个正序数组的中位数
+	namespace median_of_two_sorted_arrays {
+		class Solution {
+		public:
+			static double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2);
+		};
+	}// namespace median_of_two_sorted_arrays
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

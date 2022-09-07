@@ -3948,4 +3948,24 @@ namespace leetcode {
 			ASSERT_EQ(ans, Solution::removeInvalidParentheses("((((((((((((((((((((aaaaa"));
 		}
 	}// namespace remove_invalid_parentheses
+
+	namespace median_of_two_sorted_arrays {
+		TEST(median_of_two_sorted_arrays, case1) {
+			vector nums1 = {1, 3};
+			vector nums2 = {2};
+			ASSERT_EQ(2, Solution::findMedianSortedArrays(nums1, nums2));
+		}
+
+		TEST(median_of_two_sorted_arrays, case2) {
+			vector nums1 = {1, 2};
+			vector nums2 = {3, 4};
+			ASSERT_EQ(2.5, Solution::findMedianSortedArrays(nums1, nums2));
+		}
+
+		TEST(median_of_two_sorted_arrays, case3) {
+			vector nums1 = {1, 3};
+			vector nums2 = {2, 7};
+			ASSERT_EQ(2.5, Solution::findMedianSortedArrays(nums1, nums2));
+		}
+	}// namespace median_of_two_sorted_arrays
 }// namespace leetcode
