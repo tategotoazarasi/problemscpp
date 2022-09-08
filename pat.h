@@ -967,6 +967,39 @@ namespace pat {
 			int dfs(int father, int nd);
 			int main(istream &cin, ostream &cout);
 		}// namespace a1021
+
+		/// \brief 7-1 Balloon Popping
+		namespace a7_1 {
+			int main(istream &cin, ostream &cout);
+		}
+
+		/// \brief 7-2 The Second Run of Quicksort
+		namespace a7_2 {
+			bool isFirstRun(int start, int end);
+			int main(istream &cin, ostream &cout);
+		}// namespace a7_2
+
+		/// \brief 7-3 Leader of the Opinion Leaders
+		namespace a7_3 {
+			int main(istream &cin, ostream &cout);
+		}
+
+		/// \brief 7-4 Pseudo-completeness
+		namespace a7_4 {
+			struct Node {
+				int val;
+				Node *left{};
+				Node *right{};
+
+				explicit Node(int val): val(val) {
+				}
+			};
+			Node *genTree(const vector<int> &preorder, const vector<int> &inorder, int pStart, int pEnd, int iStart,
+			              int iEnd);
+			void postOrder(Node *node, vector<int> &vec);
+			int judge(Node *node);
+			int main(istream &cin, ostream &cout);
+		}// namespace a7_4
 	}    // namespace a
 
 	/// \brief 顶级

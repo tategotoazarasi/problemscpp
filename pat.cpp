@@ -5063,6 +5063,273 @@ namespace pat {
 				return 0;
 			}
 		}// namespace a1021
+
+		namespace a7_1 {
+			int main(istream &cin, ostream &cout) {
+				{
+					int n;
+					int h;
+					cin >> n >> h;
+					vector<int> balloons(n);
+					unordered_map<int, int> pos;
+					for(int i = 0; i < n; i++) {
+						cin >> balloons[i];
+						pos[balloons[i]] = i;
+					}
+					int maximum = 0;
+					int cnt     = 0;
+					for(int i = 0; i < n; i++) {
+						auto it     = lower_bound(balloons.begin(), balloons.end(), balloons[i] - h);
+						const int v = it - balloons.begin();
+						const int t = i - v + 1;
+						if(cnt < t) {
+							cnt     = t;
+							maximum = balloons[i] - h;
+						}
+					}
+					cout << maximum << ' ' << cnt;
+					return 0;
+				}
+			}
+		}// namespace a7_1
+
+		namespace a7_2 {
+			int vec[100010];
+			int lmax[100010];
+			int rmin[100010];
+			int lmax2[100010];
+			int rmin2[100010];
+
+			bool isFirstRun(int start, int end) {
+				if(start >= end) {
+					return true;
+				}
+				lmax2[start] = vec[start];
+				rmin2[end]   = vec[end];
+				for(int i = start + 1; i <= end; i++) {
+					lmax2[i] = max(vec[i], lmax2[i - 1]);
+				}
+				for(int i = end - 1; i >= start; i--) {
+					rmin2[i] = min(vec[i], rmin2[i + 1]);
+				}
+				for(int i = start; i <= end; i++) {
+					if(vec[i] >= lmax2[i] && vec[i] <= rmin2[i]) {
+						return true;
+					}
+				}
+				return false;
+			}
+
+			int main(istream &cin, ostream &cout) {
+				int k;
+				cin >> k;
+				while(k-- != 0) {
+					int n;
+					cin >> n;
+					for(int i = 0; i < n; i++) {
+						cin >> vec[i];
+					}
+					bool ok     = false;
+					lmax[0]     = vec[0];
+					rmin[n - 1] = vec[n - 1];
+					for(int i = 1; i < n; i++) {
+						lmax[i] = max(vec[i], lmax[i - 1]);
+					}
+					for(int i = n - 2; i >= 0; i--) {
+						rmin[i] = min(vec[i], rmin[i + 1]);
+					}
+					for(int i = 0; i < n; i++) {
+						if(vec[i] >= lmax[i] && vec[i] <= rmin[i]) {
+							if(isFirstRun(0, i - 1) && isFirstRun(i + 1, n - 1)) {
+								ok = true;
+								break;
+							}
+						}
+					}
+					if(ok) {
+						cout << "Yes" << endl;
+					} else {
+						cout << "No" << endl;
+					}
+				}
+				return 0;
+			}
+		}// namespace a7_2
+
+		namespace a7_3 {
+			int main(istream &cin, ostream &cout) {
+				int n;
+				int t;
+				cin >> n >> t;
+				vector<int> out(n + 1, 0);
+				vector<int> in(n + 1, 0);
+				vector<unordered_set<int>> following(n + 1);
+				unordered_map<int, int> kols;
+				for(int i = 1; i <= n; i++) {
+					int m;
+					cin >> m;
+					out[i] += m;
+					while(m-- != 0) {
+						int u;
+						cin >> u;
+						in[u]++;
+						following[i].insert(u);
+					}
+				}
+				for(int i = 1; i <= n; i++) {
+					if(out[i] == 0 || in[i] / following[i].size() >= t) {
+						if(kols.count(i) == 0U) {
+							kols[i] = 0;
+						}
+					}
+				}
+				for(const auto &kol: kols) {
+					for(const auto &fo: following[kol.first]) {
+						if(kols.count(fo) != 0U) {
+							kols[fo]++;
+						}
+					}
+				}
+				int maximum = 0;
+				for(auto &kv: kols) {
+					maximum = max(maximum, kv.second);
+				}
+				vector<int> ans;
+				for(auto &kv: kols) {
+					if(kv.second == maximum) {
+						ans.emplace_back(kv.first);
+					}
+				}
+				sort(ans.begin(), ans.end());
+				for(int i = 0; i < ans.size(); i++) {
+					cout << ans[i];
+					if(i != ans.size() - 1) {
+						cout << ' ';
+					}
+				}
+				return 0;
+			}
+
+		}// namespace a7_3
+
+		namespace a7_4 {
+			Node *genTree(const vector<int> &preorder, const vector<int> &inorder, int pStart, int pEnd, int iStart,
+			              int iEnd) {
+				if(pStart > pEnd || iStart > iEnd) {
+					return nullptr;
+				}
+				const int root = preorder[pStart];
+				auto *node     = new Node(root);
+				unordered_set<int> lefts;
+				int iLeftEnd = iStart;
+				while(inorder[iLeftEnd] != root) {
+					lefts.insert(inorder[iLeftEnd++]);
+				}
+				iLeftEnd--;
+				const int iRightStart = iLeftEnd + 2;
+				int pLeftEnd          = pStart + 1;
+				while(lefts.count(preorder[pLeftEnd]) != 0U) {
+					pLeftEnd++;
+				}
+				node->left  = genTree(preorder, inorder, pStart + 1, pLeftEnd - 1, iStart, iLeftEnd);
+				node->right = genTree(preorder, inorder, pLeftEnd, pEnd, iRightStart, iEnd);
+				return node;
+			}
+
+			void postOrder(Node *node, vector<int> &vec) {
+				if(node->left != nullptr) {
+					postOrder(node->left, vec);
+				}
+				if(node->right != nullptr) {
+					postOrder(node->right, vec);
+				}
+				vec.emplace_back(node->val);
+			}
+
+			int judge(Node *node) {
+				map<int, int> m;
+				vector<vector<Node *>> lvs;
+				queue<pair<int, Node *>> q;
+				q.push({0, node});
+				while(!q.empty()) {
+					const auto p = q.front();
+					q.pop();
+					const int level = p.first;
+					m[level]++;
+					while(lvs.size() < level + 1) {
+						vector<Node *> topush;
+						lvs.push_back(topush);
+					}
+					Node *n = p.second;
+					lvs[level].push_back(n);
+					if(n->left != nullptr) {
+						q.push({level + 1, n->left});
+					}
+					if(n->right != nullptr) {
+						q.push({level + 1, n->right});
+					}
+				}
+				for(const auto kv: m) {
+					const int k = kv.first;
+					const int v = kv.second;
+					if(k != m.rbegin()->first) {
+						if(v != pow(2, k)) {
+							return 0;
+						}
+					} else {
+						if(v == pow(2, k)) {
+							return 1;
+						}
+						if(lvs.size() >= 2) {
+							bool haveEmpty = false;
+							for(const auto &nd: lvs[lvs.size() - 2]) {
+								if(nd->left == nullptr) {
+									haveEmpty = true;
+								} else {
+									if(haveEmpty) {
+										return 3;
+									}
+								}
+								if(nd->right == nullptr) {
+									haveEmpty = true;
+								} else {
+									if(haveEmpty) {
+										return 3;
+									}
+								}
+							}
+						}
+						return 2;
+					}
+				}
+				return -1;
+			}
+
+			int main(istream &cin, ostream &cout) {
+				int n;
+				cin >> n;
+				vector<int> inorder(n);
+				vector<int> preorder(n);
+				for(int i = 0; i < n; i++) {
+					cin >> inorder[i];
+				}
+				for(int i = 0; i < n; i++) {
+					cin >> preorder[i];
+				}
+				Node *root = genTree(preorder, inorder, 0, n - 1, 0, n - 1);
+				vector<int> vec;
+				cout << judge(root) << endl;
+				postOrder(root, vec);
+				for(int i = 0; i < vec.size(); i++) {
+					cout << vec[i];
+					if(i != vec.size() - 1) {
+						cout << ' ';
+					}
+				}
+				return 0;
+			}
+
+		}// namespace a7_4
 	}    // namespace a
 
 	namespace top {}

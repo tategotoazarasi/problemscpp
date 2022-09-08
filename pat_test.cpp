@@ -2301,6 +2301,102 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace a1021
+
+		namespace a7_1 {
+			TEST(a7_1, case1) {
+				istringstream in("11 120\n"
+				                 "-120 -40 0 80 122 140 160 220 240 260 300");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("120 5", out.str());
+			}
+		}// namespace a7_1
+
+		namespace a7_2 {
+			TEST(a7_2, case1) {
+				istringstream in("4\n"
+				                 "8\n"
+				                 "5 2 16 12 28 60 32 72\n"
+				                 "8\n"
+				                 "2 16 5 28 12 60 32 72\n"
+				                 "8\n"
+				                 "2 12 16 5 28 32 72 60\n"
+				                 "8\n"
+				                 "5 2 12 28 16 32 72 60");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("Yes\n"
+				          "Yes\n"
+				          "Yes\n"
+				          "No\n",
+				          out.str());
+			}
+		}// namespace a7_2
+
+		namespace a7_3 {
+			TEST(a7_3, case1) {
+				istringstream in("10 3\n"
+				                 "3 9 3 8\n"
+				                 "2 1 3\n"
+				                 "2 9 7\n"
+				                 "3 2 7 5\n"
+				                 "3 6 3 7\n"
+				                 "2 7 3\n"
+				                 "1 2\n"
+				                 "2 3 9\n"
+				                 "1 10\n"
+				                 "1 3");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("7 9", out.str());
+			}
+		}// namespace a7_3
+
+		namespace a7_4 {
+			TEST(a7_4, case1) {
+				istringstream in("7\n"
+				                 "4 2 5 1 6 3 7\n"
+				                 "1 2 4 5 3 6 7");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("1\n"
+				          "4 5 2 6 7 3 1",
+				          out.str());
+			}
+
+			TEST(a7_4, case2) {
+				istringstream in("10\n"
+				                 "8 4 9 2 10 5 1 6 3 7\n"
+				                 "1 2 4 8 9 5 10 3 6 7");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("2\n"
+				          "8 9 4 10 5 2 6 7 3 1",
+				          out.str());
+			}
+
+			TEST(a7_4, case3) {
+				istringstream in("10\n"
+				                 "8 4 2 5 11 1 6 3 14 7\n"
+				                 "1 2 4 8 5 11 3 6 7 14");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("3\n"
+				          "8 4 11 5 2 6 14 7 3 1",
+				          out.str());
+			}
+
+			TEST(a7_4, case4) {
+				istringstream in("7\n"
+				                 "4 2 10 5 1 3 7\n"
+				                 "1 2 4 5 10 3 7");
+				auto out = ostringstream();
+				main(in, out);
+				ASSERT_EQ("0\n"
+				          "4 10 5 2 7 3 1",
+				          out.str());
+			}
+		}// namespace a7_4
 	}    // namespace a
 
 	namespace top {}
