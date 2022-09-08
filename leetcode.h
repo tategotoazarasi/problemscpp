@@ -2983,11 +2983,11 @@ namespace leetcode {
 	/// \brief 37. 解数独
 	namespace sudoku_solver {
 		class Solution {
-			bool dfs(const vector<vector<char>> &board, vector<vector<char>> &ans);
-			bool valid(const vector<vector<char>> &board, int x, int y, char num);
+			static bool dfs(const vector<vector<char>> &board, vector<vector<char>> &ans);
+			static bool valid(const vector<vector<char>> &board, int x, int y, char num);
 
 		public:
-			void solveSudoku(vector<vector<char>> &board);
+			static void solveSudoku(vector<vector<char>> &board);
 		};
 	}// namespace sudoku_solver
 
@@ -2996,7 +2996,7 @@ namespace leetcode {
 		class Solution {
 		public:
 			static bool dfs(const string &s, const string &p, int si, int pi);
-			static bool isMatch(string s, string p);
+			static bool isMatch(const string &s, const string &p);
 		};
 	}// namespace regular_expression_matching
 
@@ -3004,7 +3004,7 @@ namespace leetcode {
 	namespace different_ways_to_add_parentheses {
 		class Solution {
 		public:
-			static vector<int> diffWaysToCompute(string expression);
+			static vector<int> diffWaysToCompute(const string &expression);
 			static vector<int> eval(const string &expr, int start, int end);
 		};
 	}// namespace different_ways_to_add_parentheses
@@ -3013,8 +3013,8 @@ namespace leetcode {
 	namespace remove_invalid_parentheses {
 		class Solution {
 		public:
-			static bool isValid(string str);
-			static vector<string> removeInvalidParentheses(string s);
+			static bool isValid(const string &str);
+			static vector<string> removeInvalidParentheses(const string &s);
 		};
 	}// namespace remove_invalid_parentheses
 
@@ -3033,7 +3033,7 @@ namespace leetcode {
 			vector<int> c;
 			vector<int> a;
 			void Init(int length);
-			int LowBit(int x);
+			static int LowBit(int x);
 			void Update(int pos);
 			int Query(int pos);
 			void Discretization(vector<int> &nums);

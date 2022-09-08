@@ -991,9 +991,10 @@ namespace pat {
 				Node *left{};
 				Node *right{};
 
-				explicit Node(int val): val(val) {
-				}
+				explicit Node(int val)
+				    : val(val) {}
 			};
+
 			Node *genTree(const vector<int> &preorder, const vector<int> &inorder, int pStart, int pEnd, int iStart,
 			              int iEnd);
 			void postOrder(Node *node, vector<int> &vec);

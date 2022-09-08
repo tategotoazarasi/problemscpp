@@ -3283,35 +3283,35 @@ namespace leetcode {
 		TEST(serialize_and_deserialize_binary_tree, case1) {
 			const auto c            = Codec();
 			const string serialized = "[1,2,3,null,null,4,5]";
-			TreeNode *root          = c.deserialize(serialized);
+			TreeNode *root          = leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case2) {
 			const auto c            = Codec();
 			const string serialized = "[]";
-			TreeNode *root          = c.deserialize(serialized);
+			TreeNode *root          = leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case3) {
 			const auto c            = Codec();
 			const string serialized = "[1,null,2,3]";
-			TreeNode *root          = c.deserialize(serialized);
+			TreeNode *root          = leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case4) {
 			const auto c            = Codec();
 			const string serialized = "[1,2,3]";
-			TreeNode *root          = c.deserialize(serialized);
+			TreeNode *root          = leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case5) {
 			const auto c            = Codec();
 			const string serialized = "[5,4,7,3,null,2,null,-1,null,9]";
-			TreeNode *root          = c.deserialize(serialized);
+			TreeNode *root          = leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 	}// namespace serialize_and_deserialize_binary_tree
@@ -3468,32 +3468,32 @@ namespace leetcode {
 
 		TEST(delete_node_in_a_bst, case1) {
 			const auto c     = serialize_and_deserialize_binary_tree::Codec();
-			TreeNode *root   = c.deserialize("[5,3,6,2,4,null,7]");
-			TreeNode *output = c.deserialize("[5,4,6,2,null,null,7]");
+			TreeNode *root   = serialize_and_deserialize_binary_tree::Codec::deserialize("[5,3,6,2,4,null,7]");
+			TreeNode *output = serialize_and_deserialize_binary_tree::Codec::deserialize("[5,4,6,2,null,null,7]");
 			auto sol         = Solution();
 			ASSERT_TRUE(equal(output, sol.deleteNode(root, 3)));
 		}
 
 		TEST(delete_node_in_a_bst, case2) {
 			const auto c     = serialize_and_deserialize_binary_tree::Codec();
-			TreeNode *root   = c.deserialize("[5,3,6,2,4,null,7]");
-			TreeNode *output = c.deserialize("[5,3,6,2,4,null,7]");
+			TreeNode *root   = serialize_and_deserialize_binary_tree::Codec::deserialize("[5,3,6,2,4,null,7]");
+			TreeNode *output = serialize_and_deserialize_binary_tree::Codec::deserialize("[5,3,6,2,4,null,7]");
 			auto sol         = Solution();
 			ASSERT_TRUE(equal(output, sol.deleteNode(root, 0)));
 		}
 
 		TEST(delete_node_in_a_bst, case3) {
 			const auto c     = serialize_and_deserialize_binary_tree::Codec();
-			TreeNode *root   = c.deserialize("[]");
-			TreeNode *output = c.deserialize("[]");
+			TreeNode *root   = serialize_and_deserialize_binary_tree::Codec::deserialize("[]");
+			TreeNode *output = serialize_and_deserialize_binary_tree::Codec::deserialize("[]");
 			auto sol         = Solution();
 			ASSERT_TRUE(equal(output, sol.deleteNode(root, 0)));
 		}
 
 		TEST(delete_node_in_a_bst, case4) {
 			const auto c     = serialize_and_deserialize_binary_tree::Codec();
-			TreeNode *root   = c.deserialize("[3,2,5,null,null,4,10,null,null,8,15,7]");
-			TreeNode *output = c.deserialize("[3,2,7,null,null,4,10,null,null,8,15]");
+			TreeNode *root   = serialize_and_deserialize_binary_tree::Codec::deserialize("[3,2,5,null,null,4,10,null,null,8,15,7]");
+			TreeNode *output = serialize_and_deserialize_binary_tree::Codec::deserialize("[3,2,7,null,null,4,10,null,null,8,15]");
 			auto sol         = Solution();
 			ASSERT_TRUE(equal(output, sol.deleteNode(root, 5)));
 		}
@@ -3872,12 +3872,12 @@ namespace leetcode {
 
 	namespace n_queens {
 		TEST(n_queens, case1) {
-			vector<vector<string>> ans = {{".Q..", "...Q", "Q...", "..Q."}, {"..Q.", "Q...", "...Q", ".Q.."}};
+			const vector<vector<string>> ans = {{".Q..", "...Q", "Q...", "..Q."}, {"..Q.", "Q...", "...Q", ".Q.."}};
 			ASSERT_EQ(ans, Solution::solveNQueens(4));
 		}
 
 		TEST(n_queens, case2) {
-			vector<vector<string>> ans = {{"Q"}};
+			const vector<vector<string>> ans = {{"Q"}};
 			ASSERT_EQ(ans, Solution::solveNQueens(1));
 		}
 	}// namespace n_queens
@@ -3887,7 +3887,7 @@ namespace leetcode {
 			vector<vector<char>> board = {{'5', '3', '.', '.', '7', '.', '.', '.', '.'}, {'6', '.', '.', '1', '9', '5', '.', '.', '.'}, {'.', '9', '8', '.', '.', '.', '.', '6', '.'}, {'8', '.', '.', '.', '6', '.', '.', '.', '3'}, {'4', '.', '.', '8', '.', '3', '.', '.', '1'}, {'7', '.', '.', '.', '2', '.', '.', '.', '6'}, {'.', '6', '.', '.', '.', '.', '2', '8', '.'}, {'.', '.', '.', '4', '1', '9', '.', '.', '5'}, {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
 			Solution sol;
 			sol.solveSudoku(board);
-			vector<vector<char>> ans = {{'5', '3', '4', '6', '7', '8', '9', '1', '2'}, {'6', '7', '2', '1', '9', '5', '3', '4', '8'}, {'1', '9', '8', '3', '4', '2', '5', '6', '7'}, {'8', '5', '9', '7', '6', '1', '4', '2', '3'}, {'4', '2', '6', '8', '5', '3', '7', '9', '1'}, {'7', '1', '3', '9', '2', '4', '8', '5', '6'}, {'9', '6', '1', '5', '3', '7', '2', '8', '4'}, {'2', '8', '7', '4', '1', '9', '6', '3', '5'}, {'3', '4', '5', '2', '8', '6', '1', '7', '9'}};
+			const vector<vector<char>> ans = {{'5', '3', '4', '6', '7', '8', '9', '1', '2'}, {'6', '7', '2', '1', '9', '5', '3', '4', '8'}, {'1', '9', '8', '3', '4', '2', '5', '6', '7'}, {'8', '5', '9', '7', '6', '1', '4', '2', '3'}, {'4', '2', '6', '8', '5', '3', '7', '9', '1'}, {'7', '1', '3', '9', '2', '4', '8', '5', '6'}, {'9', '6', '1', '5', '3', '7', '2', '8', '4'}, {'2', '8', '7', '4', '1', '9', '6', '3', '5'}, {'3', '4', '5', '2', '8', '6', '1', '7', '9'}};
 			ASSERT_EQ(ans, board);
 		}
 	}// namespace sudoku_solver
@@ -3912,39 +3912,39 @@ namespace leetcode {
 
 	namespace different_ways_to_add_parentheses {
 		TEST(different_ways_to_add_parentheses, case1) {
-			vector<int> ans = {0, 2};
+			const vector ans = {0, 2};
 			ASSERT_EQ(ans, Solution::diffWaysToCompute("2-1-1"));
 		}
 
 		TEST(different_ways_to_add_parentheses, case2) {
-			vector<int> ans = {-34, -14, -10, -10, 10};
+			const vector ans = {-34, -14, -10, -10, 10};
 			ASSERT_EQ(ans, Solution::diffWaysToCompute("2*3-4*5"));
 		}
 	}// namespace different_ways_to_add_parentheses
 
 	namespace remove_invalid_parentheses {
 		TEST(remove_invalid_parentheses, case1) {
-			vector<string> ans = {"(())()", "()()()"};
+			const vector<string> ans = {"(())()", "()()()"};
 			ASSERT_EQ(ans, Solution::removeInvalidParentheses("()())()"));
 		}
 
 		TEST(remove_invalid_parentheses, case2) {
-			vector<string> ans = {"(a())()", "(a)()()"};
+			const vector<string> ans = {"(a())()", "(a)()()"};
 			ASSERT_EQ(ans, Solution::removeInvalidParentheses("(a)())()"));
 		}
 
 		TEST(remove_invalid_parentheses, case3) {
-			vector<string> ans = {""};
+			const vector<string> ans = {""};
 			ASSERT_EQ(ans, Solution::removeInvalidParentheses(")("));
 		}
 
 		TEST(remove_invalid_parentheses, case4) {
-			vector<string> ans = {"x"};
+			const vector<string> ans = {"x"};
 			ASSERT_EQ(ans, Solution::removeInvalidParentheses("x("));
 		}
 
 		TEST(remove_invalid_parentheses, case5) {
-			vector<string> ans = {"aaaaa"};
+			const vector<string> ans = {"aaaaa"};
 			ASSERT_EQ(ans, Solution::removeInvalidParentheses("((((((((((((((((((((aaaaa"));
 		}
 	}// namespace remove_invalid_parentheses
@@ -3971,22 +3971,22 @@ namespace leetcode {
 
 	namespace count_of_smaller_numbers_after_self {
 		TEST(count_of_smaller_numbers_after_self, case1) {
-			vector nums = {5, 2, 6, 1};
-			vector ans  = {2, 1, 1, 0};
+			vector nums      = {5, 2, 6, 1};
+			const vector ans = {2, 1, 1, 0};
 			Solution sol;
 			ASSERT_EQ(ans, sol.countSmaller(nums));
 		}
 
 		TEST(count_of_smaller_numbers_after_self, case2) {
-			vector nums = {-1};
-			vector ans  = {0};
+			vector nums      = {-1};
+			const vector ans = {0};
 			Solution sol;
 			ASSERT_EQ(ans, sol.countSmaller(nums));
 		}
 
 		TEST(count_of_smaller_numbers_after_self, case3) {
-			vector nums = {-1, -1};
-			vector ans  = {0, 0};
+			vector nums      = {-1, -1};
+			const vector ans = {0, 0};
 			Solution sol;
 			ASSERT_EQ(ans, sol.countSmaller(nums));
 		}

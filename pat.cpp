@@ -5161,8 +5161,8 @@ namespace pat {
 				int n;
 				int t;
 				cin >> n >> t;
-				vector<int> out(n + 1, 0);
-				vector<int> in(n + 1, 0);
+				vector out(n + 1, 0);
+				vector in(n + 1, 0);
 				vector<unordered_set<int>> following(n + 1);
 				unordered_map<int, int> kols;
 				for(int i = 1; i <= n; i++) {
@@ -5178,14 +5178,14 @@ namespace pat {
 				}
 				for(int i = 1; i <= n; i++) {
 					if(out[i] == 0 || in[i] / following[i].size() >= t) {
-						if(kols.count(i) == 0U) {
+						if(!kols.contains(i)) {
 							kols[i] = 0;
 						}
 					}
 				}
 				for(const auto &kol: kols) {
 					for(const auto &fo: following[kol.first]) {
-						if(kols.count(fo) != 0U) {
+						if(kols.contains(fo)) {
 							kols[fo]++;
 						}
 					}
@@ -5228,7 +5228,7 @@ namespace pat {
 				iLeftEnd--;
 				const int iRightStart = iLeftEnd + 2;
 				int pLeftEnd          = pStart + 1;
-				while(lefts.count(preorder[pLeftEnd]) != 0U) {
+				while(lefts.contains(preorder[pLeftEnd])) {
 					pLeftEnd++;
 				}
 				node->left  = genTree(preorder, inorder, pStart + 1, pLeftEnd - 1, iStart, iLeftEnd);

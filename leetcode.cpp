@@ -6901,12 +6901,8 @@ namespace leetcode {
 			int rp          = r + 1;
 			const int pivot = nums[(l + r) / 2];
 			while(lp < rp) {
-				while(nums[++lp] < pivot) {
-					;
-				}
-				while(nums[--rp] > pivot) {
-					;
-				}
+				while(nums[++lp] < pivot) {}
+				while(nums[--rp] > pivot) {}
 				if(lp < rp) {
 					swap(nums[lp], nums[rp]);
 				}
@@ -7389,7 +7385,7 @@ namespace leetcode {
 			if(current == nullptr) {
 				return;
 			}
-			auto *const p = current->next;
+			const auto *const p = current->next;
 			if(p == tail) {
 				tail = current;
 			}
@@ -8280,7 +8276,7 @@ namespace leetcode {
 					i++;
 				} else if(isdigit(s[i]) != 0) {
 					int j = i + 1;
-					while(j < s.length() && (isdigit(s[j]) != 0)) {
+					while(j < s.length() && isdigit(s[j]) != 0) {
 						j++;
 					}
 					cnt.emplace_back(stoi(s.substr(i, j - i)));
@@ -8311,7 +8307,7 @@ namespace leetcode {
 	namespace n_queens {
 		vector<vector<string>> Solution::solveNQueens(int n) {
 			vector<vector<string>> ans;
-			vector<vector<bool>> board(n, vector<bool>(n, false));
+			const vector board(n, vector(n, false));
 			dfs(board, 0, n, ans);
 			return ans;
 		}
@@ -8363,18 +8359,15 @@ namespace leetcode {
 	}// namespace n_queens
 
 	namespace sudoku_solver {
-		void Solution::solveSudoku(vector<vector<char>> &board) {
-			dfs(board, board);
-		}
+		void Solution::solveSudoku(vector<vector<char>> &board) { dfs(board, board); }
 
 		bool Solution::dfs(const vector<vector<char>> &board, vector<vector<char>> &ans) {
 			for(int i = 0; i < 9; i++) {
 				for(int j = 0; j < 9; j++) {
 					if(board[i][j] == '.') {
-						bool haveValid = false;
 						for(char c = '1'; c <= '9'; c++) {
 							if(valid(board, i, j, c)) {
-								haveValid                 = true;
+								bool haveValid            = true;
 								vector<vector<char>> next = board;
 								next[i][j]                = c;
 								if(dfs(next, ans)) {
@@ -8413,17 +8406,16 @@ namespace leetcode {
 	}// namespace sudoku_solver
 
 	namespace regular_expression_matching {
-		bool Solution::isMatch(string s, string p) {
-			return dfs(s, p, 0, 0);
-		}
+		bool Solution::isMatch(const string &s, const string &p) { return dfs(s, p, 0, 0); }
 
 		bool Solution::dfs(const string &s, const string &p, int si, int pi) {
 			if(pi == p.length() && si == s.length()) {
 				return true;
-			} else if(pi == p.length()) {
+			}
+			if(pi == p.length()) {
 				return false;
 			}
-			char c        = p[pi++];
+			const char c  = p[pi++];
 			bool multiple = false;
 			if(pi < p.length() && p[pi] == '*') {
 				multiple = true;
@@ -8435,28 +8427,24 @@ namespace leetcode {
 				}
 				if(c == '.' || s[si] == c) {
 					return dfs(s, p, si + 1, pi);
-				} else {
-					return false;
 				}
-			} else {
-				if(c == '.') {
-					for(int i = si; i <= s.length(); i++) {
-						if(dfs(s, p, i, pi)) {
-							return true;
-						}
+				return false;
+			}
+			if(c == '.') {
+				for(int i = si; i <= s.length(); i++) {
+					if(dfs(s, p, i, pi)) {
+						return true;
 					}
-					return false;
-				} else {
-					int i = si;
-					while(s[i] == c) {
-						if(dfs(s, p, ++i, pi)) {
-							return true;
-						}
-					}
-					return dfs(s, p, si, pi);
+				}
+				return false;
+			}
+			int i = si;
+			while(s[i] == c) {
+				if(dfs(s, p, ++i, pi)) {
+					return true;
 				}
 			}
-			return false;
+			return dfs(s, p, si, pi);
 		}
 	}// namespace regular_expression_matching
 
@@ -8469,8 +8457,8 @@ namespace leetcode {
 					allDigit     = false;
 					vector left  = eval(expr, start, i - 1);
 					vector right = eval(expr, i + 1, end);
-					for(auto &l: left) {
-						for(auto &r: right) {
+					for(const auto &l: left) {
+						for(const auto &r: right) {
 							switch(expr[i]) {
 								case '+':
 									ans.emplace_back(l + r);
@@ -8497,7 +8485,7 @@ namespace leetcode {
 			return ans;
 		}
 
-		vector<int> Solution::diffWaysToCompute(string expression) {
+		vector<int> Solution::diffWaysToCompute(const string &expression) {
 			vector ans = eval(expression, 0, expression.length() - 1);
 			sort(ans.begin(), ans.end());
 			return ans;
@@ -8505,7 +8493,7 @@ namespace leetcode {
 	}// namespace different_ways_to_add_parentheses
 
 	namespace remove_invalid_parentheses {
-		vector<string> Solution::removeInvalidParentheses(string s) {
+		vector<string> Solution::removeInvalidParentheses(const string &s) {
 			vector<string> ans;
 			unordered_set<string> currSet;
 
@@ -8515,7 +8503,7 @@ namespace leetcode {
 					if(isValid(str))
 						ans.emplace_back(str);
 				}
-				if(ans.size() > 0) {
+				if(!ans.empty()) {
 					sort(ans.begin(), ans.end());
 					return ans;
 				}
@@ -8534,10 +8522,10 @@ namespace leetcode {
 			}
 		}
 
-		bool Solution::isValid(string str) {
+		bool Solution::isValid(const string &str) {
 			int count = 0;
 
-			for(char c: str) {
+			for(const char c: str) {
 				if(c == '(') {
 					count++;
 				} else if(c == ')') {
@@ -8558,8 +8546,8 @@ namespace leetcode {
 				return findMedianSortedArrays(nums2, nums1);
 			}
 
-			int m    = nums1.size();
-			int n    = nums2.size();
+			const int m = nums1.size();
+			const int n = nums2.size();
 			int left = 0, right = m;
 			// median1：前一部分的最大值
 			// median2：后一部分的最小值
@@ -8568,14 +8556,14 @@ namespace leetcode {
 			while(left <= right) {
 				// 前一部分包含 nums1[0 .. i-1] 和 nums2[0 .. j-1]
 				// 后一部分包含 nums1[i .. m-1] 和 nums2[j .. n-1]
-				int i = (left + right) / 2;
-				int j = (m + n + 1) / 2 - i;
+				const int i = (left + right) / 2;
+				const int j = (m + n + 1) / 2 - i;
 
 				// nums_im1, nums_i, nums_jm1, nums_j 分别表示 nums1[i-1], nums1[i], nums2[j-1], nums2[j]
-				int nums_im1 = (i == 0 ? INT_MIN : nums1[i - 1]);
-				int nums_i   = (i == m ? INT_MAX : nums1[i]);
-				int nums_jm1 = (j == 0 ? INT_MIN : nums2[j - 1]);
-				int nums_j   = (j == n ? INT_MAX : nums2[j]);
+				int nums_im1 = i == 0 ? INT_MIN : nums1[i - 1];
+				int nums_i   = i == m ? INT_MAX : nums1[i];
+				int nums_jm1 = j == 0 ? INT_MIN : nums2[j - 1];
+				int nums_j   = j == n ? INT_MAX : nums2[j];
 
 				if(nums_im1 <= nums_j) {
 					median1 = max(nums_im1, nums_jm1);
@@ -8598,8 +8586,8 @@ namespace leetcode {
 
 			Init(nums.size() + 5);
 
-			for(int i = (int) nums.size() - 1; i >= 0; --i) {
-				int id = getId(nums[i]);
+			for(int i = static_cast<int>(nums.size()) - 1; i >= 0; --i) {
+				const int id = getId(nums[i]);
 				resultList.push_back(Query(id - 1));
 				Update(id);
 			}
@@ -8609,13 +8597,9 @@ namespace leetcode {
 			return resultList;
 		}
 
-		void Solution::Init(int length) {
-			c.resize(length, 0);
-		}
+		void Solution::Init(int length) { c.resize(length, 0); }
 
-		int Solution::LowBit(int x) {
-			return x & (-x);
-		}
+		int Solution::LowBit(int x) { return x & -x; }
 
 		void Solution::Update(int pos) {
 			while(pos < c.size()) {
@@ -8641,9 +8625,7 @@ namespace leetcode {
 			a.erase(unique(a.begin(), a.end()), a.end());
 		}
 
-		int Solution::getId(int x) {
-			return lower_bound(a.begin(), a.end(), x) - a.begin() + 1;
-		}
+		int Solution::getId(int x) { return lower_bound(a.begin(), a.end(), x) - a.begin() + 1; }
 	}// namespace count_of_smaller_numbers_after_self
 
 	namespace best_time_to_buy_and_sell_stock_with_cooldown {
@@ -8652,10 +8634,10 @@ namespace leetcode {
 				return 0;
 			}
 
-			int n  = prices.size();
-			int f0 = -prices[0];
-			int f1 = 0;
-			int f2 = 0;
+			const int n = prices.size();
+			int f0      = -prices[0];
+			int f1      = 0;
+			int f2      = 0;
 			for(int i = 1; i < n; ++i) {
 				tie(f0, f1, f2) = make_tuple(max(f0, f2 - prices[i]), f0 + prices[i], max(f1, f2));
 			}
@@ -8666,7 +8648,7 @@ namespace leetcode {
 
 	namespace best_time_to_buy_and_sell_stock_with_transaction_fee {
 		int Solution::maxProfit(vector<int> &prices, int fee) {
-			int n = prices.size();
+			const int n = prices.size();
 			vector<int> holding(n);
 			vector<int> not_holding(n);
 			not_holding[0] = 0;
