@@ -79,11 +79,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcb/a03268.html">comp_sale</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d1c/a03272.html">comp_sale</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d1c/a03272.html">comp_total</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/ded/a03276.html">comp_total</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d1a/a03264.html">paper</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcb/a03268.html">paper</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -126,19 +126,22 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l03625" name="l03625"></a><span class="lineno"> 3625</span>                                                  {</div>
 <div class="line"><a id="l03626" name="l03626"></a><span class="lineno"> 3626</span>                <span class="keywordtype">int</span> n;</div>
 <div class="line"><a id="l03627" name="l03627"></a><span class="lineno"> 3627</span>                cin &gt;&gt; n;</div>
-<div class="line"><a id="l03628" name="l03628"></a><span class="lineno"> 3628</span>                vector&lt;paper&gt; vec(n);</div>
+<div class="line"><a id="l03628" name="l03628"></a><span class="lineno"> 3628</span>                vector&lt;paper&gt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>(n);</div>
 <div class="line"><a id="l03629" name="l03629"></a><span class="lineno"> 3629</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l03630" name="l03630"></a><span class="lineno"> 3630</span>                    cin &gt;&gt; vec[i].id;</div>
-<div class="line"><a id="l03631" name="l03631"></a><span class="lineno"> 3631</span>                    cin &gt;&gt; vec[i].price;</div>
-<div class="line"><a id="l03632" name="l03632"></a><span class="lineno"> 3632</span>                    cin &gt;&gt; vec[i].sale;</div>
+<div class="line"><a id="l03630" name="l03630"></a><span class="lineno"> 3630</span>                    cin &gt;&gt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i].id;</div>
+<div class="line"><a id="l03631" name="l03631"></a><span class="lineno"> 3631</span>                    cin &gt;&gt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i].price;</div>
+<div class="line"><a id="l03632" name="l03632"></a><span class="lineno"> 3632</span>                    cin &gt;&gt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i].sale;</div>
 <div class="line"><a id="l03633" name="l03633"></a><span class="lineno"> 3633</span>                }</div>
-<div class="line"><a id="l03634" name="l03634"></a><span class="lineno"> 3634</span>                sort(vec.rbegin(), vec.rend(), comp_sale());</div>
-<div class="line"><a id="l03635" name="l03635"></a><span class="lineno"> 3635</span>                cout &lt;&lt; vec.begin()-&gt;id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; vec.begin()-&gt;sale &lt;&lt; endl;</div>
-<div class="line"><a id="l03636" name="l03636"></a><span class="lineno"> 3636</span>                sort(vec.rbegin(), vec.rend(), comp_total());</div>
-<div class="line"><a id="l03637" name="l03637"></a><span class="lineno"> 3637</span>                cout &lt;&lt; vec.begin()-&gt;id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; vec.begin()-&gt;price * vec.begin()-&gt;sale;</div>
+<div class="line"><a id="l03634" name="l03634"></a><span class="lineno"> 3634</span>                sort(<a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.rbegin(), <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.rend(), comp_sale());</div>
+<div class="line"><a id="l03635" name="l03635"></a><span class="lineno"> 3635</span>                cout &lt;&lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.begin()-&gt;id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.begin()-&gt;sale &lt;&lt; endl;</div>
+<div class="line"><a id="l03636" name="l03636"></a><span class="lineno"> 3636</span>                sort(<a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.rbegin(), <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.rend(), comp_total());</div>
+<div class="line"><a id="l03637" name="l03637"></a><span class="lineno"> 3637</span>                cout &lt;&lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.begin()-&gt;id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.begin()-&gt;price * <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.begin()-&gt;sale;</div>
 <div class="line"><a id="l03638" name="l03638"></a><span class="lineno"> 3638</span>                <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l03639" name="l03639"></a><span class="lineno"> 3639</span>            }</div>
+<div class="ttc" id="aa00572_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l05097">pat.cpp:5097</a></div></div>
 </div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l05097">pat::a::a7_2::vec</a>.</p>
+
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l01796">TEST()</a>.</p>
 
 </div>

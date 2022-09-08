@@ -79,7 +79,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d77/a03232.html">student</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de9/a03236.html">student</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -137,21 +137,24 @@ $(function() {
 <div class="line"><a id="l02815" name="l02815"></a><span class="lineno"> 2815</span>                    <span class="keywordtype">string</span> id;</div>
 <div class="line"><a id="l02816" name="l02816"></a><span class="lineno"> 2816</span>                    cin &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; um[id].final;</div>
 <div class="line"><a id="l02817" name="l02817"></a><span class="lineno"> 2817</span>                }</div>
-<div class="line"><a id="l02818" name="l02818"></a><span class="lineno"> 2818</span>                vector&lt;student&gt; vec;</div>
+<div class="line"><a id="l02818" name="l02818"></a><span class="lineno"> 2818</span>                vector&lt;student&gt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>;</div>
 <div class="line"><a id="l02819" name="l02819"></a><span class="lineno"> 2819</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;[<span class="keywordtype">id</span>, stu]: um) {</div>
 <div class="line"><a id="l02820" name="l02820"></a><span class="lineno"> 2820</span>                    stu.id    = id;</div>
 <div class="line"><a id="l02821" name="l02821"></a><span class="lineno"> 2821</span>                    stu.score = stu.get_score();</div>
 <div class="line"><a id="l02822" name="l02822"></a><span class="lineno"> 2822</span>                    <span class="keywordflow">if</span>(stu.p &gt;= 200 &amp;&amp; stu.score &gt;= 60) {</div>
-<div class="line"><a id="l02823" name="l02823"></a><span class="lineno"> 2823</span>                        vec.push_back(stu);</div>
+<div class="line"><a id="l02823" name="l02823"></a><span class="lineno"> 2823</span>                        <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.push_back(stu);</div>
 <div class="line"><a id="l02824" name="l02824"></a><span class="lineno"> 2824</span>                    }</div>
 <div class="line"><a id="l02825" name="l02825"></a><span class="lineno"> 2825</span>                }</div>
-<div class="line"><a id="l02826" name="l02826"></a><span class="lineno"> 2826</span>                sort(vec.begin(), vec.end());</div>
-<div class="line"><a id="l02827" name="l02827"></a><span class="lineno"> 2827</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;stu: vec) {</div>
+<div class="line"><a id="l02826" name="l02826"></a><span class="lineno"> 2826</span>                sort(<a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.begin(), <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.end());</div>
+<div class="line"><a id="l02827" name="l02827"></a><span class="lineno"> 2827</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;stu: <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>) {</div>
 <div class="line"><a id="l02828" name="l02828"></a><span class="lineno"> 2828</span>                    cout &lt;&lt; stu.id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; stu.p &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; stu.mid_term &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; stu.final &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; stu.score &lt;&lt; endl;</div>
 <div class="line"><a id="l02829" name="l02829"></a><span class="lineno"> 2829</span>                }</div>
 <div class="line"><a id="l02830" name="l02830"></a><span class="lineno"> 2830</span>                <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l02831" name="l02831"></a><span class="lineno"> 2831</span>            }</div>
+<div class="ttc" id="aa00572_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l05097">pat.cpp:5097</a></div></div>
 </div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l05097">pat::a::a7_2::vec</a>.</p>
+
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l01378">TEST()</a>.</p>
 
 </div>

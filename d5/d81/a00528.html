@@ -128,9 +128,9 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l03129" name="l03129"></a><span class="lineno"> 3129</span>                                                                       {</div>
 <div class="line"><a id="l03130" name="l03130"></a><span class="lineno"> 3130</span>                <span class="keywordtype">int</span> lie_count = 0;</div>
 <div class="line"><a id="l03131" name="l03131"></a><span class="lineno"> 3131</span>                <span class="keywordtype">bool</span> wolf_lie = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l03132" name="l03132"></a><span class="lineno"> 3132</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; vec.size(); i++) {</div>
-<div class="line"><a id="l03133" name="l03133"></a><span class="lineno"> 3133</span>                    <span class="keyword">const</span> <span class="keywordtype">bool</span> is_wolf = vec[i] &lt; 0;</div>
-<div class="line"><a id="l03134" name="l03134"></a><span class="lineno"> 3134</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> target   = abs(vec[i]) - 1;</div>
+<div class="line"><a id="l03132" name="l03132"></a><span class="lineno"> 3132</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.size(); i++) {</div>
+<div class="line"><a id="l03133" name="l03133"></a><span class="lineno"> 3133</span>                    <span class="keyword">const</span> <span class="keywordtype">bool</span> is_wolf = <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i] &lt; 0;</div>
+<div class="line"><a id="l03134" name="l03134"></a><span class="lineno"> 3134</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> target   = abs(<a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i]) - 1;</div>
 <div class="line"><a id="l03135" name="l03135"></a><span class="lineno"> 3135</span>                    <span class="keywordflow">if</span>(is_wolf &amp;&amp; !(target == wolf1 || target == wolf2) || !is_wolf &amp;&amp; (target == wolf1 || target == wolf2)) {</div>
 <div class="line"><a id="l03136" name="l03136"></a><span class="lineno"> 3136</span>                        lie_count++;</div>
 <div class="line"><a id="l03137" name="l03137"></a><span class="lineno"> 3137</span>                        <span class="keywordflow">if</span>(i == wolf1 || i == wolf2) {</div>
@@ -146,7 +146,10 @@ $(function() {
 <div class="line"><a id="l03147" name="l03147"></a><span class="lineno"> 3147</span>                }</div>
 <div class="line"><a id="l03148" name="l03148"></a><span class="lineno"> 3148</span>                <span class="keywordflow">return</span> wolf_lie;</div>
 <div class="line"><a id="l03149" name="l03149"></a><span class="lineno"> 3149</span>            }</div>
+<div class="ttc" id="aa00572_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l05097">pat.cpp:5097</a></div></div>
 </div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l05097">pat::a::a7_2::vec</a>.</p>
+
 <p class="reference">被这些函数引用 <a class="el" href="../../d6/d2d/a00047_source.html#l03110">main()</a>.</p>
 
 </div>
@@ -181,13 +184,13 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l03110" name="l03110"></a><span class="lineno"> 3110</span>                                                  {</div>
 <div class="line"><a id="l03111" name="l03111"></a><span class="lineno"> 3111</span>                <span class="keywordtype">int</span> n;</div>
 <div class="line"><a id="l03112" name="l03112"></a><span class="lineno"> 3112</span>                cin &gt;&gt; n;</div>
-<div class="line"><a id="l03113" name="l03113"></a><span class="lineno"> 3113</span>                vector&lt;int&gt; vec(n);</div>
+<div class="line"><a id="l03113" name="l03113"></a><span class="lineno"> 3113</span>                vector&lt;int&gt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>(n);</div>
 <div class="line"><a id="l03114" name="l03114"></a><span class="lineno"> 3114</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l03115" name="l03115"></a><span class="lineno"> 3115</span>                    cin &gt;&gt; vec[i];</div>
+<div class="line"><a id="l03115" name="l03115"></a><span class="lineno"> 3115</span>                    cin &gt;&gt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i];</div>
 <div class="line"><a id="l03116" name="l03116"></a><span class="lineno"> 3116</span>                }</div>
 <div class="line"><a id="l03117" name="l03117"></a><span class="lineno"> 3117</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i + 1 &lt; n; i++) {</div>
 <div class="line"><a id="l03118" name="l03118"></a><span class="lineno"> 3118</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i + 1; j &lt; n; j++) {</div>
-<div class="line"><a id="l03119" name="l03119"></a><span class="lineno"> 3119</span>                        <span class="keywordflow">if</span>(<a class="code hl_function" href="../../d5/d81/a00528.html#a9e25ed5e4ab4e44afcfae85f40469c89">is_true</a>(vec, i, j)) {</div>
+<div class="line"><a id="l03119" name="l03119"></a><span class="lineno"> 3119</span>                        <span class="keywordflow">if</span>(<a class="code hl_function" href="../../d5/d81/a00528.html#a9e25ed5e4ab4e44afcfae85f40469c89">is_true</a>(<a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>, i, j)) {</div>
 <div class="line"><a id="l03120" name="l03120"></a><span class="lineno"> 3120</span>                            cout &lt;&lt; i + 1 &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; j + 1;</div>
 <div class="line"><a id="l03121" name="l03121"></a><span class="lineno"> 3121</span>                            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l03122" name="l03122"></a><span class="lineno"> 3122</span>                        }</div>
@@ -198,7 +201,7 @@ $(function() {
 <div class="line"><a id="l03127" name="l03127"></a><span class="lineno"> 3127</span>            }</div>
 <div class="ttc" id="aa00528_html_a9e25ed5e4ab4e44afcfae85f40469c89"><div class="ttname"><a href="../../d5/d81/a00528.html#a9e25ed5e4ab4e44afcfae85f40469c89">pat::b::b1089::is_true</a></div><div class="ttdeci">bool is_true(const vector&lt; int &gt; &amp;vec, int wolf1, int wolf2)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l03129">pat.cpp:3129</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l03129">is_true()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l03129">is_true()</a> , 以及 <a class="el" href="../../d6/d2d/a00047_source.html#l05097">pat::a::a7_2::vec</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l01532">TEST()</a>.</p>
 

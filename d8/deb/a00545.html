@@ -116,23 +116,26 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l03787" name="l03787"></a><span class="lineno"> 3787</span>                                                  {</div>
 <div class="line"><a id="l03788" name="l03788"></a><span class="lineno"> 3788</span>                <span class="keywordtype">int</span> n;</div>
 <div class="line"><a id="l03789" name="l03789"></a><span class="lineno"> 3789</span>                cin &gt;&gt; n;</div>
-<div class="line"><a id="l03790" name="l03790"></a><span class="lineno"> 3790</span>                vector&lt;unsigned&gt; vec(n);</div>
-<div class="line"><a id="l03791" name="l03791"></a><span class="lineno"> 3791</span>                vec[0]           = 2;</div>
-<div class="line"><a id="l03792" name="l03792"></a><span class="lineno"> 3792</span>                vec[1]           = 0;</div>
-<div class="line"><a id="l03793" name="l03793"></a><span class="lineno"> 3793</span>                vec[2]           = 1;</div>
-<div class="line"><a id="l03794" name="l03794"></a><span class="lineno"> 3794</span>                vec[3]           = 9;</div>
+<div class="line"><a id="l03790" name="l03790"></a><span class="lineno"> 3790</span>                vector&lt;unsigned&gt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>(n);</div>
+<div class="line"><a id="l03791" name="l03791"></a><span class="lineno"> 3791</span>                <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0]           = 2;</div>
+<div class="line"><a id="l03792" name="l03792"></a><span class="lineno"> 3792</span>                <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[1]           = 0;</div>
+<div class="line"><a id="l03793" name="l03793"></a><span class="lineno"> 3793</span>                <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[2]           = 1;</div>
+<div class="line"><a id="l03794" name="l03794"></a><span class="lineno"> 3794</span>                <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[3]           = 9;</div>
 <div class="line"><a id="l03795" name="l03795"></a><span class="lineno"> 3795</span>                <span class="keywordtype">unsigned</span> current = 2 + 0 + 1 + 9;</div>
 <div class="line"><a id="l03796" name="l03796"></a><span class="lineno"> 3796</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 4; i &lt; n; i++) {</div>
-<div class="line"><a id="l03797" name="l03797"></a><span class="lineno"> 3797</span>                    vec[i] = current % 10;</div>
-<div class="line"><a id="l03798" name="l03798"></a><span class="lineno"> 3798</span>                    current -= vec[i - 4];</div>
-<div class="line"><a id="l03799" name="l03799"></a><span class="lineno"> 3799</span>                    current += vec[i];</div>
+<div class="line"><a id="l03797" name="l03797"></a><span class="lineno"> 3797</span>                    <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i] = current % 10;</div>
+<div class="line"><a id="l03798" name="l03798"></a><span class="lineno"> 3798</span>                    current -= <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i - 4];</div>
+<div class="line"><a id="l03799" name="l03799"></a><span class="lineno"> 3799</span>                    current += <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i];</div>
 <div class="line"><a id="l03800" name="l03800"></a><span class="lineno"> 3800</span>                }</div>
-<div class="line"><a id="l03801" name="l03801"></a><span class="lineno"> 3801</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> num: vec) {</div>
+<div class="line"><a id="l03801" name="l03801"></a><span class="lineno"> 3801</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> num: <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>) {</div>
 <div class="line"><a id="l03802" name="l03802"></a><span class="lineno"> 3802</span>                    cout &lt;&lt; num;</div>
 <div class="line"><a id="l03803" name="l03803"></a><span class="lineno"> 3803</span>                }</div>
 <div class="line"><a id="l03804" name="l03804"></a><span class="lineno"> 3804</span>                <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l03805" name="l03805"></a><span class="lineno"> 3805</span>            }</div>
+<div class="ttc" id="aa00572_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l05097">pat.cpp:5097</a></div></div>
 </div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l05097">pat::a::a7_2::vec</a>.</p>
+
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l01880">TEST()</a>.</p>
 
 </div>

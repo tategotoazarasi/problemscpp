@@ -79,7 +79,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2f/a03216.html">Person</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df5/a03220.html">Person</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -123,32 +123,32 @@ $(function() {
 <div class="line"><a id="l01913" name="l01913"></a><span class="lineno"> 1913</span>                <span class="keywordtype">int</span> n;</div>
 <div class="line"><a id="l01914" name="l01914"></a><span class="lineno"> 1914</span>                <span class="keywordtype">int</span> k;</div>
 <div class="line"><a id="l01915" name="l01915"></a><span class="lineno"> 1915</span>                cin &gt;&gt; n &gt;&gt; k;</div>
-<div class="line"><a id="l01916" name="l01916"></a><span class="lineno"> 1916</span>                vector&lt;Person&gt; vec(n);</div>
+<div class="line"><a id="l01916" name="l01916"></a><span class="lineno"> 1916</span>                vector&lt;Person&gt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>(n);</div>
 <div class="line"><a id="l01917" name="l01917"></a><span class="lineno"> 1917</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l01918" name="l01918"></a><span class="lineno"> 1918</span>                    <span class="keywordtype">string</span> name;</div>
 <div class="line"><a id="l01919" name="l01919"></a><span class="lineno"> 1919</span>                    <span class="keywordtype">int</span> height;</div>
 <div class="line"><a id="l01920" name="l01920"></a><span class="lineno"> 1920</span>                    cin &gt;&gt; name &gt;&gt; height;</div>
-<div class="line"><a id="l01921" name="l01921"></a><span class="lineno"> 1921</span>                    <span class="keyword">const</span> <span class="keyword">auto</span> p = <a class="code hl_struct" href="../../d5/d2f/a03216.html">Person</a>{name, height};</div>
-<div class="line"><a id="l01922" name="l01922"></a><span class="lineno"> 1922</span>                    vec[i]       = p;</div>
+<div class="line"><a id="l01921" name="l01921"></a><span class="lineno"> 1921</span>                    <span class="keyword">const</span> <span class="keyword">auto</span> p = <a class="code hl_struct" href="../../da/df5/a03220.html">Person</a>{name, height};</div>
+<div class="line"><a id="l01922" name="l01922"></a><span class="lineno"> 1922</span>                    <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i]       = p;</div>
 <div class="line"><a id="l01923" name="l01923"></a><span class="lineno"> 1923</span>                }</div>
-<div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span>                sort(vec.begin(), vec.end());</div>
+<div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span>                sort(<a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.begin(), <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.end());</div>
 <div class="line"><a id="l01925" name="l01925"></a><span class="lineno"> 1925</span>                vector&lt;deque&lt;Person&gt;&gt; deq(k);</div>
 <div class="line"><a id="l01926" name="l01926"></a><span class="lineno"> 1926</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n / k + n % k; i++) {</div>
 <div class="line"><a id="l01927" name="l01927"></a><span class="lineno"> 1927</span>                    <span class="keywordflow">if</span>(i % 2 == 1) {</div>
-<div class="line"><a id="l01928" name="l01928"></a><span class="lineno"> 1928</span>                        deq[k - 1].push_front(vec.back());</div>
+<div class="line"><a id="l01928" name="l01928"></a><span class="lineno"> 1928</span>                        deq[k - 1].push_front(<a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.back());</div>
 <div class="line"><a id="l01929" name="l01929"></a><span class="lineno"> 1929</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01930" name="l01930"></a><span class="lineno"> 1930</span>                        deq[k - 1].push_back(vec.back());</div>
+<div class="line"><a id="l01930" name="l01930"></a><span class="lineno"> 1930</span>                        deq[k - 1].push_back(<a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.back());</div>
 <div class="line"><a id="l01931" name="l01931"></a><span class="lineno"> 1931</span>                    }</div>
-<div class="line"><a id="l01932" name="l01932"></a><span class="lineno"> 1932</span>                    vec.pop_back();</div>
+<div class="line"><a id="l01932" name="l01932"></a><span class="lineno"> 1932</span>                    <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.pop_back();</div>
 <div class="line"><a id="l01933" name="l01933"></a><span class="lineno"> 1933</span>                }</div>
 <div class="line"><a id="l01934" name="l01934"></a><span class="lineno"> 1934</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = k - 2; i &gt;= 0; i--) {</div>
 <div class="line"><a id="l01935" name="l01935"></a><span class="lineno"> 1935</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n / k; j++) {</div>
 <div class="line"><a id="l01936" name="l01936"></a><span class="lineno"> 1936</span>                        <span class="keywordflow">if</span>(j % 2 == 1) {</div>
-<div class="line"><a id="l01937" name="l01937"></a><span class="lineno"> 1937</span>                            deq[i].push_front(vec.back());</div>
+<div class="line"><a id="l01937" name="l01937"></a><span class="lineno"> 1937</span>                            deq[i].push_front(<a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.back());</div>
 <div class="line"><a id="l01938" name="l01938"></a><span class="lineno"> 1938</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01939" name="l01939"></a><span class="lineno"> 1939</span>                            deq[i].push_back(vec.back());</div>
+<div class="line"><a id="l01939" name="l01939"></a><span class="lineno"> 1939</span>                            deq[i].push_back(<a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.back());</div>
 <div class="line"><a id="l01940" name="l01940"></a><span class="lineno"> 1940</span>                        }</div>
-<div class="line"><a id="l01941" name="l01941"></a><span class="lineno"> 1941</span>                        vec.pop_back();</div>
+<div class="line"><a id="l01941" name="l01941"></a><span class="lineno"> 1941</span>                        <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.pop_back();</div>
 <div class="line"><a id="l01942" name="l01942"></a><span class="lineno"> 1942</span>                    }</div>
 <div class="line"><a id="l01943" name="l01943"></a><span class="lineno"> 1943</span>                }</div>
 <div class="line"><a id="l01944" name="l01944"></a><span class="lineno"> 1944</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = k - 1; i &gt;= 0; i--) {</div>
@@ -164,8 +164,11 @@ $(function() {
 <div class="line"><a id="l01954" name="l01954"></a><span class="lineno"> 1954</span>                }</div>
 <div class="line"><a id="l01955" name="l01955"></a><span class="lineno"> 1955</span>                <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l01956" name="l01956"></a><span class="lineno"> 1956</span>            }</div>
-<div class="ttc" id="aa03216_html"><div class="ttname"><a href="../../d5/d2f/a03216.html">pat::b::b1055::Person</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d03/a00062_source.html#l00333">pat.h:333</a></div></div>
+<div class="ttc" id="aa00572_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l05097">pat.cpp:5097</a></div></div>
+<div class="ttc" id="aa03220_html"><div class="ttname"><a href="../../da/df5/a03220.html">pat::b::b1055::Person</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d03/a00062_source.html#l00333">pat.h:333</a></div></div>
 </div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l05097">pat::a::a7_2::vec</a>.</p>
+
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00838">TEST()</a>.</p>
 
 </div>

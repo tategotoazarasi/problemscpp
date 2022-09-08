@@ -122,7 +122,7 @@ $(function() {
 <div class="line"><a id="l03862" name="l03862"></a><span class="lineno"> 3862</span>                        }</div>
 <div class="line"><a id="l03863" name="l03863"></a><span class="lineno"> 3863</span>                    }</div>
 <div class="line"><a id="l03864" name="l03864"></a><span class="lineno"> 3864</span>                }</div>
-<div class="line"><a id="l03865" name="l03865"></a><span class="lineno"> 3865</span>                vector&lt;string&gt; vec;</div>
+<div class="line"><a id="l03865" name="l03865"></a><span class="lineno"> 3865</span>                vector&lt;string&gt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>;</div>
 <div class="line"><a id="l03866" name="l03866"></a><span class="lineno"> 3866</span>                ostringstream oss;</div>
 <div class="line"><a id="l03867" name="l03867"></a><span class="lineno"> 3867</span>                <span class="keywordtype">char</span> ch;</div>
 <div class="line"><a id="l03868" name="l03868"></a><span class="lineno"> 3868</span>                cin &gt;&gt; noskipws;</div>
@@ -131,16 +131,16 @@ $(function() {
 <div class="line"><a id="l03871" name="l03871"></a><span class="lineno"> 3871</span>                        oss &lt;&lt; ch;</div>
 <div class="line"><a id="l03872" name="l03872"></a><span class="lineno"> 3872</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l03873" name="l03873"></a><span class="lineno"> 3873</span>                        <span class="keywordflow">if</span>(!oss.str().empty()) {</div>
-<div class="line"><a id="l03874" name="l03874"></a><span class="lineno"> 3874</span>                            vec.emplace_back(oss.str());</div>
+<div class="line"><a id="l03874" name="l03874"></a><span class="lineno"> 3874</span>                            <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.emplace_back(oss.str());</div>
 <div class="line"><a id="l03875" name="l03875"></a><span class="lineno"> 3875</span>                        }</div>
 <div class="line"><a id="l03876" name="l03876"></a><span class="lineno"> 3876</span>                        oss = ostringstream();</div>
 <div class="line"><a id="l03877" name="l03877"></a><span class="lineno"> 3877</span>                    }</div>
 <div class="line"><a id="l03878" name="l03878"></a><span class="lineno"> 3878</span>                }</div>
 <div class="line"><a id="l03879" name="l03879"></a><span class="lineno"> 3879</span>                <span class="keywordflow">if</span>(!oss.str().empty()) {</div>
-<div class="line"><a id="l03880" name="l03880"></a><span class="lineno"> 3880</span>                    vec.emplace_back(oss.str());</div>
+<div class="line"><a id="l03880" name="l03880"></a><span class="lineno"> 3880</span>                    <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.emplace_back(oss.str());</div>
 <div class="line"><a id="l03881" name="l03881"></a><span class="lineno"> 3881</span>                }</div>
 <div class="line"><a id="l03882" name="l03882"></a><span class="lineno"> 3882</span>                <span class="keywordtype">int</span> cnt = 0;</div>
-<div class="line"><a id="l03883" name="l03883"></a><span class="lineno"> 3883</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;str: vec) {</div>
+<div class="line"><a id="l03883" name="l03883"></a><span class="lineno"> 3883</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;str: <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>) {</div>
 <div class="line"><a id="l03884" name="l03884"></a><span class="lineno"> 3884</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> w = str.length() * 6 - 1;</div>
 <div class="line"><a id="l03885" name="l03885"></a><span class="lineno"> 3885</span>                    vector output(7, vector(w, <span class="charliteral">&#39; &#39;</span>));</div>
 <div class="line"><a id="l03886" name="l03886"></a><span class="lineno"> 3886</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; str.length(); i++) {</div>
@@ -159,14 +159,17 @@ $(function() {
 <div class="line"><a id="l03899" name="l03899"></a><span class="lineno"> 3899</span>                            cout &lt;&lt; endl;</div>
 <div class="line"><a id="l03900" name="l03900"></a><span class="lineno"> 3900</span>                        }</div>
 <div class="line"><a id="l03901" name="l03901"></a><span class="lineno"> 3901</span>                    }</div>
-<div class="line"><a id="l03902" name="l03902"></a><span class="lineno"> 3902</span>                    <span class="keywordflow">if</span>(cnt++ != vec.size() - 1) {</div>
+<div class="line"><a id="l03902" name="l03902"></a><span class="lineno"> 3902</span>                    <span class="keywordflow">if</span>(cnt++ != <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.size() - 1) {</div>
 <div class="line"><a id="l03903" name="l03903"></a><span class="lineno"> 3903</span>                        cout &lt;&lt; endl</div>
 <div class="line"><a id="l03904" name="l03904"></a><span class="lineno"> 3904</span>                             &lt;&lt; endl;</div>
 <div class="line"><a id="l03905" name="l03905"></a><span class="lineno"> 3905</span>                    }</div>
 <div class="line"><a id="l03906" name="l03906"></a><span class="lineno"> 3906</span>                }</div>
 <div class="line"><a id="l03907" name="l03907"></a><span class="lineno"> 3907</span>                <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l03908" name="l03908"></a><span class="lineno"> 3908</span>            }</div>
+<div class="ttc" id="aa00572_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l05097">pat.cpp:5097</a></div></div>
 </div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l05097">pat::a::a7_2::vec</a>.</p>
+
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l01915">TEST()</a>.</p>
 
 </div>

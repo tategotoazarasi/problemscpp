@@ -116,24 +116,24 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l01491" name="l01491"></a><span class="lineno"> 1491</span>                                                  {</div>
 <div class="line"><a id="l01492" name="l01492"></a><span class="lineno"> 1492</span>                <span class="keywordtype">unsigned</span> n;</div>
 <div class="line"><a id="l01493" name="l01493"></a><span class="lineno"> 1493</span>                cin &gt;&gt; n;</div>
-<div class="line"><a id="l01494" name="l01494"></a><span class="lineno"> 1494</span>                vector&lt;unsigned&gt; vec(n);</div>
+<div class="line"><a id="l01494" name="l01494"></a><span class="lineno"> 1494</span>                vector&lt;unsigned&gt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>(n);</div>
 <div class="line"><a id="l01495" name="l01495"></a><span class="lineno"> 1495</span>                vector&lt;unsigned&gt; l_max(n);</div>
 <div class="line"><a id="l01496" name="l01496"></a><span class="lineno"> 1496</span>                vector&lt;unsigned&gt; r_min(n);</div>
 <div class="line"><a id="l01497" name="l01497"></a><span class="lineno"> 1497</span>                <span class="keywordtype">unsigned</span> current = 0;</div>
 <div class="line"><a id="l01498" name="l01498"></a><span class="lineno"> 1498</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; n; ++i) {</div>
-<div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span>                    cin &gt;&gt; vec[i];</div>
+<div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span>                    cin &gt;&gt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i];</div>
 <div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span>                    l_max[i] = current;</div>
-<div class="line"><a id="l01501" name="l01501"></a><span class="lineno"> 1501</span>                    current  = max(current, vec[i]);</div>
+<div class="line"><a id="l01501" name="l01501"></a><span class="lineno"> 1501</span>                    current  = max(current, <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i]);</div>
 <div class="line"><a id="l01502" name="l01502"></a><span class="lineno"> 1502</span>                }</div>
 <div class="line"><a id="l01503" name="l01503"></a><span class="lineno"> 1503</span>                current = 1000000001;</div>
 <div class="line"><a id="l01504" name="l01504"></a><span class="lineno"> 1504</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = n - 1; i &gt;= 0; --i) {</div>
 <div class="line"><a id="l01505" name="l01505"></a><span class="lineno"> 1505</span>                    r_min[i] = current;</div>
-<div class="line"><a id="l01506" name="l01506"></a><span class="lineno"> 1506</span>                    current  = min(current, vec[i]);</div>
+<div class="line"><a id="l01506" name="l01506"></a><span class="lineno"> 1506</span>                    current  = min(current, <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i]);</div>
 <div class="line"><a id="l01507" name="l01507"></a><span class="lineno"> 1507</span>                }</div>
 <div class="line"><a id="l01508" name="l01508"></a><span class="lineno"> 1508</span>                vector&lt;unsigned&gt; ans;</div>
 <div class="line"><a id="l01509" name="l01509"></a><span class="lineno"> 1509</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; n; ++i) {</div>
-<div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span>                    <span class="keywordflow">if</span>(vec[i] &gt; l_max[i] &amp;&amp; vec[i] &lt; r_min[i]) {</div>
-<div class="line"><a id="l01511" name="l01511"></a><span class="lineno"> 1511</span>                        ans.push_back(vec[i]);</div>
+<div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span>                    <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i] &gt; l_max[i] &amp;&amp; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i] &lt; r_min[i]) {</div>
+<div class="line"><a id="l01511" name="l01511"></a><span class="lineno"> 1511</span>                        ans.push_back(<a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i]);</div>
 <div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>                    }</div>
 <div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span>                }</div>
 <div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span>                cout &lt;&lt; ans.size() &lt;&lt; endl;</div>
@@ -146,7 +146,10 @@ $(function() {
 <div class="line"><a id="l01521" name="l01521"></a><span class="lineno"> 1521</span>                cout &lt;&lt; endl;</div>
 <div class="line"><a id="l01522" name="l01522"></a><span class="lineno"> 1522</span>                <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l01523" name="l01523"></a><span class="lineno"> 1523</span>            }</div>
+<div class="ttc" id="aa00572_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l05097">pat.cpp:5097</a></div></div>
 </div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l05097">pat::a::a7_2::vec</a>.</p>
+
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00701">TEST()</a>.</p>
 
 </div>

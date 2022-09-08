@@ -114,7 +114,7 @@ $(function() {
 
 <p class="definition">在文件 <a class="el" href="../../d6/d2d/a00047_source.html">pat.cpp</a> 第 <a class="el" href="../../d6/d2d/a00047_source.html#l01725">1725</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l01725" name="l01725"></a><span class="lineno"> 1725</span>                                                  {</div>
-<div class="line"><a id="l01726" name="l01726"></a><span class="lineno"> 1726</span>                vector&lt;string&gt; vec[3];</div>
+<div class="line"><a id="l01726" name="l01726"></a><span class="lineno"> 1726</span>                vector&lt;string&gt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[3];</div>
 <div class="line"><a id="l01727" name="l01727"></a><span class="lineno"> 1727</span>                <span class="keywordtype">char</span> line[1024];</div>
 <div class="line"><a id="l01728" name="l01728"></a><span class="lineno"> 1728</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> a = 0; a &lt; 3; a++) {</div>
 <div class="line"><a id="l01729" name="l01729"></a><span class="lineno"> 1729</span>                    cin.getline(line, <span class="keyword">sizeof</span> line);</div>
@@ -132,7 +132,7 @@ $(function() {
 <div class="line"><a id="l01741" name="l01741"></a><span class="lineno"> 1741</span>                            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> m = i + 1; m &lt; j; ++m) {</div>
 <div class="line"><a id="l01742" name="l01742"></a><span class="lineno"> 1742</span>                                oss &lt;&lt; line[m];</div>
 <div class="line"><a id="l01743" name="l01743"></a><span class="lineno"> 1743</span>                            }</div>
-<div class="line"><a id="l01744" name="l01744"></a><span class="lineno"> 1744</span>                            vec[a].push_back(oss.str());</div>
+<div class="line"><a id="l01744" name="l01744"></a><span class="lineno"> 1744</span>                            <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[a].push_back(oss.str());</div>
 <div class="line"><a id="l01745" name="l01745"></a><span class="lineno"> 1745</span>                            ++i;</div>
 <div class="line"><a id="l01746" name="l01746"></a><span class="lineno"> 1746</span>                            ++j;</div>
 <div class="line"><a id="l01747" name="l01747"></a><span class="lineno"> 1747</span>                        }</div>
@@ -153,30 +153,30 @@ $(function() {
 <div class="line"><a id="l01762" name="l01762"></a><span class="lineno"> 1762</span>                    --c;</div>
 <div class="line"><a id="l01763" name="l01763"></a><span class="lineno"> 1763</span>                    --d;</div>
 <div class="line"><a id="l01764" name="l01764"></a><span class="lineno"> 1764</span>                    --e;</div>
-<div class="line"><a id="l01765" name="l01765"></a><span class="lineno"> 1765</span>                    <span class="keywordflow">if</span>(a &lt; vec[0].size()) {</div>
-<div class="line"><a id="l01766" name="l01766"></a><span class="lineno"> 1766</span>                        oss &lt;&lt; vec[0][a];</div>
+<div class="line"><a id="l01765" name="l01765"></a><span class="lineno"> 1765</span>                    <span class="keywordflow">if</span>(a &lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0].size()) {</div>
+<div class="line"><a id="l01766" name="l01766"></a><span class="lineno"> 1766</span>                        oss &lt;&lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][a];</div>
 <div class="line"><a id="l01767" name="l01767"></a><span class="lineno"> 1767</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01768" name="l01768"></a><span class="lineno"> 1768</span>                        <span class="keywordflow">goto</span> END;</div>
 <div class="line"><a id="l01769" name="l01769"></a><span class="lineno"> 1769</span>                    }</div>
 <div class="line"><a id="l01770" name="l01770"></a><span class="lineno"> 1770</span>                    oss &lt;&lt; <span class="charliteral">&#39;(&#39;</span>;</div>
-<div class="line"><a id="l01771" name="l01771"></a><span class="lineno"> 1771</span>                    <span class="keywordflow">if</span>(b &lt; vec[1].size()) {</div>
-<div class="line"><a id="l01772" name="l01772"></a><span class="lineno"> 1772</span>                        oss &lt;&lt; vec[1][b];</div>
+<div class="line"><a id="l01771" name="l01771"></a><span class="lineno"> 1771</span>                    <span class="keywordflow">if</span>(b &lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[1].size()) {</div>
+<div class="line"><a id="l01772" name="l01772"></a><span class="lineno"> 1772</span>                        oss &lt;&lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[1][b];</div>
 <div class="line"><a id="l01773" name="l01773"></a><span class="lineno"> 1773</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01774" name="l01774"></a><span class="lineno"> 1774</span>                        <span class="keywordflow">goto</span> END;</div>
 <div class="line"><a id="l01775" name="l01775"></a><span class="lineno"> 1775</span>                    }</div>
-<div class="line"><a id="l01776" name="l01776"></a><span class="lineno"> 1776</span>                    <span class="keywordflow">if</span>(c &lt; vec[2].size()) {</div>
-<div class="line"><a id="l01777" name="l01777"></a><span class="lineno"> 1777</span>                        oss &lt;&lt; vec[2][c];</div>
+<div class="line"><a id="l01776" name="l01776"></a><span class="lineno"> 1776</span>                    <span class="keywordflow">if</span>(c &lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[2].size()) {</div>
+<div class="line"><a id="l01777" name="l01777"></a><span class="lineno"> 1777</span>                        oss &lt;&lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[2][c];</div>
 <div class="line"><a id="l01778" name="l01778"></a><span class="lineno"> 1778</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01779" name="l01779"></a><span class="lineno"> 1779</span>                        <span class="keywordflow">goto</span> END;</div>
 <div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span>                    }</div>
-<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span>                    <span class="keywordflow">if</span>(d &lt; vec[1].size()) {</div>
-<div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span>                        oss &lt;&lt; vec[1][d];</div>
+<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span>                    <span class="keywordflow">if</span>(d &lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[1].size()) {</div>
+<div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span>                        oss &lt;&lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[1][d];</div>
 <div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01784" name="l01784"></a><span class="lineno"> 1784</span>                        <span class="keywordflow">goto</span> END;</div>
 <div class="line"><a id="l01785" name="l01785"></a><span class="lineno"> 1785</span>                    }</div>
 <div class="line"><a id="l01786" name="l01786"></a><span class="lineno"> 1786</span>                    oss &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;</div>
-<div class="line"><a id="l01787" name="l01787"></a><span class="lineno"> 1787</span>                    <span class="keywordflow">if</span>(e &lt; vec[0].size()) {</div>
-<div class="line"><a id="l01788" name="l01788"></a><span class="lineno"> 1788</span>                        oss &lt;&lt; vec[0][e];</div>
+<div class="line"><a id="l01787" name="l01787"></a><span class="lineno"> 1787</span>                    <span class="keywordflow">if</span>(e &lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0].size()) {</div>
+<div class="line"><a id="l01788" name="l01788"></a><span class="lineno"> 1788</span>                        oss &lt;&lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][e];</div>
 <div class="line"><a id="l01789" name="l01789"></a><span class="lineno"> 1789</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01790" name="l01790"></a><span class="lineno"> 1790</span>                        <span class="keywordflow">goto</span> END;</div>
 <div class="line"><a id="l01791" name="l01791"></a><span class="lineno"> 1791</span>                    }</div>
@@ -187,7 +187,10 @@ $(function() {
 <div class="line"><a id="l01796" name="l01796"></a><span class="lineno"> 1796</span>                }</div>
 <div class="line"><a id="l01797" name="l01797"></a><span class="lineno"> 1797</span>                <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l01798" name="l01798"></a><span class="lineno"> 1798</span>            }</div>
+<div class="ttc" id="aa00572_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d6/d06/a00572.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l05097">pat.cpp:5097</a></div></div>
 </div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l05097">pat::a::a7_2::vec</a>.</p>
+
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00785">TEST()</a>.</p>
 
 </div>
