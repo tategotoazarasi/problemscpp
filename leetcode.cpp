@@ -8663,4 +8663,19 @@ namespace leetcode {
 			return max(f1, f2);
 		}
 	}// namespace best_time_to_buy_and_sell_stock_with_cooldown
+
+	namespace best_time_to_buy_and_sell_stock_with_transaction_fee {
+		int Solution::maxProfit(vector<int> &prices, int fee) {
+			int n = prices.size();
+			vector<int> holding(n);
+			vector<int> not_holding(n);
+			not_holding[0] = 0;
+			holding[0]     = -prices[0];
+			for(int i = 1; i < n; i++) {
+				not_holding[i] = max(not_holding[i - 1], holding[i - 1] + prices[i] - fee);
+				holding[i]     = max(holding[i - 1], not_holding[i - 1] - prices[i]);
+			}
+			return max(not_holding.back(), holding.back());
+		}
+	}// namespace best_time_to_buy_and_sell_stock_with_transaction_fee
 }// namespace leetcode

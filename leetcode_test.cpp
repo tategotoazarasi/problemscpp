@@ -4008,4 +4008,16 @@ namespace leetcode {
 			ASSERT_EQ(1, Solution::maxProfit(prices));
 		}
 	}// namespace best_time_to_buy_and_sell_stock_with_cooldown
+
+	namespace best_time_to_buy_and_sell_stock_with_transaction_fee {
+		TEST(best_time_to_buy_and_sell_stock_with_transaction_fee, case1) {
+			vector prices = {1, 3, 2, 8, 4, 9};
+			ASSERT_EQ(8, Solution::maxProfit(prices, 2));
+		}
+
+		TEST(best_time_to_buy_and_sell_stock_with_transaction_fee, case2) {
+			vector prices = {1, 3, 7, 5, 10, 3};
+			ASSERT_EQ(6, Solution::maxProfit(prices, 3));
+		}
+	}// namespace best_time_to_buy_and_sell_stock_with_transaction_fee
 }// namespace leetcode
