@@ -8645,4 +8645,22 @@ namespace leetcode {
 			return lower_bound(a.begin(), a.end(), x) - a.begin() + 1;
 		}
 	}// namespace count_of_smaller_numbers_after_self
+
+	namespace best_time_to_buy_and_sell_stock_with_cooldown {
+		int Solution::maxProfit(vector<int> &prices) {
+			if(prices.empty()) {
+				return 0;
+			}
+
+			int n  = prices.size();
+			int f0 = -prices[0];
+			int f1 = 0;
+			int f2 = 0;
+			for(int i = 1; i < n; ++i) {
+				tie(f0, f1, f2) = make_tuple(max(f0, f2 - prices[i]), f0 + prices[i], max(f1, f2));
+			}
+
+			return max(f1, f2);
+		}
+	}// namespace best_time_to_buy_and_sell_stock_with_cooldown
 }// namespace leetcode

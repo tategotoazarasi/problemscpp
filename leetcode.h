@@ -3043,6 +3043,14 @@ namespace leetcode {
 			vector<int> countSmaller(vector<int> &nums);
 		};
 	}// namespace count_of_smaller_numbers_after_self
+
+	/// \brief 309. 最佳买卖股票时机含冷冻期
+	namespace best_time_to_buy_and_sell_stock_with_cooldown {
+		class Solution {
+		public:
+			static int maxProfit(vector<int> &prices);
+		};
+	}// namespace best_time_to_buy_and_sell_stock_with_cooldown
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

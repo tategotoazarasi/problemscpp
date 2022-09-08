@@ -3991,4 +3991,21 @@ namespace leetcode {
 			ASSERT_EQ(ans, sol.countSmaller(nums));
 		}
 	}// namespace count_of_smaller_numbers_after_self
+
+	namespace best_time_to_buy_and_sell_stock_with_cooldown {
+		TEST(best_time_to_buy_and_sell_stock_with_cooldown, case1) {
+			vector prices = {1, 2, 3, 0, 2};
+			ASSERT_EQ(3, Solution::maxProfit(prices));
+		}
+
+		TEST(best_time_to_buy_and_sell_stock_with_cooldown, case2) {
+			vector prices = {1};
+			ASSERT_EQ(0, Solution::maxProfit(prices));
+		}
+
+		TEST(best_time_to_buy_and_sell_stock_with_cooldown, case3) {
+			vector prices = {1, 2};
+			ASSERT_EQ(1, Solution::maxProfit(prices));
+		}
+	}// namespace best_time_to_buy_and_sell_stock_with_cooldown
 }// namespace leetcode
