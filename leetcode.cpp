@@ -8608,7 +8608,7 @@ namespace leetcode {
 			}
 		}
 
-		int Solution::Query(int pos) {
+		int Solution::Query(int pos) const {
 			int ret = 0;
 
 			while(pos > 0) {

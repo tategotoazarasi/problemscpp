@@ -3283,35 +3283,35 @@ namespace leetcode {
 		TEST(serialize_and_deserialize_binary_tree, case1) {
 			const auto c            = Codec();
 			const string serialized = "[1,2,3,null,null,4,5]";
-			TreeNode *root          = leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize(serialized);
+			TreeNode *root          = Codec::deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case2) {
 			const auto c            = Codec();
 			const string serialized = "[]";
-			TreeNode *root          = leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize(serialized);
+			TreeNode *root          = Codec::deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case3) {
 			const auto c            = Codec();
 			const string serialized = "[1,null,2,3]";
-			TreeNode *root          = leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize(serialized);
+			TreeNode *root          = Codec::deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case4) {
 			const auto c            = Codec();
 			const string serialized = "[1,2,3]";
-			TreeNode *root          = leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize(serialized);
+			TreeNode *root          = Codec::deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 
 		TEST(serialize_and_deserialize_binary_tree, case5) {
 			const auto c            = Codec();
 			const string serialized = "[5,4,7,3,null,2,null,-1,null,9]";
-			TreeNode *root          = leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize(serialized);
+			TreeNode *root          = Codec::deserialize(serialized);
 			ASSERT_EQ(serialized, c.serialize(root));
 		}
 	}// namespace serialize_and_deserialize_binary_tree
@@ -3886,7 +3886,7 @@ namespace leetcode {
 		TEST(sudoku_solver, case1) {
 			vector<vector<char>> board = {{'5', '3', '.', '.', '7', '.', '.', '.', '.'}, {'6', '.', '.', '1', '9', '5', '.', '.', '.'}, {'.', '9', '8', '.', '.', '.', '.', '6', '.'}, {'8', '.', '.', '.', '6', '.', '.', '.', '3'}, {'4', '.', '.', '8', '.', '3', '.', '.', '1'}, {'7', '.', '.', '.', '2', '.', '.', '.', '6'}, {'.', '6', '.', '.', '.', '.', '2', '8', '.'}, {'.', '.', '.', '4', '1', '9', '.', '.', '5'}, {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
 			Solution sol;
-			sol.solveSudoku(board);
+			Solution::solveSudoku(board);
 			const vector<vector<char>> ans = {{'5', '3', '4', '6', '7', '8', '9', '1', '2'}, {'6', '7', '2', '1', '9', '5', '3', '4', '8'}, {'1', '9', '8', '3', '4', '2', '5', '6', '7'}, {'8', '5', '9', '7', '6', '1', '4', '2', '3'}, {'4', '2', '6', '8', '5', '3', '7', '9', '1'}, {'7', '1', '3', '9', '2', '4', '8', '5', '6'}, {'9', '6', '1', '5', '3', '7', '2', '8', '4'}, {'2', '8', '7', '4', '1', '9', '6', '3', '5'}, {'3', '4', '5', '2', '8', '6', '1', '7', '9'}};
 			ASSERT_EQ(ans, board);
 		}

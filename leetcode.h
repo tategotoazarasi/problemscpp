@@ -3035,7 +3035,7 @@ namespace leetcode {
 			void Init(int length);
 			static int LowBit(int x);
 			void Update(int pos);
-			int Query(int pos);
+			[[nodiscard]] int Query(int pos) const;
 			void Discretization(vector<int> &nums);
 			int getId(int x);
 

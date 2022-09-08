@@ -5228,7 +5228,7 @@ namespace pat {
 				iLeftEnd--;
 				const int iRightStart = iLeftEnd + 2;
 				int pLeftEnd          = pStart + 1;
-				while(lefts.contains(preorder[pLeftEnd])) {
+				while(pLeftEnd < preorder.size() && lefts.contains(preorder[pLeftEnd])) {
 					pLeftEnd++;
 				}
 				node->left  = genTree(preorder, inorder, pStart + 1, pLeftEnd - 1, iStart, iLeftEnd);
