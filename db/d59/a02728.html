@@ -70,6 +70,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
 <a href="#pri-attribs">Private 属性</a> &#124;
 <a href="../../df/d50/a02725.html">所有成员列表</a>  </div>
   <div class="headertitle"><div class="title">leetcode::count_of_smaller_numbers_after_self::Solution类 参考</div></div>
@@ -91,12 +92,15 @@ Private 成员函数</h2></td></tr>
 <tr class="separator:a81e533eb1a6842563c0ca2430918411d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff8b6750596094ff7d254539bb79552d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d59/a02728.html#aff8b6750596094ff7d254539bb79552d">Init</a> (int length)</td></tr>
 <tr class="separator:aff8b6750596094ff7d254539bb79552d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade4eb45810cd8fdf8266444408e9e71f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d59/a02728.html#ade4eb45810cd8fdf8266444408e9e71f">LowBit</a> (int x)</td></tr>
-<tr class="separator:ade4eb45810cd8fdf8266444408e9e71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41039bf1ded955838858dcff0b07d822"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d59/a02728.html#a41039bf1ded955838858dcff0b07d822">Query</a> (int pos)</td></tr>
 <tr class="separator:a41039bf1ded955838858dcff0b07d822"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae223743769f404044db4485c2aa0e875"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d59/a02728.html#ae223743769f404044db4485c2aa0e875">Update</a> (int pos)</td></tr>
 <tr class="separator:ae223743769f404044db4485c2aa0e875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:ade4eb45810cd8fdf8266444408e9e71f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d59/a02728.html#ade4eb45810cd8fdf8266444408e9e71f">LowBit</a> (int x)</td></tr>
+<tr class="separator:ade4eb45810cd8fdf8266444408e9e71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private 属性</h2></td></tr>
@@ -125,32 +129,32 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08594">8594</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08594" name="l08594"></a><span class="lineno"> 8594</span>                                                            {</div>
-<div class="line"><a id="l08595" name="l08595"></a><span class="lineno"> 8595</span>            vector&lt;int&gt; resultList;</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08582">8582</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08582" name="l08582"></a><span class="lineno"> 8582</span>                                                            {</div>
+<div class="line"><a id="l08583" name="l08583"></a><span class="lineno"> 8583</span>            vector&lt;int&gt; resultList;</div>
+<div class="line"><a id="l08584" name="l08584"></a><span class="lineno"> 8584</span> </div>
+<div class="line"><a id="l08585" name="l08585"></a><span class="lineno"> 8585</span>            <a class="code hl_function" href="../../db/d59/a02728.html#ac2dfe7d421c89c0e865617752a78a020">Discretization</a>(nums);</div>
+<div class="line"><a id="l08586" name="l08586"></a><span class="lineno"> 8586</span> </div>
+<div class="line"><a id="l08587" name="l08587"></a><span class="lineno"> 8587</span>            <a class="code hl_function" href="../../db/d59/a02728.html#aff8b6750596094ff7d254539bb79552d">Init</a>(nums.size() + 5);</div>
+<div class="line"><a id="l08588" name="l08588"></a><span class="lineno"> 8588</span> </div>
+<div class="line"><a id="l08589" name="l08589"></a><span class="lineno"> 8589</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(nums.size()) - 1; i &gt;= 0; --i) {</div>
+<div class="line"><a id="l08590" name="l08590"></a><span class="lineno"> 8590</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span> = <a class="code hl_function" href="../../db/d59/a02728.html#a81e533eb1a6842563c0ca2430918411d">getId</a>(nums[i]);</div>
+<div class="line"><a id="l08591" name="l08591"></a><span class="lineno"> 8591</span>                resultList.push_back(<a class="code hl_function" href="../../db/d59/a02728.html#a41039bf1ded955838858dcff0b07d822">Query</a>(<span class="keywordtype">id</span> - 1));</div>
+<div class="line"><a id="l08592" name="l08592"></a><span class="lineno"> 8592</span>                <a class="code hl_function" href="../../db/d59/a02728.html#ae223743769f404044db4485c2aa0e875">Update</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l08593" name="l08593"></a><span class="lineno"> 8593</span>            }</div>
+<div class="line"><a id="l08594" name="l08594"></a><span class="lineno"> 8594</span> </div>
+<div class="line"><a id="l08595" name="l08595"></a><span class="lineno"> 8595</span>            <a class="code hl_function" href="../../d9/d19/a00560.html#a2724d481a2ed52d73c35113d80c1977a">reverse</a>(resultList.begin(), resultList.end());</div>
 <div class="line"><a id="l08596" name="l08596"></a><span class="lineno"> 8596</span> </div>
-<div class="line"><a id="l08597" name="l08597"></a><span class="lineno"> 8597</span>            <a class="code hl_function" href="../../db/d59/a02728.html#ac2dfe7d421c89c0e865617752a78a020">Discretization</a>(nums);</div>
-<div class="line"><a id="l08598" name="l08598"></a><span class="lineno"> 8598</span> </div>
-<div class="line"><a id="l08599" name="l08599"></a><span class="lineno"> 8599</span>            <a class="code hl_function" href="../../db/d59/a02728.html#aff8b6750596094ff7d254539bb79552d">Init</a>(nums.size() + 5);</div>
-<div class="line"><a id="l08600" name="l08600"></a><span class="lineno"> 8600</span> </div>
-<div class="line"><a id="l08601" name="l08601"></a><span class="lineno"> 8601</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = (<span class="keywordtype">int</span>) nums.size() - 1; i &gt;= 0; --i) {</div>
-<div class="line"><a id="l08602" name="l08602"></a><span class="lineno"> 8602</span>                <span class="keywordtype">int</span> <span class="keywordtype">id</span> = <a class="code hl_function" href="../../db/d59/a02728.html#a81e533eb1a6842563c0ca2430918411d">getId</a>(nums[i]);</div>
-<div class="line"><a id="l08603" name="l08603"></a><span class="lineno"> 8603</span>                resultList.push_back(<a class="code hl_function" href="../../db/d59/a02728.html#a41039bf1ded955838858dcff0b07d822">Query</a>(<span class="keywordtype">id</span> - 1));</div>
-<div class="line"><a id="l08604" name="l08604"></a><span class="lineno"> 8604</span>                <a class="code hl_function" href="../../db/d59/a02728.html#ae223743769f404044db4485c2aa0e875">Update</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l08605" name="l08605"></a><span class="lineno"> 8605</span>            }</div>
-<div class="line"><a id="l08606" name="l08606"></a><span class="lineno"> 8606</span> </div>
-<div class="line"><a id="l08607" name="l08607"></a><span class="lineno"> 8607</span>            <a class="code hl_function" href="../../d9/d19/a00560.html#a2724d481a2ed52d73c35113d80c1977a">reverse</a>(resultList.begin(), resultList.end());</div>
-<div class="line"><a id="l08608" name="l08608"></a><span class="lineno"> 8608</span> </div>
-<div class="line"><a id="l08609" name="l08609"></a><span class="lineno"> 8609</span>            <span class="keywordflow">return</span> resultList;</div>
-<div class="line"><a id="l08610" name="l08610"></a><span class="lineno"> 8610</span>        }</div>
+<div class="line"><a id="l08597" name="l08597"></a><span class="lineno"> 8597</span>            <span class="keywordflow">return</span> resultList;</div>
+<div class="line"><a id="l08598" name="l08598"></a><span class="lineno"> 8598</span>        }</div>
 <div class="ttc" id="aa00560_html_a2724d481a2ed52d73c35113d80c1977a"><div class="ttname"><a href="../../d9/d19/a00560.html#a2724d481a2ed52d73c35113d80c1977a">pat::a::a1015::reverse</a></div><div class="ttdeci">unsigned reverse(unsigned int n, unsigned int d)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l04434">pat.cpp:4434</a></div></div>
-<div class="ttc" id="aa02728_html_a41039bf1ded955838858dcff0b07d822"><div class="ttname"><a href="../../db/d59/a02728.html#a41039bf1ded955838858dcff0b07d822">leetcode::count_of_smaller_numbers_after_self::Solution::Query</a></div><div class="ttdeci">int Query(int pos)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08627">leetcode.cpp:8627</a></div></div>
-<div class="ttc" id="aa02728_html_a81e533eb1a6842563c0ca2430918411d"><div class="ttname"><a href="../../db/d59/a02728.html#a81e533eb1a6842563c0ca2430918411d">leetcode::count_of_smaller_numbers_after_self::Solution::getId</a></div><div class="ttdeci">int getId(int x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08644">leetcode.cpp:8644</a></div></div>
-<div class="ttc" id="aa02728_html_ac2dfe7d421c89c0e865617752a78a020"><div class="ttname"><a href="../../db/d59/a02728.html#ac2dfe7d421c89c0e865617752a78a020">leetcode::count_of_smaller_numbers_after_self::Solution::Discretization</a></div><div class="ttdeci">void Discretization(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08638">leetcode.cpp:8638</a></div></div>
-<div class="ttc" id="aa02728_html_ae223743769f404044db4485c2aa0e875"><div class="ttname"><a href="../../db/d59/a02728.html#ae223743769f404044db4485c2aa0e875">leetcode::count_of_smaller_numbers_after_self::Solution::Update</a></div><div class="ttdeci">void Update(int pos)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08620">leetcode.cpp:8620</a></div></div>
-<div class="ttc" id="aa02728_html_aff8b6750596094ff7d254539bb79552d"><div class="ttname"><a href="../../db/d59/a02728.html#aff8b6750596094ff7d254539bb79552d">leetcode::count_of_smaller_numbers_after_self::Solution::Init</a></div><div class="ttdeci">void Init(int length)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08612">leetcode.cpp:8612</a></div></div>
+<div class="ttc" id="aa02728_html_a41039bf1ded955838858dcff0b07d822"><div class="ttname"><a href="../../db/d59/a02728.html#a41039bf1ded955838858dcff0b07d822">leetcode::count_of_smaller_numbers_after_self::Solution::Query</a></div><div class="ttdeci">int Query(int pos)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08611">leetcode.cpp:8611</a></div></div>
+<div class="ttc" id="aa02728_html_a81e533eb1a6842563c0ca2430918411d"><div class="ttname"><a href="../../db/d59/a02728.html#a81e533eb1a6842563c0ca2430918411d">leetcode::count_of_smaller_numbers_after_self::Solution::getId</a></div><div class="ttdeci">int getId(int x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08628">leetcode.cpp:8628</a></div></div>
+<div class="ttc" id="aa02728_html_ac2dfe7d421c89c0e865617752a78a020"><div class="ttname"><a href="../../db/d59/a02728.html#ac2dfe7d421c89c0e865617752a78a020">leetcode::count_of_smaller_numbers_after_self::Solution::Discretization</a></div><div class="ttdeci">void Discretization(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08622">leetcode.cpp:8622</a></div></div>
+<div class="ttc" id="aa02728_html_ae223743769f404044db4485c2aa0e875"><div class="ttname"><a href="../../db/d59/a02728.html#ae223743769f404044db4485c2aa0e875">leetcode::count_of_smaller_numbers_after_self::Solution::Update</a></div><div class="ttdeci">void Update(int pos)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08604">leetcode.cpp:8604</a></div></div>
+<div class="ttc" id="aa02728_html_aff8b6750596094ff7d254539bb79552d"><div class="ttname"><a href="../../db/d59/a02728.html#aff8b6750596094ff7d254539bb79552d">leetcode::count_of_smaller_numbers_after_self::Solution::Init</a></div><div class="ttdeci">void Init(int length)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08600">leetcode.cpp:8600</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08638">Discretization()</a>, <a class="el" href="../../d7/d46/a00002_source.html#l08644">getId()</a>, <a class="el" href="../../d7/d46/a00002_source.html#l08612">Init()</a>, <a class="el" href="../../d7/d46/a00002_source.html#l08627">Query()</a>, <a class="el" href="../../d6/d2d/a00047_source.html#l04434">pat::a::a1015::reverse()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08620">Update()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08622">Discretization()</a>, <a class="el" href="../../d7/d46/a00002_source.html#l08628">getId()</a>, <a class="el" href="../../d7/d46/a00002_source.html#l08600">Init()</a>, <a class="el" href="../../d7/d46/a00002_source.html#l08611">Query()</a>, <a class="el" href="../../d6/d2d/a00047_source.html#l04434">pat::a::a1015::reverse()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08604">Update()</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l03973">leetcode::count_of_smaller_numbers_after_self::TEST()</a>.</p>
 
@@ -180,17 +184,17 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08638">8638</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08638" name="l08638"></a><span class="lineno"> 8638</span>                                                       {</div>
-<div class="line"><a id="l08639" name="l08639"></a><span class="lineno"> 8639</span>            <a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.assign(nums.begin(), nums.end());</div>
-<div class="line"><a id="l08640" name="l08640"></a><span class="lineno"> 8640</span>            sort(<a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.begin(), <a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.end());</div>
-<div class="line"><a id="l08641" name="l08641"></a><span class="lineno"> 8641</span>            <a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.erase(unique(<a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.begin(), <a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.end()), <a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.end());</div>
-<div class="line"><a id="l08642" name="l08642"></a><span class="lineno"> 8642</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08622">8622</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08622" name="l08622"></a><span class="lineno"> 8622</span>                                                       {</div>
+<div class="line"><a id="l08623" name="l08623"></a><span class="lineno"> 8623</span>            <a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.assign(nums.begin(), nums.end());</div>
+<div class="line"><a id="l08624" name="l08624"></a><span class="lineno"> 8624</span>            sort(<a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.begin(), <a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.end());</div>
+<div class="line"><a id="l08625" name="l08625"></a><span class="lineno"> 8625</span>            <a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.erase(unique(<a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.begin(), <a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.end()), <a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.end());</div>
+<div class="line"><a id="l08626" name="l08626"></a><span class="lineno"> 8626</span>        }</div>
 <div class="ttc" id="aa02728_html_ac0180a5a2ef3dcb3338c650b424715da"><div class="ttname"><a href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">leetcode::count_of_smaller_numbers_after_self::Solution::a</a></div><div class="ttdeci">vector&lt; int &gt; a</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l03034">leetcode.h:3034</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03034">a</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08594">countSmaller()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08582">countSmaller()</a>.</p>
 
 </div>
 </div>
@@ -218,14 +222,12 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08644">8644</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08644" name="l08644"></a><span class="lineno"> 8644</span>                                 {</div>
-<div class="line"><a id="l08645" name="l08645"></a><span class="lineno"> 8645</span>            <span class="keywordflow">return</span> lower_bound(<a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.begin(), <a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.end(), x) - <a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.begin() + 1;</div>
-<div class="line"><a id="l08646" name="l08646"></a><span class="lineno"> 8646</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08628">8628</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08628" name="l08628"></a><span class="lineno"> 8628</span>{ <span class="keywordflow">return</span> lower_bound(<a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.begin(), <a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.end(), x) - <a class="code hl_variable" href="../../db/d59/a02728.html#ac0180a5a2ef3dcb3338c650b424715da">a</a>.begin() + 1; }</div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03034">a</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08594">countSmaller()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08582">countSmaller()</a>.</p>
 
 </div>
 </div>
@@ -253,15 +255,13 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08612">8612</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08612" name="l08612"></a><span class="lineno"> 8612</span>                                      {</div>
-<div class="line"><a id="l08613" name="l08613"></a><span class="lineno"> 8613</span>            <a class="code hl_variable" href="../../db/d59/a02728.html#a9e82917eca6b1cc4f88bcd319f753193">c</a>.resize(length, 0);</div>
-<div class="line"><a id="l08614" name="l08614"></a><span class="lineno"> 8614</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08600">8600</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08600" name="l08600"></a><span class="lineno"> 8600</span>{ <a class="code hl_variable" href="../../db/d59/a02728.html#a9e82917eca6b1cc4f88bcd319f753193">c</a>.resize(length, 0); }</div>
 <div class="ttc" id="aa02728_html_a9e82917eca6b1cc4f88bcd319f753193"><div class="ttname"><a href="../../db/d59/a02728.html#a9e82917eca6b1cc4f88bcd319f753193">leetcode::count_of_smaller_numbers_after_self::Solution::c</a></div><div class="ttdeci">vector&lt; int &gt; c</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l03033">leetcode.h:3033</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03033">c</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08594">countSmaller()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08582">countSmaller()</a>.</p>
 
 </div>
 </div>
@@ -284,17 +284,15 @@ Private 属性</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08616">8616</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08616" name="l08616"></a><span class="lineno"> 8616</span>                                  {</div>
-<div class="line"><a id="l08617" name="l08617"></a><span class="lineno"> 8617</span>            <span class="keywordflow">return</span> x &amp; (-x);</div>
-<div class="line"><a id="l08618" name="l08618"></a><span class="lineno"> 8618</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08602">8602</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08602" name="l08602"></a><span class="lineno"> 8602</span>{ <span class="keywordflow">return</span> x &amp; -x; }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08627">Query()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08620">Update()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08611">Query()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08604">Update()</a>.</p>
 
 </div>
 </div>
@@ -322,22 +320,22 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08627">8627</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08627" name="l08627"></a><span class="lineno"> 8627</span>                                   {</div>
-<div class="line"><a id="l08628" name="l08628"></a><span class="lineno"> 8628</span>            <span class="keywordtype">int</span> ret = 0;</div>
-<div class="line"><a id="l08629" name="l08629"></a><span class="lineno"> 8629</span> </div>
-<div class="line"><a id="l08630" name="l08630"></a><span class="lineno"> 8630</span>            <span class="keywordflow">while</span>(pos &gt; 0) {</div>
-<div class="line"><a id="l08631" name="l08631"></a><span class="lineno"> 8631</span>                ret += <a class="code hl_variable" href="../../db/d59/a02728.html#a9e82917eca6b1cc4f88bcd319f753193">c</a>[pos];</div>
-<div class="line"><a id="l08632" name="l08632"></a><span class="lineno"> 8632</span>                pos -= <a class="code hl_function" href="../../db/d59/a02728.html#ade4eb45810cd8fdf8266444408e9e71f">LowBit</a>(pos);</div>
-<div class="line"><a id="l08633" name="l08633"></a><span class="lineno"> 8633</span>            }</div>
-<div class="line"><a id="l08634" name="l08634"></a><span class="lineno"> 8634</span> </div>
-<div class="line"><a id="l08635" name="l08635"></a><span class="lineno"> 8635</span>            <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a id="l08636" name="l08636"></a><span class="lineno"> 8636</span>        }</div>
-<div class="ttc" id="aa02728_html_ade4eb45810cd8fdf8266444408e9e71f"><div class="ttname"><a href="../../db/d59/a02728.html#ade4eb45810cd8fdf8266444408e9e71f">leetcode::count_of_smaller_numbers_after_self::Solution::LowBit</a></div><div class="ttdeci">int LowBit(int x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08616">leetcode.cpp:8616</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08611">8611</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08611" name="l08611"></a><span class="lineno"> 8611</span>                                   {</div>
+<div class="line"><a id="l08612" name="l08612"></a><span class="lineno"> 8612</span>            <span class="keywordtype">int</span> ret = 0;</div>
+<div class="line"><a id="l08613" name="l08613"></a><span class="lineno"> 8613</span> </div>
+<div class="line"><a id="l08614" name="l08614"></a><span class="lineno"> 8614</span>            <span class="keywordflow">while</span>(pos &gt; 0) {</div>
+<div class="line"><a id="l08615" name="l08615"></a><span class="lineno"> 8615</span>                ret += <a class="code hl_variable" href="../../db/d59/a02728.html#a9e82917eca6b1cc4f88bcd319f753193">c</a>[pos];</div>
+<div class="line"><a id="l08616" name="l08616"></a><span class="lineno"> 8616</span>                pos -= <a class="code hl_function" href="../../db/d59/a02728.html#ade4eb45810cd8fdf8266444408e9e71f">LowBit</a>(pos);</div>
+<div class="line"><a id="l08617" name="l08617"></a><span class="lineno"> 8617</span>            }</div>
+<div class="line"><a id="l08618" name="l08618"></a><span class="lineno"> 8618</span> </div>
+<div class="line"><a id="l08619" name="l08619"></a><span class="lineno"> 8619</span>            <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a id="l08620" name="l08620"></a><span class="lineno"> 8620</span>        }</div>
+<div class="ttc" id="aa02728_html_ade4eb45810cd8fdf8266444408e9e71f"><div class="ttname"><a href="../../db/d59/a02728.html#ade4eb45810cd8fdf8266444408e9e71f">leetcode::count_of_smaller_numbers_after_self::Solution::LowBit</a></div><div class="ttdeci">static int LowBit(int x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08602">leetcode.cpp:8602</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03033">c</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08616">LowBit()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03033">c</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08602">LowBit()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08594">countSmaller()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08582">countSmaller()</a>.</p>
 
 </div>
 </div>
@@ -365,17 +363,17 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08620">8620</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08620" name="l08620"></a><span class="lineno"> 8620</span>                                     {</div>
-<div class="line"><a id="l08621" name="l08621"></a><span class="lineno"> 8621</span>            <span class="keywordflow">while</span>(pos &lt; <a class="code hl_variable" href="../../db/d59/a02728.html#a9e82917eca6b1cc4f88bcd319f753193">c</a>.size()) {</div>
-<div class="line"><a id="l08622" name="l08622"></a><span class="lineno"> 8622</span>                <a class="code hl_variable" href="../../db/d59/a02728.html#a9e82917eca6b1cc4f88bcd319f753193">c</a>[pos] += 1;</div>
-<div class="line"><a id="l08623" name="l08623"></a><span class="lineno"> 8623</span>                pos += <a class="code hl_function" href="../../db/d59/a02728.html#ade4eb45810cd8fdf8266444408e9e71f">LowBit</a>(pos);</div>
-<div class="line"><a id="l08624" name="l08624"></a><span class="lineno"> 8624</span>            }</div>
-<div class="line"><a id="l08625" name="l08625"></a><span class="lineno"> 8625</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08604">8604</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08604" name="l08604"></a><span class="lineno"> 8604</span>                                     {</div>
+<div class="line"><a id="l08605" name="l08605"></a><span class="lineno"> 8605</span>            <span class="keywordflow">while</span>(pos &lt; <a class="code hl_variable" href="../../db/d59/a02728.html#a9e82917eca6b1cc4f88bcd319f753193">c</a>.size()) {</div>
+<div class="line"><a id="l08606" name="l08606"></a><span class="lineno"> 8606</span>                <a class="code hl_variable" href="../../db/d59/a02728.html#a9e82917eca6b1cc4f88bcd319f753193">c</a>[pos] += 1;</div>
+<div class="line"><a id="l08607" name="l08607"></a><span class="lineno"> 8607</span>                pos += <a class="code hl_function" href="../../db/d59/a02728.html#ade4eb45810cd8fdf8266444408e9e71f">LowBit</a>(pos);</div>
+<div class="line"><a id="l08608" name="l08608"></a><span class="lineno"> 8608</span>            }</div>
+<div class="line"><a id="l08609" name="l08609"></a><span class="lineno"> 8609</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03033">c</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08616">LowBit()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03033">c</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08602">LowBit()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08594">countSmaller()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08582">countSmaller()</a>.</p>
 
 </div>
 </div>
@@ -402,7 +400,7 @@ Private 属性</h2></td></tr>
 
 <p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03034">3034</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08638">Discretization()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08644">getId()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08622">Discretization()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08628">getId()</a>.</p>
 
 </div>
 </div>
@@ -428,7 +426,7 @@ Private 属性</h2></td></tr>
 
 <p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03033">3033</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08612">Init()</a>, <a class="el" href="../../d7/d46/a00002_source.html#l08627">Query()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08620">Update()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08600">Init()</a>, <a class="el" href="../../d7/d46/a00002_source.html#l08611">Query()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08604">Update()</a>.</p>
 
 </div>
 </div>

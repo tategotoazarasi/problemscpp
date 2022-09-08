@@ -119,19 +119,19 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08668">8668</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08668" name="l08668"></a><span class="lineno"> 8668</span>                                                            {</div>
-<div class="line"><a id="l08669" name="l08669"></a><span class="lineno"> 8669</span>            <span class="keywordtype">int</span> n = prices.size();</div>
-<div class="line"><a id="l08670" name="l08670"></a><span class="lineno"> 8670</span>            vector&lt;int&gt; holding(n);</div>
-<div class="line"><a id="l08671" name="l08671"></a><span class="lineno"> 8671</span>            vector&lt;int&gt; not_holding(n);</div>
-<div class="line"><a id="l08672" name="l08672"></a><span class="lineno"> 8672</span>            not_holding[0] = 0;</div>
-<div class="line"><a id="l08673" name="l08673"></a><span class="lineno"> 8673</span>            holding[0]     = -prices[0];</div>
-<div class="line"><a id="l08674" name="l08674"></a><span class="lineno"> 8674</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; n; i++) {</div>
-<div class="line"><a id="l08675" name="l08675"></a><span class="lineno"> 8675</span>                not_holding[i] = max(not_holding[i - 1], holding[i - 1] + prices[i] - fee);</div>
-<div class="line"><a id="l08676" name="l08676"></a><span class="lineno"> 8676</span>                holding[i]     = max(holding[i - 1], not_holding[i - 1] - prices[i]);</div>
-<div class="line"><a id="l08677" name="l08677"></a><span class="lineno"> 8677</span>            }</div>
-<div class="line"><a id="l08678" name="l08678"></a><span class="lineno"> 8678</span>            <span class="keywordflow">return</span> max(not_holding.back(), holding.back());</div>
-<div class="line"><a id="l08679" name="l08679"></a><span class="lineno"> 8679</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08650">8650</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08650" name="l08650"></a><span class="lineno"> 8650</span>                                                            {</div>
+<div class="line"><a id="l08651" name="l08651"></a><span class="lineno"> 8651</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = prices.size();</div>
+<div class="line"><a id="l08652" name="l08652"></a><span class="lineno"> 8652</span>            vector&lt;int&gt; holding(n);</div>
+<div class="line"><a id="l08653" name="l08653"></a><span class="lineno"> 8653</span>            vector&lt;int&gt; not_holding(n);</div>
+<div class="line"><a id="l08654" name="l08654"></a><span class="lineno"> 8654</span>            not_holding[0] = 0;</div>
+<div class="line"><a id="l08655" name="l08655"></a><span class="lineno"> 8655</span>            holding[0]     = -prices[0];</div>
+<div class="line"><a id="l08656" name="l08656"></a><span class="lineno"> 8656</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; n; i++) {</div>
+<div class="line"><a id="l08657" name="l08657"></a><span class="lineno"> 8657</span>                not_holding[i] = max(not_holding[i - 1], holding[i - 1] + prices[i] - fee);</div>
+<div class="line"><a id="l08658" name="l08658"></a><span class="lineno"> 8658</span>                holding[i]     = max(holding[i - 1], not_holding[i - 1] - prices[i]);</div>
+<div class="line"><a id="l08659" name="l08659"></a><span class="lineno"> 8659</span>            }</div>
+<div class="line"><a id="l08660" name="l08660"></a><span class="lineno"> 8660</span>            <span class="keywordflow">return</span> max(not_holding.back(), holding.back());</div>
+<div class="line"><a id="l08661" name="l08661"></a><span class="lineno"> 8661</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l04013">leetcode::best_time_to_buy_and_sell_stock_with_transaction_fee::TEST()</a>.</p>
 

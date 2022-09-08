@@ -141,27 +141,27 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08319">8319</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08319" name="l08319"></a><span class="lineno"> 8319</span>                                                                                                          {</div>
-<div class="line"><a id="l08320" name="l08320"></a><span class="lineno"> 8320</span>            <span class="keywordflow">if</span>(line == n) {</div>
-<div class="line"><a id="l08321" name="l08321"></a><span class="lineno"> 8321</span>                ans.emplace_back(<a class="code hl_function" href="../../d4/d9d/a02704.html#ab8c3d148671e03bfe77ad725aba6a9e9">toStringVec</a>(board));</div>
-<div class="line"><a id="l08322" name="l08322"></a><span class="lineno"> 8322</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l08323" name="l08323"></a><span class="lineno"> 8323</span>            }</div>
-<div class="line"><a id="l08324" name="l08324"></a><span class="lineno"> 8324</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l08325" name="l08325"></a><span class="lineno"> 8325</span>                <span class="keywordflow">if</span>(<a class="code hl_function" href="../../d4/d9d/a02704.html#ab198ff8401bb03e65c893bbf5299dfc2">valid</a>(board, n, line, i)) {</div>
-<div class="line"><a id="l08326" name="l08326"></a><span class="lineno"> 8326</span>                    vector&lt;vector&lt;bool&gt;&gt; next = board;</div>
-<div class="line"><a id="l08327" name="l08327"></a><span class="lineno"> 8327</span>                    next[line][i]             = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l08328" name="l08328"></a><span class="lineno"> 8328</span>                    <a class="code hl_function" href="../../d4/d9d/a02704.html#abaade94624ba17a7809bb7dc39fb159b">dfs</a>(next, line + 1, n, ans);</div>
-<div class="line"><a id="l08329" name="l08329"></a><span class="lineno"> 8329</span>                }</div>
-<div class="line"><a id="l08330" name="l08330"></a><span class="lineno"> 8330</span>            }</div>
-<div class="line"><a id="l08331" name="l08331"></a><span class="lineno"> 8331</span>        }</div>
-<div class="ttc" id="aa02704_html_ab198ff8401bb03e65c893bbf5299dfc2"><div class="ttname"><a href="../../d4/d9d/a02704.html#ab198ff8401bb03e65c893bbf5299dfc2">leetcode::n_queens::Solution::valid</a></div><div class="ttdeci">static bool valid(const vector&lt; vector&lt; bool &gt; &gt; &amp;board, int n, int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08333">leetcode.cpp:8333</a></div></div>
-<div class="ttc" id="aa02704_html_ab8c3d148671e03bfe77ad725aba6a9e9"><div class="ttname"><a href="../../d4/d9d/a02704.html#ab8c3d148671e03bfe77ad725aba6a9e9">leetcode::n_queens::Solution::toStringVec</a></div><div class="ttdeci">static vector&lt; string &gt; toStringVec(const vector&lt; vector&lt; bool &gt; &gt; &amp;board)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08352">leetcode.cpp:8352</a></div></div>
-<div class="ttc" id="aa02704_html_abaade94624ba17a7809bb7dc39fb159b"><div class="ttname"><a href="../../d4/d9d/a02704.html#abaade94624ba17a7809bb7dc39fb159b">leetcode::n_queens::Solution::dfs</a></div><div class="ttdeci">static void dfs(const vector&lt; vector&lt; bool &gt; &gt; &amp;board, int line, int n, vector&lt; vector&lt; string &gt; &gt; &amp;ans)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08319">leetcode.cpp:8319</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08315">8315</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08315" name="l08315"></a><span class="lineno"> 8315</span>                                                                                                          {</div>
+<div class="line"><a id="l08316" name="l08316"></a><span class="lineno"> 8316</span>            <span class="keywordflow">if</span>(line == n) {</div>
+<div class="line"><a id="l08317" name="l08317"></a><span class="lineno"> 8317</span>                ans.emplace_back(<a class="code hl_function" href="../../d4/d9d/a02704.html#ab8c3d148671e03bfe77ad725aba6a9e9">toStringVec</a>(board));</div>
+<div class="line"><a id="l08318" name="l08318"></a><span class="lineno"> 8318</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l08319" name="l08319"></a><span class="lineno"> 8319</span>            }</div>
+<div class="line"><a id="l08320" name="l08320"></a><span class="lineno"> 8320</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l08321" name="l08321"></a><span class="lineno"> 8321</span>                <span class="keywordflow">if</span>(<a class="code hl_function" href="../../d4/d9d/a02704.html#ab198ff8401bb03e65c893bbf5299dfc2">valid</a>(board, n, line, i)) {</div>
+<div class="line"><a id="l08322" name="l08322"></a><span class="lineno"> 8322</span>                    vector&lt;vector&lt;bool&gt;&gt; next = board;</div>
+<div class="line"><a id="l08323" name="l08323"></a><span class="lineno"> 8323</span>                    next[line][i]             = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l08324" name="l08324"></a><span class="lineno"> 8324</span>                    <a class="code hl_function" href="../../d4/d9d/a02704.html#abaade94624ba17a7809bb7dc39fb159b">dfs</a>(next, line + 1, n, ans);</div>
+<div class="line"><a id="l08325" name="l08325"></a><span class="lineno"> 8325</span>                }</div>
+<div class="line"><a id="l08326" name="l08326"></a><span class="lineno"> 8326</span>            }</div>
+<div class="line"><a id="l08327" name="l08327"></a><span class="lineno"> 8327</span>        }</div>
+<div class="ttc" id="aa02704_html_ab198ff8401bb03e65c893bbf5299dfc2"><div class="ttname"><a href="../../d4/d9d/a02704.html#ab198ff8401bb03e65c893bbf5299dfc2">leetcode::n_queens::Solution::valid</a></div><div class="ttdeci">static bool valid(const vector&lt; vector&lt; bool &gt; &gt; &amp;board, int n, int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08329">leetcode.cpp:8329</a></div></div>
+<div class="ttc" id="aa02704_html_ab8c3d148671e03bfe77ad725aba6a9e9"><div class="ttname"><a href="../../d4/d9d/a02704.html#ab8c3d148671e03bfe77ad725aba6a9e9">leetcode::n_queens::Solution::toStringVec</a></div><div class="ttdeci">static vector&lt; string &gt; toStringVec(const vector&lt; vector&lt; bool &gt; &gt; &amp;board)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08348">leetcode.cpp:8348</a></div></div>
+<div class="ttc" id="aa02704_html_abaade94624ba17a7809bb7dc39fb159b"><div class="ttname"><a href="../../d4/d9d/a02704.html#abaade94624ba17a7809bb7dc39fb159b">leetcode::n_queens::Solution::dfs</a></div><div class="ttdeci">static void dfs(const vector&lt; vector&lt; bool &gt; &gt; &amp;board, int line, int n, vector&lt; vector&lt; string &gt; &gt; &amp;ans)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08315">leetcode.cpp:8315</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08319">dfs()</a>, <a class="el" href="../../d7/d46/a00002_source.html#l08352">toStringVec()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08333">valid()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08315">dfs()</a>, <a class="el" href="../../d7/d46/a00002_source.html#l08348">toStringVec()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08329">valid()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08319">dfs()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08312">solveNQueens()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08315">dfs()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l08308">solveNQueens()</a>.</p>
 
 </div>
 </div>
@@ -189,15 +189,15 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08312">8312</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08312" name="l08312"></a><span class="lineno"> 8312</span>                                                           {</div>
-<div class="line"><a id="l08313" name="l08313"></a><span class="lineno"> 8313</span>            vector&lt;vector&lt;string&gt;&gt; ans;</div>
-<div class="line"><a id="l08314" name="l08314"></a><span class="lineno"> 8314</span>            vector&lt;vector&lt;bool&gt;&gt; board(n, vector&lt;bool&gt;(n, <span class="keyword">false</span>));</div>
-<div class="line"><a id="l08315" name="l08315"></a><span class="lineno"> 8315</span>            <a class="code hl_function" href="../../d4/d9d/a02704.html#abaade94624ba17a7809bb7dc39fb159b">dfs</a>(board, 0, n, ans);</div>
-<div class="line"><a id="l08316" name="l08316"></a><span class="lineno"> 8316</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l08317" name="l08317"></a><span class="lineno"> 8317</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08308">8308</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08308" name="l08308"></a><span class="lineno"> 8308</span>                                                           {</div>
+<div class="line"><a id="l08309" name="l08309"></a><span class="lineno"> 8309</span>            vector&lt;vector&lt;string&gt;&gt; ans;</div>
+<div class="line"><a id="l08310" name="l08310"></a><span class="lineno"> 8310</span>            <span class="keyword">const</span> vector board(n, vector(n, <span class="keyword">false</span>));</div>
+<div class="line"><a id="l08311" name="l08311"></a><span class="lineno"> 8311</span>            <a class="code hl_function" href="../../d4/d9d/a02704.html#abaade94624ba17a7809bb7dc39fb159b">dfs</a>(board, 0, n, ans);</div>
+<div class="line"><a id="l08312" name="l08312"></a><span class="lineno"> 8312</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l08313" name="l08313"></a><span class="lineno"> 8313</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08319">dfs()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l08315">dfs()</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l03874">leetcode::n_queens::TEST()</a>.</p>
 
@@ -227,20 +227,20 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08352">8352</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08352" name="l08352"></a><span class="lineno"> 8352</span>                                                                              {</div>
-<div class="line"><a id="l08353" name="l08353"></a><span class="lineno"> 8353</span>            vector&lt;string&gt; ans(board.size());</div>
-<div class="line"><a id="l08354" name="l08354"></a><span class="lineno"> 8354</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; board.size(); i++) {</div>
-<div class="line"><a id="l08355" name="l08355"></a><span class="lineno"> 8355</span>                ostringstream oss;</div>
-<div class="line"><a id="l08356" name="l08356"></a><span class="lineno"> 8356</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; board[i].size(); j++) {</div>
-<div class="line"><a id="l08357" name="l08357"></a><span class="lineno"> 8357</span>                    oss &lt;&lt; (board[i][j] ? <span class="charliteral">&#39;Q&#39;</span> : <span class="charliteral">&#39;.&#39;</span>);</div>
-<div class="line"><a id="l08358" name="l08358"></a><span class="lineno"> 8358</span>                }</div>
-<div class="line"><a id="l08359" name="l08359"></a><span class="lineno"> 8359</span>                ans[i] = oss.str();</div>
-<div class="line"><a id="l08360" name="l08360"></a><span class="lineno"> 8360</span>            }</div>
-<div class="line"><a id="l08361" name="l08361"></a><span class="lineno"> 8361</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l08362" name="l08362"></a><span class="lineno"> 8362</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08348">8348</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08348" name="l08348"></a><span class="lineno"> 8348</span>                                                                              {</div>
+<div class="line"><a id="l08349" name="l08349"></a><span class="lineno"> 8349</span>            vector&lt;string&gt; ans(board.size());</div>
+<div class="line"><a id="l08350" name="l08350"></a><span class="lineno"> 8350</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; board.size(); i++) {</div>
+<div class="line"><a id="l08351" name="l08351"></a><span class="lineno"> 8351</span>                ostringstream oss;</div>
+<div class="line"><a id="l08352" name="l08352"></a><span class="lineno"> 8352</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; board[i].size(); j++) {</div>
+<div class="line"><a id="l08353" name="l08353"></a><span class="lineno"> 8353</span>                    oss &lt;&lt; (board[i][j] ? <span class="charliteral">&#39;Q&#39;</span> : <span class="charliteral">&#39;.&#39;</span>);</div>
+<div class="line"><a id="l08354" name="l08354"></a><span class="lineno"> 8354</span>                }</div>
+<div class="line"><a id="l08355" name="l08355"></a><span class="lineno"> 8355</span>                ans[i] = oss.str();</div>
+<div class="line"><a id="l08356" name="l08356"></a><span class="lineno"> 8356</span>            }</div>
+<div class="line"><a id="l08357" name="l08357"></a><span class="lineno"> 8357</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l08358" name="l08358"></a><span class="lineno"> 8358</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08319">dfs()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08315">dfs()</a>.</p>
 
 </div>
 </div>
@@ -290,27 +290,27 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08333">8333</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08333" name="l08333"></a><span class="lineno"> 8333</span>                                                                                   {</div>
-<div class="line"><a id="l08334" name="l08334"></a><span class="lineno"> 8334</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; x; i++) {</div>
-<div class="line"><a id="l08335" name="l08335"></a><span class="lineno"> 8335</span>                <span class="keywordflow">if</span>(board[i][y]) {</div>
-<div class="line"><a id="l08336" name="l08336"></a><span class="lineno"> 8336</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l08337" name="l08337"></a><span class="lineno"> 8337</span>                }</div>
-<div class="line"><a id="l08338" name="l08338"></a><span class="lineno"> 8338</span>            }</div>
-<div class="line"><a id="l08339" name="l08339"></a><span class="lineno"> 8339</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = x, j = y; i &gt;= 0 &amp;&amp; i &lt; n &amp;&amp; j &gt;= 0 &amp;&amp; j &lt; n; i--, j--) {</div>
-<div class="line"><a id="l08340" name="l08340"></a><span class="lineno"> 8340</span>                <span class="keywordflow">if</span>(board[i][j]) {</div>
-<div class="line"><a id="l08341" name="l08341"></a><span class="lineno"> 8341</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l08342" name="l08342"></a><span class="lineno"> 8342</span>                }</div>
-<div class="line"><a id="l08343" name="l08343"></a><span class="lineno"> 8343</span>            }</div>
-<div class="line"><a id="l08344" name="l08344"></a><span class="lineno"> 8344</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = x, j = y; i &gt;= 0 &amp;&amp; i &lt; n &amp;&amp; j &gt;= 0 &amp;&amp; j &lt; n; i--, j++) {</div>
-<div class="line"><a id="l08345" name="l08345"></a><span class="lineno"> 8345</span>                <span class="keywordflow">if</span>(board[i][j]) {</div>
-<div class="line"><a id="l08346" name="l08346"></a><span class="lineno"> 8346</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l08347" name="l08347"></a><span class="lineno"> 8347</span>                }</div>
-<div class="line"><a id="l08348" name="l08348"></a><span class="lineno"> 8348</span>            }</div>
-<div class="line"><a id="l08349" name="l08349"></a><span class="lineno"> 8349</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l08350" name="l08350"></a><span class="lineno"> 8350</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08329">8329</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08329" name="l08329"></a><span class="lineno"> 8329</span>                                                                                   {</div>
+<div class="line"><a id="l08330" name="l08330"></a><span class="lineno"> 8330</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; x; i++) {</div>
+<div class="line"><a id="l08331" name="l08331"></a><span class="lineno"> 8331</span>                <span class="keywordflow">if</span>(board[i][y]) {</div>
+<div class="line"><a id="l08332" name="l08332"></a><span class="lineno"> 8332</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l08333" name="l08333"></a><span class="lineno"> 8333</span>                }</div>
+<div class="line"><a id="l08334" name="l08334"></a><span class="lineno"> 8334</span>            }</div>
+<div class="line"><a id="l08335" name="l08335"></a><span class="lineno"> 8335</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = x, j = y; i &gt;= 0 &amp;&amp; i &lt; n &amp;&amp; j &gt;= 0 &amp;&amp; j &lt; n; i--, j--) {</div>
+<div class="line"><a id="l08336" name="l08336"></a><span class="lineno"> 8336</span>                <span class="keywordflow">if</span>(board[i][j]) {</div>
+<div class="line"><a id="l08337" name="l08337"></a><span class="lineno"> 8337</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l08338" name="l08338"></a><span class="lineno"> 8338</span>                }</div>
+<div class="line"><a id="l08339" name="l08339"></a><span class="lineno"> 8339</span>            }</div>
+<div class="line"><a id="l08340" name="l08340"></a><span class="lineno"> 8340</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = x, j = y; i &gt;= 0 &amp;&amp; i &lt; n &amp;&amp; j &gt;= 0 &amp;&amp; j &lt; n; i--, j++) {</div>
+<div class="line"><a id="l08341" name="l08341"></a><span class="lineno"> 8341</span>                <span class="keywordflow">if</span>(board[i][j]) {</div>
+<div class="line"><a id="l08342" name="l08342"></a><span class="lineno"> 8342</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l08343" name="l08343"></a><span class="lineno"> 8343</span>                }</div>
+<div class="line"><a id="l08344" name="l08344"></a><span class="lineno"> 8344</span>            }</div>
+<div class="line"><a id="l08345" name="l08345"></a><span class="lineno"> 8345</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l08346" name="l08346"></a><span class="lineno"> 8346</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08319">dfs()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l08315">dfs()</a>.</p>
 
 </div>
 </div>

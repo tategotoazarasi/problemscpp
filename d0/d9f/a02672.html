@@ -119,50 +119,50 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08063">8063</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08063" name="l08063"></a><span class="lineno"> 8063</span>                                                                             {</div>
-<div class="line"><a id="l08064" name="l08064"></a><span class="lineno"> 8064</span>            unordered_set&lt;string&gt; deads;</div>
-<div class="line"><a id="l08065" name="l08065"></a><span class="lineno"> 8065</span>            unordered_set&lt;string&gt; vis;</div>
-<div class="line"><a id="l08066" name="l08066"></a><span class="lineno"> 8066</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;deadend: deadends) {</div>
-<div class="line"><a id="l08067" name="l08067"></a><span class="lineno"> 8067</span>                deads.insert(deadend);</div>
-<div class="line"><a id="l08068" name="l08068"></a><span class="lineno"> 8068</span>            }</div>
-<div class="line"><a id="l08069" name="l08069"></a><span class="lineno"> 8069</span>            <span class="keyword">auto</span> get_nexts = [](<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;code) {</div>
-<div class="line"><a id="l08070" name="l08070"></a><span class="lineno"> 8070</span>                vector ans(8, code);</div>
-<div class="line"><a id="l08071" name="l08071"></a><span class="lineno"> 8071</span>                ans[0][0] = (ans[0][0] - <span class="charliteral">&#39;0&#39;</span> + 10 + 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l08072" name="l08072"></a><span class="lineno"> 8072</span>                ans[1][0] = (ans[1][0] - <span class="charliteral">&#39;0&#39;</span> + 10 - 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l08073" name="l08073"></a><span class="lineno"> 8073</span>                ans[2][1] = (ans[2][1] - <span class="charliteral">&#39;0&#39;</span> + 10 + 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l08074" name="l08074"></a><span class="lineno"> 8074</span>                ans[3][1] = (ans[3][1] - <span class="charliteral">&#39;0&#39;</span> + 10 - 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l08075" name="l08075"></a><span class="lineno"> 8075</span>                ans[4][2] = (ans[4][2] - <span class="charliteral">&#39;0&#39;</span> + 10 + 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l08076" name="l08076"></a><span class="lineno"> 8076</span>                ans[5][2] = (ans[5][2] - <span class="charliteral">&#39;0&#39;</span> + 10 - 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l08077" name="l08077"></a><span class="lineno"> 8077</span>                ans[6][3] = (ans[6][3] - <span class="charliteral">&#39;0&#39;</span> + 10 + 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l08078" name="l08078"></a><span class="lineno"> 8078</span>                ans[7][3] = (ans[7][3] - <span class="charliteral">&#39;0&#39;</span> + 10 - 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l08079" name="l08079"></a><span class="lineno"> 8079</span>                <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l08080" name="l08080"></a><span class="lineno"> 8080</span>            };</div>
-<div class="line"><a id="l08081" name="l08081"></a><span class="lineno"> 8081</span>            queue&lt;pair&lt;int, string&gt;&gt; q;</div>
-<div class="line"><a id="l08082" name="l08082"></a><span class="lineno"> 8082</span>            q.push({0, <span class="stringliteral">&quot;0000&quot;</span>});</div>
-<div class="line"><a id="l08083" name="l08083"></a><span class="lineno"> 8083</span>            <span class="keywordflow">while</span>(!q.empty()) {</div>
-<div class="line"><a id="l08084" name="l08084"></a><span class="lineno"> 8084</span>                <span class="keyword">auto</span> [step, code] = q.front();</div>
-<div class="line"><a id="l08085" name="l08085"></a><span class="lineno"> 8085</span>                <span class="keywordflow">if</span>(code == target) {</div>
-<div class="line"><a id="l08086" name="l08086"></a><span class="lineno"> 8086</span>                    <span class="keywordflow">return</span> step;</div>
-<div class="line"><a id="l08087" name="l08087"></a><span class="lineno"> 8087</span>                }</div>
-<div class="line"><a id="l08088" name="l08088"></a><span class="lineno"> 8088</span>                vis.insert(code);</div>
-<div class="line"><a id="l08089" name="l08089"></a><span class="lineno"> 8089</span>                q.pop();</div>
-<div class="line"><a id="l08090" name="l08090"></a><span class="lineno"> 8090</span>                <span class="keywordflow">if</span>(deads.contains(code)) {</div>
-<div class="line"><a id="l08091" name="l08091"></a><span class="lineno"> 8091</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l08092" name="l08092"></a><span class="lineno"> 8092</span>                }</div>
-<div class="line"><a id="l08093" name="l08093"></a><span class="lineno"> 8093</span>                <span class="keyword">auto</span> nexts = get_nexts(code);</div>
-<div class="line"><a id="l08094" name="l08094"></a><span class="lineno"> 8094</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;next: nexts) {</div>
-<div class="line"><a id="l08095" name="l08095"></a><span class="lineno"> 8095</span>                    <span class="keywordflow">if</span>(!vis.contains(next)) {</div>
-<div class="line"><a id="l08096" name="l08096"></a><span class="lineno"> 8096</span>                        vis.insert(next);</div>
-<div class="line"><a id="l08097" name="l08097"></a><span class="lineno"> 8097</span>                        <span class="keywordflow">if</span>(next == target) {</div>
-<div class="line"><a id="l08098" name="l08098"></a><span class="lineno"> 8098</span>                            <span class="keywordflow">return</span> step + 1;</div>
-<div class="line"><a id="l08099" name="l08099"></a><span class="lineno"> 8099</span>                        }</div>
-<div class="line"><a id="l08100" name="l08100"></a><span class="lineno"> 8100</span>                        q.push({step + 1, next});</div>
-<div class="line"><a id="l08101" name="l08101"></a><span class="lineno"> 8101</span>                    }</div>
-<div class="line"><a id="l08102" name="l08102"></a><span class="lineno"> 8102</span>                }</div>
-<div class="line"><a id="l08103" name="l08103"></a><span class="lineno"> 8103</span>            }</div>
-<div class="line"><a id="l08104" name="l08104"></a><span class="lineno"> 8104</span>            <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l08105" name="l08105"></a><span class="lineno"> 8105</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08059">8059</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08059" name="l08059"></a><span class="lineno"> 8059</span>                                                                             {</div>
+<div class="line"><a id="l08060" name="l08060"></a><span class="lineno"> 8060</span>            unordered_set&lt;string&gt; deads;</div>
+<div class="line"><a id="l08061" name="l08061"></a><span class="lineno"> 8061</span>            unordered_set&lt;string&gt; vis;</div>
+<div class="line"><a id="l08062" name="l08062"></a><span class="lineno"> 8062</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;deadend: deadends) {</div>
+<div class="line"><a id="l08063" name="l08063"></a><span class="lineno"> 8063</span>                deads.insert(deadend);</div>
+<div class="line"><a id="l08064" name="l08064"></a><span class="lineno"> 8064</span>            }</div>
+<div class="line"><a id="l08065" name="l08065"></a><span class="lineno"> 8065</span>            <span class="keyword">auto</span> get_nexts = [](<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;code) {</div>
+<div class="line"><a id="l08066" name="l08066"></a><span class="lineno"> 8066</span>                vector ans(8, code);</div>
+<div class="line"><a id="l08067" name="l08067"></a><span class="lineno"> 8067</span>                ans[0][0] = (ans[0][0] - <span class="charliteral">&#39;0&#39;</span> + 10 + 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l08068" name="l08068"></a><span class="lineno"> 8068</span>                ans[1][0] = (ans[1][0] - <span class="charliteral">&#39;0&#39;</span> + 10 - 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l08069" name="l08069"></a><span class="lineno"> 8069</span>                ans[2][1] = (ans[2][1] - <span class="charliteral">&#39;0&#39;</span> + 10 + 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l08070" name="l08070"></a><span class="lineno"> 8070</span>                ans[3][1] = (ans[3][1] - <span class="charliteral">&#39;0&#39;</span> + 10 - 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l08071" name="l08071"></a><span class="lineno"> 8071</span>                ans[4][2] = (ans[4][2] - <span class="charliteral">&#39;0&#39;</span> + 10 + 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l08072" name="l08072"></a><span class="lineno"> 8072</span>                ans[5][2] = (ans[5][2] - <span class="charliteral">&#39;0&#39;</span> + 10 - 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l08073" name="l08073"></a><span class="lineno"> 8073</span>                ans[6][3] = (ans[6][3] - <span class="charliteral">&#39;0&#39;</span> + 10 + 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l08074" name="l08074"></a><span class="lineno"> 8074</span>                ans[7][3] = (ans[7][3] - <span class="charliteral">&#39;0&#39;</span> + 10 - 1) % 10 + <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l08075" name="l08075"></a><span class="lineno"> 8075</span>                <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l08076" name="l08076"></a><span class="lineno"> 8076</span>            };</div>
+<div class="line"><a id="l08077" name="l08077"></a><span class="lineno"> 8077</span>            queue&lt;pair&lt;int, string&gt;&gt; q;</div>
+<div class="line"><a id="l08078" name="l08078"></a><span class="lineno"> 8078</span>            q.push({0, <span class="stringliteral">&quot;0000&quot;</span>});</div>
+<div class="line"><a id="l08079" name="l08079"></a><span class="lineno"> 8079</span>            <span class="keywordflow">while</span>(!q.empty()) {</div>
+<div class="line"><a id="l08080" name="l08080"></a><span class="lineno"> 8080</span>                <span class="keyword">auto</span> [step, code] = q.front();</div>
+<div class="line"><a id="l08081" name="l08081"></a><span class="lineno"> 8081</span>                <span class="keywordflow">if</span>(code == target) {</div>
+<div class="line"><a id="l08082" name="l08082"></a><span class="lineno"> 8082</span>                    <span class="keywordflow">return</span> step;</div>
+<div class="line"><a id="l08083" name="l08083"></a><span class="lineno"> 8083</span>                }</div>
+<div class="line"><a id="l08084" name="l08084"></a><span class="lineno"> 8084</span>                vis.insert(code);</div>
+<div class="line"><a id="l08085" name="l08085"></a><span class="lineno"> 8085</span>                q.pop();</div>
+<div class="line"><a id="l08086" name="l08086"></a><span class="lineno"> 8086</span>                <span class="keywordflow">if</span>(deads.contains(code)) {</div>
+<div class="line"><a id="l08087" name="l08087"></a><span class="lineno"> 8087</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l08088" name="l08088"></a><span class="lineno"> 8088</span>                }</div>
+<div class="line"><a id="l08089" name="l08089"></a><span class="lineno"> 8089</span>                <span class="keyword">auto</span> nexts = get_nexts(code);</div>
+<div class="line"><a id="l08090" name="l08090"></a><span class="lineno"> 8090</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;next: nexts) {</div>
+<div class="line"><a id="l08091" name="l08091"></a><span class="lineno"> 8091</span>                    <span class="keywordflow">if</span>(!vis.contains(next)) {</div>
+<div class="line"><a id="l08092" name="l08092"></a><span class="lineno"> 8092</span>                        vis.insert(next);</div>
+<div class="line"><a id="l08093" name="l08093"></a><span class="lineno"> 8093</span>                        <span class="keywordflow">if</span>(next == target) {</div>
+<div class="line"><a id="l08094" name="l08094"></a><span class="lineno"> 8094</span>                            <span class="keywordflow">return</span> step + 1;</div>
+<div class="line"><a id="l08095" name="l08095"></a><span class="lineno"> 8095</span>                        }</div>
+<div class="line"><a id="l08096" name="l08096"></a><span class="lineno"> 8096</span>                        q.push({step + 1, next});</div>
+<div class="line"><a id="l08097" name="l08097"></a><span class="lineno"> 8097</span>                    }</div>
+<div class="line"><a id="l08098" name="l08098"></a><span class="lineno"> 8098</span>                }</div>
+<div class="line"><a id="l08099" name="l08099"></a><span class="lineno"> 8099</span>            }</div>
+<div class="line"><a id="l08100" name="l08100"></a><span class="lineno"> 8100</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l08101" name="l08101"></a><span class="lineno"> 8101</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l03748">leetcode::open_the_lock::TEST()</a>.</p>
 

@@ -121,31 +121,31 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07789">7789</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07789" name="l07789"></a><span class="lineno"> 7789</span>                                                           {</div>
-<div class="line"><a id="l07790" name="l07790"></a><span class="lineno"> 7790</span>            <span class="keywordflow">if</span>(len == 0) {</div>
-<div class="line"><a id="l07791" name="l07791"></a><span class="lineno"> 7791</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07792" name="l07792"></a><span class="lineno"> 7792</span>            }</div>
-<div class="line"><a id="l07793" name="l07793"></a><span class="lineno"> 7793</span>            <span class="keywordtype">int</span> current = 0;</div>
-<div class="line"><a id="l07794" name="l07794"></a><span class="lineno"> 7794</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; len; i++) {</div>
-<div class="line"><a id="l07795" name="l07795"></a><span class="lineno"> 7795</span>                <span class="keywordflow">if</span>(nums[i] == 0) {</div>
-<div class="line"><a id="l07796" name="l07796"></a><span class="lineno"> 7796</span>                    current++;</div>
-<div class="line"><a id="l07797" name="l07797"></a><span class="lineno"> 7797</span>                }</div>
-<div class="line"><a id="l07798" name="l07798"></a><span class="lineno"> 7798</span>            }</div>
-<div class="line"><a id="l07799" name="l07799"></a><span class="lineno"> 7799</span>            <span class="keywordtype">int</span> ans = current;</div>
-<div class="line"><a id="l07800" name="l07800"></a><span class="lineno"> 7800</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0, j = len; j &lt; nums.size(); i++, j++) {</div>
-<div class="line"><a id="l07801" name="l07801"></a><span class="lineno"> 7801</span>                <span class="keywordflow">if</span>(nums[i] == 0) {</div>
-<div class="line"><a id="l07802" name="l07802"></a><span class="lineno"> 7802</span>                    current--;</div>
-<div class="line"><a id="l07803" name="l07803"></a><span class="lineno"> 7803</span>                }</div>
-<div class="line"><a id="l07804" name="l07804"></a><span class="lineno"> 7804</span>                <span class="keywordflow">if</span>(nums[j] == 0) {</div>
-<div class="line"><a id="l07805" name="l07805"></a><span class="lineno"> 7805</span>                    current++;</div>
-<div class="line"><a id="l07806" name="l07806"></a><span class="lineno"> 7806</span>                }</div>
-<div class="line"><a id="l07807" name="l07807"></a><span class="lineno"> 7807</span>                ans = min(ans, current);</div>
-<div class="line"><a id="l07808" name="l07808"></a><span class="lineno"> 7808</span>            }</div>
-<div class="line"><a id="l07809" name="l07809"></a><span class="lineno"> 7809</span>            <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a id="l07810" name="l07810"></a><span class="lineno"> 7810</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07785">7785</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07785" name="l07785"></a><span class="lineno"> 7785</span>                                                           {</div>
+<div class="line"><a id="l07786" name="l07786"></a><span class="lineno"> 7786</span>            <span class="keywordflow">if</span>(len == 0) {</div>
+<div class="line"><a id="l07787" name="l07787"></a><span class="lineno"> 7787</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07788" name="l07788"></a><span class="lineno"> 7788</span>            }</div>
+<div class="line"><a id="l07789" name="l07789"></a><span class="lineno"> 7789</span>            <span class="keywordtype">int</span> current = 0;</div>
+<div class="line"><a id="l07790" name="l07790"></a><span class="lineno"> 7790</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; len; i++) {</div>
+<div class="line"><a id="l07791" name="l07791"></a><span class="lineno"> 7791</span>                <span class="keywordflow">if</span>(nums[i] == 0) {</div>
+<div class="line"><a id="l07792" name="l07792"></a><span class="lineno"> 7792</span>                    current++;</div>
+<div class="line"><a id="l07793" name="l07793"></a><span class="lineno"> 7793</span>                }</div>
+<div class="line"><a id="l07794" name="l07794"></a><span class="lineno"> 7794</span>            }</div>
+<div class="line"><a id="l07795" name="l07795"></a><span class="lineno"> 7795</span>            <span class="keywordtype">int</span> ans = current;</div>
+<div class="line"><a id="l07796" name="l07796"></a><span class="lineno"> 7796</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0, j = len; j &lt; nums.size(); i++, j++) {</div>
+<div class="line"><a id="l07797" name="l07797"></a><span class="lineno"> 7797</span>                <span class="keywordflow">if</span>(nums[i] == 0) {</div>
+<div class="line"><a id="l07798" name="l07798"></a><span class="lineno"> 7798</span>                    current--;</div>
+<div class="line"><a id="l07799" name="l07799"></a><span class="lineno"> 7799</span>                }</div>
+<div class="line"><a id="l07800" name="l07800"></a><span class="lineno"> 7800</span>                <span class="keywordflow">if</span>(nums[j] == 0) {</div>
+<div class="line"><a id="l07801" name="l07801"></a><span class="lineno"> 7801</span>                    current++;</div>
+<div class="line"><a id="l07802" name="l07802"></a><span class="lineno"> 7802</span>                }</div>
+<div class="line"><a id="l07803" name="l07803"></a><span class="lineno"> 7803</span>                ans = min(ans, current);</div>
+<div class="line"><a id="l07804" name="l07804"></a><span class="lineno"> 7804</span>            }</div>
+<div class="line"><a id="l07805" name="l07805"></a><span class="lineno"> 7805</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l07806" name="l07806"></a><span class="lineno"> 7806</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l07774">longestOnes()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l07770">longestOnes()</a>.</p>
 
 </div>
 </div>
@@ -183,24 +183,24 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07774">7774</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07774" name="l07774"></a><span class="lineno"> 7774</span>                                                          {</div>
-<div class="line"><a id="l07775" name="l07775"></a><span class="lineno"> 7775</span>            <span class="keywordtype">int</span> l = 0;</div>
-<div class="line"><a id="l07776" name="l07776"></a><span class="lineno"> 7776</span>            <span class="keywordtype">int</span> r = nums.size();</div>
-<div class="line"><a id="l07777" name="l07777"></a><span class="lineno"> 7777</span>            <span class="keywordflow">while</span>(l &lt; r) {</div>
-<div class="line"><a id="l07778" name="l07778"></a><span class="lineno"> 7778</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> mid = (l + r) / 2 + 1;</div>
-<div class="line"><a id="l07779" name="l07779"></a><span class="lineno"> 7779</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> res = <a class="code hl_function" href="../../d8/d09/a02624.html#a42fa4542affad71b11f7c2ae81661921">cntMinFlip</a>(nums, mid);</div>
-<div class="line"><a id="l07780" name="l07780"></a><span class="lineno"> 7780</span>                <span class="keywordflow">if</span>(res &gt; k) {</div>
-<div class="line"><a id="l07781" name="l07781"></a><span class="lineno"> 7781</span>                    r = mid - 1;</div>
-<div class="line"><a id="l07782" name="l07782"></a><span class="lineno"> 7782</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07783" name="l07783"></a><span class="lineno"> 7783</span>                    l = mid;</div>
-<div class="line"><a id="l07784" name="l07784"></a><span class="lineno"> 7784</span>                }</div>
-<div class="line"><a id="l07785" name="l07785"></a><span class="lineno"> 7785</span>            }</div>
-<div class="line"><a id="l07786" name="l07786"></a><span class="lineno"> 7786</span>            <span class="keywordflow">return</span> l;</div>
-<div class="line"><a id="l07787" name="l07787"></a><span class="lineno"> 7787</span>        }</div>
-<div class="ttc" id="aa02624_html_a42fa4542affad71b11f7c2ae81661921"><div class="ttname"><a href="../../d8/d09/a02624.html#a42fa4542affad71b11f7c2ae81661921">leetcode::max_consecutive_ones_iii::Solution::cntMinFlip</a></div><div class="ttdeci">static int cntMinFlip(vector&lt; int &gt; &amp;nums, int len)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l07789">leetcode.cpp:7789</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07770">7770</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07770" name="l07770"></a><span class="lineno"> 7770</span>                                                          {</div>
+<div class="line"><a id="l07771" name="l07771"></a><span class="lineno"> 7771</span>            <span class="keywordtype">int</span> l = 0;</div>
+<div class="line"><a id="l07772" name="l07772"></a><span class="lineno"> 7772</span>            <span class="keywordtype">int</span> r = nums.size();</div>
+<div class="line"><a id="l07773" name="l07773"></a><span class="lineno"> 7773</span>            <span class="keywordflow">while</span>(l &lt; r) {</div>
+<div class="line"><a id="l07774" name="l07774"></a><span class="lineno"> 7774</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> mid = (l + r) / 2 + 1;</div>
+<div class="line"><a id="l07775" name="l07775"></a><span class="lineno"> 7775</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> res = <a class="code hl_function" href="../../d8/d09/a02624.html#a42fa4542affad71b11f7c2ae81661921">cntMinFlip</a>(nums, mid);</div>
+<div class="line"><a id="l07776" name="l07776"></a><span class="lineno"> 7776</span>                <span class="keywordflow">if</span>(res &gt; k) {</div>
+<div class="line"><a id="l07777" name="l07777"></a><span class="lineno"> 7777</span>                    r = mid - 1;</div>
+<div class="line"><a id="l07778" name="l07778"></a><span class="lineno"> 7778</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07779" name="l07779"></a><span class="lineno"> 7779</span>                    l = mid;</div>
+<div class="line"><a id="l07780" name="l07780"></a><span class="lineno"> 7780</span>                }</div>
+<div class="line"><a id="l07781" name="l07781"></a><span class="lineno"> 7781</span>            }</div>
+<div class="line"><a id="l07782" name="l07782"></a><span class="lineno"> 7782</span>            <span class="keywordflow">return</span> l;</div>
+<div class="line"><a id="l07783" name="l07783"></a><span class="lineno"> 7783</span>        }</div>
+<div class="ttc" id="aa02624_html_a42fa4542affad71b11f7c2ae81661921"><div class="ttname"><a href="../../d8/d09/a02624.html#a42fa4542affad71b11f7c2ae81661921">leetcode::max_consecutive_ones_iii::Solution::cntMinFlip</a></div><div class="ttdeci">static int cntMinFlip(vector&lt; int &gt; &amp;nums, int len)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l07785">leetcode.cpp:7785</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l07789">cntMinFlip()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l07785">cntMinFlip()</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l03655">leetcode::max_consecutive_ones_iii::TEST()</a>.</p>
 

@@ -119,27 +119,27 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07754">7754</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l07754" name="l07754"></a><span class="lineno"> 7754</span>                                                                              {</div>
-<div class="line"><a id="l07755" name="l07755"></a><span class="lineno"> 7755</span>            <span class="keywordflow">if</span>(k == 0) {</div>
-<div class="line"><a id="l07756" name="l07756"></a><span class="lineno"> 7756</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l07757" name="l07757"></a><span class="lineno"> 7757</span>            }</div>
-<div class="line"><a id="l07758" name="l07758"></a><span class="lineno"> 7758</span>            <span class="keywordtype">int</span> l = 1;</div>
-<div class="line"><a id="l07759" name="l07759"></a><span class="lineno"> 7759</span>            <span class="keywordtype">int</span> r = s.length();</div>
-<div class="line"><a id="l07760" name="l07760"></a><span class="lineno"> 7760</span>            <span class="keywordflow">while</span>(l &lt; r) {</div>
-<div class="line"><a id="l07761" name="l07761"></a><span class="lineno"> 7761</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> mid = (l + r) / 2 + 1;</div>
-<div class="line"><a id="l07762" name="l07762"></a><span class="lineno"> 7762</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> res = <a class="code hl_function" href="../../d6/dca/a02616.html#abe3836326ca5dd7ecd29c3f6be564a8d">longest_substring_with_at_most_two_distinct_characters::Solution::getMinUniqueCharCnt</a>(s, mid);</div>
-<div class="line"><a id="l07763" name="l07763"></a><span class="lineno"> 7763</span>                <span class="keywordflow">if</span>(res &gt; k) {</div>
-<div class="line"><a id="l07764" name="l07764"></a><span class="lineno"> 7764</span>                    r = mid - 1;</div>
-<div class="line"><a id="l07765" name="l07765"></a><span class="lineno"> 7765</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l07766" name="l07766"></a><span class="lineno"> 7766</span>                    l = mid;</div>
-<div class="line"><a id="l07767" name="l07767"></a><span class="lineno"> 7767</span>                }</div>
-<div class="line"><a id="l07768" name="l07768"></a><span class="lineno"> 7768</span>            }</div>
-<div class="line"><a id="l07769" name="l07769"></a><span class="lineno"> 7769</span>            <span class="keywordflow">return</span> l;</div>
-<div class="line"><a id="l07770" name="l07770"></a><span class="lineno"> 7770</span>        }</div>
-<div class="ttc" id="aa02616_html_abe3836326ca5dd7ecd29c3f6be564a8d"><div class="ttname"><a href="../../d6/dca/a02616.html#abe3836326ca5dd7ecd29c3f6be564a8d">leetcode::longest_substring_with_at_most_two_distinct_characters::Solution::getMinUniqueCharCnt</a></div><div class="ttdeci">static int getMinUniqueCharCnt(const string &amp;s, int len)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l07720">leetcode.cpp:7720</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l07750">7750</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l07750" name="l07750"></a><span class="lineno"> 7750</span>                                                                              {</div>
+<div class="line"><a id="l07751" name="l07751"></a><span class="lineno"> 7751</span>            <span class="keywordflow">if</span>(k == 0) {</div>
+<div class="line"><a id="l07752" name="l07752"></a><span class="lineno"> 7752</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l07753" name="l07753"></a><span class="lineno"> 7753</span>            }</div>
+<div class="line"><a id="l07754" name="l07754"></a><span class="lineno"> 7754</span>            <span class="keywordtype">int</span> l = 1;</div>
+<div class="line"><a id="l07755" name="l07755"></a><span class="lineno"> 7755</span>            <span class="keywordtype">int</span> r = s.length();</div>
+<div class="line"><a id="l07756" name="l07756"></a><span class="lineno"> 7756</span>            <span class="keywordflow">while</span>(l &lt; r) {</div>
+<div class="line"><a id="l07757" name="l07757"></a><span class="lineno"> 7757</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> mid = (l + r) / 2 + 1;</div>
+<div class="line"><a id="l07758" name="l07758"></a><span class="lineno"> 7758</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> res = <a class="code hl_function" href="../../d6/dca/a02616.html#abe3836326ca5dd7ecd29c3f6be564a8d">longest_substring_with_at_most_two_distinct_characters::Solution::getMinUniqueCharCnt</a>(s, mid);</div>
+<div class="line"><a id="l07759" name="l07759"></a><span class="lineno"> 7759</span>                <span class="keywordflow">if</span>(res &gt; k) {</div>
+<div class="line"><a id="l07760" name="l07760"></a><span class="lineno"> 7760</span>                    r = mid - 1;</div>
+<div class="line"><a id="l07761" name="l07761"></a><span class="lineno"> 7761</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l07762" name="l07762"></a><span class="lineno"> 7762</span>                    l = mid;</div>
+<div class="line"><a id="l07763" name="l07763"></a><span class="lineno"> 7763</span>                }</div>
+<div class="line"><a id="l07764" name="l07764"></a><span class="lineno"> 7764</span>            }</div>
+<div class="line"><a id="l07765" name="l07765"></a><span class="lineno"> 7765</span>            <span class="keywordflow">return</span> l;</div>
+<div class="line"><a id="l07766" name="l07766"></a><span class="lineno"> 7766</span>        }</div>
+<div class="ttc" id="aa02616_html_abe3836326ca5dd7ecd29c3f6be564a8d"><div class="ttname"><a href="../../d6/dca/a02616.html#abe3836326ca5dd7ecd29c3f6be564a8d">leetcode::longest_substring_with_at_most_two_distinct_characters::Solution::getMinUniqueCharCnt</a></div><div class="ttdeci">static int getMinUniqueCharCnt(const string &amp;s, int len)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l07716">leetcode.cpp:7716</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l07720">leetcode::longest_substring_with_at_most_two_distinct_characters::Solution::getMinUniqueCharCnt()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l07716">leetcode::longest_substring_with_at_most_two_distinct_characters::Solution::getMinUniqueCharCnt()</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l03645">leetcode::longest_substring_with_at_most_k_distinct_characters::TEST()</a>.</p>
 

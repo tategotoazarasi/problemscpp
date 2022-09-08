@@ -117,8 +117,8 @@ $(function() {
 <div class="line"><a id="l05161" name="l05161"></a><span class="lineno"> 5161</span>                <span class="keywordtype">int</span> n;</div>
 <div class="line"><a id="l05162" name="l05162"></a><span class="lineno"> 5162</span>                <span class="keywordtype">int</span> t;</div>
 <div class="line"><a id="l05163" name="l05163"></a><span class="lineno"> 5163</span>                cin &gt;&gt; n &gt;&gt; t;</div>
-<div class="line"><a id="l05164" name="l05164"></a><span class="lineno"> 5164</span>                vector&lt;int&gt; out(n + 1, 0);</div>
-<div class="line"><a id="l05165" name="l05165"></a><span class="lineno"> 5165</span>                vector&lt;int&gt; in(n + 1, 0);</div>
+<div class="line"><a id="l05164" name="l05164"></a><span class="lineno"> 5164</span>                vector out(n + 1, 0);</div>
+<div class="line"><a id="l05165" name="l05165"></a><span class="lineno"> 5165</span>                vector in(n + 1, 0);</div>
 <div class="line"><a id="l05166" name="l05166"></a><span class="lineno"> 5166</span>                vector&lt;unordered_set&lt;int&gt;&gt; following(n + 1);</div>
 <div class="line"><a id="l05167" name="l05167"></a><span class="lineno"> 5167</span>                unordered_map&lt;int, int&gt; kols;</div>
 <div class="line"><a id="l05168" name="l05168"></a><span class="lineno"> 5168</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
@@ -134,14 +134,14 @@ $(function() {
 <div class="line"><a id="l05178" name="l05178"></a><span class="lineno"> 5178</span>                }</div>
 <div class="line"><a id="l05179" name="l05179"></a><span class="lineno"> 5179</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
 <div class="line"><a id="l05180" name="l05180"></a><span class="lineno"> 5180</span>                    <span class="keywordflow">if</span>(out[i] == 0 || in[i] / following[i].size() &gt;= t) {</div>
-<div class="line"><a id="l05181" name="l05181"></a><span class="lineno"> 5181</span>                        <span class="keywordflow">if</span>(kols.count(i) == 0U) {</div>
+<div class="line"><a id="l05181" name="l05181"></a><span class="lineno"> 5181</span>                        <span class="keywordflow">if</span>(!kols.contains(i)) {</div>
 <div class="line"><a id="l05182" name="l05182"></a><span class="lineno"> 5182</span>                            kols[i] = 0;</div>
 <div class="line"><a id="l05183" name="l05183"></a><span class="lineno"> 5183</span>                        }</div>
 <div class="line"><a id="l05184" name="l05184"></a><span class="lineno"> 5184</span>                    }</div>
 <div class="line"><a id="l05185" name="l05185"></a><span class="lineno"> 5185</span>                }</div>
 <div class="line"><a id="l05186" name="l05186"></a><span class="lineno"> 5186</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;kol: kols) {</div>
 <div class="line"><a id="l05187" name="l05187"></a><span class="lineno"> 5187</span>                    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;fo: following[kol.first]) {</div>
-<div class="line"><a id="l05188" name="l05188"></a><span class="lineno"> 5188</span>                        <span class="keywordflow">if</span>(kols.count(fo) != 0U) {</div>
+<div class="line"><a id="l05188" name="l05188"></a><span class="lineno"> 5188</span>                        <span class="keywordflow">if</span>(kols.contains(fo)) {</div>
 <div class="line"><a id="l05189" name="l05189"></a><span class="lineno"> 5189</span>                            kols[fo]++;</div>
 <div class="line"><a id="l05190" name="l05190"></a><span class="lineno"> 5190</span>                        }</div>
 <div class="line"><a id="l05191" name="l05191"></a><span class="lineno"> 5191</span>                    }</div>

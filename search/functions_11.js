@@ -8,7 +8,7 @@ var searchData=
   ['reflect_5',['reflect',['../d2/db1/a00070.html#ade795c201255aa53c1a422998a109e2a',1,'acwing::acwing1929::reflect()'],['../d1/d7a/a03080.html#a6c9eae7885e2cc9f1e65b8fcc01d64b8',1,'luogu::P1205::reflect()']]],
   ['remove_6',['remove',['../da/d75/a02372.html#a85042c46929ee55c4660bbf87e0636a9',1,'leetcode::insert_delete_getrandom_o1::RandomizedSet::remove()'],['../da/dc4/a02548.html#a9725d6d54e6ee31a9e66b775de4c514d',1,'leetcode::design_hashmap::MyHashMap::remove()'],['../d7/d66/a02580.html#aaf5e3efbe626cd46ea4644caabd0dca4',1,'leetcode::delete_node_in_a_bst::Solution::remove()']]],
   ['removeextra_7',['removeExtra',['../dc/d3d/a02752.html#aa0e49e4d04ff089fe090aaf88dd3a96a',1,'lintcode::remove_extra::Solution']]],
-  ['removeinvalidparentheses_8',['removeInvalidParentheses',['../d5/d95/a02720.html#a5363855fd21bc5c3536fd13b9fec3424',1,'leetcode::remove_invalid_parentheses::Solution']]],
+  ['removeinvalidparentheses_8',['removeInvalidParentheses',['../d5/d95/a02720.html#ab2a8d44b423c4c9ef810a32865d439af',1,'leetcode::remove_invalid_parentheses::Solution']]],
   ['removepalindromesub_9',['removePalindromeSub',['../de/d5c/a01708.html#a1cc7901fe6d27921d87159c963fa4fe2',1,'leetcode::remove_palindromic_subsequences::Solution']]],
   ['reorderarray_10',['reOrderArray',['../df/d31/a01440.html#acb2fb42e747873f57a8e1b54665fd63c',1,'acwing::acwing32::Solution']]],
   ['repeatlimitedstring_11',['repeatLimitedString',['../d5/da1/a01988.html#aef77f8a5a379aff617a15b8e98984452',1,'leetcode::construct_string_with_repeat_limit::Solution']]],

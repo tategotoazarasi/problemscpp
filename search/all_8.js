@@ -21,10 +21,10 @@ var searchData=
   ['isadditivenumber_18',['isAdditiveNumber',['../de/df9/a01624.html#aa1426047cab79e73a543f4f950d6134b',1,'leetcode::additive_number::Solution']]],
   ['isescapepossible_19',['isEscapePossible',['../de/d14/a01640.html#a69cf50184b8862da398384c6cc88d0b7',1,'leetcode::escape_a_large_maze::Solution']]],
   ['isfirstrun_20',['isFirstRun',['../d6/d06/a00572.html#a734288ac1b1bfb30fca216ff9ad9da9f',1,'pat::a::a7_2']]],
-  ['ismatch_21',['isMatch',['../df/dc7/a02712.html#a7f1f14a67b90122b7f72479ce896a4e1',1,'leetcode::regular_expression_matching::Solution']]],
+  ['ismatch_21',['isMatch',['../df/dc7/a02712.html#a1132bf0e7bbfb4d34a552fc4106a4a4a',1,'leetcode::regular_expression_matching::Solution']]],
   ['isnstraighthand_22',['isNStraightHand',['../d6/d83/a01544.html#aaa9e63f5e810760226b4921275ae8869',1,'leetcode::hand_of_straights::Solution']]],
   ['isonebitcharacter_23',['isOneBitCharacter',['../d3/dcc/a01996.html#a878a22144be3e1d0fd3d9f4a6e9177cf',1,'leetcode::leetcode717_1_bit_and_2_bit_characters::Solution']]],
   ['issubtree_24',['isSubtree',['../d5/de6/a02424.html#ab46dfe4d50ff49aeab84a0886f162223',1,'leetcode::subtree_of_another_tree::Solution']]],
-  ['isvalid_25',['isValid',['../d5/d95/a02720.html#ab647c8b20e67cf0eec057c5aa552d172',1,'leetcode::remove_invalid_parentheses::Solution']]],
+  ['isvalid_25',['isValid',['../d5/d95/a02720.html#a440d5514a8839ae88ec791ebba6ce012',1,'leetcode::remove_invalid_parentheses::Solution']]],
   ['item_26',['item',['../df/de0/a01728.html#a49cd8b32a816723b12c492c0468541a1',1,'leetcode::k_highest_ranked_items_within_a_price_range::item::item()'],['../df/de0/a01728.html',1,'leetcode::k_highest_ranked_items_within_a_price_range::item']]]
 ];
