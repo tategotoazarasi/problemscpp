@@ -169,7 +169,7 @@ $(function() {
 <div class="line"><a id="l05228" name="l05228"></a><span class="lineno"> 5228</span>                iLeftEnd--;</div>
 <div class="line"><a id="l05229" name="l05229"></a><span class="lineno"> 5229</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> iRightStart = iLeftEnd + 2;</div>
 <div class="line"><a id="l05230" name="l05230"></a><span class="lineno"> 5230</span>                <span class="keywordtype">int</span> pLeftEnd          = pStart + 1;</div>
-<div class="line"><a id="l05231" name="l05231"></a><span class="lineno"> 5231</span>                <span class="keywordflow">while</span>(lefts.contains(preorder[pLeftEnd])) {</div>
+<div class="line"><a id="l05231" name="l05231"></a><span class="lineno"> 5231</span>                <span class="keywordflow">while</span>(pLeftEnd &lt; preorder.size() &amp;&amp; lefts.contains(preorder[pLeftEnd])) {</div>
 <div class="line"><a id="l05232" name="l05232"></a><span class="lineno"> 5232</span>                    pLeftEnd++;</div>
 <div class="line"><a id="l05233" name="l05233"></a><span class="lineno"> 5233</span>                }</div>
 <div class="line"><a id="l05234" name="l05234"></a><span class="lineno"> 5234</span>                node-&gt;left  = <a class="code hl_function" href="../../d4/dbe/a00574.html#aee9de65ae15037ef514b4ec73b2fcbff">genTree</a>(preorder, inorder, pStart + 1, pLeftEnd - 1, iStart, iLeftEnd);</div>

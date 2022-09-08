@@ -92,8 +92,8 @@ Private 成员函数</h2></td></tr>
 <tr class="separator:a81e533eb1a6842563c0ca2430918411d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff8b6750596094ff7d254539bb79552d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d59/a02728.html#aff8b6750596094ff7d254539bb79552d">Init</a> (int length)</td></tr>
 <tr class="separator:aff8b6750596094ff7d254539bb79552d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41039bf1ded955838858dcff0b07d822"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d59/a02728.html#a41039bf1ded955838858dcff0b07d822">Query</a> (int pos)</td></tr>
-<tr class="separator:a41039bf1ded955838858dcff0b07d822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c4b63f616f51a2c2b6ffc01d288a9d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d59/a02728.html#a9c4b63f616f51a2c2b6ffc01d288a9d6">Query</a> (int pos) const</td></tr>
+<tr class="separator:a9c4b63f616f51a2c2b6ffc01d288a9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae223743769f404044db4485c2aa0e875"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d59/a02728.html#ae223743769f404044db4485c2aa0e875">Update</a> (int pos)</td></tr>
 <tr class="separator:ae223743769f404044db4485c2aa0e875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -139,7 +139,7 @@ Private 属性</h2></td></tr>
 <div class="line"><a id="l08588" name="l08588"></a><span class="lineno"> 8588</span> </div>
 <div class="line"><a id="l08589" name="l08589"></a><span class="lineno"> 8589</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(nums.size()) - 1; i &gt;= 0; --i) {</div>
 <div class="line"><a id="l08590" name="l08590"></a><span class="lineno"> 8590</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span> = <a class="code hl_function" href="../../db/d59/a02728.html#a81e533eb1a6842563c0ca2430918411d">getId</a>(nums[i]);</div>
-<div class="line"><a id="l08591" name="l08591"></a><span class="lineno"> 8591</span>                resultList.push_back(<a class="code hl_function" href="../../db/d59/a02728.html#a41039bf1ded955838858dcff0b07d822">Query</a>(<span class="keywordtype">id</span> - 1));</div>
+<div class="line"><a id="l08591" name="l08591"></a><span class="lineno"> 8591</span>                resultList.push_back(<a class="code hl_function" href="../../db/d59/a02728.html#a9c4b63f616f51a2c2b6ffc01d288a9d6">Query</a>(<span class="keywordtype">id</span> - 1));</div>
 <div class="line"><a id="l08592" name="l08592"></a><span class="lineno"> 8592</span>                <a class="code hl_function" href="../../db/d59/a02728.html#ae223743769f404044db4485c2aa0e875">Update</a>(<span class="keywordtype">id</span>);</div>
 <div class="line"><a id="l08593" name="l08593"></a><span class="lineno"> 8593</span>            }</div>
 <div class="line"><a id="l08594" name="l08594"></a><span class="lineno"> 8594</span> </div>
@@ -148,8 +148,8 @@ Private 属性</h2></td></tr>
 <div class="line"><a id="l08597" name="l08597"></a><span class="lineno"> 8597</span>            <span class="keywordflow">return</span> resultList;</div>
 <div class="line"><a id="l08598" name="l08598"></a><span class="lineno"> 8598</span>        }</div>
 <div class="ttc" id="aa00560_html_a2724d481a2ed52d73c35113d80c1977a"><div class="ttname"><a href="../../d9/d19/a00560.html#a2724d481a2ed52d73c35113d80c1977a">pat::a::a1015::reverse</a></div><div class="ttdeci">unsigned reverse(unsigned int n, unsigned int d)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l04434">pat.cpp:4434</a></div></div>
-<div class="ttc" id="aa02728_html_a41039bf1ded955838858dcff0b07d822"><div class="ttname"><a href="../../db/d59/a02728.html#a41039bf1ded955838858dcff0b07d822">leetcode::count_of_smaller_numbers_after_self::Solution::Query</a></div><div class="ttdeci">int Query(int pos)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08611">leetcode.cpp:8611</a></div></div>
 <div class="ttc" id="aa02728_html_a81e533eb1a6842563c0ca2430918411d"><div class="ttname"><a href="../../db/d59/a02728.html#a81e533eb1a6842563c0ca2430918411d">leetcode::count_of_smaller_numbers_after_self::Solution::getId</a></div><div class="ttdeci">int getId(int x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08628">leetcode.cpp:8628</a></div></div>
+<div class="ttc" id="aa02728_html_a9c4b63f616f51a2c2b6ffc01d288a9d6"><div class="ttname"><a href="../../db/d59/a02728.html#a9c4b63f616f51a2c2b6ffc01d288a9d6">leetcode::count_of_smaller_numbers_after_self::Solution::Query</a></div><div class="ttdeci">int Query(int pos) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08611">leetcode.cpp:8611</a></div></div>
 <div class="ttc" id="aa02728_html_ac2dfe7d421c89c0e865617752a78a020"><div class="ttname"><a href="../../db/d59/a02728.html#ac2dfe7d421c89c0e865617752a78a020">leetcode::count_of_smaller_numbers_after_self::Solution::Discretization</a></div><div class="ttdeci">void Discretization(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08622">leetcode.cpp:8622</a></div></div>
 <div class="ttc" id="aa02728_html_ae223743769f404044db4485c2aa0e875"><div class="ttname"><a href="../../db/d59/a02728.html#ae223743769f404044db4485c2aa0e875">leetcode::count_of_smaller_numbers_after_self::Solution::Update</a></div><div class="ttdeci">void Update(int pos)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08604">leetcode.cpp:8604</a></div></div>
 <div class="ttc" id="aa02728_html_aff8b6750596094ff7d254539bb79552d"><div class="ttname"><a href="../../db/d59/a02728.html#aff8b6750596094ff7d254539bb79552d">leetcode::count_of_smaller_numbers_after_self::Solution::Init</a></div><div class="ttdeci">void Init(int length)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l08600">leetcode.cpp:8600</a></div></div>
@@ -296,8 +296,8 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a41039bf1ded955838858dcff0b07d822" name="a41039bf1ded955838858dcff0b07d822"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41039bf1ded955838858dcff0b07d822">&#9670;&nbsp;</a></span>Query()</h2>
+<a id="a9c4b63f616f51a2c2b6ffc01d288a9d6" name="a9c4b63f616f51a2c2b6ffc01d288a9d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c4b63f616f51a2c2b6ffc01d288a9d6">&#9670;&nbsp;</a></span>Query()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,7 +310,7 @@ Private 属性</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>pos</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -321,7 +321,7 @@ Private 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08611">8611</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08611" name="l08611"></a><span class="lineno"> 8611</span>                                   {</div>
+<div class="fragment"><div class="line"><a id="l08611" name="l08611"></a><span class="lineno"> 8611</span>                                         {</div>
 <div class="line"><a id="l08612" name="l08612"></a><span class="lineno"> 8612</span>            <span class="keywordtype">int</span> ret = 0;</div>
 <div class="line"><a id="l08613" name="l08613"></a><span class="lineno"> 8613</span> </div>
 <div class="line"><a id="l08614" name="l08614"></a><span class="lineno"> 8614</span>            <span class="keywordflow">while</span>(pos &gt; 0) {</div>
