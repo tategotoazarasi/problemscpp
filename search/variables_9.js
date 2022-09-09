@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['k_0',['k',['../d5/dba/a01940.html#a8e9c002415f8caeb62ab19c2d68e872e',1,'leetcode::knight_probability_in_chessboard::status']]],
-  ['key_1',['key',['../d3/d5d/a03328.html#adcd9765d413f7a9e9b8490e407cfb35e',1,'pat::a::a1020::TreeNode']]]
+  ['k_0',['k',['../d3/df9/a01942.html#a8e9c002415f8caeb62ab19c2d68e872e',1,'leetcode::knight_probability_in_chessboard::status']]],
+  ['key_1',['key',['../d6/d1c/a03346.html#adcd9765d413f7a9e9b8490e407cfb35e',1,'pat::a::a1020::TreeNode']]]
 ];

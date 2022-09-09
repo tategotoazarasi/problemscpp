@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hash_0',['hash',['../d1/dde/a01496.html',1,'acwing::acwing845']]]
+  ['hash_0',['hash',['../d6/dc9/a01498.html',1,'acwing::acwing845']]]
 ];
