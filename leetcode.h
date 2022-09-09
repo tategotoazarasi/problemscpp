@@ -3078,11 +3078,11 @@ namespace leetcode {
 			bool operator()(const pair<TreeNode *, bool> &p1, const pair<TreeNode *, bool> &p2) const;
 		};
 		class Solution {
-			static unordered_map<pair<TreeNode *, bool>, int, myhash, myeq> um;
+			unordered_map<pair<TreeNode *, bool>, int, myhash, myeq> um;
 
 		public:
-			static int dfs(bool steal, TreeNode *node);
-			static int rob(TreeNode *root);
+			int dfs(bool steal, TreeNode *node);
+			int rob(TreeNode *root);
 		};
 	}// namespace house_robber_iii
 }// namespace leetcode
