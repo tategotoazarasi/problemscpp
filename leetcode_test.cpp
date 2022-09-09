@@ -4020,4 +4020,21 @@ namespace leetcode {
 			ASSERT_EQ(6, Solution::maxProfit(prices, 3));
 		}
 	}// namespace best_time_to_buy_and_sell_stock_with_transaction_fee
+
+	namespace split_array_largest_sum {
+		TEST(split_array_largest_sum, case1) {
+			vector nums = {7, 2, 5, 10, 8};
+			ASSERT_EQ(18, Solution::splitArray(nums, 2));
+		}
+
+		TEST(split_array_largest_sum, case2) {
+			vector nums = {1, 2, 3, 4, 5};
+			ASSERT_EQ(9, Solution::splitArray(nums, 2));
+		}
+
+		TEST(split_array_largest_sum, case3) {
+			vector nums = {1, 4, 4};
+			ASSERT_EQ(4, Solution::splitArray(nums, 3));
+		}
+	}// namespace split_array_largest_sum
 }// namespace leetcode

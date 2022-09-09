@@ -5066,30 +5066,28 @@ namespace pat {
 
 		namespace a7_1 {
 			int main(istream &cin, ostream &cout) {
-				{
-					int n;
-					int h;
-					cin >> n >> h;
-					vector<int> balloons(n);
-					unordered_map<int, int> pos;
-					for(int i = 0; i < n; i++) {
-						cin >> balloons[i];
-						pos[balloons[i]] = i;
-					}
-					int maximum = 0;
-					int cnt     = 0;
-					for(int i = 0; i < n; i++) {
-						auto it     = lower_bound(balloons.begin(), balloons.end(), balloons[i] - h);
-						const int v = it - balloons.begin();
-						const int t = i - v + 1;
-						if(cnt < t) {
-							cnt     = t;
-							maximum = balloons[i] - h;
-						}
-					}
-					cout << maximum << ' ' << cnt;
-					return 0;
+				int n;
+				int h;
+				cin >> n >> h;
+				vector<int> balloons(n);
+				unordered_map<int, int> pos;
+				for(int i = 0; i < n; i++) {
+					cin >> balloons[i];
+					pos[balloons[i]] = i;
 				}
+				int maximum = 0;
+				int cnt     = 0;
+				for(int i = 0; i < n; i++) {
+					auto it     = lower_bound(balloons.begin(), balloons.end(), balloons[i] - h);
+					const int v = it - balloons.begin();
+					const int t = i - v + 1;
+					if(cnt < t) {
+						cnt     = t;
+						maximum = balloons[i] - h;
+					}
+				}
+				cout << maximum << ' ' << cnt;
+				return 0;
 			}
 		}// namespace a7_1
 
@@ -5209,7 +5207,6 @@ namespace pat {
 				}
 				return 0;
 			}
-
 		}// namespace a7_3
 
 		namespace a7_4 {
@@ -5328,7 +5325,6 @@ namespace pat {
 				}
 				return 0;
 			}
-
 		}// namespace a7_4
 	}    // namespace a
 

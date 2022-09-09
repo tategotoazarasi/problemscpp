@@ -3059,6 +3059,15 @@ namespace leetcode {
 			static int maxProfit(vector<int> &prices, int fee);
 		};
 	}// namespace best_time_to_buy_and_sell_stock_with_transaction_fee
+
+	/// \brief 410. 分割数组的最大值
+	namespace split_array_largest_sum {
+		class Solution {
+		public:
+			static int get_m(const vector<int> &nums, int msum);
+			static int splitArray(vector<int> &nums, int m);
+		};
+	}// namespace split_array_largest_sum
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

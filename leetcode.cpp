@@ -8660,4 +8660,43 @@ namespace leetcode {
 			return max(not_holding.back(), holding.back());
 		}
 	}// namespace best_time_to_buy_and_sell_stock_with_transaction_fee
+
+	namespace split_array_largest_sum {
+		int Solution::splitArray(vector<int> &nums, int m) {
+			int l = 0;
+			int r = 0;
+			for(auto num: nums) {
+				r += num;
+				l = max(l, num);
+			}
+			while(l < r) {
+				int mid = (l + r) / 2;
+				int cnt = get_m(nums, mid);
+				if(cnt == m) {
+					r = mid;
+				} else if(cnt > m) {
+					l = mid + 1;
+				} else if(cnt < m) {
+					r = mid - 1;
+				}
+			}
+			return l;
+		}
+
+		int Solution::get_m(const vector<int> &nums, int msum) {
+			int ans = 0;
+			int c   = 0;
+			for(auto num: nums) {
+				if(c + num > msum) {
+					ans++;
+					c = 0;
+				}
+				c += num;
+			}
+			if(c > 0) {
+				ans++;
+			}
+			return ans;
+		}
+	}// namespace split_array_largest_sum
 }// namespace leetcode
