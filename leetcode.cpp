@@ -8699,4 +8699,38 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace split_array_largest_sum
+
+	namespace house_robber_iii {
+		int Solution::rob(TreeNode *root) {
+			int ans = 0;
+			return max(dfs(true, root), dfs(false, root));
+		}
+
+		int Solution::dfs(bool steal, TreeNode *node) {
+			if(um.count({node, steal})) {
+				return um[{node, steal}];
+			}
+			int ans = steal ? node->val : 0;
+			if(node->left != nullptr) {
+				int ns = dfs(!steal, node->left);
+				int s  = (!steal) ? dfs(steal, node->left) : 0;
+				ans += max(s, ns);
+			}
+			if(node->right != nullptr) {
+				int ns = dfs(!steal, node->right);
+				int s  = (!steal) ? dfs(steal, node->right) : 0;
+				ans += max(s, ns);
+			}
+			um[{node, steal}] = ans;
+			return ans;
+		}
+
+		size_t myhash::operator()(const pair<TreeNode *, bool> &p) const {
+			return (uint64_t) p.first * 2 + (p.second ? 1 : 0);
+		}
+
+		bool myeq::operator()(const pair<TreeNode *, bool> &p1, const pair<TreeNode *, bool> &p2) const {
+			return p1.first == p2.first && p1.second == p2.second;
+		}
+	}// namespace house_robber_iii
 }// namespace leetcode

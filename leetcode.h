@@ -3068,6 +3068,23 @@ namespace leetcode {
 			static int splitArray(vector<int> &nums, int m);
 		};
 	}// namespace split_array_largest_sum
+
+	/// \brief 337. 打家劫舍 III
+	namespace house_robber_iii {
+		struct myhash {
+			size_t operator()(const pair<TreeNode *, bool> &p) const;
+		};
+		struct myeq {
+			bool operator()(const pair<TreeNode *, bool> &p1, const pair<TreeNode *, bool> &p2) const;
+		};
+		class Solution {
+			static unordered_map<pair<TreeNode *, bool>, int, myhash, myeq> um;
+
+		public:
+			static int dfs(bool steal, TreeNode *node);
+			static int rob(TreeNode *root);
+		};
+	}// namespace house_robber_iii
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
