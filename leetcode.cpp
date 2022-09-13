@@ -8733,4 +8733,46 @@ namespace leetcode {
 			return p1.first == p2.first && p1.second == p2.second;
 		}
 	}// namespace house_robber_iii
+
+	namespace maximal_square {
+		int Solution::maximalSquare(vector<vector<char>> &matrix) {
+			int m = matrix.size();
+			int n = matrix[0].size();
+			vector<vector<int>> horizontal_next_1s(m, vector<int>(n, 0));
+			vector<vector<int>> vertical_next_1s(m, vector<int>(n, 0));
+			vector<vector<int>> dp(m + 1, vector<int>(n + 1, 0));
+			for(int i = 0; i < m; i++) {
+				int cnt = 0;
+				for(int j = n - 1; j >= 0; j--) {
+					if(matrix[i][j] == '1') {
+						cnt++;
+					} else {
+						cnt = 0;
+					}
+					horizontal_next_1s[i][j] = cnt;
+				}
+			}
+			for(int j = 0; j < n; j++) {
+				int cnt = 0;
+				for(int i = m - 1; i >= 0; i--) {
+					if(matrix[i][j] == '1') {
+						cnt++;
+					} else {
+						cnt = 0;
+					}
+					vertical_next_1s[i][j] = cnt;
+				}
+			}
+			int ans = 0;
+			for(int i = m - 1; i >= 0; i--) {
+				for(int j = n - 1; j >= 0; j--) {
+					if(matrix[i][j] == '1') {
+						dp[i][j] = min(min(vertical_next_1s[i][j], horizontal_next_1s[i][j]), 1 + dp[i + 1][j + 1]);
+						ans      = max(ans, dp[i][j]);
+					}
+				}
+			}
+			return ans * ans;
+		}
+	}// namespace maximal_square
 }// namespace leetcode

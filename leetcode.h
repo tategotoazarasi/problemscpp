@@ -3085,6 +3085,14 @@ namespace leetcode {
 			int rob(TreeNode *root);
 		};
 	}// namespace house_robber_iii
+
+	/// \brief 221. 最大正方形
+	namespace maximal_square {
+		class Solution {
+		public:
+			static int maximalSquare(vector<vector<char>> &matrix);
+		};
+	}// namespace maximal_square
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

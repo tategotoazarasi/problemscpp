@@ -4037,4 +4037,21 @@ namespace leetcode {
 			ASSERT_EQ(4, Solution::splitArray(nums, 3));
 		}
 	}// namespace split_array_largest_sum
+
+	namespace maximal_square {
+		TEST(maximal_square, case1) {
+			vector<vector<char>> matrix = {{'1', '0', '1', '0', '0'}, {'1', '0', '1', '1', '1'}, {'1', '1', '1', '1', '1'}, {'1', '0', '0', '1', '0'}};
+			ASSERT_EQ(4, Solution::maximalSquare(matrix));
+		}
+
+		TEST(maximal_square, case2) {
+			vector<vector<char>> matrix = {{'0', '1'}, {'1', '0'}};
+			ASSERT_EQ(1, Solution::maximalSquare(matrix));
+		}
+
+		TEST(maximal_square, case3) {
+			vector<vector<char>> matrix = {{'0'}};
+			ASSERT_EQ(0, Solution::maximalSquare(matrix));
+		}
+	}// namespace maximal_square
 }// namespace leetcode
