@@ -3109,6 +3109,16 @@ namespace leetcode {
 			static bool PredictTheWinner(vector<int> &nums);
 		};
 	}// namespace predict_the_winner
+
+	/// \brief 131. 分割回文串
+	namespace palindrome_partitioning {
+		class Solution {
+		public:
+			static bool is_palindromic(const string &s, int start, int end);
+			static void dfs(vector<string> current, const string &s, vector<vector<string>> &ans, int start, int cursor);
+			static vector<vector<string>> partition(string s);
+		};
+	}// namespace palindrome_partitioning
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

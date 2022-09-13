@@ -4093,4 +4093,18 @@ namespace leetcode {
 			ASSERT_TRUE(Solution::PredictTheWinner(nums));
 		}
 	}// namespace predict_the_winner
+
+	namespace palindrome_partitioning {
+		TEST(palindrome_partitioning, case1) {
+			string s                   = "aab";
+			vector<vector<string>> ans = {{"a", "a", "b"}, {"aa", "b"}};
+			ASSERT_EQ(ans, Solution::partition(s));
+		}
+
+		TEST(palindrome_partitioning, case2) {
+			string s                   = "a";
+			vector<vector<string>> ans = {{"a"}};
+			ASSERT_EQ(ans, Solution::partition(s));
+		}
+	}// namespace palindrome_partitioning
 }// namespace leetcode

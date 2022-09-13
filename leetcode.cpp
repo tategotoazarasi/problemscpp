@@ -8839,4 +8839,40 @@ namespace leetcode {
 			return dp[length - 1] >= 0;
 		}
 	}// namespace predict_the_winner
+
+	namespace palindrome_partitioning {
+
+		vector<vector<string>> Solution::partition(string s) {
+			vector<string> vec;
+			vector<vector<string>> ans;
+			dfs(vec, s, ans, 0, 0);
+			return ans;
+		}
+
+		bool Solution::is_palindromic(const string &s, int start, int end) {
+			for(int i = start, j = end; i < j; i++, j--) {
+				if(s[i] != s[j]) {
+					return false;
+				}
+			}
+			return true;
+		}
+
+		void Solution::dfs(vector<string> current, const string &s, vector<vector<string>> &ans, int start, int cursor) {
+			if(cursor == s.length() - 1 && is_palindromic(s, start, cursor)) {
+				ans.emplace_back(current);
+				ans.back().emplace_back(s.substr(start, cursor - start + 1));
+				return;
+			}
+			if(cursor >= s.length() - 1 || start >= s.length()) {
+				return;
+			}
+			if(is_palindromic(s, start, cursor)) {
+				vector next = current;
+				next.emplace_back(s.substr(start, cursor - start + 1));
+				dfs(next, s, ans, cursor + 1, cursor + 1);
+			}
+			dfs(current, s, ans, start, cursor + 1);
+		}
+	}// namespace palindrome_partitioning
 }// namespace leetcode
