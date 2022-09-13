@@ -3135,6 +3135,14 @@ namespace leetcode {
 			static bool canPartition(vector<int> &nums);
 		};
 	}// namespace partition_equal_subset_sum
+
+	/// \brief 983. 最低票价
+	namespace minimum_cost_for_tickets {
+		class Solution {
+		public:
+			static int mincostTickets(vector<int> &days, vector<int> &costs);
+		};
+	}// namespace minimum_cost_for_tickets
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

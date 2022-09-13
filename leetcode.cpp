@@ -8941,4 +8941,25 @@ namespace leetcode {
 			return dp[n - 1][target];
 		}
 	}// namespace partition_equal_subset_sum
+
+	namespace minimum_cost_for_tickets {
+		int Solution::mincostTickets(vector<int> &days, vector<int> &costs) {
+			unordered_set<int> us;
+			int end = 0;
+			for(const auto &day: days) {
+				us.insert(day);
+				end = max(end, day);
+			}
+			vector<int> dp(end + 1, 0);
+			for(int i = 1; i <= end; i++) {
+				dp[i] = i - 1 >= 0 ? dp[i - 1] : 0;
+				if(us.count(i)) {
+					dp[i] += costs[0];
+					dp[i] = min(dp[i], (i - 7 >= 0 ? dp[i - 7] : 0) + costs[1]);
+					dp[i] = min(dp[i], (i - 30 >= 0 ? dp[i - 30] : 0) + costs[2]);
+				}
+			}
+			return dp.back();
+		}
+	}// namespace minimum_cost_for_tickets
 }// namespace leetcode

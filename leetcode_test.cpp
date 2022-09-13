@@ -4136,4 +4136,18 @@ namespace leetcode {
 			ASSERT_FALSE(Solution::canPartition(nums));
 		}
 	}// namespace partition_equal_subset_sum
+
+	namespace minimum_cost_for_tickets {
+		TEST(minimum_cost_for_tickets, case1) {
+			vector days  = {1, 4, 6, 7, 8, 20};
+			vector costs = {2, 7, 15};
+			ASSERT_EQ(11, Solution::mincostTickets(days, costs));
+		}
+
+		TEST(minimum_cost_for_tickets, case2) {
+			vector days  = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30, 31};
+			vector costs = {2, 7, 15};
+			ASSERT_EQ(17, Solution::mincostTickets(days, costs));
+		}
+	}// namespace minimum_cost_for_tickets
 }// namespace leetcode
