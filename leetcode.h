@@ -3101,6 +3101,14 @@ namespace leetcode {
 			static int maximalRectangle(vector<vector<char>> &matrix);
 		};
 	}// namespace maximal_rectangle
+
+	/// \brief 486. 预测赢家
+	namespace predict_the_winner {
+		class Solution {
+		public:
+			static bool PredictTheWinner(vector<int> &nums);
+		};
+	}// namespace predict_the_winner
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -4081,4 +4081,16 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::maximalRectangle(matrix));
 		}
 	}// namespace maximal_rectangle
+
+	namespace predict_the_winner {
+		TEST(predict_the_winner, case1) {
+			vector nums = {1, 5, 2};
+			ASSERT_FALSE(Solution::PredictTheWinner(nums));
+		}
+
+		TEST(predict_the_winner, case2) {
+			vector nums = {1, 5, 233, 7};
+			ASSERT_TRUE(Solution::PredictTheWinner(nums));
+		}
+	}// namespace predict_the_winner
 }// namespace leetcode
