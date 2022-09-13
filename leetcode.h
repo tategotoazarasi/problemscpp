@@ -3127,6 +3127,14 @@ namespace leetcode {
 			static int minCut(string s);
 		};
 	}// namespace palindrome_partitioning_ii
+
+	/// \brief 416. 分割等和子集
+	namespace partition_equal_subset_sum {
+		class Solution {
+		public:
+			static bool canPartition(vector<int> &nums);
+		};
+	}// namespace partition_equal_subset_sum
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -4124,4 +4124,16 @@ namespace leetcode {
 			ASSERT_EQ(1, Solution::minCut(s));
 		}
 	}// namespace palindrome_partitioning_ii
+
+	namespace partition_equal_subset_sum {
+		TEST(partition_equal_subset_sum, case1) {
+			vector nums = {1, 5, 11, 5};
+			ASSERT_TRUE(Solution::canPartition(nums));
+		}
+
+		TEST(partition_equal_subset_sum, case2) {
+			vector nums = {1, 2, 3, 5};
+			ASSERT_FALSE(Solution::canPartition(nums));
+		}
+	}// namespace partition_equal_subset_sum
 }// namespace leetcode
