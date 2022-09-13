@@ -3093,6 +3093,14 @@ namespace leetcode {
 			static int maximalSquare(vector<vector<char>> &matrix);
 		};
 	}// namespace maximal_square
+
+	/// \brief 85. 最大矩形
+	namespace maximal_rectangle {
+		class Solution {
+		public:
+			static int maximalRectangle(vector<vector<char>> &matrix);
+		};
+	}// namespace maximal_rectangle
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -4054,4 +4054,31 @@ namespace leetcode {
 			ASSERT_EQ(0, Solution::maximalSquare(matrix));
 		}
 	}// namespace maximal_square
+
+	namespace maximal_rectangle {
+		TEST(maximal_rectangle, case1) {
+			vector<vector<char>> matrix = {{'1', '0', '1', '0', '0'}, {'1', '0', '1', '1', '1'}, {'1', '1', '1', '1', '1'}, {'1', '0', '0', '1', '0'}};
+			ASSERT_EQ(6, Solution::maximalRectangle(matrix));
+		}
+
+		TEST(maximal_rectangle, case2) {
+			vector<vector<char>> matrix = {};
+			ASSERT_EQ(0, Solution::maximalRectangle(matrix));
+		}
+
+		TEST(maximal_rectangle, case3) {
+			vector<vector<char>> matrix = {{'0'}};
+			ASSERT_EQ(0, Solution::maximalRectangle(matrix));
+		}
+
+		TEST(maximal_rectangle, case4) {
+			vector<vector<char>> matrix = {{'1'}};
+			ASSERT_EQ(1, Solution::maximalRectangle(matrix));
+		}
+
+		TEST(maximal_rectangle, case5) {
+			vector<vector<char>> matrix = {{'0', '0'}};
+			ASSERT_EQ(0, Solution::maximalRectangle(matrix));
+		}
+	}// namespace maximal_rectangle
 }// namespace leetcode
