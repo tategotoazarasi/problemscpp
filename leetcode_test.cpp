@@ -4107,4 +4107,21 @@ namespace leetcode {
 			ASSERT_EQ(ans, Solution::partition(s));
 		}
 	}// namespace palindrome_partitioning
+
+	namespace palindrome_partitioning_ii {
+		TEST(palindrome_partitioning_ii, case1) {
+			string s = "aab";
+			ASSERT_EQ(1, Solution::minCut(s));
+		}
+
+		TEST(palindrome_partitioning_ii, case2) {
+			string s = "a";
+			ASSERT_EQ(0, Solution::minCut(s));
+		}
+
+		TEST(palindrome_partitioning_ii, case3) {
+			string s = "ab";
+			ASSERT_EQ(1, Solution::minCut(s));
+		}
+	}// namespace palindrome_partitioning_ii
 }// namespace leetcode

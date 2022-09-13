@@ -8875,4 +8875,36 @@ namespace leetcode {
 			dfs(current, s, ans, start, cursor + 1);
 		}
 	}// namespace palindrome_partitioning
+
+	namespace palindrome_partitioning_ii {
+		int Solution::minCut(string s) {
+			vector<vector<bool>> is_palindromic(s.length(), vector<bool>(s.length(), false));
+			for(int i = 0; i < s.length(); i++) {
+				for(int j = 0; i - j >= 0 && i + j < s.length() && s[i - j] == s[i + j]; j++) {
+					is_palindromic[i - j][i + j] = true;
+				}
+			}
+			for(int i = 0; i < s.length() - 1; i++) {
+				if(s[i] == s[i + 1]) {
+					for(int j = 0; i - j >= 0 && i + 1 + j < s.length() && s[i - j] == s[i + 1 + j]; j++) {
+						is_palindromic[i - j][i + 1 + j] = true;
+					}
+				}
+			}
+			vector<int> dp(s.length(), 2000);
+			dp[0] = 0;
+			for(int j = 1; j < dp.size(); j++) {
+				if(is_palindromic[0][j]) {
+					dp[j] = 0;
+					continue;
+				}
+				for(int i = j; i >= 0; i--) {
+					if(is_palindromic[i][j]) {
+						dp[j] = min(dp[j], dp[i - 1] + 1);
+					}
+				}
+			}
+			return dp.back();
+		}
+	}// namespace palindrome_partitioning_ii
 }// namespace leetcode

@@ -3119,6 +3119,14 @@ namespace leetcode {
 			static vector<vector<string>> partition(string s);
 		};
 	}// namespace palindrome_partitioning
+
+	/// \brief 132. 分割回文串 II
+	namespace palindrome_partitioning_ii {
+		class Solution {
+		public:
+			static int minCut(string s);
+		};
+	}// namespace palindrome_partitioning_ii
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
