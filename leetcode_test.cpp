@@ -4150,4 +4150,26 @@ namespace leetcode {
 			ASSERT_EQ(17, Solution::mincostTickets(days, costs));
 		}
 	}// namespace minimum_cost_for_tickets
+
+	namespace best_time_to_buy_and_sell_stock_iii {
+		TEST(best_time_to_buy_and_sell_stock_iii, case1) {
+			vector prices = {3, 3, 5, 0, 0, 3, 1, 4};
+			ASSERT_EQ(6, Solution::maxProfit(prices));
+		}
+
+		TEST(best_time_to_buy_and_sell_stock_iii, case2) {
+			vector prices = {1, 2, 3, 4, 5};
+			ASSERT_EQ(4, Solution::maxProfit(prices));
+		}
+
+		TEST(best_time_to_buy_and_sell_stock_iii, case3) {
+			vector prices = {7, 6, 4, 3, 1};
+			ASSERT_EQ(0, Solution::maxProfit(prices));
+		}
+
+		TEST(best_time_to_buy_and_sell_stock_iii, case4) {
+			vector prices = {1};
+			ASSERT_EQ(0, Solution::maxProfit(prices));
+		}
+	}// namespace best_time_to_buy_and_sell_stock_iii
 }// namespace leetcode

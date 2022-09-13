@@ -8962,4 +8962,29 @@ namespace leetcode {
 			return dp.back();
 		}
 	}// namespace minimum_cost_for_tickets
+
+	namespace best_time_to_buy_and_sell_stock_iii {
+		int Solution::maxProfit(vector<int> &prices) {
+			vector<vector<long>> dp(5, vector<long>(prices.size(), -10000000000));
+			// 0 - 不持有
+			// 1 - 第一次持有
+			// 2 - 第一次卖出
+			// 3 - 第二次持有
+			// 4 - 第二次卖出
+			dp[0][0] = 0;
+			dp[1][0] = -prices[0];
+			for(int i = 1; i < prices.size(); i++) {
+				dp[0][i] = dp[0][i - 1];
+				dp[1][i] = max(dp[1][i - 1], dp[0][i - 1] - prices[i]);
+				dp[2][i] = max(dp[2][i - 1], dp[1][i - 1] + prices[i]);
+				dp[3][i] = max(dp[3][i - 1], dp[2][i - 1] - prices[i]);
+				dp[4][i] = max(dp[4][i - 1], dp[3][i - 1] + prices[i]);
+			}
+			long ans = dp[0].back();
+			for(int i = 1; i <= 4; i++) {
+				ans = max(ans, dp[i].back());
+			}
+			return ans;
+		}
+	}// namespace best_time_to_buy_and_sell_stock_iii
 }// namespace leetcode
