@@ -3151,6 +3151,14 @@ namespace leetcode {
 			static int maxProfit(vector<int> &prices);
 		};
 	}// namespace best_time_to_buy_and_sell_stock_iii
+
+	/// \brief 174. 地下城游戏
+	namespace dungeon_game {
+		class Solution {
+		public:
+			static int calculateMinimumHP(vector<vector<int>> &dungeon);
+		};
+	}// namespace dungeon_game
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

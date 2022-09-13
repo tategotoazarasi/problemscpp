@@ -8987,4 +8987,19 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace best_time_to_buy_and_sell_stock_iii
+
+	namespace dungeon_game {
+		int Solution::calculateMinimumHP(vector<vector<int>> &dungeon) {
+			int n = dungeon.size(), m = dungeon[0].size();
+			vector<vector<int>> dp(n + 1, vector<int>(m + 1, INT_MAX));
+			dp[n][m - 1] = dp[n - 1][m] = 1;
+			for(int i = n - 1; i >= 0; --i) {
+				for(int j = m - 1; j >= 0; --j) {
+					int minn = min(dp[i + 1][j], dp[i][j + 1]);
+					dp[i][j] = max(minn - dungeon[i][j], 1);
+				}
+			}
+			return dp[0][0];
+		}
+	}// namespace dungeon_game
 }// namespace leetcode
