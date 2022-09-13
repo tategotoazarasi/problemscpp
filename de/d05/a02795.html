@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::best_time_to_buy_and_sell_stock_iii::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,18 +63,85 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d7/db9/a00426.html">lintcode</a></li><li class="navelem"><a class="el" href="../../d4/d82/a00436.html">digit_counts</a></li><li class="navelem"><a class="el" href="../../d9/da4/a02798.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d0/d4a/a00147.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d9/dd5/a00432.html">best_time_to_buy_and_sell_stock_iii</a></li><li class="navelem"><a class="el" href="../../de/d05/a02795.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">lintcode::digit_counts::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../de/db6/a02792.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::best_time_to_buy_and_sell_stock_iii::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../d9/da4/a02798.html">lintcode::digit_counts::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d9/da4/a02798.html#a879cde9870729cc588380741b31e3b60">digitCounts</a>(int k, int n)</td><td class="entry"><a class="el" href="../../d9/da4/a02798.html">lintcode::digit_counts::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a837cf85d276fbe2985f10c29de1703ac"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d05/a02795.html#a837cf85d276fbe2985f10c29de1703ac">maxProfit</a> (vector&lt; int &gt; &amp;prices)</td></tr>
+<tr class="separator:a837cf85d276fbe2985f10c29de1703ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03149">3149</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a837cf85d276fbe2985f10c29de1703ac" name="a837cf85d276fbe2985f10c29de1703ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a837cf85d276fbe2985f10c29de1703ac">&#9670;&nbsp;</a></span>maxProfit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leetcode::best_time_to_buy_and_sell_stock_iii::Solution::maxProfit </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>prices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08967">8967</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08967" name="l08967"></a><span class="lineno"> 8967</span>                                                   {</div>
+<div class="line"><a id="l08968" name="l08968"></a><span class="lineno"> 8968</span>            vector&lt;vector&lt;long&gt;&gt; dp(5, vector&lt;long&gt;(prices.size(), -10000000000));</div>
+<div class="line"><a id="l08969" name="l08969"></a><span class="lineno"> 8969</span>            <span class="comment">// 0 - 不持有</span></div>
+<div class="line"><a id="l08970" name="l08970"></a><span class="lineno"> 8970</span>            <span class="comment">// 1 - 第一次持有</span></div>
+<div class="line"><a id="l08971" name="l08971"></a><span class="lineno"> 8971</span>            <span class="comment">// 2 - 第一次卖出</span></div>
+<div class="line"><a id="l08972" name="l08972"></a><span class="lineno"> 8972</span>            <span class="comment">// 3 - 第二次持有</span></div>
+<div class="line"><a id="l08973" name="l08973"></a><span class="lineno"> 8973</span>            <span class="comment">// 4 - 第二次卖出</span></div>
+<div class="line"><a id="l08974" name="l08974"></a><span class="lineno"> 8974</span>            dp[0][0] = 0;</div>
+<div class="line"><a id="l08975" name="l08975"></a><span class="lineno"> 8975</span>            dp[1][0] = -prices[0];</div>
+<div class="line"><a id="l08976" name="l08976"></a><span class="lineno"> 8976</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; prices.size(); i++) {</div>
+<div class="line"><a id="l08977" name="l08977"></a><span class="lineno"> 8977</span>                dp[0][i] = dp[0][i - 1];</div>
+<div class="line"><a id="l08978" name="l08978"></a><span class="lineno"> 8978</span>                dp[1][i] = max(dp[1][i - 1], dp[0][i - 1] - prices[i]);</div>
+<div class="line"><a id="l08979" name="l08979"></a><span class="lineno"> 8979</span>                dp[2][i] = max(dp[2][i - 1], dp[1][i - 1] + prices[i]);</div>
+<div class="line"><a id="l08980" name="l08980"></a><span class="lineno"> 8980</span>                dp[3][i] = max(dp[3][i - 1], dp[2][i - 1] - prices[i]);</div>
+<div class="line"><a id="l08981" name="l08981"></a><span class="lineno"> 8981</span>                dp[4][i] = max(dp[4][i - 1], dp[3][i - 1] + prices[i]);</div>
+<div class="line"><a id="l08982" name="l08982"></a><span class="lineno"> 8982</span>            }</div>
+<div class="line"><a id="l08983" name="l08983"></a><span class="lineno"> 8983</span>            <span class="keywordtype">long</span> ans = dp[0].back();</div>
+<div class="line"><a id="l08984" name="l08984"></a><span class="lineno"> 8984</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= 4; i++) {</div>
+<div class="line"><a id="l08985" name="l08985"></a><span class="lineno"> 8985</span>                ans = max(ans, dp[i].back());</div>
+<div class="line"><a id="l08986" name="l08986"></a><span class="lineno"> 8986</span>            }</div>
+<div class="line"><a id="l08987" name="l08987"></a><span class="lineno"> 8987</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l08988" name="l08988"></a><span class="lineno"> 8988</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l04155">leetcode::best_time_to_buy_and_sell_stock_iii::TEST()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::predict_the_winner::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,18 +63,76 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d7/db9/a00426.html">lintcode</a></li><li class="navelem"><a class="el" href="../../df/d70/a00431.html">judge_circle</a></li><li class="navelem"><a class="el" href="../../dc/db0/a02778.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d0/d4a/a00147.html">leetcode</a></li><li class="navelem"><a class="el" href="../../da/db6/a00427.html">predict_the_winner</a></li><li class="navelem"><a class="el" href="../../d4/d72/a02775.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">lintcode::judge_circle::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d9/d4a/a02772.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::predict_the_winner::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../dc/db0/a02778.html">lintcode::judge_circle::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../dc/db0/a02778.html#a9ef53a28bd3fe0b90d3eed6fd9ad125d">judgeCircle</a>(string &amp;moves)</td><td class="entry"><a class="el" href="../../dc/db0/a02778.html">lintcode::judge_circle::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:abbd9dd960b3c85969101b727c9d2b257"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d72/a02775.html#abbd9dd960b3c85969101b727c9d2b257">PredictTheWinner</a> (vector&lt; int &gt; &amp;nums)</td></tr>
+<tr class="separator:abbd9dd960b3c85969101b727c9d2b257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03107">3107</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="abbd9dd960b3c85969101b727c9d2b257" name="abbd9dd960b3c85969101b727c9d2b257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbd9dd960b3c85969101b727c9d2b257">&#9670;&nbsp;</a></span>PredictTheWinner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool leetcode::predict_the_winner::Solution::PredictTheWinner </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nums</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08828">8828</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08828" name="l08828"></a><span class="lineno"> 8828</span>                                                         {</div>
+<div class="line"><a id="l08829" name="l08829"></a><span class="lineno"> 8829</span>            <span class="keywordtype">int</span> length = nums.size();</div>
+<div class="line"><a id="l08830" name="l08830"></a><span class="lineno"> 8830</span>            <span class="keyword">auto</span> dp    = vector&lt;int&gt;(length);</div>
+<div class="line"><a id="l08831" name="l08831"></a><span class="lineno"> 8831</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; length; i++) {</div>
+<div class="line"><a id="l08832" name="l08832"></a><span class="lineno"> 8832</span>                dp[i] = nums[i];</div>
+<div class="line"><a id="l08833" name="l08833"></a><span class="lineno"> 8833</span>            }</div>
+<div class="line"><a id="l08834" name="l08834"></a><span class="lineno"> 8834</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = length - 2; i &gt;= 0; i--) {</div>
+<div class="line"><a id="l08835" name="l08835"></a><span class="lineno"> 8835</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i + 1; j &lt; length; j++) {</div>
+<div class="line"><a id="l08836" name="l08836"></a><span class="lineno"> 8836</span>                    dp[j] = max(nums[i] - dp[j], nums[j] - dp[j - 1]);</div>
+<div class="line"><a id="l08837" name="l08837"></a><span class="lineno"> 8837</span>                }</div>
+<div class="line"><a id="l08838" name="l08838"></a><span class="lineno"> 8838</span>            }</div>
+<div class="line"><a id="l08839" name="l08839"></a><span class="lineno"> 8839</span>            <span class="keywordflow">return</span> dp[length - 1] &gt;= 0;</div>
+<div class="line"><a id="l08840" name="l08840"></a><span class="lineno"> 8840</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l04086">leetcode::predict_the_winner::TEST()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
