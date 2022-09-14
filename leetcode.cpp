@@ -9033,4 +9033,36 @@ namespace leetcode {
 			return true;
 		}
 	}// namespace course_schedule
+
+	namespace course_schedule_ii {
+		vector<int> Solution::findOrder(int numCourses, vector<vector<int>> &prerequisites) {
+			vector<int> ans;
+			vector<int> in(numCourses);
+			vector<unordered_set<int>> out(numCourses);
+			unordered_set<int> learned;
+			for(auto &prerequisite: prerequisites) {
+				in[prerequisite[0]]++;
+				out[prerequisite[1]].insert(prerequisite[0]);
+			}
+			bool hasChange = true;
+			while(hasChange) {
+				hasChange = false;
+				for(int i = 0; i < numCourses; i++) {
+					if(in[i] == 0 && !learned.count(i)) {
+						hasChange = true;
+						learned.insert(i);
+						ans.emplace_back(i);
+						for(auto &next: out[i]) {
+							in[next]--;
+						}
+					}
+				}
+			}
+			if(ans.size() == numCourses) {
+				return ans;
+			} else {
+				return {};
+			}
+		}
+	}// namespace course_schedule_ii
 }// namespace leetcode

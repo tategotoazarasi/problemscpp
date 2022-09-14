@@ -3167,6 +3167,14 @@ namespace leetcode {
 			static bool canFinish(int numCourses, vector<vector<int>> &prerequisites);
 		};
 	}// namespace course_schedule
+
+	/// \brief 210. 课程表 II
+	namespace course_schedule_ii {
+		class Solution {
+		public:
+			static vector<int> findOrder(int numCourses, vector<vector<int>> &prerequisites);
+		};
+	}// namespace course_schedule_ii
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

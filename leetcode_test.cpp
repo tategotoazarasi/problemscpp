@@ -4201,4 +4201,24 @@ namespace leetcode {
 			ASSERT_FALSE(Solution::canFinish(2, prerequisites));
 		}
 	}// namespace course_schedule
+
+	namespace course_schedule_ii {
+		TEST(course_schedule_ii, case1) {
+			vector<vector<int>> prerequisites = {{1, 0}};
+			vector<int> ans                   = {0, 1};
+			ASSERT_EQ(ans, Solution::findOrder(2, prerequisites));
+		}
+
+		TEST(course_schedule_ii, case2) {
+			vector<vector<int>> prerequisites = {{1, 0}, {2, 0}, {3, 1}, {3, 2}};
+			vector<int> ans                   = {0, 1, 2, 3};
+			ASSERT_EQ(ans, Solution::findOrder(4, prerequisites));
+		}
+
+		TEST(course_schedule_ii, case3) {
+			vector<vector<int>> prerequisites = {};
+			vector<int> ans                   = {0};
+			ASSERT_EQ(ans, Solution::findOrder(1, prerequisites));
+		}
+	}// namespace course_schedule_ii
 }// namespace leetcode
