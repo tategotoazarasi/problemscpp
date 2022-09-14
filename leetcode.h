@@ -3159,6 +3159,14 @@ namespace leetcode {
 			static int calculateMinimumHP(vector<vector<int>> &dungeon);
 		};
 	}// namespace dungeon_game
+
+	/// \brief 207. 课程表
+	namespace course_schedule {
+		class Solution {
+		public:
+			static bool canFinish(int numCourses, vector<vector<int>> &prerequisites);
+		};
+	}// namespace course_schedule
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -9002,4 +9002,35 @@ namespace leetcode {
 			return dp[0][0];
 		}
 	}// namespace dungeon_game
+
+	namespace course_schedule {
+		bool Solution::canFinish(int numCourses, vector<vector<int>> &prerequisites) {
+			vector<int> in(numCourses);
+			vector<unordered_set<int>> out(numCourses);
+			unordered_set<int> learned;
+			for(auto &prerequisite: prerequisites) {
+				in[prerequisite[1]]++;
+				out[prerequisite[0]].insert(prerequisite[1]);
+			}
+			bool hasChange = true;
+			while(hasChange) {
+				hasChange = false;
+				for(int i = 0; i < numCourses; i++) {
+					if(in[i] == 0 && !learned.count(i)) {
+						hasChange = true;
+						learned.insert(i);
+						for(auto &next: out[i]) {
+							in[next]--;
+						}
+					}
+				}
+			}
+			for(int i = 0; i < numCourses; i++) {
+				if(in[i] != 0) {
+					return false;
+				}
+			}
+			return true;
+		}
+	}// namespace course_schedule
 }// namespace leetcode

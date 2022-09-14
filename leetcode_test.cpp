@@ -4189,4 +4189,16 @@ namespace leetcode {
 			ASSERT_EQ(558, Solution::calculateMinimumHP(dungeon));
 		}
 	}// namespace dungeon_game
+
+	namespace course_schedule {
+		TEST(course_schedule, case1) {
+			vector<vector<int>> prerequisites = {{1, 0}};
+			ASSERT_TRUE(Solution::canFinish(2, prerequisites));
+		}
+
+		TEST(course_schedule, case2) {
+			vector<vector<int>> prerequisites = {{1, 0}, {0, 1}};
+			ASSERT_FALSE(Solution::canFinish(2, prerequisites));
+		}
+	}// namespace course_schedule
 }// namespace leetcode
