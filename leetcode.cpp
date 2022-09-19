@@ -9421,4 +9421,14 @@ namespace leetcode {
 			um[key] = value;
 		}
 	}// namespace lru_cache
+
+	namespace time_based_key_value_store {
+		void TimeMap::set(string key, string value, int timestamp) {
+			um[key][timestamp] = value;
+		}
+		string TimeMap::get(string key, int timestamp) {
+			auto it = um[key].lower_bound(timestamp);
+			return (it == um[key].end()) ? "" : (it->second);
+		}
+	}// namespace time_based_key_value_store
 }// namespace leetcode

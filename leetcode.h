@@ -3284,6 +3284,23 @@ namespace leetcode {
 			void put(int key, int value);
 		};
 	}// namespace lru_cache
+
+	/// \brief 981. 基于时间的键值存储
+	namespace time_based_key_value_store {
+		class TimeMap {
+			unordered_map<string, map<int, string, greater<int>>> um;
+
+		public:
+			/// \brief 初始化数据结构对象
+			TimeMap() = default;
+			/// \brief 存储键 key、值 value，以及给定的时间戳 timestamp。
+			void set(string key, string value, int timestamp);
+			/// \brief 返回先前调用 set(key, value, timestamp_prev) 所存储的值，其中 timestamp_prev <= timestamp 。
+			// 如果有多个这样的值，则返回对应最大的  timestamp_prev 的那个值。
+			// 如果没有值，则返回空字符串（""）。
+			string get(string key, int timestamp);
+		};
+	}// namespace time_based_key_value_store
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
