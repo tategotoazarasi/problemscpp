@@ -9377,4 +9377,48 @@ namespace leetcode {
 			return static_cast<double>(total) / um[startStation][endStation].size();
 		}
 	}// namespace design_underground_system
+
+	namespace lru_cache {
+		LRUCache::LRUCache(int capacity): capacity(capacity) {}
+
+		int LRUCache::get(int key) {
+			if(um.count(key)) {
+				if(key != keys.back()) {
+					keys.erase(find(keys.begin(), keys.end(), key));
+					keys.emplace_back(key);
+				}
+				return um[key];
+			}
+			return -1;
+		}
+
+		void LRUCache::put(int key, int value) {
+			if(um.size() == capacity) {
+				if(um.count(key)) {
+					//满 含
+					if(key != keys.back()) {
+						keys.erase(find(keys.begin(), keys.end(), key));
+						keys.emplace_back(key);
+					}
+				} else {
+					//满 不含
+					um.erase(*keys.begin());
+					keys.erase(keys.begin());
+					keys.emplace_back(key);
+				}
+			} else {
+				if(um.count(key)) {
+					//未满 含
+					if(key != keys.back()) {
+						keys.erase(find(keys.begin(), keys.end(), key));
+						keys.emplace_back(key);
+					}
+				} else {
+					//未满 不含
+					keys.emplace_back(key);
+				}
+			}
+			um[key] = value;
+		}
+	}// namespace lru_cache
 }// namespace leetcode
