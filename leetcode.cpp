@@ -9361,4 +9361,20 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace minimum_number_of_k_consecutive_bit_flips
+
+	namespace design_underground_system {
+		void UndergroundSystem::checkIn(int id, string stationName, int t) {
+			records[id] = {stationName, t};
+		}
+		void UndergroundSystem::checkOut(int id, string stationName, int t) {
+			um[records[id].first][stationName].emplace_back(t - records[id].second);
+		}
+		double UndergroundSystem::getAverageTime(string startStation, string endStation) {
+			int total = 0;
+			for(auto t: um[startStation][endStation]) {
+				total += t;
+			}
+			return static_cast<double>(total) / um[startStation][endStation].size();
+		}
+	}// namespace design_underground_system
 }// namespace leetcode

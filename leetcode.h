@@ -3246,6 +3246,27 @@ namespace leetcode {
 			static int minKBitFlips(vector<int> &nums, int k);
 		};
 	}// namespace minimum_number_of_k_consecutive_bit_flips
+
+	/// \brief 1396. 设计地铁系统
+	namespace design_underground_system {
+		class UndergroundSystem {
+			unordered_map<string, unordered_map<string, vector<int>>> um;
+			unordered_map<int, pair<string, int>> records;
+
+		public:
+			UndergroundSystem() = default;
+			/// \brief 通行卡 ID 等于 id 的乘客，在时间 t ，从 stationName 站进入
+			/// 乘客一次只能从一个站进入
+			void checkIn(int id, string stationName, int t);
+			/// \brief 通行卡 ID 等于 id 的乘客，在时间 t ，从 stationName 站离开
+			void checkOut(int id, string stationName, int t);
+			/// \brief 平均时间会根据截至目前所有从 startStation 站 直接 到达 endStation 站的行程进行计算，也就是从 startStation 站进入并从 endStation 离开的行程
+			/// 从 startStation 到 endStation 的行程时间与从 endStation 到 startStation 的行程时间可能不同
+			/// 在调用 getAverageTime 之前，至少有一名乘客从 startStation 站到达 endStation 站
+			/// \return 从 startStation 站到 endStation 站的平均时间
+			double getAverageTime(string startStation, string endStation);
+		};
+	}// namespace design_underground_system
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
