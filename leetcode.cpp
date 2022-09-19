@@ -9431,4 +9431,12 @@ namespace leetcode {
 			return (it == um[key].end()) ? "" : (it->second);
 		}
 	}// namespace time_based_key_value_store
+
+	namespace range_module {
+		void RangeModule::addRange(int left, int right) { tree.assign(left, right - 1, 1); }
+
+		bool RangeModule::queryRange(int left, int right) { return tree.check(left, right - 1); }
+
+		void RangeModule::removeRange(int left, int right) { tree.assign(left, right - 1); }
+	}// namespace range_module
 }// namespace leetcode

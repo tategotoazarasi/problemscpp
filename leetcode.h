@@ -3301,6 +3301,56 @@ namespace leetcode {
 			string get(string key, int timestamp);
 		};
 	}// namespace time_based_key_value_store
+
+	/// \brief 715. Range 模块
+	namespace range_module {
+		class Chtholly {
+			using type = bool;
+			struct Node {
+				unsigned l{}, r{};
+				type data{};
+				Node(unsigned l, unsigned r = 0, type data = 0): l(l), r(r), data(data) {}
+				bool operator<(const Node &rhs) const { return l < rhs.l; }
+			};
+
+		public:
+			set<Node> s;
+			auto split(unsigned pos) {
+				auto it = s.lower_bound({pos});
+				if(it != s.end() && it->l == pos)
+					return it;
+				auto [l, r, d]{*--it};
+				s.erase(it);
+				s.emplace(l, pos - 1, d);
+				return s.emplace(pos, r, d).first;
+			}
+
+			void assign(unsigned l, unsigned r, type val = 0) {
+				auto it = split(r + 1);
+				s.erase(split(l), it);
+				s.emplace(l, r, val);
+			}
+
+			bool check(unsigned l, unsigned r) {
+				auto it = split(r + 1);
+				return all_of(split(l), it, [](auto &&n) { return n.data; });
+			}
+		};
+
+		class RangeModule {
+			Chtholly tree{{{1, 100000000}}};
+
+		public:
+			/// \brief 初始化数据结构的对象。
+			RangeModule() = default;
+			/// \brief 添加 半开区间 [left, right)，跟踪该区间中的每个实数。添加与当前跟踪的数字部分重叠的区间时，应当添加在区间 [left, right) 中尚未跟踪的任何数字到该区间中。
+			void addRange(int left, int right);
+			/// \brief 只有在当前正在跟踪区间 [left, right) 中的每一个实数时，才返回 true ，否则返回 false 。
+			bool queryRange(int left, int right);
+			/// \brief 停止跟踪 半开区间 [left, right) 中当前正在跟踪的每个实数。
+			void removeRange(int left, int right);
+		};
+	}// namespace range_module
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
