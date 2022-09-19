@@ -4286,4 +4286,24 @@ namespace leetcode {
 			ASSERT_EQ("", Solution::alienOrder(words));
 		}
 	}// namespace alien_dictionary
+
+	namespace single_number_iii {
+		TEST(single_number_iii, case1) {
+			vector<int> nums = {1, 2, 1, 3, 2, 5};
+			vector<int> ans  = {3, 5};
+			ASSERT_EQ(ans, Solution::singleNumber(nums));
+		}
+
+		TEST(single_number_iii, case2) {
+			vector<int> nums = {-1, 0};
+			vector<int> ans  = {-1, 0};
+			ASSERT_EQ(ans, Solution::singleNumber(nums));
+		}
+
+		TEST(single_number_iii, case3) {
+			vector<int> nums = {0, 1};
+			vector<int> ans  = {1, 0};
+			ASSERT_EQ(ans, Solution::singleNumber(nums));
+		}
+	}// namespace single_number_iii
 }// namespace leetcode

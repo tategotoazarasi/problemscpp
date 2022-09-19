@@ -3209,6 +3209,14 @@ namespace leetcode {
 			static string alienOrder(vector<string> &words);
 		};
 	}// namespace alien_dictionary
+
+	/// \brief 260. 只出现一次的数字 III
+	namespace single_number_iii {
+		class Solution {
+		public:
+			static vector<int> singleNumber(vector<int> &nums);
+		};
+	}// namespace single_number_iii
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
