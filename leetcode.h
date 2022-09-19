@@ -3175,6 +3175,17 @@ namespace leetcode {
 			static vector<int> findOrder(int numCourses, vector<vector<int>> &prerequisites);
 		};
 	}// namespace course_schedule_ii
+
+	/// \brief 329. 矩阵中的最长递增路径
+	namespace longest_increasing_path_in_a_matrix {
+		class Solution {
+		public:
+			int rows;
+			int columns;
+			static constexpr int dirs[4][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+			int longestIncreasingPath(vector<vector<int>> &matrix);
+		};
+	}// namespace longest_increasing_path_in_a_matrix
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
