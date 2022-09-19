@@ -3201,6 +3201,14 @@ namespace leetcode {
 			static int minimumSemesters(int n, vector<vector<int>> &relations);
 		};
 	}// namespace parallel_courses
+
+	/// \brief 269. 火星词典
+	namespace alien_dictionary {
+		class Solution {
+		public:
+			static string alienOrder(vector<string> &words);
+		};
+	}// namespace alien_dictionary
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -4259,4 +4259,31 @@ namespace leetcode {
 			ASSERT_EQ(-1, Solution::minimumSemesters(3, relations));
 		}
 	}// namespace parallel_courses
+
+	namespace alien_dictionary {
+		TEST(alien_dictionary, case1) {
+			vector<string> words = {"wrt", "wrf", "er", "ett", "rftt"};
+			ASSERT_EQ("wertf", Solution::alienOrder(words));
+		}
+
+		TEST(alien_dictionary, case2) {
+			vector<string> words = {"z", "x"};
+			ASSERT_EQ("zx", Solution::alienOrder(words));
+		}
+
+		TEST(alien_dictionary, case3) {
+			vector<string> words = {"z", "x", "z"};
+			ASSERT_EQ("", Solution::alienOrder(words));
+		}
+
+		TEST(alien_dictionary, case4) {
+			vector<string> words = {"z", "z"};
+			ASSERT_EQ("z", Solution::alienOrder(words));
+		}
+
+		TEST(alien_dictionary, case5) {
+			vector<string> words = {"abc", "ab"};
+			ASSERT_EQ("", Solution::alienOrder(words));
+		}
+	}// namespace alien_dictionary
 }// namespace leetcode

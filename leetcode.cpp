@@ -9155,4 +9155,71 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace parallel_courses
+
+	namespace alien_dictionary {
+		string Solution::alienOrder(vector<string> &words) {
+			unordered_map<char, unordered_set<char>> g;
+			unordered_map<char, int> in;
+			ostringstream oss;
+			unordered_set<char> charset;
+			for(const auto &word: words) {
+				for(const auto &ch: word) {
+					charset.insert(ch);
+				}
+			}
+			for(const auto &ch: charset) {
+				g[ch]  = unordered_set<char>();
+				in[ch] = 0;
+			}
+			int max_len = 0;
+			for(const auto &word: words) {
+				max_len = max(max_len, (int) word.length());
+			}
+			for(int i = 0; i < max_len; i++) {
+				unordered_map<string, vector<string>> um;
+				for(const auto &word: words) {
+					if(word.length() >= i) {
+						um[i > 0 ? word.substr(0, i) : ""].emplace_back(word);
+					}
+				}
+				for(const auto &[pred, section]: um) {
+					for(int j = 0, k = 1; k < section.size(); j++, k++) {
+						if(i < section[j].length() && i < section[k].length()) {
+							if(section[j][i] != section[k][i]) {
+								g[section[j][i]].insert(section[k][i]);
+							}
+						} else if(i < section[j].length()) {
+							return "";
+						}
+					}
+				}
+			}
+			for(const auto &[k, section]: g) {
+				for(const auto &n: section) {
+					in[n]++;
+				}
+			}
+			bool flag = true;
+			unordered_set<char> vis;
+			while(flag) {
+				flag = false;
+				for(const auto &[ch, n]: in) {
+					if(n == 0 && !vis.count(ch)) {
+						flag = true;
+						vis.insert(ch);
+						oss << ch;
+						for(const auto &nc: g[ch]) {
+							in[nc]--;
+						}
+					}
+				}
+			}
+			for(const auto &[ch, n]: in) {
+				if(n != 0) {
+					return "";
+				}
+			}
+			return oss.str();
+		}
+	}// namespace alien_dictionary
 }// namespace leetcode
