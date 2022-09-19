@@ -48,7 +48,8 @@ var menudata={children:[
 {text:"s",url:"namespacemembers_s.html#index_s"},
 {text:"t",url:"namespacemembers_t.html#index_t"},
 {text:"u",url:"namespacemembers_u.html#index_u"},
-{text:"v",url:"namespacemembers_v.html#index_v"}]},
+{text:"v",url:"namespacemembers_v.html#index_v"},
+{text:"w",url:"namespacemembers_w.html#index_w"}]},
 {text:"函数",url:"namespacemembers_func.html",children:[
 {text:"a",url:"namespacemembers_func.html#index_a"},
 {text:"b",url:"namespacemembers_func_b.html#index_b"},
@@ -151,6 +152,7 @@ var menudata={children:[
 {text:"x",url:"functions_vars_x.html#index_x"},
 {text:"y",url:"functions_vars_y.html#index_y"},
 {text:"z",url:"functions_vars_z.html#index_z"}]},
+{text:"类型定义",url:"functions_type.html"},
 {text:"相关函数",url:"functions_rela.html"}]}]},
 {text:"文件",url:"files.html",children:[
 {text:"文件列表",url:"files.html"},
