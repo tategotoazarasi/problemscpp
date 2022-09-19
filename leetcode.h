@@ -3186,6 +3186,21 @@ namespace leetcode {
 			int longestIncreasingPath(vector<vector<int>> &matrix);
 		};
 	}// namespace longest_increasing_path_in_a_matrix
+
+	/// \brief 1136. 并行课程
+	namespace parallel_courses {
+		struct node {
+			int n;
+			int out;
+			int len = 1;
+			unordered_set<node *> pred;
+			node(int n, int out): n(n), out(out) {}
+		};
+		class Solution {
+		public:
+			static int minimumSemesters(int n, vector<vector<int>> &relations);
+		};
+	}// namespace parallel_courses
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

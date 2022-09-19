@@ -4247,4 +4247,16 @@ namespace leetcode {
 			ASSERT_EQ(140, sol.longestIncreasingPath(matrix));
 		}
 	}// namespace longest_increasing_path_in_a_matrix
+
+	namespace parallel_courses {
+		TEST(parallel_courses, case1) {
+			vector<vector<int>> relations = {{1, 3}, {2, 3}};
+			ASSERT_EQ(2, Solution::minimumSemesters(3, relations));
+		}
+
+		TEST(parallel_courses, case2) {
+			vector<vector<int>> relations = {{1, 3}, {2, 3}, {3, 1}};
+			ASSERT_EQ(-1, Solution::minimumSemesters(3, relations));
+		}
+	}// namespace parallel_courses
 }// namespace leetcode

@@ -9114,4 +9114,45 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace longest_increasing_path_in_a_matrix
+
+	namespace parallel_courses {
+		int Solution::minimumSemesters(int n, vector<vector<int>> &relations) {
+			vector<node *> nodes(n);
+			for(int i = 1; i <= n; i++) {
+				nodes[i - 1] = new node(i, 0);
+			}
+			for(const auto &relation: relations) {
+				nodes[relation[1] - 1]->pred.insert(nodes[relation[0] - 1]);
+				nodes[relation[0] - 1]->out++;
+			}
+			bool flag = true;
+			unordered_set<int> vis;
+			while(flag) {
+				flag = false;
+				for(int i = 0; i < n; i++) {
+					if(nodes[i]->out == 0) {
+						if(vis.count(i)) {
+							continue;
+						} else {
+							vis.insert(i);
+						}
+						flag = true;
+						for(node *next: nodes[i]->pred) {
+							next->out--;
+							next->len = max(next->len, nodes[i]->len + 1);
+						}
+					}
+				}
+			}
+			int ans = 0;
+			for(int i = 0; i < n; i++) {
+				if(nodes[i]->out != 0) {
+					return -1;
+				} else {
+					ans = max(ans, nodes[i]->len);
+				}
+			}
+			return ans;
+		}
+	}// namespace parallel_courses
 }// namespace leetcode
