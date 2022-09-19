@@ -4333,4 +4333,21 @@ namespace leetcode {
 			ASSERT_EQ(19, Solution::shortestPathAllKeys(grid));
 		}
 	}// namespace shortest_path_to_get_all_keys
+
+	namespace minimum_number_of_k_consecutive_bit_flips {
+		TEST(minimum_number_of_k_consecutive_bit_flips, case1) {
+			vector nums = {0, 1, 0};
+			ASSERT_EQ(2, Solution::minKBitFlips(nums, 1));
+		}
+
+		TEST(minimum_number_of_k_consecutive_bit_flips, case2) {
+			vector nums = {1, 1, 0};
+			ASSERT_EQ(-1, Solution::minKBitFlips(nums, 2));
+		}
+
+		TEST(minimum_number_of_k_consecutive_bit_flips, case3) {
+			vector nums = {0, 0, 0, 1, 0, 1, 1, 0};
+			ASSERT_EQ(3, Solution::minKBitFlips(nums, 3));
+		}
+	}// namespace minimum_number_of_k_consecutive_bit_flips
 }// namespace leetcode

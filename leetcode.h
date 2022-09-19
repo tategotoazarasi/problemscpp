@@ -3238,6 +3238,14 @@ namespace leetcode {
 			static int shortestPathAllKeys(vector<string> &grid);
 		};
 	}// namespace shortest_path_to_get_all_keys
+
+	/// \brief 995. K 连续位的最小翻转次数
+	namespace minimum_number_of_k_consecutive_bit_flips {
+		class Solution {
+		public:
+			static int minKBitFlips(vector<int> &nums, int k);
+		};
+	}// namespace minimum_number_of_k_consecutive_bit_flips
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
