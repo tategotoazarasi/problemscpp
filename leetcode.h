@@ -3217,6 +3217,27 @@ namespace leetcode {
 			static vector<int> singleNumber(vector<int> &nums);
 		};
 	}// namespace single_number_iii
+
+	/// \brief 864. 获取所有钥匙的最短路径
+	namespace shortest_path_to_get_all_keys {
+		const constexpr char EMPTY = '.';
+		const constexpr char WALL  = '#';
+		const constexpr char START = '@';
+		struct frame {
+			int x;
+			int y;
+			int lock_left;
+			int step = 0;
+			unordered_set<char> keys;
+			frame(int x, int y, int lock_left): x(x), y(y), lock_left(lock_left) {}
+			bool operator<(const frame &f) const;
+			unsigned get_mask() const;
+		};
+		class Solution {
+		public:
+			static int shortestPathAllKeys(vector<string> &grid);
+		};
+	}// namespace shortest_path_to_get_all_keys
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

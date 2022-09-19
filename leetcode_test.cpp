@@ -4306,4 +4306,31 @@ namespace leetcode {
 			ASSERT_EQ(ans, Solution::singleNumber(nums));
 		}
 	}// namespace single_number_iii
+
+	namespace shortest_path_to_get_all_keys {
+		TEST(shortest_path_to_get_all_keys, case1) {
+			vector<string> grid = {"@.a.#", "###.#", "b.A.B"};
+			ASSERT_EQ(8, Solution::shortestPathAllKeys(grid));
+		}
+
+		TEST(shortest_path_to_get_all_keys, case2) {
+			vector<string> grid = {"@..aA", "..B#.", "....b"};
+			ASSERT_EQ(6, Solution::shortestPathAllKeys(grid));
+		}
+
+		TEST(shortest_path_to_get_all_keys, case3) {
+			vector<string> grid = {"@Aa"};
+			ASSERT_EQ(-1, Solution::shortestPathAllKeys(grid));
+		}
+
+		TEST(shortest_path_to_get_all_keys, case4) {
+			vector<string> grid = {".@aA"};
+			ASSERT_EQ(1, Solution::shortestPathAllKeys(grid));
+		}
+
+		TEST(shortest_path_to_get_all_keys, case5) {
+			vector<string> grid = {"..#....##.", "....d.#.D#", "#...#.c...", "..##.#..a.", "...#....##", "#....b....", ".#..#.....", "..........", ".#..##..A.", ".B..C.#..@"};
+			ASSERT_EQ(19, Solution::shortestPathAllKeys(grid));
+		}
+	}// namespace shortest_path_to_get_all_keys
 }// namespace leetcode

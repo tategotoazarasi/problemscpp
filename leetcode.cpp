@@ -9242,4 +9242,101 @@ namespace leetcode {
 			return {type1, type2};
 		}
 	}// namespace single_number_iii
+
+	namespace shortest_path_to_get_all_keys {
+		int Solution::shortestPathAllKeys(vector<string> &grid) {
+			priority_queue<frame> pq;
+			int m        = grid.size();
+			int n        = grid[0].size();
+			int start_x  = 0;
+			int start_y  = 0;
+			int lock_cnt = 0;
+			unordered_map<unsigned, vector<vector<int>>> min_step;
+			for(int i = 0; i < m; i++) {
+				for(int j = 0; j < n; j++) {
+					if(grid[i][j] == START) {
+						start_x = i;
+						start_y = j;
+					} else if(isupper(grid[i][j])) {
+						lock_cnt++;
+					}
+				}
+			}
+			frame start(start_x, start_y, lock_cnt);
+			pq.push(start);
+			while(!pq.empty()) {
+				frame f = pq.top();
+				pq.pop();
+				if(f.keys.size() == lock_cnt) {
+					return f.step;
+				}
+				if(!min_step.count(f.get_mask())) {
+					min_step[f.get_mask()] = vector<vector<int>>(m, vector<int>(n, INT_MAX));
+				}
+				if(min_step[f.get_mask()][f.x][f.y] <= f.step) {
+					continue;
+				} else {
+					min_step[f.get_mask()][f.x][f.y] = f.step;
+				}
+				const pair<int, int> nexts[4] = {{f.x + 1, f.y}, {f.x - 1, f.y}, {f.x, f.y + 1}, {f.x, f.y - 1}};
+				for(const auto &[n_x, n_y]: nexts) {
+					if(n_x >= 0 && n_x < m && n_y >= 0 && n_y < n && grid[n_x][n_y] != WALL) {
+						if(islower(grid[n_x][n_y])) {
+							frame next = f;
+							next.x     = n_x;
+							next.y     = n_y;
+							next.step++;
+							next.keys.insert(grid[n_x][n_y]);
+							if(!min_step.count(next.get_mask())) {
+								min_step[next.get_mask()] = vector<vector<int>>(m, vector<int>(n, INT_MAX));
+							}
+							if(min_step[next.get_mask()][n_x][n_y] > next.step) {
+								pq.push(next);
+							}
+						} else if(isupper(grid[n_x][n_y])) {
+							if(f.keys.count(static_cast<char>(tolower(grid[n_x][n_y])))) {
+								frame next = f;
+								next.x     = n_x;
+								next.y     = n_y;
+								next.step++;
+								if(!min_step.count(next.get_mask())) {
+									min_step[next.get_mask()] = vector<vector<int>>(m, vector<int>(n, INT_MAX));
+								}
+								if(min_step[next.get_mask()][n_x][n_y] > next.step) {
+									pq.push(next);
+								}
+							}
+						} else {
+							frame next = f;
+							next.x     = n_x;
+							next.y     = n_y;
+							next.step++;
+							if(!min_step.count(next.get_mask())) {
+								min_step[next.get_mask()] = vector<vector<int>>(m, vector<int>(n, INT_MAX));
+							}
+							if(min_step[next.get_mask()][n_x][n_y] > next.step) {
+								pq.push(next);
+							}
+						}
+					}
+				}
+			}
+			return -1;
+		}
+
+		bool frame::operator<(const frame &f) const {
+			if(step != f.step) {
+				return step > f.step;
+			}
+			return keys.size() < f.keys.size();
+		}
+
+		unsigned frame::get_mask() const {
+			unsigned mask = 0;
+			for(const auto &key: keys) {
+				mask |= 1 << (key - 'a');
+			}
+			return mask;
+		}
+	}// namespace shortest_path_to_get_all_keys
 }// namespace leetcode
