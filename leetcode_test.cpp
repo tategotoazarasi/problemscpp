@@ -4350,4 +4350,20 @@ namespace leetcode {
 			ASSERT_EQ(3, Solution::minKBitFlips(nums, 3));
 		}
 	}// namespace minimum_number_of_k_consecutive_bit_flips
+
+	namespace lfu_cache {
+		TEST(lfu_cache, case1) {
+			LFUCache c(2);
+			c.put(1, 1);
+			c.put(2, 2);
+			ASSERT_EQ(1, c.get(1));
+			c.put(3, 3);
+			ASSERT_EQ(-1, c.get(2));
+			ASSERT_EQ(3, c.get(3));
+			c.put(4, 4);
+			ASSERT_EQ(-1, c.get(1));
+			ASSERT_EQ(3, c.get(3));
+			ASSERT_EQ(4, c.get(4));
+		}
+	}// namespace lfu_cache
 }// namespace leetcode

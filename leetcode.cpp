@@ -9439,4 +9439,67 @@ namespace leetcode {
 
 		void RangeModule::removeRange(int left, int right) { tree.assign(left, right - 1); }
 	}// namespace range_module
+
+	namespace lfu_cache {
+		int LFUCache::get(int key) {
+			if(capacity == 0) {
+				return -1;
+			}
+			int ans = -1;
+			if(um.count(key)) {
+				// 如果存在
+				ans = um[key];
+				cnt[key]++;                                                             //增加计数
+				auto it = find(tnc[cnt[key] - 1].begin(), tnc[cnt[key] - 1].end(), key);//
+				if(it != tnc[cnt[key] - 1].end()) {
+					tnc[cnt[key] - 1].erase(it);
+					if(tnc[cnt[key] - 1].empty()) {
+						tnc.erase(cnt[key] - 1);
+					}
+				}
+				tnc[cnt[key]].emplace_back(key);
+			}
+			return ans;
+		}
+
+		void LFUCache::put(int key, int value) {
+			if(capacity == 0) {
+				return;
+			}
+			cnt[key]++;
+			if(um.size() == capacity) {
+				//满
+				if(um.count(key)) {
+					//已存在
+					tnc[cnt[key] - 1].erase(find(tnc[cnt[key] - 1].begin(), tnc[cnt[key] - 1].end(), key));
+					if(tnc[cnt[key] - 1].empty()) {
+						tnc.erase(cnt[key] - 1);
+					}
+				} else {
+					//不存在
+					while(tnc.begin()->second.empty()) {
+						tnc.erase(tnc.begin());
+					}
+					auto evicted = tnc.begin()->second.begin();
+					int val      = *evicted;
+					tnc.begin()->second.erase(evicted);
+					cnt.erase(val);
+					um.erase(val);
+				}
+			} else {
+				//未满
+				if(um.count(key)) {
+					//已存在
+					tnc[cnt[key] - 1].erase(find(tnc[cnt[key] - 1].begin(), tnc[cnt[key] - 1].end(), key));
+					if(tnc[cnt[key] - 1].empty()) {
+						tnc.erase(cnt[key] - 1);
+					}
+				} else {
+					//不存在
+				}
+			}
+			tnc[cnt[key]].emplace_back(key);
+			um[key] = value;
+		}
+	}// namespace lfu_cache
 }// namespace leetcode

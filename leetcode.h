@@ -3351,6 +3351,24 @@ namespace leetcode {
 			void removeRange(int left, int right);
 		};
 	}// namespace range_module
+
+	/// \brief 460. LFU 缓存
+	namespace lfu_cache {
+		class LFUCache {
+			unordered_map<int, int> um;
+			unordered_map<int, int> cnt;
+			map<int, list<int>> tnc;
+			int capacity;
+
+		public:
+			/// \brief 用数据结构的容量 capacity 初始化对象
+			LFUCache(int capacity): capacity(capacity){};
+			/// \brief 如果键 key 存在于缓存中，则获取键的值，否则返回 -1 。
+			int get(int key);
+			/// \brief 如果键 key 已存在，则变更其值；如果键不存在，请插入键值对。当缓存达到其容量 capacity 时，则应该在插入新项之前，移除最不经常使用的项。在此问题中，当存在平局（即两个或更多个键具有相同使用频率）时，应该去除 最近最久未使用 的键。
+			void put(int key, int value);
+		};
+	}// namespace lfu_cache
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
