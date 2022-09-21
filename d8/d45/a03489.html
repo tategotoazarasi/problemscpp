@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: TrieNode结构体 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,26 +63,214 @@ $(function() {
 
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">Fraction 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="../../d8/d7b/a03486.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">TrieNode结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../d8/d3d/a03492.html">Fraction</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d8/d3d/a03492.html#a62dd875277df5cc634ed060b93d02d28">denominator</a></td><td class="entry"><a class="el" href="../../d8/d3d/a03492.html">Fraction</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d8/d3d/a03492.html#a1e87207d9f1a31bd5bdbe5da2fb8bd66">Fraction</a>(bool positive, long long numerator, long long denominator)</td><td class="entry"><a class="el" href="../../d8/d3d/a03492.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d8/d3d/a03492.html#a520a3bc5ef06aff9224ff4d1fa53ad15">get_denominator</a>() const</td><td class="entry"><a class="el" href="../../d8/d3d/a03492.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d8/d3d/a03492.html#a5b3b0274013dc8b2c2298317b9276f17">get_numerator</a>() const</td><td class="entry"><a class="el" href="../../d8/d3d/a03492.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d8/d3d/a03492.html#a07d7e003385dcc19562ed415287be613">is_positive</a>() const</td><td class="entry"><a class="el" href="../../d8/d3d/a03492.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d8/d3d/a03492.html#ac5579448914d9179b1f8431216a33af7">numerator</a></td><td class="entry"><a class="el" href="../../d8/d3d/a03492.html">Fraction</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d8/d3d/a03492.html#ae8243b75fcc95ddd169ce53cbcd805ae">operator*</a>(const Fraction &amp;f) const</td><td class="entry"><a class="el" href="../../d8/d3d/a03492.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d8/d3d/a03492.html#a1b273c566cdb62bb3c0834027133038a">operator+</a>(const Fraction &amp;f) const</td><td class="entry"><a class="el" href="../../d8/d3d/a03492.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d8/d3d/a03492.html#a50b0598f2b289832e1b1c64ac8f0e533">operator-</a>(const Fraction &amp;f) const</td><td class="entry"><a class="el" href="../../d8/d3d/a03492.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d8/d3d/a03492.html#aa9ab636b9e40dedb8c181048d8b55a82">operator/</a>(const Fraction &amp;f) const</td><td class="entry"><a class="el" href="../../d8/d3d/a03492.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d8/d3d/a03492.html#ad9647df4ee7fe0dec2520d4a00da3363">operator&lt;&lt;</a></td><td class="entry"><a class="el" href="../../d8/d3d/a03492.html">Fraction</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d8/d3d/a03492.html#a777585f98e8e6e958c126e1474961a31">positive</a></td><td class="entry"><a class="el" href="../../d8/d3d/a03492.html">Fraction</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d8/d3d/a03492.html#a6a5092eb855dac602718b19eb7fe0d6d">simplify</a>()</td><td class="entry"><a class="el" href="../../d8/d3d/a03492.html">Fraction</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-</table></div><!-- contents -->
+<p>字典树节点  
+ <a href="../../d8/d45/a03489.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../dc/dee/a00053_source.html">templates.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab03b8f092ac717a32f1d4c8f3e6e2057"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d45/a03489.html#ab03b8f092ac717a32f1d4c8f3e6e2057">TrieNode</a> (char <a class="el" href="../../d8/d45/a03489.html#a056d2c88a2e128b05422c9d834d7f8dd">ch</a>)</td></tr>
+<tr class="separator:ab03b8f092ac717a32f1d4c8f3e6e2057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c338a9960c601bbe654668cbe4f18a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d45/a03489.html#a2c338a9960c601bbe654668cbe4f18a5">~TrieNode</a> ()</td></tr>
+<tr class="separator:a2c338a9960c601bbe654668cbe4f18a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9845dc41b755ffd1e9c7e2acc08893f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d45/a03489.html#a9845dc41b755ffd1e9c7e2acc08893f2">insert</a> (const string &amp;str)</td></tr>
+<tr class="separator:a9845dc41b755ffd1e9c7e2acc08893f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a056d2c88a2e128b05422c9d834d7f8dd"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d45/a03489.html#a056d2c88a2e128b05422c9d834d7f8dd">ch</a></td></tr>
+<tr class="separator:a056d2c88a2e128b05422c9d834d7f8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f4a9d15d01cc1a6ecd8e5d327b2044"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d45/a03489.html#a62f4a9d15d01cc1a6ecd8e5d327b2044">count</a> = 0</td></tr>
+<tr class="separator:a62f4a9d15d01cc1a6ecd8e5d327b2044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af666fb8105ecd041463c44670146b1a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d45/a03489.html#af666fb8105ecd041463c44670146b1a9">end_of_word</a> = false</td></tr>
+<tr class="separator:af666fb8105ecd041463c44670146b1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07d53b17d0b024afcbabb556c9964bbd"><td class="memItemLeft" align="right" valign="top">array&lt; <a class="el" href="../../d8/d45/a03489.html">TrieNode</a> *, 26 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d45/a03489.html#a07d53b17d0b024afcbabb556c9964bbd">nexts</a> = {}</td></tr>
+<tr class="separator:a07d53b17d0b024afcbabb556c9964bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >字典树节点 </p>
+
+<p class="definition">在文件 <a class="el" href="../../dc/dee/a00053_source.html">templates.h</a> 第 <a class="el" href="../../dc/dee/a00053_source.html#l00009">9</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ab03b8f092ac717a32f1d4c8f3e6e2057" name="ab03b8f092ac717a32f1d4c8f3e6e2057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab03b8f092ac717a32f1d4c8f3e6e2057">&#9670;&nbsp;</a></span>TrieNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TrieNode::TrieNode </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>ch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dc/dee/a00053_source.html">templates.h</a> 第 <a class="el" href="../../dc/dee/a00053_source.html#l00015">15</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        : <a class="code hl_variable" href="../../d8/d45/a03489.html#a056d2c88a2e128b05422c9d834d7f8dd">ch</a>(<a class="code hl_variable" href="../../d8/d45/a03489.html#a056d2c88a2e128b05422c9d834d7f8dd">ch</a>) {}</div>
+<div class="ttc" id="aa03489_html_a056d2c88a2e128b05422c9d834d7f8dd"><div class="ttname"><a href="../../d8/d45/a03489.html#a056d2c88a2e128b05422c9d834d7f8dd">TrieNode::ch</a></div><div class="ttdeci">char ch</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00010">templates.h:10</a></div></div>
+</div><!-- fragment -->
+<p class="reference">被这些函数引用 <a class="el" href="../../d3/d8b/a00059_source.html#l00009">insert()</a>.</p>
+
+</div>
+</div>
+<a id="a2c338a9960c601bbe654668cbe4f18a5" name="a2c338a9960c601bbe654668cbe4f18a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c338a9960c601bbe654668cbe4f18a5">&#9670;&nbsp;</a></span>~TrieNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TrieNode::~TrieNode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">templates.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l00021">21</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> *next: this-&gt;<a class="code hl_variable" href="../../d8/d45/a03489.html#a07d53b17d0b024afcbabb556c9964bbd">nexts</a>) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">delete</span> next;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
+<div class="ttc" id="aa03489_html_a07d53b17d0b024afcbabb556c9964bbd"><div class="ttname"><a href="../../d8/d45/a03489.html#a07d53b17d0b024afcbabb556c9964bbd">TrieNode::nexts</a></div><div class="ttdeci">array&lt; TrieNode *, 26 &gt; nexts</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00011">templates.h:11</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l00011">nexts</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a9845dc41b755ffd1e9c7e2acc08893f2" name="a9845dc41b755ffd1e9c7e2acc08893f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9845dc41b755ffd1e9c7e2acc08893f2">&#9670;&nbsp;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TrieNode::insert </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">templates.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l00009">9</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>                                       {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="../../d8/d45/a03489.html#a07d53b17d0b024afcbabb556c9964bbd">nexts</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>] == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        this-&gt;<a class="code hl_variable" href="../../d8/d45/a03489.html#a07d53b17d0b024afcbabb556c9964bbd">nexts</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>] = <span class="keyword">new</span> <a class="code hl_function" href="../../d8/d45/a03489.html#ab03b8f092ac717a32f1d4c8f3e6e2057">TrieNode</a>(str[0]);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">if</span>(str.length() == 1) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        this-&gt;<a class="code hl_variable" href="../../d8/d45/a03489.html#a07d53b17d0b024afcbabb556c9964bbd">nexts</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>]-&gt;end_of_word = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        this-&gt;<a class="code hl_variable" href="../../d8/d45/a03489.html#a07d53b17d0b024afcbabb556c9964bbd">nexts</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>]-&gt;count++;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        this-&gt;<a class="code hl_variable" href="../../d8/d45/a03489.html#a07d53b17d0b024afcbabb556c9964bbd">nexts</a>[str[0] - <span class="charliteral">&#39;a&#39;</span>]-&gt;insert(str.substr(1));</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
+<div class="ttc" id="aa03489_html_ab03b8f092ac717a32f1d4c8f3e6e2057"><div class="ttname"><a href="../../d8/d45/a03489.html#ab03b8f092ac717a32f1d4c8f3e6e2057">TrieNode::TrieNode</a></div><div class="ttdeci">TrieNode(char ch)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00015">templates.h:15</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l00015">TrieNode()</a> , 以及 <a class="el" href="../../dc/dee/a00053_source.html#l00011">nexts</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l06683">leetcode::word_break::Solution::wordBreak()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a056d2c88a2e128b05422c9d834d7f8dd" name="a056d2c88a2e128b05422c9d834d7f8dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a056d2c88a2e128b05422c9d834d7f8dd">&#9670;&nbsp;</a></span>ch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char TrieNode::ch</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dc/dee/a00053_source.html">templates.h</a> 第 <a class="el" href="../../dc/dee/a00053_source.html#l00010">10</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a62f4a9d15d01cc1a6ecd8e5d327b2044" name="a62f4a9d15d01cc1a6ecd8e5d327b2044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62f4a9d15d01cc1a6ecd8e5d327b2044">&#9670;&nbsp;</a></span>count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned TrieNode::count = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dc/dee/a00053_source.html">templates.h</a> 第 <a class="el" href="../../dc/dee/a00053_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af666fb8105ecd041463c44670146b1a9" name="af666fb8105ecd041463c44670146b1a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af666fb8105ecd041463c44670146b1a9">&#9670;&nbsp;</a></span>end_of_word</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TrieNode::end_of_word = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dc/dee/a00053_source.html">templates.h</a> 第 <a class="el" href="../../dc/dee/a00053_source.html#l00012">12</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l06701">leetcode::word_break::Solution::search()</a>.</p>
+
+</div>
+</div>
+<a id="a07d53b17d0b024afcbabb556c9964bbd" name="a07d53b17d0b024afcbabb556c9964bbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07d53b17d0b024afcbabb556c9964bbd">&#9670;&nbsp;</a></span>nexts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">array&lt;<a class="el" href="../../d8/d45/a03489.html">TrieNode</a> *, 26&gt; TrieNode::nexts = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dc/dee/a00053_source.html">templates.h</a> 第 <a class="el" href="../../dc/dee/a00053_source.html#l00011">11</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../d3/d8b/a00059_source.html#l00021">~TrieNode()</a>, <a class="el" href="../../d7/d46/a00002_source.html#l04630">leetcode::longest_word_in_dictionary::Solution::dfs()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00009">insert()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l06701">leetcode::word_break::Solution::search()</a>.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="../../dc/dee/a00053_source.html">templates.h</a></li>
+<li><a class="el" href="../../d3/d8b/a00059_source.html">templates.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
