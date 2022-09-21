@@ -4366,4 +4366,24 @@ namespace leetcode {
 			ASSERT_EQ(4, c.get(4));
 		}
 	}// namespace lfu_cache
+
+	namespace leetcode454_4sum_ii {
+		TEST(leetcode454_4sum_ii, case1) {
+			vector nums1 = {1, 2};
+			vector nums2 = {-2, -1};
+			vector nums3 = {-1, 2};
+			vector nums4 = {0, 2};
+			Solution sol;
+			ASSERT_EQ(2, sol.fourSumCount(nums1, nums2, nums3, nums4));
+		}
+
+		TEST(leetcode454_4sum_ii, case2) {
+			vector nums1 = {0};
+			vector nums2 = {0};
+			vector nums3 = {0};
+			vector nums4 = {0};
+			Solution sol;
+			ASSERT_EQ(1, sol.fourSumCount(nums1, nums2, nums3, nums4));
+		}
+	}// namespace leetcode454_4sum_ii
 }// namespace leetcode

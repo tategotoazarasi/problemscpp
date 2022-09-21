@@ -3369,6 +3369,18 @@ namespace leetcode {
 			void put(int key, int value);
 		};
 	}// namespace lfu_cache
+
+	/// \brief 454. 四数相加 II
+	namespace leetcode454_4sum_ii {
+		class Solution {
+			vector<unordered_map<int, int>> mem;
+			vector<unordered_map<int, int>> vec;
+
+		public:
+			int sumCount(int sum, int i);
+			int fourSumCount(vector<int> &nums1, vector<int> &nums2, vector<int> &nums3, vector<int> &nums4);
+		};
+	}// namespace leetcode454_4sum_ii
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

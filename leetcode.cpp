@@ -9502,4 +9502,39 @@ namespace leetcode {
 			um[key] = value;
 		}
 	}// namespace lfu_cache
+
+	namespace leetcode454_4sum_ii {
+		int Solution::sumCount(int sum, int i) {
+			if(mem[i].count(sum)) {
+				return mem[i][sum];
+			}
+			if(i == vec.size() - 1) {
+				return vec[i][sum];
+			}
+			int ans = 0;
+			for(const auto &[k, v]: vec[i]) {
+				ans += v * sumCount(sum - k, i + 1);
+			}
+			mem[i][sum] = ans;
+			return ans;
+		}
+
+		int Solution::fourSumCount(vector<int> &nums1, vector<int> &nums2, vector<int> &nums3, vector<int> &nums4) {
+			mem = vector<unordered_map<int, int>>(4);
+			vec = vector<unordered_map<int, int>>(4);
+			for(const auto &num: nums1) {
+				vec[0][num]++;
+			}
+			for(const auto &num: nums2) {
+				vec[1][num]++;
+			}
+			for(const auto &num: nums3) {
+				vec[2][num]++;
+			}
+			for(const auto &num: nums4) {
+				vec[3][num]++;
+			}
+			return sumCount(0, 0);
+		}
+	}// namespace leetcode454_4sum_ii
 }// namespace leetcode
