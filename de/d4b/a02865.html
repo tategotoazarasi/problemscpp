@@ -82,12 +82,12 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a2538f891c4049ee95501176719c1a4c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4b/a02865.html#a2538f891c4049ee95501176719c1a4c7">TimeMap</a> ()=default</td></tr>
 <tr class="memdesc:a2538f891c4049ee95501176719c1a4c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化数据结构对象  <a href="../../de/d4b/a02865.html#a2538f891c4049ee95501176719c1a4c7">更多...</a><br /></td></tr>
 <tr class="separator:a2538f891c4049ee95501176719c1a4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6158d2525ab97f1fdab827eaea45e8a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4b/a02865.html#af6158d2525ab97f1fdab827eaea45e8a">get</a> (string key, int timestamp)</td></tr>
-<tr class="memdesc:af6158d2525ab97f1fdab827eaea45e8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回先前调用 set(key, value, timestamp_prev) 所存储的值，其中 timestamp_prev &lt;= timestamp 。  <a href="../../de/d4b/a02865.html#af6158d2525ab97f1fdab827eaea45e8a">更多...</a><br /></td></tr>
-<tr class="separator:af6158d2525ab97f1fdab827eaea45e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54abd374bcd5e455bd1de2b96acaba07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4b/a02865.html#a54abd374bcd5e455bd1de2b96acaba07">set</a> (string key, string value, int timestamp)</td></tr>
-<tr class="memdesc:a54abd374bcd5e455bd1de2b96acaba07"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储键 key、值 value，以及给定的时间戳 timestamp。  <a href="../../de/d4b/a02865.html#a54abd374bcd5e455bd1de2b96acaba07">更多...</a><br /></td></tr>
-<tr class="separator:a54abd374bcd5e455bd1de2b96acaba07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5919324273c0f9ee68a8706db33a6e8b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4b/a02865.html#a5919324273c0f9ee68a8706db33a6e8b">get</a> (const string &amp;key, int timestamp)</td></tr>
+<tr class="memdesc:a5919324273c0f9ee68a8706db33a6e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回先前调用 set(key, value, timestamp_prev) 所存储的值，其中 timestamp_prev &lt;= timestamp 。  <a href="../../de/d4b/a02865.html#a5919324273c0f9ee68a8706db33a6e8b">更多...</a><br /></td></tr>
+<tr class="separator:a5919324273c0f9ee68a8706db33a6e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa5ead8f5f4dcb67a325a8e8ae200eec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4b/a02865.html#aaa5ead8f5f4dcb67a325a8e8ae200eec">set</a> (const string &amp;key, string value, int timestamp)</td></tr>
+<tr class="memdesc:aaa5ead8f5f4dcb67a325a8e8ae200eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储键 key、值 value，以及给定的时间戳 timestamp。  <a href="../../de/d4b/a02865.html#aaa5ead8f5f4dcb67a325a8e8ae200eec">更多...</a><br /></td></tr>
+<tr class="separator:aaa5ead8f5f4dcb67a325a8e8ae200eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private 属性</h2></td></tr>
@@ -96,7 +96,7 @@ Private 属性</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03290">3290</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03300">3300</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a2538f891c4049ee95501176719c1a4c7" name="a2538f891c4049ee95501176719c1a4c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2538f891c4049ee95501176719c1a4c7">&#9670;&nbsp;</a></span>TimeMap()</h2>
@@ -126,8 +126,8 @@ Private 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="af6158d2525ab97f1fdab827eaea45e8a" name="af6158d2525ab97f1fdab827eaea45e8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6158d2525ab97f1fdab827eaea45e8a">&#9670;&nbsp;</a></span>get()</h2>
+<a id="a5919324273c0f9ee68a8706db33a6e8b" name="a5919324273c0f9ee68a8706db33a6e8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5919324273c0f9ee68a8706db33a6e8b">&#9670;&nbsp;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +135,7 @@ Private 属性</h2></td></tr>
         <tr>
           <td class="memname">string leetcode::time_based_key_value_store::TimeMap::get </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>key</em>, </td>
         </tr>
         <tr>
@@ -154,19 +154,19 @@ Private 属性</h2></td></tr>
 
 <p>返回先前调用 set(key, value, timestamp_prev) 所存储的值，其中 timestamp_prev &lt;= timestamp 。 </p>
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l09429">9429</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l09429" name="l09429"></a><span class="lineno"> 9429</span>                                                     {</div>
-<div class="line"><a id="l09430" name="l09430"></a><span class="lineno"> 9430</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="../../de/d4b/a02865.html#a61da82a42fc63e27e4c0792b441c71fb">um</a>[key].lower_bound(timestamp);</div>
-<div class="line"><a id="l09431" name="l09431"></a><span class="lineno"> 9431</span>            <span class="keywordflow">return</span> (it == <a class="code hl_variable" href="../../de/d4b/a02865.html#a61da82a42fc63e27e4c0792b441c71fb">um</a>[key].end()) ? <span class="stringliteral">&quot;&quot;</span> : (it-&gt;second);</div>
-<div class="line"><a id="l09432" name="l09432"></a><span class="lineno"> 9432</span>        }</div>
-<div class="ttc" id="aa02865_html_a61da82a42fc63e27e4c0792b441c71fb"><div class="ttname"><a href="../../de/d4b/a02865.html#a61da82a42fc63e27e4c0792b441c71fb">leetcode::time_based_key_value_store::TimeMap::um</a></div><div class="ttdeci">unordered_map&lt; string, map&lt; int, string, greater&lt; int &gt; &gt; &gt; um</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l03291">leetcode.h:3291</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l09419">9419</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l09419" name="l09419"></a><span class="lineno"> 9419</span>                                                            {</div>
+<div class="line"><a id="l09420" name="l09420"></a><span class="lineno"> 9420</span>            <span class="keyword">const</span> <span class="keyword">auto</span> it = <a class="code hl_variable" href="../../de/d4b/a02865.html#a61da82a42fc63e27e4c0792b441c71fb">um</a>[key].lower_bound(timestamp);</div>
+<div class="line"><a id="l09421" name="l09421"></a><span class="lineno"> 9421</span>            <span class="keywordflow">return</span> it == <a class="code hl_variable" href="../../de/d4b/a02865.html#a61da82a42fc63e27e4c0792b441c71fb">um</a>[key].end() ? <span class="stringliteral">&quot;&quot;</span> : it-&gt;second;</div>
+<div class="line"><a id="l09422" name="l09422"></a><span class="lineno"> 9422</span>        }</div>
+<div class="ttc" id="aa02865_html_a61da82a42fc63e27e4c0792b441c71fb"><div class="ttname"><a href="../../de/d4b/a02865.html#a61da82a42fc63e27e4c0792b441c71fb">leetcode::time_based_key_value_store::TimeMap::um</a></div><div class="ttdeci">unordered_map&lt; string, map&lt; int, string, greater&lt; int &gt; &gt; &gt; um</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l03301">leetcode.h:3301</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03291">um</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03301">um</a>.</p>
 
 </div>
 </div>
-<a id="a54abd374bcd5e455bd1de2b96acaba07" name="a54abd374bcd5e455bd1de2b96acaba07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54abd374bcd5e455bd1de2b96acaba07">&#9670;&nbsp;</a></span>set()</h2>
+<a id="aaa5ead8f5f4dcb67a325a8e8ae200eec" name="aaa5ead8f5f4dcb67a325a8e8ae200eec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa5ead8f5f4dcb67a325a8e8ae200eec">&#9670;&nbsp;</a></span>set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,7 +174,7 @@ Private 属性</h2></td></tr>
         <tr>
           <td class="memname">void leetcode::time_based_key_value_store::TimeMap::set </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>key</em>, </td>
         </tr>
         <tr>
@@ -199,12 +199,10 @@ Private 属性</h2></td></tr>
 
 <p>存储键 key、值 value，以及给定的时间戳 timestamp。 </p>
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l09426">9426</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l09426" name="l09426"></a><span class="lineno"> 9426</span>                                                                 {</div>
-<div class="line"><a id="l09427" name="l09427"></a><span class="lineno"> 9427</span>            <a class="code hl_variable" href="../../de/d4b/a02865.html#a61da82a42fc63e27e4c0792b441c71fb">um</a>[key][timestamp] = value;</div>
-<div class="line"><a id="l09428" name="l09428"></a><span class="lineno"> 9428</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l09417">9417</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l09417" name="l09417"></a><span class="lineno"> 9417</span>{ <a class="code hl_variable" href="../../de/d4b/a02865.html#a61da82a42fc63e27e4c0792b441c71fb">um</a>[key][timestamp] = std::move(value); }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03291">um</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d5/d16/a00029_source.html#l03301">um</a>.</p>
 
 </div>
 </div>
@@ -229,9 +227,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03291">3291</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03301">3301</a> 行定义.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l09429">get()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l09426">set()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d7/d46/a00002_source.html#l09419">get()</a> , 以及 <a class="el" href="../../d7/d46/a00002_source.html#l09417">set()</a>.</p>
 
 </div>
 </div>

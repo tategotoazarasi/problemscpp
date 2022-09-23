@@ -83,7 +83,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03157">3157</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03159">3159</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a051f57ba6b05c20d949765e5b70bc4c6" name="a051f57ba6b05c20d949765e5b70bc4c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a051f57ba6b05c20d949765e5b70bc4c6">&#9670;&nbsp;</a></span>calculateMinimumHP()</h2>
@@ -109,19 +109,19 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08992">8992</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08992" name="l08992"></a><span class="lineno"> 8992</span>                                                                     {</div>
-<div class="line"><a id="l08993" name="l08993"></a><span class="lineno"> 8993</span>            <span class="keywordtype">int</span> n = dungeon.size(), m = dungeon[0].size();</div>
-<div class="line"><a id="l08994" name="l08994"></a><span class="lineno"> 8994</span>            vector&lt;vector&lt;int&gt;&gt; dp(n + 1, vector&lt;int&gt;(m + 1, INT_MAX));</div>
-<div class="line"><a id="l08995" name="l08995"></a><span class="lineno"> 8995</span>            dp[n][m - 1] = dp[n - 1][m] = 1;</div>
-<div class="line"><a id="l08996" name="l08996"></a><span class="lineno"> 8996</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = n - 1; i &gt;= 0; --i) {</div>
-<div class="line"><a id="l08997" name="l08997"></a><span class="lineno"> 8997</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = m - 1; j &gt;= 0; --j) {</div>
-<div class="line"><a id="l08998" name="l08998"></a><span class="lineno"> 8998</span>                    <span class="keywordtype">int</span> minn = min(dp[i + 1][j], dp[i][j + 1]);</div>
-<div class="line"><a id="l08999" name="l08999"></a><span class="lineno"> 8999</span>                    dp[i][j] = max(minn - dungeon[i][j], 1);</div>
-<div class="line"><a id="l09000" name="l09000"></a><span class="lineno"> 9000</span>                }</div>
-<div class="line"><a id="l09001" name="l09001"></a><span class="lineno"> 9001</span>            }</div>
-<div class="line"><a id="l09002" name="l09002"></a><span class="lineno"> 9002</span>            <span class="keywordflow">return</span> dp[0][0];</div>
-<div class="line"><a id="l09003" name="l09003"></a><span class="lineno"> 9003</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08989">8989</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08989" name="l08989"></a><span class="lineno"> 8989</span>                                                                     {</div>
+<div class="line"><a id="l08990" name="l08990"></a><span class="lineno"> 8990</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = dungeon.size(), m = dungeon[0].size();</div>
+<div class="line"><a id="l08991" name="l08991"></a><span class="lineno"> 8991</span>            vector dp(n + 1, vector(m + 1, INT_MAX));</div>
+<div class="line"><a id="l08992" name="l08992"></a><span class="lineno"> 8992</span>            dp[n][m - 1] = dp[n - 1][m] = 1;</div>
+<div class="line"><a id="l08993" name="l08993"></a><span class="lineno"> 8993</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = n - 1; i &gt;= 0; --i) {</div>
+<div class="line"><a id="l08994" name="l08994"></a><span class="lineno"> 8994</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = m - 1; j &gt;= 0; --j) {</div>
+<div class="line"><a id="l08995" name="l08995"></a><span class="lineno"> 8995</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> minn = min(dp[i + 1][j], dp[i][j + 1]);</div>
+<div class="line"><a id="l08996" name="l08996"></a><span class="lineno"> 8996</span>                    dp[i][j]       = max(minn - dungeon[i][j], 1);</div>
+<div class="line"><a id="l08997" name="l08997"></a><span class="lineno"> 8997</span>                }</div>
+<div class="line"><a id="l08998" name="l08998"></a><span class="lineno"> 8998</span>            }</div>
+<div class="line"><a id="l08999" name="l08999"></a><span class="lineno"> 8999</span>            <span class="keywordflow">return</span> dp[0][0];</div>
+<div class="line"><a id="l09000" name="l09000"></a><span class="lineno"> 9000</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l04177">leetcode::dungeon_game::TEST()</a>.</p>
 

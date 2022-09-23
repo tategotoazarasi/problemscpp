@@ -6,7 +6,7 @@ var searchData=
   ['pardon_3',['pardon',['../d8/dde/a03313.html#ab3509bc7c7fea602ba679370ac9d41d8',1,'luogu::P5461']]],
   ['parkingsystem_4',['ParkingSystem',['../dd/d31/a02405.html#a5c207ffed475824a56ea8537f5b6371e',1,'leetcode::design_parking_system::ParkingSystem']]],
   ['parse_5',['parse',['../d9/dad/a00591.html#a25eeffe2c9c971ace4b52c60ffc109d4',1,'pat::a::a1020']]],
-  ['partition_6',['partition',['../df/d9c/a02793.html#afa6ce2c968d5af2af8b8e4f74c266ceb',1,'leetcode::palindrome_partitioning::Solution']]],
+  ['partition_6',['partition',['../df/d9c/a02793.html#a19d213c0c2c3958530b4d292ec66714c',1,'leetcode::palindrome_partitioning::Solution']]],
   ['partitionlabels_7',['partitionLabels',['../d6/dfc/a02593.html#a68212980c694aa4e0160ec23e53466f1',1,'leetcode::partition_labels::Solution']]],
   ['path_8',['path',['../d3/d00/a00785.html#a2b62663bd1765ca7789ef1f44afc6e4e',1,'acwing::acwing1978::path::path()'],['../d3/d00/a00785.html#a069767bd73730be1b36058badc9090cf',1,'acwing::acwing1978::path::path(int a, int b)']]],
   ['patternmatching_9',['patternMatching',['../d1/d20/a01813.html#abdf1800f6354d4c2fad0390aae1d65f5',1,'leetcode::pattern_matching_lcci::Solution']]],

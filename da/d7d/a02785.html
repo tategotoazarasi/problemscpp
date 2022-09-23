@@ -83,7 +83,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03099">3099</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03101">3101</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a3b6b99a18bc9b5489f3ab86553d27b69" name="a3b6b99a18bc9b5489f3ab86553d27b69"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b6b99a18bc9b5489f3ab86553d27b69">&#9670;&nbsp;</a></span>maximalRectangle()</h2>
@@ -109,52 +109,53 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08780">8780</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08780" name="l08780"></a><span class="lineno"> 8780</span>                                                                   {</div>
-<div class="line"><a id="l08781" name="l08781"></a><span class="lineno"> 8781</span>            <span class="keywordtype">int</span> m = matrix.size();</div>
-<div class="line"><a id="l08782" name="l08782"></a><span class="lineno"> 8782</span>            <span class="keywordflow">if</span>(m == 0) {</div>
-<div class="line"><a id="l08783" name="l08783"></a><span class="lineno"> 8783</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l08784" name="l08784"></a><span class="lineno"> 8784</span>            }</div>
-<div class="line"><a id="l08785" name="l08785"></a><span class="lineno"> 8785</span>            <span class="keywordtype">int</span> n = matrix[0].size();</div>
-<div class="line"><a id="l08786" name="l08786"></a><span class="lineno"> 8786</span>            vector&lt;vector&lt;int&gt;&gt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>(m, vector&lt;int&gt;(n, 0));</div>
-<div class="line"><a id="l08787" name="l08787"></a><span class="lineno"> 8787</span> </div>
-<div class="line"><a id="l08788" name="l08788"></a><span class="lineno"> 8788</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l08789" name="l08789"></a><span class="lineno"> 8789</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l08790" name="l08790"></a><span class="lineno"> 8790</span>                    <span class="keywordflow">if</span>(matrix[i][j] == <span class="charliteral">&#39;1&#39;</span>) {</div>
-<div class="line"><a id="l08791" name="l08791"></a><span class="lineno"> 8791</span>                        <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i][j] = (j == 0 ? 0 : <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i][j - 1]) + 1;</div>
-<div class="line"><a id="l08792" name="l08792"></a><span class="lineno"> 8792</span>                    }</div>
-<div class="line"><a id="l08793" name="l08793"></a><span class="lineno"> 8793</span>                }</div>
-<div class="line"><a id="l08794" name="l08794"></a><span class="lineno"> 8794</span>            }</div>
-<div class="line"><a id="l08795" name="l08795"></a><span class="lineno"> 8795</span> </div>
-<div class="line"><a id="l08796" name="l08796"></a><span class="lineno"> 8796</span>            <span class="keywordtype">int</span> ret = 0;</div>
-<div class="line"><a id="l08797" name="l08797"></a><span class="lineno"> 8797</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {<span class="comment">// 对于每一列，使用基于柱状图的方法</span></div>
-<div class="line"><a id="l08798" name="l08798"></a><span class="lineno"> 8798</span>                vector&lt;int&gt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a6e3e0fd26e5ab4dfae535f544a428b00">up</a>(m, 0), <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3">down</a>(m, 0);</div>
-<div class="line"><a id="l08799" name="l08799"></a><span class="lineno"> 8799</span> </div>
-<div class="line"><a id="l08800" name="l08800"></a><span class="lineno"> 8800</span>                stack&lt;int&gt; stk;</div>
-<div class="line"><a id="l08801" name="l08801"></a><span class="lineno"> 8801</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l08802" name="l08802"></a><span class="lineno"> 8802</span>                    <span class="keywordflow">while</span>(!stk.empty() &amp;&amp; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[stk.top()][j] &gt;= <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i][j]) {</div>
-<div class="line"><a id="l08803" name="l08803"></a><span class="lineno"> 8803</span>                        stk.pop();</div>
-<div class="line"><a id="l08804" name="l08804"></a><span class="lineno"> 8804</span>                    }</div>
-<div class="line"><a id="l08805" name="l08805"></a><span class="lineno"> 8805</span>                    <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a6e3e0fd26e5ab4dfae535f544a428b00">up</a>[i] = stk.empty() ? -1 : stk.top();</div>
-<div class="line"><a id="l08806" name="l08806"></a><span class="lineno"> 8806</span>                    stk.push(i);</div>
-<div class="line"><a id="l08807" name="l08807"></a><span class="lineno"> 8807</span>                }</div>
-<div class="line"><a id="l08808" name="l08808"></a><span class="lineno"> 8808</span>                stk = stack&lt;int&gt;();</div>
-<div class="line"><a id="l08809" name="l08809"></a><span class="lineno"> 8809</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = m - 1; i &gt;= 0; i--) {</div>
-<div class="line"><a id="l08810" name="l08810"></a><span class="lineno"> 8810</span>                    <span class="keywordflow">while</span>(!stk.empty() &amp;&amp; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[stk.top()][j] &gt;= <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i][j]) {</div>
-<div class="line"><a id="l08811" name="l08811"></a><span class="lineno"> 8811</span>                        stk.pop();</div>
-<div class="line"><a id="l08812" name="l08812"></a><span class="lineno"> 8812</span>                    }</div>
-<div class="line"><a id="l08813" name="l08813"></a><span class="lineno"> 8813</span>                    <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3">down</a>[i] = stk.empty() ? m : stk.top();</div>
-<div class="line"><a id="l08814" name="l08814"></a><span class="lineno"> 8814</span>                    stk.push(i);</div>
-<div class="line"><a id="l08815" name="l08815"></a><span class="lineno"> 8815</span>                }</div>
-<div class="line"><a id="l08816" name="l08816"></a><span class="lineno"> 8816</span> </div>
-<div class="line"><a id="l08817" name="l08817"></a><span class="lineno"> 8817</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l08818" name="l08818"></a><span class="lineno"> 8818</span>                    <span class="keywordtype">int</span> height = <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3">down</a>[i] - <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a6e3e0fd26e5ab4dfae535f544a428b00">up</a>[i] - 1;</div>
-<div class="line"><a id="l08819" name="l08819"></a><span class="lineno"> 8819</span>                    <span class="keywordtype">int</span> area   = height * <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i][j];</div>
-<div class="line"><a id="l08820" name="l08820"></a><span class="lineno"> 8820</span>                    ret        = max(ret, area);</div>
-<div class="line"><a id="l08821" name="l08821"></a><span class="lineno"> 8821</span>                }</div>
-<div class="line"><a id="l08822" name="l08822"></a><span class="lineno"> 8822</span>            }</div>
-<div class="line"><a id="l08823" name="l08823"></a><span class="lineno"> 8823</span>            <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a id="l08824" name="l08824"></a><span class="lineno"> 8824</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08776">8776</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08776" name="l08776"></a><span class="lineno"> 8776</span>                                                                   {</div>
+<div class="line"><a id="l08777" name="l08777"></a><span class="lineno"> 8777</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> m = matrix.size();</div>
+<div class="line"><a id="l08778" name="l08778"></a><span class="lineno"> 8778</span>            <span class="keywordflow">if</span>(m == 0) {</div>
+<div class="line"><a id="l08779" name="l08779"></a><span class="lineno"> 8779</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l08780" name="l08780"></a><span class="lineno"> 8780</span>            }</div>
+<div class="line"><a id="l08781" name="l08781"></a><span class="lineno"> 8781</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = matrix[0].size();</div>
+<div class="line"><a id="l08782" name="l08782"></a><span class="lineno"> 8782</span>            vector <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>(m, vector(n, 0));</div>
+<div class="line"><a id="l08783" name="l08783"></a><span class="lineno"> 8783</span> </div>
+<div class="line"><a id="l08784" name="l08784"></a><span class="lineno"> 8784</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l08785" name="l08785"></a><span class="lineno"> 8785</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><a id="l08786" name="l08786"></a><span class="lineno"> 8786</span>                    <span class="keywordflow">if</span>(matrix[i][j] == <span class="charliteral">&#39;1&#39;</span>) {</div>
+<div class="line"><a id="l08787" name="l08787"></a><span class="lineno"> 8787</span>                        <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i][j] = (j == 0 ? 0 : <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i][j - 1]) + 1;</div>
+<div class="line"><a id="l08788" name="l08788"></a><span class="lineno"> 8788</span>                    }</div>
+<div class="line"><a id="l08789" name="l08789"></a><span class="lineno"> 8789</span>                }</div>
+<div class="line"><a id="l08790" name="l08790"></a><span class="lineno"> 8790</span>            }</div>
+<div class="line"><a id="l08791" name="l08791"></a><span class="lineno"> 8791</span> </div>
+<div class="line"><a id="l08792" name="l08792"></a><span class="lineno"> 8792</span>            <span class="keywordtype">int</span> ret = 0;</div>
+<div class="line"><a id="l08793" name="l08793"></a><span class="lineno"> 8793</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><a id="l08794" name="l08794"></a><span class="lineno"> 8794</span>                <span class="comment">// 对于每一列，使用基于柱状图的方法</span></div>
+<div class="line"><a id="l08795" name="l08795"></a><span class="lineno"> 8795</span>                vector&lt;int&gt; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a6e3e0fd26e5ab4dfae535f544a428b00">up</a>(m, 0), <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3">down</a>(m, 0);</div>
+<div class="line"><a id="l08796" name="l08796"></a><span class="lineno"> 8796</span> </div>
+<div class="line"><a id="l08797" name="l08797"></a><span class="lineno"> 8797</span>                stack&lt;int&gt; stk;</div>
+<div class="line"><a id="l08798" name="l08798"></a><span class="lineno"> 8798</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l08799" name="l08799"></a><span class="lineno"> 8799</span>                    <span class="keywordflow">while</span>(!stk.empty() &amp;&amp; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[stk.top()][j] &gt;= <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i][j]) {</div>
+<div class="line"><a id="l08800" name="l08800"></a><span class="lineno"> 8800</span>                        stk.pop();</div>
+<div class="line"><a id="l08801" name="l08801"></a><span class="lineno"> 8801</span>                    }</div>
+<div class="line"><a id="l08802" name="l08802"></a><span class="lineno"> 8802</span>                    <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a6e3e0fd26e5ab4dfae535f544a428b00">up</a>[i] = stk.empty() ? -1 : stk.top();</div>
+<div class="line"><a id="l08803" name="l08803"></a><span class="lineno"> 8803</span>                    stk.push(i);</div>
+<div class="line"><a id="l08804" name="l08804"></a><span class="lineno"> 8804</span>                }</div>
+<div class="line"><a id="l08805" name="l08805"></a><span class="lineno"> 8805</span>                stk = stack&lt;int&gt;();</div>
+<div class="line"><a id="l08806" name="l08806"></a><span class="lineno"> 8806</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = m - 1; i &gt;= 0; i--) {</div>
+<div class="line"><a id="l08807" name="l08807"></a><span class="lineno"> 8807</span>                    <span class="keywordflow">while</span>(!stk.empty() &amp;&amp; <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[stk.top()][j] &gt;= <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i][j]) {</div>
+<div class="line"><a id="l08808" name="l08808"></a><span class="lineno"> 8808</span>                        stk.pop();</div>
+<div class="line"><a id="l08809" name="l08809"></a><span class="lineno"> 8809</span>                    }</div>
+<div class="line"><a id="l08810" name="l08810"></a><span class="lineno"> 8810</span>                    <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3">down</a>[i] = stk.empty() ? m : stk.top();</div>
+<div class="line"><a id="l08811" name="l08811"></a><span class="lineno"> 8811</span>                    stk.push(i);</div>
+<div class="line"><a id="l08812" name="l08812"></a><span class="lineno"> 8812</span>                }</div>
+<div class="line"><a id="l08813" name="l08813"></a><span class="lineno"> 8813</span> </div>
+<div class="line"><a id="l08814" name="l08814"></a><span class="lineno"> 8814</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l08815" name="l08815"></a><span class="lineno"> 8815</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> height = <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3">down</a>[i] - <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a6e3e0fd26e5ab4dfae535f544a428b00">up</a>[i] - 1;</div>
+<div class="line"><a id="l08816" name="l08816"></a><span class="lineno"> 8816</span>                    <span class="keywordtype">int</span> area         = height * <a class="code hl_enumvalue" href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i][j];</div>
+<div class="line"><a id="l08817" name="l08817"></a><span class="lineno"> 8817</span>                    ret              = max(ret, area);</div>
+<div class="line"><a id="l08818" name="l08818"></a><span class="lineno"> 8818</span>                }</div>
+<div class="line"><a id="l08819" name="l08819"></a><span class="lineno"> 8819</span>            }</div>
+<div class="line"><a id="l08820" name="l08820"></a><span class="lineno"> 8820</span>            <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a id="l08821" name="l08821"></a><span class="lineno"> 8821</span>        }</div>
 <div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3">acwing::acwing1929::down</a></div><div class="ttdeci">@ down</div><div class="ttdoc">下</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00561">acwing.h:560</a></div></div>
 <div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">acwing::acwing1929::left</a></div><div class="ttdeci">@ left</div><div class="ttdoc">左</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00554">acwing.h:554</a></div></div>
 <div class="ttc" id="aa00070_html_af40e9f5142818f91d8f7b2e795f35df5a6e3e0fd26e5ab4dfae535f544a428b00"><div class="ttname"><a href="../../d2/db1/a00070.html#af40e9f5142818f91d8f7b2e795f35df5a6e3e0fd26e5ab4dfae535f544a428b00">acwing::acwing1929::up</a></div><div class="ttdeci">@ up</div><div class="ttdoc">上</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00558">acwing.h:558</a></div></div>

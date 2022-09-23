@@ -83,7 +83,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03165">3165</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03167">3167</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a5dada8e4be24001640ec851df5e91f6e" name="a5dada8e4be24001640ec851df5e91f6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5dada8e4be24001640ec851df5e91f6e">&#9670;&nbsp;</a></span>canFinish()</h2>
@@ -119,35 +119,35 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l09007">9007</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l09007" name="l09007"></a><span class="lineno"> 9007</span>                                                                                   {</div>
-<div class="line"><a id="l09008" name="l09008"></a><span class="lineno"> 9008</span>            vector&lt;int&gt; in(numCourses);</div>
-<div class="line"><a id="l09009" name="l09009"></a><span class="lineno"> 9009</span>            vector&lt;unordered_set&lt;int&gt;&gt; out(numCourses);</div>
-<div class="line"><a id="l09010" name="l09010"></a><span class="lineno"> 9010</span>            unordered_set&lt;int&gt; learned;</div>
-<div class="line"><a id="l09011" name="l09011"></a><span class="lineno"> 9011</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;prerequisite: prerequisites) {</div>
-<div class="line"><a id="l09012" name="l09012"></a><span class="lineno"> 9012</span>                in[prerequisite[1]]++;</div>
-<div class="line"><a id="l09013" name="l09013"></a><span class="lineno"> 9013</span>                out[prerequisite[0]].insert(prerequisite[1]);</div>
-<div class="line"><a id="l09014" name="l09014"></a><span class="lineno"> 9014</span>            }</div>
-<div class="line"><a id="l09015" name="l09015"></a><span class="lineno"> 9015</span>            <span class="keywordtype">bool</span> hasChange = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l09016" name="l09016"></a><span class="lineno"> 9016</span>            <span class="keywordflow">while</span>(hasChange) {</div>
-<div class="line"><a id="l09017" name="l09017"></a><span class="lineno"> 9017</span>                hasChange = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l09018" name="l09018"></a><span class="lineno"> 9018</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; numCourses; i++) {</div>
-<div class="line"><a id="l09019" name="l09019"></a><span class="lineno"> 9019</span>                    <span class="keywordflow">if</span>(in[i] == 0 &amp;&amp; !learned.count(i)) {</div>
-<div class="line"><a id="l09020" name="l09020"></a><span class="lineno"> 9020</span>                        hasChange = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l09021" name="l09021"></a><span class="lineno"> 9021</span>                        learned.insert(i);</div>
-<div class="line"><a id="l09022" name="l09022"></a><span class="lineno"> 9022</span>                        <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;next: out[i]) {</div>
-<div class="line"><a id="l09023" name="l09023"></a><span class="lineno"> 9023</span>                            in[next]--;</div>
-<div class="line"><a id="l09024" name="l09024"></a><span class="lineno"> 9024</span>                        }</div>
-<div class="line"><a id="l09025" name="l09025"></a><span class="lineno"> 9025</span>                    }</div>
-<div class="line"><a id="l09026" name="l09026"></a><span class="lineno"> 9026</span>                }</div>
-<div class="line"><a id="l09027" name="l09027"></a><span class="lineno"> 9027</span>            }</div>
-<div class="line"><a id="l09028" name="l09028"></a><span class="lineno"> 9028</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; numCourses; i++) {</div>
-<div class="line"><a id="l09029" name="l09029"></a><span class="lineno"> 9029</span>                <span class="keywordflow">if</span>(in[i] != 0) {</div>
-<div class="line"><a id="l09030" name="l09030"></a><span class="lineno"> 9030</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l09031" name="l09031"></a><span class="lineno"> 9031</span>                }</div>
-<div class="line"><a id="l09032" name="l09032"></a><span class="lineno"> 9032</span>            }</div>
-<div class="line"><a id="l09033" name="l09033"></a><span class="lineno"> 9033</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l09034" name="l09034"></a><span class="lineno"> 9034</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l09004">9004</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l09004" name="l09004"></a><span class="lineno"> 9004</span>                                                                                   {</div>
+<div class="line"><a id="l09005" name="l09005"></a><span class="lineno"> 9005</span>            vector&lt;int&gt; in(numCourses);</div>
+<div class="line"><a id="l09006" name="l09006"></a><span class="lineno"> 9006</span>            vector&lt;unordered_set&lt;int&gt;&gt; out(numCourses);</div>
+<div class="line"><a id="l09007" name="l09007"></a><span class="lineno"> 9007</span>            unordered_set&lt;int&gt; learned;</div>
+<div class="line"><a id="l09008" name="l09008"></a><span class="lineno"> 9008</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;prerequisite: prerequisites) {</div>
+<div class="line"><a id="l09009" name="l09009"></a><span class="lineno"> 9009</span>                in[prerequisite[1]]++;</div>
+<div class="line"><a id="l09010" name="l09010"></a><span class="lineno"> 9010</span>                out[prerequisite[0]].insert(prerequisite[1]);</div>
+<div class="line"><a id="l09011" name="l09011"></a><span class="lineno"> 9011</span>            }</div>
+<div class="line"><a id="l09012" name="l09012"></a><span class="lineno"> 9012</span>            <span class="keywordtype">bool</span> hasChange = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l09013" name="l09013"></a><span class="lineno"> 9013</span>            <span class="keywordflow">while</span>(hasChange) {</div>
+<div class="line"><a id="l09014" name="l09014"></a><span class="lineno"> 9014</span>                hasChange = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l09015" name="l09015"></a><span class="lineno"> 9015</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; numCourses; i++) {</div>
+<div class="line"><a id="l09016" name="l09016"></a><span class="lineno"> 9016</span>                    <span class="keywordflow">if</span>(in[i] == 0 &amp;&amp; !learned.contains(i)) {</div>
+<div class="line"><a id="l09017" name="l09017"></a><span class="lineno"> 9017</span>                        hasChange = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l09018" name="l09018"></a><span class="lineno"> 9018</span>                        learned.insert(i);</div>
+<div class="line"><a id="l09019" name="l09019"></a><span class="lineno"> 9019</span>                        <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;next: out[i]) {</div>
+<div class="line"><a id="l09020" name="l09020"></a><span class="lineno"> 9020</span>                            in[next]--;</div>
+<div class="line"><a id="l09021" name="l09021"></a><span class="lineno"> 9021</span>                        }</div>
+<div class="line"><a id="l09022" name="l09022"></a><span class="lineno"> 9022</span>                    }</div>
+<div class="line"><a id="l09023" name="l09023"></a><span class="lineno"> 9023</span>                }</div>
+<div class="line"><a id="l09024" name="l09024"></a><span class="lineno"> 9024</span>            }</div>
+<div class="line"><a id="l09025" name="l09025"></a><span class="lineno"> 9025</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; numCourses; i++) {</div>
+<div class="line"><a id="l09026" name="l09026"></a><span class="lineno"> 9026</span>                <span class="keywordflow">if</span>(in[i] != 0) {</div>
+<div class="line"><a id="l09027" name="l09027"></a><span class="lineno"> 9027</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l09028" name="l09028"></a><span class="lineno"> 9028</span>                }</div>
+<div class="line"><a id="l09029" name="l09029"></a><span class="lineno"> 9029</span>            }</div>
+<div class="line"><a id="l09030" name="l09030"></a><span class="lineno"> 9030</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l09031" name="l09031"></a><span class="lineno"> 9031</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l04194">leetcode::course_schedule::TEST()</a>.</p>
 

@@ -125,7 +125,7 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l08686" name="l08686"></a><span class="lineno"> 8686</span>                                                             {</div>
 <div class="line"><a id="l08687" name="l08687"></a><span class="lineno"> 8687</span>            <span class="keywordtype">int</span> ans = 0;</div>
 <div class="line"><a id="l08688" name="l08688"></a><span class="lineno"> 8688</span>            <span class="keywordtype">int</span> c   = 0;</div>
-<div class="line"><a id="l08689" name="l08689"></a><span class="lineno"> 8689</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> num: nums) {</div>
+<div class="line"><a id="l08689" name="l08689"></a><span class="lineno"> 8689</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> num: nums) {</div>
 <div class="line"><a id="l08690" name="l08690"></a><span class="lineno"> 8690</span>                <span class="keywordflow">if</span>(c + num &gt; msum) {</div>
 <div class="line"><a id="l08691" name="l08691"></a><span class="lineno"> 8691</span>                    ans++;</div>
 <div class="line"><a id="l08692" name="l08692"></a><span class="lineno"> 8692</span>                    c = 0;</div>
@@ -185,8 +185,8 @@ $(function() {
 <div class="line"><a id="l08670" name="l08670"></a><span class="lineno"> 8670</span>                l = max(l, num);</div>
 <div class="line"><a id="l08671" name="l08671"></a><span class="lineno"> 8671</span>            }</div>
 <div class="line"><a id="l08672" name="l08672"></a><span class="lineno"> 8672</span>            <span class="keywordflow">while</span>(l &lt; r) {</div>
-<div class="line"><a id="l08673" name="l08673"></a><span class="lineno"> 8673</span>                <span class="keywordtype">int</span> mid = (l + r) / 2;</div>
-<div class="line"><a id="l08674" name="l08674"></a><span class="lineno"> 8674</span>                <span class="keywordtype">int</span> cnt = <a class="code hl_function" href="../../da/d73/a02765.html#aae6eff66caae7cccd362a9ac1f401b34">get_m</a>(nums, mid);</div>
+<div class="line"><a id="l08673" name="l08673"></a><span class="lineno"> 8673</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> mid = (l + r) / 2;</div>
+<div class="line"><a id="l08674" name="l08674"></a><span class="lineno"> 8674</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> cnt = <a class="code hl_function" href="../../da/d73/a02765.html#aae6eff66caae7cccd362a9ac1f401b34">get_m</a>(nums, mid);</div>
 <div class="line"><a id="l08675" name="l08675"></a><span class="lineno"> 8675</span>                <span class="keywordflow">if</span>(cnt == m) {</div>
 <div class="line"><a id="l08676" name="l08676"></a><span class="lineno"> 8676</span>                    r = mid;</div>
 <div class="line"><a id="l08677" name="l08677"></a><span class="lineno"> 8677</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(cnt &gt; m) {</div>

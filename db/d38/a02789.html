@@ -83,7 +83,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03107">3107</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03109">3109</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="abbd9dd960b3c85969101b727c9d2b257" name="abbd9dd960b3c85969101b727c9d2b257"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abbd9dd960b3c85969101b727c9d2b257">&#9670;&nbsp;</a></span>PredictTheWinner()</h2>
@@ -109,20 +109,20 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08828">8828</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08828" name="l08828"></a><span class="lineno"> 8828</span>                                                         {</div>
-<div class="line"><a id="l08829" name="l08829"></a><span class="lineno"> 8829</span>            <span class="keywordtype">int</span> length = nums.size();</div>
-<div class="line"><a id="l08830" name="l08830"></a><span class="lineno"> 8830</span>            <span class="keyword">auto</span> dp    = vector&lt;int&gt;(length);</div>
-<div class="line"><a id="l08831" name="l08831"></a><span class="lineno"> 8831</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; length; i++) {</div>
-<div class="line"><a id="l08832" name="l08832"></a><span class="lineno"> 8832</span>                dp[i] = nums[i];</div>
-<div class="line"><a id="l08833" name="l08833"></a><span class="lineno"> 8833</span>            }</div>
-<div class="line"><a id="l08834" name="l08834"></a><span class="lineno"> 8834</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = length - 2; i &gt;= 0; i--) {</div>
-<div class="line"><a id="l08835" name="l08835"></a><span class="lineno"> 8835</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i + 1; j &lt; length; j++) {</div>
-<div class="line"><a id="l08836" name="l08836"></a><span class="lineno"> 8836</span>                    dp[j] = max(nums[i] - dp[j], nums[j] - dp[j - 1]);</div>
-<div class="line"><a id="l08837" name="l08837"></a><span class="lineno"> 8837</span>                }</div>
-<div class="line"><a id="l08838" name="l08838"></a><span class="lineno"> 8838</span>            }</div>
-<div class="line"><a id="l08839" name="l08839"></a><span class="lineno"> 8839</span>            <span class="keywordflow">return</span> dp[length - 1] &gt;= 0;</div>
-<div class="line"><a id="l08840" name="l08840"></a><span class="lineno"> 8840</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08825">8825</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08825" name="l08825"></a><span class="lineno"> 8825</span>                                                         {</div>
+<div class="line"><a id="l08826" name="l08826"></a><span class="lineno"> 8826</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> length = nums.size();</div>
+<div class="line"><a id="l08827" name="l08827"></a><span class="lineno"> 8827</span>            <span class="keyword">auto</span> dp          = vector&lt;int&gt;(length);</div>
+<div class="line"><a id="l08828" name="l08828"></a><span class="lineno"> 8828</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; length; i++) {</div>
+<div class="line"><a id="l08829" name="l08829"></a><span class="lineno"> 8829</span>                dp[i] = nums[i];</div>
+<div class="line"><a id="l08830" name="l08830"></a><span class="lineno"> 8830</span>            }</div>
+<div class="line"><a id="l08831" name="l08831"></a><span class="lineno"> 8831</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = length - 2; i &gt;= 0; i--) {</div>
+<div class="line"><a id="l08832" name="l08832"></a><span class="lineno"> 8832</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i + 1; j &lt; length; j++) {</div>
+<div class="line"><a id="l08833" name="l08833"></a><span class="lineno"> 8833</span>                    dp[j] = max(nums[i] - dp[j], nums[j] - dp[j - 1]);</div>
+<div class="line"><a id="l08834" name="l08834"></a><span class="lineno"> 8834</span>                }</div>
+<div class="line"><a id="l08835" name="l08835"></a><span class="lineno"> 8835</span>            }</div>
+<div class="line"><a id="l08836" name="l08836"></a><span class="lineno"> 8836</span>            <span class="keywordflow">return</span> dp[length - 1] &gt;= 0;</div>
+<div class="line"><a id="l08837" name="l08837"></a><span class="lineno"> 8837</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l04086">leetcode::predict_the_winner::TEST()</a>.</p>
 

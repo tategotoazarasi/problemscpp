@@ -83,7 +83,7 @@ $(function() {
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03091">3091</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode.h</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l03093">3093</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a943c6de3f4a888045dbd4ae8b369ba0e" name="a943c6de3f4a888045dbd4ae8b369ba0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a943c6de3f4a888045dbd4ae8b369ba0e">&#9670;&nbsp;</a></span>maximalSquare()</h2>
@@ -109,46 +109,46 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08738">8738</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l08738" name="l08738"></a><span class="lineno"> 8738</span>                                                                {</div>
-<div class="line"><a id="l08739" name="l08739"></a><span class="lineno"> 8739</span>            <span class="keywordtype">int</span> m = matrix.size();</div>
-<div class="line"><a id="l08740" name="l08740"></a><span class="lineno"> 8740</span>            <span class="keywordtype">int</span> n = matrix[0].size();</div>
-<div class="line"><a id="l08741" name="l08741"></a><span class="lineno"> 8741</span>            vector&lt;vector&lt;int&gt;&gt; horizontal_next_1s(m, vector&lt;int&gt;(n, 0));</div>
-<div class="line"><a id="l08742" name="l08742"></a><span class="lineno"> 8742</span>            vector&lt;vector&lt;int&gt;&gt; vertical_next_1s(m, vector&lt;int&gt;(n, 0));</div>
-<div class="line"><a id="l08743" name="l08743"></a><span class="lineno"> 8743</span>            vector&lt;vector&lt;int&gt;&gt; dp(m + 1, vector&lt;int&gt;(n + 1, 0));</div>
-<div class="line"><a id="l08744" name="l08744"></a><span class="lineno"> 8744</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
-<div class="line"><a id="l08745" name="l08745"></a><span class="lineno"> 8745</span>                <span class="keywordtype">int</span> cnt = 0;</div>
-<div class="line"><a id="l08746" name="l08746"></a><span class="lineno"> 8746</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = n - 1; j &gt;= 0; j--) {</div>
-<div class="line"><a id="l08747" name="l08747"></a><span class="lineno"> 8747</span>                    <span class="keywordflow">if</span>(matrix[i][j] == <span class="charliteral">&#39;1&#39;</span>) {</div>
-<div class="line"><a id="l08748" name="l08748"></a><span class="lineno"> 8748</span>                        cnt++;</div>
-<div class="line"><a id="l08749" name="l08749"></a><span class="lineno"> 8749</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l08750" name="l08750"></a><span class="lineno"> 8750</span>                        cnt = 0;</div>
-<div class="line"><a id="l08751" name="l08751"></a><span class="lineno"> 8751</span>                    }</div>
-<div class="line"><a id="l08752" name="l08752"></a><span class="lineno"> 8752</span>                    horizontal_next_1s[i][j] = cnt;</div>
-<div class="line"><a id="l08753" name="l08753"></a><span class="lineno"> 8753</span>                }</div>
-<div class="line"><a id="l08754" name="l08754"></a><span class="lineno"> 8754</span>            }</div>
-<div class="line"><a id="l08755" name="l08755"></a><span class="lineno"> 8755</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l08756" name="l08756"></a><span class="lineno"> 8756</span>                <span class="keywordtype">int</span> cnt = 0;</div>
-<div class="line"><a id="l08757" name="l08757"></a><span class="lineno"> 8757</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = m - 1; i &gt;= 0; i--) {</div>
-<div class="line"><a id="l08758" name="l08758"></a><span class="lineno"> 8758</span>                    <span class="keywordflow">if</span>(matrix[i][j] == <span class="charliteral">&#39;1&#39;</span>) {</div>
-<div class="line"><a id="l08759" name="l08759"></a><span class="lineno"> 8759</span>                        cnt++;</div>
-<div class="line"><a id="l08760" name="l08760"></a><span class="lineno"> 8760</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l08761" name="l08761"></a><span class="lineno"> 8761</span>                        cnt = 0;</div>
-<div class="line"><a id="l08762" name="l08762"></a><span class="lineno"> 8762</span>                    }</div>
-<div class="line"><a id="l08763" name="l08763"></a><span class="lineno"> 8763</span>                    vertical_next_1s[i][j] = cnt;</div>
-<div class="line"><a id="l08764" name="l08764"></a><span class="lineno"> 8764</span>                }</div>
-<div class="line"><a id="l08765" name="l08765"></a><span class="lineno"> 8765</span>            }</div>
-<div class="line"><a id="l08766" name="l08766"></a><span class="lineno"> 8766</span>            <span class="keywordtype">int</span> ans = 0;</div>
-<div class="line"><a id="l08767" name="l08767"></a><span class="lineno"> 8767</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = m - 1; i &gt;= 0; i--) {</div>
-<div class="line"><a id="l08768" name="l08768"></a><span class="lineno"> 8768</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = n - 1; j &gt;= 0; j--) {</div>
-<div class="line"><a id="l08769" name="l08769"></a><span class="lineno"> 8769</span>                    <span class="keywordflow">if</span>(matrix[i][j] == <span class="charliteral">&#39;1&#39;</span>) {</div>
-<div class="line"><a id="l08770" name="l08770"></a><span class="lineno"> 8770</span>                        dp[i][j] = min(min(vertical_next_1s[i][j], horizontal_next_1s[i][j]), 1 + dp[i + 1][j + 1]);</div>
-<div class="line"><a id="l08771" name="l08771"></a><span class="lineno"> 8771</span>                        ans      = max(ans, dp[i][j]);</div>
-<div class="line"><a id="l08772" name="l08772"></a><span class="lineno"> 8772</span>                    }</div>
-<div class="line"><a id="l08773" name="l08773"></a><span class="lineno"> 8773</span>                }</div>
-<div class="line"><a id="l08774" name="l08774"></a><span class="lineno"> 8774</span>            }</div>
-<div class="line"><a id="l08775" name="l08775"></a><span class="lineno"> 8775</span>            <span class="keywordflow">return</span> ans * ans;</div>
-<div class="line"><a id="l08776" name="l08776"></a><span class="lineno"> 8776</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l08734">8734</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08734" name="l08734"></a><span class="lineno"> 8734</span>                                                                {</div>
+<div class="line"><a id="l08735" name="l08735"></a><span class="lineno"> 8735</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> m = matrix.size();</div>
+<div class="line"><a id="l08736" name="l08736"></a><span class="lineno"> 8736</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = matrix[0].size();</div>
+<div class="line"><a id="l08737" name="l08737"></a><span class="lineno"> 8737</span>            vector horizontal_next_1s(m, vector(n, 0));</div>
+<div class="line"><a id="l08738" name="l08738"></a><span class="lineno"> 8738</span>            vector vertical_next_1s(m, vector(n, 0));</div>
+<div class="line"><a id="l08739" name="l08739"></a><span class="lineno"> 8739</span>            vector dp(m + 1, vector(n + 1, 0));</div>
+<div class="line"><a id="l08740" name="l08740"></a><span class="lineno"> 8740</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l08741" name="l08741"></a><span class="lineno"> 8741</span>                <span class="keywordtype">int</span> cnt = 0;</div>
+<div class="line"><a id="l08742" name="l08742"></a><span class="lineno"> 8742</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = n - 1; j &gt;= 0; j--) {</div>
+<div class="line"><a id="l08743" name="l08743"></a><span class="lineno"> 8743</span>                    <span class="keywordflow">if</span>(matrix[i][j] == <span class="charliteral">&#39;1&#39;</span>) {</div>
+<div class="line"><a id="l08744" name="l08744"></a><span class="lineno"> 8744</span>                        cnt++;</div>
+<div class="line"><a id="l08745" name="l08745"></a><span class="lineno"> 8745</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l08746" name="l08746"></a><span class="lineno"> 8746</span>                        cnt = 0;</div>
+<div class="line"><a id="l08747" name="l08747"></a><span class="lineno"> 8747</span>                    }</div>
+<div class="line"><a id="l08748" name="l08748"></a><span class="lineno"> 8748</span>                    horizontal_next_1s[i][j] = cnt;</div>
+<div class="line"><a id="l08749" name="l08749"></a><span class="lineno"> 8749</span>                }</div>
+<div class="line"><a id="l08750" name="l08750"></a><span class="lineno"> 8750</span>            }</div>
+<div class="line"><a id="l08751" name="l08751"></a><span class="lineno"> 8751</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><a id="l08752" name="l08752"></a><span class="lineno"> 8752</span>                <span class="keywordtype">int</span> cnt = 0;</div>
+<div class="line"><a id="l08753" name="l08753"></a><span class="lineno"> 8753</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = m - 1; i &gt;= 0; i--) {</div>
+<div class="line"><a id="l08754" name="l08754"></a><span class="lineno"> 8754</span>                    <span class="keywordflow">if</span>(matrix[i][j] == <span class="charliteral">&#39;1&#39;</span>) {</div>
+<div class="line"><a id="l08755" name="l08755"></a><span class="lineno"> 8755</span>                        cnt++;</div>
+<div class="line"><a id="l08756" name="l08756"></a><span class="lineno"> 8756</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l08757" name="l08757"></a><span class="lineno"> 8757</span>                        cnt = 0;</div>
+<div class="line"><a id="l08758" name="l08758"></a><span class="lineno"> 8758</span>                    }</div>
+<div class="line"><a id="l08759" name="l08759"></a><span class="lineno"> 8759</span>                    vertical_next_1s[i][j] = cnt;</div>
+<div class="line"><a id="l08760" name="l08760"></a><span class="lineno"> 8760</span>                }</div>
+<div class="line"><a id="l08761" name="l08761"></a><span class="lineno"> 8761</span>            }</div>
+<div class="line"><a id="l08762" name="l08762"></a><span class="lineno"> 8762</span>            <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a id="l08763" name="l08763"></a><span class="lineno"> 8763</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = m - 1; i &gt;= 0; i--) {</div>
+<div class="line"><a id="l08764" name="l08764"></a><span class="lineno"> 8764</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = n - 1; j &gt;= 0; j--) {</div>
+<div class="line"><a id="l08765" name="l08765"></a><span class="lineno"> 8765</span>                    <span class="keywordflow">if</span>(matrix[i][j] == <span class="charliteral">&#39;1&#39;</span>) {</div>
+<div class="line"><a id="l08766" name="l08766"></a><span class="lineno"> 8766</span>                        dp[i][j] = min(min(vertical_next_1s[i][j], horizontal_next_1s[i][j]), 1 + dp[i + 1][j + 1]);</div>
+<div class="line"><a id="l08767" name="l08767"></a><span class="lineno"> 8767</span>                        ans      = max(ans, dp[i][j]);</div>
+<div class="line"><a id="l08768" name="l08768"></a><span class="lineno"> 8768</span>                    }</div>
+<div class="line"><a id="l08769" name="l08769"></a><span class="lineno"> 8769</span>                }</div>
+<div class="line"><a id="l08770" name="l08770"></a><span class="lineno"> 8770</span>            }</div>
+<div class="line"><a id="l08771" name="l08771"></a><span class="lineno"> 8771</span>            <span class="keywordflow">return</span> ans * ans;</div>
+<div class="line"><a id="l08772" name="l08772"></a><span class="lineno"> 8772</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../dc/d87/a00032_source.html#l04042">leetcode::maximal_square::TEST()</a>.</p>
 
