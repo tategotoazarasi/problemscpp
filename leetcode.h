@@ -3074,9 +3074,11 @@ namespace leetcode {
 		struct myhash {
 			size_t operator()(const pair<TreeNode *, bool> &p) const;
 		};
+
 		struct myeq {
 			bool operator()(const pair<TreeNode *, bool> &p1, const pair<TreeNode *, bool> &p2) const;
 		};
+
 		class Solution {
 			unordered_map<pair<TreeNode *, bool>, int, myhash, myeq> um;
 
@@ -3115,8 +3117,8 @@ namespace leetcode {
 		class Solution {
 		public:
 			static bool is_palindromic(const string &s, int start, int end);
-			static void dfs(vector<string> current, const string &s, vector<vector<string>> &ans, int start, int cursor);
-			static vector<vector<string>> partition(string s);
+			static void dfs(const vector<string> &current, const string &s, vector<vector<string>> &ans, int start, int cursor);
+			static vector<vector<string>> partition(const string &s);
 		};
 	}// namespace palindrome_partitioning
 
@@ -3194,8 +3196,11 @@ namespace leetcode {
 			int out;
 			int len = 1;
 			unordered_set<node *> pred;
-			node(int n, int out): n(n), out(out) {}
+
+			node(int n, int out)
+			    : n(n), out(out) {}
 		};
+
 		class Solution {
 		public:
 			static int minimumSemesters(int n, vector<vector<int>> &relations);
@@ -3220,19 +3225,24 @@ namespace leetcode {
 
 	/// \brief 864. 获取所有钥匙的最短路径
 	namespace shortest_path_to_get_all_keys {
-		const constexpr char EMPTY = '.';
-		const constexpr char WALL  = '#';
-		const constexpr char START = '@';
+		constexpr char EMPTY = '.';
+		constexpr char WALL  = '#';
+		constexpr char START = '@';
+
 		struct frame {
 			int x;
 			int y;
 			int lock_left;
 			int step = 0;
 			unordered_set<char> keys;
-			frame(int x, int y, int lock_left): x(x), y(y), lock_left(lock_left) {}
+
+			frame(int x, int y, int lock_left)
+			    : x(x), y(y), lock_left(lock_left) {}
+
 			bool operator<(const frame &f) const;
-			unsigned get_mask() const;
+			[[nodiscard]] unsigned get_mask() const;
 		};
+
 		class Solution {
 		public:
 			static int shortestPathAllKeys(vector<string> &grid);
@@ -3257,14 +3267,14 @@ namespace leetcode {
 			UndergroundSystem() = default;
 			/// \brief 通行卡 ID 等于 id 的乘客，在时间 t ，从 stationName 站进入
 			/// 乘客一次只能从一个站进入
-			void checkIn(int id, string stationName, int t);
+			void checkIn(int id, const string &stationName, int t);
 			/// \brief 通行卡 ID 等于 id 的乘客，在时间 t ，从 stationName 站离开
-			void checkOut(int id, string stationName, int t);
+			void checkOut(int id, const string &stationName, int t);
 			/// \brief 平均时间会根据截至目前所有从 startStation 站 直接 到达 endStation 站的行程进行计算，也就是从 startStation 站进入并从 endStation 离开的行程
 			/// 从 startStation 到 endStation 的行程时间与从 endStation 到 startStation 的行程时间可能不同
 			/// 在调用 getAverageTime 之前，至少有一名乘客从 startStation 站到达 endStation 站
 			/// \return 从 startStation 站到 endStation 站的平均时间
-			double getAverageTime(string startStation, string endStation);
+			double getAverageTime(const string &startStation, const string &endStation);
 		};
 	}// namespace design_underground_system
 
@@ -3294,11 +3304,11 @@ namespace leetcode {
 			/// \brief 初始化数据结构对象
 			TimeMap() = default;
 			/// \brief 存储键 key、值 value，以及给定的时间戳 timestamp。
-			void set(string key, string value, int timestamp);
+			void set(const string &key, string value, int timestamp);
 			/// \brief 返回先前调用 set(key, value, timestamp_prev) 所存储的值，其中 timestamp_prev <= timestamp 。
 			// 如果有多个这样的值，则返回对应最大的  timestamp_prev 的那个值。
 			// 如果没有值，则返回空字符串（""）。
-			string get(string key, int timestamp);
+			string get(const string &key, int timestamp);
 		};
 	}// namespace time_based_key_value_store
 
@@ -3306,15 +3316,20 @@ namespace leetcode {
 	namespace range_module {
 		class Chtholly {
 			using type = bool;
+
 			struct Node {
 				unsigned l{}, r{};
 				type data{};
-				Node(unsigned l, unsigned r = 0, type data = 0): l(l), r(r), data(data) {}
+
+				Node(unsigned l, unsigned r = 0, type data = false)
+				    : l(l), r(r), data(data) {}
+
 				bool operator<(const Node &rhs) const { return l < rhs.l; }
 			};
 
 		public:
 			set<Node> s;
+
 			auto split(unsigned pos) {
 				auto it = s.lower_bound({pos});
 				if(it != s.end() && it->l == pos)
@@ -3325,14 +3340,14 @@ namespace leetcode {
 				return s.emplace(pos, r, d).first;
 			}
 
-			void assign(unsigned l, unsigned r, type val = 0) {
-				auto it = split(r + 1);
+			void assign(unsigned l, unsigned r, type val = false) {
+				const auto it = split(r + 1);
 				s.erase(split(l), it);
 				s.emplace(l, r, val);
 			}
 
 			bool check(unsigned l, unsigned r) {
-				auto it = split(r + 1);
+				const auto it = split(r + 1);
 				return all_of(split(l), it, [](auto &&n) { return n.data; });
 			}
 		};
@@ -3362,7 +3377,8 @@ namespace leetcode {
 
 		public:
 			/// \brief 用数据结构的容量 capacity 初始化对象
-			LFUCache(int capacity): capacity(capacity){};
+			LFUCache(int capacity)
+			    : capacity(capacity){};
 			/// \brief 如果键 key 存在于缓存中，则获取键的值，否则返回 -1 。
 			int get(int key);
 			/// \brief 如果键 key 已存在，则变更其值；如果键不存在，请插入键值对。当缓存达到其容量 capacity 时，则应该在插入新项之前，移除最不经常使用的项。在此问题中，当存在平局（即两个或更多个键具有相同使用频率）时，应该去除 最近最久未使用 的键。

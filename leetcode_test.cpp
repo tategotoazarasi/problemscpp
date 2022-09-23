@@ -4096,31 +4096,31 @@ namespace leetcode {
 
 	namespace palindrome_partitioning {
 		TEST(palindrome_partitioning, case1) {
-			string s                   = "aab";
-			vector<vector<string>> ans = {{"a", "a", "b"}, {"aa", "b"}};
+			const string s                   = "aab";
+			const vector<vector<string>> ans = {{"a", "a", "b"}, {"aa", "b"}};
 			ASSERT_EQ(ans, Solution::partition(s));
 		}
 
 		TEST(palindrome_partitioning, case2) {
-			string s                   = "a";
-			vector<vector<string>> ans = {{"a"}};
+			const string s                   = "a";
+			const vector<vector<string>> ans = {{"a"}};
 			ASSERT_EQ(ans, Solution::partition(s));
 		}
 	}// namespace palindrome_partitioning
 
 	namespace palindrome_partitioning_ii {
 		TEST(palindrome_partitioning_ii, case1) {
-			string s = "aab";
+			const string s = "aab";
 			ASSERT_EQ(1, Solution::minCut(s));
 		}
 
 		TEST(palindrome_partitioning_ii, case2) {
-			string s = "a";
+			const string s = "a";
 			ASSERT_EQ(0, Solution::minCut(s));
 		}
 
 		TEST(palindrome_partitioning_ii, case3) {
-			string s = "ab";
+			const string s = "ab";
 			ASSERT_EQ(1, Solution::minCut(s));
 		}
 	}// namespace palindrome_partitioning_ii
@@ -4205,19 +4205,19 @@ namespace leetcode {
 	namespace course_schedule_ii {
 		TEST(course_schedule_ii, case1) {
 			vector<vector<int>> prerequisites = {{1, 0}};
-			vector<int> ans                   = {0, 1};
+			const vector ans                  = {0, 1};
 			ASSERT_EQ(ans, Solution::findOrder(2, prerequisites));
 		}
 
 		TEST(course_schedule_ii, case2) {
 			vector<vector<int>> prerequisites = {{1, 0}, {2, 0}, {3, 1}, {3, 2}};
-			vector<int> ans                   = {0, 1, 2, 3};
+			const vector ans                  = {0, 1, 2, 3};
 			ASSERT_EQ(ans, Solution::findOrder(4, prerequisites));
 		}
 
 		TEST(course_schedule_ii, case3) {
 			vector<vector<int>> prerequisites = {};
-			vector<int> ans                   = {0};
+			const vector ans                  = {0};
 			ASSERT_EQ(ans, Solution::findOrder(1, prerequisites));
 		}
 	}// namespace course_schedule_ii
@@ -4225,25 +4225,25 @@ namespace leetcode {
 	namespace longest_increasing_path_in_a_matrix {
 		TEST(longest_increasing_path_in_a_matrix, case1) {
 			vector<vector<int>> matrix = {{9, 9, 4}, {6, 6, 8}, {2, 1, 1}};
-			Solution sol;
+			Solution sol{};
 			ASSERT_EQ(4, sol.longestIncreasingPath(matrix));
 		}
 
 		TEST(longest_increasing_path_in_a_matrix, case2) {
 			vector<vector<int>> matrix = {{3, 4, 5}, {3, 2, 6}, {2, 2, 1}};
-			Solution sol;
+			Solution sol{};
 			ASSERT_EQ(4, sol.longestIncreasingPath(matrix));
 		}
 
 		TEST(longest_increasing_path_in_a_matrix, case3) {
 			vector<vector<int>> matrix = {{1}};
-			Solution sol;
+			Solution sol{};
 			ASSERT_EQ(1, sol.longestIncreasingPath(matrix));
 		}
 
 		TEST(longest_increasing_path_in_a_matrix, case4) {
 			vector<vector<int>> matrix = {{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, {19, 18, 17, 16, 15, 14, 13, 12, 11, 10}, {20, 21, 22, 23, 24, 25, 26, 27, 28, 29}, {39, 38, 37, 36, 35, 34, 33, 32, 31, 30}, {40, 41, 42, 43, 44, 45, 46, 47, 48, 49}, {59, 58, 57, 56, 55, 54, 53, 52, 51, 50}, {60, 61, 62, 63, 64, 65, 66, 67, 68, 69}, {79, 78, 77, 76, 75, 74, 73, 72, 71, 70}, {80, 81, 82, 83, 84, 85, 86, 87, 88, 89}, {99, 98, 97, 96, 95, 94, 93, 92, 91, 90}, {100, 101, 102, 103, 104, 105, 106, 107, 108, 109}, {119, 118, 117, 116, 115, 114, 113, 112, 111, 110}, {120, 121, 122, 123, 124, 125, 126, 127, 128, 129}, {139, 138, 137, 136, 135, 134, 133, 132, 131, 130}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}};
-			Solution sol;
+			Solution sol{};
 			ASSERT_EQ(140, sol.longestIncreasingPath(matrix));
 		}
 	}// namespace longest_increasing_path_in_a_matrix
@@ -4289,20 +4289,20 @@ namespace leetcode {
 
 	namespace single_number_iii {
 		TEST(single_number_iii, case1) {
-			vector<int> nums = {1, 2, 1, 3, 2, 5};
-			vector<int> ans  = {3, 5};
+			vector nums      = {1, 2, 1, 3, 2, 5};
+			const vector ans = {3, 5};
 			ASSERT_EQ(ans, Solution::singleNumber(nums));
 		}
 
 		TEST(single_number_iii, case2) {
-			vector<int> nums = {-1, 0};
-			vector<int> ans  = {-1, 0};
+			vector nums      = {-1, 0};
+			const vector ans = {-1, 0};
 			ASSERT_EQ(ans, Solution::singleNumber(nums));
 		}
 
 		TEST(single_number_iii, case3) {
-			vector<int> nums = {0, 1};
-			vector<int> ans  = {1, 0};
+			vector nums      = {0, 1};
+			const vector ans = {1, 0};
 			ASSERT_EQ(ans, Solution::singleNumber(nums));
 		}
 	}// namespace single_number_iii
