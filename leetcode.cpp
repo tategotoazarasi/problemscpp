@@ -9560,4 +9560,23 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace maximum_size_subarray_sum_equals_k
+
+	namespace minimum_swaps_to_group_all_1s_together {
+		int Solution::minSwaps(vector<int> &data) {
+			vector<int> one_count = vector<int>(data.size(), 0);
+			int cnt1              = 0;
+			for(int i = 0; i < one_count.size(); i++) {
+				one_count[i] = cnt1 + data[i];
+				cnt1         = one_count[i];
+			}
+			if(cnt1 == 0) {
+				return 0;
+			}
+			int ans = cnt1 - one_count[cnt1 - 1];
+			for(int i = 0; i + cnt1 < one_count.size(); i++) {
+				ans = min(ans, cnt1 - (one_count[i + cnt1] - one_count[i]));
+			}
+			return ans;
+		}
+	}// namespace minimum_swaps_to_group_all_1s_together
 }// namespace leetcode

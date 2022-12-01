@@ -4398,4 +4398,26 @@ namespace leetcode {
 			ASSERT_EQ(2, Solution::maxSubArrayLen(nums, 1));
 		}
 	}// namespace maximum_size_subarray_sum_equals_k
+
+	namespace minimum_swaps_to_group_all_1s_together {
+		TEST(minimum_swaps_to_group_all_1s_together, case1) {
+			vector data = {1, 0, 1, 0, 1};
+			ASSERT_EQ(1, Solution::minSwaps(data));
+		}
+
+		TEST(minimum_swaps_to_group_all_1s_together, case2) {
+			vector data = {0, 0, 0, 1, 0};
+			ASSERT_EQ(0, Solution::minSwaps(data));
+		}
+
+		TEST(minimum_swaps_to_group_all_1s_together, case3) {
+			vector data = {1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1};
+			ASSERT_EQ(3, Solution::minSwaps(data));
+		}
+
+		TEST(minimum_swaps_to_group_all_1s_together, case4) {
+			vector data = {1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1};
+			ASSERT_EQ(8, Solution::minSwaps(data));
+		}
+	}// namespace minimum_swaps_to_group_all_1s_together
 }// namespace leetcode
