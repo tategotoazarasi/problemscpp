@@ -3381,6 +3381,14 @@ namespace leetcode {
 			int fourSumCount(vector<int> &nums1, vector<int> &nums2, vector<int> &nums3, vector<int> &nums4);
 		};
 	}// namespace leetcode454_4sum_ii
+
+	/// \brief 325. 和等于 k 的最长子数组长度
+	namespace maximum_size_subarray_sum_equals_k {
+		class Solution {
+		public:
+			static int maxSubArrayLen(vector<int> &nums, int k);
+		};
+	}// namespace maximum_size_subarray_sum_equals_k
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

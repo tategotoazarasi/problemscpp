@@ -4386,4 +4386,16 @@ namespace leetcode {
 			ASSERT_EQ(1, sol.fourSumCount(nums1, nums2, nums3, nums4));
 		}
 	}// namespace leetcode454_4sum_ii
+
+	namespace maximum_size_subarray_sum_equals_k {
+		TEST(maximum_size_subarray_sum_equals_k, case1) {
+			vector nums = {1, -1, 5, -2, 3};
+			ASSERT_EQ(4, Solution::maxSubArrayLen(nums, 3));
+		}
+
+		TEST(maximum_size_subarray_sum_equals_k, case2) {
+			vector nums = {-2, -1, 2, 1};
+			ASSERT_EQ(2, Solution::maxSubArrayLen(nums, 1));
+		}
+	}// namespace maximum_size_subarray_sum_equals_k
 }// namespace leetcode

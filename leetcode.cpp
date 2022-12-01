@@ -9537,4 +9537,27 @@ namespace leetcode {
 			return sumCount(0, 0);
 		}
 	}// namespace leetcode454_4sum_ii
+
+	namespace maximum_size_subarray_sum_equals_k {
+		int Solution::maxSubArrayLen(vector<int> &nums, int k) {
+			vector<int> pref_sum = vector<int>(nums.size(), 0);
+			pref_sum[0]          = nums[0];
+			unordered_map<int, set<int>> um;
+			um[0].insert(-1);
+			um[nums[0]].insert(0);
+			for(int i = 1; i < nums.size(); i++) {
+				pref_sum[i] += nums[i] + pref_sum[i - 1];
+				um[pref_sum[i]].insert(i);
+			}
+			int ans = 0;
+			for(int i = nums.size() - 1; i >= 0; i--) {
+				int r = pref_sum[i];
+				int l = r - k;
+				if(!um[l].empty()) {
+					ans = max(ans, i - (*um[l].begin()));
+				}
+			}
+			return ans;
+		}
+	}// namespace maximum_size_subarray_sum_equals_k
 }// namespace leetcode
