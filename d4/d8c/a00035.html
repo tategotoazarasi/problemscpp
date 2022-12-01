@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: luogu_test.cpp 文件参考</title>
+<title>problemscpp: pat.cpp 文件参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -65,316 +65,775 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">命名空间</a> &#124;
-<a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">luogu_test.cpp 文件参考</div></div>
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">pat.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../d5/df9/a00044_source.html">luogu.h</a>&quot;</code><br />
-<code>#include &quot;gtest/gtest.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d9/d2e/a00056_source.html">pat.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/d8b/a00059_source.html">templates.h</a>&quot;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;deque&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;numeric&gt;</code><br />
+<code>#include &lt;queue&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;stack&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;unordered_set&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div>
 <p><a href="../../d4/d8c/a00035_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:d5/d5f/a00461"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html">luogu</a></td></tr>
+<tr class="memitem:db/d2c/a00466"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d2c/a00466.html">pat</a></td></tr>
+<tr class="memdesc:db/d2c/a00466"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算机程序设计能力考试 <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:de/dcb/a00462"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dcb/a00462.html">luogu::P5742</a></td></tr>
-<tr class="memdesc:de/dcb/a00462"><td class="mdescLeft">&#160;</td><td class="mdescRight">洛谷 <a class="el" href="../../d8/d5d/a03329.html">P5742</a> 【深基7.例11】评等级 <br /></td></tr>
+<tr class="memitem:d8/d9b/a00577"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d9b/a00577.html">pat::a</a></td></tr>
+<tr class="memdesc:d8/d9b/a00577"><td class="mdescLeft">&#160;</td><td class="mdescRight">甲级 <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:d3/d5d/a00463"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d5d/a00463.html">luogu::P5744</a></td></tr>
-<tr class="memdesc:d3/d5d/a00463"><td class="mdescLeft">&#160;</td><td class="mdescRight">洛谷 <a class="el" href="../../d6/df3/a03349.html">P5744</a> 【深基7.习9】培训 <br /></td></tr>
+<tr class="memitem:dd/d5c/a00578"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/a00578.html">pat::a::a1003</a></td></tr>
+<tr class="memdesc:dd/d5c/a00578"><td class="mdescLeft">&#160;</td><td class="mdescRight">1003 Emergency <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/d4a/a00579"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4a/a00579.html">pat::a::a1004</a></td></tr>
+<tr class="memdesc:dc/d4a/a00579"><td class="mdescLeft">&#160;</td><td class="mdescRight">1004 Counting Leaves <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d3/de2/a00580"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de2/a00580.html">pat::a::a1005</a></td></tr>
+<tr class="memdesc:d3/de2/a00580"><td class="mdescLeft">&#160;</td><td class="mdescRight">1005 Spell It Right <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/dc8/a00581"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc8/a00581.html">pat::a::a1006</a></td></tr>
+<tr class="memdesc:d8/dc8/a00581"><td class="mdescLeft">&#160;</td><td class="mdescRight">1006 Sign In and Sign Out <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/d2f/a00582"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2f/a00582.html">pat::a::a1007</a></td></tr>
+<tr class="memdesc:d4/d2f/a00582"><td class="mdescLeft">&#160;</td><td class="mdescRight">1007 Maximum Subsequence Sum <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d5/d80/a00583"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html">pat::a::a1008</a></td></tr>
+<tr class="memdesc:d5/d80/a00583"><td class="mdescLeft">&#160;</td><td class="mdescRight">1008 Elevator <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d7/d21/a00584"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d21/a00584.html">pat::a::a1009</a></td></tr>
+<tr class="memdesc:d7/d21/a00584"><td class="mdescLeft">&#160;</td><td class="mdescRight">1009 Product of Polynomials <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/dac/a00585"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/a00585.html">pat::a::a1013</a></td></tr>
+<tr class="memdesc:dc/dac/a00585"><td class="mdescLeft">&#160;</td><td class="mdescRight">1013 Battle Over Cities <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/d92/a00586"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html">pat::a::a1014</a></td></tr>
+<tr class="memdesc:d6/d92/a00586"><td class="mdescLeft">&#160;</td><td class="mdescRight">1014 Waiting in Line <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:de/dde/a00587"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dde/a00587.html">pat::a::a1015</a></td></tr>
+<tr class="memdesc:de/dde/a00587"><td class="mdescLeft">&#160;</td><td class="mdescRight">1015 Reversible Primes <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/d2e/a00588"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2e/a00588.html">pat::a::a1016</a></td></tr>
+<tr class="memdesc:d8/d2e/a00588"><td class="mdescLeft">&#160;</td><td class="mdescRight">1016 Phone Bills <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/da3/a00589"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da3/a00589.html">pat::a::a1017</a></td></tr>
+<tr class="memdesc:d6/da3/a00589"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ol type="1">
+<li>银行排队 </li>
+</ol>
+<br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/dad/a00591"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dad/a00591.html">pat::a::a1018</a></td></tr>
+<tr class="memdesc:d9/dad/a00591"><td class="mdescLeft">&#160;</td><td class="mdescRight">1018 Public Bike Management <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d0/dec/a00592"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dec/a00592.html">pat::a::a1019</a></td></tr>
+<tr class="memdesc:d0/dec/a00592"><td class="mdescLeft">&#160;</td><td class="mdescRight">1019 General Palindromic Number <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d2/da3/a00593"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da3/a00593.html">pat::a::a1020</a></td></tr>
+<tr class="memdesc:d2/da3/a00593"><td class="mdescLeft">&#160;</td><td class="mdescRight">1020 Tree Traversals <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/dbd/a00597"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbd/a00597.html">pat::a::a1021</a></td></tr>
+<tr class="memdesc:d8/dbd/a00597"><td class="mdescLeft">&#160;</td><td class="mdescRight">1021 Deepest Root <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:da/de4/a00594"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de4/a00594.html">pat::a::a1023</a></td></tr>
+<tr class="memdesc:da/de4/a00594"><td class="mdescLeft">&#160;</td><td class="mdescRight">1023 Have Fun with Numbers <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/de9/a00595"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de9/a00595.html">pat::a::a1024</a></td></tr>
+<tr class="memdesc:d8/de9/a00595"><td class="mdescLeft">&#160;</td><td class="mdescRight">1024 Palindromic Number <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d7/db1/a00590"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html">pat::a::a1026</a></td></tr>
+<tr class="memdesc:d7/db1/a00590"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ol type="1">
+<li>乒乓球 </li>
+</ol>
+<br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/d25/a00596"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/a00596.html">pat::a::a1027</a></td></tr>
+<tr class="memdesc:dc/d25/a00596"><td class="mdescLeft">&#160;</td><td class="mdescRight">1027 Colors in Mars <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d7/dd2/a00598"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd2/a00598.html">pat::a::a7_1</a></td></tr>
+<tr class="memdesc:d7/dd2/a00598"><td class="mdescLeft">&#160;</td><td class="mdescRight">7-1 Balloon Popping <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d5/d8a/a00599"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/a00599.html">pat::a::a7_2</a></td></tr>
+<tr class="memdesc:d5/d8a/a00599"><td class="mdescLeft">&#160;</td><td class="mdescRight">7-2 The Second Run of Quicksort <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d1/d8c/a00600"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8c/a00600.html">pat::a::a7_3</a></td></tr>
+<tr class="memdesc:d1/d8c/a00600"><td class="mdescLeft">&#160;</td><td class="mdescRight">7-3 Leader of the Opinion Leaders <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/db2/a00601"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/db2/a00601.html">pat::a::a7_4</a></td></tr>
+<tr class="memdesc:d6/db2/a00601"><td class="mdescLeft">&#160;</td><td class="mdescRight">7-4 Pseudo-completeness <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d7/d5e/a00467"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5e/a00467.html">pat::b</a></td></tr>
+<tr class="memdesc:d7/d5e/a00467"><td class="mdescLeft">&#160;</td><td class="mdescRight">乙级 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:df/d38/a00468"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d38/a00468.html">pat::b::b1001</a></td></tr>
+<tr class="memdesc:df/d38/a00468"><td class="mdescLeft">&#160;</td><td class="mdescRight">1001 害死人不偿命的(3n+1)猜想 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/ddf/a00469"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/ddf/a00469.html">pat::b::b1002</a></td></tr>
+<tr class="memdesc:dc/ddf/a00469"><td class="mdescLeft">&#160;</td><td class="mdescRight">1002 写出这个数 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d0/d29/a00470"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d29/a00470.html">pat::b::b1003</a></td></tr>
+<tr class="memdesc:d0/d29/a00470"><td class="mdescLeft">&#160;</td><td class="mdescRight">1003 我要通过！ <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/d4b/a00471"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4b/a00471.html">pat::b::b1004</a></td></tr>
+<tr class="memdesc:d4/d4b/a00471"><td class="mdescLeft">&#160;</td><td class="mdescRight">1004 成绩排名 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d7/db5/a00472"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db5/a00472.html">pat::b::b1005</a></td></tr>
+<tr class="memdesc:d7/db5/a00472"><td class="mdescLeft">&#160;</td><td class="mdescRight">1005 继续(3n+1)猜想 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/d8e/a00473"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d8e/a00473.html">pat::b::b1006</a></td></tr>
+<tr class="memdesc:dc/d8e/a00473"><td class="mdescLeft">&#160;</td><td class="mdescRight">1006 换个格式输出整数 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d5/d26/a00474"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d26/a00474.html">pat::b::b1007</a></td></tr>
+<tr class="memdesc:d5/d26/a00474"><td class="mdescLeft">&#160;</td><td class="mdescRight">1007 素数对猜想 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d1/d92/a00475"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d92/a00475.html">pat::b::b1008</a></td></tr>
+<tr class="memdesc:d1/d92/a00475"><td class="mdescLeft">&#160;</td><td class="mdescRight">1008 数组元素循环右移问题 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/d34/a00476"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/a00476.html">pat::b::b1009</a></td></tr>
+<tr class="memdesc:d9/d34/a00476"><td class="mdescLeft">&#160;</td><td class="mdescRight">1009 说反话 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/dca/a00477"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dca/a00477.html">pat::b::b1010</a></td></tr>
+<tr class="memdesc:d9/dca/a00477"><td class="mdescLeft">&#160;</td><td class="mdescRight">1010 一元多项式求导 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/dea/a00478"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dea/a00478.html">pat::b::b1011</a></td></tr>
+<tr class="memdesc:d9/dea/a00478"><td class="mdescLeft">&#160;</td><td class="mdescRight">1011 A+B 和 C <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/d4a/a00479"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d4a/a00479.html">pat::b::b1012</a></td></tr>
+<tr class="memdesc:d9/d4a/a00479"><td class="mdescLeft">&#160;</td><td class="mdescRight">1012 数字分类 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/dc5/a00480"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc5/a00480.html">pat::b::b1013</a></td></tr>
+<tr class="memdesc:d9/dc5/a00480"><td class="mdescLeft">&#160;</td><td class="mdescRight">1013 数素数 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d3/d58/a00481"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d58/a00481.html">pat::b::b1014</a></td></tr>
+<tr class="memdesc:d3/d58/a00481"><td class="mdescLeft">&#160;</td><td class="mdescRight">1014 福尔摩斯的约会 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:db/d8e/a00482"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d8e/a00482.html">pat::b::b1015</a></td></tr>
+<tr class="memdesc:db/d8e/a00482"><td class="mdescLeft">&#160;</td><td class="mdescRight">1015 德才论 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/da0/a00483"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da0/a00483.html">pat::b::b1016</a></td></tr>
+<tr class="memdesc:dc/da0/a00483"><td class="mdescLeft">&#160;</td><td class="mdescRight">1016 部分A+B <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/d89/a00484"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d89/a00484.html">pat::b::b1018</a></td></tr>
+<tr class="memdesc:d8/d89/a00484"><td class="mdescLeft">&#160;</td><td class="mdescRight">1018 锤子剪刀布 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/d1a/a00485"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1a/a00485.html">pat::b::b1019</a></td></tr>
+<tr class="memdesc:d6/d1a/a00485"><td class="mdescLeft">&#160;</td><td class="mdescRight">1019 数字黑洞 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:db/df1/a00486"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/df1/a00486.html">pat::b::b1020</a></td></tr>
+<tr class="memdesc:db/df1/a00486"><td class="mdescLeft">&#160;</td><td class="mdescRight">1020 月饼 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dd/d9c/a00487"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9c/a00487.html">pat::b::b1021</a></td></tr>
+<tr class="memdesc:dd/d9c/a00487"><td class="mdescLeft">&#160;</td><td class="mdescRight">1021 个位数统计 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/ddf/a00488"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/a00488.html">pat::b::b1022</a></td></tr>
+<tr class="memdesc:d4/ddf/a00488"><td class="mdescLeft">&#160;</td><td class="mdescRight">1022 D进制的A+B <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:da/d05/a00489"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d05/a00489.html">pat::b::b1023</a></td></tr>
+<tr class="memdesc:da/d05/a00489"><td class="mdescLeft">&#160;</td><td class="mdescRight">1023 组个最小数 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d7/daa/a00490"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/daa/a00490.html">pat::b::b1024</a></td></tr>
+<tr class="memdesc:d7/daa/a00490"><td class="mdescLeft">&#160;</td><td class="mdescRight">1024 科学计数法 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/d60/a00491"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d60/a00491.html">pat::b::b1025</a></td></tr>
+<tr class="memdesc:d6/d60/a00491"><td class="mdescLeft">&#160;</td><td class="mdescRight">1025 反转链表 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:da/d7e/a00492"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d7e/a00492.html">pat::b::b1026</a></td></tr>
+<tr class="memdesc:da/d7e/a00492"><td class="mdescLeft">&#160;</td><td class="mdescRight">1026 程序运行时间 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/da5/a00493"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/da5/a00493.html">pat::b::b1027</a></td></tr>
+<tr class="memdesc:d9/da5/a00493"><td class="mdescLeft">&#160;</td><td class="mdescRight">1027 打印沙漏 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d5/d0f/a00494"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d0f/a00494.html">pat::b::b1028</a></td></tr>
+<tr class="memdesc:d5/d0f/a00494"><td class="mdescLeft">&#160;</td><td class="mdescRight">1028 人口普查 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:db/dc4/a00495"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc4/a00495.html">pat::b::b1029</a></td></tr>
+<tr class="memdesc:db/dc4/a00495"><td class="mdescLeft">&#160;</td><td class="mdescRight">1029 旧键盘 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d3/dad/a00496"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dad/a00496.html">pat::b::b1030</a></td></tr>
+<tr class="memdesc:d3/dad/a00496"><td class="mdescLeft">&#160;</td><td class="mdescRight">1030 完美数列 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/d1e/a00497"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d1e/a00497.html">pat::b::b1031</a></td></tr>
+<tr class="memdesc:d4/d1e/a00497"><td class="mdescLeft">&#160;</td><td class="mdescRight">1031 查验身份证 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/d57/a00498"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d57/a00498.html">pat::b::b1032</a></td></tr>
+<tr class="memdesc:d8/d57/a00498"><td class="mdescLeft">&#160;</td><td class="mdescRight">1032 挖掘机技术哪家强 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/d67/a00499"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d67/a00499.html">pat::b::b1033</a></td></tr>
+<tr class="memdesc:d8/d67/a00499"><td class="mdescLeft">&#160;</td><td class="mdescRight">1033 旧键盘打字 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:de/d4e/a00500"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4e/a00500.html">pat::b::b1034</a></td></tr>
+<tr class="memdesc:de/d4e/a00500"><td class="mdescLeft">&#160;</td><td class="mdescRight">1034 有理数四则运算 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/db6/a00501"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db6/a00501.html">pat::b::b1035</a></td></tr>
+<tr class="memdesc:d8/db6/a00501"><td class="mdescLeft">&#160;</td><td class="mdescRight">1035 插入与归并 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d0/da2/a00502"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/da2/a00502.html">pat::b::b1036</a></td></tr>
+<tr class="memdesc:d0/da2/a00502"><td class="mdescLeft">&#160;</td><td class="mdescRight">1036 跟奥巴马一起编程 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/de5/a00503"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de5/a00503.html">pat::b::b1037</a></td></tr>
+<tr class="memdesc:d4/de5/a00503"><td class="mdescLeft">&#160;</td><td class="mdescRight">1037 在霍格沃茨找零钱 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/d1c/a00504"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1c/a00504.html">pat::b::b1038</a></td></tr>
+<tr class="memdesc:dc/d1c/a00504"><td class="mdescLeft">&#160;</td><td class="mdescRight">1038 统计同成绩学生 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d7/d37/a00505"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d37/a00505.html">pat::b::b1039</a></td></tr>
+<tr class="memdesc:d7/d37/a00505"><td class="mdescLeft">&#160;</td><td class="mdescRight">1039 到底买不买 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/d1f/a00506"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d1f/a00506.html">pat::b::b1040</a></td></tr>
+<tr class="memdesc:d4/d1f/a00506"><td class="mdescLeft">&#160;</td><td class="mdescRight">1040 有几个PAT <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d1/d69/a00507"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d69/a00507.html">pat::b::b1041</a></td></tr>
+<tr class="memdesc:d1/d69/a00507"><td class="mdescLeft">&#160;</td><td class="mdescRight">1041 考试座位号 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/d30/a00508"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d30/a00508.html">pat::b::b1042</a></td></tr>
+<tr class="memdesc:dc/d30/a00508"><td class="mdescLeft">&#160;</td><td class="mdescRight">1042 字符统计 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:df/db6/a00509"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db6/a00509.html">pat::b::b1043</a></td></tr>
+<tr class="memdesc:df/db6/a00509"><td class="mdescLeft">&#160;</td><td class="mdescRight">1043 输出PATest <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/d52/a00510"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d52/a00510.html">pat::b::b1044</a></td></tr>
+<tr class="memdesc:d6/d52/a00510"><td class="mdescLeft">&#160;</td><td class="mdescRight">1044 火星数字 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/d10/a00511"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d10/a00511.html">pat::b::b1045</a></td></tr>
+<tr class="memdesc:d6/d10/a00511"><td class="mdescLeft">&#160;</td><td class="mdescRight">1045 快速排序 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/dfb/a00512"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dfb/a00512.html">pat::b::b1046</a></td></tr>
+<tr class="memdesc:d4/dfb/a00512"><td class="mdescLeft">&#160;</td><td class="mdescRight">1046 划拳 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:da/def/a00513"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/def/a00513.html">pat::b::b1047</a></td></tr>
+<tr class="memdesc:da/def/a00513"><td class="mdescLeft">&#160;</td><td class="mdescRight">1047 编程团体赛 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/d90/a00514"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/a00514.html">pat::b::b1048</a></td></tr>
+<tr class="memdesc:d6/d90/a00514"><td class="mdescLeft">&#160;</td><td class="mdescRight">1048 数字加密 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/d19/a00515"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d19/a00515.html">pat::b::b1049</a></td></tr>
+<tr class="memdesc:dc/d19/a00515"><td class="mdescLeft">&#160;</td><td class="mdescRight">1049 数列的片段和 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/d40/a00516"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d40/a00516.html">pat::b::b1050</a></td></tr>
+<tr class="memdesc:d4/d40/a00516"><td class="mdescLeft">&#160;</td><td class="mdescRight">1050 螺旋矩阵 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/dc7/a00517"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc7/a00517.html">pat::b::b1051</a></td></tr>
+<tr class="memdesc:d8/dc7/a00517"><td class="mdescLeft">&#160;</td><td class="mdescRight">1051 复数乘法 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d5/dee/a00518"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dee/a00518.html">pat::b::b1052</a></td></tr>
+<tr class="memdesc:d5/dee/a00518"><td class="mdescLeft">&#160;</td><td class="mdescRight">1052 卖个萌 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dd/d4d/a00519"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4d/a00519.html">pat::b::b1053</a></td></tr>
+<tr class="memdesc:dd/d4d/a00519"><td class="mdescLeft">&#160;</td><td class="mdescRight">1053 住房空置率 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d2/da3/a00520"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da3/a00520.html">pat::b::b1054</a></td></tr>
+<tr class="memdesc:d2/da3/a00520"><td class="mdescLeft">&#160;</td><td class="mdescRight">1054 求平均值 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d7/def/a00521"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/def/a00521.html">pat::b::b1055</a></td></tr>
+<tr class="memdesc:d7/def/a00521"><td class="mdescLeft">&#160;</td><td class="mdescRight">1055 集体照 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/d14/a00522"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d14/a00522.html">pat::b::b1056</a></td></tr>
+<tr class="memdesc:d8/d14/a00522"><td class="mdescLeft">&#160;</td><td class="mdescRight">1056 组合数的和 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d0/de7/a00523"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de7/a00523.html">pat::b::b1057</a></td></tr>
+<tr class="memdesc:d0/de7/a00523"><td class="mdescLeft">&#160;</td><td class="mdescRight">1057 数零壹 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/d24/a00524"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d24/a00524.html">pat::b::b1058</a></td></tr>
+<tr class="memdesc:d9/d24/a00524"><td class="mdescLeft">&#160;</td><td class="mdescRight">1058 选择题 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d7/db7/a00525"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db7/a00525.html">pat::b::b1059</a></td></tr>
+<tr class="memdesc:d7/db7/a00525"><td class="mdescLeft">&#160;</td><td class="mdescRight">1059 C语言竞赛 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d0/d35/a00526"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d35/a00526.html">pat::b::b1060</a></td></tr>
+<tr class="memdesc:d0/d35/a00526"><td class="mdescLeft">&#160;</td><td class="mdescRight">1060 爱丁顿数 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/d44/a00527"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d44/a00527.html">pat::b::b1061</a></td></tr>
+<tr class="memdesc:d9/d44/a00527"><td class="mdescLeft">&#160;</td><td class="mdescRight">1061 判断题 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d5/d81/a00528"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d81/a00528.html">pat::b::b1062</a></td></tr>
+<tr class="memdesc:d5/d81/a00528"><td class="mdescLeft">&#160;</td><td class="mdescRight">1062 最简分数 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d1/d0b/a00529"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0b/a00529.html">pat::b::b1063</a></td></tr>
+<tr class="memdesc:d1/d0b/a00529"><td class="mdescLeft">&#160;</td><td class="mdescRight">1063 计算谱半径 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:da/d7e/a00530"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d7e/a00530.html">pat::b::b1064</a></td></tr>
+<tr class="memdesc:da/d7e/a00530"><td class="mdescLeft">&#160;</td><td class="mdescRight">1064 朋友数 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d7/d41/a00532"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d41/a00532.html">pat::b::b1065</a></td></tr>
+<tr class="memdesc:d7/d41/a00532"><td class="mdescLeft">&#160;</td><td class="mdescRight">1065 单身狗 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d0/d2a/a00531"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2a/a00531.html">pat::b::b1066</a></td></tr>
+<tr class="memdesc:d0/d2a/a00531"><td class="mdescLeft">&#160;</td><td class="mdescRight">1066 图像过滤 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:db/d44/a00533"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d44/a00533.html">pat::b::b1067</a></td></tr>
+<tr class="memdesc:db/d44/a00533"><td class="mdescLeft">&#160;</td><td class="mdescRight">1067 试密码 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/d20/a00534"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/a00534.html">pat::b::b1068</a></td></tr>
+<tr class="memdesc:dc/d20/a00534"><td class="mdescLeft">&#160;</td><td class="mdescRight">1068 万绿丛中一点红 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d7/d84/a00535"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/a00535.html">pat::b::b1069</a></td></tr>
+<tr class="memdesc:d7/d84/a00535"><td class="mdescLeft">&#160;</td><td class="mdescRight">1069 微博转发抽奖 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/d33/a00536"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/a00536.html">pat::b::b1070</a></td></tr>
+<tr class="memdesc:d4/d33/a00536"><td class="mdescLeft">&#160;</td><td class="mdescRight">1070 结绳 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/d6e/a00537"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6e/a00537.html">pat::b::b1071</a></td></tr>
+<tr class="memdesc:d8/d6e/a00537"><td class="mdescLeft">&#160;</td><td class="mdescRight">1071 小赌怡情 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dd/d5a/a00538"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5a/a00538.html">pat::b::b1072</a></td></tr>
+<tr class="memdesc:dd/d5a/a00538"><td class="mdescLeft">&#160;</td><td class="mdescRight">1072 开学寄语 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d3/d87/a00539"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d87/a00539.html">pat::b::b1073</a></td></tr>
+<tr class="memdesc:d3/d87/a00539"><td class="mdescLeft">&#160;</td><td class="mdescRight">1073 多选题常见计分法 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/d79/a00540"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/a00540.html">pat::b::b1074</a></td></tr>
+<tr class="memdesc:d4/d79/a00540"><td class="mdescLeft">&#160;</td><td class="mdescRight">1074 宇宙无敌加法器 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dd/d72/a00541"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d72/a00541.html">pat::b::b1075</a></td></tr>
+<tr class="memdesc:dd/d72/a00541"><td class="mdescLeft">&#160;</td><td class="mdescRight">1075 链表元素分类 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d0/ddb/a00542"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/ddb/a00542.html">pat::b::b1076</a></td></tr>
+<tr class="memdesc:d0/ddb/a00542"><td class="mdescLeft">&#160;</td><td class="mdescRight">1076 Wifi密码 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d2/ddf/a00544"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddf/a00544.html">pat::b::b1077</a></td></tr>
+<tr class="memdesc:d2/ddf/a00544"><td class="mdescLeft">&#160;</td><td class="mdescRight">1077 互评成绩计算 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/d9c/a00543"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d9c/a00543.html">pat::b::b1078</a></td></tr>
+<tr class="memdesc:d4/d9c/a00543"><td class="mdescLeft">&#160;</td><td class="mdescRight">1078 字符串压缩与解压 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/deb/a00545"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/deb/a00545.html">pat::b::b1079</a></td></tr>
+<tr class="memdesc:d8/deb/a00545"><td class="mdescLeft">&#160;</td><td class="mdescRight">1079 延迟的回文数 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/d2b/a00546"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2b/a00546.html">pat::b::b1080</a></td></tr>
+<tr class="memdesc:dc/d2b/a00546"><td class="mdescLeft">&#160;</td><td class="mdescRight">1080 MOOC期终成绩 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/d8b/a00547"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d8b/a00547.html">pat::b::b1081</a></td></tr>
+<tr class="memdesc:d9/d8b/a00547"><td class="mdescLeft">&#160;</td><td class="mdescRight">1081 检查密码 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dd/de6/a00548"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/de6/a00548.html">pat::b::b1082</a></td></tr>
+<tr class="memdesc:dd/de6/a00548"><td class="mdescLeft">&#160;</td><td class="mdescRight">1082 射击比赛 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d5/d21/a00549"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d21/a00549.html">pat::b::b1083</a></td></tr>
+<tr class="memdesc:d5/d21/a00549"><td class="mdescLeft">&#160;</td><td class="mdescRight">1083 是否存在相等的差 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:de/de7/a00550"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de7/a00550.html">pat::b::b1084</a></td></tr>
+<tr class="memdesc:de/de7/a00550"><td class="mdescLeft">&#160;</td><td class="mdescRight">1084 外观数列 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/d87/a00551"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d87/a00551.html">pat::b::b1085</a></td></tr>
+<tr class="memdesc:d9/d87/a00551"><td class="mdescLeft">&#160;</td><td class="mdescRight">1085 PAT单位排行 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dd/de9/a00552"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/de9/a00552.html">pat::b::b1086</a></td></tr>
+<tr class="memdesc:dd/de9/a00552"><td class="mdescLeft">&#160;</td><td class="mdescRight">1086 就不告诉你 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d0/d79/a00553"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d79/a00553.html">pat::b::b1087</a></td></tr>
+<tr class="memdesc:d0/d79/a00553"><td class="mdescLeft">&#160;</td><td class="mdescRight">1087 有多少不同的值 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/df9/a00554"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df9/a00554.html">pat::b::b1088</a></td></tr>
+<tr class="memdesc:dc/df9/a00554"><td class="mdescLeft">&#160;</td><td class="mdescRight">1088 三人行 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/d75/a00555"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d75/a00555.html">pat::b::b1089</a></td></tr>
+<tr class="memdesc:d8/d75/a00555"><td class="mdescLeft">&#160;</td><td class="mdescRight">1089 狼人杀-简单版 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/d95/a00556"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d95/a00556.html">pat::b::b1090</a></td></tr>
+<tr class="memdesc:d6/d95/a00556"><td class="mdescLeft">&#160;</td><td class="mdescRight">1090 危险品装箱 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/df0/a00557"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df0/a00557.html">pat::b::b1091</a></td></tr>
+<tr class="memdesc:d8/df0/a00557"><td class="mdescLeft">&#160;</td><td class="mdescRight">1091 N-自守数 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/dea/a00558"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/a00558.html">pat::b::b1092</a></td></tr>
+<tr class="memdesc:dc/dea/a00558"><td class="mdescLeft">&#160;</td><td class="mdescRight">1092 最好吃的月饼 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d2/d50/a00559"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/a00559.html">pat::b::b1093</a></td></tr>
+<tr class="memdesc:d2/d50/a00559"><td class="mdescLeft">&#160;</td><td class="mdescRight">1093 字符串A+B <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/d19/a00560"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d19/a00560.html">pat::b::b1094</a></td></tr>
+<tr class="memdesc:d9/d19/a00560"><td class="mdescLeft">&#160;</td><td class="mdescRight">1094 谷歌的招聘 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d2/d50/a00561"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/a00561.html">pat::b::b1095</a></td></tr>
+<tr class="memdesc:d2/d50/a00561"><td class="mdescLeft">&#160;</td><td class="mdescRight">1095 解码PAT准考证 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d3/d2f/a00562"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d2f/a00562.html">pat::b::b1096</a></td></tr>
+<tr class="memdesc:d3/d2f/a00562"><td class="mdescLeft">&#160;</td><td class="mdescRight">1096 大美数 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/dae/a00563"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dae/a00563.html">pat::b::b1097</a></td></tr>
+<tr class="memdesc:dc/dae/a00563"><td class="mdescLeft">&#160;</td><td class="mdescRight">1097 矩阵行平移 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d0/dc2/a00564"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc2/a00564.html">pat::b::b1098</a></td></tr>
+<tr class="memdesc:d0/dc2/a00564"><td class="mdescLeft">&#160;</td><td class="mdescRight">1098 岩洞施工 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/dd2/a00565"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd2/a00565.html">pat::b::b1099</a></td></tr>
+<tr class="memdesc:d8/dd2/a00565"><td class="mdescLeft">&#160;</td><td class="mdescRight">1099 性感素数 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d0/d3e/a00566"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3e/a00566.html">pat::b::b1100</a></td></tr>
+<tr class="memdesc:d0/d3e/a00566"><td class="mdescLeft">&#160;</td><td class="mdescRight">1100 校庆 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d2/dd7/a00567"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dd7/a00567.html">pat::b::b1101</a></td></tr>
+<tr class="memdesc:d2/dd7/a00567"><td class="mdescLeft">&#160;</td><td class="mdescRight">1101 B是A的多少倍 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/d40/a00568"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d40/a00568.html">pat::b::b1102</a></td></tr>
+<tr class="memdesc:dc/d40/a00568"><td class="mdescLeft">&#160;</td><td class="mdescRight">1102 教超冠军卷 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/d9e/a00569"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d9e/a00569.html">pat::b::b1103</a></td></tr>
+<tr class="memdesc:d4/d9e/a00569"><td class="mdescLeft">&#160;</td><td class="mdescRight">1103 缘分数 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/da5/a00570"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da5/a00570.html">pat::b::b1104</a></td></tr>
+<tr class="memdesc:d8/da5/a00570"><td class="mdescLeft">&#160;</td><td class="mdescRight">1104 天长地久 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:df/d3a/a00571"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d3a/a00571.html">pat::b::b1105</a></td></tr>
+<tr class="memdesc:df/d3a/a00571"><td class="mdescLeft">&#160;</td><td class="mdescRight">1105 链表合并 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/d06/a00572"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d06/a00572.html">pat::b::b1106</a></td></tr>
+<tr class="memdesc:d6/d06/a00572"><td class="mdescLeft">&#160;</td><td class="mdescRight">1106 2019数列 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/d21/a00573"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d21/a00573.html">pat::b::b1107</a></td></tr>
+<tr class="memdesc:d6/d21/a00573"><td class="mdescLeft">&#160;</td><td class="mdescRight">1107 老鼠爱大米 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/dbe/a00574"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dbe/a00574.html">pat::b::b1108</a></td></tr>
+<tr class="memdesc:d4/dbe/a00574"><td class="mdescLeft">&#160;</td><td class="mdescRight">1108 String复读机 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/d42/a00575"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/a00575.html">pat::b::b1109</a></td></tr>
+<tr class="memdesc:d9/d42/a00575"><td class="mdescLeft">&#160;</td><td class="mdescRight">1109 擅长C <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:de/d7c/a00576"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d7c/a00576.html">pat::b::b1110</a></td></tr>
+<tr class="memdesc:de/d7c/a00576"><td class="mdescLeft">&#160;</td><td class="mdescRight">1110 区块反转 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d5/d0a/a00602"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d0a/a00602.html">pat::top</a></td></tr>
+<tr class="memdesc:d5/d0a/a00602"><td class="mdescLeft">&#160;</td><td class="mdescRight">顶级 <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:aa6fcc6e7dc60458eefa653683096ea40"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aa6fcc6e7dc60458eefa653683096ea40">luogu::TEST</a> (P1000, case1)</td></tr>
-<tr class="separator:aa6fcc6e7dc60458eefa653683096ea40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad11a174c323593a3cde72fca4d1d740d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ad11a174c323593a3cde72fca4d1d740d">luogu::TEST</a> (P1001, case1)</td></tr>
-<tr class="separator:ad11a174c323593a3cde72fca4d1d740d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7a3177483467cbdcb2f54c205e1a4e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ab7a3177483467cbdcb2f54c205e1a4e8">luogu::TEST</a> (P1002, case1)</td></tr>
-<tr class="separator:ab7a3177483467cbdcb2f54c205e1a4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13f617b44a21b0cbd385aba05fa27b64"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a13f617b44a21b0cbd385aba05fa27b64">luogu::TEST</a> (P1003, case1)</td></tr>
-<tr class="separator:a13f617b44a21b0cbd385aba05fa27b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22193feed153c95d1efe2f791b9f4aff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a22193feed153c95d1efe2f791b9f4aff">luogu::TEST</a> (P1003, case2)</td></tr>
-<tr class="separator:a22193feed153c95d1efe2f791b9f4aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13d3182437ff15110779ecf1c68e6678"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a13d3182437ff15110779ecf1c68e6678">luogu::TEST</a> (P1008, case1)</td></tr>
-<tr class="separator:a13d3182437ff15110779ecf1c68e6678"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b19ad9c0c8c72e4ccd0f74ad46fce87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a9b19ad9c0c8c72e4ccd0f74ad46fce87">luogu::TEST</a> (P1009, case1)</td></tr>
-<tr class="separator:a9b19ad9c0c8c72e4ccd0f74ad46fce87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f877617f28aa876bf67f414956d06d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a7f877617f28aa876bf67f414956d06d8">luogu::TEST</a> (P1035, case1)</td></tr>
-<tr class="separator:a7f877617f28aa876bf67f414956d06d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64dd6e549704fd54b98fd64f0ebaa5f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a64dd6e549704fd54b98fd64f0ebaa5f8">luogu::TEST</a> (P1046, case1)</td></tr>
-<tr class="separator:a64dd6e549704fd54b98fd64f0ebaa5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ad0596a118d6c7dad99c7a2e350925c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a5ad0596a118d6c7dad99c7a2e350925c">luogu::TEST</a> (P1047, case1)</td></tr>
-<tr class="separator:a5ad0596a118d6c7dad99c7a2e350925c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86691fa789d0b65387ebc7418bb9c9e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a86691fa789d0b65387ebc7418bb9c9e7">luogu::TEST</a> (P1055, case1)</td></tr>
-<tr class="separator:a86691fa789d0b65387ebc7418bb9c9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afee0b78f65b5a7deba8670729edb0273"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#afee0b78f65b5a7deba8670729edb0273">luogu::TEST</a> (P1055, case2)</td></tr>
-<tr class="separator:afee0b78f65b5a7deba8670729edb0273"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0a1c5645ff48c99d279bbe9559c4f94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aa0a1c5645ff48c99d279bbe9559c4f94">luogu::TEST</a> (P1075, case1)</td></tr>
-<tr class="separator:aa0a1c5645ff48c99d279bbe9559c4f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a134f51b6446d56b61307b5a5c0f2900d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a134f51b6446d56b61307b5a5c0f2900d">luogu::TEST</a> (P1085, case1)</td></tr>
-<tr class="separator:a134f51b6446d56b61307b5a5c0f2900d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54ee2671f7d82f2b2a8b743216f4f8d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a54ee2671f7d82f2b2a8b743216f4f8d5">luogu::TEST</a> (P1089, case1)</td></tr>
-<tr class="separator:a54ee2671f7d82f2b2a8b743216f4f8d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7bf41caa024c6ffad22139cba6268bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ac7bf41caa024c6ffad22139cba6268bb">luogu::TEST</a> (P1089, case2)</td></tr>
-<tr class="separator:ac7bf41caa024c6ffad22139cba6268bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98525475c414a5b4cf1f6317cbdf39e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a98525475c414a5b4cf1f6317cbdf39e2">luogu::TEST</a> (P1125, case1)</td></tr>
-<tr class="separator:a98525475c414a5b4cf1f6317cbdf39e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe89b4ecc475233f35527834804e797d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#abe89b4ecc475233f35527834804e797d">luogu::TEST</a> (P1125, case2)</td></tr>
-<tr class="separator:abe89b4ecc475233f35527834804e797d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1d717a52406b9cbfc4e6d953874bf0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ae1d717a52406b9cbfc4e6d953874bf0e">luogu::TEST</a> (P1125, case3)</td></tr>
-<tr class="separator:ae1d717a52406b9cbfc4e6d953874bf0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaa739b2ce795556a39bfdb637ba3e02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#afaa739b2ce795556a39bfdb637ba3e02">luogu::TEST</a> (P1161, case1)</td></tr>
-<tr class="separator:afaa739b2ce795556a39bfdb637ba3e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d674fadf3a70e780eff0f220d7ab209"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a2d674fadf3a70e780eff0f220d7ab209">luogu::TEST</a> (P1200, case1)</td></tr>
-<tr class="separator:a2d674fadf3a70e780eff0f220d7ab209"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac64d4ed05bf1177f290ea8cd21c8ebe0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ac64d4ed05bf1177f290ea8cd21c8ebe0">luogu::TEST</a> (P1200, case2)</td></tr>
-<tr class="separator:ac64d4ed05bf1177f290ea8cd21c8ebe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af32827443ac5b8c787ae2ca6a8dfec7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#af32827443ac5b8c787ae2ca6a8dfec7d">luogu::TEST</a> (P1205, case1)</td></tr>
-<tr class="separator:af32827443ac5b8c787ae2ca6a8dfec7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80ce034b90c445d38fa54ae11a972c8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a80ce034b90c445d38fa54ae11a972c8e">luogu::TEST</a> (P1205, case2)</td></tr>
-<tr class="separator:a80ce034b90c445d38fa54ae11a972c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed360077e57337f26e5523fb3e351619"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aed360077e57337f26e5523fb3e351619">luogu::TEST</a> (P1217, case1)</td></tr>
-<tr class="separator:aed360077e57337f26e5523fb3e351619"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8095ad9bbd5cb8f23c0756f02fd3601"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ac8095ad9bbd5cb8f23c0756f02fd3601">luogu::TEST</a> (P1304, case1)</td></tr>
-<tr class="separator:ac8095ad9bbd5cb8f23c0756f02fd3601"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29e508299854533feb1dd457da6e3eeb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a29e508299854533feb1dd457da6e3eeb">luogu::TEST</a> (P1307, case1)</td></tr>
-<tr class="separator:a29e508299854533feb1dd457da6e3eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab142dfcd46e059c775a61a9bba60c709"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ab142dfcd46e059c775a61a9bba60c709">luogu::TEST</a> (P1307, case2)</td></tr>
-<tr class="separator:ab142dfcd46e059c775a61a9bba60c709"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4eadcdd9c30702ab193933bec1742e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ab4eadcdd9c30702ab193933bec1742e2">luogu::TEST</a> (P1308, case1)</td></tr>
-<tr class="separator:ab4eadcdd9c30702ab193933bec1742e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf62e4960bc7f068e30043838ec70310"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aaf62e4960bc7f068e30043838ec70310">luogu::TEST</a> (P1308, case2)</td></tr>
-<tr class="separator:aaf62e4960bc7f068e30043838ec70310"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1bf992d1f4964ed1aaa8a5ed8faf4c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ac1bf992d1f4964ed1aaa8a5ed8faf4c7">luogu::TEST</a> (P1308, case3)</td></tr>
-<tr class="separator:ac1bf992d1f4964ed1aaa8a5ed8faf4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa353adfe2c566ecfec47b26830561d84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aa353adfe2c566ecfec47b26830561d84">luogu::TEST</a> (P1319, case1)</td></tr>
-<tr class="separator:aa353adfe2c566ecfec47b26830561d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd13033fe7724e937ace721036edf2cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#abd13033fe7724e937ace721036edf2cf">luogu::TEST</a> (P1319, case2)</td></tr>
-<tr class="separator:abd13033fe7724e937ace721036edf2cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabb7cbb896908a546b3f3b0ad73249d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aabb7cbb896908a546b3f3b0ad73249d5">luogu::TEST</a> (P1320, case1)</td></tr>
-<tr class="separator:aabb7cbb896908a546b3f3b0ad73249d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55d7bc786c6df8bac5ad5a889ac8f679"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a55d7bc786c6df8bac5ad5a889ac8f679">luogu::TEST</a> (P1321, case1)</td></tr>
-<tr class="separator:a55d7bc786c6df8bac5ad5a889ac8f679"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4daa34bc6d8bc5162a8edece104e100d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a4daa34bc6d8bc5162a8edece104e100d">luogu::TEST</a> (P1420, case1)</td></tr>
-<tr class="separator:a4daa34bc6d8bc5162a8edece104e100d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71da422a6481688ec20f544e6fe99556"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a71da422a6481688ec20f544e6fe99556">luogu::TEST</a> (P1421, case1)</td></tr>
-<tr class="separator:a71da422a6481688ec20f544e6fe99556"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb30abeee39c50b2d7406921d1e77c41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#afb30abeee39c50b2d7406921d1e77c41">luogu::TEST</a> (P1422, case1)</td></tr>
-<tr class="separator:afb30abeee39c50b2d7406921d1e77c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a418d73701262f38e07e7afb9473806"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a8a418d73701262f38e07e7afb9473806">luogu::TEST</a> (P1423, case1)</td></tr>
-<tr class="separator:a8a418d73701262f38e07e7afb9473806"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60488b1a43a1c18cbfbbad8df05f9bfa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a60488b1a43a1c18cbfbbad8df05f9bfa">luogu::TEST</a> (P1424, case1)</td></tr>
-<tr class="separator:a60488b1a43a1c18cbfbbad8df05f9bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9520037b4e3528d7d895e6001557c8a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a9520037b4e3528d7d895e6001557c8a4">luogu::TEST</a> (P1425, case1)</td></tr>
-<tr class="separator:a9520037b4e3528d7d895e6001557c8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8b7f4831695b19ca3c89ac3d9a77811"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#af8b7f4831695b19ca3c89ac3d9a77811">luogu::TEST</a> (P1427, case1)</td></tr>
-<tr class="separator:af8b7f4831695b19ca3c89ac3d9a77811"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a764a0f81e9b9e30ee5504de30eac516e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a764a0f81e9b9e30ee5504de30eac516e">luogu::TEST</a> (P1428, case1)</td></tr>
-<tr class="separator:a764a0f81e9b9e30ee5504de30eac516e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64831261dcd7bf781d02e901610b8639"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a64831261dcd7bf781d02e901610b8639">luogu::TEST</a> (P1553, case1)</td></tr>
-<tr class="separator:a64831261dcd7bf781d02e901610b8639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dc35b19736693b0f3e560a6822b6f40"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a0dc35b19736693b0f3e560a6822b6f40">luogu::TEST</a> (P1553, case2)</td></tr>
-<tr class="separator:a0dc35b19736693b0f3e560a6822b6f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc767bfbd8c4807de7b867af8142ef89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#adc767bfbd8c4807de7b867af8142ef89">luogu::TEST</a> (P1553, case3)</td></tr>
-<tr class="separator:adc767bfbd8c4807de7b867af8142ef89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36e6551082f4d7db9d55e658ebf1ec62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a36e6551082f4d7db9d55e658ebf1ec62">luogu::TEST</a> (P1553, case4)</td></tr>
-<tr class="separator:a36e6551082f4d7db9d55e658ebf1ec62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a749ba7c0e14d501dfff63b5cd60af42d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a749ba7c0e14d501dfff63b5cd60af42d">luogu::TEST</a> (P1553, case5)</td></tr>
-<tr class="separator:a749ba7c0e14d501dfff63b5cd60af42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8106003ff2ba5cceee3a5f397dce89d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a8106003ff2ba5cceee3a5f397dce89d6">luogu::TEST</a> (P1554, case1)</td></tr>
-<tr class="separator:a8106003ff2ba5cceee3a5f397dce89d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ea4acba140535e451057cdf27a70c8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a5ea4acba140535e451057cdf27a70c8f">luogu::TEST</a> (P1597, case1)</td></tr>
-<tr class="separator:a5ea4acba140535e451057cdf27a70c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3fa68f64dcd79699e1edb8de904612e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ad3fa68f64dcd79699e1edb8de904612e">luogu::TEST</a> (P1597, case2)</td></tr>
-<tr class="separator:ad3fa68f64dcd79699e1edb8de904612e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6939b836879b976b612f107e481b19de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a6939b836879b976b612f107e481b19de">luogu::TEST</a> (P1598, case1)</td></tr>
-<tr class="separator:a6939b836879b976b612f107e481b19de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b4db8e191afffd560067f619078e184"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a6b4db8e191afffd560067f619078e184">luogu::TEST</a> (P1603, case1)</td></tr>
-<tr class="separator:a6b4db8e191afffd560067f619078e184"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83b42009fdc0982bacda9deca5923f5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a83b42009fdc0982bacda9deca5923f5b">luogu::TEST</a> (P1614, case1)</td></tr>
-<tr class="separator:a83b42009fdc0982bacda9deca5923f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f05865fb8081941de784e92090d5a44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a6f05865fb8081941de784e92090d5a44">luogu::TEST</a> (P1720, case1)</td></tr>
-<tr class="separator:a6f05865fb8081941de784e92090d5a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3a8b12a2ba62799d978c9c4dcfb7551"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ab3a8b12a2ba62799d978c9c4dcfb7551">luogu::TEST</a> (P1765, case1)</td></tr>
-<tr class="separator:ab3a8b12a2ba62799d978c9c4dcfb7551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4319c4af96e51b47f2d8af20c3c1fce5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a4319c4af96e51b47f2d8af20c3c1fce5">luogu::TEST</a> (P1789, case1)</td></tr>
-<tr class="separator:a4319c4af96e51b47f2d8af20c3c1fce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8a18e08e145dc7269f933e4f45b5215"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ac8a18e08e145dc7269f933e4f45b5215">luogu::TEST</a> (P1888, case1)</td></tr>
-<tr class="separator:ac8a18e08e145dc7269f933e4f45b5215"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8700fc0018750fb6eb6301de09ff2b84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a8700fc0018750fb6eb6301de09ff2b84">luogu::TEST</a> (P1909, case1)</td></tr>
-<tr class="separator:a8700fc0018750fb6eb6301de09ff2b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a466e32f484854828a1de15a2fbf20554"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a466e32f484854828a1de15a2fbf20554">luogu::TEST</a> (P1909, case2)</td></tr>
-<tr class="separator:a466e32f484854828a1de15a2fbf20554"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab273ac52ff24f0c230de5590b66fe57b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ab273ac52ff24f0c230de5590b66fe57b">luogu::TEST</a> (P1909, case3)</td></tr>
-<tr class="separator:ab273ac52ff24f0c230de5590b66fe57b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f18164e07a42e3efccd92910d553e58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a2f18164e07a42e3efccd92910d553e58">luogu::TEST</a> (P1914, case1)</td></tr>
-<tr class="separator:a2f18164e07a42e3efccd92910d553e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b19eecb154f2998251bc4360dbd7974"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a3b19eecb154f2998251bc4360dbd7974">luogu::TEST</a> (P1957, case1)</td></tr>
-<tr class="separator:a3b19eecb154f2998251bc4360dbd7974"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1880c1cd7581fd89c504a3a97037d512"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a1880c1cd7581fd89c504a3a97037d512">luogu::TEST</a> (P1957, case2)</td></tr>
-<tr class="separator:a1880c1cd7581fd89c504a3a97037d512"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a8f7c5ea33c7ec3e39b8512fd618d2e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a1a8f7c5ea33c7ec3e39b8512fd618d2e">luogu::TEST</a> (P1980, case1)</td></tr>
-<tr class="separator:a1a8f7c5ea33c7ec3e39b8512fd618d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ce45f184da570be48f1713ea4bffa74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a3ce45f184da570be48f1713ea4bffa74">luogu::TEST</a> (P2141, case1)</td></tr>
-<tr class="separator:a3ce45f184da570be48f1713ea4bffa74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6a682aba042a1da23cbb0eea9b85bf6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ac6a682aba042a1da23cbb0eea9b85bf6">luogu::TEST</a> (P2141, case2)</td></tr>
-<tr class="separator:ac6a682aba042a1da23cbb0eea9b85bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a479a7a65eb04ad3b4703c5791a555007"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a479a7a65eb04ad3b4703c5791a555007">luogu::TEST</a> (P2181, case1)</td></tr>
-<tr class="separator:a479a7a65eb04ad3b4703c5791a555007"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87ced13a630016b163eea045127ee20e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a87ced13a630016b163eea045127ee20e">luogu::TEST</a> (P2181, case2)</td></tr>
-<tr class="separator:a87ced13a630016b163eea045127ee20e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41491c5a2653f002b8bda55348dafcb2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a41491c5a2653f002b8bda55348dafcb2">luogu::TEST</a> (P2181, case3)</td></tr>
-<tr class="separator:a41491c5a2653f002b8bda55348dafcb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b2eb372bda69b623c83aca806306c88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a3b2eb372bda69b623c83aca806306c88">luogu::TEST</a> (P2181, case4)</td></tr>
-<tr class="separator:a3b2eb372bda69b623c83aca806306c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d3f818f2177e645191870e2226eb4b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a3d3f818f2177e645191870e2226eb4b9">luogu::TEST</a> (P2415, case1)</td></tr>
-<tr class="separator:a3d3f818f2177e645191870e2226eb4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7233d4b3891671a15b4b581e71d0d503"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a7233d4b3891671a15b4b581e71d0d503">luogu::TEST</a> (P2433, case1)</td></tr>
-<tr class="separator:a7233d4b3891671a15b4b581e71d0d503"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f56eeea6e9dde84878492abcf0f606a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a0f56eeea6e9dde84878492abcf0f606a">luogu::TEST</a> (P2550, case1)</td></tr>
-<tr class="separator:a0f56eeea6e9dde84878492abcf0f606a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42cb52bbf3de50d8b9fd9808099feb14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a42cb52bbf3de50d8b9fd9808099feb14">luogu::TEST</a> (P2615, case1)</td></tr>
-<tr class="separator:a42cb52bbf3de50d8b9fd9808099feb14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01b980e9b8c778830fdc1ea86ac56dc2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a01b980e9b8c778830fdc1ea86ac56dc2">luogu::TEST</a> (P2669, case1)</td></tr>
-<tr class="separator:a01b980e9b8c778830fdc1ea86ac56dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab271bafe42e7f3ccd78c209569c32012"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ab271bafe42e7f3ccd78c209569c32012">luogu::TEST</a> (P2669, case2)</td></tr>
-<tr class="separator:ab271bafe42e7f3ccd78c209569c32012"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaabe553e46025864c92655f00f88b30f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aaabe553e46025864c92655f00f88b30f">luogu::TEST</a> (P2911, case1)</td></tr>
-<tr class="separator:aaabe553e46025864c92655f00f88b30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c105d02d156c81c3fac6637652a9a5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a6c105d02d156c81c3fac6637652a9a5d">luogu::TEST</a> (P3741, case1)</td></tr>
-<tr class="separator:a6c105d02d156c81c3fac6637652a9a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3160553e794e2ad035d52f905f4b1c79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a3160553e794e2ad035d52f905f4b1c79">luogu::TEST</a> (P3741, case2)</td></tr>
-<tr class="separator:a3160553e794e2ad035d52f905f4b1c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adeb42cd2940514fd8ce90c1c2ec5d855"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#adeb42cd2940514fd8ce90c1c2ec5d855">luogu::TEST</a> (P3741, case3)</td></tr>
-<tr class="separator:adeb42cd2940514fd8ce90c1c2ec5d855"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58bf205c9379b54526e298b4b9be670e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a58bf205c9379b54526e298b4b9be670e">luogu::TEST</a> (P3741, case4)</td></tr>
-<tr class="separator:a58bf205c9379b54526e298b4b9be670e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab826a2afdf98a40fe01c76451af2e3fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ab826a2afdf98a40fe01c76451af2e3fa">luogu::TEST</a> (P3741, case5)</td></tr>
-<tr class="separator:ab826a2afdf98a40fe01c76451af2e3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73ed28ed5274b6dbcd10c38d50d1c416"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a73ed28ed5274b6dbcd10c38d50d1c416">luogu::TEST</a> (P3741, case6)</td></tr>
-<tr class="separator:a73ed28ed5274b6dbcd10c38d50d1c416"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add36cc7b7c74d367a7a3b5187c9d9233"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#add36cc7b7c74d367a7a3b5187c9d9233">luogu::TEST</a> (P3954, case1)</td></tr>
-<tr class="separator:add36cc7b7c74d367a7a3b5187c9d9233"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45a60f6cfeb132d9def66a7b0729e3a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a45a60f6cfeb132d9def66a7b0729e3a9">luogu::TEST</a> (P3954, case2)</td></tr>
-<tr class="separator:a45a60f6cfeb132d9def66a7b0729e3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad921366d884755e21e84e685190121b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ad921366d884755e21e84e685190121b8">luogu::TEST</a> (P4414, case1)</td></tr>
-<tr class="separator:ad921366d884755e21e84e685190121b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b35a1aa4055502a93d3a01761ab154d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a0b35a1aa4055502a93d3a01761ab154d">luogu::TEST</a> (P4414, case2)</td></tr>
-<tr class="separator:a0b35a1aa4055502a93d3a01761ab154d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2363f51699444655e3c565cad5978e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aa2363f51699444655e3c565cad5978e0">luogu::TEST</a> (P4956, case1)</td></tr>
-<tr class="separator:aa2363f51699444655e3c565cad5978e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae0a6d9a481491f187011d8b77e5869e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aae0a6d9a481491f187011d8b77e5869e">luogu::TEST</a> (P4956, case2)</td></tr>
-<tr class="separator:aae0a6d9a481491f187011d8b77e5869e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa1cbfdaf44308bf2df4defff47d198c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#afa1cbfdaf44308bf2df4defff47d198c">luogu::TEST</a> (P4956, case3)</td></tr>
-<tr class="separator:afa1cbfdaf44308bf2df4defff47d198c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbcc498caf5b2ad8789af8d07774bf87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#acbcc498caf5b2ad8789af8d07774bf87">luogu::TEST</a> (P5015, case1)</td></tr>
-<tr class="separator:acbcc498caf5b2ad8789af8d07774bf87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f8cdd440422dd3f16e83f60b6e88319"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a6f8cdd440422dd3f16e83f60b6e88319">luogu::TEST</a> (P5015, case2)</td></tr>
-<tr class="separator:a6f8cdd440422dd3f16e83f60b6e88319"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa240b45089a54f3b88b71830d587adb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aa240b45089a54f3b88b71830d587adb1">luogu::TEST</a> (P5461, case1)</td></tr>
-<tr class="separator:aa240b45089a54f3b88b71830d587adb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40120626f1399bb3cfa784c83140fe14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a40120626f1399bb3cfa784c83140fe14">luogu::TEST</a> (P5703, case1)</td></tr>
-<tr class="separator:a40120626f1399bb3cfa784c83140fe14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac05e16555cb8ef051e66156a57eac4f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ac05e16555cb8ef051e66156a57eac4f7">luogu::TEST</a> (P5704, case1)</td></tr>
-<tr class="separator:ac05e16555cb8ef051e66156a57eac4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad69bfe5f6e8ae41e2811986b49926d35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ad69bfe5f6e8ae41e2811986b49926d35">luogu::TEST</a> (P5705, case1)</td></tr>
-<tr class="separator:ad69bfe5f6e8ae41e2811986b49926d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ba24bfd9e8cb9e19f96d4e286f08936"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a0ba24bfd9e8cb9e19f96d4e286f08936">luogu::TEST</a> (P5706, case1)</td></tr>
-<tr class="separator:a0ba24bfd9e8cb9e19f96d4e286f08936"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad08e391486218adeb5a548995c6d21b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ad08e391486218adeb5a548995c6d21b4">luogu::TEST</a> (P5707, case1)</td></tr>
-<tr class="separator:ad08e391486218adeb5a548995c6d21b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30bb3b5f9e68d93203484fc6c1e6846f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a30bb3b5f9e68d93203484fc6c1e6846f">luogu::TEST</a> (P5708, case1)</td></tr>
-<tr class="separator:a30bb3b5f9e68d93203484fc6c1e6846f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a563f8f669697de6b0adf71921533e379"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a563f8f669697de6b0adf71921533e379">luogu::TEST</a> (P5709, case1)</td></tr>
-<tr class="separator:a563f8f669697de6b0adf71921533e379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a786f296f34960b349380bfa3a7eb0ac8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a786f296f34960b349380bfa3a7eb0ac8">luogu::TEST</a> (P5710, case1)</td></tr>
-<tr class="separator:a786f296f34960b349380bfa3a7eb0ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7085933f481450a0515ddd338d33028f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a7085933f481450a0515ddd338d33028f">luogu::TEST</a> (P5711, case1)</td></tr>
-<tr class="separator:a7085933f481450a0515ddd338d33028f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04fa547bce7746ff3633c424d90ae095"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a04fa547bce7746ff3633c424d90ae095">luogu::TEST</a> (P5711, case2)</td></tr>
-<tr class="separator:a04fa547bce7746ff3633c424d90ae095"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a190dc675add0bc3045b84d65085c02b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a190dc675add0bc3045b84d65085c02b3">luogu::TEST</a> (P5711, case3)</td></tr>
-<tr class="separator:a190dc675add0bc3045b84d65085c02b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c93f771df6e78dd69bf5f1710b8225c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a9c93f771df6e78dd69bf5f1710b8225c">luogu::TEST</a> (P5711, case4)</td></tr>
-<tr class="separator:a9c93f771df6e78dd69bf5f1710b8225c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9865860b419a5fa2265d49055cd1d5a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a9865860b419a5fa2265d49055cd1d5a3">luogu::TEST</a> (P5712, case1)</td></tr>
-<tr class="separator:a9865860b419a5fa2265d49055cd1d5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa6c3fe43eb9d1aa2513aebea7472705"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aaa6c3fe43eb9d1aa2513aebea7472705">luogu::TEST</a> (P5712, case3)</td></tr>
-<tr class="separator:aaa6c3fe43eb9d1aa2513aebea7472705"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1f0f3a61dad01c9a03a8d0938c6267a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ab1f0f3a61dad01c9a03a8d0938c6267a">luogu::TEST</a> (P5713, case1)</td></tr>
-<tr class="separator:ab1f0f3a61dad01c9a03a8d0938c6267a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33182c8f5b40c3cc9418cb3e1789224d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a33182c8f5b40c3cc9418cb3e1789224d">luogu::TEST</a> (P5713, case2)</td></tr>
-<tr class="separator:a33182c8f5b40c3cc9418cb3e1789224d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adae9a999a6ea20c86fb5ef8d6747e6e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#adae9a999a6ea20c86fb5ef8d6747e6e1">luogu::TEST</a> (P5714, case1)</td></tr>
-<tr class="separator:adae9a999a6ea20c86fb5ef8d6747e6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cacf266b9f743699e68d4a6eef0bb7b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a3cacf266b9f743699e68d4a6eef0bb7b">luogu::TEST</a> (P5715, case1)</td></tr>
-<tr class="separator:a3cacf266b9f743699e68d4a6eef0bb7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79002957cbabc7beaebfd4ee2bc8aabb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a79002957cbabc7beaebfd4ee2bc8aabb">luogu::TEST</a> (P5715, case2)</td></tr>
-<tr class="separator:a79002957cbabc7beaebfd4ee2bc8aabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19ef24c1057bf2000d061c804166ebca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a19ef24c1057bf2000d061c804166ebca">luogu::TEST</a> (P5716, case1)</td></tr>
-<tr class="separator:a19ef24c1057bf2000d061c804166ebca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23e1121661f8c15e4ed906c1c990130b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a23e1121661f8c15e4ed906c1c990130b">luogu::TEST</a> (P5716, case2)</td></tr>
-<tr class="separator:a23e1121661f8c15e4ed906c1c990130b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a4fe06b41759d3da47148e20888321c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a6a4fe06b41759d3da47148e20888321c">luogu::TEST</a> (P5718, case1)</td></tr>
-<tr class="separator:a6a4fe06b41759d3da47148e20888321c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46e986b66abdbfcff10c6a903a042c8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a46e986b66abdbfcff10c6a903a042c8e">luogu::TEST</a> (P5719, case1)</td></tr>
-<tr class="separator:a46e986b66abdbfcff10c6a903a042c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab10907fcee7a5b1157ad45d5cedbe6f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ab10907fcee7a5b1157ad45d5cedbe6f7">luogu::TEST</a> (P5720, case1)</td></tr>
-<tr class="separator:ab10907fcee7a5b1157ad45d5cedbe6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93efe437e81eae8cb489ec33ba81bb99"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a93efe437e81eae8cb489ec33ba81bb99">luogu::TEST</a> (P5721, case1)</td></tr>
-<tr class="separator:a93efe437e81eae8cb489ec33ba81bb99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa62be3bd0dcdd762e452b41d91f0096"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aaa62be3bd0dcdd762e452b41d91f0096">luogu::TEST</a> (P5722, case1)</td></tr>
-<tr class="separator:aaa62be3bd0dcdd762e452b41d91f0096"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91c0d5f43007e9224ecfccfd50db7123"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a91c0d5f43007e9224ecfccfd50db7123">luogu::TEST</a> (P5723, case1)</td></tr>
-<tr class="separator:a91c0d5f43007e9224ecfccfd50db7123"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69115bc47f94a8d641269387a6ac1d69"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a69115bc47f94a8d641269387a6ac1d69">luogu::TEST</a> (P5724, case1)</td></tr>
-<tr class="separator:a69115bc47f94a8d641269387a6ac1d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2200990897ab7cda7b5a99318876cf9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aa2200990897ab7cda7b5a99318876cf9">luogu::TEST</a> (P5725, case1)</td></tr>
-<tr class="separator:aa2200990897ab7cda7b5a99318876cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16e2598a4b1bbdb86a255323cd73f84b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a16e2598a4b1bbdb86a255323cd73f84b">luogu::TEST</a> (P5726, case1)</td></tr>
-<tr class="separator:a16e2598a4b1bbdb86a255323cd73f84b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadefb9d10d311c20f9d7adb181b2f248"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aadefb9d10d311c20f9d7adb181b2f248">luogu::TEST</a> (P5727, case1)</td></tr>
-<tr class="separator:aadefb9d10d311c20f9d7adb181b2f248"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad93f1524c918e8f261c97effde4aa994"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ad93f1524c918e8f261c97effde4aa994">luogu::TEST</a> (P5728, case1)</td></tr>
-<tr class="separator:ad93f1524c918e8f261c97effde4aa994"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1180af9b25805971db4786b443ada318"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a1180af9b25805971db4786b443ada318">luogu::TEST</a> (P5729, case1)</td></tr>
-<tr class="separator:a1180af9b25805971db4786b443ada318"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2045077495c2edf855a70b79210ea8dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a2045077495c2edf855a70b79210ea8dd">luogu::TEST</a> (P5730, case1)</td></tr>
-<tr class="separator:a2045077495c2edf855a70b79210ea8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a432ceb5485efdbf5212fa84e63438249"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a432ceb5485efdbf5212fa84e63438249">luogu::TEST</a> (P5731, case1)</td></tr>
-<tr class="separator:a432ceb5485efdbf5212fa84e63438249"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab961da2744707b92250f13b8f27fc15c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ab961da2744707b92250f13b8f27fc15c">luogu::TEST</a> (P5732, case1)</td></tr>
-<tr class="separator:ab961da2744707b92250f13b8f27fc15c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab726f72cdf10d68ad2f91021056d8ec8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ab726f72cdf10d68ad2f91021056d8ec8">luogu::TEST</a> (P5733, case1)</td></tr>
-<tr class="separator:ab726f72cdf10d68ad2f91021056d8ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5270a13a45d29d3478da6142f615a0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#ac5270a13a45d29d3478da6142f615a0f">luogu::TEST</a> (P5734, case1)</td></tr>
-<tr class="separator:ac5270a13a45d29d3478da6142f615a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f9b256aabb1f0bc2df2c53ee397404f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a3f9b256aabb1f0bc2df2c53ee397404f">luogu::TEST</a> (P5734, case2)</td></tr>
-<tr class="separator:a3f9b256aabb1f0bc2df2c53ee397404f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0a122e934cba5ad09a3adc940be45d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#aa0a122e934cba5ad09a3adc940be45d0">luogu::TEST</a> (P5735, case1)</td></tr>
-<tr class="separator:aa0a122e934cba5ad09a3adc940be45d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affda1c23e2a54e2438f1da9ffa90c33c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#affda1c23e2a54e2438f1da9ffa90c33c">luogu::TEST</a> (P5736, case1)</td></tr>
-<tr class="separator:affda1c23e2a54e2438f1da9ffa90c33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a999e0a9c41161ec9467f714194502ac3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a999e0a9c41161ec9467f714194502ac3">luogu::TEST</a> (P5736, case2)</td></tr>
-<tr class="separator:a999e0a9c41161ec9467f714194502ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b86c07cb7cd5c60a280b5ad4ece1581"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a5b86c07cb7cd5c60a280b5ad4ece1581">luogu::TEST</a> (P5737, case1)</td></tr>
-<tr class="separator:a5b86c07cb7cd5c60a280b5ad4ece1581"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f18837674b55403260e33272e64a974"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a0f18837674b55403260e33272e64a974">luogu::TEST</a> (P5738, case1)</td></tr>
-<tr class="separator:a0f18837674b55403260e33272e64a974"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c291e91d35616d3321ceb48013ab19b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a4c291e91d35616d3321ceb48013ab19b">luogu::TEST</a> (P5739, case1)</td></tr>
-<tr class="separator:a4c291e91d35616d3321ceb48013ab19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c86c05a264b4d662622c8dcca4abc57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a5c86c05a264b4d662622c8dcca4abc57">luogu::TEST</a> (P5740, case1)</td></tr>
-<tr class="separator:a5c86c05a264b4d662622c8dcca4abc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a485fe783835458b3bee9fefef6952169"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a485fe783835458b3bee9fefef6952169">luogu::TEST</a> (P5741, case1)</td></tr>
-<tr class="separator:a485fe783835458b3bee9fefef6952169"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa72601a0ddac91ff1dbf8b51a55a233a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dcb/a00462.html#aa72601a0ddac91ff1dbf8b51a55a233a">luogu::P5742::TEST</a> (P5742, case1)</td></tr>
-<tr class="separator:aa72601a0ddac91ff1dbf8b51a55a233a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c3dc4fa189b6825a8a8596c7d1f19dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/a00461.html#a7c3dc4fa189b6825a8a8596c7d1f19dd">luogu::TEST</a> (P5743, case1)</td></tr>
-<tr class="separator:a7c3dc4fa189b6825a8a8596c7d1f19dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83167ea80999abe3fb1a5ed550e9eb38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d5d/a00463.html#a83167ea80999abe3fb1a5ed550e9eb38">luogu::P5744::TEST</a> (P5744, case1)</td></tr>
-<tr class="separator:a83167ea80999abe3fb1a5ed550e9eb38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ad405cb11a0c764841830df77e854c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a3ad405cb11a0c764841830df77e854c5">pat::a::a1026::assign</a> (priority_queue&lt; player, vector&lt; player &gt;, greater&lt; player &gt; &gt; &amp;players, priority_queue&lt; table, vector&lt; table &gt;, greater&lt; table &gt; &gt; &amp;tables, vector&lt; player &gt; &amp;vec, vector&lt; unsigned &gt; &amp;table_cnt)</td></tr>
+<tr class="separator:a3ad405cb11a0c764841830df77e854c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d5dd79f09dbd0fc2e06ba111cb00a3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbd/a00597.html#a02d5dd79f09dbd0fc2e06ba111cb00a3">pat::a::a1021::dfs</a> (const vector&lt; unordered_set&lt; int &gt; &gt; &amp;g, int father, int nd)</td></tr>
+<tr class="separator:a02d5dd79f09dbd0fc2e06ba111cb00a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aba411dececaa6174cc0d112592e52b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/a00585.html#a2aba411dececaa6174cc0d112592e52b">pat::a::a1013::dfs</a> (int i, const vector&lt; unordered_set&lt; int &gt; &gt; &amp;g, int occupied, unordered_set&lt; int &gt; &amp;marked)</td></tr>
+<tr class="separator:a2aba411dececaa6174cc0d112592e52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ac6533b87d0402a4b68a91120796e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da5/a00570.html#a97ac6533b87d0402a4b68a91120796e5">pat::b::b1104::dfs</a> (string str, const int current_i, const int m, const int k, const int current_sum, const int cnt9, vector&lt; string &gt; &amp;ans)</td></tr>
+<tr class="separator:a97ac6533b87d0402a4b68a91120796e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee9de65ae15037ef514b4ec73b2fcbff"><td class="memItemLeft" align="right" valign="top">Node *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/db2/a00601.html#aee9de65ae15037ef514b4ec73b2fcbff">pat::a::a7_4::genTree</a> (const vector&lt; int &gt; &amp;preorder, const vector&lt; int &gt; &amp;inorder, int pStart, int pEnd, int iStart, int iEnd)</td></tr>
+<tr class="separator:aee9de65ae15037ef514b4ec73b2fcbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9049e8739446201189b247d804dd9ea2"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dde/a00587.html#a9049e8739446201189b247d804dd9ea2">pat::a::a1015::get_num</a> (const string &amp;n, unsigned int d)</td></tr>
+<tr class="separator:a9049e8739446201189b247d804dd9ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7f766dccf4185dd9dcbfc93281fdc7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/deb/a00545.html#a6e7f766dccf4185dd9dcbfc93281fdc7">pat::b::b1079::is_palindromic</a> (string str)</td></tr>
+<tr class="separator:a6e7f766dccf4185dd9dcbfc93281fdc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc7e37ca1a72156ffae16651f7356dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db7/a00525.html#a4cc7e37ca1a72156ffae16651f7356dc">pat::b::b1059::is_prime</a> (int n)</td></tr>
+<tr class="separator:a4cc7e37ca1a72156ffae16651f7356dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46700291657d5198e8c72aeb4535815a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da5/a00570.html#a46700291657d5198e8c72aeb4535815a">pat::b::b1104::is_prime</a> (int n)</td></tr>
+<tr class="separator:a46700291657d5198e8c72aeb4535815a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f617186775326faf83efd53e1405758"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d19/a00560.html#a7f617186775326faf83efd53e1405758">pat::b::b1094::is_prime</a> (unsigned int n)</td></tr>
+<tr class="separator:a7f617186775326faf83efd53e1405758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad68acf0cc7498f852cd38176f2fa7f77"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd2/a00565.html#ad68acf0cc7498f852cd38176f2fa7f77">pat::b::b1099::is_prime</a> (unsigned int n)</td></tr>
+<tr class="separator:ad68acf0cc7498f852cd38176f2fa7f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc3dd7bf4e5f981a74467c38891c806c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dde/a00587.html#afc3dd7bf4e5f981a74467c38891c806c">pat::a::a1015::is_prime</a> (unsigned int n)</td></tr>
+<tr class="separator:afc3dd7bf4e5f981a74467c38891c806c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e25ed5e4ab4e44afcfae85f40469c89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d75/a00555.html#a9e25ed5e4ab4e44afcfae85f40469c89">pat::b::b1089::is_true</a> (const vector&lt; int &gt; &amp;vec, int wolf1, int wolf2)</td></tr>
+<tr class="separator:a9e25ed5e4ab4e44afcfae85f40469c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b79de354cd90917dbef88fe38c2fb1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d0f/a00494.html#a9b79de354cd90917dbef88fe38c2fb1d">pat::b::b1028::is_valid</a> (int year, int month, int day)</td></tr>
+<tr class="separator:a9b79de354cd90917dbef88fe38c2fb1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a734288ac1b1bfb30fca216ff9ad9da9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/a00599.html#a734288ac1b1bfb30fca216ff9ad9da9f">pat::a::a7_2::isFirstRun</a> (int start, int end)</td></tr>
+<tr class="separator:a734288ac1b1bfb30fca216ff9ad9da9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ed18f50a9dd4bc8e3bf4efa69744594"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/db2/a00601.html#a4ed18f50a9dd4bc8e3bf4efa69744594">pat::a::a7_4::judge</a> (Node *node)</td></tr>
+<tr class="separator:a4ed18f50a9dd4bc8e3bf4efa69744594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1628358a91d07e8b80efa54bad75b765"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d38/a00468.html#a1628358a91d07e8b80efa54bad75b765">pat::b::b1001::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a1628358a91d07e8b80efa54bad75b765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c3de7d3b699241d4b264ef408ff8d8d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/ddf/a00469.html#a2c3de7d3b699241d4b264ef408ff8d8d">pat::b::b1002::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a2c3de7d3b699241d4b264ef408ff8d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ef49002fe8fa2037ebc5ec8f17a0bd1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d29/a00470.html#a3ef49002fe8fa2037ebc5ec8f17a0bd1">pat::b::b1003::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a3ef49002fe8fa2037ebc5ec8f17a0bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67a3dc6ff8551758538eec1580d361c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4b/a00471.html#a67a3dc6ff8551758538eec1580d361c2">pat::b::b1004::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a67a3dc6ff8551758538eec1580d361c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6909f70fbca13516aebee467ab00caa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db5/a00472.html#ac6909f70fbca13516aebee467ab00caa">pat::b::b1005::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ac6909f70fbca13516aebee467ab00caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8105f4966ea1a30568cd64ef90a49c0a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d8e/a00473.html#a8105f4966ea1a30568cd64ef90a49c0a">pat::b::b1006::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a8105f4966ea1a30568cd64ef90a49c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd4714981fee4d275064c3ddee05346"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d26/a00474.html#a8dd4714981fee4d275064c3ddee05346">pat::b::b1007::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a8dd4714981fee4d275064c3ddee05346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0e27ee71143e2b71698b9e739da37ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d92/a00475.html#ad0e27ee71143e2b71698b9e739da37ef">pat::b::b1008::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ad0e27ee71143e2b71698b9e739da37ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbd16e771916181bf81e1926771d3e9f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/a00476.html#adbd16e771916181bf81e1926771d3e9f">pat::b::b1009::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:adbd16e771916181bf81e1926771d3e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a111c3b782ce4a6a2c69e67a5aaec70d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dca/a00477.html#a111c3b782ce4a6a2c69e67a5aaec70d2">pat::b::b1010::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a111c3b782ce4a6a2c69e67a5aaec70d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f8ccd024bcd25da1188eecb3349f083"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dea/a00478.html#a2f8ccd024bcd25da1188eecb3349f083">pat::b::b1011::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a2f8ccd024bcd25da1188eecb3349f083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae29936d9d75d21c5c57bc9c4a15ad2d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d4a/a00479.html#ae29936d9d75d21c5c57bc9c4a15ad2d5">pat::b::b1012::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ae29936d9d75d21c5c57bc9c4a15ad2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b0834927354383c6efa9619683151b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc5/a00480.html#a6b0834927354383c6efa9619683151b3">pat::b::b1013::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a6b0834927354383c6efa9619683151b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36918cc0ed41681d16494a9e0918ac9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d58/a00481.html#a36918cc0ed41681d16494a9e0918ac9d">pat::b::b1014::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a36918cc0ed41681d16494a9e0918ac9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4eabc65fec8e7e6da1932e0177c24ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d8e/a00482.html#aa4eabc65fec8e7e6da1932e0177c24ec">pat::b::b1015::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:aa4eabc65fec8e7e6da1932e0177c24ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40527e33c63a01609cbd55a1457d78e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da0/a00483.html#a40527e33c63a01609cbd55a1457d78e5">pat::b::b1016::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a40527e33c63a01609cbd55a1457d78e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b3a0f5f852076f6f44e0a1a6834932"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d89/a00484.html#a39b3a0f5f852076f6f44e0a1a6834932">pat::b::b1018::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a39b3a0f5f852076f6f44e0a1a6834932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bccb0cb65eb66ede3fdd0f2ff3ac42b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1a/a00485.html#a7bccb0cb65eb66ede3fdd0f2ff3ac42b">pat::b::b1019::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a7bccb0cb65eb66ede3fdd0f2ff3ac42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa71f3b17100b7f780d00144b88b2d1af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/df1/a00486.html#aa71f3b17100b7f780d00144b88b2d1af">pat::b::b1020::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:aa71f3b17100b7f780d00144b88b2d1af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4347dbb8cfffcdba87db4c5b060ae83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9c/a00487.html#aa4347dbb8cfffcdba87db4c5b060ae83">pat::b::b1021::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:aa4347dbb8cfffcdba87db4c5b060ae83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5244ddd6aa01e874ff5caf2f0cea5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddf/a00488.html#afc5244ddd6aa01e874ff5caf2f0cea5c">pat::b::b1022::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:afc5244ddd6aa01e874ff5caf2f0cea5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b3ee415d78f4a9511158e1882fe87de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d05/a00489.html#a2b3ee415d78f4a9511158e1882fe87de">pat::b::b1023::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a2b3ee415d78f4a9511158e1882fe87de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a7f20d36470d9704718341c8aab815d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/daa/a00490.html#a1a7f20d36470d9704718341c8aab815d">pat::b::b1024::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a1a7f20d36470d9704718341c8aab815d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2ef03943d399dda491bb6d13676da11"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d60/a00491.html#ad2ef03943d399dda491bb6d13676da11">pat::b::b1025::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ad2ef03943d399dda491bb6d13676da11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eaf5688acc6137b2ee63cc6af0999be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d7e/a00492.html#a3eaf5688acc6137b2ee63cc6af0999be">pat::b::b1026::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a3eaf5688acc6137b2ee63cc6af0999be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba86426714fb45dc2f8d6044f29054a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/da5/a00493.html#afba86426714fb45dc2f8d6044f29054a">pat::b::b1027::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:afba86426714fb45dc2f8d6044f29054a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562c32ece689e3da3a0c85ee98003ed7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d0f/a00494.html#a562c32ece689e3da3a0c85ee98003ed7">pat::b::b1028::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a562c32ece689e3da3a0c85ee98003ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5237442ec4bff711841ab9c4158a35a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc4/a00495.html#ac5237442ec4bff711841ab9c4158a35a">pat::b::b1029::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ac5237442ec4bff711841ab9c4158a35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c8a4f226428901140861417e0c7a142"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dad/a00496.html#a4c8a4f226428901140861417e0c7a142">pat::b::b1030::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a4c8a4f226428901140861417e0c7a142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accb53c051e6b4a98d1cc79e5975d778e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d1e/a00497.html#accb53c051e6b4a98d1cc79e5975d778e">pat::b::b1031::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:accb53c051e6b4a98d1cc79e5975d778e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03ae06923f305fd965269ed95e53f96e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d57/a00498.html#a03ae06923f305fd965269ed95e53f96e">pat::b::b1032::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a03ae06923f305fd965269ed95e53f96e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43cdc4737c46ff21a0866115c23ab084"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d67/a00499.html#a43cdc4737c46ff21a0866115c23ab084">pat::b::b1033::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a43cdc4737c46ff21a0866115c23ab084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9f6e8bc5b277db799758b400db44f1b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4e/a00500.html#ae9f6e8bc5b277db799758b400db44f1b">pat::b::b1034::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ae9f6e8bc5b277db799758b400db44f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af57f224eceeeca17541c88ed22c76c97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db6/a00501.html#af57f224eceeeca17541c88ed22c76c97">pat::b::b1035::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:af57f224eceeeca17541c88ed22c76c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58179e4db89a88feb00ed730a280d22a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/da2/a00502.html#a58179e4db89a88feb00ed730a280d22a">pat::b::b1036::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a58179e4db89a88feb00ed730a280d22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19258cf075063dc4ec47d45b1f914a62"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de5/a00503.html#a19258cf075063dc4ec47d45b1f914a62">pat::b::b1037::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a19258cf075063dc4ec47d45b1f914a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a305ed98dcef5bdea7c9eb50811d8121f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1c/a00504.html#a305ed98dcef5bdea7c9eb50811d8121f">pat::b::b1038::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a305ed98dcef5bdea7c9eb50811d8121f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ce9523b986e57cf88906dbfcb58309"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d37/a00505.html#a74ce9523b986e57cf88906dbfcb58309">pat::b::b1039::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a74ce9523b986e57cf88906dbfcb58309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27a646dd7faa2a8f5f40a17120d67d1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d1f/a00506.html#a27a646dd7faa2a8f5f40a17120d67d1f">pat::b::b1040::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a27a646dd7faa2a8f5f40a17120d67d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a664f1b79875ecac7aa060eb5ba36a458"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d69/a00507.html#a664f1b79875ecac7aa060eb5ba36a458">pat::b::b1041::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a664f1b79875ecac7aa060eb5ba36a458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07d23a78ba1bc2eaf043e89cea7d895"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d30/a00508.html#ac07d23a78ba1bc2eaf043e89cea7d895">pat::b::b1042::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ac07d23a78ba1bc2eaf043e89cea7d895"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46dedaa08b5e8df6b019284e83e4f255"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db6/a00509.html#a46dedaa08b5e8df6b019284e83e4f255">pat::b::b1043::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a46dedaa08b5e8df6b019284e83e4f255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeebcc41275edbf8d8a1cf968e7afa77a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d52/a00510.html#aeebcc41275edbf8d8a1cf968e7afa77a">pat::b::b1044::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:aeebcc41275edbf8d8a1cf968e7afa77a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9047eeb660517f99178df3933cfbfc78"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d10/a00511.html#a9047eeb660517f99178df3933cfbfc78">pat::b::b1045::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a9047eeb660517f99178df3933cfbfc78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7029f81f75590fb0c02dd5566f7a89f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dfb/a00512.html#a7029f81f75590fb0c02dd5566f7a89f7">pat::b::b1046::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a7029f81f75590fb0c02dd5566f7a89f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2b54bc2bb97c54885631692211ef3ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/def/a00513.html#ae2b54bc2bb97c54885631692211ef3ba">pat::b::b1047::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ae2b54bc2bb97c54885631692211ef3ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69268197b7b4f92afc54dec4a184a518"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/a00514.html#a69268197b7b4f92afc54dec4a184a518">pat::b::b1048::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a69268197b7b4f92afc54dec4a184a518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e5e23f2d7738179cb17070853d531c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d19/a00515.html#a78e5e23f2d7738179cb17070853d531c">pat::b::b1049::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a78e5e23f2d7738179cb17070853d531c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab7cdf605d4dd8d5f4d3dddfecf2fe29"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d40/a00516.html#aab7cdf605d4dd8d5f4d3dddfecf2fe29">pat::b::b1050::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:aab7cdf605d4dd8d5f4d3dddfecf2fe29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247b0ca1762a8642774cc379caa39d57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc7/a00517.html#a247b0ca1762a8642774cc379caa39d57">pat::b::b1051::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a247b0ca1762a8642774cc379caa39d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad15b1985c1ceb492e36e301a3e3c253c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dee/a00518.html#ad15b1985c1ceb492e36e301a3e3c253c">pat::b::b1052::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ad15b1985c1ceb492e36e301a3e3c253c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f111b80491d6b5b4519fa36b0e30a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4d/a00519.html#ab0f111b80491d6b5b4519fa36b0e30a2">pat::b::b1053::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ab0f111b80491d6b5b4519fa36b0e30a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a505fa04a299a97068f8b74cc8c59ed4e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da3/a00520.html#a505fa04a299a97068f8b74cc8c59ed4e">pat::b::b1054::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a505fa04a299a97068f8b74cc8c59ed4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a305828b8c58b1ec7ba422dbc40bc6983"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/def/a00521.html#a305828b8c58b1ec7ba422dbc40bc6983">pat::b::b1055::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a305828b8c58b1ec7ba422dbc40bc6983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a348e3f4dd08abc9721e23a295ae23898"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d14/a00522.html#a348e3f4dd08abc9721e23a295ae23898">pat::b::b1056::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a348e3f4dd08abc9721e23a295ae23898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c1fc3f115f52a68adb0a0d7f168e47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de7/a00523.html#a24c1fc3f115f52a68adb0a0d7f168e47">pat::b::b1057::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a24c1fc3f115f52a68adb0a0d7f168e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a749938faf5c595d2a7354c3fe8fe5442"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d24/a00524.html#a749938faf5c595d2a7354c3fe8fe5442">pat::b::b1058::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a749938faf5c595d2a7354c3fe8fe5442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a757b8833fba9885c85e388085ba33dfb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db7/a00525.html#a757b8833fba9885c85e388085ba33dfb">pat::b::b1059::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a757b8833fba9885c85e388085ba33dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5e7422185d9ad155465171ec7dbf914"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d35/a00526.html#ad5e7422185d9ad155465171ec7dbf914">pat::b::b1060::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ad5e7422185d9ad155465171ec7dbf914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4913eadc4c99ffc85603da87f11a79cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d44/a00527.html#a4913eadc4c99ffc85603da87f11a79cb">pat::b::b1061::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a4913eadc4c99ffc85603da87f11a79cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49567641a93de83af02c8d80f8def057"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d81/a00528.html#a49567641a93de83af02c8d80f8def057">pat::b::b1062::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a49567641a93de83af02c8d80f8def057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98299f955d0f3afcfb9f070071dea991"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0b/a00529.html#a98299f955d0f3afcfb9f070071dea991">pat::b::b1063::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a98299f955d0f3afcfb9f070071dea991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0789d9d1af3dae7b37a735a2a0965f1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d7e/a00530.html#a0789d9d1af3dae7b37a735a2a0965f1a">pat::b::b1064::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a0789d9d1af3dae7b37a735a2a0965f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7285ae9adaf2789b703f9a5b935c8a7c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2a/a00531.html#a7285ae9adaf2789b703f9a5b935c8a7c">pat::b::b1066::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a7285ae9adaf2789b703f9a5b935c8a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e710c958faed56a117cc37f7b79eb0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d41/a00532.html#ac9e710c958faed56a117cc37f7b79eb0">pat::b::b1065::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ac9e710c958faed56a117cc37f7b79eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b0664a93b7a0aba24aff5a510683e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d44/a00533.html#a47b0664a93b7a0aba24aff5a510683e1">pat::b::b1067::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a47b0664a93b7a0aba24aff5a510683e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a416b2ce62fe6c5c77c2b8c007a732b93"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d20/a00534.html#a416b2ce62fe6c5c77c2b8c007a732b93">pat::b::b1068::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a416b2ce62fe6c5c77c2b8c007a732b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d2799fcfcd74b016d664bc444b77670"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d84/a00535.html#a4d2799fcfcd74b016d664bc444b77670">pat::b::b1069::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a4d2799fcfcd74b016d664bc444b77670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a5593d2e109cd569d1350c254dca76c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/a00536.html#a4a5593d2e109cd569d1350c254dca76c">pat::b::b1070::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a4a5593d2e109cd569d1350c254dca76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdcb487185f7d6a6321da223c1143046"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6e/a00537.html#abdcb487185f7d6a6321da223c1143046">pat::b::b1071::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:abdcb487185f7d6a6321da223c1143046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a734409c17cc09c2de05bd45f146ac69e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5a/a00538.html#a734409c17cc09c2de05bd45f146ac69e">pat::b::b1072::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a734409c17cc09c2de05bd45f146ac69e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ffa2f5d6c5309dc5e01d9078333193"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d87/a00539.html#a07ffa2f5d6c5309dc5e01d9078333193">pat::b::b1073::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a07ffa2f5d6c5309dc5e01d9078333193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfe87ea7c3ee022618d261084bf32d4d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/a00540.html#adfe87ea7c3ee022618d261084bf32d4d">pat::b::b1074::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:adfe87ea7c3ee022618d261084bf32d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb7b327c116b546d7320d9027145affa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d72/a00541.html#adb7b327c116b546d7320d9027145affa">pat::b::b1075::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:adb7b327c116b546d7320d9027145affa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa605c583e759f9258cc2ab139a6a5b93"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/ddb/a00542.html#aa605c583e759f9258cc2ab139a6a5b93">pat::b::b1076::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:aa605c583e759f9258cc2ab139a6a5b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0703c68af4fafff2475cb5b4324bdff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d9c/a00543.html#ac0703c68af4fafff2475cb5b4324bdff">pat::b::b1078::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ac0703c68af4fafff2475cb5b4324bdff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d70ddc733c87924bf7530c23d34618"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddf/a00544.html#ad3d70ddc733c87924bf7530c23d34618">pat::b::b1077::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ad3d70ddc733c87924bf7530c23d34618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed5c383bee3a09d6719ea7b74ffa7c73"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/deb/a00545.html#aed5c383bee3a09d6719ea7b74ffa7c73">pat::b::b1079::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:aed5c383bee3a09d6719ea7b74ffa7c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d16033242459e3e71a372663da29287"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2b/a00546.html#a9d16033242459e3e71a372663da29287">pat::b::b1080::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a9d16033242459e3e71a372663da29287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2823c4c97a3bf0c1dc1b2079e17c5a90"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d8b/a00547.html#a2823c4c97a3bf0c1dc1b2079e17c5a90">pat::b::b1081::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a2823c4c97a3bf0c1dc1b2079e17c5a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64c3e03a371bc2d850e19d41377e71b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/de6/a00548.html#a64c3e03a371bc2d850e19d41377e71b7">pat::b::b1082::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a64c3e03a371bc2d850e19d41377e71b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bed89305d64bd7e47f4b31d9de94b20"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d21/a00549.html#a9bed89305d64bd7e47f4b31d9de94b20">pat::b::b1083::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a9bed89305d64bd7e47f4b31d9de94b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac273bdbb94bea588ddc3b4af0be502b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de7/a00550.html#ac273bdbb94bea588ddc3b4af0be502b0">pat::b::b1084::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ac273bdbb94bea588ddc3b4af0be502b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8e9cfd1090a43f4014f2d54f031d72"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d87/a00551.html#a4b8e9cfd1090a43f4014f2d54f031d72">pat::b::b1085::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a4b8e9cfd1090a43f4014f2d54f031d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4821cd07bd59e48ad3de697dececea6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/de9/a00552.html#ab4821cd07bd59e48ad3de697dececea6">pat::b::b1086::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ab4821cd07bd59e48ad3de697dececea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac41b5fa2a9cf725f5edcf5ef234d16aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d79/a00553.html#ac41b5fa2a9cf725f5edcf5ef234d16aa">pat::b::b1087::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ac41b5fa2a9cf725f5edcf5ef234d16aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a856697ee2aa9d061aa9c6508f3210f88"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df9/a00554.html#a856697ee2aa9d061aa9c6508f3210f88">pat::b::b1088::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a856697ee2aa9d061aa9c6508f3210f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c3457107ca7a3173382da26d536d2ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d75/a00555.html#a2c3457107ca7a3173382da26d536d2ed">pat::b::b1089::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a2c3457107ca7a3173382da26d536d2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8d94f7e181a5715dcf3521d483c855d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d95/a00556.html#ab8d94f7e181a5715dcf3521d483c855d">pat::b::b1090::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ab8d94f7e181a5715dcf3521d483c855d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a843e596f255af9c8260b928ac4628ff9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df0/a00557.html#a843e596f255af9c8260b928ac4628ff9">pat::b::b1091::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a843e596f255af9c8260b928ac4628ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a694ce1618da4fbd1dba06162e228e06f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/a00558.html#a694ce1618da4fbd1dba06162e228e06f">pat::b::b1092::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a694ce1618da4fbd1dba06162e228e06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259b28ebf9a7cad684c922cc17b64762"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/a00559.html#a259b28ebf9a7cad684c922cc17b64762">pat::b::b1093::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a259b28ebf9a7cad684c922cc17b64762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ac611d46ba48631847db2622d186151"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d19/a00560.html#a8ac611d46ba48631847db2622d186151">pat::b::b1094::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a8ac611d46ba48631847db2622d186151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d8b06e0815e5d947545cb8cd116b6b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/a00561.html#a5d8b06e0815e5d947545cb8cd116b6b9">pat::b::b1095::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a5d8b06e0815e5d947545cb8cd116b6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e21f0ace7ada12d0f91d0f0b3faa3fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d2f/a00562.html#a5e21f0ace7ada12d0f91d0f0b3faa3fd">pat::b::b1096::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a5e21f0ace7ada12d0f91d0f0b3faa3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87217d01dc5370c5c09d301e22f5c6e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dae/a00563.html#a87217d01dc5370c5c09d301e22f5c6e8">pat::b::b1097::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a87217d01dc5370c5c09d301e22f5c6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b8efa432190523441c3e554620edd50"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc2/a00564.html#a8b8efa432190523441c3e554620edd50">pat::b::b1098::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a8b8efa432190523441c3e554620edd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40f104124d9853603174158307241131"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd2/a00565.html#a40f104124d9853603174158307241131">pat::b::b1099::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a40f104124d9853603174158307241131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a919a02eb1fe61741bfa86cdf9c746a7b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3e/a00566.html#a919a02eb1fe61741bfa86cdf9c746a7b">pat::b::b1100::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a919a02eb1fe61741bfa86cdf9c746a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc1cbeff8e6e420be57c80ddeafcc4dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dd7/a00567.html#afc1cbeff8e6e420be57c80ddeafcc4dc">pat::b::b1101::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:afc1cbeff8e6e420be57c80ddeafcc4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3edf0092266945c40634313ba10d1ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d40/a00568.html#ab3edf0092266945c40634313ba10d1ca">pat::b::b1102::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ab3edf0092266945c40634313ba10d1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a442f20ff3c65a6741f2b385dcb326f3e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d9e/a00569.html#a442f20ff3c65a6741f2b385dcb326f3e">pat::b::b1103::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a442f20ff3c65a6741f2b385dcb326f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf6eb6cd00b083972b390ba7de7b2dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da5/a00570.html#adbf6eb6cd00b083972b390ba7de7b2dc">pat::b::b1104::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:adbf6eb6cd00b083972b390ba7de7b2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f86083793516ffe740dcce63e8d77c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d3a/a00571.html#a0f86083793516ffe740dcce63e8d77c2">pat::b::b1105::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a0f86083793516ffe740dcce63e8d77c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f5054e2a526a1385e12f3631ea791c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d06/a00572.html#a0f5054e2a526a1385e12f3631ea791c9">pat::b::b1106::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a0f5054e2a526a1385e12f3631ea791c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ad90b9a60d405276bb634cca735ab9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d21/a00573.html#a19ad90b9a60d405276bb634cca735ab9">pat::b::b1107::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a19ad90b9a60d405276bb634cca735ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af563f1bd8743daaeba79d9e210b2a5ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dbe/a00574.html#af563f1bd8743daaeba79d9e210b2a5ae">pat::b::b1108::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:af563f1bd8743daaeba79d9e210b2a5ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a869e7b1c6afb6150aad847d1c371a15b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/a00575.html#a869e7b1c6afb6150aad847d1c371a15b">pat::b::b1109::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a869e7b1c6afb6150aad847d1c371a15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea7215269bde2592e28770ea5afd95e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d7c/a00576.html#acea7215269bde2592e28770ea5afd95e">pat::b::b1110::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:acea7215269bde2592e28770ea5afd95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2a14dbc67b6641e8a836e837ee24856"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/a00578.html#ad2a14dbc67b6641e8a836e837ee24856">pat::a::a1003::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ad2a14dbc67b6641e8a836e837ee24856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11745d0dea7acc2aa4f3e8f8317efe53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4a/a00579.html#a11745d0dea7acc2aa4f3e8f8317efe53">pat::a::a1004::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a11745d0dea7acc2aa4f3e8f8317efe53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dee93bb316b8daa50395e6492cb5898"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de2/a00580.html#a4dee93bb316b8daa50395e6492cb5898">pat::a::a1005::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a4dee93bb316b8daa50395e6492cb5898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a864f4937888d1b373102a56a234e54c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc8/a00581.html#a864f4937888d1b373102a56a234e54c8">pat::a::a1006::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a864f4937888d1b373102a56a234e54c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a073fd9a557605db03f8c83766e70606e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2f/a00582.html#a073fd9a557605db03f8c83766e70606e">pat::a::a1007::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a073fd9a557605db03f8c83766e70606e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a71bedcbedb044f59dbb7dd6f31c1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html#a39a71bedcbedb044f59dbb7dd6f31c1a">pat::a::a1008::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a39a71bedcbedb044f59dbb7dd6f31c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75494fad07c869dc224de011b05ccffc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d21/a00584.html#a75494fad07c869dc224de011b05ccffc">pat::a::a1009::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a75494fad07c869dc224de011b05ccffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a014862128651374bdda77a204601005c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/a00585.html#a014862128651374bdda77a204601005c">pat::a::a1013::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a014862128651374bdda77a204601005c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49d972fcc213f173d10a4832c8e6de3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#aa49d972fcc213f173d10a4832c8e6de3">pat::a::a1014::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:aa49d972fcc213f173d10a4832c8e6de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9909029c6bb60198bb934d982646a69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dde/a00587.html#ae9909029c6bb60198bb934d982646a69">pat::a::a1015::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ae9909029c6bb60198bb934d982646a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6675ff88d8a431086193c2afb9aa2335"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2e/a00588.html#a6675ff88d8a431086193c2afb9aa2335">pat::a::a1016::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a6675ff88d8a431086193c2afb9aa2335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d6e7c08bdab788319f69adadea6dea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da3/a00589.html#a40d6e7c08bdab788319f69adadea6dea">pat::a::a1017::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a40d6e7c08bdab788319f69adadea6dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ba96e61c72e273b63f1dbc53f1a892"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a60ba96e61c72e273b63f1dbc53f1a892">pat::a::a1026::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a60ba96e61c72e273b63f1dbc53f1a892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e864dd5cb740fa6a8b779ecea97fc92"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dad/a00591.html#a4e864dd5cb740fa6a8b779ecea97fc92">pat::a::a1018::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a4e864dd5cb740fa6a8b779ecea97fc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc6f496f0fd6ea2e50ec172e7f80bfd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dec/a00592.html#aecc6f496f0fd6ea2e50ec172e7f80bfd">pat::a::a1019::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:aecc6f496f0fd6ea2e50ec172e7f80bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30c99e0fe429fd4a60a5cab76fe0ccaf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da3/a00593.html#a30c99e0fe429fd4a60a5cab76fe0ccaf">pat::a::a1020::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a30c99e0fe429fd4a60a5cab76fe0ccaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a682132a47707b6bb8f778bcfe08ad5c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de4/a00594.html#a682132a47707b6bb8f778bcfe08ad5c7">pat::a::a1023::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a682132a47707b6bb8f778bcfe08ad5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ddc44b852aa5478aba49ee2ed592a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de9/a00595.html#a72ddc44b852aa5478aba49ee2ed592a1">pat::a::a1024::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a72ddc44b852aa5478aba49ee2ed592a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad991bec957e5bf8aab5cd0da7797f23c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/a00596.html#ad991bec957e5bf8aab5cd0da7797f23c">pat::a::a1027::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ad991bec957e5bf8aab5cd0da7797f23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6fe085cb2b79f5fc0fb0303def7a8be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbd/a00597.html#ad6fe085cb2b79f5fc0fb0303def7a8be">pat::a::a1021::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ad6fe085cb2b79f5fc0fb0303def7a8be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a389766d662a1bd166bd19523de1f1871"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd2/a00598.html#a389766d662a1bd166bd19523de1f1871">pat::a::a7_1::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a389766d662a1bd166bd19523de1f1871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e992d7aa5e14f9cee1acabc4ce3665"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/a00599.html#ac9e992d7aa5e14f9cee1acabc4ce3665">pat::a::a7_2::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:ac9e992d7aa5e14f9cee1acabc4ce3665"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ad98ab8e60573e861469619c04e6aff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8c/a00600.html#a5ad98ab8e60573e861469619c04e6aff">pat::a::a7_3::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a5ad98ab8e60573e861469619c04e6aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc4cac7eb003f395801783a89fbc354"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/db2/a00601.html#a3dc4cac7eb003f395801783a89fbc354">pat::a::a7_4::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:a3dc4cac7eb003f395801783a89fbc354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4b553430e2ab5b1ea2730e4b00dcf53"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de9/a00595.html#ae4b553430e2ab5b1ea2730e4b00dcf53">pat::a::a1024::operator&lt;&lt;</a> (ostream &amp;os, bi &amp;b)</td></tr>
+<tr class="separator:ae4b553430e2ab5b1ea2730e4b00dcf53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25eeffe2c9c971ace4b52c60ffc109d4"><td class="memItemLeft" align="right" valign="top">TreeNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da3/a00593.html#a25eeffe2c9c971ace4b52c60ffc109d4">pat::a::a1020::parse</a> (vector&lt; unsigned int &gt; post_order, const vector&lt; unsigned int &gt; &amp;in_order)</td></tr>
+<tr class="separator:a25eeffe2c9c971ace4b52c60ffc109d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48dfbcef5b801d5f2c9d82b3bfc78a7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/db2/a00601.html#a48dfbcef5b801d5f2c9d82b3bfc78a7a">pat::a::a7_4::postOrder</a> (Node *node, vector&lt; int &gt; &amp;vec)</td></tr>
+<tr class="separator:a48dfbcef5b801d5f2c9d82b3bfc78a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2724d481a2ed52d73c35113d80c1977a"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dde/a00587.html#a2724d481a2ed52d73c35113d80c1977a">pat::a::a1015::reverse</a> (unsigned int n, unsigned int d)</td></tr>
+<tr class="separator:a2724d481a2ed52d73c35113d80c1977a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6242d140961d2ae30c05cfad6aa45921"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a6242d140961d2ae30c05cfad6aa45921">pat::a::a1026::timefmt</a> (unsigned t)</td></tr>
+<tr class="separator:a6242d140961d2ae30c05cfad6aa45921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a6da91cc9ac73d40244bd38e9cbd1bb56"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/a00599.html#a6da91cc9ac73d40244bd38e9cbd1bb56">pat::a::a7_2::lmax</a> [100010]</td></tr>
+<tr class="separator:a6da91cc9ac73d40244bd38e9cbd1bb56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac731748e3dc31a3b1dc4ab550d82445c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/a00599.html#ac731748e3dc31a3b1dc4ab550d82445c">pat::a::a7_2::lmax2</a> [100010]</td></tr>
+<tr class="separator:ac731748e3dc31a3b1dc4ab550d82445c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f0b410b6a556777a21dee0775c6f54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/a00599.html#a60f0b410b6a556777a21dee0775c6f54">pat::a::a7_2::rmin</a> [100010]</td></tr>
+<tr class="separator:a60f0b410b6a556777a21dee0775c6f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0666d09212e05ff4df040be3235e0cf4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/a00599.html#a0666d09212e05ff4df040be3235e0cf4">pat::a::a7_2::rmin2</a> [100010]</td></tr>
+<tr class="separator:a0666d09212e05ff4df040be3235e0cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac2df3cab4f24d817c18fbf37673e3cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/a00599.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a> [100010]</td></tr>
+<tr class="separator:aac2df3cab4f24d817c18fbf37673e3cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['chtholly_0',['Chtholly',['../d4/d69/a02869.html',1,'leetcode::range_module']]],
-  ['cmp_1',['cmp',['../da/d71/a02101.html',1,'leetcode::sort_the_jumbled_numbers']]],
-  ['cmpcol_2',['cmpcol',['../d7/d06/a01005.html',1,'acwing::acwing1826']]],
-  ['cmprow_3',['cmprow',['../df/d59/a01001.html',1,'acwing::acwing1826']]],
-  ['codec_4',['Codec',['../d3/dff/a02565.html',1,'leetcode::serialize_and_deserialize_binary_tree']]],
-  ['comp_5',['comp',['../db/de9/a01525.html',1,'acwing::acwing849::comp'],['../d5/d56/a03437.html',1,'pat::a::a1003::comp'],['../d6/daa/a03413.html',1,'pat::b::b1100::comp']]],
-  ['comp_5fsale_6',['comp_sale',['../d9/d2c/a03421.html',1,'pat::b::b1102']]],
-  ['comp_5ftotal_7',['comp_total',['../dd/dfe/a03425.html',1,'pat::b::b1102']]],
-  ['cow_8',['cow',['../d3/d0b/a01253.html',1,'acwing::acwing1660::cow'],['../db/d2c/a01501.html',1,'acwing::acwing3370::cow']]],
-  ['customer_9',['customer',['../d7/dc5/a03449.html',1,'pat::a::a1016::customer'],['../d4/d32/a03453.html',1,'pat::a::a1017::customer']]],
-  ['customer_5fcomp_5fp_10',['customer_comp_p',['../d1/d15/a03457.html',1,'pat::a::a1017']]]
+  ['chtholly_0',['Chtholly',['../db/d08/a02871.html',1,'leetcode::range_module']]],
+  ['cmp_1',['cmp',['../d2/dbe/a02103.html',1,'leetcode::sort_the_jumbled_numbers']]],
+  ['cmpcol_2',['cmpcol',['../d6/d8d/a01007.html',1,'acwing::acwing1826']]],
+  ['cmprow_3',['cmprow',['../dc/d10/a01003.html',1,'acwing::acwing1826']]],
+  ['codec_4',['Codec',['../db/dab/a02567.html',1,'leetcode::serialize_and_deserialize_binary_tree']]],
+  ['comp_5',['comp',['../d8/d8c/a01527.html',1,'acwing::acwing849::comp'],['../db/d47/a03447.html',1,'pat::a::a1003::comp'],['../d3/d65/a03423.html',1,'pat::b::b1100::comp']]],
+  ['comp_5fsale_6',['comp_sale',['../d2/d78/a03431.html',1,'pat::b::b1102']]],
+  ['comp_5ftotal_7',['comp_total',['../d0/db9/a03435.html',1,'pat::b::b1102']]],
+  ['cow_8',['cow',['../d7/d88/a01255.html',1,'acwing::acwing1660::cow'],['../d6/df5/a01503.html',1,'acwing::acwing3370::cow']]],
+  ['customer_9',['customer',['../d4/d63/a03459.html',1,'pat::a::a1016::customer'],['../d4/d60/a03463.html',1,'pat::a::a1017::customer']]],
+  ['customer_5fcomp_5fp_10',['customer_comp_p',['../d7/db0/a03467.html',1,'pat::a::a1017']]]
 ];
