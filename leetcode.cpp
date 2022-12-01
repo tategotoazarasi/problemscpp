@@ -8670,8 +8670,8 @@ namespace leetcode {
 				l = max(l, num);
 			}
 			while(l < r) {
-				int mid = (l + r) / 2;
-				int cnt = get_m(nums, mid);
+				const int mid = (l + r) / 2;
+				const int cnt = get_m(nums, mid);
 				if(cnt == m) {
 					r = mid;
 				} else if(cnt > m) {
@@ -8686,7 +8686,7 @@ namespace leetcode {
 		int Solution::get_m(const vector<int> &nums, int msum) {
 			int ans = 0;
 			int c   = 0;
-			for(auto num: nums) {
+			for(const auto num: nums) {
 				if(c + num > msum) {
 					ans++;
 					c = 0;
@@ -8707,40 +8707,36 @@ namespace leetcode {
 		}
 
 		int Solution::dfs(bool steal, TreeNode *node) {
-			if(um.count({node, steal})) {
+			if(um.contains({node, steal})) {
 				return um[{node, steal}];
 			}
 			int ans = steal ? node->val : 0;
 			if(node->left != nullptr) {
-				int ns = dfs(!steal, node->left);
-				int s  = (!steal) ? dfs(steal, node->left) : 0;
+				const int ns = dfs(!steal, node->left);
+				const int s  = !steal ? dfs(steal, node->left) : 0;
 				ans += max(s, ns);
 			}
 			if(node->right != nullptr) {
-				int ns = dfs(!steal, node->right);
-				int s  = (!steal) ? dfs(steal, node->right) : 0;
+				const int ns = dfs(!steal, node->right);
+				const int s  = !steal ? dfs(steal, node->right) : 0;
 				ans += max(s, ns);
 			}
 			um[{node, steal}] = ans;
 			return ans;
 		}
 
-		size_t myhash::operator()(const pair<TreeNode *, bool> &p) const {
-			return (uint64_t) p.first * 2 + (p.second ? 1 : 0);
-		}
+		size_t myhash::operator()(const pair<TreeNode *, bool> &p) const { return (uint64_t) p.first * 2 + (p.second ? 1 : 0); }
 
-		bool myeq::operator()(const pair<TreeNode *, bool> &p1, const pair<TreeNode *, bool> &p2) const {
-			return p1.first == p2.first && p1.second == p2.second;
-		}
+		bool myeq::operator()(const pair<TreeNode *, bool> &p1, const pair<TreeNode *, bool> &p2) const { return p1.first == p2.first && p1.second == p2.second; }
 	}// namespace house_robber_iii
 
 	namespace maximal_square {
 		int Solution::maximalSquare(vector<vector<char>> &matrix) {
-			int m = matrix.size();
-			int n = matrix[0].size();
-			vector<vector<int>> horizontal_next_1s(m, vector<int>(n, 0));
-			vector<vector<int>> vertical_next_1s(m, vector<int>(n, 0));
-			vector<vector<int>> dp(m + 1, vector<int>(n + 1, 0));
+			const int m = matrix.size();
+			const int n = matrix[0].size();
+			vector horizontal_next_1s(m, vector(n, 0));
+			vector vertical_next_1s(m, vector(n, 0));
+			vector dp(m + 1, vector(n + 1, 0));
 			for(int i = 0; i < m; i++) {
 				int cnt = 0;
 				for(int j = n - 1; j >= 0; j--) {
@@ -8778,12 +8774,12 @@ namespace leetcode {
 
 	namespace maximal_rectangle {
 		int Solution::maximalRectangle(vector<vector<char>> &matrix) {
-			int m = matrix.size();
+			const int m = matrix.size();
 			if(m == 0) {
 				return 0;
 			}
-			int n = matrix[0].size();
-			vector<vector<int>> left(m, vector<int>(n, 0));
+			const int n = matrix[0].size();
+			vector left(m, vector(n, 0));
 
 			for(int i = 0; i < m; i++) {
 				for(int j = 0; j < n; j++) {
@@ -8794,7 +8790,8 @@ namespace leetcode {
 			}
 
 			int ret = 0;
-			for(int j = 0; j < n; j++) {// 对于每一列，使用基于柱状图的方法
+			for(int j = 0; j < n; j++) {
+				// 对于每一列，使用基于柱状图的方法
 				vector<int> up(m, 0), down(m, 0);
 
 				stack<int> stk;
@@ -8815,9 +8812,9 @@ namespace leetcode {
 				}
 
 				for(int i = 0; i < m; i++) {
-					int height = down[i] - up[i] - 1;
-					int area   = height * left[i][j];
-					ret        = max(ret, area);
+					const int height = down[i] - up[i] - 1;
+					int area         = height * left[i][j];
+					ret              = max(ret, area);
 				}
 			}
 			return ret;
@@ -8826,8 +8823,8 @@ namespace leetcode {
 
 	namespace predict_the_winner {
 		bool Solution::PredictTheWinner(vector<int> &nums) {
-			int length = nums.size();
-			auto dp    = vector<int>(length);
+			const int length = nums.size();
+			auto dp          = vector<int>(length);
 			for(int i = 0; i < length; i++) {
 				dp[i] = nums[i];
 			}
@@ -8842,8 +8839,8 @@ namespace leetcode {
 
 	namespace palindrome_partitioning {
 
-		vector<vector<string>> Solution::partition(string s) {
-			vector<string> vec;
+		vector<vector<string>> Solution::partition(const string &s) {
+			const vector<string> vec;
 			vector<vector<string>> ans;
 			dfs(vec, s, ans, 0, 0);
 			return ans;
@@ -8858,7 +8855,7 @@ namespace leetcode {
 			return true;
 		}
 
-		void Solution::dfs(vector<string> current, const string &s, vector<vector<string>> &ans, int start, int cursor) {
+		void Solution::dfs(const vector<string> &current, const string &s, vector<vector<string>> &ans, int start, int cursor) {
 			if(cursor == s.length() - 1 && is_palindromic(s, start, cursor)) {
 				ans.emplace_back(current);
 				ans.back().emplace_back(s.substr(start, cursor - start + 1));
@@ -8878,7 +8875,7 @@ namespace leetcode {
 
 	namespace palindrome_partitioning_ii {
 		int Solution::minCut(string s) {
-			vector<vector<bool>> is_palindromic(s.length(), vector<bool>(s.length(), false));
+			vector is_palindromic(s.length(), vector(s.length(), false));
 			for(int i = 0; i < s.length(); i++) {
 				for(int j = 0; i - j >= 0 && i + j < s.length() && s[i - j] == s[i + j]; j++) {
 					is_palindromic[i - j][i + j] = true;
@@ -8891,7 +8888,7 @@ namespace leetcode {
 					}
 				}
 			}
-			vector<int> dp(s.length(), 2000);
+			vector dp(s.length(), 2000);
 			dp[0] = 0;
 			for(int j = 1; j < dp.size(); j++) {
 				if(is_palindromic[0][j]) {
@@ -8910,26 +8907,26 @@ namespace leetcode {
 
 	namespace partition_equal_subset_sum {
 		bool Solution::canPartition(vector<int> &nums) {
-			int n = nums.size();
+			const int n = nums.size();
 			if(n < 2) {
 				return false;
 			}
-			int sum    = accumulate(nums.begin(), nums.end(), 0);
-			int maxNum = *max_element(nums.begin(), nums.end());
+			const int sum    = accumulate(nums.begin(), nums.end(), 0);
+			const int maxNum = *max_element(nums.begin(), nums.end());
 			if(sum & 1) {
 				return false;
 			}
-			int target = sum / 2;
+			const int target = sum / 2;
 			if(maxNum > target) {
 				return false;
 			}
-			vector<vector<int>> dp(n, vector<int>(target + 1, 0));
+			vector dp(n, vector(target + 1, 0));
 			for(int i = 0; i < n; i++) {
 				dp[i][0] = true;
 			}
 			dp[0][nums[0]] = true;
 			for(int i = 1; i < n; i++) {
-				int num = nums[i];
+				const int num = nums[i];
 				for(int j = 1; j <= target; j++) {
 					if(j >= num) {
 						dp[i][j] = dp[i - 1][j] | dp[i - 1][j - num];
@@ -8950,10 +8947,10 @@ namespace leetcode {
 				us.insert(day);
 				end = max(end, day);
 			}
-			vector<int> dp(end + 1, 0);
+			vector dp(end + 1, 0);
 			for(int i = 1; i <= end; i++) {
 				dp[i] = i - 1 >= 0 ? dp[i - 1] : 0;
-				if(us.count(i)) {
+				if(us.contains(i)) {
 					dp[i] += costs[0];
 					dp[i] = min(dp[i], (i - 7 >= 0 ? dp[i - 7] : 0) + costs[1]);
 					dp[i] = min(dp[i], (i - 30 >= 0 ? dp[i - 30] : 0) + costs[2]);
@@ -8965,7 +8962,7 @@ namespace leetcode {
 
 	namespace best_time_to_buy_and_sell_stock_iii {
 		int Solution::maxProfit(vector<int> &prices) {
-			vector<vector<long>> dp(5, vector<long>(prices.size(), -10000000000));
+			vector dp(5, vector<long>(prices.size(), -10000000000));
 			// 0 - 不持有
 			// 1 - 第一次持有
 			// 2 - 第一次卖出
@@ -8990,13 +8987,13 @@ namespace leetcode {
 
 	namespace dungeon_game {
 		int Solution::calculateMinimumHP(vector<vector<int>> &dungeon) {
-			int n = dungeon.size(), m = dungeon[0].size();
-			vector<vector<int>> dp(n + 1, vector<int>(m + 1, INT_MAX));
+			const int n = dungeon.size(), m = dungeon[0].size();
+			vector dp(n + 1, vector(m + 1, INT_MAX));
 			dp[n][m - 1] = dp[n - 1][m] = 1;
 			for(int i = n - 1; i >= 0; --i) {
 				for(int j = m - 1; j >= 0; --j) {
-					int minn = min(dp[i + 1][j], dp[i][j + 1]);
-					dp[i][j] = max(minn - dungeon[i][j], 1);
+					const int minn = min(dp[i + 1][j], dp[i][j + 1]);
+					dp[i][j]       = max(minn - dungeon[i][j], 1);
 				}
 			}
 			return dp[0][0];
@@ -9016,7 +9013,7 @@ namespace leetcode {
 			while(hasChange) {
 				hasChange = false;
 				for(int i = 0; i < numCourses; i++) {
-					if(in[i] == 0 && !learned.count(i)) {
+					if(in[i] == 0 && !learned.contains(i)) {
 						hasChange = true;
 						learned.insert(i);
 						for(auto &next: out[i]) {
@@ -9048,7 +9045,7 @@ namespace leetcode {
 			while(hasChange) {
 				hasChange = false;
 				for(int i = 0; i < numCourses; i++) {
-					if(in[i] == 0 && !learned.count(i)) {
+					if(in[i] == 0 && !learned.contains(i)) {
 						hasChange = true;
 						learned.insert(i);
 						ans.emplace_back(i);
@@ -9060,24 +9057,23 @@ namespace leetcode {
 			}
 			if(ans.size() == numCourses) {
 				return ans;
-			} else {
-				return {};
 			}
+			return {};
 		}
 	}// namespace course_schedule_ii
 
 	namespace longest_increasing_path_in_a_matrix {
 		int Solution::longestIncreasingPath(vector<vector<int>> &matrix) {
-			if(matrix.size() == 0 || matrix[0].size() == 0) {
+			if(matrix.empty() || matrix[0].empty()) {
 				return 0;
 			}
 			rows            = matrix.size();
 			columns         = matrix[0].size();
-			auto outdegrees = vector<vector<int>>(rows, vector<int>(columns));
+			auto outdegrees = vector(rows, vector<int>(columns));
 			for(int i = 0; i < rows; ++i) {
 				for(int j = 0; j < columns; ++j) {
 					for(int k = 0; k < 4; ++k) {
-						int newRow = i + dirs[k][0], newColumn = j + dirs[k][1];
+						const int newRow = i + dirs[k][0], newColumn = j + dirs[k][1];
 						if(newRow >= 0 && newRow < rows && newColumn >= 0 && newColumn < columns && matrix[newRow][newColumn] > matrix[i][j]) {
 							++outdegrees[i][j];
 						}
@@ -9095,11 +9091,11 @@ namespace leetcode {
 			int ans = 0;
 			while(!q.empty()) {
 				++ans;
-				int size = q.size();
+				const int size = q.size();
 				for(int i = 0; i < size; ++i) {
-					auto cell = q.front();
+					const auto cell = q.front();
 					q.pop();
-					int row = cell.first, column = cell.second;
+					const int row = cell.first, column = cell.second;
 					for(int k = 0; k < 4; ++k) {
 						int newRow = row + dirs[k][0], newColumn = column + dirs[k][1];
 						if(newRow >= 0 && newRow < rows && newColumn >= 0 && newColumn < columns && matrix[newRow][newColumn] < matrix[row][column]) {
@@ -9131,11 +9127,10 @@ namespace leetcode {
 				flag = false;
 				for(int i = 0; i < n; i++) {
 					if(nodes[i]->out == 0) {
-						if(vis.count(i)) {
+						if(vis.contains(i)) {
 							continue;
-						} else {
-							vis.insert(i);
 						}
+						vis.insert(i);
 						flag = true;
 						for(node *next: nodes[i]->pred) {
 							next->out--;
@@ -9148,9 +9143,8 @@ namespace leetcode {
 			for(int i = 0; i < n; i++) {
 				if(nodes[i]->out != 0) {
 					return -1;
-				} else {
-					ans = max(ans, nodes[i]->len);
 				}
+				ans = max(ans, nodes[i]->len);
 			}
 			return ans;
 		}
@@ -9173,7 +9167,7 @@ namespace leetcode {
 			}
 			int max_len = 0;
 			for(const auto &word: words) {
-				max_len = max(max_len, (int) word.length());
+				max_len = max(max_len, static_cast<int>(word.length()));
 			}
 			for(int i = 0; i < max_len; i++) {
 				unordered_map<string, vector<string>> um;
@@ -9204,7 +9198,7 @@ namespace leetcode {
 			while(flag) {
 				flag = false;
 				for(const auto &[ch, n]: in) {
-					if(n == 0 && !vis.count(ch)) {
+					if(n == 0 && !vis.contains(ch)) {
 						flag = true;
 						vis.insert(ch);
 						oss << ch;
@@ -9226,13 +9220,13 @@ namespace leetcode {
 	namespace single_number_iii {
 		vector<int> Solution::singleNumber(vector<int> &nums) {
 			int xorsum = 0;
-			for(int num: nums) {
+			for(const int num: nums) {
 				xorsum ^= num;
 			}
 			// 防止溢出
-			int lsb   = (xorsum == INT_MIN ? xorsum : xorsum & (-xorsum));
+			const int lsb = xorsum == INT_MIN ? xorsum : xorsum & -xorsum;
 			int type1 = 0, type2 = 0;
-			for(int num: nums) {
+			for(const int num: nums) {
 				if(num & lsb) {
 					type1 ^= num;
 				} else {
@@ -9270,15 +9264,14 @@ namespace leetcode {
 				if(f.keys.size() == lock_cnt) {
 					return f.step;
 				}
-				if(!min_step.count(f.get_mask())) {
-					min_step[f.get_mask()] = vector<vector<int>>(m, vector<int>(n, INT_MAX));
+				if(!min_step.contains(f.get_mask())) {
+					min_step[f.get_mask()] = vector(m, vector(n, INT_MAX));
 				}
 				if(min_step[f.get_mask()][f.x][f.y] <= f.step) {
 					continue;
-				} else {
-					min_step[f.get_mask()][f.x][f.y] = f.step;
 				}
-				const pair<int, int> nexts[4] = {{f.x + 1, f.y}, {f.x - 1, f.y}, {f.x, f.y + 1}, {f.x, f.y - 1}};
+				min_step[f.get_mask()][f.x][f.y] = f.step;
+				const pair<int, int> nexts[4]    = {{f.x + 1, f.y}, {f.x - 1, f.y}, {f.x, f.y + 1}, {f.x, f.y - 1}};
 				for(const auto &[n_x, n_y]: nexts) {
 					if(n_x >= 0 && n_x < m && n_y >= 0 && n_y < n && grid[n_x][n_y] != WALL) {
 						if(islower(grid[n_x][n_y])) {
@@ -9287,20 +9280,20 @@ namespace leetcode {
 							next.y     = n_y;
 							next.step++;
 							next.keys.insert(grid[n_x][n_y]);
-							if(!min_step.count(next.get_mask())) {
-								min_step[next.get_mask()] = vector<vector<int>>(m, vector<int>(n, INT_MAX));
+							if(!min_step.contains(next.get_mask())) {
+								min_step[next.get_mask()] = vector(m, vector(n, INT_MAX));
 							}
 							if(min_step[next.get_mask()][n_x][n_y] > next.step) {
 								pq.push(next);
 							}
 						} else if(isupper(grid[n_x][n_y])) {
-							if(f.keys.count(static_cast<char>(tolower(grid[n_x][n_y])))) {
+							if(f.keys.contains(static_cast<char>(tolower(grid[n_x][n_y])))) {
 								frame next = f;
 								next.x     = n_x;
 								next.y     = n_y;
 								next.step++;
-								if(!min_step.count(next.get_mask())) {
-									min_step[next.get_mask()] = vector<vector<int>>(m, vector<int>(n, INT_MAX));
+								if(!min_step.contains(next.get_mask())) {
+									min_step[next.get_mask()] = vector(m, vector(n, INT_MAX));
 								}
 								if(min_step[next.get_mask()][n_x][n_y] > next.step) {
 									pq.push(next);
@@ -9311,8 +9304,8 @@ namespace leetcode {
 							next.x     = n_x;
 							next.y     = n_y;
 							next.step++;
-							if(!min_step.count(next.get_mask())) {
-								min_step[next.get_mask()] = vector<vector<int>>(m, vector<int>(n, INT_MAX));
+							if(!min_step.contains(next.get_mask())) {
+								min_step[next.get_mask()] = vector(m, vector(n, INT_MAX));
 							}
 							if(min_step[next.get_mask()][n_x][n_y] > next.step) {
 								pq.push(next);
@@ -9334,7 +9327,7 @@ namespace leetcode {
 		unsigned frame::get_mask() const {
 			unsigned mask = 0;
 			for(const auto &key: keys) {
-				mask |= 1 << (key - 'a');
+				mask |= 1 << key - 'a';
 			}
 			return mask;
 		}
@@ -9342,7 +9335,7 @@ namespace leetcode {
 
 	namespace minimum_number_of_k_consecutive_bit_flips {
 		int Solution::minKBitFlips(vector<int> &nums, int k) {
-			int n   = nums.size();
+			const int n = nums.size();
 			int ans = 0, revCnt = 0;
 			for(int i = 0; i < n; ++i) {
 				if(i >= k && nums[i - k] > 1) {
@@ -9363,15 +9356,12 @@ namespace leetcode {
 	}// namespace minimum_number_of_k_consecutive_bit_flips
 
 	namespace design_underground_system {
-		void UndergroundSystem::checkIn(int id, string stationName, int t) {
-			records[id] = {stationName, t};
-		}
-		void UndergroundSystem::checkOut(int id, string stationName, int t) {
-			um[records[id].first][stationName].emplace_back(t - records[id].second);
-		}
-		double UndergroundSystem::getAverageTime(string startStation, string endStation) {
+		void UndergroundSystem::checkIn(int id, const string &stationName, int t) { records[id] = {stationName, t}; }
+		void UndergroundSystem::checkOut(int id, const string &stationName, int t) { um[records[id].first][stationName].emplace_back(t - records[id].second); }
+
+		double UndergroundSystem::getAverageTime(const string &startStation, const string &endStation) {
 			int total = 0;
-			for(auto t: um[startStation][endStation]) {
+			for(const auto t: um[startStation][endStation]) {
 				total += t;
 			}
 			return static_cast<double>(total) / um[startStation][endStation].size();
@@ -9379,10 +9369,11 @@ namespace leetcode {
 	}// namespace design_underground_system
 
 	namespace lru_cache {
-		LRUCache::LRUCache(int capacity): capacity(capacity) {}
+		LRUCache::LRUCache(int capacity)
+		    : capacity(capacity) {}
 
 		int LRUCache::get(int key) {
-			if(um.count(key)) {
+			if(um.contains(key)) {
 				if(key != keys.back()) {
 					keys.erase(find(keys.begin(), keys.end(), key));
 					keys.emplace_back(key);
@@ -9394,7 +9385,7 @@ namespace leetcode {
 
 		void LRUCache::put(int key, int value) {
 			if(um.size() == capacity) {
-				if(um.count(key)) {
+				if(um.contains(key)) {
 					//满 含
 					if(key != keys.back()) {
 						keys.erase(find(keys.begin(), keys.end(), key));
@@ -9407,7 +9398,7 @@ namespace leetcode {
 					keys.emplace_back(key);
 				}
 			} else {
-				if(um.count(key)) {
+				if(um.contains(key)) {
 					//未满 含
 					if(key != keys.back()) {
 						keys.erase(find(keys.begin(), keys.end(), key));
@@ -9423,17 +9414,16 @@ namespace leetcode {
 	}// namespace lru_cache
 
 	namespace time_based_key_value_store {
-		void TimeMap::set(string key, string value, int timestamp) {
-			um[key][timestamp] = value;
-		}
-		string TimeMap::get(string key, int timestamp) {
-			auto it = um[key].lower_bound(timestamp);
-			return (it == um[key].end()) ? "" : (it->second);
+		void TimeMap::set(const string &key, string value, int timestamp) { um[key][timestamp] = std::move(value); }
+
+		string TimeMap::get(const string &key, int timestamp) {
+			const auto it = um[key].lower_bound(timestamp);
+			return it == um[key].end() ? "" : it->second;
 		}
 	}// namespace time_based_key_value_store
 
 	namespace range_module {
-		void RangeModule::addRange(int left, int right) { tree.assign(left, right - 1, 1); }
+		void RangeModule::addRange(int left, int right) { tree.assign(left, right - 1, true); }
 
 		bool RangeModule::queryRange(int left, int right) { return tree.check(left, right - 1); }
 
@@ -9446,11 +9436,11 @@ namespace leetcode {
 				return -1;
 			}
 			int ans = -1;
-			if(um.count(key)) {
+			if(um.contains(key)) {
 				// 如果存在
 				ans = um[key];
-				cnt[key]++;                                                             //增加计数
-				auto it = find(tnc[cnt[key] - 1].begin(), tnc[cnt[key] - 1].end(), key);//
+				cnt[key]++;                                                                   //增加计数
+				const auto it = find(tnc[cnt[key] - 1].begin(), tnc[cnt[key] - 1].end(), key);//
 				if(it != tnc[cnt[key] - 1].end()) {
 					tnc[cnt[key] - 1].erase(it);
 					if(tnc[cnt[key] - 1].empty()) {
@@ -9469,7 +9459,7 @@ namespace leetcode {
 			cnt[key]++;
 			if(um.size() == capacity) {
 				//满
-				if(um.count(key)) {
+				if(um.contains(key)) {
 					//已存在
 					tnc[cnt[key] - 1].erase(find(tnc[cnt[key] - 1].begin(), tnc[cnt[key] - 1].end(), key));
 					if(tnc[cnt[key] - 1].empty()) {
@@ -9480,15 +9470,15 @@ namespace leetcode {
 					while(tnc.begin()->second.empty()) {
 						tnc.erase(tnc.begin());
 					}
-					auto evicted = tnc.begin()->second.begin();
-					int val      = *evicted;
+					const auto evicted = tnc.begin()->second.begin();
+					const int val      = *evicted;
 					tnc.begin()->second.erase(evicted);
 					cnt.erase(val);
 					um.erase(val);
 				}
 			} else {
 				//未满
-				if(um.count(key)) {
+				if(um.contains(key)) {
 					//已存在
 					tnc[cnt[key] - 1].erase(find(tnc[cnt[key] - 1].begin(), tnc[cnt[key] - 1].end(), key));
 					if(tnc[cnt[key] - 1].empty()) {
@@ -9505,7 +9495,7 @@ namespace leetcode {
 
 	namespace leetcode454_4sum_ii {
 		int Solution::sumCount(int sum, int i) {
-			if(mem[i].count(sum)) {
+			if(mem[i].contains(sum)) {
 				return mem[i][sum];
 			}
 			if(i == vec.size() - 1) {
