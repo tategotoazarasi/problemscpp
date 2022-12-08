@@ -9530,8 +9530,8 @@ namespace leetcode {
 
 	namespace maximum_size_subarray_sum_equals_k {
 		int Solution::maxSubArrayLen(vector<int> &nums, int k) {
-			vector<int> pref_sum = vector<int>(nums.size(), 0);
-			pref_sum[0]          = nums[0];
+			auto pref_sum = vector(nums.size(), 0);
+			pref_sum[0]   = nums[0];
 			unordered_map<int, set<int>> um;
 			um[0].insert(-1);
 			um[nums[0]].insert(0);
@@ -9541,10 +9541,10 @@ namespace leetcode {
 			}
 			int ans = 0;
 			for(int i = nums.size() - 1; i >= 0; i--) {
-				int r = pref_sum[i];
-				int l = r - k;
+				const int r = pref_sum[i];
+				int l       = r - k;
 				if(!um[l].empty()) {
-					ans = max(ans, i - (*um[l].begin()));
+					ans = max(ans, i - *um[l].begin());
 				}
 			}
 			return ans;
@@ -9553,8 +9553,8 @@ namespace leetcode {
 
 	namespace minimum_swaps_to_group_all_1s_together {
 		int Solution::minSwaps(vector<int> &data) {
-			vector<int> one_count = vector<int>(data.size(), 0);
-			int cnt1              = 0;
+			auto one_count = vector(data.size(), 0);
+			int cnt1       = 0;
 			for(int i = 0; i < one_count.size(); i++) {
 				one_count[i] = cnt1 + data[i];
 				cnt1         = one_count[i];

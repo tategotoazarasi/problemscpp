@@ -7482,7 +7482,7 @@ namespace acwing {
 			color[node] = c;
 			for(const auto sibling: g[node]) {
 				if(color[sibling] == 3) {
-					if(!dfs(g, sibling, color, static_cast<int>(c == 0))) {
+					if(!dfs(g, sibling, color, c == 0)) {
 						return false;
 					}
 				} else if(color[sibling] == c) {
