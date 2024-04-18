@@ -729,7 +729,7 @@ namespace pat {
 
 			int main(istream &cin, ostream &cout);
 		}// namespace b1110
-	}    // namespace b
+	}// namespace b
 
 	/// \brief 甲级
 	namespace a {
@@ -1001,7 +1001,7 @@ namespace pat {
 			int judge(Node *node);
 			int main(istream &cin, ostream &cout);
 		}// namespace a7_4
-	}    // namespace a
+	}// namespace a
 
 	/// \brief 顶级
 	namespace top {}

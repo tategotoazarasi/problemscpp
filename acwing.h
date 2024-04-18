@@ -16,8 +16,7 @@ namespace acwing {
 		int val;
 		ListNode *next;
 
-		explicit ListNode(int x)
-		    : val(x), next(nullptr) {}
+		explicit ListNode(int x): val(x), next(nullptr) {}
 	};
 
 	class acwing1 {
@@ -86,32 +85,32 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief 时间转换
-	 */
+ * \brief 时间转换
+ */
 	class acwing654 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief 简单乘积
-	 */
+ * \brief 简单乘积
+ */
 	class acwing605 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 2041. 干草堆
-	 */
+ * \brief AcWing 2041. 干草堆
+ */
 	class acwing2041 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 2060. 奶牛选美
-	 */
+ * \brief AcWing 2060. 奶牛选美
+ */
 	namespace acwing2060 {
 		class acwing2060 {
 		public:
@@ -124,8 +123,7 @@ namespace acwing {
 
 			point() = default;
 
-			point(int x, int y)
-			    : x(x), y(y){};
+			point(int x, int y): x(x), y(y){};
 		};
 
 		struct pointhash {
@@ -136,12 +134,14 @@ namespace acwing {
 			bool operator()(const point & /*p1*/, const point & /*p2*/) const;
 		};
 
-		void flood(point /*first*/, bool /*occupy*/[55][55], unordered_set<point, pointhash, pointequal> * /*edge*/, char /*cowhide*/[55][55], int /*n*/, int /*m*/);
+		void flood(point /*first*/, bool /*occupy*/[55][55],
+		           unordered_set<point, pointhash, pointequal> * /*edge*/,
+		           char /*cowhide*/[55][55], int /*n*/, int /*m*/);
 	}// namespace acwing2060
 
 	/**
-	 * \brief AcWing 2019. 拖拉机
-	 */
+ * \brief AcWing 2019. 拖拉机
+ */
 	namespace acwing2019 {
 		const int N = 1000;
 
@@ -150,8 +150,7 @@ namespace acwing {
 			int y;
 			int step;
 
-			point(int x, int y, int step)
-			    : x(x), y(y), step(step){};
+			point(int x, int y, int step): x(x), y(y), step(step){};
 		};
 
 		int bfs(point /*start*/, int ** /*field*/, int /*max_x*/, int /*max_y*/);
@@ -163,64 +162,64 @@ namespace acwing {
 	}// namespace acwing2019
 
 	/**
-	 * \brief AcWing 611. 简单计算
-	 */
+ * \brief AcWing 611. 简单计算
+ */
 	class acwing611 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 612. 球的体积
-	 */
+ * \brief AcWing 612. 球的体积
+ */
 	class acwing612 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 2014. 岛
-	 */
+ * \brief AcWing 2014. 岛
+ */
 	class acwing2014 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 607. 平均数2
-	 */
+ * \brief AcWing 607. 平均数2
+ */
 	class acwing607 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 613. 面积
-	 */
+ * \brief AcWing 613. 面积
+ */
 	class acwing613 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 610. 工资和奖金
-	 */
+ * \brief AcWing 610. 工资和奖金
+ */
 	class acwing610 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 614. 最大值
-	 */
+ * \brief AcWing 614. 最大值
+ */
 	class acwing614 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 2005. 马蹄铁
-	 */
+ * \brief AcWing 2005. 马蹄铁
+ */
 	class acwing2005 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
@@ -235,21 +234,21 @@ namespace acwing {
 		/// \param y 当前纵座标
 		/// \param n 座标上限
 		/// \return 当前状态下最长完全平衡括号字符串的长度
-		static int
-		dfs(bool stage, char horseshoes[5][5], const bool picked[5][5], int count, int level, int x, int y, int n);
+		static int dfs(bool stage, char horseshoes[5][5], const bool picked[5][5],
+		               int count, int level, int x, int y, int n);
 	};
 
 	/**
-	 * \brief AcWing 617. 距离
-	 */
+ * \brief AcWing 617. 距离
+ */
 	class acwing617 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing  618. 燃料消耗
-	 */
+ * \brief AcWing  618. 燃料消耗
+ */
 	class acwing618 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
@@ -270,40 +269,39 @@ namespace acwing {
 	/// \brief AcWing 4208. 电话号码
 	namespace acwing4208 {
 		/**
-		 * \brief 字典树
-		 */
+ * \brief 字典树
+ */
 		struct trie_node {
 			/**
-			 * \brief 值
-			 */
+   * \brief 值
+   */
 			int val;
 			/**
-			 * \brief 父节点
-			 */
+   * \brief 父节点
+   */
 			trie_node *father;
 			/**
-			 * \brief 子节点
-			 */
+   * \brief 子节点
+   */
 			trie_node *nexts[10]{};
 
-			trie_node(int val, trie_node *father)
-			    : val(val), father(father){};
+			trie_node(int val, trie_node *father): val(val), father(father){};
 
 			/**
-			 * \brief 反向插入
-			 * \param str 插入的字符串
-			 */
+   * \brief 反向插入
+   * \param str 插入的字符串
+   */
 			void insert(string str);
 
 			/**
-			 * \brief 显示
-			 */
+   * \brief 显示
+   */
 			void display();
 
 			/**
-			 * \brief 分支计数
-			 * \return 分支计数
-			 */
+   * \brief 分支计数
+   * \return 分支计数
+   */
 			int count();
 		};
 
@@ -334,24 +332,24 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 665. 倍数
-	 */
+ * \brief AcWing 665. 倍数
+ */
 	class acwing665 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 657. 选择练习1
-	 */
+ * \brief AcWing 657. 选择练习1
+ */
 	class acwing657 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 1987. 粉刷栅栏
-	 */
+ * \brief AcWing 1987. 粉刷栅栏
+ */
 	class acwing1987 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
@@ -375,11 +373,9 @@ namespace acwing {
 			int a;
 			int b;
 
-			path()
-			    : a(0), b(0){};
+			path(): a(0), b(0){};
 
-			path(int a, int b)
-			    : a(a), b(b){};
+			path(int a, int b): a(a), b(b){};
 			bool operator<(const path &p) const;
 		};
 
@@ -390,48 +386,48 @@ namespace acwing {
 	}// namespace acwing1978
 
 	/**
-	 * \brief AcWing 659. 区间
-	 */
+ * \brief AcWing 659. 区间
+ */
 	class acwing659 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 662. 点的坐标
-	 */
+ * \brief AcWing 662. 点的坐标
+ */
 	class acwing662 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 1969. 品种邻近
-	 */
+ * \brief AcWing 1969. 品种邻近
+ */
 	class acwing1969 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 664. 三角形
-	 */
+ * \brief AcWing 664. 三角形
+ */
 	class acwing664 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 666. 三角形类型
-	 */
+ * \brief AcWing 666. 三角形类型
+ */
 	class acwing666 {
 	public:
 		static int main(istream & /*cin*/, ostream & /*cout*/);
 	};
 
 	/**
-	 * \brief AcWing 1960. 闪烁
-	 */
+ * \brief AcWing 1960. 闪烁
+ */
 	class acwing1960 {
 	private:
 		int fsm[1 << 16] = {};
@@ -481,24 +477,24 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 4209. 三元组
-	 */
+ * \brief AcWing 4209. 三元组
+ */
 	class acwing4209 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4210. 数字
-	 */
+ * \brief AcWing 4210. 数字
+ */
 	class acwing4210 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4211. 序列重排
-	 */
+ * \brief AcWing 4211. 序列重排
+ */
 	class acwing4211 {
 	public:
 		static int main(istream &cin, ostream &cout);
@@ -526,29 +522,29 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 658. 一元二次方程公式
-	 */
+ * \brief AcWing 658. 一元二次方程公式
+ */
 	class acwing658 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 661. 平均数3
-	 */
+ * \brief AcWing 661. 平均数3
+ */
 	class acwing661 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 1929. 镜子田地
-	 * \date 2022-01-18
-	 */
+ * \brief AcWing 1929. 镜子田地
+ * \date 2022-01-18
+ */
 	namespace acwing1929 {
 		/**
-		 * \brief 方向
-		 */
+ * \brief 方向
+ */
 		enum direction {
 			/// @brief 左
 			left,
@@ -561,8 +557,8 @@ namespace acwing {
 		};
 
 		/**
-		 * \brief 行动
-		 */
+ * \brief 行动
+ */
 		struct step {
 			/// @brief 方向
 			direction d;
@@ -571,8 +567,7 @@ namespace acwing {
 			/// @brief 纵坐标
 			unsigned int y;
 
-			step(direction d, unsigned int x, unsigned int y)
-			    : d(d), x(x), y(y){};
+			step(direction d, unsigned int x, unsigned int y): d(d), x(x), y(y){};
 		};
 
 		struct step_hash {
@@ -603,33 +598,33 @@ namespace acwing {
 		public:
 			int main(istream &cin, ostream &cout);
 			/**
-			 * \brief 获取反射的次数
-			 * \param d 方向
-			 * \param x 横坐标
-			 * \param y 纵坐标
-			 * \return 在(x,y)以d方向前进的光距离离开剩下的反射次数
-			 */
+   * \brief 获取反射的次数
+   * \param d 方向
+   * \param x 横坐标
+   * \param y 纵坐标
+   * \return 在(x,y)以d方向前进的光距离离开剩下的反射次数
+   */
 			unsigned int count_reflect(direction d, unsigned int x, unsigned int y);
 			/**
-			 * \brief 获取记录类型
-			 * \param d 方向
-			 * \return 方向对应的记录
-			 */
+   * \brief 获取记录类型
+   * \param d 方向
+   * \return 方向对应的记录
+   */
 			unsigned (*get_record(direction d))[1000][1000];
 		};
 
 		/**
-		 * \brief 方向经过镜子反射后的变化
-		 * \param d 方向
-		 * \param mirror 镜子 
-		 * \return 方向经过镜子反射后的变化
-		 */
+ * \brief 方向经过镜子反射后的变化
+ * \param d 方向
+ * \param mirror 镜子
+ * \return 方向经过镜子反射后的变化
+ */
 		direction reflect(direction d, char mirror);
 		/**
-		 * \brief 取反方向
-		 * \param d 方向
-		 * \return d的反方向
-		 */
+ * \brief 取反方向
+ * \param d 方向
+ * \return d的反方向
+ */
 		direction operator!(const direction &d);
 	}// namespace acwing1929
 
@@ -670,24 +665,24 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 712. 正数
-	 */
+ * \brief AcWing 712. 正数
+ */
 	class acwing712 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 711. 乘法表
-	 */
+ * \brief AcWing 711. 乘法表
+ */
 	class acwing711 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 1904. 奶牛慢跑
-	 */
+ * \brief AcWing 1904. 奶牛慢跑
+ */
 	class acwing1904 {
 	public:
 		static int main(istream &cin, ostream &cout);
@@ -712,65 +707,66 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 4212. 字符串比较
-	 */
+ * \brief AcWing 4212. 字符串比较
+ */
 	class acwing4212 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4213. 最小结果
-	 */
+ * \brief AcWing 4213. 最小结果
+ */
 	class acwing4213 {
 	public:
 		static int main(istream &cin, ostream &cout);
-		static unsigned long long get_min(vector<char> ops, vector<unsigned long long> vec);
+		static unsigned long long get_min(vector<char> ops,
+		                                  vector<unsigned long long> vec);
 	};
 
 	/**
-	 * \brief AcWing 4214. 三元组
-	 */
+ * \brief AcWing 4214. 三元组
+ */
 	class acwing4214 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 716. 最大数和它的位置
-	 */
+ * \brief AcWing 716. 最大数和它的位置
+ */
 	class acwing716 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 713. 区间 2
-	 */
+ * \brief AcWing 713. 区间 2
+ */
 	class acwing713 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 721. 递增序列
-	 */
+ * \brief AcWing 721. 递增序列
+ */
 	class acwing721 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 719. 连续奇数的和 2
-	 */
+ * \brief AcWing 719. 连续奇数的和 2
+ */
 	class acwing719 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 1875. 贝茜的报复
-	 */
+ * \brief AcWing 1875. 贝茜的报复
+ */
 	class acwing1875 {
 	public:
 		static int main(istream &cin, ostream &cout);
@@ -827,11 +823,13 @@ namespace acwing {
 	/// \brief AcWing 1826. 农田缩减
 	namespace acwing1826 {
 		struct cmprow {
-			bool operator()(const pair<unsigned int, unsigned int> &left, const pair<unsigned int, unsigned int> &right) const;
+			bool operator()(const pair<unsigned int, unsigned int> &left,
+			                const pair<unsigned int, unsigned int> &right) const;
 		};
 
 		struct cmpcol {
-			bool operator()(const pair<unsigned int, unsigned int> &left, const pair<unsigned int, unsigned int> &right) const;
+			bool operator()(const pair<unsigned int, unsigned int> &left,
+			                const pair<unsigned int, unsigned int> &right) const;
 		};
 
 		class acwing1826 {
@@ -859,48 +857,48 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 737. 数组替换
-	 */
+ * \brief AcWing 737. 数组替换
+ */
 	class acwing737 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 740. 数组变换
-	 */
+ * \brief AcWing 740. 数组变换
+ */
 	class acwing740 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 1801. 蹄子剪刀布
-	 */
+ * \brief AcWing 1801. 蹄子剪刀布
+ */
 	class acwing1801 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4215. 处理字符串
-	 */
+ * \brief AcWing 4215. 处理字符串
+ */
 	class acwing4215 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4216. 图中的环
-	 */
+ * \brief AcWing 4216. 图中的环
+ */
 	class acwing4216 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4217. 机器人移动
-	 */
+ * \brief AcWing 4217. 机器人移动
+ */
 	class acwing4217 {
 		vector<char> ops;
 		vector<pair<int, int>> forth;
@@ -915,16 +913,16 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 738. 数组填充
-	 */
+ * \brief AcWing 738. 数组填充
+ */
 	class acwing738 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 741. 斐波那契数列
-	 */
+ * \brief AcWing 741. 斐波那契数列
+ */
 	class acwing741 {
 	public:
 		static int main(istream &cin, ostream &cout);
@@ -967,16 +965,16 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 1762. 牛的洗牌
-	 */
+ * \brief AcWing 1762. 牛的洗牌
+ */
 	class acwing1762 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 1750. 救生员
-	 */
+ * \brief AcWing 1750. 救生员
+ */
 	class acwing1750 {
 	public:
 		static int main(istream &cin, ostream &cout);
@@ -1013,24 +1011,24 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 4296. 合适数对
-	 */
+ * \brief AcWing 4296. 合适数对
+ */
 	class acwing4296 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4297. 截断数组
-	 */
+ * \brief AcWing 4297. 截断数组
+ */
 	class acwing4297 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4298. 搭档
-	 */
+ * \brief AcWing 4298. 搭档
+ */
 	class acwing4298 {
 		int n            = 0;      ///< 男孩数量
 		int m            = 0;      ///< 女孩数量
@@ -1046,16 +1044,16 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 749. 数组的上方区域
-	 */
+ * \brief AcWing 749. 数组的上方区域
+ */
 	class acwing749 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 750. 数组的下方区域
-	 */
+ * \brief AcWing 750. 数组的下方区域
+ */
 	class acwing750 {
 	public:
 		static int main(istream &cin, ostream &cout);
@@ -1134,24 +1132,24 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 761. 字符串中的数字个数
-	 */
+ * \brief AcWing 761. 字符串中的数字个数
+ */
 	class acwing761 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 768. 忽略大小写比较字符串大小
-	 */
+ * \brief AcWing 768. 忽略大小写比较字符串大小
+ */
 	class acwing768 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 1471. 牛奶工厂
-	 */
+ * \brief AcWing 1471. 牛奶工厂
+ */
 	class acwing1471 {
 	public:
 		static int main(istream &cin, ostream &cout);
@@ -1176,40 +1174,40 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 4299. 删点
-	 */
+ * \brief AcWing 4299. 删点
+ */
 	class acwing4299 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4300. 两种操作
-	 */
+ * \brief AcWing 4300. 两种操作
+ */
 	class acwing4300 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4301. 截断数列
-	 */
+ * \brief AcWing 4301. 截断数列
+ */
 	class acwing4301 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 765. 字符串加空格
-	 */
+ * \brief AcWing 765. 字符串加空格
+ */
 	class acwing765 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 767. 信息加密
-	 */
+ * \brief AcWing 767. 信息加密
+ */
 	class acwing767 {
 	public:
 		static int main(istream &cin, ostream &cout);
@@ -1308,24 +1306,24 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 4302. 元素分类
-	 */
+ * \brief AcWing 4302. 元素分类
+ */
 	class acwing4302 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4303. 链表
-	 */
+ * \brief AcWing 4303. 链表
+ */
 	class acwing4303 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4304. 字符串归类
-	 */
+ * \brief AcWing 4304. 字符串归类
+ */
 	class acwing4304 {
 	public:
 		static int main(istream &cin, ostream &cout);
@@ -1333,16 +1331,16 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 778. 字符串最大跨距
-	 */
+ * \brief AcWing 778. 字符串最大跨距
+ */
 	class acwing778 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 779. 最长公共字符串后缀
-	 */
+ * \brief AcWing 779. 最长公共字符串后缀
+ */
 	class acwing779 {
 	public:
 		static int main(istream &cin, ostream &cout);
@@ -1433,24 +1431,24 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 4305. 斐波那契字符串
-	 */
+ * \brief AcWing 4305. 斐波那契字符串
+ */
 	class acwing4305 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4306. 序列处理
-	 */
+ * \brief AcWing 4306. 序列处理
+ */
 	class acwing4306 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4307. 数字重构
-	 */
+ * \brief AcWing 4307. 数字重构
+ */
 	class acwing4307 {
 	public:
 		static int main(istream &cin, ostream &cout);
@@ -1458,8 +1456,8 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 819. 递归求阶乘
-	 */
+ * \brief AcWing 819. 递归求阶乘
+ */
 	class acwing819 {
 	public:
 		static int main(istream &cin, ostream &cout);
@@ -1467,8 +1465,8 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 816. 数组翻转
-	 */
+ * \brief AcWing 816. 数组翻转
+ */
 	class acwing816 {
 	public:
 		static int main(istream &cin, ostream &cout);
@@ -1549,31 +1547,30 @@ namespace acwing {
 	}// namespace acwing87
 
 	/**
-	 * \brief AcWing 4308. 组合字符串
-	 */
+ * \brief AcWing 4308. 组合字符串
+ */
 	class acwing4308 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4309. 消灭老鼠
-	 */
+ * \brief AcWing 4309. 消灭老鼠
+ */
 	class acwing4309 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4310. 树的DFS
-	 */
+ * \brief AcWing 4310. 树的DFS
+ */
 	namespace acwing4310 {
 		struct TreeNode {
 			int val;
 			map<int, TreeNode *> nexts;
 
-			explicit TreeNode(int val)
-			    : val(val) {}
+			explicit TreeNode(int val): val(val) {}
 		};
 
 		class acwing4310 {
@@ -1588,8 +1585,8 @@ namespace acwing {
 	}// namespace acwing4310
 
 	/**
-	 * \brief AcWing 84. 求1+2+…+n 
-	 */
+ * \brief AcWing 84. 求1+2+…+n
+ */
 	namespace acwing84 {
 		class Solution {
 		public:
@@ -1598,8 +1595,8 @@ namespace acwing {
 	};// namespace acwing84
 
 	/**
-	 * \brief AcWing 35. 反转链表
-	 */
+ * \brief AcWing 35. 反转链表
+ */
 	namespace acwing35 {
 		class Solution {
 		public:
@@ -1608,8 +1605,8 @@ namespace acwing {
 	}// namespace acwing35
 
 	/**
-	 * \brief AcWing 28. 在O(1)时间删除链表结点
-	 */
+ * \brief AcWing 28. 在O(1)时间删除链表结点
+ */
 	namespace acwing28 {
 		class Solution {
 		public:
@@ -1618,8 +1615,8 @@ namespace acwing {
 	}// namespace acwing28
 
 	/**
-	 * \brief AcWing 66. 两个链表的第一个公共结点
-	 */
+ * \brief AcWing 66. 两个链表的第一个公共结点
+ */
 	namespace acwing66 {
 		class Solution {
 		public:
@@ -1688,7 +1685,8 @@ namespace acwing {
 		class Solution {
 		public:
 			static vector<vector<int>> permutation(vector<int> &nums);
-			static void dfs(const vector<int> &vec, vector<int> nums, set<vector<int>> &s);
+			static void dfs(const vector<int> &vec, vector<int> nums,
+			                set<vector<int>> &s);
 		};
 	}// namespace acwing51
 
@@ -1740,16 +1738,16 @@ namespace acwing {
 	};
 
 	/**
-	 * \brief AcWing 4311. 最小值
-	 */
+ * \brief AcWing 4311. 最小值
+ */
 	class acwing4311 {
 	public:
 		static int main(istream &cin, ostream &cout);
 	};
 
 	/**
-	 * \brief AcWing 4312. 出现次数
-	 */
+ * \brief AcWing 4312. 出现次数
+ */
 	class acwing3412 {
 	public:
 		static int main(istream &cin, ostream &cout);
@@ -1798,15 +1796,15 @@ namespace acwing {
 	}
 
 	/**
-	 * \brief AcWing 4314. 三元组
-	 */
+ * \brief AcWing 4314. 三元组
+ */
 	namespace acwing4314 {
 		int main(istream &cin, ostream &cout);
 	}
 
 	/**
-	 * \brief AcWing 4315. 两个数列
-	 */
+ * \brief AcWing 4315. 两个数列
+ */
 	namespace acwing4315 {
 		int main(istream &cin, ostream &cout);
 	}
@@ -1817,8 +1815,8 @@ namespace acwing {
 	}
 
 	/**
-	 * \brief 1659. 社交距离 I
-	 */
+ * \brief 1659. 社交距离 I
+ */
 	namespace acwing1659 {
 		int main(istream &cin, ostream &cout);
 	}
@@ -1839,15 +1837,15 @@ namespace acwing {
 	}
 
 	/**
-	 * \brief 4318. 最短路径
-	 */
+ * \brief 4318. 最短路径
+ */
 	namespace acwing4318 {
 		int main(istream &cin, ostream &cout);
 	}
 
 	/**
-	 * \brief 4319. 合适数对
-	 */
+ * \brief 4319. 合适数对
+ */
 	namespace acwing4319 {
 		int main(istream &cin, ostream &cout);
 	}
@@ -1889,8 +1887,8 @@ namespace acwing {
 	}
 
 	/**
-	 * \brief 4394. 最长连续子序列
-	 */
+ * \brief 4394. 最长连续子序列
+ */
 	namespace acwing4394 {
 		int main(istream &cin, ostream &cout);
 	}
@@ -1940,23 +1938,23 @@ namespace acwing {
 	}
 
 	/**
-	 * \brief 1854. 晋升计数 
-	 */
+ * \brief 1854. 晋升计数
+ */
 	namespace acwing1854 {
 		int main(istream &cin, ostream &cout);
 	}
 
 	/**
-	 * \brief 4397. 卡牌
-	 */
+ * \brief 4397. 卡牌
+ */
 	namespace acwing4397 {
 		bool cmp(const pair<int, int> &a, const pair<int, int> &b);
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing4397
 
 	/**
-	 * \brief 4398. 查询字符串
-	 */
+ * \brief 4398. 查询字符串
+ */
 	namespace acwing4398 {
 		/// \brief 字典树节点
 		struct TrieNode {
@@ -1964,8 +1962,7 @@ namespace acwing {
 			unordered_map<char, TrieNode *> nexts = unordered_map<char, TrieNode *>();
 			unordered_set<string *> origin        = unordered_set<string *>();
 
-			explicit TrieNode(char ch)
-			    : ch(ch) {}
+			explicit TrieNode(char ch): ch(ch) {}
 
 			void insert(const string &str, int start, string *origin);
 			[[nodiscard]] TrieNode *search(const string &str, int start);
@@ -2119,8 +2116,14 @@ namespace acwing {
 
 	/// \brief 861. 二分图的最大匹配
 	namespace acwing861 {
-		bool find(vector<unordered_set<int>> &g, int x, vector<bool> &st, vector<int> &match);
+		bool find(vector<unordered_set<int>> &g, int x, vector<bool> &st,
+		          vector<int> &match);
 		int main(istream &cin, ostream &cout);
 	}// namespace acwing861
+
+	/// \brief 3373. 进制转换
+	namespace acwing3373 {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace acwing
-#endif//PROBLEMSCPP_ACWING_H
+#endif// PROBLEMSCPP_ACWING_H

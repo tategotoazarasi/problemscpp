@@ -7532,4 +7532,36 @@ namespace acwing {
 			return false;
 		}
 	}// namespace acwing861
+
+	namespace acwing3373 {
+		int main(istream &cin, ostream &cout) {
+			string input;
+			while(cin >> input) {
+				if(input == "0") {
+					cout << 0 << endl;
+					continue;
+				}
+				unsigned short promotion = 0;
+				vector<char> result      = vector<char>();
+				vector<char> charvec     = vector<char>(input.begin(), input.end());
+				vector<char> next        = vector<char>();
+				while(!charvec.empty() && !(charvec.size() == 1 && charvec[0] == '0')) {
+					for(char c: charvec) {
+						unsigned short digit = promotion + c - '0';
+						if(digit / 2 > 0) {
+							next.push_back((digit / 2) + '0');
+						}
+						promotion = (digit % 2) * 10;
+					}
+					result.push_back(promotion / 10 + '0');
+					promotion = 0;
+					charvec   = next;
+					next.clear();
+				}
+				string output = string(result.rbegin(), result.rend());
+				cout << output << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3373
 }// namespace acwing

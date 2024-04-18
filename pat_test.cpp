@@ -1961,7 +1961,7 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace b1110
-	}    // namespace b
+	}// namespace b
 
 	namespace a {
 		namespace a1003 {
@@ -2397,7 +2397,7 @@ namespace pat {
 				          out.str());
 			}
 		}// namespace a7_4
-	}    // namespace a
+	}// namespace a
 
 	namespace top {}
 }// namespace pat
