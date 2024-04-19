@@ -7541,25 +7541,30 @@ namespace acwing {
 					cout << 0 << endl;
 					continue;
 				}
-				unsigned short promotion = 0;
-				vector<char> result      = vector<char>();
-				vector<char> charvec     = vector<char>(input.begin(), input.end());
-				vector<char> next        = vector<char>();
-				while(!charvec.empty() && !(charvec.size() == 1 && charvec[0] == '0')) {
-					for(char c: charvec) {
-						unsigned short digit = promotion + c - '0';
-						if(digit / 2 > 0) {
-							next.push_back((digit / 2) + '0');
+				unsigned short promotion       = 0;
+				vector<unsigned short> result  = vector<unsigned short>();
+				vector<unsigned short> charvec = vector<unsigned short>(input.length());
+				for(auto i = 0; i < input.length(); i++) {
+					charvec[i] = input[i] - '0';
+				}
+				vector<unsigned short> next = vector<unsigned short>();
+				while(!charvec.empty() && !(charvec.size() == 1 && charvec[0] == 0)) {
+					for(unsigned short d: charvec) {
+						unsigned short digit = promotion * 10 + d;
+						if(digit / 2 > 0 || !next.empty()) {
+							next.push_back(digit / 2);
 						}
-						promotion = (digit % 2) * 10;
+						promotion = digit % 2;
 					}
-					result.push_back(promotion / 10 + '0');
+					result.push_back(promotion);
 					promotion = 0;
 					charvec   = next;
 					next.clear();
 				}
-				string output = string(result.rbegin(), result.rend());
-				cout << output << endl;
+				for(auto i = result.rbegin(); i != result.rend(); i++) {
+					cout << *i;
+				}
+				cout << endl;
 			}
 			return 0;
 		}
