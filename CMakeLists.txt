@@ -25,7 +25,11 @@ endif ()
 # Now simply link against gtest or gtest_main as needed. Eg
 include(GoogleTest)
 enable_testing()
-add_executable(problemscpp main.cpp acwing.cpp acwing.h lintcode.cpp lintcode.h leetcode.cpp leetcode.h luogu.cpp luogu.h leetcode_test.cpp lintcode_test.cpp acwing_test.cpp luogu_test.cpp set_stack_limit.cpp templates.h templates_test.cpp pat.cpp pat.h pat_test.cpp templates.cpp)
+add_executable(problemscpp main.cpp acwing.cpp acwing.h lintcode.cpp lintcode.h leetcode.cpp leetcode.h luogu.cpp luogu.h leetcode_test.cpp lintcode_test.cpp acwing_test.cpp luogu_test.cpp set_stack_limit.cpp templates.h templates_test.cpp pat.cpp pat.h pat_test.cpp templates.cpp
+        acwing408.cpp
+        acwing408.h
+        acwing408_test.cpp
+)
 target_link_libraries(problemscpp PRIVATE GTest::gmock GTest::gtest GTest::gmock_main GTest::gtest_main)
 gtest_discover_tests(problemscpp)
 add_test(NAME problemscpp COMMAND problemscpp)
