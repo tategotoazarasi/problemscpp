@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type_0',['type',['../d9/dcc/a02872.html#ab6a7f28d72ef0bc24ddfb5be846b76a4',1,'leetcode::range_module::Chtholly']]]
+  ['student_0',['student',['../d1/db7/a00157.html#aaaee6780b6d3b9a51659c21bcef6c40d',1,'acwing::acwing3378']]]
 ];
