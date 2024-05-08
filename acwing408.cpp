@@ -39,4 +39,26 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3378
+
+	namespace acwing3376 {
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			vector<student> students(n);
+			for(int i = 0; i < n; i++) {
+				cin >> students[i].id >> students[i].score;
+				students[i].id_numeric = stoi(students[i].id);
+			}
+			sort(students.begin(), students.end(), [](const student &a, const student &b) {
+				if(a.score == b.score) {
+					return a.id_numeric < b.id_numeric;
+				}
+				return a.score < b.score;
+			});
+			for(const auto &s: students) {
+				cout << s.id << ' ' << s.score << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3376
 }// namespace acwing

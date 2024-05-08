@@ -23,6 +23,15 @@ namespace acwing {
 		} student;
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	};// namespace acwing3378
+
+	namespace acwing3376 {
+		typedef struct student {
+			string id;
+			int id_numeric;
+			int score;
+		} student;
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing3376
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H
