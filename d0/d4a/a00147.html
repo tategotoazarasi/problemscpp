@@ -125,7 +125,7 @@ $(function() {
 <div class="line"><a id="l07203" name="l07203"></a><span class="lineno"> 7203</span>            <span class="keywordtype">int</span> m;</div>
 <div class="line"><a id="l07204" name="l07204"></a><span class="lineno"> 7204</span>            <span class="keywordtype">int</span> k;</div>
 <div class="line"><a id="l07205" name="l07205"></a><span class="lineno"> 7205</span>            cin &gt;&gt; n &gt;&gt; m &gt;&gt; k;</div>
-<div class="line"><a id="l07206" name="l07206"></a><span class="lineno"> 7206</span>            vector&lt;tuple&lt;int, int, int&gt;&gt; <a class="code hl_variable" href="../../da/d6e/a00610.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>(m);</div>
+<div class="line"><a id="l07206" name="l07206"></a><span class="lineno"> 7206</span>            vector&lt;tuple&lt;int, int, int&gt;&gt; <a class="code hl_variable" href="../../dd/dc0/a00611.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>(m);</div>
 <div class="line"><a id="l07207" name="l07207"></a><span class="lineno"> 7207</span>            vector shortest(n + 1, 0x3f3f3f);</div>
 <div class="line"><a id="l07208" name="l07208"></a><span class="lineno"> 7208</span>            shortest[1] = 0;</div>
 <div class="line"><a id="l07209" name="l07209"></a><span class="lineno"> 7209</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
@@ -133,11 +133,11 @@ $(function() {
 <div class="line"><a id="l07211" name="l07211"></a><span class="lineno"> 7211</span>                <span class="keywordtype">int</span> y;</div>
 <div class="line"><a id="l07212" name="l07212"></a><span class="lineno"> 7212</span>                <span class="keywordtype">int</span> z;</div>
 <div class="line"><a id="l07213" name="l07213"></a><span class="lineno"> 7213</span>                cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</div>
-<div class="line"><a id="l07214" name="l07214"></a><span class="lineno"> 7214</span>                <a class="code hl_variable" href="../../da/d6e/a00610.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i] = make_tuple(x, y, z);</div>
+<div class="line"><a id="l07214" name="l07214"></a><span class="lineno"> 7214</span>                <a class="code hl_variable" href="../../dd/dc0/a00611.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i] = make_tuple(x, y, z);</div>
 <div class="line"><a id="l07215" name="l07215"></a><span class="lineno"> 7215</span>            }</div>
 <div class="line"><a id="l07216" name="l07216"></a><span class="lineno"> 7216</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; k; i++) {</div>
 <div class="line"><a id="l07217" name="l07217"></a><span class="lineno"> 7217</span>                vector&lt;int&gt; shortest_cpy = shortest;</div>
-<div class="line"><a id="l07218" name="l07218"></a><span class="lineno"> 7218</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> [x, y, z]: <a class="code hl_variable" href="../../da/d6e/a00610.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>) {</div>
+<div class="line"><a id="l07218" name="l07218"></a><span class="lineno"> 7218</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> [x, y, z]: <a class="code hl_variable" href="../../dd/dc0/a00611.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>) {</div>
 <div class="line"><a id="l07219" name="l07219"></a><span class="lineno"> 7219</span>                    shortest[y] = min(shortest[y], shortest_cpy[x] + z);</div>
 <div class="line"><a id="l07220" name="l07220"></a><span class="lineno"> 7220</span>                }</div>
 <div class="line"><a id="l07221" name="l07221"></a><span class="lineno"> 7221</span>            }</div>
@@ -148,7 +148,7 @@ $(function() {
 <div class="line"><a id="l07226" name="l07226"></a><span class="lineno"> 7226</span>            }</div>
 <div class="line"><a id="l07227" name="l07227"></a><span class="lineno"> 7227</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l07228" name="l07228"></a><span class="lineno"> 7228</span>        }</div>
-<div class="ttc" id="aa00610_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../da/d6e/a00610.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de1/a00065_source.html#l05095">pat.cpp:5095</a></div></div>
+<div class="ttc" id="aa00611_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../dd/dc0/a00611.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de1/a00065_source.html#l05095">pat.cpp:5095</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../de/de1/a00065_source.html#l05095">pat::a::a7_2::vec</a>.</p>
 

@@ -91,7 +91,7 @@ $(function() {
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                <span class="keywordflow">if</span>(index.find(students[i]) == index.end())</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                    index[students[i]] = i;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            sort(students.begin(), students.end(), [rule, &amp;index](<a class="code hl_struct" href="../../d9/da1/a01546.html">student</a> *a, <a class="code hl_struct" href="../../d9/da1/a01546.html">student</a> *b) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            sort(students.begin(), students.end(), [rule, &amp;index](<a class="code hl_struct" href="../../da/ded/a01547.html">student</a> *a, <a class="code hl_struct" href="../../da/ded/a01547.html">student</a> *b) {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                if(a-&gt;score == b-&gt;score) {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                    return index[a] &lt; index[b];</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                }</div>
@@ -107,12 +107,37 @@ $(function() {
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }<span class="comment">// namespace acwing3378</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}<span class="comment">// namespace acwing</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d6/db8/a00158.html">   43</a></span>    <span class="keyword">namespace </span>acwing3376 {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d6/db8/a00158.html#aee1b3566879434cf494a458570177c69">   44</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d2/de7/a00014.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            cin &gt;&gt; n;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            vector&lt;student&gt; students(n);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                cin &gt;&gt; students[i].id &gt;&gt; students[i].score;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                students[i].id_numeric = stoi(students[i].<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            sort(students.begin(), students.end(), [](<span class="keyword">const</span> <a class="code hl_struct" href="../../d5/df4/a01551.html">student</a> &amp;a, <span class="keyword">const</span> <a class="code hl_struct" href="../../d5/df4/a01551.html">student</a> &amp;b) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                if(a.score == b.score) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    return a.id_numeric &lt; b.id_numeric;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordflow">return</span> a.<a class="code hl_variable" href="../../d5/df4/a01551.html#a64e39aa57fb622dbe5678affb8bad787">score</a> &lt; b.<a class="code hl_variable" href="../../d5/df4/a01551.html#a64e39aa57fb622dbe5678affb8bad787">score</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            });</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;s: students) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                cout &lt;&lt; s.id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; s.score &lt;&lt; endl;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }<span class="comment">// namespace acwing3376</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}<span class="comment">// namespace acwing</span></div>
+<div class="ttc" id="aa00014_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d2/de7/a00014.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de7/a00014_source.html#l00005">main.cpp:5</a></div></div>
 <div class="ttc" id="aa00047_html"><div class="ttname"><a href="../../d6/d2d/a00047.html">acwing408.h</a></div></div>
 <div class="ttc" id="aa00074_html"><div class="ttname"><a href="../../db/db6/a00074.html">acwing</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d41/a00038_source.html#l00022">acwing.cpp:22</a></div></div>
 <div class="ttc" id="aa00157_html_aaaee6780b6d3b9a51659c21bcef6c40d"><div class="ttname"><a href="../../d1/db7/a00157.html#aaaee6780b6d3b9a51659c21bcef6c40d">acwing::acwing3378::student</a></div><div class="ttdeci">struct acwing::acwing3378::student student</div></div>
 <div class="ttc" id="aa00157_html_aca9ca6119655bb80c7e04f2f444ce95f"><div class="ttname"><a href="../../d1/db7/a00157.html#aca9ca6119655bb80c7e04f2f444ce95f">acwing::acwing3378::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00014">acwing408.cpp:14</a></div></div>
-<div class="ttc" id="aa01546_html"><div class="ttname"><a href="../../d9/da1/a01546.html">acwing::acwing3378::student</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l00020">acwing408.h:20</a></div></div>
+<div class="ttc" id="aa01547_html"><div class="ttname"><a href="../../da/ded/a01547.html">acwing::acwing3378::student</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l00020">acwing408.h:20</a></div></div>
+<div class="ttc" id="aa01551_html"><div class="ttname"><a href="../../d5/df4/a01551.html">acwing::acwing3376::student</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l00028">acwing408.h:28</a></div></div>
+<div class="ttc" id="aa01551_html_a64e39aa57fb622dbe5678affb8bad787"><div class="ttname"><a href="../../d5/df4/a01551.html#a64e39aa57fb622dbe5678affb8bad787">acwing::acwing3376::student::score</a></div><div class="ttdeci">int score</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2d/a00047_source.html#l00031">acwing408.h:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
