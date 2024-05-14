@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::image_smoother::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,18 +63,86 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../de/db9/a00159.html">leetcode</a></li><li class="navelem"><a class="el" href="../../db/d53/a00321.html">factorial_trailing_zeroes</a></li><li class="navelem"><a class="el" href="../../dd/da4/a02295.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../de/d38/a00160.html">leetcode</a></li><li class="navelem"><a class="el" href="../../db/d53/a00321.html">image_smoother</a></li><li class="navelem"><a class="el" href="../../d4/d8c/a02292.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::factorial_trailing_zeroes::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../de/d4e/a02289.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::image_smoother::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../dd/da4/a02295.html">leetcode::factorial_trailing_zeroes::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../dd/da4/a02295.html#afb8da28c5040decf7d1fec4c745f906b">trailingZeroes</a>(int n)</td><td class="entry"><a class="el" href="../../dd/da4/a02295.html">leetcode::factorial_trailing_zeroes::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../d4/dee/a00008_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a95f897eaa521948f43cd0eaab09708ab"><td class="memItemLeft" align="right" valign="top">static vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d8c/a02292.html#a95f897eaa521948f43cd0eaab09708ab">imageSmoother</a> (vector&lt; vector&lt; int &gt; &gt; &amp;img)</td></tr>
+<tr class="separator:a95f897eaa521948f43cd0eaab09708ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../d4/dee/a00008_source.html">leetcode.h</a> 第 <a class="el" href="../../d4/dee/a00008_source.html#l01902">1902</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a95f897eaa521948f43cd0eaab09708ab" name="a95f897eaa521948f43cd0eaab09708ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f897eaa521948f43cd0eaab09708ab">&#9670;&nbsp;</a></span>imageSmoother()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; vector&lt; int &gt; &gt; leetcode::image_smoother::Solution::imageSmoother </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; vector&lt; int &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>img</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l04985">4985</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l04985" name="l04985"></a><span class="lineno"> 4985</span>                                                                            {</div>
+<div class="line"><a id="l04986" name="l04986"></a><span class="lineno"> 4986</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> m = img.size();</div>
+<div class="line"><a id="l04987" name="l04987"></a><span class="lineno"> 4987</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = img[0].size();</div>
+<div class="line"><a id="l04988" name="l04988"></a><span class="lineno"> 4988</span>            <span class="keyword">auto</span> ans    = vector(m, vector&lt;int&gt;(n));</div>
+<div class="line"><a id="l04989" name="l04989"></a><span class="lineno"> 4989</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; m; i++) {</div>
+<div class="line"><a id="l04990" name="l04990"></a><span class="lineno"> 4990</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><a id="l04991" name="l04991"></a><span class="lineno"> 4991</span>                    pair&lt;int, int&gt; cells[9] = {make_pair(i - 1, j - 1), make_pair(i - 1, j), make_pair(i - 1, j + 1),</div>
+<div class="line"><a id="l04992" name="l04992"></a><span class="lineno"> 4992</span>                                               make_pair(i, j - 1), make_pair(i, j), make_pair(i, j + 1),</div>
+<div class="line"><a id="l04993" name="l04993"></a><span class="lineno"> 4993</span>                                               make_pair(i + 1, j - 1), make_pair(i + 1, j), make_pair(i + 1, j + 1)};</div>
+<div class="line"><a id="l04994" name="l04994"></a><span class="lineno"> 4994</span>                    <span class="keywordtype">int</span> sum                 = 0;</div>
+<div class="line"><a id="l04995" name="l04995"></a><span class="lineno"> 4995</span>                    <span class="keywordtype">int</span> count               = 0;</div>
+<div class="line"><a id="l04996" name="l04996"></a><span class="lineno"> 4996</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 0; k &lt; 9; k++) {</div>
+<div class="line"><a id="l04997" name="l04997"></a><span class="lineno"> 4997</span>                        <span class="keyword">auto</span> [x, y] = cells[k];</div>
+<div class="line"><a id="l04998" name="l04998"></a><span class="lineno"> 4998</span>                        <span class="keywordflow">if</span>(0 &lt;= x &amp;&amp; x &lt; m &amp;&amp; 0 &lt;= y &amp;&amp; y &lt; n) {</div>
+<div class="line"><a id="l04999" name="l04999"></a><span class="lineno"> 4999</span>                            count++;</div>
+<div class="line"><a id="l05000" name="l05000"></a><span class="lineno"> 5000</span>                            sum += img[x][y];</div>
+<div class="line"><a id="l05001" name="l05001"></a><span class="lineno"> 5001</span>                        }</div>
+<div class="line"><a id="l05002" name="l05002"></a><span class="lineno"> 5002</span>                    }</div>
+<div class="line"><a id="l05003" name="l05003"></a><span class="lineno"> 5003</span>                    ans[i][j] = sum / count;</div>
+<div class="line"><a id="l05004" name="l05004"></a><span class="lineno"> 5004</span>                }</div>
+<div class="line"><a id="l05005" name="l05005"></a><span class="lineno"> 5005</span>            }</div>
+<div class="line"><a id="l05006" name="l05006"></a><span class="lineno"> 5006</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l05007" name="l05007"></a><span class="lineno"> 5007</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d8c/a00035_source.html#l02432">leetcode::image_smoother::TEST()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../d4/dee/a00008_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../d6/d5b/a00026_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
