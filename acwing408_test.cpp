@@ -474,4 +474,26 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3376
+
+	namespace acwing3374 {
+		TEST(acwing3374, case1) {
+			istringstream in("10 2\n"
+			                 "11");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1011",
+			          ans);
+		}
+
+		TEST(acwing3374, case2) {
+			istringstream in("33 32\n"
+			                 "8MJ8REPCCDS646V91FU5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("fil22vqticlaaeabeme7",
+			          ans);
+		}
+	}// namespace acwing3374
 }// namespace acwing

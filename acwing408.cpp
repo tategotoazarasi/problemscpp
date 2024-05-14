@@ -3,7 +3,10 @@
 //
 
 #include "acwing408.h"
+#include "templates.h"
 #include <algorithm>
+#include <queue>
+#include <sstream>
 #include <unordered_map>
 #include <vector>
 
@@ -61,4 +64,53 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3376
+
+	namespace acwing3374 {
+		int main(istream &cin, ostream &cout) {
+			int m, n;
+			string x;
+			cin >> m >> n >> x;
+			if(x == "0") {
+				cout << "0";
+				return 0;
+			}
+			vector<unsigned short> input   = vector<unsigned short>();
+			vector<unsigned short> ans     = vector<unsigned short>();
+			queue<unsigned short> quotient = queue<unsigned short>();
+			for(auto i = x.begin(); i != x.end(); i++) {
+				if(isdigit(*i)) {
+					input.push_back(*i - '0');
+				} else if(isupper(*i)) {
+					input.push_back(*i - 'A' + 10);
+				}
+			}
+			do {
+				unsigned int current = 0;
+				quotient             = queue<unsigned short>();
+				for(auto i = input.begin(); i != input.end(); i++) {
+					current *= m;
+					current += *i;
+					quotient.push(current / n);
+					current %= n;
+				}
+				while(!quotient.empty() && quotient.front() == 0) {
+					quotient.pop();
+				}
+				ans.push_back(current);
+				input = vector<unsigned short>(quotient.size());
+				for(unsigned int i = 0; i < input.size(); i++) {
+					input[i] = quotient.front();
+					quotient.pop();
+				}
+			} while(!input.empty());
+			for(auto i = ans.rbegin(); i != ans.rend(); i++) {
+				if(*i < 10) {
+					cout << *i;
+				} else {
+					cout << (char) (*i - 10 + 'a');
+				}
+			}
+			return 0;
+		}
+	}// namespace acwing3374
 }// namespace acwing

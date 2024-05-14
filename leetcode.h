@@ -2,6 +2,7 @@
 #define PROBLEMSCPP_LEETCODE_H
 
 #include "templates.h"
+#include <algorithm>
 #include <array>
 #include <bitset>
 #include <functional>
@@ -3348,7 +3349,7 @@ namespace leetcode {
 
 			bool check(unsigned l, unsigned r) {
 				const auto it = split(r + 1);
-				return all_of(split(l), it, [](auto &&n) { return n.data; });
+				return std::all_of(split(l), it, [](auto &&n) { return n.data; });
 			}
 		};
 

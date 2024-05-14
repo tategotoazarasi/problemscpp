@@ -2124,6 +2124,6 @@ namespace acwing {
 	/// \brief 3373. 进制转换
 	namespace acwing3373 {
 		int main(istream &cin, ostream &cout);
-	}
+	}// namespace acwing3373
 }// namespace acwing
 #endif// PROBLEMSCPP_ACWING_H
