@@ -496,4 +496,41 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3374
+
+	namespace acwing3757 {
+		TEST(acwing3757, case1) {
+			auto head = new ListNode{1,
+			                         new ListNode{2,
+			                                      new ListNode{3,
+			                                                   new ListNode{4, nullptr}}}};
+			rearrangedList(head);
+			ASSERT_EQ(1, head->val);
+			ASSERT_EQ(4, head->next->val);
+			ASSERT_EQ(2, head->next->next->val);
+			ASSERT_EQ(3, head->next->next->next->val);
+			delete head->next->next->next;
+			delete head->next->next;
+			delete head->next;
+			delete head;
+		}
+
+		TEST(acwing3757, case2) {
+			auto head = new ListNode{1,
+			                         new ListNode{2,
+			                                      new ListNode{3,
+			                                                   new ListNode{4,
+			                                                                new ListNode{5, nullptr}}}}};
+			rearrangedList(head);
+			ASSERT_EQ(1, head->val);
+			ASSERT_EQ(5, head->next->val);
+			ASSERT_EQ(2, head->next->next->val);
+			ASSERT_EQ(4, head->next->next->next->val);
+			ASSERT_EQ(3, head->next->next->next->next->val);
+			delete head->next->next->next->next;
+			delete head->next->next->next;
+			delete head->next->next;
+			delete head->next;
+			delete head;
+		}
+	}// namespace acwing3757
 }// namespace acwing

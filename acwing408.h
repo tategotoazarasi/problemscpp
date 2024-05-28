@@ -36,6 +36,15 @@ namespace acwing {
 	namespace acwing3374 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing3374
+
+	namespace acwing3757 {
+		struct ListNode {
+			int val;
+			struct ListNode *next;
+		};
+		void rearrangedList(struct ListNode *head);
+		void reverse(struct ListNode *head);
+	}// namespace acwing3757
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

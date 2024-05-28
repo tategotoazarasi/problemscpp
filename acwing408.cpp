@@ -113,4 +113,40 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3374
+
+	namespace acwing3757 {
+		void rearrangedList(struct ListNode *head) {
+			if(head == NULL || head->next == NULL)
+				return;
+			int len = 0;
+			for(struct ListNode *p = head; p != NULL; p = p->next)
+				len++;
+			int mid            = (len + 1) / 2;
+			struct ListNode *a = head;
+			for(int i = 0; i < mid - 1; i++) {
+				a = a->next;
+			}
+			struct ListNode *b = a->next;
+			struct ListNode *c = b->next;
+			a->next            = NULL;
+			b->next            = NULL;
+			while(c) {
+				struct ListNode *tmp = c->next;
+				c->next              = b;
+				b                    = c;
+				c                    = tmp;
+			}
+			struct ListNode *p = head;
+			struct ListNode *q = b;
+			while(q) {
+				auto qq = q->next;
+				// 插入结点
+				q->next = p->next;
+				p->next = q;
+				// 移动p和q
+				p = q->next;
+				q = qq;
+			}
+		}
+	}// namespace acwing3757
 }// namespace acwing
