@@ -533,4 +533,48 @@ namespace acwing {
 			delete head;
 		}
 	}// namespace acwing3757
+
+	namespace acwing3607 {
+		TEST(acwing3607, case1) {
+			istringstream in("2000 3\n"
+			                 "2000 31\n"
+			                 "2000 40\n"
+			                 "2000 60\n"
+			                 "2000 61\n"
+			                 "2001 60");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2000-01-03\n"
+			          "2000-01-31\n"
+			          "2000-02-09\n"
+			          "2000-02-29\n"
+			          "2000-03-01\n"
+			          "2001-03-01\n",
+			          ans);
+		}
+
+		TEST(acwing3607, case2) {
+			istringstream in("2000 3\n"
+			                 "2000 31\n"
+			                 "2000 40\n"
+			                 "2000 60\n"
+			                 "2000 366\n"
+			                 "2001 60\n"
+			                 "2004 366\n"
+			                 "1900 365");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2000-01-03\n"
+			          "2000-01-31\n"
+			          "2000-02-09\n"
+			          "2000-02-29\n"
+			          "2000-12-31\n"
+			          "2001-03-01\n"
+			          "2004-12-31\n"
+			          "1900-12-31\n",
+			          ans);
+		}
+	}// namespace acwing3607
 }// namespace acwing

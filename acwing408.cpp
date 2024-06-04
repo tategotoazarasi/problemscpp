@@ -5,6 +5,10 @@
 #include "acwing408.h"
 #include "templates.h"
 #include <algorithm>
+#include <climits>
+#include <cstdlib>
+#include <cstring>
+#include <iomanip>
 #include <queue>
 #include <sstream>
 #include <unordered_map>
@@ -149,4 +153,39 @@ namespace acwing {
 			}
 		}
 	}// namespace acwing3757
+
+	namespace acwing3607 {
+		int main(istream &cin, ostream &cout) {
+			int year, day;
+			int day_of_month[13]       = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+			int day_of_month_leap[13]  = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+			int start_day_of_month[14] = {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, INT_MAX};
+			while(cin >> year >> day) {
+				bool leap = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+				if(leap) {
+					for(int i = 1; i <= 12; i++) {
+						start_day_of_month[i] = start_day_of_month[i - 1] + day_of_month_leap[i - 1];
+					}
+				} else {
+					for(int i = 1; i <= 12; i++) {
+						start_day_of_month[i] = start_day_of_month[i - 1] + day_of_month[i - 1];
+					}
+				}
+				cout << setw(4) << setfill('0') << year << '-';
+				for(int i = 1; i <= 13; i++) {
+					if(start_day_of_month[i] > day) {
+						cout << setw(2) << setfill('0') << i - 1 << '-';
+						day -= start_day_of_month[i - 1];
+						day++;
+						cout << setw(2) << setfill('0') << day << endl;
+						break;
+					}
+				}
+				memset(start_day_of_month, 0, sizeof(start_day_of_month));
+				start_day_of_month[0]  = 1;
+				start_day_of_month[13] = INT_MAX;
+			}
+			return 0;
+		}
+	}// namespace acwing3607
 }// namespace acwing
