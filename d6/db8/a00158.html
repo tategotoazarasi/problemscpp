@@ -77,12 +77,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2c/a01553.html">student</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1d/a01554.html">student</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 类型定义</h2></td></tr>
-<tr class="memitem:aa7b6296783f6717cb9441edd1f984de1"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../de/d2c/a01553.html">acwing::acwing3376::student</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/db8/a00158.html#aa7b6296783f6717cb9441edd1f984de1">student</a></td></tr>
+<tr class="memitem:aa7b6296783f6717cb9441edd1f984de1"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d7/d1d/a01554.html">acwing::acwing3376::student</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/db8/a00158.html#aa7b6296783f6717cb9441edd1f984de1">student</a></td></tr>
 <tr class="separator:aa7b6296783f6717cb9441edd1f984de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -100,7 +100,7 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="../../de/d2c/a01553.html">acwing::acwing3376::student</a> <a class="el" href="../../de/d2c/a01553.html">acwing::acwing3376::student</a></td>
+          <td class="memname">typedef struct <a class="el" href="../../d7/d1d/a01554.html">acwing::acwing3376::student</a> <a class="el" href="../../d7/d1d/a01554.html">acwing::acwing3376::student</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -134,26 +134,26 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../dc/dee/a00053_source.html">acwing408.cpp</a> 第 <a class="el" href="../../dc/dee/a00053_source.html#l00047">47</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                                              {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            cin &gt;&gt; n;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            vector&lt;student&gt; students(n);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                cin &gt;&gt; students[i].id &gt;&gt; students[i].score;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                students[i].id_numeric = stoi(students[i].<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            sort(students.begin(), students.end(), [](<span class="keyword">const</span> <a class="code hl_typedef" href="../../d1/db7/a00157.html#aaaee6780b6d3b9a51659c21bcef6c40d">student</a> &amp;a, <span class="keyword">const</span> <a class="code hl_typedef" href="../../d1/db7/a00157.html#aaaee6780b6d3b9a51659c21bcef6c40d">student</a> &amp;b) {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                if(a.score == b.score) {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    return a.id_numeric &lt; b.id_numeric;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <span class="keywordflow">return</span> a.score &lt; b.score;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            });</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;s: students) {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                cout &lt;&lt; s.id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; s.score &lt;&lt; endl;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../dc/dee/a00053_source.html">acwing408.cpp</a> 第 <a class="el" href="../../dc/dee/a00053_source.html#l00051">51</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                                              {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            cin &gt;&gt; n;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            vector&lt;student&gt; students(n);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                cin &gt;&gt; students[i].id &gt;&gt; students[i].score;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                students[i].id_numeric = stoi(students[i].<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            sort(students.begin(), students.end(), [](<span class="keyword">const</span> <a class="code hl_typedef" href="../../d1/db7/a00157.html#aaaee6780b6d3b9a51659c21bcef6c40d">student</a> &amp;a, <span class="keyword">const</span> <a class="code hl_typedef" href="../../d1/db7/a00157.html#aaaee6780b6d3b9a51659c21bcef6c40d">student</a> &amp;b) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                if(a.score == b.score) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    return a.id_numeric &lt; b.id_numeric;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="keywordflow">return</span> a.score &lt; b.score;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            });</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;s: students) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                cout &lt;&lt; s.id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; s.score &lt;&lt; endl;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
 <div class="ttc" id="aa00157_html_aaaee6780b6d3b9a51659c21bcef6c40d"><div class="ttname"><a href="../../d1/db7/a00157.html#aaaee6780b6d3b9a51659c21bcef6c40d">acwing::acwing3378::student</a></div><div class="ttdeci">struct acwing::acwing3378::student student</div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00031">acwing::acwing3376::student::score</a>.</p>
@@ -204,7 +204,7 @@ $(function() {
 <div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span>        }</div>
 <div class="ttc" id="aa00050_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d5/de0/a00050.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de0/a00050_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l00047">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l00051">main()</a>.</p>
 
 </div>
 </div>
