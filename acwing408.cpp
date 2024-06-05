@@ -188,4 +188,31 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3607
+
+	namespace acwing3573 {
+		int main(istream &cin, ostream &cout) {
+			int t, year, month, day, a;
+			int day_of_month[13]      = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+			int day_of_month_leap[13] = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+			int(*day_of_month_p)[13]  = nullptr;
+
+			cin >> t;
+			while(t--) {
+				cin >> year >> month >> day >> a;
+				day_of_month_p = ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) ? &day_of_month_leap : &day_of_month;
+				day += a;
+				while(day > (*day_of_month_p)[month]) {
+					day -= (*day_of_month_p)[month];
+					month++;
+					if(month > 12) {
+						month = 1;
+						year++;
+						day_of_month_p = ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) ? &day_of_month_leap : &day_of_month;
+					}
+				}
+				cout << setw(4) << setfill('0') << year << '-' << setw(2) << setfill('0') << month << '-' << setw(2) << setfill('0') << day << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3573
 }// namespace acwing
