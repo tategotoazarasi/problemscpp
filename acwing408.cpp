@@ -300,4 +300,22 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3302_408
+
+	namespace acwing3766 {
+		int pathSum(TreeNode *root) {
+			return pathSum(root, 0);
+		}
+
+		int pathSum(TreeNode *root, int level) {
+			if(root == nullptr) {
+				return 0;
+			}
+			if(root->left == nullptr && root->right == nullptr) {
+				return level * root->val;
+			}
+			int leftVal  = pathSum(root->left, level + 1);
+			int rightVal = pathSum(root->right, level + 1);
+			return leftVal + rightVal;
+		}
+	}// namespace acwing3766
 }// namespace acwing

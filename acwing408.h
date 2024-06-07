@@ -16,6 +16,13 @@
 using namespace std;
 
 namespace acwing {
+	struct TreeNode {
+		int val;
+		TreeNode *left;
+		TreeNode *right;
+		TreeNode(int x): val(x), left(NULL), right(NULL) {}
+	};
+
 	namespace acwing3378 {
 		typedef struct student {
 			string name;
@@ -57,6 +64,11 @@ namespace acwing {
 	namespace acwing3302_408 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	namespace acwing3766 {
+		int pathSum(TreeNode *root, int level);
+		int pathSum(TreeNode *root);
+	}// namespace acwing3766
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H
