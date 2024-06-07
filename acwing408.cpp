@@ -11,6 +11,7 @@
 #include <iomanip>
 #include <queue>
 #include <sstream>
+#include <stack>
 #include <unordered_map>
 #include <vector>
 
@@ -215,4 +216,88 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3573
+
+	namespace acwing3302_408 {
+		int main(istream &cin, ostream &cout) {
+			int x;
+			char y;
+			unordered_map<char, int> priority = {
+			        {'+', 1},
+			        {'-', 1},
+			        {'*', 2},
+			        {'/', 2}};
+			stack<char> op = stack<char>();
+			stack<int> num = stack<int>();
+			while(!cin.eof() || !cin.fail() || !cin.bad()) {
+				if(cin.peek() == EOF)
+					break;
+				if(isdigit(cin.peek())) {
+					cin >> x;
+					num.push(x);
+				} else {
+					cin >> y;
+					if(y == '(') {
+						op.push(y);
+					} else if(y == ')') {
+						while(!op.empty() && op.top() != '(') {
+							int b = num.top();
+							num.pop();
+							int a = num.top();
+							num.pop();
+							char c = op.top();
+							op.pop();
+							if(c == '+') {
+								num.push(a + b);
+							} else if(c == '-') {
+								num.push(a - b);
+							} else if(c == '*') {
+								num.push(a * b);
+							} else if(c == '/') {
+								num.push(a / b);
+							}
+						}
+						op.pop();
+					} else if(priority.find(y) != priority.end()) {
+						while(!op.empty() && op.top() != '(' && priority[op.top()] >= priority[y]) {
+							int b = num.top();
+							num.pop();
+							int a = num.top();
+							num.pop();
+							char c = op.top();
+							op.pop();
+							if(c == '+') {
+								num.push(a + b);
+							} else if(c == '-') {
+								num.push(a - b);
+							} else if(c == '*') {
+								num.push(a * b);
+							} else if(c == '/') {
+								num.push(a / b);
+							}
+						}
+						op.push(y);
+					}
+				}
+			}
+			while(!op.empty()) {
+				int b = num.top();
+				num.pop();
+				int a = num.top();
+				num.pop();
+				char c = op.top();
+				op.pop();
+				if(c == '+') {
+					num.push(a + b);
+				} else if(c == '-') {
+					num.push(a - b);
+				} else if(c == '*') {
+					num.push(a * b);
+				} else if(c == '/') {
+					num.push(a / b);
+				}
+			}
+			cout << num.top();
+			return 0;
+		}
+	}// namespace acwing3302_408
 }// namespace acwing

@@ -53,6 +53,10 @@ namespace acwing {
 	namespace acwing3573 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	namespace acwing3302_408 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H
