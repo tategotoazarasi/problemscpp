@@ -318,4 +318,28 @@ namespace acwing {
 			return leftVal + rightVal;
 		}
 	}// namespace acwing3766
+
+	namespace acwing148 {
+		int main(istream &cin, ostream &cout) {
+			priority_queue<int, vector<int>, greater<>> pq = priority_queue<int, vector<int>, greater<>>();
+			int n;
+			cin >> n;
+			int x;
+			while(n--) {
+				cin >> x;
+				pq.push(x);
+			}
+			int ans = 0;
+			while(pq.size() > 1) {
+				int a = pq.top();
+				pq.pop();
+				int b = pq.top();
+				pq.pop();
+				ans += a + b;
+				pq.push(a + b);
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing148
 }// namespace acwing

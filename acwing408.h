@@ -69,6 +69,10 @@ namespace acwing {
 		int pathSum(TreeNode *root, int level);
 		int pathSum(TreeNode *root);
 	}// namespace acwing3766
+
+	namespace acwing148 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

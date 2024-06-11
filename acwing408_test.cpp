@@ -932,4 +932,15 @@ namespace acwing {
 			ASSERT_EQ("-965", ans);
 		}
 	}// namespace acwing3302_408
+
+	namespace acwing148 {
+		TEST(acwing148, case1) {
+			istringstream in("3 \n"
+			                 "1 2 9 ");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("15", ans);
+		}
+	}// namespace acwing148
 }// namespace acwing
