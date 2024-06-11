@@ -75,9 +75,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:aa247517adc95963774f8b83d6862e12d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddf/a00164.html#aa247517adc95963774f8b83d6862e12d">pathSum</a> (<a class="el" href="../../de/d2c/a01553.html">TreeNode</a> *root)</td></tr>
+<tr class="memitem:aa247517adc95963774f8b83d6862e12d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddf/a00164.html#aa247517adc95963774f8b83d6862e12d">pathSum</a> (<a class="el" href="../../d7/d1d/a01554.html">TreeNode</a> *root)</td></tr>
 <tr class="separator:aa247517adc95963774f8b83d6862e12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec211c340058528aacb977bd26849d77"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddf/a00164.html#aec211c340058528aacb977bd26849d77">pathSum</a> (<a class="el" href="../../de/d2c/a01553.html">TreeNode</a> *root, int level)</td></tr>
+<tr class="memitem:aec211c340058528aacb977bd26849d77"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddf/a00164.html#aec211c340058528aacb977bd26849d77">pathSum</a> (<a class="el" href="../../d7/d1d/a01554.html">TreeNode</a> *root, int level)</td></tr>
 <tr class="separator:aec211c340058528aacb977bd26849d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
@@ -90,7 +90,7 @@ $(function() {
         <tr>
           <td class="memname">int acwing::acwing3766::pathSum </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../de/d2c/a01553.html">TreeNode</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d7/d1d/a01554.html">TreeNode</a> *&#160;</td>
           <td class="paramname"><em>root</em></td><td>)</td>
           <td></td>
         </tr>
@@ -116,7 +116,7 @@ $(function() {
         <tr>
           <td class="memname">int acwing::acwing3766::pathSum </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../de/d2c/a01553.html">TreeNode</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d7/d1d/a01554.html">TreeNode</a> *&#160;</td>
           <td class="paramname"><em>root</em>, </td>
         </tr>
         <tr>
@@ -138,16 +138,16 @@ $(function() {
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            <span class="keywordflow">if</span>(root == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            }</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            <span class="keywordflow">if</span>(root-&gt;<a class="code hl_variable" href="../../de/d2c/a01553.html#ac4a2bae5e3e6ed237d35bfd1fc9b3c45">left</a> == <span class="keyword">nullptr</span> &amp;&amp; root-&gt;<a class="code hl_variable" href="../../de/d2c/a01553.html#a607d461889e5d25518927df95bfe25ab">right</a> == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                <span class="keywordflow">return</span> level * root-&gt;<a class="code hl_variable" href="../../de/d2c/a01553.html#a5badfe8302f705b2b94a598d8360abc0">val</a>;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            <span class="keywordflow">if</span>(root-&gt;<a class="code hl_variable" href="../../d7/d1d/a01554.html#ac4a2bae5e3e6ed237d35bfd1fc9b3c45">left</a> == <span class="keyword">nullptr</span> &amp;&amp; root-&gt;<a class="code hl_variable" href="../../d7/d1d/a01554.html#a607d461889e5d25518927df95bfe25ab">right</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                <span class="keywordflow">return</span> level * root-&gt;<a class="code hl_variable" href="../../d7/d1d/a01554.html#a5badfe8302f705b2b94a598d8360abc0">val</a>;</div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            }</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            <span class="keywordtype">int</span> leftVal  = <a class="code hl_function" href="../../db/ddf/a00164.html#aec211c340058528aacb977bd26849d77">pathSum</a>(root-&gt;<a class="code hl_variable" href="../../de/d2c/a01553.html#ac4a2bae5e3e6ed237d35bfd1fc9b3c45">left</a>, level + 1);</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            <span class="keywordtype">int</span> rightVal = <a class="code hl_function" href="../../db/ddf/a00164.html#aec211c340058528aacb977bd26849d77">pathSum</a>(root-&gt;<a class="code hl_variable" href="../../de/d2c/a01553.html#a607d461889e5d25518927df95bfe25ab">right</a>, level + 1);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            <span class="keywordtype">int</span> leftVal  = <a class="code hl_function" href="../../db/ddf/a00164.html#aec211c340058528aacb977bd26849d77">pathSum</a>(root-&gt;<a class="code hl_variable" href="../../d7/d1d/a01554.html#ac4a2bae5e3e6ed237d35bfd1fc9b3c45">left</a>, level + 1);</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            <span class="keywordtype">int</span> rightVal = <a class="code hl_function" href="../../db/ddf/a00164.html#aec211c340058528aacb977bd26849d77">pathSum</a>(root-&gt;<a class="code hl_variable" href="../../d7/d1d/a01554.html#a607d461889e5d25518927df95bfe25ab">right</a>, level + 1);</div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            <span class="keywordflow">return</span> leftVal + rightVal;</div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        }</div>
-<div class="ttc" id="aa01553_html_a5badfe8302f705b2b94a598d8360abc0"><div class="ttname"><a href="../../de/d2c/a01553.html#a5badfe8302f705b2b94a598d8360abc0">acwing::TreeNode::val</a></div><div class="ttdeci">int val</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00020">acwing408.h:20</a></div></div>
-<div class="ttc" id="aa01553_html_a607d461889e5d25518927df95bfe25ab"><div class="ttname"><a href="../../de/d2c/a01553.html#a607d461889e5d25518927df95bfe25ab">acwing::TreeNode::right</a></div><div class="ttdeci">TreeNode * right</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00022">acwing408.h:22</a></div></div>
-<div class="ttc" id="aa01553_html_ac4a2bae5e3e6ed237d35bfd1fc9b3c45"><div class="ttname"><a href="../../de/d2c/a01553.html#ac4a2bae5e3e6ed237d35bfd1fc9b3c45">acwing::TreeNode::left</a></div><div class="ttdeci">TreeNode * left</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00021">acwing408.h:21</a></div></div>
+<div class="ttc" id="aa01554_html_a5badfe8302f705b2b94a598d8360abc0"><div class="ttname"><a href="../../d7/d1d/a01554.html#a5badfe8302f705b2b94a598d8360abc0">acwing::TreeNode::val</a></div><div class="ttdeci">int val</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00020">acwing408.h:20</a></div></div>
+<div class="ttc" id="aa01554_html_a607d461889e5d25518927df95bfe25ab"><div class="ttname"><a href="../../d7/d1d/a01554.html#a607d461889e5d25518927df95bfe25ab">acwing::TreeNode::right</a></div><div class="ttdeci">TreeNode * right</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00022">acwing408.h:22</a></div></div>
+<div class="ttc" id="aa01554_html_ac4a2bae5e3e6ed237d35bfd1fc9b3c45"><div class="ttname"><a href="../../d7/d1d/a01554.html#ac4a2bae5e3e6ed237d35bfd1fc9b3c45">acwing::TreeNode::left</a></div><div class="ttdeci">TreeNode * left</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00021">acwing408.h:21</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00021">acwing::TreeNode::left</a>, <a class="el" href="../../dc/dee/a00053_source.html#l00309">pathSum()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00022">acwing::TreeNode::right</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00020">acwing::TreeNode::val</a>.</p>
 
