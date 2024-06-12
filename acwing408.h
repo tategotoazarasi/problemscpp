@@ -73,6 +73,12 @@ namespace acwing {
 	namespace acwing148 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	namespace acwing836_408 {
+		int find(int x);
+		void merge(int x, int y);
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing836_408
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

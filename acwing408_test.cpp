@@ -943,4 +943,22 @@ namespace acwing {
 			ASSERT_EQ("15", ans);
 		}
 	}// namespace acwing148
+
+	namespace acwing836_408 {
+		TEST(acwing836_408, case1) {
+			istringstream in("4 5\n"
+			                 "M 1 2\n"
+			                 "M 3 4\n"
+			                 "Q 1 2\n"
+			                 "Q 1 3\n"
+			                 "Q 3 4");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("Yes\n"
+			          "No\n"
+			          "Yes\n",
+			          ans);
+		}
+	}// namespace acwing836_408
 }// namespace acwing

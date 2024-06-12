@@ -342,4 +342,49 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing148
+
+	namespace acwing836_408 {
+		vector<int> root;
+
+		int find(int x) {
+			if(root[x] < 0)
+				return x;
+			else {
+				int grand_parent = find(root[x]);
+				root[x]          = grand_parent;
+				return grand_parent;
+			}
+		}
+
+		void merge(int x, int y) {
+			int root_x = find(x);
+			int root_y = find(y);
+			if(root_x != root_y) {
+				if(root[root_x] < root[root_y]) {
+					root[root_x] += root[root_y];
+					root[root_y] = root_x;
+				} else {
+					root[root_y] += root[root_x];
+					root[root_x] = root_y;
+				}
+			}
+		}
+
+		int main(istream &cin, ostream &cout) {
+			int n, m;
+			cin >> n >> m;
+			root = vector<int>(n + 1, -1);
+			char op;
+			int a, b;
+			while(m--) {
+				cin >> op >> a >> b;
+				if(op == 'M') {
+					merge(a, b);
+				} else {
+					cout << (find(a) == find(b) ? "Yes" : "No") << endl;
+				}
+			}
+			return 0;
+		}
+	}// namespace acwing836_408
 }// namespace acwing
