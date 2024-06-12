@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::check_if_every_row_and_column_contains_all_numbers 命名空间参考</title>
+<title>problemscpp: leetcode::gray_code 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,27 +63,72 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d9/d38/a00166.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d8/d00/a00186.html">check_if_every_row_and_column_contains_all_numbers</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/de6/a00167.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d8/d00/a00186.html">gray_code</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">类</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::check_if_every_row_and_column_contains_all_numbers 命名空间参考</div></div>
+<a href="#nested-classes">类</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::gray_code 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>LeetCode 5976. 检查是否每一行每一列都包含全部整数  
+<p>LeetCode 89. 格雷编码  
 <a href="../../d8/d00/a00186.html#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/df6/a01670.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d8d/a01667.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a38de39380dd7a84ce138a2c0b7924e9a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d00/a00186.html#a38de39380dd7a84ce138a2c0b7924e9a">TEST</a> (gray_code, case1)</td></tr>
+<tr class="separator:a38de39380dd7a84ce138a2c0b7924e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >LeetCode 5976. 检查是否每一行每一列都包含全部整数 </p>
-</div></div><!-- contents -->
+<div class="textblock"><p >LeetCode 89. 格雷编码 </p>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="a38de39380dd7a84ce138a2c0b7924e9a" name="a38de39380dd7a84ce138a2c0b7924e9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38de39380dd7a84ce138a2c0b7924e9a">&#9670;&nbsp;</a></span>TEST()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::gray_code::TEST </td>
+          <td>(</td>
+          <td class="paramtype">gray_code&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case1&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l00363">363</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                               {</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            <span class="keywordtype">int</span> output[]   = {0, 1, 3, 2};</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_variable" href="../../d6/d6a/a00619.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a> = vector(begin(output), end(output));</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>            ASSERT_EQ(<a class="code hl_variable" href="../../d6/d6a/a00619.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>, Solution::grayCode(2));</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        }</div>
+<div class="ttc" id="aa00619_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d6/d6a/a00619.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de1/a00065_source.html#l05095">pat.cpp:5095</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l00615">leetcode::gray_code::Solution::grayCode()</a> , 以及 <a class="el" href="../../de/de1/a00065_source.html#l05095">pat::a::a7_2::vec</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
