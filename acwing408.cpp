@@ -387,4 +387,45 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing836_408
+
+	namespace acwing18 {
+		TreeNode *rebuild(vector<int> &inorder, int in_begin, int in_end, vector<int> &preorder, int pre_begin, int pre_end) {
+			if(in_begin == in_end) {
+				return new TreeNode(inorder[in_begin]);
+			}
+			TreeNode *root = new TreeNode(preorder[pre_begin]);
+
+			int left_in_cursor  = in_begin;
+			int left_pre_cursor = pre_begin + 1;
+
+			if(inorder[in_begin] == preorder[pre_begin]) {
+				root->left = nullptr;
+			} else {
+				unordered_set<int> left = unordered_set<int>();
+				while(inorder[left_in_cursor] != preorder[pre_begin]) {
+					left.insert(inorder[left_in_cursor]);
+					left_in_cursor++;
+				}
+				while(left.find(preorder[left_pre_cursor]) != left.end()) {
+					left_pre_cursor++;
+				}
+				root->left = rebuild(inorder, in_begin, left_in_cursor - 1, preorder, pre_begin + 1, left_pre_cursor - 1);
+			}
+
+			if(inorder[in_end] == preorder[pre_begin]) {
+				root->right = nullptr;
+			} else {
+				root->right = rebuild(inorder, left_in_cursor + 1, in_end, preorder, left_pre_cursor, pre_end);
+			}
+
+			return root;
+		}
+
+		TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder) {
+			if(preorder.empty() || inorder.empty()) {
+				return nullptr;
+			}
+			return rebuild(inorder, 0, inorder.size() - 1, preorder, 0, preorder.size() - 1);
+		}
+	}// namespace acwing18
 }// namespace acwing

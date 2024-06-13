@@ -79,6 +79,11 @@ namespace acwing {
 		void merge(int x, int y);
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing836_408
+
+	namespace acwing18 {
+		TreeNode *rebuild(vector<int> &inorder, int in_begin, int in_end, vector<int> &preorder, int pre_begin, int pre_end);
+		TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder);
+	}// namespace acwing18
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H
