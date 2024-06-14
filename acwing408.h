@@ -89,10 +89,10 @@ namespace acwing {
 	 * @brief 3786. 二叉排序树
 	 */
 	namespace acwing3786 {
-		void insert(TreeNode *node, int x);
-		void remove(TreeNode *node, TreeNode *parent, int x);
-		int pre(TreeNode *node, int x);
-		int post(TreeNode *node, int x);
+		void insert(TreeNode *&root, int x);
+		void remove(TreeNode *&root, int x);
+		int get_pre(TreeNode *root, int x);
+		int get_suc(TreeNode *root, int x);
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing3786
 }// namespace acwing
