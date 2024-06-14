@@ -84,6 +84,17 @@ namespace acwing {
 		TreeNode *rebuild(vector<int> &inorder, int in_begin, int in_end, vector<int> &preorder, int pre_begin, int pre_end);
 		TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder);
 	}// namespace acwing18
+
+	/**
+	 * @brief 3786. 二叉排序树
+	 */
+	namespace acwing3786 {
+		void insert(TreeNode *node, int x);
+		void remove(TreeNode *node, TreeNode *parent, int x);
+		int pre(TreeNode *node, int x);
+		int post(TreeNode *node, int x);
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing3786
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

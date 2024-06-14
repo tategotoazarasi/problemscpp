@@ -961,4 +961,58 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing836_408
+
+	/**
+	 * @brief 3786. 二叉排序树
+	 */
+	namespace acwing3786 {
+		TEST(acwing3786, case1) {
+			istringstream in("6\n"
+			                 "1 1\n"
+			                 "1 3\n"
+			                 "1 5\n"
+			                 "3 4\n"
+			                 "2 3\n"
+			                 "4 2");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3\n"
+			          "5\n",
+			          ans);
+		}
+
+		TEST(acwing3786, case2) {
+			istringstream in("20\n"
+			                 "1 -9\n"
+			                 "1 5\n"
+			                 "2 5\n"
+			                 "2 -9\n"
+			                 "1 -5\n"
+			                 "1 -4\n"
+			                 "4 -19\n"
+			                 "1 -10\n"
+			                 "2 -4\n"
+			                 "2 -10\n"
+			                 "1 -14\n"
+			                 "4 -17\n"
+			                 "4 -10\n"
+			                 "2 -14\n"
+			                 "1 -12\n"
+			                 "1 -3\n"
+			                 "3 -8\n"
+			                 "1 -7\n"
+			                 "4 -18\n"
+			                 "1 1");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("-5\n"
+			          "-14\n"
+			          "-5\n"
+			          "-12\n"
+			          "-12\n",
+			          ans);
+		}
+	}// namespace acwing3786
 }// namespace acwing

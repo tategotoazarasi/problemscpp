@@ -428,4 +428,121 @@ namespace acwing {
 			return rebuild(inorder, 0, inorder.size() - 1, preorder, 0, preorder.size() - 1);
 		}
 	}// namespace acwing18
+
+	/**
+	 * @brief 3786. 二叉排序树
+	 */
+	namespace acwing3786 {
+		TreeNode *root = nullptr;
+		int main(istream &cin, ostream &cout) {
+			int n, opt, x;
+			cin >> n;
+			while(n--) {
+				cin >> opt >> x;
+				switch(opt) {
+					case 1:
+						insert(root, x);
+						break;
+					case 2:
+						remove(root, nullptr, x);
+						break;
+					case 3:
+						cout << pre(root, x) << endl;
+						break;
+					case 4:
+						cout << post(root, x) << endl;
+						break;
+					default:
+						break;
+				}
+			}
+			return 0;
+		}
+
+		void insert(TreeNode *node, int x) {
+			if(node == nullptr) {
+				root = new TreeNode(x);
+				return;
+			}
+			TreeNode *p = node;
+			while(p) {
+				if(x < p->val) {
+					if(p->left == nullptr) {
+						p->left = new TreeNode(x);
+						return;
+					}
+					p = p->left;
+				} else {
+					if(p->right == nullptr) {
+						p->right = new TreeNode(x);
+						return;
+					}
+					p = p->right;
+				}
+			}
+		}
+
+		void remove(TreeNode *node, TreeNode *parent, int x) {
+			TreeNode *p = node;
+			if(p->val < x) {
+				remove(p->right, p, x);
+			} else if(p->val > x) {
+				remove(p->left, p, x);
+			} else {//p->val==x
+				if(p->left == nullptr && p->right == nullptr) {
+					if(parent->left == p) {
+						parent->left = nullptr;
+					} else {
+						parent->right = nullptr;
+					}
+					delete p;
+				} else if(p->left == nullptr) {
+					if(parent->left == p) {
+						parent->left = p->right;
+					} else {
+						parent->right = p->right;
+					}
+					delete p;
+				} else if(p->right == nullptr) {
+					if(parent->left == p) {
+						parent->left = p->left;
+					} else {
+						parent->right = p->left;
+					}
+					delete p;
+				} else {
+					TreeNode *q = p->right;
+					while(q->left) {
+						q = q->left;
+					}
+					p->val = q->val;
+					remove(p->right, p, q->val);
+				}
+			}
+		}
+
+		int pre(TreeNode *node, int x) {
+			if(node == nullptr) {
+				return INT_MIN;
+			}
+			TreeNode *p = node;
+			if(node->val >= x) {
+				return pre(p->left, x);
+			} else {
+				return max(p->val, pre(p->right, x));
+			}
+		}
+
+		int post(TreeNode *node, int x) {
+			if(node == nullptr) {
+				return INT_MAX;
+			}
+			TreeNode *p = node;
+			if(node->val <= x) {
+				return post(p->right, x);
+			} else {
+				return min(p->val, post(p->left, x));
+			}
+		}
+	}// namespace acwing3786
 }// namespace acwing
