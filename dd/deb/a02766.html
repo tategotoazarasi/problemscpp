@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::critical_connections_in_a_network::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,21 +63,184 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../de/d53/a00169.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d4/d82/a00436.html">n_queens</a></li><li class="navelem"><a class="el" href="../../d1/da5/a02769.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d5/dcb/a00170.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d1/d7e/a00434.html">critical_connections_in_a_network</a></li><li class="navelem"><a class="el" href="../../dd/deb/a02766.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::n_queens::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d5/d4d/a02763.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::critical_connections_in_a_network::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../d1/da5/a02769.html">leetcode::n_queens::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/da5/a02769.html#abaade94624ba17a7809bb7dc39fb159b">dfs</a>(const vector&lt; vector&lt; bool &gt; &gt; &amp;board, int line, int n, vector&lt; vector&lt; string &gt; &gt; &amp;ans)</td><td class="entry"><a class="el" href="../../d1/da5/a02769.html">leetcode::n_queens::Solution</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d1/da5/a02769.html#af6845a0110c8c9407ef965bfa102e90b">solveNQueens</a>(int n)</td><td class="entry"><a class="el" href="../../d1/da5/a02769.html">leetcode::n_queens::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/da5/a02769.html#ab8c3d148671e03bfe77ad725aba6a9e9">toStringVec</a>(const vector&lt; vector&lt; bool &gt; &gt; &amp;board)</td><td class="entry"><a class="el" href="../../d1/da5/a02769.html">leetcode::n_queens::Solution</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d1/da5/a02769.html#ab198ff8401bb03e65c893bbf5299dfc2">valid</a>(const vector&lt; vector&lt; bool &gt; &gt; &amp;board, int n, int x, int y)</td><td class="entry"><a class="el" href="../../d1/da5/a02769.html">leetcode::n_queens::Solution</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../d3/d52/a00023_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:af34c59c4e03cdc63b5cb8310143c1290"><td class="memItemLeft" align="right" valign="top">static vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/deb/a02766.html#af34c59c4e03cdc63b5cb8310143c1290">criticalConnections</a> (int n, vector&lt; vector&lt; int &gt; &gt; &amp;connections)</td></tr>
+<tr class="separator:af34c59c4e03cdc63b5cb8310143c1290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d3c0894aa5d0d36b4da53cabdbbdafc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/deb/a02766.html#a2d3c0894aa5d0d36b4da53cabdbbdafc">tarjan</a> (int prev, int &amp;step, vector&lt; int &gt; &amp;dfn, int node, vector&lt; unordered_set&lt; int &gt; &gt; &amp;g, vector&lt; int &gt; &amp;low, vector&lt; vector&lt; int &gt; &gt; &amp;ans)</td></tr>
+<tr class="separator:a2d3c0894aa5d0d36b4da53cabdbbdafc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">leetcode.h</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l02948">2948</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="af34c59c4e03cdc63b5cb8310143c1290" name="af34c59c4e03cdc63b5cb8310143c1290"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af34c59c4e03cdc63b5cb8310143c1290">&#9670;&nbsp;</a></span>criticalConnections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; vector&lt; int &gt; &gt; leetcode::critical_connections_in_a_network::Solution::criticalConnections </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; vector&lt; int &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>connections</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l08211">8211</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08211" name="l08211"></a><span class="lineno"> 8211</span>                                                                                                 {</div>
+<div class="line"><a id="l08212" name="l08212"></a><span class="lineno"> 8212</span>            vector&lt;unordered_set&lt;int&gt;&gt; g(n);</div>
+<div class="line"><a id="l08213" name="l08213"></a><span class="lineno"> 8213</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;conn: connections) {</div>
+<div class="line"><a id="l08214" name="l08214"></a><span class="lineno"> 8214</span>                g[conn[0]].insert(conn[1]);</div>
+<div class="line"><a id="l08215" name="l08215"></a><span class="lineno"> 8215</span>                g[conn[1]].insert(conn[0]);</div>
+<div class="line"><a id="l08216" name="l08216"></a><span class="lineno"> 8216</span>            }</div>
+<div class="line"><a id="l08217" name="l08217"></a><span class="lineno"> 8217</span>            vector&lt;vector&lt;int&gt;&gt; ans;</div>
+<div class="line"><a id="l08218" name="l08218"></a><span class="lineno"> 8218</span>            vector dfn(n, -1);</div>
+<div class="line"><a id="l08219" name="l08219"></a><span class="lineno"> 8219</span>            vector low(n, -1);</div>
+<div class="line"><a id="l08220" name="l08220"></a><span class="lineno"> 8220</span>            unordered_set&lt;int&gt; vis;</div>
+<div class="line"><a id="l08221" name="l08221"></a><span class="lineno"> 8221</span>            <span class="keywordtype">int</span> step = 0;</div>
+<div class="line"><a id="l08222" name="l08222"></a><span class="lineno"> 8222</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l08223" name="l08223"></a><span class="lineno"> 8223</span>                <span class="keywordflow">if</span>(dfn[i] == -1) {</div>
+<div class="line"><a id="l08224" name="l08224"></a><span class="lineno"> 8224</span>                    step = 0;</div>
+<div class="line"><a id="l08225" name="l08225"></a><span class="lineno"> 8225</span>                    <a class="code hl_function" href="../../dd/deb/a02766.html#a2d3c0894aa5d0d36b4da53cabdbbdafc">tarjan</a>(-1, step, dfn, i, g, low, ans);</div>
+<div class="line"><a id="l08226" name="l08226"></a><span class="lineno"> 8226</span>                }</div>
+<div class="line"><a id="l08227" name="l08227"></a><span class="lineno"> 8227</span>            }</div>
+<div class="line"><a id="l08228" name="l08228"></a><span class="lineno"> 8228</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l08229" name="l08229"></a><span class="lineno"> 8229</span>        }</div>
+<div class="ttc" id="aa02766_html_a2d3c0894aa5d0d36b4da53cabdbbdafc"><div class="ttname"><a href="../../dd/deb/a02766.html#a2d3c0894aa5d0d36b4da53cabdbbdafc">leetcode::critical_connections_in_a_network::Solution::tarjan</a></div><div class="ttdeci">static void tarjan(int prev, int &amp;step, vector&lt; int &gt; &amp;dfn, int node, vector&lt; unordered_set&lt; int &gt; &gt; &amp;g, vector&lt; int &gt; &amp;low, vector&lt; vector&lt; int &gt; &gt; &amp;ans)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l08231">leetcode.cpp:8231</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l08231">tarjan()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l03815">leetcode::critical_connections_in_a_network::TEST()</a>.</p>
+
+</div>
+</div>
+<a id="a2d3c0894aa5d0d36b4da53cabdbbdafc" name="a2d3c0894aa5d0d36b4da53cabdbbdafc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d3c0894aa5d0d36b4da53cabdbbdafc">&#9670;&nbsp;</a></span>tarjan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void leetcode::critical_connections_in_a_network::Solution::tarjan </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>step</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dfn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; unordered_set&lt; int &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>low</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; vector&lt; int &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ans</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l08231">8231</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08231" name="l08231"></a><span class="lineno"> 8231</span>                                                                                                                                                        {</div>
+<div class="line"><a id="l08232" name="l08232"></a><span class="lineno"> 8232</span>            dfn[node] = step;</div>
+<div class="line"><a id="l08233" name="l08233"></a><span class="lineno"> 8233</span>            low[node] = step;</div>
+<div class="line"><a id="l08234" name="l08234"></a><span class="lineno"> 8234</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;next: g[node]) {</div>
+<div class="line"><a id="l08235" name="l08235"></a><span class="lineno"> 8235</span>                <span class="keywordflow">if</span>(dfn[next] == -1) {</div>
+<div class="line"><a id="l08236" name="l08236"></a><span class="lineno"> 8236</span>                    <a class="code hl_function" href="../../dd/deb/a02766.html#a2d3c0894aa5d0d36b4da53cabdbbdafc">tarjan</a>(node, ++step, dfn, next, g, low, ans);</div>
+<div class="line"><a id="l08237" name="l08237"></a><span class="lineno"> 8237</span>                }</div>
+<div class="line"><a id="l08238" name="l08238"></a><span class="lineno"> 8238</span>                <span class="keywordflow">if</span>(next != prev) {</div>
+<div class="line"><a id="l08239" name="l08239"></a><span class="lineno"> 8239</span>                    low[node] = min(low[node], low[next]);</div>
+<div class="line"><a id="l08240" name="l08240"></a><span class="lineno"> 8240</span>                }</div>
+<div class="line"><a id="l08241" name="l08241"></a><span class="lineno"> 8241</span>                <span class="keywordflow">if</span>(dfn[node] &lt; low[next]) {</div>
+<div class="line"><a id="l08242" name="l08242"></a><span class="lineno"> 8242</span>                    ans.push_back({node, next});</div>
+<div class="line"><a id="l08243" name="l08243"></a><span class="lineno"> 8243</span>                }</div>
+<div class="line"><a id="l08244" name="l08244"></a><span class="lineno"> 8244</span>            }</div>
+<div class="line"><a id="l08245" name="l08245"></a><span class="lineno"> 8245</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l08231">tarjan()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l08211">criticalConnections()</a> , 以及 <a class="el" href="../../da/d45/a00011_source.html#l08231">tarjan()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../d3/d52/a00023_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
