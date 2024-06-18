@@ -522,4 +522,61 @@ namespace acwing {
 				return min(root->val, get_suc(root->left, x));
 		}
 	}// namespace acwing3786
+
+	namespace acwing149 {
+		bool Compare::operator()(huff_tree *const &a, huff_tree *const &b) {
+			if(a->val != b->val)
+				return a->val > b->val;
+			else
+				return a->height > b->height;
+		}
+
+		int main(istream &cin, ostream &cout) {
+			u_int64_t n, k, w;
+			cin >> n >> k;
+			priority_queue<huff_tree *, vector<huff_tree *>, Compare> pq;
+			for(int i = 0; i < n; i++) {
+				cin >> w;
+				pq.push(new huff_tree(w, 1, k));
+			}
+			while((n - 1) % (k - 1)) {
+				pq.push(new huff_tree(0, 1, k));
+				n++;
+			}
+			while(pq.size() > 1) {
+				huff_tree *ht = new huff_tree(0, 0, k);
+				for(int i = 0; i < k && !pq.empty(); i++) {
+					huff_tree *least = pq.top();
+					ht->height       = max(ht->height, least->height + 1);
+					ht->children[i]  = least;
+					ht->val += least->val;
+					pq.pop();
+				}
+				pq.push(ht);
+			}
+			huff_tree *root = pq.top();
+			queue<pair<huff_tree *, u_int64_t>> q;
+			q.push(make_pair(root, 0));
+			u_int64_t min_level = 0;
+			u_int64_t sum       = 0;
+			while(!q.empty()) {
+				auto [ht, level] = q.front();
+				q.pop();
+				bool flag = true;
+				for(int i = 0; i < k; i++) {
+					if(ht->children[i] != nullptr) {
+						flag = false;
+						q.push(make_pair(ht->children[i], level + 1));
+					}
+				}
+				if(flag) {
+					sum += ht->val * level;
+					min_level = max(min_level, level);
+				}
+			}
+			cout << sum << endl
+			     << min_level << endl;
+			return 0;
+		}
+	}// namespace acwing149
 }// namespace acwing

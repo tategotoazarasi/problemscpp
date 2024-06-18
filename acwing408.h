@@ -95,6 +95,23 @@ namespace acwing {
 		int get_suc(TreeNode *root, int x);
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing3786
+
+	/**
+	 * @brief 149. 荷马史诗
+	 */
+	namespace acwing149 {
+		class huff_tree {
+		public:
+			u_int64_t val;
+			u_int64_t height;
+			vector<huff_tree *> children;
+			huff_tree(u_int64_t val, u_int64_t height, u_int64_t k): val(val), height(height), children(k, nullptr){};
+		};
+		struct Compare {
+			bool operator()(huff_tree *const &a, huff_tree *const &b);
+		};
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing149
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

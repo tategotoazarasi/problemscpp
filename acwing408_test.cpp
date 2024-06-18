@@ -1015,4 +1015,62 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3786
+
+	/**
+	 * @brief 149. 荷马史诗
+	 */
+	namespace acwing149 {
+		TEST(acwing149, case1) {
+			istringstream in("4 2\n"
+			                 "1\n"
+			                 "1\n"
+			                 "2\n"
+			                 "2");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("12\n"
+			          "2\n",
+			          ans);
+		}
+
+		TEST(acwing149, case2) {
+			istringstream in("3 2\n"
+			                 "1\n"
+			                 "2\n"
+			                 "3");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("9\n"
+			          "2\n",
+			          ans);
+		}
+
+		TEST(acwing149, case3) {
+			istringstream in("16 3\n"
+			                 "98\n"
+			                 "98\n"
+			                 "98\n"
+			                 "98\n"
+			                 "98\n"
+			                 "98\n"
+			                 "98\n"
+			                 "98\n"
+			                 "98\n"
+			                 "98\n"
+			                 "98\n"
+			                 "98\n"
+			                 "98\n"
+			                 "98\n"
+			                 "98\n"
+			                 "98");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("4214\n"
+			          "3\n",
+			          ans);
+		}
+	}// namespace acwing149
 }// namespace acwing
