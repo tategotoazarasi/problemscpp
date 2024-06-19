@@ -112,6 +112,14 @@ namespace acwing {
 		};
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing149
+
+	/**
+	 * @brief 831. KMP字符串
+	 */
+	namespace acwing831_408 {
+		vector<int> get_next(string s);
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing831_408
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

@@ -579,4 +579,39 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing149
+
+	/**
+	 * @brief 831. KMP字符串
+	 */
+	namespace acwing831_408 {
+		vector<int> get_next(string p) {
+			vector<int> next(p.size(), 0);
+			for(int i = 1, j = 0; i < p.size(); i++) {
+				while(j && p[i] != p[j])
+					j = next[j - 1];
+				if(p[i] == p[j])
+					j++;
+				next[i] = j;
+			}
+			return next;
+		}
+
+		int main(istream &cin, ostream &cout) {
+			int n, m;
+			string p, s;
+			cin >> n >> p >> m >> s;
+			vector<int> next = get_next(p);
+			for(int i = 0, j = 0; i < m; i++) {
+				while(j && s[i] != p[j])
+					j = next[j - 1];
+				if(s[i] == p[j])
+					j++;
+				if(j == n) {
+					cout << i - n + 1 << ' ';
+					j = next[j - 1];
+				}
+			}
+			return 0;
+		}
+	}// namespace acwing831_408
 }// namespace acwing

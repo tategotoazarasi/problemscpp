@@ -1073,4 +1073,21 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing149
+
+	/**
+	 * @brief 831. KMP字符串
+	 */
+	namespace acwing831_408 {
+		TEST(acwing831_408, case1) {
+			istringstream in("3\n"
+			                 "aba\n"
+			                 "5\n"
+			                 "ababa");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("0 2 ",
+			          ans);
+		}
+	}// namespace acwing831_408
 }// namespace acwing
