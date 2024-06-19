@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['msg_0',['msg',['../d2/d45/a01826.html',1,'leetcode::maximum_good_people_based_on_statements']]],
-  ['mycmp_1',['mycmp',['../d2/d93/a02758.html',1,'leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid']]],
-  ['myeq_2',['myeq',['../d1/de5/a02822.html',1,'leetcode::house_robber_iii::myeq'],['../d9/db1/a02718.html',1,'leetcode::pacific_atlantic_waterflow::myeq']]],
-  ['myhash_3',['myhash',['../d5/d85/a02818.html',1,'leetcode::house_robber_iii::myhash'],['../d1/d3c/a02714.html',1,'leetcode::pacific_atlantic_waterflow::myhash']]],
-  ['myhashmap_4',['MyHashMap',['../dc/ddf/a02622.html',1,'leetcode::design_hashmap']]],
-  ['mylinkedlist_5',['MyLinkedList',['../d5/d9a/a02650.html',1,'leetcode::design_linked_list']]],
-  ['myqueue_6',['MyQueue',['../db/d57/a01506.html',1,'acwing::acwing20']]]
+  ['msg_0',['msg',['../d7/d1a/a01827.html',1,'leetcode::maximum_good_people_based_on_statements']]],
+  ['mycmp_1',['mycmp',['../da/d8e/a02759.html',1,'leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid']]],
+  ['myeq_2',['myeq',['../df/d37/a02823.html',1,'leetcode::house_robber_iii::myeq'],['../d5/d55/a02719.html',1,'leetcode::pacific_atlantic_waterflow::myeq']]],
+  ['myhash_3',['myhash',['../d6/d6c/a02819.html',1,'leetcode::house_robber_iii::myhash'],['../d1/db4/a02715.html',1,'leetcode::pacific_atlantic_waterflow::myhash']]],
+  ['myhashmap_4',['MyHashMap',['../d4/d29/a02623.html',1,'leetcode::design_hashmap']]],
+  ['mylinkedlist_5',['MyLinkedList',['../df/de4/a02651.html',1,'leetcode::design_linked_list']]],
+  ['myqueue_6',['MyQueue',['../d8/dd9/a01507.html',1,'acwing::acwing20']]]
 ];

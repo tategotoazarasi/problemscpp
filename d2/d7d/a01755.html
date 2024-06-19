@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::solving_questions_with_brainpower::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,18 +63,70 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d5/dcb/a00170.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d5/df1/a00206.html">maximum_running_time_of_n_computers</a></li><li class="navelem"><a class="el" href="../../d9/de3/a01758.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d1/d0d/a00171.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d5/df1/a00206.html">solving_questions_with_brainpower</a></li><li class="navelem"><a class="el" href="../../d2/d7d/a01755.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::maximum_running_time_of_n_computers::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d3/dbf/a01752.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::solving_questions_with_brainpower::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../d9/de3/a01758.html">leetcode::maximum_running_time_of_n_computers::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d9/de3/a01758.html#aeaab340c377cc08de68ee6927d2cfce6">maxRunTime</a>(int n, vector&lt; int &gt; &amp;batteries)</td><td class="entry"><a class="el" href="../../d9/de3/a01758.html">leetcode::maximum_running_time_of_n_computers::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../dc/d87/a00032_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a3d78f60928c0a94e479b1f8a15d19a6c"><td class="memItemLeft" align="right" valign="top">static long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7d/a01755.html#a3d78f60928c0a94e479b1f8a15d19a6c">mostPoints</a> (vector&lt; vector&lt; int &gt; &gt; &amp;questions)</td></tr>
+<tr class="separator:a3d78f60928c0a94e479b1f8a15d19a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../dc/d87/a00032_source.html">leetcode.h</a> 第 <a class="el" href="../../dc/d87/a00032_source.html#l00494">494</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a3d78f60928c0a94e479b1f8a15d19a6c" name="a3d78f60928c0a94e479b1f8a15d19a6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d78f60928c0a94e479b1f8a15d19a6c">&#9670;&nbsp;</a></span>mostPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long long leetcode::solving_questions_with_brainpower::Solution::mostPoints </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; vector&lt; int &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>questions</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d2/de7/a00014_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d2/de7/a00014_source.html#l01086">1086</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>                                                                     {</div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>            vector&lt;long long&gt; f(questions.size() + 1);</div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = questions.size() - 1; i &gt;= 0; --i) {</div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>                <span class="keyword">auto</span> &amp;q     = questions[i];</div>
+<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> j = i + q[1] + 1;</div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>                f[i]        = max(f[i + 1], q[0] + (j &lt; questions.size() ? f[j] : 0));</div>
+<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>            }</div>
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>            <span class="keywordflow">return</span> f[0];</div>
+<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../dc/d87/a00032_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../d2/de7/a00014_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
