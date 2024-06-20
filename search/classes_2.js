@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['chtholly_0',['Chtholly',['../db/da5/a02919.html',1,'leetcode::range_module']]],
-  ['cmp_1',['cmp',['../dd/d99/a02151.html',1,'leetcode::sort_the_jumbled_numbers']]],
-  ['cmpcol_2',['cmpcol',['../d6/dcf/a01031.html',1,'acwing::acwing1826']]],
-  ['cmprow_3',['cmprow',['../dd/dfd/a01027.html',1,'acwing::acwing1826']]],
-  ['codec_4',['Codec',['../dc/dcf/a02615.html',1,'leetcode::serialize_and_deserialize_binary_tree']]],
-  ['comp_5',['comp',['../d5/df4/a01551.html',1,'acwing::acwing849::comp'],['../dd/d6c/a03495.html',1,'pat::a::a1003::comp'],['../db/db8/a03471.html',1,'pat::b::b1100::comp']]],
-  ['comp_5fsale_6',['comp_sale',['../dc/d14/a03479.html',1,'pat::b::b1102']]],
-  ['comp_5ftotal_7',['comp_total',['../dc/d5c/a03483.html',1,'pat::b::b1102']]],
-  ['compare_8',['Compare',['../d5/d81/a01579.html',1,'acwing::acwing149']]],
-  ['cow_9',['cow',['../d9/de7/a01279.html',1,'acwing::acwing1660::cow'],['../d8/d8c/a01527.html',1,'acwing::acwing3370::cow']]],
-  ['customer_10',['customer',['../dc/d46/a03507.html',1,'pat::a::a1016::customer'],['../d9/d25/a03511.html',1,'pat::a::a1017::customer']]],
-  ['customer_5fcomp_5fp_11',['customer_comp_p',['../de/d3d/a03515.html',1,'pat::a::a1017']]]
+  ['chtholly_0',['Chtholly',['../d1/d77/a02920.html',1,'leetcode::range_module']]],
+  ['cmp_1',['cmp',['../df/d28/a02152.html',1,'leetcode::sort_the_jumbled_numbers']]],
+  ['cmpcol_2',['cmpcol',['../df/d89/a01032.html',1,'acwing::acwing1826']]],
+  ['cmprow_3',['cmprow',['../db/d08/a01028.html',1,'acwing::acwing1826']]],
+  ['codec_4',['Codec',['../d6/dca/a02616.html',1,'leetcode::serialize_and_deserialize_binary_tree']]],
+  ['comp_5',['comp',['../d0/db9/a01552.html',1,'acwing::acwing849::comp'],['../d4/d5b/a03496.html',1,'pat::a::a1003::comp'],['../d6/d49/a03472.html',1,'pat::b::b1100::comp']]],
+  ['comp_5fsale_6',['comp_sale',['../d8/dbb/a03480.html',1,'pat::b::b1102']]],
+  ['comp_5ftotal_7',['comp_total',['../de/df6/a03484.html',1,'pat::b::b1102']]],
+  ['compare_8',['Compare',['../da/dd5/a01580.html',1,'acwing::acwing149']]],
+  ['cow_9',['cow',['../d8/d0d/a01280.html',1,'acwing::acwing1660::cow'],['../da/d97/a01528.html',1,'acwing::acwing3370::cow']]],
+  ['customer_10',['customer',['../db/d09/a03508.html',1,'pat::a::a1016::customer'],['../dd/d25/a03512.html',1,'pat::a::a1017::customer']]],
+  ['customer_5fcomp_5fp_11',['customer_comp_p',['../d1/dc3/a03516.html',1,'pat::a::a1017']]]
 ];
