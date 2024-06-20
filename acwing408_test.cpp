@@ -1090,4 +1090,19 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing831_408
+
+	/**
+	 * @brief 3385. 玛雅人的密码
+	 */
+	namespace acwing3385 {
+		TEST(acwing3385, case1) {
+			istringstream in("5\n"
+			                 "02120\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1",
+			          ans);
+		}
+	}// namespace acwing3385
 }// namespace acwing

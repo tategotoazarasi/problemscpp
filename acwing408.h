@@ -120,6 +120,13 @@ namespace acwing {
 		vector<int> get_next(string s);
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing831_408
+
+	/**
+	 * @brief 3385. 玛雅人的密码
+	 */
+	namespace acwing3385 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

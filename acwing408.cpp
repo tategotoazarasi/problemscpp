@@ -614,4 +614,37 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing831_408
+
+	/**
+	 * @brief 3385. 玛雅人的密码
+	 */
+	namespace acwing3385 {
+		int main(istream &cin, ostream &cout) {
+			int n;
+			string s;
+			cin >> n >> s;
+			unordered_set<string> used;
+			queue<pair<string, int>> q = queue<pair<string, int>>();
+			q.push(make_pair(s, 0));
+			used.insert(s);
+			while(!q.empty()) {
+				auto [current_s, current_step] = q.front();
+				if(current_s.find("2012") != string::npos) {
+					cout << current_step;
+					return 0;
+				}
+				q.pop();
+				for(int i = 0, j = 1; j < n; i++, j++) {
+					string next_s = current_s;
+					swap(next_s[i], next_s[j]);
+					if(used.find(next_s) == used.end()) {
+						used.insert(next_s);
+						q.push(make_pair(next_s, current_step + 1));
+					}
+				}
+			}
+			cout << -1;
+			return 0;
+		}
+	}// namespace acwing3385
 }// namespace acwing
