@@ -127,6 +127,14 @@ namespace acwing {
 	namespace acwing3385 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3429. 全排列
+	 */
+	namespace acwing3429 {
+		void dfs(vector<char> &stk, int p, ostream &, string s);
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing3429
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

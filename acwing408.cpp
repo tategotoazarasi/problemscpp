@@ -647,4 +647,40 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3385
+
+	/**
+	 * @brief 3429. 全排列
+	 */
+	namespace acwing3429 {
+		void dfs(vector<char> &stk, int p, ostream &cout, string s) {
+			if(p == s.length()) {
+				for(char c: stk) {
+					cout << c;
+				}
+				cout << endl;
+				return;
+			}
+			for(int i = 0; i < s.length(); i++) {
+				bool contain = false;
+				for(int j = 0; j < p; j++) {
+					if(stk[j] == s[i]) {
+						contain = true;
+						break;
+					}
+				}
+				if(!contain) {
+					stk[p] = s[i];
+					dfs(stk, p + 1, cout, s);
+				}
+			}
+		}
+
+		int main(istream &cin, ostream &cout) {
+			string s;
+			cin >> s;
+			vector<char> stk = vector<char>(s.length(), 0);
+			dfs(stk, 0, cout, s);
+			return 0;
+		}
+	}// namespace acwing3429
 }// namespace acwing

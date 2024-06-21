@@ -1105,4 +1105,23 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3385
+
+	/**
+	 * @brief 3429. 全排列
+	 */
+	namespace acwing3429 {
+		TEST(acwing3429, case1) {
+			istringstream in("abc");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("abc\n"
+			          "acb\n"
+			          "bac\n"
+			          "bca\n"
+			          "cab\n"
+			          "cba\n",
+			          ans);
+		}
+	}// namespace acwing3429
 }// namespace acwing
