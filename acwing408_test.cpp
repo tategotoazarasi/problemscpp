@@ -1124,4 +1124,22 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3429
+
+	/**
+	 * @brief 858. Prim算法求最小生成树
+	 */
+	namespace acwing858_408 {
+		TEST(acwing858_408, case1) {
+			istringstream in("4 5\n"
+			                 "1 2 1\n"
+			                 "1 3 2\n"
+			                 "1 4 3\n"
+			                 "2 3 2\n"
+			                 "3 4 4");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("6", ans);
+		}
+	}// namespace acwing858_408
 }// namespace acwing

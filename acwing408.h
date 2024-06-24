@@ -135,6 +135,29 @@ namespace acwing {
 		void dfs(vector<char> &stk, int p, ostream &, string s);
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing3429
+
+	/**
+	 * @brief 858. Prim算法求最小生成树
+	 */
+	namespace acwing858_408 {
+		// Custom hash function for pair<int, int>
+		struct pair_hash {
+			template<class T1, class T2>
+			size_t operator()(const pair<T1, T2> &p) const;
+		};
+
+		// Custom equal function for pair<int, int>
+		struct pair_equal {
+			template<class T1, class T2>
+			bool operator()(const pair<T1, T2> &p1, const pair<T1, T2> &p2) const;
+		};
+
+		// Custom comparator for tuple<int, int, int>
+		struct tuple_compare {
+			bool operator()(const tuple<int, int, int> &t1, const tuple<int, int, int> &t2);
+		};
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing858_408
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

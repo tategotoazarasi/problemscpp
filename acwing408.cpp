@@ -683,4 +683,75 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3429
+
+	/**
+	 * @brief 858. Prim算法求最小生成树
+	 */
+	namespace acwing858_408 {
+		// Custom hash function for pair<int, int>
+		template<class T1, class T2>
+		size_t pair_hash::operator()(const pair<T1, T2> &p) const {
+			auto h1 = hash<T1>{}(p.first);
+			auto h2 = hash<T2>{}(p.second);
+			return h1 ^ h2;
+		}
+
+		// Custom equal function for pair<int, int>
+		template<class T1, class T2>
+		bool pair_equal::operator()(const pair<T1, T2> &p1, const pair<T1, T2> &p2) const {
+			return p1.first == p2.first && p1.second == p2.second;
+		}
+
+		// Custom comparator for tuple<int, int, int>
+		bool tuple_compare::operator()(const tuple<int, int, int> &t1, const tuple<int, int, int> &t2) {
+			return get<2>(t1) > get<2>(t2);
+		}
+
+		int main(istream &cin, ostream &cout) {
+			int n, m;
+			int ans = 0;
+			unordered_set<int> mst;
+			unordered_map<int, unordered_set<pair<int, int>, pair_hash, pair_equal>> g;
+			priority_queue<tuple<int, int, int>, vector<tuple<int, int, int>>, tuple_compare> pq;
+			cin >> n >> m;
+			while(m--) {
+				int u, v, w;
+				cin >> u >> v >> w;
+				if(g.find(u) == g.end()) {
+					g[u] = unordered_set<pair<int, int>, pair_hash, pair_equal>();
+				}
+				g[u].insert(make_pair(v, w));
+				if(g.find(v) == g.end()) {
+					g[v] = unordered_set<pair<int, int>, pair_hash, pair_equal>();
+				}
+				g[v].insert(make_pair(u, w));
+			}
+			mst.insert(g.begin()->first);
+			for(const auto &p: g[g.begin()->first]) {
+				pq.push(make_tuple(g.begin()->first, p.first, p.second));
+			}
+			while(!pq.empty()) {
+				auto [u, v, w] = pq.top();
+				pq.pop();
+				bool u_in = mst.find(u) != mst.end();
+				bool v_in = mst.find(v) != mst.end();
+				if(u_in && v_in)
+					continue;
+				int to_insert = u_in ? v : u;
+				mst.insert(to_insert);
+				ans += w;
+				for(const auto &p: g[to_insert]) {
+					if(mst.find(p.first) != mst.end() && mst.find(to_insert) != mst.end())
+						continue;
+					pq.push(make_tuple(to_insert, p.first, p.second));
+				}
+			}
+			if(mst.size() == n) {
+				cout << ans;
+			} else {
+				cout << "impossible";
+			}
+			return 0;
+		}
+	}// namespace acwing858_408
 }// namespace acwing
