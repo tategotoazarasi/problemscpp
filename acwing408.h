@@ -158,6 +158,13 @@ namespace acwing {
 		};
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing858_408
+
+	/**
+	 * @brief 849. Dijkstra求最短路 I
+	 */
+	namespace acwing849_408 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

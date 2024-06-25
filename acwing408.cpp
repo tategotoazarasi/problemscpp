@@ -754,4 +754,48 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing858_408
+
+	/**
+	 * @brief 849. Dijkstra求最短路 I
+	 */
+	namespace acwing849_408 {
+		int main(istream &cin, ostream &cout) {
+			int n, m;
+			cin >> n >> m;
+			unordered_map<int, unordered_map<int, int>> g = unordered_map<int, unordered_map<int, int>>();
+			unordered_set<int> visited                    = unordered_set<int>();
+			while(m--) {
+				int x, y, z;
+				cin >> x >> y >> z;
+				if(g[x].count(y) == 0 || g[x][y] > z) {
+					g[x][y] = z;// Only keep the smallest weight for multiple edges
+				}
+			}
+			visited.insert(1);
+			// Custom comparator for priority_queue to prioritize smaller weights
+			auto cmp = [](pair<int, int> left, pair<int, int> right) {
+				return left.second > right.second;// Compare by distance
+			};
+			priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(cmp)> pq(cmp);
+			pq.emplace(1, 0);
+			while(!pq.empty()) {
+				auto [u, d] = pq.top();
+				pq.pop();
+				if(u != 1 && (visited.find(u) != visited.end()))
+					continue;
+				visited.insert(u);
+				if(u == n) {
+					cout << d;
+					return 0;
+				}
+				for(auto [v, w]: g[u]) {
+					if(visited.find(v) != visited.end())
+						continue;
+					pq.emplace(v, d + w);
+				}
+			}
+			cout << -1;
+			return 0;
+		}
+	}// namespace acwing849_408
 }// namespace acwing
