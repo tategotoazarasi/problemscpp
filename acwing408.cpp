@@ -798,4 +798,42 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing849_408
+
+	/**
+	 * @brief 854. Floyd求最短路
+	 */
+	namespace acwing854_408 {
+		int main(istream &cin, ostream &cout) {
+			int n, m, k;
+			cin >> n >> m >> k;
+			vector<vector<int>> g = vector<vector<int>>(n + 1, vector<int>(n + 1, INT_MAX));
+			for(int i = 1; i <= n; i++) {
+				g[i][i] = 0;
+			}
+			while(m--) {
+				int x, y, z;
+				cin >> x >> y >> z;
+				g[x][y] = min(g[x][y], z);
+			}
+			for(int k = 1; k <= n; k++) {
+				for(int i = 1; i <= n; i++) {
+					for(int j = 1; j <= n; j++) {
+						if(g[i][k] != INT_MAX && g[k][j] != INT_MAX) {
+							g[i][j] = min(g[i][j], g[i][k] + g[k][j]);
+						}
+					}
+				}
+			}
+			while(k--) {
+				int x, y;
+				cin >> x >> y;
+				if(g[x][y] == INT_MAX) {
+					cout << "impossible" << endl;
+				} else {
+					cout << g[x][y] << endl;
+				}
+			}
+			return 0;
+		}
+	}// namespace acwing854_408
 }// namespace acwing

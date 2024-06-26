@@ -165,6 +165,13 @@ namespace acwing {
 	namespace acwing849_408 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 854. Floyd求最短路
+	 */
+	namespace acwing854_408 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

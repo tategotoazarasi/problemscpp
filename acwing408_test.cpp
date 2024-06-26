@@ -1176,4 +1176,24 @@ namespace acwing {
 			ASSERT_EQ("12", ans);
 		}
 	}// namespace acwing849_408
+
+	/**
+	 * @brief 854. Floyd求最短路
+	 */
+	namespace acwing854_408 {
+		TEST(acwing854_408, case1) {
+			istringstream in("3 3 2\n"
+			                 "1 2 1\n"
+			                 "2 3 2\n"
+			                 "1 3 1\n"
+			                 "2 1\n"
+			                 "1 3");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("impossible\n"
+			          "1\n",
+			          ans);
+		}
+	}// namespace acwing854_408
 }// namespace acwing
