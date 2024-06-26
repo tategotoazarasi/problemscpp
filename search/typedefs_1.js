@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type_0',['type',['../d9/da5/a02935.html#ab6a7f28d72ef0bc24ddfb5be846b76a4',1,'leetcode::range_module::Chtholly']]]
+  ['type_0',['type',['../d0/d08/a02936.html#ab6a7f28d72ef0bc24ddfb5be846b76a4',1,'leetcode::range_module::Chtholly']]]
 ];
