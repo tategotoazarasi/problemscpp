@@ -1196,4 +1196,82 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing854_408
+
+	/**
+	 * @brief 848. 有向图的拓扑序列
+	 */
+	namespace acwing848_408 {
+		TEST(acwing848_408, case1) {
+			istringstream in("3 3\n"
+			                 "1 2\n"
+			                 "2 3\n"
+			                 "1 3");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1 2 3 ",
+			          ans);
+		}
+
+		TEST(acwing848_408, case2) {
+			istringstream in("5 10\n"
+			                 "2 3\n"
+			                 "2 5\n"
+			                 "2 5\n"
+			                 "1 4\n"
+			                 "2 4\n"
+			                 "1 2\n"
+			                 "2 3\n"
+			                 "2 4\n"
+			                 "3 5\n"
+			                 "3 4");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1 2 3 4 5 ",
+			          ans);
+		}
+
+		TEST(acwing848_408, case3) {
+			istringstream in("10 20\n"
+			                 "2 3\n"
+			                 "5 10\n"
+			                 "1 5\n"
+			                 "2 5\n"
+			                 "4 6\n"
+			                 "1 2\n"
+			                 "4 5\n"
+			                 "3 7\n"
+			                 "2 10\n"
+			                 "4 4\n"
+			                 "1 7\n"
+			                 "1 2\n"
+			                 "1 4\n"
+			                 "3 8\n"
+			                 "7 8\n"
+			                 "1 2\n"
+			                 "2 5\n"
+			                 "4 7\n"
+			                 "2 9\n"
+			                 "3 10");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("-1",
+			          ans);
+		}
+
+		TEST(acwing848_408, case4) {
+			istringstream in("4 4\n"
+			                 "2 1\n"
+			                 "1 3\n"
+			                 "1 4\n"
+			                 "3 4");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2 1 3 4 ",
+			          ans);
+		}
+	}// namespace acwing848_408
 }// namespace acwing

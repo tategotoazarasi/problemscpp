@@ -172,6 +172,13 @@ namespace acwing {
 	namespace acwing854_408 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 848. 有向图的拓扑序列
+	 */
+	namespace acwing848_408 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

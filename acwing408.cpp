@@ -836,4 +836,50 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing854_408
+
+	/**
+	 * @brief 848. 有向图的拓扑序列
+	 */
+	namespace acwing848_408 {
+		int main(istream &cin, ostream &cout) {
+			ostringstream oss;
+			int n, m;
+			cin >> n >> m;
+			vector<unordered_set<int>> g = vector<unordered_set<int>>(n + 1, unordered_set<int>());
+			vector<short> in             = vector<short>(n + 1, 0);
+			while(m--) {
+				int x, y;
+				cin >> x >> y;
+				if(g[x].find(y) != g[x].end())
+					continue;
+				g[x].insert(y);
+				in[y]++;
+			}
+			bool flag = true;
+			while(flag) {
+				for(int i = 1; i <= n; i++) {
+					if(in[i] == 0) {
+						flag = false;
+						oss << i << ' ';
+						for(int j: g[i]) {
+							in[j]--;
+						}
+						in[i] = -1;
+					}
+				}
+				if(flag) {
+					break;
+				}
+				flag = true;
+			}
+			for(int i = 1; i <= n; i++) {
+				if(in[i] != -1) {
+					cout << -1;
+					return 0;
+				}
+			}
+			cout << oss.str();
+			return 0;
+		}
+	}// namespace acwing848_408
 }// namespace acwing
