@@ -82,9 +82,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de2/a01585.html">Compare</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2f/a01586.html">Compare</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df3/a01581.html">huff_tree</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d21/a01582.html">huff_tree</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -133,10 +133,10 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>                                              {</div>
 <div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>            u_int64_t n, k, w;</div>
 <div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>            cin &gt;&gt; n &gt;&gt; k;</div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>            priority_queue&lt;huff_tree *, vector&lt;huff_tree *&gt;, <a class="code hl_struct" href="../../da/de2/a01585.html">Compare</a>&gt; pq;</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>            priority_queue&lt;huff_tree *, vector&lt;huff_tree *&gt;, <a class="code hl_struct" href="../../d2/d2f/a01586.html">Compare</a>&gt; pq;</div>
 <div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>                cin &gt;&gt; w;</div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                pq.push(<span class="keyword">new</span> <a class="code hl_class" href="../../da/df3/a01581.html">huff_tree</a>(w, 1, k));</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                pq.push(<span class="keyword">new</span> <a class="code hl_class" href="../../d0/d21/a01582.html">huff_tree</a>(w, 1, k));</div>
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>            }</div>
 <div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>            <span class="keywordflow">while</span>((n - 1) % (k - 1)) {</div>
 <div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>                pq.push(<span class="keyword">new</span> huff_tree(0, 1, k));</div>
@@ -169,7 +169,7 @@ $(function() {
 <div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>                    }</div>
 <div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>                }</div>
 <div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>                <span class="keywordflow">if</span>(flag) {</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>                    sum += ht-&gt;<a class="code hl_variable" href="../../d6/d82/a01565.html#a5badfe8302f705b2b94a598d8360abc0">val</a> * level;</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>                    sum += ht-&gt;<a class="code hl_variable" href="../../d1/d9b/a01566.html#a5badfe8302f705b2b94a598d8360abc0">val</a> * level;</div>
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>                    min_level = max(min_level, level);</div>
 <div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>                }</div>
 <div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>            }</div>
@@ -178,9 +178,9 @@ $(function() {
 <div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>        }</div>
 <div class="ttc" id="aa00168_html_a6705e1770943bb22db792d281c1b5e5b"><div class="ttname"><a href="../../dd/da7/a00168.html#a6705e1770943bb22db792d281c1b5e5b">acwing::acwing3786::root</a></div><div class="ttdeci">TreeNode * root</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d24/a00068_source.html#l00436">acwing408.cpp:436</a></div></div>
-<div class="ttc" id="aa01565_html_a5badfe8302f705b2b94a598d8360abc0"><div class="ttname"><a href="../../d6/d82/a01565.html#a5badfe8302f705b2b94a598d8360abc0">acwing::TreeNode::val</a></div><div class="ttdeci">int val</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d89/a00071_source.html#l00020">acwing408.h:20</a></div></div>
-<div class="ttc" id="aa01581_html"><div class="ttname"><a href="../../da/df3/a01581.html">acwing::acwing149::huff_tree</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d89/a00071_source.html#l00103">acwing408.h:103</a></div></div>
-<div class="ttc" id="aa01585_html"><div class="ttname"><a href="../../da/de2/a01585.html">acwing::acwing149::Compare</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d89/a00071_source.html#l00110">acwing408.h:110</a></div></div>
+<div class="ttc" id="aa01566_html_a5badfe8302f705b2b94a598d8360abc0"><div class="ttname"><a href="../../d1/d9b/a01566.html#a5badfe8302f705b2b94a598d8360abc0">acwing::TreeNode::val</a></div><div class="ttdeci">int val</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d89/a00071_source.html#l00020">acwing408.h:20</a></div></div>
+<div class="ttc" id="aa01582_html"><div class="ttname"><a href="../../d0/d21/a01582.html">acwing::acwing149::huff_tree</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d89/a00071_source.html#l00103">acwing408.h:103</a></div></div>
+<div class="ttc" id="aa01586_html"><div class="ttname"><a href="../../d2/d2f/a01586.html">acwing::acwing149::Compare</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d89/a00071_source.html#l00110">acwing408.h:110</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../d0/d89/a00071_source.html#l00107">acwing::acwing149::huff_tree::children</a>, <a class="el" href="../../d0/d89/a00071_source.html#l00106">acwing::acwing149::huff_tree::height</a>, <a class="el" href="../../da/d24/a00068_source.html#l00436">acwing::acwing3786::root</a>, <a class="el" href="../../d0/d89/a00071_source.html#l00020">acwing::TreeNode::val</a> , 以及 <a class="el" href="../../d0/d89/a00071_source.html#l00105">acwing::acwing149::huff_tree::val</a>.</p>
 
