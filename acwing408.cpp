@@ -882,4 +882,115 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing848_408
+
+	/**
+	 * @brief 3402. 等差数列
+	 */
+	namespace acwing3402 {
+		int main(istream &cin, ostream &cout) {
+			int n, m;
+			cin >> n >> m;
+			vector<vector<int>> a(n + 1, vector<int>(m + 1, 0));
+			unordered_set<int> filled_rows = unordered_set<int>();
+			unordered_set<int> filled_cols = unordered_set<int>();
+			vector<int> row_cnt            = vector<int>(n + 1, 0);
+			vector<int> col_cnt            = vector<int>(m + 1, 0);
+			for(int i = 1; i <= n; i++) {
+				for(int j = 1; j <= m; j++) {
+					cin >> a[i][j];
+					if(a[i][j] > 0) {
+						row_cnt[i]++;
+						col_cnt[j]++;
+					}
+				}
+			}
+			for(int i = 1; i <= n; i++) {
+				for(int j = 1; j <= m; j++) {
+					if(row_cnt[i] == n) {
+						filled_rows.insert(i);
+					}
+					if(col_cnt[j] == m) {
+						filled_cols.insert(j);
+					}
+				}
+			}
+			vector<vector<int>> a_cpy(a.begin(), a.end());
+			queue<pair<bool, int>> q = queue<pair<bool, int>>();// <is_row,index>
+			for(int i = 1; i < n; i++) {
+				if(row_cnt[i] > 1) {
+					filled_rows.insert(i);
+					q.push(make_pair(true, i));
+				}
+			}
+			for(int i = 1; i < m; i++) {
+				if(col_cnt[i] > 1) {
+					filled_cols.insert(i);
+					q.push(make_pair(false, i));
+				}
+			}
+			while(!q.empty()) {
+				auto [is_row, index] = q.front();
+				q.pop();
+				if(is_row) {
+					int l = 0;
+					int r = 0;
+					for(int j = 1; j <= m; j++) {
+						if(a[index][j] > 0) {
+							if(l == 0) {
+								l = j;
+							} else if(r == 0) {
+								r = j;
+							} else {
+								break;
+							}
+						}
+					}
+					int d = (a[index][r] - a[index][l]) / (r - l);
+					for(int j = 1; j <= m; j++) {
+						if(a[index][j] == 0) {
+							a[index][j] = a[index][l] + (j - l) * d;
+							col_cnt[j]++;
+							if(col_cnt[j] > 1 && filled_cols.find(j) == filled_cols.end()) {
+								filled_cols.insert(j);
+								q.emplace(false, j);
+							}
+						}
+					}
+				} else {
+					int l = 0;
+					int r = 0;
+					for(int i = 1; i <= n; i++) {
+						if(a[i][index] > 0) {
+							if(l == 0) {
+								l = i;
+							} else if(r == 0) {
+								r = i;
+							} else {
+								break;
+							}
+						}
+					}
+					int d = (a[r][index] - a[l][index]) / (r - l);
+					for(int i = 1; i <= n; i++) {
+						if(a[i][index] == 0) {
+							a[i][index] = a[l][index] + (i - l) * d;
+							row_cnt[i]++;
+							if(row_cnt[i] > 1 && filled_rows.find(i) == filled_rows.end()) {
+								filled_rows.insert(i);
+								q.emplace(true, i);
+							}
+						}
+					}
+				}
+			}
+			for(int i = 1; i <= n; i++) {
+				for(int j = 1; j <= m; j++) {
+					if(a_cpy[i][j] != a[i][j]) {
+						cout << i << ' ' << j << ' ' << a[i][j] << endl;
+					}
+				}
+			}
+			return 0;
+		}
+	}// namespace acwing3402
 }// namespace acwing

@@ -1274,4 +1274,23 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing848_408
+
+	/**
+	 * @brief 3402. 等差数列
+	 */
+	namespace acwing3402 {
+		TEST(acwing3402, case1) {
+			istringstream in("3 4\n"
+			                 "1 2 0 0\n"
+			                 "0 0 0 0\n"
+			                 "3 0 0 0");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1 3 3\n"
+			          "1 4 4\n"
+			          "2 1 2\n",
+			          ans);
+		}
+	}// namespace acwing3402
 }// namespace acwing

@@ -179,6 +179,13 @@ namespace acwing {
 	namespace acwing848_408 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3402. 等差数列
+	 */
+	namespace acwing3402 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H
