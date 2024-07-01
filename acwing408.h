@@ -8,6 +8,7 @@
 #include <iostream>
 #include <map>
 #include <set>
+#include <stack>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
@@ -186,6 +187,14 @@ namespace acwing {
 	namespace acwing3402 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3472. 八皇后
+	 */
+	namespace acwing3472 {
+		void dfs(vector<vector<bool>> board, int current_row, vector<string> &ans, vector<int> &ans_stk);
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing3472
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

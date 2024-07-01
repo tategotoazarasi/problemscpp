@@ -1293,4 +1293,21 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3402
+
+	/**
+	 * @brief 3472. 八皇后
+	 */
+	namespace acwing3472 {
+		TEST(acwing3472, case1) {
+			istringstream in("2\n"
+			                 "1\n"
+			                 "92");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("15863724\n"
+			          "84136275\n",
+			          ans);
+		}
+	}// namespace acwing3472
 }// namespace acwing

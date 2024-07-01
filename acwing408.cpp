@@ -993,4 +993,48 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3402
+
+	/**
+	 * @brief 3472. 八皇后
+	 */
+	namespace acwing3472 {
+		void dfs(vector<vector<bool>> board, int current_row, vector<string> &ans, vector<int> &ans_stk) {
+			if(current_row == 8) {
+				ostringstream oss;
+				for(int i = 0; i < 8; i++) {
+					oss << ans_stk[i] + 1;
+				}
+				ans.push_back(oss.str());
+				return;
+			}
+			for(int k = 0; k < 8; k++) {
+				if(board[current_row][k]) {
+					vector<vector<bool>> next_board = vector<vector<bool>>(board.begin(), board.end());
+					for(int i = 0; i < 8; i++) {
+						for(int j = 0; j < 8; j++) {
+							if(i == current_row || j == k || i + j == current_row + k || i - j == current_row - k) {
+								next_board[i][j] = false;
+							}
+						}
+					}
+					ans_stk.push_back(k);
+					dfs(next_board, current_row + 1, ans, ans_stk);
+					ans_stk.pop_back();
+				}
+			}
+		}
+		int main(istream &cin, ostream &cout) {
+			int n, b;
+			cin >> n;
+			vector<vector<bool>> board = vector<vector<bool>>(8, vector<bool>(8, true));
+			vector<string> ans         = vector<string>();
+			vector<int> ans_stk        = vector<int>();
+			dfs(board, 0, ans, ans_stk);
+			while(n--) {
+				cin >> b;
+				cout << ans[b - 1] << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3472
 }// namespace acwing
