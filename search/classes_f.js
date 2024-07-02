@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['undergroundsystem_0',['UndergroundSystem',['../d5/dea/a02927.html',1,'leetcode::design_underground_system']]],
-  ['unionfind_1',['UnionFind',['../d5/df4/a01551.html',1,'acwing::acwing240::UnionFind'],['../d6/dd2/a02243.html',1,'leetcode::max_area_of_island::UnionFind'],['../d6/d4b/a03579.html',1,'UnionFind']]]
+  ['undergroundsystem_0',['UndergroundSystem',['../da/dad/a02928.html',1,'leetcode::design_underground_system']]],
+  ['unionfind_1',['UnionFind',['../d0/db9/a01552.html',1,'acwing::acwing240::UnionFind'],['../d8/d51/a02244.html',1,'leetcode::max_area_of_island::UnionFind'],['../dc/dca/a03580.html',1,'UnionFind']]]
 ];
