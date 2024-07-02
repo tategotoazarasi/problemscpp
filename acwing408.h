@@ -195,6 +195,13 @@ namespace acwing {
 		void dfs(vector<vector<bool>> board, int current_row, vector<string> &ans, vector<int> &ans_stk);
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing3472
+
+	/**
+	 * @brief 3439. 首字母大写
+	 */
+	namespace acwing3439 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

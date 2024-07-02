@@ -1037,4 +1037,27 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3472
+
+	/**
+	 * @brief 3439. 首字母大写
+	 */
+	namespace acwing3439 {
+		int main(istream &cin, ostream &cout) {
+			bool ready = true;
+			while(cin) {
+				char c;
+				c = cin.get();
+				if(!cin) {
+					break;
+				}
+				if(ready && islower(c)) {
+					cout << (char) toupper(c);
+				} else {
+					cout << c;
+				}
+				ready = c == ' ';
+			}
+			return 0;
+		}
+	}// namespace acwing3439
 }// namespace acwing

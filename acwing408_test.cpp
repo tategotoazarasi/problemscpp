@@ -1310,4 +1310,27 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3472
+
+	/**
+	 * @brief 3439. 首字母大写
+	 */
+	namespace acwing3439 {
+		TEST(acwing3439, case1) {
+			istringstream in("if so, you already have a google account. you can sign in on the right.");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("If So, You Already Have A Google Account. You Can Sign In On The Right.",
+			          ans);
+		}
+
+		TEST(acwing3439, case2) {
+			istringstream in("Lke IioARt mXN bAqKm yzIU oiG wcczrp   W Qr j  auy   iL lMtAfH  CEVaj ni JPoWl  DcUMiqmNMGJ  p hs a");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("Lke IioARt MXN BAqKm YzIU OiG Wcczrp   W Qr J  Auy   IL LMtAfH  CEVaj Ni JPoWl  DcUMiqmNMGJ  P Hs A",
+			          ans);
+		}
+	}// namespace acwing3439
 }// namespace acwing
