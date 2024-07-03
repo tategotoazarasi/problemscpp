@@ -1060,4 +1060,18 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3439
+
+	/**
+	 * @brief 3379. 反序输出
+	 */
+	namespace acwing3379 {
+		int main(istream &cin, ostream &cout) {
+			string s;
+			while(cin >> s) {
+				reverse(s.begin(), s.end());
+				cout << s << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3379
 }// namespace acwing

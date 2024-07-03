@@ -202,6 +202,13 @@ namespace acwing {
 	namespace acwing3439 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3379. 反序输出
+	 */
+	namespace acwing3379 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

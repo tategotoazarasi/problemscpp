@@ -1333,4 +1333,24 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3439
+
+	/**
+	 * @brief 3379. 反序输出
+	 */
+	namespace acwing3379 {
+		TEST(acwing3379, case1) {
+			istringstream in("Upin\n"
+			                 "cvYj\n"
+			                 "WJpw\n"
+			                 "cXOA");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("nipU\n"
+			          "jYvc\n"
+			          "wpJW\n"
+			          "AOXc\n",
+			          ans);
+		}
+	}// namespace acwing3379
 }// namespace acwing
