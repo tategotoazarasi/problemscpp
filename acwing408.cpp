@@ -1068,10 +1068,36 @@ namespace acwing {
 		int main(istream &cin, ostream &cout) {
 			string s;
 			while(cin >> s) {
-				reverse(s.begin(), s.end());
+				ranges::reverse(s.begin(), s.end());
 				cout << s << endl;
 			}
 			return 0;
 		}
 	}// namespace acwing3379
+
+	/**
+	 * @brief 3390. 特殊乘法
+	 */
+	namespace acwing3390 {
+		int main(istream &cin, ostream &cout) {
+			string a, b;
+			cin >> a >> b;
+			vector<int> a_vec(a.length(), 0);
+			vector<int> b_vec(b.length(), 0);
+			for(int i = 0; i < a.length(); i++) {
+				a_vec[i] = a[i] - '0';
+			}
+			for(int i = 0; i < b.length(); i++) {
+				b_vec[i] = b[i] - '0';
+			}
+			int sum = 0;
+			for(int i = 0; i < a.length(); i++) {
+				for(int j = 0; j < b.length(); j++) {
+					sum += a_vec[i] * b_vec[j];
+				}
+			}
+			cout << sum;
+			return 0;
+		}
+	}// namespace acwing3390
 }// namespace acwing

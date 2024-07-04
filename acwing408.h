@@ -209,6 +209,13 @@ namespace acwing {
 	namespace acwing3379 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3390. 特殊乘法
+	 */
+	namespace acwing3390 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

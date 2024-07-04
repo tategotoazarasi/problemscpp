@@ -1353,4 +1353,17 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3379
+
+	/**
+	 * @brief 3390. 特殊乘法
+	 */
+	namespace acwing3390 {
+		TEST(acwing3390, case1) {
+			istringstream in("123 45");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("54", ans);
+		}
+	}// namespace acwing3390
 }// namespace acwing
