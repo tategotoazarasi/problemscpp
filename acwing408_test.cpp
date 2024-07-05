@@ -1366,4 +1366,20 @@ namespace acwing {
 			ASSERT_EQ("54", ans);
 		}
 	}// namespace acwing3390
+
+	/**
+	 * @brief 3397. 众数
+	 */
+	namespace acwing3397 {
+		TEST(acwing3397, case1) {
+			istringstream in("3 2\n"
+			                 "31 32 30");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("0\n"
+			          "3\n",
+			          ans);
+		}
+	}// namespace acwing3397
 }// namespace acwing

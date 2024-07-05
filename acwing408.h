@@ -216,6 +216,13 @@ namespace acwing {
 	namespace acwing3390 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3397. 众数
+	 */
+	namespace acwing3397 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

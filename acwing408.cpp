@@ -1100,4 +1100,39 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3390
+
+	/**
+	 * @brief 3397. 众数
+	 */
+	namespace acwing3397 {
+		int main(istream &cin, ostream &cout) {
+			int n, m;
+			cin >> n >> m;
+			vector<map<int, int>> a = vector<map<int, int>>(m, map<int, int>());
+			for(int i = 0; i < n; i++) {
+				for(int j = 0; j < m; j++) {
+					char c;
+					cin >> c;
+					int x = c - '0';
+					if(a[j].find(x) == a[j].end()) {
+						a[j][x] = 1;
+					} else {
+						a[j][x]++;
+					}
+				}
+			}
+			for(int i = m - 1; i >= 0; i--) {
+				int max_val = 0;
+				int max_key = 0;
+				for(auto &p: a[i]) {
+					if(p.second > max_val) {
+						max_val = p.second;
+						max_key = p.first;
+					}
+				}
+				cout << max_key << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3397
 }// namespace acwing
