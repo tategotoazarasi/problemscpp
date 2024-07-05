@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::palindrome_partitioning_ii::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,18 +63,95 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d7/d25/a00182.html">leetcode</a></li><li class="navelem"><a class="el" href="../../db/de0/a00465.html">partition_equal_subset_sum</a></li><li class="navelem"><a class="el" href="../../d2/d80/a02874.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d52/a00183.html">leetcode</a></li><li class="navelem"><a class="el" href="../../db/de0/a00465.html">palindrome_partitioning_ii</a></li><li class="navelem"><a class="el" href="../../db/d08/a02871.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::partition_equal_subset_sum::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d9/df0/a02868.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::palindrome_partitioning_ii::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../d2/d80/a02874.html">leetcode::partition_equal_subset_sum::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d2/d80/a02874.html#a6e59161978e1dcf8b0239a9e80319458">canPartition</a>(vector&lt; int &gt; &amp;nums)</td><td class="entry"><a class="el" href="../../d2/d80/a02874.html">leetcode::partition_equal_subset_sum::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../dc/d87/a00032_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a6b501f931417fa8a14ff6e5cc6c1be87"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d08/a02871.html#a6b501f931417fa8a14ff6e5cc6c1be87">minCut</a> (string s)</td></tr>
+<tr class="separator:a6b501f931417fa8a14ff6e5cc6c1be87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../dc/d87/a00032_source.html">leetcode.h</a> 第 <a class="el" href="../../dc/d87/a00032_source.html#l03128">3128</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a6b501f931417fa8a14ff6e5cc6c1be87" name="a6b501f931417fa8a14ff6e5cc6c1be87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b501f931417fa8a14ff6e5cc6c1be87">&#9670;&nbsp;</a></span>minCut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leetcode::palindrome_partitioning_ii::Solution::minCut </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d2/de7/a00014_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d2/de7/a00014_source.html#l08877">8877</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l08877" name="l08877"></a><span class="lineno"> 8877</span>                                     {</div>
+<div class="line"><a id="l08878" name="l08878"></a><span class="lineno"> 8878</span>            vector <a class="code hl_function" href="../../d8/dc8/a00581.html#a6e7f766dccf4185dd9dcbfc93281fdc7">is_palindromic</a>(s.length(), vector(s.length(), <span class="keyword">false</span>));</div>
+<div class="line"><a id="l08879" name="l08879"></a><span class="lineno"> 8879</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; s.length(); i++) {</div>
+<div class="line"><a id="l08880" name="l08880"></a><span class="lineno"> 8880</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; i - j &gt;= 0 &amp;&amp; i + j &lt; s.length() &amp;&amp; s[i - j] == s[i + j]; j++) {</div>
+<div class="line"><a id="l08881" name="l08881"></a><span class="lineno"> 8881</span>                    <a class="code hl_function" href="../../d8/dc8/a00581.html#a6e7f766dccf4185dd9dcbfc93281fdc7">is_palindromic</a>[i - j][i + j] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l08882" name="l08882"></a><span class="lineno"> 8882</span>                }</div>
+<div class="line"><a id="l08883" name="l08883"></a><span class="lineno"> 8883</span>            }</div>
+<div class="line"><a id="l08884" name="l08884"></a><span class="lineno"> 8884</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; s.length() - 1; i++) {</div>
+<div class="line"><a id="l08885" name="l08885"></a><span class="lineno"> 8885</span>                <span class="keywordflow">if</span>(s[i] == s[i + 1]) {</div>
+<div class="line"><a id="l08886" name="l08886"></a><span class="lineno"> 8886</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; i - j &gt;= 0 &amp;&amp; i + 1 + j &lt; s.length() &amp;&amp; s[i - j] == s[i + 1 + j]; j++) {</div>
+<div class="line"><a id="l08887" name="l08887"></a><span class="lineno"> 8887</span>                        <a class="code hl_function" href="../../d8/dc8/a00581.html#a6e7f766dccf4185dd9dcbfc93281fdc7">is_palindromic</a>[i - j][i + 1 + j] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l08888" name="l08888"></a><span class="lineno"> 8888</span>                    }</div>
+<div class="line"><a id="l08889" name="l08889"></a><span class="lineno"> 8889</span>                }</div>
+<div class="line"><a id="l08890" name="l08890"></a><span class="lineno"> 8890</span>            }</div>
+<div class="line"><a id="l08891" name="l08891"></a><span class="lineno"> 8891</span>            vector dp(s.length(), 2000);</div>
+<div class="line"><a id="l08892" name="l08892"></a><span class="lineno"> 8892</span>            dp[0] = 0;</div>
+<div class="line"><a id="l08893" name="l08893"></a><span class="lineno"> 8893</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt; dp.size(); j++) {</div>
+<div class="line"><a id="l08894" name="l08894"></a><span class="lineno"> 8894</span>                <span class="keywordflow">if</span>(<a class="code hl_function" href="../../d8/dc8/a00581.html#a6e7f766dccf4185dd9dcbfc93281fdc7">is_palindromic</a>[0][j]) {</div>
+<div class="line"><a id="l08895" name="l08895"></a><span class="lineno"> 8895</span>                    dp[j] = 0;</div>
+<div class="line"><a id="l08896" name="l08896"></a><span class="lineno"> 8896</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l08897" name="l08897"></a><span class="lineno"> 8897</span>                }</div>
+<div class="line"><a id="l08898" name="l08898"></a><span class="lineno"> 8898</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = j; i &gt;= 0; i--) {</div>
+<div class="line"><a id="l08899" name="l08899"></a><span class="lineno"> 8899</span>                    <span class="keywordflow">if</span>(<a class="code hl_function" href="../../d8/dc8/a00581.html#a6e7f766dccf4185dd9dcbfc93281fdc7">is_palindromic</a>[i][j]) {</div>
+<div class="line"><a id="l08900" name="l08900"></a><span class="lineno"> 8900</span>                        dp[j] = min(dp[j], dp[i - 1] + 1);</div>
+<div class="line"><a id="l08901" name="l08901"></a><span class="lineno"> 8901</span>                    }</div>
+<div class="line"><a id="l08902" name="l08902"></a><span class="lineno"> 8902</span>                }</div>
+<div class="line"><a id="l08903" name="l08903"></a><span class="lineno"> 8903</span>            }</div>
+<div class="line"><a id="l08904" name="l08904"></a><span class="lineno"> 8904</span>            <span class="keywordflow">return</span> dp.back();</div>
+<div class="line"><a id="l08905" name="l08905"></a><span class="lineno"> 8905</span>        }</div>
+<div class="ttc" id="aa00581_html_a6e7f766dccf4185dd9dcbfc93281fdc7"><div class="ttname"><a href="../../d8/dc8/a00581.html#a6e7f766dccf4185dd9dcbfc93281fdc7">pat::b::b1079::is_palindromic</a></div><div class="ttdeci">bool is_palindromic(string str)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d03/a00062_source.html#l02767">pat.cpp:2767</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../df/d03/a00062_source.html#l02767">pat::b::b1079::is_palindromic()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../d9/d2e/a00056_source.html#l04113">leetcode::palindrome_partitioning_ii::TEST()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../dc/d87/a00032_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../d2/de7/a00014_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
