@@ -223,6 +223,14 @@ namespace acwing {
 	namespace acwing3397 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3426. 糖果分享游戏
+	 */
+	namespace acwing3426 {
+		bool ended(vector<int> &candy);
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing3426
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

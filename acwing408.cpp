@@ -1135,4 +1135,45 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3397
+
+	/**
+	 * @brief 3426. 糖果分享游戏
+	 */
+	namespace acwing3426 {
+		bool ended(vector<int> &candy) {
+			for(int i = 1; i < candy.size(); i++) {
+				if(candy[i] != candy[i - 1]) {
+					return false;
+				}
+			}
+			return true;
+		}
+
+		int main(istream &cin, ostream &cout) {
+			int n;
+			while(cin >> n) {
+				if(n == 0)
+					continue;
+				vector<int> candy = vector<int>(n);
+				for(int i = 0; i < n; i++) {
+					cin >> candy[i];
+				}
+				int count = 0;
+				while(!ended(candy)) {
+					vector<int> next_candy = vector<int>(n);
+					for(int i = 0; i < n; i++) {
+						int next         = (i + 1) % n;
+						next_candy[next] = candy[next] / 2 + candy[i] / 2;
+						if(next_candy[next] % 2) {
+							next_candy[next]++;
+						}
+					}
+					candy = next_candy;
+					count++;
+				}
+				cout << count << ' ' << candy[0] << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3426
 }// namespace acwing

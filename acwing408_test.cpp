@@ -1382,4 +1382,44 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3397
+
+	/**
+	 * @brief 3426. 糖果分享游戏
+	 */
+	namespace acwing3426 {
+		TEST(acwing3426, case1) {
+			istringstream in("6\n"
+			                 "36\n"
+			                 "2\n"
+			                 "2\n"
+			                 "2\n"
+			                 "2\n"
+			                 "2\n"
+			                 "11\n"
+			                 "22\n"
+			                 "20\n"
+			                 "18\n"
+			                 "16\n"
+			                 "14\n"
+			                 "12\n"
+			                 "10\n"
+			                 "8\n"
+			                 "6\n"
+			                 "4\n"
+			                 "2\n"
+			                 "4\n"
+			                 "2\n"
+			                 "4\n"
+			                 "6\n"
+			                 "8\n"
+			                 "0");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("15 14\n"
+			          "17 22\n"
+			          "4 8\n",
+			          ans);
+		}
+	}// namespace acwing3426
 }// namespace acwing
