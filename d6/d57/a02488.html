@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::house_robber::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,18 +63,75 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dc/d52/a00183.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d8/d95/a00379.html">triangle</a></li><li class="navelem"><a class="el" href="../../d6/d9a/a02491.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d2/d94/a00184.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d8/d95/a00379.html">house_robber</a></li><li class="navelem"><a class="el" href="../../d6/d57/a02488.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::triangle::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d8/d44/a02485.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::house_robber::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../d6/d9a/a02491.html">leetcode::triangle::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d6/d9a/a02491.html#a31b9a65344473576e8c033ad5e40702d">minimumTotal</a>(vector&lt; vector&lt; int &gt; &gt; &amp;triangle)</td><td class="entry"><a class="el" href="../../d6/d9a/a02491.html">leetcode::triangle::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../dc/d87/a00032_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:aefd78c55e4bb4ca8b06c831d522f2f2e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d57/a02488.html#aefd78c55e4bb4ca8b06c831d522f2f2e">rob</a> (vector&lt; int &gt; &amp;nums)</td></tr>
+<tr class="separator:aefd78c55e4bb4ca8b06c831d522f2f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../dc/d87/a00032_source.html">leetcode.h</a> 第 <a class="el" href="../../dc/d87/a00032_source.html#l02280">2280</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="aefd78c55e4bb4ca8b06c831d522f2f2e" name="aefd78c55e4bb4ca8b06c831d522f2f2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefd78c55e4bb4ca8b06c831d522f2f2e">&#9670;&nbsp;</a></span>rob()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leetcode::house_robber::Solution::rob </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nums</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d2/de7/a00014_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d2/de7/a00014_source.html#l06067">6067</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l06067" name="l06067"></a><span class="lineno"> 6067</span>                                           {</div>
+<div class="line"><a id="l06068" name="l06068"></a><span class="lineno"> 6068</span>            <span class="keywordflow">if</span>(nums.size() == 1) {</div>
+<div class="line"><a id="l06069" name="l06069"></a><span class="lineno"> 6069</span>                <span class="keywordflow">return</span> nums[0];</div>
+<div class="line"><a id="l06070" name="l06070"></a><span class="lineno"> 6070</span>            }</div>
+<div class="line"><a id="l06071" name="l06071"></a><span class="lineno"> 6071</span>            vector&lt;int&gt; dp(nums.size());</div>
+<div class="line"><a id="l06072" name="l06072"></a><span class="lineno"> 6072</span>            dp[0] = nums[0];</div>
+<div class="line"><a id="l06073" name="l06073"></a><span class="lineno"> 6073</span>            dp[1] = max(nums[0], nums[1]);</div>
+<div class="line"><a id="l06074" name="l06074"></a><span class="lineno"> 6074</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2; i &lt; nums.size(); i++) {</div>
+<div class="line"><a id="l06075" name="l06075"></a><span class="lineno"> 6075</span>                dp[i] = max(dp[i - 2] + nums[i], dp[i - 1]);</div>
+<div class="line"><a id="l06076" name="l06076"></a><span class="lineno"> 6076</span>            }</div>
+<div class="line"><a id="l06077" name="l06077"></a><span class="lineno"> 6077</span>            <span class="keywordflow">return</span> dp[nums.size() - 1];</div>
+<div class="line"><a id="l06078" name="l06078"></a><span class="lineno"> 6078</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">被这些函数引用 <a class="el" href="../../d2/de7/a00014_source.html#l06520">leetcode::house_robber_ii::Solution::rob()</a> , 以及 <a class="el" href="../../d9/d2e/a00056_source.html#l02861">leetcode::house_robber::TEST()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../dc/d87/a00032_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../d2/de7/a00014_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
