@@ -231,6 +231,19 @@ namespace acwing {
 		bool ended(vector<int> &candy);
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing3426
+
+	/**
+	 * @brief 3406. 日志排序
+	 */
+	namespace acwing3406 {
+		struct task {
+			string name;
+			string date_time;
+			double duration;
+			string raw_line;
+		};
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing3406
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

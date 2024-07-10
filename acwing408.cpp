@@ -1176,4 +1176,31 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3426
+
+	/**
+	 * @brief 3406. 日志排序
+	 */
+	namespace acwing3406 {
+		int main(istream &cin, ostream &cout) {
+			vector<task> vec = vector<task>();
+			string name, date, time, duration_s, line;
+			double duration;
+			while(getline(cin, line)) {
+				istringstream iss(line);
+				iss >> name >> date >> time >> duration >> duration_s;
+				vec.push_back({name, date + " " + time, duration, line});
+			}
+			sort(vec.begin(), vec.end(), [](task &a, task &b) {
+				if(a.duration != b.duration) {
+					return a.duration < b.duration;
+				} else {
+					return a.date_time < b.date_time;
+				}
+			});
+			for(const auto &record: vec) {
+				cout << record.raw_line << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3406
 }// namespace acwing
