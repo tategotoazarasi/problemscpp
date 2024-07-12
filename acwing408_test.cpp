@@ -1493,4 +1493,22 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3406
+
+	/**
+	 * @brief 3447. 子串计算
+	 */
+	namespace acwing3447 {
+		TEST(acwing3447, case1) {
+			istringstream in("10101");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("0 2\n"
+			          "01 2\n"
+			          "1 3\n"
+			          "10 2\n"
+			          "101 2\n",
+			          ans);
+		}
+	}// namespace acwing3447
 }// namespace acwing

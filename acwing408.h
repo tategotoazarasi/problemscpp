@@ -244,6 +244,13 @@ namespace acwing {
 		};
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing3406
+
+	/**
+	 * @brief 3447. 子串计算
+	 */
+	namespace acwing3447 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

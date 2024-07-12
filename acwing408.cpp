@@ -1203,4 +1203,32 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3406
+
+	/**
+	 * @brief 3447. 子串计算
+	 */
+	namespace acwing3447 {
+		int main(istream &cin, ostream &cout) {
+			string s;
+			map<string, int> m;
+			while(cin >> s) {
+				m.clear();
+				for(int i = 0; i < s.length(); i++) {
+					for(int j = 1; j <= s.length() - i; j++) {
+						string sub = s.substr(i, j);
+						if(m.find(sub) == m.end()) {
+							m[sub] = 1;
+						} else {
+							m[sub]++;
+						}
+					}
+				}
+				for(const auto &p: m) {
+					if(p.second > 1)
+						cout << p.first << ' ' << p.second << endl;
+				}
+			}
+			return 0;
+		}
+	}// namespace acwing3447
 }// namespace acwing
