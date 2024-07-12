@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['problemscpp_0',['problemscpp',['../d6/d35/a03670.html',1,'']]]
+  ['problemscpp_0',['problemscpp',['../d0/ded/a03671.html',1,'']]]
 ];

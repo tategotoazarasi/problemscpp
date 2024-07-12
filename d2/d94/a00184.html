@@ -82,7 +82,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d24/a01609.html">task</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfd/a01610.html">task</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -125,33 +125,33 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d24/a00068_source.html">acwing408.cpp</a> 第 <a class="el" href="../../da/d24/a00068_source.html#l01184">1184</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">acwing408.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l01184">1184</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>                                              {</div>
-<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>            vector&lt;task&gt; <a class="code hl_variable" href="../../de/dbb/a00637.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a> = vector&lt;task&gt;();</div>
+<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>            vector&lt;task&gt; <a class="code hl_variable" href="../../d1/daa/a00638.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a> = vector&lt;task&gt;();</div>
 <div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>            <span class="keywordtype">string</span> name, date, time, duration_s, line;</div>
 <div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>            <span class="keywordtype">double</span> duration;</div>
 <div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>            <span class="keywordflow">while</span>(getline(cin, line)) {</div>
 <div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>                istringstream iss(line);</div>
 <div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>                iss &gt;&gt; name &gt;&gt; date &gt;&gt; time &gt;&gt; duration &gt;&gt; duration_s;</div>
-<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>                <a class="code hl_variable" href="../../de/dbb/a00637.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.push_back({name, date + <span class="stringliteral">&quot; &quot;</span> + time, duration, line});</div>
+<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>                <a class="code hl_variable" href="../../d1/daa/a00638.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.push_back({name, date + <span class="stringliteral">&quot; &quot;</span> + time, duration, line});</div>
 <div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>            }</div>
-<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span>            sort(<a class="code hl_variable" href="../../de/dbb/a00637.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.begin(), <a class="code hl_variable" href="../../de/dbb/a00637.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.end(), [](task &amp;a, task &amp;b) {</div>
+<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span>            sort(<a class="code hl_variable" href="../../d1/daa/a00638.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.begin(), <a class="code hl_variable" href="../../d1/daa/a00638.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.end(), [](task &amp;a, task &amp;b) {</div>
 <div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span>                if(a.duration != b.duration) {</div>
 <div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span>                    return a.duration &lt; b.duration;</div>
 <div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>                } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>                    return a.date_time &lt; b.date_time;</div>
 <div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>                }</div>
 <div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>            });</div>
-<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;record: <a class="code hl_variable" href="../../de/dbb/a00637.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>) {</div>
+<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;record: <a class="code hl_variable" href="../../d1/daa/a00638.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>) {</div>
 <div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span>                cout &lt;&lt; record.raw_line &lt;&lt; endl;</div>
 <div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>            }</div>
 <div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>        }</div>
-<div class="ttc" id="aa00637_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../de/dbb/a00637.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d03/a00062_source.html#l05095">pat.cpp:5095</a></div></div>
+<div class="ttc" id="aa00638_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d1/daa/a00638.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l05095">pat.cpp:5095</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../df/d03/a00062_source.html#l05095">pat::a::a7_2::vec</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d6/d5b/a00026_source.html#l05095">pat::a::a7_2::vec</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d8b/a00059_source.html#l01430">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l01430">TEST()</a>.</p>
 
 </div>
 </div>
@@ -181,7 +181,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">acwing408_test.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l01430">1430</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing408_test.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l01430">1430</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>                                {</div>
 <div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>            istringstream in(<span class="stringliteral">&quot;hs_10000_p   2007-01-17 19:22:53,315     253.035(s)\n&quot;</span></div>
 <div class="line"><a id="l01432" name="l01432"></a><span class="lineno"> 1432</span>                             <span class="stringliteral">&quot;hs_10001_p   2007-01-17 19:22:53,315     253.846(s)\n&quot;</span></div>
@@ -194,7 +194,7 @@ $(function() {
 <div class="line"><a id="l01439" name="l01439"></a><span class="lineno"> 1439</span>                             <span class="stringliteral">&quot;hs_10006_m   2007-01-17 19:22:53,318     248.548(s)\n&quot;</span></div>
 <div class="line"><a id="l01440" name="l01440"></a><span class="lineno"> 1440</span>                             <span class="stringliteral">&quot;hs_10006_p   2007-01-17 19:25:23,367    3146.827(s)&quot;</span>);</div>
 <div class="line"><a id="l01441" name="l01441"></a><span class="lineno"> 1441</span>            <span class="keyword">auto</span> out = ostringstream();</div>
-<div class="line"><a id="l01442" name="l01442"></a><span class="lineno"> 1442</span>            <a class="code hl_function" href="../../dd/d32/a00041.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
+<div class="line"><a id="l01442" name="l01442"></a><span class="lineno"> 1442</span>            <a class="code hl_function" href="../../dc/d87/a00032.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
 <div class="line"><a id="l01443" name="l01443"></a><span class="lineno"> 1443</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><a id="l01444" name="l01444"></a><span class="lineno"> 1444</span>            ASSERT_EQ(<span class="stringliteral">&quot;hs_10003_m   2007-01-17 19:22:53,318     126.622(s)\n&quot;</span></div>
 <div class="line"><a id="l01445" name="l01445"></a><span class="lineno"> 1445</span>                      <span class="stringliteral">&quot;hs_10002_m   2007-01-17 19:22:53,315     129.574(s)\n&quot;</span></div>
@@ -208,9 +208,9 @@ $(function() {
 <div class="line"><a id="l01453" name="l01453"></a><span class="lineno"> 1453</span>                      <span class="stringliteral">&quot;hs_10006_p   2007-01-17 19:25:23,367    3146.827(s)\n&quot;</span>,</div>
 <div class="line"><a id="l01454" name="l01454"></a><span class="lineno"> 1454</span>                      ans);</div>
 <div class="line"><a id="l01455" name="l01455"></a><span class="lineno"> 1455</span>        }</div>
-<div class="ttc" id="aa00041_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dd/d32/a00041.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d32/a00041_source.html#l00005">main.cpp:5</a></div></div>
+<div class="ttc" id="aa00032_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../dc/d87/a00032.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d87/a00032_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d24/a00068_source.html#l01184">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l01184">main()</a>.</p>
 
 </div>
 </div>
@@ -240,7 +240,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">acwing408_test.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l01457">1457</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">acwing408_test.cpp</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l01457">1457</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l01457" name="l01457"></a><span class="lineno"> 1457</span>                                {</div>
 <div class="line"><a id="l01458" name="l01458"></a><span class="lineno"> 1458</span>            istringstream in(<span class="stringliteral">&quot;hs_10000_p   2007-01-17 19:22:53,315     253.035(s)\n&quot;</span></div>
 <div class="line"><a id="l01459" name="l01459"></a><span class="lineno"> 1459</span>                             <span class="stringliteral">&quot;hs_10001_p   2007-01-17 19:22:53,315     253.846(s)\n&quot;</span></div>
@@ -259,7 +259,7 @@ $(function() {
 <div class="line"><a id="l01472" name="l01472"></a><span class="lineno"> 1472</span>                             <span class="stringliteral">&quot;hs_10000_r   2007-02-17 19:22:53,315     253.035(s)\n&quot;</span></div>
 <div class="line"><a id="l01473" name="l01473"></a><span class="lineno"> 1473</span>                             <span class="stringliteral">&quot;hs_10000_s   2008-01-17 19:22:53,315     253.035(s)&quot;</span>);</div>
 <div class="line"><a id="l01474" name="l01474"></a><span class="lineno"> 1474</span>            <span class="keyword">auto</span> out = ostringstream();</div>
-<div class="line"><a id="l01475" name="l01475"></a><span class="lineno"> 1475</span>            <a class="code hl_function" href="../../dd/d32/a00041.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
+<div class="line"><a id="l01475" name="l01475"></a><span class="lineno"> 1475</span>            <a class="code hl_function" href="../../dc/d87/a00032.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
 <div class="line"><a id="l01476" name="l01476"></a><span class="lineno"> 1476</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><a id="l01477" name="l01477"></a><span class="lineno"> 1477</span>            ASSERT_EQ(<span class="stringliteral">&quot;hs_10003_m   2007-01-17 19:22:53,318     126.622(s)\n&quot;</span></div>
 <div class="line"><a id="l01478" name="l01478"></a><span class="lineno"> 1478</span>                      <span class="stringliteral">&quot;hs_10002_m   2007-01-17 19:22:53,315     129.574(s)\n&quot;</span></div>
@@ -280,7 +280,7 @@ $(function() {
 <div class="line"><a id="l01493" name="l01493"></a><span class="lineno"> 1493</span>                      ans);</div>
 <div class="line"><a id="l01494" name="l01494"></a><span class="lineno"> 1494</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d24/a00068_source.html#l01184">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l01184">main()</a>.</p>
 
 </div>
 </div>
