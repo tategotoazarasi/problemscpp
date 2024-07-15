@@ -1231,4 +1231,18 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3447
+
+	/**
+	 * @brief 3820. 未出现过的最小正整数
+	 */
+	namespace acwing3820 {
+		int findMissMin(vector<int> &nums) {
+			unordered_set<int> s = unordered_set<int>(nums.begin(), nums.end());
+			int i                = 1;
+			while(s.find(i) != s.end()) {
+				i++;
+			}
+			return i;
+		}
+	}// namespace acwing3820
 }// namespace acwing

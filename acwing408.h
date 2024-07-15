@@ -251,6 +251,13 @@ namespace acwing {
 	namespace acwing3447 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3820. 未出现过的最小正整数
+	 */
+	namespace acwing3820 {
+		int findMissMin(vector<int> &nums);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

@@ -1511,4 +1511,21 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3447
+
+	/**
+	 * @brief 3820. 未出现过的最小正整数
+	 */
+	namespace acwing3820 {
+		TEST(acwing3820, case1) {
+			vector<int> in = {-5, 3, 2, 3};
+			findMissMin(in);
+			ASSERT_EQ(findMissMin(in), 1);
+		}
+
+		TEST(acwing3820, case2) {
+			vector<int> in = {1, 2, 3};
+			findMissMin(in);
+			ASSERT_EQ(findMissMin(in), 4);
+		}
+	}// namespace acwing3820
 }// namespace acwing
