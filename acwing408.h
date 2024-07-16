@@ -258,6 +258,13 @@ namespace acwing {
 	namespace acwing3820 {
 		int findMissMin(vector<int> &nums);
 	}
+
+	/**
+	 * @brief 840. 模拟散列表
+	 */
+	namespace acwing840_408 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

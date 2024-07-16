@@ -9,6 +9,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <iomanip>
+#include <list>
 #include <queue>
 #include <sstream>
 #include <stack>
@@ -1245,4 +1246,35 @@ namespace acwing {
 			return i;
 		}
 	}// namespace acwing3820
+
+	/**
+	 * @brief 840. 模拟散列表
+	 */
+	namespace acwing840_408 {
+		int main(istream &cin, ostream &cout) {
+			const int N            = 99991;
+			array<list<int>, N> ht = array<list<int>, N>();
+			int n;
+			cin >> n;
+			while(n--) {
+				char op;
+				int x;
+				cin >> op >> x;
+				int k = (x % N + N) % N;
+				if(op == 'Q') {
+					bool found = false;
+					for(auto &i: ht[k]) {
+						if(i == x) {
+							found = true;
+							break;
+						}
+					}
+					cout << (found ? "Yes" : "No") << endl;
+				} else {
+					ht[k].push_back(x);
+				}
+			}
+			return 0;
+		}
+	}// namespace acwing840_408
 }// namespace acwing

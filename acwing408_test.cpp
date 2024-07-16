@@ -1528,4 +1528,24 @@ namespace acwing {
 			ASSERT_EQ(findMissMin(in), 4);
 		}
 	}// namespace acwing3820
+
+	/**
+	 * @brief 840. 模拟散列表
+	 */
+	namespace acwing840_408 {
+		TEST(acwing840_408, case2) {
+			istringstream in("5\n"
+			                 "I 1\n"
+			                 "I 2\n"
+			                 "I 3\n"
+			                 "Q 2\n"
+			                 "Q 5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("Yes\n"
+			          "No\n",
+			          ans);
+		}
+	}// namespace acwing840_408
 }// namespace acwing
