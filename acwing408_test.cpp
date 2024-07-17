@@ -1548,4 +1548,23 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing840_408
+
+	/**
+	 * @brief 3542. 查找
+	 */
+	namespace acwing3542 {
+		TEST(acwing3542, case1) {
+			istringstream in("5\n"
+			                 "1 5 2 4 3\n"
+			                 "3\n"
+			                 "2 5 6");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("YES\n"
+			          "YES\n"
+			          "NO\n",
+			          ans);
+		}
+	}// namespace acwing3542
 }// namespace acwing

@@ -265,6 +265,13 @@ namespace acwing {
 	namespace acwing840_408 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3542. 查找
+	 */
+	namespace acwing3542 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

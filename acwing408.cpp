@@ -1277,4 +1277,25 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing840_408
+
+	/**
+	 * @brief 3542. 查找
+	 */
+	namespace acwing3542 {
+		int main(istream &cin, ostream &cout) {
+			int n, a;
+			cin >> n;
+			unordered_set<int> us = unordered_set<int>();
+			while(n--) {
+				cin >> a;
+				us.insert(a);
+			}
+			cin >> n;
+			while(n--) {
+				cin >> a;
+				cout << (us.find(a) != us.end() ? "YES" : "NO") << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3542
 }// namespace acwing
