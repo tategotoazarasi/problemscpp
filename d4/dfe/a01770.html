@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::permutations::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,18 +63,89 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../da/deb/a00189.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d5/d0b/a00220.html">calculate_money_in_leetcode_bank</a></li><li class="navelem"><a class="el" href="../../d5/d36/a01773.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d7/d6e/a00190.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d5/d0b/a00220.html">permutations</a></li><li class="navelem"><a class="el" href="../../d4/dfe/a01770.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::calculate_money_in_leetcode_bank::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d1/dab/a01767.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::permutations::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../d5/d36/a01773.html">leetcode::calculate_money_in_leetcode_bank::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d5/d36/a01773.html#a0bf70a69c467fefb6615e4a00bc62710">totalMoney</a>(int n)</td><td class="entry"><a class="el" href="../../d5/d36/a01773.html">leetcode::calculate_money_in_leetcode_bank::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../df/d03/a00062_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ae54a80dae9d7299763890e8e69811324"><td class="memItemLeft" align="right" valign="top">static vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dfe/a01770.html#ae54a80dae9d7299763890e8e69811324">permute</a> (vector&lt; int &gt; &amp;nums)</td></tr>
+<tr class="separator:ae54a80dae9d7299763890e8e69811324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../df/d03/a00062_source.html">leetcode.h</a> 第 <a class="el" href="../../df/d03/a00062_source.html#l00440">440</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="ae54a80dae9d7299763890e8e69811324" name="ae54a80dae9d7299763890e8e69811324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae54a80dae9d7299763890e8e69811324">&#9670;&nbsp;</a></span>permute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; vector&lt; int &gt; &gt; leetcode::permutations::Solution::permute </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nums</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d0/d89/a00071_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d0/d89/a00071_source.html#l01000">1000</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>                                                               {</div>
+<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>            <span class="keyword">auto</span> ans = vector&lt;vector&lt;int&gt;&gt;();</div>
+<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>            <span class="keywordflow">if</span>(nums.size() == 1) {</div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>                <span class="keyword">auto</span> next_ans = vector&lt;int&gt;();</div>
+<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>                next_ans.push_back(nums[0]);</div>
+<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>                ans.push_back(next_ans);</div>
+<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>                <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>            }</div>
+<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> num: nums) {</div>
+<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>                <span class="keyword">auto</span> next = vector(nums);</div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>                next.erase(<a class="code hl_function" href="../../d3/d65/a00154.html#ab10f99b2dc87d12962d4016234de99e2">find</a>(next.begin(), next.end(), num));</div>
+<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>                <span class="keyword">auto</span> next_permutations = <a class="code hl_function" href="../../d4/dfe/a01770.html#ae54a80dae9d7299763890e8e69811324">permute</a>(next);</div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>                <span class="keyword">auto</span> new_ans           = vector&lt;int&gt;();</div>
+<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>                new_ans.push_back(num);</div>
+<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> next_permutation: next_permutations) {</div>
+<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>                    <span class="keyword">auto</span> next_ans = vector(new_ans);</div>
+<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>                    next_ans.insert(next_ans.end(), next_permutation.begin(), next_permutation.end());</div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>                    ans.push_back(next_ans);</div>
+<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>                }</div>
+<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>            }</div>
+<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>        }</div>
+<div class="ttc" id="aa00154_html_ab10f99b2dc87d12962d4016234de99e2"><div class="ttname"><a href="../../d3/d65/a00154.html#ab10f99b2dc87d12962d4016234de99e2">acwing::acwing861::find</a></div><div class="ttdeci">bool find(vector&lt; unordered_set&lt; int &gt; &gt; &amp;g, int x, vector&lt; bool &gt; &amp;st, vector&lt; int &gt; &amp;match)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l07522">acwing.cpp:7522</a></div></div>
+<div class="ttc" id="aa01770_html_ae54a80dae9d7299763890e8e69811324"><div class="ttname"><a href="../../d4/dfe/a01770.html#ae54a80dae9d7299763890e8e69811324">leetcode::permutations::Solution::permute</a></div><div class="ttdeci">static vector&lt; vector&lt; int &gt; &gt; permute(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d89/a00071_source.html#l01000">leetcode.cpp:1000</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l07522">acwing::acwing861::find()</a> , 以及 <a class="el" href="../../d0/d89/a00071_source.html#l01000">permute()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../d0/d89/a00071_source.html#l01000">permute()</a> , 以及 <a class="el" href="../../da/d45/a00011_source.html#l00601">leetcode::permutations::TEST()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../df/d03/a00062_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../d0/d89/a00071_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
