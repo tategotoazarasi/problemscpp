@@ -272,6 +272,13 @@ namespace acwing {
 	namespace acwing3542 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3581. 单词识别
+	 */
+	namespace acwing3581 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

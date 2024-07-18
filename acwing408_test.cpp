@@ -1567,4 +1567,92 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3542
+
+	/**
+	 * @brief 3581. 单词识别
+	 */
+	namespace acwing3581 {
+		TEST(acwing3542, case1) {
+			istringstream in("A blockhouse is a small castle that has four openings through which to shoot.");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("a:2\n"
+			          "blockhouse:1\n"
+			          "castle:1\n"
+			          "four:1\n"
+			          "has:1\n"
+			          "is:1\n"
+			          "openings:1\n"
+			          "shoot:1\n"
+			          "small:1\n"
+			          "that:1\n"
+			          "through:1\n"
+			          "to:1\n"
+			          "which:1\n",
+			          ans);
+		}
+
+		TEST(acwing3542, case2) {
+			istringstream in("ZhnqZlbTCiol .,YHsWlKfYf.,.Ug, .LPkReTwCoTUVAY.,Pv .BZRkvRZ,..uoeeEtwPLn.oLjdlYaolkctEM EUbsyHRPfHgtKXw s .a.HVZk. .JV ..TP,msuKHuIHETiPdNe, A,,.L,,.mbppWtkj.. KoURloeEO.  URJNwpFSj,FCfPqxH .Hvzk KzoZGPIRh .cluMByzNQCnrds.  lPKrEtWCOTUvAY...a,,UQq,.TP.IDNmLWyuBA ,ukTFWJtGaYpv,.kOurLOeEO,,.pwBwtcIPBNjQaX,  Gzc .FY.ug,,sZzrQnZnoKAyvOT,.ynHN, .iht,hVZK.  SzzrqNznoKAYvoT.. a. GzC. ,uoEEETWpLn,,jmozwuAaMnTCBx . URjNwPfsJ,BDQxCSWMkebF,, lPkretWcotUVaY . UOeeetWpln  pWBwtcIpBnjqAx CluMbYZNqcnrDS,,,MBPPwTkj pujlNV,..BzrkvrZ,.NJ,,,OTjJ zbWP..FaIPSfd  ,VbAXOCeUuc ..PAoOyvSlYxjcwA uQQ cmmhLELseIBMmj  ZBWP,.ZPVxAgLRHmPmn  lPKrETwCOtuvAY jV rrfG,URJNWpfSJ.  xDKcrUHgv EhKqG .MsUKhuIHeTipdnE ,,kZOzgPIRH vgWC.,EhKqg zhNqzLbTCioL.,uktfWJTGaYPV. ,fcfPQXh..Q.BDQXcSWMkeBF..fY,nJ,,PBODNCHgtV,, TOrAepgX   koURlOeEo.,.PwBWTcIPbnJQax,,OSfU Jv,,ENTiYAJD.zPvXagLrHmpmN.oTJJ.,.EbnaotBLnRhwdX. ,UkTfWjtgaypv ..EbNAOtBLNRhwdx pAOOYVsLYXjCWA SZZRQnZNOkayVot.,.EbnaOtblNrHwdx  ,KzoZgpirH, LPkretwcotuvAY..cRyi,.Rrfg.cmM");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("a:4\n"
+			          "bdqxcswmkebf:2\n"
+			          "bzrkvrz:2\n"
+			          "clumbyznqcnrds:2\n"
+			          "cmm:1\n"
+			          "cmmhlelseibmmj:1\n"
+			          "cryi:1\n"
+			          "ebnaotblnrhwdx:3\n"
+			          "ehkqg:2\n"
+			          "entiyajd:1\n"
+			          "eubsyhrpfhgtkxw:1\n"
+			          "faipsfd:1\n"
+			          "fcfpqxh:2\n"
+			          "fy:2\n"
+			          "gzc:2\n"
+			          "hvzk:3\n"
+			          "idnmlwyuba:1\n"
+			          "iht:1\n"
+			          "jmozwuaamntcbx:1\n"
+			          "jv:3\n"
+			          "kourloeeo:3\n"
+			          "kzozgpirh:3\n"
+			          "l:1\n"
+			          "lpkretwcotuvay:5\n"
+			          "mbppwtkj:2\n"
+			          "msukhuihetipdne:2\n"
+			          "nj:2\n"
+			          "oljdlyaolkctem:1\n"
+			          "osfu:1\n"
+			          "otjj:2\n"
+			          "paooyvslyxjcwa:2\n"
+			          "pbodnchgtv:1\n"
+			          "pujlnv:1\n"
+			          "pv:1\n"
+			          "pwbwtcipbnjqax:3\n"
+			          "q:1\n"
+			          "rrfg:2\n"
+			          "s:1\n"
+			          "szzrqnznokayvot:3\n"
+			          "toraepgx:1\n"
+			          "tp:2\n"
+			          "ug:2\n"
+			          "uktfwjtgaypv:3\n"
+			          "uoeeetwpln:3\n"
+			          "uqq:2\n"
+			          "urjnwpfsj:3\n"
+			          "vbaxoceuuc:1\n"
+			          "vgwc:1\n"
+			          "xdkcruhgv:1\n"
+			          "yhswlkfyf:1\n"
+			          "ynhn:1\n"
+			          "zbwp:2\n"
+			          "zhnqzlbtciol:2\n"
+			          "zpvxaglrhmpmn:2\n",
+			          ans);
+		}
+	}// namespace acwing3581
 }// namespace acwing

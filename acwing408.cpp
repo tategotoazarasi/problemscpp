@@ -1298,4 +1298,32 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3542
+
+	/**
+	 * @brief 3581. 单词识别
+	 */
+	namespace acwing3581 {
+		int main(istream &cin, ostream &cout) {
+			map<string, int> dict = map<string, int>();
+			ostringstream oss;
+			while(!cin.eof() && !cin.fail() && cin.peek() != EOF) {
+				char c = cin.get();
+				if(isalpha(c)) {
+					oss << char(tolower(c));
+				} else {
+					if(oss.str().empty())
+						continue;
+					dict[oss.str()]++;
+					oss = ostringstream();
+				}
+			}
+			if(!oss.str().empty()) {
+				dict[oss.str()]++;
+			}
+			for(const auto &[word, cnt]: dict) {
+				cout << word << ':' << cnt << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3581
 }// namespace acwing
