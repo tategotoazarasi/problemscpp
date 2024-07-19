@@ -1655,4 +1655,29 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3581
+
+	/**
+	 * @brief 785. 快速排序
+	 */
+	namespace acwing785_408 {
+		TEST(acwing785_408, case1) {
+			istringstream in("5\n"
+			                 "3 1 2 4 5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1 2 3 4 5 ",
+			          ans);
+		}
+
+		TEST(acwing785_408, case2) {
+			istringstream in("30\n"
+			                 "128 294 133 295 175 8 232 248 241 164 11 60 238 133 291 116 6 67 98 67 196 260 181 160 83 160 90 153 233 216");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("6 8 11 60 67 67 83 90 98 116 128 133 133 153 160 160 164 175 181 196 216 232 233 238 241 248 260 291 294 295 ",
+			          ans);
+		}
+	}// namespace acwing785_408
 }// namespace acwing

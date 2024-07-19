@@ -279,6 +279,14 @@ namespace acwing {
 	namespace acwing3581 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 785. 快速排序
+	 */
+	namespace acwing785_408 {
+		void qs(vector<int> &vec, int l, int r);
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing785_408
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

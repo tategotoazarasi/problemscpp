@@ -1326,4 +1326,42 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3581
+
+	/**
+	 * @brief 785. 快速排序
+	 */
+	namespace acwing785_408 {
+		void qs(vector<int> &vec, int l, int r) {
+			if(l >= r)
+				return;
+			int pivot = vec[(l + r) / 2];
+			int lp    = l - 1;
+			int rp    = r + 1;
+			while(lp < rp) {
+				while(vec[++lp] < pivot)
+					;
+				while(vec[--rp] > pivot)
+					;
+				if(lp < rp) {
+					swap(vec[lp], vec[rp]);
+				}
+			}
+			qs(vec, l, rp);
+			qs(vec, rp + 1, r);
+		}
+
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			vector<int> vec(n);
+			for(int i = 0; i < n; i++) {
+				cin >> vec[i];
+			}
+			qs(vec, 0, n - 1);
+			for(int i = 0; i < n; i++) {
+				cout << vec[i] << ' ';
+			}
+			return 0;
+		}
+	}// namespace acwing785_408
 }// namespace acwing
