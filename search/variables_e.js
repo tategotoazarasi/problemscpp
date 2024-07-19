@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['p_0',['p',['../d7/d96/a03546.html#afbc8935faeffa5c2c1a4567c8f3cac70',1,'pat::a::a1017::customer::p()'],['../d6/d76/a03554.html#ae0643b38b79c19432202b445971fe87f',1,'pat::a::a1026::player::p()'],['../de/df7/a03478.html#aad10aebf91b5b315ea4d3615647c4053',1,'pat::b::b1080::student::p()']]],
-  ['parent_1',['parent',['../d2/dc1/a01562.html#ab40c36b6bf474896b3ea57880113726a',1,'acwing::acwing240::UnionFind::parent()'],['../dd/d19/a01922.html#a8b8fbb4149478a627b4f1373787e8474',1,'leetcode::groups_of_strings::Solution::parent()'],['../d1/d44/a02242.html#a15133d0f7bc45a4e7f4b9a79b4ea9470',1,'leetcode::count_nodes_with_the_highest_score::TreeNode::parent()'],['../dc/db6/a02258.html#ab9c1d82bddb398ee4d5d708ea868fe7e',1,'leetcode::max_area_of_island::UnionFind::parent()'],['../d0/dff/a02506.html#ae8e182d41e4828f70da1669af846b2d6',1,'leetcode::lowest_common_ancestor_of_a_binary_search_tree::TreeNodeP::parent()'],['../da/d0f/a03594.html#a916e09e220667fb55fbf332c8852c948',1,'UnionFind::parent()']]],
-  ['path_2',['path',['../d5/d60/a03562.html#a2677071bd6874319247461f5441449f9',1,'pat::a::a1018::frame']]],
-  ['patience_3',['patience',['../d3/d09/a02334.html#a5219e386c2afaa89ae5d939fb3a92b88',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]],
-  ['person_4',['person',['../d0/d4a/a01862.html#a4c36bc87b6ea871fc4e662922972bf06',1,'leetcode::maximum_good_people_based_on_statements::msg']]],
-  ['position_5',['position',['../d5/d67/a01466.html#a6c128688ce7e71f96a3a0ab23a3e1290',1,'acwing::acwing4310::acwing4310::position()'],['../de/dfb/a01874.html#a4d6ee48ca18dd104c6bed2c37d2a057a',1,'leetcode::second_minimum_time_to_reach_destination::status::position()']]],
-  ['positive_6',['positive',['../d2/dcf/a03586.html#a622851f40dd8992cc2a66a5ce83133df',1,'BigInt::positive()'],['../dd/de9/a03590.html#a777585f98e8e6e958c126e1474961a31',1,'Fraction::positive()']]],
-  ['pred_7',['pred',['../d7/da7/a02914.html#a8868786102f9305ed697ccb1e85c9f0e',1,'leetcode::parallel_courses::node']]],
-  ['pref_5fsum_8',['pref_sum',['../dc/d28/a02494.html#a90ff9708b2766d87cc5f640ae2c6a1b8',1,'leetcode::range_sum_query_immutable::NumArray']]],
-  ['prev_9',['prev',['../df/d5e/a02690.html#a27333b110e316836ac474cf674945133',1,'leetcode::delete_node_in_a_bst::Solution::prev()'],['../d1/d82/a03450.html#ab0a7bb4930e4218b13762478cf914d1f',1,'pat::b::b1025::Node::prev()']]],
-  ['previous_10',['previous',['../d9/da1/a01546.html#a524976d0d212f969c750e00ec2c34615',1,'acwing::acwing3370::cow']]],
-  ['price_11',['price',['../db/d09/a01838.html#aee320f3f7b4364d6dd47ac22541a48ad',1,'leetcode::k_highest_ranked_items_within_a_price_range::item::price()'],['../d6/d61/a03510.html#afcdb4ca82369cbb0db332a6697001c96',1,'pat::b::b1102::paper::price()']]],
-  ['primes_12',['primes',['../db/d34/a02118.html#aeb494f3a836c706277b2470a1789119a',1,'leetcode::the_number_of_good_subsets::Solution']]]
+  ['p_0',['p',['../dd/d6d/a03547.html#afbc8935faeffa5c2c1a4567c8f3cac70',1,'pat::a::a1017::customer::p()'],['../d1/df9/a03555.html#ae0643b38b79c19432202b445971fe87f',1,'pat::a::a1026::player::p()'],['../dc/d14/a03479.html#aad10aebf91b5b315ea4d3615647c4053',1,'pat::b::b1080::student::p()']]],
+  ['parent_1',['parent',['../d8/d6c/a01563.html#ab40c36b6bf474896b3ea57880113726a',1,'acwing::acwing240::UnionFind::parent()'],['../d9/de1/a01923.html#a8b8fbb4149478a627b4f1373787e8474',1,'leetcode::groups_of_strings::Solution::parent()'],['../d6/dd2/a02243.html#a15133d0f7bc45a4e7f4b9a79b4ea9470',1,'leetcode::count_nodes_with_the_highest_score::TreeNode::parent()'],['../d3/d3a/a02259.html#ab9c1d82bddb398ee4d5d708ea868fe7e',1,'leetcode::max_area_of_island::UnionFind::parent()'],['../de/dbd/a02507.html#ae8e182d41e4828f70da1669af846b2d6',1,'leetcode::lowest_common_ancestor_of_a_binary_search_tree::TreeNodeP::parent()'],['../d2/db0/a03595.html#a916e09e220667fb55fbf332c8852c948',1,'UnionFind::parent()']]],
+  ['path_2',['path',['../d4/dbd/a03563.html#a2677071bd6874319247461f5441449f9',1,'pat::a::a1018::frame']]],
+  ['patience_3',['patience',['../d4/d30/a02335.html#a5219e386c2afaa89ae5d939fb3a92b88',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]],
+  ['person_4',['person',['../d4/d12/a01863.html#a4c36bc87b6ea871fc4e662922972bf06',1,'leetcode::maximum_good_people_based_on_statements::msg']]],
+  ['position_5',['position',['../df/d5e/a01467.html#a6c128688ce7e71f96a3a0ab23a3e1290',1,'acwing::acwing4310::acwing4310::position()'],['../dc/d1e/a01875.html#a4d6ee48ca18dd104c6bed2c37d2a057a',1,'leetcode::second_minimum_time_to_reach_destination::status::position()']]],
+  ['positive_6',['positive',['../df/d38/a03587.html#a622851f40dd8992cc2a66a5ce83133df',1,'BigInt::positive()'],['../d1/dd1/a03591.html#a777585f98e8e6e958c126e1474961a31',1,'Fraction::positive()']]],
+  ['pred_7',['pred',['../d6/deb/a02915.html#a8868786102f9305ed697ccb1e85c9f0e',1,'leetcode::parallel_courses::node']]],
+  ['pref_5fsum_8',['pref_sum',['../d5/d56/a02495.html#a90ff9708b2766d87cc5f640ae2c6a1b8',1,'leetcode::range_sum_query_immutable::NumArray']]],
+  ['prev_9',['prev',['../dc/d8b/a02691.html#a27333b110e316836ac474cf674945133',1,'leetcode::delete_node_in_a_bst::Solution::prev()'],['../d7/d76/a03451.html#ab0a7bb4930e4218b13762478cf914d1f',1,'pat::b::b1025::Node::prev()']]],
+  ['previous_10',['previous',['../da/ded/a01547.html#a524976d0d212f969c750e00ec2c34615',1,'acwing::acwing3370::cow']]],
+  ['price_11',['price',['../d2/d2c/a01839.html#aee320f3f7b4364d6dd47ac22541a48ad',1,'leetcode::k_highest_ranked_items_within_a_price_range::item::price()'],['../d9/d25/a03511.html#afcdb4ca82369cbb0db332a6697001c96',1,'pat::b::b1102::paper::price()']]],
+  ['primes_12',['primes',['../dd/d54/a02119.html#aeb494f3a836c706277b2470a1789119a',1,'leetcode::the_number_of_good_subsets::Solution']]]
 ];
