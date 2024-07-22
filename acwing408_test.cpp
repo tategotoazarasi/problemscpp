@@ -1680,4 +1680,45 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing785_408
+
+	/**
+	 * @brief 3504. 字符串转换整数
+	 */
+	namespace acwing3504 {
+		TEST(acwing3504, case1) {
+			istringstream in("2016");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2016",
+			          ans);
+		}
+
+		TEST(acwing3504, case2) {
+			istringstream in("o627CSo1");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("627",
+			          ans);
+		}
+
+		TEST(acwing3504, case3) {
+			istringstream in("123456789123abc");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("-1",
+			          ans);
+		}
+
+		TEST(acwing3504, case4) {
+			istringstream in("abc");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("-1",
+			          ans);
+		}
+	}// namespace acwing3504
 }// namespace acwing

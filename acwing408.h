@@ -287,6 +287,13 @@ namespace acwing {
 		void qs(vector<int> &vec, int l, int r);
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing785_408
+
+	/**
+	 * @brief 3504. 字符串转换整数
+	 */
+	namespace acwing3504 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

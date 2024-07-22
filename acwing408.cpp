@@ -1364,4 +1364,34 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing785_408
+
+	/**
+	 * @brief 3504. 字符串转换整数
+	 */
+	namespace acwing3504 {
+		int main(istream &cin, ostream &cout) {
+			string s;
+			cin >> s;
+			int num   = 0;
+			bool flag = false;
+			for(char c: s) {
+				if(isdigit(c)) {
+					flag = true;
+					num *= 10;
+					num += c - '0';
+					if(num < 0) {
+						num = -1;
+						break;
+					}
+				} else if(flag) {
+					break;
+				}
+			}
+			if(!flag) {
+				num = -1;
+			}
+			cout << num;
+			return 0;
+		}
+	}// namespace acwing3504
 }// namespace acwing
