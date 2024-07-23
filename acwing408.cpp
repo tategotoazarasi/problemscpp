@@ -1394,4 +1394,44 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3504
+
+	/**
+	 * @brief 1603. 整数集合划分
+	 */
+	namespace acwing1603 {
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			vector<int> vec(n);
+			for(int i = 0; i < n; i++) {
+				cin >> vec[i];
+			}
+			sort(vec.begin(), vec.end());
+			if(n % 2 == 0) {
+				int s1 = 0;
+				int s2 = 0;
+				for(int i = 0; i < n / 2; i++) {
+					s1 += vec[i];
+				}
+				for(int i = n / 2; i < n; i++) {
+					s2 += vec[i];
+				}
+				cout << "0 " << abs(s1 - s2);
+			} else {
+				int s1 = 0;
+				int s2 = 0;
+				for(int i = 0; i < n / 2; i++) {
+					s1 += vec[i];
+				}
+				for(int i = n / 2 + 1; i < n; i++) {
+					s2 += vec[i];
+				}
+				int res1 = abs((s1 + vec[n / 2]) - s2);
+				int res2 = abs(s1 - (s2 + vec[n / 2]));
+				int res  = max(res1, res2);
+				cout << "1 " << res;
+			}
+			return 0;
+		}
+	}// namespace acwing1603
 }// namespace acwing

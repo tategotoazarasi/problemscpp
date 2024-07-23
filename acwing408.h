@@ -294,6 +294,13 @@ namespace acwing {
 	namespace acwing3504 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 1603. 整数集合划分
+	 */
+	namespace acwing1603 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

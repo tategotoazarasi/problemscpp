@@ -1721,4 +1721,29 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3504
+
+	/**
+	 * @brief 1603. 整数集合划分
+	 */
+	namespace acwing1603 {
+		TEST(acwing1603, case1) {
+			istringstream in("10\n"
+			                 "23 8 10 99 46 2333 46 1 666 555");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("0 3611",
+			          ans);
+		}
+
+		TEST(acwing1603, case2) {
+			istringstream in("13\n"
+			                 "110 79 218 69 3721 100 29 135 2 6 13 5188 85");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1 9359",
+			          ans);
+		}
+	}// namespace acwing1603
 }// namespace acwing
