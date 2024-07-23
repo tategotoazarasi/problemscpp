@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['k_0',['k',['../d3/df9/a02052.html#a8e9c002415f8caeb62ab19c2d68e872e',1,'leetcode::knight_probability_in_chessboard::status']]],
-  ['key_1',['key',['../d8/db0/a03572.html#adcd9765d413f7a9e9b8490e407cfb35e',1,'pat::a::a1020::TreeNode']]],
-  ['keys_2',['keys',['../d2/d0c/a02932.html#abc3e566a64d18e4b4e21142a2b7dac0f',1,'leetcode::shortest_path_to_get_all_keys::frame::keys()'],['../d2/d9c/a02948.html#add15f11d93b6b2a6341acbcb043f6504',1,'leetcode::lru_cache::LRUCache::keys()']]],
-  ['killprocess_3',['killProcess',['../d9/d4a/a02772.html#ab3beea54500e469e44fa1e56871a8beb',1,'leetcode::kill_process::Solution']]],
-  ['knightprobability_4',['knightProbability',['../de/def/a02064.html#aa778581a1cd8b722fba7ede7ca818493',1,'leetcode::knight_probability_in_chessboard::Solution']]],
-  ['ksmallestpairs_5',['kSmallestPairs',['../de/dda/a01768.html#ad10110d7c72b7b6e5c5fc388d87c02be',1,'leetcode::find_k_pairs_with_smallest_sums::Solution']]],
-  ['kthpalindrome_6',['kthPalindrome',['../da/d75/a02372.html#a3357807af1462d4c9f6342a8b266c8af',1,'leetcode::find_palindrome_with_fixed_length::Solution']]]
+  ['k_0',['k',['../d0/d55/a02053.html#a8e9c002415f8caeb62ab19c2d68e872e',1,'leetcode::knight_probability_in_chessboard::status']]],
+  ['key_1',['key',['../de/d29/a03573.html#adcd9765d413f7a9e9b8490e407cfb35e',1,'pat::a::a1020::TreeNode']]],
+  ['keys_2',['keys',['../df/d5c/a02933.html#abc3e566a64d18e4b4e21142a2b7dac0f',1,'leetcode::shortest_path_to_get_all_keys::frame::keys()'],['../dd/d4c/a02949.html#add15f11d93b6b2a6341acbcb043f6504',1,'leetcode::lru_cache::LRUCache::keys()']]],
+  ['killprocess_3',['killProcess',['../db/de5/a02773.html#ab3beea54500e469e44fa1e56871a8beb',1,'leetcode::kill_process::Solution']]],
+  ['knightprobability_4',['knightProbability',['../d0/d67/a02065.html#aa778581a1cd8b722fba7ede7ca818493',1,'leetcode::knight_probability_in_chessboard::Solution']]],
+  ['ksmallestpairs_5',['kSmallestPairs',['../d7/d6d/a01769.html#ad10110d7c72b7b6e5c5fc388d87c02be',1,'leetcode::find_k_pairs_with_smallest_sums::Solution']]],
+  ['kthpalindrome_6',['kthPalindrome',['../d7/de7/a02373.html#a3357807af1462d4c9f6342a8b266c8af',1,'leetcode::find_palindrome_with_fixed_length::Solution']]]
 ];

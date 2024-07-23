@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['t_5fsum_0',['t_sum',['../d8/db3/a03488.html#a1046605e6a9e8191f6fc0d71ad62f587',1,'pat::b::b1085::school']]],
-  ['tail_1',['tail',['../d4/dfe/a02688.html#ae503afd168e60471e7734f558b51f309',1,'leetcode::design_linked_list::MyLinkedList']]],
-  ['target_2',['target',['../d0/db9/a01552.html#ae83f4fb88084805a39c03af2c8fe96b9',1,'acwing::acwing1470::status::target()'],['../d1/d04/a01744.html#a2dd17627992e17331faefb6e05791baa',1,'leetcode::escape_a_large_maze::point::target()']]],
-  ['time_3',['time',['../de/d23/a01876.html#a1c4fd1711dd871723b696b2a5d033781',1,'leetcode::second_minimum_time_to_reach_destination::status::time()'],['../d3/d9c/a02336.html#a95ae7aeaf3c1c355791e0a7f9b44db39',1,'leetcode::the_time_when_the_network_becomes_idle::Node::time()'],['../db/d3b/a02388.html#a90811d8afc1a97615cf7d4d1f379b6cf',1,'leetcode::find_servers_that_handled_most_number_of_requests::event::time()'],['../dd/dd7/a03540.html#a9884fabcefb6771543758fb4cbb68572',1,'pat::a::a1016::record::time()']]],
-  ['tmp_4',['tmp',['../da/d97/a01528.html#a7fc403e9dd0f2cb48fdfa2fb792f6842',1,'acwing::acwing20::MyQueue']]],
-  ['tnc_5',['tnc',['../d0/d7b/a02968.html#a721e912651a0f181637e5bfc248fb2d3',1,'leetcode::lfu_cache::LFUCache']]],
-  ['tree_6',['tree',['../db/db9/a02964.html#ae84714c971561de384d1e431d199d7b7',1,'leetcode::range_module::RangeModule']]]
+  ['t_5fsum_0',['t_sum',['../d8/d45/a03489.html#a1046605e6a9e8191f6fc0d71ad62f587',1,'pat::b::b1085::school']]],
+  ['tail_1',['tail',['../df/dff/a02689.html#ae503afd168e60471e7734f558b51f309',1,'leetcode::design_linked_list::MyLinkedList']]],
+  ['target_2',['target',['../de/d2c/a01553.html#ae83f4fb88084805a39c03af2c8fe96b9',1,'acwing::acwing1470::status::target()'],['../d0/d78/a01745.html#a2dd17627992e17331faefb6e05791baa',1,'leetcode::escape_a_large_maze::point::target()']]],
+  ['time_3',['time',['../d9/d63/a01877.html#a1c4fd1711dd871723b696b2a5d033781',1,'leetcode::second_minimum_time_to_reach_destination::status::time()'],['../d7/d52/a02337.html#a95ae7aeaf3c1c355791e0a7f9b44db39',1,'leetcode::the_time_when_the_network_becomes_idle::Node::time()'],['../d3/d53/a02389.html#a90811d8afc1a97615cf7d4d1f379b6cf',1,'leetcode::find_servers_that_handled_most_number_of_requests::event::time()'],['../d6/dd5/a03541.html#a9884fabcefb6771543758fb4cbb68572',1,'pat::a::a1016::record::time()']]],
+  ['tmp_4',['tmp',['../db/dce/a01529.html#a7fc403e9dd0f2cb48fdfa2fb792f6842',1,'acwing::acwing20::MyQueue']]],
+  ['tnc_5',['tnc',['../db/d6c/a02969.html#a721e912651a0f181637e5bfc248fb2d3',1,'leetcode::lfu_cache::LFUCache']]],
+  ['tree_6',['tree',['../d4/d39/a02965.html#ae84714c971561de384d1e431d199d7b7',1,'leetcode::range_module::RangeModule']]]
 ];
