@@ -1746,4 +1746,45 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing1603
+
+	/**
+	 * @brief 3527. 旋转矩阵
+	 */
+	namespace acwing3527 {
+		TEST(acwing3527, case1) {
+			istringstream in("3\n"
+			                 "1 2 3\n"
+			                 "4 5 6\n"
+			                 "7 8 9\n"
+			                 "7 4 1\n"
+			                 "8 5 2\n"
+			                 "9 6 3");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("90",
+			          ans);
+		}
+
+		TEST(acwing3527, case2) {
+			istringstream in("6\n"
+			                 "5 2 5 1 2 6\n"
+			                 "6 4 5 2 3 4\n"
+			                 "2 4 3 4 1 1\n"
+			                 "5 4 1 4 6 6\n"
+			                 "5 4 3 4 1 5\n"
+			                 "5 5 1 1 2 5\n"
+			                 "6 4 1 6 5 5\n"
+			                 "2 3 1 6 1 2\n"
+			                 "1 2 4 4 4 1\n"
+			                 "5 5 3 1 3 1\n"
+			                 "2 4 4 4 5 4\n"
+			                 "5 6 2 5 5 5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("-1",
+			          ans);
+		}
+	}// namespace acwing3527
 }// namespace acwing

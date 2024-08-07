@@ -1434,4 +1434,70 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing1603
+
+	/**
+	 * @brief 3527. 旋转矩阵
+	 */
+	namespace acwing3527 {
+		int main(istream &cin, ostream &cout) {
+			int matrix[3][2][2] = {
+			        {
+			                {0, 1},
+			                {-1, 0},
+			        },
+			        {{-1, 0},
+			         {0, -1}},
+			        {{0, -1},
+			         {1, 0}},
+			};
+			int n;
+			cin >> n;
+			vector<vector<int>> vec[5] = {vector(n, vector<int>(n, 0)), vector(n, vector<int>(n, 0)), vector(n, vector<int>(n, 0)), vector(n, vector<int>(n, 0)), vector(n, vector<int>(n, 0))};
+			for(int i = 0; i < n; i++) {
+				for(int j = 0; j < n; j++) {
+					cin >> vec[0][i][j];
+
+					int i2         = matrix[0][0][0] * i + matrix[0][0][1] * j;
+					int j2         = matrix[0][1][0] * i + matrix[0][1][1] * j + n - 1;
+					vec[1][i2][j2] = vec[0][i][j];
+
+					int i3         = matrix[1][0][0] * i + matrix[1][0][1] * j + n - 1;
+					int j3         = matrix[1][1][0] * i + matrix[1][1][1] * j + n - 1;
+					vec[2][i3][j3] = vec[0][i][j];
+
+					int i4         = matrix[2][0][0] * i + matrix[2][0][1] * j + n - 1;
+					int j4         = matrix[2][1][0] * i + matrix[2][1][1] * j;
+					vec[3][i4][j4] = vec[0][i][j];
+				}
+			}
+			for(int i = 0; i < n; i++) {
+				for(int j = 0; j < n; j++) {
+					cin >> vec[4][i][j];
+				}
+			}
+			bool flag = true;
+			for(int k = 0; k < 4; k++) {
+				flag = true;
+				for(int i = 1; i < n; i++) {
+					for(int j = 0; j < n; j++) {
+						if(vec[k][i][j] != vec[4][i][j]) {
+							flag = false;
+							break;
+						}
+					}
+					if(!flag) {
+						break;
+					}
+				}
+				if(flag) {
+					cout << k * 90;
+					break;
+				}
+			}
+			if(!flag) {
+				cout << -1;
+			}
+			return 0;
+		}
+	}// namespace acwing3527
 }// namespace acwing

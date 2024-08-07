@@ -301,6 +301,13 @@ namespace acwing {
 	namespace acwing1603 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3527. 旋转矩阵
+	 */
+	namespace acwing3527 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H
