@@ -101,3 +101,17 @@ public:
 	int get_size(int x);
 	unsigned count();
 };
+
+/// \brief 矩阵
+class Matrix {
+private:
+	vector<vector<int>> mat;
+
+public:
+	Matrix(int n);
+	Matrix(const Matrix &m);
+	Matrix operator*(const Matrix &m) const;
+	vector<int> &operator[](int i);
+	const vector<int> &operator[](int i) const;
+	static Matrix identity(int n);
+};

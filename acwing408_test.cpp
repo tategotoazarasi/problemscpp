@@ -1787,4 +1787,21 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3527
+
+	/**
+ * 3534. 矩阵幂
+ */
+	namespace acwing3534 {
+		TEST(acwing3534, case1) {
+			istringstream in("2 2\n"
+			                 "9 8\n"
+			                 "9 3");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("153 96 \n"
+			          "108 81 \n",
+			          ans);
+		}
+	}// namespace acwing3534
 }// namespace acwing

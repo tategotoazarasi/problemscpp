@@ -1500,4 +1500,64 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3527
+
+	/**
+	 * 3534. 矩阵幂
+	 */
+	namespace acwing3534 {
+		int main(istream &cin, ostream &cout) {
+			int n, p;
+			cin >> n >> p;
+			/*Matrix mat = Matrix(n);
+			for(int i = 0; i < n; i++) {
+				for(int j = 0; j < n; j++) {
+					cin >> mat[i][j];
+				}
+			}
+			for(int i = 1; i < p; i++) {
+				mat = mat * mat;
+			}
+			for(int i = 0; i < n; i++) {
+				for(int j = 0; j < n; j++) {
+					cout << mat[i][j] << ' ';
+				}
+				cout << endl;
+			}*/
+			vector<Matrix *> mats = vector<Matrix *>(p + 1, nullptr);
+			mats[1]               = new Matrix(n);
+			for(int i = 0; i < n; i++) {
+				for(int j = 0; j < n; j++) {
+					cin >> (*mats[1])[i][j];
+				}
+			}
+			Matrix mat = getMat(mats, p);
+			for(int i = 0; i < n; i++) {
+				for(int j = 0; j < n; j++) {
+					cout << mat[i][j] << ' ';
+				}
+				cout << endl;
+			}
+			return 0;
+		}
+
+		Matrix getMat(vector<Matrix *> &mat, int p) {
+			if(mat[p] != nullptr) {
+				return *mat[p];
+			}
+			Matrix res = Matrix::identity((*mat[1])[1].size());
+			for(int i = 0; p >> i != 0; i++) {
+				int masked = p & (1 << i);
+				if(masked != 0) {
+					if(masked != p) {
+						res = res * getMat(mat, p & (1 << i));
+					} else {
+						Matrix m2 = getMat(mat, masked >> 1);
+						res       = res * m2 * m2;
+					}
+				}
+			}
+			mat[p] = new Matrix(res);
+			return res;
+		}
+	}// namespace acwing3534
 }// namespace acwing

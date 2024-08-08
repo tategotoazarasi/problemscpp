@@ -5,6 +5,7 @@
 #ifndef PROBLEMSCPP_ACWING408_H
 #define PROBLEMSCPP_ACWING408_H
 
+#include "templates.h"
 #include <iostream>
 #include <map>
 #include <set>
@@ -308,6 +309,14 @@ namespace acwing {
 	namespace acwing3527 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * 3534. 矩阵幂
+	 */
+	namespace acwing3534 {
+		Matrix getMat(vector<Matrix *> &mat, int p);
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing3534
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

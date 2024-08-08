@@ -518,3 +518,42 @@ unsigned UnionFind::count() {
 	}
 	return us.size();
 }
+
+Matrix::Matrix(int n) { mat = vector<vector<int>>(n, vector<int>(n, 0)); }
+
+Matrix::Matrix(const Matrix &m) {
+	mat = vector<vector<int>>(m.mat.size(), vector<int>(m.mat.size(), 0));
+	for(int i = 0; i < m.mat.size(); i++) {
+		for(int j = 0; j < m.mat.size(); j++) {
+			mat[i][j] = m.mat[i][j];
+		}
+	}
+}
+
+Matrix Matrix::operator*(const Matrix &m) const {
+	Matrix ret(mat.size());
+	for(int i = 0; i < mat.size(); i++) {
+		for(int j = 0; j < mat.size(); j++) {
+			for(int k = 0; k < mat.size(); k++) {
+				ret.mat[i][j] += mat[i][k] * m.mat[k][j];
+			}
+		}
+	}
+	return ret;
+}
+
+vector<int> &Matrix::operator[](int i) {
+	return mat[i];
+}
+
+const vector<int> &Matrix::operator[](int i) const {
+	return mat[i];
+}
+
+Matrix Matrix::identity(int n) {
+	Matrix ret(n);
+	for(int i = 0; i < n; i++) {
+		ret.mat[i][i] = 1;
+	}
+	return ret;
+}
