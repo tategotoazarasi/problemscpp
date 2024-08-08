@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::jump_game_ii::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,18 +63,78 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dc/d57/a00194.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d1/d98/a00407.html">unique_paths</a></li><li class="navelem"><a class="el" href="../../d9/dfb/a02578.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d3/d2a/a00195.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d1/d98/a00407.html">jump_game_ii</a></li><li class="navelem"><a class="el" href="../../db/d39/a02575.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::unique_paths::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d9/de7/a02572.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::jump_game_ii::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../d9/dfb/a02578.html">leetcode::unique_paths::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d9/dfb/a02578.html#a30c24bdc68edd039c08e4c9522b8babc">uniquePaths</a>(int m, int n)</td><td class="entry"><a class="el" href="../../d9/dfb/a02578.html">leetcode::unique_paths::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ab1ee6e042a177b1b8781e11eca9893a6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d39/a02575.html#ab1ee6e042a177b1b8781e11eca9893a6">jump</a> (vector&lt; int &gt; &amp;nums)</td></tr>
+<tr class="separator:ab1ee6e042a177b1b8781e11eca9893a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l02442">2442</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="ab1ee6e042a177b1b8781e11eca9893a6" name="ab1ee6e042a177b1b8781e11eca9893a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1ee6e042a177b1b8781e11eca9893a6">&#9670;&nbsp;</a></span>jump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leetcode::jump_game_ii::Solution::jump </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nums</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l06548">6548</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l06548" name="l06548"></a><span class="lineno"> 6548</span>                                            {</div>
+<div class="line"><a id="l06549" name="l06549"></a><span class="lineno"> 6549</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = nums.size();</div>
+<div class="line"><a id="l06550" name="l06550"></a><span class="lineno"> 6550</span>            <span class="keywordtype">int</span> ans     = 0;</div>
+<div class="line"><a id="l06551" name="l06551"></a><span class="lineno"> 6551</span>            <span class="keywordtype">int</span> last    = n - 1;</div>
+<div class="line"><a id="l06552" name="l06552"></a><span class="lineno"> 6552</span>            <span class="keywordflow">while</span>(last != 0) {</div>
+<div class="line"><a id="l06553" name="l06553"></a><span class="lineno"> 6553</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l06554" name="l06554"></a><span class="lineno"> 6554</span>                    <span class="keywordflow">if</span>(i + nums[i] &gt;= last) {</div>
+<div class="line"><a id="l06555" name="l06555"></a><span class="lineno"> 6555</span>                        last = i;</div>
+<div class="line"><a id="l06556" name="l06556"></a><span class="lineno"> 6556</span>                        ans++;</div>
+<div class="line"><a id="l06557" name="l06557"></a><span class="lineno"> 6557</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l06558" name="l06558"></a><span class="lineno"> 6558</span>                    }</div>
+<div class="line"><a id="l06559" name="l06559"></a><span class="lineno"> 6559</span>                }</div>
+<div class="line"><a id="l06560" name="l06560"></a><span class="lineno"> 6560</span>            }</div>
+<div class="line"><a id="l06561" name="l06561"></a><span class="lineno"> 6561</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l06562" name="l06562"></a><span class="lineno"> 6562</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">被这些函数引用 <a class="el" href="../../dd/dad/a00005_source.html#l02992">leetcode::jump_game_ii::TEST()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../d9/d2e/a00056_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
