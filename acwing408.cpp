@@ -1508,21 +1508,6 @@ namespace acwing {
 		int main(istream &cin, ostream &cout) {
 			int n, p;
 			cin >> n >> p;
-			/*Matrix mat = Matrix(n);
-			for(int i = 0; i < n; i++) {
-				for(int j = 0; j < n; j++) {
-					cin >> mat[i][j];
-				}
-			}
-			for(int i = 1; i < p; i++) {
-				mat = mat * mat;
-			}
-			for(int i = 0; i < n; i++) {
-				for(int j = 0; j < n; j++) {
-					cout << mat[i][j] << ' ';
-				}
-				cout << endl;
-			}*/
 			vector<Matrix *> mats = vector<Matrix *>(p + 1, nullptr);
 			mats[1]               = new Matrix(n);
 			for(int i = 0; i < n; i++) {
@@ -1560,4 +1545,52 @@ namespace acwing {
 			return res;
 		}
 	}// namespace acwing3534
+
+	/**
+	 * @brief 3535. C翻转
+	 */
+	namespace acwing3535 {
+		int main(istream &cin, ostream &cout) {
+			int dir, len, x, y;
+
+			vector<vector<int>> mat = vector<vector<int>>(6, vector<int>(6, 0));
+			for(int i = 1; i <= 5; i++) {
+				for(int j = 1; j <= 5; j++) {
+					cin >> mat[i][j];
+				}
+			}
+			vector<vector<int>> ret = mat;
+			cin >> dir >> len >> x >> y;
+			int transform[2][2][2] = {
+			        {{0, 1},
+			         {-1, 0}},
+			        {{0, -1},
+			         {1, 0}},
+			};
+			dir--;
+			for(int i = x; i < x + len; i++) {
+				for(int j = y; j < y + len; j++) {
+					int i0 = i - x + 1;
+					int j0 = j - y + 1;
+					int i2 = transform[dir][0][0] * i0 + transform[dir][0][1] * j0;
+					int j2 = transform[dir][1][0] * i0 + transform[dir][1][1] * j0;
+					if(dir == 0) {
+						j2 += len + 1;
+					} else {
+						i2 += len + 1;
+					}
+					i2 += x - 1;
+					j2 += y - 1;
+					ret[i2][j2] = mat[i][j];
+				}
+			}
+			for(int i = 1; i <= 5; i++) {
+				for(int j = 1; j <= 5; j++) {
+					cout << ret[i][j] << ' ';
+				}
+				cout << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3535
 }// namespace acwing

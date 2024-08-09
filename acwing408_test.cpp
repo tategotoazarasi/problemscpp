@@ -1789,8 +1789,8 @@ namespace acwing {
 	}// namespace acwing3527
 
 	/**
- * 3534. 矩阵幂
- */
+     * @brief 3534. 矩阵幂
+     */
 	namespace acwing3534 {
 		TEST(acwing3534, case1) {
 			istringstream in("2 2\n"
@@ -1804,4 +1804,45 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3534
+
+	/**
+	 * @brief 3535. C翻转
+	 */
+	namespace acwing3535 {
+		TEST(acwing3535, case1) {
+			istringstream in("1 2 3 4 5\n"
+			                 "6 7 8 9 10\n"
+			                 "11 12 13 14 15\n"
+			                 "16 17 18 19 20\n"
+			                 "21 22 23 24 25\n"
+			                 "1 3 1 1");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("11 6 1 4 5 \n"
+			          "12 7 2 9 10 \n"
+			          "13 8 3 14 15 \n"
+			          "16 17 18 19 20 \n"
+			          "21 22 23 24 25 \n",
+			          ans);
+		}
+
+		TEST(acwing3535, case2) {
+			istringstream in("19 5 7 16 12\n"
+			                 "17 9 6 9 11\n"
+			                 "9 19 14 10 8\n"
+			                 "11 12 20 2 13\n"
+			                 "16 10 7 2 10\n"
+			                 "1 2 3 4");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("19 5 7 16 12 \n"
+			          "17 9 6 9 11 \n"
+			          "9 19 14 2 10 \n"
+			          "11 12 20 13 8 \n"
+			          "16 10 7 2 10 \n",
+			          ans);
+		}
+	}// namespace acwing3535
 }// namespace acwing

@@ -311,12 +311,19 @@ namespace acwing {
 	}
 
 	/**
-	 * 3534. 矩阵幂
+	 * @brief 3534. 矩阵幂
 	 */
 	namespace acwing3534 {
 		Matrix getMat(vector<Matrix *> &mat, int p);
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing3534
+
+	/**
+	 * @brief 3535. C翻转
+	 */
+	namespace acwing3535 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H
