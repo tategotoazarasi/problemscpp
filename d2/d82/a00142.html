@@ -82,7 +82,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6c/a01563.html">TrieNode</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd5/a01564.html">TrieNode</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -127,8 +127,8 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l06958" name="l06958"></a><span class="lineno"> 6958</span>                                              {</div>
 <div class="line"><a id="l06959" name="l06959"></a><span class="lineno"> 6959</span>            <span class="keywordtype">int</span> n;</div>
 <div class="line"><a id="l06960" name="l06960"></a><span class="lineno"> 6960</span>            cin &gt;&gt; n;</div>
-<div class="line"><a id="l06961" name="l06961"></a><span class="lineno"> 6961</span>            vector&lt;string&gt; <a class="code hl_variable" href="../../d3/d8e/a00647.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>(n);</div>
-<div class="line"><a id="l06962" name="l06962"></a><span class="lineno"> 6962</span>            <a class="code hl_struct" href="../../d8/d6c/a01563.html">TrieNode</a> tn;</div>
+<div class="line"><a id="l06961" name="l06961"></a><span class="lineno"> 6961</span>            vector&lt;string&gt; <a class="code hl_variable" href="../../dd/d1f/a00648.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>(n);</div>
+<div class="line"><a id="l06962" name="l06962"></a><span class="lineno"> 6962</span>            <a class="code hl_struct" href="../../de/dd5/a01564.html">TrieNode</a> tn;</div>
 <div class="line"><a id="l06963" name="l06963"></a><span class="lineno"> 6963</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
 <div class="line"><a id="l06964" name="l06964"></a><span class="lineno"> 6964</span>                <span class="keywordtype">unsigned</span> a;</div>
 <div class="line"><a id="l06965" name="l06965"></a><span class="lineno"> 6965</span>                cin &gt;&gt; a;</div>
@@ -137,12 +137,12 @@ $(function() {
 <div class="line"><a id="l06968" name="l06968"></a><span class="lineno"> 6968</span>                    oss &lt;&lt; ((a &amp; 1 &lt;&lt; i) != 0U ? <span class="charliteral">&#39;1&#39;</span> : <span class="charliteral">&#39;0&#39;</span>);</div>
 <div class="line"><a id="l06969" name="l06969"></a><span class="lineno"> 6969</span>                }</div>
 <div class="line"><a id="l06970" name="l06970"></a><span class="lineno"> 6970</span>                <span class="keywordtype">string</span> str = oss.str();</div>
-<div class="line"><a id="l06971" name="l06971"></a><span class="lineno"> 6971</span>                <a class="code hl_variable" href="../../d3/d8e/a00647.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[j]     = str;</div>
-<div class="line"><a id="l06972" name="l06972"></a><span class="lineno"> 6972</span>                tn.<a class="code hl_function" href="../../d8/d6c/a01563.html#ad302b8769f3f0096a77b51a6ee49014b">insert</a>(str, 0);</div>
+<div class="line"><a id="l06971" name="l06971"></a><span class="lineno"> 6971</span>                <a class="code hl_variable" href="../../dd/d1f/a00648.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[j]     = str;</div>
+<div class="line"><a id="l06972" name="l06972"></a><span class="lineno"> 6972</span>                tn.<a class="code hl_function" href="../../de/dd5/a01564.html#ad302b8769f3f0096a77b51a6ee49014b">insert</a>(str, 0);</div>
 <div class="line"><a id="l06973" name="l06973"></a><span class="lineno"> 6973</span>            }</div>
 <div class="line"><a id="l06974" name="l06974"></a><span class="lineno"> 6974</span>            <span class="keywordtype">unsigned</span> maximum = 0;</div>
-<div class="line"><a id="l06975" name="l06975"></a><span class="lineno"> 6975</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;str: <a class="code hl_variable" href="../../d3/d8e/a00647.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>) {</div>
-<div class="line"><a id="l06976" name="l06976"></a><span class="lineno"> 6976</span>                <span class="keyword">const</span> <a class="code hl_struct" href="../../df/d38/a03587.html">TrieNode</a> *current = &amp;tn;</div>
+<div class="line"><a id="l06975" name="l06975"></a><span class="lineno"> 6975</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;str: <a class="code hl_variable" href="../../dd/d1f/a00648.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>) {</div>
+<div class="line"><a id="l06976" name="l06976"></a><span class="lineno"> 6976</span>                <span class="keyword">const</span> <a class="code hl_struct" href="../../de/d51/a03588.html">TrieNode</a> *current = &amp;tn;</div>
 <div class="line"><a id="l06977" name="l06977"></a><span class="lineno"> 6977</span>                <span class="keywordtype">unsigned</span> ans            = 0;</div>
 <div class="line"><a id="l06978" name="l06978"></a><span class="lineno"> 6978</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt;= 30; i++) {</div>
 <div class="line"><a id="l06979" name="l06979"></a><span class="lineno"> 6979</span>                    ans &lt;&lt;= 1;</div>
@@ -158,10 +158,10 @@ $(function() {
 <div class="line"><a id="l06989" name="l06989"></a><span class="lineno"> 6989</span>            cout &lt;&lt; maximum;</div>
 <div class="line"><a id="l06990" name="l06990"></a><span class="lineno"> 6990</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l06991" name="l06991"></a><span class="lineno"> 6991</span>        }</div>
-<div class="ttc" id="aa00647_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d3/d8e/a00647.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d24/a00068_source.html#l05095">pat.cpp:5095</a></div></div>
-<div class="ttc" id="aa01563_html"><div class="ttname"><a href="../../d8/d6c/a01563.html">acwing::acwing143::TrieNode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dee/a00008_source.html#l02028">acwing.h:2028</a></div></div>
-<div class="ttc" id="aa01563_html_ad302b8769f3f0096a77b51a6ee49014b"><div class="ttname"><a href="../../d8/d6c/a01563.html#ad302b8769f3f0096a77b51a6ee49014b">acwing::acwing143::TrieNode::insert</a></div><div class="ttdeci">void insert(const string &amp;str, int i)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de1/a00065_source.html#l06993">acwing.cpp:6993</a></div></div>
-<div class="ttc" id="aa03587_html"><div class="ttname"><a href="../../df/d38/a03587.html">TrieNode</a></div><div class="ttdoc">字典树节点</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00009">templates.h:9</a></div></div>
+<div class="ttc" id="aa00648_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../dd/d1f/a00648.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d24/a00068_source.html#l05095">pat.cpp:5095</a></div></div>
+<div class="ttc" id="aa01564_html"><div class="ttname"><a href="../../de/dd5/a01564.html">acwing::acwing143::TrieNode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dee/a00008_source.html#l02028">acwing.h:2028</a></div></div>
+<div class="ttc" id="aa01564_html_ad302b8769f3f0096a77b51a6ee49014b"><div class="ttname"><a href="../../de/dd5/a01564.html#ad302b8769f3f0096a77b51a6ee49014b">acwing::acwing143::TrieNode::insert</a></div><div class="ttdeci">void insert(const string &amp;str, int i)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de1/a00065_source.html#l06993">acwing.cpp:6993</a></div></div>
+<div class="ttc" id="aa03588_html"><div class="ttname"><a href="../../de/d51/a03588.html">TrieNode</a></div><div class="ttdoc">字典树节点</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00009">templates.h:9</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../de/de1/a00065_source.html#l06993">acwing::acwing143::TrieNode::insert()</a>, <a class="el" href="../../d4/dee/a00008_source.html#l02029">acwing::acwing143::TrieNode::next</a> , 以及 <a class="el" href="../../da/d24/a00068_source.html#l05095">pat::a::a7_2::vec</a>.</p>
 
