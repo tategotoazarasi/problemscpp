@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hash_0',['hash',['../d3/d22/a01572.html',1,'acwing::acwing845']]],
-  ['huff_5ftree_1',['huff_tree',['../d4/d3f/a01600.html',1,'acwing::acwing149']]]
+  ['hash_0',['hash',['../d6/db5/a01573.html',1,'acwing::acwing845']]],
+  ['huff_5ftree_1',['huff_tree',['../d5/d75/a01605.html',1,'acwing::acwing149']]]
 ];
