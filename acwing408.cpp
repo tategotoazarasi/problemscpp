@@ -1593,4 +1593,81 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3535
+
+	/**
+	 * @brief 3874. 三元组的最小距离
+	 */
+	namespace acwing3874 {
+		struct point {
+			int64_t value;
+			int64_t group;
+			int64_t prev_index[4];
+		};
+		int main(istream &cin, ostream &cout) {
+			int64_t l, m, n;
+			cin >> l >> m >> n;
+			vector<int64_t> s1(l), s2(m), s3(n);
+			for(int i = 0; i < l; i++) {
+				cin >> s1[i];
+			}
+			for(int i = 0; i < m; i++) {
+				cin >> s2[i];
+			}
+			for(int i = 0; i < n; i++) {
+				cin >> s3[i];
+			}
+			vector<point> s(l + m + n);
+			int64_t p1 = 0, p2 = 0, p3 = 0, ps = 0, prev1 = -1, prev2 = -1, prev3 = -1;
+			while(p1 < l || p2 < m || p3 < n || ps < l + m + n) {
+				int64_t v1    = p1 < l ? s1[p1] : LONG_LONG_MAX;
+				int64_t v2    = p2 < m ? s2[p2] : LONG_LONG_MAX;
+				int64_t v3    = p3 < n ? s3[p3] : LONG_LONG_MAX;
+				int64_t min_v = min(v1, min(v2, v3));
+				if(min_v == v1) {
+					s[ps++] = {v1, 1, {-1, prev1, prev2, prev3}};
+					prev1   = ps - 1;
+					p1++;
+				} else if(min_v == v2) {
+					s[ps++] = {v2, 2, {-1, prev1, prev2, prev3}};
+					prev2   = ps - 1;
+					p2++;
+				} else {
+					s[ps++] = {v3, 3, {-1, prev1, prev2, prev3}};
+					prev3   = ps - 1;
+					p3++;
+				}
+			}
+			int64_t last1 = l + m + n, last2 = l + m + n, last3 = l + m + n;
+			int64_t ans = LONG_LONG_MAX;
+			for(int64_t i = l + m + n - 1; i >= 0; i--) {
+				if(s[i].group == 1) {
+					if(last2 != l + m + n && s[i].prev_index[3] != -1) {
+						ans = min(ans, 2 * (s[last2].value - s[s[i].prev_index[3]].value));
+					}
+					if(last3 != l + m + n && s[i].prev_index[2] != -1) {
+						ans = min(ans, 2 * (s[last3].value - s[s[i].prev_index[2]].value));
+					}
+					last1 = i;
+				} else if(s[i].group == 2) {
+					if(last1 != l + m + n && s[i].prev_index[3] != -1) {
+						ans = min(ans, 2 * (s[last1].value - s[s[i].prev_index[3]].value));
+					}
+					if(last3 != l + m + n && s[i].prev_index[1] != -1) {
+						ans = min(ans, 2 * (s[last3].value - s[s[i].prev_index[1]].value));
+					}
+					last2 = i;
+				} else {
+					if(last1 != l + m + n && s[i].prev_index[2] != -1) {
+						ans = min(ans, 2 * (s[last1].value - s[s[i].prev_index[2]].value));
+					}
+					if(last2 != l + m + n && s[i].prev_index[1] != -1) {
+						ans = min(ans, 2 * (s[last2].value - s[s[i].prev_index[1]].value));
+					}
+					last3 = i;
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace acwing3874
 }// namespace acwing

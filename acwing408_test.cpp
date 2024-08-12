@@ -1845,4 +1845,21 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3535
+
+	/**
+	 * @brief 3874. 三元组的最小距离
+	 */
+	namespace acwing3874 {
+		TEST(acwing3874, case2) {
+			istringstream in("3 4 5\n"
+			                 "-1 0 9\n"
+			                 "-25 -10 10 11\n"
+			                 "2 9 17 30 41");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2",
+			          ans);
+		}
+	}// namespace acwing3874
 }// namespace acwing

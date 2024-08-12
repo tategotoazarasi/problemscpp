@@ -324,6 +324,13 @@ namespace acwing {
 	namespace acwing3535 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3874. 三元组的最小距离
+	 */
+	namespace acwing3874 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H
