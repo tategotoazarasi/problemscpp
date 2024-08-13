@@ -1670,4 +1670,27 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3874
+
+	/**
+	 * @brief 52. 数组中出现次数超过一半的数字
+	 */
+	namespace acwing52 {
+		int moreThanHalfNum_Solution(vector<int> &nums) {
+			int cnt = 0;
+			int ans = 0;
+			for(auto num: nums) {
+				if(cnt == 0) {
+					ans = num;
+					cnt++;
+					continue;
+				}
+				if(num == ans) {
+					cnt++;
+				} else {
+					cnt--;
+				}
+			}
+			return ans;
+		}
+	}// namespace acwing52
 }// namespace acwing

@@ -1862,4 +1862,15 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3874
+
+	/**
+	 * @brief 52. 数组中出现次数超过一半的数字
+	 */
+	namespace acwing52 {
+		TEST(acwing52, case1) {
+			vector<int> input = {1, 2, 1, 1, 3};
+			moreThanHalfNum_Solution(input);
+			ASSERT_EQ(moreThanHalfNum_Solution(input), 1);
+		}
+	}// namespace acwing52
 }// namespace acwing

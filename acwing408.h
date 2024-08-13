@@ -331,6 +331,13 @@ namespace acwing {
 	namespace acwing3874 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 52. 数组中出现次数超过一半的数字
+	 */
+	namespace acwing52 {
+		int moreThanHalfNum_Solution(vector<int> &nums);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H
