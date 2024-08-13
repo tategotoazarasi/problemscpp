@@ -133,27 +133,27 @@ $(function() {
 <div class="line"><a id="l01452" name="l01452"></a><span class="lineno"> 1452</span>            };</div>
 <div class="line"><a id="l01453" name="l01453"></a><span class="lineno"> 1453</span>            <span class="keywordtype">int</span> n;</div>
 <div class="line"><a id="l01454" name="l01454"></a><span class="lineno"> 1454</span>            cin &gt;&gt; n;</div>
-<div class="line"><a id="l01455" name="l01455"></a><span class="lineno"> 1455</span>            vector&lt;vector&lt;int&gt;&gt; <a class="code hl_variable" href="../../dd/d6b/a00649.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[5] = {vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0))};</div>
+<div class="line"><a id="l01455" name="l01455"></a><span class="lineno"> 1455</span>            vector&lt;vector&lt;int&gt;&gt; <a class="code hl_variable" href="../../da/d36/a00650.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[5] = {vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0))};</div>
 <div class="line"><a id="l01456" name="l01456"></a><span class="lineno"> 1456</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l01457" name="l01457"></a><span class="lineno"> 1457</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l01458" name="l01458"></a><span class="lineno"> 1458</span>                    cin &gt;&gt; <a class="code hl_variable" href="../../dd/d6b/a00649.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
+<div class="line"><a id="l01458" name="l01458"></a><span class="lineno"> 1458</span>                    cin &gt;&gt; <a class="code hl_variable" href="../../da/d36/a00650.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
 <div class="line"><a id="l01459" name="l01459"></a><span class="lineno"> 1459</span> </div>
 <div class="line"><a id="l01460" name="l01460"></a><span class="lineno"> 1460</span>                    <span class="keywordtype">int</span> i2         = matrix[0][0][0] * i + matrix[0][0][1] * j;</div>
 <div class="line"><a id="l01461" name="l01461"></a><span class="lineno"> 1461</span>                    <span class="keywordtype">int</span> j2         = matrix[0][1][0] * i + matrix[0][1][1] * j + n - 1;</div>
-<div class="line"><a id="l01462" name="l01462"></a><span class="lineno"> 1462</span>                    <a class="code hl_variable" href="../../dd/d6b/a00649.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[1][i2][j2] = <a class="code hl_variable" href="../../dd/d6b/a00649.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
+<div class="line"><a id="l01462" name="l01462"></a><span class="lineno"> 1462</span>                    <a class="code hl_variable" href="../../da/d36/a00650.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[1][i2][j2] = <a class="code hl_variable" href="../../da/d36/a00650.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
 <div class="line"><a id="l01463" name="l01463"></a><span class="lineno"> 1463</span> </div>
 <div class="line"><a id="l01464" name="l01464"></a><span class="lineno"> 1464</span>                    <span class="keywordtype">int</span> i3         = matrix[1][0][0] * i + matrix[1][0][1] * j + n - 1;</div>
 <div class="line"><a id="l01465" name="l01465"></a><span class="lineno"> 1465</span>                    <span class="keywordtype">int</span> j3         = matrix[1][1][0] * i + matrix[1][1][1] * j + n - 1;</div>
-<div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>                    <a class="code hl_variable" href="../../dd/d6b/a00649.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[2][i3][j3] = <a class="code hl_variable" href="../../dd/d6b/a00649.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
+<div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>                    <a class="code hl_variable" href="../../da/d36/a00650.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[2][i3][j3] = <a class="code hl_variable" href="../../da/d36/a00650.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
 <div class="line"><a id="l01467" name="l01467"></a><span class="lineno"> 1467</span> </div>
 <div class="line"><a id="l01468" name="l01468"></a><span class="lineno"> 1468</span>                    <span class="keywordtype">int</span> i4         = matrix[2][0][0] * i + matrix[2][0][1] * j + n - 1;</div>
 <div class="line"><a id="l01469" name="l01469"></a><span class="lineno"> 1469</span>                    <span class="keywordtype">int</span> j4         = matrix[2][1][0] * i + matrix[2][1][1] * j;</div>
-<div class="line"><a id="l01470" name="l01470"></a><span class="lineno"> 1470</span>                    <a class="code hl_variable" href="../../dd/d6b/a00649.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[3][i4][j4] = <a class="code hl_variable" href="../../dd/d6b/a00649.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
+<div class="line"><a id="l01470" name="l01470"></a><span class="lineno"> 1470</span>                    <a class="code hl_variable" href="../../da/d36/a00650.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[3][i4][j4] = <a class="code hl_variable" href="../../da/d36/a00650.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
 <div class="line"><a id="l01471" name="l01471"></a><span class="lineno"> 1471</span>                }</div>
 <div class="line"><a id="l01472" name="l01472"></a><span class="lineno"> 1472</span>            }</div>
 <div class="line"><a id="l01473" name="l01473"></a><span class="lineno"> 1473</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l01474" name="l01474"></a><span class="lineno"> 1474</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l01475" name="l01475"></a><span class="lineno"> 1475</span>                    cin &gt;&gt; <a class="code hl_variable" href="../../dd/d6b/a00649.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[4][i][j];</div>
+<div class="line"><a id="l01475" name="l01475"></a><span class="lineno"> 1475</span>                    cin &gt;&gt; <a class="code hl_variable" href="../../da/d36/a00650.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[4][i][j];</div>
 <div class="line"><a id="l01476" name="l01476"></a><span class="lineno"> 1476</span>                }</div>
 <div class="line"><a id="l01477" name="l01477"></a><span class="lineno"> 1477</span>            }</div>
 <div class="line"><a id="l01478" name="l01478"></a><span class="lineno"> 1478</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
@@ -161,7 +161,7 @@ $(function() {
 <div class="line"><a id="l01480" name="l01480"></a><span class="lineno"> 1480</span>                flag = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l01481" name="l01481"></a><span class="lineno"> 1481</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; n; i++) {</div>
 <div class="line"><a id="l01482" name="l01482"></a><span class="lineno"> 1482</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><a id="l01483" name="l01483"></a><span class="lineno"> 1483</span>                        <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../dd/d6b/a00649.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[k][i][j] != <a class="code hl_variable" href="../../dd/d6b/a00649.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[4][i][j]) {</div>
+<div class="line"><a id="l01483" name="l01483"></a><span class="lineno"> 1483</span>                        <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../da/d36/a00650.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[k][i][j] != <a class="code hl_variable" href="../../da/d36/a00650.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[4][i][j]) {</div>
 <div class="line"><a id="l01484" name="l01484"></a><span class="lineno"> 1484</span>                            flag = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l01485" name="l01485"></a><span class="lineno"> 1485</span>                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l01486" name="l01486"></a><span class="lineno"> 1486</span>                        }</div>
@@ -180,7 +180,7 @@ $(function() {
 <div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span>            }</div>
 <div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l01501" name="l01501"></a><span class="lineno"> 1501</span>        }</div>
-<div class="ttc" id="aa00649_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../dd/d6b/a00649.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d24/a00068_source.html#l05095">pat.cpp:5095</a></div></div>
+<div class="ttc" id="aa00650_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../da/d36/a00650.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d24/a00068_source.html#l05095">pat.cpp:5095</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../da/d24/a00068_source.html#l05095">pat::a::a7_2::vec</a>.</p>
 
