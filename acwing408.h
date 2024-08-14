@@ -338,6 +338,13 @@ namespace acwing {
 	namespace acwing52 {
 		int moreThanHalfNum_Solution(vector<int> &nums);
 	}
+
+	/**
+	 * @brief 3392. 递推数列
+	 */
+	namespace acwing3392 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

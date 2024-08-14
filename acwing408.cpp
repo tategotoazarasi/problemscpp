@@ -1693,4 +1693,21 @@ namespace acwing {
 			return ans;
 		}
 	}// namespace acwing52
+
+	/**
+	 * @brief 3392. 递推数列
+	 */
+	namespace acwing3392 {
+		int main(istream &cin, ostream &cout) {
+			const int limit = 10000;
+			int a[3]        = {};
+			int p, q, k;
+			cin >> a[0] >> a[1] >> p >> q >> k;
+			for(int i = 2; i <= k; i++) {
+				a[i % 3] = ((p * a[(i - 1 + 3) % 3]) % limit + (q * a[(i - 2 + 3) % 3]) % limit) % limit;
+			}
+			cout << a[k % 3] % limit;
+			return 0;
+		}
+	}// namespace acwing3392
 }// namespace acwing

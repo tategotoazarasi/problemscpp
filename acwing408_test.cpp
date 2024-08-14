@@ -1873,4 +1873,25 @@ namespace acwing {
 			ASSERT_EQ(moreThanHalfNum_Solution(input), 1);
 		}
 	}// namespace acwing52
+
+	/**
+	 * @brief 3392. 递推数列
+	 */
+	namespace acwing3392 {
+		TEST(acwing3392, case1) {
+			istringstream in("20 1 1 14 5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("8359", ans);
+		}
+
+		TEST(acwing3392, case2) {
+			istringstream in("1 10000 1 1 1");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("0", ans);
+		}
+	}// namespace acwing3392
 }// namespace acwing
