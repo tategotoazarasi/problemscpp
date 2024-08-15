@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::alien_dictionary::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,18 +63,127 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d8/d72/a00199.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d6/d60/a00491.html">single_number_iii</a></li><li class="navelem"><a class="el" href="../../de/d87/a02939.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d3/db1/a00200.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d6/d60/a00491.html">alien_dictionary</a></li><li class="navelem"><a class="el" href="../../d0/d08/a02936.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::single_number_iii::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../df/d5c/a02933.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::alien_dictionary::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../de/d87/a02939.html">leetcode::single_number_iii::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../de/d87/a02939.html#aba3051d2bfca3172af7769f228c0e5fd">singleNumber</a>(vector&lt; int &gt; &amp;nums)</td><td class="entry"><a class="el" href="../../de/d87/a02939.html">leetcode::single_number_iii::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a0656d31337dbb55a51ac7475ec2313cb"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d08/a02936.html#a0656d31337dbb55a51ac7475ec2313cb">alienOrder</a> (vector&lt; string &gt; &amp;words)</td></tr>
+<tr class="separator:a0656d31337dbb55a51ac7475ec2313cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l03213">3213</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a0656d31337dbb55a51ac7475ec2313cb" name="a0656d31337dbb55a51ac7475ec2313cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0656d31337dbb55a51ac7475ec2313cb">&#9670;&nbsp;</a></span>alienOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string leetcode::alien_dictionary::Solution::alienOrder </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>words</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l09154">9154</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l09154" name="l09154"></a><span class="lineno"> 9154</span>                                                         {</div>
+<div class="line"><a id="l09155" name="l09155"></a><span class="lineno"> 9155</span>            unordered_map&lt;char, unordered_set&lt;char&gt;&gt; g;</div>
+<div class="line"><a id="l09156" name="l09156"></a><span class="lineno"> 9156</span>            unordered_map&lt;char, int&gt; in;</div>
+<div class="line"><a id="l09157" name="l09157"></a><span class="lineno"> 9157</span>            ostringstream oss;</div>
+<div class="line"><a id="l09158" name="l09158"></a><span class="lineno"> 9158</span>            unordered_set&lt;char&gt; charset;</div>
+<div class="line"><a id="l09159" name="l09159"></a><span class="lineno"> 9159</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;word: words) {</div>
+<div class="line"><a id="l09160" name="l09160"></a><span class="lineno"> 9160</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;ch: word) {</div>
+<div class="line"><a id="l09161" name="l09161"></a><span class="lineno"> 9161</span>                    charset.insert(ch);</div>
+<div class="line"><a id="l09162" name="l09162"></a><span class="lineno"> 9162</span>                }</div>
+<div class="line"><a id="l09163" name="l09163"></a><span class="lineno"> 9163</span>            }</div>
+<div class="line"><a id="l09164" name="l09164"></a><span class="lineno"> 9164</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;ch: charset) {</div>
+<div class="line"><a id="l09165" name="l09165"></a><span class="lineno"> 9165</span>                g[ch]  = unordered_set&lt;char&gt;();</div>
+<div class="line"><a id="l09166" name="l09166"></a><span class="lineno"> 9166</span>                in[ch] = 0;</div>
+<div class="line"><a id="l09167" name="l09167"></a><span class="lineno"> 9167</span>            }</div>
+<div class="line"><a id="l09168" name="l09168"></a><span class="lineno"> 9168</span>            <span class="keywordtype">int</span> max_len = 0;</div>
+<div class="line"><a id="l09169" name="l09169"></a><span class="lineno"> 9169</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;word: words) {</div>
+<div class="line"><a id="l09170" name="l09170"></a><span class="lineno"> 9170</span>                max_len = max(max_len, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(word.length()));</div>
+<div class="line"><a id="l09171" name="l09171"></a><span class="lineno"> 9171</span>            }</div>
+<div class="line"><a id="l09172" name="l09172"></a><span class="lineno"> 9172</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; max_len; i++) {</div>
+<div class="line"><a id="l09173" name="l09173"></a><span class="lineno"> 9173</span>                unordered_map&lt;string, vector&lt;string&gt;&gt; um;</div>
+<div class="line"><a id="l09174" name="l09174"></a><span class="lineno"> 9174</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;word: words) {</div>
+<div class="line"><a id="l09175" name="l09175"></a><span class="lineno"> 9175</span>                    <span class="keywordflow">if</span>(word.length() &gt;= i) {</div>
+<div class="line"><a id="l09176" name="l09176"></a><span class="lineno"> 9176</span>                        um[i &gt; 0 ? word.substr(0, i) : <span class="stringliteral">&quot;&quot;</span>].emplace_back(word);</div>
+<div class="line"><a id="l09177" name="l09177"></a><span class="lineno"> 9177</span>                    }</div>
+<div class="line"><a id="l09178" name="l09178"></a><span class="lineno"> 9178</span>                }</div>
+<div class="line"><a id="l09179" name="l09179"></a><span class="lineno"> 9179</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[pred, section]: um) {</div>
+<div class="line"><a id="l09180" name="l09180"></a><span class="lineno"> 9180</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0, k = 1; k &lt; section.size(); j++, k++) {</div>
+<div class="line"><a id="l09181" name="l09181"></a><span class="lineno"> 9181</span>                        <span class="keywordflow">if</span>(i &lt; section[j].length() &amp;&amp; i &lt; section[k].length()) {</div>
+<div class="line"><a id="l09182" name="l09182"></a><span class="lineno"> 9182</span>                            <span class="keywordflow">if</span>(section[j][i] != section[k][i]) {</div>
+<div class="line"><a id="l09183" name="l09183"></a><span class="lineno"> 9183</span>                                g[section[j][i]].insert(section[k][i]);</div>
+<div class="line"><a id="l09184" name="l09184"></a><span class="lineno"> 9184</span>                            }</div>
+<div class="line"><a id="l09185" name="l09185"></a><span class="lineno"> 9185</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(i &lt; section[j].length()) {</div>
+<div class="line"><a id="l09186" name="l09186"></a><span class="lineno"> 9186</span>                            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l09187" name="l09187"></a><span class="lineno"> 9187</span>                        }</div>
+<div class="line"><a id="l09188" name="l09188"></a><span class="lineno"> 9188</span>                    }</div>
+<div class="line"><a id="l09189" name="l09189"></a><span class="lineno"> 9189</span>                }</div>
+<div class="line"><a id="l09190" name="l09190"></a><span class="lineno"> 9190</span>            }</div>
+<div class="line"><a id="l09191" name="l09191"></a><span class="lineno"> 9191</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[k, section]: g) {</div>
+<div class="line"><a id="l09192" name="l09192"></a><span class="lineno"> 9192</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;n: section) {</div>
+<div class="line"><a id="l09193" name="l09193"></a><span class="lineno"> 9193</span>                    in[n]++;</div>
+<div class="line"><a id="l09194" name="l09194"></a><span class="lineno"> 9194</span>                }</div>
+<div class="line"><a id="l09195" name="l09195"></a><span class="lineno"> 9195</span>            }</div>
+<div class="line"><a id="l09196" name="l09196"></a><span class="lineno"> 9196</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l09197" name="l09197"></a><span class="lineno"> 9197</span>            unordered_set&lt;char&gt; vis;</div>
+<div class="line"><a id="l09198" name="l09198"></a><span class="lineno"> 9198</span>            <span class="keywordflow">while</span>(flag) {</div>
+<div class="line"><a id="l09199" name="l09199"></a><span class="lineno"> 9199</span>                flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l09200" name="l09200"></a><span class="lineno"> 9200</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[ch, n]: in) {</div>
+<div class="line"><a id="l09201" name="l09201"></a><span class="lineno"> 9201</span>                    <span class="keywordflow">if</span>(n == 0 &amp;&amp; !vis.contains(ch)) {</div>
+<div class="line"><a id="l09202" name="l09202"></a><span class="lineno"> 9202</span>                        flag = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l09203" name="l09203"></a><span class="lineno"> 9203</span>                        vis.insert(ch);</div>
+<div class="line"><a id="l09204" name="l09204"></a><span class="lineno"> 9204</span>                        oss &lt;&lt; ch;</div>
+<div class="line"><a id="l09205" name="l09205"></a><span class="lineno"> 9205</span>                        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;nc: g[ch]) {</div>
+<div class="line"><a id="l09206" name="l09206"></a><span class="lineno"> 9206</span>                            in[nc]--;</div>
+<div class="line"><a id="l09207" name="l09207"></a><span class="lineno"> 9207</span>                        }</div>
+<div class="line"><a id="l09208" name="l09208"></a><span class="lineno"> 9208</span>                    }</div>
+<div class="line"><a id="l09209" name="l09209"></a><span class="lineno"> 9209</span>                }</div>
+<div class="line"><a id="l09210" name="l09210"></a><span class="lineno"> 9210</span>            }</div>
+<div class="line"><a id="l09211" name="l09211"></a><span class="lineno"> 9211</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[ch, n]: in) {</div>
+<div class="line"><a id="l09212" name="l09212"></a><span class="lineno"> 9212</span>                <span class="keywordflow">if</span>(n != 0) {</div>
+<div class="line"><a id="l09213" name="l09213"></a><span class="lineno"> 9213</span>                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l09214" name="l09214"></a><span class="lineno"> 9214</span>                }</div>
+<div class="line"><a id="l09215" name="l09215"></a><span class="lineno"> 9215</span>            }</div>
+<div class="line"><a id="l09216" name="l09216"></a><span class="lineno"> 9216</span>            <span class="keywordflow">return</span> oss.str();</div>
+<div class="line"><a id="l09217" name="l09217"></a><span class="lineno"> 9217</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">被这些函数引用 <a class="el" href="../../dd/dad/a00005_source.html#l04265">leetcode::alien_dictionary::TEST()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../d9/d2e/a00056_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
