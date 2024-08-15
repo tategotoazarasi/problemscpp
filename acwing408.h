@@ -345,6 +345,13 @@ namespace acwing {
 	namespace acwing3392 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3433. 吃糖果
+	 */
+	namespace acwing3433 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

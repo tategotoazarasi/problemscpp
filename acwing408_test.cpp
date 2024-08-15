@@ -1894,4 +1894,17 @@ namespace acwing {
 			ASSERT_EQ("0", ans);
 		}
 	}// namespace acwing3392
+
+	/**
+	 * @brief 3433. 吃糖果
+	 */
+	namespace acwing3433 {
+		TEST(acwing3392, case2) {
+			istringstream in("4");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("5", ans);
+		}
+	}// namespace acwing3433
 }// namespace acwing

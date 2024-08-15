@@ -1710,4 +1710,31 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3392
+
+	/**
+	 * @brief 3433. 吃糖果
+	 */
+	namespace acwing3433 {
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			vector<unordered_set<string>> vec(n + 1, unordered_set<string>());
+			vec[1].insert("1");
+			vec[2].insert("2");
+			vec[2].insert("11");
+			for(int i = 3; i <= n; i++) {
+				for(int j = 1; j < n; j++) {
+					auto set1 = vec[j];
+					auto set2 = vec[i - j];
+					for(const auto &s1: set1) {
+						for(const auto &s2: set2) {
+							vec[i].insert(s1 + s2);
+						}
+					}
+				}
+			}
+			cout << vec[n].size();
+			return 0;
+		}
+	}// namespace acwing3433
 }// namespace acwing
