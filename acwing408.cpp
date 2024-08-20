@@ -1737,4 +1737,64 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3433
+
+	/**
+	 * @brief 3441. 重复者
+	 */
+	namespace acwing3441 {
+		void draw(const vector<vector<char>> &g, int n, int level, vector<vector<char>> &canvas, int x, int y, int space) {
+			if(level > 1) {
+				space /= n;
+				for(int i = 0; i < n; i++) {
+					for(int j = 0; j < n; j++) {
+						if(!isspace(g[i][j])) {
+							draw(g, n, level - 1, canvas, x + i * space, y + j * space, space);
+						}
+					}
+				}
+				return;
+			}
+
+			for(int i = 0; i < n; i++) {
+				for(int j = 0; j < n; j++) {
+					canvas[x + i][y + j] = g[i][j];
+				}
+			}
+		}
+
+		int main(istream &cin, ostream &cout) {
+			int n;
+			while(cin >> n) {
+				int q;
+				if(n == 0) {
+					break;
+				}
+				vector<vector<char>> graph = vector<vector<char>>(n, vector<char>(n, ' '));
+				for(int i = 0; i < n; i++) {
+					for(int j = 0; j < n; j++) {
+						char ch = cin.get();
+						if(ch != '\n') {
+							graph[i][j] = ch;
+						} else {
+							j--;
+						}
+					}
+				}
+				cin >> q;
+				int canvas_size = 1;
+				for(int i = 0; i < q; i++) {
+					canvas_size *= n;
+				}
+				vector<vector<char>> canvas = vector<vector<char>>(canvas_size, vector<char>(canvas_size, ' '));
+				draw(graph, n, q, canvas, 0, 0, canvas_size);
+				for(int i = 0; i < canvas_size; i++) {
+					for(int j = 0; j < canvas_size; j++) {
+						cout << canvas[i][j];
+					}
+					cout << endl;
+				}
+			}
+			return 0;
+		}
+	}// namespace acwing3441
 }// namespace acwing

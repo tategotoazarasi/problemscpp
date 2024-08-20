@@ -1907,4 +1907,79 @@ namespace acwing {
 			ASSERT_EQ("5", ans);
 		}
 	}// namespace acwing3433
+
+	/**
+	 * @brief 3441. 重复者
+	 */
+	namespace acwing3441 {
+		TEST(acwing3441, case1) {
+			istringstream in("3\n"
+			                 "# #\n"
+			                 " # \n"
+			                 "# #\n"
+			                 "1\n"
+			                 "3\n"
+			                 "# #\n"
+			                 " # \n"
+			                 "# #\n"
+			                 "3\n"
+			                 "4\n"
+			                 " OO \n"
+			                 "O  O\n"
+			                 "O  O\n"
+			                 " OO \n"
+			                 "2\n"
+			                 "0");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("# #\n"
+			          " # \n"
+			          "# #\n"
+			          "# #   # #         # #   # #\n"
+			          " #     #           #     # \n"
+			          "# #   # #         # #   # #\n"
+			          "   # #               # #   \n"
+			          "    #                 #    \n"
+			          "   # #               # #   \n"
+			          "# #   # #         # #   # #\n"
+			          " #     #           #     # \n"
+			          "# #   # #         # #   # #\n"
+			          "         # #   # #         \n"
+			          "          #     #          \n"
+			          "         # #   # #         \n"
+			          "            # #            \n"
+			          "             #             \n"
+			          "            # #            \n"
+			          "         # #   # #         \n"
+			          "          #     #          \n"
+			          "         # #   # #         \n"
+			          "# #   # #         # #   # #\n"
+			          " #     #           #     # \n"
+			          "# #   # #         # #   # #\n"
+			          "   # #               # #   \n"
+			          "    #                 #    \n"
+			          "   # #               # #   \n"
+			          "# #   # #         # #   # #\n"
+			          " #     #           #     # \n"
+			          "# #   # #         # #   # #\n"
+			          "     OO  OO     \n"
+			          "    O  OO  O    \n"
+			          "    O  OO  O    \n"
+			          "     OO  OO     \n"
+			          " OO          OO \n"
+			          "O  O        O  O\n"
+			          "O  O        O  O\n"
+			          " OO          OO \n"
+			          " OO          OO \n"
+			          "O  O        O  O\n"
+			          "O  O        O  O\n"
+			          " OO          OO \n"
+			          "     OO  OO     \n"
+			          "    O  OO  O    \n"
+			          "    O  OO  O    \n"
+			          "     OO  OO     \n",
+			          ans);
+		}
+	}// namespace acwing3441
 }// namespace acwing

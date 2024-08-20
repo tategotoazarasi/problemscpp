@@ -107,7 +107,7 @@ namespace acwing {
 			u_int64_t val;
 			u_int64_t height;
 			vector<huff_tree *> children;
-			huff_tree(u_int64_t val, u_int64_t height, u_int64_t k): val(val), height(height), children(k, nullptr){};
+			huff_tree(u_int64_t val, u_int64_t height, u_int64_t k): val(val), height(height), children(k, nullptr) {};
 		};
 		struct Compare {
 			bool operator()(huff_tree *const &a, huff_tree *const &b);
@@ -352,6 +352,14 @@ namespace acwing {
 	namespace acwing3433 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3441. 重复者
+	 */
+	namespace acwing3441 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+		void draw(const vector<vector<char>> &g, int n, int level, vector<vector<char>> &canvas, int x, int y, int space);
+	}// namespace acwing3441
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H
