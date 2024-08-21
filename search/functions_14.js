@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['uncommonfromsentences_0',['uncommonFromSentences',['../da/d6c/a01921.html#a08fdf78e4632ef77df66870a5e2431e4',1,'leetcode::uncommon_words_from_two_sentences::Solution']]],
-  ['undergroundsystem_1',['UndergroundSystem',['../dd/d08/a02957.html#a5d1dbd86bcb0807dd4a54c4d26a4c3a7',1,'leetcode::design_underground_system::UndergroundSystem']]],
-  ['unfix_2',['unfix',['../d0/dc1/a01993.html#af13991a774feaa2f4ec38a57d7ec9a12',1,'leetcode::design_bitset::Bitset']]],
-  ['unionfind_3',['UnionFind',['../d6/db5/a01573.html#aab2b783c6c2b20c187844788e3f3dd0a',1,'acwing::acwing240::UnionFind::UnionFind()'],['../d7/d6e/a02273.html#a9dccde679f6519a68ade5c3ac62b2302',1,'leetcode::max_area_of_island::UnionFind::UnionFind()'],['../d8/d13/a03609.html#aab2b783c6c2b20c187844788e3f3dd0a',1,'UnionFind::UnionFind()']]],
-  ['uniquepaths_4',['uniquePaths',['../de/d48/a02589.html#a30c24bdc68edd039c08e4c9522b8babc',1,'leetcode::unique_paths::Solution']]],
-  ['unite_5',['unite',['../d8/d13/a03609.html#a36a27b936dbdeb53749e32a71554c3ed',1,'UnionFind']]],
-  ['update_6',['update',['../d7/d9c/a01885.html#a1feba060722fd95e34620fbb73e31417',1,'leetcode::stock_price_fluctuation::StockPrice::update()'],['../d4/dbb/a02097.html#a803d0329b5e1a8ba43e5ff4f2d9f7994',1,'leetcode::count_good_triplets_in_an_array::FenwickTree::update()'],['../dd/d26/a02445.html#ae824cd22aeae3b87de5d4f4ba685e472',1,'leetcode::range_sum_query_mutable::NumArray::update()']]],
-  ['update_7',['Update',['../dc/da3/a02853.html#ae223743769f404044db4485c2aa0e875',1,'leetcode::count_of_smaller_numbers_after_self::Solution']]]
+  ['uncommonfromsentences_0',['uncommonFromSentences',['../d2/db9/a01926.html#a08fdf78e4632ef77df66870a5e2431e4',1,'leetcode::uncommon_words_from_two_sentences::Solution']]],
+  ['undergroundsystem_1',['UndergroundSystem',['../d6/d0c/a02962.html#a5d1dbd86bcb0807dd4a54c4d26a4c3a7',1,'leetcode::design_underground_system::UndergroundSystem']]],
+  ['unfix_2',['unfix',['../d5/d2e/a01998.html#af13991a774feaa2f4ec38a57d7ec9a12',1,'leetcode::design_bitset::Bitset']]],
+  ['unionfind_3',['UnionFind',['../d9/df5/a01574.html#aab2b783c6c2b20c187844788e3f3dd0a',1,'acwing::acwing240::UnionFind::UnionFind()'],['../d9/dba/a02278.html#a9dccde679f6519a68ade5c3ac62b2302',1,'leetcode::max_area_of_island::UnionFind::UnionFind()'],['../d3/df2/a03614.html#aab2b783c6c2b20c187844788e3f3dd0a',1,'UnionFind::UnionFind()']]],
+  ['uniquepaths_4',['uniquePaths',['../db/d8b/a02594.html#a30c24bdc68edd039c08e4c9522b8babc',1,'leetcode::unique_paths::Solution']]],
+  ['unite_5',['unite',['../d3/df2/a03614.html#a36a27b936dbdeb53749e32a71554c3ed',1,'UnionFind']]],
+  ['update_6',['update',['../d0/d45/a01890.html#a1feba060722fd95e34620fbb73e31417',1,'leetcode::stock_price_fluctuation::StockPrice::update()'],['../d0/dfe/a02102.html#a803d0329b5e1a8ba43e5ff4f2d9f7994',1,'leetcode::count_good_triplets_in_an_array::FenwickTree::update()'],['../d8/db7/a02450.html#ae824cd22aeae3b87de5d4f4ba685e472',1,'leetcode::range_sum_query_mutable::NumArray::update()']]],
+  ['update_7',['Update',['../d7/de8/a02858.html#ae223743769f404044db4485c2aa0e875',1,'leetcode::count_of_smaller_numbers_after_self::Solution']]]
 ];
