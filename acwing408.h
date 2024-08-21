@@ -360,6 +360,17 @@ namespace acwing {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 		void draw(const vector<vector<char>> &g, int n, int level, vector<vector<char>> &canvas, int x, int y, int space);
 	}// namespace acwing3441
+
+	/**
+	 * @brief 2. 01背包问题
+	 */
+	namespace acwing2 {
+		struct status {
+			int w;
+			vector<bool> free;
+		};
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing2
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

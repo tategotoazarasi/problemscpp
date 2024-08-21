@@ -1982,4 +1982,21 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3441
+
+	/**
+	 * @brief 2. 01背包问题
+	 */
+	namespace acwing2 {
+		TEST(acwing2, case1) {
+			istringstream in("4 5\n"
+			                 "1 2\n"
+			                 "2 4\n"
+			                 "3 4\n"
+			                 "4 5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("8", ans);
+		}
+	}// namespace acwing2
 }// namespace acwing

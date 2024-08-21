@@ -1797,4 +1797,37 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3441
+
+	/**
+	 * @brief 2. 01背包问题
+	 */
+	namespace acwing2 {
+		int main(istream &cin, ostream &cout) {
+			int N, V;
+			cin >> N >> V;
+			vector<int> v     = vector<int>(N);
+			vector<int> w     = vector<int>(N);
+			vector<status> dp = vector<status>(V + 1, status{
+			                                                  .w    = 0,
+			                                                  .free = vector<bool>(N, true)});
+			for(int i = 0; i < N; i++) {
+				cin >> v[i] >> w[i];
+			}
+			for(int i = 0; i <= V; i++) {
+				for(int j = 0; j < N; j++) {
+					if(dp[i].free[j]) {
+						int next_w = dp[i].w + w[j];
+						int next_v = i + v[j];
+						if(next_v <= V && next_w > dp[next_v].w) {
+							dp[next_v].w       = next_w;
+							dp[next_v].free    = vector<bool>(dp[i].free);
+							dp[next_v].free[j] = false;
+						}
+					}
+				}
+			}
+			cout << dp[V].w;
+			return 0;
+		}
+	}// namespace acwing2
 }// namespace acwing
