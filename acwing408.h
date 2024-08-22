@@ -371,6 +371,17 @@ namespace acwing {
 		};
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing2
+
+	/**
+	 * @brief 3445. 点菜问题
+	 */
+	namespace acwing3445 {
+		struct status {
+			int v;
+			vector<bool> free;
+		};
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing3445
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

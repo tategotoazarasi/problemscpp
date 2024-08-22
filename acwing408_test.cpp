@@ -1999,4 +1999,49 @@ namespace acwing {
 			ASSERT_EQ("8", ans);
 		}
 	}// namespace acwing2
+
+	/**
+	 * @brief 3445. 点菜问题
+	 */
+	namespace acwing3445 {
+		TEST(acwing3445, case1) {
+			istringstream in("90 4\n"
+			                 "20 25\n"
+			                 "30 20\n"
+			                 "40 50\n"
+			                 "10 18");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("95", ans);
+		}
+
+		TEST(acwing3445, case2) {
+			istringstream in("300 20\n"
+			                 "19 24\n"
+			                 "26 3\n"
+			                 "2 5\n"
+			                 "17 8\n"
+			                 "13 17\n"
+			                 "10 9\n"
+			                 "19 9\n"
+			                 "30 4\n"
+			                 "23 24\n"
+			                 "9 9\n"
+			                 "5 22\n"
+			                 "10 15\n"
+			                 "9 10\n"
+			                 "15 29\n"
+			                 "20 14\n"
+			                 "8 12\n"
+			                 "4 23\n"
+			                 "24 22\n"
+			                 "16 13\n"
+			                 "5 26");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("298", ans);
+		}
+	}// namespace acwing3445
 }// namespace acwing

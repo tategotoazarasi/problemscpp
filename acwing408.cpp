@@ -1830,4 +1830,39 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing2
+
+	/**
+	 * @brief 3445. 点菜问题
+	 */
+	namespace acwing3445 {
+		int main(istream &cin, ostream &cout) {
+			int c, n;
+			cin >> c >> n;
+			vector<int> p = vector<int>(n);
+			vector<int> v = vector<int>(n);
+			for(int i = 0; i < n; i++) {
+				cin >> p[i] >> v[i];
+			}
+			vector<status> dp = vector<status>(c + 1, status{
+			                                                  .v    = 0,
+			                                                  .free = vector<bool>(n, true)});
+			int max_v         = 0;
+			for(int i = 0; i <= c; i++) {
+				for(int j = 0; j < n; j++) {
+					max_v = max(max_v, dp[i].v);
+					if(dp[i].free[j]) {
+						int next_v = dp[i].v + v[j];
+						int next_c = i + p[j];
+						if(next_c <= c && next_v > dp[next_c].v) {
+							dp[next_c].v       = next_v;
+							dp[next_c].free    = vector<bool>(dp[i].free);
+							dp[next_c].free[j] = false;
+						}
+					}
+				}
+			}
+			cout << max(max_v, dp[c].v);
+			return 0;
+		}
+	}// namespace acwing3445
 }// namespace acwing
