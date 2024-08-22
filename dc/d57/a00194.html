@@ -81,7 +81,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a338fc85b82b46b546dcbe8296038ed0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d7e/a03618.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d57/a00194.html#a338fc85b82b46b546dcbe8296038ed0d">getMat</a> (vector&lt; <a class="el" href="../../de/d7e/a03618.html">Matrix</a> * &gt; &amp;mat, int p)</td></tr>
+<tr class="memitem:a338fc85b82b46b546dcbe8296038ed0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d42/a03623.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d57/a00194.html#a338fc85b82b46b546dcbe8296038ed0d">getMat</a> (vector&lt; <a class="el" href="../../df/d42/a03623.html">Matrix</a> * &gt; &amp;mat, int p)</td></tr>
 <tr class="separator:a338fc85b82b46b546dcbe8296038ed0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af42d54f86ecb028ca680a388080a9341"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d57/a00194.html#af42d54f86ecb028ca680a388080a9341">main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
 <tr class="separator:af42d54f86ecb028ca680a388080a9341"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,9 +103,9 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../de/d7e/a03618.html">Matrix</a> acwing::acwing3534::getMat </td>
+          <td class="memname"><a class="el" href="../../df/d42/a03623.html">Matrix</a> acwing::acwing3534::getMat </td>
           <td>(</td>
-          <td class="paramtype">vector&lt; <a class="el" href="../../de/d7e/a03618.html">Matrix</a> * &gt; &amp;&#160;</td>
+          <td class="paramtype">vector&lt; <a class="el" href="../../df/d42/a03623.html">Matrix</a> * &gt; &amp;&#160;</td>
           <td class="paramname"><em>mat</em>, </td>
         </tr>
         <tr>
@@ -127,24 +127,24 @@ $(function() {
 <div class="line"><a id="l01529" name="l01529"></a><span class="lineno"> 1529</span>            <span class="keywordflow">if</span>(mat[p] != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l01530" name="l01530"></a><span class="lineno"> 1530</span>                <span class="keywordflow">return</span> *mat[p];</div>
 <div class="line"><a id="l01531" name="l01531"></a><span class="lineno"> 1531</span>            }</div>
-<div class="line"><a id="l01532" name="l01532"></a><span class="lineno"> 1532</span>            <a class="code hl_class" href="../../de/d7e/a03618.html">Matrix</a> res = <a class="code hl_function" href="../../de/d7e/a03618.html#ab2163118152b1a18c223d03c470b937a">Matrix::identity</a>((*mat[1])[1].size());</div>
+<div class="line"><a id="l01532" name="l01532"></a><span class="lineno"> 1532</span>            <a class="code hl_class" href="../../df/d42/a03623.html">Matrix</a> res = <a class="code hl_function" href="../../df/d42/a03623.html#ab2163118152b1a18c223d03c470b937a">Matrix::identity</a>((*mat[1])[1].size());</div>
 <div class="line"><a id="l01533" name="l01533"></a><span class="lineno"> 1533</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; p &gt;&gt; i != 0; i++) {</div>
 <div class="line"><a id="l01534" name="l01534"></a><span class="lineno"> 1534</span>                <span class="keywordtype">int</span> masked = p &amp; (1 &lt;&lt; i);</div>
 <div class="line"><a id="l01535" name="l01535"></a><span class="lineno"> 1535</span>                <span class="keywordflow">if</span>(masked != 0) {</div>
 <div class="line"><a id="l01536" name="l01536"></a><span class="lineno"> 1536</span>                    <span class="keywordflow">if</span>(masked != p) {</div>
 <div class="line"><a id="l01537" name="l01537"></a><span class="lineno"> 1537</span>                        res = res * <a class="code hl_function" href="../../dc/d57/a00194.html#a338fc85b82b46b546dcbe8296038ed0d">getMat</a>(mat, p &amp; (1 &lt;&lt; i));</div>
 <div class="line"><a id="l01538" name="l01538"></a><span class="lineno"> 1538</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01539" name="l01539"></a><span class="lineno"> 1539</span>                        <a class="code hl_class" href="../../de/d7e/a03618.html">Matrix</a> m2 = <a class="code hl_function" href="../../dc/d57/a00194.html#a338fc85b82b46b546dcbe8296038ed0d">getMat</a>(mat, masked &gt;&gt; 1);</div>
+<div class="line"><a id="l01539" name="l01539"></a><span class="lineno"> 1539</span>                        <a class="code hl_class" href="../../df/d42/a03623.html">Matrix</a> m2 = <a class="code hl_function" href="../../dc/d57/a00194.html#a338fc85b82b46b546dcbe8296038ed0d">getMat</a>(mat, masked &gt;&gt; 1);</div>
 <div class="line"><a id="l01540" name="l01540"></a><span class="lineno"> 1540</span>                        res       = res * m2 * m2;</div>
 <div class="line"><a id="l01541" name="l01541"></a><span class="lineno"> 1541</span>                    }</div>
 <div class="line"><a id="l01542" name="l01542"></a><span class="lineno"> 1542</span>                }</div>
 <div class="line"><a id="l01543" name="l01543"></a><span class="lineno"> 1543</span>            }</div>
-<div class="line"><a id="l01544" name="l01544"></a><span class="lineno"> 1544</span>            mat[p] = <span class="keyword">new</span> <a class="code hl_class" href="../../de/d7e/a03618.html">Matrix</a>(res);</div>
+<div class="line"><a id="l01544" name="l01544"></a><span class="lineno"> 1544</span>            mat[p] = <span class="keyword">new</span> <a class="code hl_class" href="../../df/d42/a03623.html">Matrix</a>(res);</div>
 <div class="line"><a id="l01545" name="l01545"></a><span class="lineno"> 1545</span>            <span class="keywordflow">return</span> res;</div>
 <div class="line"><a id="l01546" name="l01546"></a><span class="lineno"> 1546</span>        }</div>
 <div class="ttc" id="aa00194_html_a338fc85b82b46b546dcbe8296038ed0d"><div class="ttname"><a href="../../dc/d57/a00194.html#a338fc85b82b46b546dcbe8296038ed0d">acwing::acwing3534::getMat</a></div><div class="ttdeci">Matrix getMat(vector&lt; Matrix * &gt; &amp;mat, int p)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d89/a00071_source.html#l01528">acwing408.cpp:1528</a></div></div>
-<div class="ttc" id="aa03618_html"><div class="ttname"><a href="../../de/d7e/a03618.html">Matrix</a></div><div class="ttdoc">矩阵</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00106">templates.h:106</a></div></div>
-<div class="ttc" id="aa03618_html_ab2163118152b1a18c223d03c470b937a"><div class="ttname"><a href="../../de/d7e/a03618.html#ab2163118152b1a18c223d03c470b937a">Matrix::identity</a></div><div class="ttdeci">static Matrix identity(int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l00553">templates.cpp:553</a></div></div>
+<div class="ttc" id="aa03623_html"><div class="ttname"><a href="../../df/d42/a03623.html">Matrix</a></div><div class="ttdoc">矩阵</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00106">templates.h:106</a></div></div>
+<div class="ttc" id="aa03623_html_ab2163118152b1a18c223d03c470b937a"><div class="ttname"><a href="../../df/d42/a03623.html#ab2163118152b1a18c223d03c470b937a">Matrix::identity</a></div><div class="ttdeci">static Matrix identity(int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d52/a00023_source.html#l00553">templates.cpp:553</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../d0/d89/a00071_source.html#l01528">getMat()</a> , 以及 <a class="el" href="../../d3/d52/a00023_source.html#l00553">Matrix::identity()</a>.</p>
 
@@ -183,13 +183,13 @@ $(function() {
 <div class="line"><a id="l01509" name="l01509"></a><span class="lineno"> 1509</span>            <span class="keywordtype">int</span> n, p;</div>
 <div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span>            cin &gt;&gt; n &gt;&gt; p;</div>
 <div class="line"><a id="l01511" name="l01511"></a><span class="lineno"> 1511</span>            vector&lt;Matrix *&gt; mats = vector&lt;Matrix *&gt;(p + 1, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>            mats[1]               = <span class="keyword">new</span> <a class="code hl_class" href="../../de/d7e/a03618.html">Matrix</a>(n);</div>
+<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>            mats[1]               = <span class="keyword">new</span> <a class="code hl_class" href="../../df/d42/a03623.html">Matrix</a>(n);</div>
 <div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
 <div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span>                    cin &gt;&gt; (*mats[1])[i][j];</div>
 <div class="line"><a id="l01516" name="l01516"></a><span class="lineno"> 1516</span>                }</div>
 <div class="line"><a id="l01517" name="l01517"></a><span class="lineno"> 1517</span>            }</div>
-<div class="line"><a id="l01518" name="l01518"></a><span class="lineno"> 1518</span>            <a class="code hl_class" href="../../de/d7e/a03618.html">Matrix</a> mat = <a class="code hl_function" href="../../dc/d57/a00194.html#a338fc85b82b46b546dcbe8296038ed0d">getMat</a>(mats, p);</div>
+<div class="line"><a id="l01518" name="l01518"></a><span class="lineno"> 1518</span>            <a class="code hl_class" href="../../df/d42/a03623.html">Matrix</a> mat = <a class="code hl_function" href="../../dc/d57/a00194.html#a338fc85b82b46b546dcbe8296038ed0d">getMat</a>(mats, p);</div>
 <div class="line"><a id="l01519" name="l01519"></a><span class="lineno"> 1519</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><a id="l01520" name="l01520"></a><span class="lineno"> 1520</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
 <div class="line"><a id="l01521" name="l01521"></a><span class="lineno"> 1521</span>                    cout &lt;&lt; mat[i][j] &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['operator_3c_3c_0',['operator&lt;&lt;',['../de/da3/a03606.html#a5bfa0694dcfb588baef2174a3ea82794',1,'BigInt::operator&lt;&lt;()'],['../df/d0b/a03610.html#ad9647df4ee7fe0dec2520d4a00da3363',1,'Fraction::operator&lt;&lt;()']]],
-  ['operator_3e_3e_1',['operator&gt;&gt;',['../de/da3/a03606.html#ac34f777e9f24df2612d7769e2252a065',1,'BigInt']]]
+  ['operator_3c_3c_0',['operator&lt;&lt;',['../d0/d50/a03611.html#a5bfa0694dcfb588baef2174a3ea82794',1,'BigInt::operator&lt;&lt;()'],['../d7/d6e/a03615.html#ad9647df4ee7fe0dec2520d4a00da3363',1,'Fraction::operator&lt;&lt;()']]],
+  ['operator_3e_3e_1',['operator&gt;&gt;',['../d0/d50/a03611.html#ac34f777e9f24df2612d7769e2252a065',1,'BigInt']]]
 ];
