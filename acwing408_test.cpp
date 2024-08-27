@@ -2044,4 +2044,48 @@ namespace acwing {
 			ASSERT_EQ("298", ans);
 		}
 	}// namespace acwing3445
+
+	/**
+	 * @brief 3442. 神奇的口袋
+	 */
+	namespace acwing3442 {
+		TEST(acwing3442, case1) {
+			istringstream in("3\n"
+			                 "20\n"
+			                 "20\n"
+			                 "20");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3", ans);
+		}
+
+		TEST(acwing3442, case2) {
+			istringstream in("20\n"
+			                 "1\n"
+			                 "2\n"
+			                 "2\n"
+			                 "5\n"
+			                 "4\n"
+			                 "5\n"
+			                 "5\n"
+			                 "2\n"
+			                 "3\n"
+			                 "5\n"
+			                 "1\n"
+			                 "4\n"
+			                 "3\n"
+			                 "5\n"
+			                 "4\n"
+			                 "3\n"
+			                 "3\n"
+			                 "2\n"
+			                 "3\n"
+			                 "5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("37564", ans);
+		}
+	}// namespace acwing3442
 }// namespace acwing

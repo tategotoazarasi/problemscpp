@@ -382,6 +382,13 @@ namespace acwing {
 		};
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing3445
+
+	/**
+	 * @brief 3442. 神奇的口袋
+	 */
+	namespace acwing3442 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing3442
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H
