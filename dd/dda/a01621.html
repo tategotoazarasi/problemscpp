@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: acwing::acwing858_408::pair_hash结构体 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,18 +63,61 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../db/db6/a00074.html">acwing</a></li><li class="navelem"><a class="el" href="../../d7/d3f/a00173.html">acwing858_408</a></li><li class="navelem"><a class="el" href="../../de/df9/a01624.html">pair_equal</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../db/db6/a00074.html">acwing</a></li><li class="navelem"><a class="el" href="../../d7/d3f/a00173.html">acwing858_408</a></li><li class="navelem"><a class="el" href="../../dd/dda/a01621.html">pair_hash</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">acwing::acwing858_408::pair_equal 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../d9/d6a/a01618.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">acwing::acwing858_408::pair_hash结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../de/df9/a01624.html">acwing::acwing858_408::pair_equal</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../de/df9/a01624.html#a0574b3a6e8da537c3ac23ff03e704f34">operator()</a>(const pair&lt; T1, T2 &gt; &amp;p1, const pair&lt; T1, T2 &gt; &amp;p2) const</td><td class="entry"><a class="el" href="../../de/df9/a01624.html">acwing::acwing858_408::pair_equal</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../d5/de0/a00050_source.html">acwing408.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a38f67cdd3736fa917d4294199cc4adf1"><td class="memTemplParams" colspan="2">template&lt;class T1 , class T2 &gt; </td></tr>
+<tr class="memitem:a38f67cdd3736fa917d4294199cc4adf1"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/dda/a01621.html#a38f67cdd3736fa917d4294199cc4adf1">operator()</a> (const pair&lt; T1, T2 &gt; &amp;p) const</td></tr>
+<tr class="separator:a38f67cdd3736fa917d4294199cc4adf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">acwing408.h</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l00146">146</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a38f67cdd3736fa917d4294199cc4adf1" name="a38f67cdd3736fa917d4294199cc4adf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38f67cdd3736fa917d4294199cc4adf1">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T1 , class T2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t acwing::acwing858_408::pair_hash::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const pair&lt; T1, T2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d0/d89/a00071_source.html">acwing408.cpp</a> 第 <a class="el" href="../../d0/d89/a00071_source.html#l00694">694</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>                                                                {</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>            <span class="keyword">auto</span> h1 = hash&lt;T1&gt;{}(p.first);</div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>            <span class="keyword">auto</span> h2 = hash&lt;T2&gt;{}(p.second);</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>            <span class="keywordflow">return</span> h1 ^ h2;</div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="../../d5/de0/a00050_source.html">acwing408.h</a></li>
+<li><a class="el" href="../../d0/d89/a00071_source.html">acwing408.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
