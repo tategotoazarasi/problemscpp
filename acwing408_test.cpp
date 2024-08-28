@@ -2088,4 +2088,17 @@ namespace acwing {
 			ASSERT_EQ("37564", ans);
 		}
 	}// namespace acwing3442
+
+	/**
+	 * @brief 3382. 整数拆分
+	 */
+	namespace acwing3382 {
+		TEST(acwing3382, case1) {
+			istringstream in("7");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("6", ans);
+		}
+	}// namespace acwing3382
 }// namespace acwing

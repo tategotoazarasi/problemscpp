@@ -1891,4 +1891,23 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3442
+
+	/**
+	 * @brief 3382. 整数拆分
+	 */
+	namespace acwing3382 {
+		int main(istream &cin, ostream &cout) {
+			unsigned n;
+			cin >> n;
+			vector<unsigned> dp(n + 1);
+			dp[0] = 1;
+			for(int i = 1; i <= n; i *= 2) {
+				for(int j = i; j <= n; j++) {
+					dp[j] = (dp[j] + dp[j - i]) % 1000000000;
+				}
+			}
+			cout << dp[n];
+			return 0;
+		}
+	}// namespace acwing3382
 }// namespace acwing
