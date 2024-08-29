@@ -1,18 +1,18 @@
 var searchData=
 [
-  ['abs_0',['abs',['../d7/d81/a01365.html#aaba02b418d26b514fee805a430e5d9a5',1,'acwing::acwing810']]],
-  ['add_1',['add',['../d7/d38/a01373.html#a49765bf1414cfbb8dfb2db9d034047ed',1,'acwing::acwing806::add()'],['../d4/d07/a01913.html#a6c4d5f1e2fca3b9d4896fb728f62f2be',1,'leetcode::detect_squares::DetectSquares::add()']]],
-  ['add_5fchild_2',['add_child',['../de/d1b/a02269.html#a2f3f82c1823aacac7248e16ad406a369',1,'leetcode::count_nodes_with_the_highest_score::TreeNode']]],
-  ['addathead_3',['addAtHead',['../dc/d1d/a02713.html#a32fd312bd0df9c7849f94192b880007b',1,'leetcode::design_linked_list::MyLinkedList']]],
-  ['addatindex_4',['addAtIndex',['../dc/d1d/a02713.html#ab23f9d192b98a46abc8e7ca196538543',1,'leetcode::design_linked_list::MyLinkedList']]],
-  ['addattail_5',['addAtTail',['../dc/d1d/a02713.html#a58a927f186e2f423ad71719d28419c1e',1,'leetcode::design_linked_list::MyLinkedList']]],
-  ['addcar_6',['addCar',['../d4/db4/a02517.html#aad19ddaec8b6db066f90e0f2e9d584ae',1,'leetcode::design_parking_system::ParkingSystem']]],
-  ['adddigits_7',['addDigits',['../de/df6/a02197.html#a51df825888fd36aba1dba2bea6b5d089',1,'leetcode::add_digits::Solution']]],
-  ['addrange_8',['addRange',['../d4/d69/a02989.html#a606f072c2df9b2ae32eaa29253323260',1,'leetcode::range_module::RangeModule']]],
-  ['alienorder_9',['alienOrder',['../dd/d4c/a02949.html#a0656d31337dbb55a51ac7475ec2313cb',1,'leetcode::alien_dictionary::Solution']]],
-  ['all_10',['all',['../d3/d39/a02005.html#a8d40567cb4874a37ffad8fe92ba8bee1',1,'leetcode::design_bitset::Bitset']]],
-  ['allone_11',['AllOne',['../d2/d0a/a02321.html#a41f7ad8b372744848be2a3ac1d1b2c5b',1,'leetcode::all_oone_data_structure::AllOne']]],
-  ['allpathssourcetarget_12',['allPathsSourceTarget',['../d2/ddf/a02573.html#aab9d8b7867d1e511bc5bf4f7f259669b',1,'leetcode::all_paths_from_source_to_target::Solution']]],
-  ['assign_13',['assign',['../d7/d93/a02981.html#a5c1a16242087978fbb712d4624297cae',1,'leetcode::range_module::Chtholly::assign()'],['../dd/d1f/a00648.html#a3ad405cb11a0c764841830df77e854c5',1,'pat::a::a1026::assign()']]],
-  ['asteroidsdestroyed_14',['asteroidsDestroyed',['../d2/d0c/a01713.html#afb9382d1c309a7974aea07a0cd04f637',1,'leetcode::destroying_asteroids::Solution']]]
+  ['abs_0',['abs',['../d6/dfe/a01366.html#aaba02b418d26b514fee805a430e5d9a5',1,'acwing::acwing810']]],
+  ['add_1',['add',['../d2/dff/a01374.html#a49765bf1414cfbb8dfb2db9d034047ed',1,'acwing::acwing806::add()'],['../dc/d18/a01914.html#a6c4d5f1e2fca3b9d4896fb728f62f2be',1,'leetcode::detect_squares::DetectSquares::add()']]],
+  ['add_5fchild_2',['add_child',['../d4/de7/a02270.html#a2f3f82c1823aacac7248e16ad406a369',1,'leetcode::count_nodes_with_the_highest_score::TreeNode']]],
+  ['addathead_3',['addAtHead',['../d1/d3c/a02714.html#a32fd312bd0df9c7849f94192b880007b',1,'leetcode::design_linked_list::MyLinkedList']]],
+  ['addatindex_4',['addAtIndex',['../d1/d3c/a02714.html#ab23f9d192b98a46abc8e7ca196538543',1,'leetcode::design_linked_list::MyLinkedList']]],
+  ['addattail_5',['addAtTail',['../d1/d3c/a02714.html#a58a927f186e2f423ad71719d28419c1e',1,'leetcode::design_linked_list::MyLinkedList']]],
+  ['addcar_6',['addCar',['../d6/de1/a02518.html#aad19ddaec8b6db066f90e0f2e9d584ae',1,'leetcode::design_parking_system::ParkingSystem']]],
+  ['adddigits_7',['addDigits',['../d7/db7/a02198.html#a51df825888fd36aba1dba2bea6b5d089',1,'leetcode::add_digits::Solution']]],
+  ['addrange_8',['addRange',['../d1/df2/a02990.html#a606f072c2df9b2ae32eaa29253323260',1,'leetcode::range_module::RangeModule']]],
+  ['alienorder_9',['alienOrder',['../df/d16/a02950.html#a0656d31337dbb55a51ac7475ec2313cb',1,'leetcode::alien_dictionary::Solution']]],
+  ['all_10',['all',['../d9/de8/a02006.html#a8d40567cb4874a37ffad8fe92ba8bee1',1,'leetcode::design_bitset::Bitset']]],
+  ['allone_11',['AllOne',['../d7/df2/a02322.html#a41f7ad8b372744848be2a3ac1d1b2c5b',1,'leetcode::all_oone_data_structure::AllOne']]],
+  ['allpathssourcetarget_12',['allPathsSourceTarget',['../dc/db2/a02574.html#aab9d8b7867d1e511bc5bf4f7f259669b',1,'leetcode::all_paths_from_source_to_target::Solution']]],
+  ['assign_13',['assign',['../d2/d34/a02982.html#a5c1a16242087978fbb712d4624297cae',1,'leetcode::range_module::Chtholly::assign()'],['../dd/d6b/a00649.html#a3ad405cb11a0c764841830df77e854c5',1,'pat::a::a1026::assign()']]],
+  ['asteroidsdestroyed_14',['asteroidsDestroyed',['../d8/dce/a01714.html#afb9382d1c309a7974aea07a0cd04f637',1,'leetcode::destroying_asteroids::Solution']]]
 ];
