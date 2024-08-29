@@ -1910,4 +1910,27 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3382
+
+	/**
+	 * @brief 3389. N 的阶乘
+	 */
+	namespace acwing3389 {
+		int main(istream &cin, ostream &cout) {
+			unsigned n;
+			unordered_map<unsigned, BigInt> cache = unordered_map<unsigned, BigInt>();
+			while(cin >> n) {
+				BigInt res = 1;
+				for(unsigned i = 1; i <= n; i++) {
+					if(cache.find(i) != cache.end()) {
+						res = cache[i];
+						continue;
+					}
+					res *= i;
+					cache[i] = res;
+				}
+				cout << res << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3389
 }// namespace acwing

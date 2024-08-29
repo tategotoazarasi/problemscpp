@@ -64,6 +64,7 @@ public:
 	bool operator<=(const BigInt &bi) const;
 	friend ostream &operator<<(ostream &os, const BigInt & /*bi*/);
 	friend istream &operator>>(istream &is, const BigInt & /*bi*/);
+	BigInt();
 };
 
 /// \brief 分数

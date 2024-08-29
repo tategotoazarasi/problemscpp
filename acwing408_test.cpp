@@ -2101,4 +2101,22 @@ namespace acwing {
 			ASSERT_EQ("6", ans);
 		}
 	}// namespace acwing3382
+
+	/**
+	 * @brief 3389. N 的阶乘
+	 */
+	namespace acwing3389 {
+		TEST(acwing3389, case1) {
+			istringstream in("4\n"
+			                 "5\n"
+			                 "15");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("24\n"
+			          "120\n"
+			          "1307674368000\n",
+			          ans);
+		}
+	}// namespace acwing3389
 }// namespace acwing

@@ -381,6 +381,10 @@ BigInt BigInt::operator--(int) {
 	*this -= 1;
 	return ret;
 }
+BigInt::BigInt() {
+	vec      = vector<unsigned short>();
+	positive = true;
+}
 
 bool Fraction::is_positive() const { return positive; }
 

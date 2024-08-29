@@ -396,6 +396,13 @@ namespace acwing {
 	namespace acwing3382 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3389. N 的阶乘
+	 */
+	namespace acwing3389 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H
