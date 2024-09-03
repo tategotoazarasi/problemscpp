@@ -2119,4 +2119,49 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3389
+
+	/**
+	 * @brief 3448. 基本算术
+	 */
+	namespace acwing3448 {
+		TEST(acwing3448, case1) {
+			istringstream in("123 456\n"
+			                 "555 555\n"
+			                 "123 594\n"
+			                 "0 0");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("No carry operation.\n"
+			          "3 carry operations.\n"
+			          "1 carry operation.\n",
+			          ans);
+		}
+
+		TEST(acwing3448, case2) {
+			istringstream in("123 456\n"
+			                 "555 555\n"
+			                 "123 594\n"
+			                 "99999 1\n"
+			                 "167 33\n"
+			                 "5 55\n"
+			                 "0 1\n"
+			                 "1654 69565\n"
+			                 "999999999 999999999\n"
+			                 "0 0");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("No carry operation.\n"
+			          "3 carry operations.\n"
+			          "1 carry operation.\n"
+			          "5 carry operations.\n"
+			          "2 carry operations.\n"
+			          "1 carry operation.\n"
+			          "No carry operation.\n"
+			          "3 carry operations.\n"
+			          "9 carry operations.\n",
+			          ans);
+		}
+	}// namespace acwing3448
 }// namespace acwing

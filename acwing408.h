@@ -403,6 +403,13 @@ namespace acwing {
 	namespace acwing3389 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3448. 基本算术
+	 */
+	namespace acwing3448 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

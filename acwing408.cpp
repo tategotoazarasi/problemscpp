@@ -1933,4 +1933,38 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3389
+
+	/**
+	 * @brief 3448. 基本算术
+	 */
+	namespace acwing3448 {
+		int main(istream &cin, ostream &cout) {
+			unsigned long a, b;
+			cin >> a >> b;
+			for(; a != 0 || b != 0; cin >> a >> b) {
+				vector<unsigned short> va = vector<unsigned short>();
+				vector<unsigned short> vb = vector<unsigned short>();
+				while(a != 0) {
+					va.push_back(a % 10);
+					a /= 10;
+				}
+				while(b != 0) {
+					vb.push_back(b % 10);
+					b /= 10;
+				}
+				vector<unsigned short> res;
+				unsigned short cnt   = 0;
+				unsigned short carry = 0;
+				for(size_t i = 0; i < max(va.size(), vb.size()); i++) {
+					unsigned short sum = (i < va.size() ? va[i] : 0) + (i < vb.size() ? vb[i] : 0) + carry;
+					cnt += sum / 10;
+					carry = sum / 10;
+				}
+				ostringstream ss = ostringstream();
+				ss << cnt;
+				cout << ((cnt != 0) ? ss.str() : "No") << " carry operation" << ((cnt <= 1) ? "" : "s") << '.' << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3448
 }// namespace acwing
