@@ -410,6 +410,13 @@ namespace acwing {
 	namespace acwing3448 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3453. 整数查询
+	 */
+	namespace acwing3453 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

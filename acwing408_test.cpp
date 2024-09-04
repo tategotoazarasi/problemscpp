@@ -2164,4 +2164,20 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3448
+
+	/**
+	 * @brief 3453. 整数查询
+	 */
+	namespace acwing3453 {
+		TEST(acwing3448, case1) {
+			istringstream in("123456789012345678901234567890\n"
+			                 "123456789012345678901234567890\n"
+			                 "123456789012345678901234567890\n"
+			                 "0");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("370370367037037036703703703670", ans);
+		}
+	}// namespace acwing3453
 }// namespace acwing

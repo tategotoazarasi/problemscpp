@@ -1967,4 +1967,21 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3448
+
+	/**
+	 * @brief 3453. 整数查询
+	 */
+	namespace acwing3453 {
+		int main(istream &cin, ostream &cout) {
+			BigInt sum = 0;
+			BigInt input;
+			string str;
+			while(cin >> str) {
+				input = BigInt(str);
+				sum += input;
+			}
+			cout << sum;
+			return 0;
+		}
+	}// namespace acwing3453
 }// namespace acwing
