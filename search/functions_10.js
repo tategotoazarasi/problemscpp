@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['qmi_0',['qmi',['../db/d7e/a00372.html#a204ac9d9f7c9f78ff40ecf388b4e2548',1,'leetcode::find_palindrome_with_fixed_length']]],
+  ['qmi_0',['qmi',['../dc/de3/a00373.html#a204ac9d9f7c9f78ff40ecf388b4e2548',1,'leetcode::find_palindrome_with_fixed_length']]],
   ['qs_1',['qs',['../dc/dfe/a00125.html#aaabf963a764747754ac97447ee2dd925',1,'acwing::acwing785::qs()'],['../d7/d6e/a00190.html#a880b3b9cd503eae64262d3bf8a9f033c',1,'acwing::acwing785_408::qs()']]],
-  ['qsort_2',['qsort',['../d3/d59/a02659.html#ac960a9d1add7006e7a5b765fb57fadd0',1,'leetcode::sort_colors::Solution']]],
-  ['query_3',['query',['../d4/d64/a02111.html#ad94ff40f89e1b7e392752af737044917',1,'leetcode::count_good_triplets_in_an_array::FenwickTree']]],
-  ['query_4',['Query',['../d6/d92/a02867.html#a9c4b63f616f51a2c2b6ffc01d288a9d6',1,'leetcode::count_of_smaller_numbers_after_self::Solution']]],
-  ['queryrange_5',['queryRange',['../dd/d65/a02991.html#ab92361e93e64d523029985c5dcb6be13',1,'leetcode::range_module::RangeModule']]]
+  ['qsort_2',['qsort',['../de/d7b/a02660.html#ac960a9d1add7006e7a5b765fb57fadd0',1,'leetcode::sort_colors::Solution']]],
+  ['query_3',['query',['../d8/d84/a02112.html#ad94ff40f89e1b7e392752af737044917',1,'leetcode::count_good_triplets_in_an_array::FenwickTree']]],
+  ['query_4',['Query',['../d9/df0/a02868.html#a9c4b63f616f51a2c2b6ffc01d288a9d6',1,'leetcode::count_of_smaller_numbers_after_self::Solution']]],
+  ['queryrange_5',['queryRange',['../d6/d5d/a02992.html#ab92361e93e64d523029985c5dcb6be13',1,'leetcode::range_module::RangeModule']]]
 ];
