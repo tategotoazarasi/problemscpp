@@ -121,29 +121,29 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l01718" name="l01718"></a><span class="lineno"> 1718</span>                                              {</div>
 <div class="line"><a id="l01719" name="l01719"></a><span class="lineno"> 1719</span>            <span class="keywordtype">int</span> n;</div>
 <div class="line"><a id="l01720" name="l01720"></a><span class="lineno"> 1720</span>            cin &gt;&gt; n;</div>
-<div class="line"><a id="l01721" name="l01721"></a><span class="lineno"> 1721</span>            vector&lt;unordered_set&lt;string&gt;&gt; <a class="code hl_variable" href="../../d5/d4e/a00660.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>(n + 1, unordered_set&lt;string&gt;());</div>
-<div class="line"><a id="l01722" name="l01722"></a><span class="lineno"> 1722</span>            <a class="code hl_variable" href="../../d5/d4e/a00660.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[1].insert(<span class="stringliteral">&quot;1&quot;</span>);</div>
-<div class="line"><a id="l01723" name="l01723"></a><span class="lineno"> 1723</span>            <a class="code hl_variable" href="../../d5/d4e/a00660.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[2].insert(<span class="stringliteral">&quot;2&quot;</span>);</div>
-<div class="line"><a id="l01724" name="l01724"></a><span class="lineno"> 1724</span>            <a class="code hl_variable" href="../../d5/d4e/a00660.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[2].insert(<span class="stringliteral">&quot;11&quot;</span>);</div>
+<div class="line"><a id="l01721" name="l01721"></a><span class="lineno"> 1721</span>            vector&lt;unordered_set&lt;string&gt;&gt; <a class="code hl_variable" href="../../d0/d50/a00661.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>(n + 1, unordered_set&lt;string&gt;());</div>
+<div class="line"><a id="l01722" name="l01722"></a><span class="lineno"> 1722</span>            <a class="code hl_variable" href="../../d0/d50/a00661.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[1].insert(<span class="stringliteral">&quot;1&quot;</span>);</div>
+<div class="line"><a id="l01723" name="l01723"></a><span class="lineno"> 1723</span>            <a class="code hl_variable" href="../../d0/d50/a00661.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[2].insert(<span class="stringliteral">&quot;2&quot;</span>);</div>
+<div class="line"><a id="l01724" name="l01724"></a><span class="lineno"> 1724</span>            <a class="code hl_variable" href="../../d0/d50/a00661.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[2].insert(<span class="stringliteral">&quot;11&quot;</span>);</div>
 <div class="line"><a id="l01725" name="l01725"></a><span class="lineno"> 1725</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 3; i &lt;= n; i++) {</div>
 <div class="line"><a id="l01726" name="l01726"></a><span class="lineno"> 1726</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt; n; j++) {</div>
-<div class="line"><a id="l01727" name="l01727"></a><span class="lineno"> 1727</span>                    <span class="keyword">auto</span> set1 = <a class="code hl_variable" href="../../d5/d4e/a00660.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[j];</div>
-<div class="line"><a id="l01728" name="l01728"></a><span class="lineno"> 1728</span>                    <span class="keyword">auto</span> set2 = <a class="code hl_variable" href="../../d5/d4e/a00660.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i - j];</div>
+<div class="line"><a id="l01727" name="l01727"></a><span class="lineno"> 1727</span>                    <span class="keyword">auto</span> set1 = <a class="code hl_variable" href="../../d0/d50/a00661.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[j];</div>
+<div class="line"><a id="l01728" name="l01728"></a><span class="lineno"> 1728</span>                    <span class="keyword">auto</span> set2 = <a class="code hl_variable" href="../../d0/d50/a00661.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i - j];</div>
 <div class="line"><a id="l01729" name="l01729"></a><span class="lineno"> 1729</span>                    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;s1: set1) {</div>
 <div class="line"><a id="l01730" name="l01730"></a><span class="lineno"> 1730</span>                        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;s2: set2) {</div>
-<div class="line"><a id="l01731" name="l01731"></a><span class="lineno"> 1731</span>                            <a class="code hl_variable" href="../../d5/d4e/a00660.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i].insert(s1 + s2);</div>
+<div class="line"><a id="l01731" name="l01731"></a><span class="lineno"> 1731</span>                            <a class="code hl_variable" href="../../d0/d50/a00661.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i].insert(s1 + s2);</div>
 <div class="line"><a id="l01732" name="l01732"></a><span class="lineno"> 1732</span>                        }</div>
 <div class="line"><a id="l01733" name="l01733"></a><span class="lineno"> 1733</span>                    }</div>
 <div class="line"><a id="l01734" name="l01734"></a><span class="lineno"> 1734</span>                }</div>
 <div class="line"><a id="l01735" name="l01735"></a><span class="lineno"> 1735</span>            }</div>
-<div class="line"><a id="l01736" name="l01736"></a><span class="lineno"> 1736</span>            cout &lt;&lt; <a class="code hl_variable" href="../../d5/d4e/a00660.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[n].size();</div>
+<div class="line"><a id="l01736" name="l01736"></a><span class="lineno"> 1736</span>            cout &lt;&lt; <a class="code hl_variable" href="../../d0/d50/a00661.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[n].size();</div>
 <div class="line"><a id="l01737" name="l01737"></a><span class="lineno"> 1737</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l01738" name="l01738"></a><span class="lineno"> 1738</span>        }</div>
-<div class="ttc" id="aa00660_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d5/d4e/a00660.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d24/a00068_source.html#l05095">pat.cpp:5095</a></div></div>
+<div class="ttc" id="aa00661_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d0/d50/a00661.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d32/a00041_source.html#l05095">pat.cpp:5095</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../da/d24/a00068_source.html#l05095">pat::a::a7_2::vec</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dd/d32/a00041_source.html#l05095">pat::a::a7_2::vec</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../dd/d32/a00041_source.html#l01902">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l01902">TEST()</a>.</p>
 
 </div>
 </div>
@@ -173,15 +173,15 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">acwing408_test.cpp</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l01902">1902</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing408_test.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l01902">1902</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l01902" name="l01902"></a><span class="lineno"> 1902</span>                                {</div>
 <div class="line"><a id="l01903" name="l01903"></a><span class="lineno"> 1903</span>            istringstream in(<span class="stringliteral">&quot;4&quot;</span>);</div>
 <div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span>            <span class="keyword">auto</span> out = ostringstream();</div>
-<div class="line"><a id="l01905" name="l01905"></a><span class="lineno"> 1905</span>            <a class="code hl_function" href="../../df/d03/a00062.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
+<div class="line"><a id="l01905" name="l01905"></a><span class="lineno"> 1905</span>            <a class="code hl_function" href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
 <div class="line"><a id="l01906" name="l01906"></a><span class="lineno"> 1906</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><a id="l01907" name="l01907"></a><span class="lineno"> 1907</span>            ASSERT_EQ(<span class="stringliteral">&quot;5&quot;</span>, ans);</div>
 <div class="line"><a id="l01908" name="l01908"></a><span class="lineno"> 1908</span>        }</div>
-<div class="ttc" id="aa00062_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../df/d03/a00062.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d03/a00062_source.html#l00005">main.cpp:5</a></div></div>
+<div class="ttc" id="aa00026_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../d0/d89/a00071_source.html#l01718">main()</a>.</p>
 

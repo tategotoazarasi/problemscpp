@@ -122,7 +122,7 @@ $(function() {
 <div class="line"><a id="l01919" name="l01919"></a><span class="lineno"> 1919</span>            <span class="keywordtype">unsigned</span> n;</div>
 <div class="line"><a id="l01920" name="l01920"></a><span class="lineno"> 1920</span>            unordered_map&lt;unsigned, BigInt&gt; cache = unordered_map&lt;unsigned, BigInt&gt;();</div>
 <div class="line"><a id="l01921" name="l01921"></a><span class="lineno"> 1921</span>            <span class="keywordflow">while</span>(cin &gt;&gt; n) {</div>
-<div class="line"><a id="l01922" name="l01922"></a><span class="lineno"> 1922</span>                <a class="code hl_class" href="../../d9/ddd/a03616.html">BigInt</a> res = 1;</div>
+<div class="line"><a id="l01922" name="l01922"></a><span class="lineno"> 1922</span>                <a class="code hl_class" href="../../d4/d35/a03617.html">BigInt</a> res = 1;</div>
 <div class="line"><a id="l01923" name="l01923"></a><span class="lineno"> 1923</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 1; i &lt;= n; i++) {</div>
 <div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span>                    <span class="keywordflow">if</span>(cache.find(i) != cache.end()) {</div>
 <div class="line"><a id="l01925" name="l01925"></a><span class="lineno"> 1925</span>                        res = cache[i];</div>
@@ -135,9 +135,9 @@ $(function() {
 <div class="line"><a id="l01932" name="l01932"></a><span class="lineno"> 1932</span>            }</div>
 <div class="line"><a id="l01933" name="l01933"></a><span class="lineno"> 1933</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l01934" name="l01934"></a><span class="lineno"> 1934</span>        }</div>
-<div class="ttc" id="aa03616_html"><div class="ttname"><a href="../../d9/ddd/a03616.html">BigInt</a></div><div class="ttdoc">高精度整数</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d45/a00011_source.html#l00023">templates.h:23</a></div></div>
+<div class="ttc" id="aa03617_html"><div class="ttname"><a href="../../d4/d35/a03617.html">BigInt</a></div><div class="ttdoc">高精度整数</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l00023">templates.h:23</a></div></div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../dd/d32/a00041_source.html#l02109">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l02109">TEST()</a>.</p>
 
 </div>
 </div>
@@ -167,20 +167,20 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">acwing408_test.cpp</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l02109">2109</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d5/d16/a00029_source.html">acwing408_test.cpp</a> 第 <a class="el" href="../../d5/d16/a00029_source.html#l02109">2109</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l02109" name="l02109"></a><span class="lineno"> 2109</span>                                {</div>
 <div class="line"><a id="l02110" name="l02110"></a><span class="lineno"> 2110</span>            istringstream in(<span class="stringliteral">&quot;4\n&quot;</span></div>
 <div class="line"><a id="l02111" name="l02111"></a><span class="lineno"> 2111</span>                             <span class="stringliteral">&quot;5\n&quot;</span></div>
 <div class="line"><a id="l02112" name="l02112"></a><span class="lineno"> 2112</span>                             <span class="stringliteral">&quot;15&quot;</span>);</div>
 <div class="line"><a id="l02113" name="l02113"></a><span class="lineno"> 2113</span>            <span class="keyword">auto</span> out = ostringstream();</div>
-<div class="line"><a id="l02114" name="l02114"></a><span class="lineno"> 2114</span>            <a class="code hl_function" href="../../df/d03/a00062.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
+<div class="line"><a id="l02114" name="l02114"></a><span class="lineno"> 2114</span>            <a class="code hl_function" href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(in, out);</div>
 <div class="line"><a id="l02115" name="l02115"></a><span class="lineno"> 2115</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><a id="l02116" name="l02116"></a><span class="lineno"> 2116</span>            ASSERT_EQ(<span class="stringliteral">&quot;24\n&quot;</span></div>
 <div class="line"><a id="l02117" name="l02117"></a><span class="lineno"> 2117</span>                      <span class="stringliteral">&quot;120\n&quot;</span></div>
 <div class="line"><a id="l02118" name="l02118"></a><span class="lineno"> 2118</span>                      <span class="stringliteral">&quot;1307674368000\n&quot;</span>,</div>
 <div class="line"><a id="l02119" name="l02119"></a><span class="lineno"> 2119</span>                      ans);</div>
 <div class="line"><a id="l02120" name="l02120"></a><span class="lineno"> 2120</span>        }</div>
-<div class="ttc" id="aa00062_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../df/d03/a00062.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d03/a00062_source.html#l00005">main.cpp:5</a></div></div>
+<div class="ttc" id="aa00026_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../d0/d89/a00071_source.html#l01918">main()</a>.</p>
 
