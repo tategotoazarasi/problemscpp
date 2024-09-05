@@ -1984,4 +1984,35 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3453
+
+	/**
+	 * @brief 3380. 质因数的个数
+	 */
+	namespace acwing3380 {
+		bool add(unsigned long long n) {
+			if(n < 2)
+				return false;
+			for(unsigned long long i = 2; i * i <= n; i++)
+				if(n % i == 0)
+					return false;
+			return true;
+		}
+
+		int main(istream &cin, ostream &cout) {
+			unsigned long long n;
+			while(cin >> n) {
+				unsigned long long k = 0;
+				for(unsigned long long i = 2; i * i <= n; i++) {
+					if(add(i)) {
+						while(n % i == 0)
+							n /= i, k++;
+					}
+				}
+				if(add(n))
+					k++;
+				cout << k << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3380
 }// namespace acwing

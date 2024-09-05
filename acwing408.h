@@ -417,6 +417,14 @@ namespace acwing {
 	namespace acwing3453 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3380. 质因数的个数
+	 */
+	namespace acwing3380 {
+		bool add(long long n);
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace acwing3380
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H
