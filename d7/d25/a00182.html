@@ -117,39 +117,39 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d0/d89/a00071_source.html">acwing408.cpp</a> 第 <a class="el" href="../../d0/d89/a00071_source.html#l01109">1109</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>                                              {</div>
-<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>            <span class="keywordtype">int</span> n, m;</div>
-<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>            cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>            vector&lt;map&lt;int, int&gt;&gt; a = vector&lt;map&lt;int, int&gt;&gt;(m, map&lt;int, int&gt;());</div>
-<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; m; j++) {</div>
-<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>                    <span class="keywordtype">char</span> c;</div>
-<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>                    cin &gt;&gt; c;</div>
-<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>                    <span class="keywordtype">int</span> x = c - <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>                    <span class="keywordflow">if</span>(a[j].<a class="code hl_function" href="../../d9/d38/a00166.html#a09bc4d1c88a5c5422a13c06833c49459">find</a>(x) == a[j].end()) {</div>
-<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>                        a[j][x] = 1;</div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>                        a[j][x]++;</div>
-<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>                    }</div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>                }</div>
-<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>            }</div>
-<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = m - 1; i &gt;= 0; i--) {</div>
-<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>                <span class="keywordtype">int</span> max_val = 0;</div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>                <span class="keywordtype">int</span> max_key = 0;</div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;p: a[i]) {</div>
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>                    <span class="keywordflow">if</span>(p.second &gt; max_val) {</div>
-<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>                        max_val = p.second;</div>
-<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>                        max_key = p.first;</div>
-<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>                    }</div>
-<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>                }</div>
-<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>                cout &lt;&lt; max_key &lt;&lt; endl;</div>
-<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>            }</div>
-<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>        }</div>
-<div class="ttc" id="aa00166_html_a09bc4d1c88a5c5422a13c06833c49459"><div class="ttname"><a href="../../d9/d38/a00166.html#a09bc4d1c88a5c5422a13c06833c49459">acwing::acwing836_408::find</a></div><div class="ttdeci">int find(int x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d89/a00071_source.html#l00350">acwing408.cpp:350</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d0/d89/a00071_source.html">acwing408.cpp</a> 第 <a class="el" href="../../d0/d89/a00071_source.html#l01110">1110</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>                                              {</div>
+<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>            <span class="keywordtype">int</span> n, m;</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>            cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>            vector&lt;map&lt;int, int&gt;&gt; a = vector&lt;map&lt;int, int&gt;&gt;(m, map&lt;int, int&gt;());</div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; m; j++) {</div>
+<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>                    <span class="keywordtype">char</span> c;</div>
+<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>                    cin &gt;&gt; c;</div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>                    <span class="keywordtype">int</span> x = c - <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>                    <span class="keywordflow">if</span>(a[j].<a class="code hl_function" href="../../d9/d38/a00166.html#a09bc4d1c88a5c5422a13c06833c49459">find</a>(x) == a[j].end()) {</div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>                        a[j][x] = 1;</div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>                        a[j][x]++;</div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>                    }</div>
+<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>                }</div>
+<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>            }</div>
+<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = m - 1; i &gt;= 0; i--) {</div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>                <span class="keywordtype">int</span> max_val = 0;</div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>                <span class="keywordtype">int</span> max_key = 0;</div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;p: a[i]) {</div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>                    <span class="keywordflow">if</span>(p.second &gt; max_val) {</div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>                        max_val = p.second;</div>
+<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>                        max_key = p.first;</div>
+<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>                    }</div>
+<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>                }</div>
+<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>                cout &lt;&lt; max_key &lt;&lt; endl;</div>
+<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>            }</div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>        }</div>
+<div class="ttc" id="aa00166_html_a09bc4d1c88a5c5422a13c06833c49459"><div class="ttname"><a href="../../d9/d38/a00166.html#a09bc4d1c88a5c5422a13c06833c49459">acwing::acwing836_408::find</a></div><div class="ttdeci">int find(int x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d89/a00071_source.html#l00351">acwing408.cpp:351</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d0/d89/a00071_source.html#l00350">acwing::acwing836_408::find()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d0/d89/a00071_source.html#l00351">acwing::acwing836_408::find()</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l01374">TEST()</a>.</p>
 
@@ -194,7 +194,7 @@ $(function() {
 <div class="line"><a id="l01383" name="l01383"></a><span class="lineno"> 1383</span>        }</div>
 <div class="ttc" id="aa00026_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d0/d89/a00071_source.html#l01109">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d0/d89/a00071_source.html#l01110">main()</a>.</p>
 
 </div>
 </div>

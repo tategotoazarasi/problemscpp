@@ -117,32 +117,32 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d0/d89/a00071_source.html">acwing408.cpp</a> 第 <a class="el" href="../../d0/d89/a00071_source.html#l01254">1254</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>                                              {</div>
-<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../db/df8/a00076.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>            = 99991;</div>
-<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>            array&lt;list&lt;int&gt;, <a class="code hl_variable" href="../../db/df8/a00076.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>&gt; ht = array&lt;list&lt;int&gt;, <a class="code hl_variable" href="../../db/df8/a00076.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>&gt;();</div>
-<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>            <span class="keywordtype">int</span> n;</div>
-<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>            cin &gt;&gt; n;</div>
-<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>            <span class="keywordflow">while</span>(n--) {</div>
-<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>                <span class="keywordtype">char</span> op;</div>
-<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>                <span class="keywordtype">int</span> x;</div>
-<div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>                cin &gt;&gt; op &gt;&gt; x;</div>
-<div class="line"><a id="l01263" name="l01263"></a><span class="lineno"> 1263</span>                <span class="keywordtype">int</span> k = (x % <a class="code hl_variable" href="../../db/df8/a00076.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a> + <a class="code hl_variable" href="../../db/df8/a00076.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>) % <a class="code hl_variable" href="../../db/df8/a00076.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>;</div>
-<div class="line"><a id="l01264" name="l01264"></a><span class="lineno"> 1264</span>                <span class="keywordflow">if</span>(op == <span class="charliteral">&#39;Q&#39;</span>) {</div>
-<div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span>                    <span class="keywordtype">bool</span> found = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span>                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;i: ht[k]) {</div>
-<div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>                        <span class="keywordflow">if</span>(i == x) {</div>
-<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>                            found = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>                        }</div>
-<div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span>                    }</div>
-<div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span>                    cout &lt;&lt; (found ? <span class="stringliteral">&quot;Yes&quot;</span> : <span class="stringliteral">&quot;No&quot;</span>) &lt;&lt; endl;</div>
-<div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span>                    ht[k].push_back(x);</div>
-<div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>                }</div>
-<div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span>            }</div>
-<div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d0/d89/a00071_source.html">acwing408.cpp</a> 第 <a class="el" href="../../d0/d89/a00071_source.html#l01255">1255</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>                                              {</div>
+<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../db/df8/a00076.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>            = 99991;</div>
+<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>            array&lt;list&lt;int&gt;, <a class="code hl_variable" href="../../db/df8/a00076.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>&gt; ht = array&lt;list&lt;int&gt;, <a class="code hl_variable" href="../../db/df8/a00076.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>&gt;();</div>
+<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>            cin &gt;&gt; n;</div>
+<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>            <span class="keywordflow">while</span>(n--) {</div>
+<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>                <span class="keywordtype">char</span> op;</div>
+<div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>                <span class="keywordtype">int</span> x;</div>
+<div class="line"><a id="l01263" name="l01263"></a><span class="lineno"> 1263</span>                cin &gt;&gt; op &gt;&gt; x;</div>
+<div class="line"><a id="l01264" name="l01264"></a><span class="lineno"> 1264</span>                <span class="keywordtype">int</span> k = (x % <a class="code hl_variable" href="../../db/df8/a00076.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a> + <a class="code hl_variable" href="../../db/df8/a00076.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>) % <a class="code hl_variable" href="../../db/df8/a00076.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">N</a>;</div>
+<div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span>                <span class="keywordflow">if</span>(op == <span class="charliteral">&#39;Q&#39;</span>) {</div>
+<div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span>                    <span class="keywordtype">bool</span> found = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;i: ht[k]) {</div>
+<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>                        <span class="keywordflow">if</span>(i == x) {</div>
+<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>                            found = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span>                        }</div>
+<div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span>                    }</div>
+<div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>                    cout &lt;&lt; (found ? <span class="stringliteral">&quot;Yes&quot;</span> : <span class="stringliteral">&quot;No&quot;</span>) &lt;&lt; endl;</div>
+<div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>                    ht[k].push_back(x);</div>
+<div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span>                }</div>
+<div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span>            }</div>
+<div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span>        }</div>
 <div class="ttc" id="aa00076_html_ab0d0f3a698d2eb3fdc6107c07ccfdbe8"><div class="ttname"><a href="../../db/df8/a00076.html#ab0d0f3a698d2eb3fdc6107c07ccfdbe8">acwing::acwing2019::N</a></div><div class="ttdeci">const int N</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d03/a00062_source.html#l00146">acwing.h:146</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../df/d03/a00062_source.html#l00146">acwing::acwing2019::N</a>.</p>
@@ -194,7 +194,7 @@ $(function() {
 <div class="line"><a id="l01549" name="l01549"></a><span class="lineno"> 1549</span>        }</div>
 <div class="ttc" id="aa00026_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d0/d89/a00071_source.html#l01254">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d0/d89/a00071_source.html#l01255">main()</a>.</p>
 
 </div>
 </div>

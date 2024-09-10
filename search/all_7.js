@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['halvearray_0',['halveArray',['../dc/d0a/a02345.html#a8b6d8af4c6d483a917d9ffd9564d48a2',1,'leetcode::minimum_operations_to_halve_array_sum::Solution']]],
-  ['hasalternatingbits_1',['hasAlternatingBits',['../d7/d18/a02409.html#a51c5b051628687d977e80333f7e8fa05',1,'leetcode::binary_number_with_alternating_bits::Solution']]],
-  ['hash_2',['hash',['../da/de2/a01585.html',1,'acwing::acwing845']]],
-  ['head_3',['head',['../de/d3c/a01809.html#a4f57c3dd424723297e00af02450b7d55',1,'leetcode::linked_list_random_node::Solution::head()'],['../d0/df8/a02717.html#a0374336358effe22a25a457e300101f3',1,'leetcode::design_linked_list::MyLinkedList::head()']]],
-  ['height_4',['height',['../d6/d6d/a01617.html#ad9b2c963827858a2732c33f268069634',1,'acwing::acwing149::huff_tree::height()'],['../d6/d04/a03493.html#a8fb7e727e3ecc817aaa5f7ccba9c8e74',1,'pat::b::b1055::Person::height()']]],
-  ['highestpeak_5',['highestPeak',['../dc/da7/a01933.html#abb9f9e1158e8b78d5fd3da458bfa04ee',1,'leetcode::map_of_highest_peak::Solution']]],
-  ['highestrankedkitems_6',['highestRankedKItems',['../de/dd3/a01873.html#a9eb14c6a78e5ca4b6d333b512fe3eebd',1,'leetcode::k_highest_ranked_items_within_a_price_range::Solution']]],
-  ['hour_7',['hour',['../dd/d87/a03569.html#aad4cfab0e41b37e8c74e0bc64c421501',1,'pat::a::a1016::record']]],
-  ['huff_5ftree_8',['huff_tree',['../d6/d6d/a01617.html',1,'acwing::acwing149::huff_tree'],['../d6/d6d/a01617.html#a5a1ef04012e6e49022cf49a7d0079b1e',1,'acwing::acwing149::huff_tree::huff_tree()']]]
+  ['halvearray_0',['halveArray',['../df/d1b/a02346.html#a8b6d8af4c6d483a917d9ffd9564d48a2',1,'leetcode::minimum_operations_to_halve_array_sum::Solution']]],
+  ['hasalternatingbits_1',['hasAlternatingBits',['../d8/da6/a02410.html#a51c5b051628687d977e80333f7e8fa05',1,'leetcode::binary_number_with_alternating_bits::Solution']]],
+  ['hash_2',['hash',['../d2/d2f/a01586.html',1,'acwing::acwing845']]],
+  ['head_3',['head',['../df/d3a/a01810.html#a4f57c3dd424723297e00af02450b7d55',1,'leetcode::linked_list_random_node::Solution::head()'],['../d9/db1/a02718.html#a0374336358effe22a25a457e300101f3',1,'leetcode::design_linked_list::MyLinkedList::head()']]],
+  ['height_4',['height',['../d9/d6a/a01618.html#ad9b2c963827858a2732c33f268069634',1,'acwing::acwing149::huff_tree::height()'],['../df/d5f/a03494.html#a8fb7e727e3ecc817aaa5f7ccba9c8e74',1,'pat::b::b1055::Person::height()']]],
+  ['highestpeak_5',['highestPeak',['../de/da9/a01934.html#abb9f9e1158e8b78d5fd3da458bfa04ee',1,'leetcode::map_of_highest_peak::Solution']]],
+  ['highestrankedkitems_6',['highestRankedKItems',['../de/dfb/a01874.html#a9eb14c6a78e5ca4b6d333b512fe3eebd',1,'leetcode::k_highest_ranked_items_within_a_price_range::Solution']]],
+  ['hour_7',['hour',['../d3/d6e/a03570.html#aad4cfab0e41b37e8c74e0bc64c421501',1,'pat::a::a1016::record']]],
+  ['huff_5ftree_8',['huff_tree',['../d9/d6a/a01618.html',1,'acwing::acwing149::huff_tree'],['../d9/d6a/a01618.html#a5a1ef04012e6e49022cf49a7d0079b1e',1,'acwing::acwing149::huff_tree::huff_tree()']]]
 ];

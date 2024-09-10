@@ -119,45 +119,45 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d0/d89/a00071_source.html">acwing408.cpp</a> 第 <a class="el" href="../../d0/d89/a00071_source.html#l00763">763</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>                                              {</div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>            <span class="keywordtype">int</span> n, m;</div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>            cin &gt;&gt; n &gt;&gt; m;</div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>            unordered_map&lt;int, unordered_map&lt;int, int&gt;&gt; g = unordered_map&lt;int, unordered_map&lt;int, int&gt;&gt;();</div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>            unordered_set&lt;int&gt; visited                    = unordered_set&lt;int&gt;();</div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>            <span class="keywordflow">while</span>(m--) {</div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>                <span class="keywordtype">int</span> x, y, z;</div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>                cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>                <span class="keywordflow">if</span>(g[x].count(y) == 0 || g[x][y] &gt; z) {</div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>                    g[x][y] = z;<span class="comment">// Only keep the smallest weight for multiple edges</span></div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>                }</div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>            }</div>
-<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>            visited.insert(1);</div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>            <span class="comment">// Custom comparator for priority_queue to prioritize smaller weights</span></div>
-<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>            <span class="keyword">auto</span> <a class="code hl_function" href="../../d6/db3/a00130.html#a93ab66a86e434e6bd6959243ace9ddab">cmp</a> = [](pair&lt;int, int&gt; <a class="code hl_enumvalue" href="../../d1/d51/a00079.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>, pair&lt;int, int&gt; <a class="code hl_enumvalue" href="../../d1/d51/a00079.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>) {</div>
-<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>                <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="../../d1/d51/a00079.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>.second &gt; <a class="code hl_enumvalue" href="../../d1/d51/a00079.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>.second;<span class="comment">// Compare by distance</span></div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>            };</div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>            priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, <span class="keyword">decltype</span>(<a class="code hl_function" href="../../d6/db3/a00130.html#a93ab66a86e434e6bd6959243ace9ddab">cmp</a>)&gt; pq(<a class="code hl_function" href="../../d6/db3/a00130.html#a93ab66a86e434e6bd6959243ace9ddab">cmp</a>);</div>
-<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>            pq.emplace(1, 0);</div>
-<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>            <span class="keywordflow">while</span>(!pq.empty()) {</div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>                <span class="keyword">auto</span> [u, d] = pq.top();</div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>                pq.pop();</div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>                <span class="keywordflow">if</span>(u != 1 &amp;&amp; (visited.find(u) != visited.end()))</div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>                visited.insert(u);</div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>                <span class="keywordflow">if</span>(u == n) {</div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>                    cout &lt;&lt; d;</div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>                }</div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> [v, w]: g[u]) {</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>                    <span class="keywordflow">if</span>(visited.find(v) != visited.end())</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>                        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>                    pq.emplace(v, d + w);</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>                }</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>            }</div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>            cout &lt;&lt; -1;</div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d0/d89/a00071_source.html">acwing408.cpp</a> 第 <a class="el" href="../../d0/d89/a00071_source.html#l00764">764</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>                                              {</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>            <span class="keywordtype">int</span> n, m;</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>            cin &gt;&gt; n &gt;&gt; m;</div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>            unordered_map&lt;int, unordered_map&lt;int, int&gt;&gt; g = unordered_map&lt;int, unordered_map&lt;int, int&gt;&gt;();</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>            unordered_set&lt;int&gt; visited                    = unordered_set&lt;int&gt;();</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>            <span class="keywordflow">while</span>(m--) {</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>                <span class="keywordtype">int</span> x, y, z;</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>                cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>                <span class="keywordflow">if</span>(g[x].count(y) == 0 || g[x][y] &gt; z) {</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>                    g[x][y] = z;<span class="comment">// Only keep the smallest weight for multiple edges</span></div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>                }</div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>            }</div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>            visited.insert(1);</div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>            <span class="comment">// Custom comparator for priority_queue to prioritize smaller weights</span></div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>            <span class="keyword">auto</span> <a class="code hl_function" href="../../d6/db3/a00130.html#a93ab66a86e434e6bd6959243ace9ddab">cmp</a> = [](pair&lt;int, int&gt; <a class="code hl_enumvalue" href="../../d1/d51/a00079.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>, pair&lt;int, int&gt; <a class="code hl_enumvalue" href="../../d1/d51/a00079.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>) {</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>                <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="../../d1/d51/a00079.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>.second &gt; <a class="code hl_enumvalue" href="../../d1/d51/a00079.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>.second;<span class="comment">// Compare by distance</span></div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>            };</div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>            priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, <span class="keyword">decltype</span>(<a class="code hl_function" href="../../d6/db3/a00130.html#a93ab66a86e434e6bd6959243ace9ddab">cmp</a>)&gt; pq(<a class="code hl_function" href="../../d6/db3/a00130.html#a93ab66a86e434e6bd6959243ace9ddab">cmp</a>);</div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>            pq.emplace(1, 0);</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>            <span class="keywordflow">while</span>(!pq.empty()) {</div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>                <span class="keyword">auto</span> [u, d] = pq.top();</div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>                pq.pop();</div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>                <span class="keywordflow">if</span>(u != 1 &amp;&amp; (visited.find(u) != visited.end()))</div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>                visited.insert(u);</div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>                <span class="keywordflow">if</span>(u == n) {</div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>                    cout &lt;&lt; d;</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>                }</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> [v, w]: g[u]) {</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>                    <span class="keywordflow">if</span>(visited.find(v) != visited.end())</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>                    pq.emplace(v, d + w);</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>                }</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>            }</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>            cout &lt;&lt; -1;</div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>        }</div>
 <div class="ttc" id="aa00079_html_af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977"><div class="ttname"><a href="../../d1/d51/a00079.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">acwing::acwing1929::left</a></div><div class="ttdeci">@ left</div><div class="ttdoc">左</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d03/a00062_source.html#l00550">acwing.h:550</a></div></div>
 <div class="ttc" id="aa00079_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d1/d51/a00079.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d03/a00062_source.html#l00552">acwing.h:552</a></div></div>
 <div class="ttc" id="aa00130_html_a93ab66a86e434e6bd6959243ace9ddab"><div class="ttname"><a href="../../d6/db3/a00130.html#a93ab66a86e434e6bd6959243ace9ddab">acwing::acwing4397::cmp</a></div><div class="ttdeci">bool cmp(const pair&lt; int, int &gt; &amp;a, const pair&lt; int, int &gt; &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d51/a00017_source.html#l06470">acwing.cpp:6470</a></div></div>
@@ -207,7 +207,7 @@ $(function() {
 <div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>        }</div>
 <div class="ttc" id="aa00026_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d6/d5b/a00026.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d5b/a00026_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d0/d89/a00071_source.html#l00763">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d0/d89/a00071_source.html#l00764">main()</a>.</p>
 
 </div>
 </div>
@@ -256,7 +256,7 @@ $(function() {
 <div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>            ASSERT_EQ(<span class="stringliteral">&quot;12&quot;</span>, ans);</div>
 <div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d0/d89/a00071_source.html#l00763">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d0/d89/a00071_source.html#l00764">main()</a>.</p>
 
 </div>
 </div>

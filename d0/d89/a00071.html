@@ -75,6 +75,7 @@ $(function() {
 <code>#include &quot;<a class="el" href="../../db/db2/a00020_source.html">templates.h</a>&quot;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;climits&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;iomanip&gt;</code><br />
@@ -89,7 +90,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d1d/a01597.html">acwing::acwing3874::point</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/a01598.html">acwing::acwing3874::point</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -123,6 +124,12 @@ $(function() {
 <tr class="memitem:de/db9/a00159"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db9/a00159.html">acwing::acwing3374</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d6/db8/a00158"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/db8/a00158.html">acwing::acwing3376</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d3/de5/a00209"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de5/a00209.html">acwing::acwing3377</a></td></tr>
+<tr class="memdesc:d3/de5/a00209"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ol type="1">
+<li>约数的个数 </li>
+</ol>
+<br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d1/db7/a00157"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db7/a00157.html">acwing::acwing3378</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -389,7 +396,7 @@ $(function() {
 <tr class="separator:abfed33610d445c65fe4c05fb040d605d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cbc4288b0228bbba49360fd0586a145"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/a00168.html#a4cbc4288b0228bbba49360fd0586a145">acwing::acwing3786::get_suc</a> (TreeNode *root, int x)</td></tr>
 <tr class="separator:a4cbc4288b0228bbba49360fd0586a145"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a338fc85b82b46b546dcbe8296038ed0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d33/a03629.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d57/a00194.html#a338fc85b82b46b546dcbe8296038ed0d">acwing::acwing3534::getMat</a> (vector&lt; <a class="el" href="../../d8/d33/a03629.html">Matrix</a> * &gt; &amp;mat, int p)</td></tr>
+<tr class="memitem:a338fc85b82b46b546dcbe8296038ed0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d81/a03630.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d57/a00194.html#a338fc85b82b46b546dcbe8296038ed0d">acwing::acwing3534::getMat</a> (vector&lt; <a class="el" href="../../d6/d81/a03630.html">Matrix</a> * &gt; &amp;mat, int p)</td></tr>
 <tr class="separator:a338fc85b82b46b546dcbe8296038ed0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeaf119bde6674976986ca75985205a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da7/a00168.html#afeaf119bde6674976986ca75985205a8">acwing::acwing3786::insert</a> (TreeNode *&amp;root, int x)</td></tr>
 <tr class="separator:afeaf119bde6674976986ca75985205a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -487,6 +494,8 @@ $(function() {
 <tr class="separator:aae74aaaa74c9e285b2f4e513e2d0c72d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4551a620b37bca733f6776956c754df7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d31/a00208.html#a4551a620b37bca733f6776956c754df7">acwing::acwing3380::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
 <tr class="separator:a4551a620b37bca733f6776956c754df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa927748f18e0c9d02411142d97258110"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de5/a00209.html#aa927748f18e0c9d02411142d97258110">acwing::acwing3377::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
+<tr class="separator:aa927748f18e0c9d02411142d97258110"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0eb3cb281a60371c34e783e02b76d8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d38/a00166.html#ac0eb3cb281a60371c34e783e02b76d8f">acwing::acwing836_408::merge</a> (int x, int y)</td></tr>
 <tr class="separator:ac0eb3cb281a60371c34e783e02b76d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa58eeb92100986e48c5f6f98e12f5b16"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db1/a00197.html#aa58eeb92100986e48c5f6f98e12f5b16">acwing::acwing52::moreThanHalfNum_Solution</a> (vector&lt; int &gt; &amp;nums)</td></tr>

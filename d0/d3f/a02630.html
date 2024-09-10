@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::number_of_longest_increasing_subsequence::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,18 +63,85 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d3/de5/a00209.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d4/d53/a00429.html">longest_common_subsequence</a></li><li class="navelem"><a class="el" href="../../d6/d6a/a02633.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../da/de7/a00210.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d4/d53/a00429.html">number_of_longest_increasing_subsequence</a></li><li class="navelem"><a class="el" href="../../d0/d3f/a02630.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::longest_common_subsequence::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../dc/d34/a02627.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::number_of_longest_increasing_subsequence::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../d6/d6a/a02633.html">leetcode::longest_common_subsequence::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d6/d6a/a02633.html#a2bb46ed3a8be851f858de98de8158fd8">longestCommonSubsequence</a>(string text1, string text2)</td><td class="entry"><a class="el" href="../../d6/d6a/a02633.html">leetcode::longest_common_subsequence::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a4b6af9799eec313f937bc5006af09c27"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3f/a02630.html#a4b6af9799eec313f937bc5006af09c27">findNumberOfLIS</a> (vector&lt; int &gt; &amp;nums)</td></tr>
+<tr class="separator:a4b6af9799eec313f937bc5006af09c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l02499">2499</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a4b6af9799eec313f937bc5006af09c27" name="a4b6af9799eec313f937bc5006af09c27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b6af9799eec313f937bc5006af09c27">&#9670;&nbsp;</a></span>findNumberOfLIS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leetcode::number_of_longest_increasing_subsequence::Solution::findNumberOfLIS </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nums</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dc/dee/a00053_source.html">leetcode.cpp</a> 第 <a class="el" href="../../dc/dee/a00053_source.html#l06733">6733</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l06733" name="l06733"></a><span class="lineno"> 6733</span>                                                       {</div>
+<div class="line"><a id="l06734" name="l06734"></a><span class="lineno"> 6734</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = nums.size();</div>
+<div class="line"><a id="l06735" name="l06735"></a><span class="lineno"> 6735</span>            vector dp(n, map&lt;unsigned, unsigned&gt;());<span class="comment">//dp[i][j] = number of increasing subsequence end with i, length is j</span></div>
+<div class="line"><a id="l06736" name="l06736"></a><span class="lineno"> 6736</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l06737" name="l06737"></a><span class="lineno"> 6737</span>                dp[i][1] = 1;</div>
+<div class="line"><a id="l06738" name="l06738"></a><span class="lineno"> 6738</span>            }</div>
+<div class="line"><a id="l06739" name="l06739"></a><span class="lineno"> 6739</span>            <span class="keywordtype">unsigned</span> max_len = 1;</div>
+<div class="line"><a id="l06740" name="l06740"></a><span class="lineno"> 6740</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l06741" name="l06741"></a><span class="lineno"> 6741</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i + 1; j &lt; n; j++) {</div>
+<div class="line"><a id="l06742" name="l06742"></a><span class="lineno"> 6742</span>                    <span class="keyword">auto</span> &amp;[len, cnt] = *dp[i].rbegin();</div>
+<div class="line"><a id="l06743" name="l06743"></a><span class="lineno"> 6743</span>                    <span class="keywordflow">if</span>(nums[j] &gt; nums[i]) {</div>
+<div class="line"><a id="l06744" name="l06744"></a><span class="lineno"> 6744</span>                        dp[j][len + 1] += cnt;</div>
+<div class="line"><a id="l06745" name="l06745"></a><span class="lineno"> 6745</span>                        max_len = max(max_len, len + 1);</div>
+<div class="line"><a id="l06746" name="l06746"></a><span class="lineno"> 6746</span>                    }</div>
+<div class="line"><a id="l06747" name="l06747"></a><span class="lineno"> 6747</span>                }</div>
+<div class="line"><a id="l06748" name="l06748"></a><span class="lineno"> 6748</span>            }</div>
+<div class="line"><a id="l06749" name="l06749"></a><span class="lineno"> 6749</span>            <span class="keywordtype">unsigned</span> ans = 0;</div>
+<div class="line"><a id="l06750" name="l06750"></a><span class="lineno"> 6750</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l06751" name="l06751"></a><span class="lineno"> 6751</span>                ans += dp[i][max_len];</div>
+<div class="line"><a id="l06752" name="l06752"></a><span class="lineno"> 6752</span>            }</div>
+<div class="line"><a id="l06753" name="l06753"></a><span class="lineno"> 6753</span>            <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l06754" name="l06754"></a><span class="lineno"> 6754</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">被这些函数引用 <a class="el" href="../../d5/de0/a00050_source.html#l03107">leetcode::number_of_longest_increasing_subsequence::TEST()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../dd/dad/a00005_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../dc/dee/a00053_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
