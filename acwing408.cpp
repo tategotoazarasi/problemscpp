@@ -6,6 +6,7 @@
 #include "templates.h"
 #include <algorithm>
 #include <climits>
+#include <cmath>
 #include <cstdlib>
 #include <cstring>
 #include <iomanip>
@@ -2015,4 +2016,32 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3380
+
+	/**
+	 * @brief 3377. 约数的个数
+	 */
+	namespace acwing3377 {
+		int main(istream &cin, ostream &cout) {
+			unsigned long n;
+			cin >> n;
+			unsigned long a;
+			while(n--) {
+				cin >> a;
+				unsigned long cnt = 2;
+				for(unsigned long i = 2; i <= sqrt(a); i++) {
+					if(a % i == 0) {
+						cnt += 2;
+						if(a / i == i) {
+							cnt--;
+						}
+					}
+				}
+				if(a == 1) {
+					cnt = 1;
+				}
+				cout << cnt << endl;
+			}
+			return 0;
+		}
+	}// namespace acwing3377
 }// namespace acwing

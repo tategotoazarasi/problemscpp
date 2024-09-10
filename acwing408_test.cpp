@@ -2400,4 +2400,23 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3380
+
+	/**
+	 * @brief 3377. 约数的个数
+	 */
+	namespace acwing3377 {
+		TEST(acwing3377, case1) {
+			istringstream in("5\n"
+			                 "1 3 4 6 12");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1\n"
+			          "2\n"
+			          "3\n"
+			          "4\n"
+			          "6\n",
+			          ans);
+		}
+	}// namespace acwing3377
 }// namespace acwing

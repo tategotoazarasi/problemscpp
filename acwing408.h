@@ -425,6 +425,13 @@ namespace acwing {
 		bool add(long long n);
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace acwing3380
+
+	/**
+	 * @brief 3377. 约数的个数
+	 */
+	namespace acwing3377 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H
