@@ -432,6 +432,13 @@ namespace acwing {
 	namespace acwing3377 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3507. 阶乘的末尾0
+	 */
+	namespace acwing3507 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

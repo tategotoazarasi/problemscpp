@@ -2419,4 +2419,26 @@ namespace acwing {
 			          ans);
 		}
 	}// namespace acwing3377
+
+	/**
+	 * @brief 3507. 阶乘的末尾0
+	 */
+	namespace acwing3507 {
+		TEST(acwing3507, case1) {
+			istringstream in("5");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1",
+			          ans);
+		}
+
+		TEST(acwing3507, case2) {
+			istringstream in("417918803");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("104479694", ans);
+		}
+	}// namespace acwing3507
 }// namespace acwing

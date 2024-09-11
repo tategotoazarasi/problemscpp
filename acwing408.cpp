@@ -2044,4 +2044,24 @@ namespace acwing {
 			return 0;
 		}
 	}// namespace acwing3377
+
+	/**
+	 * @brief 3507. 阶乘的末尾0
+	 */
+	namespace acwing3507 {
+		int main(istream &cin, ostream &cout) {
+			unsigned long n;
+			cin >> n;
+			unsigned long cnt2 = 0;
+			unsigned long cnt5 = 0;
+			for(unsigned long i = 2; i <= n; i *= 2) {
+				cnt2 += n / i;
+			}
+			for(unsigned long i = 5; i <= n; i *= 5) {
+				cnt5 += n / i;
+			}
+			cout << min(cnt2, cnt5);
+			return 0;
+		}
+	}// namespace acwing3507
 }// namespace acwing
