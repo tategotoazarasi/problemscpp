@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['head_0',['head',['../df/d3a/a01810.html#a4f57c3dd424723297e00af02450b7d55',1,'leetcode::linked_list_random_node::Solution::head()'],['../d9/db1/a02718.html#a0374336358effe22a25a457e300101f3',1,'leetcode::design_linked_list::MyLinkedList::head()']]],
-  ['height_1',['height',['../d9/d6a/a01618.html#ad9b2c963827858a2732c33f268069634',1,'acwing::acwing149::huff_tree::height()'],['../df/d5f/a03494.html#a8fb7e727e3ecc817aaa5f7ccba9c8e74',1,'pat::b::b1055::Person::height()']]],
-  ['hour_2',['hour',['../d3/d6e/a03570.html#aad4cfab0e41b37e8c74e0bc64c421501',1,'pat::a::a1016::record']]]
+  ['head_0',['head',['../d2/d31/a01811.html#a4f57c3dd424723297e00af02450b7d55',1,'leetcode::linked_list_random_node::Solution::head()'],['../d5/d55/a02719.html#a0374336358effe22a25a457e300101f3',1,'leetcode::design_linked_list::MyLinkedList::head()']]],
+  ['height_1',['height',['../d3/deb/a01619.html#ad9b2c963827858a2732c33f268069634',1,'acwing::acwing149::huff_tree::height()'],['../dd/d6c/a03495.html#a8fb7e727e3ecc817aaa5f7ccba9c8e74',1,'pat::b::b1055::Person::height()']]],
+  ['hour_2',['hour',['../d3/da4/a03571.html#aad4cfab0e41b37e8c74e0bc64c421501',1,'pat::a::a1016::record']]]
 ];

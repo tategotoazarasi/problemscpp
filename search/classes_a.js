@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['node_0',['Node',['../da/d40/a02806.html',1,'leetcode::all_nodes_distance_k_in_binary_tree::Node'],['../d9/da4/a02798.html',1,'leetcode::kill_process::Node'],['../d1/de5/a02822.html',1,'leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::Node'],['../d2/df5/a02482.html',1,'leetcode::n_ary_tree_level_order_traversal::Node'],['../d5/d49/a02282.html',1,'leetcode::n_ary_tree_postorder_traversal::Node'],['../d3/d6e/a02266.html',1,'leetcode::n_ary_tree_preorder_traversal::Node'],['../d9/d79/a01658.html',1,'leetcode::Node']]],
-  ['node_1',['node',['../d8/d5a/a02946.html',1,'leetcode::parallel_courses']]],
-  ['node_2',['Node',['../d1/df2/a02990.html',1,'leetcode::range_module::Chtholly::Node'],['../d9/d4f/a02366.html',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]],
-  ['node_3',['node',['../d2/d6e/a03566.html',1,'pat::a::a1004']]],
-  ['node_4',['Node',['../df/d0b/a03610.html',1,'pat::a::a7_4::Node'],['../d1/d07/a03482.html',1,'pat::b::b1025::Node'],['../d7/d83/a03506.html',1,'pat::b::b1075::Node']]],
-  ['node_5',['node',['../d6/d76/a03554.html',1,'pat::b::b1105::node'],['../d0/d31/a03558.html',1,'pat::b::b1110::node']]],
-  ['numarray_6',['NumArray',['../d9/d76/a02526.html',1,'leetcode::range_sum_query_immutable::NumArray'],['../df/d89/a02462.html',1,'leetcode::range_sum_query_mutable::NumArray']]]
+  ['node_0',['Node',['../d9/daf/a02807.html',1,'leetcode::all_nodes_distance_k_in_binary_tree::Node'],['../d0/dda/a02799.html',1,'leetcode::kill_process::Node'],['../df/d37/a02823.html',1,'leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::Node'],['../d3/de3/a02483.html',1,'leetcode::n_ary_tree_level_order_traversal::Node'],['../dd/d29/a02283.html',1,'leetcode::n_ary_tree_postorder_traversal::Node'],['../d5/d95/a02267.html',1,'leetcode::n_ary_tree_preorder_traversal::Node'],['../d4/dd4/a01659.html',1,'leetcode::Node']]],
+  ['node_1',['node',['../df/d93/a02947.html',1,'leetcode::parallel_courses']]],
+  ['node_2',['Node',['../dd/d65/a02991.html',1,'leetcode::range_module::Chtholly::Node'],['../d2/daa/a02367.html',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]],
+  ['node_3',['node',['../d4/dd1/a03567.html',1,'pat::a::a1004']]],
+  ['node_4',['Node',['../d0/d50/a03611.html',1,'pat::a::a7_4::Node'],['../dc/d5c/a03483.html',1,'pat::b::b1025::Node'],['../dc/d46/a03507.html',1,'pat::b::b1075::Node']]],
+  ['node_5',['node',['../d1/df9/a03555.html',1,'pat::b::b1105::node'],['../d0/db8/a03559.html',1,'pat::b::b1110::node']]],
+  ['numarray_6',['NumArray',['../d7/d7d/a02527.html',1,'leetcode::range_sum_query_immutable::NumArray'],['../dc/d6a/a02463.html',1,'leetcode::range_sum_query_mutable::NumArray']]]
 ];
