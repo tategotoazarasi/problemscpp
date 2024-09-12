@@ -439,6 +439,13 @@ namespace acwing {
 	namespace acwing3507 {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	/**
+	 * @brief 3484. 整除问题
+	 */
+	namespace acwing3484 {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace acwing
 
 #endif//PROBLEMSCPP_ACWING408_H

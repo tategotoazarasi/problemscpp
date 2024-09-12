@@ -2441,4 +2441,33 @@ namespace acwing {
 			ASSERT_EQ("104479694", ans);
 		}
 	}// namespace acwing3507
+
+	/**
+	 * @brief 3484. 整除问题
+	 */
+	namespace acwing3484 {
+		TEST(acwing3484, case1) {
+			istringstream in("6 10");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1", ans);
+		}
+
+		TEST(acwing3484, case2) {
+			istringstream in("519 453");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3", ans);
+		}
+
+		TEST(acwing3484, case3) {
+			istringstream in("339 9");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("83", ans);
+		}
+	}// namespace acwing3484
 }// namespace acwing
