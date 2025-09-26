@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::simplify_path 命名空间参考</title>
+<title>problemscpp: leetcode::hand_of_straights 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">problemscpp
    </div>
    <div id="projectbrief">A collection of my answers to algorithm problems in c++.</div>
@@ -30,10 +34,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -41,12 +50,17 @@ var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,227 +70,180 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/dc1/a00212.html">leetcode</a></li><li class="navelem"><a class="el" href="../../dd/d2d/a00229.html">simplify_path</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d28/a00223.html">leetcode</a></li><li class="navelem"><a class="el" href="../../dd/d2d/a00229.html">hand_of_straights</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::simplify_path 命名空间参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::hand_of_straights 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>LeetCode 71. 简化路径  
-<a href="../../dd/d2d/a00229.html#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d8f/a01740.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df7/a01711.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:abffb4cd45fb8ccda1b6a1d71dc8c6677"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/a00229.html#abffb4cd45fb8ccda1b6a1d71dc8c6677">TEST</a> (simplify_path, case1)</td></tr>
-<tr class="separator:abffb4cd45fb8ccda1b6a1d71dc8c6677"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3421e5ccb70f77f379c999d36905fed0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/a00229.html#a3421e5ccb70f77f379c999d36905fed0">TEST</a> (simplify_path, case2)</td></tr>
-<tr class="separator:a3421e5ccb70f77f379c999d36905fed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ac9d8260db90a0b2d3f704ca5b7053d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/a00229.html#a9ac9d8260db90a0b2d3f704ca5b7053d">TEST</a> (simplify_path, case3)</td></tr>
-<tr class="separator:a9ac9d8260db90a0b2d3f704ca5b7053d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa85cbd2e12475c807f5459fea0490d74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/a00229.html#aa85cbd2e12475c807f5459fea0490d74">TEST</a> (simplify_path, case4)</td></tr>
-<tr class="separator:aa85cbd2e12475c807f5459fea0490d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6eb7a477e83f60c039ff838279533540"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/a00229.html#a6eb7a477e83f60c039ff838279533540">TEST</a> (simplify_path, case5)</td></tr>
-<tr class="separator:a6eb7a477e83f60c039ff838279533540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb70a66f645529e36f7e28730f8ca0a9" id="r_adb70a66f645529e36f7e28730f8ca0a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb70a66f645529e36f7e28730f8ca0a9">TEST</a> (hand_of_straights, case1)</td></tr>
+<tr class="separator:adb70a66f645529e36f7e28730f8ca0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f5e4d5d5483d9a926aad511a3ba149" id="r_a60f5e4d5d5483d9a926aad511a3ba149"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60f5e4d5d5483d9a926aad511a3ba149">TEST</a> (hand_of_straights, case2)</td></tr>
+<tr class="separator:a60f5e4d5d5483d9a926aad511a3ba149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed869a157da04423e4373025516fc0f4" id="r_aed869a157da04423e4373025516fc0f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed869a157da04423e4373025516fc0f4">TEST</a> (hand_of_straights, case3)</td></tr>
+<tr class="separator:aed869a157da04423e4373025516fc0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6662512f2a7c75bd22be6af07a8fcb1e" id="r_a6662512f2a7c75bd22be6af07a8fcb1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6662512f2a7c75bd22be6af07a8fcb1e">TEST</a> (hand_of_straights, case4)</td></tr>
+<tr class="separator:a6662512f2a7c75bd22be6af07a8fcb1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >LeetCode 71. 简化路径 </p>
-</div><h2 class="groupheader">函数说明</h2>
-<a id="abffb4cd45fb8ccda1b6a1d71dc8c6677" name="abffb4cd45fb8ccda1b6a1d71dc8c6677"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abffb4cd45fb8ccda1b6a1d71dc8c6677">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/5]</span></h2>
+<h2 class="groupheader">函数说明</h2>
+<a id="adb70a66f645529e36f7e28730f8ca0a9" name="adb70a66f645529e36f7e28730f8ca0a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb70a66f645529e36f7e28730f8ca0a9">&#9670;&#160;</a></span>TEST() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::simplify_path::TEST </td>
+          <td class="memname">leetcode::hand_of_straights::TEST </td>
           <td>(</td>
-          <td class="paramtype">simplify_path&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">hand_of_straights</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case1&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l00323">323</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                                   {</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            ASSERT_EQ(<span class="stringliteral">&quot;/home&quot;</span>, Solution::simplifyPath(<span class="stringliteral">&quot;/home/&quot;</span>));</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00147">147</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>                                       {</div>
+<div class="line"><span class="lineno">  148</span>            <span class="keywordtype">int</span> input[] = {1, 2, 3, 6, 2, 3, 4, 7, 8};</div>
+<div class="line"><span class="lineno">  149</span>            <span class="keyword">auto</span> vec    = vector(begin(input), end(input));</div>
+<div class="line"><span class="lineno">  150</span>            ASSERT_TRUE(<a class="code hl_function" href="../../d8/df7/a01711.html#aaa9e63f5e810760226b4921275ae8869">Solution::isNStraightHand</a>(vec, 3));</div>
+<div class="line"><span class="lineno">  151</span>        }</div>
+<div class="ttc" id="aa01711_html_aaa9e63f5e810760226b4921275ae8869"><div class="ttname"><a href="../../d8/df7/a01711.html#aaa9e63f5e810760226b4921275ae8869">leetcode::hand_of_straights::Solution::isNStraightHand</a></div><div class="ttdeci">static bool isNStraightHand(vector&lt; int &gt; &amp;hand, int groupSize)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l00192">leetcode.cpp:192</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l00560">leetcode::simplify_path::Solution::simplifyPath()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l00192">leetcode::hand_of_straights::Solution::isNStraightHand()</a>.</p>
 
 </div>
 </div>
-<a id="a3421e5ccb70f77f379c999d36905fed0" name="a3421e5ccb70f77f379c999d36905fed0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3421e5ccb70f77f379c999d36905fed0">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/5]</span></h2>
+<a id="a60f5e4d5d5483d9a926aad511a3ba149" name="a60f5e4d5d5483d9a926aad511a3ba149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f5e4d5d5483d9a926aad511a3ba149">&#9670;&#160;</a></span>TEST() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::simplify_path::TEST </td>
+          <td class="memname">leetcode::hand_of_straights::TEST </td>
           <td>(</td>
-          <td class="paramtype">simplify_path&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">hand_of_straights</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case2&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l00327">327</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                                   {</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            ASSERT_EQ(<span class="stringliteral">&quot;/&quot;</span>, Solution::simplifyPath(<span class="stringliteral">&quot;/../&quot;</span>));</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00153">153</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  153</span>                                       {</div>
+<div class="line"><span class="lineno">  154</span>            <span class="keywordtype">int</span> input[] = {1, 2, 3, 4, 5};</div>
+<div class="line"><span class="lineno">  155</span>            <span class="keyword">auto</span> vec    = vector(begin(input), end(input));</div>
+<div class="line"><span class="lineno">  156</span>            ASSERT_FALSE(<a class="code hl_function" href="../../d8/df7/a01711.html#aaa9e63f5e810760226b4921275ae8869">Solution::isNStraightHand</a>(vec, 4));</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l00560">leetcode::simplify_path::Solution::simplifyPath()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l00192">leetcode::hand_of_straights::Solution::isNStraightHand()</a>.</p>
 
 </div>
 </div>
-<a id="a9ac9d8260db90a0b2d3f704ca5b7053d" name="a9ac9d8260db90a0b2d3f704ca5b7053d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ac9d8260db90a0b2d3f704ca5b7053d">&#9670;&nbsp;</a></span>TEST() <span class="overload">[3/5]</span></h2>
+<a id="aed869a157da04423e4373025516fc0f4" name="aed869a157da04423e4373025516fc0f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed869a157da04423e4373025516fc0f4">&#9670;&#160;</a></span>TEST() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::simplify_path::TEST </td>
+          <td class="memname">leetcode::hand_of_straights::TEST </td>
           <td>(</td>
-          <td class="paramtype">simplify_path&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">hand_of_straights</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case3&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l00331">331</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                                   {</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            ASSERT_EQ(<span class="stringliteral">&quot;/home/foo&quot;</span>, Solution::simplifyPath(<span class="stringliteral">&quot;/home//foo/&quot;</span>));</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00159">159</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>                                       {</div>
+<div class="line"><span class="lineno">  160</span>            <span class="keywordtype">int</span> input[] = {1, 2, 3, 4, 5, 6};</div>
+<div class="line"><span class="lineno">  161</span>            <span class="keyword">auto</span> vec    = vector(begin(input), end(input));</div>
+<div class="line"><span class="lineno">  162</span>            ASSERT_TRUE(<a class="code hl_function" href="../../d8/df7/a01711.html#aaa9e63f5e810760226b4921275ae8869">Solution::isNStraightHand</a>(vec, 2));</div>
+<div class="line"><span class="lineno">  163</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l00560">leetcode::simplify_path::Solution::simplifyPath()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l00192">leetcode::hand_of_straights::Solution::isNStraightHand()</a>.</p>
 
 </div>
 </div>
-<a id="aa85cbd2e12475c807f5459fea0490d74" name="aa85cbd2e12475c807f5459fea0490d74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa85cbd2e12475c807f5459fea0490d74">&#9670;&nbsp;</a></span>TEST() <span class="overload">[4/5]</span></h2>
+<a id="a6662512f2a7c75bd22be6af07a8fcb1e" name="a6662512f2a7c75bd22be6af07a8fcb1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6662512f2a7c75bd22be6af07a8fcb1e">&#9670;&#160;</a></span>TEST() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::simplify_path::TEST </td>
+          <td class="memname">leetcode::hand_of_straights::TEST </td>
           <td>(</td>
-          <td class="paramtype">simplify_path&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">hand_of_straights</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case4&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case4</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l00335">335</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                                   {</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            ASSERT_EQ(<span class="stringliteral">&quot;/c&quot;</span>, Solution::simplifyPath(<span class="stringliteral">&quot;/a/./b/../../c/&quot;</span>));</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00165">165</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  165</span>                                       {</div>
+<div class="line"><span class="lineno">  166</span>            <span class="keywordtype">int</span> input[] = {</div>
+<div class="line"><span class="lineno">  167</span>                    9, 13, 15, 23, 22, 25, 4, 4, 29, 15, 8, 23, 12, 19, 24, 17, 18, 11, 22, 24, 17, 17, 10, 23,</div>
+<div class="line"><span class="lineno">  168</span>                    21, 18, 14, 18, 7, 6, 3, 6, 19, 11, 16, 11, 12, 13, 8, 26, 17, 20, 13, 19, 22, 21, 27, 9, 20,</div>
+<div class="line"><span class="lineno">  169</span>                    15, 20, 27, 8, 13, 25, 23, 22, 15, 9, 14, 20, 10, 6, 5, 14, 12, 7, 16, 21, 18, 21, 24, 23,</div>
+<div class="line"><span class="lineno">  170</span>                    10, 21, 16, 18, 16, 18, 5, 20, 19, 20, 10, 14, 26, 2, 9, 19, 12, 28, 17, 5, 7, 25, 22, 16,</div>
+<div class="line"><span class="lineno">  171</span>                    17, 21, 11};</div>
+<div class="line"><span class="lineno">  172</span>            <span class="keyword">auto</span> vec = vector(begin(input), end(input));</div>
+<div class="line"><span class="lineno">  173</span>            ASSERT_FALSE(<a class="code hl_function" href="../../d8/df7/a01711.html#aaa9e63f5e810760226b4921275ae8869">Solution::isNStraightHand</a>(vec, 10));</div>
+<div class="line"><span class="lineno">  174</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l00560">leetcode::simplify_path::Solution::simplifyPath()</a>.</p>
-
-</div>
-</div>
-<a id="a6eb7a477e83f60c039ff838279533540" name="a6eb7a477e83f60c039ff838279533540"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6eb7a477e83f60c039ff838279533540">&#9670;&nbsp;</a></span>TEST() <span class="overload">[5/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">leetcode::simplify_path::TEST </td>
-          <td>(</td>
-          <td class="paramtype">simplify_path&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">case5&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l00339">339</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                                   {</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            ASSERT_EQ(<span class="stringliteral">&quot;/a/b/c&quot;</span>, Solution::simplifyPath(<span class="stringliteral">&quot;/a//b////c/d//././/..&quot;</span>));</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l00560">leetcode::simplify_path::Solution::simplifyPath()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l00192">leetcode::hand_of_straights::Solution::isNStraightHand()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

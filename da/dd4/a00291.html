@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::longest_happy_string 命名空间参考</title>
+<title>problemscpp: leetcode::find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">problemscpp
    </div>
    <div id="projectbrief">A collection of my answers to algorithm problems in c++.</div>
@@ -30,10 +34,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -41,12 +50,17 @@ var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,116 +70,142 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/dc1/a00212.html">leetcode</a></li><li class="navelem"><a class="el" href="../../da/dd4/a00291.html">longest_happy_string</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d28/a00223.html">leetcode</a></li><li class="navelem"><a class="el" href="../../da/dd4/a00291.html">find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::longest_happy_string 命名空间参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>LeetCode 1405. Longest Happy String  
-<a href="../../da/dd4/a00291.html#details">更多...</a></p>
+<p>LeetCode 1414. 和为 K 的最少斐波那契数字数目  
+<a href="#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df0/a02016.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd8/a01995.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a72ea5269ac7dd41a82a630c8290188f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd4/a00291.html#a72ea5269ac7dd41a82a630c8290188f9">TEST</a> (longest_happy_string, case1)</td></tr>
-<tr class="separator:a72ea5269ac7dd41a82a630c8290188f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88c0a7e40e96039207130f562a93603f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd4/a00291.html#a88c0a7e40e96039207130f562a93603f">TEST</a> (longest_happy_string, case2)</td></tr>
-<tr class="separator:a88c0a7e40e96039207130f562a93603f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a762726b6c27abe3a81e82d772a36e89a" id="r_a762726b6c27abe3a81e82d772a36e89a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a762726b6c27abe3a81e82d772a36e89a">TEST</a> (find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k, case1)</td></tr>
+<tr class="separator:a762726b6c27abe3a81e82d772a36e89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d12c2ce0236f46a19f44f50f1277783" id="r_a2d12c2ce0236f46a19f44f50f1277783"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d12c2ce0236f46a19f44f50f1277783">TEST</a> (find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k, case2)</td></tr>
+<tr class="separator:a2d12c2ce0236f46a19f44f50f1277783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bfa9f4f8057c260124f70146da351b7" id="r_a9bfa9f4f8057c260124f70146da351b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bfa9f4f8057c260124f70146da351b7">TEST</a> (find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k, case3)</td></tr>
+<tr class="separator:a9bfa9f4f8057c260124f70146da351b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >LeetCode 1405. Longest Happy String </p>
+<div class="textblock"><p>LeetCode 1414. 和为 K 的最少斐波那契数字数目 </p>
 </div><h2 class="groupheader">函数说明</h2>
-<a id="a72ea5269ac7dd41a82a630c8290188f9" name="a72ea5269ac7dd41a82a630c8290188f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72ea5269ac7dd41a82a630c8290188f9">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/2]</span></h2>
+<a id="a762726b6c27abe3a81e82d772a36e89a" name="a762726b6c27abe3a81e82d772a36e89a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a762726b6c27abe3a81e82d772a36e89a">&#9670;&#160;</a></span>TEST() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::longest_happy_string::TEST </td>
+          <td class="memname">leetcode::find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k::TEST </td>
           <td>(</td>
-          <td class="paramtype">longest_happy_string&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case1&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01336">1336</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01336" name="l01336"></a><span class="lineno"> 1336</span>                                          {</div>
-<div class="line"><a id="l01337" name="l01337"></a><span class="lineno"> 1337</span>            ASSERT_EQ(<span class="stringliteral">&quot;ccbccacc&quot;</span>, Solution::longestDiverseString(1, 1, 7));</div>
-<div class="line"><a id="l01338" name="l01338"></a><span class="lineno"> 1338</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l01239">1239</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1239</span>                                                                                 {</div>
+<div class="line"><span class="lineno"> 1240</span>            ASSERT_EQ(2, <a class="code hl_function" href="../../d3/dd8/a01995.html#a2c2c057331382fa8576425a0a775d975">Solution::findMinFibonacciNumbers</a>(7));</div>
+<div class="line"><span class="lineno"> 1241</span>        }</div>
+<div class="ttc" id="aa01995_html_a2c2c057331382fa8576425a0a775d975"><div class="ttname"><a href="../../d3/dd8/a01995.html#a2c2c057331382fa8576425a0a775d975">leetcode::find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k::Solution::findMinFibonacciNumbers</a></div><div class="ttdeci">static int findMinFibonacciNumbers(int k)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l02172">leetcode.cpp:2172</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l02507">leetcode::longest_happy_string::Solution::longestDiverseString()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l02172">leetcode::find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k::Solution::findMinFibonacciNumbers()</a>.</p>
 
 </div>
 </div>
-<a id="a88c0a7e40e96039207130f562a93603f" name="a88c0a7e40e96039207130f562a93603f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88c0a7e40e96039207130f562a93603f">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/2]</span></h2>
+<a id="a2d12c2ce0236f46a19f44f50f1277783" name="a2d12c2ce0236f46a19f44f50f1277783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d12c2ce0236f46a19f44f50f1277783">&#9670;&#160;</a></span>TEST() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::longest_happy_string::TEST </td>
+          <td class="memname">leetcode::find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k::TEST </td>
           <td>(</td>
-          <td class="paramtype">longest_happy_string&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case2&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01340">1340</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01340" name="l01340"></a><span class="lineno"> 1340</span>                                          {</div>
-<div class="line"><a id="l01341" name="l01341"></a><span class="lineno"> 1341</span>            ASSERT_EQ(<span class="stringliteral">&quot;aabaa&quot;</span>, Solution::longestDiverseString(7, 1, 0));</div>
-<div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l01243">1243</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1243</span>                                                                                 {</div>
+<div class="line"><span class="lineno"> 1244</span>            ASSERT_EQ(2, <a class="code hl_function" href="../../d3/dd8/a01995.html#a2c2c057331382fa8576425a0a775d975">Solution::findMinFibonacciNumbers</a>(10));</div>
+<div class="line"><span class="lineno"> 1245</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l02507">leetcode::longest_happy_string::Solution::longestDiverseString()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l02172">leetcode::find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k::Solution::findMinFibonacciNumbers()</a>.</p>
+
+</div>
+</div>
+<a id="a9bfa9f4f8057c260124f70146da351b7" name="a9bfa9f4f8057c260124f70146da351b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bfa9f4f8057c260124f70146da351b7">&#9670;&#160;</a></span>TEST() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k::TEST </td>
+          <td>(</td>
+          <td class="paramtype">find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l01247">1247</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1247</span>                                                                                 {</div>
+<div class="line"><span class="lineno"> 1248</span>            ASSERT_EQ(3, <a class="code hl_function" href="../../d3/dd8/a01995.html#a2c2c057331382fa8576425a0a775d975">Solution::findMinFibonacciNumbers</a>(19));</div>
+<div class="line"><span class="lineno"> 1249</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l02172">leetcode::find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k::Solution::findMinFibonacciNumbers()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

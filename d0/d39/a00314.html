@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::merge_nodes_in_between_zeros 命名空间参考</title>
+<title>problemscpp: leetcode::single_element_in_a_sorted_array 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">problemscpp
    </div>
    <div id="projectbrief">A collection of my answers to algorithm problems in c++.</div>
@@ -30,10 +34,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -41,12 +50,17 @@ var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,37 +70,114 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/dc1/a00212.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d0/d39/a00314.html">merge_nodes_in_between_zeros</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d28/a00223.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d0/d39/a00314.html">single_element_in_a_sorted_array</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">类</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::merge_nodes_in_between_zeros 命名空间参考</div></div>
+<a href="#nested-classes">类</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::single_element_in_a_sorted_array 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>LeetCode 6013. 合并零之间的节点  
-<a href="../../d0/d39/a00314.html#details">更多...</a></p>
+<p>LeetCode 540. Single Element in a Sorted Array  
+<a href="#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d60/a02128.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d96/a02091.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a87486d612f4aab71430856aacc3df4eb" id="r_a87486d612f4aab71430856aacc3df4eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87486d612f4aab71430856aacc3df4eb">TEST</a> (single_element_in_a_sorted_array, case1)</td></tr>
+<tr class="separator:a87486d612f4aab71430856aacc3df4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17daf266baffe293d2cab542d82a1ca5" id="r_a17daf266baffe293d2cab542d82a1ca5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17daf266baffe293d2cab542d82a1ca5">TEST</a> (single_element_in_a_sorted_array, case2)</td></tr>
+<tr class="separator:a17daf266baffe293d2cab542d82a1ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >LeetCode 6013. 合并零之间的节点 </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>LeetCode 540. Single Element in a Sorted Array </p>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="a87486d612f4aab71430856aacc3df4eb" name="a87486d612f4aab71430856aacc3df4eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87486d612f4aab71430856aacc3df4eb">&#9670;&#160;</a></span>TEST() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::single_element_in_a_sorted_array::TEST </td>
+          <td>(</td>
+          <td class="paramtype">single_element_in_a_sorted_array</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l01520">1520</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1520</span>                                                      {</div>
+<div class="line"><span class="lineno"> 1521</span>            vector input = {1, 1, 2, 3, 3, 4, 4, 8, 8};</div>
+<div class="line"><span class="lineno"> 1522</span>            ASSERT_EQ(2, <a class="code hl_function" href="../../d9/d96/a02091.html#a3e81c55df1c79cab718d79c6f0605cf8">Solution::singleNonDuplicate</a>(input));</div>
+<div class="line"><span class="lineno"> 1523</span>        }</div>
+<div class="ttc" id="aa02091_html_a3e81c55df1c79cab718d79c6f0605cf8"><div class="ttname"><a href="../../d9/d96/a02091.html#a3e81c55df1c79cab718d79c6f0605cf8">leetcode::single_element_in_a_sorted_array::Solution::singleNonDuplicate</a></div><div class="ttdeci">static int singleNonDuplicate(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l02895">leetcode.cpp:2895</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l02895">leetcode::single_element_in_a_sorted_array::Solution::singleNonDuplicate()</a>.</p>
+
+</div>
+</div>
+<a id="a17daf266baffe293d2cab542d82a1ca5" name="a17daf266baffe293d2cab542d82a1ca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17daf266baffe293d2cab542d82a1ca5">&#9670;&#160;</a></span>TEST() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::single_element_in_a_sorted_array::TEST </td>
+          <td>(</td>
+          <td class="paramtype">single_element_in_a_sorted_array</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l01525">1525</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1525</span>                                                      {</div>
+<div class="line"><span class="lineno"> 1526</span>            vector input = {3, 3, 7, 7, 10, 11, 11};</div>
+<div class="line"><span class="lineno"> 1527</span>            ASSERT_EQ(10, <a class="code hl_function" href="../../d9/d96/a02091.html#a3e81c55df1c79cab718d79c6f0605cf8">Solution::singleNonDuplicate</a>(input));</div>
+<div class="line"><span class="lineno"> 1528</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l02895">leetcode::single_element_in_a_sorted_array::Solution::singleNonDuplicate()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

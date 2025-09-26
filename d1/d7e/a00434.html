@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::edit_distance 命名空间参考</title>
+<title>problemscpp: leetcode::jump_game 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">problemscpp
    </div>
    <div id="projectbrief">A collection of my answers to algorithm problems in c++.</div>
@@ -30,10 +34,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -41,12 +50,17 @@ var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,125 +70,119 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/dc1/a00212.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d1/d7e/a00434.html">edit_distance</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d28/a00223.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d1/d7e/a00434.html">jump_game</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::edit_distance 命名空间参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::jump_game 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><ol type="1">
-<li>Edit Distance </li>
+<li>Jump Game </li>
 </ol>
  
-<a href="../../d1/d7e/a00434.html#details">更多...</a></p>
+<a href="#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d26/a02644.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d29/a02623.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a2d0aa90f1f77b44debcf34e6ae79e9d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7e/a00434.html#a2d0aa90f1f77b44debcf34e6ae79e9d6">TEST</a> (edit_distance, case1)</td></tr>
-<tr class="separator:a2d0aa90f1f77b44debcf34e6ae79e9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addd997bc8398218f2bcb38df89d7a114"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7e/a00434.html#addd997bc8398218f2bcb38df89d7a114">TEST</a> (edit_distance, case2)</td></tr>
-<tr class="separator:addd997bc8398218f2bcb38df89d7a114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7a3e5f84eb8f1b13b6d7dfb25ce815a" id="r_ae7a3e5f84eb8f1b13b6d7dfb25ce815a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7a3e5f84eb8f1b13b6d7dfb25ce815a">TEST</a> (jump_game, case1)</td></tr>
+<tr class="separator:ae7a3e5f84eb8f1b13b6d7dfb25ce815a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2266a9612a495166bf1174afa3e6e1b7" id="r_a2266a9612a495166bf1174afa3e6e1b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2266a9612a495166bf1174afa3e6e1b7">TEST</a> (jump_game, case2)</td></tr>
+<tr class="separator:a2266a9612a495166bf1174afa3e6e1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><ol type="1">
-<li>Edit Distance </li>
+<li>Jump Game </li>
 </ol>
 </div><h2 class="groupheader">函数说明</h2>
-<a id="a2d0aa90f1f77b44debcf34e6ae79e9d6" name="a2d0aa90f1f77b44debcf34e6ae79e9d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d0aa90f1f77b44debcf34e6ae79e9d6">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/2]</span></h2>
+<a id="ae7a3e5f84eb8f1b13b6d7dfb25ce815a" name="ae7a3e5f84eb8f1b13b6d7dfb25ce815a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7a3e5f84eb8f1b13b6d7dfb25ce815a">&#9670;&#160;</a></span>TEST() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::edit_distance::TEST </td>
+          <td class="memname">leetcode::jump_game::TEST </td>
           <td>(</td>
-          <td class="paramtype">edit_distance&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">jump_game</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case1&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l03159">3159</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03159" name="l03159"></a><span class="lineno"> 3159</span>                                   {</div>
-<div class="line"><a id="l03160" name="l03160"></a><span class="lineno"> 3160</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> word1 = <span class="stringliteral">&quot;horse&quot;</span>;</div>
-<div class="line"><a id="l03161" name="l03161"></a><span class="lineno"> 3161</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> word2 = <span class="stringliteral">&quot;ros&quot;</span>;</div>
-<div class="line"><a id="l03162" name="l03162"></a><span class="lineno"> 3162</span>            ASSERT_EQ(3, Solution::minDistance(word1, word2));</div>
-<div class="line"><a id="l03163" name="l03163"></a><span class="lineno"> 3163</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l02980">2980</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2980</span>                               {</div>
+<div class="line"><span class="lineno"> 2981</span>            vector nums = {2, 3, 1, 1, 4};</div>
+<div class="line"><span class="lineno"> 2982</span>            ASSERT_TRUE(<a class="code hl_function" href="../../d4/d29/a02623.html#a9a2676507e1040aab2d77f525c367ba5">Solution::canJump</a>(nums));</div>
+<div class="line"><span class="lineno"> 2983</span>        }</div>
+<div class="ttc" id="aa02623_html_a9a2676507e1040aab2d77f525c367ba5"><div class="ttname"><a href="../../d4/d29/a02623.html#a9a2676507e1040aab2d77f525c367ba5">leetcode::jump_game::Solution::canJump</a></div><div class="ttdeci">static bool canJump(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l06531">leetcode.cpp:6531</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l06781">leetcode::edit_distance::Solution::minDistance()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l06531">leetcode::jump_game::Solution::canJump()</a>.</p>
 
 </div>
 </div>
-<a id="addd997bc8398218f2bcb38df89d7a114" name="addd997bc8398218f2bcb38df89d7a114"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addd997bc8398218f2bcb38df89d7a114">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/2]</span></h2>
+<a id="a2266a9612a495166bf1174afa3e6e1b7" name="a2266a9612a495166bf1174afa3e6e1b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2266a9612a495166bf1174afa3e6e1b7">&#9670;&#160;</a></span>TEST() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::edit_distance::TEST </td>
+          <td class="memname">leetcode::jump_game::TEST </td>
           <td>(</td>
-          <td class="paramtype">edit_distance&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">jump_game</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case2&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l03165">3165</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03165" name="l03165"></a><span class="lineno"> 3165</span>                                   {</div>
-<div class="line"><a id="l03166" name="l03166"></a><span class="lineno"> 3166</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> word1 = <span class="stringliteral">&quot;intention&quot;</span>;</div>
-<div class="line"><a id="l03167" name="l03167"></a><span class="lineno"> 3167</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> word2 = <span class="stringliteral">&quot;execution&quot;</span>;</div>
-<div class="line"><a id="l03168" name="l03168"></a><span class="lineno"> 3168</span>            ASSERT_EQ(5, Solution::minDistance(word1, word2));</div>
-<div class="line"><a id="l03169" name="l03169"></a><span class="lineno"> 3169</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l02985">2985</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2985</span>                               {</div>
+<div class="line"><span class="lineno"> 2986</span>            vector nums = {3, 2, 1, 0, 4};</div>
+<div class="line"><span class="lineno"> 2987</span>            ASSERT_FALSE(<a class="code hl_function" href="../../d4/d29/a02623.html#a9a2676507e1040aab2d77f525c367ba5">Solution::canJump</a>(nums));</div>
+<div class="line"><span class="lineno"> 2988</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l06781">leetcode::edit_distance::Solution::minDistance()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l06531">leetcode::jump_game::Solution::canJump()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

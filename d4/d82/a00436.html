@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::integer_break 命名空间参考</title>
+<title>problemscpp: leetcode::unique_paths 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">problemscpp
    </div>
    <div id="projectbrief">A collection of my answers to algorithm problems in c++.</div>
@@ -30,10 +34,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -41,12 +50,17 @@ var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,123 +70,117 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/dc1/a00212.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d4/d82/a00436.html">integer_break</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d28/a00223.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d4/d82/a00436.html">unique_paths</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::integer_break 命名空间参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::unique_paths 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><ol type="1">
-<li>Integer Break </li>
+<li>Unique Paths </li>
 </ol>
  
-<a href="../../d4/d82/a00436.html#details">更多...</a></p>
+<a href="#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5a/a02652.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d9a/a02631.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a1f3b2ae34c689b4a29402df718eecb41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d82/a00436.html#a1f3b2ae34c689b4a29402df718eecb41">TEST</a> (integer_break, case1)</td></tr>
-<tr class="separator:a1f3b2ae34c689b4a29402df718eecb41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0825acfb9328d3b2755dac3f7dd3a2a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d82/a00436.html#ab0825acfb9328d3b2755dac3f7dd3a2a">TEST</a> (integer_break, case2)</td></tr>
-<tr class="separator:ab0825acfb9328d3b2755dac3f7dd3a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff49321effb0a40f9d92c3ebd9524ca" id="r_adff49321effb0a40f9d92c3ebd9524ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adff49321effb0a40f9d92c3ebd9524ca">TEST</a> (unique_paths, case1)</td></tr>
+<tr class="separator:adff49321effb0a40f9d92c3ebd9524ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8540f2c6a905a2c9845c8313853c939b" id="r_a8540f2c6a905a2c9845c8313853c939b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8540f2c6a905a2c9845c8313853c939b">TEST</a> (unique_paths, case2)</td></tr>
+<tr class="separator:a8540f2c6a905a2c9845c8313853c939b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><ol type="1">
-<li>Integer Break </li>
+<li>Unique Paths </li>
 </ol>
 </div><h2 class="groupheader">函数说明</h2>
-<a id="a1f3b2ae34c689b4a29402df718eecb41" name="a1f3b2ae34c689b4a29402df718eecb41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f3b2ae34c689b4a29402df718eecb41">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/2]</span></h2>
+<a id="adff49321effb0a40f9d92c3ebd9524ca" name="adff49321effb0a40f9d92c3ebd9524ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adff49321effb0a40f9d92c3ebd9524ca">&#9670;&#160;</a></span>TEST() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::integer_break::TEST </td>
+          <td class="memname">leetcode::unique_paths::TEST </td>
           <td>(</td>
-          <td class="paramtype">integer_break&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">unique_paths</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case1&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l03205">3205</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03205" name="l03205"></a><span class="lineno"> 3205</span>                                   {</div>
-<div class="line"><a id="l03206" name="l03206"></a><span class="lineno"> 3206</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = 2;</div>
-<div class="line"><a id="l03207" name="l03207"></a><span class="lineno"> 3207</span>            ASSERT_EQ(1, Solution::integerBreak(n));</div>
-<div class="line"><a id="l03208" name="l03208"></a><span class="lineno"> 3208</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03004">3004</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3004</span>                                  {</div>
+<div class="line"><span class="lineno"> 3005</span>            ASSERT_EQ(28, <a class="code hl_function" href="../../d0/d9a/a02631.html#a30c24bdc68edd039c08e4c9522b8babc">Solution::uniquePaths</a>(3, 7));</div>
+<div class="line"><span class="lineno"> 3006</span>        }</div>
+<div class="ttc" id="aa02631_html_a30c24bdc68edd039c08e4c9522b8babc"><div class="ttname"><a href="../../d0/d9a/a02631.html#a30c24bdc68edd039c08e4c9522b8babc">leetcode::unique_paths::Solution::uniquePaths</a></div><div class="ttdeci">static int uniquePaths(int m, int n)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l06566">leetcode.cpp:6566</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l06831">leetcode::integer_break::Solution::integerBreak()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l06566">leetcode::unique_paths::Solution::uniquePaths()</a>.</p>
 
 </div>
 </div>
-<a id="ab0825acfb9328d3b2755dac3f7dd3a2a" name="ab0825acfb9328d3b2755dac3f7dd3a2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0825acfb9328d3b2755dac3f7dd3a2a">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/2]</span></h2>
+<a id="a8540f2c6a905a2c9845c8313853c939b" name="a8540f2c6a905a2c9845c8313853c939b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8540f2c6a905a2c9845c8313853c939b">&#9670;&#160;</a></span>TEST() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::integer_break::TEST </td>
+          <td class="memname">leetcode::unique_paths::TEST </td>
           <td>(</td>
-          <td class="paramtype">integer_break&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">unique_paths</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case2&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l03210">3210</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03210" name="l03210"></a><span class="lineno"> 3210</span>                                   {</div>
-<div class="line"><a id="l03211" name="l03211"></a><span class="lineno"> 3211</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> n = 10;</div>
-<div class="line"><a id="l03212" name="l03212"></a><span class="lineno"> 3212</span>            ASSERT_EQ(36, Solution::integerBreak(n));</div>
-<div class="line"><a id="l03213" name="l03213"></a><span class="lineno"> 3213</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03008">3008</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3008</span>                                  {</div>
+<div class="line"><span class="lineno"> 3009</span>            ASSERT_EQ(3, <a class="code hl_function" href="../../d0/d9a/a02631.html#a30c24bdc68edd039c08e4c9522b8babc">Solution::uniquePaths</a>(3, 2));</div>
+<div class="line"><span class="lineno"> 3010</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l06831">leetcode::integer_break::Solution::integerBreak()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l06566">leetcode::unique_paths::Solution::uniquePaths()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

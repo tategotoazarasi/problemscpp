@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::find_all_k_distant_indices_in_an_array 命名空间参考</title>
+<title>problemscpp: leetcode::append_k_integers_with_minimal_sum 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">problemscpp
    </div>
    <div id="projectbrief">A collection of my answers to algorithm problems in c++.</div>
@@ -30,10 +34,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -41,12 +50,17 @@ var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,120 +70,207 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/dc1/a00212.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d6/d9c/a00352.html">find_all_k_distant_indices_in_an_array</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d28/a00223.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d6/d9c/a00352.html">append_k_integers_with_minimal_sum</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::find_all_k_distant_indices_in_an_array 命名空间参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::append_k_integers_with_minimal_sum 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>LeetCode 6031. 找出数组中的所有 K 近邻下标  
-<a href="../../d6/d9c/a00352.html#details">更多...</a></p>
+<p>LeetCode 6017. 向数组中追加 K 个整数  
+<a href="#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d47/a02300.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4a/a02263.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:af50649cfc4c6f68def6f720709bf6374"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9c/a00352.html#af50649cfc4c6f68def6f720709bf6374">TEST</a> (find_all_k_distant_indices_in_an_array, case1)</td></tr>
-<tr class="separator:af50649cfc4c6f68def6f720709bf6374"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2664108c5a4811948e18784a950d2aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d9c/a00352.html#ad2664108c5a4811948e18784a950d2aa">TEST</a> (find_all_k_distant_indices_in_an_array, case2)</td></tr>
-<tr class="separator:ad2664108c5a4811948e18784a950d2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a143bb2177663f4320fd7ea481a851c60" id="r_a143bb2177663f4320fd7ea481a851c60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a143bb2177663f4320fd7ea481a851c60">TEST</a> (append_k_integers_with_minimal_sum, case1)</td></tr>
+<tr class="separator:a143bb2177663f4320fd7ea481a851c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe133829e36bff179c546f7eb7f870e" id="r_a3fe133829e36bff179c546f7eb7f870e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fe133829e36bff179c546f7eb7f870e">TEST</a> (append_k_integers_with_minimal_sum, case2)</td></tr>
+<tr class="separator:a3fe133829e36bff179c546f7eb7f870e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aededd0c3618da4c7feef14fe46de1489" id="r_aededd0c3618da4c7feef14fe46de1489"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aededd0c3618da4c7feef14fe46de1489">TEST</a> (append_k_integers_with_minimal_sum, case3)</td></tr>
+<tr class="separator:aededd0c3618da4c7feef14fe46de1489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc079344936aaa55d3e62e425a3731f" id="r_aecc079344936aaa55d3e62e425a3731f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecc079344936aaa55d3e62e425a3731f">TEST</a> (append_k_integers_with_minimal_sum, case4)</td></tr>
+<tr class="separator:aecc079344936aaa55d3e62e425a3731f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f998ecc6f4667f1922c16c8bc6e158f" id="r_a2f998ecc6f4667f1922c16c8bc6e158f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f998ecc6f4667f1922c16c8bc6e158f">TEST</a> (append_k_integers_with_minimal_sum, case5)</td></tr>
+<tr class="separator:a2f998ecc6f4667f1922c16c8bc6e158f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >LeetCode 6031. 找出数组中的所有 K 近邻下标 </p>
+<div class="textblock"><p>LeetCode 6017. 向数组中追加 K 个整数 </p>
 </div><h2 class="groupheader">函数说明</h2>
-<a id="af50649cfc4c6f68def6f720709bf6374" name="af50649cfc4c6f68def6f720709bf6374"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af50649cfc4c6f68def6f720709bf6374">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/2]</span></h2>
+<a id="a143bb2177663f4320fd7ea481a851c60" name="a143bb2177663f4320fd7ea481a851c60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a143bb2177663f4320fd7ea481a851c60">&#9670;&#160;</a></span>TEST() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::find_all_k_distant_indices_in_an_array::TEST </td>
+          <td class="memname">leetcode::append_k_integers_with_minimal_sum::TEST </td>
           <td>(</td>
-          <td class="paramtype">find_all_k_distant_indices_in_an_array&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">append_k_integers_with_minimal_sum</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case1&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l02178">2178</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02178" name="l02178"></a><span class="lineno"> 2178</span>                                                            {</div>
-<div class="line"><a id="l02179" name="l02179"></a><span class="lineno"> 2179</span>            vector nums         = {3, 4, 9, 1, 3, 9, 5};</div>
-<div class="line"><a id="l02180" name="l02180"></a><span class="lineno"> 2180</span>            <span class="keyword">const</span> vector output = {1, 2, 3, 4, 5, 6};</div>
-<div class="line"><a id="l02181" name="l02181"></a><span class="lineno"> 2181</span>            ASSERT_EQ(output, Solution::findKDistantIndices(nums, 9, 1));</div>
-<div class="line"><a id="l02182" name="l02182"></a><span class="lineno"> 2182</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l02044">2044</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2044</span>                                                        {</div>
+<div class="line"><span class="lineno"> 2045</span>            vector input = {96, 44, 99, 25, 61, 84, 88, 18, 19, 33, 60, 86, 52, 19, 32, 47, 35, 50, 94, 17, 29, 98, 22, 21, 72, 100, 40, 84};</div>
+<div class="line"><span class="lineno"> 2046</span>            ASSERT_EQ(794, <a class="code hl_function" href="../../d4/d4a/a02263.html#a83f152e8aafe1ade449b6aaba1e1e982">Solution::minimalKSum</a>(input, 35));</div>
+<div class="line"><span class="lineno"> 2047</span>        }</div>
+<div class="ttc" id="aa02263_html_a83f152e8aafe1ade449b6aaba1e1e982"><div class="ttname"><a href="../../d4/d4a/a02263.html#a83f152e8aafe1ade449b6aaba1e1e982">leetcode::append_k_integers_with_minimal_sum::Solution::minimalKSum</a></div><div class="ttdeci">static long long minimalKSum(vector&lt; int &gt; &amp;nums, int k)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l03946">leetcode.cpp:3946</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l04315">leetcode::find_all_k_distant_indices_in_an_array::Solution::findKDistantIndices()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l03946">leetcode::append_k_integers_with_minimal_sum::Solution::minimalKSum()</a>.</p>
 
 </div>
 </div>
-<a id="ad2664108c5a4811948e18784a950d2aa" name="ad2664108c5a4811948e18784a950d2aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2664108c5a4811948e18784a950d2aa">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/2]</span></h2>
+<a id="a3fe133829e36bff179c546f7eb7f870e" name="a3fe133829e36bff179c546f7eb7f870e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fe133829e36bff179c546f7eb7f870e">&#9670;&#160;</a></span>TEST() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::find_all_k_distant_indices_in_an_array::TEST </td>
+          <td class="memname">leetcode::append_k_integers_with_minimal_sum::TEST </td>
           <td>(</td>
-          <td class="paramtype">find_all_k_distant_indices_in_an_array&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">append_k_integers_with_minimal_sum</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case2&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l02184">2184</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02184" name="l02184"></a><span class="lineno"> 2184</span>                                                            {</div>
-<div class="line"><a id="l02185" name="l02185"></a><span class="lineno"> 2185</span>            vector nums         = {2, 2, 2, 2, 2};</div>
-<div class="line"><a id="l02186" name="l02186"></a><span class="lineno"> 2186</span>            <span class="keyword">const</span> vector output = {0, 1, 2, 3, 4};</div>
-<div class="line"><a id="l02187" name="l02187"></a><span class="lineno"> 2187</span>            ASSERT_EQ(output, Solution::findKDistantIndices(nums, 2, 2));</div>
-<div class="line"><a id="l02188" name="l02188"></a><span class="lineno"> 2188</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l02049">2049</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2049</span>                                                        {</div>
+<div class="line"><span class="lineno"> 2050</span>            vector input = {5, 6};</div>
+<div class="line"><span class="lineno"> 2051</span>            ASSERT_EQ(25, <a class="code hl_function" href="../../d4/d4a/a02263.html#a83f152e8aafe1ade449b6aaba1e1e982">Solution::minimalKSum</a>(input, 6));</div>
+<div class="line"><span class="lineno"> 2052</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l04315">leetcode::find_all_k_distant_indices_in_an_array::Solution::findKDistantIndices()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l03946">leetcode::append_k_integers_with_minimal_sum::Solution::minimalKSum()</a>.</p>
+
+</div>
+</div>
+<a id="aededd0c3618da4c7feef14fe46de1489" name="aededd0c3618da4c7feef14fe46de1489"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aededd0c3618da4c7feef14fe46de1489">&#9670;&#160;</a></span>TEST() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::append_k_integers_with_minimal_sum::TEST </td>
+          <td>(</td>
+          <td class="paramtype">append_k_integers_with_minimal_sum</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l02054">2054</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2054</span>                                                        {</div>
+<div class="line"><span class="lineno"> 2055</span>            vector input = {1, 4, 25, 10, 25};</div>
+<div class="line"><span class="lineno"> 2056</span>            ASSERT_EQ(5, <a class="code hl_function" href="../../d4/d4a/a02263.html#a83f152e8aafe1ade449b6aaba1e1e982">Solution::minimalKSum</a>(input, 2));</div>
+<div class="line"><span class="lineno"> 2057</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l03946">leetcode::append_k_integers_with_minimal_sum::Solution::minimalKSum()</a>.</p>
+
+</div>
+</div>
+<a id="aecc079344936aaa55d3e62e425a3731f" name="aecc079344936aaa55d3e62e425a3731f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc079344936aaa55d3e62e425a3731f">&#9670;&#160;</a></span>TEST() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::append_k_integers_with_minimal_sum::TEST </td>
+          <td>(</td>
+          <td class="paramtype">append_k_integers_with_minimal_sum</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case4</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l02059">2059</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2059</span>                                                        {</div>
+<div class="line"><span class="lineno"> 2060</span>            vector input = {1, 2};</div>
+<div class="line"><span class="lineno"> 2061</span>            ASSERT_EQ(3, <a class="code hl_function" href="../../d4/d4a/a02263.html#a83f152e8aafe1ade449b6aaba1e1e982">Solution::minimalKSum</a>(input, 1));</div>
+<div class="line"><span class="lineno"> 2062</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l03946">leetcode::append_k_integers_with_minimal_sum::Solution::minimalKSum()</a>.</p>
+
+</div>
+</div>
+<a id="a2f998ecc6f4667f1922c16c8bc6e158f" name="a2f998ecc6f4667f1922c16c8bc6e158f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f998ecc6f4667f1922c16c8bc6e158f">&#9670;&#160;</a></span>TEST() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::append_k_integers_with_minimal_sum::TEST </td>
+          <td>(</td>
+          <td class="paramtype">append_k_integers_with_minimal_sum</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case5</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l02064">2064</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2064</span>                                                        {</div>
+<div class="line"><span class="lineno"> 2065</span>            vector input = {2, 2, 2, 2};</div>
+<div class="line"><span class="lineno"> 2066</span>            ASSERT_EQ(8, <a class="code hl_function" href="../../d4/d4a/a02263.html#a83f152e8aafe1ade449b6aaba1e1e982">Solution::minimalKSum</a>(input, 3));</div>
+<div class="line"><span class="lineno"> 2067</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l03946">leetcode::append_k_integers_with_minimal_sum::Solution::minimalKSum()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

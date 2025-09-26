@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::pattern_matching_lcci 命名空间参考</title>
+<title>problemscpp: leetcode::number_of_ways_to_divide_a_long_corridor 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">problemscpp
    </div>
    <div id="projectbrief">A collection of my answers to algorithm problems in c++.</div>
@@ -30,10 +34,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -41,12 +50,17 @@ var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,264 +70,202 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/dc1/a00212.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d9/d2a/a00270.html">pattern_matching_lcci</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d28/a00223.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d9/d2a/a00270.html">number_of_ways_to_divide_a_long_corridor</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::pattern_matching_lcci 命名空间参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::number_of_ways_to_divide_a_long_corridor 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>LeetCode 面试题 16.18. 模式匹配  
-<a href="../../d9/d2a/a00270.html#details">更多...</a></p>
+<p>LeetCode 5974. 分隔长廊的方案数  
+<a href="#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d22/a01932.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d4c/a01903.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a43750ac93094e90998b9f90528bc3d1a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2a/a00270.html#a43750ac93094e90998b9f90528bc3d1a">TEST</a> (pattern_matching_lcci, case1)</td></tr>
-<tr class="separator:a43750ac93094e90998b9f90528bc3d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8fc149b0fc826da05e35e90dd4d89d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2a/a00270.html#ae8fc149b0fc826da05e35e90dd4d89d0">TEST</a> (pattern_matching_lcci, case2)</td></tr>
-<tr class="separator:ae8fc149b0fc826da05e35e90dd4d89d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa7fd801155e0ad6f7b316719f739156"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2a/a00270.html#afa7fd801155e0ad6f7b316719f739156">TEST</a> (pattern_matching_lcci, case3)</td></tr>
-<tr class="separator:afa7fd801155e0ad6f7b316719f739156"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a77b0f45ed40d8eb2861dec2e4148d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2a/a00270.html#a1a77b0f45ed40d8eb2861dec2e4148d5">TEST</a> (pattern_matching_lcci, case4)</td></tr>
-<tr class="separator:a1a77b0f45ed40d8eb2861dec2e4148d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf1c0e6a19d53ae5e493219fbc8cccc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2a/a00270.html#abf1c0e6a19d53ae5e493219fbc8cccc3">TEST</a> (pattern_matching_lcci, case5)</td></tr>
-<tr class="separator:abf1c0e6a19d53ae5e493219fbc8cccc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d89bda8960aa25ff715b6b11ed85f8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2a/a00270.html#a7d89bda8960aa25ff715b6b11ed85f8b">TEST</a> (pattern_matching_lcci, case6)</td></tr>
-<tr class="separator:a7d89bda8960aa25ff715b6b11ed85f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd08fc064e8dcec655ad543da923b12" id="r_aabd08fc064e8dcec655ad543da923b12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabd08fc064e8dcec655ad543da923b12">TEST</a> (number_of_ways_to_divide_a_long_corridor, case1)</td></tr>
+<tr class="separator:aabd08fc064e8dcec655ad543da923b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e702e826c3d727c12e4d2d5eda3bcc8" id="r_a8e702e826c3d727c12e4d2d5eda3bcc8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e702e826c3d727c12e4d2d5eda3bcc8">TEST</a> (number_of_ways_to_divide_a_long_corridor, case2)</td></tr>
+<tr class="separator:a8e702e826c3d727c12e4d2d5eda3bcc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a049ee34d9a678443984b6360195b51ce" id="r_a049ee34d9a678443984b6360195b51ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a049ee34d9a678443984b6360195b51ce">TEST</a> (number_of_ways_to_divide_a_long_corridor, case3)</td></tr>
+<tr class="separator:a049ee34d9a678443984b6360195b51ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47635f13cab52fff2eca229dc8fdd19" id="r_ac47635f13cab52fff2eca229dc8fdd19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac47635f13cab52fff2eca229dc8fdd19">TEST</a> (number_of_ways_to_divide_a_long_corridor, case4)</td></tr>
+<tr class="separator:ac47635f13cab52fff2eca229dc8fdd19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ace6fb8d6f450845860943106638ad4" id="r_a5ace6fb8d6f450845860943106638ad4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ace6fb8d6f450845860943106638ad4">TEST</a> (number_of_ways_to_divide_a_long_corridor, case6)</td></tr>
+<tr class="separator:a5ace6fb8d6f450845860943106638ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >LeetCode 面试题 16.18. 模式匹配 </p>
+<div class="textblock"><p>LeetCode 5974. 分隔长廊的方案数 </p>
 </div><h2 class="groupheader">函数说明</h2>
-<a id="a43750ac93094e90998b9f90528bc3d1a" name="a43750ac93094e90998b9f90528bc3d1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43750ac93094e90998b9f90528bc3d1a">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/6]</span></h2>
+<a id="aabd08fc064e8dcec655ad543da923b12" name="aabd08fc064e8dcec655ad543da923b12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabd08fc064e8dcec655ad543da923b12">&#9670;&#160;</a></span>TEST() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::pattern_matching_lcci::TEST </td>
+          <td class="memname">leetcode::number_of_ways_to_divide_a_long_corridor::TEST </td>
           <td>(</td>
-          <td class="paramtype">pattern_matching_lcci&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">number_of_ways_to_divide_a_long_corridor</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case1&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01076">1076</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>                                           {</div>
-<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>            ASSERT_TRUE(Solution::patternMatching(<span class="stringliteral">&quot;abba&quot;</span>, <span class="stringliteral">&quot;dogcatcatdog&quot;</span>));</div>
-<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00929">929</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  929</span>                                                              {</div>
+<div class="line"><span class="lineno">  930</span>            ASSERT_EQ(3, <a class="code hl_function" href="../../d6/d4c/a01903.html#a945fcfea4985a913cb678aaf3749a373">Solution::numberOfWays</a>(<span class="stringliteral">&quot;SSPPSPS&quot;</span>));</div>
+<div class="line"><span class="lineno">  931</span>        }</div>
+<div class="ttc" id="aa01903_html_a945fcfea4985a913cb678aaf3749a373"><div class="ttname"><a href="../../d6/d4c/a01903.html#a945fcfea4985a913cb678aaf3749a373">leetcode::number_of_ways_to_divide_a_long_corridor::Solution::numberOfWays</a></div><div class="ttdeci">static int numberOfWays(string corridor)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l01388">leetcode.cpp:1388</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l01783">leetcode::pattern_matching_lcci::Solution::patternMatching()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01388">leetcode::number_of_ways_to_divide_a_long_corridor::Solution::numberOfWays()</a>.</p>
 
 </div>
 </div>
-<a id="ae8fc149b0fc826da05e35e90dd4d89d0" name="ae8fc149b0fc826da05e35e90dd4d89d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8fc149b0fc826da05e35e90dd4d89d0">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/6]</span></h2>
+<a id="a8e702e826c3d727c12e4d2d5eda3bcc8" name="a8e702e826c3d727c12e4d2d5eda3bcc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e702e826c3d727c12e4d2d5eda3bcc8">&#9670;&#160;</a></span>TEST() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::pattern_matching_lcci::TEST </td>
+          <td class="memname">leetcode::number_of_ways_to_divide_a_long_corridor::TEST </td>
           <td>(</td>
-          <td class="paramtype">pattern_matching_lcci&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">number_of_ways_to_divide_a_long_corridor</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case2&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01080">1080</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>                                           {</div>
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>            ASSERT_FALSE(Solution::patternMatching(<span class="stringliteral">&quot;abba&quot;</span>, <span class="stringliteral">&quot;dogcatcatfish&quot;</span>));</div>
-<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00933">933</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  933</span>                                                              {</div>
+<div class="line"><span class="lineno">  934</span>            ASSERT_EQ(1, <a class="code hl_function" href="../../d6/d4c/a01903.html#a945fcfea4985a913cb678aaf3749a373">Solution::numberOfWays</a>(<span class="stringliteral">&quot;PPSPSP&quot;</span>));</div>
+<div class="line"><span class="lineno">  935</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l01783">leetcode::pattern_matching_lcci::Solution::patternMatching()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01388">leetcode::number_of_ways_to_divide_a_long_corridor::Solution::numberOfWays()</a>.</p>
 
 </div>
 </div>
-<a id="afa7fd801155e0ad6f7b316719f739156" name="afa7fd801155e0ad6f7b316719f739156"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa7fd801155e0ad6f7b316719f739156">&#9670;&nbsp;</a></span>TEST() <span class="overload">[3/6]</span></h2>
+<a id="a049ee34d9a678443984b6360195b51ce" name="a049ee34d9a678443984b6360195b51ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a049ee34d9a678443984b6360195b51ce">&#9670;&#160;</a></span>TEST() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::pattern_matching_lcci::TEST </td>
+          <td class="memname">leetcode::number_of_ways_to_divide_a_long_corridor::TEST </td>
           <td>(</td>
-          <td class="paramtype">pattern_matching_lcci&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">number_of_ways_to_divide_a_long_corridor</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case3&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01084">1084</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>                                           {</div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>            ASSERT_FALSE(Solution::patternMatching(<span class="stringliteral">&quot;aaaa&quot;</span>, <span class="stringliteral">&quot;dogcatcatdog&quot;</span>));</div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00937">937</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  937</span>                                                              {</div>
+<div class="line"><span class="lineno">  938</span>            ASSERT_EQ(0, <a class="code hl_function" href="../../d6/d4c/a01903.html#a945fcfea4985a913cb678aaf3749a373">Solution::numberOfWays</a>(<span class="stringliteral">&quot;S&quot;</span>));</div>
+<div class="line"><span class="lineno">  939</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l01783">leetcode::pattern_matching_lcci::Solution::patternMatching()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01388">leetcode::number_of_ways_to_divide_a_long_corridor::Solution::numberOfWays()</a>.</p>
 
 </div>
 </div>
-<a id="a1a77b0f45ed40d8eb2861dec2e4148d5" name="a1a77b0f45ed40d8eb2861dec2e4148d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a77b0f45ed40d8eb2861dec2e4148d5">&#9670;&nbsp;</a></span>TEST() <span class="overload">[4/6]</span></h2>
+<a id="ac47635f13cab52fff2eca229dc8fdd19" name="ac47635f13cab52fff2eca229dc8fdd19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac47635f13cab52fff2eca229dc8fdd19">&#9670;&#160;</a></span>TEST() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::pattern_matching_lcci::TEST </td>
+          <td class="memname">leetcode::number_of_ways_to_divide_a_long_corridor::TEST </td>
           <td>(</td>
-          <td class="paramtype">pattern_matching_lcci&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">number_of_ways_to_divide_a_long_corridor</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case4&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case4</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01088">1088</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>                                           {</div>
-<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>            ASSERT_TRUE(Solution::patternMatching(<span class="stringliteral">&quot;abba&quot;</span>, <span class="stringliteral">&quot;dogdogdogdog&quot;</span>));</div>
-<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00941">941</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  941</span>                                                              {</div>
+<div class="line"><span class="lineno">  942</span>            ASSERT_EQ(0, <a class="code hl_function" href="../../d6/d4c/a01903.html#a945fcfea4985a913cb678aaf3749a373">Solution::numberOfWays</a>(<span class="stringliteral">&quot;P&quot;</span>));</div>
+<div class="line"><span class="lineno">  943</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l01783">leetcode::pattern_matching_lcci::Solution::patternMatching()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01388">leetcode::number_of_ways_to_divide_a_long_corridor::Solution::numberOfWays()</a>.</p>
 
 </div>
 </div>
-<a id="abf1c0e6a19d53ae5e493219fbc8cccc3" name="abf1c0e6a19d53ae5e493219fbc8cccc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf1c0e6a19d53ae5e493219fbc8cccc3">&#9670;&nbsp;</a></span>TEST() <span class="overload">[5/6]</span></h2>
+<a id="a5ace6fb8d6f450845860943106638ad4" name="a5ace6fb8d6f450845860943106638ad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ace6fb8d6f450845860943106638ad4">&#9670;&#160;</a></span>TEST() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::pattern_matching_lcci::TEST </td>
+          <td class="memname">leetcode::number_of_ways_to_divide_a_long_corridor::TEST </td>
           <td>(</td>
-          <td class="paramtype">pattern_matching_lcci&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">number_of_ways_to_divide_a_long_corridor</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case5&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case6</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01092">1092</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>                                           {</div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>            ASSERT_TRUE(Solution::patternMatching(<span class="stringliteral">&quot;bb&quot;</span>, <span class="stringliteral">&quot;tttt&quot;</span>));</div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00945">945</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  945</span>                                                              {</div>
+<div class="line"><span class="lineno">  946</span>            ASSERT_EQ(1, <a class="code hl_function" href="../../d6/d4c/a01903.html#a945fcfea4985a913cb678aaf3749a373">Solution::numberOfWays</a>(<span class="stringliteral">&quot;PSSSSP&quot;</span>));</div>
+<div class="line"><span class="lineno">  947</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l01783">leetcode::pattern_matching_lcci::Solution::patternMatching()</a>.</p>
-
-</div>
-</div>
-<a id="a7d89bda8960aa25ff715b6b11ed85f8b" name="a7d89bda8960aa25ff715b6b11ed85f8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d89bda8960aa25ff715b6b11ed85f8b">&#9670;&nbsp;</a></span>TEST() <span class="overload">[6/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">leetcode::pattern_matching_lcci::TEST </td>
-          <td>(</td>
-          <td class="paramtype">pattern_matching_lcci&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">case6&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01096">1096</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>                                           {</div>
-<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>            ASSERT_TRUE(Solution::patternMatching(<span class="stringliteral">&quot;aaaaab&quot;</span>, <span class="stringliteral">&quot;xahnxdxyaahnxdxyaahnxdxyaahnxdxyaauxuhuo&quot;</span>));</div>
-<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l01783">leetcode::pattern_matching_lcci::Solution::patternMatching()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01388">leetcode::number_of_ways_to_divide_a_long_corridor::Solution::numberOfWays()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::detect_squares 命名空间参考</title>
+<title>problemscpp: leetcode::minimum_cost_of_buying_candies_with_discount 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">problemscpp
    </div>
    <div id="projectbrief">A collection of my answers to algorithm problems in c++.</div>
@@ -30,10 +34,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -41,12 +50,17 @@ var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,38 +70,148 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/dc1/a00212.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d1/dd4/a00267.html">detect_squares</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d28/a00223.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d1/dd4/a00267.html">minimum_cost_of_buying_candies_with_discount</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">类</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::detect_squares 命名空间参考</div></div>
+<a href="#nested-classes">类</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::minimum_cost_of_buying_candies_with_discount 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>LeetCode 2013. 检测正方形  
-<a href="../../d1/dd4/a00267.html#details">更多...</a></p>
+<p>LeetCode 5971. 打折购买糖果的最小开销  
+<a href="#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da2/a01920.html">DetectSquares</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbe/a01887.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a0ac8ab0206995a5cd0478fc36ef6f52a" id="r_a0ac8ab0206995a5cd0478fc36ef6f52a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ac8ab0206995a5cd0478fc36ef6f52a">TEST</a> (minimum_cost_of_buying_candies_with_discount, case1)</td></tr>
+<tr class="separator:a0ac8ab0206995a5cd0478fc36ef6f52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c952000076b5a18283ad1b13f25ea6f" id="r_a6c952000076b5a18283ad1b13f25ea6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c952000076b5a18283ad1b13f25ea6f">TEST</a> (minimum_cost_of_buying_candies_with_discount, case2)</td></tr>
+<tr class="separator:a6c952000076b5a18283ad1b13f25ea6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b6f0f1b1c159b183998e7e1b361db0f" id="r_a7b6f0f1b1c159b183998e7e1b361db0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b6f0f1b1c159b183998e7e1b361db0f">TEST</a> (minimum_cost_of_buying_candies_with_discount, case3)</td></tr>
+<tr class="separator:a7b6f0f1b1c159b183998e7e1b361db0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >LeetCode 2013. 检测正方形 </p>
-<p >Your <a class="el" href="../../d6/da2/a01920.html">DetectSquares</a> object will be instantiated and called as such: DetectSquares* obj = new DetectSquares(); obj-&gt;add(point); int param_2 = obj-&gt;count(point); </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>LeetCode 5971. 打折购买糖果的最小开销 </p>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="a0ac8ab0206995a5cd0478fc36ef6f52a" name="a0ac8ab0206995a5cd0478fc36ef6f52a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ac8ab0206995a5cd0478fc36ef6f52a">&#9670;&#160;</a></span>TEST() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::minimum_cost_of_buying_candies_with_discount::TEST </td>
+          <td>(</td>
+          <td class="paramtype">minimum_cost_of_buying_candies_with_discount</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00889">889</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  889</span>                                                                  {</div>
+<div class="line"><span class="lineno">  890</span>            <span class="keywordtype">int</span> input[] = {1, 2, 3};</div>
+<div class="line"><span class="lineno">  891</span>            <span class="keyword">auto</span> vec    = vector(begin(input), end(input));</div>
+<div class="line"><span class="lineno">  892</span>            ASSERT_EQ(5, <a class="code hl_function" href="../../db/dbe/a01887.html#a8f73bc0a9aca7cfd50a526c0dd7028b5">Solution::minimumCost</a>(vec));</div>
+<div class="line"><span class="lineno">  893</span>        }</div>
+<div class="ttc" id="aa01887_html_a8f73bc0a9aca7cfd50a526c0dd7028b5"><div class="ttname"><a href="../../db/dbe/a01887.html#a8f73bc0a9aca7cfd50a526c0dd7028b5">leetcode::minimum_cost_of_buying_candies_with_discount::Solution::minimumCost</a></div><div class="ttdeci">static int minimumCost(vector&lt; int &gt; &amp;cost)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l01305">leetcode.cpp:1305</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01305">leetcode::minimum_cost_of_buying_candies_with_discount::Solution::minimumCost()</a>.</p>
+
+</div>
+</div>
+<a id="a6c952000076b5a18283ad1b13f25ea6f" name="a6c952000076b5a18283ad1b13f25ea6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c952000076b5a18283ad1b13f25ea6f">&#9670;&#160;</a></span>TEST() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::minimum_cost_of_buying_candies_with_discount::TEST </td>
+          <td>(</td>
+          <td class="paramtype">minimum_cost_of_buying_candies_with_discount</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00895">895</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  895</span>                                                                  {</div>
+<div class="line"><span class="lineno">  896</span>            <span class="keywordtype">int</span> input[] = {6, 5, 7, 9, 2, 2};</div>
+<div class="line"><span class="lineno">  897</span>            <span class="keyword">auto</span> vec    = vector(begin(input), end(input));</div>
+<div class="line"><span class="lineno">  898</span>            ASSERT_EQ(23, <a class="code hl_function" href="../../db/dbe/a01887.html#a8f73bc0a9aca7cfd50a526c0dd7028b5">Solution::minimumCost</a>(vec));</div>
+<div class="line"><span class="lineno">  899</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01305">leetcode::minimum_cost_of_buying_candies_with_discount::Solution::minimumCost()</a>.</p>
+
+</div>
+</div>
+<a id="a7b6f0f1b1c159b183998e7e1b361db0f" name="a7b6f0f1b1c159b183998e7e1b361db0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b6f0f1b1c159b183998e7e1b361db0f">&#9670;&#160;</a></span>TEST() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::minimum_cost_of_buying_candies_with_discount::TEST </td>
+          <td>(</td>
+          <td class="paramtype">minimum_cost_of_buying_candies_with_discount</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00901">901</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  901</span>                                                                  {</div>
+<div class="line"><span class="lineno">  902</span>            <span class="keywordtype">int</span> input[] = {5, 5};</div>
+<div class="line"><span class="lineno">  903</span>            <span class="keyword">auto</span> vec    = vector(begin(input), end(input));</div>
+<div class="line"><span class="lineno">  904</span>            ASSERT_EQ(10, <a class="code hl_function" href="../../db/dbe/a01887.html#a8f73bc0a9aca7cfd50a526c0dd7028b5">Solution::minimumCost</a>(vec));</div>
+<div class="line"><span class="lineno">  905</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01305">leetcode::minimum_cost_of_buying_candies_with_discount::Solution::minimumCost()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

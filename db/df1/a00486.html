@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::best_time_to_buy_and_sell_stock_with_cooldown 命名空间参考</title>
+<title>problemscpp: leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">problemscpp
    </div>
    <div id="projectbrief">A collection of my answers to algorithm problems in c++.</div>
@@ -30,10 +34,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -41,12 +50,17 @@ var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,161 +70,216 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/dc1/a00212.html">leetcode</a></li><li class="navelem"><a class="el" href="../../db/df1/a00486.html">best_time_to_buy_and_sell_stock_with_cooldown</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d28/a00223.html">leetcode</a></li><li class="navelem"><a class="el" href="../../db/df1/a00486.html">minimum_cost_to_make_at_least_one_valid_path_in_a_grid</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::best_time_to_buy_and_sell_stock_with_cooldown 命名空间参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><ol type="1">
-<li>最佳买卖股票时机含冷冻期 </li>
+<li>使网格图至少有一条有效路径的最小代价 </li>
 </ol>
  
-<a href="../../db/df1/a00486.html#details">更多...</a></p>
+<a href="#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d65/a02876.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de4/a02851.html">mycmp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d24/a02847.html">Node</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d05/a02855.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a01c2975f8b34dd1d33e827f5842df591"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/df1/a00486.html#a01c2975f8b34dd1d33e827f5842df591">TEST</a> (best_time_to_buy_and_sell_stock_with_cooldown, case1)</td></tr>
-<tr class="separator:a01c2975f8b34dd1d33e827f5842df591"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5434a3a5d451d6908103b8bdd8549b33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/df1/a00486.html#a5434a3a5d451d6908103b8bdd8549b33">TEST</a> (best_time_to_buy_and_sell_stock_with_cooldown, case2)</td></tr>
-<tr class="separator:a5434a3a5d451d6908103b8bdd8549b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fe24bf2ab88fd7c030d6eeb6e51d6bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/df1/a00486.html#a5fe24bf2ab88fd7c030d6eeb6e51d6bd">TEST</a> (best_time_to_buy_and_sell_stock_with_cooldown, case3)</td></tr>
-<tr class="separator:a5fe24bf2ab88fd7c030d6eeb6e51d6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2d026ddeef016dd7897fc68c5166564" id="r_ad2d026ddeef016dd7897fc68c5166564"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2d026ddeef016dd7897fc68c5166564">TEST</a> (minimum_cost_to_make_at_least_one_valid_path_in_a_grid, case1)</td></tr>
+<tr class="separator:ad2d026ddeef016dd7897fc68c5166564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61be9ce396d085cb92349759ed57af1b" id="r_a61be9ce396d085cb92349759ed57af1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61be9ce396d085cb92349759ed57af1b">TEST</a> (minimum_cost_to_make_at_least_one_valid_path_in_a_grid, case2)</td></tr>
+<tr class="separator:a61be9ce396d085cb92349759ed57af1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ef7c9418173100fcf913c6846274a63" id="r_a9ef7c9418173100fcf913c6846274a63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ef7c9418173100fcf913c6846274a63">TEST</a> (minimum_cost_to_make_at_least_one_valid_path_in_a_grid, case3)</td></tr>
+<tr class="separator:a9ef7c9418173100fcf913c6846274a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36c08dc31623744ec001358483d50676" id="r_a36c08dc31623744ec001358483d50676"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36c08dc31623744ec001358483d50676">TEST</a> (minimum_cost_to_make_at_least_one_valid_path_in_a_grid, case4)</td></tr>
+<tr class="separator:a36c08dc31623744ec001358483d50676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4050fef0aeea26d203606b89a37b9cb4" id="r_a4050fef0aeea26d203606b89a37b9cb4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4050fef0aeea26d203606b89a37b9cb4">TEST</a> (minimum_cost_to_make_at_least_one_valid_path_in_a_grid, case5)</td></tr>
+<tr class="separator:a4050fef0aeea26d203606b89a37b9cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><ol type="1">
-<li>最佳买卖股票时机含冷冻期 </li>
+<li>使网格图至少有一条有效路径的最小代价 </li>
 </ol>
 </div><h2 class="groupheader">函数说明</h2>
-<a id="a01c2975f8b34dd1d33e827f5842df591" name="a01c2975f8b34dd1d33e827f5842df591"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01c2975f8b34dd1d33e827f5842df591">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/3]</span></h2>
+<a id="ad2d026ddeef016dd7897fc68c5166564" name="ad2d026ddeef016dd7897fc68c5166564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2d026ddeef016dd7897fc68c5166564">&#9670;&#160;</a></span>TEST() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::best_time_to_buy_and_sell_stock_with_cooldown::TEST </td>
+          <td class="memname">leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::TEST </td>
           <td>(</td>
-          <td class="paramtype">best_time_to_buy_and_sell_stock_with_cooldown&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">minimum_cost_to_make_at_least_one_valid_path_in_a_grid</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case1&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l03997">3997</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03997" name="l03997"></a><span class="lineno"> 3997</span>                                                                   {</div>
-<div class="line"><a id="l03998" name="l03998"></a><span class="lineno"> 3998</span>            vector prices = {1, 2, 3, 0, 2};</div>
-<div class="line"><a id="l03999" name="l03999"></a><span class="lineno"> 3999</span>            ASSERT_EQ(3, Solution::maxProfit(prices));</div>
-<div class="line"><a id="l04000" name="l04000"></a><span class="lineno"> 4000</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03788">3788</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3788</span>                                                                            {</div>
+<div class="line"><span class="lineno"> 3789</span>            vector&lt;vector&lt;int&gt;&gt; grid = {{1, 1, 1, 1}, {2, 2, 2, 2}, {1, 1, 1, 1}, {2, 2, 2, 2}};</div>
+<div class="line"><span class="lineno"> 3790</span>            ASSERT_EQ(3, <a class="code hl_function" href="../../dc/d05/a02855.html#a7a49405a940d7be58bd53676d59bfac9">Solution::minCost</a>(grid));</div>
+<div class="line"><span class="lineno"> 3791</span>        }</div>
+<div class="ttc" id="aa02855_html_a7a49405a940d7be58bd53676d59bfac9"><div class="ttname"><a href="../../dc/d05/a02855.html#a7a49405a940d7be58bd53676d59bfac9">leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::Solution::minCost</a></div><div class="ttdeci">static int minCost(vector&lt; vector&lt; int &gt; &gt; &amp;grid)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l08142">leetcode.cpp:8142</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l08632">leetcode::best_time_to_buy_and_sell_stock_with_cooldown::Solution::maxProfit()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l08142">leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::Solution::minCost()</a>.</p>
 
 </div>
 </div>
-<a id="a5434a3a5d451d6908103b8bdd8549b33" name="a5434a3a5d451d6908103b8bdd8549b33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5434a3a5d451d6908103b8bdd8549b33">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/3]</span></h2>
+<a id="a61be9ce396d085cb92349759ed57af1b" name="a61be9ce396d085cb92349759ed57af1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61be9ce396d085cb92349759ed57af1b">&#9670;&#160;</a></span>TEST() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::best_time_to_buy_and_sell_stock_with_cooldown::TEST </td>
+          <td class="memname">leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::TEST </td>
           <td>(</td>
-          <td class="paramtype">best_time_to_buy_and_sell_stock_with_cooldown&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">minimum_cost_to_make_at_least_one_valid_path_in_a_grid</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case2&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l04002">4002</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04002" name="l04002"></a><span class="lineno"> 4002</span>                                                                   {</div>
-<div class="line"><a id="l04003" name="l04003"></a><span class="lineno"> 4003</span>            vector prices = {1};</div>
-<div class="line"><a id="l04004" name="l04004"></a><span class="lineno"> 4004</span>            ASSERT_EQ(0, Solution::maxProfit(prices));</div>
-<div class="line"><a id="l04005" name="l04005"></a><span class="lineno"> 4005</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03793">3793</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3793</span>                                                                            {</div>
+<div class="line"><span class="lineno"> 3794</span>            vector&lt;vector&lt;int&gt;&gt; grid = {{1, 1, 3}, {3, 2, 2}, {1, 1, 4}};</div>
+<div class="line"><span class="lineno"> 3795</span>            ASSERT_EQ(0, <a class="code hl_function" href="../../dc/d05/a02855.html#a7a49405a940d7be58bd53676d59bfac9">Solution::minCost</a>(grid));</div>
+<div class="line"><span class="lineno"> 3796</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l08632">leetcode::best_time_to_buy_and_sell_stock_with_cooldown::Solution::maxProfit()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l08142">leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::Solution::minCost()</a>.</p>
 
 </div>
 </div>
-<a id="a5fe24bf2ab88fd7c030d6eeb6e51d6bd" name="a5fe24bf2ab88fd7c030d6eeb6e51d6bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fe24bf2ab88fd7c030d6eeb6e51d6bd">&#9670;&nbsp;</a></span>TEST() <span class="overload">[3/3]</span></h2>
+<a id="a9ef7c9418173100fcf913c6846274a63" name="a9ef7c9418173100fcf913c6846274a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ef7c9418173100fcf913c6846274a63">&#9670;&#160;</a></span>TEST() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::best_time_to_buy_and_sell_stock_with_cooldown::TEST </td>
+          <td class="memname">leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::TEST </td>
           <td>(</td>
-          <td class="paramtype">best_time_to_buy_and_sell_stock_with_cooldown&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">minimum_cost_to_make_at_least_one_valid_path_in_a_grid</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case3&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l04007">4007</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l04007" name="l04007"></a><span class="lineno"> 4007</span>                                                                   {</div>
-<div class="line"><a id="l04008" name="l04008"></a><span class="lineno"> 4008</span>            vector prices = {1, 2};</div>
-<div class="line"><a id="l04009" name="l04009"></a><span class="lineno"> 4009</span>            ASSERT_EQ(1, Solution::maxProfit(prices));</div>
-<div class="line"><a id="l04010" name="l04010"></a><span class="lineno"> 4010</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03798">3798</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3798</span>                                                                            {</div>
+<div class="line"><span class="lineno"> 3799</span>            vector&lt;vector&lt;int&gt;&gt; grid = {{1, 2}, {4, 3}};</div>
+<div class="line"><span class="lineno"> 3800</span>            ASSERT_EQ(1, <a class="code hl_function" href="../../dc/d05/a02855.html#a7a49405a940d7be58bd53676d59bfac9">Solution::minCost</a>(grid));</div>
+<div class="line"><span class="lineno"> 3801</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l08632">leetcode::best_time_to_buy_and_sell_stock_with_cooldown::Solution::maxProfit()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l08142">leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::Solution::minCost()</a>.</p>
+
+</div>
+</div>
+<a id="a36c08dc31623744ec001358483d50676" name="a36c08dc31623744ec001358483d50676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36c08dc31623744ec001358483d50676">&#9670;&#160;</a></span>TEST() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::TEST </td>
+          <td>(</td>
+          <td class="paramtype">minimum_cost_to_make_at_least_one_valid_path_in_a_grid</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case4</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03803">3803</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3803</span>                                                                            {</div>
+<div class="line"><span class="lineno"> 3804</span>            vector&lt;vector&lt;int&gt;&gt; grid = {{2, 2, 2}, {2, 2, 2}};</div>
+<div class="line"><span class="lineno"> 3805</span>            ASSERT_EQ(3, <a class="code hl_function" href="../../dc/d05/a02855.html#a7a49405a940d7be58bd53676d59bfac9">Solution::minCost</a>(grid));</div>
+<div class="line"><span class="lineno"> 3806</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l08142">leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::Solution::minCost()</a>.</p>
+
+</div>
+</div>
+<a id="a4050fef0aeea26d203606b89a37b9cb4" name="a4050fef0aeea26d203606b89a37b9cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4050fef0aeea26d203606b89a37b9cb4">&#9670;&#160;</a></span>TEST() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::TEST </td>
+          <td>(</td>
+          <td class="paramtype">minimum_cost_to_make_at_least_one_valid_path_in_a_grid</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case5</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03808">3808</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3808</span>                                                                            {</div>
+<div class="line"><span class="lineno"> 3809</span>            vector&lt;vector&lt;int&gt;&gt; grid = {{4}};</div>
+<div class="line"><span class="lineno"> 3810</span>            ASSERT_EQ(0, <a class="code hl_function" href="../../dc/d05/a02855.html#a7a49405a940d7be58bd53676d59bfac9">Solution::minCost</a>(grid));</div>
+<div class="line"><span class="lineno"> 3811</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l08142">leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::Solution::minCost()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

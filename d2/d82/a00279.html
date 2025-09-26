@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::reverse_prefix_of_word 命名空间参考</title>
+<title>problemscpp: leetcode::number_of_valid_words_in_a_sentence 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">problemscpp
    </div>
    <div id="projectbrief">A collection of my answers to algorithm problems in c++.</div>
@@ -30,10 +34,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -41,12 +50,17 @@ var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,153 +70,172 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/dc1/a00212.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d2/d82/a00279.html">reverse_prefix_of_word</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d28/a00223.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d2/d82/a00279.html">number_of_valid_words_in_a_sentence</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::reverse_prefix_of_word 命名空间参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::number_of_valid_words_in_a_sentence 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>LeetCode 2000. 反转单词前缀  
-<a href="../../d2/d82/a00279.html#details">更多...</a></p>
+<p>LeetCode 2047. 句子中的有效单词数  
+<a href="#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d4f/a01968.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d19/a01947.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a5eaad615ec714dab53930e7b4de313c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d82/a00279.html#a5eaad615ec714dab53930e7b4de313c4">TEST</a> (reverse_prefix_of_word, case1)</td></tr>
-<tr class="separator:a5eaad615ec714dab53930e7b4de313c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a987b395e45ab57faf167fa593be68789"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d82/a00279.html#a987b395e45ab57faf167fa593be68789">TEST</a> (reverse_prefix_of_word, case2)</td></tr>
-<tr class="separator:a987b395e45ab57faf167fa593be68789"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a057e790318b72c20acf8944efff9e65e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d82/a00279.html#a057e790318b72c20acf8944efff9e65e">TEST</a> (reverse_prefix_of_word, case3)</td></tr>
-<tr class="separator:a057e790318b72c20acf8944efff9e65e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72f8e533f21cebab12d501858b5725cf" id="r_a72f8e533f21cebab12d501858b5725cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72f8e533f21cebab12d501858b5725cf">TEST</a> (number_of_valid_words_in_a_sentence, case1)</td></tr>
+<tr class="separator:a72f8e533f21cebab12d501858b5725cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac0b913d3591d1a0ff8c779d12797866" id="r_aac0b913d3591d1a0ff8c779d12797866"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac0b913d3591d1a0ff8c779d12797866">TEST</a> (number_of_valid_words_in_a_sentence, case2)</td></tr>
+<tr class="separator:aac0b913d3591d1a0ff8c779d12797866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11447f614bdf2947707bfb2cbf6ade7c" id="r_a11447f614bdf2947707bfb2cbf6ade7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11447f614bdf2947707bfb2cbf6ade7c">TEST</a> (number_of_valid_words_in_a_sentence, case3)</td></tr>
+<tr class="separator:a11447f614bdf2947707bfb2cbf6ade7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a032b07e4837fda52635963ac1e070a21" id="r_a032b07e4837fda52635963ac1e070a21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a032b07e4837fda52635963ac1e070a21">TEST</a> (number_of_valid_words_in_a_sentence, case4)</td></tr>
+<tr class="separator:a032b07e4837fda52635963ac1e070a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >LeetCode 2000. 反转单词前缀 </p>
+<div class="textblock"><p>LeetCode 2047. 句子中的有效单词数 </p>
 </div><h2 class="groupheader">函数说明</h2>
-<a id="a5eaad615ec714dab53930e7b4de313c4" name="a5eaad615ec714dab53930e7b4de313c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5eaad615ec714dab53930e7b4de313c4">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/3]</span></h2>
+<a id="a72f8e533f21cebab12d501858b5725cf" name="a72f8e533f21cebab12d501858b5725cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72f8e533f21cebab12d501858b5725cf">&#9670;&#160;</a></span>TEST() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::reverse_prefix_of_word::TEST </td>
+          <td class="memname">leetcode::number_of_valid_words_in_a_sentence::TEST </td>
           <td>(</td>
-          <td class="paramtype">reverse_prefix_of_word&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">number_of_valid_words_in_a_sentence</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case1&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01225">1225</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>                                            {</div>
-<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>            ASSERT_EQ(<span class="stringliteral">&quot;dcbaefd&quot;</span>, Solution::reversePrefix(<span class="stringliteral">&quot;abcdefd&quot;</span>, <span class="charliteral">&#39;d&#39;</span>));</div>
-<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l01058">1058</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1058</span>                                                         {</div>
+<div class="line"><span class="lineno"> 1059</span>            ASSERT_EQ(3, <a class="code hl_function" href="../../d6/d19/a01947.html#a97afc98b37e6edcb15fbb0fd68325175">Solution::countValidWords</a>(<span class="stringliteral">&quot;cat and  dog&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1060</span>        }</div>
+<div class="ttc" id="aa01947_html_a97afc98b37e6edcb15fbb0fd68325175"><div class="ttname"><a href="../../d6/d19/a01947.html#a97afc98b37e6edcb15fbb0fd68325175">leetcode::number_of_valid_words_in_a_sentence::Solution::countValidWords</a></div><div class="ttdeci">static int countValidWords(const string &amp;sentence)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l01718">leetcode.cpp:1718</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l02154">leetcode::reverse_prefix_of_word::Solution::reversePrefix()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01718">leetcode::number_of_valid_words_in_a_sentence::Solution::countValidWords()</a>.</p>
 
 </div>
 </div>
-<a id="a987b395e45ab57faf167fa593be68789" name="a987b395e45ab57faf167fa593be68789"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a987b395e45ab57faf167fa593be68789">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/3]</span></h2>
+<a id="aac0b913d3591d1a0ff8c779d12797866" name="aac0b913d3591d1a0ff8c779d12797866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac0b913d3591d1a0ff8c779d12797866">&#9670;&#160;</a></span>TEST() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::reverse_prefix_of_word::TEST </td>
+          <td class="memname">leetcode::number_of_valid_words_in_a_sentence::TEST </td>
           <td>(</td>
-          <td class="paramtype">reverse_prefix_of_word&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">number_of_valid_words_in_a_sentence</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case2&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01229">1229</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>                                            {</div>
-<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>            ASSERT_EQ(<span class="stringliteral">&quot;zxyxxe&quot;</span>, Solution::reversePrefix(<span class="stringliteral">&quot;xyxzxe&quot;</span>, <span class="charliteral">&#39;z&#39;</span>));</div>
-<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l01062">1062</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1062</span>                                                         {</div>
+<div class="line"><span class="lineno"> 1063</span>            ASSERT_EQ(0, <a class="code hl_function" href="../../d6/d19/a01947.html#a97afc98b37e6edcb15fbb0fd68325175">Solution::countValidWords</a>(<span class="stringliteral">&quot;!this  1-s b8d!&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1064</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l02154">leetcode::reverse_prefix_of_word::Solution::reversePrefix()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01718">leetcode::number_of_valid_words_in_a_sentence::Solution::countValidWords()</a>.</p>
 
 </div>
 </div>
-<a id="a057e790318b72c20acf8944efff9e65e" name="a057e790318b72c20acf8944efff9e65e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a057e790318b72c20acf8944efff9e65e">&#9670;&nbsp;</a></span>TEST() <span class="overload">[3/3]</span></h2>
+<a id="a11447f614bdf2947707bfb2cbf6ade7c" name="a11447f614bdf2947707bfb2cbf6ade7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11447f614bdf2947707bfb2cbf6ade7c">&#9670;&#160;</a></span>TEST() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::reverse_prefix_of_word::TEST </td>
+          <td class="memname">leetcode::number_of_valid_words_in_a_sentence::TEST </td>
           <td>(</td>
-          <td class="paramtype">reverse_prefix_of_word&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">number_of_valid_words_in_a_sentence</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case3&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01233">1233</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>                                            {</div>
-<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>            ASSERT_EQ(<span class="stringliteral">&quot;abcd&quot;</span>, Solution::reversePrefix(<span class="stringliteral">&quot;abcd&quot;</span>, <span class="charliteral">&#39;z&#39;</span>));</div>
-<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l01066">1066</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1066</span>                                                         {</div>
+<div class="line"><span class="lineno"> 1067</span>            ASSERT_EQ(5, <a class="code hl_function" href="../../d6/d19/a01947.html#a97afc98b37e6edcb15fbb0fd68325175">Solution::countValidWords</a>(<span class="stringliteral">&quot;alice and  bob are playing stone-game10&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1068</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l02154">leetcode::reverse_prefix_of_word::Solution::reversePrefix()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01718">leetcode::number_of_valid_words_in_a_sentence::Solution::countValidWords()</a>.</p>
+
+</div>
+</div>
+<a id="a032b07e4837fda52635963ac1e070a21" name="a032b07e4837fda52635963ac1e070a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a032b07e4837fda52635963ac1e070a21">&#9670;&#160;</a></span>TEST() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::number_of_valid_words_in_a_sentence::TEST </td>
+          <td>(</td>
+          <td class="paramtype">number_of_valid_words_in_a_sentence</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case4</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l01070">1070</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1070</span>                                                         {</div>
+<div class="line"><span class="lineno"> 1071</span>            ASSERT_EQ(6, <a class="code hl_function" href="../../d6/d19/a01947.html#a97afc98b37e6edcb15fbb0fd68325175">Solution::countValidWords</a>(<span class="stringliteral">&quot;he bought 2 pencils, 3 erasers, and 1  pencil-sharpener.&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1072</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l01718">leetcode::number_of_valid_words_in_a_sentence::Solution::countValidWords()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::missing_element_in_sorted_array 命名空间参考</title>
+<title>problemscpp: leetcode::serialize_and_deserialize_binary_tree 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">problemscpp
    </div>
    <div id="projectbrief">A collection of my answers to algorithm problems in c++.</div>
@@ -30,10 +34,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -41,12 +50,17 @@ var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,161 +70,224 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/dc1/a00212.html">leetcode</a></li><li class="navelem"><a class="el" href="../../dd/d63/a00455.html">missing_element_in_sorted_array</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d28/a00223.html">leetcode</a></li><li class="navelem"><a class="el" href="../../dd/d63/a00455.html">serialize_and_deserialize_binary_tree</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::missing_element_in_sorted_array 命名空间参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::serialize_and_deserialize_binary_tree 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><ol type="1">
-<li>有序数组中的缺失元素 </li>
+<li>Serialize and Deserialize Binary Tree </li>
 </ol>
  
-<a href="../../dd/d63/a00455.html#details">更多...</a></p>
+<a href="#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d59/a02728.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0f/a02707.html">Codec</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a7ba7a2286600a8801cc675f679ec5e8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d63/a00455.html#a7ba7a2286600a8801cc675f679ec5e8d">TEST</a> (missing_element_in_sorted_array, case1)</td></tr>
-<tr class="separator:a7ba7a2286600a8801cc675f679ec5e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae885b3304894892776e4f61fb5a796a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d63/a00455.html#ae885b3304894892776e4f61fb5a796a3">TEST</a> (missing_element_in_sorted_array, case2)</td></tr>
-<tr class="separator:ae885b3304894892776e4f61fb5a796a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad80afd24065fcbd43720cc20d38599c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d63/a00455.html#ad80afd24065fcbd43720cc20d38599c3">TEST</a> (missing_element_in_sorted_array, case3)</td></tr>
-<tr class="separator:ad80afd24065fcbd43720cc20d38599c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a081fb0d475bbc97cc8cbd07f4b2e9ef8" id="r_a081fb0d475bbc97cc8cbd07f4b2e9ef8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a081fb0d475bbc97cc8cbd07f4b2e9ef8">TEST</a> (serialize_and_deserialize_binary_tree, case1)</td></tr>
+<tr class="separator:a081fb0d475bbc97cc8cbd07f4b2e9ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95ec8473825a227b207136889146af5" id="r_ad95ec8473825a227b207136889146af5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad95ec8473825a227b207136889146af5">TEST</a> (serialize_and_deserialize_binary_tree, case2)</td></tr>
+<tr class="separator:ad95ec8473825a227b207136889146af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e63167703f11da3a62a17133596517" id="r_a42e63167703f11da3a62a17133596517"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42e63167703f11da3a62a17133596517">TEST</a> (serialize_and_deserialize_binary_tree, case3)</td></tr>
+<tr class="separator:a42e63167703f11da3a62a17133596517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a862e2f903a2a665d24995fac604cce24" id="r_a862e2f903a2a665d24995fac604cce24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a862e2f903a2a665d24995fac604cce24">TEST</a> (serialize_and_deserialize_binary_tree, case4)</td></tr>
+<tr class="separator:a862e2f903a2a665d24995fac604cce24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bb7100a67f80ad4e0492bc0a27f6352" id="r_a4bb7100a67f80ad4e0492bc0a27f6352"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bb7100a67f80ad4e0492bc0a27f6352">TEST</a> (serialize_and_deserialize_binary_tree, case5)</td></tr>
+<tr class="separator:a4bb7100a67f80ad4e0492bc0a27f6352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><ol type="1">
-<li>有序数组中的缺失元素 </li>
+<li>Serialize and Deserialize Binary Tree </li>
 </ol>
 </div><h2 class="groupheader">函数说明</h2>
-<a id="a7ba7a2286600a8801cc675f679ec5e8d" name="a7ba7a2286600a8801cc675f679ec5e8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ba7a2286600a8801cc675f679ec5e8d">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/3]</span></h2>
+<a id="a081fb0d475bbc97cc8cbd07f4b2e9ef8" name="a081fb0d475bbc97cc8cbd07f4b2e9ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a081fb0d475bbc97cc8cbd07f4b2e9ef8">&#9670;&#160;</a></span>TEST() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::missing_element_in_sorted_array::TEST </td>
+          <td class="memname">leetcode::serialize_and_deserialize_binary_tree::TEST </td>
           <td>(</td>
-          <td class="paramtype">missing_element_in_sorted_array&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">serialize_and_deserialize_binary_tree</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case1&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l03504">3504</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03504" name="l03504"></a><span class="lineno"> 3504</span>                                                     {</div>
-<div class="line"><a id="l03505" name="l03505"></a><span class="lineno"> 3505</span>            vector nums = {4, 7, 9, 10};</div>
-<div class="line"><a id="l03506" name="l03506"></a><span class="lineno"> 3506</span>            ASSERT_EQ(Solution::missingElement(nums, 1), 5);</div>
-<div class="line"><a id="l03507" name="l03507"></a><span class="lineno"> 3507</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03284">3284</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3284</span>                                                           {</div>
+<div class="line"><span class="lineno"> 3285</span>            <span class="keyword">const</span> <span class="keyword">auto</span> c            = <a class="code hl_class" href="../../d8/d0f/a02707.html">Codec</a>();</div>
+<div class="line"><span class="lineno"> 3286</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> serialized = <span class="stringliteral">&quot;[1,2,3,null,null,4,5]&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3287</span>            <a class="code hl_struct" href="../../db/d98/a01675.html">TreeNode</a> *root          = <a class="code hl_function" href="../../d8/d0f/a02707.html#a140b954d27b6128dafdfba9b98424e22">Codec::deserialize</a>(serialized);</div>
+<div class="line"><span class="lineno"> 3288</span>            ASSERT_EQ(serialized, c.serialize(root));</div>
+<div class="line"><span class="lineno"> 3289</span>        }</div>
+<div class="ttc" id="aa01675_html"><div class="ttname"><a href="../../db/d98/a01675.html">leetcode::TreeNode</a></div><div class="ttdef"><b>定义</b> <a href="../../dc/d87/a00032_source.html#l00023">leetcode.h:23</a></div></div>
+<div class="ttc" id="aa02707_html"><div class="ttname"><a href="../../d8/d0f/a02707.html">leetcode::serialize_and_deserialize_binary_tree::Codec</a></div><div class="ttdef"><b>定义</b> <a href="../../dc/d87/a00032_source.html#l02605">leetcode.h:2605</a></div></div>
+<div class="ttc" id="aa02707_html_a140b954d27b6128dafdfba9b98424e22"><div class="ttname"><a href="../../d8/d0f/a02707.html#a140b954d27b6128dafdfba9b98424e22">leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize</a></div><div class="ttdeci">static TreeNode * deserialize(string data)</div><div class="ttdoc">Decodes your encoded data to tree.</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l07045">leetcode.cpp:7045</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l07473">leetcode::missing_element_in_sorted_array::Solution::missingElement()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07045">leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize()</a>.</p>
 
 </div>
 </div>
-<a id="ae885b3304894892776e4f61fb5a796a3" name="ae885b3304894892776e4f61fb5a796a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae885b3304894892776e4f61fb5a796a3">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/3]</span></h2>
+<a id="ad95ec8473825a227b207136889146af5" name="ad95ec8473825a227b207136889146af5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95ec8473825a227b207136889146af5">&#9670;&#160;</a></span>TEST() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::missing_element_in_sorted_array::TEST </td>
+          <td class="memname">leetcode::serialize_and_deserialize_binary_tree::TEST </td>
           <td>(</td>
-          <td class="paramtype">missing_element_in_sorted_array&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">serialize_and_deserialize_binary_tree</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case2&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l03509">3509</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03509" name="l03509"></a><span class="lineno"> 3509</span>                                                     {</div>
-<div class="line"><a id="l03510" name="l03510"></a><span class="lineno"> 3510</span>            vector nums = {4, 7, 9, 10};</div>
-<div class="line"><a id="l03511" name="l03511"></a><span class="lineno"> 3511</span>            ASSERT_EQ(Solution::missingElement(nums, 3), 8);</div>
-<div class="line"><a id="l03512" name="l03512"></a><span class="lineno"> 3512</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03291">3291</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3291</span>                                                           {</div>
+<div class="line"><span class="lineno"> 3292</span>            <span class="keyword">const</span> <span class="keyword">auto</span> c            = <a class="code hl_class" href="../../d8/d0f/a02707.html">Codec</a>();</div>
+<div class="line"><span class="lineno"> 3293</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> serialized = <span class="stringliteral">&quot;[]&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3294</span>            <a class="code hl_struct" href="../../db/d98/a01675.html">TreeNode</a> *root          = <a class="code hl_function" href="../../d8/d0f/a02707.html#a140b954d27b6128dafdfba9b98424e22">Codec::deserialize</a>(serialized);</div>
+<div class="line"><span class="lineno"> 3295</span>            ASSERT_EQ(serialized, c.serialize(root));</div>
+<div class="line"><span class="lineno"> 3296</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l07473">leetcode::missing_element_in_sorted_array::Solution::missingElement()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07045">leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize()</a>.</p>
 
 </div>
 </div>
-<a id="ad80afd24065fcbd43720cc20d38599c3" name="ad80afd24065fcbd43720cc20d38599c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad80afd24065fcbd43720cc20d38599c3">&#9670;&nbsp;</a></span>TEST() <span class="overload">[3/3]</span></h2>
+<a id="a42e63167703f11da3a62a17133596517" name="a42e63167703f11da3a62a17133596517"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42e63167703f11da3a62a17133596517">&#9670;&#160;</a></span>TEST() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::missing_element_in_sorted_array::TEST </td>
+          <td class="memname">leetcode::serialize_and_deserialize_binary_tree::TEST </td>
           <td>(</td>
-          <td class="paramtype">missing_element_in_sorted_array&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">serialize_and_deserialize_binary_tree</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case3&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l03514">3514</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l03514" name="l03514"></a><span class="lineno"> 3514</span>                                                     {</div>
-<div class="line"><a id="l03515" name="l03515"></a><span class="lineno"> 3515</span>            vector nums = {1, 2, 4};</div>
-<div class="line"><a id="l03516" name="l03516"></a><span class="lineno"> 3516</span>            ASSERT_EQ(Solution::missingElement(nums, 3), 6);</div>
-<div class="line"><a id="l03517" name="l03517"></a><span class="lineno"> 3517</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03298">3298</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3298</span>                                                           {</div>
+<div class="line"><span class="lineno"> 3299</span>            <span class="keyword">const</span> <span class="keyword">auto</span> c            = <a class="code hl_class" href="../../d8/d0f/a02707.html">Codec</a>();</div>
+<div class="line"><span class="lineno"> 3300</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> serialized = <span class="stringliteral">&quot;[1,null,2,3]&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3301</span>            <a class="code hl_struct" href="../../db/d98/a01675.html">TreeNode</a> *root          = <a class="code hl_function" href="../../d8/d0f/a02707.html#a140b954d27b6128dafdfba9b98424e22">Codec::deserialize</a>(serialized);</div>
+<div class="line"><span class="lineno"> 3302</span>            ASSERT_EQ(serialized, c.serialize(root));</div>
+<div class="line"><span class="lineno"> 3303</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l07473">leetcode::missing_element_in_sorted_array::Solution::missingElement()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07045">leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a862e2f903a2a665d24995fac604cce24" name="a862e2f903a2a665d24995fac604cce24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a862e2f903a2a665d24995fac604cce24">&#9670;&#160;</a></span>TEST() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::serialize_and_deserialize_binary_tree::TEST </td>
+          <td>(</td>
+          <td class="paramtype">serialize_and_deserialize_binary_tree</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case4</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03305">3305</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3305</span>                                                           {</div>
+<div class="line"><span class="lineno"> 3306</span>            <span class="keyword">const</span> <span class="keyword">auto</span> c            = <a class="code hl_class" href="../../d8/d0f/a02707.html">Codec</a>();</div>
+<div class="line"><span class="lineno"> 3307</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> serialized = <span class="stringliteral">&quot;[1,2,3]&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3308</span>            <a class="code hl_struct" href="../../db/d98/a01675.html">TreeNode</a> *root          = <a class="code hl_function" href="../../d8/d0f/a02707.html#a140b954d27b6128dafdfba9b98424e22">Codec::deserialize</a>(serialized);</div>
+<div class="line"><span class="lineno"> 3309</span>            ASSERT_EQ(serialized, c.serialize(root));</div>
+<div class="line"><span class="lineno"> 3310</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07045">leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize()</a>.</p>
+
+</div>
+</div>
+<a id="a4bb7100a67f80ad4e0492bc0a27f6352" name="a4bb7100a67f80ad4e0492bc0a27f6352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bb7100a67f80ad4e0492bc0a27f6352">&#9670;&#160;</a></span>TEST() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::serialize_and_deserialize_binary_tree::TEST </td>
+          <td>(</td>
+          <td class="paramtype">serialize_and_deserialize_binary_tree</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case5</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03312">3312</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3312</span>                                                           {</div>
+<div class="line"><span class="lineno"> 3313</span>            <span class="keyword">const</span> <span class="keyword">auto</span> c            = <a class="code hl_class" href="../../d8/d0f/a02707.html">Codec</a>();</div>
+<div class="line"><span class="lineno"> 3314</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> serialized = <span class="stringliteral">&quot;[5,4,7,3,null,2,null,-1,null,9]&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3315</span>            <a class="code hl_struct" href="../../db/d98/a01675.html">TreeNode</a> *root          = <a class="code hl_function" href="../../d8/d0f/a02707.html#a140b954d27b6128dafdfba9b98424e22">Codec::deserialize</a>(serialized);</div>
+<div class="line"><span class="lineno"> 3316</span>            ASSERT_EQ(serialized, c.serialize(root));</div>
+<div class="line"><span class="lineno"> 3317</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l07045">leetcode::serialize_and_deserialize_binary_tree::Codec::deserialize()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

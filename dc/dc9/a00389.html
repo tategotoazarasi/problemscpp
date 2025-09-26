@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::maximum_candies_allocated_to_k_children 命名空间参考</title>
+<title>problemscpp: leetcode::find_missing_observations 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">problemscpp
    </div>
    <div id="projectbrief">A collection of my answers to algorithm problems in c++.</div>
@@ -30,10 +34,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -41,12 +50,17 @@ var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,202 +70,121 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/dc1/a00212.html">leetcode</a></li><li class="navelem"><a class="el" href="../../dc/dc9/a00389.html">maximum_candies_allocated_to_k_children</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d28/a00223.html">leetcode</a></li><li class="navelem"><a class="el" href="../../dc/dc9/a00389.html">find_missing_observations</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::maximum_candies_allocated_to_k_children 命名空间参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::find_missing_observations 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><ol type="1">
-<li>Maximum Candies Allocated to K Children </li>
+<li>Find Missing Observations </li>
 </ol>
  
-<a href="../../dc/dc9/a00389.html#details">更多...</a></p>
+<a href="#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dcb/a02456.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/df1/a02431.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a93036bbd5f1f272915a9f4c02f35ec93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc9/a00389.html#a93036bbd5f1f272915a9f4c02f35ec93">TEST</a> (maximum_candies_allocated_to_k_children, case1)</td></tr>
-<tr class="separator:a93036bbd5f1f272915a9f4c02f35ec93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3687644c47c2d56e10efba938bb3b3e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc9/a00389.html#a3687644c47c2d56e10efba938bb3b3e5">TEST</a> (maximum_candies_allocated_to_k_children, case2)</td></tr>
-<tr class="separator:a3687644c47c2d56e10efba938bb3b3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad0999185047f1740142a4461027c2f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc9/a00389.html#aad0999185047f1740142a4461027c2f9">TEST</a> (maximum_candies_allocated_to_k_children, case3)</td></tr>
-<tr class="separator:aad0999185047f1740142a4461027c2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bb707104f6630e7ae68a8d55975ba46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc9/a00389.html#a0bb707104f6630e7ae68a8d55975ba46">TEST</a> (maximum_candies_allocated_to_k_children, case4)</td></tr>
-<tr class="separator:a0bb707104f6630e7ae68a8d55975ba46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a3d2e71fc02852e54fafe169b94841e" id="r_a4a3d2e71fc02852e54fafe169b94841e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a3d2e71fc02852e54fafe169b94841e">TEST</a> (find_missing_observations, case1)</td></tr>
+<tr class="separator:a4a3d2e71fc02852e54fafe169b94841e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40204916aac5b8aa077b967313009b90" id="r_a40204916aac5b8aa077b967313009b90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40204916aac5b8aa077b967313009b90">TEST</a> (find_missing_observations, case3)</td></tr>
+<tr class="separator:a40204916aac5b8aa077b967313009b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><ol type="1">
-<li>Maximum Candies Allocated to K Children </li>
-</ol>
-<ol type="1">
-<li>每个小孩最多能分到多少糖果 </li>
+<li>Find Missing Observations </li>
 </ol>
 </div><h2 class="groupheader">函数说明</h2>
-<a id="a93036bbd5f1f272915a9f4c02f35ec93" name="a93036bbd5f1f272915a9f4c02f35ec93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93036bbd5f1f272915a9f4c02f35ec93">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/4]</span></h2>
+<a id="a4a3d2e71fc02852e54fafe169b94841e" name="a4a3d2e71fc02852e54fafe169b94841e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a3d2e71fc02852e54fafe169b94841e">&#9670;&#160;</a></span>TEST() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::maximum_candies_allocated_to_k_children::TEST </td>
+          <td class="memname">leetcode::find_missing_observations::TEST </td>
           <td>(</td>
-          <td class="paramtype">maximum_candies_allocated_to_k_children&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">find_missing_observations</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case1&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l02678">2678</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02678" name="l02678"></a><span class="lineno"> 2678</span>                                                             {</div>
-<div class="line"><a id="l02679" name="l02679"></a><span class="lineno"> 2679</span>            vector candies = {5, 8, 6};</div>
-<div class="line"><a id="l02680" name="l02680"></a><span class="lineno"> 2680</span>            ASSERT_EQ(5, Solution::maximumCandies(candies, 3));</div>
-<div class="line"><a id="l02681" name="l02681"></a><span class="lineno"> 2681</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l02509">2509</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2509</span>                                               {</div>
+<div class="line"><span class="lineno"> 2510</span>            vector rolls        = {3, 2, 4, 3};</div>
+<div class="line"><span class="lineno"> 2511</span>            <span class="keyword">const</span> vector output = {6, 6};</div>
+<div class="line"><span class="lineno"> 2512</span>            ASSERT_EQ(output, <a class="code hl_function" href="../../d1/df1/a02431.html#a2e23d7e6ab7dba4e4543ef64117b2676">Solution::missingRolls</a>(rolls, 4, 2));</div>
+<div class="line"><span class="lineno"> 2513</span>        }</div>
+<div class="ttc" id="aa02431_html_a2e23d7e6ab7dba4e4543ef64117b2676"><div class="ttname"><a href="../../d1/df1/a02431.html#a2e23d7e6ab7dba4e4543ef64117b2676">leetcode::find_missing_observations::Solution::missingRolls</a></div><div class="ttdeci">static vector&lt; int &gt; missingRolls(vector&lt; int &gt; &amp;rolls, int mean, int n)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l05177">leetcode.cpp:5177</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l05581">leetcode::maximum_candies_allocated_to_k_children::Solution::maximumCandies()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l05177">leetcode::find_missing_observations::Solution::missingRolls()</a>.</p>
 
 </div>
 </div>
-<a id="a3687644c47c2d56e10efba938bb3b3e5" name="a3687644c47c2d56e10efba938bb3b3e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3687644c47c2d56e10efba938bb3b3e5">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/4]</span></h2>
+<a id="a40204916aac5b8aa077b967313009b90" name="a40204916aac5b8aa077b967313009b90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40204916aac5b8aa077b967313009b90">&#9670;&#160;</a></span>TEST() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::maximum_candies_allocated_to_k_children::TEST </td>
+          <td class="memname">leetcode::find_missing_observations::TEST </td>
           <td>(</td>
-          <td class="paramtype">maximum_candies_allocated_to_k_children&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">find_missing_observations</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case2&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l02683">2683</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02683" name="l02683"></a><span class="lineno"> 2683</span>                                                             {</div>
-<div class="line"><a id="l02684" name="l02684"></a><span class="lineno"> 2684</span>            vector candies = {2, 5};</div>
-<div class="line"><a id="l02685" name="l02685"></a><span class="lineno"> 2685</span>            ASSERT_EQ(0, Solution::maximumCandies(candies, 11));</div>
-<div class="line"><a id="l02686" name="l02686"></a><span class="lineno"> 2686</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l02515">2515</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2515</span>                                               {</div>
+<div class="line"><span class="lineno"> 2516</span>            vector rolls             = {1, 2, 3, 4};</div>
+<div class="line"><span class="lineno"> 2517</span>            <span class="keyword">const</span> vector&lt;int&gt; output = {};</div>
+<div class="line"><span class="lineno"> 2518</span>            ASSERT_EQ(output, <a class="code hl_function" href="../../d1/df1/a02431.html#a2e23d7e6ab7dba4e4543ef64117b2676">Solution::missingRolls</a>(rolls, 6, 4));</div>
+<div class="line"><span class="lineno"> 2519</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l05581">leetcode::maximum_candies_allocated_to_k_children::Solution::maximumCandies()</a>.</p>
-
-</div>
-</div>
-<a id="aad0999185047f1740142a4461027c2f9" name="aad0999185047f1740142a4461027c2f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad0999185047f1740142a4461027c2f9">&#9670;&nbsp;</a></span>TEST() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">leetcode::maximum_candies_allocated_to_k_children::TEST </td>
-          <td>(</td>
-          <td class="paramtype">maximum_candies_allocated_to_k_children&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">case3&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l02688">2688</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02688" name="l02688"></a><span class="lineno"> 2688</span>                                                             {</div>
-<div class="line"><a id="l02689" name="l02689"></a><span class="lineno"> 2689</span>            vector candies = {1, 2, 3, 4, 10};</div>
-<div class="line"><a id="l02690" name="l02690"></a><span class="lineno"> 2690</span>            ASSERT_EQ(3, Solution::maximumCandies(candies, 5));</div>
-<div class="line"><a id="l02691" name="l02691"></a><span class="lineno"> 2691</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l05581">leetcode::maximum_candies_allocated_to_k_children::Solution::maximumCandies()</a>.</p>
-
-</div>
-</div>
-<a id="a0bb707104f6630e7ae68a8d55975ba46" name="a0bb707104f6630e7ae68a8d55975ba46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bb707104f6630e7ae68a8d55975ba46">&#9670;&nbsp;</a></span>TEST() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">leetcode::maximum_candies_allocated_to_k_children::TEST </td>
-          <td>(</td>
-          <td class="paramtype">maximum_candies_allocated_to_k_children&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">case4&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l02693">2693</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02693" name="l02693"></a><span class="lineno"> 2693</span>                                                             {</div>
-<div class="line"><a id="l02694" name="l02694"></a><span class="lineno"> 2694</span>            vector candies = {123, 13300, 1000, 23, 11, 41, 311};</div>
-<div class="line"><a id="l02695" name="l02695"></a><span class="lineno"> 2695</span>            ASSERT_EQ(15, Solution::maximumCandies(candies, 980));</div>
-<div class="line"><a id="l02696" name="l02696"></a><span class="lineno"> 2696</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l05581">leetcode::maximum_candies_allocated_to_k_children::Solution::maximumCandies()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l05177">leetcode::find_missing_observations::Solution::missingRolls()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

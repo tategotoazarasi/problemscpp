@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::the_time_when_the_network_becomes_idle 命名空间参考</title>
+<title>problemscpp: leetcode::count_number_of_maximum_bitwise_or_subsets 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">problemscpp
    </div>
    <div id="projectbrief">A collection of my answers to algorithm problems in c++.</div>
@@ -30,10 +34,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -41,12 +50,17 @@ var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,122 +70,145 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/dc1/a00212.html">leetcode</a></li><li class="navelem"><a class="el" href="../../df/dee/a00369.html">the_time_when_the_network_becomes_idle</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d28/a00223.html">leetcode</a></li><li class="navelem"><a class="el" href="../../df/dee/a00369.html">count_number_of_maximum_bitwise_or_subsets</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::the_time_when_the_network_becomes_idle 命名空间参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::count_number_of_maximum_bitwise_or_subsets 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>LeetCode 2039. The Time When the Network Becomes Idle  
-<a href="../../df/dee/a00369.html#details">更多...</a></p>
+<p>LeetCode 2044. Count Number of Maximum Bitwise-OR Subsets  
+<a href="#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da2/a02368.html">Node</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d75/a02372.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d21/a02347.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a3487bc3c0815ab4eb778ca736c04dfa4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dee/a00369.html#a3487bc3c0815ab4eb778ca736c04dfa4">TEST</a> (the_time_when_the_network_becomes_idle, case1)</td></tr>
-<tr class="separator:a3487bc3c0815ab4eb778ca736c04dfa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af48b6a5a840a1e222e1accc2e2170158"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dee/a00369.html#af48b6a5a840a1e222e1accc2e2170158">TEST</a> (the_time_when_the_network_becomes_idle, case2)</td></tr>
-<tr class="separator:af48b6a5a840a1e222e1accc2e2170158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a756e581264d80ee77d31a167eb153d65" id="r_a756e581264d80ee77d31a167eb153d65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a756e581264d80ee77d31a167eb153d65">TEST</a> (count_number_of_maximum_bitwise_or_subsets, case1)</td></tr>
+<tr class="separator:a756e581264d80ee77d31a167eb153d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae280554aa38b98321740eaee09864952" id="r_ae280554aa38b98321740eaee09864952"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae280554aa38b98321740eaee09864952">TEST</a> (count_number_of_maximum_bitwise_or_subsets, case2)</td></tr>
+<tr class="separator:ae280554aa38b98321740eaee09864952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a276e5d637b9a8e77b54767ceb2ee2b41" id="r_a276e5d637b9a8e77b54767ceb2ee2b41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a276e5d637b9a8e77b54767ceb2ee2b41">TEST</a> (count_number_of_maximum_bitwise_or_subsets, case3)</td></tr>
+<tr class="separator:a276e5d637b9a8e77b54767ceb2ee2b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >LeetCode 2039. The Time When the Network Becomes Idle </p>
+<div class="textblock"><p>LeetCode 2044. Count Number of Maximum Bitwise-OR Subsets </p>
 </div><h2 class="groupheader">函数说明</h2>
-<a id="a3487bc3c0815ab4eb778ca736c04dfa4" name="a3487bc3c0815ab4eb778ca736c04dfa4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3487bc3c0815ab4eb778ca736c04dfa4">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/2]</span></h2>
+<a id="a756e581264d80ee77d31a167eb153d65" name="a756e581264d80ee77d31a167eb153d65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a756e581264d80ee77d31a167eb153d65">&#9670;&#160;</a></span>TEST() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::the_time_when_the_network_becomes_idle::TEST </td>
+          <td class="memname">leetcode::count_number_of_maximum_bitwise_or_subsets::TEST </td>
           <td>(</td>
-          <td class="paramtype">the_time_when_the_network_becomes_idle&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">count_number_of_maximum_bitwise_or_subsets</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case1&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l02394">2394</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02394" name="l02394"></a><span class="lineno"> 2394</span>                                                            {</div>
-<div class="line"><a id="l02395" name="l02395"></a><span class="lineno"> 2395</span>            vector&lt;vector&lt;int&gt;&gt; edges = {{0, 1}, {1, 2}};</div>
-<div class="line"><a id="l02396" name="l02396"></a><span class="lineno"> 2396</span>            vector patience           = {0, 2, 1};</div>
-<div class="line"><a id="l02397" name="l02397"></a><span class="lineno"> 2397</span>            ASSERT_EQ(8, Solution::networkBecomesIdle(edges, patience));</div>
-<div class="line"><a id="l02398" name="l02398"></a><span class="lineno"> 2398</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l02273">2273</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2273</span>                                                                {</div>
+<div class="line"><span class="lineno"> 2274</span>            vector nums = {3, 1};</div>
+<div class="line"><span class="lineno"> 2275</span>            ASSERT_EQ(2, <a class="code hl_function" href="../../d4/d21/a02347.html#adb338dc720ea9e3d10c6fe743985ae3c">Solution::countMaxOrSubsets</a>(nums));</div>
+<div class="line"><span class="lineno"> 2276</span>        }</div>
+<div class="ttc" id="aa02347_html_adb338dc720ea9e3d10c6fe743985ae3c"><div class="ttname"><a href="../../d4/d21/a02347.html#adb338dc720ea9e3d10c6fe743985ae3c">leetcode::count_number_of_maximum_bitwise_or_subsets::Solution::countMaxOrSubsets</a></div><div class="ttdeci">static int countMaxOrSubsets(vector&lt; int &gt; &amp;nums)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l04541">leetcode.cpp:4541</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l04851">leetcode::the_time_when_the_network_becomes_idle::Solution::networkBecomesIdle()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l04541">leetcode::count_number_of_maximum_bitwise_or_subsets::Solution::countMaxOrSubsets()</a>.</p>
 
 </div>
 </div>
-<a id="af48b6a5a840a1e222e1accc2e2170158" name="af48b6a5a840a1e222e1accc2e2170158"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af48b6a5a840a1e222e1accc2e2170158">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/2]</span></h2>
+<a id="ae280554aa38b98321740eaee09864952" name="ae280554aa38b98321740eaee09864952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae280554aa38b98321740eaee09864952">&#9670;&#160;</a></span>TEST() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::the_time_when_the_network_becomes_idle::TEST </td>
+          <td class="memname">leetcode::count_number_of_maximum_bitwise_or_subsets::TEST </td>
           <td>(</td>
-          <td class="paramtype">the_time_when_the_network_becomes_idle&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">count_number_of_maximum_bitwise_or_subsets</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case2&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l02400">2400</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l02400" name="l02400"></a><span class="lineno"> 2400</span>                                                            {</div>
-<div class="line"><a id="l02401" name="l02401"></a><span class="lineno"> 2401</span>            vector&lt;vector&lt;int&gt;&gt; edges = {{0, 1}, {0, 2}, {1, 2}};</div>
-<div class="line"><a id="l02402" name="l02402"></a><span class="lineno"> 2402</span>            vector patience           = {0, 10, 10};</div>
-<div class="line"><a id="l02403" name="l02403"></a><span class="lineno"> 2403</span>            ASSERT_EQ(3, Solution::networkBecomesIdle(edges, patience));</div>
-<div class="line"><a id="l02404" name="l02404"></a><span class="lineno"> 2404</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l02278">2278</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2278</span>                                                                {</div>
+<div class="line"><span class="lineno"> 2279</span>            vector nums = {2, 2, 2};</div>
+<div class="line"><span class="lineno"> 2280</span>            ASSERT_EQ(7, <a class="code hl_function" href="../../d4/d21/a02347.html#adb338dc720ea9e3d10c6fe743985ae3c">Solution::countMaxOrSubsets</a>(nums));</div>
+<div class="line"><span class="lineno"> 2281</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l04851">leetcode::the_time_when_the_network_becomes_idle::Solution::networkBecomesIdle()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l04541">leetcode::count_number_of_maximum_bitwise_or_subsets::Solution::countMaxOrSubsets()</a>.</p>
+
+</div>
+</div>
+<a id="a276e5d637b9a8e77b54767ceb2ee2b41" name="a276e5d637b9a8e77b54767ceb2ee2b41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a276e5d637b9a8e77b54767ceb2ee2b41">&#9670;&#160;</a></span>TEST() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::count_number_of_maximum_bitwise_or_subsets::TEST </td>
+          <td>(</td>
+          <td class="paramtype">count_number_of_maximum_bitwise_or_subsets</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l02283">2283</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2283</span>                                                                {</div>
+<div class="line"><span class="lineno"> 2284</span>            vector nums = {3, 2, 1, 5};</div>
+<div class="line"><span class="lineno"> 2285</span>            ASSERT_EQ(6, <a class="code hl_function" href="../../d4/d21/a02347.html#adb338dc720ea9e3d10c6fe743985ae3c">Solution::countMaxOrSubsets</a>(nums));</div>
+<div class="line"><span class="lineno"> 2286</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l04541">leetcode::count_number_of_maximum_bitwise_or_subsets::Solution::countMaxOrSubsets()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

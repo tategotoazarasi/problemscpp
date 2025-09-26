@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::find_the_closest_palindrome 命名空间参考</title>
+<title>problemscpp: leetcode::reverse_only_letters 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">problemscpp
    </div>
    <div id="projectbrief">A collection of my answers to algorithm problems in c++.</div>
@@ -30,10 +34,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -41,12 +50,17 @@ var searchBox = new SearchBox("searchBox", "../../search",'搜索','.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,375 +70,142 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/dc1/a00212.html">leetcode</a></li><li class="navelem"><a class="el" href="../../dc/d50/a00332.html">find_the_closest_palindrome</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/d28/a00223.html">leetcode</a></li><li class="navelem"><a class="el" href="../../dc/d50/a00332.html">reverse_only_letters</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::find_the_closest_palindrome 命名空间参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::reverse_only_letters 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>LeetCode 564. Find the Closest Palindrome  
-<a href="../../dc/d50/a00332.html#details">更多...</a></p>
+<p>LeetCode 917. Reverse Only Letters  
+<a href="#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dce/a02200.html">Solution</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d61/a02179.html">Solution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a7bca2aa86bc7a97340df33eb54da57e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d50/a00332.html#a7bca2aa86bc7a97340df33eb54da57e0">TEST</a> (find_the_closest_palindrome, case1)</td></tr>
-<tr class="separator:a7bca2aa86bc7a97340df33eb54da57e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab336b0498c82f8ace2c640a780f922b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d50/a00332.html#ab336b0498c82f8ace2c640a780f922b5">TEST</a> (find_the_closest_palindrome, case2)</td></tr>
-<tr class="separator:ab336b0498c82f8ace2c640a780f922b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2e077419d82a5186f53046a1e0ea226"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d50/a00332.html#ac2e077419d82a5186f53046a1e0ea226">TEST</a> (find_the_closest_palindrome, case3)</td></tr>
-<tr class="separator:ac2e077419d82a5186f53046a1e0ea226"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad855ef657f089950141f45ca95358c78"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d50/a00332.html#ad855ef657f089950141f45ca95358c78">TEST</a> (find_the_closest_palindrome, case4)</td></tr>
-<tr class="separator:ad855ef657f089950141f45ca95358c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a341bad931cd0fec54164fb01df2dd445"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d50/a00332.html#a341bad931cd0fec54164fb01df2dd445">TEST</a> (find_the_closest_palindrome, case5)</td></tr>
-<tr class="separator:a341bad931cd0fec54164fb01df2dd445"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60341d598babf49cc3ed5d0bcd5f8ea0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d50/a00332.html#a60341d598babf49cc3ed5d0bcd5f8ea0">TEST</a> (find_the_closest_palindrome, case6)</td></tr>
-<tr class="separator:a60341d598babf49cc3ed5d0bcd5f8ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf6436d0e5624ebaae5275afa6015ea5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d50/a00332.html#acf6436d0e5624ebaae5275afa6015ea5">TEST</a> (find_the_closest_palindrome, case7)</td></tr>
-<tr class="separator:acf6436d0e5624ebaae5275afa6015ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae67c8108448c2a1d5d7dd0155cff31c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d50/a00332.html#ae67c8108448c2a1d5d7dd0155cff31c2">TEST</a> (find_the_closest_palindrome, case8)</td></tr>
-<tr class="separator:ae67c8108448c2a1d5d7dd0155cff31c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25f8e8143681c10022a92eef99cf78e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d50/a00332.html#a25f8e8143681c10022a92eef99cf78e3">TEST</a> (find_the_closest_palindrome, case9)</td></tr>
-<tr class="separator:a25f8e8143681c10022a92eef99cf78e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae42c2e547394b2a3f309cf8e02f8fe42" id="r_ae42c2e547394b2a3f309cf8e02f8fe42"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae42c2e547394b2a3f309cf8e02f8fe42">TEST</a> (reverse_only_letters, case1)</td></tr>
+<tr class="separator:ae42c2e547394b2a3f309cf8e02f8fe42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a2f08bbf89c076edaa7769ff0aa088" id="r_ad0a2f08bbf89c076edaa7769ff0aa088"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0a2f08bbf89c076edaa7769ff0aa088">TEST</a> (reverse_only_letters, case2)</td></tr>
+<tr class="separator:ad0a2f08bbf89c076edaa7769ff0aa088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b2516ed15bb518575fe7d955f0b2fd9" id="r_a2b2516ed15bb518575fe7d955f0b2fd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b2516ed15bb518575fe7d955f0b2fd9">TEST</a> (reverse_only_letters, case3)</td></tr>
+<tr class="separator:a2b2516ed15bb518575fe7d955f0b2fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >LeetCode 564. Find the Closest Palindrome </p>
+<div class="textblock"><p>LeetCode 917. Reverse Only Letters </p>
 </div><h2 class="groupheader">函数说明</h2>
-<a id="a7bca2aa86bc7a97340df33eb54da57e0" name="a7bca2aa86bc7a97340df33eb54da57e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bca2aa86bc7a97340df33eb54da57e0">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/9]</span></h2>
+<a id="ae42c2e547394b2a3f309cf8e02f8fe42" name="ae42c2e547394b2a3f309cf8e02f8fe42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae42c2e547394b2a3f309cf8e02f8fe42">&#9670;&#160;</a></span>TEST() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::find_the_closest_palindrome::TEST </td>
+          <td class="memname">leetcode::reverse_only_letters::TEST </td>
           <td>(</td>
-          <td class="paramtype">find_the_closest_palindrome&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">reverse_only_letters</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case1&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01895">1895</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01895" name="l01895"></a><span class="lineno"> 1895</span>                                                 {</div>
-<div class="line"><a id="l01896" name="l01896"></a><span class="lineno"> 1896</span>            ASSERT_EQ(<span class="stringliteral">&quot;121&quot;</span>, Solution::nearestPalindromic(<span class="stringliteral">&quot;123&quot;</span>));</div>
-<div class="line"><a id="l01897" name="l01897"></a><span class="lineno"> 1897</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l01735">1735</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1735</span>                                          {</div>
+<div class="line"><span class="lineno"> 1736</span>            ASSERT_EQ(<span class="stringliteral">&quot;dc-ba&quot;</span>, <a class="code hl_function" href="../../d3/d61/a02179.html#a58e7f066fd64a33f5ef53c46dfcc515d">Solution::reverseOnlyLetters</a>(<span class="stringliteral">&quot;ab-cd&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1737</span>        }</div>
+<div class="ttc" id="aa02179_html_a58e7f066fd64a33f5ef53c46dfcc515d"><div class="ttname"><a href="../../d3/d61/a02179.html#a58e7f066fd64a33f5ef53c46dfcc515d">leetcode::reverse_only_letters::Solution::reverseOnlyLetters</a></div><div class="ttdeci">static string reverseOnlyLetters(string s)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l03442">leetcode.cpp:3442</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l03748">leetcode::find_the_closest_palindrome::Solution::nearestPalindromic()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l03442">leetcode::reverse_only_letters::Solution::reverseOnlyLetters()</a>.</p>
 
 </div>
 </div>
-<a id="ab336b0498c82f8ace2c640a780f922b5" name="ab336b0498c82f8ace2c640a780f922b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab336b0498c82f8ace2c640a780f922b5">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/9]</span></h2>
+<a id="ad0a2f08bbf89c076edaa7769ff0aa088" name="ad0a2f08bbf89c076edaa7769ff0aa088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a2f08bbf89c076edaa7769ff0aa088">&#9670;&#160;</a></span>TEST() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::find_the_closest_palindrome::TEST </td>
+          <td class="memname">leetcode::reverse_only_letters::TEST </td>
           <td>(</td>
-          <td class="paramtype">find_the_closest_palindrome&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">reverse_only_letters</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case2&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01899">1899</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01899" name="l01899"></a><span class="lineno"> 1899</span>                                                 {</div>
-<div class="line"><a id="l01900" name="l01900"></a><span class="lineno"> 1900</span>            ASSERT_EQ(<span class="stringliteral">&quot;0&quot;</span>, Solution::nearestPalindromic(<span class="stringliteral">&quot;1&quot;</span>));</div>
-<div class="line"><a id="l01901" name="l01901"></a><span class="lineno"> 1901</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l01739">1739</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1739</span>                                          {</div>
+<div class="line"><span class="lineno"> 1740</span>            ASSERT_EQ(<span class="stringliteral">&quot;j-Ih-gfE-dCba&quot;</span>, <a class="code hl_function" href="../../d3/d61/a02179.html#a58e7f066fd64a33f5ef53c46dfcc515d">Solution::reverseOnlyLetters</a>(<span class="stringliteral">&quot;a-bC-dEf-ghIj&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1741</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l03748">leetcode::find_the_closest_palindrome::Solution::nearestPalindromic()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l03442">leetcode::reverse_only_letters::Solution::reverseOnlyLetters()</a>.</p>
 
 </div>
 </div>
-<a id="ac2e077419d82a5186f53046a1e0ea226" name="ac2e077419d82a5186f53046a1e0ea226"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2e077419d82a5186f53046a1e0ea226">&#9670;&nbsp;</a></span>TEST() <span class="overload">[3/9]</span></h2>
+<a id="a2b2516ed15bb518575fe7d955f0b2fd9" name="a2b2516ed15bb518575fe7d955f0b2fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b2516ed15bb518575fe7d955f0b2fd9">&#9670;&#160;</a></span>TEST() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::find_the_closest_palindrome::TEST </td>
+          <td class="memname">leetcode::reverse_only_letters::TEST </td>
           <td>(</td>
-          <td class="paramtype">find_the_closest_palindrome&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">reverse_only_letters</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">case3&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">case3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01903">1903</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01903" name="l01903"></a><span class="lineno"> 1903</span>                                                 {</div>
-<div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span>            ASSERT_EQ(<span class="stringliteral">&quot;1221&quot;</span>, Solution::nearestPalindromic(<span class="stringliteral">&quot;1234&quot;</span>));</div>
-<div class="line"><a id="l01905" name="l01905"></a><span class="lineno"> 1905</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l01743">1743</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1743</span>                                          {</div>
+<div class="line"><span class="lineno"> 1744</span>            ASSERT_EQ(<span class="stringliteral">&quot;Qedo1ct-eeLg=ntse-T!&quot;</span>, <a class="code hl_function" href="../../d3/d61/a02179.html#a58e7f066fd64a33f5ef53c46dfcc515d">Solution::reverseOnlyLetters</a>(<span class="stringliteral">&quot;Test1ng-Leet=code-Q!&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1745</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l03748">leetcode::find_the_closest_palindrome::Solution::nearestPalindromic()</a>.</p>
-
-</div>
-</div>
-<a id="ad855ef657f089950141f45ca95358c78" name="ad855ef657f089950141f45ca95358c78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad855ef657f089950141f45ca95358c78">&#9670;&nbsp;</a></span>TEST() <span class="overload">[4/9]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">leetcode::find_the_closest_palindrome::TEST </td>
-          <td>(</td>
-          <td class="paramtype">find_the_closest_palindrome&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">case4&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01907">1907</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01907" name="l01907"></a><span class="lineno"> 1907</span>                                                 {</div>
-<div class="line"><a id="l01908" name="l01908"></a><span class="lineno"> 1908</span>            ASSERT_EQ(<span class="stringliteral">&quot;1001&quot;</span>, Solution::nearestPalindromic(<span class="stringliteral">&quot;999&quot;</span>));</div>
-<div class="line"><a id="l01909" name="l01909"></a><span class="lineno"> 1909</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l03748">leetcode::find_the_closest_palindrome::Solution::nearestPalindromic()</a>.</p>
-
-</div>
-</div>
-<a id="a341bad931cd0fec54164fb01df2dd445" name="a341bad931cd0fec54164fb01df2dd445"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a341bad931cd0fec54164fb01df2dd445">&#9670;&nbsp;</a></span>TEST() <span class="overload">[5/9]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">leetcode::find_the_closest_palindrome::TEST </td>
-          <td>(</td>
-          <td class="paramtype">find_the_closest_palindrome&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">case5&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01911">1911</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01911" name="l01911"></a><span class="lineno"> 1911</span>                                                 {</div>
-<div class="line"><a id="l01912" name="l01912"></a><span class="lineno"> 1912</span>            ASSERT_EQ(<span class="stringliteral">&quot;999&quot;</span>, Solution::nearestPalindromic(<span class="stringliteral">&quot;1000&quot;</span>));</div>
-<div class="line"><a id="l01913" name="l01913"></a><span class="lineno"> 1913</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l03748">leetcode::find_the_closest_palindrome::Solution::nearestPalindromic()</a>.</p>
-
-</div>
-</div>
-<a id="a60341d598babf49cc3ed5d0bcd5f8ea0" name="a60341d598babf49cc3ed5d0bcd5f8ea0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60341d598babf49cc3ed5d0bcd5f8ea0">&#9670;&nbsp;</a></span>TEST() <span class="overload">[6/9]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">leetcode::find_the_closest_palindrome::TEST </td>
-          <td>(</td>
-          <td class="paramtype">find_the_closest_palindrome&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">case6&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01915">1915</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01915" name="l01915"></a><span class="lineno"> 1915</span>                                                 {</div>
-<div class="line"><a id="l01916" name="l01916"></a><span class="lineno"> 1916</span>            ASSERT_EQ(<span class="stringliteral">&quot;12921&quot;</span>, Solution::nearestPalindromic(<span class="stringliteral">&quot;12932&quot;</span>));</div>
-<div class="line"><a id="l01917" name="l01917"></a><span class="lineno"> 1917</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l03748">leetcode::find_the_closest_palindrome::Solution::nearestPalindromic()</a>.</p>
-
-</div>
-</div>
-<a id="acf6436d0e5624ebaae5275afa6015ea5" name="acf6436d0e5624ebaae5275afa6015ea5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf6436d0e5624ebaae5275afa6015ea5">&#9670;&nbsp;</a></span>TEST() <span class="overload">[7/9]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">leetcode::find_the_closest_palindrome::TEST </td>
-          <td>(</td>
-          <td class="paramtype">find_the_closest_palindrome&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">case7&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01919">1919</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01919" name="l01919"></a><span class="lineno"> 1919</span>                                                 {</div>
-<div class="line"><a id="l01920" name="l01920"></a><span class="lineno"> 1920</span>            ASSERT_EQ(<span class="stringliteral">&quot;99799&quot;</span>, Solution::nearestPalindromic(<span class="stringliteral">&quot;99800&quot;</span>));</div>
-<div class="line"><a id="l01921" name="l01921"></a><span class="lineno"> 1921</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l03748">leetcode::find_the_closest_palindrome::Solution::nearestPalindromic()</a>.</p>
-
-</div>
-</div>
-<a id="ae67c8108448c2a1d5d7dd0155cff31c2" name="ae67c8108448c2a1d5d7dd0155cff31c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae67c8108448c2a1d5d7dd0155cff31c2">&#9670;&nbsp;</a></span>TEST() <span class="overload">[8/9]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">leetcode::find_the_closest_palindrome::TEST </td>
-          <td>(</td>
-          <td class="paramtype">find_the_closest_palindrome&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">case8&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01923">1923</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01923" name="l01923"></a><span class="lineno"> 1923</span>                                                 {</div>
-<div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span>            ASSERT_EQ(<span class="stringliteral">&quot;12121&quot;</span>, Solution::nearestPalindromic(<span class="stringliteral">&quot;12120&quot;</span>));</div>
-<div class="line"><a id="l01925" name="l01925"></a><span class="lineno"> 1925</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l03748">leetcode::find_the_closest_palindrome::Solution::nearestPalindromic()</a>.</p>
-
-</div>
-</div>
-<a id="a25f8e8143681c10022a92eef99cf78e3" name="a25f8e8143681c10022a92eef99cf78e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25f8e8143681c10022a92eef99cf78e3">&#9670;&nbsp;</a></span>TEST() <span class="overload">[9/9]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">leetcode::find_the_closest_palindrome::TEST </td>
-          <td>(</td>
-          <td class="paramtype">find_the_closest_palindrome&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">case9&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">leetcode_test.cpp</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01927">1927</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l01927" name="l01927"></a><span class="lineno"> 1927</span>                                                 {</div>
-<div class="line"><a id="l01928" name="l01928"></a><span class="lineno"> 1928</span>            ASSERT_EQ(<span class="stringliteral">&quot;1805115081&quot;</span>, Solution::nearestPalindromic(<span class="stringliteral">&quot;1805170081&quot;</span>));</div>
-<div class="line"><a id="l01929" name="l01929"></a><span class="lineno"> 1929</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l03748">leetcode::find_the_closest_palindrome::Solution::nearestPalindromic()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l03442">leetcode::reverse_only_letters::Solution::reverseOnlyLetters()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>
