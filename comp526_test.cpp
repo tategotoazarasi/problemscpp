@@ -121,4 +121,60 @@ namespace comp526 {
 		}
 
 	}// namespace stable_matching
+	namespace recount {
+		TEST(recout, case1) {
+			istringstream in("Penny Franklin\n"
+			                 "Connie Froggatt\n"
+			                 "Barbara Skinner\n"
+			                 "Connie Froggatt\n"
+			                 "Jose Antonio Gomez-Iglesias\n"
+			                 "Connie Froggatt\n"
+			                 "Bruce Stanger\n"
+			                 "Barbara Skinner\n"
+			                 "Barbara Skinner\n"
+			                 "***");
+			auto out = ostringstream();
+			recount::main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("Runoff!", ans);
+		}
+	}// namespace recount
+
+	namespace set {
+		TEST(set, case1) {
+			istringstream in("3DTG 3DOP 2DSG\n1SOP 1DTG 2OTR\n3DOR 3STG 2DSP\n3SSP 3OTG 1DTP\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1 8 11\n2 9 12\n3 7 12\n5 7 9\n6 8 12\n7 10 11\n", ans);
+		}
+	}// namespace set
+
+	namespace plantingtrees {
+		TEST(plantingtrees, case1) {
+			istringstream in("4\n2 3 4 3\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("7", ans);
+		}
+
+		TEST(plantingtrees, case2) {
+			istringstream in("6\n39 38 9 35 39 20\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("42", ans);
+		}
+	}// namespace plantingtrees
+
+	namespace snowflakes {
+		TEST(snowflakes, case1) {
+			istringstream in("1\n5\n1\n2\n3\n2\n1\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3", ans);
+		}
+	}// namespace snowflakes
 }// namespace comp526

@@ -5,6 +5,8 @@
 #ifndef PROBLEMSCPP_COMO526_H
 #define PROBLEMSCPP_COMO526_H
 
+#include <iosfwd>
+#include <set>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
@@ -43,6 +45,42 @@ namespace comp526 {
 			vector<int> match(vector<vector<int>>, vector<vector<int>>);
 		};
 	}// namespace stable_matching
+
+	namespace oddecho {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
+
+	namespace recount {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
+
+	namespace set {
+		class card {
+		public:
+			int id;
+			char f[4];
+			card(int id, string s);
+		};
+		class cardset {
+		public:
+			unsigned short mask = -1;
+			int cnt             = 0;
+			unordered_set<card *> cards{};
+			cardset() = default;
+			cardset(card *c);
+			void insert(card *c);
+		};
+
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace set
+
+	namespace plantingtrees {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
+
+	namespace snowflakes {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace comp526
 
 #endif//PROBLEMSCPP_COMO526_H
