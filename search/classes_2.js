@@ -1,16 +1,18 @@
 var searchData=
 [
-  ['chtholly_0',['Chtholly',['../d6/d97/a03011.html',1,'leetcode::range_module']]],
-  ['cmp_1',['cmp',['../d6/dd2/a02243.html',1,'leetcode::sort_the_jumbled_numbers']]],
-  ['cmpcol_2',['cmpcol',['../d6/d9a/a01083.html',1,'acwing::acwing1826']]],
-  ['cmprow_3',['cmprow',['../d2/d4d/a01079.html',1,'acwing::acwing1826']]],
-  ['codec_4',['Codec',['../d8/d0f/a02707.html',1,'leetcode::serialize_and_deserialize_binary_tree']]],
-  ['comp_5',['comp',['../db/d51/a01603.html',1,'acwing::acwing849::comp'],['../df/d38/a03587.html',1,'pat::a::a1003::comp'],['../d4/dbd/a03563.html',1,'pat::b::b1100::comp']]],
-  ['comp_5fsale_6',['comp_sale',['../d3/da4/a03571.html',1,'pat::b::b1102']]],
-  ['comp_5ftotal_7',['comp_total',['../d3/dbd/a03575.html',1,'pat::b::b1102']]],
-  ['company_8',['Company',['../dd/d8d/a01667.html',1,'comp526::stable_matching']]],
-  ['compare_9',['Compare',['../dd/d2d/a01635.html',1,'acwing::acwing149']]],
-  ['cow_10',['cow',['../dc/d8e/a01331.html',1,'acwing::acwing1660::cow'],['../d5/d81/a01579.html',1,'acwing::acwing3370::cow']]],
-  ['customer_11',['customer',['../d4/dd9/a03599.html',1,'pat::a::a1016::customer'],['../d3/d97/a03603.html',1,'pat::a::a1017::customer']]],
-  ['customer_5fcomp_5fp_12',['customer_comp_p',['../da/d93/a03607.html',1,'pat::a::a1017']]]
+  ['card_0',['card',['../d5/d83/a01680.html',1,'comp526::set']]],
+  ['cardset_1',['cardset',['../d2/d71/a01684.html',1,'comp526::set']]],
+  ['chtholly_2',['Chtholly',['../d4/dc8/a03024.html',1,'leetcode::range_module']]],
+  ['cmp_3',['cmp',['../de/dc3/a02256.html',1,'leetcode::sort_the_jumbled_numbers']]],
+  ['cmpcol_4',['cmpcol',['../da/db7/a01088.html',1,'acwing::acwing1826']]],
+  ['cmprow_5',['cmprow',['../da/d93/a01084.html',1,'acwing::acwing1826']]],
+  ['codec_6',['Codec',['../d5/d95/a02720.html',1,'leetcode::serialize_and_deserialize_binary_tree']]],
+  ['comp_7',['comp',['../db/dfd/a01608.html',1,'acwing::acwing849::comp'],['../df/d81/a03600.html',1,'pat::a::a1003::comp'],['../db/d83/a03576.html',1,'pat::b::b1100::comp']]],
+  ['comp_5fsale_8',['comp_sale',['../dd/dda/a03584.html',1,'pat::b::b1102']]],
+  ['comp_5ftotal_9',['comp_total',['../de/d51/a03588.html',1,'pat::b::b1102']]],
+  ['company_10',['Company',['../d2/d7b/a01672.html',1,'comp526::stable_matching']]],
+  ['compare_11',['Compare',['../de/d14/a01640.html',1,'acwing::acwing149']]],
+  ['cow_12',['cow',['../df/d93/a01336.html',1,'acwing::acwing1660::cow'],['../d8/d22/a01584.html',1,'acwing::acwing3370::cow']]],
+  ['customer_13',['customer',['../d1/d43/a03612.html',1,'pat::a::a1016::customer'],['../d9/ddd/a03616.html',1,'pat::a::a1017::customer']]],
+  ['customer_5fcomp_5fp_14',['customer_comp_p',['../d0/da2/a03620.html',1,'pat::a::a1017']]]
 ];
