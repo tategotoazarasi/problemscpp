@@ -81,6 +81,10 @@ namespace comp526 {
 	namespace snowflakes {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	namespace amalgram {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace comp526
 
 #endif//PROBLEMSCPP_COMO526_H

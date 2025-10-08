@@ -259,4 +259,25 @@ namespace comp526 {
 			return 0;
 		}
 	}// namespace snowflakes
+
+	namespace amalgram {
+		int main(istream &cin, ostream &cout) {
+			string a, b;
+			cin >> a >> b;
+			vector<int> cnt1 = vector<int>(26, 0);
+			vector<int> cnt2 = vector<int>(26, 0);
+			for(char c: a) {
+				cnt1[c - 'a']++;
+			}
+			for(char c: b) {
+				cnt2[c - 'a']++;
+			}
+			for(int i = 0; i < 26; i++) {
+				for(int j = 0; j < max(cnt1[i], cnt2[i]); j++) {
+					cout << (char) ('a' + i);
+				}
+			}
+			return 0;
+		}
+	}// namespace amalgram
 }// namespace comp526

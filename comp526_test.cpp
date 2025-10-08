@@ -177,4 +177,30 @@ namespace comp526 {
 			ASSERT_EQ("3", ans);
 		}
 	}// namespace snowflakes
+
+	namespace amalgram {
+		TEST(amalgram, case1) {
+			istringstream in("hello\nworld");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("dehllorw", ans);
+		}
+
+		TEST(amalgram, case2) {
+			istringstream in("unclear\ninstructions");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("aceiilnnorssttu", ans);
+		}
+
+		TEST(amalgram, case3) {
+			istringstream in("boring\nboring");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("bginor", ans);
+		}
+	}// namespace amalgram
 }// namespace comp526
