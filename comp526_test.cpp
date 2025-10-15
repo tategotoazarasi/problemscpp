@@ -203,4 +203,30 @@ namespace comp526 {
 			ASSERT_EQ("bginor", ans);
 		}
 	}// namespace amalgram
+
+	namespace wheresmyinternet {
+		TEST(wheresmyinternet, case1) {
+			istringstream in("6 4\n1 2\n2 3\n3 4\n5 6\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("5\n6\n", ans);
+		}
+
+		TEST(wheresmyinternet, case2) {
+			istringstream in("2 1\n2 1\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("Connected", ans);
+		}
+
+		TEST(wheresmyinternet, case3) {
+			istringstream in("4 3\n2 3\n4 2\n3 4\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2\n3\n4\n", ans);
+		}
+	}
 }// namespace comp526

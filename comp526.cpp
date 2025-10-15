@@ -9,6 +9,7 @@
 #include <ostream>
 #include <sstream>
 #include <vector>
+#include "templates.h"
 
 using namespace std;
 
@@ -280,4 +281,28 @@ namespace comp526 {
 			return 0;
 		}
 	}// namespace amalgram
+
+	namespace wheresmyinternet {
+		int main(istream &cin, ostream &cout) {
+			int N,M;
+			int a,b;
+			cin>>N>>M;
+			UnionFind uf = UnionFind(N+1);
+			while(M--) {
+				cin>>a>>b;
+				uf.unite(a,b);
+			}
+			bool flag = false;
+			for(int i=2;i<=N;i++) {
+				if(!uf.same(i,1)) {
+					cout<<i<<endl;
+					flag = true;
+				}
+			}
+			if(!flag) {
+				cout<<"Connected";
+			}
+			return 0;
+		}
+	}
 }// namespace comp526
