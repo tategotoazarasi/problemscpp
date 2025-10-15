@@ -257,4 +257,30 @@ namespace comp526 {
 			ASSERT_EQ("NO", ans);
 		}
 	}// namespace countingchocolate
+
+	namespace grid {
+		TEST(grid, case1) {
+			istringstream in("2 2\n11\n11\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2", ans);
+		}
+
+		TEST(grid, case2) {
+			istringstream in("2 2\n22\n22\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("-1", ans);
+		}
+
+		TEST(grid, case3) {
+			istringstream in("5 4\n2120\n1203\n3113\n1120\n1110\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("6", ans);
+		}
+	}// namespace grid
 }// namespace comp526

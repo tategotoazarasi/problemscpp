@@ -98,6 +98,16 @@ namespace comp526 {
 		bool solve(const vector<int> &a, int john, int sam, int sp, int target);
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace countingchocolate
+
+	namespace grid {
+		struct state {
+		public:
+			int x;
+			int y;
+			int step;
+		};
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace grid
 }// namespace comp526
 
 #endif//PROBLEMSCPP_COMO526_H

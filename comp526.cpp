@@ -8,6 +8,7 @@
 #include <climits>
 #include <iostream>
 #include <ostream>
+#include <queue>
 #include <sstream>
 #include <vector>
 
@@ -354,4 +355,75 @@ namespace comp526 {
 			return 0;
 		}
 	}// namespace countingchocolate
+
+	namespace grid {
+
+		int n, m;
+		struct pair_hash {
+			size_t operator()(const pair<int, int> &p) const {
+				return hash<int>()(p.first) ^ (hash<int>()(p.second) << 1);
+			}
+		};
+		struct pair_equal {
+			bool operator()(const pair<int, int> &a, const pair<int, int> &b) const {
+				return a.first == b.first && a.second == b.second;
+			}
+		};
+		int main(istream &cin, ostream &cout) {
+			cin >> n >> m;
+			vector<vector<int>> grid(n, vector<int>(m));
+			for(int i = 0; i < n; i++) {
+				string line;
+				cin >> line;
+				istringstream iss(line);
+				for(int j = 0; j < m; j++) {
+					char c;
+					iss >> c;
+					grid[i][j] = c - '0';
+				}
+			}
+			unordered_set<pair<int, int>, pair_hash, pair_equal> visited{};
+			auto comp = [](const state &a, const state &b) {
+				if(a.step != b.step) {
+					return a.step > b.step;
+				}
+				int dist_a = (n - a.x - 1) + (m - a.y - 1);
+				int dist_b = (n - b.x - 1) + (m - b.y - 1);
+				return dist_a > dist_b;
+			};
+			priority_queue<state, vector<state>, decltype(comp)> pq{};
+			pq.push(state{0, 0, 0});
+			while(!pq.empty()) {
+				auto top = pq.top();
+				pq.pop();
+				int x = top.x;
+				int y = top.y;
+				if(visited.count({x, y})) {
+					continue;
+				}
+				visited.insert(make_pair(x, y));
+				if(x == n - 1 && y == m - 1) {
+					cout << top.step;
+					return 0;
+				}
+				int step               = grid[x][y];
+				pair<int, int> next[4] = {
+				        make_pair(x + step, y),
+				        make_pair(x - step, y),
+				        make_pair(x, y + step),
+				        make_pair(x, y - step)};
+				for(auto [next_x, next_y]: next) {
+					if(next_x == n - 1 && next_y == m - 1) {
+						cout << top.step + 1;
+						return 0;
+					}
+					if(next_x >= 0 && next_x < n && next_y >= 0 && next_y < m && grid[next_x][next_y] != 0) {
+						pq.push(state{next_x, next_y, top.step + 1});
+					}
+				}
+			}
+			cout << -1;
+			return 0;
+		}
+	}// namespace grid
 }// namespace comp526
