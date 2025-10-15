@@ -318,4 +318,40 @@ namespace comp526 {
 			return 0;
 		}
 	}// namespace oddities
+
+	namespace countingchocolate {
+		bool solve(const vector<int> &a, int john, int sam, int sp, int target) {
+			if(sp == a.size()) {
+				return false;
+			}
+			if(john == target || sam == target) {
+				return true;
+			}
+			if(john > target || sam > target) {
+				return false;
+			}
+			return solve(a, john + a[sp], sam, sp + 1, target) || solve(a, john, sam + a[sp], sp + 1, target);
+		}
+
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			vector<int> a = vector<int>(n);
+			int sum       = 0;
+			for(int i = 0; i < n; i++) {
+				cin >> a[i];
+				sum += a[i];
+			}
+			if(sum % 2 == 1) {
+				cout << "NO";
+				return 0;
+			}
+			if(solve(a, 0, 0, 0, sum / 2)) {
+				cout << "YES";
+			} else {
+				cout << "NO";
+			}
+			return 0;
+		}
+	}// namespace countingchocolate
 }// namespace comp526

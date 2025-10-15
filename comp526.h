@@ -93,6 +93,11 @@ namespace comp526 {
 	namespace oddities {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	namespace countingchocolate {
+		bool solve(const vector<int> &a, int john, int sam, int sp, int target);
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace countingchocolate
 }// namespace comp526
 
 #endif//PROBLEMSCPP_COMO526_H

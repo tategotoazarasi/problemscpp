@@ -239,4 +239,22 @@ namespace comp526 {
 			ASSERT_EQ("10 is even\n9 is odd\n-5 is odd\n", ans);
 		}
 	}// namespace oddities
+
+	namespace countingchocolate {
+		TEST(countingchocolate, case1) {
+			istringstream in("6\n1 4 3 12 13 1\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("YES", ans);
+		}
+
+		TEST(countingchocolate, case2) {
+			istringstream in("6\n1 1 1 3 4 11\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("NO", ans);
+		}
+	}// namespace countingchocolate
 }// namespace comp526
