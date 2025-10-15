@@ -108,6 +108,14 @@ namespace comp526 {
 		};
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace grid
+
+	namespace allpairspath {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
+
+	namespace weakvertices{
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace comp526
 
 #endif//PROBLEMSCPP_COMO526_H

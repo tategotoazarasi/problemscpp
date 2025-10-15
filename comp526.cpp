@@ -6,6 +6,7 @@
 #include "templates.h"
 #include <algorithm>
 #include <climits>
+#include <cstring>
 #include <iostream>
 #include <ostream>
 #include <queue>
@@ -426,4 +427,65 @@ namespace comp526 {
 			return 0;
 		}
 	}// namespace grid
+
+	namespace allpairspath {
+
+		int main(istream &cin, ostream &cout) {
+			int n,m,q;
+			while(cin>>n>>m>>q) {
+				if(n==0 && m==0 && q==0) {
+					return 0;
+				}
+
+				for(int i=0;i<m;i++) {
+					int u,v,w;
+					cin>>u>>v>>w;
+				}
+			}
+			return 0;
+		}
+	}
+
+	namespace weakvertices{
+		int main(istream &cin, ostream &cout) {
+			int n;
+			while(cin>>n) {
+				if(n==-1) return 0;
+				vector<vector<int>> siblings = vector(n,vector<int>());
+				vector<vector<bool>> graph = vector(n,vector<bool>(n,false));
+				for(int i=0;i<n;i++) {
+					for(int j=0;j<n;j++) {
+						int x;
+						cin>>x;
+						if(x==1) {
+							siblings[i].push_back(j);
+							//siblings[j].push_back(j);
+							graph[i][j] = true;
+							graph[j][i] = true;
+						}
+					}
+				}
+				for(int i=0;i<n;i++) {
+					bool flag = true;
+					for(int j=0;j<siblings[i].size();j++) {
+						for(int k=j+1;k<siblings[i].size();k++) {
+							if(graph[siblings[i][j]][siblings[i][k]]) {
+								flag = false;
+								break;
+							}
+						}
+						if(!flag) {
+							break;
+						}
+					}
+					if(flag) {
+						cout<<i<<' ';
+					}
+				}
+				cout<<endl;
+			}
+
+			return 0;
+		}
+	}
 }// namespace comp526
