@@ -229,4 +229,14 @@ namespace comp526 {
 			ASSERT_EQ("2\n3\n4\n", ans);
 		}
 	}// namespace wheresmyinternet
+
+	namespace oddities {
+		TEST(oddities, case1) {
+			istringstream in("3\n10\n9\n-5\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("10 is even\n9 is odd\n-5 is odd\n", ans);
+		}
+	}// namespace oddities
 }// namespace comp526

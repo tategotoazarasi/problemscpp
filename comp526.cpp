@@ -305,4 +305,17 @@ namespace comp526 {
 			return 0;
 		}
 	}// namespace wheresmyinternet
+
+	namespace oddities {
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			while(n--) {
+				int x;
+				cin >> x;
+				cout << x << " is " << ((abs(x) % 2 == 1) ? "odd" : "even") << endl;
+			}
+			return 0;
+		}
+	}// namespace oddities
 }// namespace comp526
