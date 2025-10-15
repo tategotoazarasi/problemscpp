@@ -3,13 +3,13 @@
 //
 #include "comp526.h"
 
+#include "templates.h"
 #include <algorithm>
 #include <climits>
 #include <iostream>
 #include <ostream>
 #include <sstream>
 #include <vector>
-#include "templates.h"
 
 using namespace std;
 
@@ -284,25 +284,25 @@ namespace comp526 {
 
 	namespace wheresmyinternet {
 		int main(istream &cin, ostream &cout) {
-			int N,M;
-			int a,b;
-			cin>>N>>M;
-			UnionFind uf = UnionFind(N+1);
+			int N, M;
+			int a, b;
+			cin >> N >> M;
+			UnionFind uf = UnionFind(N + 1);
 			while(M--) {
-				cin>>a>>b;
-				uf.unite(a,b);
+				cin >> a >> b;
+				uf.unite(a, b);
 			}
 			bool flag = false;
-			for(int i=2;i<=N;i++) {
-				if(!uf.same(i,1)) {
-					cout<<i<<endl;
+			for(int i = 2; i <= N; i++) {
+				if(!uf.same(i, 1)) {
+					cout << i << endl;
 					flag = true;
 				}
 			}
 			if(!flag) {
-				cout<<"Connected";
+				cout << "Connected";
 			}
 			return 0;
 		}
-	}
+	}// namespace wheresmyinternet
 }// namespace comp526

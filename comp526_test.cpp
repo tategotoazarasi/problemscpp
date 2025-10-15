@@ -228,5 +228,5 @@ namespace comp526 {
 			const auto ans = out.str();
 			ASSERT_EQ("2\n3\n4\n", ans);
 		}
-	}
+	}// namespace wheresmyinternet
 }// namespace comp526
