@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['zero0_0',['zero0',['../d8/d5a/a02049.html#a4f78043c1ccf5612fca9a532f41b671a',1,'leetcode::design_bitset::Bitset']]],
-  ['zodiac_1',['zodiac',['../da/de2/a01585.html#abef67b35485b53a77edd0dc330bbccf1',1,'acwing::acwing3370::cow']]]
+  ['zero0_0',['zero0',['../d5/d14/a02071.html#a4f78043c1ccf5612fca9a532f41b671a',1,'leetcode::design_bitset::Bitset']]],
+  ['zodiac_1',['zodiac',['../dc/d42/a01591.html#abef67b35485b53a77edd0dc330bbccf1',1,'acwing::acwing3370::cow']]]
 ];

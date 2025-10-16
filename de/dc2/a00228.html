@@ -126,25 +126,25 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">comp526.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l00264">264</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  264</span>                                              {</div>
-<div class="line"><span class="lineno">  265</span>            <span class="keywordtype">string</span> a, b;</div>
-<div class="line"><span class="lineno">  266</span>            cin &gt;&gt; a &gt;&gt; b;</div>
-<div class="line"><span class="lineno">  267</span>            vector&lt;int&gt; cnt1 = vector&lt;int&gt;(26, 0);</div>
-<div class="line"><span class="lineno">  268</span>            vector&lt;int&gt; cnt2 = vector&lt;int&gt;(26, 0);</div>
-<div class="line"><span class="lineno">  269</span>            <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: a) {</div>
-<div class="line"><span class="lineno">  270</span>                cnt1[c - <span class="charliteral">&#39;a&#39;</span>]++;</div>
-<div class="line"><span class="lineno">  271</span>            }</div>
-<div class="line"><span class="lineno">  272</span>            <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: b) {</div>
-<div class="line"><span class="lineno">  273</span>                cnt2[c - <span class="charliteral">&#39;a&#39;</span>]++;</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">comp526.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l00267">267</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  267</span>                                              {</div>
+<div class="line"><span class="lineno">  268</span>            <span class="keywordtype">string</span> a, b;</div>
+<div class="line"><span class="lineno">  269</span>            cin &gt;&gt; a &gt;&gt; b;</div>
+<div class="line"><span class="lineno">  270</span>            vector&lt;int&gt; cnt1 = vector&lt;int&gt;(26, 0);</div>
+<div class="line"><span class="lineno">  271</span>            vector&lt;int&gt; cnt2 = vector&lt;int&gt;(26, 0);</div>
+<div class="line"><span class="lineno">  272</span>            <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: a) {</div>
+<div class="line"><span class="lineno">  273</span>                cnt1[c - <span class="charliteral">&#39;a&#39;</span>]++;</div>
 <div class="line"><span class="lineno">  274</span>            }</div>
-<div class="line"><span class="lineno">  275</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
-<div class="line"><span class="lineno">  276</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; max(cnt1[i], cnt2[i]); j++) {</div>
-<div class="line"><span class="lineno">  277</span>                    cout &lt;&lt; (char) (<span class="charliteral">&#39;a&#39;</span> + i);</div>
-<div class="line"><span class="lineno">  278</span>                }</div>
-<div class="line"><span class="lineno">  279</span>            }</div>
-<div class="line"><span class="lineno">  280</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  281</span>        }</div>
+<div class="line"><span class="lineno">  275</span>            <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: b) {</div>
+<div class="line"><span class="lineno">  276</span>                cnt2[c - <span class="charliteral">&#39;a&#39;</span>]++;</div>
+<div class="line"><span class="lineno">  277</span>            }</div>
+<div class="line"><span class="lineno">  278</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
+<div class="line"><span class="lineno">  279</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; max(cnt1[i], cnt2[i]); j++) {</div>
+<div class="line"><span class="lineno">  280</span>                    cout &lt;&lt; (char) (<span class="charliteral">&#39;a&#39;</span> + i);</div>
+<div class="line"><span class="lineno">  281</span>                }</div>
+<div class="line"><span class="lineno">  282</span>            }</div>
+<div class="line"><span class="lineno">  283</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  284</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d4/d8c/a00035_source.html#l00182">TEST()</a>, <a class="el" href="../../d4/d8c/a00035_source.html#l00190">TEST()</a> , 以及 <a class="el" href="../../d4/d8c/a00035_source.html#l00198">TEST()</a>.</p>
 
@@ -177,9 +177,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  186</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><span class="lineno">  187</span>            ASSERT_EQ(<span class="stringliteral">&quot;dehllorw&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">  188</span>        }</div>
-<div class="ttc" id="aa00228_html_a070cbbf28d5bf2be272978ca02fc2c46"><div class="ttname"><a href="#a070cbbf28d5bf2be272978ca02fc2c46">comp526::amalgram::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00264">comp526.cpp:264</a></div></div>
+<div class="ttc" id="aa00228_html_a070cbbf28d5bf2be272978ca02fc2c46"><div class="ttname"><a href="#a070cbbf28d5bf2be272978ca02fc2c46">comp526::amalgram::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00267">comp526.cpp:267</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l00264">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l00267">main()</a>.</p>
 
 </div>
 </div>
@@ -211,7 +211,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  195</span>            ASSERT_EQ(<span class="stringliteral">&quot;aceiilnnorssttu&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">  196</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l00264">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l00267">main()</a>.</p>
 
 </div>
 </div>
@@ -243,7 +243,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  203</span>            ASSERT_EQ(<span class="stringliteral">&quot;bginor&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">  204</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l00264">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l00267">main()</a>.</p>
 
 </div>
 </div>

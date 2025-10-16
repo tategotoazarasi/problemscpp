@@ -147,10 +147,10 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">   95</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> current = 0;</div>
 <div class="line"><span class="lineno">   96</span>                quotient             = queue&lt;unsigned short&gt;();</div>
 <div class="line"><span class="lineno">   97</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = input.begin(); i != input.end(); i++) {</div>
-<div class="line"><span class="lineno">   98</span>                    current *= m;</div>
+<div class="line"><span class="lineno">   98</span>                    current *= <a class="code hl_variable" href="../../d0/d53/a00232.html#a5b44ae23ff931d686319ac36494bf274">m</a>;</div>
 <div class="line"><span class="lineno">   99</span>                    current += *i;</div>
 <div class="line"><span class="lineno">  100</span>                    quotient.push(current / n);</div>
-<div class="line"><span class="lineno">  101</span>                    current %= n;</div>
+<div class="line"><span class="lineno">  101</span>                    current %= <a class="code hl_variable" href="../../d0/d53/a00232.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>;</div>
 <div class="line"><span class="lineno">  102</span>                }</div>
 <div class="line"><span class="lineno">  103</span>                <span class="keywordflow">while</span>(!quotient.empty() &amp;&amp; quotient.front() == 0) {</div>
 <div class="line"><span class="lineno">  104</span>                    quotient.pop();</div>
@@ -171,7 +171,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  119</span>            }</div>
 <div class="line"><span class="lineno">  120</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  121</span>        }</div>
-<div class="ttc" id="aa00225_html_abce64e9bd359516e1c396e6af442934f"><div class="ttname"><a href="../../dc/d98/a00225.html#abce64e9bd359516e1c396e6af442934f">comp526::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00126">comp526.cpp:126</a></div></div>
+<div class="ttc" id="aa00225_html_abce64e9bd359516e1c396e6af442934f"><div class="ttname"><a href="../../dc/d98/a00225.html#abce64e9bd359516e1c396e6af442934f">comp526::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00129">comp526.cpp:129</a></div></div>
+<div class="ttc" id="aa00232_html_a11f44ec8ab6ab27b1d278577b98a491f"><div class="ttname"><a href="../../d0/d53/a00232.html#a11f44ec8ab6ab27b1d278577b98a491f">comp526::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00362">comp526.cpp:362</a></div></div>
+<div class="ttc" id="aa00232_html_a5b44ae23ff931d686319ac36494bf274"><div class="ttname"><a href="../../d0/d53/a00232.html#a5b44ae23ff931d686319ac36494bf274">comp526::grid::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00362">comp526.cpp:362</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../df/d03/a00062_source.html#l00479">TEST()</a> , 以及 <a class="el" href="../../df/d03/a00062_source.html#l00489">TEST()</a>.</p>
 
