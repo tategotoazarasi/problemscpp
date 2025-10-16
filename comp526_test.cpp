@@ -285,14 +285,14 @@ namespace comp526 {
 	}// namespace grid
 
 	namespace allpairspath {
-		/*TEST(grid, case1) {
+		TEST(grid, case1) {
 			istringstream in("4 3 4\n0 1 2\n1 2 2\n3 3 1\n0 2\n1 2\n3 0\n3 3\n2 1 2\n0 1 100\n0 1\n1 0\n0 0 0\n");
 			auto out = ostringstream();
 			main(in, out);
 			const auto ans = out.str();
-			ASSERT_EQ("4\n2\nImpossible\n0\n\n100\nImpossible\n", ans);
-		}*/
-	}
+			ASSERT_EQ("4\n2\nImpossible\n0\n\n100\nImpossible\n\n", ans);
+		}
+	}// namespace allpairspath
 
 	namespace weakvertices {
 		TEST(weakvertices, case1) {
@@ -300,7 +300,7 @@ namespace comp526 {
 			auto out = ostringstream();
 			main(in, out);
 			const auto ans = out.str();
-			ASSERT_EQ("1 8\n0\n", ans);
+			ASSERT_EQ("1 8 \n0 \n", ans);
 		}
-	}
+	}// namespace weakvertices
 }// namespace comp526

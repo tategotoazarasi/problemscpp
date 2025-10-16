@@ -431,33 +431,75 @@ namespace comp526 {
 	namespace allpairspath {
 
 		int main(istream &cin, ostream &cout) {
-			int n,m,q;
-			while(cin>>n>>m>>q) {
-				if(n==0 && m==0 && q==0) {
+			int n, m, q;
+			while(cin >> n >> m >> q) {
+				if(n == 0 && m == 0 && q == 0) {
 					return 0;
 				}
 
-				for(int i=0;i<m;i++) {
-					int u,v,w;
-					cin>>u>>v>>w;
+				vector<vector<int>> dist = vector(n, vector<int>(n, INT_MAX / 2));
+				vector<edge> edges       = vector<edge>(m);
+				for(int i = 0; i < n; i++) {
+					dist[i][i] = 0;
 				}
+				unordered_set<int> calced{};
+
+				for(int i = 0; i < m; i++) {
+					int u, v, w;
+					cin >> u >> v >> w;
+					edges[i] = edge{u, v, w};
+				}
+
+				while(q--) {
+					int u, v;
+					cin >> u >> v;
+					if(calced.contains(u)) {
+						if(dist[u][v] >= INT_MAX / 2) {
+							cout << "Impossible" << endl;
+						} else {
+							cout << dist[u][v] << endl;
+						}
+						continue;
+					}
+
+					for(int i = 0; i < n; i++) {
+						for(int j = 0; j < m; j++) {
+							int from = edges[j].u;
+							int to   = edges[j].v;
+							int w    = edges[j].w;
+							if(dist[u][to] > dist[u][from] + w) {
+								dist[u][to] = dist[u][from] + w;
+							}
+						}
+					}
+					if(dist[u][v] >= INT_MAX / 2) {
+						cout << "Impossible" << endl;
+					} else {
+						cout << dist[u][v] << endl;
+					}
+
+					calced.insert(u);
+				}
+
+				cout << endl;
 			}
 			return 0;
 		}
-	}
+	}// namespace allpairspath
 
-	namespace weakvertices{
+	namespace weakvertices {
 		int main(istream &cin, ostream &cout) {
 			int n;
-			while(cin>>n) {
-				if(n==-1) return 0;
-				vector<vector<int>> siblings = vector(n,vector<int>());
-				vector<vector<bool>> graph = vector(n,vector<bool>(n,false));
-				for(int i=0;i<n;i++) {
-					for(int j=0;j<n;j++) {
+			while(cin >> n) {
+				if(n == -1)
+					return 0;
+				vector<vector<int>> siblings = vector(n, vector<int>());
+				vector<vector<bool>> graph   = vector(n, vector<bool>(n, false));
+				for(int i = 0; i < n; i++) {
+					for(int j = 0; j < n; j++) {
 						int x;
-						cin>>x;
-						if(x==1) {
+						cin >> x;
+						if(x == 1) {
 							siblings[i].push_back(j);
 							//siblings[j].push_back(j);
 							graph[i][j] = true;
@@ -465,10 +507,10 @@ namespace comp526 {
 						}
 					}
 				}
-				for(int i=0;i<n;i++) {
+				for(int i = 0; i < n; i++) {
 					bool flag = true;
-					for(int j=0;j<siblings[i].size();j++) {
-						for(int k=j+1;k<siblings[i].size();k++) {
+					for(int j = 0; j < siblings[i].size(); j++) {
+						for(int k = j + 1; k < siblings[i].size(); k++) {
 							if(graph[siblings[i][j]][siblings[i][k]]) {
 								flag = false;
 								break;
@@ -479,13 +521,13 @@ namespace comp526 {
 						}
 					}
 					if(flag) {
-						cout<<i<<' ';
+						cout << i << ' ';
 					}
 				}
-				cout<<endl;
+				cout << endl;
 			}
 
 			return 0;
 		}
-	}
+	}// namespace weakvertices
 }// namespace comp526

@@ -110,10 +110,13 @@ namespace comp526 {
 	}// namespace grid
 
 	namespace allpairspath {
+		struct edge {
+			int u, v, w;
+		};
 		int main(istream & /*cin*/, ostream & /*cout*/);
-	}
+	}// namespace allpairspath
 
-	namespace weakvertices{
+	namespace weakvertices {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
 }// namespace comp526
