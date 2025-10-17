@@ -4,9 +4,15 @@
 
 #ifndef PROBLEMSCPP_CODEFORCES_H
 #define PROBLEMSCPP_CODEFORCES_H
+#include <iosfwd>
+
+using namespace std;
 
 namespace codeforces {
+	namespace beautiful_average {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 
-}
+}// namespace codeforces
 
 #endif//PROBLEMSCPP_CODEFORCES_H
