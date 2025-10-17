@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::count_artifacts_that_can_be_extracted::Solution类 参考</title>
+<title>problemscpp: leetcode::max_area_of_island::UnionFind类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,31 +84,111 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d3/d42/a00235.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d6/db8/a00376.html">count_artifacts_that_can_be_extracted</a></li><li class="navelem"><a class="el" href="../../d9/d27/a02363.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d0/d1f/a00247.html">leetcode</a></li><li class="navelem"><a class="el" href="../../dd/df5/a00386.html">max_area_of_island</a></li><li class="navelem"><a class="el" href="../../d9/d27/a02363.html">UnionFind</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
 <a href="../../d3/d35/a02360.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::count_artifacts_that_can_be_extracted::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::max_area_of_island::UnionFind类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../dc/d87/a00032_source.html">leetcode.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:aef4eb815260b961deb9493d4b3028b5e" id="r_aef4eb815260b961deb9493d4b3028b5e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef4eb815260b961deb9493d4b3028b5e">digArtifacts</a> (int n, vector&lt; vector&lt; int &gt; &gt; &amp;artifacts, vector&lt; vector&lt; int &gt; &gt; &amp;dig)</td></tr>
-<tr class="separator:aef4eb815260b961deb9493d4b3028b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a9dccde679f6519a68ade5c3ac62b2302" id="r_a9dccde679f6519a68ade5c3ac62b2302"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9dccde679f6519a68ade5c3ac62b2302">UnionFind</a> (int <a class="el" href="#a8649a665108d6de45e1caa971b5cd6f3">m</a>, int <a class="el" href="#a85268e353d993c1ea4877064d731e96f">n</a>)</td></tr>
+<tr class="separator:a9dccde679f6519a68ade5c3ac62b2302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa312cdb91ccb6215ae59945ffda03408" id="r_aa312cdb91ccb6215ae59945ffda03408"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa312cdb91ccb6215ae59945ffda03408">contains</a> (pair&lt; int, int &gt; p) const</td></tr>
+<tr class="separator:aa312cdb91ccb6215ae59945ffda03408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0440ba658f675e9f5926323645647f4" id="r_af0440ba658f675e9f5926323645647f4"><td class="memItemLeft" align="right" valign="top">pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0440ba658f675e9f5926323645647f4">find</a> (pair&lt; int, int &gt; val)</td></tr>
+<tr class="separator:af0440ba658f675e9f5926323645647f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a330fcd9ade24e471b31ff5a1e8306f74" id="r_a330fcd9ade24e471b31ff5a1e8306f74"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a330fcd9ade24e471b31ff5a1e8306f74">get_size</a> (pair&lt; int, int &gt; p)</td></tr>
+<tr class="separator:a330fcd9ade24e471b31ff5a1e8306f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a587c53ed9dc36e79ef15c5b1ff04f965" id="r_a587c53ed9dc36e79ef15c5b1ff04f965"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a587c53ed9dc36e79ef15c5b1ff04f965">merge</a> (pair&lt; int, int &gt; a, pair&lt; int, int &gt; b)</td></tr>
+<tr class="separator:a587c53ed9dc36e79ef15c5b1ff04f965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32d65bac78f42427388eb8f114873af3" id="r_a32d65bac78f42427388eb8f114873af3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32d65bac78f42427388eb8f114873af3">same</a> (pair&lt; int, int &gt; a, pair&lt; int, int &gt; b)</td></tr>
+<tr class="separator:a32d65bac78f42427388eb8f114873af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a8649a665108d6de45e1caa971b5cd6f3" id="r_a8649a665108d6de45e1caa971b5cd6f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8649a665108d6de45e1caa971b5cd6f3">m</a></td></tr>
+<tr class="separator:a8649a665108d6de45e1caa971b5cd6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85268e353d993c1ea4877064d731e96f" id="r_a85268e353d993c1ea4877064d731e96f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85268e353d993c1ea4877064d731e96f">n</a></td></tr>
+<tr class="separator:a85268e353d993c1ea4877064d731e96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9c1d82bddb398ee4d5d708ea868fe7e" id="r_ab9c1d82bddb398ee4d5d708ea868fe7e"><td class="memItemLeft" align="right" valign="top">unordered_map&lt; pair&lt; int, int &gt;, pair&lt; int, int &gt;, function&lt; unsigned int(const pair&lt; int, int &gt; &amp;)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9c1d82bddb398ee4d5d708ea868fe7e">parent</a></td></tr>
+<tr class="separator:ab9c1d82bddb398ee4d5d708ea868fe7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24e9b098711282dab910737b3c45ea72" id="r_a24e9b098711282dab910737b3c45ea72"><td class="memItemLeft" align="right" valign="top">unordered_map&lt; pair&lt; int, int &gt;, int, function&lt; unsigned int(const pair&lt; int, int &gt; &amp;)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24e9b098711282dab910737b3c45ea72">rank</a></td></tr>
+<tr class="separator:a24e9b098711282dab910737b3c45ea72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044c57c520a9d5211affa5bb784aeb36" id="r_a044c57c520a9d5211affa5bb784aeb36"><td class="memItemLeft" align="right" valign="top">unordered_map&lt; pair&lt; int, int &gt;, int, function&lt; unsigned int(const pair&lt; int, int &gt; &amp;)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a044c57c520a9d5211affa5bb784aeb36">size</a></td></tr>
+<tr class="separator:a044c57c520a9d5211affa5bb784aeb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../dc/d87/a00032_source.html">leetcode.h</a> 第 <a class="el" href="../../dc/d87/a00032_source.html#l01698">1698</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="aef4eb815260b961deb9493d4b3028b5e" name="aef4eb815260b961deb9493d4b3028b5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef4eb815260b961deb9493d4b3028b5e">&#9670;&#160;</a></span>digArtifacts()</h2>
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l01665">1665</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a9dccde679f6519a68ade5c3ac62b2302" name="a9dccde679f6519a68ade5c3ac62b2302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dccde679f6519a68ade5c3ac62b2302">&#9670;&#160;</a></span>UnionFind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnionFind::UnionFind </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l04255">4255</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4256</span>            : <a class="code hl_variable" href="#a8649a665108d6de45e1caa971b5cd6f3">m</a>(<a class="code hl_variable" href="#a8649a665108d6de45e1caa971b5cd6f3">m</a>), <a class="code hl_variable" href="#a85268e353d993c1ea4877064d731e96f">n</a>(<a class="code hl_variable" href="#a85268e353d993c1ea4877064d731e96f">n</a>) {</div>
+<div class="line"><span class="lineno"> 4257</span>            <a class="code hl_variable" href="#ab9c1d82bddb398ee4d5d708ea868fe7e">parent</a> = unordered_map&lt;pair&lt;int, int&gt;,</div>
+<div class="line"><span class="lineno"> 4258</span>                                   pair&lt;int, int&gt;,</div>
+<div class="line"><span class="lineno"> 4259</span>                                   function&lt;<span class="keywordtype">unsigned</span> int(<span class="keyword">const</span> pair&lt;int, int&gt; &amp;)&gt;&gt;(</div>
+<div class="line"><span class="lineno"> 4260</span>                    <a class="code hl_variable" href="#a8649a665108d6de45e1caa971b5cd6f3">m</a> * <a class="code hl_variable" href="#a85268e353d993c1ea4877064d731e96f">n</a>,</div>
+<div class="line"><span class="lineno"> 4261</span>                    [](<span class="keyword">const</span> pair&lt;int, int&gt; &amp;p) { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(p.first * 50 + p.second); });</div>
+<div class="line"><span class="lineno"> 4262</span>            <a class="code hl_variable" href="#a044c57c520a9d5211affa5bb784aeb36">size</a> = unordered_map&lt;pair&lt;int, int&gt;,</div>
+<div class="line"><span class="lineno"> 4263</span>                                 int,</div>
+<div class="line"><span class="lineno"> 4264</span>                                 function&lt;<span class="keywordtype">unsigned</span> int(<span class="keyword">const</span> pair&lt;int, int&gt; &amp;)&gt;&gt;(</div>
+<div class="line"><span class="lineno"> 4265</span>                    <a class="code hl_variable" href="#a8649a665108d6de45e1caa971b5cd6f3">m</a> * <a class="code hl_variable" href="#a85268e353d993c1ea4877064d731e96f">n</a>,</div>
+<div class="line"><span class="lineno"> 4266</span>                    [](<span class="keyword">const</span> pair&lt;int, int&gt; &amp;p) { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(p.first * 50 + p.second); });</div>
+<div class="line"><span class="lineno"> 4267</span>            <a class="code hl_variable" href="#a24e9b098711282dab910737b3c45ea72">rank</a> = unordered_map&lt;pair&lt;int, int&gt;,</div>
+<div class="line"><span class="lineno"> 4268</span>                                 int,</div>
+<div class="line"><span class="lineno"> 4269</span>                                 function&lt;<span class="keywordtype">unsigned</span> int(<span class="keyword">const</span> pair&lt;int, int&gt; &amp;)&gt;&gt;(</div>
+<div class="line"><span class="lineno"> 4270</span>                    <a class="code hl_variable" href="#a8649a665108d6de45e1caa971b5cd6f3">m</a> * <a class="code hl_variable" href="#a85268e353d993c1ea4877064d731e96f">n</a>,</div>
+<div class="line"><span class="lineno"> 4271</span>                    [](<span class="keyword">const</span> pair&lt;int, int&gt; &amp;p) { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(p.first * 50 + p.second); });</div>
+<div class="line"><span class="lineno"> 4272</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="#a8649a665108d6de45e1caa971b5cd6f3">m</a>; i++) {</div>
+<div class="line"><span class="lineno"> 4273</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="#a85268e353d993c1ea4877064d731e96f">n</a>; j++) {</div>
+<div class="line"><span class="lineno"> 4274</span>                    pair&lt;int, int&gt; p = make_pair(i, j);</div>
+<div class="line"><span class="lineno"> 4275</span>                    <a class="code hl_variable" href="#ab9c1d82bddb398ee4d5d708ea868fe7e">parent</a>[p]        = p;</div>
+<div class="line"><span class="lineno"> 4276</span>                    <a class="code hl_variable" href="#a044c57c520a9d5211affa5bb784aeb36">size</a>[p]          = 1;</div>
+<div class="line"><span class="lineno"> 4277</span>                    <a class="code hl_variable" href="#a24e9b098711282dab910737b3c45ea72">rank</a>[p]          = 0;</div>
+<div class="line"><span class="lineno"> 4278</span>                }</div>
+<div class="line"><span class="lineno"> 4279</span>            }</div>
+<div class="line"><span class="lineno"> 4280</span>        }</div>
+<div class="ttc" id="aa02363_html_a044c57c520a9d5211affa5bb784aeb36"><div class="ttname"><a href="#a044c57c520a9d5211affa5bb784aeb36">leetcode::max_area_of_island::UnionFind::size</a></div><div class="ttdeci">unordered_map&lt; pair&lt; int, int &gt;, int, function&lt; unsigned int(const pair&lt; int, int &gt; &amp;)&gt; &gt; size</div><div class="ttdef"><b>定义</b> <a href="../../d8/d41/a00038_source.html#l01670">leetcode.h:1670</a></div></div>
+<div class="ttc" id="aa02363_html_a24e9b098711282dab910737b3c45ea72"><div class="ttname"><a href="#a24e9b098711282dab910737b3c45ea72">leetcode::max_area_of_island::UnionFind::rank</a></div><div class="ttdeci">unordered_map&lt; pair&lt; int, int &gt;, int, function&lt; unsigned int(const pair&lt; int, int &gt; &amp;)&gt; &gt; rank</div><div class="ttdef"><b>定义</b> <a href="../../d8/d41/a00038_source.html#l01671">leetcode.h:1671</a></div></div>
+<div class="ttc" id="aa02363_html_a85268e353d993c1ea4877064d731e96f"><div class="ttname"><a href="#a85268e353d993c1ea4877064d731e96f">leetcode::max_area_of_island::UnionFind::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d8/d41/a00038_source.html#l01668">leetcode.h:1668</a></div></div>
+<div class="ttc" id="aa02363_html_a8649a665108d6de45e1caa971b5cd6f3"><div class="ttname"><a href="#a8649a665108d6de45e1caa971b5cd6f3">leetcode::max_area_of_island::UnionFind::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>定义</b> <a href="../../d8/d41/a00038_source.html#l01667">leetcode.h:1667</a></div></div>
+<div class="ttc" id="aa02363_html_ab9c1d82bddb398ee4d5d708ea868fe7e"><div class="ttname"><a href="#ab9c1d82bddb398ee4d5d708ea868fe7e">leetcode::max_area_of_island::UnionFind::parent</a></div><div class="ttdeci">unordered_map&lt; pair&lt; int, int &gt;, pair&lt; int, int &gt;, function&lt; unsigned int(const pair&lt; int, int &gt; &amp;)&gt; &gt; parent</div><div class="ttdef"><b>定义</b> <a href="../../d8/d41/a00038_source.html#l01669">leetcode.h:1669</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l01667">m</a>, <a class="el" href="../../d8/d41/a00038_source.html#l01668">n</a>, <a class="el" href="../../d8/d41/a00038_source.html#l01669">parent</a>, <a class="el" href="../../d8/d41/a00038_source.html#l01671">rank</a> , 以及 <a class="el" href="../../d8/d41/a00038_source.html#l01670">size</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aa312cdb91ccb6215ae59945ffda03408" name="aa312cdb91ccb6215ae59945ffda03408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa312cdb91ccb6215ae59945ffda03408">&#9670;&#160;</a></span>contains()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -117,71 +197,279 @@ $(function(){ initResizable(false); });
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int leetcode::count_artifacts_that_can_be_extracted::Solution::digArtifacts </td>
+          <td class="memname">bool UnionFind::contains </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vector&lt; vector&lt; int &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>artifacts</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vector&lt; vector&lt; int &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dig</em></span>&#160;)</td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l04335">4335</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 4335</span>                                                                                                  {</div>
-<div class="line"><span class="lineno"> 4336</span>            <span class="keyword">auto</span> *grid = <span class="keyword">new</span> <span class="keywordtype">bool</span> *[<a class="code hl_variable" href="../../d0/d53/a00232.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>];</div>
-<div class="line"><span class="lineno"> 4337</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d0/d53/a00232.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>; i++) {</div>
-<div class="line"><span class="lineno"> 4338</span>                grid[i] = <span class="keyword">new</span> <span class="keywordtype">bool</span>[<a class="code hl_variable" href="../../d0/d53/a00232.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>];</div>
-<div class="line"><span class="lineno"> 4339</span>                memset(grid[i], 0, n * <span class="keyword">sizeof</span>(<span class="keywordtype">bool</span>));</div>
-<div class="line"><span class="lineno"> 4340</span>            }</div>
-<div class="line"><span class="lineno"> 4341</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i: dig) {</div>
-<div class="line"><span class="lineno"> 4342</span>                grid[i[0]][i[1]] = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 4343</span>            }</div>
-<div class="line"><span class="lineno"> 4344</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="../../dc/d98/a00225.html#abce64e9bd359516e1c396e6af442934f">ans</a> = 0;</div>
-<div class="line"><span class="lineno"> 4345</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> artifact: artifacts) {</div>
-<div class="line"><span class="lineno"> 4346</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 4347</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = artifact[0]; i &lt;= artifact[2]; i++) {</div>
-<div class="line"><span class="lineno"> 4348</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = artifact[1]; j &lt;= artifact[3]; j++) {</div>
-<div class="line"><span class="lineno"> 4349</span>                        <span class="keywordflow">if</span>(!grid[i][j]) {</div>
-<div class="line"><span class="lineno"> 4350</span>                            flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 4351</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 4352</span>                        }</div>
-<div class="line"><span class="lineno"> 4353</span>                    }</div>
-<div class="line"><span class="lineno"> 4354</span>                    <span class="keywordflow">if</span>(!flag) {</div>
-<div class="line"><span class="lineno"> 4355</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 4356</span>                    }</div>
-<div class="line"><span class="lineno"> 4357</span>                }</div>
-<div class="line"><span class="lineno"> 4358</span>                <span class="keywordflow">if</span>(flag) {</div>
-<div class="line"><span class="lineno"> 4359</span>                    <a class="code hl_variable" href="../../dc/d98/a00225.html#abce64e9bd359516e1c396e6af442934f">ans</a>++;</div>
-<div class="line"><span class="lineno"> 4360</span>                }</div>
-<div class="line"><span class="lineno"> 4361</span>            }</div>
-<div class="line"><span class="lineno"> 4362</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d0/d53/a00232.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>; i++) {</div>
-<div class="line"><span class="lineno"> 4363</span>                <span class="keyword">delete</span>[] grid[i];</div>
-<div class="line"><span class="lineno"> 4364</span>            }</div>
-<div class="line"><span class="lineno"> 4365</span>            <span class="keyword">delete</span>[] grid;</div>
-<div class="line"><span class="lineno"> 4366</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d98/a00225.html#abce64e9bd359516e1c396e6af442934f">ans</a>;</div>
-<div class="line"><span class="lineno"> 4367</span>        }</div>
-<div class="ttc" id="aa00225_html_abce64e9bd359516e1c396e6af442934f"><div class="ttname"><a href="../../dc/d98/a00225.html#abce64e9bd359516e1c396e6af442934f">comp526::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00129">comp526.cpp:129</a></div></div>
-<div class="ttc" id="aa00232_html_a11f44ec8ab6ab27b1d278577b98a491f"><div class="ttname"><a href="../../d0/d53/a00232.html#a11f44ec8ab6ab27b1d278577b98a491f">comp526::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00362">comp526.cpp:362</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l04309">4309</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4309</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ab9c1d82bddb398ee4d5d708ea868fe7e">parent</a>.contains(p); }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l02192">leetcode::count_artifacts_that_can_be_extracted::TEST()</a> , 以及 <a class="el" href="../../db/db2/a00020_source.html#l02198">leetcode::count_artifacts_that_can_be_extracted::TEST()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d8/d41/a00038_source.html#l01669">parent</a>.</p>
+
+</div>
+</div>
+<a id="af0440ba658f675e9f5926323645647f4" name="af0440ba658f675e9f5926323645647f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0440ba658f675e9f5926323645647f4">&#9670;&#160;</a></span>find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pair&lt; int, int &gt; UnionFind::find </td>
+          <td>(</td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l04282">4282</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4282</span>                                                         {</div>
+<div class="line"><span class="lineno"> 4283</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ab9c1d82bddb398ee4d5d708ea868fe7e">parent</a>[val] != val) {</div>
+<div class="line"><span class="lineno"> 4284</span>                <a class="code hl_variable" href="#ab9c1d82bddb398ee4d5d708ea868fe7e">parent</a>[val] = <a class="code hl_function" href="#af0440ba658f675e9f5926323645647f4">find</a>(<a class="code hl_variable" href="#ab9c1d82bddb398ee4d5d708ea868fe7e">parent</a>[val]);</div>
+<div class="line"><span class="lineno"> 4285</span>            }</div>
+<div class="line"><span class="lineno"> 4286</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="#ab9c1d82bddb398ee4d5d708ea868fe7e">parent</a>[val];</div>
+<div class="line"><span class="lineno"> 4287</span>        }</div>
+<div class="ttc" id="aa02363_html_af0440ba658f675e9f5926323645647f4"><div class="ttname"><a href="#af0440ba658f675e9f5926323645647f4">leetcode::max_area_of_island::UnionFind::find</a></div><div class="ttdeci">pair&lt; int, int &gt; find(pair&lt; int, int &gt; val)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l04282">leetcode.cpp:4282</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l04282">find()</a> , 以及 <a class="el" href="../../d8/d41/a00038_source.html#l01669">parent</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l04282">find()</a>, <a class="el" href="../../da/d45/a00011_source.html#l04311">get_size()</a>, <a class="el" href="../../da/d45/a00011_source.html#l04289">merge()</a> , 以及 <a class="el" href="../../da/d45/a00011_source.html#l04307">same()</a>.</p>
+
+</div>
+</div>
+<a id="a330fcd9ade24e471b31ff5a1e8306f74" name="a330fcd9ade24e471b31ff5a1e8306f74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a330fcd9ade24e471b31ff5a1e8306f74">&#9670;&#160;</a></span>get_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnionFind::get_size </td>
+          <td>(</td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l04311">4311</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4311</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a044c57c520a9d5211affa5bb784aeb36">size</a>[<a class="code hl_function" href="#af0440ba658f675e9f5926323645647f4">find</a>(p)]; }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l04282">find()</a> , 以及 <a class="el" href="../../d8/d41/a00038_source.html#l01670">size</a>.</p>
+
+</div>
+</div>
+<a id="a587c53ed9dc36e79ef15c5b1ff04f965" name="a587c53ed9dc36e79ef15c5b1ff04f965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a587c53ed9dc36e79ef15c5b1ff04f965">&#9670;&#160;</a></span>merge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnionFind::merge </td>
+          <td>(</td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l04289">4289</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4289</span>                                                                {</div>
+<div class="line"><span class="lineno"> 4290</span>            <span class="keyword">const</span> <span class="keyword">auto</span> pa = <a class="code hl_function" href="#af0440ba658f675e9f5926323645647f4">find</a>(a);</div>
+<div class="line"><span class="lineno"> 4291</span>            <span class="keyword">const</span> <span class="keyword">auto</span> pb = <a class="code hl_function" href="#af0440ba658f675e9f5926323645647f4">find</a>(b);</div>
+<div class="line"><span class="lineno"> 4292</span>            <span class="keywordflow">if</span>(pa != pb) {</div>
+<div class="line"><span class="lineno"> 4293</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> sum = <a class="code hl_variable" href="#a044c57c520a9d5211affa5bb784aeb36">size</a>[pa] + <a class="code hl_variable" href="#a044c57c520a9d5211affa5bb784aeb36">size</a>[pb];</div>
+<div class="line"><span class="lineno"> 4294</span>                <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a24e9b098711282dab910737b3c45ea72">rank</a>[pa] &gt; <a class="code hl_variable" href="#a24e9b098711282dab910737b3c45ea72">rank</a>[pb]) {</div>
+<div class="line"><span class="lineno"> 4295</span>                    <a class="code hl_variable" href="#ab9c1d82bddb398ee4d5d708ea868fe7e">parent</a>[pb] = pa;</div>
+<div class="line"><span class="lineno"> 4296</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 4297</span>                    <a class="code hl_variable" href="#ab9c1d82bddb398ee4d5d708ea868fe7e">parent</a>[pa] = pb;</div>
+<div class="line"><span class="lineno"> 4298</span>                    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a24e9b098711282dab910737b3c45ea72">rank</a>[pa] == <a class="code hl_variable" href="#a24e9b098711282dab910737b3c45ea72">rank</a>[pb]) {</div>
+<div class="line"><span class="lineno"> 4299</span>                        ++<a class="code hl_variable" href="#a24e9b098711282dab910737b3c45ea72">rank</a>[pb];</div>
+<div class="line"><span class="lineno"> 4300</span>                    }</div>
+<div class="line"><span class="lineno"> 4301</span>                }</div>
+<div class="line"><span class="lineno"> 4302</span>                <a class="code hl_variable" href="#a044c57c520a9d5211affa5bb784aeb36">size</a>[pa] = sum;</div>
+<div class="line"><span class="lineno"> 4303</span>                <a class="code hl_variable" href="#a044c57c520a9d5211affa5bb784aeb36">size</a>[pb] = sum;</div>
+<div class="line"><span class="lineno"> 4304</span>            }</div>
+<div class="line"><span class="lineno"> 4305</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l04282">find()</a>, <a class="el" href="../../d8/d41/a00038_source.html#l01669">parent</a>, <a class="el" href="../../d8/d41/a00038_source.html#l01671">rank</a> , 以及 <a class="el" href="../../d8/d41/a00038_source.html#l01670">size</a>.</p>
+
+</div>
+</div>
+<a id="a32d65bac78f42427388eb8f114873af3" name="a32d65bac78f42427388eb8f114873af3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d65bac78f42427388eb8f114873af3">&#9670;&#160;</a></span>same()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnionFind::same </td>
+          <td>(</td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l04307">4307</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4307</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="#af0440ba658f675e9f5926323645647f4">find</a>(a) == <a class="code hl_function" href="#af0440ba658f675e9f5926323645647f4">find</a>(b); }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l04282">find()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a8649a665108d6de45e1caa971b5cd6f3" name="a8649a665108d6de45e1caa971b5cd6f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8649a665108d6de45e1caa971b5cd6f3">&#9670;&#160;</a></span>m</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leetcode::max_area_of_island::UnionFind::m</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l01667">1667</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l04255">UnionFind()</a>.</p>
+
+</div>
+</div>
+<a id="a85268e353d993c1ea4877064d731e96f" name="a85268e353d993c1ea4877064d731e96f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85268e353d993c1ea4877064d731e96f">&#9670;&#160;</a></span>n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leetcode::max_area_of_island::UnionFind::n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l01668">1668</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l04255">UnionFind()</a>.</p>
+
+</div>
+</div>
+<a id="ab9c1d82bddb398ee4d5d708ea868fe7e" name="ab9c1d82bddb398ee4d5d708ea868fe7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9c1d82bddb398ee4d5d708ea868fe7e">&#9670;&#160;</a></span>parent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unordered_map&lt;pair&lt;int, int&gt;, pair&lt;int, int&gt;, function&lt;unsigned int(const pair&lt;int, int&gt; &amp;)&gt; &gt; leetcode::max_area_of_island::UnionFind::parent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l01669">1669</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l04255">UnionFind()</a>, <a class="el" href="../../da/d45/a00011_source.html#l04309">contains()</a>, <a class="el" href="../../da/d45/a00011_source.html#l04282">find()</a> , 以及 <a class="el" href="../../da/d45/a00011_source.html#l04289">merge()</a>.</p>
+
+</div>
+</div>
+<a id="a24e9b098711282dab910737b3c45ea72" name="a24e9b098711282dab910737b3c45ea72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24e9b098711282dab910737b3c45ea72">&#9670;&#160;</a></span>rank</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unordered_map&lt;pair&lt;int, int&gt;, int, function&lt;unsigned int(const pair&lt;int, int&gt; &amp;)&gt; &gt; leetcode::max_area_of_island::UnionFind::rank</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l01671">1671</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l04255">UnionFind()</a> , 以及 <a class="el" href="../../da/d45/a00011_source.html#l04289">merge()</a>.</p>
+
+</div>
+</div>
+<a id="a044c57c520a9d5211affa5bb784aeb36" name="a044c57c520a9d5211affa5bb784aeb36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a044c57c520a9d5211affa5bb784aeb36">&#9670;&#160;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unordered_map&lt;pair&lt;int, int&gt;, int, function&lt;unsigned int(const pair&lt;int, int&gt; &amp;)&gt; &gt; leetcode::max_area_of_island::UnionFind::size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l01670">1670</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l04255">UnionFind()</a>, <a class="el" href="../../da/d45/a00011_source.html#l04311">get_size()</a> , 以及 <a class="el" href="../../da/d45/a00011_source.html#l04289">merge()</a>.</p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../dc/d87/a00032_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a></li>
 <li><a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a></li>
 </ul>
 </div><!-- contents -->
