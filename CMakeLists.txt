@@ -16,7 +16,7 @@ if (NOT ${GTest_FOUND})
             googletest
             # Specify the commit you depend on and update it regularly.
             URL https://codeload.github.com/google/googletest/zip/release-1.11.0
-    )
+            )
     # For Windows: Prevent overriding the parent project's compiler/linker settings
     set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
     FetchContent_MakeAvailable(googletest)
@@ -32,6 +32,9 @@ add_executable(problemscpp main.cpp acwing.cpp acwing.h lintcode.cpp lintcode.h 
                comp526.h
                comp526.cpp
                comp526_test.cpp
+               codeforces.h
+               codeforces.cpp
+               codeforces_test.cpp
                )
 target_link_libraries(problemscpp PRIVATE GTest::gmock GTest::gtest GTest::gmock_main GTest::gtest_main)
 gtest_discover_tests(problemscpp)
