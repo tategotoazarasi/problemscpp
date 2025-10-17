@@ -35,4 +35,36 @@ namespace codeforces {
 			return 0;
 		}
 	}// namespace beautiful_average
+
+	namespace beautiful_string {
+		int main(istream &cin, ostream &cout) {
+			int t;
+			cin >> t;
+			while(t--) {
+				int k;
+				string s;
+				cin >> k >> s;
+				int cnt         = 0;
+				vector<int> ans = vector<int>();
+				for(int i = 0; i < k; i++) {
+					if(s[i] == '0') {
+						cnt++;
+						ans.push_back(i + 1);
+					}
+				}
+				cout << cnt << endl;
+				bool first = true;
+				for(int i = 0; i < ans.size(); i++) {
+					if(first) {
+						cout << ans[i];
+						first = false;
+					} else {
+						cout << " " << ans[i];
+					}
+				}
+				cout << endl;
+			}
+			return 0;
+		}
+	}// namespace beautiful_string
 }// namespace codeforces

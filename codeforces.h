@@ -13,6 +13,10 @@ namespace codeforces {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
 
+	namespace beautiful_string {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
+
 }// namespace codeforces
 
 #endif//PROBLEMSCPP_CODEFORCES_H
