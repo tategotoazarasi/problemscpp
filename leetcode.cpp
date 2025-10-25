@@ -9669,4 +9669,27 @@ namespace leetcode {
 				return step_cnt + 1 + abs(nums2[nearest] - extra);
 		}
 	}// namespace minimum_operations_to_transform_array
+
+	namespace maximize_sum_of_squares_of_digits {
+		string Solution::maxSumOfSquares(int num, int sum) {
+			ostringstream oss = {};
+			if(9 * num < sum) {
+				return "";
+			}
+			int cnt = 0;
+			while(sum > 9) {
+				oss << 9;
+				cnt++;
+				sum -= 9;
+			}
+			oss << sum;
+			cnt++;
+			while(num - cnt > 0) {
+				cnt++;
+				oss << 0;
+			}
+
+			return oss.str();
+		}
+	}// namespace maximize_sum_of_squares_of_digits
 }// namespace leetcode

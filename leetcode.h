@@ -3428,6 +3428,13 @@ namespace leetcode {
 			static long long minOperations(vector<int> &nums1, vector<int> &nums2);
 		};
 	}// namespace minimum_operations_to_transform_array
+
+	namespace maximize_sum_of_squares_of_digits {
+		class Solution {
+		public:
+			static string maxSumOfSquares(int num, int sum);
+		};
+	}// namespace maximize_sum_of_squares_of_digits
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -4464,4 +4464,18 @@ namespace leetcode {
 			ASSERT_EQ(753, Solution::minOperations(nums1, nums2));
 		}
 	}// namespace minimum_operations_to_transform_array
+
+	namespace maximize_sum_of_squares_of_digits {
+		TEST(maximize_sum_of_squares_of_digits, case1) {
+			ASSERT_EQ("30", Solution::maxSumOfSquares(2, 3));
+		}
+
+		TEST(maximize_sum_of_squares_of_digits, case2) {
+			ASSERT_EQ("98", Solution::maxSumOfSquares(2, 17));
+		}
+
+		TEST(maximize_sum_of_squares_of_digits, case3) {
+			ASSERT_EQ("", Solution::maxSumOfSquares(1, 10));
+		}
+	}// namespace maximize_sum_of_squares_of_digits
 }// namespace leetcode
