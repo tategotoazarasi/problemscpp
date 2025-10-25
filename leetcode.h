@@ -3407,14 +3407,6 @@ namespace leetcode {
 		};
 	}// namespace maximum_size_subarray_sum_equals_k
 
-	/// \brief 1151. 最少交换次数来组合所有的 1
-	namespace minimum_swaps_to_group_all_1s_together {
-		class Solution {
-		public:
-			static int minSwaps(vector<int> &data);
-		};
-	}// namespace minimum_swaps_to_group_all_1s_together
-
 	namespace minimum_operations_to_transform_array {
 		class Solution {
 		public:
