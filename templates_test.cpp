@@ -165,3 +165,121 @@ TEST(BigInt, multiply3) {
 	ss >> ans;
 	ASSERT_EQ("332404827195364786322355785444558091034080578559256965088672851184934586482932664625", ans);
 }
+
+TEST(AVLNodeTest, ConstructionAndGetters) {
+	AVLNode<int> node(10);
+	ASSERT_EQ(node.get_value(), 10);
+	ASSERT_EQ(node.get_height(), 1);
+	ASSERT_EQ(node.get_left(), nullptr);
+	ASSERT_EQ(node.get_right(), nullptr);
+	ASSERT_EQ(node.get_parent(), nullptr);
+}
+
+TEST(AVLNodeTest, Setters) {
+	AVLNode<int> node(10);
+	AVLNode<int> left_child(5);
+	AVLNode<int> right_child(15);
+	AVLNode<int> parent(20);
+
+	node.set_value(99);
+	ASSERT_EQ(node.get_value(), 99);
+
+	node.set_height(5);
+	ASSERT_EQ(node.get_height(), 5);
+
+	node.set_left(&left_child);
+	ASSERT_EQ(node.get_left(), &left_child);
+	ASSERT_EQ(node.get_left()->get_value(), 5);
+
+	node.set_right(&right_child);
+	ASSERT_EQ(node.get_right(), &right_child);
+	ASSERT_EQ(node.get_right()->get_value(), 15);
+
+	node.set_parent(&parent);
+	ASSERT_EQ(node.get_parent(), &parent);
+	ASSERT_EQ(node.get_parent()->get_value(), 20);
+}
+
+
+TEST(AVLNodeTest, SimpleInsertion) {
+	AVLNode<int> root(10);
+	AVLNode<int> node5(5);
+	AVLNode<int> node15(15);
+
+	// Insert a smaller value
+	root.insert(&node5);
+	ASSERT_EQ(root.get_left(), &node5);
+	ASSERT_EQ(root.get_right(), nullptr);
+	ASSERT_EQ(node5.get_parent(), &root);
+	// Check height updates
+	ASSERT_EQ(node5.get_height(), 1);
+	ASSERT_EQ(root.get_height(), 2);
+
+	// Insert a larger value
+	root.insert(&node15);
+	ASSERT_EQ(root.get_left(), &node5);
+	ASSERT_EQ(root.get_right(), &node15);
+	ASSERT_EQ(node15.get_parent(), &root);
+	// Check height updates
+	ASSERT_EQ(node15.get_height(), 1);
+	ASSERT_EQ(root.get_height(), 2);// max(left_height, right_height) + 1 -> max(1, 1) + 1 = 2
+}
+
+TEST(AVLNodeTest, DeeperInsertionAndFind) {
+	// Create nodes
+	AVLNode<int> root(20);
+	AVLNode<int> node10(10);
+	AVLNode<int> node30(30);
+	AVLNode<int> node5(5);
+	AVLNode<int> node15(15);
+	AVLNode<int> node25(25);
+	AVLNode<int> node35(35);
+
+	// Insert them
+	root.insert(&node10);
+	root.insert(&node30);
+	root.insert(&node5);
+	root.insert(&node15);
+	root.insert(&node25);
+	root.insert(&node35);
+
+	/*
+     * The resulting tree structure should be:
+     * 20 (h=3)
+     * /  \
+     * 10(h=2) 30(h=2)
+     * / \     / \
+     * 5 15   25  35  (all h=1)
+    */
+
+	// Verify structure
+	ASSERT_EQ(root.get_left(), &node10);
+	ASSERT_EQ(root.get_right(), &node30);
+	ASSERT_EQ(node10.get_parent(), &root);
+	ASSERT_EQ(node30.get_parent(), &root);
+
+	ASSERT_EQ(node10.get_left(), &node5);
+	ASSERT_EQ(node10.get_right(), &node15);
+	ASSERT_EQ(node5.get_parent(), &node10);
+	ASSERT_EQ(node15.get_parent(), &node10);
+
+	ASSERT_EQ(node30.get_left(), &node25);
+	ASSERT_EQ(node30.get_right(), &node35);
+	ASSERT_EQ(node25.get_parent(), &node30);
+	ASSERT_EQ(node35.get_parent(), &node30);
+
+	// Verify heights
+	ASSERT_EQ(root.get_height(), 3);
+	ASSERT_EQ(node10.get_height(), 2);
+	ASSERT_EQ(node30.get_height(), 2);
+	ASSERT_EQ(node5.get_height(), 1);
+	ASSERT_EQ(node15.get_height(), 1);
+	ASSERT_EQ(node25.get_height(), 1);
+	ASSERT_EQ(node35.get_height(), 1);
+
+	// Verify find method (for existing values)
+	ASSERT_EQ(root.find(20), &root);
+	ASSERT_EQ(root.find(10), &node10);
+	ASSERT_EQ(root.find(35), &node35);
+	ASSERT_EQ(root.find(15), &node15);
+}

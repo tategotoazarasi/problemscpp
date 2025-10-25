@@ -116,3 +116,96 @@ public:
 	const vector<int> &operator[](int i) const;
 	static Matrix identity(int n);
 };
+
+/// \brief 平衡二叉树节点
+template<typename T>
+class AVLNode {
+private:
+	T value;
+	int height         = 1;
+	AVLNode<T> *left   = nullptr;
+	AVLNode<T> *right  = nullptr;
+	AVLNode<T> *parent = nullptr;
+
+	AVLNode *find_next() {
+		AVLNode *ans = this->right;
+		if(ans == nullptr) {
+			return nullptr;
+		}
+		while(ans->left != nullptr) {
+			ans = ans->left;
+		}
+		return ans;
+	}
+
+public:
+	AVLNode(T value)
+	    : value(value) {}
+	T get_value() const { return value; }
+	void set_value(const T &value) { this->value = value; }
+	int get_height() const { return height; }
+	void set_height(int height) { this->height = height; }
+	AVLNode<T> *get_left() const { return left; }
+	void set_left(AVLNode<T> *left) { this->left = left; }
+	AVLNode<T> *get_right() const { return right; }
+	void set_right(AVLNode<T> *right) { this->right = right; }
+	AVLNode<T> *get_parent() const { return parent; }
+	void set_parent(AVLNode<T> *parent) { this->parent = parent; }
+
+	void insert(AVLNode *node) {
+		AVLNode *current = this;
+		AVLNode *prior   = nullptr;
+		while(current != nullptr) {
+			prior = current;
+			if(node->value >= current->value) {
+				current = current->right;
+			} else {
+				current = current->left;
+			}
+		}
+		if(node->value >= prior->value) {
+			prior->right = node;
+		} else {
+			prior->left = node;
+		}
+		node->parent = prior;
+		current      = prior;
+		while(current != nullptr) {
+			int height_left  = current->left ? current->left->height : 0;
+			int height_right = current->right ? current->right->height : 0;
+			if(abs(height_left - height_right) > 1) {
+				current->balance();
+			}
+			current->height = max(height_left, height_right) + 1;
+			current         = current->parent;
+		}
+	}
+
+	AVLNode *find(T v) {
+		AVLNode *current = this;
+		while(current->value != v) {
+			if(v < current->value) {
+				current = current->left;
+			} else {
+				current = current->right;
+			}
+		}
+		return current;
+	}
+
+	void remove(T v) {
+		AVLNode *to_remove = this->find(v);
+		if(to_remove == nullptr) {
+			return;
+		}
+		AVLNode *next = to_remove->find_next();
+		if(next == nullptr) {
+			//TODO
+		}
+		//TODO
+	}
+
+	void balance() {
+		//TODO
+	}
+};
