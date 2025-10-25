@@ -4422,23 +4422,6 @@ namespace leetcode {
 		}
 	}// namespace minimum_swaps_to_group_all_1s_together
 
-	namespace lexicographically_smallest_string_after_reverse {
-		/*TEST(lexicographically_smallest_string_after_reverse, case1) {
-			string input = "dcab";
-			ASSERT_EQ("acdb", Solution::lexSmallest(input));
-		}
-
-		TEST(lexicographically_smallest_string_after_reverse, case2) {
-			string input = "abba";
-			ASSERT_EQ("aabb", Solution::lexSmallest(input));
-		}
-
-		TEST(lexicographically_smallest_string_after_reverse, case3) {
-			string input = "zxy";
-			ASSERT_EQ("xzy", Solution::lexSmallest(input));
-		}*/
-	}// namespace lexicographically_smallest_string_after_reverse
-
 	namespace minimum_operations_to_transform_array {
 		TEST(minimum_operations_to_transform_array, case1) {
 			vector<int> nums1 = {2, 8};
