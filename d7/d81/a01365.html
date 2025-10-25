@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: acwing::acwing774类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,87 +84,19 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d1/dc1/a00092.html">acwing</a></li><li class="navelem"><a class="el" href="../../d7/d81/a01365.html">acwing774</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d1/dc1/a00092.html">acwing</a></li><li class="navelem"><a class="el" href="../../dd/d0c/a01368.html">acwing775</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="../../da/dab/a01362.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">acwing::acwing774类 参考</div></div>
+  <div class="headertitle"><div class="title">acwing::acwing775 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>AcWing 774. 最长单词  
- <a href="#details">更多...</a></p>
-
-<p><code>#include &lt;<a class="el" href="../../d5/de0/a00050_source.html">acwing.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a9bb8574b01cca2fe99f46eaf82784089" id="r_a9bb8574b01cca2fe99f46eaf82784089"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bb8574b01cca2fe99f46eaf82784089">main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a9bb8574b01cca2fe99f46eaf82784089"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>AcWing 774. 最长单词 </p>
-
-<p class="definition">在文件 <a class="el" href="../../d5/de0/a00050_source.html">acwing.h</a> 第 <a class="el" href="../../d5/de0/a00050_source.html#l01279">1279</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="a9bb8574b01cca2fe99f46eaf82784089" name="a9bb8574b01cca2fe99f46eaf82784089"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bb8574b01cca2fe99f46eaf82784089">&#9670;&#160;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int acwing::acwing774::main </td>
-          <td>(</td>
-          <td class="paramtype">istream &amp;</td>          <td class="paramname"><span class="paramname"><em>cin</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>cout</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d4/d8c/a00035_source.html">acwing.cpp</a> 第 <a class="el" href="../../d4/d8c/a00035_source.html#l04133">4133</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 4133</span>                                                   {</div>
-<div class="line"><span class="lineno"> 4134</span>        <span class="keyword">auto</span> *str = <span class="keyword">new</span> <span class="keywordtype">char</span>[501];</div>
-<div class="line"><span class="lineno"> 4135</span>        cin.getline(str, 501);</div>
-<div class="line"><span class="lineno"> 4136</span>        str[strlen(str) - 1]     = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno"> 4137</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *longest_word = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno"> 4138</span>        <span class="keywordtype">int</span> max_len              = 0;</div>
-<div class="line"><span class="lineno"> 4139</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> *word = strtok(str, <span class="stringliteral">&quot; &quot;</span>); word != <span class="keyword">nullptr</span>; word = strtok(<span class="keyword">nullptr</span>, <span class="stringliteral">&quot; &quot;</span>)) {</div>
-<div class="line"><span class="lineno"> 4140</span>            <span class="keywordflow">if</span>(max_len &lt; strlen(word)) {</div>
-<div class="line"><span class="lineno"> 4141</span>                max_len      = strlen(word);</div>
-<div class="line"><span class="lineno"> 4142</span>                longest_word = word;</div>
-<div class="line"><span class="lineno"> 4143</span>            }</div>
-<div class="line"><span class="lineno"> 4144</span>        }</div>
-<div class="line"><span class="lineno"> 4145</span>        cout &lt;&lt; longest_word;</div>
-<div class="line"><span class="lineno"> 4146</span>        <span class="keyword">delete</span>[] str;</div>
-<div class="line"><span class="lineno"> 4147</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno"> 4148</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../df/d03/a00062_source.html#l01958">acwing::TEST()</a>.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../d5/de0/a00050_source.html">acwing.h</a></li>
-<li><a class="el" href="../../d4/d8c/a00035_source.html">acwing.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="../../dd/d0c/a01368.html">acwing::acwing775</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../dd/d0c/a01368.html#ab3c191efd1bad4e5c4a3dd7dfc7787ca">main</a>(istream &amp;cin, ostream &amp;cout)</td><td class="entry"><a class="el" href="../../dd/d0c/a01368.html">acwing::acwing775</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2

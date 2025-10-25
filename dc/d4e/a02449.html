@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::two_sum_iv_input_is_a_bst::Solution类 参考</title>
+<title>problemscpp: 成员列表</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,98 +84,19 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d0/d1f/a00247.html">leetcode</a></li><li class="navelem"><a class="el" href="../../de/de8/a00405.html">two_sum_iv_input_is_a_bst</a></li><li class="navelem"><a class="el" href="../../dc/d4e/a02449.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d0/d1f/a00247.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d1/d8b/a00406.html">remove_colored_pieces_if_both_neighbors_are_the_same_color</a></li><li class="navelem"><a class="el" href="../../da/d23/a02452.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="../../d3/d6c/a02446.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::two_sum_iv_input_is_a_bst::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::remove_colored_pieces_if_both_neighbors_are_the_same_color::Solution 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:aa9c9ff36bb0dc4ad1e3a1b38acdecf75" id="r_aa9c9ff36bb0dc4ad1e3a1b38acdecf75"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9c9ff36bb0dc4ad1e3a1b38acdecf75">findTarget</a> (<a class="el" href="../../d3/d5e/a01725.html">TreeNode</a> *root, int k)</td></tr>
-<tr class="separator:aa9c9ff36bb0dc4ad1e3a1b38acdecf75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l01875">1875</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="aa9c9ff36bb0dc4ad1e3a1b38acdecf75" name="aa9c9ff36bb0dc4ad1e3a1b38acdecf75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9c9ff36bb0dc4ad1e3a1b38acdecf75">&#9670;&#160;</a></span>findTarget()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool leetcode::two_sum_iv_input_is_a_bst::Solution::findTarget </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d3/d5e/a01725.html">TreeNode</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>k</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l04894">4894</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 4894</span>                                                       {</div>
-<div class="line"><span class="lineno"> 4895</span>            set&lt;int&gt; s;</div>
-<div class="line"><span class="lineno"> 4896</span>            unordered_map&lt;int, int&gt; count;</div>
-<div class="line"><span class="lineno"> 4897</span>            queue&lt;TreeNode *&gt; que;</div>
-<div class="line"><span class="lineno"> 4898</span>            que.push(root);</div>
-<div class="line"><span class="lineno"> 4899</span>            <span class="keywordflow">while</span>(!que.empty()) {</div>
-<div class="line"><span class="lineno"> 4900</span>                <span class="keyword">const</span> <span class="keyword">auto</span> *node = que.front();</div>
-<div class="line"><span class="lineno"> 4901</span>                que.pop();</div>
-<div class="line"><span class="lineno"> 4902</span>                s.insert(node-&gt;val);</div>
-<div class="line"><span class="lineno"> 4903</span>                count[node-&gt;val]++;</div>
-<div class="line"><span class="lineno"> 4904</span>                <span class="keywordflow">if</span>(node-&gt;left != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno"> 4905</span>                    que.push(node-&gt;left);</div>
-<div class="line"><span class="lineno"> 4906</span>                }</div>
-<div class="line"><span class="lineno"> 4907</span>                <span class="keywordflow">if</span>(node-&gt;right != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno"> 4908</span>                    que.push(node-&gt;right);</div>
-<div class="line"><span class="lineno"> 4909</span>                }</div>
-<div class="line"><span class="lineno"> 4910</span>            }</div>
-<div class="line"><span class="lineno"> 4911</span>            <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../d4/d08/a00237.html#abce64e9bd359516e1c396e6af442934f">ans</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 4912</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = s.begin(); it != s.end(); ++it) {</div>
-<div class="line"><span class="lineno"> 4913</span>                <span class="keywordtype">int</span> other = k - *it;</div>
-<div class="line"><span class="lineno"> 4914</span>                <span class="keywordflow">if</span>(other == *it) {</div>
-<div class="line"><span class="lineno"> 4915</span>                    <span class="keywordflow">if</span>(count[other] &gt; 1) {</div>
-<div class="line"><span class="lineno"> 4916</span>                        <a class="code hl_variable" href="../../d4/d08/a00237.html#abce64e9bd359516e1c396e6af442934f">ans</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 4917</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 4918</span>                    }</div>
-<div class="line"><span class="lineno"> 4919</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(s.contains(other)) {</div>
-<div class="line"><span class="lineno"> 4920</span>                    <a class="code hl_variable" href="../../d4/d08/a00237.html#abce64e9bd359516e1c396e6af442934f">ans</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 4921</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 4922</span>                }</div>
-<div class="line"><span class="lineno"> 4923</span>            }</div>
-<div class="line"><span class="lineno"> 4924</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d4/d08/a00237.html#abce64e9bd359516e1c396e6af442934f">ans</a>;</div>
-<div class="line"><span class="lineno"> 4925</span>        }</div>
-<div class="ttc" id="aa00237_html_abce64e9bd359516e1c396e6af442934f"><div class="ttname"><a href="../../d4/d08/a00237.html#abce64e9bd359516e1c396e6af442934f">comp526::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00129">comp526.cpp:129</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a></li>
-<li><a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>成员的完整列表，这些成员属于 <a class="el" href="../../da/d23/a02452.html">leetcode::remove_colored_pieces_if_both_neighbors_are_the_same_color::Solution</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="../../da/d23/a02452.html#ab2211697c42a6ef38bdb40993dbf0373">winnerOfGame</a>(string colors)</td><td class="entry"><a class="el" href="../../da/d23/a02452.html">leetcode::remove_colored_pieces_if_both_neighbors_are_the_same_color::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
