@@ -4421,4 +4421,47 @@ namespace leetcode {
 			ASSERT_EQ(8, Solution::minSwaps(data));
 		}
 	}// namespace minimum_swaps_to_group_all_1s_together
+
+	namespace lexicographically_smallest_string_after_reverse {
+		/*TEST(lexicographically_smallest_string_after_reverse, case1) {
+			string input = "dcab";
+			ASSERT_EQ("acdb", Solution::lexSmallest(input));
+		}
+
+		TEST(lexicographically_smallest_string_after_reverse, case2) {
+			string input = "abba";
+			ASSERT_EQ("aabb", Solution::lexSmallest(input));
+		}
+
+		TEST(lexicographically_smallest_string_after_reverse, case3) {
+			string input = "zxy";
+			ASSERT_EQ("xzy", Solution::lexSmallest(input));
+		}*/
+	}// namespace lexicographically_smallest_string_after_reverse
+
+	namespace minimum_operations_to_transform_array {
+		TEST(minimum_operations_to_transform_array, case1) {
+			vector<int> nums1 = {2, 8};
+			vector<int> nums2 = {1, 7, 3};
+			ASSERT_EQ(4, Solution::minOperations(nums1, nums2));
+		}
+
+		TEST(minimum_operations_to_transform_array, case2) {
+			vector<int> nums1 = {1, 3, 6};
+			vector<int> nums2 = {2, 4, 5, 3};
+			ASSERT_EQ(4, Solution::minOperations(nums1, nums2));
+		}
+
+		TEST(minimum_operations_to_transform_array, case3) {
+			vector<int> nums1 = {2};
+			vector<int> nums2 = {3, 4};
+			ASSERT_EQ(3, Solution::minOperations(nums1, nums2));
+		}
+
+		TEST(minimum_operations_to_transform_array, case4) {
+			vector<int> nums1 = {532, 502};
+			vector<int> nums2 = {205, 927, 279};
+			ASSERT_EQ(753, Solution::minOperations(nums1, nums2));
+		}
+	}// namespace minimum_operations_to_transform_array
 }// namespace leetcode

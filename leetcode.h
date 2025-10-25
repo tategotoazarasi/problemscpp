@@ -44,13 +44,13 @@ namespace leetcode {
 		ListNode *next;
 
 		ListNode()
-		    : val(0), next(nullptr){};
+		    : val(0), next(nullptr) {};
 
 		explicit ListNode(int x)
-		    : val(x), next(nullptr){};
+		    : val(x), next(nullptr) {};
 
 		ListNode(int x, ListNode *next)
-		    : val(x), next(next){};
+		    : val(x), next(next) {};
 	};
 
 	class Node {
@@ -370,10 +370,10 @@ namespace leetcode {
 			point *target;
 
 			point()
-			    : x(0), y(0), distance(0), target(nullptr){};
+			    : x(0), y(0), distance(0), target(nullptr) {};
 
 			point(unsigned int x, unsigned int y, int distance, point *target)
-			    : x(x), y(y), distance(distance), target(target){};
+			    : x(x), y(y), distance(distance), target(target) {};
 			bool operator<(const point &p) const;
 			bool operator==(const point &p) const;
 		};
@@ -423,7 +423,7 @@ namespace leetcode {
 			int v;
 
 			pair(int u, int v)
-			    : u(u), v(v){};
+			    : u(u), v(v) {};
 			bool operator<(const pair & /*p*/) const;
 		};
 
@@ -461,7 +461,7 @@ namespace leetcode {
 
 		public:
 			explicit Solution(ListNode *head)
-			    : head(head){};
+			    : head(head) {};
 			[[nodiscard]] int getRandom() const;
 		};
 
@@ -568,10 +568,10 @@ namespace leetcode {
 			bool endroot;
 
 			TrieNode()
-			    : ch(0), endroot(false){};
+			    : ch(0), endroot(false) {};
 
 			explicit TrieNode(char ch)
-			    : ch(ch), endroot(false){};
+			    : ch(ch), endroot(false) {};
 			void insert(const string &str);
 			[[nodiscard]] string get_prefix(string root, const string &str) const;
 		};
@@ -613,7 +613,7 @@ namespace leetcode {
 			int col;
 
 			item(int distance, int price, int row, int col)
-			    : distance(distance), price(price), row(row), col(col){};
+			    : distance(distance), price(price), row(row), col(col) {};
 			bool operator<(const item & /*i*/) const;
 		};
 
@@ -672,7 +672,7 @@ namespace leetcode {
 			bool good;
 
 			msg(int person, bool good)
-			    : person(person), good(good){};
+			    : person(person), good(good) {};
 		};
 
 		class Solution {
@@ -714,7 +714,7 @@ namespace leetcode {
 			int time;
 
 			status(int position, int time)
-			    : position(position), time(time){};
+			    : position(position), time(time) {};
 			bool operator<(const status &s) const;
 		};
 
@@ -1170,7 +1170,7 @@ namespace leetcode {
 			int column;
 
 			status(int k, int row, int column)
-			    : k(k), row(row), column(column){};
+			    : k(k), row(row), column(column) {};
 		};
 
 		struct status_hash {
@@ -1623,7 +1623,7 @@ namespace leetcode {
 
 		public:
 			explicit TreeNode(int val)
-			    : val(val){};
+			    : val(val) {};
 			void add_child(TreeNode *node);
 			[[nodiscard]] const vector<TreeNode *> &get_children() const;
 			[[nodiscard]] int get_count() const;
@@ -2146,10 +2146,10 @@ namespace leetcode {
 			Node() = default;
 
 			explicit Node(int _val)
-			    : val(_val){};
+			    : val(_val) {};
 
 			Node(int _val, vector<Node *> _children)
-			    : val(_val), children(std::move(std::move(_children))){};
+			    : val(_val), children(std::move(std::move(_children))) {};
 		};
 
 		class Solution {
@@ -3379,7 +3379,7 @@ namespace leetcode {
 		public:
 			/// \brief 用数据结构的容量 capacity 初始化对象
 			LFUCache(int capacity)
-			    : capacity(capacity){};
+			    : capacity(capacity) {};
 			/// \brief 如果键 key 存在于缓存中，则获取键的值，否则返回 -1 。
 			int get(int key);
 			/// \brief 如果键 key 已存在，则变更其值；如果键不存在，请插入键值对。当缓存达到其容量 capacity 时，则应该在插入新项之前，移除最不经常使用的项。在此问题中，当存在平局（即两个或更多个键具有相同使用频率）时，应该去除 最近最久未使用 的键。
@@ -3414,6 +3414,20 @@ namespace leetcode {
 			static int minSwaps(vector<int> &data);
 		};
 	}// namespace minimum_swaps_to_group_all_1s_together
+
+	namespace lexicographically_smallest_string_after_reverse {
+		class Solution {
+		public:
+			static string lexSmallest(string s);
+		};
+	}// namespace lexicographically_smallest_string_after_reverse
+
+	namespace minimum_operations_to_transform_array {
+		class Solution {
+		public:
+			static long long minOperations(vector<int> &nums1, vector<int> &nums2);
+		};
+	}// namespace minimum_operations_to_transform_array
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

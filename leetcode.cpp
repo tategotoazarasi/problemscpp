@@ -9569,4 +9569,104 @@ namespace leetcode {
 			return ans;
 		}
 	}// namespace minimum_swaps_to_group_all_1s_together
+
+	namespace lexicographically_smallest_string_after_reverse {
+		string lexSmallest_front(const string &s) {
+			unordered_set<int> smallest_index = {};
+			unordered_set<int> evicted        = {};
+			char smallest                     = 'z';
+			for(char c: s) {
+				if(c < smallest) {
+					smallest = c;
+				}
+			}
+			for(int i = 0; i < s.length(); i++) {
+				if(s[i] == smallest) {
+					smallest_index.insert(i);
+				}
+			}
+			int i = 1;
+			while(smallest_index.size() > 1) {
+				evicted.clear();
+				char smallest = 'z';
+				for(int index: smallest_index) {
+					int next = index - i > 0 ? index - i : i;
+					if(s[next] < smallest) {
+						smallest = s[next];
+					}
+				}
+				for(int index: smallest_index) {
+					int next = index - i > 0 ? index - i : i;
+					if(s[next] > smallest) {
+						evicted.insert(s[next]);
+					}
+				}
+				for(int index: evicted) {
+					smallest_index.erase(index);
+				}
+				i++;
+				if(i >= s.length()) {
+					break;
+				}
+			}
+			string ret = s;
+			int index  = *smallest_index.begin();
+			reverse(ret.begin(), ret.begin() + index + 1);
+			return ret;
+		}
+
+		string lexSmallest_back(const string &s) {
+			bool flag                     = true;
+			unordered_set<int> candidates = {};
+			for(int i = 0; i < s.length() && flag; i++) {
+
+				if(s[i] > s.back()) {
+					flag = false;
+					candidates.insert(i);
+				} else if(s[i] == s.back()) {
+					candidates.insert(i);
+				}
+			}
+			return "";
+		}
+
+		string Solution::lexSmallest(string s) {
+			string s1_res = lexSmallest_front(s);
+			string s2_res = lexSmallest_back(s);
+			return min(s1_res, s2_res);
+		};
+	}// namespace lexicographically_smallest_string_after_reverse
+
+	namespace minimum_operations_to_transform_array {
+		long long Solution::minOperations(vector<int> &nums1, vector<int> &nums2) {
+			int extra          = nums2.back();
+			long long step_cnt = 0;
+			int nearest        = 0;
+			int nearest_d      = INT_MAX;
+			bool flag          = false;
+			int status         = 1;
+			for(int i = 0; i < nums1.size(); i++) {
+				if(abs(nums1[i] - extra) < nearest_d) {
+					nearest   = i;
+					status    = 1;
+					nearest_d = abs(nums1[i] - extra);
+				}
+				if(abs(nums2[i] - extra) < nearest_d) {
+					nearest   = i;
+					status    = 2;
+					nearest_d = abs(nums2[i] - extra);
+				}
+				if((nums1[i] <= extra && extra <= nums2[i]) || (nums2[i] <= extra && extra <= nums1[i])) {
+					flag = true;
+				}
+				step_cnt += abs(nums1[i] - nums2[i]);
+			}
+			if(flag) {
+				return step_cnt + 1;
+			} else if(status == 1) {
+				return step_cnt + 1 + abs(nums1[nearest] - extra);
+			} else
+				return step_cnt + 1 + abs(nums2[nearest] - extra);
+		}
+	}// namespace minimum_operations_to_transform_array
 }// namespace leetcode
