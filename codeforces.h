@@ -4,7 +4,10 @@
 
 #ifndef PROBLEMSCPP_CODEFORCES_H
 #define PROBLEMSCPP_CODEFORCES_H
+#include <array>
+#include <cstdint>
 #include <iosfwd>
+#include <unordered_map>
 
 using namespace std;
 
@@ -24,6 +27,10 @@ namespace codeforces {
 	namespace isamatdin_and_his_magic_wand {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	namespace yet_another_array_problem {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace yet_another_array_problem
 
 }// namespace codeforces
 

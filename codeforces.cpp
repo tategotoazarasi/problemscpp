@@ -4,8 +4,11 @@
 #include "codeforces.h"
 
 #include <algorithm>
+#include <array>
+#include <cstdint>
 #include <iosfwd>
 #include <iostream>
+#include <unordered_map>
 #include <vector>
 
 using namespace std;
@@ -132,4 +135,44 @@ namespace codeforces {
 			return 0;
 		}
 	}// namespace isamatdin_and_his_magic_wand
+
+	namespace yet_another_array_problem {
+
+		uint64_t gcd(uint64_t a1, uint64_t a2) {
+			while(a2) {
+				uint64_t temp = a2;
+				a2            = a1 % a2;
+				a1            = temp;
+			}
+			return a1;
+		}
+
+		int main(istream &cin, ostream &cout) {
+			const uint64_t N = 1000000000000000000;
+			int t;
+			cin >> t;
+			while(t--) {
+				int n;
+				cin >> n;
+				uint64_t smallest = -1;
+				while(n--) {
+					uint64_t a;
+					cin >> a;
+					for(uint64_t x = 2; x < smallest && x <= N; x++) {
+						if(gcd(x, a) == 1) {
+							smallest = x;
+							break;
+						}
+					}
+				}
+				if(smallest == -1) {
+					cout << -1;
+				} else {
+					cout << smallest;
+				}
+				cout << endl;
+			}
+			return 0;
+		}
+	}// namespace yet_another_array_problem
 }// namespace codeforces

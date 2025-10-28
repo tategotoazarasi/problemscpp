@@ -34,4 +34,14 @@ namespace codeforces {
 			ASSERT_EQ("1 2 3 4 \n1 2 3 3 4 \n3 7 5 1 \n1000000000 2 \n1 3 5 \n1 2 3 5 7 \n2 4 8 6 \n", ans);
 		}
 	}// namespace isamatdin_and_his_magic_wand
+
+	namespace yet_another_array_problem {
+		TEST(yet_another_array_problem, case1) {
+			istringstream in("4\n1\n1\n4\n6 6 12 12\n3\n24 120 210\n4\n2 4 6 10\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2\n5\n5\n3\n", ans);
+		}
+	}// namespace yet_another_array_problem
 }// namespace codeforces
