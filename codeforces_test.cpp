@@ -23,5 +23,15 @@ namespace codeforces {
 			const auto ans = out.str();
 			ASSERT_EQ("YES\nYES\nNO\nNO\nYES\n", ans);
 		}
-	}
+	}// namespace your_name
+
+	namespace isamatdin_and_his_magic_wand {
+		TEST(isamatdin_and_his_magic_wand, case1) {
+			istringstream in("7\n4\n2 3 1 4\n5\n3 2 1 3 4\n4\n3 7 5 1\n2\n1000000000 2\n3\n1 3 5\n5\n2 5 3 1 7\n4\n2 4 8 6\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1 2 3 4 \n1 2 3 3 4 \n3 7 5 1 \n1000000000 2 \n1 3 5 \n1 2 3 5 7 \n2 4 8 6 \n", ans);
+		}
+	}// namespace isamatdin_and_his_magic_wand
 }// namespace codeforces

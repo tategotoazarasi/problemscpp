@@ -21,6 +21,10 @@ namespace codeforces {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
 
+	namespace isamatdin_and_his_magic_wand {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
+
 }// namespace codeforces
 
 #endif//PROBLEMSCPP_CODEFORCES_H
