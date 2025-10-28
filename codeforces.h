@@ -17,6 +17,10 @@ namespace codeforces {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
 
+	namespace your_name {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
+
 }// namespace codeforces
 
 #endif//PROBLEMSCPP_CODEFORCES_H

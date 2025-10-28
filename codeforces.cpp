@@ -67,4 +67,37 @@ namespace codeforces {
 			return 0;
 		}
 	}// namespace beautiful_string
+
+	namespace your_name {
+		int main(istream &cin, ostream &cout) {
+			int q;
+			cin>>q;
+			while(q--) {
+				int n;
+				cin>>n;
+				string s,t;
+				cin>>s>>t;
+				char a[26] = {};
+				char b[26] = {};
+				for(char c:s) {
+					a[c-'a']++;
+				}
+				for(char c:t) {
+					b[c-'a']++;
+				}
+				bool flag = true;
+				for(int i=0;i<26;i++) {
+					if(a[i]!=b[i]) {
+						cout<<"NO"<<endl;
+						flag = false;
+						break;
+					}
+				}
+				if(flag) {
+					cout<<"YES"<<endl;
+				}
+			}
+			return 0;
+		}
+	}
 }// namespace codeforces

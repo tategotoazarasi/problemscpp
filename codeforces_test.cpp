@@ -14,4 +14,14 @@ namespace codeforces {
 			ASSERT_EQ("3\n9\n4\n", ans);
 		}
 	}// namespace beautiful_average
+
+	namespace your_name {
+		TEST(your_name, case1) {
+			istringstream in("5\n7\nhumitsa mitsuha\n4\norhi hori\n6\naakima makima\n6\nnezuqo nezuko\n6\nmisaka mikasa\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("YES\nYES\nNO\nNO\nYES\n", ans);
+		}
+	}
 }// namespace codeforces
