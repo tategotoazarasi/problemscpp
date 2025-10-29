@@ -530,4 +530,80 @@ namespace comp526 {
 			return 0;
 		}
 	}// namespace weakvertices
+
+	namespace clockpictures {
+		struct match_subarr {
+			int start_index;
+			int len;
+		};
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			vector<int> a1(n);
+			vector<int> a2(n);
+			vector<int> space1(n);
+			vector<int> space2(n);
+			for(int i = 0; i < n; i++) {
+				cin >> a1[i];
+			}
+			for(int i = 0; i < n; i++) {
+				cin >> a2[i];
+			}
+			sort(a1.begin(), a1.end());
+			sort(a2.begin(), a2.end());
+			for(int i = 0; i < n; i++) {
+				space1[i] = ((i + 1 < n) ? a1[i + 1] : (a1[0] + 360000)) - a1[i];
+				space2[i] = ((i + 1 < n) ? a2[i + 1] : (a2[0] + 360000)) - a2[i];
+			}
+			queue<match_subarr> candidates = {};
+			for(int i = 0; i < n; i++) {
+				candidates.push(match_subarr{i, 0});
+			}
+			while(!candidates.empty()) {
+				auto subarr = candidates.front();
+				candidates.pop();
+				if(space1[(subarr.start_index + subarr.len + n) % n] == space2[subarr.len]) {
+					subarr.len++;
+					if(subarr.len + 1 == n) {
+						cout << "possible";
+						return 0;
+					}
+					candidates.push(subarr);
+				}
+			}
+
+			cout << "impossible";
+
+			return 0;
+		}
+	}// namespace clockpictures
+
+	namespace ceremony {
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			deque<int> floors;
+			for(int i = 0; i < n; i++) {
+				int h;
+				cin >> h;
+				floors.push_back(h);
+			}
+			sort(floors.begin(), floors.end());
+			int ans        = 0;
+			int demolished = 0;
+			while(!floors.empty()) {
+				ans++;
+				if(floors.size() > floors.back() - demolished) {
+					demolished++;
+					while(!floors.empty() && floors.front() - demolished == 0) {
+						floors.pop_front();
+					}
+				} else {
+					floors.pop_back();
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace ceremony
 }// namespace comp526

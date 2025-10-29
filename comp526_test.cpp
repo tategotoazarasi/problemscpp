@@ -303,4 +303,48 @@ namespace comp526 {
 			ASSERT_EQ("1 8 \n0 \n", ans);
 		}
 	}// namespace weakvertices
+
+	namespace clockpictures {
+		TEST(clockpictures, case1) {
+			istringstream in("6\n1 2 3 4 5 6\n7 6 5 4 3 1\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("impossible", ans);
+		}
+
+		TEST(clockpictures, case2) {
+			istringstream in("2\n0 270000\n180000 270000\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("possible", ans);
+		}
+
+		TEST(clockpictures, case3) {
+			istringstream in("7\n140 130 110 120 125 100 105\n235 205 215 220 225 200 240\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("impossible", ans);
+		}
+	}// namespace clockpictures
+
+	namespace ceremony {
+		TEST(ceremony, case1) {
+			istringstream in("6\n2 1 8 8 2 3\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("5", ans);
+		}
+
+		TEST(ceremony, case2) {
+			istringstream in("5\n1 1 1 1 10\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2", ans);
+		}
+	}// namespace ceremony
 }// namespace comp526

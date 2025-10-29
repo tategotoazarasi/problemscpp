@@ -119,6 +119,14 @@ namespace comp526 {
 	namespace weakvertices {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	namespace clockpictures {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
+
+	namespace ceremony {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace comp526
 
 #endif//PROBLEMSCPP_COMO526_H
