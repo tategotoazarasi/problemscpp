@@ -7,6 +7,7 @@
 
 #include <iosfwd>
 #include <set>
+#include <string>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
@@ -127,6 +128,21 @@ namespace comp526 {
 	namespace ceremony {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	namespace doctorkattis {
+		struct cat {
+			string name;
+			int order;
+			int infection_level;
+
+			bool operator<(const cat &c2) const;
+		};
+		void arrive_at_clinic(string cat_name, int infection_level);
+		void update_infection_level(string cat_name, int increase_infection);
+		void treat(string cat_name);
+		string query();
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace doctorkattis
 }// namespace comp526
 
 #endif//PROBLEMSCPP_COMO526_H

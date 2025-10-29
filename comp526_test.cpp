@@ -347,4 +347,14 @@ namespace comp526 {
 			ASSERT_EQ("2", ans);
 		}
 	}// namespace ceremony
+
+	namespace doctorkattis {
+		TEST(doctorkattis, case1) {
+			istringstream in("15\n0 LUNA 31\n0 NALA 55\n0 BELLA 42\n3\n0 KITTY 77\n3\n1 LUNA 24\n2 KITTY\n3\n2 BELLA\n3\n2 LUNA\n3\n2 NALA\n3\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("NALA\nKITTY\nLUNA\nLUNA\nNALA\nThe clinic is empty\n", ans);
+		}
+	}// namespace doctorkattis
 }// namespace comp526

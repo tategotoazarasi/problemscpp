@@ -536,7 +536,12 @@ namespace comp526 {
 			int start_index;
 			int len;
 		};
+		struct subarr {
+			int num;
+			int cnt;
+		};
 		int main(istream &cin, ostream &cout) {
+
 			int n;
 			cin >> n;
 			vector<int> a1(n);
@@ -555,25 +560,25 @@ namespace comp526 {
 				space1[i] = ((i + 1 < n) ? a1[i + 1] : (a1[0] + 360000)) - a1[i];
 				space2[i] = ((i + 1 < n) ? a2[i + 1] : (a2[0] + 360000)) - a2[i];
 			}
-			queue<match_subarr> candidates = {};
+
+			ostringstream oss1;
+			ostringstream oss2;
 			for(int i = 0; i < n; i++) {
-				candidates.push(match_subarr{i, 0});
+				oss1 << space1[i] << ' ';
 			}
-			while(!candidates.empty()) {
-				auto subarr = candidates.front();
-				candidates.pop();
-				if(space1[(subarr.start_index + subarr.len + n) % n] == space2[subarr.len]) {
-					subarr.len++;
-					if(subarr.len + 1 == n) {
-						cout << "possible";
-						return 0;
-					}
-					candidates.push(subarr);
-				}
+			for(int i = 0; i < n; i++) {
+				oss1 << space1[i] << ' ';
 			}
-
-			cout << "impossible";
-
+			for(int i = 0; i < n; i++) {
+				oss2 << space2[i] << ' ';
+			}
+			string str1 = oss1.str();
+			string str2 = oss2.str();
+			if(str1.find(str2) != std::string::npos) {
+				cout << "possible";
+			} else {
+				cout << "impossible";
+			}
 			return 0;
 		}
 	}// namespace clockpictures
@@ -606,4 +611,117 @@ namespace comp526 {
 			return 0;
 		}
 	}// namespace ceremony
+
+	namespace doctorkattis {
+		constexpr int N = 1000010;
+		cat heap[N];
+		int heap_size                        = 0;
+		int time_counter                     = 0;
+		unordered_map<string, int> cat_index = {};
+
+		bool cat::operator<(const cat &c2) const {
+			if(this->infection_level != c2.infection_level) {
+				return this->infection_level > c2.infection_level;
+			}
+			return this->order < c2.order;
+		}
+
+		int bubble_up(int index) {
+			while(((index - 1) / 2) >= 0 && heap[index] < heap[(index - 1) / 2]) {
+				swap(heap[index], heap[(index - 1) / 2]);
+				cat_index[heap[index].name] = index;
+				index                       = (index - 1) / 2;
+				cat_index[heap[index].name] = index;
+			}
+			return index;
+		}
+
+		int bubble_down(int index) {
+			while(2 * index + 1 < heap_size) {
+				int l        = 2 * index + 1;// Left child index
+				int r        = 2 * index + 2;// Right child index
+				int smallest = index;
+				if(l < heap_size && heap[l] < heap[smallest]) {
+					smallest = l;
+				}
+				if(r < heap_size && heap[r] < heap[smallest]) {
+					smallest = r;
+				}
+				if(smallest == index) {
+					break;
+				}
+				swap(heap[index], heap[smallest]);
+				cat_index[heap[index].name]    = index;
+				cat_index[heap[smallest].name] = smallest;
+				index                          = smallest;
+			}
+			return index;
+		}
+
+		void arrive_at_clinic(string cat_name, int infection_level) {
+			cat c               = cat{cat_name, time_counter++, infection_level};
+			heap[heap_size]     = c;
+			cat_index[cat_name] = heap_size;
+			bubble_up(heap_size++);
+		}
+
+		void update_infection_level(string cat_name, int increase_infection) {
+			int index                   = cat_index[cat_name];
+			heap[index].infection_level = min(100, heap[index].infection_level + increase_infection);
+			bubble_up(index);
+		}
+
+		void treat(string cat_name) {
+			int index = cat_index[cat_name];
+			int last  = heap_size - 1;
+			swap(heap[index], heap[last]);
+			cat_index[heap[index].name] = index;
+			heap_size--;
+			index = bubble_up(index);
+			bubble_down(index);
+		}
+
+		string query() {
+			if(heap_size > 0) {
+				return heap[0].name;
+			} else {
+				return "The clinic is empty";
+			}
+		}
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			while(n--) {
+				int cmd;
+				cin >> cmd;
+				switch(cmd) {
+					case 0: {
+						string name;
+						int infection_level;
+						cin >> name >> infection_level;
+						arrive_at_clinic(name, infection_level);
+						break;
+					}
+					case 1: {
+						string name;
+						int increase_infection;
+						cin >> name >> increase_infection;
+						update_infection_level(name, increase_infection);
+						break;
+					}
+					case 2: {
+						string name;
+						cin >> name;
+						treat(name);
+						break;
+					}
+					case 3: {
+						cout << query() << endl;
+						break;
+					}
+				}
+			}
+			return 0;
+		}
+	}// namespace doctorkattis
 }// namespace comp526
