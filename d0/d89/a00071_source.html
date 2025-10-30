@@ -94,27 +94,48 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef PROBLEMSCPP_CODEFORCES_H</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define PROBLEMSCPP_CODEFORCES_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using namespace </span>std;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d1/da8/a00230.html">codeforces</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../df/d17/a00231.html">beautiful_average</a> {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../df/d17/a00231.html#a293a283d1de569648ac626e92ee2faae">main</a>(istream &amp; <span class="comment">/*cin*/</span>, ostream &amp; <span class="comment">/*cout*/</span>);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../d0/d53/a00232.html">beautiful_string</a> {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d0/d53/a00232.html#a5e5c4d31546fb3ead80167a4ab22d6f6">main</a>(istream &amp; <span class="comment">/*cin*/</span>, ostream &amp; <span class="comment">/*cout*/</span>);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}<span class="comment">// namespace codeforces</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#endif</span><span class="comment">//PROBLEMSCPP_CODEFORCES_H</span></div>
-<div class="ttc" id="aa00230_html"><div class="ttname"><a href="../../d1/da8/a00230.html">codeforces</a></div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00011">codeforces.cpp:11</a></div></div>
-<div class="ttc" id="aa00231_html"><div class="ttname"><a href="../../df/d17/a00231.html">codeforces::beautiful_average</a></div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00012">codeforces.cpp:12</a></div></div>
-<div class="ttc" id="aa00231_html_a293a283d1de569648ac626e92ee2faae"><div class="ttname"><a href="../../df/d17/a00231.html#a293a283d1de569648ac626e92ee2faae">codeforces::beautiful_average::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00013">codeforces.cpp:13</a></div></div>
-<div class="ttc" id="aa00232_html"><div class="ttname"><a href="../../d0/d53/a00232.html">codeforces::beautiful_string</a></div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00039">codeforces.cpp:39</a></div></div>
-<div class="ttc" id="aa00232_html_a5e5c4d31546fb3ead80167a4ab22d6f6"><div class="ttname"><a href="../../d0/d53/a00232.html#a5e5c4d31546fb3ead80167a4ab22d6f6">codeforces::beautiful_string::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00040">codeforces.cpp:40</a></div></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d1/da8/a00230.html">codeforces</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../df/d17/a00231.html">beautiful_average</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../df/d17/a00231.html#a293a283d1de569648ac626e92ee2faae">main</a>(istream &amp; <span class="comment">/*cin*/</span>, ostream &amp; <span class="comment">/*cout*/</span>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../d0/d53/a00232.html">beautiful_string</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d0/d53/a00232.html#a5e5c4d31546fb3ead80167a4ab22d6f6">main</a>(istream &amp; <span class="comment">/*cin*/</span>, ostream &amp; <span class="comment">/*cout*/</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/de1/a00233.html">your_name</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d6/de1/a00233.html#a3fee5f12d556d12365d706f0f889ccc8">main</a>(istream &amp; <span class="comment">/*cin*/</span>, ostream &amp; <span class="comment">/*cout*/</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../da/d31/a00234.html">isamatdin_and_his_magic_wand</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../da/d31/a00234.html#a32d947effce5b9a9940588964d4dafde">main</a>(istream &amp; <span class="comment">/*cin*/</span>, ostream &amp; <span class="comment">/*cout*/</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../d3/d42/a00235.html">yet_another_array_problem</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d3/d42/a00235.html#a69b0a251ff98cf156a79071bb0a5a523">main</a>(istream &amp; <span class="comment">/*cin*/</span>, ostream &amp; <span class="comment">/*cout*/</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }<span class="comment">// namespace yet_another_array_problem</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}<span class="comment">// namespace codeforces</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif</span><span class="comment">//PROBLEMSCPP_CODEFORCES_H</span></div>
+<div class="ttc" id="aa00230_html"><div class="ttname"><a href="../../d1/da8/a00230.html">codeforces</a></div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00016">codeforces.cpp:16</a></div></div>
+<div class="ttc" id="aa00231_html"><div class="ttname"><a href="../../df/d17/a00231.html">codeforces::beautiful_average</a></div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00017">codeforces.cpp:17</a></div></div>
+<div class="ttc" id="aa00231_html_a293a283d1de569648ac626e92ee2faae"><div class="ttname"><a href="../../df/d17/a00231.html#a293a283d1de569648ac626e92ee2faae">codeforces::beautiful_average::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00018">codeforces.cpp:18</a></div></div>
+<div class="ttc" id="aa00232_html"><div class="ttname"><a href="../../d0/d53/a00232.html">codeforces::beautiful_string</a></div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00044">codeforces.cpp:44</a></div></div>
+<div class="ttc" id="aa00232_html_a5e5c4d31546fb3ead80167a4ab22d6f6"><div class="ttname"><a href="../../d0/d53/a00232.html#a5e5c4d31546fb3ead80167a4ab22d6f6">codeforces::beautiful_string::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00045">codeforces.cpp:45</a></div></div>
+<div class="ttc" id="aa00233_html"><div class="ttname"><a href="../../d6/de1/a00233.html">codeforces::your_name</a></div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00076">codeforces.cpp:76</a></div></div>
+<div class="ttc" id="aa00233_html_a3fee5f12d556d12365d706f0f889ccc8"><div class="ttname"><a href="../../d6/de1/a00233.html#a3fee5f12d556d12365d706f0f889ccc8">codeforces::your_name::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00077">codeforces.cpp:77</a></div></div>
+<div class="ttc" id="aa00234_html"><div class="ttname"><a href="../../da/d31/a00234.html">codeforces::isamatdin_and_his_magic_wand</a></div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00109">codeforces.cpp:109</a></div></div>
+<div class="ttc" id="aa00234_html_a32d947effce5b9a9940588964d4dafde"><div class="ttname"><a href="../../da/d31/a00234.html#a32d947effce5b9a9940588964d4dafde">codeforces::isamatdin_and_his_magic_wand::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00110">codeforces.cpp:110</a></div></div>
+<div class="ttc" id="aa00235_html"><div class="ttname"><a href="../../d3/d42/a00235.html">codeforces::yet_another_array_problem</a></div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00139">codeforces.cpp:139</a></div></div>
+<div class="ttc" id="aa00235_html_a69b0a251ff98cf156a79071bb0a5a523"><div class="ttname"><a href="../../d3/d42/a00235.html#a69b0a251ff98cf156a79071bb0a5a523">codeforces::yet_another_array_problem::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00150">codeforces.cpp:150</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

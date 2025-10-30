@@ -122,32 +122,32 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">codeforces.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l00013">13</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>                                              {</div>
-<div class="line"><span class="lineno">   14</span>            <span class="keywordtype">int</span> t;</div>
-<div class="line"><span class="lineno">   15</span>            cin &gt;&gt; t;</div>
-<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">while</span>(t--) {</div>
-<div class="line"><span class="lineno">   17</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><span class="lineno">   18</span>                cin &gt;&gt; n;</div>
-<div class="line"><span class="lineno">   19</span>                vector&lt;int&gt; arr(n);</div>
-<div class="line"><span class="lineno">   20</span>                vector&lt;int&gt; pref_sum(n + 1, 0);</div>
-<div class="line"><span class="lineno">   21</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><span class="lineno">   22</span>                    cin &gt;&gt; arr[i];</div>
-<div class="line"><span class="lineno">   23</span>                    pref_sum[i + 1] = pref_sum[i] + arr[i];</div>
-<div class="line"><span class="lineno">   24</span>                }</div>
-<div class="line"><span class="lineno">   25</span>                <span class="keywordtype">int</span> ans = -1;</div>
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">codeforces.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l00018">18</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>                                              {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordtype">int</span> t;</div>
+<div class="line"><span class="lineno">   20</span>            cin &gt;&gt; t;</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">while</span>(t--) {</div>
+<div class="line"><span class="lineno">   22</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><span class="lineno">   23</span>                cin &gt;&gt; n;</div>
+<div class="line"><span class="lineno">   24</span>                vector&lt;int&gt; arr(n);</div>
+<div class="line"><span class="lineno">   25</span>                vector&lt;int&gt; pref_sum(n + 1, 0);</div>
 <div class="line"><span class="lineno">   26</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><span class="lineno">   27</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i; j &lt; n; j++) {</div>
-<div class="line"><span class="lineno">   28</span>                        <span class="keywordtype">int</span> sum = pref_sum[j + 1] - pref_sum[i];</div>
-<div class="line"><span class="lineno">   29</span>                        <span class="keywordtype">int</span> avg = sum / (j - i + 1);</div>
-<div class="line"><span class="lineno">   30</span>                        ans     = max(avg, ans);</div>
-<div class="line"><span class="lineno">   31</span>                    }</div>
-<div class="line"><span class="lineno">   32</span>                }</div>
-<div class="line"><span class="lineno">   33</span>                cout &lt;&lt; <a class="code hl_variable" href="../../d4/d08/a00237.html#abce64e9bd359516e1c396e6af442934f">ans</a> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   34</span>            }</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   36</span>        }</div>
-<div class="ttc" id="aa00237_html_abce64e9bd359516e1c396e6af442934f"><div class="ttname"><a href="../../d4/d08/a00237.html#abce64e9bd359516e1c396e6af442934f">comp526::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00129">comp526.cpp:129</a></div></div>
+<div class="line"><span class="lineno">   27</span>                    cin &gt;&gt; arr[i];</div>
+<div class="line"><span class="lineno">   28</span>                    pref_sum[i + 1] = pref_sum[i] + arr[i];</div>
+<div class="line"><span class="lineno">   29</span>                }</div>
+<div class="line"><span class="lineno">   30</span>                <span class="keywordtype">int</span> ans = -1;</div>
+<div class="line"><span class="lineno">   31</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><span class="lineno">   32</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = i; j &lt; n; j++) {</div>
+<div class="line"><span class="lineno">   33</span>                        <span class="keywordtype">int</span> sum = pref_sum[j + 1] - pref_sum[i];</div>
+<div class="line"><span class="lineno">   34</span>                        <span class="keywordtype">int</span> avg = sum / (j - i + 1);</div>
+<div class="line"><span class="lineno">   35</span>                        ans     = max(avg, ans);</div>
+<div class="line"><span class="lineno">   36</span>                    }</div>
+<div class="line"><span class="lineno">   37</span>                }</div>
+<div class="line"><span class="lineno">   38</span>                cout &lt;&lt; <a class="code hl_variable" href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">ans</a> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="ttc" id="aa00240_html_abce64e9bd359516e1c396e6af442934f"><div class="ttname"><a href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">comp526::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00129">comp526.cpp:129</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00009">TEST()</a>.</p>
 
@@ -180,9 +180,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">   13</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><span class="lineno">   14</span>            ASSERT_EQ(<span class="stringliteral">&quot;3\n9\n4\n&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">   15</span>        }</div>
-<div class="ttc" id="aa00231_html_a293a283d1de569648ac626e92ee2faae"><div class="ttname"><a href="#a293a283d1de569648ac626e92ee2faae">codeforces::beautiful_average::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00013">codeforces.cpp:13</a></div></div>
+<div class="ttc" id="aa00231_html_a293a283d1de569648ac626e92ee2faae"><div class="ttname"><a href="#a293a283d1de569648ac626e92ee2faae">codeforces::beautiful_average::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00018">codeforces.cpp:18</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d6/d5b/a00026_source.html#l00013">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d6/d5b/a00026_source.html#l00018">main()</a>.</p>
 
 </div>
 </div>
