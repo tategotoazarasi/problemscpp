@@ -532,16 +532,11 @@ namespace comp526 {
 	}// namespace weakvertices
 
 	namespace clockpictures {
-		struct match_subarr {
-			int start_index;
-			int len;
-		};
 		struct subarr {
 			int num;
 			int cnt;
 		};
 		int main(istream &cin, ostream &cout) {
-
 			int n;
 			cin >> n;
 			vector<int> a1(n);
@@ -560,17 +555,53 @@ namespace comp526 {
 				space1[i] = ((i + 1 < n) ? a1[i + 1] : (a1[0] + 360000)) - a1[i];
 				space2[i] = ((i + 1 < n) ? a2[i + 1] : (a2[0] + 360000)) - a2[i];
 			}
+			int start_1 = 0;
+			for(start_1 = 1; start_1 < n && space1[start_1] == space1[0]; start_1++)
+				;
+			start_1 %= n;
+			int start_2 = 0;
+			for(start_2 = 1; start_2 < n && space2[start_2] == space2[0]; start_2++)
+				;
+			start_2 %= n;
+			vector<subarr> subarrs_1 = {};
+			vector<subarr> subarrs_2 = {};
+			int prev                 = space1[start_1];
+			int cnt                  = 0;
+			for(int i = 0; i < n; i++) {
+				if(space1[(start_1 + i) % n] != prev) {
+					subarrs_1.push_back(subarr{prev, cnt});
+					prev = space1[(start_1 + i) % n];
+					cnt  = 1;
+				} else {
+					cnt++;
+				}
+			}
+			subarrs_1.push_back(subarr{prev, cnt});
+
+
+			prev = space2[start_2];
+			cnt  = 0;
+			for(int i = 0; i < n; i++) {
+				if(space2[(start_2 + i) % n] != prev) {
+					subarrs_2.push_back(subarr{prev, cnt});
+					prev = space2[(start_2 + i) % n];
+					cnt  = 1;
+				} else {
+					cnt++;
+				}
+			}
+			subarrs_2.push_back(subarr{prev, cnt});
 
 			ostringstream oss1;
 			ostringstream oss2;
-			for(int i = 0; i < n; i++) {
-				oss1 << space1[i] << ' ';
+			for(int i = 0; i < subarrs_1.size(); i++) {
+				oss1 << subarrs_1[i].num << '*' << subarrs_1[i].cnt << ' ';
 			}
-			for(int i = 0; i < n; i++) {
-				oss1 << space1[i] << ' ';
+			for(int i = 0; i < subarrs_1.size(); i++) {
+				oss1 << subarrs_1[i].num << '*' << subarrs_1[i].cnt << ' ';
 			}
-			for(int i = 0; i < n; i++) {
-				oss2 << space2[i] << ' ';
+			for(int i = 0; i < subarrs_2.size(); i++) {
+				oss2 << subarrs_2[i].num << '*' << subarrs_2[i].cnt << ' ';
 			}
 			string str1 = oss1.str();
 			string str2 = oss2.str();
