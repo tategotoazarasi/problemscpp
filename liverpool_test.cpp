@@ -1,10 +1,10 @@
 //
 // Created by wangzhiheng on 26/09/2025.
 //
-#include "comp526.h"
+#include "liverpool.h"
 #include "gtest/gtest.h"
 
-namespace comp526 {
+namespace liverpool {
 	namespace stable_matching {
 
 		// Helper function to convert from standard ranked-list preferences
@@ -357,4 +357,4 @@ namespace comp526 {
 			ASSERT_EQ("NALA\nKITTY\nLUNA\nLUNA\nNALA\nThe clinic is empty\n", ans);
 		}
 	}// namespace doctorkattis
-}// namespace comp526
+}// namespace liverpool

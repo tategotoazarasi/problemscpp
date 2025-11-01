@@ -1,7 +1,7 @@
 //
 // Created by wangzhiheng on 26/09/2025.
 //
-#include "comp526.h"
+#include "liverpool.h"
 
 #include "templates.h"
 #include <algorithm>
@@ -15,7 +15,7 @@
 
 using namespace std;
 
-namespace comp526 {
+namespace liverpool {
 	namespace stable_matching {
 		vector<int> Solution::match(vector<vector<int>> s2c, vector<vector<int>> c2s) {
 			int N     = s2c.size();
@@ -755,4 +755,4 @@ namespace comp526 {
 			return 0;
 		}
 	}// namespace doctorkattis
-}// namespace comp526
+}// namespace liverpool

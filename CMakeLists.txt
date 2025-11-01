@@ -29,9 +29,9 @@ add_executable(problemscpp main.cpp acwing.cpp acwing.h lintcode.cpp lintcode.h 
                acwing408.cpp
                acwing408.h
                acwing408_test.cpp
-               comp526.h
-               comp526.cpp
-               comp526_test.cpp
+               liverpool.h
+               liverpool.cpp
+               liverpool_test.cpp
                codeforces.h
                codeforces.cpp
                codeforces_test.cpp

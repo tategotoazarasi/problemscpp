@@ -14,7 +14,7 @@
 
 using namespace std;
 
-namespace comp526 {
+namespace liverpool {
 	namespace stable_matching {
 		class Student;
 		class Company;
@@ -143,6 +143,6 @@ namespace comp526 {
 		string query();
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace doctorkattis
-}// namespace comp526
+}// namespace liverpool
 
 #endif//PROBLEMSCPP_COMO526_H
