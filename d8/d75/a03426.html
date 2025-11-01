@@ -143,13 +143,13 @@ $(function(){ initResizable(false); });
 
 <p class="definition">在文件 <a class="el" href="../../d6/d2d/a00047_source.html">luogu.cpp</a> 第 <a class="el" href="../../d6/d2d/a00047_source.html#l01506">1506</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1506</span>                                               {</div>
-<div class="line"><span class="lineno"> 1507</span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>;</div>
-<div class="line"><span class="lineno"> 1508</span>        cin &gt;&gt; <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>;</div>
+<div class="line"><span class="lineno"> 1507</span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
+<div class="line"><span class="lineno"> 1508</span>        cin &gt;&gt; <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
 <div class="line"><span class="lineno"> 1509</span>        <span class="keywordtype">int</span> square[9][9] = {};</div>
 <div class="line"><span class="lineno"> 1510</span>        <span class="keywordtype">int</span> dir          = 0;</div>
 <div class="line"><span class="lineno"> 1511</span>        <span class="keywordtype">int</span> current_x    = 0;</div>
 <div class="line"><span class="lineno"> 1512</span>        <span class="keywordtype">int</span> current_y    = 0;</div>
-<div class="line"><span class="lineno"> 1513</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a> * <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>; i++) {</div>
+<div class="line"><span class="lineno"> 1513</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> * <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
 <div class="line"><span class="lineno"> 1514</span>            square[current_x][current_y] = i;</div>
 <div class="line"><span class="lineno"> 1515</span>            <span class="keyword">auto</span> [next_x, next_y]        = <a class="code hl_function" href="#a788735db22cddecef39d2f44b2ea1463">move_forward</a>(dir, current_x, current_y);</div>
 <div class="line"><span class="lineno"> 1516</span>            <span class="keywordflow">if</span>(next_x &lt; 0 || next_x &gt;= n || next_y &lt; 0 || next_y &gt;= n || square[next_x][next_y] != 0) {</div>
@@ -159,8 +159,8 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno"> 1520</span>            current_x       = next.first;</div>
 <div class="line"><span class="lineno"> 1521</span>            current_y       = next.second;</div>
 <div class="line"><span class="lineno"> 1522</span>        }</div>
-<div class="line"><span class="lineno"> 1523</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>; i++) {</div>
-<div class="line"><span class="lineno"> 1524</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>; j++) {</div>
+<div class="line"><span class="lineno"> 1523</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno"> 1524</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; j++) {</div>
 <div class="line"><span class="lineno"> 1525</span>                cout &lt;&lt; setw(3) &lt;&lt; <a class="code hl_enumvalue" href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a> &lt;&lt; setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; square[i][j];</div>
 <div class="line"><span class="lineno"> 1526</span>            }</div>
 <div class="line"><span class="lineno"> 1527</span>            cout &lt;&lt; endl;</div>
@@ -168,7 +168,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno"> 1529</span>        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno"> 1530</span>    }</div>
 <div class="ttc" id="aa00097_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>定义</b> <a href="../../d5/de0/a00050_source.html#l00552">acwing.h:552</a></div></div>
-<div class="ttc" id="aa00247_html_a11f44ec8ab6ab27b1d278577b98a491f"><div class="ttname"><a href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">comp526::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00362">comp526.cpp:362</a></div></div>
+<div class="ttc" id="aa00564_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00362">liverpool.cpp:362</a></div></div>
 <div class="ttc" id="aa03426_html_a788735db22cddecef39d2f44b2ea1463"><div class="ttname"><a href="#a788735db22cddecef39d2f44b2ea1463">luogu::P5731::move_forward</a></div><div class="ttdeci">static pair&lt; int, int &gt; move_forward(int dir, int current_x, int current_y)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d2d/a00047_source.html#l01532">luogu.cpp:1532</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../d6/d2d/a00047_source.html#l01532">move_forward()</a>.</p>

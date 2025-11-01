@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::course_schedule::Solution类 参考</title>
+<title>problemscpp: leetcode::lru_cache::LRUCache类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,31 +84,166 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d0/d3e/a00253.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d4/d79/a00540.html">course_schedule</a></li><li class="navelem"><a class="el" href="../../d2/df4/a03022.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d7/d40/a00236.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d7/d41/a00532.html">lru_cache</a></li><li class="navelem"><a class="el" href="../../d2/df4/a03022.html">LRUCache</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
 <a href="../../de/dc6/a03019.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::course_schedule::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::lru_cache::LRUCache类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a5dada8e4be24001640ec851df5e91f6e" id="r_a5dada8e4be24001640ec851df5e91f6e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5dada8e4be24001640ec851df5e91f6e">canFinish</a> (int numCourses, vector&lt; vector&lt; int &gt; &gt; &amp;prerequisites)</td></tr>
-<tr class="separator:a5dada8e4be24001640ec851df5e91f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a41158190836e96a72d3145067d54ada5" id="r_a41158190836e96a72d3145067d54ada5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41158190836e96a72d3145067d54ada5">LRUCache</a> (int <a class="el" href="#ac8017c9ce8e5be7daa7a5ab2f9ee5358">capacity</a>)</td></tr>
+<tr class="memdesc:a41158190836e96a72d3145067d54ada5"><td class="mdescLeft">&#160;</td><td class="mdescRight">以 正整数 作为容量 capacity 初始化 LRU 缓存  <br /></td></tr>
+<tr class="separator:a41158190836e96a72d3145067d54ada5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae745fea9e42256e17a3dc0b182c18d" id="r_a6ae745fea9e42256e17a3dc0b182c18d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ae745fea9e42256e17a3dc0b182c18d">get</a> (int key)</td></tr>
+<tr class="memdesc:a6ae745fea9e42256e17a3dc0b182c18d"><td class="mdescLeft">&#160;</td><td class="mdescRight">如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。  <br /></td></tr>
+<tr class="separator:a6ae745fea9e42256e17a3dc0b182c18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1163da3582896710c7d72684f7ab0dd6" id="r_a1163da3582896710c7d72684f7ab0dd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1163da3582896710c7d72684f7ab0dd6">put</a> (int key, int value)</td></tr>
+<tr class="memdesc:a1163da3582896710c7d72684f7ab0dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">如果关键字 key 已经存在，则变更其数据值 value ；如果不存在，则向缓存中插入该组 key-value 。如果插入操作导致关键字数量超过 capacity ，则应该 逐出 最久未使用的关键字。  <br /></td></tr>
+<tr class="separator:a1163da3582896710c7d72684f7ab0dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ac8017c9ce8e5be7daa7a5ab2f9ee5358" id="r_ac8017c9ce8e5be7daa7a5ab2f9ee5358"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8017c9ce8e5be7daa7a5ab2f9ee5358">capacity</a></td></tr>
+<tr class="separator:ac8017c9ce8e5be7daa7a5ab2f9ee5358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add15f11d93b6b2a6341acbcb043f6504" id="r_add15f11d93b6b2a6341acbcb043f6504"><td class="memItemLeft" align="right" valign="top">list&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a></td></tr>
+<tr class="separator:add15f11d93b6b2a6341acbcb043f6504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa6cf782515b768ec468b1bfdca131b0" id="r_aaa6cf782515b768ec468b1bfdca131b0"><td class="memItemLeft" align="right" valign="top">unordered_map&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa6cf782515b768ec468b1bfdca131b0">um</a></td></tr>
+<tr class="separator:aaa6cf782515b768ec468b1bfdca131b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l03168">3168</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="a5dada8e4be24001640ec851df5e91f6e" name="a5dada8e4be24001640ec851df5e91f6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5dada8e4be24001640ec851df5e91f6e">&#9670;&#160;</a></span>canFinish()</h2>
+<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l03284">3284</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a41158190836e96a72d3145067d54ada5" name="a41158190836e96a72d3145067d54ada5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41158190836e96a72d3145067d54ada5">&#9670;&#160;</a></span>LRUCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::lru_cache::LRUCache::LRUCache </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>capacity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>以 正整数 作为容量 capacity 初始化 LRU 缓存 </p>
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l09372">9372</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 9373</span>            : <a class="code hl_variable" href="#ac8017c9ce8e5be7daa7a5ab2f9ee5358">capacity</a>(<a class="code hl_variable" href="#ac8017c9ce8e5be7daa7a5ab2f9ee5358">capacity</a>) {}</div>
+<div class="ttc" id="aa03022_html_ac8017c9ce8e5be7daa7a5ab2f9ee5358"><div class="ttname"><a href="#ac8017c9ce8e5be7daa7a5ab2f9ee5358">leetcode::lru_cache::LRUCache::capacity</a></div><div class="ttdeci">int capacity</div><div class="ttdef"><b>定义</b> <a href="../../dd/d32/a00041_source.html#l03285">leetcode.h:3285</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/d32/a00041_source.html#l03285">capacity</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a6ae745fea9e42256e17a3dc0b182c18d" name="a6ae745fea9e42256e17a3dc0b182c18d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ae745fea9e42256e17a3dc0b182c18d">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leetcode::lru_cache::LRUCache::get </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。 </p>
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l09375">9375</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 9375</span>                                 {</div>
+<div class="line"><span class="lineno"> 9376</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="#aaa6cf782515b768ec468b1bfdca131b0">um</a>.contains(key)) {</div>
+<div class="line"><span class="lineno"> 9377</span>                <span class="keywordflow">if</span>(key != <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.back()) {</div>
+<div class="line"><span class="lineno"> 9378</span>                    <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.erase(<a class="code hl_function" href="../../d6/dfb/a00172.html#ab10f99b2dc87d12962d4016234de99e2">find</a>(<a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.begin(), <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.end(), key));</div>
+<div class="line"><span class="lineno"> 9379</span>                    <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.emplace_back(key);</div>
+<div class="line"><span class="lineno"> 9380</span>                }</div>
+<div class="line"><span class="lineno"> 9381</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaa6cf782515b768ec468b1bfdca131b0">um</a>[key];</div>
+<div class="line"><span class="lineno"> 9382</span>            }</div>
+<div class="line"><span class="lineno"> 9383</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 9384</span>        }</div>
+<div class="ttc" id="aa00172_html_ab10f99b2dc87d12962d4016234de99e2"><div class="ttname"><a href="../../d6/dfb/a00172.html#ab10f99b2dc87d12962d4016234de99e2">acwing::acwing861::find</a></div><div class="ttdeci">bool find(vector&lt; unordered_set&lt; int &gt; &gt; &amp;g, int x, vector&lt; bool &gt; &amp;st, vector&lt; int &gt; &amp;match)</div><div class="ttdef"><b>定义</b> <a href="../../d8/d41/a00038_source.html#l07522">acwing.cpp:7522</a></div></div>
+<div class="ttc" id="aa03022_html_aaa6cf782515b768ec468b1bfdca131b0"><div class="ttname"><a href="#aaa6cf782515b768ec468b1bfdca131b0">leetcode::lru_cache::LRUCache::um</a></div><div class="ttdeci">unordered_map&lt; int, int &gt; um</div><div class="ttdef"><b>定义</b> <a href="../../dd/d32/a00041_source.html#l03287">leetcode.h:3287</a></div></div>
+<div class="ttc" id="aa03022_html_add15f11d93b6b2a6341acbcb043f6504"><div class="ttname"><a href="#add15f11d93b6b2a6341acbcb043f6504">leetcode::lru_cache::LRUCache::keys</a></div><div class="ttdeci">list&lt; int &gt; keys</div><div class="ttdef"><b>定义</b> <a href="../../dd/d32/a00041_source.html#l03286">leetcode.h:3286</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/d32/a00041_source.html#l03286">keys</a> , 以及 <a class="el" href="../../dd/d32/a00041_source.html#l03287">um</a>.</p>
+
+</div>
+</div>
+<a id="a1163da3582896710c7d72684f7ab0dd6" name="a1163da3582896710c7d72684f7ab0dd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1163da3582896710c7d72684f7ab0dd6">&#9670;&#160;</a></span>put()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void leetcode::lru_cache::LRUCache::put </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>如果关键字 key 已经存在，则变更其数据值 value ；如果不存在，则向缓存中插入该组 key-value 。如果插入操作导致关键字数量超过 capacity ，则应该 逐出 最久未使用的关键字。 </p>
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l09386">9386</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 9386</span>                                             {</div>
+<div class="line"><span class="lineno"> 9387</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="#aaa6cf782515b768ec468b1bfdca131b0">um</a>.size() == <a class="code hl_variable" href="#ac8017c9ce8e5be7daa7a5ab2f9ee5358">capacity</a>) {</div>
+<div class="line"><span class="lineno"> 9388</span>                <span class="keywordflow">if</span>(<a class="code hl_variable" href="#aaa6cf782515b768ec468b1bfdca131b0">um</a>.contains(key)) {</div>
+<div class="line"><span class="lineno"> 9389</span>                    <span class="comment">//满 含</span></div>
+<div class="line"><span class="lineno"> 9390</span>                    <span class="keywordflow">if</span>(key != <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.back()) {</div>
+<div class="line"><span class="lineno"> 9391</span>                        <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.erase(<a class="code hl_function" href="../../d6/dfb/a00172.html#ab10f99b2dc87d12962d4016234de99e2">find</a>(<a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.begin(), <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.end(), key));</div>
+<div class="line"><span class="lineno"> 9392</span>                        <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.emplace_back(key);</div>
+<div class="line"><span class="lineno"> 9393</span>                    }</div>
+<div class="line"><span class="lineno"> 9394</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 9395</span>                    <span class="comment">//满 不含</span></div>
+<div class="line"><span class="lineno"> 9396</span>                    <a class="code hl_variable" href="#aaa6cf782515b768ec468b1bfdca131b0">um</a>.erase(*<a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.begin());</div>
+<div class="line"><span class="lineno"> 9397</span>                    <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.erase(<a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.begin());</div>
+<div class="line"><span class="lineno"> 9398</span>                    <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.emplace_back(key);</div>
+<div class="line"><span class="lineno"> 9399</span>                }</div>
+<div class="line"><span class="lineno"> 9400</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 9401</span>                <span class="keywordflow">if</span>(<a class="code hl_variable" href="#aaa6cf782515b768ec468b1bfdca131b0">um</a>.contains(key)) {</div>
+<div class="line"><span class="lineno"> 9402</span>                    <span class="comment">//未满 含</span></div>
+<div class="line"><span class="lineno"> 9403</span>                    <span class="keywordflow">if</span>(key != <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.back()) {</div>
+<div class="line"><span class="lineno"> 9404</span>                        <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.erase(<a class="code hl_function" href="../../d6/dfb/a00172.html#ab10f99b2dc87d12962d4016234de99e2">find</a>(<a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.begin(), <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.end(), key));</div>
+<div class="line"><span class="lineno"> 9405</span>                        <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.emplace_back(key);</div>
+<div class="line"><span class="lineno"> 9406</span>                    }</div>
+<div class="line"><span class="lineno"> 9407</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 9408</span>                    <span class="comment">//未满 不含</span></div>
+<div class="line"><span class="lineno"> 9409</span>                    <a class="code hl_variable" href="#add15f11d93b6b2a6341acbcb043f6504">keys</a>.emplace_back(key);</div>
+<div class="line"><span class="lineno"> 9410</span>                }</div>
+<div class="line"><span class="lineno"> 9411</span>            }</div>
+<div class="line"><span class="lineno"> 9412</span>            <a class="code hl_variable" href="#aaa6cf782515b768ec468b1bfdca131b0">um</a>[key] = value;</div>
+<div class="line"><span class="lineno"> 9413</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/d32/a00041_source.html#l03285">capacity</a>, <a class="el" href="../../dd/d32/a00041_source.html#l03286">keys</a> , 以及 <a class="el" href="../../dd/d32/a00041_source.html#l03287">um</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ac8017c9ce8e5be7daa7a5ab2f9ee5358" name="ac8017c9ce8e5be7daa7a5ab2f9ee5358"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8017c9ce8e5be7daa7a5ab2f9ee5358">&#9670;&#160;</a></span>capacity</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -117,59 +252,76 @@ $(function(){ initResizable(false); });
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool leetcode::course_schedule::Solution::canFinish </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>numCourses</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vector&lt; vector&lt; int &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>prerequisites</em></span>&#160;)</td>
+          <td class="memname">int leetcode::lru_cache::LRUCache::capacity</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l09004">9004</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 9004</span>                                                                                   {</div>
-<div class="line"><span class="lineno"> 9005</span>            vector&lt;int&gt; in(numCourses);</div>
-<div class="line"><span class="lineno"> 9006</span>            vector&lt;unordered_set&lt;int&gt;&gt; out(numCourses);</div>
-<div class="line"><span class="lineno"> 9007</span>            unordered_set&lt;int&gt; learned;</div>
-<div class="line"><span class="lineno"> 9008</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;prerequisite: prerequisites) {</div>
-<div class="line"><span class="lineno"> 9009</span>                in[prerequisite[1]]++;</div>
-<div class="line"><span class="lineno"> 9010</span>                out[prerequisite[0]].insert(prerequisite[1]);</div>
-<div class="line"><span class="lineno"> 9011</span>            }</div>
-<div class="line"><span class="lineno"> 9012</span>            <span class="keywordtype">bool</span> hasChange = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 9013</span>            <span class="keywordflow">while</span>(hasChange) {</div>
-<div class="line"><span class="lineno"> 9014</span>                hasChange = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 9015</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; numCourses; i++) {</div>
-<div class="line"><span class="lineno"> 9016</span>                    <span class="keywordflow">if</span>(in[i] == 0 &amp;&amp; !learned.contains(i)) {</div>
-<div class="line"><span class="lineno"> 9017</span>                        hasChange = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 9018</span>                        learned.insert(i);</div>
-<div class="line"><span class="lineno"> 9019</span>                        <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;next: out[i]) {</div>
-<div class="line"><span class="lineno"> 9020</span>                            in[next]--;</div>
-<div class="line"><span class="lineno"> 9021</span>                        }</div>
-<div class="line"><span class="lineno"> 9022</span>                    }</div>
-<div class="line"><span class="lineno"> 9023</span>                }</div>
-<div class="line"><span class="lineno"> 9024</span>            }</div>
-<div class="line"><span class="lineno"> 9025</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; numCourses; i++) {</div>
-<div class="line"><span class="lineno"> 9026</span>                <span class="keywordflow">if</span>(in[i] != 0) {</div>
-<div class="line"><span class="lineno"> 9027</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 9028</span>                }</div>
-<div class="line"><span class="lineno"> 9029</span>            }</div>
-<div class="line"><span class="lineno"> 9030</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 9031</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l04195">leetcode::course_schedule::TEST()</a> , 以及 <a class="el" href="../../d3/d52/a00023_source.html#l04200">leetcode::course_schedule::TEST()</a>.</p>
+<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l03285">3285</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l09372">LRUCache()</a> , 以及 <a class="el" href="../../da/d45/a00011_source.html#l09386">put()</a>.</p>
+
+</div>
+</div>
+<a id="add15f11d93b6b2a6341acbcb043f6504" name="add15f11d93b6b2a6341acbcb043f6504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add15f11d93b6b2a6341acbcb043f6504">&#9670;&#160;</a></span>keys</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list&lt;int&gt; leetcode::lru_cache::LRUCache::keys</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l03286">3286</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l09375">get()</a> , 以及 <a class="el" href="../../da/d45/a00011_source.html#l09386">put()</a>.</p>
+
+</div>
+</div>
+<a id="aaa6cf782515b768ec468b1bfdca131b0" name="aaa6cf782515b768ec468b1bfdca131b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa6cf782515b768ec468b1bfdca131b0">&#9670;&#160;</a></span>um</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unordered_map&lt;int, int&gt; leetcode::lru_cache::LRUCache::um</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l03287">3287</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l09375">get()</a> , 以及 <a class="el" href="../../da/d45/a00011_source.html#l09386">put()</a>.</p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a></li>
 <li><a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a></li>
 </ul>
 </div><!-- contents -->

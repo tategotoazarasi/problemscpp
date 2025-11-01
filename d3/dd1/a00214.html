@@ -156,8 +156,8 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno"> 1621</span>            int64_t p1 = 0, p2 = 0, p3 = 0, ps = 0, prev1 = -1, prev2 = -1, prev3 = -1;</div>
 <div class="line"><span class="lineno"> 1622</span>            <span class="keywordflow">while</span>(p1 &lt; l || p2 &lt; m || p3 &lt; n || ps &lt; l + m + n) {</div>
 <div class="line"><span class="lineno"> 1623</span>                int64_t v1    = p1 &lt; l ? s1[p1] : LONG_LONG_MAX;</div>
-<div class="line"><span class="lineno"> 1624</span>                int64_t v2    = p2 &lt; <a class="code hl_variable" href="../../d0/d1f/a00247.html#a5b44ae23ff931d686319ac36494bf274">m</a> ? s2[p2] : LONG_LONG_MAX;</div>
-<div class="line"><span class="lineno"> 1625</span>                int64_t v3    = p3 &lt; <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a> ? s3[p3] : LONG_LONG_MAX;</div>
+<div class="line"><span class="lineno"> 1624</span>                int64_t v2    = p2 &lt; <a class="code hl_variable" href="../../d0/dc2/a00564.html#ab2991a035ec7c05bca06cda958a3e50c">m</a> ? s2[p2] : LONG_LONG_MAX;</div>
+<div class="line"><span class="lineno"> 1625</span>                int64_t v3    = p3 &lt; <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> ? s3[p3] : LONG_LONG_MAX;</div>
 <div class="line"><span class="lineno"> 1626</span>                int64_t min_v = min(v1, min(v2, v3));</div>
 <div class="line"><span class="lineno"> 1627</span>                <span class="keywordflow">if</span>(min_v == v1) {</div>
 <div class="line"><span class="lineno"> 1628</span>                    s[ps++] = {v1, 1, {-1, prev1, prev2, prev3}};</div>
@@ -173,41 +173,41 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno"> 1638</span>                    p3++;</div>
 <div class="line"><span class="lineno"> 1639</span>                }</div>
 <div class="line"><span class="lineno"> 1640</span>            }</div>
-<div class="line"><span class="lineno"> 1641</span>            int64_t last1 = l + <a class="code hl_variable" href="../../d0/d1f/a00247.html#a5b44ae23ff931d686319ac36494bf274">m</a> + <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>, last2 = l + <a class="code hl_variable" href="../../d0/d1f/a00247.html#a5b44ae23ff931d686319ac36494bf274">m</a> + <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>, last3 = l + <a class="code hl_variable" href="../../d0/d1f/a00247.html#a5b44ae23ff931d686319ac36494bf274">m</a> + <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>;</div>
-<div class="line"><span class="lineno"> 1642</span>            int64_t <a class="code hl_variable" href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">ans</a> = LONG_LONG_MAX;</div>
+<div class="line"><span class="lineno"> 1641</span>            int64_t last1 = l + <a class="code hl_variable" href="../../d0/dc2/a00564.html#ab2991a035ec7c05bca06cda958a3e50c">m</a> + <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>, last2 = l + <a class="code hl_variable" href="../../d0/dc2/a00564.html#ab2991a035ec7c05bca06cda958a3e50c">m</a> + <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>, last3 = l + <a class="code hl_variable" href="../../d0/dc2/a00564.html#ab2991a035ec7c05bca06cda958a3e50c">m</a> + <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
+<div class="line"><span class="lineno"> 1642</span>            int64_t <a class="code hl_variable" href="../../d8/df0/a00557.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = LONG_LONG_MAX;</div>
 <div class="line"><span class="lineno"> 1643</span>            <span class="keywordflow">for</span>(int64_t i = l + m + n - 1; i &gt;= 0; i--) {</div>
 <div class="line"><span class="lineno"> 1644</span>                <span class="keywordflow">if</span>(s[i].group == 1) {</div>
 <div class="line"><span class="lineno"> 1645</span>                    <span class="keywordflow">if</span>(last2 != l + m + n &amp;&amp; s[i].prev_index[3] != -1) {</div>
-<div class="line"><span class="lineno"> 1646</span>                        <a class="code hl_variable" href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">ans</a> = min(ans, 2 * (s[last2].value - s[s[i].prev_index[3]].value));</div>
+<div class="line"><span class="lineno"> 1646</span>                        <a class="code hl_variable" href="../../d8/df0/a00557.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = min(ans, 2 * (s[last2].value - s[s[i].prev_index[3]].value));</div>
 <div class="line"><span class="lineno"> 1647</span>                    }</div>
 <div class="line"><span class="lineno"> 1648</span>                    <span class="keywordflow">if</span>(last3 != l + m + n &amp;&amp; s[i].prev_index[2] != -1) {</div>
-<div class="line"><span class="lineno"> 1649</span>                        <a class="code hl_variable" href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">ans</a> = min(ans, 2 * (s[last3].value - s[s[i].prev_index[2]].value));</div>
+<div class="line"><span class="lineno"> 1649</span>                        <a class="code hl_variable" href="../../d8/df0/a00557.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = min(ans, 2 * (s[last3].value - s[s[i].prev_index[2]].value));</div>
 <div class="line"><span class="lineno"> 1650</span>                    }</div>
 <div class="line"><span class="lineno"> 1651</span>                    last1 = i;</div>
 <div class="line"><span class="lineno"> 1652</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(s[i].group == 2) {</div>
 <div class="line"><span class="lineno"> 1653</span>                    <span class="keywordflow">if</span>(last1 != l + m + n &amp;&amp; s[i].prev_index[3] != -1) {</div>
-<div class="line"><span class="lineno"> 1654</span>                        <a class="code hl_variable" href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">ans</a> = min(ans, 2 * (s[last1].value - s[s[i].prev_index[3]].value));</div>
+<div class="line"><span class="lineno"> 1654</span>                        <a class="code hl_variable" href="../../d8/df0/a00557.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = min(ans, 2 * (s[last1].value - s[s[i].prev_index[3]].value));</div>
 <div class="line"><span class="lineno"> 1655</span>                    }</div>
 <div class="line"><span class="lineno"> 1656</span>                    <span class="keywordflow">if</span>(last3 != l + m + n &amp;&amp; s[i].prev_index[1] != -1) {</div>
-<div class="line"><span class="lineno"> 1657</span>                        <a class="code hl_variable" href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">ans</a> = min(ans, 2 * (s[last3].value - s[s[i].prev_index[1]].value));</div>
+<div class="line"><span class="lineno"> 1657</span>                        <a class="code hl_variable" href="../../d8/df0/a00557.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = min(ans, 2 * (s[last3].value - s[s[i].prev_index[1]].value));</div>
 <div class="line"><span class="lineno"> 1658</span>                    }</div>
 <div class="line"><span class="lineno"> 1659</span>                    last2 = i;</div>
 <div class="line"><span class="lineno"> 1660</span>                } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno"> 1661</span>                    <span class="keywordflow">if</span>(last1 != l + m + n &amp;&amp; s[i].prev_index[2] != -1) {</div>
-<div class="line"><span class="lineno"> 1662</span>                        <a class="code hl_variable" href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">ans</a> = min(ans, 2 * (s[last1].value - s[s[i].prev_index[2]].value));</div>
+<div class="line"><span class="lineno"> 1662</span>                        <a class="code hl_variable" href="../../d8/df0/a00557.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = min(ans, 2 * (s[last1].value - s[s[i].prev_index[2]].value));</div>
 <div class="line"><span class="lineno"> 1663</span>                    }</div>
 <div class="line"><span class="lineno"> 1664</span>                    <span class="keywordflow">if</span>(last2 != l + m + n &amp;&amp; s[i].prev_index[1] != -1) {</div>
-<div class="line"><span class="lineno"> 1665</span>                        <a class="code hl_variable" href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">ans</a> = min(ans, 2 * (s[last2].value - s[s[i].prev_index[1]].value));</div>
+<div class="line"><span class="lineno"> 1665</span>                        <a class="code hl_variable" href="../../d8/df0/a00557.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = min(ans, 2 * (s[last2].value - s[s[i].prev_index[1]].value));</div>
 <div class="line"><span class="lineno"> 1666</span>                    }</div>
 <div class="line"><span class="lineno"> 1667</span>                    last3 = i;</div>
 <div class="line"><span class="lineno"> 1668</span>                }</div>
 <div class="line"><span class="lineno"> 1669</span>            }</div>
-<div class="line"><span class="lineno"> 1670</span>            cout &lt;&lt; <a class="code hl_variable" href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">ans</a>;</div>
+<div class="line"><span class="lineno"> 1670</span>            cout &lt;&lt; <a class="code hl_variable" href="../../d8/df0/a00557.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
 <div class="line"><span class="lineno"> 1671</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno"> 1672</span>        }</div>
-<div class="ttc" id="aa00240_html_abce64e9bd359516e1c396e6af442934f"><div class="ttname"><a href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">comp526::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00129">comp526.cpp:129</a></div></div>
-<div class="ttc" id="aa00247_html_a11f44ec8ab6ab27b1d278577b98a491f"><div class="ttname"><a href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">comp526::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00362">comp526.cpp:362</a></div></div>
-<div class="ttc" id="aa00247_html_a5b44ae23ff931d686319ac36494bf274"><div class="ttname"><a href="../../d0/d1f/a00247.html#a5b44ae23ff931d686319ac36494bf274">comp526::grid::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00362">comp526.cpp:362</a></div></div>
+<div class="ttc" id="aa00557_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../d8/df0/a00557.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00129">liverpool.cpp:129</a></div></div>
+<div class="ttc" id="aa00564_html_ab2991a035ec7c05bca06cda958a3e50c"><div class="ttname"><a href="../../d0/dc2/a00564.html#ab2991a035ec7c05bca06cda958a3e50c">liverpool::grid::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00362">liverpool.cpp:362</a></div></div>
+<div class="ttc" id="aa00564_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00362">liverpool.cpp:362</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../da/d24/a00068_source.html#l01853">TEST()</a>.</p>
 

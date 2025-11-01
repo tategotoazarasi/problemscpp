@@ -1,20 +1,20 @@
 var searchData=
 [
   ['p_0',['p',['../de/dc5/a03602.html#aad10aebf91b5b315ea4d3615647c4053',1,'pat::b::b1080::student::p'],['../d6/d35/a03670.html#afbc8935faeffa5c2c1a4567c8f3cac70',1,'pat::a::a1017::customer::p'],['../d4/db1/a03678.html#ae0643b38b79c19432202b445971fe87f',1,'pat::a::a1026::player::p']]],
-  ['parent_1',['parent',['../dd/d90/a01626.html#ab40c36b6bf474896b3ea57880113726a',1,'acwing::acwing240::UnionFind::parent'],['../d1/dc4/a02042.html#a8b8fbb4149478a627b4f1373787e8474',1,'leetcode::groups_of_strings::Solution::parent'],['../d2/d3d/a02362.html#a15133d0f7bc45a4e7f4b9a79b4ea9470',1,'leetcode::count_nodes_with_the_highest_score::TreeNode::parent'],['../d5/d43/a02378.html#ab9c1d82bddb398ee4d5d708ea868fe7e',1,'leetcode::max_area_of_island::UnionFind::parent'],['../db/d99/a02626.html#ae8e182d41e4828f70da1669af846b2d6',1,'leetcode::lowest_common_ancestor_of_a_binary_search_tree::TreeNodeP::parent'],['../da/daf/a03718.html#a916e09e220667fb55fbf332c8852c948',1,'UnionFind::parent'],['../df/d76/a03726.html#ad27124df821789ff04c9e60838fffb65',1,'AVLNode::parent']]],
+  ['parent_1',['parent',['../dd/d90/a01626.html#ab40c36b6bf474896b3ea57880113726a',1,'acwing::acwing240::UnionFind::parent'],['../d5/d2e/a01998.html#a8b8fbb4149478a627b4f1373787e8474',1,'leetcode::groups_of_strings::Solution::parent'],['../db/dda/a02318.html#a15133d0f7bc45a4e7f4b9a79b4ea9470',1,'leetcode::count_nodes_with_the_highest_score::TreeNode::parent'],['../d3/d09/a02334.html#ab9c1d82bddb398ee4d5d708ea868fe7e',1,'leetcode::max_area_of_island::UnionFind::parent'],['../d1/d03/a02582.html#ae8e182d41e4828f70da1669af846b2d6',1,'leetcode::lowest_common_ancestor_of_a_binary_search_tree::TreeNodeP::parent'],['../da/daf/a03718.html#a916e09e220667fb55fbf332c8852c948',1,'UnionFind::parent'],['../df/d76/a03726.html#ad27124df821789ff04c9e60838fffb65',1,'AVLNode::parent']]],
   ['path_2',['path',['../d4/d5e/a03686.html#a2677071bd6874319247461f5441449f9',1,'pat::a::a1018::frame']]],
-  ['patience_3',['patience',['../d1/d9a/a02454.html#a5219e386c2afaa89ae5d939fb3a92b88',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]],
-  ['person_4',['person',['../d2/d3d/a01982.html#a4c36bc87b6ea871fc4e662922972bf06',1,'leetcode::maximum_good_people_based_on_statements::msg']]],
-  ['position_5',['position',['../d7/d90/a01530.html#a6c128688ce7e71f96a3a0ab23a3e1290',1,'acwing::acwing4310::acwing4310::position'],['../d4/dae/a01994.html#a4d6ee48ca18dd104c6bed2c37d2a057a',1,'leetcode::second_minimum_time_to_reach_destination::status::position']]],
+  ['patience_3',['patience',['../d8/da6/a02410.html#a5219e386c2afaa89ae5d939fb3a92b88',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]],
+  ['person_4',['person',['../d5/dd0/a01938.html#a4c36bc87b6ea871fc4e662922972bf06',1,'leetcode::maximum_good_people_based_on_statements::msg']]],
+  ['position_5',['position',['../d7/d90/a01530.html#a6c128688ce7e71f96a3a0ab23a3e1290',1,'acwing::acwing4310::acwing4310::position'],['../d5/d28/a01950.html#a4d6ee48ca18dd104c6bed2c37d2a057a',1,'leetcode::second_minimum_time_to_reach_destination::status::position']]],
   ['positive_6',['positive',['../d5/d46/a03710.html#a622851f40dd8992cc2a66a5ce83133df',1,'BigInt::positive'],['../d1/d78/a03714.html#a777585f98e8e6e958c126e1474961a31',1,'Fraction::positive']]],
-  ['pred_7',['pred',['../dd/d84/a03034.html#a8868786102f9305ed697ccb1e85c9f0e',1,'leetcode::parallel_courses::node']]],
-  ['pref_5fsum_8',['pref_sum',['../dc/dd5/a02614.html#a90ff9708b2766d87cc5f640ae2c6a1b8',1,'leetcode::range_sum_query_immutable::NumArray']]],
-  ['prev_9',['prev',['../d6/d59/a02810.html#a27333b110e316836ac474cf674945133',1,'leetcode::delete_node_in_a_bst::Solution::prev'],['../db/d52/a03574.html#ab0a7bb4930e4218b13762478cf914d1f',1,'pat::b::b1025::Node::prev']]],
+  ['pred_7',['pred',['../d1/df2/a02990.html#a8868786102f9305ed697ccb1e85c9f0e',1,'leetcode::parallel_courses::node']]],
+  ['pref_5fsum_8',['pref_sum',['../d1/d0c/a02570.html#a90ff9708b2766d87cc5f640ae2c6a1b8',1,'leetcode::range_sum_query_immutable::NumArray']]],
+  ['prev_9',['prev',['../dd/deb/a02766.html#a27333b110e316836ac474cf674945133',1,'leetcode::delete_node_in_a_bst::Solution::prev'],['../db/d52/a03574.html#ab0a7bb4930e4218b13762478cf914d1f',1,'pat::b::b1025::Node::prev']]],
   ['prev_5findex_10',['prev_index',['../d7/d94/a01642.html#a24c2fb7c5889f76214b83fc387f7e300',1,'acwing::acwing3874::point']]],
   ['previous_11',['previous',['../d9/dfd/a01610.html#a524976d0d212f969c750e00ec2c34615',1,'acwing::acwing3370::cow']]],
-  ['price_12',['price',['../d3/d67/a01958.html#aee320f3f7b4364d6dd47ac22541a48ad',1,'leetcode::k_highest_ranked_items_within_a_price_range::item::price'],['../dc/d12/a03634.html#afcdb4ca82369cbb0db332a6697001c96',1,'pat::b::b1102::paper::price']]],
-  ['primes_13',['primes',['../d4/d5b/a02238.html#aeb494f3a836c706277b2470a1789119a',1,'leetcode::the_number_of_good_subsets::Solution']]],
-  ['priority_14',['priority',['../d6/d9a/a01710.html#ad6f64170b25ab9c2e83232ce01947af5',1,'comp526::stable_matching::Company']]],
-  ['priority_5fc_15',['priority_c',['../db/dbe/a01706.html#a8b636dd3e87b03bc2eccb27d8338caf0',1,'comp526::stable_matching::Student']]],
-  ['proposed_5fstudents_16',['proposed_students',['../d6/d9a/a01710.html#ad5e2b74317aa23561e67855b02fdc564',1,'comp526::stable_matching::Company']]]
+  ['price_12',['price',['../dc/d18/a01914.html#aee320f3f7b4364d6dd47ac22541a48ad',1,'leetcode::k_highest_ranked_items_within_a_price_range::item::price'],['../dc/d12/a03634.html#afcdb4ca82369cbb0db332a6697001c96',1,'pat::b::b1102::paper::price']]],
+  ['primes_13',['primes',['../d0/db2/a02194.html#aeb494f3a836c706277b2470a1789119a',1,'leetcode::the_number_of_good_subsets::Solution']]],
+  ['priority_14',['priority',['../d9/d44/a03126.html#a1011e85cfcfc7a00c8b7b7ac57c52743',1,'liverpool::stable_matching::Company']]],
+  ['priority_5fc_15',['priority_c',['../d8/dfb/a03122.html#a24c8aa6d8476080301a7b104985c1a89',1,'liverpool::stable_matching::Student']]],
+  ['proposed_5fstudents_16',['proposed_students',['../d9/d44/a03126.html#a4dc07c2af4a17689450150d663600333',1,'liverpool::stable_matching::Company']]]
 ];

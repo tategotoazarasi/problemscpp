@@ -140,18 +140,18 @@ $(function(){ initResizable(false); });
 
 <p class="definition">在文件 <a class="el" href="../../d6/d2d/a00047_source.html">luogu.cpp</a> 第 <a class="el" href="../../d6/d2d/a00047_source.html#l02455">2455</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 2455</span>                                               {</div>
-<div class="line"><span class="lineno"> 2456</span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>;</div>
-<div class="line"><span class="lineno"> 2457</span>        cin &gt;&gt; <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>;</div>
+<div class="line"><span class="lineno"> 2456</span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
+<div class="line"><span class="lineno"> 2457</span>        cin &gt;&gt; <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
 <div class="line"><span class="lineno"> 2458</span>        set&lt;int&gt; primes;</div>
-<div class="line"><span class="lineno"> 2459</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2; i &lt;= <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>; i++) {</div>
+<div class="line"><span class="lineno"> 2459</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2; i &lt;= <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
 <div class="line"><span class="lineno"> 2460</span>            primes.insert(i);</div>
 <div class="line"><span class="lineno"> 2461</span>        }</div>
-<div class="line"><span class="lineno"> 2462</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2; i &lt;= <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>; i++) {</div>
-<div class="line"><span class="lineno"> 2463</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 2; i * j &lt;= <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>; j++) {</div>
+<div class="line"><span class="lineno"> 2462</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2; i &lt;= <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno"> 2463</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 2; i * j &lt;= <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; j++) {</div>
 <div class="line"><span class="lineno"> 2464</span>                primes.erase(i * j);</div>
 <div class="line"><span class="lineno"> 2465</span>            }</div>
 <div class="line"><span class="lineno"> 2466</span>        }</div>
-<div class="line"><span class="lineno"> 2467</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 4; i &lt;= <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>; i += 2) {</div>
+<div class="line"><span class="lineno"> 2467</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 4; i &lt;= <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i += 2) {</div>
 <div class="line"><span class="lineno"> 2468</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> prime = primes.begin(); *prime &lt;= i / 2 &amp;&amp; prime != primes.end(); ++prime) {</div>
 <div class="line"><span class="lineno"> 2469</span>                <span class="keywordflow">if</span>(primes.contains(i - *prime)) {</div>
 <div class="line"><span class="lineno"> 2470</span>                    cout &lt;&lt; i &lt;&lt; <span class="charliteral">&#39;=&#39;</span> &lt;&lt; *prime &lt;&lt; <span class="charliteral">&#39;+&#39;</span> &lt;&lt; i - *prime &lt;&lt; endl;</div>
@@ -161,7 +161,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno"> 2474</span>        }</div>
 <div class="line"><span class="lineno"> 2475</span>        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno"> 2476</span>    }</div>
-<div class="ttc" id="aa00247_html_a11f44ec8ab6ab27b1d278577b98a491f"><div class="ttname"><a href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">comp526::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00362">comp526.cpp:362</a></div></div>
+<div class="ttc" id="aa00564_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00362">liverpool.cpp:362</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l01382">luogu::TEST()</a>.</p>
 

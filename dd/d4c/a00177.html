@@ -147,22 +147,22 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">   95</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> current = 0;</div>
 <div class="line"><span class="lineno">   96</span>                quotient             = queue&lt;unsigned short&gt;();</div>
 <div class="line"><span class="lineno">   97</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = input.begin(); i != input.end(); i++) {</div>
-<div class="line"><span class="lineno">   98</span>                    current *= <a class="code hl_variable" href="../../d0/d1f/a00247.html#a5b44ae23ff931d686319ac36494bf274">m</a>;</div>
+<div class="line"><span class="lineno">   98</span>                    current *= <a class="code hl_variable" href="../../d0/dc2/a00564.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>;</div>
 <div class="line"><span class="lineno">   99</span>                    current += *i;</div>
 <div class="line"><span class="lineno">  100</span>                    quotient.push(current / n);</div>
-<div class="line"><span class="lineno">  101</span>                    current %= <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>;</div>
+<div class="line"><span class="lineno">  101</span>                    current %= <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
 <div class="line"><span class="lineno">  102</span>                }</div>
 <div class="line"><span class="lineno">  103</span>                <span class="keywordflow">while</span>(!quotient.empty() &amp;&amp; quotient.front() == 0) {</div>
 <div class="line"><span class="lineno">  104</span>                    quotient.pop();</div>
 <div class="line"><span class="lineno">  105</span>                }</div>
-<div class="line"><span class="lineno">  106</span>                <a class="code hl_variable" href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">ans</a>.push_back(current);</div>
+<div class="line"><span class="lineno">  106</span>                <a class="code hl_variable" href="../../d8/df0/a00557.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.push_back(current);</div>
 <div class="line"><span class="lineno">  107</span>                input = vector&lt;unsigned short&gt;(quotient.size());</div>
 <div class="line"><span class="lineno">  108</span>                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; input.size(); i++) {</div>
 <div class="line"><span class="lineno">  109</span>                    input[i] = quotient.front();</div>
 <div class="line"><span class="lineno">  110</span>                    quotient.pop();</div>
 <div class="line"><span class="lineno">  111</span>                }</div>
 <div class="line"><span class="lineno">  112</span>            } <span class="keywordflow">while</span>(!input.empty());</div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = <a class="code hl_variable" href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">ans</a>.rbegin(); i != <a class="code hl_variable" href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">ans</a>.rend(); i++) {</div>
+<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = <a class="code hl_variable" href="../../d8/df0/a00557.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.rbegin(); i != <a class="code hl_variable" href="../../d8/df0/a00557.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.rend(); i++) {</div>
 <div class="line"><span class="lineno">  114</span>                <span class="keywordflow">if</span>(*i &lt; 10) {</div>
 <div class="line"><span class="lineno">  115</span>                    cout &lt;&lt; *i;</div>
 <div class="line"><span class="lineno">  116</span>                } <span class="keywordflow">else</span> {</div>
@@ -171,9 +171,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  119</span>            }</div>
 <div class="line"><span class="lineno">  120</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  121</span>        }</div>
-<div class="ttc" id="aa00240_html_abce64e9bd359516e1c396e6af442934f"><div class="ttname"><a href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">comp526::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00129">comp526.cpp:129</a></div></div>
-<div class="ttc" id="aa00247_html_a11f44ec8ab6ab27b1d278577b98a491f"><div class="ttname"><a href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">comp526::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00362">comp526.cpp:362</a></div></div>
-<div class="ttc" id="aa00247_html_a5b44ae23ff931d686319ac36494bf274"><div class="ttname"><a href="../../d0/d1f/a00247.html#a5b44ae23ff931d686319ac36494bf274">comp526::grid::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00362">comp526.cpp:362</a></div></div>
+<div class="ttc" id="aa00557_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../d8/df0/a00557.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00129">liverpool.cpp:129</a></div></div>
+<div class="ttc" id="aa00564_html_ab2991a035ec7c05bca06cda958a3e50c"><div class="ttname"><a href="../../d0/dc2/a00564.html#ab2991a035ec7c05bca06cda958a3e50c">liverpool::grid::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00362">liverpool.cpp:362</a></div></div>
+<div class="ttc" id="aa00564_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00362">liverpool.cpp:362</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../da/d24/a00068_source.html#l00479">TEST()</a> , 以及 <a class="el" href="../../da/d24/a00068_source.html#l00489">TEST()</a>.</p>
 

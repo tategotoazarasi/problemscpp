@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['killprocess_0',['killProcess',['../d6/d92/a02890.html#ab3beea54500e469e44fa1e56871a8beb',1,'leetcode::kill_process::Solution']]],
-  ['knightprobability_1',['knightProbability',['../d5/db4/a02182.html#aa778581a1cd8b722fba7ede7ca818493',1,'leetcode::knight_probability_in_chessboard::Solution']]],
-  ['ksmallestpairs_2',['kSmallestPairs',['../d9/dd5/a01886.html#ad10110d7c72b7b6e5c5fc388d87c02be',1,'leetcode::find_k_pairs_with_smallest_sums::Solution']]],
-  ['kthpalindrome_3',['kthPalindrome',['../d5/ddd/a02490.html#a3357807af1462d4c9f6342a8b266c8af',1,'leetcode::find_palindrome_with_fixed_length::Solution']]]
+  ['killprocess_0',['killProcess',['../d5/d4c/a02846.html#ab3beea54500e469e44fa1e56871a8beb',1,'leetcode::kill_process::Solution']]],
+  ['knightprobability_1',['knightProbability',['../db/df6/a02138.html#aa778581a1cd8b722fba7ede7ca818493',1,'leetcode::knight_probability_in_chessboard::Solution']]],
+  ['ksmallestpairs_2',['kSmallestPairs',['../db/d5a/a01842.html#ad10110d7c72b7b6e5c5fc388d87c02be',1,'leetcode::find_k_pairs_with_smallest_sums::Solution']]],
+  ['kthpalindrome_3',['kthPalindrome',['../d3/d6c/a02446.html#a3357807af1462d4c9f6342a8b266c8af',1,'leetcode::find_palindrome_with_fixed_length::Solution']]]
 ];

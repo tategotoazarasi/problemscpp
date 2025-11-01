@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::count_nodes_with_the_highest_score::Solution类 参考</title>
+<title>problemscpp: leetcode::count_number_of_maximum_bitwise_or_subsets::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,7 +84,7 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d0/d3e/a00253.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d9/d0a/a00390.html">count_nodes_with_the_highest_score</a></li><li class="navelem"><a class="el" href="../../d9/d4f/a02366.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d7/d40/a00236.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d3/d45/a00382.html">count_number_of_maximum_bitwise_or_subsets</a></li><li class="navelem"><a class="el" href="../../d9/d4f/a02366.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -92,23 +92,25 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="../../d9/d27/a02363.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::count_nodes_with_the_highest_score::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::count_number_of_maximum_bitwise_or_subsets::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a49f05b6edd18b2a9fd5c8a9232a01361" id="r_a49f05b6edd18b2a9fd5c8a9232a01361"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49f05b6edd18b2a9fd5c8a9232a01361">countHighestScoreNodes</a> (vector&lt; int &gt; &amp;parents)</td></tr>
-<tr class="separator:a49f05b6edd18b2a9fd5c8a9232a01361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb338dc720ea9e3d10c6fe743985ae3c" id="r_adb338dc720ea9e3d10c6fe743985ae3c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb338dc720ea9e3d10c6fe743985ae3c">countMaxOrSubsets</a> (vector&lt; int &gt; &amp;nums)</td></tr>
+<tr class="separator:adb338dc720ea9e3d10c6fe743985ae3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3c5e323f0d254fd74d217cf7bac1fe8" id="r_af3c5e323f0d254fd74d217cf7bac1fe8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3c5e323f0d254fd74d217cf7bac1fe8">dfs</a> (int current, int target, vector&lt; int &gt; nums)</td></tr>
+<tr class="separator:af3c5e323f0d254fd74d217cf7bac1fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a> 第 <a class="el" href="../../d8/d41/a00038_source.html#l01634">1634</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l01739">1739</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a49f05b6edd18b2a9fd5c8a9232a01361" name="a49f05b6edd18b2a9fd5c8a9232a01361"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49f05b6edd18b2a9fd5c8a9232a01361">&#9670;&#160;</a></span>countHighestScoreNodes()</h2>
+<a id="adb338dc720ea9e3d10c6fe743985ae3c" name="adb338dc720ea9e3d10c6fe743985ae3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb338dc720ea9e3d10c6fe743985ae3c">&#9670;&#160;</a></span>countMaxOrSubsets()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -117,9 +119,9 @@ $(function(){ initResizable(false); });
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int leetcode::count_nodes_with_the_highest_score::Solution::countHighestScoreNodes </td>
+          <td class="memname">int leetcode::count_number_of_maximum_bitwise_or_subsets::Solution::countMaxOrSubsets </td>
           <td>(</td>
-          <td class="paramtype">vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>parents</em></span></td><td>)</td>
+          <td class="paramtype">vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>nums</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -130,52 +132,76 @@ $(function(){ initResizable(false); });
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l04153">4153</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 4153</span>                                                                 {</div>
-<div class="line"><span class="lineno"> 4154</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">ans</a>     = 0;</div>
-<div class="line"><span class="lineno"> 4155</span>            <span class="keyword">auto</span> nodes  = vector&lt;TreeNode *&gt;(parents.size(), <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno"> 4156</span>            <span class="keyword">auto</span> edges  = vector(parents.size(), vector&lt;int&gt;());</div>
-<div class="line"><span class="lineno"> 4157</span>            <span class="keyword">auto</span> scores = vector&lt;unsigned long long&gt;(parents.size(), 0);</div>
-<div class="line"><span class="lineno"> 4158</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; parents.size(); i++) {</div>
-<div class="line"><span class="lineno"> 4159</span>                nodes[i] = <span class="keyword">new</span> TreeNode(i);</div>
-<div class="line"><span class="lineno"> 4160</span>                <span class="keywordflow">if</span>(parents[i] != -1) {</div>
-<div class="line"><span class="lineno"> 4161</span>                    edges[i].push_back(parents[i]);</div>
-<div class="line"><span class="lineno"> 4162</span>                    edges[parents[i]].push_back(i);</div>
-<div class="line"><span class="lineno"> 4163</span>                }</div>
-<div class="line"><span class="lineno"> 4164</span>            }</div>
-<div class="line"><span class="lineno"> 4165</span>            TreeNode *<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno"> 4166</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; parents.size(); i++) {</div>
-<div class="line"><span class="lineno"> 4167</span>                <span class="keywordflow">if</span>(parents[i] != -1) {</div>
-<div class="line"><span class="lineno"> 4168</span>                    nodes[parents[i]]-&gt;add_child(nodes[i]);</div>
-<div class="line"><span class="lineno"> 4169</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 4170</span>                    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a> = nodes[i];</div>
-<div class="line"><span class="lineno"> 4171</span>                }</div>
-<div class="line"><span class="lineno"> 4172</span>            }</div>
-<div class="line"><span class="lineno"> 4173</span>            <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>-&gt;dfs();</div>
-<div class="line"><span class="lineno"> 4174</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> max_score = 0;</div>
-<div class="line"><span class="lineno"> 4175</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; parents.size(); i++) {</div>
-<div class="line"><span class="lineno"> 4176</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> score = 1;</div>
-<div class="line"><span class="lineno"> 4177</span>                <span class="keyword">const</span> <span class="keyword">auto</span> *node         = nodes[i];</div>
-<div class="line"><span class="lineno"> 4178</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> *child: node-&gt;get_children()) {</div>
-<div class="line"><span class="lineno"> 4179</span>                    score *= child-&gt;get_count();</div>
-<div class="line"><span class="lineno"> 4180</span>                }</div>
-<div class="line"><span class="lineno"> 4181</span>                <span class="keywordflow">if</span>(node-&gt;get_parent() != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno"> 4182</span>                    score *= <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>-&gt;get_count() - node-&gt;get_count();</div>
-<div class="line"><span class="lineno"> 4183</span>                }</div>
-<div class="line"><span class="lineno"> 4184</span>                max_score = max(max_score, score);</div>
-<div class="line"><span class="lineno"> 4185</span>                scores[i] = score;</div>
-<div class="line"><span class="lineno"> 4186</span>            }</div>
-<div class="line"><span class="lineno"> 4187</span>            <span class="keywordflow">return</span> count(scores.begin(), scores.end(), max_score);</div>
-<div class="line"><span class="lineno"> 4188</span>        }</div>
-<div class="ttc" id="aa00184_html_accc0a171e77d59c74473564e308e8b08"><div class="ttname"><a href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">acwing::acwing836_408::root</a></div><div class="ttdeci">vector&lt; int &gt; root</div><div class="ttdef"><b>定义</b> <a href="../../dc/dee/a00053_source.html#l00349">acwing408.cpp:349</a></div></div>
-<div class="ttc" id="aa00240_html_abce64e9bd359516e1c396e6af442934f"><div class="ttname"><a href="../../d9/d21/a00240.html#abce64e9bd359516e1c396e6af442934f">comp526::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00129">comp526.cpp:129</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l04541">4541</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4541</span>                                                         {</div>
+<div class="line"><span class="lineno"> 4542</span>            <span class="keywordtype">int</span> max = 0;</div>
+<div class="line"><span class="lineno"> 4543</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> num: nums) {</div>
+<div class="line"><span class="lineno"> 4544</span>                max |= num;</div>
+<div class="line"><span class="lineno"> 4545</span>            }</div>
+<div class="line"><span class="lineno"> 4546</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#af3c5e323f0d254fd74d217cf7bac1fe8">dfs</a>(0, max, nums);</div>
+<div class="line"><span class="lineno"> 4547</span>        }</div>
+<div class="ttc" id="aa02366_html_af3c5e323f0d254fd74d217cf7bac1fe8"><div class="ttname"><a href="#af3c5e323f0d254fd74d217cf7bac1fe8">leetcode::count_number_of_maximum_bitwise_or_subsets::Solution::dfs</a></div><div class="ttdeci">static int dfs(int current, int target, vector&lt; int &gt; nums)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l04549">leetcode.cpp:4549</a></div></div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l02147">leetcode::count_nodes_with_the_highest_score::TEST()</a> , 以及 <a class="el" href="../../d3/d52/a00023_source.html#l02152">leetcode::count_nodes_with_the_highest_score::TEST()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l04549">dfs()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l02273">leetcode::count_number_of_maximum_bitwise_or_subsets::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l02278">leetcode::count_number_of_maximum_bitwise_or_subsets::TEST()</a> , 以及 <a class="el" href="../../d4/d51/a00017_source.html#l02283">leetcode::count_number_of_maximum_bitwise_or_subsets::TEST()</a>.</p>
+
+</div>
+</div>
+<a id="af3c5e323f0d254fd74d217cf7bac1fe8" name="af3c5e323f0d254fd74d217cf7bac1fe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3c5e323f0d254fd74d217cf7bac1fe8">&#9670;&#160;</a></span>dfs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leetcode::count_number_of_maximum_bitwise_or_subsets::Solution::dfs </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt;</td>          <td class="paramname"><span class="paramname"><em>nums</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l04549">4549</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4549</span>                                                                   {</div>
+<div class="line"><span class="lineno"> 4550</span>            <span class="keywordflow">if</span>((current | target) == current) {</div>
+<div class="line"><span class="lineno"> 4551</span>                <span class="keywordflow">return</span> 1 &lt;&lt; nums.size();</div>
+<div class="line"><span class="lineno"> 4552</span>            }</div>
+<div class="line"><span class="lineno"> 4553</span>            <span class="keywordtype">int</span> sum         = 0;</div>
+<div class="line"><span class="lineno"> 4554</span>            vector nums_cpy = nums;</div>
+<div class="line"><span class="lineno"> 4555</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nums.size(); i++) {</div>
+<div class="line"><span class="lineno"> 4556</span>                nums_cpy.erase(nums_cpy.begin());</div>
+<div class="line"><span class="lineno"> 4557</span>                sum += <a class="code hl_function" href="#af3c5e323f0d254fd74d217cf7bac1fe8">dfs</a>(current | nums[i], target, nums_cpy);</div>
+<div class="line"><span class="lineno"> 4558</span>            }</div>
+<div class="line"><span class="lineno"> 4559</span>            <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno"> 4560</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l04549">dfs()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l04541">countMaxOrSubsets()</a> , 以及 <a class="el" href="../../da/d45/a00011_source.html#l04549">dfs()</a>.</p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../d8/d41/a00038_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a></li>
 <li><a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a></li>
 </ul>
 </div><!-- contents -->

@@ -5,22 +5,5 @@ var searchData=
   ['codeforces_3a_3abeautiful_5fstring_2',['beautiful_string',['../d0/d53/a00232.html',1,'codeforces']]],
   ['codeforces_3a_3aisamatdin_5fand_5fhis_5fmagic_5fwand_3',['isamatdin_and_his_magic_wand',['../da/d31/a00234.html',1,'codeforces']]],
   ['codeforces_3a_3ayet_5fanother_5farray_5fproblem_4',['yet_another_array_problem',['../d3/d42/a00235.html',1,'codeforces']]],
-  ['codeforces_3a_3ayour_5fname_5',['your_name',['../d6/de1/a00233.html',1,'codeforces']]],
-  ['comp526_6',['comp526',['../d7/d40/a00236.html',1,'']]],
-  ['comp526_3a_3aallpairspath_7',['allpairspath',['../dd/dd7/a00248.html',1,'comp526']]],
-  ['comp526_3a_3aamalgram_8',['amalgram',['../d6/d82/a00243.html',1,'comp526']]],
-  ['comp526_3a_3aceremony_9',['ceremony',['../d3/d1a/a00251.html',1,'comp526']]],
-  ['comp526_3a_3aclockpictures_10',['clockpictures',['../d0/da7/a00250.html',1,'comp526']]],
-  ['comp526_3a_3acountingchocolate_11',['countingchocolate',['../d4/d9a/a00246.html',1,'comp526']]],
-  ['comp526_3a_3adoctorkattis_12',['doctorkattis',['../dc/ded/a00252.html',1,'comp526']]],
-  ['comp526_3a_3agrid_13',['grid',['../d0/d1f/a00247.html',1,'comp526']]],
-  ['comp526_3a_3aoddecho_14',['oddecho',['../da/d2e/a00238.html',1,'comp526']]],
-  ['comp526_3a_3aoddities_15',['oddities',['../d6/d22/a00245.html',1,'comp526']]],
-  ['comp526_3a_3aplantingtrees_16',['plantingtrees',['../d6/db6/a00241.html',1,'comp526']]],
-  ['comp526_3a_3arecount_17',['recount',['../d0/d27/a00239.html',1,'comp526']]],
-  ['comp526_3a_3aset_18',['set',['../d9/d21/a00240.html',1,'comp526']]],
-  ['comp526_3a_3asnowflakes_19',['snowflakes',['../d2/dc8/a00242.html',1,'comp526']]],
-  ['comp526_3a_3astable_5fmatching_20',['stable_matching',['../d4/d08/a00237.html',1,'comp526']]],
-  ['comp526_3a_3aweakvertices_21',['weakvertices',['../de/dbc/a00249.html',1,'comp526']]],
-  ['comp526_3a_3awheresmyinternet_22',['wheresmyinternet',['../d6/d08/a00244.html',1,'comp526']]]
+  ['codeforces_3a_3ayour_5fname_5',['your_name',['../d6/de1/a00233.html',1,'codeforces']]]
 ];

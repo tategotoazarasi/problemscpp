@@ -190,6 +190,6 @@ var searchData=
   ['acwing822_187',['acwing822',['../d6/d51/a01494.html',1,'acwing']]],
   ['acwing823_188',['acwing823',['../d6/dc9/a01498.html',1,'acwing']]],
   ['acwing862_189',['acwing862',['../dc/def/a01594.html',1,'acwing']]],
-  ['allone_190',['AllOne',['../de/dc9/a02414.html',1,'leetcode::all_oone_data_structure']]],
+  ['allone_190',['AllOne',['../dc/dfd/a02370.html',1,'leetcode::all_oone_data_structure']]],
   ['avlnode_191',['AVLNode',['../df/d76/a03726.html',1,'']]]
 ];

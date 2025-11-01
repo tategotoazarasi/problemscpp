@@ -140,18 +140,18 @@ $(function(){ initResizable(false); });
 
 <p class="definition">在文件 <a class="el" href="../../d6/d2d/a00047_source.html">luogu.cpp</a> 第 <a class="el" href="../../d6/d2d/a00047_source.html#l01274">1274</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1274</span>                                               {</div>
-<div class="line"><span class="lineno"> 1275</span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>;</div>
+<div class="line"><span class="lineno"> 1275</span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
 <div class="line"><span class="lineno"> 1276</span>        <span class="keywordtype">int</span> square[40][40];</div>
 <div class="line"><span class="lineno"> 1277</span>        memset(square, 0, <span class="keyword">sizeof</span> square);</div>
 <div class="line"><span class="lineno"> 1278</span>        <span class="keyword">auto</span> um = unordered_map&lt;int, pair&lt;int, int&gt;&gt;();</div>
-<div class="line"><span class="lineno"> 1279</span>        cin &gt;&gt; <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>;</div>
-<div class="line"><span class="lineno"> 1280</span>        square[0][<a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a> / 2] = 1;</div>
+<div class="line"><span class="lineno"> 1279</span>        cin &gt;&gt; <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
+<div class="line"><span class="lineno"> 1280</span>        square[0][<a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> / 2] = 1;</div>
 <div class="line"><span class="lineno"> 1281</span>        um[1]            = make_pair(0, n / 2);</div>
-<div class="line"><span class="lineno"> 1282</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 2; k &lt;= <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a> * <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>; k++) {</div>
+<div class="line"><span class="lineno"> 1282</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 2; k &lt;= <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> * <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; k++) {</div>
 <div class="line"><span class="lineno"> 1283</span>            <span class="keyword">auto</span> [prev_x, prev_y] = um[k - 1];</div>
 <div class="line"><span class="lineno"> 1284</span>            <span class="keywordflow">if</span>(prev_x == 0 &amp;&amp; prev_y != n - 1) {</div>
 <div class="line"><span class="lineno"> 1285</span>                <span class="comment">//若 (K−1) 在第一行但不在最后一列，则将 K 填在最后一行， (K−1) 所在列的右一列；</span></div>
-<div class="line"><span class="lineno"> 1286</span>                square[<a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a> - 1][prev_y + 1] = k;</div>
+<div class="line"><span class="lineno"> 1286</span>                square[<a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> - 1][prev_y + 1] = k;</div>
 <div class="line"><span class="lineno"> 1287</span>                um[k]                     = make_pair(n - 1, prev_y + 1);</div>
 <div class="line"><span class="lineno"> 1288</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(prev_y == n - 1 &amp;&amp; prev_x != 0) {</div>
 <div class="line"><span class="lineno"> 1289</span>                <span class="comment">//若 (K−1) 在最后一列但不在第一行，则将 K 填在第一列， (K−1) 所在行的上一行；</span></div>
@@ -172,15 +172,15 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno"> 1304</span>                }</div>
 <div class="line"><span class="lineno"> 1305</span>            }</div>
 <div class="line"><span class="lineno"> 1306</span>        }</div>
-<div class="line"><span class="lineno"> 1307</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>; i++) {</div>
-<div class="line"><span class="lineno"> 1308</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">n</a>; j++) {</div>
+<div class="line"><span class="lineno"> 1307</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno"> 1308</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; j++) {</div>
 <div class="line"><span class="lineno"> 1309</span>                cout &lt;&lt; square[i][j] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
 <div class="line"><span class="lineno"> 1310</span>            }</div>
 <div class="line"><span class="lineno"> 1311</span>            cout &lt;&lt; endl;</div>
 <div class="line"><span class="lineno"> 1312</span>        }</div>
 <div class="line"><span class="lineno"> 1313</span>        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno"> 1314</span>    }</div>
-<div class="ttc" id="aa00247_html_a11f44ec8ab6ab27b1d278577b98a491f"><div class="ttname"><a href="../../d0/d1f/a00247.html#a11f44ec8ab6ab27b1d278577b98a491f">comp526::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00362">comp526.cpp:362</a></div></div>
+<div class="ttc" id="aa00564_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00362">liverpool.cpp:362</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d5/d16/a00029_source.html#l00759">luogu::TEST()</a>.</p>
 
