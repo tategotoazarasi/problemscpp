@@ -175,4 +175,23 @@ namespace codeforces {
 			return 0;
 		}
 	}// namespace yet_another_array_problem
+
+	namespace shizuku_hoshikawa_and_farm_legs {
+		int main(istream &cin, ostream &cout) {
+			int t = 0;
+			cin >> t;
+			while(t--) {
+				int n;
+				int cnt = 0;
+				cin >> n;
+				for(int i = 0; i <= n / 2; i++) {
+					if((n - 2 * i) % 4 == 0) {
+						cnt++;
+					}
+				}
+				cout << cnt << endl;
+			}
+			return 0;
+		}
+	}// namespace shizuku_hoshikawa_and_farm_legs
 }// namespace codeforces

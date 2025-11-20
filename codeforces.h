@@ -32,6 +32,10 @@ namespace codeforces {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace yet_another_array_problem
 
+	namespace shizuku_hoshikawa_and_farm_legs {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
+
 }// namespace codeforces
 
 #endif//PROBLEMSCPP_CODEFORCES_H

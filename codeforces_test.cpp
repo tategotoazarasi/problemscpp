@@ -44,4 +44,14 @@ namespace codeforces {
 			ASSERT_EQ("2\n5\n5\n3\n", ans);
 		}
 	}// namespace yet_another_array_problem
+
+	namespace shizuku_hoshikawa_and_farm_legs {
+		TEST(shizuku_hoshikawa_and_farm_legs, case1) {
+			istringstream in("5\n2\n3\n4\n6\n100\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1\n0\n2\n2\n26\n", ans);
+		}
+	}// namespace shizuku_hoshikawa_and_farm_legs
 }// namespace codeforces
