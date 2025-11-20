@@ -64,4 +64,14 @@ namespace codeforces {
 			ASSERT_EQ("1\n2 0 7 1 \n0\n0 2 4 0 \n0\n2 0 1 5 11 12 1 2 \n0\n0 0 0 \n2\n2 5 4 \n0\n5 5 \n", ans);
 		}
 	}// namespace yuu_koito_and_minimum_absolute_sum
+
+	namespace renako_amaori_and_xor_game {
+		TEST(renako_amaori_and_xor_game, case1) {
+			istringstream in("6\n4\n1 0 0 1\n1 0 1 1\n6\n0 1 1 1 1 0\n0 0 1 0 1 1\n4\n0 0 1 0\n1 0 1 1\n5\n1 0 1 1 1\n0 1 1 1 0\n6\n1 1 1 1 1 1\n1 1 1 1 1 1\n5\n0 1 0 0 1\n1 0 0 1 1\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("Ajisai\nMai\nTie\nAjisai\nTie\nMai\n", ans);
+		}
+	}// namespace renako_amaori_and_xor_game
 }// namespace codeforces

@@ -8,6 +8,7 @@
 #include <cstdint>
 #include <iosfwd>
 #include <iostream>
+#include <stack>
 #include <unordered_map>
 #include <vector>
 
@@ -238,4 +239,45 @@ namespace codeforces {
 			return 0;
 		}
 	}// namespace yuu_koito_and_minimum_absolute_sum
+
+	namespace renako_amaori_and_xor_game {
+		int main(istream &cin, ostream &cout) {
+			int t;
+			cin >> t;
+			while(t--) {
+				int n;
+				cin >> n;
+				vector<int> a(n);
+				vector<int> b(n);
+
+				int res_a = 0;
+				for(int i = 0; i < n; i++) {
+					cin >> a[i];
+					res_a ^= a[i];
+				}
+
+				int res_b     = 0;
+				int last_diff = -1;
+
+				for(int i = 0; i < n; i++) {
+					cin >> b[i];
+					res_b ^= b[i];
+					if(a[i] != b[i]) {
+						last_diff = i;
+					}
+				}
+
+				if(res_a == res_b) {
+					cout << "Tie" << endl;
+				} else {
+					if(last_diff % 2 == 0) {
+						cout << "Ajisai" << endl;
+					} else {
+						cout << "Mai" << endl;
+					}
+				}
+			}
+			return 0;
+		}
+	}// namespace renako_amaori_and_xor_game
 }// namespace codeforces
