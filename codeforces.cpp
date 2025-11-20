@@ -8,6 +8,8 @@
 #include <cstdint>
 #include <iosfwd>
 #include <iostream>
+#include <limits.h>
+#include <queue>
 #include <stack>
 #include <unordered_map>
 #include <vector>
@@ -280,4 +282,43 @@ namespace codeforces {
 			return 0;
 		}
 	}// namespace renako_amaori_and_xor_game
+
+	namespace rae_taylor_and_trees {
+		int main(istream &cin, ostream &cout) {
+			int t;
+			cin >> t;
+			while(t--) {
+				int n;
+				cin >> n;
+				vector<int> p(n);
+				vector<int> lmin(n, n);
+				vector<int> rmax(n, 1);
+				for(int i = 0; i < n; i++) {
+					cin >> p[i];
+				}
+				for(int i = 1; i < n; i++) {
+					lmin[i] = min(lmin[i - 1], p[i - 1]);
+				}
+				for(int i = n - 2; i >= 0; i--) {
+					rmax[i] = max(rmax[i + 1], p[i + 1]);
+				}
+				if(p[0] > rmax[0] || p[n - 1] < lmin[n - 1]) {
+					cout << "No" << endl;
+					continue;
+				}
+				bool flag = true;
+				for(int i = 1; i < n - 1; i++) {
+					if(lmin[i] > rmax[i]) {
+						cout << "No" << endl;
+						flag = false;
+						break;
+					}
+				}
+				if(flag) {
+					cout << "Yes" << endl;
+				}
+			}
+			return 0;
+		}
+	}// namespace rae_taylor_and_trees
 }// namespace codeforces

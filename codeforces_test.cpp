@@ -74,4 +74,14 @@ namespace codeforces {
 			ASSERT_EQ("Ajisai\nMai\nTie\nAjisai\nTie\nMai\n", ans);
 		}
 	}// namespace renako_amaori_and_xor_game
+
+	namespace rae_taylor_and_trees {
+		TEST(rae_taylor_and_trees, case1) {
+			istringstream in("9\n6\n1 3 4 5 2 6\n4\n3 4 1 2\n5\n4 3 5 1 2\n4\n1 2 3 4\n7\n4 3 5 7 6 2 1\n6\n2 4 6 1 3 5\n3\n2 1 3\n4\n2 4 1 3\n6\n4 2 6 5 1 3\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("Yes\nNo\nNo\nYes\nNo\nYes\nYes\nYes\nYes\n", ans);
+		}
+	}// namespace rae_taylor_and_trees
 }// namespace codeforces
