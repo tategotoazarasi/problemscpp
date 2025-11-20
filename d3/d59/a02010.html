@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::reverse_prefix_of_word::Solution类 参考</title>
+<title>problemscpp: leetcode::longest_nice_substring::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,7 +84,7 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d7/d40/a00236.html">leetcode</a></li><li class="navelem"><a class="el" href="../../dc/d0f/a00303.html">reverse_prefix_of_word</a></li><li class="navelem"><a class="el" href="../../d3/d59/a02010.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d9/d21/a00240.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d1/de3/a00306.html">longest_nice_substring</a></li><li class="navelem"><a class="el" href="../../d3/d59/a02010.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -92,7 +92,7 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="../../d6/d19/a02007.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::reverse_prefix_of_word::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::longest_nice_substring::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -100,15 +100,17 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a36110f317ddb6dc75962abe919b8dd9c" id="r_a36110f317ddb6dc75962abe919b8dd9c"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36110f317ddb6dc75962abe919b8dd9c">reversePrefix</a> (string word, char ch)</td></tr>
-<tr class="separator:a36110f317ddb6dc75962abe919b8dd9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c6eddb6510e6ddcc38f9a22a4244806" id="r_a4c6eddb6510e6ddcc38f9a22a4244806"><td class="memItemLeft" align="right" valign="top">static pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c6eddb6510e6ddcc38f9a22a4244806">dfs</a> (string s, int start, int end)</td></tr>
+<tr class="separator:a4c6eddb6510e6ddcc38f9a22a4244806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4556e24442a4565d109d4d175f8dbbb2" id="r_a4556e24442a4565d109d4d175f8dbbb2"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4556e24442a4565d109d4d175f8dbbb2">longestNiceSubstring</a> (const string &amp;s)</td></tr>
+<tr class="separator:a4556e24442a4565d109d4d175f8dbbb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l00865">865</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l00856">856</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a36110f317ddb6dc75962abe919b8dd9c" name="a36110f317ddb6dc75962abe919b8dd9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36110f317ddb6dc75962abe919b8dd9c">&#9670;&#160;</a></span>reversePrefix()</h2>
+<a id="a4c6eddb6510e6ddcc38f9a22a4244806" name="a4c6eddb6510e6ddcc38f9a22a4244806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c6eddb6510e6ddcc38f9a22a4244806">&#9670;&#160;</a></span>dfs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -117,14 +119,19 @@ $(function(){ initResizable(false); });
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string leetcode::reverse_prefix_of_word::Solution::reversePrefix </td>
+          <td class="memname">pair&lt; int, int &gt; leetcode::longest_nice_substring::Solution::dfs </td>
           <td>(</td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>word</em></span>, </td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>ch</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>end</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -134,24 +141,93 @@ $(function(){ initResizable(false); });
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l02154">2154</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2154</span>                                                           {</div>
-<div class="line"><span class="lineno"> 2155</span>            <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><span class="lineno"> 2156</span>            <span class="keywordflow">for</span>(; i &lt; word.length(); i++) {</div>
-<div class="line"><span class="lineno"> 2157</span>                <span class="keywordflow">if</span>(ch == word[i]) {</div>
-<div class="line"><span class="lineno"> 2158</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2159</span>                }</div>
-<div class="line"><span class="lineno"> 2160</span>            }</div>
-<div class="line"><span class="lineno"> 2161</span>            <span class="keywordflow">if</span>(i == word.length()) {</div>
-<div class="line"><span class="lineno"> 2162</span>                <span class="keywordflow">return</span> word;</div>
-<div class="line"><span class="lineno"> 2163</span>            }</div>
-<div class="line"><span class="lineno"> 2164</span>            <span class="keywordtype">string</span> prefix       = word.substr(0, i + 1);</div>
-<div class="line"><span class="lineno"> 2165</span>            <span class="keyword">const</span> <span class="keywordtype">string</span> suffix = word.substr(i + 1);</div>
-<div class="line"><span class="lineno"> 2166</span>            <span class="keyword">const</span> <span class="keyword">auto</span> xiferp   = string(prefix.rbegin(), prefix.rend());</div>
-<div class="line"><span class="lineno"> 2167</span>            <span class="keywordflow">return</span> xiferp + suffix;</div>
-<div class="line"><span class="lineno"> 2168</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l02108">2108</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2108</span>                                                                 {</div>
+<div class="line"><span class="lineno"> 2109</span>            <span class="keywordflow">if</span>(start == end) {</div>
+<div class="line"><span class="lineno"> 2110</span>                <span class="keywordflow">return</span> {start, 0};</div>
+<div class="line"><span class="lineno"> 2111</span>            }</div>
+<div class="line"><span class="lineno"> 2112</span>            <span class="keywordtype">int</span> lower     = 0;</div>
+<div class="line"><span class="lineno"> 2113</span>            <span class="keywordtype">int</span> upper     = 0;</div>
+<div class="line"><span class="lineno"> 2114</span>            <span class="keywordtype">int</span> max_start = 0;</div>
+<div class="line"><span class="lineno"> 2115</span>            <span class="keywordtype">int</span> max_len   = 0;</div>
+<div class="line"><span class="lineno"> 2116</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = start; i &lt;= end; i++) {</div>
+<div class="line"><span class="lineno"> 2117</span>                <span class="keyword">const</span> <span class="keywordtype">char</span> ch = s[i];</div>
+<div class="line"><span class="lineno"> 2118</span>                <span class="keywordflow">if</span>(islower(ch) != 0) {</div>
+<div class="line"><span class="lineno"> 2119</span>                    lower |= 1 &lt;&lt; ch - <span class="charliteral">&#39;a&#39;</span>;</div>
+<div class="line"><span class="lineno"> 2120</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 2121</span>                    <span class="comment">//isupper</span></div>
+<div class="line"><span class="lineno"> 2122</span>                    upper |= 1 &lt;&lt; ch - <span class="charliteral">&#39;A&#39;</span>;</div>
+<div class="line"><span class="lineno"> 2123</span>                }</div>
+<div class="line"><span class="lineno"> 2124</span>            }</div>
+<div class="line"><span class="lineno"> 2125</span>            <span class="keywordflow">if</span>(lower == upper) {</div>
+<div class="line"><span class="lineno"> 2126</span>                <span class="comment">//是美好字符串</span></div>
+<div class="line"><span class="lineno"> 2127</span>                <span class="keywordflow">return</span> {start, end - start + 1};</div>
+<div class="line"><span class="lineno"> 2128</span>            }</div>
+<div class="line"><span class="lineno"> 2129</span>            <span class="comment">//不是美好字符串</span></div>
+<div class="line"><span class="lineno"> 2130</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> not_nice = lower ^ upper;<span class="comment">//无法构成美好字符串的字符</span></div>
+<div class="line"><span class="lineno"> 2131</span>            <span class="keywordtype">int</span> i              = start;</div>
+<div class="line"><span class="lineno"> 2132</span>            <span class="keywordflow">while</span>(i &lt;= end) {</div>
+<div class="line"><span class="lineno"> 2133</span>                <span class="keywordflow">if</span>((not_nice &gt;&gt; tolower(s[i]) - <span class="charliteral">&#39;a&#39;</span> &amp; 1) == 1) {</div>
+<div class="line"><span class="lineno"> 2134</span>                    <span class="comment">//在not_nice中</span></div>
+<div class="line"><span class="lineno"> 2135</span>                    i++;</div>
+<div class="line"><span class="lineno"> 2136</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2137</span>                }</div>
+<div class="line"><span class="lineno"> 2138</span>                <span class="keywordtype">int</span> j = i + 1;</div>
+<div class="line"><span class="lineno"> 2139</span>                <span class="keywordflow">while</span>(j &lt;= end &amp;&amp; (not_nice &gt;&gt; tolower(s[j]) - <span class="charliteral">&#39;a&#39;</span> &amp; 1) != 1) {</div>
+<div class="line"><span class="lineno"> 2140</span>                    j++;</div>
+<div class="line"><span class="lineno"> 2141</span>                }</div>
+<div class="line"><span class="lineno"> 2142</span>                <span class="keyword">auto</span> [next_start, next_len] = <a class="code hl_function" href="#a4c6eddb6510e6ddcc38f9a22a4244806">dfs</a>(s, i, j - 1);</div>
+<div class="line"><span class="lineno"> 2143</span>                <span class="keywordflow">if</span>(max_len &lt; next_len) {</div>
+<div class="line"><span class="lineno"> 2144</span>                    max_len   = next_len;</div>
+<div class="line"><span class="lineno"> 2145</span>                    max_start = next_start;</div>
+<div class="line"><span class="lineno"> 2146</span>                }</div>
+<div class="line"><span class="lineno"> 2147</span>                i = j;</div>
+<div class="line"><span class="lineno"> 2148</span>            }</div>
+<div class="line"><span class="lineno"> 2149</span>            <span class="keywordflow">return</span> {max_start, max_len};</div>
+<div class="line"><span class="lineno"> 2150</span>        }</div>
+<div class="ttc" id="aa02010_html_a4c6eddb6510e6ddcc38f9a22a4244806"><div class="ttname"><a href="#a4c6eddb6510e6ddcc38f9a22a4244806">leetcode::longest_nice_substring::Solution::dfs</a></div><div class="ttdeci">static pair&lt; int, int &gt; dfs(string s, int start, int end)</div><div class="ttdef"><b>定义</b> <a href="../../da/d45/a00011_source.html#l02108">leetcode.cpp:2108</a></div></div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01225">leetcode::reverse_prefix_of_word::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l01229">leetcode::reverse_prefix_of_word::TEST()</a> , 以及 <a class="el" href="../../d4/d51/a00017_source.html#l01233">leetcode::reverse_prefix_of_word::TEST()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l02108">dfs()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l02108">dfs()</a> , 以及 <a class="el" href="../../da/d45/a00011_source.html#l02100">longestNiceSubstring()</a>.</p>
+
+</div>
+</div>
+<a id="a4556e24442a4565d109d4d175f8dbbb2" name="a4556e24442a4565d109d4d175f8dbbb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4556e24442a4565d109d4d175f8dbbb2">&#9670;&#160;</a></span>longestNiceSubstring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string leetcode::longest_nice_substring::Solution::longestNiceSubstring </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l02100">2100</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2100</span>                                                             {</div>
+<div class="line"><span class="lineno"> 2101</span>            <span class="keyword">auto</span> [max_start, max_len] = <a class="code hl_function" href="#a4c6eddb6510e6ddcc38f9a22a4244806">dfs</a>(s, 0, s.length() - 1);</div>
+<div class="line"><span class="lineno"> 2102</span>            <span class="keywordflow">if</span>(max_len == 0) {</div>
+<div class="line"><span class="lineno"> 2103</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 2104</span>            }</div>
+<div class="line"><span class="lineno"> 2105</span>            <span class="keywordflow">return</span> s.substr(max_start, max_len);</div>
+<div class="line"><span class="lineno"> 2106</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../da/d45/a00011_source.html#l02108">dfs()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01207">leetcode::longest_nice_substring::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l01211">leetcode::longest_nice_substring::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l01215">leetcode::longest_nice_substring::TEST()</a> , 以及 <a class="el" href="../../d4/d51/a00017_source.html#l01219">leetcode::longest_nice_substring::TEST()</a>.</p>
 
 </div>
 </div>

@@ -122,36 +122,36 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">codeforces.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l00110">110</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                              {</div>
-<div class="line"><span class="lineno">  111</span>            <span class="keywordtype">int</span> t;</div>
-<div class="line"><span class="lineno">  112</span>            cin &gt;&gt; t;</div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">while</span>(t--) {</div>
-<div class="line"><span class="lineno">  114</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><span class="lineno">  115</span>                cin &gt;&gt; n;</div>
-<div class="line"><span class="lineno">  116</span>                <span class="keywordtype">bool</span> all_even   = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  117</span>                <span class="keywordtype">bool</span> all_odd    = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  118</span>                vector&lt;int&gt; vec = vector&lt;int&gt;(n);</div>
-<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><span class="lineno">  120</span>                    cin &gt;&gt; vec[i];</div>
-<div class="line"><span class="lineno">  121</span>                    <span class="keywordflow">if</span>(vec[i] % 2 == 0) {</div>
-<div class="line"><span class="lineno">  122</span>                        all_odd = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  123</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  124</span>                        all_even = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  125</span>                    }</div>
-<div class="line"><span class="lineno">  126</span>                }</div>
-<div class="line"><span class="lineno">  127</span>                <span class="keywordflow">if</span>(!all_odd &amp;&amp; !all_even) {</div>
-<div class="line"><span class="lineno">  128</span>                    sort(<a class="code hl_variable" href="../../d8/dcb/a00706.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.begin(), <a class="code hl_variable" href="../../d8/dcb/a00706.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.end());</div>
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">codeforces.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l00113">113</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>                                              {</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordtype">int</span> t;</div>
+<div class="line"><span class="lineno">  115</span>            cin &gt;&gt; t;</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">while</span>(t--) {</div>
+<div class="line"><span class="lineno">  117</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><span class="lineno">  118</span>                cin &gt;&gt; n;</div>
+<div class="line"><span class="lineno">  119</span>                <span class="keywordtype">bool</span> all_even   = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  120</span>                <span class="keywordtype">bool</span> all_odd    = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  121</span>                vector&lt;int&gt; vec = vector&lt;int&gt;(n);</div>
+<div class="line"><span class="lineno">  122</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><span class="lineno">  123</span>                    cin &gt;&gt; vec[i];</div>
+<div class="line"><span class="lineno">  124</span>                    <span class="keywordflow">if</span>(vec[i] % 2 == 0) {</div>
+<div class="line"><span class="lineno">  125</span>                        all_odd = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  126</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  127</span>                        all_even = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  128</span>                    }</div>
 <div class="line"><span class="lineno">  129</span>                }</div>
-<div class="line"><span class="lineno">  130</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
-<div class="line"><span class="lineno">  131</span>                    cout &lt;&lt; <a class="code hl_variable" href="../../d8/dcb/a00706.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i] &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  130</span>                <span class="keywordflow">if</span>(!all_odd &amp;&amp; !all_even) {</div>
+<div class="line"><span class="lineno">  131</span>                    sort(<a class="code hl_variable" href="../../d4/deb/a00710.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.begin(), <a class="code hl_variable" href="../../d4/deb/a00710.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.end());</div>
 <div class="line"><span class="lineno">  132</span>                }</div>
-<div class="line"><span class="lineno">  133</span>                cout &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  134</span>            }</div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
-<div class="ttc" id="aa00564_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../d0/dc2/a00564.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00362">liverpool.cpp:362</a></div></div>
-<div class="ttc" id="aa00706_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d8/dcb/a00706.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>定义</b> <a href="../../d1/d09/a00077_source.html#l05095">pat.cpp:5095</a></div></div>
+<div class="line"><span class="lineno">  133</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno">  134</span>                    cout &lt;&lt; <a class="code hl_variable" href="../../d4/deb/a00710.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i] &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  135</span>                }</div>
+<div class="line"><span class="lineno">  136</span>                cout &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  137</span>            }</div>
+<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  139</span>        }</div>
+<div class="ttc" id="aa00568_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00362">liverpool.cpp:362</a></div></div>
+<div class="ttc" id="aa00710_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d4/deb/a00710.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>定义</b> <a href="../../d1/d09/a00077_source.html#l05095">pat.cpp:5095</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d2/de7/a00014_source.html#l00029">TEST()</a>.</p>
 
@@ -184,9 +184,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">   33</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><span class="lineno">   34</span>            ASSERT_EQ(<span class="stringliteral">&quot;1 2 3 4 \n1 2 3 3 4 \n3 7 5 1 \n1000000000 2 \n1 3 5 \n1 2 3 5 7 \n2 4 8 6 \n&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">   35</span>        }</div>
-<div class="ttc" id="aa00234_html_a32d947effce5b9a9940588964d4dafde"><div class="ttname"><a href="#a32d947effce5b9a9940588964d4dafde">codeforces::isamatdin_and_his_magic_wand::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00110">codeforces.cpp:110</a></div></div>
+<div class="ttc" id="aa00234_html_a32d947effce5b9a9940588964d4dafde"><div class="ttname"><a href="#a32d947effce5b9a9940588964d4dafde">codeforces::isamatdin_and_his_magic_wand::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00113">codeforces.cpp:113</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d6/d5b/a00026_source.html#l00110">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d6/d5b/a00026_source.html#l00113">main()</a>.</p>
 
 </div>
 </div>

@@ -122,37 +122,37 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">codeforces.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l00077">77</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>                                              {</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordtype">int</span> q;</div>
-<div class="line"><span class="lineno">   79</span>            cin &gt;&gt; q;</div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">while</span>(q--) {</div>
-<div class="line"><span class="lineno">   81</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><span class="lineno">   82</span>                cin &gt;&gt; n;</div>
-<div class="line"><span class="lineno">   83</span>                <span class="keywordtype">string</span> s, t;</div>
-<div class="line"><span class="lineno">   84</span>                cin &gt;&gt; s &gt;&gt; t;</div>
-<div class="line"><span class="lineno">   85</span>                <span class="keywordtype">char</span> a[26] = {};</div>
-<div class="line"><span class="lineno">   86</span>                <span class="keywordtype">char</span> b[26] = {};</div>
-<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: s) {</div>
-<div class="line"><span class="lineno">   88</span>                    a[c - <span class="charliteral">&#39;a&#39;</span>]++;</div>
-<div class="line"><span class="lineno">   89</span>                }</div>
-<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: t) {</div>
-<div class="line"><span class="lineno">   91</span>                    b[c - <span class="charliteral">&#39;a&#39;</span>]++;</div>
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">codeforces.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l00080">80</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>                                              {</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordtype">int</span> q;</div>
+<div class="line"><span class="lineno">   82</span>            cin &gt;&gt; q;</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">while</span>(q--) {</div>
+<div class="line"><span class="lineno">   84</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><span class="lineno">   85</span>                cin &gt;&gt; n;</div>
+<div class="line"><span class="lineno">   86</span>                <span class="keywordtype">string</span> s, t;</div>
+<div class="line"><span class="lineno">   87</span>                cin &gt;&gt; s &gt;&gt; t;</div>
+<div class="line"><span class="lineno">   88</span>                <span class="keywordtype">char</span> a[26] = {};</div>
+<div class="line"><span class="lineno">   89</span>                <span class="keywordtype">char</span> b[26] = {};</div>
+<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: s) {</div>
+<div class="line"><span class="lineno">   91</span>                    a[c - <span class="charliteral">&#39;a&#39;</span>]++;</div>
 <div class="line"><span class="lineno">   92</span>                }</div>
-<div class="line"><span class="lineno">   93</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
-<div class="line"><span class="lineno">   95</span>                    <span class="keywordflow">if</span>(a[i] != b[i]) {</div>
-<div class="line"><span class="lineno">   96</span>                        cout &lt;&lt; <span class="stringliteral">&quot;NO&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   97</span>                        flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   98</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   99</span>                    }</div>
-<div class="line"><span class="lineno">  100</span>                }</div>
-<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">if</span>(flag) {</div>
-<div class="line"><span class="lineno">  102</span>                    cout &lt;&lt; <span class="stringliteral">&quot;YES&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   93</span>                <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: t) {</div>
+<div class="line"><span class="lineno">   94</span>                    b[c - <span class="charliteral">&#39;a&#39;</span>]++;</div>
+<div class="line"><span class="lineno">   95</span>                }</div>
+<div class="line"><span class="lineno">   96</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   97</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
+<div class="line"><span class="lineno">   98</span>                    <span class="keywordflow">if</span>(a[i] != b[i]) {</div>
+<div class="line"><span class="lineno">   99</span>                        cout &lt;&lt; <span class="stringliteral">&quot;NO&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  100</span>                        flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  101</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  102</span>                    }</div>
 <div class="line"><span class="lineno">  103</span>                }</div>
-<div class="line"><span class="lineno">  104</span>            }</div>
-<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  104</span>                <span class="keywordflow">if</span>(flag) {</div>
+<div class="line"><span class="lineno">  105</span>                    cout &lt;&lt; <span class="stringliteral">&quot;YES&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  106</span>                }</div>
+<div class="line"><span class="lineno">  107</span>            }</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d2/de7/a00014_source.html#l00019">TEST()</a>.</p>
 
@@ -185,9 +185,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">   23</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><span class="lineno">   24</span>            ASSERT_EQ(<span class="stringliteral">&quot;YES\nYES\nNO\nNO\nYES\n&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">   25</span>        }</div>
-<div class="ttc" id="aa00233_html_a3fee5f12d556d12365d706f0f889ccc8"><div class="ttname"><a href="#a3fee5f12d556d12365d706f0f889ccc8">codeforces::your_name::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00077">codeforces.cpp:77</a></div></div>
+<div class="ttc" id="aa00233_html_a3fee5f12d556d12365d706f0f889ccc8"><div class="ttname"><a href="#a3fee5f12d556d12365d706f0f889ccc8">codeforces::your_name::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00080">codeforces.cpp:80</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d6/d5b/a00026_source.html#l00077">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d6/d5b/a00026_source.html#l00080">main()</a>.</p>
 
 </div>
 </div>
