@@ -54,4 +54,14 @@ namespace codeforces {
 			ASSERT_EQ("1\n0\n2\n2\n26\n", ans);
 		}
 	}// namespace shizuku_hoshikawa_and_farm_legs
+
+	namespace yuu_koito_and_minimum_absolute_sum {
+		TEST(yuu_koito_and_minimum_absolute_sum, case1) {
+			istringstream in("6\n4\n2 -1 7 1\n4\n-1 2 4 -1\n8\n2 -1 1 5 11 12 1 -1\n3\n-1 -1 -1\n3\n2 5 4\n2\n-1 5\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1\n2 0 7 1 \n0\n0 2 4 0 \n0\n2 0 1 5 11 12 1 2 \n0\n0 0 0 \n2\n2 5 4 \n0\n5 5 \n", ans);
+		}
+	}// namespace yuu_koito_and_minimum_absolute_sum
 }// namespace codeforces

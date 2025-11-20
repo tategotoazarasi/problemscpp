@@ -194,4 +194,48 @@ namespace codeforces {
 			return 0;
 		}
 	}// namespace shizuku_hoshikawa_and_farm_legs
+
+	namespace yuu_koito_and_minimum_absolute_sum {
+		int main(istream &cin, ostream &cout) {
+			int t;
+			cin >> t;
+			while(t--) {
+				int n;
+				cin >> n;
+				int sum = 0;
+				vector<int> a(n);
+				for(int i = 0; i < n; i++) {
+					cin >> a[i];
+					if(a[i] == -1 && i > 0 && i < n - 1) {
+						a[i] = 0;
+					}
+					if(a[i] != -1 && i > 0 && a[i - 1] != -1) {
+						sum += a[i] - a[i - 1];
+					}
+				}
+				if(n == 2 && a[0] == -1 && a[1] == -1) {
+					cout << 0 << endl
+					     << "0 0" << endl;
+					continue;
+				}
+				if(a[n - 1] == -1) {
+					if(a[0] == -1) {
+						a[0] = 0;
+						sum += a[1];
+					}
+					a[n - 1] = a[n - 2] - sum;
+					sum      = 0;
+				} else if(a[0] == -1) {
+					a[0] = a[1] + sum;
+					sum  = 0;
+				}
+				cout << abs(sum) << endl;
+				for(int i = 0; i < n; i++) {
+					cout << a[i] << " ";
+				}
+				cout << endl;
+			}
+			return 0;
+		}
+	}// namespace yuu_koito_and_minimum_absolute_sum
 }// namespace codeforces

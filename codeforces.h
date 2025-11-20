@@ -36,6 +36,10 @@ namespace codeforces {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
 
+	namespace yuu_koito_and_minimum_absolute_sum {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
+
 }// namespace codeforces
 
 #endif//PROBLEMSCPP_CODEFORCES_H
