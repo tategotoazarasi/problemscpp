@@ -143,6 +143,10 @@ namespace liverpool {
 		string query();
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}// namespace doctorkattis
+
+	namespace lobby {
+		int main_1(istream &cin, ostream &cout);
+	}
 }// namespace liverpool
 
 #endif//PROBLEMSCPP_COMO526_H

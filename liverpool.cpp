@@ -755,4 +755,24 @@ namespace liverpool {
 			return 0;
 		}
 	}// namespace doctorkattis
+
+
+	namespace lobby {
+		int main_1(istream &cin, ostream &cout) {
+			string line;
+			int ans = 0;
+			while(cin >> line) {
+				vector<int> rMax      = vector<int>(line.size(), 0);
+				rMax[line.size() - 1] = line.back() - '0';
+				int lineMax           = 0;
+				for(int i = line.length() - 2; i >= 0; i--) {
+					rMax[i] = max(line[i] - '0', rMax[i + 1]);
+					lineMax = max(lineMax, 10 * (line[i] - '0') + rMax[i + 1]);
+				}
+				ans += lineMax;
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace lobby
 }// namespace liverpool
