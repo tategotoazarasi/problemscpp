@@ -99,11 +99,11 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d00/a03118.html">pair_equal</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df0/a03119.html">pair_equal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/a03114.html">pair_hash</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7a/a03115.html">pair_hash</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df0/a03146.html">state</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d1f/a03147.html">state</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -159,7 +159,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  384</span>                }</div>
 <div class="line"><span class="lineno">  385</span>            }</div>
 <div class="line"><span class="lineno">  386</span>            unordered_set&lt;pair&lt;int, int&gt;, pair_hash, pair_equal&gt; visited{};</div>
-<div class="line"><span class="lineno">  387</span>            <span class="keyword">auto</span> comp = [](<span class="keyword">const</span> <a class="code hl_struct" href="../../dc/df0/a03146.html">state</a> &amp;a, <span class="keyword">const</span> <a class="code hl_struct" href="../../dc/df0/a03146.html">state</a> &amp;b) {</div>
+<div class="line"><span class="lineno">  387</span>            <span class="keyword">auto</span> comp = [](<span class="keyword">const</span> <a class="code hl_struct" href="../../d5/d1f/a03147.html">state</a> &amp;a, <span class="keyword">const</span> <a class="code hl_struct" href="../../d5/d1f/a03147.html">state</a> &amp;b) {</div>
 <div class="line"><span class="lineno">  388</span>                <span class="keywordflow">if</span>(a.step != b.step) {</div>
 <div class="line"><span class="lineno">  389</span>                    <span class="keywordflow">return</span> a.step &gt; b.step;</div>
 <div class="line"><span class="lineno">  390</span>                }</div>
@@ -168,7 +168,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  393</span>                <span class="keywordflow">return</span> dist_a &gt; dist_b;</div>
 <div class="line"><span class="lineno">  394</span>            };</div>
 <div class="line"><span class="lineno">  395</span>            priority_queue&lt;state, vector&lt;state&gt;, <span class="keyword">decltype</span>(comp)&gt; pq{};</div>
-<div class="line"><span class="lineno">  396</span>            pq.push(<a class="code hl_struct" href="../../dc/df0/a03146.html">state</a>{0, 0, 0});</div>
+<div class="line"><span class="lineno">  396</span>            pq.push(<a class="code hl_struct" href="../../d5/d1f/a03147.html">state</a>{0, 0, 0});</div>
 <div class="line"><span class="lineno">  397</span>            <span class="keywordflow">while</span>(!pq.empty()) {</div>
 <div class="line"><span class="lineno">  398</span>                <span class="keyword">auto</span> top = pq.top();</div>
 <div class="line"><span class="lineno">  399</span>                pq.pop();</div>
@@ -194,7 +194,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  419</span>                        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  420</span>                    }</div>
 <div class="line"><span class="lineno">  421</span>                    <span class="keywordflow">if</span>(next_x &gt;= 0 &amp;&amp; next_x &lt; n &amp;&amp; next_y &gt;= 0 &amp;&amp; next_y &lt; <a class="code hl_variable" href="#ab2991a035ec7c05bca06cda958a3e50c">m</a> &amp;&amp; grid[next_x][next_y] != 0) {</div>
-<div class="line"><span class="lineno">  422</span>                        pq.push(<a class="code hl_struct" href="../../dc/df0/a03146.html">state</a>{next_x, next_y, top.step + 1});</div>
+<div class="line"><span class="lineno">  422</span>                        pq.push(<a class="code hl_struct" href="../../d5/d1f/a03147.html">state</a>{next_x, next_y, top.step + 1});</div>
 <div class="line"><span class="lineno">  423</span>                    }</div>
 <div class="line"><span class="lineno">  424</span>                }</div>
 <div class="line"><span class="lineno">  425</span>            }</div>
@@ -204,7 +204,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aa00568_html"><div class="ttname"><a href="../../dc/d40/a00568.html">liverpool::grid</a></div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00360">liverpool.cpp:360</a></div></div>
 <div class="ttc" id="aa00568_html_ab2991a035ec7c05bca06cda958a3e50c"><div class="ttname"><a href="#ab2991a035ec7c05bca06cda958a3e50c">liverpool::grid::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00362">liverpool.cpp:362</a></div></div>
 <div class="ttc" id="aa00568_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00362">liverpool.cpp:362</a></div></div>
-<div class="ttc" id="aa03146_html"><div class="ttname"><a href="../../dc/df0/a03146.html">liverpool::grid::state</a></div><div class="ttdef"><b>定义</b> <a href="../../dc/d87/a00032_source.html#l00104">liverpool.h:104</a></div></div>
+<div class="ttc" id="aa03147_html"><div class="ttname"><a href="../../d5/d1f/a03147.html">liverpool::grid::state</a></div><div class="ttdef"><b>定义</b> <a href="../../dc/d87/a00032_source.html#l00104">liverpool.h:104</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00362">m</a>, <a class="el" href="../../d3/d52/a00023_source.html#l00362">n</a>, <a class="el" href="../../dc/d87/a00032_source.html#l00108">liverpool::grid::state::step</a>, <a class="el" href="../../dc/d87/a00032_source.html#l00106">liverpool::grid::state::x</a> , 以及 <a class="el" href="../../dc/d87/a00032_source.html#l00107">liverpool::grid::state::y</a>.</p>
 
