@@ -146,7 +146,8 @@ namespace liverpool {
 
 	namespace lobby {
 		int main_1(istream &cin, ostream &cout);
-	}
+		int main_2(istream &cin, ostream &cout);
+	}// namespace lobby
 }// namespace liverpool
 
 #endif//PROBLEMSCPP_COMO526_H

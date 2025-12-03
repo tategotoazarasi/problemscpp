@@ -774,5 +774,27 @@ namespace liverpool {
 			cout << ans;
 			return 0;
 		}
+
+		int main_2(istream &cin, ostream &cout) {
+			string line;
+			unsigned long long ans = 0;
+			while(cin >> line) {
+				vector<vector<unsigned long long>> rMax = vector<vector<unsigned long long>>(13, vector<unsigned long long>(line.size(), 0));
+				rMax[1][line.size() - 1]                = line.back() - '0';
+				unsigned long long level                = 1;
+				for(int i = 1; i <= 12; i++, level *= 10) {
+					for(int j = line.length() - i; j >= 0; j--) {
+						rMax[i][j] = max((line[j] - '0') * level + (i - 1 > 0 ? rMax[i - 1][j + 1] : 0), j + 1 < line.length() ? rMax[i][j + 1] : 0);
+					}
+				}
+				unsigned long long lineMax = 0;
+				for(int i = 0; i < line.length(); i++) {
+					lineMax = max(lineMax, rMax[12][i]);
+				}
+				ans += lineMax;
+			}
+			cout << ans;
+			return 0;
+		}
 	}// namespace lobby
 }// namespace liverpool
