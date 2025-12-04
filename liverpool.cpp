@@ -894,4 +894,30 @@ namespace liverpool {
 			return 0;
 		}
 	}// namespace printing_department
+
+	namespace secret_entrance {
+		int main_1(istream &cin, ostream &cout) {
+			int dial = 50;
+			int ans = 0;
+			string cmd;
+			while(cin>>cmd) {
+				istringstream iss(cmd);
+				char c;
+				int step;
+				iss>>c>>step;
+				if(c=='R') {
+					dial +=step;
+				}else {
+					dial+=100-step;
+				}
+				dial%=100;
+				if(dial==0) {
+					ans++;
+				}
+			}
+			cout<<ans;
+			return 0;
+		}
+
+	}
 }// namespace liverpool
