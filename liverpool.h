@@ -150,14 +150,15 @@ namespace liverpool {
 	}// namespace lobby
 
 	namespace printing_department {
+		void remove(vector<vector<int>> &cnt, const vector<string> &input, int x, int y, int w, int h, int &ans);
 		int main_1(istream &cin, ostream &cout);
 		int main_2(istream &cin, ostream &cout);
 	}// namespace printing_department
 
 	namespace secret_entrance {
 		int main_1(istream &cin, ostream &cout);
-
-	}
+		int main_2(istream &cin, ostream &cout);
+	}// namespace secret_entrance
 }// namespace liverpool
 
 #endif//PROBLEMSCPP_COMO526_H

@@ -898,26 +898,54 @@ namespace liverpool {
 	namespace secret_entrance {
 		int main_1(istream &cin, ostream &cout) {
 			int dial = 50;
-			int ans = 0;
+			int ans  = 0;
 			string cmd;
-			while(cin>>cmd) {
+			while(cin >> cmd) {
 				istringstream iss(cmd);
 				char c;
 				int step;
-				iss>>c>>step;
-				if(c=='R') {
-					dial +=step;
-				}else {
-					dial+=100-step;
+				iss >> c >> step;
+				if(c == 'R') {
+					dial += step;
+				} else {
+					dial += 100 - step;
 				}
-				dial%=100;
-				if(dial==0) {
+				dial %= 100;
+				if(dial == 0) {
 					ans++;
 				}
 			}
-			cout<<ans;
+			cout << ans;
 			return 0;
 		}
 
-	}
+		int main_2(istream &cin, ostream &cout) {
+			int dial = 50;
+			int ans  = 0;
+			string cmd;
+			while(cin >> cmd) {
+				istringstream iss(cmd);
+				char c;
+				int step;
+				iss >> c >> step;
+
+				ans += step / 100;
+				step %= 100;
+				for(int i = 0; i < step; i++) {
+					if(c == 'R') {
+						dial++;
+					} else {
+						dial--;
+					}
+					dial += 100;
+					dial %= 100;
+					if(dial == 0) {
+						ans++;
+					}
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace secret_entrance
 }// namespace liverpool
