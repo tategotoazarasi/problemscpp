@@ -833,5 +833,65 @@ namespace liverpool {
 			cout << ans;
 			return 0;
 		}
+
+		void remove(vector<vector<int>> &cnt, const vector<string> &input, int x, int y, int w, int h, int &ans) {
+			ans++;
+			cnt[x][y]                    = -1;
+			pair<int, int> directions[8] = {
+			        {-1, 0},
+			        {1, 0},
+			        {0, -1},
+			        {0, 1},
+			        {-1, -1},
+			        {-1, 1},
+			        {1, 1},
+			        {1, -1}};
+			for(auto [dx, dy]: directions) {
+				int nx = x + dx;
+				int ny = y + dy;
+				if(cnt[nx][ny] != -1 && nx >= 1 && nx <= h && ny >= 1 && ny <= w) {
+					cnt[nx][ny]--;
+					if(cnt[nx][ny] < 4 && input[nx - 1][ny - 1] == '@') {
+						remove(cnt, input, nx, ny, w, h, ans);
+					}
+				}
+			}
+		}
+
+		int main_2(istream &cin, ostream &cout) {
+			vector<string> input = {};
+			string line;
+			while(cin >> line) {
+				input.push_back(line);
+			}
+			int w                   = line.length();
+			int h                   = input.size();
+			vector<vector<int>> cnt = vector<vector<int>>(h + 2, vector<int>(w + 2, 0));
+			for(int i = 1; i <= h; i++) {
+				for(int j = 1; j <= w; j++) {
+					if(input[i - 1][j - 1] == '@') {
+						cnt[i - 1][j]++;
+						cnt[i + 1][j]++;
+						cnt[i][j - 1]++;
+						cnt[i][j + 1]++;
+						cnt[i - 1][j - 1]++;
+						cnt[i - 1][j + 1]++;
+						cnt[i + 1][j + 1]++;
+						cnt[i + 1][j - 1]++;
+					}
+				}
+			}
+
+			int ans = 0;
+			for(int i = 1; i <= h; i++) {
+				for(int j = 1; j <= w; j++) {
+					if(cnt[i][j] < 4 && cnt[i][j] != -1 && input[i - 1][j - 1] == '@') {
+						remove(cnt, input, i, j, w, h, ans);
+					}
+				}
+			}
+			cout << ans;
+			return 0;
+		}
 	}// namespace printing_department
 }// namespace liverpool
