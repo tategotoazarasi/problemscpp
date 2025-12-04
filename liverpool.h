@@ -148,6 +148,9 @@ namespace liverpool {
 		int main_1(istream &cin, ostream &cout);
 		int main_2(istream &cin, ostream &cout);
 	}// namespace lobby
+	namespace printing_department {
+		int main_1(istream &cin, ostream &cout);
+	}
 }// namespace liverpool
 
 #endif//PROBLEMSCPP_COMO526_H

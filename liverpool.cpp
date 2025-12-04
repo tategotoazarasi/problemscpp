@@ -797,4 +797,41 @@ namespace liverpool {
 			return 0;
 		}
 	}// namespace lobby
+
+	namespace printing_department {
+		int main_1(istream &cin, ostream &cout) {
+			vector<string> input = {};
+			string line;
+			while(cin >> line) {
+				input.push_back(line);
+			}
+			int w                   = line.length();
+			int h                   = input.size();
+			vector<vector<int>> cnt = vector<vector<int>>(h + 2, vector<int>(w + 2, 0));
+			for(int i = 1; i <= h; i++) {
+				for(int j = 1; j <= w; j++) {
+					if(input[i - 1][j - 1] == '@') {
+						cnt[i - 1][j]++;
+						cnt[i + 1][j]++;
+						cnt[i][j - 1]++;
+						cnt[i][j + 1]++;
+						cnt[i - 1][j - 1]++;
+						cnt[i - 1][j + 1]++;
+						cnt[i + 1][j + 1]++;
+						cnt[i + 1][j - 1]++;
+					}
+				}
+			}
+			int ans = 0;
+			for(int i = 1; i <= h; i++) {
+				for(int j = 1; j <= w; j++) {
+					if(cnt[i][j] < 4 && input[i - 1][j - 1] == '@') {
+						ans++;
+					}
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace printing_department
 }// namespace liverpool
