@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::longest_palindromic_substring::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,19 +84,109 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d9/d21/a00240.html">leetcode</a></li><li class="navelem"><a class="el" href="../../dd/d63/a00455.html">arithmetic_slices</a></li><li class="navelem"><a class="el" href="../../d6/d18/a02664.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d9/d21/a00240.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d7/d9f/a00454.html">longest_palindromic_substring</a></li><li class="navelem"><a class="el" href="../../d8/d69/a02661.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::arithmetic_slices::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../df/d14/a02658.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::longest_palindromic_substring::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../d6/d18/a02664.html">leetcode::arithmetic_slices::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d6/d18/a02664.html#ab945e1b31d4e743406174e575166fcf4">numberOfArithmeticSlices</a>(vector&lt; int &gt; &amp;nums)</td><td class="entry"><a class="el" href="../../d6/d18/a02664.html">leetcode::arithmetic_slices::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a717064618d0a81a2c64e3cf5e3c3fbf4" id="r_a717064618d0a81a2c64e3cf5e3c3fbf4"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a717064618d0a81a2c64e3cf5e3c3fbf4">longestPalindrome</a> (string s)</td></tr>
+<tr class="separator:a717064618d0a81a2c64e3cf5e3c3fbf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l02458">2458</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a717064618d0a81a2c64e3cf5e3c3fbf4" name="a717064618d0a81a2c64e3cf5e3c3fbf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a717064618d0a81a2c64e3cf5e3c3fbf4">&#9670;&#160;</a></span>longestPalindrome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string leetcode::longest_palindromic_substring::Solution::longestPalindrome </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l06584">6584</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 6584</span>                                                   {</div>
+<div class="line"><span class="lineno"> 6585</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> = s.size();</div>
+<div class="line"><span class="lineno"> 6586</span>            <span class="keywordflow">if</span>(n &lt; 2) {</div>
+<div class="line"><span class="lineno"> 6587</span>                <span class="keywordflow">return</span> s;</div>
+<div class="line"><span class="lineno"> 6588</span>            }</div>
+<div class="line"><span class="lineno"> 6589</span> </div>
+<div class="line"><span class="lineno"> 6590</span>            <span class="keywordtype">int</span> maxLen = 1;</div>
+<div class="line"><span class="lineno"> 6591</span>            <span class="keywordtype">int</span> begin  = 0;</div>
+<div class="line"><span class="lineno"> 6592</span>            <span class="comment">// dp[i][j] 表示 s[i..j] 是否是回文串</span></div>
+<div class="line"><span class="lineno"> 6593</span>            vector dp(n, vector&lt;int&gt;(n));</div>
+<div class="line"><span class="lineno"> 6594</span>            <span class="comment">// 初始化：所有长度为 1 的子串都是回文串</span></div>
+<div class="line"><span class="lineno"> 6595</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno"> 6596</span>                dp[i][i] = 1;</div>
+<div class="line"><span class="lineno"> 6597</span>            }</div>
+<div class="line"><span class="lineno"> 6598</span>            <span class="comment">// 递推开始</span></div>
+<div class="line"><span class="lineno"> 6599</span>            <span class="comment">// 先枚举子串长度</span></div>
+<div class="line"><span class="lineno"> 6600</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> L = 2; L &lt;= <a class="code hl_variable" href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; L++) {</div>
+<div class="line"><span class="lineno"> 6601</span>                <span class="comment">// 枚举左边界，左边界的上限设置可以宽松一些</span></div>
+<div class="line"><span class="lineno"> 6602</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno"> 6603</span>                    <span class="comment">// 由 L 和 i 可以确定右边界，即 j - i + 1 = L 得</span></div>
+<div class="line"><span class="lineno"> 6604</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> j = L + i - 1;</div>
+<div class="line"><span class="lineno"> 6605</span>                    <span class="comment">// 如果右边界越界，就可以退出当前循环</span></div>
+<div class="line"><span class="lineno"> 6606</span>                    <span class="keywordflow">if</span>(j &gt;= n) {</div>
+<div class="line"><span class="lineno"> 6607</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 6608</span>                    }</div>
+<div class="line"><span class="lineno"> 6609</span> </div>
+<div class="line"><span class="lineno"> 6610</span>                    <span class="keywordflow">if</span>(s[i] != s[j]) {</div>
+<div class="line"><span class="lineno"> 6611</span>                        dp[i][j] = 0;</div>
+<div class="line"><span class="lineno"> 6612</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 6613</span>                        <span class="keywordflow">if</span>(j - i &lt; 3) {</div>
+<div class="line"><span class="lineno"> 6614</span>                            dp[i][j] = 1;</div>
+<div class="line"><span class="lineno"> 6615</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 6616</span>                            dp[i][j] = dp[i + 1][j - 1];</div>
+<div class="line"><span class="lineno"> 6617</span>                        }</div>
+<div class="line"><span class="lineno"> 6618</span>                    }</div>
+<div class="line"><span class="lineno"> 6619</span> </div>
+<div class="line"><span class="lineno"> 6620</span>                    <span class="comment">// 只要 dp[i][L] == true 成立，就表示子串 s[i..L] 是回文，此时记录回文长度和起始位置</span></div>
+<div class="line"><span class="lineno"> 6621</span>                    <span class="keywordflow">if</span>(dp[i][j] != 0 &amp;&amp; j - i + 1 &gt; maxLen) {</div>
+<div class="line"><span class="lineno"> 6622</span>                        maxLen = j - i + 1;</div>
+<div class="line"><span class="lineno"> 6623</span>                        begin  = i;</div>
+<div class="line"><span class="lineno"> 6624</span>                    }</div>
+<div class="line"><span class="lineno"> 6625</span>                }</div>
+<div class="line"><span class="lineno"> 6626</span>            }</div>
+<div class="line"><span class="lineno"> 6627</span>            <span class="keywordflow">return</span> s.substr(begin, maxLen);</div>
+<div class="line"><span class="lineno"> 6628</span>        }</div>
+<div class="ttc" id="aa00568_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00362">liverpool.cpp:362</a></div></div>
+</div><!-- fragment -->
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l03014">leetcode::longest_palindromic_substring::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l03018">leetcode::longest_palindromic_substring::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l03022">leetcode::longest_palindromic_substring::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l03026">leetcode::longest_palindromic_substring::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l03030">leetcode::longest_palindromic_substring::TEST()</a> , 以及 <a class="el" href="../../d4/d51/a00017_source.html#l03034">leetcode::longest_palindromic_substring::TEST()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2

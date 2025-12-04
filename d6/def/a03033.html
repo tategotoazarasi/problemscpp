@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::time_based_key_value_store::TimeMap类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,23 +84,167 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d9/d21/a00240.html">leetcode</a></li><li class="navelem"><a class="el" href="../../dd/d5a/a00538.html">range_module</a></li><li class="navelem"><a class="el" href="../../d5/d7f/a03036.html">Chtholly</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d9/d21/a00240.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d8/d6e/a00537.html">time_based_key_value_store</a></li><li class="navelem"><a class="el" href="../../d6/def/a03033.html">TimeMap</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::range_module::Chtholly 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="../../da/d2f/a03030.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::time_based_key_value_store::TimeMap类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../d5/d7f/a03036.html">leetcode::range_module::Chtholly</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d5/d7f/a03036.html#a5c1a16242087978fbb712d4624297cae">assign</a>(unsigned l, unsigned r, type val=false)</td><td class="entry"><a class="el" href="../../d5/d7f/a03036.html">leetcode::range_module::Chtholly</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d5/d7f/a03036.html#ab92e76b33f724b20cf1531f6d866ce3c">check</a>(unsigned l, unsigned r)</td><td class="entry"><a class="el" href="../../d5/d7f/a03036.html">leetcode::range_module::Chtholly</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d5/d7f/a03036.html#abae9f024f7e7b80e67aec4f5d44edff1">s</a></td><td class="entry"><a class="el" href="../../d5/d7f/a03036.html">leetcode::range_module::Chtholly</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d5/d7f/a03036.html#a24b046fa4194ae28659471b8961584c7">split</a>(unsigned pos)</td><td class="entry"><a class="el" href="../../d5/d7f/a03036.html">leetcode::range_module::Chtholly</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d5/d7f/a03036.html#ab6a7f28d72ef0bc24ddfb5be846b76a4">type</a> typedef</td><td class="entry"><a class="el" href="../../d5/d7f/a03036.html">leetcode::range_module::Chtholly</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a2538f891c4049ee95501176719c1a4c7" id="r_a2538f891c4049ee95501176719c1a4c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2538f891c4049ee95501176719c1a4c7">TimeMap</a> ()=default</td></tr>
+<tr class="memdesc:a2538f891c4049ee95501176719c1a4c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化数据结构对象  <br /></td></tr>
+<tr class="separator:a2538f891c4049ee95501176719c1a4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5919324273c0f9ee68a8706db33a6e8b" id="r_a5919324273c0f9ee68a8706db33a6e8b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5919324273c0f9ee68a8706db33a6e8b">get</a> (const string &amp;key, int timestamp)</td></tr>
+<tr class="memdesc:a5919324273c0f9ee68a8706db33a6e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回先前调用 set(key, value, timestamp_prev) 所存储的值，其中 timestamp_prev &lt;= timestamp 。  <br /></td></tr>
+<tr class="separator:a5919324273c0f9ee68a8706db33a6e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa5ead8f5f4dcb67a325a8e8ae200eec" id="r_aaa5ead8f5f4dcb67a325a8e8ae200eec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa5ead8f5f4dcb67a325a8e8ae200eec">set</a> (const string &amp;key, string value, int timestamp)</td></tr>
+<tr class="memdesc:aaa5ead8f5f4dcb67a325a8e8ae200eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储键 key、值 value，以及给定的时间戳 timestamp。  <br /></td></tr>
+<tr class="separator:aaa5ead8f5f4dcb67a325a8e8ae200eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a61da82a42fc63e27e4c0792b441c71fb" id="r_a61da82a42fc63e27e4c0792b441c71fb"><td class="memItemLeft" align="right" valign="top">unordered_map&lt; string, map&lt; int, string, greater&lt; int &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61da82a42fc63e27e4c0792b441c71fb">um</a></td></tr>
+<tr class="separator:a61da82a42fc63e27e4c0792b441c71fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l03301">3301</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a2538f891c4049ee95501176719c1a4c7" name="a2538f891c4049ee95501176719c1a4c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2538f891c4049ee95501176719c1a4c7">&#9670;&#160;</a></span>TimeMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">leetcode::time_based_key_value_store::TimeMap::TimeMap </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化数据结构对象 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a5919324273c0f9ee68a8706db33a6e8b" name="a5919324273c0f9ee68a8706db33a6e8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5919324273c0f9ee68a8706db33a6e8b">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string leetcode::time_based_key_value_store::TimeMap::get </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>timestamp</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回先前调用 set(key, value, timestamp_prev) 所存储的值，其中 timestamp_prev &lt;= timestamp 。 </p>
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l09419">9419</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 9419</span>                                                            {</div>
+<div class="line"><span class="lineno"> 9420</span>            <span class="keyword">const</span> <span class="keyword">auto</span> it = <a class="code hl_variable" href="#a61da82a42fc63e27e4c0792b441c71fb">um</a>[key].lower_bound(timestamp);</div>
+<div class="line"><span class="lineno"> 9421</span>            <span class="keywordflow">return</span> it == <a class="code hl_variable" href="#a61da82a42fc63e27e4c0792b441c71fb">um</a>[key].end() ? <span class="stringliteral">&quot;&quot;</span> : it-&gt;second;</div>
+<div class="line"><span class="lineno"> 9422</span>        }</div>
+<div class="ttc" id="aa03033_html_a61da82a42fc63e27e4c0792b441c71fb"><div class="ttname"><a href="#a61da82a42fc63e27e4c0792b441c71fb">leetcode::time_based_key_value_store::TimeMap::um</a></div><div class="ttdeci">unordered_map&lt; string, map&lt; int, string, greater&lt; int &gt; &gt; &gt; um</div><div class="ttdef"><b>定义</b> <a href="../../dd/d32/a00041_source.html#l03302">leetcode.h:3302</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/d32/a00041_source.html#l03302">um</a>.</p>
+
+</div>
+</div>
+<a id="aaa5ead8f5f4dcb67a325a8e8ae200eec" name="aaa5ead8f5f4dcb67a325a8e8ae200eec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa5ead8f5f4dcb67a325a8e8ae200eec">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void leetcode::time_based_key_value_store::TimeMap::set </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>timestamp</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>存储键 key、值 value，以及给定的时间戳 timestamp。 </p>
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l09417">9417</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 9417</span>{ <a class="code hl_variable" href="#a61da82a42fc63e27e4c0792b441c71fb">um</a>[key][timestamp] = std::move(value); }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/d32/a00041_source.html#l03302">um</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a61da82a42fc63e27e4c0792b441c71fb" name="a61da82a42fc63e27e4c0792b441c71fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61da82a42fc63e27e4c0792b441c71fb">&#9670;&#160;</a></span>um</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unordered_map&lt;string, map&lt;int, string, greater&lt;int&gt; &gt; &gt; leetcode::time_based_key_value_store::TimeMap::um</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l03302">3302</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l09419">get()</a> , 以及 <a class="el" href="../../da/d45/a00011_source.html#l09417">set()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
