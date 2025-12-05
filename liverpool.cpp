@@ -1050,4 +1050,34 @@ namespace liverpool {
 			return 0;
 		}
 	}// namespace cafeteria
+
+	namespace gift_shop {
+		bool test(unsigned long long num) {
+			ostringstream oss = {};
+			oss << num;
+			string str = oss.str();
+			if(str.length() % 2 == 1) {
+				return false;
+			}
+			return str.substr(0, str.length() / 2) == str.substr(str.length() / 2);
+		}
+
+		int main_1(istream &cin, ostream &cout) {
+			unsigned long long a, b;
+			char c;
+			unsigned long long ans = 0;
+			while(cin >> a >> c >> b) {
+				for(unsigned long long i = a; i <= b; i++) {
+					if(test(i)) {
+						ans += i;
+					}
+				}
+				if(!(cin >> c)) {
+					break;
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace gift_shop
 }// namespace liverpool
