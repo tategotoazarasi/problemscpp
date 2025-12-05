@@ -948,4 +948,61 @@ namespace liverpool {
 			return 0;
 		}
 	}// namespace secret_entrance
+
+	namespace cafeteria {
+		struct node {
+			bool start            = true;
+			bool check            = false;
+			unsigned long long id = 0;
+		};
+
+		int main_1(istream &cin, ostream &cout) {
+			string line;
+			vector<node> ranges = {};
+			bool part_1         = true;
+			while(cin >> line) {
+				if(line.empty() || line.find('-') == string::npos) {
+					part_1 = false;
+				}
+				istringstream iss(line);
+				unsigned long long id;
+				if(part_1) {
+					char c;
+					iss >> id >> c;
+					ranges.push_back(node{true, false, id});
+					iss >> id;
+					ranges.push_back(node{false, false, id + 1});
+				} else {
+					iss >> id;
+					ranges.push_back(node{false, true, id});
+				}
+			}
+
+			sort(ranges.begin(), ranges.end(), [](const node &a, const node &b) {
+				if(a.id != b.id) {
+					return a.id < b.id;
+				}
+				if(a.start != b.start) {
+					return a.start > b.start;
+				}
+				return a.check < b.check;
+			});
+
+			unsigned long long cnt = 0;
+			unsigned long long ans = 0;
+			for(const auto &node: ranges) {
+				if(node.start) {
+					cnt++;
+				} else if(node.check) {
+					if(cnt > 0) {
+						ans++;
+					}
+				} else {
+					cnt--;
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace cafeteria
 }// namespace liverpool
