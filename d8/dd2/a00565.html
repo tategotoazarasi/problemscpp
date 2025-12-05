@@ -131,14 +131,14 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  289</span>            <span class="keywordtype">int</span> N, M;</div>
 <div class="line"><span class="lineno">  290</span>            <span class="keywordtype">int</span> a, b;</div>
 <div class="line"><span class="lineno">  291</span>            cin &gt;&gt; N &gt;&gt; M;</div>
-<div class="line"><span class="lineno">  292</span>            <a class="code hl_class" href="../../d0/d69/a03725.html">UnionFind</a> uf = <a class="code hl_class" href="../../d0/d69/a03725.html">UnionFind</a>(N + 1);</div>
+<div class="line"><span class="lineno">  292</span>            <a class="code hl_class" href="../../d1/d22/a03731.html">UnionFind</a> uf = <a class="code hl_class" href="../../d1/d22/a03731.html">UnionFind</a>(N + 1);</div>
 <div class="line"><span class="lineno">  293</span>            <span class="keywordflow">while</span>(M--) {</div>
 <div class="line"><span class="lineno">  294</span>                cin &gt;&gt; a &gt;&gt; b;</div>
-<div class="line"><span class="lineno">  295</span>                uf.<a class="code hl_function" href="../../d0/d69/a03725.html#a36a27b936dbdeb53749e32a71554c3ed">unite</a>(a, b);</div>
+<div class="line"><span class="lineno">  295</span>                uf.<a class="code hl_function" href="../../d1/d22/a03731.html#a36a27b936dbdeb53749e32a71554c3ed">unite</a>(a, b);</div>
 <div class="line"><span class="lineno">  296</span>            }</div>
 <div class="line"><span class="lineno">  297</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  298</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 2; i &lt;= N; i++) {</div>
-<div class="line"><span class="lineno">  299</span>                <span class="keywordflow">if</span>(!uf.<a class="code hl_function" href="../../d0/d69/a03725.html#aa1580fa407277914913231a7d752c7d8">same</a>(i, 1)) {</div>
+<div class="line"><span class="lineno">  299</span>                <span class="keywordflow">if</span>(!uf.<a class="code hl_function" href="../../d1/d22/a03731.html#aa1580fa407277914913231a7d752c7d8">same</a>(i, 1)) {</div>
 <div class="line"><span class="lineno">  300</span>                    cout &lt;&lt; i &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  301</span>                    flag = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  302</span>                }</div>
@@ -148,9 +148,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  306</span>            }</div>
 <div class="line"><span class="lineno">  307</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  308</span>        }</div>
-<div class="ttc" id="aa03725_html"><div class="ttname"><a href="../../d0/d69/a03725.html">UnionFind</a></div><div class="ttdoc">并查集</div><div class="ttdef"><b>定义</b> <a href="../../d3/d8b/a00059_source.html#l00091">templates.h:91</a></div></div>
-<div class="ttc" id="aa03725_html_a36a27b936dbdeb53749e32a71554c3ed"><div class="ttname"><a href="../../d0/d69/a03725.html#a36a27b936dbdeb53749e32a71554c3ed">UnionFind::unite</a></div><div class="ttdeci">void unite(int x, int y)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00496">templates.cpp:496</a></div></div>
-<div class="ttc" id="aa03725_html_aa1580fa407277914913231a7d752c7d8"><div class="ttname"><a href="../../d0/d69/a03725.html#aa1580fa407277914913231a7d752c7d8">UnionFind::same</a></div><div class="ttdeci">bool same(int x, int y)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00514">templates.cpp:514</a></div></div>
+<div class="ttc" id="aa03731_html"><div class="ttname"><a href="../../d1/d22/a03731.html">UnionFind</a></div><div class="ttdoc">并查集</div><div class="ttdef"><b>定义</b> <a href="../../d3/d8b/a00059_source.html#l00091">templates.h:91</a></div></div>
+<div class="ttc" id="aa03731_html_a36a27b936dbdeb53749e32a71554c3ed"><div class="ttname"><a href="../../d1/d22/a03731.html#a36a27b936dbdeb53749e32a71554c3ed">UnionFind::unite</a></div><div class="ttdeci">void unite(int x, int y)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00496">templates.cpp:496</a></div></div>
+<div class="ttc" id="aa03731_html_aa1580fa407277914913231a7d752c7d8"><div class="ttname"><a href="../../d1/d22/a03731.html#aa1580fa407277914913231a7d752c7d8">UnionFind::same</a></div><div class="ttdeci">bool same(int x, int y)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00514">templates.cpp:514</a></div></div>
 </div><!-- fragment -->
 <p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00514">UnionFind::same()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00496">UnionFind::unite()</a>.</p>
 

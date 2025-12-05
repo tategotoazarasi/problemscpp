@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['w_0',['w',['../d7/d53/a01645.html#a6b08565b9a7435f4d28abc03a1adb84d',1,'acwing::acwing859::edge::w'],['../dd/db4/a01693.html#a561dbf5e1973ca96265bf961dfd0a517',1,'acwing::acwing2::status::w'],['../db/d44/a03153.html#a3d813cef30c9ade6198411a1963edb1c',1,'liverpool::allpairspath::edge::w']]],
-  ['waiting_5ftime_1',['waiting_time',['../da/da8/a03685.html#a74778535059d3e483b41984330b8f71c',1,'pat::a::a1026::player']]],
+  ['w_0',['w',['../d6/df0/a01647.html#a6b08565b9a7435f4d28abc03a1adb84d',1,'acwing::acwing859::edge::w'],['../dc/dc8/a01695.html#a561dbf5e1973ca96265bf961dfd0a517',1,'acwing::acwing2::status::w'],['../d4/dbc/a03159.html#a3d813cef30c9ade6198411a1963edb1c',1,'liverpool::allpairspath::edge::w']]],
+  ['waiting_5ftime_1',['waiting_time',['../d1/d46/a03691.html#a74778535059d3e483b41984330b8f71c',1,'pat::a::a1026::player']]],
   ['wall_2',['WALL',['../db/d44/a00533.html#a7c9f51a7e49965cbf58b9ce4ce67e9a5',1,'leetcode::shortest_path_to_get_all_keys']]],
-  ['wallsandgates_3',['wallsAndGates',['../db/d4f/a02829.html#a7b94cd974e0d5e91347821d212d32b5e',1,'leetcode::walls_and_gates::Solution']]],
-  ['winnerofgame_4',['winnerOfGame',['../dc/d09/a02429.html#ab2211697c42a6ef38bdb40993dbf0373',1,'leetcode::remove_colored_pieces_if_both_neighbors_are_the_same_color::Solution']]],
-  ['withdraw_5',['withdraw',['../dd/da3/a02385.html#a91143511689bdbbc61721cc98564370b',1,'leetcode::simple_bank_system::Bank']]],
-  ['wordbreak_6',['wordBreak',['../df/d46/a02673.html#aee6a9a9a9345c714dbbe6a03d44d5694',1,'leetcode::word_break::Solution']]],
-  ['wordcount_7',['wordCount',['../de/d3c/a01809.html#a7f1751f84964dffec1cb5db46bef2816',1,'leetcode::count_words_obtained_after_adding_a_letter::Solution']]]
+  ['wallsandgates_3',['wallsAndGates',['../d0/d82/a02831.html#a7b94cd974e0d5e91347821d212d32b5e',1,'leetcode::walls_and_gates::Solution']]],
+  ['winnerofgame_4',['winnerOfGame',['../d1/df1/a02431.html#ab2211697c42a6ef38bdb40993dbf0373',1,'leetcode::remove_colored_pieces_if_both_neighbors_are_the_same_color::Solution']]],
+  ['withdraw_5',['withdraw',['../d8/deb/a02387.html#a91143511689bdbbc61721cc98564370b',1,'leetcode::simple_bank_system::Bank']]],
+  ['wordbreak_6',['wordBreak',['../d8/d01/a02675.html#aee6a9a9a9345c714dbbe6a03d44d5694',1,'leetcode::word_break::Solution']]],
+  ['wordcount_7',['wordCount',['../d2/d31/a01811.html#a7f1751f84964dffec1cb5db46bef2816',1,'leetcode::count_words_obtained_after_adding_a_letter::Solution']]]
 ];
