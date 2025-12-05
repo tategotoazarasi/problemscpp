@@ -1004,5 +1004,50 @@ namespace liverpool {
 			cout << ans;
 			return 0;
 		}
+
+		int main_2(istream &cin, ostream &cout) {
+			string line;
+			vector<node> ranges = {};
+			while(cin >> line) {
+				istringstream iss(line);
+				unsigned long long id;
+				char c;
+				iss >> id >> c;
+				ranges.push_back(node{true, false, id});
+				iss >> id;
+				ranges.push_back(node{false, false, id + 1});
+			}
+
+			sort(ranges.begin(), ranges.end(), [](const node &a, const node &b) {
+				if(a.id != b.id) {
+					return a.id < b.id;
+				}
+				if(a.start != b.start) {
+					return a.start > b.start;
+				}
+				return a.check < b.check;
+			});
+
+			unsigned long long cnt     = 0;
+			unsigned long long prev_id = -1;
+			unsigned long long ans     = 0;
+			for(const auto &node: ranges) {
+				if(node.start) {
+					cnt++;
+				} else {
+					cnt--;
+				}
+
+				if(prev_id == -1 && cnt > 0) {
+					prev_id = node.id;
+				} else if(cnt == 0 && prev_id != -1) {
+					ans += node.id - prev_id;
+					//cerr << node.id << '\t' << prev_id << '\t' << (node.id - prev_id) << '\t' << ans << endl;
+					prev_id = -1;
+				}
+			}
+			cout << ans;
+			return 0;
+		}
 	}// namespace cafeteria
 }// namespace liverpool
