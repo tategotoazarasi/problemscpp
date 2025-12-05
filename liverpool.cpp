@@ -1079,5 +1079,43 @@ namespace liverpool {
 			cout << ans;
 			return 0;
 		}
+
+		bool test2(string num, int repeat) {
+			if(num.length() % repeat != 0) {
+				return false;
+			}
+			string example = num.substr(0, num.length() / repeat);
+			for(int i = 1; i < repeat; i++) {
+				if(num.substr(i * (num.length() / repeat), num.length() / repeat) != example) {
+					return false;
+				}
+			}
+			return true;
+		}
+
+		int main_2(istream &cin, ostream &cout) {
+			unsigned long long a, b;
+			char c;
+			unsigned long long ans = 0;
+			while(cin >> a >> c >> b) {
+				for(unsigned long long i = a; i <= b; i++) {
+					string num;
+					ostringstream oss = {};
+					oss << i;
+					num = oss.str();
+					for(int j = 2; j <= 100; j++) {
+						if(test2(num, j)) {
+							ans += i;
+							break;
+						}
+					}
+				}
+				if(!(cin >> c)) {
+					break;
+				}
+			}
+			cout << ans;
+			return 0;
+		}
 	}// namespace gift_shop
 }// namespace liverpool
