@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['head_0',['head',['../d4/d12/a01863.html#a4f57c3dd424723297e00af02450b7d55',1,'leetcode::linked_list_random_node::Solution::head'],['../d0/dbd/a02771.html#a0374336358effe22a25a457e300101f3',1,'leetcode::design_linked_list::MyLinkedList::head']]],
+  ['head_0',['head',['../dd/d87/a01864.html#a4f57c3dd424723297e00af02450b7d55',1,'leetcode::linked_list_random_node::Solution::head'],['../d9/d4a/a02772.html#a0374336358effe22a25a457e300101f3',1,'leetcode::design_linked_list::MyLinkedList::head']]],
   ['heap_1',['heap',['../d6/d21/a00573.html#a01d93c3b24a0c1a206aa4ab572c58157',1,'liverpool::doctorkattis']]],
   ['heap_5fsize_2',['heap_size',['../d6/d21/a00573.html#a154ad77d5a5838fcd44b28bd9c885004',1,'liverpool::doctorkattis']]],
-  ['height_3',['height',['../d4/d3c/a01671.html#ad9b2c963827858a2732c33f268069634',1,'acwing::acwing149::huff_tree::height'],['../d4/dd9/a03599.html#a8fb7e727e3ecc817aaa5f7ccba9c8e74',1,'pat::b::b1055::Person::height'],['../d5/d8b/a03739.html#a04910843d3ea0111eb3dcfe92a8f7588',1,'AVLNode::height']]],
-  ['hour_4',['hour',['../d2/dff/a03675.html#aad4cfab0e41b37e8c74e0bc64c421501',1,'pat::a::a1016::record']]]
+  ['height_3',['height',['../d2/d7b/a01672.html#ad9b2c963827858a2732c33f268069634',1,'acwing::acwing149::huff_tree::height'],['../df/d81/a03600.html#a8fb7e727e3ecc817aaa5f7ccba9c8e74',1,'pat::b::b1055::Person::height'],['../d3/d4a/a03740.html#a04910843d3ea0111eb3dcfe92a8f7588',1,'AVLNode::height']]],
+  ['hour_4',['hour',['../d9/d94/a03676.html#aad4cfab0e41b37e8c74e0bc64c421501',1,'pat::a::a1016::record']]]
 ];

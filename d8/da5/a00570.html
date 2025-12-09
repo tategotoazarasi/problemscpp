@@ -122,49 +122,49 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00491">491</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  491</span>                                              {</div>
-<div class="line"><span class="lineno">  492</span>            <span class="keywordtype">int</span> n;</div>
-<div class="line"><span class="lineno">  493</span>            <span class="keywordflow">while</span>(cin &gt;&gt; n) {</div>
-<div class="line"><span class="lineno">  494</span>                <span class="keywordflow">if</span>(n == -1)</div>
-<div class="line"><span class="lineno">  495</span>                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  496</span>                vector&lt;vector&lt;int&gt;&gt; siblings = vector(n, vector&lt;int&gt;());</div>
-<div class="line"><span class="lineno">  497</span>                vector&lt;vector&lt;bool&gt;&gt; graph   = vector(n, vector&lt;bool&gt;(n, <span class="keyword">false</span>));</div>
-<div class="line"><span class="lineno">  498</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><span class="lineno">  499</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
-<div class="line"><span class="lineno">  500</span>                        <span class="keywordtype">int</span> x;</div>
-<div class="line"><span class="lineno">  501</span>                        cin &gt;&gt; x;</div>
-<div class="line"><span class="lineno">  502</span>                        <span class="keywordflow">if</span>(x == 1) {</div>
-<div class="line"><span class="lineno">  503</span>                            siblings[i].push_back(j);</div>
-<div class="line"><span class="lineno">  504</span>                            <span class="comment">//siblings[j].push_back(j);</span></div>
-<div class="line"><span class="lineno">  505</span>                            graph[i][j] = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  506</span>                            graph[j][i] = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  507</span>                        }</div>
-<div class="line"><span class="lineno">  508</span>                    }</div>
-<div class="line"><span class="lineno">  509</span>                }</div>
-<div class="line"><span class="lineno">  510</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
-<div class="line"><span class="lineno">  511</span>                    <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  512</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; siblings[i].size(); j++) {</div>
-<div class="line"><span class="lineno">  513</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = j + 1; k &lt; siblings[i].size(); k++) {</div>
-<div class="line"><span class="lineno">  514</span>                            <span class="keywordflow">if</span>(graph[siblings[i][j]][siblings[i][k]]) {</div>
-<div class="line"><span class="lineno">  515</span>                                flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  516</span>                                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  517</span>                            }</div>
-<div class="line"><span class="lineno">  518</span>                        }</div>
-<div class="line"><span class="lineno">  519</span>                        <span class="keywordflow">if</span>(!flag) {</div>
-<div class="line"><span class="lineno">  520</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  521</span>                        }</div>
-<div class="line"><span class="lineno">  522</span>                    }</div>
-<div class="line"><span class="lineno">  523</span>                    <span class="keywordflow">if</span>(flag) {</div>
-<div class="line"><span class="lineno">  524</span>                        cout &lt;&lt; i &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  525</span>                    }</div>
-<div class="line"><span class="lineno">  526</span>                }</div>
-<div class="line"><span class="lineno">  527</span>                cout &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  528</span>            }</div>
-<div class="line"><span class="lineno">  529</span> </div>
-<div class="line"><span class="lineno">  530</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  531</span>        }</div>
-<div class="ttc" id="aa00568_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00362">liverpool.cpp:362</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00492">492</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  492</span>                                              {</div>
+<div class="line"><span class="lineno">  493</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><span class="lineno">  494</span>            <span class="keywordflow">while</span>(cin &gt;&gt; n) {</div>
+<div class="line"><span class="lineno">  495</span>                <span class="keywordflow">if</span>(n == -1)</div>
+<div class="line"><span class="lineno">  496</span>                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  497</span>                vector&lt;vector&lt;int&gt;&gt; siblings = vector(n, vector&lt;int&gt;());</div>
+<div class="line"><span class="lineno">  498</span>                vector&lt;vector&lt;bool&gt;&gt; graph   = vector(n, vector&lt;bool&gt;(n, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  499</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><span class="lineno">  500</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; n; j++) {</div>
+<div class="line"><span class="lineno">  501</span>                        <span class="keywordtype">int</span> x;</div>
+<div class="line"><span class="lineno">  502</span>                        cin &gt;&gt; x;</div>
+<div class="line"><span class="lineno">  503</span>                        <span class="keywordflow">if</span>(x == 1) {</div>
+<div class="line"><span class="lineno">  504</span>                            siblings[i].push_back(j);</div>
+<div class="line"><span class="lineno">  505</span>                            <span class="comment">//siblings[j].push_back(j);</span></div>
+<div class="line"><span class="lineno">  506</span>                            graph[i][j] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  507</span>                            graph[j][i] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  508</span>                        }</div>
+<div class="line"><span class="lineno">  509</span>                    }</div>
+<div class="line"><span class="lineno">  510</span>                }</div>
+<div class="line"><span class="lineno">  511</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno">  512</span>                    <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  513</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; siblings[i].size(); j++) {</div>
+<div class="line"><span class="lineno">  514</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = j + 1; k &lt; siblings[i].size(); k++) {</div>
+<div class="line"><span class="lineno">  515</span>                            <span class="keywordflow">if</span>(graph[siblings[i][j]][siblings[i][k]]) {</div>
+<div class="line"><span class="lineno">  516</span>                                flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  517</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  518</span>                            }</div>
+<div class="line"><span class="lineno">  519</span>                        }</div>
+<div class="line"><span class="lineno">  520</span>                        <span class="keywordflow">if</span>(!flag) {</div>
+<div class="line"><span class="lineno">  521</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  522</span>                        }</div>
+<div class="line"><span class="lineno">  523</span>                    }</div>
+<div class="line"><span class="lineno">  524</span>                    <span class="keywordflow">if</span>(flag) {</div>
+<div class="line"><span class="lineno">  525</span>                        cout &lt;&lt; i &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  526</span>                    }</div>
+<div class="line"><span class="lineno">  527</span>                }</div>
+<div class="line"><span class="lineno">  528</span>                cout &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  529</span>            }</div>
+<div class="line"><span class="lineno">  530</span> </div>
+<div class="line"><span class="lineno">  531</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  532</span>        }</div>
+<div class="ttc" id="aa00568_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00363">liverpool.cpp:363</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00298">TEST()</a>.</p>
 
@@ -197,9 +197,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  302</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><span class="lineno">  303</span>            ASSERT_EQ(<span class="stringliteral">&quot;1 8 \n0 \n&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">  304</span>        }</div>
-<div class="ttc" id="aa00570_html_a5ab5dbfc3ec0e684329293fb0ec1c24a"><div class="ttname"><a href="#a5ab5dbfc3ec0e684329293fb0ec1c24a">liverpool::weakvertices::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00491">liverpool.cpp:491</a></div></div>
+<div class="ttc" id="aa00570_html_a5ab5dbfc3ec0e684329293fb0ec1c24a"><div class="ttname"><a href="#a5ab5dbfc3ec0e684329293fb0ec1c24a">liverpool::weakvertices::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00492">liverpool.cpp:492</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00491">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00492">main()</a>.</p>
 
 </div>
 </div>

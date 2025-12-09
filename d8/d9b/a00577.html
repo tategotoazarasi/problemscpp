@@ -98,7 +98,7 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d09/a03131.html">node</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbf/a03132.html">node</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -109,12 +109,8 @@ $(function(){ initResizable(false); });
 <tr class="separator:a8c2614fa2fb9810e79178a2592fcd11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa07ee1968a25694a5ea1e2a40ed68176" id="r_aa07ee1968a25694a5ea1e2a40ed68176"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa07ee1968a25694a5ea1e2a40ed68176">TEST</a> (cafeteria, case1_0)</td></tr>
 <tr class="separator:aa07ee1968a25694a5ea1e2a40ed68176"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81c2108af87da7558e309477b9f40f57" id="r_a81c2108af87da7558e309477b9f40f57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81c2108af87da7558e309477b9f40f57">TEST</a> (cafeteria, case1_1)</td></tr>
-<tr class="separator:a81c2108af87da7558e309477b9f40f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac32ac3a23c971a919e2733093b1b627a" id="r_ac32ac3a23c971a919e2733093b1b627a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac32ac3a23c971a919e2733093b1b627a">TEST</a> (cafeteria, case2_0)</td></tr>
 <tr class="separator:ac32ac3a23c971a919e2733093b1b627a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a335122f88170f107385ca83cac029cd0" id="r_a335122f88170f107385ca83cac029cd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a335122f88170f107385ca83cac029cd0">TEST</a> (cafeteria, case2_1)</td></tr>
-<tr class="separator:a335122f88170f107385ca83cac029cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
 <a id="ad7291cefde9612a80ec68e12115cc1e1" name="ad7291cefde9612a80ec68e12115cc1e1"></a>
@@ -136,63 +132,63 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00959">959</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  959</span>                                                {</div>
-<div class="line"><span class="lineno">  960</span>            <span class="keywordtype">string</span> line;</div>
-<div class="line"><span class="lineno">  961</span>            vector&lt;node&gt; ranges = {};</div>
-<div class="line"><span class="lineno">  962</span>            <span class="keywordtype">bool</span> part_1         = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  963</span>            <span class="keywordflow">while</span>(cin &gt;&gt; line) {</div>
-<div class="line"><span class="lineno">  964</span>                <span class="keywordflow">if</span>(line.empty() || line.find(<span class="charliteral">&#39;-&#39;</span>) == string::npos) {</div>
-<div class="line"><span class="lineno">  965</span>                    part_1 = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  966</span>                }</div>
-<div class="line"><span class="lineno">  967</span>                istringstream iss(line);</div>
-<div class="line"><span class="lineno">  968</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> id;</div>
-<div class="line"><span class="lineno">  969</span>                <span class="keywordflow">if</span>(part_1) {</div>
-<div class="line"><span class="lineno">  970</span>                    <span class="keywordtype">char</span> c;</div>
-<div class="line"><span class="lineno">  971</span>                    iss &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; c;</div>
-<div class="line"><span class="lineno">  972</span>                    ranges.push_back(node{<span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keywordtype">id</span>});</div>
-<div class="line"><span class="lineno">  973</span>                    iss &gt;&gt; id;</div>
-<div class="line"><span class="lineno">  974</span>                    ranges.push_back(<a class="code hl_struct" href="../../db/d09/a03131.html">node</a>{<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keywordtype">id</span> + 1});</div>
-<div class="line"><span class="lineno">  975</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  976</span>                    iss &gt;&gt; id;</div>
-<div class="line"><span class="lineno">  977</span>                    ranges.push_back(<a class="code hl_struct" href="../../db/d09/a03131.html">node</a>{<span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keywordtype">id</span>});</div>
-<div class="line"><span class="lineno">  978</span>                }</div>
-<div class="line"><span class="lineno">  979</span>            }</div>
-<div class="line"><span class="lineno">  980</span> </div>
-<div class="line"><span class="lineno">  981</span>            sort(ranges.begin(), ranges.end(), [](<span class="keyword">const</span> <a class="code hl_struct" href="../../db/d09/a03131.html">node</a> &amp;a, <span class="keyword">const</span> <a class="code hl_struct" href="../../db/d09/a03131.html">node</a> &amp;b) {</div>
-<div class="line"><span class="lineno">  982</span>                if(a.id != b.id) {</div>
-<div class="line"><span class="lineno">  983</span>                    return a.id &lt; b.id;</div>
-<div class="line"><span class="lineno">  984</span>                }</div>
-<div class="line"><span class="lineno">  985</span>                <span class="keywordflow">if</span>(a.start != b.start) {</div>
-<div class="line"><span class="lineno">  986</span>                    return a.start &gt; b.start;</div>
-<div class="line"><span class="lineno">  987</span>                }</div>
-<div class="line"><span class="lineno">  988</span>                <span class="keywordflow">return</span> a.check &lt; b.check;</div>
-<div class="line"><span class="lineno">  989</span>            });</div>
-<div class="line"><span class="lineno">  990</span> </div>
-<div class="line"><span class="lineno">  991</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> cnt = 0;</div>
-<div class="line"><span class="lineno">  992</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = 0;</div>
-<div class="line"><span class="lineno">  993</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<a class="code hl_struct" href="../../db/d09/a03131.html">node</a>: ranges) {</div>
-<div class="line"><span class="lineno">  994</span>                <span class="keywordflow">if</span>(<a class="code hl_struct" href="../../db/d09/a03131.html">node</a>.<a class="code hl_variable" href="../../db/d09/a03131.html#a0440aa1ff7421b62a9886b5ed315b8a2">start</a>) {</div>
-<div class="line"><span class="lineno">  995</span>                    cnt++;</div>
-<div class="line"><span class="lineno">  996</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_struct" href="../../db/d09/a03131.html">node</a>.<a class="code hl_variable" href="../../db/d09/a03131.html#a444a59eb84dfa824b7b5eb6b73c07197">check</a>) {</div>
-<div class="line"><span class="lineno">  997</span>                    <span class="keywordflow">if</span>(cnt &gt; 0) {</div>
-<div class="line"><span class="lineno">  998</span>                        <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>++;</div>
-<div class="line"><span class="lineno">  999</span>                    }</div>
-<div class="line"><span class="lineno"> 1000</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 1001</span>                    cnt--;</div>
-<div class="line"><span class="lineno"> 1002</span>                }</div>
-<div class="line"><span class="lineno"> 1003</span>            }</div>
-<div class="line"><span class="lineno"> 1004</span>            cout &lt;&lt; <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno"> 1005</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno"> 1006</span>        }</div>
-<div class="ttc" id="aa00561_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00129">liverpool.cpp:129</a></div></div>
-<div class="ttc" id="aa03131_html"><div class="ttname"><a href="../../db/d09/a03131.html">liverpool::cafeteria::node</a></div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00953">liverpool.cpp:953</a></div></div>
-<div class="ttc" id="aa03131_html_a0440aa1ff7421b62a9886b5ed315b8a2"><div class="ttname"><a href="../../db/d09/a03131.html#a0440aa1ff7421b62a9886b5ed315b8a2">liverpool::cafeteria::node::start</a></div><div class="ttdeci">bool start</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00954">liverpool.cpp:954</a></div></div>
-<div class="ttc" id="aa03131_html_a444a59eb84dfa824b7b5eb6b73c07197"><div class="ttname"><a href="../../db/d09/a03131.html#a444a59eb84dfa824b7b5eb6b73c07197">liverpool::cafeteria::node::check</a></div><div class="ttdeci">bool check</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00955">liverpool.cpp:955</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00960">960</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  960</span>                                                {</div>
+<div class="line"><span class="lineno">  961</span>            <span class="keywordtype">string</span> line;</div>
+<div class="line"><span class="lineno">  962</span>            vector&lt;node&gt; ranges = {};</div>
+<div class="line"><span class="lineno">  963</span>            <span class="keywordtype">bool</span> part_1         = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  964</span>            <span class="keywordflow">while</span>(cin &gt;&gt; line) {</div>
+<div class="line"><span class="lineno">  965</span>                <span class="keywordflow">if</span>(line.empty() || line.find(<span class="charliteral">&#39;-&#39;</span>) == string::npos) {</div>
+<div class="line"><span class="lineno">  966</span>                    part_1 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  967</span>                }</div>
+<div class="line"><span class="lineno">  968</span>                istringstream iss(line);</div>
+<div class="line"><span class="lineno">  969</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> id;</div>
+<div class="line"><span class="lineno">  970</span>                <span class="keywordflow">if</span>(part_1) {</div>
+<div class="line"><span class="lineno">  971</span>                    <span class="keywordtype">char</span> c;</div>
+<div class="line"><span class="lineno">  972</span>                    iss &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; c;</div>
+<div class="line"><span class="lineno">  973</span>                    ranges.push_back(node{<span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keywordtype">id</span>});</div>
+<div class="line"><span class="lineno">  974</span>                    iss &gt;&gt; id;</div>
+<div class="line"><span class="lineno">  975</span>                    ranges.push_back(<a class="code hl_struct" href="../../df/dbf/a03132.html">node</a>{<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keywordtype">id</span> + 1});</div>
+<div class="line"><span class="lineno">  976</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  977</span>                    iss &gt;&gt; id;</div>
+<div class="line"><span class="lineno">  978</span>                    ranges.push_back(<a class="code hl_struct" href="../../df/dbf/a03132.html">node</a>{<span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keywordtype">id</span>});</div>
+<div class="line"><span class="lineno">  979</span>                }</div>
+<div class="line"><span class="lineno">  980</span>            }</div>
+<div class="line"><span class="lineno">  981</span> </div>
+<div class="line"><span class="lineno">  982</span>            sort(ranges.begin(), ranges.end(), [](<span class="keyword">const</span> <a class="code hl_struct" href="../../df/dbf/a03132.html">node</a> &amp;a, <span class="keyword">const</span> <a class="code hl_struct" href="../../df/dbf/a03132.html">node</a> &amp;b) {</div>
+<div class="line"><span class="lineno">  983</span>                if(a.id != b.id) {</div>
+<div class="line"><span class="lineno">  984</span>                    return a.id &lt; b.id;</div>
+<div class="line"><span class="lineno">  985</span>                }</div>
+<div class="line"><span class="lineno">  986</span>                <span class="keywordflow">if</span>(a.start != b.start) {</div>
+<div class="line"><span class="lineno">  987</span>                    return a.start &gt; b.start;</div>
+<div class="line"><span class="lineno">  988</span>                }</div>
+<div class="line"><span class="lineno">  989</span>                <span class="keywordflow">return</span> a.check &lt; b.check;</div>
+<div class="line"><span class="lineno">  990</span>            });</div>
+<div class="line"><span class="lineno">  991</span> </div>
+<div class="line"><span class="lineno">  992</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> cnt = 0;</div>
+<div class="line"><span class="lineno">  993</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = 0;</div>
+<div class="line"><span class="lineno">  994</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<a class="code hl_struct" href="../../df/dbf/a03132.html">node</a>: ranges) {</div>
+<div class="line"><span class="lineno">  995</span>                <span class="keywordflow">if</span>(<a class="code hl_struct" href="../../df/dbf/a03132.html">node</a>.<a class="code hl_variable" href="../../df/dbf/a03132.html#a0440aa1ff7421b62a9886b5ed315b8a2">start</a>) {</div>
+<div class="line"><span class="lineno">  996</span>                    cnt++;</div>
+<div class="line"><span class="lineno">  997</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_struct" href="../../df/dbf/a03132.html">node</a>.<a class="code hl_variable" href="../../df/dbf/a03132.html#a444a59eb84dfa824b7b5eb6b73c07197">check</a>) {</div>
+<div class="line"><span class="lineno">  998</span>                    <span class="keywordflow">if</span>(cnt &gt; 0) {</div>
+<div class="line"><span class="lineno">  999</span>                        <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>++;</div>
+<div class="line"><span class="lineno"> 1000</span>                    }</div>
+<div class="line"><span class="lineno"> 1001</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 1002</span>                    cnt--;</div>
+<div class="line"><span class="lineno"> 1003</span>                }</div>
+<div class="line"><span class="lineno"> 1004</span>            }</div>
+<div class="line"><span class="lineno"> 1005</span>            cout &lt;&lt; <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno"> 1006</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1007</span>        }</div>
+<div class="ttc" id="aa00561_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00130">liverpool.cpp:130</a></div></div>
+<div class="ttc" id="aa03132_html"><div class="ttname"><a href="../../df/dbf/a03132.html">liverpool::cafeteria::node</a></div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00954">liverpool.cpp:954</a></div></div>
+<div class="ttc" id="aa03132_html_a0440aa1ff7421b62a9886b5ed315b8a2"><div class="ttname"><a href="../../df/dbf/a03132.html#a0440aa1ff7421b62a9886b5ed315b8a2">liverpool::cafeteria::node::start</a></div><div class="ttdeci">bool start</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00955">liverpool.cpp:955</a></div></div>
+<div class="ttc" id="aa03132_html_a444a59eb84dfa824b7b5eb6b73c07197"><div class="ttname"><a href="../../df/dbf/a03132.html#a444a59eb84dfa824b7b5eb6b73c07197">liverpool::cafeteria::node::check</a></div><div class="ttdeci">bool check</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00956">liverpool.cpp:956</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00955">liverpool::cafeteria::node::check</a>, <a class="el" href="../../d3/d52/a00023_source.html#l00959">main_1()</a> , 以及 <a class="el" href="../../d3/d52/a00023_source.html#l00954">liverpool::cafeteria::node::start</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00956">liverpool::cafeteria::node::check</a>, <a class="el" href="../../d3/d52/a00023_source.html#l00960">main_1()</a> , 以及 <a class="el" href="../../d3/d52/a00023_source.html#l00955">liverpool::cafeteria::node::start</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l00959">main_1()</a>, <a class="el" href="../../db/db2/a00020_source.html#l00456">TEST()</a> , 以及 <a class="el" href="../../db/db2/a00020_source.html#l00464">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l00960">main_1()</a> , 以及 <a class="el" href="../../db/db2/a00020_source.html#l00408">TEST()</a>.</p>
 
 </div>
 </div>
@@ -215,61 +211,61 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l01008">1008</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1008</span>                                                {</div>
-<div class="line"><span class="lineno"> 1009</span>            <span class="keywordtype">string</span> line;</div>
-<div class="line"><span class="lineno"> 1010</span>            vector&lt;node&gt; ranges = {};</div>
-<div class="line"><span class="lineno"> 1011</span>            <span class="keywordflow">while</span>(cin &gt;&gt; line) {</div>
-<div class="line"><span class="lineno"> 1012</span>                istringstream iss(line);</div>
-<div class="line"><span class="lineno"> 1013</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> id;</div>
-<div class="line"><span class="lineno"> 1014</span>                <span class="keywordtype">char</span> c;</div>
-<div class="line"><span class="lineno"> 1015</span>                iss &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; c;</div>
-<div class="line"><span class="lineno"> 1016</span>                ranges.push_back(node{<span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keywordtype">id</span>});</div>
-<div class="line"><span class="lineno"> 1017</span>                iss &gt;&gt; id;</div>
-<div class="line"><span class="lineno"> 1018</span>                ranges.push_back(node{<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keywordtype">id</span> + 1});</div>
-<div class="line"><span class="lineno"> 1019</span>            }</div>
-<div class="line"><span class="lineno"> 1020</span> </div>
-<div class="line"><span class="lineno"> 1021</span>            sort(ranges.begin(), ranges.end(), [](<span class="keyword">const</span> <a class="code hl_struct" href="../../db/d09/a03131.html">node</a> &amp;a, <span class="keyword">const</span> <a class="code hl_struct" href="../../db/d09/a03131.html">node</a> &amp;b) {</div>
-<div class="line"><span class="lineno"> 1022</span>                if(a.id != b.id) {</div>
-<div class="line"><span class="lineno"> 1023</span>                    return a.id &lt; b.id;</div>
-<div class="line"><span class="lineno"> 1024</span>                }</div>
-<div class="line"><span class="lineno"> 1025</span>                <span class="keywordflow">if</span>(a.start != b.start) {</div>
-<div class="line"><span class="lineno"> 1026</span>                    return a.start &gt; b.start;</div>
-<div class="line"><span class="lineno"> 1027</span>                }</div>
-<div class="line"><span class="lineno"> 1028</span>                <span class="keywordflow">return</span> a.check &lt; b.check;</div>
-<div class="line"><span class="lineno"> 1029</span>            });</div>
-<div class="line"><span class="lineno"> 1030</span> </div>
-<div class="line"><span class="lineno"> 1031</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> cnt     = 0;</div>
-<div class="line"><span class="lineno"> 1032</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> prev_id = -1;</div>
-<div class="line"><span class="lineno"> 1033</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>     = 0;</div>
-<div class="line"><span class="lineno"> 1034</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<a class="code hl_struct" href="../../db/d09/a03131.html">node</a>: ranges) {</div>
-<div class="line"><span class="lineno"> 1035</span>                <span class="keywordflow">if</span>(<a class="code hl_struct" href="../../db/d09/a03131.html">node</a>.<a class="code hl_variable" href="../../db/d09/a03131.html#a0440aa1ff7421b62a9886b5ed315b8a2">start</a>) {</div>
-<div class="line"><span class="lineno"> 1036</span>                    cnt++;</div>
-<div class="line"><span class="lineno"> 1037</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 1038</span>                    cnt--;</div>
-<div class="line"><span class="lineno"> 1039</span>                }</div>
-<div class="line"><span class="lineno"> 1040</span> </div>
-<div class="line"><span class="lineno"> 1041</span>                <span class="keywordflow">if</span>(prev_id == -1 &amp;&amp; cnt &gt; 0) {</div>
-<div class="line"><span class="lineno"> 1042</span>                    prev_id = <a class="code hl_struct" href="../../db/d09/a03131.html">node</a>.<a class="code hl_variable" href="../../db/d09/a03131.html#a614369bbc4f87200aa2d7960af66359e">id</a>;</div>
-<div class="line"><span class="lineno"> 1043</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(cnt == 0 &amp;&amp; prev_id != -1) {</div>
-<div class="line"><span class="lineno"> 1044</span>                    <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> += <a class="code hl_struct" href="../../db/d09/a03131.html">node</a>.<a class="code hl_variable" href="../../db/d09/a03131.html#a614369bbc4f87200aa2d7960af66359e">id</a> - prev_id;</div>
-<div class="line"><span class="lineno"> 1045</span>                    <span class="comment">//cerr &lt;&lt; node.id &lt;&lt; &#39;\t&#39; &lt;&lt; prev_id &lt;&lt; &#39;\t&#39; &lt;&lt; (node.id - prev_id) &lt;&lt; &#39;\t&#39; &lt;&lt; ans &lt;&lt; endl;</span></div>
-<div class="line"><span class="lineno"> 1046</span>                    prev_id = -1;</div>
-<div class="line"><span class="lineno"> 1047</span>                }</div>
-<div class="line"><span class="lineno"> 1048</span>            }</div>
-<div class="line"><span class="lineno"> 1049</span>            cout &lt;&lt; <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno"> 1050</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno"> 1051</span>        }</div>
-<div class="ttc" id="aa03131_html_a614369bbc4f87200aa2d7960af66359e"><div class="ttname"><a href="../../db/d09/a03131.html#a614369bbc4f87200aa2d7960af66359e">liverpool::cafeteria::node::id</a></div><div class="ttdeci">unsigned long long id</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00956">liverpool.cpp:956</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l01009">1009</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1009</span>                                                {</div>
+<div class="line"><span class="lineno"> 1010</span>            <span class="keywordtype">string</span> line;</div>
+<div class="line"><span class="lineno"> 1011</span>            vector&lt;node&gt; ranges = {};</div>
+<div class="line"><span class="lineno"> 1012</span>            <span class="keywordflow">while</span>(cin &gt;&gt; line) {</div>
+<div class="line"><span class="lineno"> 1013</span>                istringstream iss(line);</div>
+<div class="line"><span class="lineno"> 1014</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> id;</div>
+<div class="line"><span class="lineno"> 1015</span>                <span class="keywordtype">char</span> c;</div>
+<div class="line"><span class="lineno"> 1016</span>                iss &gt;&gt; <span class="keywordtype">id</span> &gt;&gt; c;</div>
+<div class="line"><span class="lineno"> 1017</span>                ranges.push_back(node{<span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keywordtype">id</span>});</div>
+<div class="line"><span class="lineno"> 1018</span>                iss &gt;&gt; id;</div>
+<div class="line"><span class="lineno"> 1019</span>                ranges.push_back(node{<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keywordtype">id</span> + 1});</div>
+<div class="line"><span class="lineno"> 1020</span>            }</div>
+<div class="line"><span class="lineno"> 1021</span> </div>
+<div class="line"><span class="lineno"> 1022</span>            sort(ranges.begin(), ranges.end(), [](<span class="keyword">const</span> <a class="code hl_struct" href="../../df/dbf/a03132.html">node</a> &amp;a, <span class="keyword">const</span> <a class="code hl_struct" href="../../df/dbf/a03132.html">node</a> &amp;b) {</div>
+<div class="line"><span class="lineno"> 1023</span>                if(a.id != b.id) {</div>
+<div class="line"><span class="lineno"> 1024</span>                    return a.id &lt; b.id;</div>
+<div class="line"><span class="lineno"> 1025</span>                }</div>
+<div class="line"><span class="lineno"> 1026</span>                <span class="keywordflow">if</span>(a.start != b.start) {</div>
+<div class="line"><span class="lineno"> 1027</span>                    return a.start &gt; b.start;</div>
+<div class="line"><span class="lineno"> 1028</span>                }</div>
+<div class="line"><span class="lineno"> 1029</span>                <span class="keywordflow">return</span> a.check &lt; b.check;</div>
+<div class="line"><span class="lineno"> 1030</span>            });</div>
+<div class="line"><span class="lineno"> 1031</span> </div>
+<div class="line"><span class="lineno"> 1032</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> cnt     = 0;</div>
+<div class="line"><span class="lineno"> 1033</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> prev_id = -1;</div>
+<div class="line"><span class="lineno"> 1034</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>     = 0;</div>
+<div class="line"><span class="lineno"> 1035</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<a class="code hl_struct" href="../../df/dbf/a03132.html">node</a>: ranges) {</div>
+<div class="line"><span class="lineno"> 1036</span>                <span class="keywordflow">if</span>(<a class="code hl_struct" href="../../df/dbf/a03132.html">node</a>.<a class="code hl_variable" href="../../df/dbf/a03132.html#a0440aa1ff7421b62a9886b5ed315b8a2">start</a>) {</div>
+<div class="line"><span class="lineno"> 1037</span>                    cnt++;</div>
+<div class="line"><span class="lineno"> 1038</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 1039</span>                    cnt--;</div>
+<div class="line"><span class="lineno"> 1040</span>                }</div>
+<div class="line"><span class="lineno"> 1041</span> </div>
+<div class="line"><span class="lineno"> 1042</span>                <span class="keywordflow">if</span>(prev_id == -1 &amp;&amp; cnt &gt; 0) {</div>
+<div class="line"><span class="lineno"> 1043</span>                    prev_id = <a class="code hl_struct" href="../../df/dbf/a03132.html">node</a>.<a class="code hl_variable" href="../../df/dbf/a03132.html#a614369bbc4f87200aa2d7960af66359e">id</a>;</div>
+<div class="line"><span class="lineno"> 1044</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(cnt == 0 &amp;&amp; prev_id != -1) {</div>
+<div class="line"><span class="lineno"> 1045</span>                    <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> += <a class="code hl_struct" href="../../df/dbf/a03132.html">node</a>.<a class="code hl_variable" href="../../df/dbf/a03132.html#a614369bbc4f87200aa2d7960af66359e">id</a> - prev_id;</div>
+<div class="line"><span class="lineno"> 1046</span>                    <span class="comment">//cerr &lt;&lt; node.id &lt;&lt; &#39;\t&#39; &lt;&lt; prev_id &lt;&lt; &#39;\t&#39; &lt;&lt; (node.id - prev_id) &lt;&lt; &#39;\t&#39; &lt;&lt; ans &lt;&lt; endl;</span></div>
+<div class="line"><span class="lineno"> 1047</span>                    prev_id = -1;</div>
+<div class="line"><span class="lineno"> 1048</span>                }</div>
+<div class="line"><span class="lineno"> 1049</span>            }</div>
+<div class="line"><span class="lineno"> 1050</span>            cout &lt;&lt; <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno"> 1051</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1052</span>        }</div>
+<div class="ttc" id="aa03132_html_a614369bbc4f87200aa2d7960af66359e"><div class="ttname"><a href="../../df/dbf/a03132.html#a614369bbc4f87200aa2d7960af66359e">liverpool::cafeteria::node::id</a></div><div class="ttdeci">unsigned long long id</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00957">liverpool.cpp:957</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00955">liverpool::cafeteria::node::check</a>, <a class="el" href="../../d3/d52/a00023_source.html#l01008">main_2()</a> , 以及 <a class="el" href="../../d3/d52/a00023_source.html#l00954">liverpool::cafeteria::node::start</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00956">liverpool::cafeteria::node::check</a>, <a class="el" href="../../d3/d52/a00023_source.html#l01009">main_2()</a> , 以及 <a class="el" href="../../d3/d52/a00023_source.html#l00955">liverpool::cafeteria::node::start</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l01008">main_2()</a>, <a class="el" href="../../db/db2/a00020_source.html#l00472">TEST()</a> , 以及 <a class="el" href="../../db/db2/a00020_source.html#l00480">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l01009">main_2()</a> , 以及 <a class="el" href="../../db/db2/a00020_source.html#l00416">TEST()</a>.</p>
 
 </div>
 </div>
 <a id="aa07ee1968a25694a5ea1e2a40ed68176" name="aa07ee1968a25694a5ea1e2a40ed68176"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa07ee1968a25694a5ea1e2a40ed68176">&#9670;&#160;</a></span>TEST() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07ee1968a25694a5ea1e2a40ed68176">&#9670;&#160;</a></span>TEST() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,54 +283,22 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00456">456</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  456</span>                                 {</div>
-<div class="line"><span class="lineno">  457</span>            istringstream in(<span class="stringliteral">&quot;3-5\n10-14\n16-20\n12-18\n\n1\n5\n8\n11\n17\n32\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  458</span>            <span class="keyword">auto</span> out = ostringstream();</div>
-<div class="line"><span class="lineno">  459</span>            <a class="code hl_function" href="#ad7291cefde9612a80ec68e12115cc1e1">main_1</a>(in, out);</div>
-<div class="line"><span class="lineno">  460</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
-<div class="line"><span class="lineno">  461</span>            ASSERT_EQ(<span class="stringliteral">&quot;3&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">  462</span>        }</div>
-<div class="ttc" id="aa00577_html_ad7291cefde9612a80ec68e12115cc1e1"><div class="ttname"><a href="#ad7291cefde9612a80ec68e12115cc1e1">liverpool::cafeteria::main_1</a></div><div class="ttdeci">int main_1(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00959">liverpool.cpp:959</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00408">408</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  408</span>                                 {</div>
+<div class="line"><span class="lineno">  409</span>            istringstream in(<span class="stringliteral">&quot;3-5\n10-14\n16-20\n12-18\n\n1\n5\n8\n11\n17\n32\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  410</span>            <span class="keyword">auto</span> out = ostringstream();</div>
+<div class="line"><span class="lineno">  411</span>            <a class="code hl_function" href="#ad7291cefde9612a80ec68e12115cc1e1">main_1</a>(in, out);</div>
+<div class="line"><span class="lineno">  412</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
+<div class="line"><span class="lineno">  413</span>            ASSERT_EQ(<span class="stringliteral">&quot;3&quot;</span>, ans);</div>
+<div class="line"><span class="lineno">  414</span>        }</div>
+<div class="ttc" id="aa00577_html_ad7291cefde9612a80ec68e12115cc1e1"><div class="ttname"><a href="#ad7291cefde9612a80ec68e12115cc1e1">liverpool::cafeteria::main_1</a></div><div class="ttdeci">int main_1(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00960">liverpool.cpp:960</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00959">main_1()</a>.</p>
-
-</div>
-</div>
-<a id="a81c2108af87da7558e309477b9f40f57" name="a81c2108af87da7558e309477b9f40f57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81c2108af87da7558e309477b9f40f57">&#9670;&#160;</a></span>TEST() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">liverpool::cafeteria::TEST </td>
-          <td>(</td>
-          <td class="paramtype">cafeteria</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">case1_1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00464">464</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  464</span>                                 {</div>
-<div class="line"><span class="lineno">  465</span>            istringstream in(<span class="stringliteral">&quot;213743501161200-213743501161200\n221359789392478-222960432116258\n553905700373062-561794342755365\n388351876706917-388578461376678\n263685821321516-270464997549766\n384957836075964-385057316204755\n86932924454422-88726115602910\n64713316693400-65189382496202\n68179610157787-68454649435444\n143154545648377-145980913110898\n390250299542523-390843409397977\n392162789636707-394167531415509\n467795551515047-469145316638624\n73412860995201-78319783604609\n174577844186025-180222947242739\n34889394659118-37852045203256\n506719917120116-506719917120116\n64999889315593-65189382496202\n62511033442122-62882231057991\n169629548448978-169629548448978\n195991726717561-200347594718591\n80800364897743-82410540424990\n157966143122749-158625789879543\n414893276002289-420734433214551\n468854880571347-470178150823398\n293047529057561-293047529057561\n526293793744803-526800435871324\n154610263545675-155018832807006\n85676500485010-87494001551296\n404052468013478-411059540873663\n529805857574316-530354749652142\n282126028703430-287392631951184\n536612716581558-542001885354658\n224389325429033-225956850054114\n389327354686290-389941649666180\n226458176996215-227998751964573\n466681105242973-468035461798180\n132182495488136-136864510598769\n158625789879543-158943957000511\n222498723695457-223722626496659\n24396986945805-29009989981082\n387070084421471-387699738663307\n463761550427134-465101663712718\n244484473250009-249824444617715\n235682381324440-239428507922589\n356542431952285-357218504633271\n528809160802420-529163494010802\n203275761047276-207893046967514\n65189382496202-65740304733466\n84564501332038-86342507935742\n528809160802420-529739126171581\n430824287436458-430824287436458\n270464997549767-270464997549767\n73412860995201-73412860995201\n203275761047276-207893046967514\n465765531974637-467339424840641\n88308683283200-90314897336701\n506719917120116-509378158464998\n154610263545675-155018832807006\n436351058276905-441549428537929\n390250299542523-390501802123222\n464766089052130-465995972804612\n153723748856595-154247928476913\n524957458539564-525444885761624\n193355047594087-195991726717559\n68057027039766-68454649435444\n114292754379846-114292754379846\n476176387291714-479287347759176\n68727093315072-69054421292865\n374010991378735-378095042001312\n396702787271742-398555495412596\n92985559435331-99083983384255\n524317721420090-524645436296520\n470916081729043-472406223184007\n307193970359996-309957481846034\n83208072709351-85336482970086\n61908006035935-62767933777530\n12440214380075-19413829756369\n158268094987535-158625789879543\n323855611951188-327225842492665\n232121351950005-235682381324439\n104580961113313-109652180451852\n155719620755384-156378640409574\n225242642256272-226838958939168\n126345620041269-129628037616258\n272979306019768-272979306019768\n229571449179868-230955409924473\n15572428843108-19413829756369\n486438625661094-489174884685392\n399063478386186-400626043814074\n61434917885505-61908006035935\n442807002499434-447467590937981\n153470274802250-153891356149723\n548528649335253-552132613556960\n302406550101741-307193970359994\n284836416410676-290905691766532\n134736737710827-138821293926430\n524645436296520-525444885761624\n347299925469182-350731461622425\n333121507005172-333121507005172\n257633973479609-259311991697339\n418350619486212-420734433214551\n523873015780814-524032209716334\n424331863324814-430824287436457\n143154545648377-148152467497972\n156770859353106-157228370844559\n523401105399726-524032209716334\n3672218268426-9069958349825\n41190120499524-48710502110828\n171431709160547-176780839877720\n65740304733466-66283299959280\n3672218268426-9069958349825\n157444284967581-157743465985657\n99083983384256-99083983384256\n114292754379847-118122243442587\n32783805912506-34889394659117\n495774309849622-495774309849622\n385597213338484-386130309524989\n66422129062863-66711994098586\n390501802123222-390843409397977\n227420995218497-229137292369316\n518765954978807-520809013033287\n81872566000969-83813851796454\n272979306019768-280055074059068\n394469512488834-396279958092492\n469546011173175-471346897231698\n442807002499434-451270889383530\n184738598610317-187210601572675\n364359970290004-369109081626630\n327225842492665-327225842492665\n353087698181504-361406479744402\n293047529057561-299710639297794\n486438625661094-489174884685392\n472788183962691-480272823246663\n152000130191943-152486238796869\n386858817856261-387699738663307\n462503261552047-464039809812541\n183175626133351-189172211000972\n163807315460788-169629548448978\n393534536834350-394918686174827\n344389995827602-347299925469181\n159774306485562-160419960771595\n544514849402253-552132613556960\n65400483278322-66283299959280\n63641646788533-63945948546021\n228387323493940-230123402570745\n223334527687062-225118219054282\n398001413033472-399528430973758\n389120143291068-389327354686290\n251886663550811-259311991697339\n69054421292865-69216943568303\n109652180451852-109652180451852\n53011962076696-56344039055008\n400162615237818-402020110303086\n43204303716398-46879070810322\n314744608126757-318669297711175\n432956413748504-436351058276903\n374010991378735-379580541653265\n53011962076696-58576758868523\n151246265148187-151690444980057\n67160465476009-67649438641309\n333121507005173-341135415342898\n456177793236387-461879349449355\n395508284503006-397494347386228\n533093622413503-538889692659981\n561794342755365-561794342755365\n515616143391792-518765954978806\n69696292125615-70040914201079\n68727093315072-69401400390266\n495774309849623-500237151028475\n369109081626631-369109081626631\n529163494010802-529436944344583\n404052468013478-411059540873663\n121847024509459-126345620041267\n522880293422404-523179474172233\n158459878825465-159131956260867\n213743501161201-219471291456959\n\n494837294376908\n435660505746994\n99786817997391\n472909760977579\n463484249547475\n273865746097567\n546948282990871\n313905748059736\n389220642255587\n264910144325219\n194634550937143\n452503195637112\n38664030641468\n8643898228674\n408947325836900\n56337977420387\n174507776974605\n140836347671248\n47631986998014\n235031396283281\n343857671631037\n252684431369877\n561260764726582\n13377139290760\n335659611077426\n305254801428350\n23068609919756\n358157740175632\n336124567002906\n499856499644500\n245581152411526\n4607628398578\n113989649477446\n261695855054656\n54145308170978\n23643219088083\n288564055768829\n76218205231423\n383056969666651\n206049039348792\n362866693952230\n447390838499260\n269419273985840\n495173666576593\n475030519522818\n12103270345560\n107629037149479\n393860930903512\n141626771549297\n250924689541736\n5883371952028\n423912703644535\n302546348630570\n436937082048731\n494664825705194\n448188584703582\n254291468010192\n221243211979987\n350545951774103\n393592820188728\n32794726074237\n215351251387887\n18789663384866\n546887929110328\n229634965624793\n26225821034784\n175436974010271\n330555143105279\n540559732802993\n146048634742198\n457763885033022\n255063532513955\n523233693563579\n520111841799148\n554058843495886\n318786207342405\n377363192140595\n99808601402762\n18925946943601\n114133861116596\n466658719803329\n239088721753669\n437089455846288\n368941022635265\n396739332676075\n136405831558024\n56176226086142\n89188104356081\n522069015255255\n321118023164859\n9031526519848\n426715696390470\n525707768388028\n152077432064905\n409969738179310\n413539799236118\n394325762684221\n152819990377936\n394401954863928\n126602621671422\n504598064766126\n458638902263336\n326459124993522\n419281996008737\n490842973818114\n146271762366396\n22503238293943\n537920215050605\n559195645649780\n53366531225879\n147488127813515\n87770751897444\n355793262392237\n29238551733499\n480135691758946\n538362412784828\n450359874870348\n173926045560484\n401263245119900\n469761746266259\n517263368251455\n49071456365129\n137992440004065\n414963191734774\n478773793672052\n323893963358308\n346609563056966\n528752351256778\n296671648977112\n374729839695085\n454860071033636\n467162739020170\n507732258880396\n230301737270720\n289177397090688\n528799065232012\n165854989903172\n406394881004817\n481447401833724\n516889448667819\n554061619704684\n392059778405048\n175159258924467\n463421480856860\n544635640616828\n309477164734560\n231037323484799\n340860687007580\n448875290293314\n127397009585739\n246830806645075\n518431937476941\n3732761639887\n147285882576699\n396422419852454\n27478056069416\n286717356301433\n236893740878667\n290016489594859\n298887079519963\n461497186313441\n235329424183967\n556647097855604\n261197438978660\n118073942807968\n285360172331044\n169445091271339\n418603412598323\n416679342584654\n163804209188500\n167161416515668\n300589656673348\n84155065043548\n298520045126168\n154549118044364\n509513039742643\n406174906841001\n239965534880610\n264241638530762\n326907134654161\n148801284014366\n252845684706962\n538160202161003\n396627759613700\n546079642043457\n75651194219911\n432586855556463\n96802942627830\n25041440445919\n107116271154358\n303702054634544\n398781252434901\n503172397854082\n379315602131933\n236979084549993\n451397490649019\n279868894290565\n524617891089775\n136961187947989\n136429946001689\n76950346304543\n306928041509744\n312915314588031\n298998035287402\n34760223536011\n446404886235072\n197388407848521\n333191332684099\n221740779665886\n309416371878888\n158477659448444\n516680333458799\n44853377628995\n278888606895658\n278420982927684\n175703803052425\n470568172737830\n236084777219214\n397984966672806\n473425480788950\n522025578442624\n427215517454322\n198299794101146\n349413337275427\n125618902680777\n89314589371888\n368825410886351\n330191130666564\n387752207575580\n440138070603836\n227890254261097\n44488299718077\n29751481585745\n25028650437464\n547595768878\n174236076333058\n133712293361829\n540096229159911\n360206980499620\n258011259781602\n549364690524601\n10091206687143\n470374190930049\n179075060473731\n377242979825409\n352690157476711\n278488530349263\n384422855896670\n49811728480863\n267349043407318\n489564767823505\n73008037929843\n124299946430397\n217882757871908\n108999668545307\n20703850023939\n496246608935789\n541069367118771\n305122372020761\n115492357896852\n193492845516396\n417751256829819\n285658063335359\n246744409069648\n351755993275651\n98127769000175\n482372026370776\n457710650905360\n18026862445928\n108534833075078\n169824794939485\n559142599641987\n2085564400281\n309173175821638\n456153160917877\n293414602125014\n547198783459634\n76444012948089\n529290472539497\n355365766193271\n287986193982431\n173227908416238\n551806007985042\n186471826913763\n121801161824669\n97800001698241\n342494173599273\n12505387404524\n306058580091348\n318867143656603\n428585013529288\n256312606382787\n366239026804887\n51539372147365\n66134064995673\n79041166640102\n75784996215689\n287522598289639\n332881462196418\n520053787194950\n297834256156760\n46395714814142\n478528279216500\n283333063204819\n245859459924907\n473660316927145\n307732071267576\n277227366442821\n390581386350646\n376021035764980\n463341164063984\n185816349933763\n241632149492477\n289330190978899\n476909402388343\n458026449622767\n257790586910592\n174516863536188\n285936912577790\n401130002886351\n458803825528219\n478494606977638\n345725593786871\n138388443036459\n282300697387892\n71713317490775\n556366167372211\n456995326804110\n247592812172057\n494021760846937\n371537593769295\n170534224078136\n42472063541628\n8253779665434\n372548475874699\n9789888924117\n405774436581168\n108848101351560\n356331145749819\n102658847092504\n497003148825168\n202359692308749\n378179874893748\n288190427639734\n67215625812110\n93836607837463\n39963768403407\n461513540873237\n54758410728278\n469151923616890\n166921111216013\n172094825320701\n401988768026836\n72359177616839\n73996848337616\n156027952163011\n80550172897080\n272407697592724\n319010392655020\n105513600420820\n162726193523288\n535986651356692\n436612082177264\n212069750441845\n524009300711044\n3906518069903\n511762793424455\n435458211326830\n182645647469308\n386479321392427\n547154129474513\n189861778530296\n538429181270504\n507550826426915\n444356931927172\n358258263704862\n479009393218306\n124637474760302\n48105008177613\n79260117487309\n174911990213797\n500298985584761\n326954412173914\n295336439807937\n395949666733917\n443370872863471\n318697699565865\n427947513844159\n511045858671785\n203280107417109\n6700597080245\n348384357592517\n374376031983939\n260753794641180\n56191981851288\n97355512125554\n60506801192793\n84565744031887\n488814694065249\n161260860939794\n337637633215227\n173783730103701\n142086002223119\n207574240730436\n436871109820151\n461408177154461\n382258137884632\n440730273321561\n159229941436332\n166460057869524\n15683339825778\n68381063771276\n143598887912420\n96653310252281\n234747364980280\n128261783917087\n103021515222116\n477480443511452\n114836796393351\n176449720440695\n275945902507716\n99018309358801\n254514953778996\n471192665544357\n358710048656100\n469155211803836\n203392280667538\n192303210311382\n15133914751416\n263057847298987\n304201025028695\n109141830415556\n62185120729939\n347423458432248\n1593697889240\n4336364389626\n249534740021091\n245022245155666\n378597629224414\n217930033733263\n47800102644184\n138075535369981\n357729021453863\n349551010555520\n414887370914099\n395344795419827\n521156568954976\n272534129891028\n371964108827244\n227896489799466\n249887136596757\n16884793154524\n317821877138354\n81898773447364\n443073486047140\n247847253283552\n315251502366423\n102188123805733\n303075733196562\n557745658198349\n206799637439489\n451334768708210\n97037065675992\n257278920415657\n56437781998953\n44288968074472\n113292234978530\n151922731113530\n391052761602056\n267944508540614\n343200180160422\n288399431199285\n93273619500930\n75721595033881\n550871884021335\n149604081990381\n512742597104092\n455839846395368\n445378642797525\n16014807365216\n30695616425451\n43049956446441\n270535131219725\n4693914659902\n335914961222544\n272323132654404\n528950169623633\n445047908810129\n419646793721765\n213936570355528\n395125528944776\n141671410426457\n453372985670055\n222478883363391\n439875818936907\n303299784024612\n56388748078988\n318257306432227\n215338536256842\n532406515670856\n172904036406734\n25079121055090\n326898571184918\n383895798528344\n416303301754527\n490848856553941\n320988109028453\n223845273980771\n94966656581935\n190179292225210\n419218075147010\n230508834223536\n548901527044748\n297819409510702\n464859798986245\n118169686522273\n207497906150129\n512346201207054\n1158097103310\n459046195527588\n186759288128078\n96944724188350\n392594151513159\n234466454560389\n68623818756541\n246226233532203\n114619533725580\n493869659303676\n313637481743263\n534137643816612\n264642463242404\n377529710233522\n87155833011856\n35770041890308\n516647262550256\n265354534106177\n406005422023368\n272642225302759\n85930020547676\n284783735206766\n436630505082911\n15951172389804\n444797637969258\n97363222190880\n133445802169347\n272305925709773\n548458915170143\n430806456961455\n245507121943314\n160249013035249\n527709486106910\n367001001737708\n518162583986624\n183225672376704\n296993625361143\n231639876629108\n407962526353092\n67393637407153\n85833159363453\n49339824913993\n28400800168478\n15327853771250\n354370364188649\n201574969117946\n552709965745032\n213632623033074\n312504618210213\n327125906582053\n144452289727950\n203987516214332\n479509321715515\n88372152498413\n307473270739765\n245675091013202\n336432122026158\n41324911865648\n458457956208945\n542446938157188\n89589403513696\n24781388955739\n305437870582706\n348288413987487\n431709614168751\n276141784590342\n466981918128601\n372707468387142\n102568457788486\n349718918963076\n104093272014233\n265342553887934\n339579325422624\n516419655842307\n325305930926652\n409419378044930\n290691078464777\n538500176586611\n104911135244051\n460656158588869\n19085848624265\n550573802219161\n22745479349256\n65579588599422\n254111896868958\n43567781834275\n90573006423916\n45561710350423\n149209374428586\n446575143276470\n550306254135662\n181025204938463\n97330974107531\n379402147450993\n241506356892172\n168713148733973\n48466869897953\n528008864607078\n393115054851961\n165787328717415\n287310392177289\n551681935207092\n122167522220188\n132105403007176\n317705294863715\n109910998040619\n446000068071441\n235531799669044\n146356734397746\n47298585536802\n42273110218235\n444603089915716\n241465851395725\n109573813906530\n231274862902914\n537319538622584\n157414189612508\n221642178690563\n245610078329995\n528325158959332\n145325570078081\n12079144762793\n531588757842283\n547678261102872\n127153144140359\n305742973421716\n8011027076203\n477661996505800\n466477744603636\n403328720663418\n507927453967381\n538069184299013\n214768582354766\n137397594359581\n187613809609389\n357880338028129\n433487759782156\n487471717210901\n180006387715886\n326002409470383\n76444888756813\n444254908195532\n148806304277047\n479844016063762\n330052487223106\n240176280384525\n411385336296896\n354792309945488\n305594460678296\n40995915706785\n39394966701507\n89548663321944\n548307369875750\n488506179147436\n121924775887669\n148038179339071\n338537681759411\n468669066514854\n184481225100823\n360687191874324\n489917124737512\n183480059346292\n210032333691837\n415012143178873\n425782508042329\n206536230476631\n69446550967892\n456998663839841\n487684484253300\n132781025275839\n51299076795592\n214996080875736\n395997740442896\n229801883331266\n410891218970154\n44342335653173\n468644958332092\n133694753338744\n15324257575984\n382577259399786\n371176455304440\n273103366140744\n473864877490707\n348672546656929\n346325654887690\n204798752414288\n205451628438977\n2248039977575\n236557577288755\n246505641659146\n441573876295181\n554299527848615\n368147889057080\n337980441560978\n108843538156956\n214211872574501\n222501948465259\n199340300341502\n57751894058447\n387301004745509\n555684169567228\n444161010809973\n44274057183558\n457484483808702\n299118893791597\n278770127821305\n19364490860923\n269877412509975\n362138446785346\n407915043906975\n110542007795632\n351373538617793\n178613301456939\n419145884127302\n337724653316807\n273150978486771\n314964765668119\n471968715772891\n357610841553825\n22133316659832\n208155444980927\n509198516401694\n411253902813469\n227031471430627\n446602597121154\n271273314812585\n415798095859971\n561190340020923\n336975452894927\n143875972527564\n290796527780450\n562533759378622\n116821329895853\n386671228899496\n317327089314224\n183632275635096\n273373429456521\n129515707014799\n110676169506793\n233033183096270\n318333250308412\n112033225565880\n519454679823055\n55656519297819\n377451642372971\n338691010626694\n64777634972758\n436208855797645\n415156993450774\n98020363049302\n42655570576535\n34400406221986\n290610597270086\n537265183350038\n400911093968583\n525318854899855\n248415410979120\n418842405171486\n411566017836771\n425657631898340\n354259572729994\n268446068326870\n296070266615673\n136227729615321\n120047629033730\n406964876482178\n137521850223080\n92611826977927\n331877322852943\n479781531711867\n266206661846269\n347578536598669\n89240023766690\n529174586943339\n84839756252558\n419979950328255\n547500684314327\n280045500991504\n215483226398738\n441596111446605\n302694962708225\n273892147226306\n482132415192397\n102702250742943\n223089452700980\n457807726448257\n384562645765746\n277781338567261\n439822548783525\n183776192242043\n301325514128398\n70021389620076\n336918674037773\n68295253195049\n543695343432503\n111249314175356\n7690585447477\n309542200032252\n103628229231634\n73718547163740\n159803357847773\n430786036978468\n415204380827690\n48045918311352\n517000580666897\n325917367515042\n426507802694299\n526144643790360\n513035119218192\n315794526632610\n285574806997324\n276841825017615\n179635895379213\n325755181311001\n524060550844191\n91712045450912\n77966935288136\n264428541284938\n524847707306416\n111105350913783\n346301400064114\n556613923238451\n472099250670418\n371207522154824\n451823217286595\n357256514424263\n372048331394790\n434691928665739\n560829027337169\n16136507872053\n282364153898411\n154085261680230\n254154288276590\n514028216189442\n545333427544222\n476497025736792\n242355804527146\n561598070577352\n118400176536972\n375682605796962\n399133654154343\n201628057251316\n217572056496332\n533395907107346\n47345345286797\n7408156832896\n522616875123776\n349641074502968\n345818104113036\n438218046900677\n31628293548083\n351605047809133\n359444834536162\n290228149997469\n135905576277424\n84612883197372\n189982680788991\n450138577332891\n136439932241119\n187799240856577\n68578204608926\n134334871260185\n291561127203042\n273974000047959\n174624183735646\n18383048241682\n556252702946152\n387793821456466\n298566510001603\n172815513476927\n33902411018515\n555994633611969\n289184312520430\n436658715830883\n470864228533567\n164090356849964\n98782919658558\n97942176959956\n112901798817150\n35208936896656\n14353996552438\n471473766116537\n480180311744636\n499204584847002\n80611198707461\n544525064031093\n229232247132363\n162849540618442\n492975074294900\n166448581711132\n114764389841759\n63292143206629\n98480857792796\n157851646383721\n253474206387522\n354978928842494\n278747160618146\n4530472691471\n58079854789591\n66267035140727\n311056476691269\n557762351202903\n197758525541161\n437268149565806\n313236543511296\n302427918967126\n400691760604857\n399668277458282\n223494949882340\n46570814488202\n204451824914507\n345698026918708\n497928342405563\n325773432317635\n93545891401889\n5585896974427\n356380459100139\n264230752597112\n426543387431711\n387146966449194\n41228535640790\n509087992955574\n489729610164135\n416479576139310\n28845488051941\n522009267546744\n271000859618955\n283750554123411\n410419160607446\n185499005938127\n471551666427620\n58626479872089\n42972264624877\n524613104175528\n27852888528989\n237204455550497\n288326266418244\n63065149157014\n553756535652764\n282436178910576\n88402747933723\n400823646916103\n223363824772513\n525071673732969\n537259982319875\n276682773539699\n398451590620752\n245054501306549\n464479921104086\n457043633831813\n516586215954486\n64884357708824\n56128129974389\n152412022204482\n222723024889271\n199274377091885\n477985828686667\n461997935560695\n544878475633187\n173350091865783\n28043191569632\n550154791633306\n95957091506410\n148749440627953\n363647261163259\n137891120244035\n292700540347170\n7279385311717\n127148348879474\n470000742634139\n144166016173754\n394128803397657\n361074837077952\n126989419234613\n420362060242891\n404091808985110\n118996430880710\n108513159619332\n245110820984873\n404371687077287\n92684280085493\n109303133175033\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  466</span>            <span class="keyword">auto</span> out = ostringstream();</div>
-<div class="line"><span class="lineno">  467</span>            <a class="code hl_function" href="#ad7291cefde9612a80ec68e12115cc1e1">main_1</a>(in, out);</div>
-<div class="line"><span class="lineno">  468</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
-<div class="line"><span class="lineno">  469</span>            ASSERT_EQ(<span class="stringliteral">&quot;756&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">  470</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00959">main_1()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00960">main_1()</a>.</p>
 
 </div>
 </div>
 <a id="ac32ac3a23c971a919e2733093b1b627a" name="ac32ac3a23c971a919e2733093b1b627a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac32ac3a23c971a919e2733093b1b627a">&#9670;&#160;</a></span>TEST() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac32ac3a23c971a919e2733093b1b627a">&#9670;&#160;</a></span>TEST() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,49 +316,17 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00472">472</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  472</span>                                 {</div>
-<div class="line"><span class="lineno">  473</span>            istringstream in(<span class="stringliteral">&quot;3-5\n10-14\n16-20\n12-18&quot;</span>);</div>
-<div class="line"><span class="lineno">  474</span>            <span class="keyword">auto</span> out = ostringstream();</div>
-<div class="line"><span class="lineno">  475</span>            <a class="code hl_function" href="#a8c2614fa2fb9810e79178a2592fcd11e">main_2</a>(in, out);</div>
-<div class="line"><span class="lineno">  476</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
-<div class="line"><span class="lineno">  477</span>            ASSERT_EQ(<span class="stringliteral">&quot;14&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">  478</span>        }</div>
-<div class="ttc" id="aa00577_html_a8c2614fa2fb9810e79178a2592fcd11e"><div class="ttname"><a href="#a8c2614fa2fb9810e79178a2592fcd11e">liverpool::cafeteria::main_2</a></div><div class="ttdeci">int main_2(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l01008">liverpool.cpp:1008</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00416">416</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  416</span>                                 {</div>
+<div class="line"><span class="lineno">  417</span>            istringstream in(<span class="stringliteral">&quot;3-5\n10-14\n16-20\n12-18&quot;</span>);</div>
+<div class="line"><span class="lineno">  418</span>            <span class="keyword">auto</span> out = ostringstream();</div>
+<div class="line"><span class="lineno">  419</span>            <a class="code hl_function" href="#a8c2614fa2fb9810e79178a2592fcd11e">main_2</a>(in, out);</div>
+<div class="line"><span class="lineno">  420</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
+<div class="line"><span class="lineno">  421</span>            ASSERT_EQ(<span class="stringliteral">&quot;14&quot;</span>, ans);</div>
+<div class="line"><span class="lineno">  422</span>        }</div>
+<div class="ttc" id="aa00577_html_a8c2614fa2fb9810e79178a2592fcd11e"><div class="ttname"><a href="#a8c2614fa2fb9810e79178a2592fcd11e">liverpool::cafeteria::main_2</a></div><div class="ttdeci">int main_2(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l01009">liverpool.cpp:1009</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l01008">main_2()</a>.</p>
-
-</div>
-</div>
-<a id="a335122f88170f107385ca83cac029cd0" name="a335122f88170f107385ca83cac029cd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a335122f88170f107385ca83cac029cd0">&#9670;&#160;</a></span>TEST() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">liverpool::cafeteria::TEST </td>
-          <td>(</td>
-          <td class="paramtype">cafeteria</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">case2_1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00480">480</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  480</span>                                 {</div>
-<div class="line"><span class="lineno">  481</span>            istringstream in(<span class="stringliteral">&quot;213743501161200-213743501161200\n221359789392478-222960432116258\n553905700373062-561794342755365\n388351876706917-388578461376678\n263685821321516-270464997549766\n384957836075964-385057316204755\n86932924454422-88726115602910\n64713316693400-65189382496202\n68179610157787-68454649435444\n143154545648377-145980913110898\n390250299542523-390843409397977\n392162789636707-394167531415509\n467795551515047-469145316638624\n73412860995201-78319783604609\n174577844186025-180222947242739\n34889394659118-37852045203256\n506719917120116-506719917120116\n64999889315593-65189382496202\n62511033442122-62882231057991\n169629548448978-169629548448978\n195991726717561-200347594718591\n80800364897743-82410540424990\n157966143122749-158625789879543\n414893276002289-420734433214551\n468854880571347-470178150823398\n293047529057561-293047529057561\n526293793744803-526800435871324\n154610263545675-155018832807006\n85676500485010-87494001551296\n404052468013478-411059540873663\n529805857574316-530354749652142\n282126028703430-287392631951184\n536612716581558-542001885354658\n224389325429033-225956850054114\n389327354686290-389941649666180\n226458176996215-227998751964573\n466681105242973-468035461798180\n132182495488136-136864510598769\n158625789879543-158943957000511\n222498723695457-223722626496659\n24396986945805-29009989981082\n387070084421471-387699738663307\n463761550427134-465101663712718\n244484473250009-249824444617715\n235682381324440-239428507922589\n356542431952285-357218504633271\n528809160802420-529163494010802\n203275761047276-207893046967514\n65189382496202-65740304733466\n84564501332038-86342507935742\n528809160802420-529739126171581\n430824287436458-430824287436458\n270464997549767-270464997549767\n73412860995201-73412860995201\n203275761047276-207893046967514\n465765531974637-467339424840641\n88308683283200-90314897336701\n506719917120116-509378158464998\n154610263545675-155018832807006\n436351058276905-441549428537929\n390250299542523-390501802123222\n464766089052130-465995972804612\n153723748856595-154247928476913\n524957458539564-525444885761624\n193355047594087-195991726717559\n68057027039766-68454649435444\n114292754379846-114292754379846\n476176387291714-479287347759176\n68727093315072-69054421292865\n374010991378735-378095042001312\n396702787271742-398555495412596\n92985559435331-99083983384255\n524317721420090-524645436296520\n470916081729043-472406223184007\n307193970359996-309957481846034\n83208072709351-85336482970086\n61908006035935-62767933777530\n12440214380075-19413829756369\n158268094987535-158625789879543\n323855611951188-327225842492665\n232121351950005-235682381324439\n104580961113313-109652180451852\n155719620755384-156378640409574\n225242642256272-226838958939168\n126345620041269-129628037616258\n272979306019768-272979306019768\n229571449179868-230955409924473\n15572428843108-19413829756369\n486438625661094-489174884685392\n399063478386186-400626043814074\n61434917885505-61908006035935\n442807002499434-447467590937981\n153470274802250-153891356149723\n548528649335253-552132613556960\n302406550101741-307193970359994\n284836416410676-290905691766532\n134736737710827-138821293926430\n524645436296520-525444885761624\n347299925469182-350731461622425\n333121507005172-333121507005172\n257633973479609-259311991697339\n418350619486212-420734433214551\n523873015780814-524032209716334\n424331863324814-430824287436457\n143154545648377-148152467497972\n156770859353106-157228370844559\n523401105399726-524032209716334\n3672218268426-9069958349825\n41190120499524-48710502110828\n171431709160547-176780839877720\n65740304733466-66283299959280\n3672218268426-9069958349825\n157444284967581-157743465985657\n99083983384256-99083983384256\n114292754379847-118122243442587\n32783805912506-34889394659117\n495774309849622-495774309849622\n385597213338484-386130309524989\n66422129062863-66711994098586\n390501802123222-390843409397977\n227420995218497-229137292369316\n518765954978807-520809013033287\n81872566000969-83813851796454\n272979306019768-280055074059068\n394469512488834-396279958092492\n469546011173175-471346897231698\n442807002499434-451270889383530\n184738598610317-187210601572675\n364359970290004-369109081626630\n327225842492665-327225842492665\n353087698181504-361406479744402\n293047529057561-299710639297794\n486438625661094-489174884685392\n472788183962691-480272823246663\n152000130191943-152486238796869\n386858817856261-387699738663307\n462503261552047-464039809812541\n183175626133351-189172211000972\n163807315460788-169629548448978\n393534536834350-394918686174827\n344389995827602-347299925469181\n159774306485562-160419960771595\n544514849402253-552132613556960\n65400483278322-66283299959280\n63641646788533-63945948546021\n228387323493940-230123402570745\n223334527687062-225118219054282\n398001413033472-399528430973758\n389120143291068-389327354686290\n251886663550811-259311991697339\n69054421292865-69216943568303\n109652180451852-109652180451852\n53011962076696-56344039055008\n400162615237818-402020110303086\n43204303716398-46879070810322\n314744608126757-318669297711175\n432956413748504-436351058276903\n374010991378735-379580541653265\n53011962076696-58576758868523\n151246265148187-151690444980057\n67160465476009-67649438641309\n333121507005173-341135415342898\n456177793236387-461879349449355\n395508284503006-397494347386228\n533093622413503-538889692659981\n561794342755365-561794342755365\n515616143391792-518765954978806\n69696292125615-70040914201079\n68727093315072-69401400390266\n495774309849623-500237151028475\n369109081626631-369109081626631\n529163494010802-529436944344583\n404052468013478-411059540873663\n121847024509459-126345620041267\n522880293422404-523179474172233\n158459878825465-159131956260867\n213743501161201-219471291456959&quot;</span>);</div>
-<div class="line"><span class="lineno">  482</span>            <span class="keyword">auto</span> out = ostringstream();</div>
-<div class="line"><span class="lineno">  483</span>            <a class="code hl_function" href="#a8c2614fa2fb9810e79178a2592fcd11e">main_2</a>(in, out);</div>
-<div class="line"><span class="lineno">  484</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
-<div class="line"><span class="lineno">  485</span>            ASSERT_EQ(<span class="stringliteral">&quot;355555479253787&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">  486</span>        }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l01008">main_2()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l01009">main_2()</a>.</p>
 
 </div>
 </div>

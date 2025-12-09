@@ -337,9 +337,10 @@ var searchData=
   ['liverpool_3a_3aset_334',['set',['../d2/d50/a00561.html',1,'liverpool']]],
   ['liverpool_3a_3asnowflakes_335',['snowflakes',['../dc/dae/a00563.html',1,'liverpool']]],
   ['liverpool_3a_3astable_5fmatching_336',['stable_matching',['../dc/dea/a00558.html',1,'liverpool']]],
-  ['liverpool_3a_3aweakvertices_337',['weakvertices',['../d8/da5/a00570.html',1,'liverpool']]],
-  ['liverpool_3a_3awheresmyinternet_338',['wheresmyinternet',['../d8/dd2/a00565.html',1,'liverpool']]],
-  ['luogu_339',['luogu',['../dc/d4a/a00579.html',1,'']]],
-  ['luogu_3a_3ap5742_340',['P5742',['../d3/de2/a00580.html',1,'luogu']]],
-  ['luogu_3a_3ap5744_341',['P5744',['../d8/dc8/a00581.html',1,'luogu']]]
+  ['liverpool_3a_3atrash_5fcompactor_337',['trash_compactor',['../dc/d4a/a00579.html',1,'liverpool']]],
+  ['liverpool_3a_3aweakvertices_338',['weakvertices',['../d8/da5/a00570.html',1,'liverpool']]],
+  ['liverpool_3a_3awheresmyinternet_339',['wheresmyinternet',['../d8/dd2/a00565.html',1,'liverpool']]],
+  ['luogu_340',['luogu',['../d3/de2/a00580.html',1,'']]],
+  ['luogu_3a_3ap5742_341',['P5742',['../d8/dc8/a00581.html',1,'luogu']]],
+  ['luogu_3a_3ap5744_342',['P5744',['../d4/d2f/a00582.html',1,'luogu']]]
 ];
