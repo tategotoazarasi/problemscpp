@@ -1191,4 +1191,32 @@ namespace liverpool {
 			return 0;
 		}
 	}// namespace trash_compactor
+
+	namespace movie_theater {
+		int main_1(istream &cin, ostream &cout) {
+			vector<pair<unsigned long long,unsigned long long>> vert = {};
+			unsigned long long x,y;
+			char c;
+			unsigned long long ans = 0;
+			while(cin>>x>>c >> y) {
+				auto p = make_pair(x, y);
+
+				for(const auto &[nx, ny]: vert) {
+					unsigned long long x_min = min(nx, x);
+					unsigned long long x_max = max(nx, x);
+					unsigned long long y_min = min(ny, y);
+					unsigned long long y_max = max(ny, y);
+
+					ans = max(ans, (x_max + 1 - x_min) * (y_max + 1 - y_min));
+				}
+
+				vert.push_back(p);
+			}
+			cout << ans;
+			return 0;
+		}
+		int main_2(istream &cin, ostream &cout) {
+			return 0;
+		}
+	}// namespace movie_theater
 }// namespace liverpool

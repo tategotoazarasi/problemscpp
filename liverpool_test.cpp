@@ -457,4 +457,14 @@ namespace liverpool {
 			ASSERT_EQ("3263827", ans);
 		}
 	}// namespace trash_compactor
+
+	namespace movie_theater {
+		TEST(movie_theater, case1_0) {
+			istringstream in("7,1\n11,1\n11,7\n9,7\n9,5\n2,5\n2,3\n7,3");
+			auto out = ostringstream();
+			main_1(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("50", ans);
+		}
+	}
 }// namespace liverpool
