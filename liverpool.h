@@ -169,6 +169,11 @@ namespace liverpool {
 		int main_1(istream &cin, ostream &cout);
 		int main_2(istream &cin, ostream &cout);
 	}// namespace gift_shop
+
+	namespace trash_compactor {
+		int main_1(istream &cin, ostream &cout, int n, int nl);
+		int main_2(istream &cin, ostream &cout);
+	}// namespace trash_compactor
 }// namespace liverpool
 
 #endif//PROBLEMSCPP_COMO526_H

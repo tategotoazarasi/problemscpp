@@ -11,6 +11,7 @@
 #include <ostream>
 #include <queue>
 #include <sstream>
+#include <stack>
 #include <vector>
 
 using namespace std;
@@ -1118,4 +1119,76 @@ namespace liverpool {
 			return 0;
 		}
 	}// namespace gift_shop
+
+	namespace trash_compactor {
+		int main_1(istream &cin, ostream &cout, int n, int nl) {
+			vector<vector<unsigned long long>> input = vector<vector<unsigned long long>>(nl, vector<unsigned long long>(n, 0));
+			for(int i = 0; i < nl; i++) {
+				for(int j = 0; j < n; j++) {
+					cin >> input[i][j];
+				}
+			}
+			char c;
+			unsigned long long ans = 0;
+			for(int i = 0; i < n; i++) {
+				cin >> c;
+				if(c == '+') {
+					for(int j = 0; j < nl; j++) {
+						ans += input[j][i];
+					}
+				} else {// *
+					unsigned long long tmp = 1;
+					for(int j = 0; j < nl; j++) {
+						tmp *= input[j][i];
+					}
+					ans += tmp;
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+		int main_2(istream &cin, ostream &cout) {
+			vector<string> grid = vector<string>();
+			string line;
+			while(getline(cin, line)) {
+				grid.emplace_back(line);
+			}
+			int h                         = grid.size();
+			int w                         = grid[0].length();
+			unsigned long long ans        = 0;
+			stack<unsigned long long> stk = {};
+			for(int i = w - 1; i >= 0; i--) {
+				unsigned long long current = 0;
+				bool push                  = false;
+				for(int j = 0; j < h; j++) {
+					char c = grid[j][i];
+					if(isdigit(c)) {
+						push = true;
+						current *= 10;
+						current += (c - '0');
+					} else if(c == '+') {
+						stk.push(current);
+						push = false;
+						while(!stk.empty()) {
+							ans += stk.top();
+							stk.pop();
+						}
+					} else if(c == '*') {
+						stk.push(current);
+						push                   = false;
+						unsigned long long tmp = 1;
+						while(!stk.empty()) {
+							tmp *= stk.top();
+							stk.pop();
+						}
+						ans += tmp;
+					}
+				}
+				if(push)
+					stk.push(current);
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace trash_compactor
 }// namespace liverpool
