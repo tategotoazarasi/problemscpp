@@ -128,46 +128,46 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00803">803</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  803</span>                                                {</div>
-<div class="line"><span class="lineno">  804</span>            vector&lt;string&gt; input = {};</div>
-<div class="line"><span class="lineno">  805</span>            <span class="keywordtype">string</span> line;</div>
-<div class="line"><span class="lineno">  806</span>            <span class="keywordflow">while</span>(cin &gt;&gt; line) {</div>
-<div class="line"><span class="lineno">  807</span>                input.push_back(line);</div>
-<div class="line"><span class="lineno">  808</span>            }</div>
-<div class="line"><span class="lineno">  809</span>            <span class="keywordtype">int</span> w                   = line.length();</div>
-<div class="line"><span class="lineno">  810</span>            <span class="keywordtype">int</span> h                   = input.size();</div>
-<div class="line"><span class="lineno">  811</span>            vector&lt;vector&lt;int&gt;&gt; cnt = vector&lt;vector&lt;int&gt;&gt;(h + 2, vector&lt;int&gt;(w + 2, 0));</div>
-<div class="line"><span class="lineno">  812</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= h; i++) {</div>
-<div class="line"><span class="lineno">  813</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= w; j++) {</div>
-<div class="line"><span class="lineno">  814</span>                    <span class="keywordflow">if</span>(input[i - 1][j - 1] == <span class="charliteral">&#39;@&#39;</span>) {</div>
-<div class="line"><span class="lineno">  815</span>                        cnt[i - 1][j]++;</div>
-<div class="line"><span class="lineno">  816</span>                        cnt[i + 1][j]++;</div>
-<div class="line"><span class="lineno">  817</span>                        cnt[i][j - 1]++;</div>
-<div class="line"><span class="lineno">  818</span>                        cnt[i][j + 1]++;</div>
-<div class="line"><span class="lineno">  819</span>                        cnt[i - 1][j - 1]++;</div>
-<div class="line"><span class="lineno">  820</span>                        cnt[i - 1][j + 1]++;</div>
-<div class="line"><span class="lineno">  821</span>                        cnt[i + 1][j + 1]++;</div>
-<div class="line"><span class="lineno">  822</span>                        cnt[i + 1][j - 1]++;</div>
-<div class="line"><span class="lineno">  823</span>                    }</div>
-<div class="line"><span class="lineno">  824</span>                }</div>
-<div class="line"><span class="lineno">  825</span>            }</div>
-<div class="line"><span class="lineno">  826</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = 0;</div>
-<div class="line"><span class="lineno">  827</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= h; i++) {</div>
-<div class="line"><span class="lineno">  828</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= w; j++) {</div>
-<div class="line"><span class="lineno">  829</span>                    <span class="keywordflow">if</span>(cnt[i][j] &lt; 4 &amp;&amp; input[i - 1][j - 1] == <span class="charliteral">&#39;@&#39;</span>) {</div>
-<div class="line"><span class="lineno">  830</span>                        <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>++;</div>
-<div class="line"><span class="lineno">  831</span>                    }</div>
-<div class="line"><span class="lineno">  832</span>                }</div>
-<div class="line"><span class="lineno">  833</span>            }</div>
-<div class="line"><span class="lineno">  834</span>            cout &lt;&lt; <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  835</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  836</span>        }</div>
-<div class="ttc" id="aa00561_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00130">liverpool.cpp:130</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00804">804</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  804</span>                                                {</div>
+<div class="line"><span class="lineno">  805</span>            vector&lt;string&gt; input = {};</div>
+<div class="line"><span class="lineno">  806</span>            <span class="keywordtype">string</span> line;</div>
+<div class="line"><span class="lineno">  807</span>            <span class="keywordflow">while</span>(cin &gt;&gt; line) {</div>
+<div class="line"><span class="lineno">  808</span>                input.push_back(line);</div>
+<div class="line"><span class="lineno">  809</span>            }</div>
+<div class="line"><span class="lineno">  810</span>            <span class="keywordtype">int</span> w                   = line.length();</div>
+<div class="line"><span class="lineno">  811</span>            <span class="keywordtype">int</span> h                   = input.size();</div>
+<div class="line"><span class="lineno">  812</span>            vector&lt;vector&lt;int&gt;&gt; cnt = vector&lt;vector&lt;int&gt;&gt;(h + 2, vector&lt;int&gt;(w + 2, 0));</div>
+<div class="line"><span class="lineno">  813</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= h; i++) {</div>
+<div class="line"><span class="lineno">  814</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= w; j++) {</div>
+<div class="line"><span class="lineno">  815</span>                    <span class="keywordflow">if</span>(input[i - 1][j - 1] == <span class="charliteral">&#39;@&#39;</span>) {</div>
+<div class="line"><span class="lineno">  816</span>                        cnt[i - 1][j]++;</div>
+<div class="line"><span class="lineno">  817</span>                        cnt[i + 1][j]++;</div>
+<div class="line"><span class="lineno">  818</span>                        cnt[i][j - 1]++;</div>
+<div class="line"><span class="lineno">  819</span>                        cnt[i][j + 1]++;</div>
+<div class="line"><span class="lineno">  820</span>                        cnt[i - 1][j - 1]++;</div>
+<div class="line"><span class="lineno">  821</span>                        cnt[i - 1][j + 1]++;</div>
+<div class="line"><span class="lineno">  822</span>                        cnt[i + 1][j + 1]++;</div>
+<div class="line"><span class="lineno">  823</span>                        cnt[i + 1][j - 1]++;</div>
+<div class="line"><span class="lineno">  824</span>                    }</div>
+<div class="line"><span class="lineno">  825</span>                }</div>
+<div class="line"><span class="lineno">  826</span>            }</div>
+<div class="line"><span class="lineno">  827</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = 0;</div>
+<div class="line"><span class="lineno">  828</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= h; i++) {</div>
+<div class="line"><span class="lineno">  829</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= w; j++) {</div>
+<div class="line"><span class="lineno">  830</span>                    <span class="keywordflow">if</span>(cnt[i][j] &lt; 4 &amp;&amp; input[i - 1][j - 1] == <span class="charliteral">&#39;@&#39;</span>) {</div>
+<div class="line"><span class="lineno">  831</span>                        <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>++;</div>
+<div class="line"><span class="lineno">  832</span>                    }</div>
+<div class="line"><span class="lineno">  833</span>                }</div>
+<div class="line"><span class="lineno">  834</span>            }</div>
+<div class="line"><span class="lineno">  835</span>            cout &lt;&lt; <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  836</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  837</span>        }</div>
+<div class="ttc" id="aa00561_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00131">liverpool.cpp:131</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00803">main_1()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00804">main_1()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l00803">main_1()</a> , 以及 <a class="el" href="../../db/db2/a00020_source.html#l00372">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l00804">main_1()</a> , 以及 <a class="el" href="../../db/db2/a00020_source.html#l00372">TEST()</a>.</p>
 
 </div>
 </div>
@@ -190,47 +190,47 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00862">862</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  862</span>                                                {</div>
-<div class="line"><span class="lineno">  863</span>            vector&lt;string&gt; input = {};</div>
-<div class="line"><span class="lineno">  864</span>            <span class="keywordtype">string</span> line;</div>
-<div class="line"><span class="lineno">  865</span>            <span class="keywordflow">while</span>(cin &gt;&gt; line) {</div>
-<div class="line"><span class="lineno">  866</span>                input.push_back(line);</div>
-<div class="line"><span class="lineno">  867</span>            }</div>
-<div class="line"><span class="lineno">  868</span>            <span class="keywordtype">int</span> w                   = line.length();</div>
-<div class="line"><span class="lineno">  869</span>            <span class="keywordtype">int</span> h                   = input.size();</div>
-<div class="line"><span class="lineno">  870</span>            vector&lt;vector&lt;int&gt;&gt; cnt = vector&lt;vector&lt;int&gt;&gt;(h + 2, vector&lt;int&gt;(w + 2, 0));</div>
-<div class="line"><span class="lineno">  871</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= h; i++) {</div>
-<div class="line"><span class="lineno">  872</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= w; j++) {</div>
-<div class="line"><span class="lineno">  873</span>                    <span class="keywordflow">if</span>(input[i - 1][j - 1] == <span class="charliteral">&#39;@&#39;</span>) {</div>
-<div class="line"><span class="lineno">  874</span>                        cnt[i - 1][j]++;</div>
-<div class="line"><span class="lineno">  875</span>                        cnt[i + 1][j]++;</div>
-<div class="line"><span class="lineno">  876</span>                        cnt[i][j - 1]++;</div>
-<div class="line"><span class="lineno">  877</span>                        cnt[i][j + 1]++;</div>
-<div class="line"><span class="lineno">  878</span>                        cnt[i - 1][j - 1]++;</div>
-<div class="line"><span class="lineno">  879</span>                        cnt[i - 1][j + 1]++;</div>
-<div class="line"><span class="lineno">  880</span>                        cnt[i + 1][j + 1]++;</div>
-<div class="line"><span class="lineno">  881</span>                        cnt[i + 1][j - 1]++;</div>
-<div class="line"><span class="lineno">  882</span>                    }</div>
-<div class="line"><span class="lineno">  883</span>                }</div>
-<div class="line"><span class="lineno">  884</span>            }</div>
-<div class="line"><span class="lineno">  885</span> </div>
-<div class="line"><span class="lineno">  886</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = 0;</div>
-<div class="line"><span class="lineno">  887</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= h; i++) {</div>
-<div class="line"><span class="lineno">  888</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= w; j++) {</div>
-<div class="line"><span class="lineno">  889</span>                    <span class="keywordflow">if</span>(cnt[i][j] &lt; 4 &amp;&amp; cnt[i][j] != -1 &amp;&amp; input[i - 1][j - 1] == <span class="charliteral">&#39;@&#39;</span>) {</div>
-<div class="line"><span class="lineno">  890</span>                        <a class="code hl_function" href="#aee77b9202d6483a372bcf4c3408e5f06">remove</a>(cnt, input, i, j, w, h, ans);</div>
-<div class="line"><span class="lineno">  891</span>                    }</div>
-<div class="line"><span class="lineno">  892</span>                }</div>
-<div class="line"><span class="lineno">  893</span>            }</div>
-<div class="line"><span class="lineno">  894</span>            cout &lt;&lt; <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  895</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  896</span>        }</div>
-<div class="ttc" id="aa00575_html_aee77b9202d6483a372bcf4c3408e5f06"><div class="ttname"><a href="#aee77b9202d6483a372bcf4c3408e5f06">liverpool::printing_department::remove</a></div><div class="ttdeci">void remove(vector&lt; vector&lt; int &gt; &gt; &amp;cnt, const vector&lt; string &gt; &amp;input, int x, int y, int w, int h, int &amp;ans)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00838">liverpool.cpp:838</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00863">863</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  863</span>                                                {</div>
+<div class="line"><span class="lineno">  864</span>            vector&lt;string&gt; input = {};</div>
+<div class="line"><span class="lineno">  865</span>            <span class="keywordtype">string</span> line;</div>
+<div class="line"><span class="lineno">  866</span>            <span class="keywordflow">while</span>(cin &gt;&gt; line) {</div>
+<div class="line"><span class="lineno">  867</span>                input.push_back(line);</div>
+<div class="line"><span class="lineno">  868</span>            }</div>
+<div class="line"><span class="lineno">  869</span>            <span class="keywordtype">int</span> w                   = line.length();</div>
+<div class="line"><span class="lineno">  870</span>            <span class="keywordtype">int</span> h                   = input.size();</div>
+<div class="line"><span class="lineno">  871</span>            vector&lt;vector&lt;int&gt;&gt; cnt = vector&lt;vector&lt;int&gt;&gt;(h + 2, vector&lt;int&gt;(w + 2, 0));</div>
+<div class="line"><span class="lineno">  872</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= h; i++) {</div>
+<div class="line"><span class="lineno">  873</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= w; j++) {</div>
+<div class="line"><span class="lineno">  874</span>                    <span class="keywordflow">if</span>(input[i - 1][j - 1] == <span class="charliteral">&#39;@&#39;</span>) {</div>
+<div class="line"><span class="lineno">  875</span>                        cnt[i - 1][j]++;</div>
+<div class="line"><span class="lineno">  876</span>                        cnt[i + 1][j]++;</div>
+<div class="line"><span class="lineno">  877</span>                        cnt[i][j - 1]++;</div>
+<div class="line"><span class="lineno">  878</span>                        cnt[i][j + 1]++;</div>
+<div class="line"><span class="lineno">  879</span>                        cnt[i - 1][j - 1]++;</div>
+<div class="line"><span class="lineno">  880</span>                        cnt[i - 1][j + 1]++;</div>
+<div class="line"><span class="lineno">  881</span>                        cnt[i + 1][j + 1]++;</div>
+<div class="line"><span class="lineno">  882</span>                        cnt[i + 1][j - 1]++;</div>
+<div class="line"><span class="lineno">  883</span>                    }</div>
+<div class="line"><span class="lineno">  884</span>                }</div>
+<div class="line"><span class="lineno">  885</span>            }</div>
+<div class="line"><span class="lineno">  886</span> </div>
+<div class="line"><span class="lineno">  887</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = 0;</div>
+<div class="line"><span class="lineno">  888</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= h; i++) {</div>
+<div class="line"><span class="lineno">  889</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= w; j++) {</div>
+<div class="line"><span class="lineno">  890</span>                    <span class="keywordflow">if</span>(cnt[i][j] &lt; 4 &amp;&amp; cnt[i][j] != -1 &amp;&amp; input[i - 1][j - 1] == <span class="charliteral">&#39;@&#39;</span>) {</div>
+<div class="line"><span class="lineno">  891</span>                        <a class="code hl_function" href="#aee77b9202d6483a372bcf4c3408e5f06">remove</a>(cnt, input, i, j, w, h, ans);</div>
+<div class="line"><span class="lineno">  892</span>                    }</div>
+<div class="line"><span class="lineno">  893</span>                }</div>
+<div class="line"><span class="lineno">  894</span>            }</div>
+<div class="line"><span class="lineno">  895</span>            cout &lt;&lt; <a class="code hl_variable" href="../../d2/d50/a00561.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  896</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  897</span>        }</div>
+<div class="ttc" id="aa00575_html_aee77b9202d6483a372bcf4c3408e5f06"><div class="ttname"><a href="#aee77b9202d6483a372bcf4c3408e5f06">liverpool::printing_department::remove</a></div><div class="ttdeci">void remove(vector&lt; vector&lt; int &gt; &gt; &amp;cnt, const vector&lt; string &gt; &amp;input, int x, int y, int w, int h, int &amp;ans)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00839">liverpool.cpp:839</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00862">main_2()</a> , 以及 <a class="el" href="../../d3/d52/a00023_source.html#l00838">remove()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00863">main_2()</a> , 以及 <a class="el" href="../../d3/d52/a00023_source.html#l00839">remove()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l00862">main_2()</a> , 以及 <a class="el" href="../../db/db2/a00020_source.html#l00380">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l00863">main_2()</a> , 以及 <a class="el" href="../../db/db2/a00020_source.html#l00380">TEST()</a>.</p>
 
 </div>
 </div>
@@ -278,34 +278,34 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00838">838</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  838</span>                                                                                                                 {</div>
-<div class="line"><span class="lineno">  839</span>            ans++;</div>
-<div class="line"><span class="lineno">  840</span>            cnt[x][y]                    = -1;</div>
-<div class="line"><span class="lineno">  841</span>            pair&lt;int, int&gt; directions[8] = {</div>
-<div class="line"><span class="lineno">  842</span>                    {-1, 0},</div>
-<div class="line"><span class="lineno">  843</span>                    {1, 0},</div>
-<div class="line"><span class="lineno">  844</span>                    {0, -1},</div>
-<div class="line"><span class="lineno">  845</span>                    {0, 1},</div>
-<div class="line"><span class="lineno">  846</span>                    {-1, -1},</div>
-<div class="line"><span class="lineno">  847</span>                    {-1, 1},</div>
-<div class="line"><span class="lineno">  848</span>                    {1, 1},</div>
-<div class="line"><span class="lineno">  849</span>                    {1, -1}};</div>
-<div class="line"><span class="lineno">  850</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> [dx, dy]: directions) {</div>
-<div class="line"><span class="lineno">  851</span>                <span class="keywordtype">int</span> nx = x + dx;</div>
-<div class="line"><span class="lineno">  852</span>                <span class="keywordtype">int</span> ny = y + dy;</div>
-<div class="line"><span class="lineno">  853</span>                <span class="keywordflow">if</span>(cnt[nx][ny] != -1 &amp;&amp; nx &gt;= 1 &amp;&amp; nx &lt;= h &amp;&amp; ny &gt;= 1 &amp;&amp; ny &lt;= w) {</div>
-<div class="line"><span class="lineno">  854</span>                    cnt[nx][ny]--;</div>
-<div class="line"><span class="lineno">  855</span>                    <span class="keywordflow">if</span>(cnt[nx][ny] &lt; 4 &amp;&amp; input[nx - 1][ny - 1] == <span class="charliteral">&#39;@&#39;</span>) {</div>
-<div class="line"><span class="lineno">  856</span>                        <a class="code hl_function" href="#aee77b9202d6483a372bcf4c3408e5f06">remove</a>(cnt, input, nx, ny, w, h, ans);</div>
-<div class="line"><span class="lineno">  857</span>                    }</div>
-<div class="line"><span class="lineno">  858</span>                }</div>
-<div class="line"><span class="lineno">  859</span>            }</div>
-<div class="line"><span class="lineno">  860</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00839">839</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  839</span>                                                                                                                 {</div>
+<div class="line"><span class="lineno">  840</span>            ans++;</div>
+<div class="line"><span class="lineno">  841</span>            cnt[x][y]                    = -1;</div>
+<div class="line"><span class="lineno">  842</span>            pair&lt;int, int&gt; directions[8] = {</div>
+<div class="line"><span class="lineno">  843</span>                    {-1, 0},</div>
+<div class="line"><span class="lineno">  844</span>                    {1, 0},</div>
+<div class="line"><span class="lineno">  845</span>                    {0, -1},</div>
+<div class="line"><span class="lineno">  846</span>                    {0, 1},</div>
+<div class="line"><span class="lineno">  847</span>                    {-1, -1},</div>
+<div class="line"><span class="lineno">  848</span>                    {-1, 1},</div>
+<div class="line"><span class="lineno">  849</span>                    {1, 1},</div>
+<div class="line"><span class="lineno">  850</span>                    {1, -1}};</div>
+<div class="line"><span class="lineno">  851</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> [dx, dy]: directions) {</div>
+<div class="line"><span class="lineno">  852</span>                <span class="keywordtype">int</span> nx = x + dx;</div>
+<div class="line"><span class="lineno">  853</span>                <span class="keywordtype">int</span> ny = y + dy;</div>
+<div class="line"><span class="lineno">  854</span>                <span class="keywordflow">if</span>(cnt[nx][ny] != -1 &amp;&amp; nx &gt;= 1 &amp;&amp; nx &lt;= h &amp;&amp; ny &gt;= 1 &amp;&amp; ny &lt;= w) {</div>
+<div class="line"><span class="lineno">  855</span>                    cnt[nx][ny]--;</div>
+<div class="line"><span class="lineno">  856</span>                    <span class="keywordflow">if</span>(cnt[nx][ny] &lt; 4 &amp;&amp; input[nx - 1][ny - 1] == <span class="charliteral">&#39;@&#39;</span>) {</div>
+<div class="line"><span class="lineno">  857</span>                        <a class="code hl_function" href="#aee77b9202d6483a372bcf4c3408e5f06">remove</a>(cnt, input, nx, ny, w, h, ans);</div>
+<div class="line"><span class="lineno">  858</span>                    }</div>
+<div class="line"><span class="lineno">  859</span>                }</div>
+<div class="line"><span class="lineno">  860</span>            }</div>
+<div class="line"><span class="lineno">  861</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00838">remove()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00839">remove()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l00862">main_2()</a> , 以及 <a class="el" href="../../d3/d52/a00023_source.html#l00838">remove()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l00863">main_2()</a> , 以及 <a class="el" href="../../d3/d52/a00023_source.html#l00839">remove()</a>.</p>
 
 </div>
 </div>
@@ -336,9 +336,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  376</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><span class="lineno">  377</span>            ASSERT_EQ(<span class="stringliteral">&quot;13&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">  378</span>        }</div>
-<div class="ttc" id="aa00575_html_a57e6cfa549233c27847ab097addd325f"><div class="ttname"><a href="#a57e6cfa549233c27847ab097addd325f">liverpool::printing_department::main_1</a></div><div class="ttdeci">int main_1(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00803">liverpool.cpp:803</a></div></div>
+<div class="ttc" id="aa00575_html_a57e6cfa549233c27847ab097addd325f"><div class="ttname"><a href="#a57e6cfa549233c27847ab097addd325f">liverpool::printing_department::main_1</a></div><div class="ttdeci">int main_1(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00804">liverpool.cpp:804</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00803">main_1()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00804">main_1()</a>.</p>
 
 </div>
 </div>
@@ -369,9 +369,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  384</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><span class="lineno">  385</span>            ASSERT_EQ(<span class="stringliteral">&quot;43&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">  386</span>        }</div>
-<div class="ttc" id="aa00575_html_a06baa4bee45c81d1cbb96e71314d9fbd"><div class="ttname"><a href="#a06baa4bee45c81d1cbb96e71314d9fbd">liverpool::printing_department::main_2</a></div><div class="ttdeci">int main_2(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00862">liverpool.cpp:862</a></div></div>
+<div class="ttc" id="aa00575_html_a06baa4bee45c81d1cbb96e71314d9fbd"><div class="ttname"><a href="#a06baa4bee45c81d1cbb96e71314d9fbd">liverpool::printing_department::main_2</a></div><div class="ttdeci">int main_2(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00863">liverpool.cpp:863</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00862">main_2()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00863">main_2()</a>.</p>
 
 </div>
 </div>

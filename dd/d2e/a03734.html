@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: UnionFind类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -85,20 +85,330 @@ $(function(){ initResizable(false); });
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">Matrix 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="../../d1/d22/a03731.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">UnionFind类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../db/d49/a03737.html">Matrix</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../db/d49/a03737.html#ab2163118152b1a18c223d03c470b937a">identity</a>(int n)</td><td class="entry"><a class="el" href="../../db/d49/a03737.html">Matrix</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../db/d49/a03737.html#a355c44319c8478c93d464a66a7261bf4">mat</a></td><td class="entry"><a class="el" href="../../db/d49/a03737.html">Matrix</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../db/d49/a03737.html#adc0e82f527cab2ae7463140cf8a072a0">Matrix</a>(int n)</td><td class="entry"><a class="el" href="../../db/d49/a03737.html">Matrix</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../db/d49/a03737.html#a765f4dcb51b6829311cc3e7576388423">Matrix</a>(const Matrix &amp;m)</td><td class="entry"><a class="el" href="../../db/d49/a03737.html">Matrix</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../db/d49/a03737.html#a537594e2800c06bb4875027197506d2b">operator*</a>(const Matrix &amp;m) const</td><td class="entry"><a class="el" href="../../db/d49/a03737.html">Matrix</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../db/d49/a03737.html#a9d75dadc843f814586c1a4f3cbe2d98c">operator[]</a>(int i)</td><td class="entry"><a class="el" href="../../db/d49/a03737.html">Matrix</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../db/d49/a03737.html#a42a3c305501a74cadf8386ed33543290">operator[]</a>(int i) const</td><td class="entry"><a class="el" href="../../db/d49/a03737.html">Matrix</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p>并查集  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d3/d8b/a00059_source.html">templates.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aab2b783c6c2b20c187844788e3f3dd0a" id="r_aab2b783c6c2b20c187844788e3f3dd0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab2b783c6c2b20c187844788e3f3dd0a">UnionFind</a> (int n)</td></tr>
+<tr class="separator:aab2b783c6c2b20c187844788e3f3dd0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad17f179c36b8bffa7ccc92866eb1b182" id="r_ad17f179c36b8bffa7ccc92866eb1b182"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad17f179c36b8bffa7ccc92866eb1b182">count</a> ()</td></tr>
+<tr class="separator:ad17f179c36b8bffa7ccc92866eb1b182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3fe04bfd2e9ce2e33c3edf8c91c3aea" id="r_aa3fe04bfd2e9ce2e33c3edf8c91c3aea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a> (int x)</td></tr>
+<tr class="separator:aa3fe04bfd2e9ce2e33c3edf8c91c3aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a841370ab42669c1e8db9ade92ca098a1" id="r_a841370ab42669c1e8db9ade92ca098a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a841370ab42669c1e8db9ade92ca098a1">get_size</a> (int x)</td></tr>
+<tr class="separator:a841370ab42669c1e8db9ade92ca098a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1580fa407277914913231a7d752c7d8" id="r_aa1580fa407277914913231a7d752c7d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1580fa407277914913231a7d752c7d8">same</a> (int x, int y)</td></tr>
+<tr class="separator:aa1580fa407277914913231a7d752c7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a27b936dbdeb53749e32a71554c3ed" id="r_a36a27b936dbdeb53749e32a71554c3ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36a27b936dbdeb53749e32a71554c3ed">unite</a> (int x, int y)</td></tr>
+<tr class="separator:a36a27b936dbdeb53749e32a71554c3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a916e09e220667fb55fbf332c8852c948" id="r_a916e09e220667fb55fbf332c8852c948"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a916e09e220667fb55fbf332c8852c948">parent</a></td></tr>
+<tr class="separator:a916e09e220667fb55fbf332c8852c948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769d9195e1d005bfe2c8fb99f2bdf6d9" id="r_a769d9195e1d005bfe2c8fb99f2bdf6d9"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a769d9195e1d005bfe2c8fb99f2bdf6d9">rank</a></td></tr>
+<tr class="separator:a769d9195e1d005bfe2c8fb99f2bdf6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c710163069c74256b4fae5d00225e4" id="r_a31c710163069c74256b4fae5d00225e4"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31c710163069c74256b4fae5d00225e4">size</a></td></tr>
+<tr class="separator:a31c710163069c74256b4fae5d00225e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>并查集 </p>
+
+<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">templates.h</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l00091">91</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aab2b783c6c2b20c187844788e3f3dd0a" name="aab2b783c6c2b20c187844788e3f3dd0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab2b783c6c2b20c187844788e3f3dd0a">&#9670;&#160;</a></span>UnionFind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnionFind::UnionFind </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00478">478</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  478</span>                          {</div>
+<div class="line"><span class="lineno">  479</span>    this-&gt;<a class="code hl_variable" href="#a916e09e220667fb55fbf332c8852c948">parent</a> = vector&lt;int&gt;(n);</div>
+<div class="line"><span class="lineno">  480</span>    this-&gt;<a class="code hl_variable" href="#a769d9195e1d005bfe2c8fb99f2bdf6d9">rank</a>   = vector&lt;int&gt;(n);</div>
+<div class="line"><span class="lineno">  481</span>    this-&gt;<a class="code hl_variable" href="#a31c710163069c74256b4fae5d00225e4">size</a>   = vector&lt;int&gt;(n);</div>
+<div class="line"><span class="lineno">  482</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno">  483</span>        this-&gt;<a class="code hl_variable" href="#a916e09e220667fb55fbf332c8852c948">parent</a>[i] = i;</div>
+<div class="line"><span class="lineno">  484</span>        this-&gt;<a class="code hl_variable" href="#a769d9195e1d005bfe2c8fb99f2bdf6d9">rank</a>[i]   = 0;</div>
+<div class="line"><span class="lineno">  485</span>        <a class="code hl_variable" href="#a31c710163069c74256b4fae5d00225e4">size</a>[i]         = 1;</div>
+<div class="line"><span class="lineno">  486</span>    }</div>
+<div class="line"><span class="lineno">  487</span>}</div>
+<div class="ttc" id="aa00568_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
+<div class="ttc" id="aa03734_html_a31c710163069c74256b4fae5d00225e4"><div class="ttname"><a href="#a31c710163069c74256b4fae5d00225e4">UnionFind::size</a></div><div class="ttdeci">vector&lt; int &gt; size</div><div class="ttdef"><b>定义</b> <a href="../../d3/d8b/a00059_source.html#l00095">templates.h:95</a></div></div>
+<div class="ttc" id="aa03734_html_a769d9195e1d005bfe2c8fb99f2bdf6d9"><div class="ttname"><a href="#a769d9195e1d005bfe2c8fb99f2bdf6d9">UnionFind::rank</a></div><div class="ttdeci">vector&lt; int &gt; rank</div><div class="ttdef"><b>定义</b> <a href="../../d3/d8b/a00059_source.html#l00094">templates.h:94</a></div></div>
+<div class="ttc" id="aa03734_html_a916e09e220667fb55fbf332c8852c948"><div class="ttname"><a href="#a916e09e220667fb55fbf332c8852c948">UnionFind::parent</a></div><div class="ttdeci">vector&lt; int &gt; parent</div><div class="ttdef"><b>定义</b> <a href="../../d3/d8b/a00059_source.html#l00093">templates.h:93</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00093">parent</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00094">rank</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00095">size</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ad17f179c36b8bffa7ccc92866eb1b182" name="ad17f179c36b8bffa7ccc92866eb1b182"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad17f179c36b8bffa7ccc92866eb1b182">&#9670;&#160;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned UnionFind::count </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00518">518</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  518</span>                          {</div>
+<div class="line"><span class="lineno">  519</span>    unordered_set&lt;int&gt; us;</div>
+<div class="line"><span class="lineno">  520</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="#a31c710163069c74256b4fae5d00225e4">size</a>.size(); i++) {</div>
+<div class="line"><span class="lineno">  521</span>        us.insert(<a class="code hl_function" href="#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a>(i));</div>
+<div class="line"><span class="lineno">  522</span>    }</div>
+<div class="line"><span class="lineno">  523</span>    <span class="keywordflow">return</span> us.size();</div>
+<div class="line"><span class="lineno">  524</span>}</div>
+<div class="ttc" id="aa03734_html_aa3fe04bfd2e9ce2e33c3edf8c91c3aea"><div class="ttname"><a href="#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">UnionFind::find</a></div><div class="ttdeci">int find(int x)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00489">templates.cpp:489</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00489">find()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00095">size</a>.</p>
+
+</div>
+</div>
+<a id="aa3fe04bfd2e9ce2e33c3edf8c91c3aea" name="aa3fe04bfd2e9ce2e33c3edf8c91c3aea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">&#9670;&#160;</a></span>find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnionFind::find </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00489">489</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  489</span>                         {</div>
+<div class="line"><span class="lineno">  490</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a916e09e220667fb55fbf332c8852c948">parent</a>[x] != x) {</div>
+<div class="line"><span class="lineno">  491</span>        <a class="code hl_variable" href="#a916e09e220667fb55fbf332c8852c948">parent</a>[x] = <a class="code hl_function" href="#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a>(<a class="code hl_variable" href="#a916e09e220667fb55fbf332c8852c948">parent</a>[x]);</div>
+<div class="line"><span class="lineno">  492</span>    }</div>
+<div class="line"><span class="lineno">  493</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a916e09e220667fb55fbf332c8852c948">parent</a>[x];</div>
+<div class="line"><span class="lineno">  494</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00489">find()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00093">parent</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../dd/dad/a00005_source.html#l00518">count()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00489">find()</a>, <a class="el" href="../../da/d45/a00011_source.html#l05689">leetcode::process_restricted_friend_requests::Solution::friendRequests()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00516">get_size()</a>, <a class="el" href="../../d1/d09/a00077_source.html#l05032">pat::a::a1021::main()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00514">same()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00496">unite()</a>.</p>
+
+</div>
+</div>
+<a id="a841370ab42669c1e8db9ade92ca098a1" name="a841370ab42669c1e8db9ade92ca098a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a841370ab42669c1e8db9ade92ca098a1">&#9670;&#160;</a></span>get_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnionFind::get_size </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00516">516</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  516</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a31c710163069c74256b4fae5d00225e4">size</a>[<a class="code hl_function" href="#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a>(x)]; }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00489">find()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00095">size</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l07005">acwing::acwing837::main()</a>.</p>
+
+</div>
+</div>
+<a id="aa1580fa407277914913231a7d752c7d8" name="aa1580fa407277914913231a7d752c7d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1580fa407277914913231a7d752c7d8">&#9670;&#160;</a></span>same()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnionFind::same </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00514">514</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  514</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a>(x) == <a class="code hl_function" href="#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a>(y); }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00489">find()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../d8/d41/a00038_source.html#l07005">acwing::acwing837::main()</a>, <a class="el" href="../../d8/d41/a00038_source.html#l07422">acwing::acwing859::main()</a> , 以及 <a class="el" href="../../d3/d52/a00023_source.html#l00290">liverpool::wheresmyinternet::main()</a>.</p>
+
+</div>
+</div>
+<a id="a36a27b936dbdeb53749e32a71554c3ed" name="a36a27b936dbdeb53749e32a71554c3ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36a27b936dbdeb53749e32a71554c3ed">&#9670;&#160;</a></span>unite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnionFind::unite </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00496">496</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  496</span>                                  {</div>
+<div class="line"><span class="lineno">  497</span>    x = <a class="code hl_function" href="#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a>(x);</div>
+<div class="line"><span class="lineno">  498</span>    y = <a class="code hl_function" href="#aa3fe04bfd2e9ce2e33c3edf8c91c3aea">find</a>(y);</div>
+<div class="line"><span class="lineno">  499</span>    <span class="keywordflow">if</span>(x == y) {</div>
+<div class="line"><span class="lineno">  500</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  501</span>    }</div>
+<div class="line"><span class="lineno">  502</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a769d9195e1d005bfe2c8fb99f2bdf6d9">rank</a>[x] &lt; <a class="code hl_variable" href="#a769d9195e1d005bfe2c8fb99f2bdf6d9">rank</a>[y]) {</div>
+<div class="line"><span class="lineno">  503</span>        <a class="code hl_variable" href="#a916e09e220667fb55fbf332c8852c948">parent</a>[x] = y;</div>
+<div class="line"><span class="lineno">  504</span>        <a class="code hl_variable" href="#a31c710163069c74256b4fae5d00225e4">size</a>[y] += <a class="code hl_variable" href="#a31c710163069c74256b4fae5d00225e4">size</a>[x];</div>
+<div class="line"><span class="lineno">  505</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  506</span>        <a class="code hl_variable" href="#a916e09e220667fb55fbf332c8852c948">parent</a>[y] = x;</div>
+<div class="line"><span class="lineno">  507</span>        <a class="code hl_variable" href="#a31c710163069c74256b4fae5d00225e4">size</a>[x] += <a class="code hl_variable" href="#a31c710163069c74256b4fae5d00225e4">size</a>[y];</div>
+<div class="line"><span class="lineno">  508</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a769d9195e1d005bfe2c8fb99f2bdf6d9">rank</a>[x] == <a class="code hl_variable" href="#a769d9195e1d005bfe2c8fb99f2bdf6d9">rank</a>[y]) {</div>
+<div class="line"><span class="lineno">  509</span>            <a class="code hl_variable" href="#a769d9195e1d005bfe2c8fb99f2bdf6d9">rank</a>[x]++;</div>
+<div class="line"><span class="lineno">  510</span>        }</div>
+<div class="line"><span class="lineno">  511</span>    }</div>
+<div class="line"><span class="lineno">  512</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00489">find()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00093">parent</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00094">rank</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00095">size</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../da/d45/a00011_source.html#l05689">leetcode::process_restricted_friend_requests::Solution::friendRequests()</a>, <a class="el" href="../../d8/d41/a00038_source.html#l07005">acwing::acwing837::main()</a>, <a class="el" href="../../d8/d41/a00038_source.html#l07422">acwing::acwing859::main()</a>, <a class="el" href="../../d3/d52/a00023_source.html#l00290">liverpool::wheresmyinternet::main()</a> , 以及 <a class="el" href="../../d1/d09/a00077_source.html#l05032">pat::a::a1021::main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a916e09e220667fb55fbf332c8852c948" name="a916e09e220667fb55fbf332c8852c948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a916e09e220667fb55fbf332c8852c948">&#9670;&#160;</a></span>parent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;int&gt; UnionFind::parent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">templates.h</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l00093">93</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../dd/dad/a00005_source.html#l00478">UnionFind()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00489">find()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00496">unite()</a>.</p>
+
+</div>
+</div>
+<a id="a769d9195e1d005bfe2c8fb99f2bdf6d9" name="a769d9195e1d005bfe2c8fb99f2bdf6d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a769d9195e1d005bfe2c8fb99f2bdf6d9">&#9670;&#160;</a></span>rank</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;int&gt; UnionFind::rank</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">templates.h</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l00094">94</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../dd/dad/a00005_source.html#l00478">UnionFind()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00496">unite()</a>.</p>
+
+</div>
+</div>
+<a id="a31c710163069c74256b4fae5d00225e4" name="a31c710163069c74256b4fae5d00225e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31c710163069c74256b4fae5d00225e4">&#9670;&#160;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;int&gt; UnionFind::size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">templates.h</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l00095">95</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../dd/dad/a00005_source.html#l00478">UnionFind()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00518">count()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00516">get_size()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00496">unite()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../d3/d8b/a00059_source.html">templates.h</a></li>
+<li><a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2

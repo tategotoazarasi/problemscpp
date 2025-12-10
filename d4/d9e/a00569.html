@@ -98,7 +98,7 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d04/a03161.html">edge</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d29/a03162.html">edge</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -128,65 +128,65 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00434">434</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  434</span>                                              {</div>
-<div class="line"><span class="lineno">  435</span>            <span class="keywordtype">int</span> n, m, q;</div>
-<div class="line"><span class="lineno">  436</span>            <span class="keywordflow">while</span>(cin &gt;&gt; n &gt;&gt; m &gt;&gt; q) {</div>
-<div class="line"><span class="lineno">  437</span>                <span class="keywordflow">if</span>(n == 0 &amp;&amp; m == 0 &amp;&amp; q == 0) {</div>
-<div class="line"><span class="lineno">  438</span>                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  439</span>                }</div>
-<div class="line"><span class="lineno">  440</span> </div>
-<div class="line"><span class="lineno">  441</span>                vector&lt;vector&lt;int&gt;&gt; dist = vector(n, vector&lt;int&gt;(n, INT_MAX / 2));</div>
-<div class="line"><span class="lineno">  442</span>                vector&lt;edge&gt; edges       = vector&lt;edge&gt;(m);</div>
-<div class="line"><span class="lineno">  443</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><span class="lineno">  444</span>                    dist[i][i] = 0;</div>
-<div class="line"><span class="lineno">  445</span>                }</div>
-<div class="line"><span class="lineno">  446</span>                unordered_set&lt;int&gt; calced{};</div>
-<div class="line"><span class="lineno">  447</span> </div>
-<div class="line"><span class="lineno">  448</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; i++) {</div>
-<div class="line"><span class="lineno">  449</span>                    <span class="keywordtype">int</span> u, v, w;</div>
-<div class="line"><span class="lineno">  450</span>                    cin &gt;&gt; u &gt;&gt; v &gt;&gt; w;</div>
-<div class="line"><span class="lineno">  451</span>                    edges[i] = <a class="code hl_struct" href="../../d0/d04/a03161.html">edge</a>{u, v, w};</div>
-<div class="line"><span class="lineno">  452</span>                }</div>
-<div class="line"><span class="lineno">  453</span> </div>
-<div class="line"><span class="lineno">  454</span>                <span class="keywordflow">while</span>(q--) {</div>
-<div class="line"><span class="lineno">  455</span>                    <span class="keywordtype">int</span> u, v;</div>
-<div class="line"><span class="lineno">  456</span>                    cin &gt;&gt; u &gt;&gt; v;</div>
-<div class="line"><span class="lineno">  457</span>                    <span class="keywordflow">if</span>(calced.contains(u)) {</div>
-<div class="line"><span class="lineno">  458</span>                        <span class="keywordflow">if</span>(dist[u][v] &gt;= INT_MAX / 2) {</div>
-<div class="line"><span class="lineno">  459</span>                            cout &lt;&lt; <span class="stringliteral">&quot;Impossible&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  460</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  461</span>                            cout &lt;&lt; dist[u][v] &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  462</span>                        }</div>
-<div class="line"><span class="lineno">  463</span>                        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  464</span>                    }</div>
-<div class="line"><span class="lineno">  465</span> </div>
-<div class="line"><span class="lineno">  466</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
-<div class="line"><span class="lineno">  467</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; j++) {</div>
-<div class="line"><span class="lineno">  468</span>                            <span class="keywordtype">int</span> from = edges[j].u;</div>
-<div class="line"><span class="lineno">  469</span>                            <span class="keywordtype">int</span> to   = edges[j].v;</div>
-<div class="line"><span class="lineno">  470</span>                            <span class="keywordtype">int</span> w    = edges[j].w;</div>
-<div class="line"><span class="lineno">  471</span>                            <span class="keywordflow">if</span>(dist[u][to] &gt; dist[u][from] + w) {</div>
-<div class="line"><span class="lineno">  472</span>                                dist[u][to] = dist[u][from] + w;</div>
-<div class="line"><span class="lineno">  473</span>                            }</div>
-<div class="line"><span class="lineno">  474</span>                        }</div>
-<div class="line"><span class="lineno">  475</span>                    }</div>
-<div class="line"><span class="lineno">  476</span>                    <span class="keywordflow">if</span>(dist[u][v] &gt;= INT_MAX / 2) {</div>
-<div class="line"><span class="lineno">  477</span>                        cout &lt;&lt; <span class="stringliteral">&quot;Impossible&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  478</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  479</span>                        cout &lt;&lt; dist[u][v] &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  480</span>                    }</div>
-<div class="line"><span class="lineno">  481</span> </div>
-<div class="line"><span class="lineno">  482</span>                    calced.insert(u);</div>
-<div class="line"><span class="lineno">  483</span>                }</div>
-<div class="line"><span class="lineno">  484</span> </div>
-<div class="line"><span class="lineno">  485</span>                cout &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  486</span>            }</div>
-<div class="line"><span class="lineno">  487</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  488</span>        }</div>
-<div class="ttc" id="aa00568_html_ab2991a035ec7c05bca06cda958a3e50c"><div class="ttname"><a href="../../dc/d40/a00568.html#ab2991a035ec7c05bca06cda958a3e50c">liverpool::grid::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00363">liverpool.cpp:363</a></div></div>
-<div class="ttc" id="aa00568_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00363">liverpool.cpp:363</a></div></div>
-<div class="ttc" id="aa03161_html"><div class="ttname"><a href="../../d0/d04/a03161.html">liverpool::allpairspath::edge</a></div><div class="ttdef"><b>定义</b> <a href="../../dc/d87/a00032_source.html#l00114">liverpool.h:114</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00435">435</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  435</span>                                              {</div>
+<div class="line"><span class="lineno">  436</span>            <span class="keywordtype">int</span> n, m, q;</div>
+<div class="line"><span class="lineno">  437</span>            <span class="keywordflow">while</span>(cin &gt;&gt; n &gt;&gt; m &gt;&gt; q) {</div>
+<div class="line"><span class="lineno">  438</span>                <span class="keywordflow">if</span>(n == 0 &amp;&amp; m == 0 &amp;&amp; q == 0) {</div>
+<div class="line"><span class="lineno">  439</span>                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  440</span>                }</div>
+<div class="line"><span class="lineno">  441</span> </div>
+<div class="line"><span class="lineno">  442</span>                vector&lt;vector&lt;int&gt;&gt; dist = vector(n, vector&lt;int&gt;(n, INT_MAX / 2));</div>
+<div class="line"><span class="lineno">  443</span>                vector&lt;edge&gt; edges       = vector&lt;edge&gt;(m);</div>
+<div class="line"><span class="lineno">  444</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><span class="lineno">  445</span>                    dist[i][i] = 0;</div>
+<div class="line"><span class="lineno">  446</span>                }</div>
+<div class="line"><span class="lineno">  447</span>                unordered_set&lt;int&gt; calced{};</div>
+<div class="line"><span class="lineno">  448</span> </div>
+<div class="line"><span class="lineno">  449</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; i++) {</div>
+<div class="line"><span class="lineno">  450</span>                    <span class="keywordtype">int</span> u, v, w;</div>
+<div class="line"><span class="lineno">  451</span>                    cin &gt;&gt; u &gt;&gt; v &gt;&gt; w;</div>
+<div class="line"><span class="lineno">  452</span>                    edges[i] = <a class="code hl_struct" href="../../d8/d29/a03162.html">edge</a>{u, v, w};</div>
+<div class="line"><span class="lineno">  453</span>                }</div>
+<div class="line"><span class="lineno">  454</span> </div>
+<div class="line"><span class="lineno">  455</span>                <span class="keywordflow">while</span>(q--) {</div>
+<div class="line"><span class="lineno">  456</span>                    <span class="keywordtype">int</span> u, v;</div>
+<div class="line"><span class="lineno">  457</span>                    cin &gt;&gt; u &gt;&gt; v;</div>
+<div class="line"><span class="lineno">  458</span>                    <span class="keywordflow">if</span>(calced.contains(u)) {</div>
+<div class="line"><span class="lineno">  459</span>                        <span class="keywordflow">if</span>(dist[u][v] &gt;= INT_MAX / 2) {</div>
+<div class="line"><span class="lineno">  460</span>                            cout &lt;&lt; <span class="stringliteral">&quot;Impossible&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  461</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  462</span>                            cout &lt;&lt; dist[u][v] &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  463</span>                        }</div>
+<div class="line"><span class="lineno">  464</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  465</span>                    }</div>
+<div class="line"><span class="lineno">  466</span> </div>
+<div class="line"><span class="lineno">  467</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno">  468</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; j++) {</div>
+<div class="line"><span class="lineno">  469</span>                            <span class="keywordtype">int</span> from = edges[j].u;</div>
+<div class="line"><span class="lineno">  470</span>                            <span class="keywordtype">int</span> to   = edges[j].v;</div>
+<div class="line"><span class="lineno">  471</span>                            <span class="keywordtype">int</span> w    = edges[j].w;</div>
+<div class="line"><span class="lineno">  472</span>                            <span class="keywordflow">if</span>(dist[u][to] &gt; dist[u][from] + w) {</div>
+<div class="line"><span class="lineno">  473</span>                                dist[u][to] = dist[u][from] + w;</div>
+<div class="line"><span class="lineno">  474</span>                            }</div>
+<div class="line"><span class="lineno">  475</span>                        }</div>
+<div class="line"><span class="lineno">  476</span>                    }</div>
+<div class="line"><span class="lineno">  477</span>                    <span class="keywordflow">if</span>(dist[u][v] &gt;= INT_MAX / 2) {</div>
+<div class="line"><span class="lineno">  478</span>                        cout &lt;&lt; <span class="stringliteral">&quot;Impossible&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  479</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  480</span>                        cout &lt;&lt; dist[u][v] &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  481</span>                    }</div>
+<div class="line"><span class="lineno">  482</span> </div>
+<div class="line"><span class="lineno">  483</span>                    calced.insert(u);</div>
+<div class="line"><span class="lineno">  484</span>                }</div>
+<div class="line"><span class="lineno">  485</span> </div>
+<div class="line"><span class="lineno">  486</span>                cout &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  487</span>            }</div>
+<div class="line"><span class="lineno">  488</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  489</span>        }</div>
+<div class="ttc" id="aa00568_html_ab2991a035ec7c05bca06cda958a3e50c"><div class="ttname"><a href="../../dc/d40/a00568.html#ab2991a035ec7c05bca06cda958a3e50c">liverpool::grid::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
+<div class="ttc" id="aa00568_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
+<div class="ttc" id="aa03162_html"><div class="ttname"><a href="../../d8/d29/a03162.html">liverpool::allpairspath::edge</a></div><div class="ttdef"><b>定义</b> <a href="../../dc/d87/a00032_source.html#l00114">liverpool.h:114</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00288">TEST()</a>.</p>
 
@@ -219,9 +219,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  292</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><span class="lineno">  293</span>            ASSERT_EQ(<span class="stringliteral">&quot;4\n2\nImpossible\n0\n\n100\nImpossible\n\n&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">  294</span>        }</div>
-<div class="ttc" id="aa00569_html_a49fa080c69a6a6c217d2848079d7fb86"><div class="ttname"><a href="#a49fa080c69a6a6c217d2848079d7fb86">liverpool::allpairspath::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00434">liverpool.cpp:434</a></div></div>
+<div class="ttc" id="aa00569_html_a49fa080c69a6a6c217d2848079d7fb86"><div class="ttname"><a href="#a49fa080c69a6a6c217d2848079d7fb86">liverpool::allpairspath::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00435">liverpool.cpp:435</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00434">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00435">main()</a>.</p>
 
 </div>
 </div>

@@ -122,39 +122,39 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00235">235</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  235</span>                                              {</div>
-<div class="line"><span class="lineno">  236</span>            <span class="keywordtype">int</span> testCases;</div>
-<div class="line"><span class="lineno">  237</span>            cin &gt;&gt; testCases;</div>
-<div class="line"><span class="lineno">  238</span>            <span class="keywordflow">while</span>(testCases--) {</div>
-<div class="line"><span class="lineno">  239</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><span class="lineno">  240</span>                cin &gt;&gt; n;</div>
-<div class="line"><span class="lineno">  241</span>                <span class="keywordflow">if</span>(n == 0) {</div>
-<div class="line"><span class="lineno">  242</span>                    cout &lt;&lt; 0 &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  243</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  244</span>                }</div>
-<div class="line"><span class="lineno">  245</span>                vector&lt;int&gt; <a class="code hl_namespace" href="../../dc/dae/a00563.html">snowflakes</a>(n);</div>
-<div class="line"><span class="lineno">  246</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
-<div class="line"><span class="lineno">  247</span>                    cin &gt;&gt; <a class="code hl_namespace" href="../../dc/dae/a00563.html">snowflakes</a>[i];</div>
-<div class="line"><span class="lineno">  248</span>                }</div>
-<div class="line"><span class="lineno">  249</span>                unordered_map&lt;int, int&gt; lastSeen;</div>
-<div class="line"><span class="lineno">  250</span>                <span class="keywordtype">int</span> left      = 0;</div>
-<div class="line"><span class="lineno">  251</span>                <span class="keywordtype">int</span> maxLength = 0;</div>
-<div class="line"><span class="lineno">  252</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> right = 0; right &lt; n; ++right) {</div>
-<div class="line"><span class="lineno">  253</span>                    <span class="keywordtype">int</span> currentSnowflake = snowflakes[right];</div>
-<div class="line"><span class="lineno">  254</span>                    <span class="keywordflow">if</span>(lastSeen.count(currentSnowflake)) {</div>
-<div class="line"><span class="lineno">  255</span>                        left = max(left, lastSeen[currentSnowflake] + 1);</div>
-<div class="line"><span class="lineno">  256</span>                    }</div>
-<div class="line"><span class="lineno">  257</span>                    lastSeen[currentSnowflake] = <a class="code hl_enumvalue" href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>;</div>
-<div class="line"><span class="lineno">  258</span>                    maxLength                  = max(maxLength, right - left + 1);</div>
-<div class="line"><span class="lineno">  259</span>                }</div>
-<div class="line"><span class="lineno">  260</span>                cout &lt;&lt; maxLength;</div>
-<div class="line"><span class="lineno">  261</span>            }</div>
-<div class="line"><span class="lineno">  262</span> </div>
-<div class="line"><span class="lineno">  263</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  264</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00236">236</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  236</span>                                              {</div>
+<div class="line"><span class="lineno">  237</span>            <span class="keywordtype">int</span> testCases;</div>
+<div class="line"><span class="lineno">  238</span>            cin &gt;&gt; testCases;</div>
+<div class="line"><span class="lineno">  239</span>            <span class="keywordflow">while</span>(testCases--) {</div>
+<div class="line"><span class="lineno">  240</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><span class="lineno">  241</span>                cin &gt;&gt; n;</div>
+<div class="line"><span class="lineno">  242</span>                <span class="keywordflow">if</span>(n == 0) {</div>
+<div class="line"><span class="lineno">  243</span>                    cout &lt;&lt; 0 &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  244</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  245</span>                }</div>
+<div class="line"><span class="lineno">  246</span>                vector&lt;int&gt; <a class="code hl_namespace" href="../../dc/dae/a00563.html">snowflakes</a>(n);</div>
+<div class="line"><span class="lineno">  247</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><span class="lineno">  248</span>                    cin &gt;&gt; <a class="code hl_namespace" href="../../dc/dae/a00563.html">snowflakes</a>[i];</div>
+<div class="line"><span class="lineno">  249</span>                }</div>
+<div class="line"><span class="lineno">  250</span>                unordered_map&lt;int, int&gt; lastSeen;</div>
+<div class="line"><span class="lineno">  251</span>                <span class="keywordtype">int</span> left      = 0;</div>
+<div class="line"><span class="lineno">  252</span>                <span class="keywordtype">int</span> maxLength = 0;</div>
+<div class="line"><span class="lineno">  253</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> right = 0; right &lt; n; ++right) {</div>
+<div class="line"><span class="lineno">  254</span>                    <span class="keywordtype">int</span> currentSnowflake = snowflakes[right];</div>
+<div class="line"><span class="lineno">  255</span>                    <span class="keywordflow">if</span>(lastSeen.count(currentSnowflake)) {</div>
+<div class="line"><span class="lineno">  256</span>                        left = max(left, lastSeen[currentSnowflake] + 1);</div>
+<div class="line"><span class="lineno">  257</span>                    }</div>
+<div class="line"><span class="lineno">  258</span>                    lastSeen[currentSnowflake] = <a class="code hl_enumvalue" href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">right</a>;</div>
+<div class="line"><span class="lineno">  259</span>                    maxLength                  = max(maxLength, right - left + 1);</div>
+<div class="line"><span class="lineno">  260</span>                }</div>
+<div class="line"><span class="lineno">  261</span>                cout &lt;&lt; maxLength;</div>
+<div class="line"><span class="lineno">  262</span>            }</div>
+<div class="line"><span class="lineno">  263</span> </div>
+<div class="line"><span class="lineno">  264</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  265</span>        }</div>
 <div class="ttc" id="aa00097_html_af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2"><div class="ttname"><a href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a897d2f6558fb5acf62ae3dc2db1f9cd2">acwing::acwing1929::right</a></div><div class="ttdeci">@ right</div><div class="ttdoc">右</div><div class="ttdef"><b>定义</b> <a href="../../d5/de0/a00050_source.html#l00552">acwing.h:552</a></div></div>
-<div class="ttc" id="aa00563_html"><div class="ttname"><a href="../../dc/dae/a00563.html">liverpool::snowflakes</a></div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00234">liverpool.cpp:234</a></div></div>
+<div class="ttc" id="aa00563_html"><div class="ttname"><a href="../../dc/dae/a00563.html">liverpool::snowflakes</a></div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00235">liverpool.cpp:235</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00172">TEST()</a>.</p>
 
@@ -187,9 +187,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  176</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><span class="lineno">  177</span>            ASSERT_EQ(<span class="stringliteral">&quot;3&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">  178</span>        }</div>
-<div class="ttc" id="aa00563_html_a82cb7b85a433686a7c04cabb16fad897"><div class="ttname"><a href="#a82cb7b85a433686a7c04cabb16fad897">liverpool::snowflakes::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00235">liverpool.cpp:235</a></div></div>
+<div class="ttc" id="aa00563_html_a82cb7b85a433686a7c04cabb16fad897"><div class="ttname"><a href="#a82cb7b85a433686a7c04cabb16fad897">liverpool::snowflakes::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00236">liverpool.cpp:236</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00235">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00236">main()</a>.</p>
 
 </div>
 </div>

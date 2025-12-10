@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: pat::b::b1095::room_cnt_comp结构体 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,19 +84,63 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d7/d21/a00584.html">pat</a></li><li class="navelem"><a class="el" href="../../dc/dac/a00585.html">b</a></li><li class="navelem"><a class="el" href="../../d3/db4/a00684.html">b1100</a></li><li class="navelem"><a class="el" href="../../db/d6b/a03645.html">comp</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dc/dac/a00585.html">pat</a></li><li class="navelem"><a class="el" href="../../d6/d92/a00586.html">b</a></li><li class="navelem"><a class="el" href="../../d4/d9b/a00680.html">b1095</a></li><li class="navelem"><a class="el" href="../../dc/dd9/a03642.html">room_cnt_comp</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">pat::b::b1100::comp 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../d1/d7b/a03639.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">pat::b::b1095::room_cnt_comp结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../db/d6b/a03645.html">pat::b::b1100::comp</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../db/d6b/a03645.html#aca8a5df1e180ad8ed8382a7ef30814ea">operator()</a>(const string &amp;s1, const string &amp;s2) const</td><td class="entry"><a class="el" href="../../db/d6b/a03645.html">pat::b::b1100::comp</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../d5/df9/a00044_source.html">pat.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aee13191f75b058fdaa5ec74323370a2e" id="r_aee13191f75b058fdaa5ec74323370a2e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee13191f75b058fdaa5ec74323370a2e">operator()</a> (const pair&lt; string, int &gt; &amp;p1, const pair&lt; string, int &gt; &amp;p2) const</td></tr>
+<tr class="separator:aee13191f75b058fdaa5ec74323370a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../d5/df9/a00044_source.html">pat.h</a> 第 <a class="el" href="../../d5/df9/a00044_source.html#l00618">618</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="aee13191f75b058fdaa5ec74323370a2e" name="aee13191f75b058fdaa5ec74323370a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee13191f75b058fdaa5ec74323370a2e">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool pat::b::b1095::room_cnt_comp::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const pair&lt; string, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const pair&lt; string, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p2</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d1/d09/a00077_source.html">pat.cpp</a> 第 <a class="el" href="../../d1/d09/a00077_source.html#l03406">3406</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3406</span>                                                                                                         {</div>
+<div class="line"><span class="lineno"> 3407</span>                <span class="keywordflow">if</span>(p1.second != p2.second) {</div>
+<div class="line"><span class="lineno"> 3408</span>                    <span class="keywordflow">return</span> p1.second &gt; p2.second;</div>
+<div class="line"><span class="lineno"> 3409</span>                }</div>
+<div class="line"><span class="lineno"> 3410</span>                <span class="keywordflow">return</span> p1.first &lt; p2.first;</div>
+<div class="line"><span class="lineno"> 3411</span>            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="../../d5/df9/a00044_source.html">pat.h</a></li>
+<li><a class="el" href="../../d1/d09/a00077_source.html">pat.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
