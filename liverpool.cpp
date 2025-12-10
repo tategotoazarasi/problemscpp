@@ -10,6 +10,7 @@
 #include <iostream>
 #include <ostream>
 #include <queue>
+#include <ranges>
 #include <sstream>
 #include <stack>
 #include <vector>
@@ -1285,14 +1286,6 @@ namespace liverpool {
 				}
 			}
 
-			// print
-			for(int i = 0; i < w; i++) {
-				for(int j = 0; j < h; j++) {
-					cerr << grid[i][j] << ' ';
-				}
-				cerr << endl;
-			}
-
 			for(int i = 0; i < vert.size(); i++) {
 				for(int j = i + 1; j < vert.size(); j++) {
 					unsigned long long x1 = min(vert[i].first, vert[j].first);
@@ -1330,4 +1323,67 @@ namespace liverpool {
 			return 0;
 		}
 	}// namespace movie_theater
+
+	namespace factory {
+		int main_1(istream &cin, ostream &cout) {
+			unsigned long long ans = 0;
+			string line;
+			while(getline(cin, line)) {
+				unsigned long long destination = 0;
+				vector<unsigned long long> ops = {};
+				auto substrs                   = std::views::split(line, ' ');
+				for(const auto &[a, b]: substrs) {
+					string substr = string(a, b);
+					istringstream iss;
+					if(substr[0] == '[') {// destination
+						substr = string(a + 1, b - 1);
+						for(int i = 0; i < substr.length(); i++) {
+							if(substr[i] == '#') {
+								destination |= (1ULL << i);
+							}
+						}
+					} else if(substr[0] == '(') {// operator
+						unsigned long long op = 0;
+						substr                = string(a + 1, b - 1);
+						auto subsubstrs       = std::views::split(substr, ',');
+						for(const auto &[c, d]: subsubstrs) {
+							string subsubstr = string(c, d);
+							iss              = istringstream(subsubstr);
+							int index;
+							iss >> index;
+							op |= (1ULL << index);
+						}
+						ops.push_back(op);
+					} else {// ?
+						substr = string(a + 1, b - 1);
+					}
+				}
+				unordered_set<unsigned long long> vis                 = {};
+				queue<pair<unsigned long long, unsigned long long>> q = {};
+				for(int i = 0; i < ops.size(); i++) {
+					q.push({0 ^ ops[i], 1ULL << i});
+					vis.insert(1ULL << i);
+				}
+				while(!q.empty()) {
+					auto [current, tag] = q.front();
+					q.pop();
+					if(current == destination) {
+						//cout << std::popcount(tag) << endl;
+						ans += std::popcount(tag);
+						break;
+					}
+					for(int i = 0; i < ops.size(); i++) {
+						unsigned long long next_tag = tag | (1ULL << i);
+						if(!vis.contains(next_tag)) {
+							unsigned long long next_current = current ^ ops[i];
+							vis.insert(next_tag);
+							q.push({next_current, next_tag});
+						}
+					}
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace factory
 }// namespace liverpool
