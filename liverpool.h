@@ -178,7 +178,7 @@ namespace liverpool {
 	namespace movie_theater {
 		int main_1(istream &cin, ostream &cout);
 		int main_2(istream &cin, ostream &cout);
-	}
+	}// namespace movie_theater
 }// namespace liverpool
 
 #endif//PROBLEMSCPP_COMO526_H

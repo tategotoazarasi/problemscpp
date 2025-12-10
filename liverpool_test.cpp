@@ -466,5 +466,13 @@ namespace liverpool {
 			const auto ans = out.str();
 			ASSERT_EQ("50", ans);
 		}
-	}
+
+		TEST(movie_theater, case2_0) {
+			istringstream in("7,1\n11,1\n11,7\n9,7\n9,5\n2,5\n2,3\n7,3");
+			auto out = ostringstream();
+			main_2(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("24", ans);
+		}
+	}// namespace movie_theater
 }// namespace liverpool

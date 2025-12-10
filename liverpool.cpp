@@ -1194,11 +1194,11 @@ namespace liverpool {
 
 	namespace movie_theater {
 		int main_1(istream &cin, ostream &cout) {
-			vector<pair<unsigned long long,unsigned long long>> vert = {};
-			unsigned long long x,y;
+			vector<pair<unsigned long long, unsigned long long>> vert = {};
+			unsigned long long x, y;
 			char c;
 			unsigned long long ans = 0;
-			while(cin>>x>>c >> y) {
+			while(cin >> x >> c >> y) {
 				auto p = make_pair(x, y);
 
 				for(const auto &[nx, ny]: vert) {
@@ -1215,7 +1215,118 @@ namespace liverpool {
 			cout << ans;
 			return 0;
 		}
+
 		int main_2(istream &cin, ostream &cout) {
+			vector<pair<unsigned long long, unsigned long long>> vert = {};
+			unsigned long long x, y;
+			char c;
+			unsigned long long ans = 0;
+
+			unordered_set<unsigned long long> xs = {};
+			unordered_set<unsigned long long> ys = {};
+
+			while(cin >> x >> c >> y) {
+				xs.insert(x);
+				ys.insert(y);
+				auto p = make_pair(x, y);
+				vert.push_back(p);
+			}
+			vector<unsigned long long> x_vect(xs.begin(), xs.end());
+			vector<unsigned long long> y_vect(ys.begin(), ys.end());
+			ranges::sort(x_vect);
+			ranges::sort(y_vect);
+			unordered_map<unsigned long long, unsigned long long> x_i = {};
+			unordered_map<unsigned long long, unsigned long long> y_i = {};
+			for(int i = 0; i < x_vect.size(); i++) {
+				x_i[x_vect[i]] = i + 1;
+			}
+			for(int i = 0; i < y_vect.size(); i++) {
+				y_i[y_vect[i]] = i + 1;
+			}
+			for(auto &[xx, yy]: vert) {
+				xx = x_i[xx];
+				yy = y_i[yy];
+			}
+
+			unsigned long long w     = x_vect.size() + 2;
+			unsigned long long h     = y_vect.size() + 2;
+			vector<vector<int>> grid = vector<vector<int>>(w, vector<int>(h, 2));
+			for(int i = 0; i < vert.size(); i++) {
+				auto p1               = vert[i];
+				auto p2               = vert[(i + 1) % vert.size()];
+				unsigned long long x0 = min(p1.first, p2.first);
+				unsigned long long x1 = max(p1.first, p2.first);
+				unsigned long long y0 = min(p1.second, p2.second);
+				unsigned long long y1 = max(p1.second, p2.second);
+				for(int j = x0; j <= x1; j++) {
+					for(int k = y0; k <= y1; k++) {
+						grid[j][k] = 1;
+					}
+				}
+			}
+
+			queue<pair<unsigned long long, unsigned long long>> q = {};
+			q.push({0, 0});
+			while(!q.empty()) {
+				auto front = q.front();
+				q.pop();
+				pair<unsigned long long, unsigned long long> directions[4] = {
+				        {1, 0},
+				        {-1, 0},
+				        {0, 1},
+				        {0, -1}};
+				for(auto [dx, dy]: directions) {
+					unsigned long long nx = front.first + dx;
+					unsigned long long ny = front.second + dy;
+					if(nx < w && ny < h && grid[nx][ny] == 2) {
+						grid[nx][ny] = 0;
+						q.push({nx, ny});
+					}
+				}
+			}
+
+			// print
+			for(int i = 0; i < w; i++) {
+				for(int j = 0; j < h; j++) {
+					cerr << grid[i][j] << ' ';
+				}
+				cerr << endl;
+			}
+
+			for(int i = 0; i < vert.size(); i++) {
+				for(int j = i + 1; j < vert.size(); j++) {
+					unsigned long long x1 = min(vert[i].first, vert[j].first);
+					unsigned long long x2 = max(vert[i].first, vert[j].first);
+					unsigned long long y1 = min(vert[i].second, vert[j].second);
+					unsigned long long y2 = max(vert[i].second, vert[j].second);
+					bool valid            = true;
+					for(int xx = x1; xx <= x2; xx++) {
+						if(grid[xx][y1] == 0) {
+							valid = false;
+							goto END;
+						}
+						if(grid[xx][y2] == 0) {
+							valid = false;
+							goto END;
+						}
+					}
+					for(int yy = y1; yy <= y2; yy++) {
+						if(grid[x1][yy] == 0) {
+							valid = false;
+							goto END;
+						}
+						if(grid[x2][yy] == 0) {
+							valid = false;
+							goto END;
+						}
+					}
+				END:
+					if(valid) {
+						ans = max(ans, (x_vect[x2 - 1] + 1 - x_vect[x1 - 1]) * (y_vect[y2 - 1] + 1 - y_vect[y1 - 1]));
+					}
+				}
+			}
+			cout << ans;
 			return 0;
 		}
 	}// namespace movie_theater
