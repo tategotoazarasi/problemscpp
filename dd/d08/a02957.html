@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::maximal_rectangle::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,19 +84,114 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d9/d21/a00240.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d2/da3/a00520.html">predict_the_winner</a></li><li class="navelem"><a class="el" href="../../db/d1b/a02960.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d9/d21/a00240.html">leetcode</a></li><li class="navelem"><a class="el" href="../../dd/d4d/a00519.html">maximal_rectangle</a></li><li class="navelem"><a class="el" href="../../dd/d08/a02957.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::predict_the_winner::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d4/dbc/a02954.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::maximal_rectangle::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../db/d1b/a02960.html">leetcode::predict_the_winner::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../db/d1b/a02960.html#abbd9dd960b3c85969101b727c9d2b257">PredictTheWinner</a>(vector&lt; int &gt; &amp;nums)</td><td class="entry"><a class="el" href="../../db/d1b/a02960.html">leetcode::predict_the_winner::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a3b6b99a18bc9b5489f3ab86553d27b69" id="r_a3b6b99a18bc9b5489f3ab86553d27b69"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b6b99a18bc9b5489f3ab86553d27b69">maximalRectangle</a> (vector&lt; vector&lt; char &gt; &gt; &amp;matrix)</td></tr>
+<tr class="separator:a3b6b99a18bc9b5489f3ab86553d27b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l03102">3102</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a3b6b99a18bc9b5489f3ab86553d27b69" name="a3b6b99a18bc9b5489f3ab86553d27b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6b99a18bc9b5489f3ab86553d27b69">&#9670;&#160;</a></span>maximalRectangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leetcode::maximal_rectangle::Solution::maximalRectangle </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; vector&lt; char &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l08776">8776</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 8776</span>                                                                   {</div>
+<div class="line"><span class="lineno"> 8777</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../dc/d40/a00568.html#ab2991a035ec7c05bca06cda958a3e50c">m</a> = matrix.size();</div>
+<div class="line"><span class="lineno"> 8778</span>            <span class="keywordflow">if</span>(m == 0) {</div>
+<div class="line"><span class="lineno"> 8779</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 8780</span>            }</div>
+<div class="line"><span class="lineno"> 8781</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> = matrix[0].size();</div>
+<div class="line"><span class="lineno"> 8782</span>            vector <a class="code hl_enumvalue" href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>(m, vector(n, 0));</div>
+<div class="line"><span class="lineno"> 8783</span> </div>
+<div class="line"><span class="lineno"> 8784</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; i++) {</div>
+<div class="line"><span class="lineno"> 8785</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; j++) {</div>
+<div class="line"><span class="lineno"> 8786</span>                    <span class="keywordflow">if</span>(matrix[i][j] == <span class="charliteral">&#39;1&#39;</span>) {</div>
+<div class="line"><span class="lineno"> 8787</span>                        <a class="code hl_enumvalue" href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i][j] = (j == 0 ? 0 : <a class="code hl_enumvalue" href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i][j - 1]) + 1;</div>
+<div class="line"><span class="lineno"> 8788</span>                    }</div>
+<div class="line"><span class="lineno"> 8789</span>                }</div>
+<div class="line"><span class="lineno"> 8790</span>            }</div>
+<div class="line"><span class="lineno"> 8791</span> </div>
+<div class="line"><span class="lineno"> 8792</span>            <span class="keywordtype">int</span> ret = 0;</div>
+<div class="line"><span class="lineno"> 8793</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; j++) {</div>
+<div class="line"><span class="lineno"> 8794</span>                <span class="comment">// 对于每一列，使用基于柱状图的方法</span></div>
+<div class="line"><span class="lineno"> 8795</span>                vector&lt;int&gt; <a class="code hl_enumvalue" href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a6e3e0fd26e5ab4dfae535f544a428b00">up</a>(m, 0), <a class="code hl_enumvalue" href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3">down</a>(m, 0);</div>
+<div class="line"><span class="lineno"> 8796</span> </div>
+<div class="line"><span class="lineno"> 8797</span>                stack&lt;int&gt; stk;</div>
+<div class="line"><span class="lineno"> 8798</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; i++) {</div>
+<div class="line"><span class="lineno"> 8799</span>                    <span class="keywordflow">while</span>(!stk.empty() &amp;&amp; left[stk.top()][j] &gt;= left[i][j]) {</div>
+<div class="line"><span class="lineno"> 8800</span>                        stk.pop();</div>
+<div class="line"><span class="lineno"> 8801</span>                    }</div>
+<div class="line"><span class="lineno"> 8802</span>                    <a class="code hl_enumvalue" href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a6e3e0fd26e5ab4dfae535f544a428b00">up</a>[i] = stk.empty() ? -1 : stk.top();</div>
+<div class="line"><span class="lineno"> 8803</span>                    stk.push(i);</div>
+<div class="line"><span class="lineno"> 8804</span>                }</div>
+<div class="line"><span class="lineno"> 8805</span>                stk = stack&lt;int&gt;();</div>
+<div class="line"><span class="lineno"> 8806</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = m - 1; i &gt;= 0; i--) {</div>
+<div class="line"><span class="lineno"> 8807</span>                    <span class="keywordflow">while</span>(!stk.empty() &amp;&amp; left[stk.top()][j] &gt;= left[i][j]) {</div>
+<div class="line"><span class="lineno"> 8808</span>                        stk.pop();</div>
+<div class="line"><span class="lineno"> 8809</span>                    }</div>
+<div class="line"><span class="lineno"> 8810</span>                    <a class="code hl_enumvalue" href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3">down</a>[i] = stk.empty() ? <a class="code hl_variable" href="../../dc/d40/a00568.html#ab2991a035ec7c05bca06cda958a3e50c">m</a> : stk.top();</div>
+<div class="line"><span class="lineno"> 8811</span>                    stk.push(i);</div>
+<div class="line"><span class="lineno"> 8812</span>                }</div>
+<div class="line"><span class="lineno"> 8813</span> </div>
+<div class="line"><span class="lineno"> 8814</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dc/d40/a00568.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; i++) {</div>
+<div class="line"><span class="lineno"> 8815</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> height = <a class="code hl_enumvalue" href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3">down</a>[i] - <a class="code hl_enumvalue" href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a6e3e0fd26e5ab4dfae535f544a428b00">up</a>[i] - 1;</div>
+<div class="line"><span class="lineno"> 8816</span>                    <span class="keywordtype">int</span> area         = height * <a class="code hl_enumvalue" href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">left</a>[i][j];</div>
+<div class="line"><span class="lineno"> 8817</span>                    ret              = max(ret, area);</div>
+<div class="line"><span class="lineno"> 8818</span>                }</div>
+<div class="line"><span class="lineno"> 8819</span>            }</div>
+<div class="line"><span class="lineno"> 8820</span>            <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno"> 8821</span>        }</div>
+<div class="ttc" id="aa00097_html_af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3"><div class="ttname"><a href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3">acwing::acwing1929::down</a></div><div class="ttdeci">@ down</div><div class="ttdoc">下</div><div class="ttdef"><b>定义</b> <a href="../../d5/de0/a00050_source.html#l00556">acwing.h:556</a></div></div>
+<div class="ttc" id="aa00097_html_af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977"><div class="ttname"><a href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a155e3752c1ccb6e399a69accc045e977">acwing::acwing1929::left</a></div><div class="ttdeci">@ left</div><div class="ttdoc">左</div><div class="ttdef"><b>定义</b> <a href="../../d5/de0/a00050_source.html#l00550">acwing.h:550</a></div></div>
+<div class="ttc" id="aa00097_html_af40e9f5142818f91d8f7b2e795f35df5a6e3e0fd26e5ab4dfae535f544a428b00"><div class="ttname"><a href="../../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a6e3e0fd26e5ab4dfae535f544a428b00">acwing::acwing1929::up</a></div><div class="ttdeci">@ up</div><div class="ttdoc">上</div><div class="ttdef"><b>定义</b> <a href="../../d5/de0/a00050_source.html#l00554">acwing.h:554</a></div></div>
+<div class="ttc" id="aa00568_html_ab2991a035ec7c05bca06cda958a3e50c"><div class="ttname"><a href="../../dc/d40/a00568.html#ab2991a035ec7c05bca06cda958a3e50c">liverpool::grid::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00363">liverpool.cpp:363</a></div></div>
+<div class="ttc" id="aa00568_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../dc/d40/a00568.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00363">liverpool.cpp:363</a></div></div>
+</div><!-- fragment -->
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l04060">leetcode::maximal_rectangle::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l04065">leetcode::maximal_rectangle::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l04070">leetcode::maximal_rectangle::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l04075">leetcode::maximal_rectangle::TEST()</a> , 以及 <a class="el" href="../../d4/d51/a00017_source.html#l04080">leetcode::maximal_rectangle::TEST()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
