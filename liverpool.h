@@ -182,8 +182,12 @@ namespace liverpool {
 
 	namespace factory {
 		int main_1(istream &cin, ostream &cout);
-		int main_2(istream &cin, ostream &cout);
 	}// namespace factory
+
+	namespace reactor {
+		int main_1(istream &cin, ostream &cout);
+		int main_2(istream &cin, ostream &cout);
+	}// namespace reactor
 }// namespace liverpool
 
 #endif//PROBLEMSCPP_COMO526_H

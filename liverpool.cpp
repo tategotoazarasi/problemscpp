@@ -1386,4 +1386,44 @@ namespace liverpool {
 			return 0;
 		}
 	}// namespace factory
+
+	namespace reactor {
+		struct node {
+			string name;
+			vector<string> next;
+			int v = 0;
+		};
+
+		int main_1(istream &cin, ostream &cout) {
+			string tag;
+			string in;
+			unordered_map<string, node> nodes = {};
+			while(cin >> tag) {
+				if(tag.ends_with(':')) {
+					in = tag.substr(0, tag.length() - 1);
+					if(!nodes.contains(in)) {
+						nodes.insert({in, node{in, {}}});
+					}
+				} else {
+					if(!nodes.contains(tag)) {
+						nodes.insert({tag, node{tag, {}}});
+					}
+					nodes[tag].next.push_back(in);
+				}
+			}
+			stack<string> stk = {};
+			stk.push("out");
+			while(!stk.empty()) {
+				string current = stk.top();
+				stk.pop();
+				nodes[current].v++;
+				for(const auto &next: nodes[current].next) {
+					if(nodes[next].v < 1 << 12)
+						stk.push(next);
+				}
+			}
+			cout << nodes["you"].v;
+			return 0;
+		}
+	}// namespace reactor
 }// namespace liverpool

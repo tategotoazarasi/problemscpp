@@ -484,6 +484,15 @@ namespace liverpool {
 			const auto ans = out.str();
 			ASSERT_EQ("7", ans);
 		}
-
 	}// namespace factory
+
+	namespace reactor {
+		TEST(reactor, case1_0) {
+			istringstream in("aaa: you hhh\nyou: bbb ccc\nbbb: ddd eee\nccc: ddd eee fff\nddd: ggg\neee: out\nfff: out\nggg: out\nhhh: ccc fff iii\niii: out\n");
+			auto out = ostringstream();
+			main_1(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("5", ans);
+		}
+	}// namespace reactor
 }// namespace liverpool
