@@ -1426,4 +1426,43 @@ namespace liverpool {
 			return 0;
 		}
 	}// namespace reactor
+
+	namespace hsbc_interview {
+		string solution(string letters) {
+			int lower_id[26] = {};
+			int upper_id[26] = {};
+			bool output[26]  = {};
+			for(int i = 0; i < 26; i++) {
+				lower_id[i] = -1;
+				upper_id[i] = -1;
+				output[i]   = false;
+			}
+			int cnt = 0;
+			for(int i = 0; i < letters.length(); i++) {
+				char c = letters[i];
+				if(islower(c) && lower_id[c - 'a'] == -1) {
+					lower_id[c - 'a'] = i;
+				} else if(isupper(c)) {
+					upper_id[c - 'A'] = i;
+				}
+			}
+			for(int i = 0; i < 26; i++) {
+				if(lower_id[i] != -1 && upper_id[i] != -1 && lower_id[i] > upper_id[i]) {
+					cnt++;
+					output[i] = true;
+				}
+			}
+			ostringstream oss = {};
+			oss << cnt;
+			if(cnt > 0) {
+				oss << " ";
+				for(int i = 0; i < 26; i++) {
+					if(output[i]) {
+						oss << (char) (i + 'A') << ' ' << (char) (i + 'a') << ' ';
+					}
+				}
+			}
+			return oss.str();
+		}
+	}// namespace hsbc_interview
 }// namespace liverpool

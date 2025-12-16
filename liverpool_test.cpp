@@ -495,4 +495,29 @@ namespace liverpool {
 			ASSERT_EQ("5", ans);
 		}
 	}// namespace reactor
+
+	namespace hsbc_interview {
+		/*TEST(hsbc1, case1) {
+			string in("aaaAAA");
+			int ans = solution(in);
+			ASSERT_EQ(1, ans);
+		}
+
+		TEST(hsbc1, case2) {
+			string in("aAaAaA");
+			int ans = solution(in);
+			ASSERT_EQ(0, ans);
+		}*/
+
+		TEST(hsbc1, case3) {
+			string in("AaCcc*zZz");
+			string ans = solution(in);
+			ASSERT_EQ("2 A a C c ", ans);
+		}
+		TEST(hsbc1, case4) {
+			string in("AaCc*");
+			string ans = solution(in);
+			ASSERT_EQ("2 A a C c ", ans);
+		}
+	}// namespace hsbc_interview
 }// namespace liverpool
