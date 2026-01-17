@@ -9606,4 +9606,30 @@ namespace leetcode {
 			return oss.str();
 		}
 	}// namespace maximize_sum_of_squares_of_digits
+
+	namespace beast_reachable_tower {
+		vector<int> Solution::bestTower(vector<vector<int>> &towers, vector<int> &center, int radius) {
+			vector<tower> vec = vector<tower>();
+			for(const auto t: towers) {
+				tower nt = tower{t[0], t[1], t[2], abs(t[0] - center[0]) + abs(t[1] - center[1])};
+				if(nt.d <= radius) {
+					vec.push_back(nt);
+				}
+			}
+			ranges::sort(vec, [](const tower &a, const tower &b) {
+				if(a.f != b.f) {
+					return a.f > b.f;
+				}
+				if(a.x != b.x) {
+					return a.x < b.x;
+				}
+				return a.y < b.y;
+			});
+			if(vec.empty()) {
+				return {-1, -1};
+			} else {
+				return {vec[0].x, vec[0].y};
+			}
+		}
+	}// namespace beast_reachable_tower
 }// namespace leetcode

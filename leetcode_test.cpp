@@ -4439,4 +4439,29 @@ namespace leetcode {
 			ASSERT_EQ("", Solution::maxSumOfSquares(1, 10));
 		}
 	}// namespace maximize_sum_of_squares_of_digits
+
+	namespace beast_reachable_tower {
+		TEST(beast_reachable_tower, case1) {
+			vector<vector<int>> towers = {{1, 2, 5}, {2, 1, 7}, {3, 1, 9}};
+			vector<int> center         = {1, 1};
+			vector<int> output         = {3, 1};
+			ASSERT_EQ(output, Solution::bestTower(towers, center, 2));
+		}
+
+
+		TEST(beast_reachable_tower, case2) {
+			vector<vector<int>> towers = {{1, 3, 4}, {2, 2, 4}, {4, 4, 7}};
+			vector<int> center         = {0, 0};
+			vector<int> output         = {1, 3};
+			ASSERT_EQ(output, Solution::bestTower(towers, center, 5));
+		}
+
+		TEST(beast_reachable_tower, case3) {
+			vector<vector<int>> towers = {{5, 6, 8}, {0, 3, 5}};
+			vector<int> center         = {1, 2};
+			vector<int> output         = {-1, -1};
+			ASSERT_EQ(output, Solution::bestTower(towers, center, 1));
+		}
+
+	}// namespace beast_reachable_tower
 }// namespace leetcode

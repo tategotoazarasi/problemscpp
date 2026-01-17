@@ -3420,6 +3420,16 @@ namespace leetcode {
 			static string maxSumOfSquares(int num, int sum);
 		};
 	}// namespace maximize_sum_of_squares_of_digits
+
+	namespace beast_reachable_tower {
+		struct tower {
+			int x, y, f, d;
+		};
+		class Solution {
+		public:
+			static vector<int> bestTower(vector<vector<int>> &towers, vector<int> &center, int radius);
+		};
+	}// namespace beast_reachable_tower
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
