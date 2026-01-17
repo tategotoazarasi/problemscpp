@@ -9632,4 +9632,16 @@ namespace leetcode {
 			}
 		}
 	}// namespace beast_reachable_tower
+
+	namespace minimum_operations_to_reach_target_array {
+		int Solution::minOperations(vector<int> &nums, vector<int> &target) {
+			unordered_set<int> s = {};
+			for(int i = 0; i < nums.size(); i++) {
+				if(nums[i] != target[i]) {
+					s.insert(nums[i]);
+				}
+			}
+			return s.size();
+		}
+	}// namespace minimum_operations_to_reach_target_array
 }// namespace leetcode

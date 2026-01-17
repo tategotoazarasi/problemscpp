@@ -3430,6 +3430,13 @@ namespace leetcode {
 			static vector<int> bestTower(vector<vector<int>> &towers, vector<int> &center, int radius);
 		};
 	}// namespace beast_reachable_tower
+
+	namespace minimum_operations_to_reach_target_array {
+		class Solution {
+		public:
+			static int minOperations(vector<int> &nums, vector<int> &target);
+		};
+	}// namespace minimum_operations_to_reach_target_array
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

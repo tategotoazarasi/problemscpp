@@ -4462,6 +4462,25 @@ namespace leetcode {
 			vector<int> output         = {-1, -1};
 			ASSERT_EQ(output, Solution::bestTower(towers, center, 1));
 		}
-
 	}// namespace beast_reachable_tower
+
+	namespace minimum_operations_to_reach_target_array {
+		TEST(minimum_operations_to_reach_target_array, case1) {
+			vector<int> nums   = {1, 2, 3};
+			vector<int> target = {2, 1, 3};
+			ASSERT_EQ(2, Solution::minOperations(nums, target));
+		}
+
+		TEST(minimum_operations_to_reach_target_array, case2) {
+			vector<int> nums   = {4, 1, 4};
+			vector<int> target = {5, 1, 4};
+			ASSERT_EQ(1, Solution::minOperations(nums, target));
+		}
+
+		TEST(minimum_operations_to_reach_target_array, case3) {
+			vector<int> nums   = {7, 3, 7};
+			vector<int> target = {5, 5, 9};
+			ASSERT_EQ(2, Solution::minOperations(nums, target));
+		}
+	}// namespace minimum_operations_to_reach_target_array
 }// namespace leetcode
