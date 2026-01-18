@@ -450,7 +450,69 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    }<span class="comment">// namespace rae_taylor_and_trees</span></div>
 </div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>}<span class="comment">// namespace codeforces</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="foldopen" id="foldopen00325" data-start="{" data-end="}">
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno"><a class="line" href="../../d9/d21/a00240.html">  325</a></span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../d9/d21/a00240.html">perfect_root</a> {</div>
+<div class="foldopen" id="foldopen00326" data-start="{" data-end="}">
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno"><a class="line" href="../../d9/d21/a00240.html#ab90000f919ee984fe17b0a804db5494f">  326</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d9/d21/a00240.html#ab90000f919ee984fe17b0a804db5494f">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            <span class="keywordtype">int</span> t;</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            cin &gt;&gt; t;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            <span class="keywordflow">while</span>(t--) {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                cin &gt;&gt; n;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= n; i++) {</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                    cout &lt;&lt; i &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                }</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                cout &lt;&lt; endl;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            }</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        }</div>
+</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    }<span class="comment">// namespace perfect_root</span></div>
+</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
+<div class="foldopen" id="foldopen00341" data-start="{" data-end="}">
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno"><a class="line" href="../../d6/db6/a00241.html">  341</a></span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/db6/a00241.html">prefix_max</a> {</div>
+<div class="foldopen" id="foldopen00342" data-start="{" data-end="}">
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno"><a class="line" href="../../d6/db6/a00241.html#a891ddc1cd3196ada6daf789bfae3c844">  342</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="../../d6/db6/a00241.html#a891ddc1cd3196ada6daf789bfae3c844">main</a>(istream &amp;cin, ostream &amp;cout) {</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>            <span class="keywordtype">int</span> t;</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            cin &gt;&gt; t;</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            <span class="keywordflow">while</span>(t--) {</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                cin &gt;&gt; n;</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                vector&lt;int&gt; vec(n);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                    cin &gt;&gt; vec[i];</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                }</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                vector&lt;int&gt; pref_max(n);</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                <span class="keywordtype">int</span> maximuim = vec[0];</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                    maximuim    = max(vec[i], maximuim);</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                    pref_max[i] = maximuim;</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                }</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                vector&lt;int&gt; pref_sum(n);</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>                    sum += pref_max[i];</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>                    pref_sum[i] = sum;</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                }</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                <span class="keywordtype">int</span> ans = pref_sum[n - 1];</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; n; i++) {</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                    <span class="keywordtype">int</span> j = 0;</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                    <span class="keywordflow">while</span>(pref_max[j] &lt; vec[i]) {</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                        j++;</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                    }</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                    <span class="keywordtype">int</span> val = vec[j] * j + (pref_sum[n - 1] - ((j - 1 &gt;= 0) ? pref_sum[j - 1] : 0));</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                    ans     = max(ans, val);</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>                }</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>                cout &lt;&lt; ans &lt;&lt; endl;</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>            }</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        }</div>
+</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    }<span class="comment">// namespace prefix_max</span></div>
+</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>}<span class="comment">// namespace codeforces</span></div>
 </div>
 <div class="ttc" id="aa00071_html"><div class="ttname"><a href="../../d0/d89/a00071.html">codeforces.h</a></div></div>
 <div class="ttc" id="aa00230_html"><div class="ttname"><a href="../../d1/da8/a00230.html">codeforces</a></div><div class="ttdef"><b>定义</b> <a href="#l00019">codeforces.cpp:19</a></div></div>
@@ -473,6 +535,10 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aa00238_html_a0b2449d7f371c13bd616d0aa14177d53"><div class="ttname"><a href="../../da/d2e/a00238.html#a0b2449d7f371c13bd616d0aa14177d53">codeforces::renako_amaori_and_xor_game::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="#l00246">codeforces.cpp:246</a></div></div>
 <div class="ttc" id="aa00239_html"><div class="ttname"><a href="../../d0/d27/a00239.html">codeforces::rae_taylor_and_trees</a></div><div class="ttdef"><b>定义</b> <a href="#l00286">codeforces.cpp:286</a></div></div>
 <div class="ttc" id="aa00239_html_ab5292da1db5430991a6106c333535830"><div class="ttname"><a href="../../d0/d27/a00239.html#ab5292da1db5430991a6106c333535830">codeforces::rae_taylor_and_trees::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="#l00287">codeforces.cpp:287</a></div></div>
+<div class="ttc" id="aa00240_html"><div class="ttname"><a href="../../d9/d21/a00240.html">codeforces::perfect_root</a></div><div class="ttdef"><b>定义</b> <a href="#l00325">codeforces.cpp:325</a></div></div>
+<div class="ttc" id="aa00240_html_ab90000f919ee984fe17b0a804db5494f"><div class="ttname"><a href="../../d9/d21/a00240.html#ab90000f919ee984fe17b0a804db5494f">codeforces::perfect_root::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="#l00326">codeforces.cpp:326</a></div></div>
+<div class="ttc" id="aa00241_html"><div class="ttname"><a href="../../d6/db6/a00241.html">codeforces::prefix_max</a></div><div class="ttdef"><b>定义</b> <a href="#l00341">codeforces.cpp:341</a></div></div>
+<div class="ttc" id="aa00241_html_a891ddc1cd3196ada6daf789bfae3c844"><div class="ttname"><a href="../../d6/db6/a00241.html#a891ddc1cd3196ada6daf789bfae3c844">codeforces::prefix_max::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="#l00342">codeforces.cpp:342</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
