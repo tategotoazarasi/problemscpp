@@ -12,6 +12,7 @@
 #include <queue>
 #include <stack>
 #include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 using namespace std;
@@ -375,4 +376,38 @@ namespace codeforces {
 			return 0;
 		}
 	}// namespace prefix_max
+
+	namespace shifted_mex {
+		int main(istream &cin, ostream &cout) {
+			int t;
+			cin >> t;
+			while(t--) {
+				int n;
+				cin >> n;
+				unordered_set<int> nums;
+				while(n--) {
+					int a;
+					cin >> a;
+					nums.insert(a);
+				}
+				vector<int> vec(nums.begin(), nums.end());
+				sort(vec.begin(), vec.end());
+				int prev        = vec[0];
+				int current_len = 1;
+				int max_len     = 1;
+				for(int i = 1; i < vec.size(); i++) {
+					if(vec[i] == prev + 1) {
+						current_len++;
+					} else {
+						current_len = 1;
+					}
+					max_len = max(max_len, current_len);
+					prev    = vec[i];
+				}
+				max_len = max(max_len, current_len);
+				cout << max_len << endl;
+			}
+			return 0;
+		}
+	}// namespace shifted_mex
 }// namespace codeforces

@@ -55,6 +55,10 @@ namespace codeforces {
 	namespace prefix_max {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	namespace shifted_mex {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace codeforces
 
 #endif//PROBLEMSCPP_CODEFORCES_H

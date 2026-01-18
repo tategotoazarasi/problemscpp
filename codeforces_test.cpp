@@ -118,4 +118,14 @@ namespace codeforces {
 			ASSERT_EQ("14\n", ans);
 		}
 	}// namespace prefix_max
+
+	namespace shifted_mex {
+		TEST(shifted_mex, case1) {
+			istringstream in("6\n1\n4\n5\n0 1 1 2 3\n2\n1 1\n4\n4 2 3 6\n5\n2 4 1 0 -1\n6\n-1 1 2 3 5 6\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1\n4\n1\n3\n4\n3\n", ans);
+		}
+	}// namespace shifted_mex
 }// namespace codeforces
