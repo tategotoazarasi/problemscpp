@@ -3,6 +3,7 @@
 #include <queue>
 #include <random>
 #include <sstream>
+#include <unordered_set>
 
 using namespace std;
 
@@ -325,8 +326,8 @@ TEST(huffman, case_rand) {
 	auto res        = huffman::compress(input);
 	string comp_str = res.first;
 	//cerr<< 100*static_cast<float>(comp_str.size())/(5*input.size())<<'%' << endl;
-	huffman *h      = res.second;
-	string output   = h->decompress(comp_str);
+	huffman *h    = res.second;
+	string output = h->decompress(comp_str);
 	ASSERT_EQ(output, input);
 }
 
@@ -351,3 +352,44 @@ namespace elias_gamma {
 		ASSERT_EQ(input, decompressed);
 	}
 }// namespace elias_gamma
+
+namespace lzw {
+	TEST(lzw, case_rand) {
+		std::random_device rd;
+		std::mt19937 gen(rd());
+		std::uniform_int_distribution<> dis_word(0, 25);
+		std::normal_distribution<> dis_len_normal(5.0, 2.0);
+		std::uniform_int_distribution<> dis_num_word(64, 128);
+		std::uniform_int_distribution<> dis_tot_num_word(1024, 2048);
+		auto generate_len = [&]() {
+			while(true) {
+				int val = std::round(dis_len_normal(gen));
+				if(val >= 2 && val <= 15) {
+					return val;
+				}
+			}
+		};
+		vector<string> wordslist = {};
+		int num_word             = dis_num_word(gen);
+		for(int i = 0; i < num_word; i++) {
+			int len           = generate_len();
+			ostringstream oss = {};
+			for(int j = 0; j < len; j++) {
+				oss << static_cast<char>(dis_word(gen) + 'a');
+			}
+			wordslist.push_back(oss.str());
+		}
+		std::uniform_int_distribution<> dist_word_index(0, wordslist.size() - 1);
+		ostringstream oss = {};
+		int total_words   = dis_tot_num_word(gen);
+		for(int i = 0; i < total_words; i++) {
+			int word_i = dist_word_index(gen);
+			oss << wordslist[word_i];
+		}
+		string input = oss.str();
+
+		auto compressed   = encode(input);
+		auto decompressed = decode(compressed.first, compressed.second);
+		ASSERT_EQ(input, decompressed);
+	}
+}// namespace lzw

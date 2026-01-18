@@ -700,3 +700,51 @@ namespace elias_gamma {
 		return ans;
 	}
 }// namespace elias_gamma
+
+namespace lzw {
+	pair<vector<int>, unordered_map<int, string>> encode(string input) {
+		unordered_set<string> table = {};
+		vector<string> wordlist     = {};
+		for(char c: input) {
+			string s;
+			s.push_back(c);
+			table.insert(s);
+		}
+		int i = 0;
+		string word;
+		for(int j = 0; j < input.size(); j++) {
+			auto substr = input.substr(i, j - i + 1);
+			if(!table.contains(substr)) {
+				wordlist.push_back(word);
+				table.insert(substr);
+				i    = j;
+				word = input.substr(j, 1);
+			} else {
+				word = substr;
+			}
+		}
+		wordlist.push_back(word);
+		vector<string> vec(table.begin(), table.end());
+		unordered_map<string, int> um = {};
+		for(int i = 0; i < vec.size(); i++) {
+			um[vec[i]] = i;
+		}
+		vector<int> ans(wordlist.size());
+		for(int i = 0; i < wordlist.size(); i++) {
+			ans[i] = um[wordlist[i]];
+		}
+		unordered_map<int, string> um2 = {};
+		for(auto &[k, v]: um) {
+			um2[v] = k;
+		}
+		return make_pair(ans, um2);
+	}
+
+	string decode(vector<int> input, unordered_map<int, string> dict) {
+		ostringstream oss = {};
+		for(int i: input) {
+			oss << dict[i];
+		}
+		return oss.str();
+	}
+}// namespace lzw
