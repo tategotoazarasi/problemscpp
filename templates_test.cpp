@@ -328,3 +328,24 @@ TEST(huffman, case_rand) {
 	string output   = h->decompress(comp_str);
 	ASSERT_EQ(output, input);
 }
+
+namespace elias_gamma {
+	TEST(elias_gamma, case_rand) {
+		std::random_device rd;
+		std::mt19937 gen(rd());
+		std::uniform_int_distribution<> dis(16, 64);
+		int len            = dis(gen);
+		bool flag          = dis(gen) % 2 == 0;
+		vector<bool> input = {};
+		for(int i = 0; i < len; i++) {
+			int len2 = dis(gen);
+			for(int j = 0; j < len2; j++) {
+				input.push_back(static_cast<unsigned short>(flag ? 0 : 1));
+			}
+			flag = !flag;
+		}
+		auto compressed   = encode(input);
+		auto decompressed = decode(compressed);
+		ASSERT_EQ(input, decompressed);
+	}
+}// namespace elias_gamma

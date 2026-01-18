@@ -639,3 +639,64 @@ string huffman::decompress(string input) {
 bool huffman_ptr_comp::operator()(const huffman *a, const huffman *b) const {
 	return a->get_weight() < b->get_weight();
 }
+
+namespace elias_gamma {
+	vector<bool> encode(vector<bool> input) {
+		vector<int> len_list = {};
+		vector<bool> ans     = {};
+		ans.push_back(static_cast<unsigned short>(input[0] ? 1 : 0));
+		//len_list.push_back(input[0]);
+		bool current    = input[0];
+		int current_len = 0;
+		for(bool c: input) {
+			if(c == current) {
+				current_len++;
+			} else {
+				len_list.push_back(current_len);
+				current_len = 1;
+				current     = c;
+			}
+		}
+		len_list.push_back(current_len);
+
+		for(auto len: len_list) {
+			ostringstream oss = {};
+			vector<bool> seg  = {};
+			int bits          = std::bit_width(static_cast<unsigned int>(len));
+			for(int i = 0; i < bits - 1; i++) {
+				seg.push_back(false);
+			}
+			for(int i = bits - 1; i >= 0; i--) {
+				seg.push_back((len >> i) & 1);
+			}
+			ans.insert(ans.end(), seg.begin(), seg.end());
+		}
+		return ans;
+	}
+	vector<bool> decode(vector<bool> input) {
+		if(input.empty())
+			return {};
+		bool flag = input[0];
+		vector<bool> ans;
+		int i = 1;
+		while(i < input.size()) {
+			int zero_cnt = 0;
+			while(i < input.size() && !input[i]) {
+				zero_cnt++;
+				i++;
+			}
+			if(i >= input.size())
+				break;
+			int len          = 0;
+			int bits_to_read = zero_cnt + 1;
+			for(int j = 0; j < bits_to_read; j++) {
+				len = (len << 1) | (input[i] ? 1 : 0);
+				i++;
+			}
+			for(int k = 0; k < len; k++)
+				ans.push_back(flag);
+			flag = !flag;
+		}
+		return ans;
+	}
+}// namespace elias_gamma

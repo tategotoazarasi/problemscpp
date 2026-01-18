@@ -235,3 +235,8 @@ public:
 struct huffman_ptr_comp {
 	bool operator()(const huffman *a, const huffman *b) const;
 };
+
+namespace elias_gamma {
+	vector<bool> encode(vector<bool> input);
+	vector<bool> decode(vector<bool> input);
+}// namespace elias_gamma
