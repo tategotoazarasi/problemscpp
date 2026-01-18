@@ -29,7 +29,7 @@ var searchData=
   ['combinationsum2_26',['combinationSum2',['../d5/d9a/a02650.html#a69c42d5b3d2685121e00d7baca056c52',1,'leetcode::combination_sum_ii::Solution']]],
   ['company_27',['Company',['../d8/d29/a03162.html#abe550047abfe49b0d1b3a878f23ea107',1,'liverpool::stable_matching::Company']]],
   ['complexnumbermultiply_28',['complexNumberMultiply',['../d6/d41/a02222.html#add6d0ad5901391250e5831ab5db507b5',1,'leetcode::complex_number_multiplication::Solution']]],
-  ['compress_29',['compress',['../d5/d54/a00938.html#a1d23c971cf13b5e5d56879b6eba34724',1,'acwing::acwing1960::compress()'],['../d0/d48/a02014.html#ab5563bc1f9d383c3a2192894d2886fae',1,'leetcode::groups_of_strings::Solution::compress()']]],
+  ['compress_29',['compress',['../d5/d54/a00938.html#a1d23c971cf13b5e5d56879b6eba34724',1,'acwing::acwing1960::compress()'],['../d0/d48/a02014.html#ab5563bc1f9d383c3a2192894d2886fae',1,'leetcode::groups_of_strings::Solution::compress()'],['../d1/da4/a03766.html#a35917d477c228f8352c438e825a86194',1,'huffman::compress()']]],
   ['connect_30',['connect',['../dc/ddf/a02622.html#a102590eb0a1abcf04952625b6590d03d',1,'leetcode::populating_next_right_pointers_in_each_node_ii::Solution']]],
   ['construct2darray_31',['construct2DArray',['../dd/d40/a01762.html#a7a2a832500ba73b9fa1ad75a40c91ade',1,'leetcode::convert_1d_array_into_2d_array::Solution']]],
   ['contains_32',['contains',['../d9/d61/a02350.html#aa312cdb91ccb6215ae59945ffda03408',1,'leetcode::max_area_of_island::UnionFind']]],

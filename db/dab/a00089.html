@@ -92,6 +92,8 @@ $(function(){ initResizable(false); });
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d3/d8b/a00059_source.html">templates.h</a>&quot;</code><br />
 <code>#include &quot;gtest/gtest.h&quot;</code><br />
+<code>#include &lt;queue&gt;</code><br />
+<code>#include &lt;random&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 </div>
 <p><a href="../../db/dab/a00089_source.html">浏览该文件的源代码.</a></p>
@@ -142,10 +144,12 @@ $(function(){ initResizable(false); });
 <tr class="separator:aca95738a474f3ffe31f6c9a2f16e747a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4de1df27f374c5d1ebef68249ff89cde" id="r_a4de1df27f374c5d1ebef68249ff89cde"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4de1df27f374c5d1ebef68249ff89cde">TEST</a> (<a class="el" href="../../d7/d4f/a03746.html">BigInt</a>, plus3)</td></tr>
 <tr class="separator:a4de1df27f374c5d1ebef68249ff89cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86874303e797084106d8a4ea7198982a" id="r_a86874303e797084106d8a4ea7198982a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86874303e797084106d8a4ea7198982a">TEST</a> (<a class="el" href="../../d1/da4/a03766.html">huffman</a>, case_rand)</td></tr>
+<tr class="separator:a86874303e797084106d8a4ea7198982a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
 <a id="ae00c0e99baafc3e27221448c6f4aa79c" name="ae00c0e99baafc3e27221448c6f4aa79c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae00c0e99baafc3e27221448c6f4aa79c">&#9670;&#160;</a></span>TEST() <span class="overload">[1/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae00c0e99baafc3e27221448c6f4aa79c">&#9670;&#160;</a></span>TEST() <span class="overload">[1/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,23 +167,23 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00169">169</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  169</span>                                          {</div>
-<div class="line"><span class="lineno">  170</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node(10);</div>
-<div class="line"><span class="lineno">  171</span>    ASSERT_EQ(node.get_value(), 10);</div>
-<div class="line"><span class="lineno">  172</span>    ASSERT_EQ(node.get_height(), 1);</div>
-<div class="line"><span class="lineno">  173</span>    ASSERT_EQ(node.get_left(), <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  174</span>    ASSERT_EQ(node.get_right(), <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  175</span>    ASSERT_EQ(node.get_parent(), <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  176</span>}</div>
-<div class="ttc" id="aa03762_html"><div class="ttname"><a href="../../dc/d6d/a03762.html">AVLNode</a></div><div class="ttdoc">平衡二叉树节点</div><div class="ttdef"><b>定义</b> <a href="../../d3/d8b/a00059_source.html#l00122">templates.h:122</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00171">171</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  171</span>                                          {</div>
+<div class="line"><span class="lineno">  172</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node(10);</div>
+<div class="line"><span class="lineno">  173</span>    ASSERT_EQ(node.get_value(), 10);</div>
+<div class="line"><span class="lineno">  174</span>    ASSERT_EQ(node.get_height(), 1);</div>
+<div class="line"><span class="lineno">  175</span>    ASSERT_EQ(node.get_left(), <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  176</span>    ASSERT_EQ(node.get_right(), <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  177</span>    ASSERT_EQ(node.get_parent(), <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  178</span>}</div>
+<div class="ttc" id="aa03762_html"><div class="ttname"><a href="../../dc/d6d/a03762.html">AVLNode</a></div><div class="ttdoc">平衡二叉树节点</div><div class="ttdef"><b>定义</b> <a href="../../d3/d8b/a00059_source.html#l00123">templates.h:123</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00146">AVLNode&lt; T &gt;::get_height()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00148">AVLNode&lt; T &gt;::get_left()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00152">AVLNode&lt; T &gt;::get_parent()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00150">AVLNode&lt; T &gt;::get_right()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00144">AVLNode&lt; T &gt;::get_value()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00147">AVLNode&lt; T &gt;::get_height()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00149">AVLNode&lt; T &gt;::get_left()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00153">AVLNode&lt; T &gt;::get_parent()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00151">AVLNode&lt; T &gt;::get_right()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00145">AVLNode&lt; T &gt;::get_value()</a>.</p>
 
 </div>
 </div>
 <a id="ad54732241c3d145d89c418933dffd470" name="ad54732241c3d145d89c418933dffd470"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad54732241c3d145d89c418933dffd470">&#9670;&#160;</a></span>TEST() <span class="overload">[2/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54732241c3d145d89c418933dffd470">&#9670;&#160;</a></span>TEST() <span class="overload">[2/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,73 +201,73 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00228">228</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  228</span>                                          {</div>
-<div class="line"><span class="lineno">  229</span>    <span class="comment">// Create nodes</span></div>
-<div class="line"><span class="lineno">  230</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>(20);</div>
-<div class="line"><span class="lineno">  231</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node10(10);</div>
-<div class="line"><span class="lineno">  232</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node30(30);</div>
-<div class="line"><span class="lineno">  233</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node5(5);</div>
-<div class="line"><span class="lineno">  234</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node15(15);</div>
-<div class="line"><span class="lineno">  235</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node25(25);</div>
-<div class="line"><span class="lineno">  236</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node35(35);</div>
-<div class="line"><span class="lineno">  237</span> </div>
-<div class="line"><span class="lineno">  238</span>    <span class="comment">// Insert them</span></div>
-<div class="line"><span class="lineno">  239</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node10);</div>
-<div class="line"><span class="lineno">  240</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node30);</div>
-<div class="line"><span class="lineno">  241</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node5);</div>
-<div class="line"><span class="lineno">  242</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node15);</div>
-<div class="line"><span class="lineno">  243</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node25);</div>
-<div class="line"><span class="lineno">  244</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node35);</div>
-<div class="line"><span class="lineno">  245</span> </div>
-<div class="line"><span class="lineno">  246</span>    <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">  247</span><span class="comment">     * The resulting tree structure should be:</span></div>
-<div class="line"><span class="lineno">  248</span><span class="comment">     * 20 (h=3)</span></div>
-<div class="line"><span class="lineno">  249</span><span class="comment">     * /  \</span></div>
-<div class="line"><span class="lineno">  250</span><span class="comment">     * 10(h=2) 30(h=2)</span></div>
-<div class="line"><span class="lineno">  251</span><span class="comment">     * / \     / \</span></div>
-<div class="line"><span class="lineno">  252</span><span class="comment">     * 5 15   25  35  (all h=1)</span></div>
-<div class="line"><span class="lineno">  253</span><span class="comment">    */</span></div>
-<div class="line"><span class="lineno">  254</span> </div>
-<div class="line"><span class="lineno">  255</span>    <span class="comment">// Verify structure</span></div>
-<div class="line"><span class="lineno">  256</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_left(), &amp;node10);</div>
-<div class="line"><span class="lineno">  257</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_right(), &amp;node30);</div>
-<div class="line"><span class="lineno">  258</span>    ASSERT_EQ(node10.get_parent(), &amp;root);</div>
-<div class="line"><span class="lineno">  259</span>    ASSERT_EQ(node30.get_parent(), &amp;root);</div>
-<div class="line"><span class="lineno">  260</span> </div>
-<div class="line"><span class="lineno">  261</span>    ASSERT_EQ(node10.get_left(), &amp;node5);</div>
-<div class="line"><span class="lineno">  262</span>    ASSERT_EQ(node10.get_right(), &amp;node15);</div>
-<div class="line"><span class="lineno">  263</span>    ASSERT_EQ(node5.get_parent(), &amp;node10);</div>
-<div class="line"><span class="lineno">  264</span>    ASSERT_EQ(node15.get_parent(), &amp;node10);</div>
-<div class="line"><span class="lineno">  265</span> </div>
-<div class="line"><span class="lineno">  266</span>    ASSERT_EQ(node30.get_left(), &amp;node25);</div>
-<div class="line"><span class="lineno">  267</span>    ASSERT_EQ(node30.get_right(), &amp;node35);</div>
-<div class="line"><span class="lineno">  268</span>    ASSERT_EQ(node25.get_parent(), &amp;node30);</div>
-<div class="line"><span class="lineno">  269</span>    ASSERT_EQ(node35.get_parent(), &amp;node30);</div>
-<div class="line"><span class="lineno">  270</span> </div>
-<div class="line"><span class="lineno">  271</span>    <span class="comment">// Verify heights</span></div>
-<div class="line"><span class="lineno">  272</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_height(), 3);</div>
-<div class="line"><span class="lineno">  273</span>    ASSERT_EQ(node10.get_height(), 2);</div>
-<div class="line"><span class="lineno">  274</span>    ASSERT_EQ(node30.get_height(), 2);</div>
-<div class="line"><span class="lineno">  275</span>    ASSERT_EQ(node5.get_height(), 1);</div>
-<div class="line"><span class="lineno">  276</span>    ASSERT_EQ(node15.get_height(), 1);</div>
-<div class="line"><span class="lineno">  277</span>    ASSERT_EQ(node25.get_height(), 1);</div>
-<div class="line"><span class="lineno">  278</span>    ASSERT_EQ(node35.get_height(), 1);</div>
-<div class="line"><span class="lineno">  279</span> </div>
-<div class="line"><span class="lineno">  280</span>    <span class="comment">// Verify find method (for existing values)</span></div>
-<div class="line"><span class="lineno">  281</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.find(20), &amp;root);</div>
-<div class="line"><span class="lineno">  282</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.find(10), &amp;node10);</div>
-<div class="line"><span class="lineno">  283</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.find(35), &amp;node35);</div>
-<div class="line"><span class="lineno">  284</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.find(15), &amp;node15);</div>
-<div class="line"><span class="lineno">  285</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00230">230</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  230</span>                                          {</div>
+<div class="line"><span class="lineno">  231</span>    <span class="comment">// Create nodes</span></div>
+<div class="line"><span class="lineno">  232</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>(20);</div>
+<div class="line"><span class="lineno">  233</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node10(10);</div>
+<div class="line"><span class="lineno">  234</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node30(30);</div>
+<div class="line"><span class="lineno">  235</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node5(5);</div>
+<div class="line"><span class="lineno">  236</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node15(15);</div>
+<div class="line"><span class="lineno">  237</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node25(25);</div>
+<div class="line"><span class="lineno">  238</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node35(35);</div>
+<div class="line"><span class="lineno">  239</span> </div>
+<div class="line"><span class="lineno">  240</span>    <span class="comment">// Insert them</span></div>
+<div class="line"><span class="lineno">  241</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node10);</div>
+<div class="line"><span class="lineno">  242</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node30);</div>
+<div class="line"><span class="lineno">  243</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node5);</div>
+<div class="line"><span class="lineno">  244</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node15);</div>
+<div class="line"><span class="lineno">  245</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node25);</div>
+<div class="line"><span class="lineno">  246</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node35);</div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>    <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  249</span><span class="comment">     * The resulting tree structure should be:</span></div>
+<div class="line"><span class="lineno">  250</span><span class="comment">     * 20 (h=3)</span></div>
+<div class="line"><span class="lineno">  251</span><span class="comment">     * /  \</span></div>
+<div class="line"><span class="lineno">  252</span><span class="comment">     * 10(h=2) 30(h=2)</span></div>
+<div class="line"><span class="lineno">  253</span><span class="comment">     * / \     / \</span></div>
+<div class="line"><span class="lineno">  254</span><span class="comment">     * 5 15   25  35  (all h=1)</span></div>
+<div class="line"><span class="lineno">  255</span><span class="comment">    */</span></div>
+<div class="line"><span class="lineno">  256</span> </div>
+<div class="line"><span class="lineno">  257</span>    <span class="comment">// Verify structure</span></div>
+<div class="line"><span class="lineno">  258</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_left(), &amp;node10);</div>
+<div class="line"><span class="lineno">  259</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_right(), &amp;node30);</div>
+<div class="line"><span class="lineno">  260</span>    ASSERT_EQ(node10.get_parent(), &amp;root);</div>
+<div class="line"><span class="lineno">  261</span>    ASSERT_EQ(node30.get_parent(), &amp;root);</div>
+<div class="line"><span class="lineno">  262</span> </div>
+<div class="line"><span class="lineno">  263</span>    ASSERT_EQ(node10.get_left(), &amp;node5);</div>
+<div class="line"><span class="lineno">  264</span>    ASSERT_EQ(node10.get_right(), &amp;node15);</div>
+<div class="line"><span class="lineno">  265</span>    ASSERT_EQ(node5.get_parent(), &amp;node10);</div>
+<div class="line"><span class="lineno">  266</span>    ASSERT_EQ(node15.get_parent(), &amp;node10);</div>
+<div class="line"><span class="lineno">  267</span> </div>
+<div class="line"><span class="lineno">  268</span>    ASSERT_EQ(node30.get_left(), &amp;node25);</div>
+<div class="line"><span class="lineno">  269</span>    ASSERT_EQ(node30.get_right(), &amp;node35);</div>
+<div class="line"><span class="lineno">  270</span>    ASSERT_EQ(node25.get_parent(), &amp;node30);</div>
+<div class="line"><span class="lineno">  271</span>    ASSERT_EQ(node35.get_parent(), &amp;node30);</div>
+<div class="line"><span class="lineno">  272</span> </div>
+<div class="line"><span class="lineno">  273</span>    <span class="comment">// Verify heights</span></div>
+<div class="line"><span class="lineno">  274</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_height(), 3);</div>
+<div class="line"><span class="lineno">  275</span>    ASSERT_EQ(node10.get_height(), 2);</div>
+<div class="line"><span class="lineno">  276</span>    ASSERT_EQ(node30.get_height(), 2);</div>
+<div class="line"><span class="lineno">  277</span>    ASSERT_EQ(node5.get_height(), 1);</div>
+<div class="line"><span class="lineno">  278</span>    ASSERT_EQ(node15.get_height(), 1);</div>
+<div class="line"><span class="lineno">  279</span>    ASSERT_EQ(node25.get_height(), 1);</div>
+<div class="line"><span class="lineno">  280</span>    ASSERT_EQ(node35.get_height(), 1);</div>
+<div class="line"><span class="lineno">  281</span> </div>
+<div class="line"><span class="lineno">  282</span>    <span class="comment">// Verify find method (for existing values)</span></div>
+<div class="line"><span class="lineno">  283</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.find(20), &amp;root);</div>
+<div class="line"><span class="lineno">  284</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.find(10), &amp;node10);</div>
+<div class="line"><span class="lineno">  285</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.find(35), &amp;node35);</div>
+<div class="line"><span class="lineno">  286</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.find(15), &amp;node15);</div>
+<div class="line"><span class="lineno">  287</span>}</div>
 <div class="ttc" id="aa00184_html_accc0a171e77d59c74473564e308e8b08"><div class="ttname"><a href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">acwing::acwing836_408::root</a></div><div class="ttdeci">vector&lt; int &gt; root</div><div class="ttdef"><b>定义</b> <a href="../../dc/dee/a00053_source.html#l00349">acwing408.cpp:349</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00146">AVLNode&lt; T &gt;::get_height()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00148">AVLNode&lt; T &gt;::get_left()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00152">AVLNode&lt; T &gt;::get_parent()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00150">AVLNode&lt; T &gt;::get_right()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00147">AVLNode&lt; T &gt;::get_height()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00149">AVLNode&lt; T &gt;::get_left()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00153">AVLNode&lt; T &gt;::get_parent()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00151">AVLNode&lt; T &gt;::get_right()</a>.</p>
 
 </div>
 </div>
 <a id="ac6363f723b627c4567c50c6ea9faeae4" name="ac6363f723b627c4567c50c6ea9faeae4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6363f723b627c4567c50c6ea9faeae4">&#9670;&#160;</a></span>TEST() <span class="overload">[3/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6363f723b627c4567c50c6ea9faeae4">&#9670;&#160;</a></span>TEST() <span class="overload">[3/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -281,38 +285,38 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00178">178</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  178</span>                           {</div>
-<div class="line"><span class="lineno">  179</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node(10);</div>
-<div class="line"><span class="lineno">  180</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> left_child(5);</div>
-<div class="line"><span class="lineno">  181</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> right_child(15);</div>
-<div class="line"><span class="lineno">  182</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> parent(20);</div>
-<div class="line"><span class="lineno">  183</span> </div>
-<div class="line"><span class="lineno">  184</span>    node.set_value(99);</div>
-<div class="line"><span class="lineno">  185</span>    ASSERT_EQ(node.get_value(), 99);</div>
-<div class="line"><span class="lineno">  186</span> </div>
-<div class="line"><span class="lineno">  187</span>    node.set_height(5);</div>
-<div class="line"><span class="lineno">  188</span>    ASSERT_EQ(node.get_height(), 5);</div>
-<div class="line"><span class="lineno">  189</span> </div>
-<div class="line"><span class="lineno">  190</span>    node.set_left(&amp;left_child);</div>
-<div class="line"><span class="lineno">  191</span>    ASSERT_EQ(node.get_left(), &amp;left_child);</div>
-<div class="line"><span class="lineno">  192</span>    ASSERT_EQ(node.get_left()-&gt;get_value(), 5);</div>
-<div class="line"><span class="lineno">  193</span> </div>
-<div class="line"><span class="lineno">  194</span>    node.set_right(&amp;right_child);</div>
-<div class="line"><span class="lineno">  195</span>    ASSERT_EQ(node.get_right(), &amp;right_child);</div>
-<div class="line"><span class="lineno">  196</span>    ASSERT_EQ(node.get_right()-&gt;get_value(), 15);</div>
-<div class="line"><span class="lineno">  197</span> </div>
-<div class="line"><span class="lineno">  198</span>    node.set_parent(&amp;parent);</div>
-<div class="line"><span class="lineno">  199</span>    ASSERT_EQ(node.get_parent(), &amp;parent);</div>
-<div class="line"><span class="lineno">  200</span>    ASSERT_EQ(node.get_parent()-&gt;get_value(), 20);</div>
-<div class="line"><span class="lineno">  201</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00180">180</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  180</span>                           {</div>
+<div class="line"><span class="lineno">  181</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node(10);</div>
+<div class="line"><span class="lineno">  182</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> left_child(5);</div>
+<div class="line"><span class="lineno">  183</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> right_child(15);</div>
+<div class="line"><span class="lineno">  184</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> parent(20);</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>    node.set_value(99);</div>
+<div class="line"><span class="lineno">  187</span>    ASSERT_EQ(node.get_value(), 99);</div>
+<div class="line"><span class="lineno">  188</span> </div>
+<div class="line"><span class="lineno">  189</span>    node.set_height(5);</div>
+<div class="line"><span class="lineno">  190</span>    ASSERT_EQ(node.get_height(), 5);</div>
+<div class="line"><span class="lineno">  191</span> </div>
+<div class="line"><span class="lineno">  192</span>    node.set_left(&amp;left_child);</div>
+<div class="line"><span class="lineno">  193</span>    ASSERT_EQ(node.get_left(), &amp;left_child);</div>
+<div class="line"><span class="lineno">  194</span>    ASSERT_EQ(node.get_left()-&gt;get_value(), 5);</div>
+<div class="line"><span class="lineno">  195</span> </div>
+<div class="line"><span class="lineno">  196</span>    node.set_right(&amp;right_child);</div>
+<div class="line"><span class="lineno">  197</span>    ASSERT_EQ(node.get_right(), &amp;right_child);</div>
+<div class="line"><span class="lineno">  198</span>    ASSERT_EQ(node.get_right()-&gt;get_value(), 15);</div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span>    node.set_parent(&amp;parent);</div>
+<div class="line"><span class="lineno">  201</span>    ASSERT_EQ(node.get_parent(), &amp;parent);</div>
+<div class="line"><span class="lineno">  202</span>    ASSERT_EQ(node.get_parent()-&gt;get_value(), 20);</div>
+<div class="line"><span class="lineno">  203</span>}</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00146">AVLNode&lt; T &gt;::get_height()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00148">AVLNode&lt; T &gt;::get_left()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00152">AVLNode&lt; T &gt;::get_parent()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00150">AVLNode&lt; T &gt;::get_right()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00144">AVLNode&lt; T &gt;::get_value()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00147">AVLNode&lt; T &gt;::set_height()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00149">AVLNode&lt; T &gt;::set_left()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00153">AVLNode&lt; T &gt;::set_parent()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00151">AVLNode&lt; T &gt;::set_right()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00145">AVLNode&lt; T &gt;::set_value()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00147">AVLNode&lt; T &gt;::get_height()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00149">AVLNode&lt; T &gt;::get_left()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00153">AVLNode&lt; T &gt;::get_parent()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00151">AVLNode&lt; T &gt;::get_right()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00145">AVLNode&lt; T &gt;::get_value()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00148">AVLNode&lt; T &gt;::set_height()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00150">AVLNode&lt; T &gt;::set_left()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00154">AVLNode&lt; T &gt;::set_parent()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00152">AVLNode&lt; T &gt;::set_right()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00146">AVLNode&lt; T &gt;::set_value()</a>.</p>
 
 </div>
 </div>
 <a id="ac8b77a152e1059414d7542af53587d38" name="ac8b77a152e1059414d7542af53587d38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8b77a152e1059414d7542af53587d38">&#9670;&#160;</a></span>TEST() <span class="overload">[4/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8b77a152e1059414d7542af53587d38">&#9670;&#160;</a></span>TEST() <span class="overload">[4/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -330,37 +334,37 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00204">204</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  204</span>                                   {</div>
-<div class="line"><span class="lineno">  205</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>(10);</div>
-<div class="line"><span class="lineno">  206</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node5(5);</div>
-<div class="line"><span class="lineno">  207</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node15(15);</div>
-<div class="line"><span class="lineno">  208</span> </div>
-<div class="line"><span class="lineno">  209</span>    <span class="comment">// Insert a smaller value</span></div>
-<div class="line"><span class="lineno">  210</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node5);</div>
-<div class="line"><span class="lineno">  211</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_left(), &amp;node5);</div>
-<div class="line"><span class="lineno">  212</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_right(), <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  213</span>    ASSERT_EQ(node5.get_parent(), &amp;root);</div>
-<div class="line"><span class="lineno">  214</span>    <span class="comment">// Check height updates</span></div>
-<div class="line"><span class="lineno">  215</span>    ASSERT_EQ(node5.get_height(), 1);</div>
-<div class="line"><span class="lineno">  216</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_height(), 2);</div>
-<div class="line"><span class="lineno">  217</span> </div>
-<div class="line"><span class="lineno">  218</span>    <span class="comment">// Insert a larger value</span></div>
-<div class="line"><span class="lineno">  219</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node15);</div>
-<div class="line"><span class="lineno">  220</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_left(), &amp;node5);</div>
-<div class="line"><span class="lineno">  221</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_right(), &amp;node15);</div>
-<div class="line"><span class="lineno">  222</span>    ASSERT_EQ(node15.get_parent(), &amp;root);</div>
-<div class="line"><span class="lineno">  223</span>    <span class="comment">// Check height updates</span></div>
-<div class="line"><span class="lineno">  224</span>    ASSERT_EQ(node15.get_height(), 1);</div>
-<div class="line"><span class="lineno">  225</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_height(), 2);<span class="comment">// max(left_height, right_height) + 1 -&gt; max(1, 1) + 1 = 2</span></div>
-<div class="line"><span class="lineno">  226</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00206">206</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  206</span>                                   {</div>
+<div class="line"><span class="lineno">  207</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>(10);</div>
+<div class="line"><span class="lineno">  208</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node5(5);</div>
+<div class="line"><span class="lineno">  209</span>    <a class="code hl_class" href="../../dc/d6d/a03762.html">AVLNode&lt;int&gt;</a> node15(15);</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>    <span class="comment">// Insert a smaller value</span></div>
+<div class="line"><span class="lineno">  212</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node5);</div>
+<div class="line"><span class="lineno">  213</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_left(), &amp;node5);</div>
+<div class="line"><span class="lineno">  214</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_right(), <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  215</span>    ASSERT_EQ(node5.get_parent(), &amp;root);</div>
+<div class="line"><span class="lineno">  216</span>    <span class="comment">// Check height updates</span></div>
+<div class="line"><span class="lineno">  217</span>    ASSERT_EQ(node5.get_height(), 1);</div>
+<div class="line"><span class="lineno">  218</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_height(), 2);</div>
+<div class="line"><span class="lineno">  219</span> </div>
+<div class="line"><span class="lineno">  220</span>    <span class="comment">// Insert a larger value</span></div>
+<div class="line"><span class="lineno">  221</span>    <a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.insert(&amp;node15);</div>
+<div class="line"><span class="lineno">  222</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_left(), &amp;node5);</div>
+<div class="line"><span class="lineno">  223</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_right(), &amp;node15);</div>
+<div class="line"><span class="lineno">  224</span>    ASSERT_EQ(node15.get_parent(), &amp;root);</div>
+<div class="line"><span class="lineno">  225</span>    <span class="comment">// Check height updates</span></div>
+<div class="line"><span class="lineno">  226</span>    ASSERT_EQ(node15.get_height(), 1);</div>
+<div class="line"><span class="lineno">  227</span>    ASSERT_EQ(<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a>.get_height(), 2);<span class="comment">// max(left_height, right_height) + 1 -&gt; max(1, 1) + 1 = 2</span></div>
+<div class="line"><span class="lineno">  228</span>}</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00146">AVLNode&lt; T &gt;::get_height()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00152">AVLNode&lt; T &gt;::get_parent()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00147">AVLNode&lt; T &gt;::get_height()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00153">AVLNode&lt; T &gt;::get_parent()</a>.</p>
 
 </div>
 </div>
 <a id="a3304015984ef0810bad31a4a92c71443" name="a3304015984ef0810bad31a4a92c71443"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3304015984ef0810bad31a4a92c71443">&#9670;&#160;</a></span>TEST() <span class="overload">[5/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3304015984ef0810bad31a4a92c71443">&#9670;&#160;</a></span>TEST() <span class="overload">[5/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -378,18 +382,18 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00040">40</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                    {</div>
-<div class="line"><span class="lineno">   41</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
-<div class="line"><span class="lineno">   42</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-1093857940790276890525749302&quot;</span>;</div>
-<div class="line"><span class="lineno">   43</span>    ASSERT_TRUE(bi1 != bi2);</div>
-<div class="line"><span class="lineno">   44</span>}</div>
-<div class="ttc" id="aa03746_html"><div class="ttname"><a href="../../d7/d4f/a03746.html">BigInt</a></div><div class="ttdoc">高精度整数</div><div class="ttdef"><b>定义</b> <a href="../../d3/d8b/a00059_source.html#l00023">templates.h:23</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00042">42</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                    {</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-1093857940790276890525749302&quot;</span>;</div>
+<div class="line"><span class="lineno">   45</span>    ASSERT_TRUE(bi1 != bi2);</div>
+<div class="line"><span class="lineno">   46</span>}</div>
+<div class="ttc" id="aa03746_html"><div class="ttname"><a href="../../d7/d4f/a03746.html">BigInt</a></div><div class="ttdoc">高精度整数</div><div class="ttdef"><b>定义</b> <a href="../../d3/d8b/a00059_source.html#l00024">templates.h:24</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a8222d72806bf9e6524ef38a5393b47b6" name="a8222d72806bf9e6524ef38a5393b47b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8222d72806bf9e6524ef38a5393b47b6">&#9670;&#160;</a></span>TEST() <span class="overload">[6/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8222d72806bf9e6524ef38a5393b47b6">&#9670;&#160;</a></span>TEST() <span class="overload">[6/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -407,17 +411,17 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00046">46</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                    {</div>
-<div class="line"><span class="lineno">   47</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
-<div class="line"><span class="lineno">   48</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
-<div class="line"><span class="lineno">   49</span>    ASSERT_TRUE(bi1 == bi2);</div>
-<div class="line"><span class="lineno">   50</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00048">48</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                    {</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
+<div class="line"><span class="lineno">   51</span>    ASSERT_TRUE(bi1 == bi2);</div>
+<div class="line"><span class="lineno">   52</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a474576da541c8adf64bc1cd551cc02b3" name="a474576da541c8adf64bc1cd551cc02b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a474576da541c8adf64bc1cd551cc02b3">&#9670;&#160;</a></span>TEST() <span class="overload">[7/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a474576da541c8adf64bc1cd551cc02b3">&#9670;&#160;</a></span>TEST() <span class="overload">[7/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -435,17 +439,17 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00052">52</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                    {</div>
-<div class="line"><span class="lineno">   53</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
-<div class="line"><span class="lineno">   54</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-1093857940790276890525749302&quot;</span>;</div>
-<div class="line"><span class="lineno">   55</span>    ASSERT_TRUE(bi1 &gt; bi2);</div>
-<div class="line"><span class="lineno">   56</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00054">54</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                    {</div>
+<div class="line"><span class="lineno">   55</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-1093857940790276890525749302&quot;</span>;</div>
+<div class="line"><span class="lineno">   57</span>    ASSERT_TRUE(bi1 &gt; bi2);</div>
+<div class="line"><span class="lineno">   58</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a0777b1f84c4171215fb94131ee871d15" name="a0777b1f84c4171215fb94131ee871d15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0777b1f84c4171215fb94131ee871d15">&#9670;&#160;</a></span>TEST() <span class="overload">[8/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0777b1f84c4171215fb94131ee871d15">&#9670;&#160;</a></span>TEST() <span class="overload">[8/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -463,17 +467,17 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00058">58</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                    {</div>
-<div class="line"><span class="lineno">   59</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
-<div class="line"><span class="lineno">   60</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-57483928028032689427591&quot;</span>;</div>
-<div class="line"><span class="lineno">   61</span>    ASSERT_TRUE(bi1 &gt;= bi2);</div>
-<div class="line"><span class="lineno">   62</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00060">60</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>                    {</div>
+<div class="line"><span class="lineno">   61</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
+<div class="line"><span class="lineno">   62</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-57483928028032689427591&quot;</span>;</div>
+<div class="line"><span class="lineno">   63</span>    ASSERT_TRUE(bi1 &gt;= bi2);</div>
+<div class="line"><span class="lineno">   64</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a76d75064b95b83ec5ac39d91c73146c5" name="a76d75064b95b83ec5ac39d91c73146c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76d75064b95b83ec5ac39d91c73146c5">&#9670;&#160;</a></span>TEST() <span class="overload">[9/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d75064b95b83ec5ac39d91c73146c5">&#9670;&#160;</a></span>TEST() <span class="overload">[9/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -491,17 +495,17 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00064">64</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>                    {</div>
-<div class="line"><span class="lineno">   65</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
-<div class="line"><span class="lineno">   66</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;57483928028032689427590&quot;</span>;</div>
-<div class="line"><span class="lineno">   67</span>    ASSERT_TRUE(bi1 &lt;= bi2);</div>
-<div class="line"><span class="lineno">   68</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00066">66</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>                    {</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;57483928028032689427590&quot;</span>;</div>
+<div class="line"><span class="lineno">   69</span>    ASSERT_TRUE(bi1 &lt;= bi2);</div>
+<div class="line"><span class="lineno">   70</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a9650bebaef8f8eeac4dbe68a3b484bdc" name="a9650bebaef8f8eeac4dbe68a3b484bdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9650bebaef8f8eeac4dbe68a3b484bdc">&#9670;&#160;</a></span>TEST() <span class="overload">[10/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9650bebaef8f8eeac4dbe68a3b484bdc">&#9670;&#160;</a></span>TEST() <span class="overload">[10/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -519,17 +523,17 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00070">70</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>                    {</div>
-<div class="line"><span class="lineno">   71</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;57483928028032689427590&quot;</span>;</div>
-<div class="line"><span class="lineno">   72</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
-<div class="line"><span class="lineno">   73</span>    ASSERT_TRUE(bi1 &gt; bi2);</div>
-<div class="line"><span class="lineno">   74</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00072">72</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                    {</div>
+<div class="line"><span class="lineno">   73</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;57483928028032689427590&quot;</span>;</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
+<div class="line"><span class="lineno">   75</span>    ASSERT_TRUE(bi1 &gt; bi2);</div>
+<div class="line"><span class="lineno">   76</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="ab997b41bd966f946d7af0f87ecacec30" name="ab997b41bd966f946d7af0f87ecacec30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab997b41bd966f946d7af0f87ecacec30">&#9670;&#160;</a></span>TEST() <span class="overload">[11/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab997b41bd966f946d7af0f87ecacec30">&#9670;&#160;</a></span>TEST() <span class="overload">[11/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -547,16 +551,16 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00076">76</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>                    {</div>
-<div class="line"><span class="lineno">   77</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;44324324&quot;</span>;</div>
-<div class="line"><span class="lineno">   78</span>    ASSERT_TRUE(bi1 &gt; 456);</div>
-<div class="line"><span class="lineno">   79</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00078">78</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>                    {</div>
+<div class="line"><span class="lineno">   79</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;44324324&quot;</span>;</div>
+<div class="line"><span class="lineno">   80</span>    ASSERT_TRUE(bi1 &gt; 456);</div>
+<div class="line"><span class="lineno">   81</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="ad2a6066b712a3b72b0cdd5709cc94342" name="ad2a6066b712a3b72b0cdd5709cc94342"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2a6066b712a3b72b0cdd5709cc94342">&#9670;&#160;</a></span>TEST() <span class="overload">[12/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2a6066b712a3b72b0cdd5709cc94342">&#9670;&#160;</a></span>TEST() <span class="overload">[12/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -574,23 +578,23 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00081">81</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                     {</div>
-<div class="line"><span class="lineno">   82</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
-<div class="line"><span class="lineno">   83</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-1093857940790276890525749302&quot;</span>;</div>
-<div class="line"><span class="lineno">   84</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 - bi2;</div>
-<div class="line"><span class="lineno">   85</span>    stringstream ss;</div>
-<div class="line"><span class="lineno">   86</span>    ss &lt;&lt; bi;</div>
-<div class="line"><span class="lineno">   87</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">   88</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">   89</span>    ASSERT_EQ(<span class="stringliteral">&quot;1093800456862248857836321712&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">   90</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00083">83</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>                     {</div>
+<div class="line"><span class="lineno">   84</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-1093857940790276890525749302&quot;</span>;</div>
+<div class="line"><span class="lineno">   86</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 - bi2;</div>
+<div class="line"><span class="lineno">   87</span>    stringstream ss;</div>
+<div class="line"><span class="lineno">   88</span>    ss &lt;&lt; bi;</div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">   90</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">   91</span>    ASSERT_EQ(<span class="stringliteral">&quot;1093800456862248857836321712&quot;</span>, ans);</div>
+<div class="line"><span class="lineno">   92</span>}</div>
 <div class="ttc" id="aa00563_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00131">liverpool.cpp:131</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a5de5e646faa4920001f146b0e07877eb" name="a5de5e646faa4920001f146b0e07877eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5de5e646faa4920001f146b0e07877eb">&#9670;&#160;</a></span>TEST() <span class="overload">[13/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de5e646faa4920001f146b0e07877eb">&#9670;&#160;</a></span>TEST() <span class="overload">[13/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -608,22 +612,22 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00092">92</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                     {</div>
-<div class="line"><span class="lineno">   93</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;52785940326406280942375&quot;</span>;</div>
-<div class="line"><span class="lineno">   94</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;432463829&quot;</span>;</div>
-<div class="line"><span class="lineno">   95</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 - bi2;</div>
-<div class="line"><span class="lineno">   96</span>    stringstream ss;</div>
-<div class="line"><span class="lineno">   97</span>    ss &lt;&lt; bi;</div>
-<div class="line"><span class="lineno">   98</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">   99</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  100</span>    ASSERT_EQ(<span class="stringliteral">&quot;52785940326405848478546&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">  101</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00094">94</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>                     {</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;52785940326406280942375&quot;</span>;</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;432463829&quot;</span>;</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 - bi2;</div>
+<div class="line"><span class="lineno">   98</span>    stringstream ss;</div>
+<div class="line"><span class="lineno">   99</span>    ss &lt;&lt; bi;</div>
+<div class="line"><span class="lineno">  100</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  101</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  102</span>    ASSERT_EQ(<span class="stringliteral">&quot;52785940326405848478546&quot;</span>, ans);</div>
+<div class="line"><span class="lineno">  103</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a741a41de74e968901aa19f5208574a5d" name="a741a41de74e968901aa19f5208574a5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a741a41de74e968901aa19f5208574a5d">&#9670;&#160;</a></span>TEST() <span class="overload">[14/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a741a41de74e968901aa19f5208574a5d">&#9670;&#160;</a></span>TEST() <span class="overload">[14/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -641,22 +645,22 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00103">103</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                     {</div>
-<div class="line"><span class="lineno">  104</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;9421965382&quot;</span>;</div>
-<div class="line"><span class="lineno">  105</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;7589436289289054&quot;</span>;</div>
-<div class="line"><span class="lineno">  106</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 - bi2;</div>
-<div class="line"><span class="lineno">  107</span>    stringstream ss;</div>
-<div class="line"><span class="lineno">  108</span>    ss &lt;&lt; bi;</div>
-<div class="line"><span class="lineno">  109</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  110</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  111</span>    ASSERT_EQ(<span class="stringliteral">&quot;-7589426867323672&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">  112</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00105">105</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>                     {</div>
+<div class="line"><span class="lineno">  106</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;9421965382&quot;</span>;</div>
+<div class="line"><span class="lineno">  107</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;7589436289289054&quot;</span>;</div>
+<div class="line"><span class="lineno">  108</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 - bi2;</div>
+<div class="line"><span class="lineno">  109</span>    stringstream ss;</div>
+<div class="line"><span class="lineno">  110</span>    ss &lt;&lt; bi;</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  112</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  113</span>    ASSERT_EQ(<span class="stringliteral">&quot;-7589426867323672&quot;</span>, ans);</div>
+<div class="line"><span class="lineno">  114</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a1de422088971282071662acea2cc4951" name="a1de422088971282071662acea2cc4951"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1de422088971282071662acea2cc4951">&#9670;&#160;</a></span>TEST() <span class="overload">[15/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1de422088971282071662acea2cc4951">&#9670;&#160;</a></span>TEST() <span class="overload">[15/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -674,22 +678,22 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00114">114</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                     {</div>
-<div class="line"><span class="lineno">  115</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-4214325&quot;</span>;</div>
-<div class="line"><span class="lineno">  116</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-4781955555&quot;</span>;</div>
-<div class="line"><span class="lineno">  117</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 - bi2;</div>
-<div class="line"><span class="lineno">  118</span>    stringstream ss;</div>
-<div class="line"><span class="lineno">  119</span>    ss &lt;&lt; bi;</div>
-<div class="line"><span class="lineno">  120</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  121</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  122</span>    ASSERT_EQ(<span class="stringliteral">&quot;4777741230&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">  123</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00116">116</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>                     {</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-4214325&quot;</span>;</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-4781955555&quot;</span>;</div>
+<div class="line"><span class="lineno">  119</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 - bi2;</div>
+<div class="line"><span class="lineno">  120</span>    stringstream ss;</div>
+<div class="line"><span class="lineno">  121</span>    ss &lt;&lt; bi;</div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  123</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  124</span>    ASSERT_EQ(<span class="stringliteral">&quot;4777741230&quot;</span>, ans);</div>
+<div class="line"><span class="lineno">  125</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a700bae1f7edd894ddc4c40c11a2ca63f" name="a700bae1f7edd894ddc4c40c11a2ca63f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a700bae1f7edd894ddc4c40c11a2ca63f">&#9670;&#160;</a></span>TEST() <span class="overload">[16/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a700bae1f7edd894ddc4c40c11a2ca63f">&#9670;&#160;</a></span>TEST() <span class="overload">[16/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -707,22 +711,22 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00125">125</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>                     {</div>
-<div class="line"><span class="lineno">  126</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;123456789&quot;</span>;</div>
-<div class="line"><span class="lineno">  127</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;987654321&quot;</span>;</div>
-<div class="line"><span class="lineno">  128</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 - bi2;</div>
-<div class="line"><span class="lineno">  129</span>    stringstream ss;</div>
-<div class="line"><span class="lineno">  130</span>    ss &lt;&lt; bi;</div>
-<div class="line"><span class="lineno">  131</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  132</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  133</span>    ASSERT_EQ(<span class="stringliteral">&quot;-864197532&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">  134</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00127">127</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>                     {</div>
+<div class="line"><span class="lineno">  128</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;123456789&quot;</span>;</div>
+<div class="line"><span class="lineno">  129</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;987654321&quot;</span>;</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 - bi2;</div>
+<div class="line"><span class="lineno">  131</span>    stringstream ss;</div>
+<div class="line"><span class="lineno">  132</span>    ss &lt;&lt; bi;</div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  134</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  135</span>    ASSERT_EQ(<span class="stringliteral">&quot;-864197532&quot;</span>, ans);</div>
+<div class="line"><span class="lineno">  136</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a8ad0eea4081704ff34e6c709f0325f05" name="a8ad0eea4081704ff34e6c709f0325f05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ad0eea4081704ff34e6c709f0325f05">&#9670;&#160;</a></span>TEST() <span class="overload">[17/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad0eea4081704ff34e6c709f0325f05">&#9670;&#160;</a></span>TEST() <span class="overload">[17/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -740,22 +744,22 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00136">136</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>                        {</div>
-<div class="line"><span class="lineno">  137</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;123456789&quot;</span>;</div>
-<div class="line"><span class="lineno">  138</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;987654321&quot;</span>;</div>
-<div class="line"><span class="lineno">  139</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 * bi2;</div>
-<div class="line"><span class="lineno">  140</span>    stringstream ss;</div>
-<div class="line"><span class="lineno">  141</span>    ss &lt;&lt; bi;</div>
-<div class="line"><span class="lineno">  142</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  143</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  144</span>    ASSERT_EQ(<span class="stringliteral">&quot;121932631112635269&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">  145</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00138">138</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>                        {</div>
+<div class="line"><span class="lineno">  139</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;123456789&quot;</span>;</div>
+<div class="line"><span class="lineno">  140</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;987654321&quot;</span>;</div>
+<div class="line"><span class="lineno">  141</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 * bi2;</div>
+<div class="line"><span class="lineno">  142</span>    stringstream ss;</div>
+<div class="line"><span class="lineno">  143</span>    ss &lt;&lt; bi;</div>
+<div class="line"><span class="lineno">  144</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  145</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  146</span>    ASSERT_EQ(<span class="stringliteral">&quot;121932631112635269&quot;</span>, ans);</div>
+<div class="line"><span class="lineno">  147</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="ad79bfa829d13d5e73f1ea0a913bc57ca" name="ad79bfa829d13d5e73f1ea0a913bc57ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad79bfa829d13d5e73f1ea0a913bc57ca">&#9670;&#160;</a></span>TEST() <span class="overload">[18/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad79bfa829d13d5e73f1ea0a913bc57ca">&#9670;&#160;</a></span>TEST() <span class="overload">[18/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -773,22 +777,22 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00147">147</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                        {</div>
-<div class="line"><span class="lineno">  148</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;73892532615&quot;</span>;</div>
-<div class="line"><span class="lineno">  149</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-544835983274&quot;</span>;</div>
-<div class="line"><span class="lineno">  150</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 * bi2;</div>
-<div class="line"><span class="lineno">  151</span>    stringstream ss;</div>
-<div class="line"><span class="lineno">  152</span>    ss &lt;&lt; bi;</div>
-<div class="line"><span class="lineno">  153</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  154</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  155</span>    ASSERT_EQ(<span class="stringliteral">&quot;-40259310663899639481510&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">  156</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00149">149</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>                        {</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;73892532615&quot;</span>;</div>
+<div class="line"><span class="lineno">  151</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-544835983274&quot;</span>;</div>
+<div class="line"><span class="lineno">  152</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 * bi2;</div>
+<div class="line"><span class="lineno">  153</span>    stringstream ss;</div>
+<div class="line"><span class="lineno">  154</span>    ss &lt;&lt; bi;</div>
+<div class="line"><span class="lineno">  155</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  156</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  157</span>    ASSERT_EQ(<span class="stringliteral">&quot;-40259310663899639481510&quot;</span>, ans);</div>
+<div class="line"><span class="lineno">  158</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a8b48b786fed28ce094559f80a11cf68f" name="a8b48b786fed28ce094559f80a11cf68f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b48b786fed28ce094559f80a11cf68f">&#9670;&#160;</a></span>TEST() <span class="overload">[19/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b48b786fed28ce094559f80a11cf68f">&#9670;&#160;</a></span>TEST() <span class="overload">[19/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -806,22 +810,22 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00158">158</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  158</span>                        {</div>
-<div class="line"><span class="lineno">  159</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57843957920564789329632578432578924635789325423789&quot;</span>;</div>
-<div class="line"><span class="lineno">  160</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-5746578193211561278947328194319125&quot;</span>;</div>
-<div class="line"><span class="lineno">  161</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 * bi2;</div>
-<div class="line"><span class="lineno">  162</span>    stringstream ss;</div>
-<div class="line"><span class="lineno">  163</span>    ss &lt;&lt; bi;</div>
-<div class="line"><span class="lineno">  164</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  165</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  166</span>    ASSERT_EQ(<span class="stringliteral">&quot;332404827195364786322355785444558091034080578559256965088672851184934586482932664625&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">  167</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00160">160</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>                        {</div>
+<div class="line"><span class="lineno">  161</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57843957920564789329632578432578924635789325423789&quot;</span>;</div>
+<div class="line"><span class="lineno">  162</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-5746578193211561278947328194319125&quot;</span>;</div>
+<div class="line"><span class="lineno">  163</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 * bi2;</div>
+<div class="line"><span class="lineno">  164</span>    stringstream ss;</div>
+<div class="line"><span class="lineno">  165</span>    ss &lt;&lt; bi;</div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  167</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  168</span>    ASSERT_EQ(<span class="stringliteral">&quot;332404827195364786322355785444558091034080578559256965088672851184934586482932664625&quot;</span>, ans);</div>
+<div class="line"><span class="lineno">  169</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a12f64c3b7d0e473933d840f2ad6e59e9" name="a12f64c3b7d0e473933d840f2ad6e59e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12f64c3b7d0e473933d840f2ad6e59e9">&#9670;&#160;</a></span>TEST() <span class="overload">[20/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a12f64c3b7d0e473933d840f2ad6e59e9">&#9670;&#160;</a></span>TEST() <span class="overload">[20/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -839,22 +843,22 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00007">7</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>                    {</div>
-<div class="line"><span class="lineno">    8</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;112233445566778899&quot;</span>;</div>
-<div class="line"><span class="lineno">    9</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;9988776655443322&quot;</span>;</div>
-<div class="line"><span class="lineno">   10</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 + bi2;</div>
-<div class="line"><span class="lineno">   11</span>    stringstream ss;</div>
-<div class="line"><span class="lineno">   12</span>    ss &lt;&lt; bi;</div>
-<div class="line"><span class="lineno">   13</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">   14</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">   15</span>    ASSERT_EQ(<span class="stringliteral">&quot;122222222222222221&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">   16</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00009">9</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>                    {</div>
+<div class="line"><span class="lineno">   10</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;112233445566778899&quot;</span>;</div>
+<div class="line"><span class="lineno">   11</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;9988776655443322&quot;</span>;</div>
+<div class="line"><span class="lineno">   12</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 + bi2;</div>
+<div class="line"><span class="lineno">   13</span>    stringstream ss;</div>
+<div class="line"><span class="lineno">   14</span>    ss &lt;&lt; bi;</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">   16</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">   17</span>    ASSERT_EQ(<span class="stringliteral">&quot;122222222222222221&quot;</span>, ans);</div>
+<div class="line"><span class="lineno">   18</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="aca95738a474f3ffe31f6c9a2f16e747a" name="aca95738a474f3ffe31f6c9a2f16e747a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca95738a474f3ffe31f6c9a2f16e747a">&#9670;&#160;</a></span>TEST() <span class="overload">[21/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aca95738a474f3ffe31f6c9a2f16e747a">&#9670;&#160;</a></span>TEST() <span class="overload">[21/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -872,22 +876,22 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00018">18</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>                    {</div>
-<div class="line"><span class="lineno">   19</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;1&quot;</span>;</div>
-<div class="line"><span class="lineno">   20</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;999999999&quot;</span>;</div>
-<div class="line"><span class="lineno">   21</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 + bi2;</div>
-<div class="line"><span class="lineno">   22</span>    stringstream ss;</div>
-<div class="line"><span class="lineno">   23</span>    ss &lt;&lt; bi;</div>
-<div class="line"><span class="lineno">   24</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">   25</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">   26</span>    ASSERT_EQ(<span class="stringliteral">&quot;1000000000&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">   27</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00020">20</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>                    {</div>
+<div class="line"><span class="lineno">   21</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;1&quot;</span>;</div>
+<div class="line"><span class="lineno">   22</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;999999999&quot;</span>;</div>
+<div class="line"><span class="lineno">   23</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 + bi2;</div>
+<div class="line"><span class="lineno">   24</span>    stringstream ss;</div>
+<div class="line"><span class="lineno">   25</span>    ss &lt;&lt; bi;</div>
+<div class="line"><span class="lineno">   26</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">   27</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">   28</span>    ASSERT_EQ(<span class="stringliteral">&quot;1000000000&quot;</span>, ans);</div>
+<div class="line"><span class="lineno">   29</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a4de1df27f374c5d1ebef68249ff89cde" name="a4de1df27f374c5d1ebef68249ff89cde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4de1df27f374c5d1ebef68249ff89cde">&#9670;&#160;</a></span>TEST() <span class="overload">[22/22]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4de1df27f374c5d1ebef68249ff89cde">&#9670;&#160;</a></span>TEST() <span class="overload">[22/23]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -905,18 +909,64 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00029">29</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                    {</div>
-<div class="line"><span class="lineno">   30</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
-<div class="line"><span class="lineno">   31</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-1093857940790276890525749302&quot;</span>;</div>
-<div class="line"><span class="lineno">   32</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 + bi2;</div>
-<div class="line"><span class="lineno">   33</span>    stringstream ss;</div>
-<div class="line"><span class="lineno">   34</span>    ss &lt;&lt; bi;</div>
-<div class="line"><span class="lineno">   35</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">   36</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">   37</span>    ASSERT_EQ(<span class="stringliteral">&quot;-1093915424718304923215176892&quot;</span>, ans);</div>
-<div class="line"><span class="lineno">   38</span>}</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00031">31</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>                    {</div>
+<div class="line"><span class="lineno">   32</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi1 = <span class="stringliteral">&quot;-57483928028032689427590&quot;</span>;</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi2 = <span class="stringliteral">&quot;-1093857940790276890525749302&quot;</span>;</div>
+<div class="line"><span class="lineno">   34</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../d7/d4f/a03746.html">BigInt</a> bi  = bi1 + bi2;</div>
+<div class="line"><span class="lineno">   35</span>    stringstream ss;</div>
+<div class="line"><span class="lineno">   36</span>    ss &lt;&lt; bi;</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">   38</span>    ss &gt;&gt; <a class="code hl_variable" href="../../dc/dae/a00563.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">   39</span>    ASSERT_EQ(<span class="stringliteral">&quot;-1093915424718304923215176892&quot;</span>, ans);</div>
+<div class="line"><span class="lineno">   40</span>}</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a86874303e797084106d8a4ea7198982a" name="a86874303e797084106d8a4ea7198982a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86874303e797084106d8a4ea7198982a">&#9670;&#160;</a></span>TEST() <span class="overload">[23/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/da4/a03766.html">huffman</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">case_rand</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00314">314</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  314</span>                         {</div>
+<div class="line"><span class="lineno">  315</span>    std::random_device rd;</div>
+<div class="line"><span class="lineno">  316</span>    std::mt19937 gen(rd());</div>
+<div class="line"><span class="lineno">  317</span>    std::uniform_int_distribution&lt;&gt; dis(512, 1024);</div>
+<div class="line"><span class="lineno">  318</span>    <span class="keywordtype">int</span> len           = dis(gen);</div>
+<div class="line"><span class="lineno">  319</span>    <span class="keyword">auto</span> nums         = <a class="code hl_function" href="../../d1/da4/a03766.html#a430358603f1f6f54d8b1e94aa31b5a75">huffman::generate_bounded_normal_ints</a>(len);</div>
+<div class="line"><span class="lineno">  320</span>    ostringstream oss = {};</div>
+<div class="line"><span class="lineno">  321</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> num: nums) {</div>
+<div class="line"><span class="lineno">  322</span>        oss &lt;&lt; static_cast&lt;char&gt;(num + <span class="charliteral">&#39;a&#39;</span>);</div>
+<div class="line"><span class="lineno">  323</span>    }</div>
+<div class="line"><span class="lineno">  324</span>    <span class="keywordtype">string</span> input    = oss.str();</div>
+<div class="line"><span class="lineno">  325</span>    <span class="keyword">auto</span> res        = <a class="code hl_function" href="../../d1/da4/a03766.html#a35917d477c228f8352c438e825a86194">huffman::compress</a>(input);</div>
+<div class="line"><span class="lineno">  326</span>    <span class="keywordtype">string</span> comp_str = res.first;</div>
+<div class="line"><span class="lineno">  327</span>    <a class="code hl_class" href="../../d1/da4/a03766.html">huffman</a> *h      = res.second;</div>
+<div class="line"><span class="lineno">  328</span>    <span class="keywordtype">string</span> output   = h-&gt;<a class="code hl_function" href="../../d1/da4/a03766.html#a415858041934616bd82f1fdafb76a444">decompress</a>(comp_str);</div>
+<div class="line"><span class="lineno">  329</span>    ASSERT_EQ(output, input);</div>
+<div class="line"><span class="lineno">  330</span>}</div>
+<div class="ttc" id="aa03766_html"><div class="ttname"><a href="../../d1/da4/a03766.html">huffman</a></div><div class="ttdef"><b>定义</b> <a href="../../d3/d8b/a00059_source.html#l00214">templates.h:214</a></div></div>
+<div class="ttc" id="aa03766_html_a35917d477c228f8352c438e825a86194"><div class="ttname"><a href="../../d1/da4/a03766.html#a35917d477c228f8352c438e825a86194">huffman::compress</a></div><div class="ttdeci">static pair&lt; string, huffman * &gt; compress(string input)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00578">templates.cpp:578</a></div></div>
+<div class="ttc" id="aa03766_html_a415858041934616bd82f1fdafb76a444"><div class="ttname"><a href="../../d1/da4/a03766.html#a415858041934616bd82f1fdafb76a444">huffman::decompress</a></div><div class="ttdeci">string decompress(string input)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00618">templates.cpp:618</a></div></div>
+<div class="ttc" id="aa03766_html_a430358603f1f6f54d8b1e94aa31b5a75"><div class="ttname"><a href="../../d1/da4/a03766.html#a430358603f1f6f54d8b1e94aa31b5a75">huffman::generate_bounded_normal_ints</a></div><div class="ttdeci">static std::vector&lt; int &gt; generate_bounded_normal_ints(int n)</div><div class="ttdef"><b>定义</b> <a href="../../db/dab/a00089_source.html#l00289">templates_test.cpp:289</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00578">huffman::compress()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00618">huffman::decompress()</a> , 以及 <a class="el" href="../../db/dab/a00089_source.html#l00289">huffman::generate_bounded_normal_ints()</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

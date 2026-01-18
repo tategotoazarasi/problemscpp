@@ -4,7 +4,7 @@ var searchData=
   ['dec_1',['dec',['../d9/d8c/a02386.html#a9282221f59794ad44fa3fe0f8f5d5492',1,'leetcode::all_oone_data_structure::AllOne']]],
   ['decodeciphertext_2',['decodeCiphertext',['../d0/d4f/a01830.html#a252f4bfe7f988ff380c5b93665b70c46',1,'leetcode::decode_the_slanted_ciphertext::Solution']]],
   ['decodestring_3',['decodeString',['../d5/d1c/a02902.html#a1c939bfdcd3770a51f9f78f4c51ced38',1,'leetcode::decode_string::Solution']]],
-  ['decompress_4',['decompress',['../d5/d54/a00938.html#a0af4b988fb6e15bce0971bd1bcfa5bba',1,'acwing::acwing1960']]],
+  ['decompress_4',['decompress',['../d5/d54/a00938.html#a0af4b988fb6e15bce0971bd1bcfa5bba',1,'acwing::acwing1960::decompress()'],['../d1/da4/a03766.html#a415858041934616bd82f1fdafb76a444',1,'huffman::decompress()']]],
   ['decrypt_5',['decrypt',['../d6/de1/a02518.html#aa1096e0b6360f01b34d7ed58a6e71002',1,'leetcode::encrypt_and_decrypt_strings::Encrypter']]],
   ['deleteatindex_6',['deleteAtIndex',['../dc/db0/a02778.html#a2aae9826a58edb9d19658641415193cb',1,'leetcode::design_linked_list::MyLinkedList']]],
   ['deleteduplication_7',['deleteDuplication',['../d5/d75/a01570.html#a50787f324e6f0e54011e8a71a201ea74',1,'acwing::acwing29::Solution']]],

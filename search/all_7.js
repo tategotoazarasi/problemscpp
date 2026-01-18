@@ -10,5 +10,7 @@ var searchData=
   ['highestpeak_7',['highestPeak',['../d4/dae/a01994.html#abb9f9e1158e8b78d5fd3da458bfa04ee',1,'leetcode::map_of_highest_peak::Solution']]],
   ['highestrankedkitems_8',['highestRankedKItems',['../de/da9/a01934.html#a9eb14c6a78e5ca4b6d333b512fe3eebd',1,'leetcode::k_highest_ranked_items_within_a_price_range::Solution']]],
   ['hour_9',['hour',['../d3/d94/a03698.html#aad4cfab0e41b37e8c74e0bc64c421501',1,'pat::a::a1016::record']]],
-  ['huff_5ftree_10',['huff_tree',['../d6/d26/a01678.html',1,'acwing::acwing149::huff_tree'],['../d6/d26/a01678.html#a5a1ef04012e6e49022cf49a7d0079b1e',1,'acwing::acwing149::huff_tree::huff_tree()']]]
+  ['huff_5ftree_10',['huff_tree',['../d6/d26/a01678.html',1,'acwing::acwing149::huff_tree'],['../d6/d26/a01678.html#a5a1ef04012e6e49022cf49a7d0079b1e',1,'acwing::acwing149::huff_tree::huff_tree()']]],
+  ['huffman_11',['huffman',['../d1/da4/a03766.html',1,'huffman'],['../d1/da4/a03766.html#ae8e4ad12d41763a31b668604d7ed9e54',1,'huffman::huffman()']]],
+  ['huffman_5fptr_5fcomp_12',['huffman_ptr_comp',['../d2/d33/a03770.html',1,'']]]
 ];

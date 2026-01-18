@@ -295,7 +295,7 @@ var searchData=
   ['priority_5fc_292',['priority_c',['../da/d8d/a03158.html#a24c8aa6d8476080301a7b104985c1a89',1,'liverpool::stable_matching::Student']]],
   ['problem_293',['Problem',['../d8/d71/a03626.html',1,'pat::b::b1058']]],
   ['problem_294',['problem',['../d6/d81/a03630.html',1,'pat::b::b1073']]],
-  ['problemscpp_295',['problemscpp',['../d8/d9b/a04067.html',1,'']]],
+  ['problemscpp_295',['problemscpp',['../da/d33/a04079.html',1,'']]],
   ['productexceptself_296',['productExceptSelf',['../de/d8e/a02762.html#a710bfbef355ea54ccce5bead0124bfb0',1,'leetcode::product_of_array_except_self::Solution']]],
   ['projectionarea_297',['projectionArea',['../d9/dfb/a02578.html#a48368dafd2c2c8ca1b2d2bd36fad1a2f',1,'leetcode::projection_area_of_3d_shapes::Solution']]],
   ['proposed_5fstudents_298',['proposed_students',['../d8/d29/a03162.html#a4dc07c2af4a17689450150d663600333',1,'liverpool::stable_matching::Company']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['c_0',['c',['../d6/d41/a02930.html#a9e82917eca6b1cc4f88bcd319f753193',1,'leetcode::count_of_smaller_numbers_after_self::Solution']]],
+  ['c_0',['c',['../d6/d41/a02930.html#a9e82917eca6b1cc4f88bcd319f753193',1,'leetcode::count_of_smaller_numbers_after_self::Solution::c'],['../d1/da4/a03766.html#a694d80638e7ecc595f43840e31f21d68',1,'huffman::c']]],
   ['c_5fpriority_1',['c_priority',['../da/d8d/a03158.html#a2181dab290dfc19e3f2227cb56e7d86c',1,'liverpool::stable_matching::Student']]],
   ['ca_2',['ca',['../d6/d81/a03630.html#a56d29e2d96888a88f2f2be6e46642dbc',1,'pat::b::b1073::problem']]],
   ['calc_5fdist_3',['calc_dist',['../dc/dfd/a02370.html#a6d0b13d473a99c69485a95e6d2570eba',1,'leetcode::minimum_weighted_subgraph_with_the_required_paths::Solution']]],
@@ -66,7 +66,7 @@ var searchData=
   ['compare_63',['Compare',['../dd/d08/a01682.html',1,'acwing::acwing149']]],
   ['complexnumbermultiply_64',['complexNumberMultiply',['../d6/d41/a02222.html#add6d0ad5901391250e5831ab5db507b5',1,'leetcode::complex_number_multiplication::Solution']]],
   ['composite_65',['composite',['../d9/d65/a03578.html#a37c6c6322e636df04e8db30bb39d340f',1,'luogu::P5742::Student']]],
-  ['compress_66',['compress',['../d5/d54/a00938.html#a1d23c971cf13b5e5d56879b6eba34724',1,'acwing::acwing1960::compress()'],['../d0/d48/a02014.html#ab5563bc1f9d383c3a2192894d2886fae',1,'leetcode::groups_of_strings::Solution::compress()']]],
+  ['compress_66',['compress',['../d5/d54/a00938.html#a1d23c971cf13b5e5d56879b6eba34724',1,'acwing::acwing1960::compress()'],['../d0/d48/a02014.html#ab5563bc1f9d383c3a2192894d2886fae',1,'leetcode::groups_of_strings::Solution::compress()'],['../d1/da4/a03766.html#a35917d477c228f8352c438e825a86194',1,'huffman::compress()']]],
   ['connect_67',['connect',['../dc/ddf/a02622.html#a102590eb0a1abcf04952625b6590d03d',1,'leetcode::populating_next_right_pointers_in_each_node_ii::Solution']]],
   ['connected_68',['connected',['../d7/dc5/a01242.html#a34a130f77b77098643d62be5d347c5b9',1,'acwing::acwing4298']]],
   ['construct2darray_69',['construct2DArray',['../dd/d40/a01762.html#a7a2a832500ba73b9fa1ad75a40c91ade',1,'leetcode::convert_1d_array_into_2d_array::Solution']]],
