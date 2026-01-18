@@ -116,23 +116,23 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00772">772</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  772</span>                                     {</div>
-<div class="line"><span class="lineno">  773</span>        list&lt;char&gt; dict   = {<span class="charliteral">&#39;q&#39;</span>, <span class="charliteral">&#39;w&#39;</span>, <span class="charliteral">&#39;e&#39;</span>, <span class="charliteral">&#39;r&#39;</span>, <span class="charliteral">&#39;t&#39;</span>, <span class="charliteral">&#39;y&#39;</span>, <span class="charliteral">&#39;u&#39;</span>, <span class="charliteral">&#39;i&#39;</span>, <span class="charliteral">&#39;o&#39;</span>, <span class="charliteral">&#39;p&#39;</span>, <span class="charliteral">&#39;a&#39;</span>, <span class="charliteral">&#39;s&#39;</span>, <span class="charliteral">&#39;d&#39;</span>, <span class="charliteral">&#39;f&#39;</span>, <span class="charliteral">&#39;g&#39;</span>, <span class="charliteral">&#39;h&#39;</span>, <span class="charliteral">&#39;j&#39;</span>, <span class="charliteral">&#39;k&#39;</span>, <span class="charliteral">&#39;l&#39;</span>, <span class="charliteral">&#39;z&#39;</span>, <span class="charliteral">&#39;x&#39;</span>, <span class="charliteral">&#39;c&#39;</span>, <span class="charliteral">&#39;v&#39;</span>, <span class="charliteral">&#39;b&#39;</span>, <span class="charliteral">&#39;n&#39;</span>, <span class="charliteral">&#39;m&#39;</span>};</div>
-<div class="line"><span class="lineno">  774</span>        ostringstream ans = {};</div>
-<div class="line"><span class="lineno">  775</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i: input) {</div>
-<div class="line"><span class="lineno">  776</span>            <span class="keyword">auto</span> it = dict.begin();</div>
-<div class="line"><span class="lineno">  777</span>            <span class="keywordtype">char</span> c;</div>
-<div class="line"><span class="lineno">  778</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; i; j++) {</div>
-<div class="line"><span class="lineno">  779</span>                ++it;</div>
-<div class="line"><span class="lineno">  780</span>            }</div>
-<div class="line"><span class="lineno">  781</span>            c = *it;</div>
-<div class="line"><span class="lineno">  782</span>            dict.erase(it);</div>
-<div class="line"><span class="lineno">  783</span>            <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> &lt;&lt; c;</div>
-<div class="line"><span class="lineno">  784</span>            dict.push_front(c);</div>
-<div class="line"><span class="lineno">  785</span>        }</div>
-<div class="line"><span class="lineno">  786</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.str();</div>
-<div class="line"><span class="lineno">  787</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00775">775</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  775</span>                                     {</div>
+<div class="line"><span class="lineno">  776</span>        list&lt;char&gt; dict   = {<span class="charliteral">&#39;q&#39;</span>, <span class="charliteral">&#39;w&#39;</span>, <span class="charliteral">&#39;e&#39;</span>, <span class="charliteral">&#39;r&#39;</span>, <span class="charliteral">&#39;t&#39;</span>, <span class="charliteral">&#39;y&#39;</span>, <span class="charliteral">&#39;u&#39;</span>, <span class="charliteral">&#39;i&#39;</span>, <span class="charliteral">&#39;o&#39;</span>, <span class="charliteral">&#39;p&#39;</span>, <span class="charliteral">&#39;a&#39;</span>, <span class="charliteral">&#39;s&#39;</span>, <span class="charliteral">&#39;d&#39;</span>, <span class="charliteral">&#39;f&#39;</span>, <span class="charliteral">&#39;g&#39;</span>, <span class="charliteral">&#39;h&#39;</span>, <span class="charliteral">&#39;j&#39;</span>, <span class="charliteral">&#39;k&#39;</span>, <span class="charliteral">&#39;l&#39;</span>, <span class="charliteral">&#39;z&#39;</span>, <span class="charliteral">&#39;x&#39;</span>, <span class="charliteral">&#39;c&#39;</span>, <span class="charliteral">&#39;v&#39;</span>, <span class="charliteral">&#39;b&#39;</span>, <span class="charliteral">&#39;n&#39;</span>, <span class="charliteral">&#39;m&#39;</span>};</div>
+<div class="line"><span class="lineno">  777</span>        ostringstream ans = {};</div>
+<div class="line"><span class="lineno">  778</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i: input) {</div>
+<div class="line"><span class="lineno">  779</span>            <span class="keyword">auto</span> it = dict.begin();</div>
+<div class="line"><span class="lineno">  780</span>            <span class="keywordtype">char</span> c;</div>
+<div class="line"><span class="lineno">  781</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; i; j++) {</div>
+<div class="line"><span class="lineno">  782</span>                ++it;</div>
+<div class="line"><span class="lineno">  783</span>            }</div>
+<div class="line"><span class="lineno">  784</span>            c = *it;</div>
+<div class="line"><span class="lineno">  785</span>            dict.erase(it);</div>
+<div class="line"><span class="lineno">  786</span>            <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> &lt;&lt; c;</div>
+<div class="line"><span class="lineno">  787</span>            dict.push_front(c);</div>
+<div class="line"><span class="lineno">  788</span>        }</div>
+<div class="line"><span class="lineno">  789</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.str();</div>
+<div class="line"><span class="lineno">  790</span>    }</div>
 <div class="ttc" id="aa00568_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00131">liverpool.cpp:131</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/dab/a00089_source.html#l00398">TEST()</a>.</p>
@@ -154,25 +154,25 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00754">754</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  754</span>                                     {</div>
-<div class="line"><span class="lineno">  755</span>        list&lt;char&gt; dict = {<span class="charliteral">&#39;q&#39;</span>, <span class="charliteral">&#39;w&#39;</span>, <span class="charliteral">&#39;e&#39;</span>, <span class="charliteral">&#39;r&#39;</span>, <span class="charliteral">&#39;t&#39;</span>, <span class="charliteral">&#39;y&#39;</span>, <span class="charliteral">&#39;u&#39;</span>, <span class="charliteral">&#39;i&#39;</span>, <span class="charliteral">&#39;o&#39;</span>, <span class="charliteral">&#39;p&#39;</span>, <span class="charliteral">&#39;a&#39;</span>, <span class="charliteral">&#39;s&#39;</span>, <span class="charliteral">&#39;d&#39;</span>, <span class="charliteral">&#39;f&#39;</span>, <span class="charliteral">&#39;g&#39;</span>, <span class="charliteral">&#39;h&#39;</span>, <span class="charliteral">&#39;j&#39;</span>, <span class="charliteral">&#39;k&#39;</span>, <span class="charliteral">&#39;l&#39;</span>, <span class="charliteral">&#39;z&#39;</span>, <span class="charliteral">&#39;x&#39;</span>, <span class="charliteral">&#39;c&#39;</span>, <span class="charliteral">&#39;v&#39;</span>, <span class="charliteral">&#39;b&#39;</span>, <span class="charliteral">&#39;n&#39;</span>, <span class="charliteral">&#39;m&#39;</span>};</div>
-<div class="line"><span class="lineno">  756</span>        <span class="keywordtype">int</span> i           = 0;</div>
-<div class="line"><span class="lineno">  757</span>        vector&lt;int&gt; ans(input.size());</div>
-<div class="line"><span class="lineno">  758</span>        <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: input) {</div>
-<div class="line"><span class="lineno">  759</span>            <span class="keywordtype">int</span> index = -1;</div>
-<div class="line"><span class="lineno">  760</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = dict.begin(); it != dict.end(); ++it) {</div>
-<div class="line"><span class="lineno">  761</span>                <span class="keywordflow">if</span>(*it == c) {</div>
-<div class="line"><span class="lineno">  762</span>                    index    = std::distance(dict.begin(), it);</div>
-<div class="line"><span class="lineno">  763</span>                    ans[i++] = index;</div>
-<div class="line"><span class="lineno">  764</span>                    dict.erase(it);</div>
-<div class="line"><span class="lineno">  765</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  766</span>                }</div>
-<div class="line"><span class="lineno">  767</span>            }</div>
-<div class="line"><span class="lineno">  768</span>            dict.push_front(c);</div>
-<div class="line"><span class="lineno">  769</span>        }</div>
-<div class="line"><span class="lineno">  770</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  771</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00757">757</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  757</span>                                     {</div>
+<div class="line"><span class="lineno">  758</span>        list&lt;char&gt; dict = {<span class="charliteral">&#39;q&#39;</span>, <span class="charliteral">&#39;w&#39;</span>, <span class="charliteral">&#39;e&#39;</span>, <span class="charliteral">&#39;r&#39;</span>, <span class="charliteral">&#39;t&#39;</span>, <span class="charliteral">&#39;y&#39;</span>, <span class="charliteral">&#39;u&#39;</span>, <span class="charliteral">&#39;i&#39;</span>, <span class="charliteral">&#39;o&#39;</span>, <span class="charliteral">&#39;p&#39;</span>, <span class="charliteral">&#39;a&#39;</span>, <span class="charliteral">&#39;s&#39;</span>, <span class="charliteral">&#39;d&#39;</span>, <span class="charliteral">&#39;f&#39;</span>, <span class="charliteral">&#39;g&#39;</span>, <span class="charliteral">&#39;h&#39;</span>, <span class="charliteral">&#39;j&#39;</span>, <span class="charliteral">&#39;k&#39;</span>, <span class="charliteral">&#39;l&#39;</span>, <span class="charliteral">&#39;z&#39;</span>, <span class="charliteral">&#39;x&#39;</span>, <span class="charliteral">&#39;c&#39;</span>, <span class="charliteral">&#39;v&#39;</span>, <span class="charliteral">&#39;b&#39;</span>, <span class="charliteral">&#39;n&#39;</span>, <span class="charliteral">&#39;m&#39;</span>};</div>
+<div class="line"><span class="lineno">  759</span>        <span class="keywordtype">int</span> i           = 0;</div>
+<div class="line"><span class="lineno">  760</span>        vector&lt;int&gt; ans(input.size());</div>
+<div class="line"><span class="lineno">  761</span>        <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: input) {</div>
+<div class="line"><span class="lineno">  762</span>            <span class="keywordtype">int</span> index = -1;</div>
+<div class="line"><span class="lineno">  763</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = dict.begin(); it != dict.end(); ++it) {</div>
+<div class="line"><span class="lineno">  764</span>                <span class="keywordflow">if</span>(*it == c) {</div>
+<div class="line"><span class="lineno">  765</span>                    index    = std::distance(dict.begin(), it);</div>
+<div class="line"><span class="lineno">  766</span>                    ans[i++] = index;</div>
+<div class="line"><span class="lineno">  767</span>                    dict.erase(it);</div>
+<div class="line"><span class="lineno">  768</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  769</span>                }</div>
+<div class="line"><span class="lineno">  770</span>            }</div>
+<div class="line"><span class="lineno">  771</span>            dict.push_front(c);</div>
+<div class="line"><span class="lineno">  772</span>        }</div>
+<div class="line"><span class="lineno">  773</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  774</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/dab/a00089_source.html#l00398">TEST()</a>.</p>
 
@@ -214,10 +214,10 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  411</span>        <span class="keyword">auto</span> decompressed = <a class="code hl_function" href="#aa859a32558f21d20a9f3379cfa6f6d88">decode</a>(compressed);</div>
 <div class="line"><span class="lineno">  412</span>        ASSERT_EQ(input, decompressed);</div>
 <div class="line"><span class="lineno">  413</span>    }</div>
-<div class="ttc" id="aa00733_html_aa859a32558f21d20a9f3379cfa6f6d88"><div class="ttname"><a href="#aa859a32558f21d20a9f3379cfa6f6d88">mtf::decode</a></div><div class="ttdeci">string decode(vector&lt; int &gt; input)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00772">templates.cpp:772</a></div></div>
-<div class="ttc" id="aa00733_html_adc38323bb696e24193f9bfc834579dda"><div class="ttname"><a href="#adc38323bb696e24193f9bfc834579dda">mtf::encode</a></div><div class="ttdeci">vector&lt; int &gt; encode(string input)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00754">templates.cpp:754</a></div></div>
+<div class="ttc" id="aa00733_html_aa859a32558f21d20a9f3379cfa6f6d88"><div class="ttname"><a href="#aa859a32558f21d20a9f3379cfa6f6d88">mtf::decode</a></div><div class="ttdeci">string decode(vector&lt; int &gt; input)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00775">templates.cpp:775</a></div></div>
+<div class="ttc" id="aa00733_html_adc38323bb696e24193f9bfc834579dda"><div class="ttname"><a href="#adc38323bb696e24193f9bfc834579dda">mtf::encode</a></div><div class="ttdeci">vector&lt; int &gt; encode(string input)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00757">templates.cpp:757</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00772">decode()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00754">encode()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00775">decode()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00757">encode()</a>.</p>
 
 </div>
 </div>

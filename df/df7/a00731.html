@@ -116,33 +116,33 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00677">677</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  677</span>                                            {</div>
-<div class="line"><span class="lineno">  678</span>        <span class="keywordflow">if</span>(input.empty())</div>
-<div class="line"><span class="lineno">  679</span>            <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">  680</span>        <span class="keywordtype">bool</span> flag = input[0];</div>
-<div class="line"><span class="lineno">  681</span>        vector&lt;bool&gt; ans;</div>
-<div class="line"><span class="lineno">  682</span>        <span class="keywordtype">int</span> i = 1;</div>
-<div class="line"><span class="lineno">  683</span>        <span class="keywordflow">while</span>(i &lt; input.size()) {</div>
-<div class="line"><span class="lineno">  684</span>            <span class="keywordtype">int</span> zero_cnt = 0;</div>
-<div class="line"><span class="lineno">  685</span>            <span class="keywordflow">while</span>(i &lt; input.size() &amp;&amp; !input[i]) {</div>
-<div class="line"><span class="lineno">  686</span>                zero_cnt++;</div>
-<div class="line"><span class="lineno">  687</span>                i++;</div>
-<div class="line"><span class="lineno">  688</span>            }</div>
-<div class="line"><span class="lineno">  689</span>            <span class="keywordflow">if</span>(i &gt;= input.size())</div>
-<div class="line"><span class="lineno">  690</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  691</span>            <span class="keywordtype">int</span> len          = 0;</div>
-<div class="line"><span class="lineno">  692</span>            <span class="keywordtype">int</span> bits_to_read = zero_cnt + 1;</div>
-<div class="line"><span class="lineno">  693</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; bits_to_read; j++) {</div>
-<div class="line"><span class="lineno">  694</span>                len = (len &lt;&lt; 1) | (input[i] ? 1 : 0);</div>
-<div class="line"><span class="lineno">  695</span>                i++;</div>
-<div class="line"><span class="lineno">  696</span>            }</div>
-<div class="line"><span class="lineno">  697</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 0; k &lt; len; k++)</div>
-<div class="line"><span class="lineno">  698</span>                <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.push_back(flag);</div>
-<div class="line"><span class="lineno">  699</span>            flag = !flag;</div>
-<div class="line"><span class="lineno">  700</span>        }</div>
-<div class="line"><span class="lineno">  701</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  702</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00680">680</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  680</span>                                            {</div>
+<div class="line"><span class="lineno">  681</span>        <span class="keywordflow">if</span>(input.empty())</div>
+<div class="line"><span class="lineno">  682</span>            <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno">  683</span>        <span class="keywordtype">bool</span> flag = input[0];</div>
+<div class="line"><span class="lineno">  684</span>        vector&lt;bool&gt; ans;</div>
+<div class="line"><span class="lineno">  685</span>        <span class="keywordtype">int</span> i = 1;</div>
+<div class="line"><span class="lineno">  686</span>        <span class="keywordflow">while</span>(i &lt; input.size()) {</div>
+<div class="line"><span class="lineno">  687</span>            <span class="keywordtype">int</span> zero_cnt = 0;</div>
+<div class="line"><span class="lineno">  688</span>            <span class="keywordflow">while</span>(i &lt; input.size() &amp;&amp; !input[i]) {</div>
+<div class="line"><span class="lineno">  689</span>                zero_cnt++;</div>
+<div class="line"><span class="lineno">  690</span>                i++;</div>
+<div class="line"><span class="lineno">  691</span>            }</div>
+<div class="line"><span class="lineno">  692</span>            <span class="keywordflow">if</span>(i &gt;= input.size())</div>
+<div class="line"><span class="lineno">  693</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  694</span>            <span class="keywordtype">int</span> len          = 0;</div>
+<div class="line"><span class="lineno">  695</span>            <span class="keywordtype">int</span> bits_to_read = zero_cnt + 1;</div>
+<div class="line"><span class="lineno">  696</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; bits_to_read; j++) {</div>
+<div class="line"><span class="lineno">  697</span>                len = (len &lt;&lt; 1) | (input[i] ? 1 : 0);</div>
+<div class="line"><span class="lineno">  698</span>                i++;</div>
+<div class="line"><span class="lineno">  699</span>            }</div>
+<div class="line"><span class="lineno">  700</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 0; k &lt; len; k++)</div>
+<div class="line"><span class="lineno">  701</span>                <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.push_back(flag);</div>
+<div class="line"><span class="lineno">  702</span>            flag = !flag;</div>
+<div class="line"><span class="lineno">  703</span>        }</div>
+<div class="line"><span class="lineno">  704</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  705</span>    }</div>
 <div class="ttc" id="aa00568_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00131">liverpool.cpp:131</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/dab/a00089_source.html#l00335">TEST()</a>.</p>
@@ -164,39 +164,39 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00645">645</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  645</span>                                            {</div>
-<div class="line"><span class="lineno">  646</span>        vector&lt;int&gt; len_list = {};</div>
-<div class="line"><span class="lineno">  647</span>        vector&lt;bool&gt; ans     = {};</div>
-<div class="line"><span class="lineno">  648</span>        <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">short</span><span class="keyword">&gt;</span>(input[0] ? 1 : 0));</div>
-<div class="line"><span class="lineno">  649</span>        <span class="comment">//len_list.push_back(input[0]);</span></div>
-<div class="line"><span class="lineno">  650</span>        <span class="keywordtype">bool</span> current    = input[0];</div>
-<div class="line"><span class="lineno">  651</span>        <span class="keywordtype">int</span> current_len = 0;</div>
-<div class="line"><span class="lineno">  652</span>        <span class="keywordflow">for</span>(<span class="keywordtype">bool</span> c: input) {</div>
-<div class="line"><span class="lineno">  653</span>            <span class="keywordflow">if</span>(c == current) {</div>
-<div class="line"><span class="lineno">  654</span>                current_len++;</div>
-<div class="line"><span class="lineno">  655</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  656</span>                len_list.push_back(current_len);</div>
-<div class="line"><span class="lineno">  657</span>                current_len = 1;</div>
-<div class="line"><span class="lineno">  658</span>                current     = c;</div>
-<div class="line"><span class="lineno">  659</span>            }</div>
-<div class="line"><span class="lineno">  660</span>        }</div>
-<div class="line"><span class="lineno">  661</span>        len_list.push_back(current_len);</div>
-<div class="line"><span class="lineno">  662</span> </div>
-<div class="line"><span class="lineno">  663</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> len: len_list) {</div>
-<div class="line"><span class="lineno">  664</span>            ostringstream oss = {};</div>
-<div class="line"><span class="lineno">  665</span>            vector&lt;bool&gt; seg  = {};</div>
-<div class="line"><span class="lineno">  666</span>            <span class="keywordtype">int</span> bits          = std::bit_width(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(len));</div>
-<div class="line"><span class="lineno">  667</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; bits - 1; i++) {</div>
-<div class="line"><span class="lineno">  668</span>                seg.push_back(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  669</span>            }</div>
-<div class="line"><span class="lineno">  670</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = bits - 1; i &gt;= 0; i--) {</div>
-<div class="line"><span class="lineno">  671</span>                seg.push_back((len &gt;&gt; i) &amp; 1);</div>
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00648">648</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  648</span>                                            {</div>
+<div class="line"><span class="lineno">  649</span>        vector&lt;int&gt; len_list = {};</div>
+<div class="line"><span class="lineno">  650</span>        vector&lt;bool&gt; ans     = {};</div>
+<div class="line"><span class="lineno">  651</span>        <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">short</span><span class="keyword">&gt;</span>(input[0] ? 1 : 0));</div>
+<div class="line"><span class="lineno">  652</span>        <span class="comment">//len_list.push_back(input[0]);</span></div>
+<div class="line"><span class="lineno">  653</span>        <span class="keywordtype">bool</span> current    = input[0];</div>
+<div class="line"><span class="lineno">  654</span>        <span class="keywordtype">int</span> current_len = 0;</div>
+<div class="line"><span class="lineno">  655</span>        <span class="keywordflow">for</span>(<span class="keywordtype">bool</span> c: input) {</div>
+<div class="line"><span class="lineno">  656</span>            <span class="keywordflow">if</span>(c == current) {</div>
+<div class="line"><span class="lineno">  657</span>                current_len++;</div>
+<div class="line"><span class="lineno">  658</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  659</span>                len_list.push_back(current_len);</div>
+<div class="line"><span class="lineno">  660</span>                current_len = 1;</div>
+<div class="line"><span class="lineno">  661</span>                current     = c;</div>
+<div class="line"><span class="lineno">  662</span>            }</div>
+<div class="line"><span class="lineno">  663</span>        }</div>
+<div class="line"><span class="lineno">  664</span>        len_list.push_back(current_len);</div>
+<div class="line"><span class="lineno">  665</span> </div>
+<div class="line"><span class="lineno">  666</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> len: len_list) {</div>
+<div class="line"><span class="lineno">  667</span>            ostringstream oss = {};</div>
+<div class="line"><span class="lineno">  668</span>            vector&lt;bool&gt; seg  = {};</div>
+<div class="line"><span class="lineno">  669</span>            <span class="keywordtype">int</span> bits          = std::bit_width(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(len));</div>
+<div class="line"><span class="lineno">  670</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; bits - 1; i++) {</div>
+<div class="line"><span class="lineno">  671</span>                seg.push_back(<span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">  672</span>            }</div>
-<div class="line"><span class="lineno">  673</span>            <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.insert(<a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.end(), seg.begin(), seg.end());</div>
-<div class="line"><span class="lineno">  674</span>        }</div>
-<div class="line"><span class="lineno">  675</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno">  676</span>    }</div>
+<div class="line"><span class="lineno">  673</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = bits - 1; i &gt;= 0; i--) {</div>
+<div class="line"><span class="lineno">  674</span>                seg.push_back((len &gt;&gt; i) &amp; 1);</div>
+<div class="line"><span class="lineno">  675</span>            }</div>
+<div class="line"><span class="lineno">  676</span>            <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.insert(<a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.end(), seg.begin(), seg.end());</div>
+<div class="line"><span class="lineno">  677</span>        }</div>
+<div class="line"><span class="lineno">  678</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  679</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/dab/a00089_source.html#l00335">TEST()</a>.</p>
 
@@ -241,10 +241,10 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  351</span>        <span class="comment">//cerr&lt;&lt;100*(compressed.size()/static_cast&lt;float&gt;(input.size()))&lt;&lt;&#39;%&#39;&lt;&lt;endl;</span></div>
 <div class="line"><span class="lineno">  352</span>        ASSERT_EQ(input, decompressed);</div>
 <div class="line"><span class="lineno">  353</span>    }</div>
-<div class="ttc" id="aa00731_html_a90e2af63f140b5681290d048b8b06e29"><div class="ttname"><a href="#a90e2af63f140b5681290d048b8b06e29">elias_gamma::decode</a></div><div class="ttdeci">vector&lt; bool &gt; decode(vector&lt; bool &gt; input)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00677">templates.cpp:677</a></div></div>
-<div class="ttc" id="aa00731_html_aeba99a7f51ba7dabc6c95bd5ba99ba0e"><div class="ttname"><a href="#aeba99a7f51ba7dabc6c95bd5ba99ba0e">elias_gamma::encode</a></div><div class="ttdeci">vector&lt; bool &gt; encode(vector&lt; bool &gt; input)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00645">templates.cpp:645</a></div></div>
+<div class="ttc" id="aa00731_html_a90e2af63f140b5681290d048b8b06e29"><div class="ttname"><a href="#a90e2af63f140b5681290d048b8b06e29">elias_gamma::decode</a></div><div class="ttdeci">vector&lt; bool &gt; decode(vector&lt; bool &gt; input)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00680">templates.cpp:680</a></div></div>
+<div class="ttc" id="aa00731_html_aeba99a7f51ba7dabc6c95bd5ba99ba0e"><div class="ttname"><a href="#aeba99a7f51ba7dabc6c95bd5ba99ba0e">elias_gamma::encode</a></div><div class="ttdeci">vector&lt; bool &gt; encode(vector&lt; bool &gt; input)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00648">templates.cpp:648</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00677">decode()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00645">encode()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00680">decode()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00648">encode()</a>.</p>
 
 </div>
 </div>
