@@ -138,4 +138,14 @@ namespace codeforces {
 			ASSERT_EQ("1 2 4 \n1 1 1 1 1 \n1 0 0 0 \n", ans);
 		}
 	}// namespace out_of_memory_error
+
+	namespace the_robotic_rush {
+		TEST(the_robotic_rush, case1) {
+			istringstream in("3\n2 1 3\n0 1\n2\nLRR\n2 3 3\n2 4\n1 3 5\nLRL\n3 2 3\n1 3 7\n9 6\nRRL\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2 2 1 \n0 0 0 \n3 2 2 \n", ans);
+		}
+	}// namespace the_robotic_rush
 }// namespace codeforces

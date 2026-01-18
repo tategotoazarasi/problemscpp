@@ -9,6 +9,7 @@
 #include <iosfwd>
 #include <iostream>
 #include <limits.h>
+#include <list>
 #include <queue>
 #include <stack>
 #include <unordered_map>
@@ -445,4 +446,82 @@ namespace codeforces {
 			return 0;
 		}
 	}// namespace out_of_memory_error
+
+	namespace the_robotic_rush {
+		int main(istream &cin, ostream &cout) {
+			int t;
+			cin >> t;
+			while(t--) {
+				int n, m, k;
+				cin >> n >> m >> k;
+				vector<int> a(n);
+				vector<int> b(m);
+				vector<node> nodes(n + m);
+				int nodes_i = 0;
+				string instructions;
+				for(int i = 0; i < n; i++) {
+					cin >> a[i];
+					nodes[nodes_i++] = node{true, a[i]};
+				}
+				for(int i = 0; i < m; i++) {
+					cin >> b[i];
+					nodes[nodes_i++] = node{false, b[i]};
+				}
+				ranges::sort(nodes, [](const node &a, const node &b) {
+					return a.pos < b.pos;
+				});
+				int lmax = INT_MIN;
+				int rmin = INT_MAX;
+				for(auto &node: nodes) {
+					if(!node.robot) {
+						lmax = max(lmax, node.pos);
+					}
+					node.lmax = lmax;
+				}
+				for(int i = nodes.size() - 1; i >= 0; i--) {
+					if(!nodes[i].robot) {
+						rmin = min(rmin, nodes[i].pos);
+					}
+					nodes[i].rmin = rmin;
+				}
+				cin >> instructions;
+				vector<int> r_max(k);
+				int rmax = 0;
+				lmax     = 0;
+				vector<int> l_max(k);
+				int pos = 0;
+				for(int i = 0; i < instructions.size(); i++) {
+					if(instructions[i] == 'L') {
+						pos--;
+					} else {
+						pos++;
+					}
+					rmax     = max(rmax, pos);
+					lmax     = max(lmax, -pos);
+					r_max[i] = rmax;
+					l_max[i] = lmax;
+				}
+				vector<int> drop(k, 0);
+				for(auto &node: nodes) {
+					if(node.robot) {
+						int dist_to_right = (node.rmin == INT_MAX) ? INT_MAX : (node.rmin - node.pos);
+						int dist_to_left  = (node.lmax == INT_MIN) ? INT_MAX : (node.pos - node.lmax);
+						auto r_exceed     = std::lower_bound(r_max.begin(), r_max.end(), dist_to_right);
+						auto l_exceed     = std::lower_bound(l_max.begin(), l_max.end(), dist_to_left);
+						int min_d         = min(std::distance(r_max.begin(), r_exceed), std::distance(l_max.begin(), l_exceed));
+						if(min_d < drop.size()) {
+							drop[min_d]++;
+						}
+					}
+				}
+				int current = n;
+				for(int i = 0; i < k; i++) {
+					current -= drop[i];
+					cout << current << ' ';
+				}
+				cout << endl;
+			}
+			return 0;
+		}
+	}// namespace the_robotic_rush
 }// namespace codeforces

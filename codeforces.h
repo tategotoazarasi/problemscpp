@@ -63,6 +63,16 @@ namespace codeforces {
 	namespace out_of_memory_error {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	namespace the_robotic_rush {
+		struct node {
+			bool robot;
+			int pos;
+			int lmax;
+			int rmin;
+		};
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}// namespace the_robotic_rush
 }// namespace codeforces
 
 #endif//PROBLEMSCPP_CODEFORCES_H
