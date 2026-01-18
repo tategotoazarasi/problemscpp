@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['fenwicktree_0',['FenwickTree',['../de/d1b/a02187.html',1,'leetcode::count_good_triplets_in_an_array']]],
-  ['fraction_1',['Fraction',['../d1/d2f/a03767.html',1,'']]],
-  ['frame_2',['frame',['../d1/d89/a03035.html',1,'leetcode::shortest_path_to_get_all_keys::frame'],['../dd/d3c/a03735.html',1,'pat::a::a1018::frame']]],
-  ['frame_5fcmp_3',['frame_cmp',['../d5/d8b/a03739.html',1,'pat::a::a1018']]],
-  ['friendtreenode_4',['FriendTreeNode',['../d1/dab/a01767.html',1,'leetcode::convert_bst_to_greater_tree']]]
+  ['fenwicktree_0',['FenwickTree',['../dc/d3c/a02188.html',1,'leetcode::count_good_triplets_in_an_array']]],
+  ['fraction_1',['Fraction',['../df/dcb/a03768.html',1,'']]],
+  ['frame_2',['frame',['../d5/d7f/a03036.html',1,'leetcode::shortest_path_to_get_all_keys::frame'],['../d7/d7e/a03736.html',1,'pat::a::a1018::frame']]],
+  ['frame_5fcmp_3',['frame_cmp',['../d3/d4a/a03740.html',1,'pat::a::a1018']]],
+  ['friendtreenode_4',['FriendTreeNode',['../de/dda/a01768.html',1,'leetcode::convert_bst_to_greater_tree']]]
 ];

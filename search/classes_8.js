@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['lfucache_0',['LFUCache',['../df/d48/a03071.html',1,'leetcode::lfu_cache']]],
-  ['listnode_1',['ListNode',['../d2/dca/a01683.html',1,'acwing::acwing3757::ListNode'],['../da/df7/a00739.html',1,'acwing::ListNode'],['../de/d0f/a01727.html',1,'leetcode::ListNode']]],
-  ['lrucache_2',['LRUCache',['../df/d4a/a03051.html',1,'leetcode::lru_cache']]]
+  ['lfucache_0',['LFUCache',['../dd/d7c/a03072.html',1,'leetcode::lfu_cache']]],
+  ['listnode_1',['ListNode',['../d2/d71/a01684.html',1,'acwing::acwing3757::ListNode'],['../dc/dce/a00740.html',1,'acwing::ListNode'],['../df/de0/a01728.html',1,'leetcode::ListNode']]],
+  ['lrucache_2',['LRUCache',['../d4/d15/a03052.html',1,'leetcode::lru_cache']]]
 ];
