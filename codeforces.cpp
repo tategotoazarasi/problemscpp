@@ -321,4 +321,58 @@ namespace codeforces {
 			return 0;
 		}
 	}// namespace rae_taylor_and_trees
+
+	namespace perfect_root {
+		int main(istream &cin, ostream &cout) {
+			int t;
+			cin >> t;
+			while(t--) {
+				int n;
+				cin >> n;
+				for(int i = 1; i <= n; i++) {
+					cout << i << ' ';
+				}
+				cout << endl;
+			}
+			return 0;
+		}
+	}// namespace perfect_root
+
+	namespace prefix_max {
+		int main(istream &cin, ostream &cout) {
+			int t;
+			cin >> t;
+			while(t--) {
+				int n;
+				cin >> n;
+				vector<int> vec(n);
+				for(int i = 0; i < n; i++) {
+					cin >> vec[i];
+				}
+				vector<int> pref_max(n);
+				int maximuim = vec[0];
+				for(int i = 0; i < n; i++) {
+					maximuim    = max(vec[i], maximuim);
+					pref_max[i] = maximuim;
+				}
+				vector<int> pref_sum(n);
+				int sum = 0;
+				for(int i = 0; i < n; i++) {
+					sum += pref_max[i];
+					pref_sum[i] = sum;
+				}
+				int ans = pref_sum[n - 1];
+				for(int i = 1; i < n; i++) {
+					int j = 0;
+					while(pref_max[j] < vec[i]) {
+						j++;
+					}
+					int val = vec[j] * j + (pref_sum[n - 1] - ((j - 1 >= 0) ? pref_sum[j - 1] : 0));
+					ans     = max(ans, val);
+				}
+				cout << ans << endl;
+			}
+			return 0;
+		}
+	}// namespace prefix_max
 }// namespace codeforces

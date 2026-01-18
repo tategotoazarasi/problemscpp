@@ -572,7 +572,7 @@ huffman *huffman::get_right() const { return right; }
 int huffman::get_weight() const { return weight; }
 
 bool operator<(const huffman &h1, const huffman &h2) {
-	return h1.get_weight() < h2.get_weight();
+	return h1.get_weight() > h2.get_weight();
 }
 
 pair<string, huffman *> huffman::compress(string input) {

@@ -324,6 +324,7 @@ TEST(huffman, case_rand) {
 	string input    = oss.str();
 	auto res        = huffman::compress(input);
 	string comp_str = res.first;
+	//cerr<< 100*static_cast<float>(comp_str.size())/(5*input.size())<<'%' << endl;
 	huffman *h      = res.second;
 	string output   = h->decompress(comp_str);
 	ASSERT_EQ(output, input);
@@ -346,6 +347,7 @@ namespace elias_gamma {
 		}
 		auto compressed   = encode(input);
 		auto decompressed = decode(compressed);
+		//cerr<<100*(compressed.size()/static_cast<float>(input.size()))<<'%'<<endl;
 		ASSERT_EQ(input, decompressed);
 	}
 }// namespace elias_gamma

@@ -48,6 +48,13 @@ namespace codeforces {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
 
+	namespace perfect_root {
+		int main(istream &, ostream &);
+	}
+
+	namespace prefix_max {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace codeforces
 
 #endif//PROBLEMSCPP_CODEFORCES_H

@@ -84,4 +84,38 @@ namespace codeforces {
 			ASSERT_EQ("Yes\nNo\nNo\nYes\nNo\nYes\nYes\nYes\nYes\n", ans);
 		}
 	}// namespace rae_taylor_and_trees
+
+	namespace prefix_max {
+		TEST(prefix_max, case1) {
+			istringstream in("1\n5\n2 1 4 5 3\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("25\n", ans);
+		}
+
+		TEST(prefix_max, case2) {
+			istringstream in("1\n2\n5 1\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("10\n", ans);
+		}
+
+		TEST(prefix_max, case3) {
+			istringstream in("1\n3\n3 2 1\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("9\n", ans);
+		}
+
+		TEST(prefix_max, case4) {
+			istringstream in("1\n2\n6 7\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("14\n", ans);
+		}
+	}// namespace prefix_max
 }// namespace codeforces
