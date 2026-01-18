@@ -410,4 +410,39 @@ namespace codeforces {
 			return 0;
 		}
 	}// namespace shifted_mex
+
+	namespace out_of_memory_error {
+		int main(istream &cin, ostream &cout) {
+			int t;
+			cin >> t;
+			while(t--) {
+				int n, m, h;
+				cin >> n >> m >> h;
+				vector<int> a(n + 1);
+				for(int i = 1; i <= n; i++) {
+					cin >> a[i];
+				}
+				unordered_map<int, int> um = {};
+				while(m--) {
+					int b, c;
+					cin >> b >> c;
+					if(!um.contains(b)) {
+						um[b] = a[b];
+					}
+					um[b] += c;
+					if(um[b] > h) {
+						um.clear();
+					}
+				}
+				for(const auto &[k, v]: um) {
+					a[k] = v;
+				}
+				for(int i = 1; i <= n; i++) {
+					cout << a[i] << ' ';
+				}
+				cout << endl;
+			}
+			return 0;
+		}
+	}// namespace out_of_memory_error
 }// namespace codeforces

@@ -59,6 +59,10 @@ namespace codeforces {
 	namespace shifted_mex {
 		int main(istream & /*cin*/, ostream & /*cout*/);
 	}
+
+	namespace out_of_memory_error {
+		int main(istream & /*cin*/, ostream & /*cout*/);
+	}
 }// namespace codeforces
 
 #endif//PROBLEMSCPP_CODEFORCES_H

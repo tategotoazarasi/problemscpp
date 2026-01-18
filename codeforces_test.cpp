@@ -128,4 +128,14 @@ namespace codeforces {
 			ASSERT_EQ("1\n4\n1\n3\n4\n3\n", ans);
 		}
 	}// namespace shifted_mex
+
+	namespace out_of_memory_error {
+		TEST(out_of_memory_error, case1) {
+			istringstream in("3\n3 4 5\n1 2 1\n1 4\n2 4\n3 3\n2 0\n5 3 1\n1 1 1 1 1\n1 1\n1 1\n2 1\n4 4 1\n1 0 0 0\n1 1\n4 4\n3 3\n4 4\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1 2 4 \n1 1 1 1 1 \n1 0 0 0 \n", ans);
+		}
+	}// namespace out_of_memory_error
 }// namespace codeforces
