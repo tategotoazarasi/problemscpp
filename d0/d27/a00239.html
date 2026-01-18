@@ -122,44 +122,44 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">codeforces.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l00287">287</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  287</span>                                              {</div>
-<div class="line"><span class="lineno">  288</span>            <span class="keywordtype">int</span> t;</div>
-<div class="line"><span class="lineno">  289</span>            cin &gt;&gt; t;</div>
-<div class="line"><span class="lineno">  290</span>            <span class="keywordflow">while</span>(t--) {</div>
-<div class="line"><span class="lineno">  291</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><span class="lineno">  292</span>                cin &gt;&gt; n;</div>
-<div class="line"><span class="lineno">  293</span>                vector&lt;int&gt; p(n);</div>
-<div class="line"><span class="lineno">  294</span>                vector&lt;int&gt; lmin(n, n);</div>
-<div class="line"><span class="lineno">  295</span>                vector&lt;int&gt; rmax(n, 1);</div>
-<div class="line"><span class="lineno">  296</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><span class="lineno">  297</span>                    cin &gt;&gt; p[i];</div>
-<div class="line"><span class="lineno">  298</span>                }</div>
-<div class="line"><span class="lineno">  299</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; n; i++) {</div>
-<div class="line"><span class="lineno">  300</span>                    lmin[i] = min(lmin[i - 1], p[i - 1]);</div>
-<div class="line"><span class="lineno">  301</span>                }</div>
-<div class="line"><span class="lineno">  302</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = n - 2; i &gt;= 0; i--) {</div>
-<div class="line"><span class="lineno">  303</span>                    rmax[i] = max(rmax[i + 1], p[i + 1]);</div>
-<div class="line"><span class="lineno">  304</span>                }</div>
-<div class="line"><span class="lineno">  305</span>                <span class="keywordflow">if</span>(p[0] &gt; rmax[0] || p[n - 1] &lt; lmin[n - 1]) {</div>
-<div class="line"><span class="lineno">  306</span>                    cout &lt;&lt; <span class="stringliteral">&quot;No&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  307</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  308</span>                }</div>
-<div class="line"><span class="lineno">  309</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  310</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; <a class="code hl_variable" href="../../d6/d06/a00572.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> - 1; i++) {</div>
-<div class="line"><span class="lineno">  311</span>                    <span class="keywordflow">if</span>(lmin[i] &gt; rmax[i]) {</div>
-<div class="line"><span class="lineno">  312</span>                        cout &lt;&lt; <span class="stringliteral">&quot;No&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  313</span>                        flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  314</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  315</span>                    }</div>
-<div class="line"><span class="lineno">  316</span>                }</div>
-<div class="line"><span class="lineno">  317</span>                <span class="keywordflow">if</span>(flag) {</div>
-<div class="line"><span class="lineno">  318</span>                    cout &lt;&lt; <span class="stringliteral">&quot;Yes&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  319</span>                }</div>
-<div class="line"><span class="lineno">  320</span>            }</div>
-<div class="line"><span class="lineno">  321</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  322</span>        }</div>
-<div class="ttc" id="aa00572_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../d6/d06/a00572.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">codeforces.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l00289">289</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  289</span>                                              {</div>
+<div class="line"><span class="lineno">  290</span>            <span class="keywordtype">int</span> t;</div>
+<div class="line"><span class="lineno">  291</span>            cin &gt;&gt; t;</div>
+<div class="line"><span class="lineno">  292</span>            <span class="keywordflow">while</span>(t--) {</div>
+<div class="line"><span class="lineno">  293</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><span class="lineno">  294</span>                cin &gt;&gt; n;</div>
+<div class="line"><span class="lineno">  295</span>                vector&lt;int&gt; p(n);</div>
+<div class="line"><span class="lineno">  296</span>                vector&lt;int&gt; lmin(n, n);</div>
+<div class="line"><span class="lineno">  297</span>                vector&lt;int&gt; rmax(n, 1);</div>
+<div class="line"><span class="lineno">  298</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><span class="lineno">  299</span>                    cin &gt;&gt; p[i];</div>
+<div class="line"><span class="lineno">  300</span>                }</div>
+<div class="line"><span class="lineno">  301</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; n; i++) {</div>
+<div class="line"><span class="lineno">  302</span>                    lmin[i] = min(lmin[i - 1], p[i - 1]);</div>
+<div class="line"><span class="lineno">  303</span>                }</div>
+<div class="line"><span class="lineno">  304</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = n - 2; i &gt;= 0; i--) {</div>
+<div class="line"><span class="lineno">  305</span>                    rmax[i] = max(rmax[i + 1], p[i + 1]);</div>
+<div class="line"><span class="lineno">  306</span>                }</div>
+<div class="line"><span class="lineno">  307</span>                <span class="keywordflow">if</span>(p[0] &gt; rmax[0] || p[n - 1] &lt; lmin[n - 1]) {</div>
+<div class="line"><span class="lineno">  308</span>                    cout &lt;&lt; <span class="stringliteral">&quot;No&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  309</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  310</span>                }</div>
+<div class="line"><span class="lineno">  311</span>                <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  312</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> - 1; i++) {</div>
+<div class="line"><span class="lineno">  313</span>                    <span class="keywordflow">if</span>(lmin[i] &gt; rmax[i]) {</div>
+<div class="line"><span class="lineno">  314</span>                        cout &lt;&lt; <span class="stringliteral">&quot;No&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  315</span>                        flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  316</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  317</span>                    }</div>
+<div class="line"><span class="lineno">  318</span>                }</div>
+<div class="line"><span class="lineno">  319</span>                <span class="keywordflow">if</span>(flag) {</div>
+<div class="line"><span class="lineno">  320</span>                    cout &lt;&lt; <span class="stringliteral">&quot;Yes&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  321</span>                }</div>
+<div class="line"><span class="lineno">  322</span>            }</div>
+<div class="line"><span class="lineno">  323</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  324</span>        }</div>
+<div class="ttc" id="aa00575_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../d2/de7/a00014_source.html#l00079">TEST()</a>.</p>
 
@@ -192,9 +192,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">   83</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><span class="lineno">   84</span>            ASSERT_EQ(<span class="stringliteral">&quot;Yes\nNo\nNo\nYes\nNo\nYes\nYes\nYes\nYes\n&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">   85</span>        }</div>
-<div class="ttc" id="aa00239_html_ab5292da1db5430991a6106c333535830"><div class="ttname"><a href="#ab5292da1db5430991a6106c333535830">codeforces::rae_taylor_and_trees::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00287">codeforces.cpp:287</a></div></div>
+<div class="ttc" id="aa00239_html_ab5292da1db5430991a6106c333535830"><div class="ttname"><a href="#ab5292da1db5430991a6106c333535830">codeforces::rae_taylor_and_trees::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00289">codeforces.cpp:289</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d6/d5b/a00026_source.html#l00287">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d6/d5b/a00026_source.html#l00289">main()</a>.</p>
 
 </div>
 </div>

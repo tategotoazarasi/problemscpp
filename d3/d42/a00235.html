@@ -124,17 +124,17 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">codeforces.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l00144">144</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  144</span>                                               {</div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">while</span>(a2) {</div>
-<div class="line"><span class="lineno">  146</span>                uint64_t temp = a2;</div>
-<div class="line"><span class="lineno">  147</span>                a2            = a1 % a2;</div>
-<div class="line"><span class="lineno">  148</span>                a1            = temp;</div>
-<div class="line"><span class="lineno">  149</span>            }</div>
-<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">return</span> a1;</div>
-<div class="line"><span class="lineno">  151</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">codeforces.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l00146">146</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>                                               {</div>
+<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">while</span>(a2) {</div>
+<div class="line"><span class="lineno">  148</span>                uint64_t temp = a2;</div>
+<div class="line"><span class="lineno">  149</span>                a2            = a1 % a2;</div>
+<div class="line"><span class="lineno">  150</span>                a1            = temp;</div>
+<div class="line"><span class="lineno">  151</span>            }</div>
+<div class="line"><span class="lineno">  152</span>            <span class="keywordflow">return</span> a1;</div>
+<div class="line"><span class="lineno">  153</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l00153">main()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l00155">main()</a>.</p>
 
 </div>
 </div>
@@ -157,37 +157,37 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">codeforces.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l00153">153</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>                                              {</div>
-<div class="line"><span class="lineno">  154</span>            <span class="keyword">const</span> uint64_t N = 1000000000000000000;</div>
-<div class="line"><span class="lineno">  155</span>            <span class="keywordtype">int</span> t;</div>
-<div class="line"><span class="lineno">  156</span>            cin &gt;&gt; t;</div>
-<div class="line"><span class="lineno">  157</span>            <span class="keywordflow">while</span>(t--) {</div>
-<div class="line"><span class="lineno">  158</span>                <span class="keywordtype">int</span> n;</div>
-<div class="line"><span class="lineno">  159</span>                cin &gt;&gt; n;</div>
-<div class="line"><span class="lineno">  160</span>                uint64_t smallest = -1;</div>
-<div class="line"><span class="lineno">  161</span>                <span class="keywordflow">while</span>(n--) {</div>
-<div class="line"><span class="lineno">  162</span>                    uint64_t a;</div>
-<div class="line"><span class="lineno">  163</span>                    cin &gt;&gt; a;</div>
-<div class="line"><span class="lineno">  164</span>                    <span class="keywordflow">for</span>(uint64_t x = 2; x &lt; smallest &amp;&amp; x &lt;= N; x++) {</div>
-<div class="line"><span class="lineno">  165</span>                        <span class="keywordflow">if</span>(<a class="code hl_function" href="#a5638a343b4e5abe5dc49019ea3bf19fc">gcd</a>(x, a) == 1) {</div>
-<div class="line"><span class="lineno">  166</span>                            smallest = x;</div>
-<div class="line"><span class="lineno">  167</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  168</span>                        }</div>
-<div class="line"><span class="lineno">  169</span>                    }</div>
-<div class="line"><span class="lineno">  170</span>                }</div>
-<div class="line"><span class="lineno">  171</span>                <span class="keywordflow">if</span>(smallest == -1) {</div>
-<div class="line"><span class="lineno">  172</span>                    cout &lt;&lt; -1;</div>
-<div class="line"><span class="lineno">  173</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  174</span>                    cout &lt;&lt; smallest;</div>
-<div class="line"><span class="lineno">  175</span>                }</div>
-<div class="line"><span class="lineno">  176</span>                cout &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  177</span>            }</div>
-<div class="line"><span class="lineno">  178</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  179</span>        }</div>
-<div class="ttc" id="aa00235_html_a5638a343b4e5abe5dc49019ea3bf19fc"><div class="ttname"><a href="#a5638a343b4e5abe5dc49019ea3bf19fc">codeforces::yet_another_array_problem::gcd</a></div><div class="ttdeci">uint64_t gcd(uint64_t a1, uint64_t a2)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00144">codeforces.cpp:144</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d6/d5b/a00026_source.html">codeforces.cpp</a> 第 <a class="el" href="../../d6/d5b/a00026_source.html#l00155">155</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  155</span>                                              {</div>
+<div class="line"><span class="lineno">  156</span>            <span class="keyword">const</span> uint64_t N = 1000000000000000000;</div>
+<div class="line"><span class="lineno">  157</span>            <span class="keywordtype">int</span> t;</div>
+<div class="line"><span class="lineno">  158</span>            cin &gt;&gt; t;</div>
+<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">while</span>(t--) {</div>
+<div class="line"><span class="lineno">  160</span>                <span class="keywordtype">int</span> n;</div>
+<div class="line"><span class="lineno">  161</span>                cin &gt;&gt; n;</div>
+<div class="line"><span class="lineno">  162</span>                uint64_t smallest = -1;</div>
+<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">while</span>(n--) {</div>
+<div class="line"><span class="lineno">  164</span>                    uint64_t a;</div>
+<div class="line"><span class="lineno">  165</span>                    cin &gt;&gt; a;</div>
+<div class="line"><span class="lineno">  166</span>                    <span class="keywordflow">for</span>(uint64_t x = 2; x &lt; smallest &amp;&amp; x &lt;= N; x++) {</div>
+<div class="line"><span class="lineno">  167</span>                        <span class="keywordflow">if</span>(<a class="code hl_function" href="#a5638a343b4e5abe5dc49019ea3bf19fc">gcd</a>(x, a) == 1) {</div>
+<div class="line"><span class="lineno">  168</span>                            smallest = x;</div>
+<div class="line"><span class="lineno">  169</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  170</span>                        }</div>
+<div class="line"><span class="lineno">  171</span>                    }</div>
+<div class="line"><span class="lineno">  172</span>                }</div>
+<div class="line"><span class="lineno">  173</span>                <span class="keywordflow">if</span>(smallest == -1) {</div>
+<div class="line"><span class="lineno">  174</span>                    cout &lt;&lt; -1;</div>
+<div class="line"><span class="lineno">  175</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  176</span>                    cout &lt;&lt; smallest;</div>
+<div class="line"><span class="lineno">  177</span>                }</div>
+<div class="line"><span class="lineno">  178</span>                cout &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  179</span>            }</div>
+<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  181</span>        }</div>
+<div class="ttc" id="aa00235_html_a5638a343b4e5abe5dc49019ea3bf19fc"><div class="ttname"><a href="#a5638a343b4e5abe5dc49019ea3bf19fc">codeforces::yet_another_array_problem::gcd</a></div><div class="ttdeci">uint64_t gcd(uint64_t a1, uint64_t a2)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00146">codeforces.cpp:146</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d6/d5b/a00026_source.html#l00144">gcd()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d6/d5b/a00026_source.html#l00146">gcd()</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="../../d2/de7/a00014_source.html#l00039">TEST()</a>.</p>
 
@@ -220,9 +220,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">   43</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><span class="lineno">   44</span>            ASSERT_EQ(<span class="stringliteral">&quot;2\n5\n5\n3\n&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">   45</span>        }</div>
-<div class="ttc" id="aa00235_html_a69b0a251ff98cf156a79071bb0a5a523"><div class="ttname"><a href="#a69b0a251ff98cf156a79071bb0a5a523">codeforces::yet_another_array_problem::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00153">codeforces.cpp:153</a></div></div>
+<div class="ttc" id="aa00235_html_a69b0a251ff98cf156a79071bb0a5a523"><div class="ttname"><a href="#a69b0a251ff98cf156a79071bb0a5a523">codeforces::yet_another_array_problem::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00155">codeforces.cpp:155</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d6/d5b/a00026_source.html#l00153">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d6/d5b/a00026_source.html#l00155">main()</a>.</p>
 
 </div>
 </div>
