@@ -1,6 +1,7 @@
 #include "templates.h"
 #include <cstring>
 #include <numeric>
+#include <queue>
 #include <sstream>
 #include <unordered_set>
 
@@ -560,4 +561,81 @@ Matrix Matrix::identity(int n) {
 		ret.mat[i][i] = 1;
 	}
 	return ret;
+}
+
+char huffman::get_c() const { return c; }
+
+huffman *huffman::get_left() const { return left; }
+
+huffman *huffman::get_right() const { return right; }
+
+int huffman::get_weight() const { return weight; }
+
+bool operator<(const huffman &h1, const huffman &h2) {
+	return h1.get_weight() < h2.get_weight();
+}
+
+pair<string, huffman *> huffman::compress(string input) {
+	int counter[26] = {};
+	memset(counter, 0, sizeof(counter));
+	for(char c: input) {
+		counter[c - 'a']++;
+	}
+	priority_queue<huffman *, vector<huffman *>, huffman_ptr_comp> pq = {};
+	for(int i = 0; i < 26; i++) {
+		pq.push(new huffman(i + 'a', nullptr, nullptr, counter[i]));
+	}
+	while(pq.size() >= 2) {
+		huffman *h1 = pq.top();
+		pq.pop();
+		huffman *h2 = pq.top();
+		pq.pop();
+		auto *n = new huffman('\0', h1, h2, h1->get_weight() + h2->get_weight());
+		pq.push(n);
+	}
+	huffman *top = pq.top();
+	pq.pop();
+	huffman::gen_table("", top, top);
+	ostringstream ans = {};
+	for(char c: input) {
+		ans << top->table[c];
+	}
+	return make_pair(ans.str(), top);
+}
+
+void huffman::gen_table(string str, huffman *current, huffman *top) {
+	if(current->left == nullptr && current->right == nullptr) {
+		top->table[current->get_c()] = str;
+	}
+	if(current->left != nullptr) {
+		gen_table(str + '0', current->left, top);
+	}
+	if(current->right != nullptr) {
+		gen_table(str + '1', current->right, top);
+	}
+}
+
+string huffman::decompress(string input) {
+	vector<char> ans = {};
+	huffman *current = this;
+	for(char ch: input) {
+		if(ch == '0') {
+			current = current->left;
+		} else {
+			current = current->right;
+		}
+		if(current->get_left() == nullptr && current->get_right() == nullptr) {
+			ans.push_back(current->get_c());
+			current = this;
+		}
+	}
+	ostringstream oss = {};
+	for(char ch: ans) {
+		oss << ch;
+	}
+	return oss.str();
+}
+
+bool huffman_ptr_comp::operator()(const huffman *a, const huffman *b) const {
+	return a->get_weight() < b->get_weight();
 }

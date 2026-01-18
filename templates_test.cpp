@@ -1,5 +1,7 @@
 #include "templates.h"
 #include "gtest/gtest.h"
+#include <queue>
+#include <random>
 #include <sstream>
 
 using namespace std;
@@ -282,4 +284,47 @@ TEST(AVLNodeTest, DeeperInsertionAndFind) {
 	ASSERT_EQ(root.find(10), &node10);
 	ASSERT_EQ(root.find(35), &node35);
 	ASSERT_EQ(root.find(15), &node15);
+}
+
+std::vector<int> huffman::generate_bounded_normal_ints(int n) {
+	static std::random_device rd;
+	static std::mt19937 gen(rd());
+
+	std::uniform_int_distribution<int> mu_dist(0, 25);
+	double mean = mu_dist(gen);
+
+	double dist_to_closest_edge = std::min(mean - 0.0, 25.0 - mean);
+	double stddev               = std::max(dist_to_closest_edge * 3, 1.0);
+
+	std::normal_distribution<double> norm_dist(mean, stddev);
+	std::vector<int> results;
+	results.reserve(n);
+
+	for(int i = 0; i < n; ++i) {
+		double val;
+		do {
+			val = norm_dist(gen);
+		} while(val < 0 || val > 25);
+
+		results.push_back(static_cast<int>(std::round(val)));
+	}
+	return results;
+}
+
+TEST(huffman, case_rand) {
+	std::random_device rd;
+	std::mt19937 gen(rd());
+	std::uniform_int_distribution<> dis(512, 1024);
+	int len           = dis(gen);
+	auto nums         = huffman::generate_bounded_normal_ints(len);
+	ostringstream oss = {};
+	for(int num: nums) {
+		oss << static_cast<char>(num + 'a');
+	}
+	string input    = oss.str();
+	auto res        = huffman::compress(input);
+	string comp_str = res.first;
+	huffman *h      = res.second;
+	string output   = h->decompress(comp_str);
+	ASSERT_EQ(output, input);
 }

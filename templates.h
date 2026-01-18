@@ -1,6 +1,7 @@
 #pragma once
 #include <array>
 #include <string>
+#include <unordered_map>
 #include <vector>
 
 using namespace std;
@@ -208,4 +209,29 @@ public:
 	void balance() {
 		//TODO
 	}
+};
+
+class huffman {
+private:
+	char c;
+	huffman *left;
+	huffman *right;
+	int weight;
+	unordered_map<char, string> table = {};
+	static void gen_table(string str, huffman *current, huffman *top);
+
+public:
+	huffman(char c, huffman *left, huffman *right, int weight): c(c), left(left), right(right), weight(weight) {}
+	char get_c() const;
+	huffman *get_left() const;
+	huffman *get_right() const;
+	int get_weight() const;
+	bool operator<(const huffman &h) const;
+	static std::vector<int> generate_bounded_normal_ints(int n);
+	static pair<string, huffman *> compress(string input);
+	string decompress(string input);
+};
+
+struct huffman_ptr_comp {
+	bool operator()(const huffman *a, const huffman *b) const;
 };
