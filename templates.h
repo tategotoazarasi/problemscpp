@@ -255,3 +255,8 @@ namespace bwt {
 	string encode(string input);
 	string decode(string input);
 }// namespace bwt
+
+namespace hamming {
+	vector<bool> encode(vector<bool> input);
+	vector<bool> correct(vector<bool> input);
+}// namespace hamming

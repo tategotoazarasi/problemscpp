@@ -431,3 +431,23 @@ namespace bwt {
 		ASSERT_EQ(input, decompressed);
 	}
 }// namespace bwt
+
+namespace hamming {
+	TEST(hamming, case_rand) {
+		std::random_device rd;
+		std::mt19937 gen(rd());
+		std::uniform_int_distribution<> dis_len(64, 128);
+		vector<bool> input;
+		int len = dis_len(gen);
+		std::uniform_int_distribution<> index(0, len - 1);
+		for(int i = 0; i < len; i++) {
+			input.push_back(dis_len(gen) % 2);
+		}
+		auto ham       = encode(input);
+		int i          = index(gen);
+		auto dirty     = ham;
+		dirty[i]       = !dirty[i];
+		auto corrected = correct(dirty);
+		ASSERT_EQ(ham, corrected);
+	}
+}// namespace hamming

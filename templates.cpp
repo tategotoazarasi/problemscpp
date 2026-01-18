@@ -850,3 +850,40 @@ namespace bwt {
 		return oss.str();
 	}
 }// namespace bwt
+
+namespace hamming {
+	vector<bool> encode(vector<bool> input) {
+		vector<bool> ans = {};
+		for(int i = 0; i < input.size();) {
+			unsigned int index = ans.size() + 1;
+			if(std::popcount(index) == 1) {
+				ans.push_back(false);
+			} else {
+				ans.push_back(input[i]);
+				i++;
+			}
+		}
+		for(int i = 0; i < ans.size(); i++) {
+			unsigned int j = i + 1;
+			if(std::popcount(j) != 1) {
+				for(int k = 0; (1 << k) - 1 < ans.size(); k++) {
+					if((i + 1) & (1 << k)) {
+						ans[(1 << k) - 1] = ans[(1 << k) - 1] ^ ans[i];
+					}
+				}
+			}
+		}
+		return ans;
+	}
+	vector<bool> correct(vector<bool> input) {
+		unsigned int error_i = 0;
+		for(unsigned int i = 0; i < input.size(); i++) {
+			unsigned int real_i = i + 1;
+			if(input[i] == 1) {
+				error_i ^= real_i;
+			}
+		}
+		input[error_i - 1] = !input[error_i - 1];
+		return input;
+	}
+}// namespace hamming
