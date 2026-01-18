@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::number_of_ways_to_select_buildings::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,19 +84,101 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d6/d22/a00245.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d3/d29/a00419.html">sum_of_scores_of_built_strings</a></li><li class="navelem"><a class="el" href="../../d4/db4/a02517.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d6/d22/a00245.html">leetcode</a></li><li class="navelem"><a class="el" href="../../de/df7/a00418.html">number_of_ways_to_select_buildings</a></li><li class="navelem"><a class="el" href="../../df/d9b/a02514.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::sum_of_scores_of_built_strings::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d0/d01/a02511.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::number_of_ways_to_select_buildings::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../d4/db4/a02517.html">leetcode::sum_of_scores_of_built_strings::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d4/db4/a02517.html#a7d5a5a0c7fec6234aa5d10f2b5456b76">sumScores</a>(string s)</td><td class="entry"><a class="el" href="../../d4/db4/a02517.html">leetcode::sum_of_scores_of_built_strings::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a6d02679b8e8224e22264303a7094909b" id="r_a6d02679b8e8224e22264303a7094909b"><td class="memItemLeft" align="right" valign="top">static long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d02679b8e8224e22264303a7094909b">numberOfWays</a> (string s)</td></tr>
+<tr class="separator:a6d02679b8e8224e22264303a7094909b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l02017">2017</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a6d02679b8e8224e22264303a7094909b" name="a6d02679b8e8224e22264303a7094909b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d02679b8e8224e22264303a7094909b">&#9670;&#160;</a></span>numberOfWays()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long long leetcode::number_of_ways_to_select_buildings::Solution::numberOfWays </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l05460">5460</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5460</span>                                                 {</div>
+<div class="line"><span class="lineno"> 5461</span>            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> = s.length();</div>
+<div class="line"><span class="lineno"> 5462</span>            vector&lt;unsigned int&gt; prev0(n, 0);</div>
+<div class="line"><span class="lineno"> 5463</span>            vector&lt;unsigned int&gt; prev1(n, 0);</div>
+<div class="line"><span class="lineno"> 5464</span>            vector&lt;unsigned int&gt; post0(n, 0);</div>
+<div class="line"><span class="lineno"> 5465</span>            vector&lt;unsigned int&gt; post1(n, 0);</div>
+<div class="line"><span class="lineno"> 5466</span>            <span class="keywordtype">unsigned</span> current0 = 0;</div>
+<div class="line"><span class="lineno"> 5467</span>            <span class="keywordtype">unsigned</span> current1 = 0;</div>
+<div class="line"><span class="lineno"> 5468</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno"> 5469</span>                prev0[i] = current0;</div>
+<div class="line"><span class="lineno"> 5470</span>                prev1[i] = current1;</div>
+<div class="line"><span class="lineno"> 5471</span>                <span class="keywordflow">if</span>(s[i] == <span class="charliteral">&#39;0&#39;</span>) {</div>
+<div class="line"><span class="lineno"> 5472</span>                    current0++;</div>
+<div class="line"><span class="lineno"> 5473</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 5474</span>                    current1++;</div>
+<div class="line"><span class="lineno"> 5475</span>                }</div>
+<div class="line"><span class="lineno"> 5476</span>            }</div>
+<div class="line"><span class="lineno"> 5477</span>            current0 = 0;</div>
+<div class="line"><span class="lineno"> 5478</span>            current1 = 0;</div>
+<div class="line"><span class="lineno"> 5479</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = n - 1; i &gt;= 0; i--) {</div>
+<div class="line"><span class="lineno"> 5480</span>                post0[i] = current0;</div>
+<div class="line"><span class="lineno"> 5481</span>                post1[i] = current1;</div>
+<div class="line"><span class="lineno"> 5482</span>                <span class="keywordflow">if</span>(s[i] == <span class="charliteral">&#39;0&#39;</span>) {</div>
+<div class="line"><span class="lineno"> 5483</span>                    current0++;</div>
+<div class="line"><span class="lineno"> 5484</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 5485</span>                    current1++;</div>
+<div class="line"><span class="lineno"> 5486</span>                }</div>
+<div class="line"><span class="lineno"> 5487</span>            }</div>
+<div class="line"><span class="lineno"> 5488</span>            <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = 0;</div>
+<div class="line"><span class="lineno"> 5489</span>            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno"> 5490</span>                <span class="keywordflow">if</span>(s[i] == <span class="charliteral">&#39;0&#39;</span>) {</div>
+<div class="line"><span class="lineno"> 5491</span>                    <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> += <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(prev1[i]) * post1[i];</div>
+<div class="line"><span class="lineno"> 5492</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 5493</span>                    <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> += <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(prev0[i]) * post0[i];</div>
+<div class="line"><span class="lineno"> 5494</span>                }</div>
+<div class="line"><span class="lineno"> 5495</span>            }</div>
+<div class="line"><span class="lineno"> 5496</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno"> 5497</span>        }</div>
+<div class="ttc" id="aa00568_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00131">liverpool.cpp:131</a></div></div>
+<div class="ttc" id="aa00575_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
