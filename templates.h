@@ -245,3 +245,8 @@ namespace lzw {
 	pair<vector<int>, unordered_map<int, string>> encode(string input);
 	string decode(vector<int> input, unordered_map<int, string> dict);
 }// namespace lzw
+
+namespace mtf {
+	vector<int> encode(string input);
+	string decode(vector<int> input);
+}// namespace mtf

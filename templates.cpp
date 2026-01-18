@@ -1,5 +1,6 @@
 #include "templates.h"
 #include <cstring>
+#include <list>
 #include <numeric>
 #include <queue>
 #include <sstream>
@@ -748,3 +749,40 @@ namespace lzw {
 		return oss.str();
 	}
 }// namespace lzw
+
+namespace mtf {
+	vector<int> encode(string input) {
+		list<char> dict = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'};
+		int i           = 0;
+		vector<int> ans(input.size());
+		for(char c: input) {
+			int index = -1;
+			for(auto it = dict.begin(); it != dict.end(); ++it) {
+				if(*it == c) {
+					index    = std::distance(dict.begin(), it);
+					ans[i++] = index;
+					dict.erase(it);
+					break;
+				}
+			}
+			dict.push_front(c);
+		}
+		return ans;
+	}
+	string decode(vector<int> input) {
+		list<char> dict   = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'};
+		ostringstream ans = {};
+		for(int i: input) {
+			auto it = dict.begin();
+			char c;
+			for(int j = 0; j < i; j++) {
+				++it;
+			}
+			c = *it;
+			dict.erase(it);
+			ans << c;
+			dict.push_front(c);
+		}
+		return ans.str();
+	}
+}// namespace mtf
