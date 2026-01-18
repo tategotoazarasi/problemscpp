@@ -926,3 +926,46 @@ namespace dfa {
 		return -1;
 	}
 }// namespace dfa
+
+namespace kmp {
+	vector<int> failure_link(string pattern) {
+		vector<int> fail(pattern.size());
+		int m   = pattern.size();
+		fail[0] = 0;
+		int x   = 0;
+		for(int q = 1; q < m; q++) {
+			fail[q] = x;
+			while(pattern[x] != pattern[q]) {
+				if(x == 0) {
+					x = -1;
+					break;
+				}
+				x = fail[x];
+			}
+			x = x + 1;
+		}
+		return fail;
+	}
+
+	int str_match(string str, string pattern) {
+		auto fail = failure_link(pattern);
+		int i     = 0;
+		int j     = 0;
+		while(i < str.size()) {
+			if(str[i] == pattern[j]) {
+				i++;
+				j++;
+				if(j == pattern.size()) {
+					return i - j;
+				}
+			} else {
+				if(j >= 1) {
+					j = fail[j];
+				} else {
+					i++;
+				}
+			}
+		}
+		return -1;
+	}
+}// namespace kmp

@@ -265,3 +265,8 @@ namespace dfa {
 	vector<unordered_map<char, int>> construct_dfa(string pattern);
 	int str_match(string str, string pattern);
 }// namespace dfa
+
+namespace kmp {
+	vector<int> failure_link(string pattern);
+	int str_match(string str, string pattern);
+}// namespace kmp
