@@ -101,13 +101,13 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d9a/a03668.html">p_stu_comp</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d83/a03669.html">p_stu_comp</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4c/a03664.html">room</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/df9/a03665.html">room</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/df6/a03672.html">room_cnt_comp</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/da3/a03673.html">room_cnt_comp</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d99/a03660.html">student</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dce/a03661.html">student</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -148,7 +148,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno"> 3332</span>                unordered_map&lt;char, unordered_set&lt;student *&gt;&gt; levels;</div>
 <div class="line"><span class="lineno"> 3333</span>                unordered_map&lt;string, unordered_map&lt;string, int&gt;&gt; dates;</div>
 <div class="line"><span class="lineno"> 3334</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><span class="lineno"> 3335</span>                    <span class="keyword">auto</span> *stu = <span class="keyword">new</span> <a class="code hl_struct" href="../../d0/d99/a03660.html">student</a>();</div>
+<div class="line"><span class="lineno"> 3335</span>                    <span class="keyword">auto</span> *stu = <span class="keyword">new</span> <a class="code hl_struct" href="../../d9/dce/a03661.html">student</a>();</div>
 <div class="line"><span class="lineno"> 3336</span>                    cin &gt;&gt; stu-&gt;id &gt;&gt; stu-&gt;grade;</div>
 <div class="line"><span class="lineno"> 3337</span>                    stu-&gt;level = stu-&gt;id[0];</div>
 <div class="line"><span class="lineno"> 3338</span>                    stu-&gt;room  = stu-&gt;id.substr(1, 3);</div>
@@ -199,7 +199,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno"> 3383</span>                        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;room_cnt: dates[date]) {</div>
 <div class="line"><span class="lineno"> 3384</span>                            <a class="code hl_variable" href="../../dc/ddc/a00727.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.emplace_back(room_cnt);</div>
 <div class="line"><span class="lineno"> 3385</span>                        }</div>
-<div class="line"><span class="lineno"> 3386</span>                        sort(<a class="code hl_variable" href="../../dc/ddc/a00727.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.begin(), <a class="code hl_variable" href="../../dc/ddc/a00727.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.end(), <a class="code hl_struct" href="../../d7/df6/a03672.html">room_cnt_comp</a>());</div>
+<div class="line"><span class="lineno"> 3386</span>                        sort(<a class="code hl_variable" href="../../dc/ddc/a00727.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.begin(), <a class="code hl_variable" href="../../dc/ddc/a00727.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.end(), <a class="code hl_struct" href="../../d9/da3/a03673.html">room_cnt_comp</a>());</div>
 <div class="line"><span class="lineno"> 3387</span>                        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[<span class="keywordtype">id</span>, cnt]: vec) {</div>
 <div class="line"><span class="lineno"> 3388</span>                            cout &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; cnt &lt;&lt; endl;</div>
 <div class="line"><span class="lineno"> 3389</span>                        }</div>
@@ -212,8 +212,8 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno"> 3396</span>                <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno"> 3397</span>            }</div>
 <div class="ttc" id="aa00727_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../dc/ddc/a00727.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>定义</b> <a href="../../d1/d09/a00077_source.html#l05095">pat.cpp:5095</a></div></div>
-<div class="ttc" id="aa03660_html"><div class="ttname"><a href="../../d0/d99/a03660.html">pat::b::b1095::student</a></div><div class="ttdef"><b>定义</b> <a href="../../d5/df9/a00044_source.html#l00599">pat.h:599</a></div></div>
-<div class="ttc" id="aa03672_html"><div class="ttname"><a href="../../d7/df6/a03672.html">pat::b::b1095::room_cnt_comp</a></div><div class="ttdef"><b>定义</b> <a href="../../d5/df9/a00044_source.html#l00618">pat.h:618</a></div></div>
+<div class="ttc" id="aa03661_html"><div class="ttname"><a href="../../d9/dce/a03661.html">pat::b::b1095::student</a></div><div class="ttdef"><b>定义</b> <a href="../../d5/df9/a00044_source.html#l00599">pat.h:599</a></div></div>
+<div class="ttc" id="aa03673_html"><div class="ttname"><a href="../../d9/da3/a03673.html">pat::b::b1095::room_cnt_comp</a></div><div class="ttdef"><b>定义</b> <a href="../../d5/df9/a00044_source.html#l00618">pat.h:618</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../db/db6/a00074_source.html#l01645">TEST()</a>.</p>
 

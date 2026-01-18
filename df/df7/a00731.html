@@ -145,7 +145,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  701</span>    }</div>
 <div class="ttc" id="aa00568_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00131">liverpool.cpp:131</a></div></div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../db/dab/a00089_source.html#l00334">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../db/dab/a00089_source.html#l00335">TEST()</a>.</p>
 
 </div>
 </div>
@@ -198,7 +198,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  674</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
 <div class="line"><span class="lineno">  675</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../db/dab/a00089_source.html#l00334">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../db/dab/a00089_source.html#l00335">TEST()</a>.</p>
 
 </div>
 </div>
@@ -221,26 +221,26 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00334">334</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  334</span>                                 {</div>
-<div class="line"><span class="lineno">  335</span>        std::random_device rd;</div>
-<div class="line"><span class="lineno">  336</span>        std::mt19937 gen(rd());</div>
-<div class="line"><span class="lineno">  337</span>        std::uniform_int_distribution&lt;&gt; dis(16, 64);</div>
-<div class="line"><span class="lineno">  338</span>        <span class="keywordtype">int</span> len            = dis(gen);</div>
-<div class="line"><span class="lineno">  339</span>        <span class="keywordtype">bool</span> flag          = dis(gen) % 2 == 0;</div>
-<div class="line"><span class="lineno">  340</span>        vector&lt;bool&gt; input = {};</div>
-<div class="line"><span class="lineno">  341</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; len; i++) {</div>
-<div class="line"><span class="lineno">  342</span>            <span class="keywordtype">int</span> len2 = dis(gen);</div>
-<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; len2; j++) {</div>
-<div class="line"><span class="lineno">  344</span>                input.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">short</span><span class="keyword">&gt;</span>(flag ? 0 : 1));</div>
-<div class="line"><span class="lineno">  345</span>            }</div>
-<div class="line"><span class="lineno">  346</span>            flag = !flag;</div>
-<div class="line"><span class="lineno">  347</span>        }</div>
-<div class="line"><span class="lineno">  348</span>        <span class="keyword">auto</span> compressed   = <a class="code hl_function" href="#aeba99a7f51ba7dabc6c95bd5ba99ba0e">encode</a>(input);</div>
-<div class="line"><span class="lineno">  349</span>        <span class="keyword">auto</span> decompressed = <a class="code hl_function" href="#a90e2af63f140b5681290d048b8b06e29">decode</a>(compressed);</div>
-<div class="line"><span class="lineno">  350</span>        <span class="comment">//cerr&lt;&lt;100*(compressed.size()/static_cast&lt;float&gt;(input.size()))&lt;&lt;&#39;%&#39;&lt;&lt;endl;</span></div>
-<div class="line"><span class="lineno">  351</span>        ASSERT_EQ(input, decompressed);</div>
-<div class="line"><span class="lineno">  352</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00335">335</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  335</span>                                 {</div>
+<div class="line"><span class="lineno">  336</span>        std::random_device rd;</div>
+<div class="line"><span class="lineno">  337</span>        std::mt19937 gen(rd());</div>
+<div class="line"><span class="lineno">  338</span>        std::uniform_int_distribution&lt;&gt; dis(16, 64);</div>
+<div class="line"><span class="lineno">  339</span>        <span class="keywordtype">int</span> len            = dis(gen);</div>
+<div class="line"><span class="lineno">  340</span>        <span class="keywordtype">bool</span> flag          = dis(gen) % 2 == 0;</div>
+<div class="line"><span class="lineno">  341</span>        vector&lt;bool&gt; input = {};</div>
+<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; len; i++) {</div>
+<div class="line"><span class="lineno">  343</span>            <span class="keywordtype">int</span> len2 = dis(gen);</div>
+<div class="line"><span class="lineno">  344</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; len2; j++) {</div>
+<div class="line"><span class="lineno">  345</span>                input.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">short</span><span class="keyword">&gt;</span>(flag ? 0 : 1));</div>
+<div class="line"><span class="lineno">  346</span>            }</div>
+<div class="line"><span class="lineno">  347</span>            flag = !flag;</div>
+<div class="line"><span class="lineno">  348</span>        }</div>
+<div class="line"><span class="lineno">  349</span>        <span class="keyword">auto</span> compressed   = <a class="code hl_function" href="#aeba99a7f51ba7dabc6c95bd5ba99ba0e">encode</a>(input);</div>
+<div class="line"><span class="lineno">  350</span>        <span class="keyword">auto</span> decompressed = <a class="code hl_function" href="#a90e2af63f140b5681290d048b8b06e29">decode</a>(compressed);</div>
+<div class="line"><span class="lineno">  351</span>        <span class="comment">//cerr&lt;&lt;100*(compressed.size()/static_cast&lt;float&gt;(input.size()))&lt;&lt;&#39;%&#39;&lt;&lt;endl;</span></div>
+<div class="line"><span class="lineno">  352</span>        ASSERT_EQ(input, decompressed);</div>
+<div class="line"><span class="lineno">  353</span>    }</div>
 <div class="ttc" id="aa00731_html_a90e2af63f140b5681290d048b8b06e29"><div class="ttname"><a href="#a90e2af63f140b5681290d048b8b06e29">elias_gamma::decode</a></div><div class="ttdeci">vector&lt; bool &gt; decode(vector&lt; bool &gt; input)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00676">templates.cpp:676</a></div></div>
 <div class="ttc" id="aa00731_html_aeba99a7f51ba7dabc6c95bd5ba99ba0e"><div class="ttname"><a href="#aeba99a7f51ba7dabc6c95bd5ba99ba0e">elias_gamma::encode</a></div><div class="ttdeci">vector&lt; bool &gt; encode(vector&lt; bool &gt; input)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00644">templates.cpp:644</a></div></div>
 </div><!-- fragment -->
