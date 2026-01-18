@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: BigInt类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -85,26 +85,1371 @@ $(function(){ initResizable(false); });
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">Fraction 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="../../dc/d6d/a03762.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">BigInt类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../df/dcb/a03768.html">Fraction</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../df/dcb/a03768.html#a62dd875277df5cc634ed060b93d02d28">denominator</a></td><td class="entry"><a class="el" href="../../df/dcb/a03768.html">Fraction</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../df/dcb/a03768.html#a1e87207d9f1a31bd5bdbe5da2fb8bd66">Fraction</a>(bool positive, long long numerator, long long denominator)</td><td class="entry"><a class="el" href="../../df/dcb/a03768.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../df/dcb/a03768.html#a520a3bc5ef06aff9224ff4d1fa53ad15">get_denominator</a>() const</td><td class="entry"><a class="el" href="../../df/dcb/a03768.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../df/dcb/a03768.html#a5b3b0274013dc8b2c2298317b9276f17">get_numerator</a>() const</td><td class="entry"><a class="el" href="../../df/dcb/a03768.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../df/dcb/a03768.html#a07d7e003385dcc19562ed415287be613">is_positive</a>() const</td><td class="entry"><a class="el" href="../../df/dcb/a03768.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../df/dcb/a03768.html#ac5579448914d9179b1f8431216a33af7">numerator</a></td><td class="entry"><a class="el" href="../../df/dcb/a03768.html">Fraction</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../df/dcb/a03768.html#ae8243b75fcc95ddd169ce53cbcd805ae">operator*</a>(const Fraction &amp;f) const</td><td class="entry"><a class="el" href="../../df/dcb/a03768.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../df/dcb/a03768.html#a1b273c566cdb62bb3c0834027133038a">operator+</a>(const Fraction &amp;f) const</td><td class="entry"><a class="el" href="../../df/dcb/a03768.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../df/dcb/a03768.html#a50b0598f2b289832e1b1c64ac8f0e533">operator-</a>(const Fraction &amp;f) const</td><td class="entry"><a class="el" href="../../df/dcb/a03768.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../df/dcb/a03768.html#aa9ab636b9e40dedb8c181048d8b55a82">operator/</a>(const Fraction &amp;f) const</td><td class="entry"><a class="el" href="../../df/dcb/a03768.html">Fraction</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../df/dcb/a03768.html#ad9647df4ee7fe0dec2520d4a00da3363">operator&lt;&lt;</a>(ostream &amp;os, const Fraction &amp;frac)</td><td class="entry"><a class="el" href="../../df/dcb/a03768.html">Fraction</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../df/dcb/a03768.html#a777585f98e8e6e958c126e1474961a31">positive</a></td><td class="entry"><a class="el" href="../../df/dcb/a03768.html">Fraction</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../df/dcb/a03768.html#a6a5092eb855dac602718b19eb7fe0d6d">simplify</a>()</td><td class="entry"><a class="el" href="../../df/dcb/a03768.html">Fraction</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-</table></div><!-- contents -->
+<p>高精度整数  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d3/d8b/a00059_source.html">templates.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af677021c0987fc2a48da06837ed29c58" id="r_af677021c0987fc2a48da06837ed29c58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af677021c0987fc2a48da06837ed29c58">BigInt</a> ()</td></tr>
+<tr class="separator:af677021c0987fc2a48da06837ed29c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10c4f2b99c90fcd6dc105af7b269c715" id="r_a10c4f2b99c90fcd6dc105af7b269c715"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10c4f2b99c90fcd6dc105af7b269c715">BigInt</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi)</td></tr>
+<tr class="separator:a10c4f2b99c90fcd6dc105af7b269c715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad39f7cbf28baa8d159c66ae44a1911fc" id="r_ad39f7cbf28baa8d159c66ae44a1911fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad39f7cbf28baa8d159c66ae44a1911fc">BigInt</a> (const char *str)</td></tr>
+<tr class="separator:ad39f7cbf28baa8d159c66ae44a1911fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57bb80e48f8bb8b2d27937d40b9d0210" id="r_a57bb80e48f8bb8b2d27937d40b9d0210"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57bb80e48f8bb8b2d27937d40b9d0210">BigInt</a> (const string &amp;str)</td></tr>
+<tr class="separator:a57bb80e48f8bb8b2d27937d40b9d0210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c8a560cf8872ff2028bfb5efbe79c01" id="r_a7c8a560cf8872ff2028bfb5efbe79c01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c8a560cf8872ff2028bfb5efbe79c01">BigInt</a> (int n)</td></tr>
+<tr class="separator:a7c8a560cf8872ff2028bfb5efbe79c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc9be570f898d3402769b12c12bd9e3f" id="r_abc9be570f898d3402769b12c12bd9e3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc9be570f898d3402769b12c12bd9e3f">BigInt</a> (long long n)</td></tr>
+<tr class="separator:abc9be570f898d3402769b12c12bd9e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0312b980d211a64100e7a74bfedffc72" id="r_a0312b980d211a64100e7a74bfedffc72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0312b980d211a64100e7a74bfedffc72">BigInt</a> (long n)</td></tr>
+<tr class="separator:a0312b980d211a64100e7a74bfedffc72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad054ba108ab0177dedfdf03505843402" id="r_ad054ba108ab0177dedfdf03505843402"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad054ba108ab0177dedfdf03505843402">BigInt</a> (short n)</td></tr>
+<tr class="separator:ad054ba108ab0177dedfdf03505843402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b7f4eed365219c19214c78245a3e1e6" id="r_a2b7f4eed365219c19214c78245a3e1e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b7f4eed365219c19214c78245a3e1e6">BigInt</a> (unsigned int n)</td></tr>
+<tr class="separator:a2b7f4eed365219c19214c78245a3e1e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62b93d5563dc3091003eb014be8b904e" id="r_a62b93d5563dc3091003eb014be8b904e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62b93d5563dc3091003eb014be8b904e">BigInt</a> (unsigned long long n)</td></tr>
+<tr class="separator:a62b93d5563dc3091003eb014be8b904e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9cc3a7e3e2ecdb9dbeed65b5cc681b0" id="r_ac9cc3a7e3e2ecdb9dbeed65b5cc681b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9cc3a7e3e2ecdb9dbeed65b5cc681b0">BigInt</a> (unsigned long n)</td></tr>
+<tr class="separator:ac9cc3a7e3e2ecdb9dbeed65b5cc681b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6f5982d4fb19ed02b9d654309ed44a5" id="r_ad6f5982d4fb19ed02b9d654309ed44a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6f5982d4fb19ed02b9d654309ed44a5">BigInt</a> (unsigned short n)</td></tr>
+<tr class="separator:ad6f5982d4fb19ed02b9d654309ed44a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40b0de9a9cec989f94db6524265d0843" id="r_a40b0de9a9cec989f94db6524265d0843"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40b0de9a9cec989f94db6524265d0843">operator!=</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi) const</td></tr>
+<tr class="separator:a40b0de9a9cec989f94db6524265d0843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca851028fe86d112b0aa4056bf69ef4" id="r_a7ca851028fe86d112b0aa4056bf69ef4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ca851028fe86d112b0aa4056bf69ef4">operator%</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi) const</td></tr>
+<tr class="separator:a7ca851028fe86d112b0aa4056bf69ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af96eed866601d6fff522cc54736c591a" id="r_af96eed866601d6fff522cc54736c591a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af96eed866601d6fff522cc54736c591a">operator%=</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi)</td></tr>
+<tr class="separator:af96eed866601d6fff522cc54736c591a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f03acae85136498b1b534ef9733cdcd" id="r_a5f03acae85136498b1b534ef9733cdcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f03acae85136498b1b534ef9733cdcd">operator*</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi) const</td></tr>
+<tr class="separator:a5f03acae85136498b1b534ef9733cdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a2f352f4d72a711a91d2c289c22eb32" id="r_a3a2f352f4d72a711a91d2c289c22eb32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a2f352f4d72a711a91d2c289c22eb32">operator*=</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi)</td></tr>
+<tr class="separator:a3a2f352f4d72a711a91d2c289c22eb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10dcbf16dae8701172569f053212d862" id="r_a10dcbf16dae8701172569f053212d862"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10dcbf16dae8701172569f053212d862">operator+</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi) const</td></tr>
+<tr class="separator:a10dcbf16dae8701172569f053212d862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f1a8a43867f25c8df48e7747012536f" id="r_a0f1a8a43867f25c8df48e7747012536f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f1a8a43867f25c8df48e7747012536f">operator++</a> ()</td></tr>
+<tr class="separator:a0f1a8a43867f25c8df48e7747012536f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7120696c07c413340246a61eb209a541" id="r_a7120696c07c413340246a61eb209a541"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7120696c07c413340246a61eb209a541">operator++</a> (int)</td></tr>
+<tr class="separator:a7120696c07c413340246a61eb209a541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b1d72dc1076528c0fdab9a67c28659" id="r_ae1b1d72dc1076528c0fdab9a67c28659"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1b1d72dc1076528c0fdab9a67c28659">operator+=</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi)</td></tr>
+<tr class="separator:ae1b1d72dc1076528c0fdab9a67c28659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a4ded170439fee88f133d0202b5c182" id="r_a4a4ded170439fee88f133d0202b5c182"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a4ded170439fee88f133d0202b5c182">operator-</a> () const</td></tr>
+<tr class="separator:a4a4ded170439fee88f133d0202b5c182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a002d4c7a709bca582b94062ed18bcf4a" id="r_a002d4c7a709bca582b94062ed18bcf4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a002d4c7a709bca582b94062ed18bcf4a">operator-</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi) const</td></tr>
+<tr class="separator:a002d4c7a709bca582b94062ed18bcf4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed992537fac59f8c794fc24d10baf199" id="r_aed992537fac59f8c794fc24d10baf199"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed992537fac59f8c794fc24d10baf199">operator--</a> ()</td></tr>
+<tr class="separator:aed992537fac59f8c794fc24d10baf199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ef5639e9f2cb2226f8611bb39c6c663" id="r_a6ef5639e9f2cb2226f8611bb39c6c663"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ef5639e9f2cb2226f8611bb39c6c663">operator--</a> (int)</td></tr>
+<tr class="separator:a6ef5639e9f2cb2226f8611bb39c6c663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40506afe3528e6de90db7339870a5388" id="r_a40506afe3528e6de90db7339870a5388"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40506afe3528e6de90db7339870a5388">operator-=</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi)</td></tr>
+<tr class="separator:a40506afe3528e6de90db7339870a5388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ad84d14142e72660a69217ecd44397a" id="r_a6ad84d14142e72660a69217ecd44397a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ad84d14142e72660a69217ecd44397a">operator/</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi) const</td></tr>
+<tr class="separator:a6ad84d14142e72660a69217ecd44397a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace7b3a08d85245b3f1ddc80562c7606e" id="r_ace7b3a08d85245b3f1ddc80562c7606e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace7b3a08d85245b3f1ddc80562c7606e">operator/=</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi)</td></tr>
+<tr class="separator:ace7b3a08d85245b3f1ddc80562c7606e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f4095f8d9fea90dff6087f953bf98ab" id="r_a3f4095f8d9fea90dff6087f953bf98ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f4095f8d9fea90dff6087f953bf98ab">operator&lt;</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi) const</td></tr>
+<tr class="separator:a3f4095f8d9fea90dff6087f953bf98ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88582e66ab6a678adca59098a3002511" id="r_a88582e66ab6a678adca59098a3002511"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88582e66ab6a678adca59098a3002511">operator&lt;=</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi) const</td></tr>
+<tr class="separator:a88582e66ab6a678adca59098a3002511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19dc5b0f94917a8350deded100030c8" id="r_af19dc5b0f94917a8350deded100030c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af19dc5b0f94917a8350deded100030c8">operator==</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi) const</td></tr>
+<tr class="separator:af19dc5b0f94917a8350deded100030c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a101ffb4059c7d96d853869a316dc8659" id="r_a101ffb4059c7d96d853869a316dc8659"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a101ffb4059c7d96d853869a316dc8659">operator&gt;</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi) const</td></tr>
+<tr class="separator:a101ffb4059c7d96d853869a316dc8659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eca20c6d226bd09fec2e67c81f9ba0c" id="r_a8eca20c6d226bd09fec2e67c81f9ba0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8eca20c6d226bd09fec2e67c81f9ba0c">operator&gt;=</a> (const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi) const</td></tr>
+<tr class="separator:a8eca20c6d226bd09fec2e67c81f9ba0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a0a313e4f0383847e9e042944746e3179" id="r_a0a313e4f0383847e9e042944746e3179"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a313e4f0383847e9e042944746e3179">BigInt</a> (const vector&lt; unsigned short &gt; &amp;<a class="el" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>, bool <a class="el" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>)</td></tr>
+<tr class="separator:a0a313e4f0383847e9e042944746e3179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f416b0240756bc9f78c5589339636e6" id="r_a1f416b0240756bc9f78c5589339636e6"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a> () const</td></tr>
+<tr class="separator:a1f416b0240756bc9f78c5589339636e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1766b8666a4b360078d6485ffb6ccb7d" id="r_a1766b8666a4b360078d6485ffb6ccb7d"><td class="memItemLeft" align="right" valign="top">vector&lt; unsigned short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1766b8666a4b360078d6485ffb6ccb7d">operator*</a> (unsigned short n) const</td></tr>
+<tr class="separator:a1766b8666a4b360078d6485ffb6ccb7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bdb78c6c46db616abb7eedf093ea2a9" id="r_a1bdb78c6c46db616abb7eedf093ea2a9"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bdb78c6c46db616abb7eedf093ea2a9">operator[]</a> (unsigned long) const</td></tr>
+<tr class="separator:a1bdb78c6c46db616abb7eedf093ea2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a622851f40dd8992cc2a66a5ce83133df" id="r_a622851f40dd8992cc2a66a5ce83133df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> = true</td></tr>
+<tr class="separator:a622851f40dd8992cc2a66a5ce83133df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff0b8f430da59beb2b9e3d9a8f4f122" id="r_a8ff0b8f430da59beb2b9e3d9a8f4f122"><td class="memItemLeft" align="right" valign="top">vector&lt; unsigned short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a> = {}</td></tr>
+<tr class="separator:a8ff0b8f430da59beb2b9e3d9a8f4f122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a306bf00524f91d87d511fe540d517e8f" id="r_a306bf00524f91d87d511fe540d517e8f"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a306bf00524f91d87d511fe540d517e8f">operator&lt;&lt;</a> (ostream &amp;os, const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;bi)</td></tr>
+<tr class="separator:a306bf00524f91d87d511fe540d517e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac34f777e9f24df2612d7769e2252a065" id="r_ac34f777e9f24df2612d7769e2252a065"><td class="memItemLeft" align="right" valign="top">istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac34f777e9f24df2612d7769e2252a065">operator&gt;&gt;</a> (istream &amp;is, const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;)</td></tr>
+<tr class="separator:ac34f777e9f24df2612d7769e2252a065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>高精度整数 </p>
+
+<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">templates.h</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l00024">24</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a0a313e4f0383847e9e042944746e3179" name="a0a313e4f0383847e9e042944746e3179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a313e4f0383847e9e042944746e3179">&#9670;&#160;</a></span>BigInt() <span class="overload">[1/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; unsigned short &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>positive</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00036">36</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    : <a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>(<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>) {</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordtype">int</span> end_i = <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.size() - 1;</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">while</span>(end_i &gt;= 0 &amp;&amp; <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>[end_i] == 0) {</div>
+<div class="line"><span class="lineno">   40</span>        end_i--;</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="line"><span class="lineno">   42</span>    this-&gt;<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a> = vector&lt;unsigned short&gt;();</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt;= end_i; i++) {</div>
+<div class="line"><span class="lineno">   44</span>        this-&gt;<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.push_back(<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>[i]);</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.empty()) {</div>
+<div class="line"><span class="lineno">   47</span>        this-&gt;<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.push_back(0);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="line"><span class="lineno">   49</span>}</div>
+<div class="ttc" id="aa03765_html_a622851f40dd8992cc2a66a5ce83133df"><div class="ttname"><a href="#a622851f40dd8992cc2a66a5ce83133df">BigInt::positive</a></div><div class="ttdeci">bool positive</div><div class="ttdef"><b>定义</b> <a href="../../d3/d8b/a00059_source.html#l00026">templates.h:26</a></div></div>
+<div class="ttc" id="aa03765_html_a8ff0b8f430da59beb2b9e3d9a8f4f122"><div class="ttname"><a href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">BigInt::vec</a></div><div class="ttdeci">vector&lt; unsigned short &gt; vec</div><div class="ttdef"><b>定义</b> <a href="../../d3/d8b/a00059_source.html#l00027">templates.h:27</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../dd/dad/a00005_source.html#l00159">BigInt()</a>, <a class="el" href="#a62b93d5563dc3091003eb014be8b904e">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00318">operator!=()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00271">operator%()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00349">operator%=()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00240">operator*()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00339">operator*=()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00174">operator+()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00368">operator++()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00378">operator++()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00329">operator+=()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00366">operator-()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00196">operator-()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00373">operator--()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00384">operator--()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00334">operator-=()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00269">operator/()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00344">operator/=()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00298">operator&lt;()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00354">operator&lt;&lt;</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00327">operator&lt;=()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00311">operator==()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00273">operator&gt;()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00325">operator&gt;=()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00364">operator&gt;&gt;</a>.</p>
+
+</div>
+</div>
+<a id="ad054ba108ab0177dedfdf03505843402" name="ad054ba108ab0177dedfdf03505843402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad054ba108ab0177dedfdf03505843402">&#9670;&#160;</a></span>BigInt() <span class="overload">[2/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00051">51</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>                      {</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">if</span>(n &lt; 0) {</div>
+<div class="line"><span class="lineno">   53</span>        <a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   54</span>        <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>        = -<a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="line"><span class="lineno">   56</span>    <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a> = vector&lt;unsigned short&gt;();</div>
+<div class="line"><span class="lineno">   57</span>    stringstream ss;</div>
+<div class="line"><span class="lineno">   58</span>    ss &lt;&lt; <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordtype">char</span> ch;</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">while</span>(ss &gt;&gt; ch) {</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.push_back(ch - <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="line"><span class="lineno">   63</span>}</div>
+<div class="ttc" id="aa00575_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="a7c8a560cf8872ff2028bfb5efbe79c01" name="a7c8a560cf8872ff2028bfb5efbe79c01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c8a560cf8872ff2028bfb5efbe79c01">&#9670;&#160;</a></span>BigInt() <span class="overload">[3/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00065">65</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>                    {</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">if</span>(n &lt; 0) {</div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>        = -<a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="line"><span class="lineno">   70</span>    <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a> = vector&lt;unsigned short&gt;();</div>
+<div class="line"><span class="lineno">   71</span>    stringstream ss;</div>
+<div class="line"><span class="lineno">   72</span>    ss &lt;&lt; <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordtype">char</span> ch;</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">while</span>(ss &gt;&gt; ch) {</div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.push_back(ch - <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+<div class="line"><span class="lineno">   77</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="a0312b980d211a64100e7a74bfedffc72" name="a0312b980d211a64100e7a74bfedffc72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0312b980d211a64100e7a74bfedffc72">&#9670;&#160;</a></span>BigInt() <span class="overload">[4/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00079">79</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                     {</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">if</span>(n &lt; 0) {</div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   82</span>        <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>        = -<a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+<div class="line"><span class="lineno">   84</span>    <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a> = vector&lt;unsigned short&gt;();</div>
+<div class="line"><span class="lineno">   85</span>    stringstream ss;</div>
+<div class="line"><span class="lineno">   86</span>    ss &lt;&lt; <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordtype">char</span> ch;</div>
+<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">while</span>(ss &gt;&gt; ch) {</div>
+<div class="line"><span class="lineno">   89</span>        <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.push_back(ch - <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   91</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="abc9be570f898d3402769b12c12bd9e3f" name="abc9be570f898d3402769b12c12bd9e3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc9be570f898d3402769b12c12bd9e3f">&#9670;&#160;</a></span>BigInt() <span class="overload">[5/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramtype">long long</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6f5982d4fb19ed02b9d654309ed44a5" name="ad6f5982d4fb19ed02b9d654309ed44a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6f5982d4fb19ed02b9d654309ed44a5">&#9670;&#160;</a></span>BigInt() <span class="overload">[6/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00105">105</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>                               {</div>
+<div class="line"><span class="lineno">  106</span>    <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a> = vector&lt;unsigned short&gt;();</div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">do</span> {</div>
+<div class="line"><span class="lineno">  108</span>        <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.push_back(n % 10);</div>
+<div class="line"><span class="lineno">  109</span>        <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> /= 10;</div>
+<div class="line"><span class="lineno">  110</span>    } <span class="keywordflow">while</span>(n != 0);</div>
+<div class="line"><span class="lineno">  111</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="a2b7f4eed365219c19214c78245a3e1e6" name="a2b7f4eed365219c19214c78245a3e1e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b7f4eed365219c19214c78245a3e1e6">&#9670;&#160;</a></span>BigInt() <span class="overload">[7/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00113">113</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>                             {</div>
+<div class="line"><span class="lineno">  114</span>    <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a> = vector&lt;unsigned short&gt;();</div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">do</span> {</div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.push_back(n % 10);</div>
+<div class="line"><span class="lineno">  117</span>        <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> /= 10;</div>
+<div class="line"><span class="lineno">  118</span>    } <span class="keywordflow">while</span>(n != 0);</div>
+<div class="line"><span class="lineno">  119</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="ac9cc3a7e3e2ecdb9dbeed65b5cc681b0" name="ac9cc3a7e3e2ecdb9dbeed65b5cc681b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9cc3a7e3e2ecdb9dbeed65b5cc681b0">&#9670;&#160;</a></span>BigInt() <span class="overload">[8/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00121">121</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>                              {</div>
+<div class="line"><span class="lineno">  122</span>    <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a> = vector&lt;unsigned short&gt;();</div>
+<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">do</span> {</div>
+<div class="line"><span class="lineno">  124</span>        <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.push_back(n % 10);</div>
+<div class="line"><span class="lineno">  125</span>        <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> /= 10;</div>
+<div class="line"><span class="lineno">  126</span>    } <span class="keywordflow">while</span>(n != 0);</div>
+<div class="line"><span class="lineno">  127</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="a62b93d5563dc3091003eb014be8b904e" name="a62b93d5563dc3091003eb014be8b904e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62b93d5563dc3091003eb014be8b904e">&#9670;&#160;</a></span>BigInt() <span class="overload">[9/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long long</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<a id="a57bb80e48f8bb8b2d27937d40b9d0210" name="a57bb80e48f8bb8b2d27937d40b9d0210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57bb80e48f8bb8b2d27937d40b9d0210">&#9670;&#160;</a></span>BigInt() <span class="overload">[10/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00137">137</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>                                {</div>
+<div class="line"><span class="lineno">  138</span>    <span class="keywordtype">int</span> start_i = str.length() - 1;</div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">while</span>(start_i &gt;= 0 &amp;&amp; isdigit(str[start_i]) != 0) {</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.push_back(str[start_i] - <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><span class="lineno">  141</span>        start_i--;</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">if</span>(str[0] == <span class="charliteral">&#39;-&#39;</span>) {</div>
+<div class="line"><span class="lineno">  144</span>        <a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
+<div class="line"><span class="lineno">  146</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="ad39f7cbf28baa8d159c66ae44a1911fc" name="ad39f7cbf28baa8d159c66ae44a1911fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad39f7cbf28baa8d159c66ae44a1911fc">&#9670;&#160;</a></span>BigInt() <span class="overload">[11/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00148">148</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  148</span>                              {</div>
+<div class="line"><span class="lineno">  149</span>    <span class="keywordtype">int</span> start_i = strlen(str) - 1;</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">while</span>(start_i &gt;= 0 &amp;&amp; isdigit(str[start_i]) != 0) {</div>
+<div class="line"><span class="lineno">  151</span>        <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.push_back(str[start_i] - <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><span class="lineno">  152</span>        start_i--;</div>
+<div class="line"><span class="lineno">  153</span>    }</div>
+<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">if</span>(str[0] == <span class="charliteral">&#39;-&#39;</span>) {</div>
+<div class="line"><span class="lineno">  155</span>        <a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  156</span>    }</div>
+<div class="line"><span class="lineno">  157</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="a10c4f2b99c90fcd6dc105af7b269c715" name="a10c4f2b99c90fcd6dc105af7b269c715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10c4f2b99c90fcd6dc105af7b269c715">&#9670;&#160;</a></span>BigInt() <span class="overload">[12/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00159">159</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>                               {</div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordtype">int</span> end_i = bi.<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.size() - 1;</div>
+<div class="line"><span class="lineno">  161</span>    <span class="keywordflow">while</span>(end_i &gt;= 0 &amp;&amp; bi.<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>[end_i] == 0) {</div>
+<div class="line"><span class="lineno">  162</span>        end_i--;</div>
+<div class="line"><span class="lineno">  163</span>    }</div>
+<div class="line"><span class="lineno">  164</span>    this-&gt;<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a> = vector&lt;unsigned short&gt;();</div>
+<div class="line"><span class="lineno">  165</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt;= end_i; i++) {</div>
+<div class="line"><span class="lineno">  166</span>        this-&gt;<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.push_back(bi.<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>[i]);</div>
+<div class="line"><span class="lineno">  167</span>    }</div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.empty()) {</div>
+<div class="line"><span class="lineno">  169</span>        this-&gt;<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.push_back(0);</div>
+<div class="line"><span class="lineno">  170</span>    }</div>
+<div class="line"><span class="lineno">  171</span>    this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> = bi.<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>;</div>
+<div class="line"><span class="lineno">  172</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="af677021c0987fc2a48da06837ed29c58" name="af677021c0987fc2a48da06837ed29c58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af677021c0987fc2a48da06837ed29c58">&#9670;&#160;</a></span>BigInt() <span class="overload">[13/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00389">389</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  389</span>               {</div>
+<div class="line"><span class="lineno">  390</span>    <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>      = vector&lt;unsigned short&gt;();</div>
+<div class="line"><span class="lineno">  391</span>    <a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  392</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../dd/dad/a00005_source.html#l00240">operator*()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00174">operator+()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00378">operator++()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00366">operator-()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00196">operator-()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00384">operator--()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a1f416b0240756bc9f78c5589339636e6" name="a1f416b0240756bc9f78c5589339636e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f416b0240756bc9f78c5589339636e6">&#9670;&#160;</a></span>get_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long BigInt::get_size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00032">32</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.size(); }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../dd/dad/a00005_source.html#l00174">operator+()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00196">operator-()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00298">operator&lt;()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00273">operator&gt;()</a>.</p>
+
+</div>
+</div>
+<a id="a40b0de9a9cec989f94db6524265d0843" name="a40b0de9a9cec989f94db6524265d0843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40b0de9a9cec989f94db6524265d0843">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BigInt::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00318">318</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  318</span>                                              {</div>
+<div class="line"><span class="lineno">  319</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> == bi.<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>) {</div>
+<div class="line"><span class="lineno">  320</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a> != bi.<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>;</div>
+<div class="line"><span class="lineno">  321</span>    }</div>
+<div class="line"><span class="lineno">  322</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  323</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="a7ca851028fe86d112b0aa4056bf69ef4" name="a7ca851028fe86d112b0aa4056bf69ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ca851028fe86d112b0aa4056bf69ef4">&#9670;&#160;</a></span>operator%()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> BigInt::operator% </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00271">271</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  271</span>{ <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<a id="af96eed866601d6fff522cc54736c591a" name="af96eed866601d6fff522cc54736c591a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af96eed866601d6fff522cc54736c591a">&#9670;&#160;</a></span>operator%=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp; BigInt::operator%= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00349">349</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  349</span>                                           {</div>
+<div class="line"><span class="lineno">  350</span>    *<span class="keyword">this</span> = *<span class="keyword">this</span> % bi;</div>
+<div class="line"><span class="lineno">  351</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  352</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<a id="a5f03acae85136498b1b534ef9733cdcd" name="a5f03acae85136498b1b534ef9733cdcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f03acae85136498b1b534ef9733cdcd">&#9670;&#160;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> BigInt::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00240">240</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  240</span>                                               {</div>
+<div class="line"><span class="lineno">  241</span>    <span class="keywordtype">unsigned</span> max_len = 0;</div>
+<div class="line"><span class="lineno">  242</span>    vector&lt;vector&lt;unsigned short&gt;&gt; vecs(bi.<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.size());</div>
+<div class="line"><span class="lineno">  243</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; bi.<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.size(); i++) {</div>
+<div class="line"><span class="lineno">  244</span>        vector&lt;unsigned short&gt; vi(i, 0);</div>
+<div class="line"><span class="lineno">  245</span>        vector&lt;unsigned short&gt; ai = *<span class="keyword">this</span> * bi.<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>[i];</div>
+<div class="line"><span class="lineno">  246</span>        vi.insert(vi.end(), ai.begin(), ai.end());</div>
+<div class="line"><span class="lineno">  247</span>        vecs[i] = vi;</div>
+<div class="line"><span class="lineno">  248</span>        max_len = max(max_len, <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(vi.size()));</div>
+<div class="line"><span class="lineno">  249</span>    }</div>
+<div class="line"><span class="lineno">  250</span>    vector&lt;unsigned short&gt; <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno">  251</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> c = 0;</div>
+<div class="line"><span class="lineno">  252</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; max_len; i++) {</div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> v = 0;</div>
+<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; vecs.size(); j++) {</div>
+<div class="line"><span class="lineno">  255</span>            v += i &lt; vecs[j].size() ? vecs[j][i] : 0;</div>
+<div class="line"><span class="lineno">  256</span>        }</div>
+<div class="line"><span class="lineno">  257</span>        v += c;</div>
+<div class="line"><span class="lineno">  258</span>        c = v / 10;</div>
+<div class="line"><span class="lineno">  259</span>        v %= 10;</div>
+<div class="line"><span class="lineno">  260</span>        <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.emplace_back(v);</div>
+<div class="line"><span class="lineno">  261</span>    }</div>
+<div class="line"><span class="lineno">  262</span>    <span class="keywordflow">while</span>(c &gt; 0) {</div>
+<div class="line"><span class="lineno">  263</span>        <a class="code hl_variable" href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.emplace_back(c % 10);</div>
+<div class="line"><span class="lineno">  264</span>        c /= 10;</div>
+<div class="line"><span class="lineno">  265</span>    }</div>
+<div class="line"><span class="lineno">  266</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#af677021c0987fc2a48da06837ed29c58">BigInt</a>(ans, (*this).positive == bi.<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>);</div>
+<div class="line"><span class="lineno">  267</span>}</div>
+<div class="ttc" id="aa00568_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../dc/d40/a00568.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00131">liverpool.cpp:131</a></div></div>
+<div class="ttc" id="aa03765_html_af677021c0987fc2a48da06837ed29c58"><div class="ttname"><a href="#af677021c0987fc2a48da06837ed29c58">BigInt::BigInt</a></div><div class="ttdeci">BigInt()</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00389">templates.cpp:389</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00389">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="a1766b8666a4b360078d6485ffb6ccb7d" name="a1766b8666a4b360078d6485ffb6ccb7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1766b8666a4b360078d6485ffb6ccb7d">&#9670;&#160;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; unsigned short &gt; BigInt::operator* </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00224">224</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>                                                                     {</div>
+<div class="line"><span class="lineno">  225</span>    vector&lt;unsigned short&gt; res;</div>
+<div class="line"><span class="lineno">  226</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> c = 0;</div>
+<div class="line"><span class="lineno">  227</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> v: this-&gt;<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>) {</div>
+<div class="line"><span class="lineno">  228</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> num = <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> * v + c;</div>
+<div class="line"><span class="lineno">  229</span>        c                  = num / 10;</div>
+<div class="line"><span class="lineno">  230</span>        num %= 10;</div>
+<div class="line"><span class="lineno">  231</span>        res.emplace_back(num);</div>
+<div class="line"><span class="lineno">  232</span>    }</div>
+<div class="line"><span class="lineno">  233</span>    <span class="keywordflow">while</span>(c &gt; 0) {</div>
+<div class="line"><span class="lineno">  234</span>        res.emplace_back(c % 10);</div>
+<div class="line"><span class="lineno">  235</span>        c /= 10;</div>
+<div class="line"><span class="lineno">  236</span>    }</div>
+<div class="line"><span class="lineno">  237</span>    <span class="keywordflow">return</span> res;</div>
+<div class="line"><span class="lineno">  238</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="a3a2f352f4d72a711a91d2c289c22eb32" name="a3a2f352f4d72a711a91d2c289c22eb32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a2f352f4d72a711a91d2c289c22eb32">&#9670;&#160;</a></span>operator*=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp; BigInt::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00339">339</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  339</span>                                           {</div>
+<div class="line"><span class="lineno">  340</span>    *<span class="keyword">this</span> = *<span class="keyword">this</span> * bi;</div>
+<div class="line"><span class="lineno">  341</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  342</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<a id="a10dcbf16dae8701172569f053212d862" name="a10dcbf16dae8701172569f053212d862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10dcbf16dae8701172569f053212d862">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> BigInt::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00174">174</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>                                               {</div>
+<div class="line"><span class="lineno">  175</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> &amp;&amp; !bi.<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>) {</div>
+<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span> - -bi;</div>
+<div class="line"><span class="lineno">  177</span>    }</div>
+<div class="line"><span class="lineno">  178</span>    <span class="keywordflow">if</span>(!this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> &amp;&amp; bi.<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>) {</div>
+<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">return</span> bi - -*<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  180</span>    }</div>
+<div class="line"><span class="lineno">  181</span>    vector&lt;unsigned short&gt; v;</div>
+<div class="line"><span class="lineno">  182</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> carry = 0;</div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">for</span>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> i = 0; i &lt; max(this-&gt;<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>(), bi.<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>()) || carry != 0; i++) {</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> this_num = i &lt; this-&gt;<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>() ? (*this)[i] : 0;</div>
+<div class="line"><span class="lineno">  185</span>        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> bi_num   = i &lt; bi.<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>() ? bi[i] : 0;</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> sum            = this_num + bi_num;</div>
+<div class="line"><span class="lineno">  187</span>        sum += carry;</div>
+<div class="line"><span class="lineno">  188</span>        carry = sum / 10;</div>
+<div class="line"><span class="lineno">  189</span>        sum %= 10;</div>
+<div class="line"><span class="lineno">  190</span>        v.push_back(sum);</div>
+<div class="line"><span class="lineno">  191</span>    }</div>
+<div class="line"><span class="lineno">  192</span>    <span class="keyword">auto</span> ret = <a class="code hl_function" href="#af677021c0987fc2a48da06837ed29c58">BigInt</a>(v, this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>);</div>
+<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">  194</span>}</div>
+<div class="ttc" id="aa03765_html_a1f416b0240756bc9f78c5589339636e6"><div class="ttname"><a href="#a1f416b0240756bc9f78c5589339636e6">BigInt::get_size</a></div><div class="ttdeci">unsigned long get_size() const</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00032">templates.cpp:32</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00389">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00032">get_size()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a>.</p>
+
+</div>
+</div>
+<a id="a0f1a8a43867f25c8df48e7747012536f" name="a0f1a8a43867f25c8df48e7747012536f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f1a8a43867f25c8df48e7747012536f">&#9670;&#160;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp; BigInt::operator++ </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00368">368</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  368</span>                           {</div>
+<div class="line"><span class="lineno">  369</span>    *<span class="keyword">this</span> += 1;</div>
+<div class="line"><span class="lineno">  370</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  371</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<a id="a7120696c07c413340246a61eb209a541" name="a7120696c07c413340246a61eb209a541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7120696c07c413340246a61eb209a541">&#9670;&#160;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> BigInt::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00378">378</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  378</span>                             {</div>
+<div class="line"><span class="lineno">  379</span>    <span class="keyword">auto</span> ret = <a class="code hl_function" href="#af677021c0987fc2a48da06837ed29c58">BigInt</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  380</span>    *<span class="keyword">this</span> += 1;</div>
+<div class="line"><span class="lineno">  381</span>    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">  382</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00389">BigInt()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<a id="ae1b1d72dc1076528c0fdab9a67c28659" name="ae1b1d72dc1076528c0fdab9a67c28659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b1d72dc1076528c0fdab9a67c28659">&#9670;&#160;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp; BigInt::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00329">329</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  329</span>                                           {</div>
+<div class="line"><span class="lineno">  330</span>    *<span class="keyword">this</span> = *<span class="keyword">this</span> + bi;</div>
+<div class="line"><span class="lineno">  331</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  332</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<a id="a4a4ded170439fee88f133d0202b5c182" name="a4a4ded170439fee88f133d0202b5c182"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a4ded170439fee88f133d0202b5c182">&#9670;&#160;</a></span>operator-() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> BigInt::operator- </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00366">366</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  366</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="#af677021c0987fc2a48da06837ed29c58">BigInt</a>(this-&gt;<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>, !this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>); }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00389">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="a002d4c7a709bca582b94062ed18bcf4a" name="a002d4c7a709bca582b94062ed18bcf4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a002d4c7a709bca582b94062ed18bcf4a">&#9670;&#160;</a></span>operator-() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> BigInt::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00196">196</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  196</span>                                               {</div>
+<div class="line"><span class="lineno">  197</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> != bi.<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>) {</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span> + -bi;</div>
+<div class="line"><span class="lineno">  199</span>    }</div>
+<div class="line"><span class="lineno">  200</span>    <span class="keywordflow">if</span>(!this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>) {</div>
+<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">return</span> -bi - -*<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  202</span>    }</div>
+<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">if</span>(*<span class="keyword">this</span> &lt; bi) {</div>
+<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">return</span> -(bi - *<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  205</span>    }</div>
+<div class="line"><span class="lineno">  206</span>    vector&lt;unsigned short&gt; v;</div>
+<div class="line"><span class="lineno">  207</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> borrow = 0;</div>
+<div class="line"><span class="lineno">  208</span>    <span class="keywordflow">for</span>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> i = 0; i &lt; max(this-&gt;<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>(), bi.<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>()); i++) {</div>
+<div class="line"><span class="lineno">  209</span>        <span class="keywordtype">short</span> this_num     = i &lt; this-&gt;<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>() ? (*this)[i] : 0;</div>
+<div class="line"><span class="lineno">  210</span>        <span class="keyword">const</span> <span class="keywordtype">short</span> bi_num = i &lt; bi.<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>() ? bi[i] : 0;</div>
+<div class="line"><span class="lineno">  211</span>        this_num -= borrow;</div>
+<div class="line"><span class="lineno">  212</span>        <span class="keywordtype">short</span> diff = this_num - bi_num;</div>
+<div class="line"><span class="lineno">  213</span>        borrow     = 0;</div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">while</span>(diff &lt; 0) {</div>
+<div class="line"><span class="lineno">  215</span>            borrow++;</div>
+<div class="line"><span class="lineno">  216</span>            diff += 10;</div>
+<div class="line"><span class="lineno">  217</span>        }</div>
+<div class="line"><span class="lineno">  218</span>        v.push_back(diff);</div>
+<div class="line"><span class="lineno">  219</span>    }</div>
+<div class="line"><span class="lineno">  220</span>    <span class="keyword">auto</span> ret = <a class="code hl_function" href="#af677021c0987fc2a48da06837ed29c58">BigInt</a>(v, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  221</span>    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">  222</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00389">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00032">get_size()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a>.</p>
+
+</div>
+</div>
+<a id="aed992537fac59f8c794fc24d10baf199" name="aed992537fac59f8c794fc24d10baf199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed992537fac59f8c794fc24d10baf199">&#9670;&#160;</a></span>operator--() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp; BigInt::operator-- </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00373">373</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  373</span>                           {</div>
+<div class="line"><span class="lineno">  374</span>    *<span class="keyword">this</span> -= 1;</div>
+<div class="line"><span class="lineno">  375</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  376</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<a id="a6ef5639e9f2cb2226f8611bb39c6c663" name="a6ef5639e9f2cb2226f8611bb39c6c663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ef5639e9f2cb2226f8611bb39c6c663">&#9670;&#160;</a></span>operator--() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> BigInt::operator-- </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00384">384</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  384</span>                             {</div>
+<div class="line"><span class="lineno">  385</span>    <span class="keyword">auto</span> ret = <a class="code hl_function" href="#af677021c0987fc2a48da06837ed29c58">BigInt</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  386</span>    *<span class="keyword">this</span> -= 1;</div>
+<div class="line"><span class="lineno">  387</span>    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">  388</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00389">BigInt()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<a id="a40506afe3528e6de90db7339870a5388" name="a40506afe3528e6de90db7339870a5388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40506afe3528e6de90db7339870a5388">&#9670;&#160;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp; BigInt::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00334">334</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  334</span>                                           {</div>
+<div class="line"><span class="lineno">  335</span>    *<span class="keyword">this</span> = *<span class="keyword">this</span> - bi;</div>
+<div class="line"><span class="lineno">  336</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  337</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<a id="a6ad84d14142e72660a69217ecd44397a" name="a6ad84d14142e72660a69217ecd44397a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ad84d14142e72660a69217ecd44397a">&#9670;&#160;</a></span>operator/()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> BigInt::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00269">269</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  269</span>{ <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<a id="ace7b3a08d85245b3f1ddc80562c7606e" name="ace7b3a08d85245b3f1ddc80562c7606e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace7b3a08d85245b3f1ddc80562c7606e">&#9670;&#160;</a></span>operator/=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp; BigInt::operator/= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00344">344</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  344</span>                                           {</div>
+<div class="line"><span class="lineno">  345</span>    *<span class="keyword">this</span> = *<span class="keyword">this</span> / bi;</div>
+<div class="line"><span class="lineno">  346</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  347</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<a id="a3f4095f8d9fea90dff6087f953bf98ab" name="a3f4095f8d9fea90dff6087f953bf98ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f4095f8d9fea90dff6087f953bf98ab">&#9670;&#160;</a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BigInt::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00298">298</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  298</span>                                             {</div>
+<div class="line"><span class="lineno">  299</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> != bi.<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>) {</div>
+<div class="line"><span class="lineno">  300</span>        <span class="keywordflow">return</span> !this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>;</div>
+<div class="line"><span class="lineno">  301</span>    }</div>
+<div class="line"><span class="lineno">  302</span>    <span class="keywordflow">if</span>(!this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> &amp;&amp; !bi.<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>) {</div>
+<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">return</span> -*<span class="keyword">this</span> &gt; -bi;</div>
+<div class="line"><span class="lineno">  304</span>    }</div>
+<div class="line"><span class="lineno">  305</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>() != bi.<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>()) {</div>
+<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>() &lt; bi.<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>();</div>
+<div class="line"><span class="lineno">  307</span>    }</div>
+<div class="line"><span class="lineno">  308</span>    <span class="keywordflow">return</span> !(*<span class="keyword">this</span> &gt;= bi);</div>
+<div class="line"><span class="lineno">  309</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00032">get_size()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a>.</p>
+
+</div>
+</div>
+<a id="a88582e66ab6a678adca59098a3002511" name="a88582e66ab6a678adca59098a3002511"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88582e66ab6a678adca59098a3002511">&#9670;&#160;</a></span>operator&lt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BigInt::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00327">327</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  327</span>{ <span class="keywordflow">return</span> *<span class="keyword">this</span> == bi || *<span class="keyword">this</span> &lt; bi; }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<a id="af19dc5b0f94917a8350deded100030c8" name="af19dc5b0f94917a8350deded100030c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af19dc5b0f94917a8350deded100030c8">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BigInt::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00311">311</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  311</span>                                              {</div>
+<div class="line"><span class="lineno">  312</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> == bi.<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>) {</div>
+<div class="line"><span class="lineno">  313</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a> == bi.<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>;</div>
+<div class="line"><span class="lineno">  314</span>    }</div>
+<div class="line"><span class="lineno">  315</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  316</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="a101ffb4059c7d96d853869a316dc8659" name="a101ffb4059c7d96d853869a316dc8659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a101ffb4059c7d96d853869a316dc8659">&#9670;&#160;</a></span>operator&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BigInt::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00273">273</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  273</span>                                             {</div>
+<div class="line"><span class="lineno">  274</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> != bi.<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>) {</div>
+<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>;</div>
+<div class="line"><span class="lineno">  276</span>    }</div>
+<div class="line"><span class="lineno">  277</span>    <span class="keywordflow">if</span>(!this-&gt;<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a> &amp;&amp; !bi.<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>) {</div>
+<div class="line"><span class="lineno">  278</span>        <span class="keywordflow">return</span> -*<span class="keyword">this</span> &lt; -bi;</div>
+<div class="line"><span class="lineno">  279</span>    }</div>
+<div class="line"><span class="lineno">  280</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>() != bi.<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>()) {</div>
+<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>() &gt; bi.<a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>();</div>
+<div class="line"><span class="lineno">  282</span>    }</div>
+<div class="line"><span class="lineno">  283</span> </div>
+<div class="line"><span class="lineno">  284</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = <a class="code hl_function" href="#a1f416b0240756bc9f78c5589339636e6">get_size</a>() - 1; i &gt;= 0; --i) {</div>
+<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">if</span>((*<span class="keyword">this</span>)[i] &gt; bi[i]) {</div>
+<div class="line"><span class="lineno">  286</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  287</span>        }</div>
+<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">if</span>((*<span class="keyword">this</span>)[i] &lt; bi[i]) {</div>
+<div class="line"><span class="lineno">  289</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  290</span>        }</div>
+<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">if</span>((*<span class="keyword">this</span>)[i] &lt; bi[i]) {</div>
+<div class="line"><span class="lineno">  292</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  293</span>        }</div>
+<div class="line"><span class="lineno">  294</span>    }</div>
+<div class="line"><span class="lineno">  295</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  296</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00032">get_size()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a>.</p>
+
+</div>
+</div>
+<a id="a8eca20c6d226bd09fec2e67c81f9ba0c" name="a8eca20c6d226bd09fec2e67c81f9ba0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eca20c6d226bd09fec2e67c81f9ba0c">&#9670;&#160;</a></span>operator&gt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BigInt::operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00325">325</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  325</span>{ <span class="keywordflow">return</span> *<span class="keyword">this</span> == bi || *<span class="keyword">this</span> &gt; bi; }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<a id="a1bdb78c6c46db616abb7eedf093ea2a9" name="a1bdb78c6c46db616abb7eedf093ea2a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bdb78c6c46db616abb7eedf093ea2a9">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short BigInt::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00034">34</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>[i]; }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关符号说明</h2>
+<a id="a306bf00524f91d87d511fe540d517e8f" name="a306bf00524f91d87d511fe540d517e8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a306bf00524f91d87d511fe540d517e8f">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00354">354</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  354</span>                                                   {</div>
+<div class="line"><span class="lineno">  355</span>    <span class="keywordflow">if</span>(!bi.<a class="code hl_variable" href="#a622851f40dd8992cc2a66a5ce83133df">positive</a>) {</div>
+<div class="line"><span class="lineno">  356</span>        os &lt;&lt; <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line"><span class="lineno">  357</span>    }</div>
+<div class="line"><span class="lineno">  358</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = bi.<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.rbegin(); it != bi.<a class="code hl_variable" href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.rend(); ++it) {</div>
+<div class="line"><span class="lineno">  359</span>        os &lt;&lt; *it;</div>
+<div class="line"><span class="lineno">  360</span>    }</div>
+<div class="line"><span class="lineno">  361</span>    <span class="keywordflow">return</span> os;</div>
+<div class="line"><span class="lineno">  362</span>}</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l00026">positive</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">vec</a>.</p>
+
+</div>
+</div>
+<a id="ac34f777e9f24df2612d7769e2252a065" name="ac34f777e9f24df2612d7769e2252a065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac34f777e9f24df2612d7769e2252a065">&#9670;&#160;</a></span>operator&gt;&gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">istream &amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;</td>          <td class="paramname"><span class="paramname"><em>is</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../da/d93/a03765.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00364">364</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  364</span>{ <span class="keywordflow">return</span> is; }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a622851f40dd8992cc2a66a5ce83133df" name="a622851f40dd8992cc2a66a5ce83133df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a622851f40dd8992cc2a66a5ce83133df">&#9670;&#160;</a></span>positive</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BigInt::positive = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">templates.h</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l00026">26</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../dd/dad/a00005_source.html#l00389">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00159">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00148">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00137">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00065">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00079">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00051">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00318">operator!=()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00240">operator*()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00174">operator+()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00366">operator-()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00196">operator-()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00298">operator&lt;()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00354">operator&lt;&lt;</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00311">operator==()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00273">operator&gt;()</a>.</p>
+
+</div>
+</div>
+<a id="a8ff0b8f430da59beb2b9e3d9a8f4f122" name="a8ff0b8f430da59beb2b9e3d9a8f4f122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ff0b8f430da59beb2b9e3d9a8f4f122">&#9670;&#160;</a></span>vec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;unsigned short&gt; BigInt::vec = {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">templates.h</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l00027">27</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>{};</div>
+</div><!-- fragment -->
+<p class="reference">被这些函数引用 <a class="el" href="../../dd/dad/a00005_source.html#l00389">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00159">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00148">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00137">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00036">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00065">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00079">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00051">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00113">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00121">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00105">BigInt()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00032">get_size()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00318">operator!=()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00240">operator*()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00224">operator*()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00366">operator-()</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00354">operator&lt;&lt;</a>, <a class="el" href="../../dd/dad/a00005_source.html#l00311">operator==()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00034">operator[]()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../d3/d8b/a00059_source.html">templates.h</a></li>
+<li><a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
