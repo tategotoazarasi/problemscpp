@@ -887,3 +887,42 @@ namespace hamming {
 		return input;
 	}
 }// namespace hamming
+
+namespace dfa {
+	vector<unordered_map<char, int>> construct_dfa(string pattern) {
+		int m = pattern.size();
+		if(m == 0)
+			return {};
+		vector<unordered_map<char, int>> lut(m, unordered_map<char, int>());
+		lut[0][pattern[0]] = 1;
+		int x              = 0;
+		for(int j = 1; j < m; j++) {
+			lut[j]             = lut[x];
+			lut[j][pattern[j]] = j + 1;
+			x                  = lut[x][pattern[j]];
+		}
+		return lut;
+	}
+
+	int str_match(string str, string pattern) {
+		if(pattern.empty())
+			return 0;
+
+		auto dfa = construct_dfa(pattern);
+		int m    = pattern.size();
+		int n    = str.size();
+		int q    = 0;
+
+		for(int i = 0; i < n; i++) {
+			if(dfa[q].count(str[i])) {
+				q = dfa[q][str[i]];
+			} else {
+				q = 0;
+			}
+			if(q == m) {
+				return i - m + 1;
+			}
+		}
+		return -1;
+	}
+}// namespace dfa

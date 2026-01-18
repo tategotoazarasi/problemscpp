@@ -260,3 +260,8 @@ namespace hamming {
 	vector<bool> encode(vector<bool> input);
 	vector<bool> correct(vector<bool> input);
 }// namespace hamming
+
+namespace dfa {
+	vector<unordered_map<char, int>> construct_dfa(string pattern);
+	int str_match(string str, string pattern);
+}// namespace dfa

@@ -451,3 +451,29 @@ namespace hamming {
 		ASSERT_EQ(ham, corrected);
 	}
 }// namespace hamming
+
+namespace dfa {
+	TEST(dfa, case_rand) {
+		std::random_device rd;
+		std::mt19937 gen(rd());
+		std::uniform_int_distribution<> dis_word(0, 25);
+		std::uniform_int_distribution<> dis_len(64, 128);
+		ostringstream oss = {};
+		int len           = dis_len(gen);
+		for(int i = 0; i < len; i++) {
+			char c = static_cast<char>(dis_word(gen) + 'a');
+			oss << c;
+		}
+		std::uniform_int_distribution<> dis_i(0, len - 1);
+		int i = dis_i(gen);
+		int j = dis_i(gen);
+		if(i > j) {
+			swap(i, j);
+		}
+		string input   = oss.str();
+		string pattern = input.substr(i, j - i + 1);
+		auto pos       = input.find(pattern);
+		auto ans       = str_match(input, pattern);
+		ASSERT_EQ(ans, pos);
+	}
+}// namespace dfa
