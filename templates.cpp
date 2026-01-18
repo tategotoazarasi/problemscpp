@@ -1,5 +1,8 @@
 #include "templates.h"
+
+#include <algorithm>
 #include <cstring>
+#include <iostream>
 #include <list>
 #include <numeric>
 #include <queue>
@@ -786,3 +789,64 @@ namespace mtf {
 		return ans.str();
 	}
 }// namespace mtf
+
+namespace bwt {
+	string encode(string input) {
+		deque<char> deq(input.begin(), input.end());
+		deq.push_back('$');
+		ostringstream oss = {};
+		vector<string> vec(deq.size());
+
+		for(int i = 0; i < deq.size(); i++) {
+			for(auto c: deq) {
+				oss << c;
+			}
+			deq.push_back(deq.front());
+			deq.pop_front();
+			vec[i] = oss.str();
+			oss    = ostringstream();
+		}
+		ranges::sort(vec.begin(), vec.end());
+		for(string str: vec) {
+			oss << str.back();
+		}
+		return oss.str();
+	}
+	struct node {
+		char c;
+		int order                                                 = 0;
+		bool operator==(vector<node>::const_reference node) const = default;
+	};
+	string decode(string input) {
+		vector<node> l               = {};
+		unordered_map<char, int> cnt = {};
+		for(char c: input) {
+			l.push_back(node{c, cnt[c]});
+			cnt[c]++;
+		}
+		vector<node> f = l;
+		sort(f.begin(), f.end(), [](const node &a, const node &b) {
+			if(a.c != b.c) {
+				return a.c < b.c;
+			} else {
+				return a.order < b.order;
+			}
+		});
+		deque<char> deq;
+		int cur = 0;
+		for(int j = 0; j < f.size() - 1; j++) {
+			deq.push_front(l[cur].c);
+			for(int i = 0; i < f.size(); i++) {
+				if(f[i] == l[cur]) {
+					cur = i;
+					break;
+				}
+			}
+		}
+		ostringstream oss = {};
+		for(char c: deq) {
+			oss << c;
+		}
+		return oss.str();
+	}
+}// namespace bwt

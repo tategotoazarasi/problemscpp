@@ -412,3 +412,22 @@ namespace mtf {
 		ASSERT_EQ(input, decompressed);
 	}
 }// namespace mtf
+
+namespace bwt {
+	TEST(bwt, case_rand) {
+		std::random_device rd;
+		std::mt19937 gen(rd());
+		std::uniform_int_distribution<> dis_word(0, 25);
+		std::uniform_int_distribution<> dis_len(64, 128);
+		ostringstream oss = {};
+		int len           = dis_len(gen);
+		for(int i = 0; i < len; i++) {
+			char c = static_cast<char>(dis_word(gen) + 'a');
+			oss << c;
+		}
+		string input      = oss.str();
+		auto compressed   = encode(input);
+		auto decompressed = decode(compressed);
+		ASSERT_EQ(input, decompressed);
+	}
+}// namespace bwt

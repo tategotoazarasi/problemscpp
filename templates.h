@@ -250,3 +250,8 @@ namespace mtf {
 	vector<int> encode(string input);
 	string decode(vector<int> input);
 }// namespace mtf
+
+namespace bwt {
+	string encode(string input);
+	string decode(string input);
+}// namespace bwt
