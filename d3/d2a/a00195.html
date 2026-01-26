@@ -150,8 +150,8 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  906</span>                    }</div>
 <div class="line"><span class="lineno">  907</span>                }</div>
 <div class="line"><span class="lineno">  908</span>            }</div>
-<div class="line"><span class="lineno">  909</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
-<div class="line"><span class="lineno">  910</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= <a class="code hl_variable" href="../../d9/d42/a00575.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; j++) {</div>
+<div class="line"><span class="lineno">  909</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno">  910</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= <a class="code hl_variable" href="../../de/d7c/a00576.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; j++) {</div>
 <div class="line"><span class="lineno">  911</span>                    <span class="keywordflow">if</span>(row_cnt[i] == n) {</div>
 <div class="line"><span class="lineno">  912</span>                        filled_rows.insert(i);</div>
 <div class="line"><span class="lineno">  913</span>                    }</div>
@@ -162,13 +162,13 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  918</span>            }</div>
 <div class="line"><span class="lineno">  919</span>            vector&lt;vector&lt;int&gt;&gt; a_cpy(a.begin(), a.end());</div>
 <div class="line"><span class="lineno">  920</span>            queue&lt;pair&lt;bool, int&gt;&gt; q = queue&lt;pair&lt;bool, int&gt;&gt;();<span class="comment">// &lt;is_row,index&gt;</span></div>
-<div class="line"><span class="lineno">  921</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno">  921</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
 <div class="line"><span class="lineno">  922</span>                <span class="keywordflow">if</span>(row_cnt[i] &gt; 1) {</div>
 <div class="line"><span class="lineno">  923</span>                    filled_rows.insert(i);</div>
 <div class="line"><span class="lineno">  924</span>                    q.push(make_pair(<span class="keyword">true</span>, i));</div>
 <div class="line"><span class="lineno">  925</span>                }</div>
 <div class="line"><span class="lineno">  926</span>            }</div>
-<div class="line"><span class="lineno">  927</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; <a class="code hl_variable" href="../../d9/d42/a00575.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; i++) {</div>
+<div class="line"><span class="lineno">  927</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; <a class="code hl_variable" href="../../de/d7c/a00576.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; i++) {</div>
 <div class="line"><span class="lineno">  928</span>                <span class="keywordflow">if</span>(col_cnt[i] &gt; 1) {</div>
 <div class="line"><span class="lineno">  929</span>                    filled_cols.insert(i);</div>
 <div class="line"><span class="lineno">  930</span>                    q.push(make_pair(<span class="keyword">false</span>, i));</div>
@@ -180,7 +180,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  936</span>                <span class="keywordflow">if</span>(is_row) {</div>
 <div class="line"><span class="lineno">  937</span>                    <span class="keywordtype">int</span> l = 0;</div>
 <div class="line"><span class="lineno">  938</span>                    <span class="keywordtype">int</span> r = 0;</div>
-<div class="line"><span class="lineno">  939</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= <a class="code hl_variable" href="../../d9/d42/a00575.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; j++) {</div>
+<div class="line"><span class="lineno">  939</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= <a class="code hl_variable" href="../../de/d7c/a00576.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; j++) {</div>
 <div class="line"><span class="lineno">  940</span>                        <span class="keywordflow">if</span>(a[index][j] &gt; 0) {</div>
 <div class="line"><span class="lineno">  941</span>                            <span class="keywordflow">if</span>(l == 0) {</div>
 <div class="line"><span class="lineno">  942</span>                                l = j;</div>
@@ -192,7 +192,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  948</span>                        }</div>
 <div class="line"><span class="lineno">  949</span>                    }</div>
 <div class="line"><span class="lineno">  950</span>                    <span class="keywordtype">int</span> d = (a[index][r] - a[index][l]) / (r - l);</div>
-<div class="line"><span class="lineno">  951</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= <a class="code hl_variable" href="../../d9/d42/a00575.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; j++) {</div>
+<div class="line"><span class="lineno">  951</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= <a class="code hl_variable" href="../../de/d7c/a00576.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; j++) {</div>
 <div class="line"><span class="lineno">  952</span>                        <span class="keywordflow">if</span>(a[index][j] == 0) {</div>
 <div class="line"><span class="lineno">  953</span>                            a[index][j] = a[index][l] + (j - l) * d;</div>
 <div class="line"><span class="lineno">  954</span>                            col_cnt[j]++;</div>
@@ -205,7 +205,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  961</span>                } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">  962</span>                    <span class="keywordtype">int</span> l = 0;</div>
 <div class="line"><span class="lineno">  963</span>                    <span class="keywordtype">int</span> r = 0;</div>
-<div class="line"><span class="lineno">  964</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno">  964</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
 <div class="line"><span class="lineno">  965</span>                        <span class="keywordflow">if</span>(a[i][index] &gt; 0) {</div>
 <div class="line"><span class="lineno">  966</span>                            <span class="keywordflow">if</span>(l == 0) {</div>
 <div class="line"><span class="lineno">  967</span>                                l = i;</div>
@@ -217,7 +217,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  973</span>                        }</div>
 <div class="line"><span class="lineno">  974</span>                    }</div>
 <div class="line"><span class="lineno">  975</span>                    <span class="keywordtype">int</span> d = (a[r][index] - a[l][index]) / (r - l);</div>
-<div class="line"><span class="lineno">  976</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno">  976</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
 <div class="line"><span class="lineno">  977</span>                        <span class="keywordflow">if</span>(a[i][index] == 0) {</div>
 <div class="line"><span class="lineno">  978</span>                            a[i][index] = a[l][index] + (i - l) * d;</div>
 <div class="line"><span class="lineno">  979</span>                            row_cnt[i]++;</div>
@@ -229,8 +229,8 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  985</span>                    }</div>
 <div class="line"><span class="lineno">  986</span>                }</div>
 <div class="line"><span class="lineno">  987</span>            }</div>
-<div class="line"><span class="lineno">  988</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code hl_variable" href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
-<div class="line"><span class="lineno">  989</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= <a class="code hl_variable" href="../../d9/d42/a00575.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; j++) {</div>
+<div class="line"><span class="lineno">  988</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno">  989</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= <a class="code hl_variable" href="../../de/d7c/a00576.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; j++) {</div>
 <div class="line"><span class="lineno">  990</span>                    <span class="keywordflow">if</span>(a_cpy[i][j] != a[i][j]) {</div>
 <div class="line"><span class="lineno">  991</span>                        cout &lt;&lt; i &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; j &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; a[i][j] &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  992</span>                    }</div>
@@ -238,8 +238,8 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  994</span>            }</div>
 <div class="line"><span class="lineno">  995</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  996</span>        }</div>
-<div class="ttc" id="aa00575_html_ab2991a035ec7c05bca06cda958a3e50c"><div class="ttname"><a href="../../d9/d42/a00575.html#ab2991a035ec7c05bca06cda958a3e50c">liverpool::grid::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
-<div class="ttc" id="aa00575_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../d9/d42/a00575.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
+<div class="ttc" id="aa00576_html_ab2991a035ec7c05bca06cda958a3e50c"><div class="ttname"><a href="../../de/d7c/a00576.html#ab2991a035ec7c05bca06cda958a3e50c">liverpool::grid::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
+<div class="ttc" id="aa00576_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../da/d24/a00068_source.html#l01282">TEST()</a>.</p>
 
