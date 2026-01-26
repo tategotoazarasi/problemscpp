@@ -3437,6 +3437,25 @@ namespace leetcode {
 			static int minOperations(vector<int> &nums, vector<int> &target);
 		};
 	}// namespace minimum_operations_to_reach_target_array
+
+	namespace minimum_cost_path_with_edge_reversals {
+		struct node {
+			int id                          = -1;
+			unordered_map<node *, int> to   = {};
+			unordered_map<node *, int> from = {};
+			node(const int id): id(id) {}
+		};
+		struct status {
+			node *nd   = nullptr;
+			int weight = 0;
+			bool used  = false;
+			bool operator<(const status &rhs) const;
+		};
+		class Solution {
+		public:
+			static int minCost(int n, vector<vector<int>> &edges);
+		};
+	}// namespace minimum_cost_path_with_edge_reversals
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

@@ -4483,4 +4483,23 @@ namespace leetcode {
 			ASSERT_EQ(2, Solution::minOperations(nums, target));
 		}
 	}// namespace minimum_operations_to_reach_target_array
+
+	namespace minimum_cost_path_with_edge_reversals {
+		TEST(minimum_cost_path_with_edge_reversals, case1) {
+			vector<vector<int>> edges = {{0, 1, 3}, {3, 1, 1}, {2, 3, 4}, {0, 2, 2}};
+			ASSERT_EQ(5, Solution::minCost(4, edges));
+		}
+		TEST(minimum_cost_path_with_edge_reversals, case2) {
+			vector<vector<int>> edges = {{0, 2, 1}, {2, 1, 1}, {1, 3, 1}, {2, 3, 3}};
+			ASSERT_EQ(3, Solution::minCost(4, edges));
+		}
+		TEST(minimum_cost_path_with_edge_reversals, case3) {
+			vector<vector<int>> edges = {{2, 1, 1}, {1, 0, 1}, {2, 0, 16}};
+			ASSERT_EQ(4, Solution::minCost(3, edges));
+		}
+		TEST(minimum_cost_path_with_edge_reversals, case4) {
+			vector<vector<int>> edges = {{2, 3, 25}, {2, 1, 18}, {3, 1, 2}};
+			ASSERT_EQ(-1, Solution::minCost(4, edges));
+		}
+	}// namespace minimum_cost_path_with_edge_reversals
 }// namespace leetcode

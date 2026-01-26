@@ -9644,4 +9644,51 @@ namespace leetcode {
 			return s.size();
 		}
 	}// namespace minimum_operations_to_reach_target_array
+
+	namespace minimum_cost_path_with_edge_reversals {
+		bool status::operator<(const status &rhs) const {
+			return this->weight > rhs.weight;
+		}
+		int Solution::minCost(int n, vector<vector<int>> &edges) {
+			vector<node *> nodes(n);
+			for(int i = 0; i < n; i++) {
+				nodes[i] = new node(i);
+			}
+			for(const auto &edge: edges) {
+				int u                    = edge[0];
+				int v                    = edge[1];
+				int w                    = edge[2];
+				nodes[u]->to[nodes[v]]   = w;
+				nodes[v]->from[nodes[u]] = w;
+			}
+			priority_queue<status> pq = {};
+			unordered_set<int> vis    = {};
+			pq.push(status{nodes[0], 0, false});
+			while(!pq.empty()) {
+				auto current = pq.top();
+				pq.pop();
+				if(vis.contains(current.nd->id)) {
+					continue;
+				} else {
+					vis.insert(current.nd->id);
+				}
+				if(current.nd->id == n - 1) {
+					return current.weight;
+				}
+				for(const auto &[k, v]: current.nd->to) {
+					if(!vis.contains(k->id)) {
+						pq.push(status{k, current.weight + v, current.used});
+					}
+				}
+				//if(!current.used) {
+				for(const auto &[k, v]: current.nd->from) {
+					if(!vis.contains(k->id)) {
+						pq.push(status{k, current.weight + 2 * v, true});
+					}
+				}
+				//}
+			}
+			return -1;
+		}
+	}// namespace minimum_cost_path_with_edge_reversals
 }// namespace leetcode
