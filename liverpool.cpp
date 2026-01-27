@@ -1465,4 +1465,33 @@ namespace liverpool {
 			return oss.str();
 		}
 	}// namespace hsbc_interview
+
+	namespace booking {
+		int getScoreDifference(vector<int> numSeq) {
+			int p1      = 0;
+			int p2      = 0;
+			int l       = 0;
+			int r       = numSeq.size() - 1;
+			int *cursor = &l;
+			bool p1turn = true;
+			while(l <= r) {
+				int score = numSeq[*cursor];
+				if(p1turn) {
+					p1 += score;
+				} else {
+					p2 += score;
+				}
+				if(cursor == &l) {
+					(*cursor)++;
+				} else {
+					(*cursor)--;
+				}
+				if(score % 2 == 0) {
+					cursor = (cursor == &l) ? &r : &l;
+				}
+				p1turn = !p1turn;
+			}
+			return p1 - p2;
+		}
+	}// namespace booking
 }// namespace liverpool

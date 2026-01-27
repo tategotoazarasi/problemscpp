@@ -520,4 +520,11 @@ namespace liverpool {
 			ASSERT_EQ("2 A a C c ", ans);
 		}
 	}// namespace hsbc_interview
+
+	namespace booking {
+		TEST(booking_1, case1) {
+			ASSERT_EQ(1, getScoreDifference({3, 6, 2, 3, 5}));
+		}
+
+	}// namespace booking
 }// namespace liverpool

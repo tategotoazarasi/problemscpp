@@ -192,6 +192,10 @@ namespace liverpool {
 	namespace hsbc_interview {
 		string solution(string letters);
 	}
+
+	namespace booking {
+		int getScoreDifference(vector<int> numSeq);
+	}
 }// namespace liverpool
 
 #endif//PROBLEMSCPP_COMO526_H
