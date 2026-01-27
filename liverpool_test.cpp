@@ -526,5 +526,16 @@ namespace liverpool {
 			ASSERT_EQ(1, getScoreDifference({3, 6, 2, 3, 5}));
 		}
 
+		TEST(booking_2, case1) {
+			ASSERT_EQ(4, getSwapTime("001011"));
+		}
+
+		TEST(booking_2, case2) {
+			ASSERT_EQ(2, getSwapTime("0101"));
+		}
+
+		TEST(booking_2, case3) {
+			ASSERT_EQ(0, getSwapTime("1111"));
+		}
 	}// namespace booking
 }// namespace liverpool

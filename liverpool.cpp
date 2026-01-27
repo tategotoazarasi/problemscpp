@@ -1493,5 +1493,19 @@ namespace liverpool {
 			}
 			return p1 - p2;
 		}
+
+		int getSwapTime(string color) {
+			int ans    = 0;
+			int l0_cnt = 0;
+			for(char c: color) {
+				if(c == '0') {
+					l0_cnt++;
+				} else if(l0_cnt != 0) {
+					ans = max(ans + 1, l0_cnt);
+				}
+			}
+			return ans;
+		}
 	}// namespace booking
+
 }// namespace liverpool

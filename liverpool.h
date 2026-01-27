@@ -195,7 +195,8 @@ namespace liverpool {
 
 	namespace booking {
 		int getScoreDifference(vector<int> numSeq);
-	}
+		int getSwapTime(string color);
+	}// namespace booking
 }// namespace liverpool
 
 #endif//PROBLEMSCPP_COMO526_H
