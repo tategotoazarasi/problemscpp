@@ -148,27 +148,27 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno"> 1453</span>            };</div>
 <div class="line"><span class="lineno"> 1454</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
 <div class="line"><span class="lineno"> 1455</span>            cin &gt;&gt; <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
-<div class="line"><span class="lineno"> 1456</span>            vector&lt;vector&lt;int&gt;&gt; <a class="code hl_variable" href="../../df/d3b/a00728.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[5] = {vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0))};</div>
+<div class="line"><span class="lineno"> 1456</span>            vector&lt;vector&lt;int&gt;&gt; <a class="code hl_variable" href="../../d8/d52/a00729.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[5] = {vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0)), vector(n, vector&lt;int&gt;(n, 0))};</div>
 <div class="line"><span class="lineno"> 1457</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
 <div class="line"><span class="lineno"> 1458</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; j++) {</div>
-<div class="line"><span class="lineno"> 1459</span>                    cin &gt;&gt; <a class="code hl_variable" href="../../df/d3b/a00728.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
+<div class="line"><span class="lineno"> 1459</span>                    cin &gt;&gt; <a class="code hl_variable" href="../../d8/d52/a00729.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
 <div class="line"><span class="lineno"> 1460</span> </div>
 <div class="line"><span class="lineno"> 1461</span>                    <span class="keywordtype">int</span> i2         = matrix[0][0][0] * i + matrix[0][0][1] * j;</div>
 <div class="line"><span class="lineno"> 1462</span>                    <span class="keywordtype">int</span> j2         = matrix[0][1][0] * i + matrix[0][1][1] * j + <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> - 1;</div>
-<div class="line"><span class="lineno"> 1463</span>                    <a class="code hl_variable" href="../../df/d3b/a00728.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[1][i2][j2] = <a class="code hl_variable" href="../../df/d3b/a00728.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
+<div class="line"><span class="lineno"> 1463</span>                    <a class="code hl_variable" href="../../d8/d52/a00729.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[1][i2][j2] = <a class="code hl_variable" href="../../d8/d52/a00729.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
 <div class="line"><span class="lineno"> 1464</span> </div>
 <div class="line"><span class="lineno"> 1465</span>                    <span class="keywordtype">int</span> i3         = matrix[1][0][0] * i + matrix[1][0][1] * j + <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> - 1;</div>
 <div class="line"><span class="lineno"> 1466</span>                    <span class="keywordtype">int</span> j3         = matrix[1][1][0] * i + matrix[1][1][1] * j + <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> - 1;</div>
-<div class="line"><span class="lineno"> 1467</span>                    <a class="code hl_variable" href="../../df/d3b/a00728.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[2][i3][j3] = <a class="code hl_variable" href="../../df/d3b/a00728.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
+<div class="line"><span class="lineno"> 1467</span>                    <a class="code hl_variable" href="../../d8/d52/a00729.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[2][i3][j3] = <a class="code hl_variable" href="../../d8/d52/a00729.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
 <div class="line"><span class="lineno"> 1468</span> </div>
 <div class="line"><span class="lineno"> 1469</span>                    <span class="keywordtype">int</span> i4         = matrix[2][0][0] * i + matrix[2][0][1] * j + <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> - 1;</div>
 <div class="line"><span class="lineno"> 1470</span>                    <span class="keywordtype">int</span> j4         = matrix[2][1][0] * i + matrix[2][1][1] * j;</div>
-<div class="line"><span class="lineno"> 1471</span>                    <a class="code hl_variable" href="../../df/d3b/a00728.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[3][i4][j4] = <a class="code hl_variable" href="../../df/d3b/a00728.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
+<div class="line"><span class="lineno"> 1471</span>                    <a class="code hl_variable" href="../../d8/d52/a00729.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[3][i4][j4] = <a class="code hl_variable" href="../../d8/d52/a00729.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[0][i][j];</div>
 <div class="line"><span class="lineno"> 1472</span>                }</div>
 <div class="line"><span class="lineno"> 1473</span>            }</div>
 <div class="line"><span class="lineno"> 1474</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
 <div class="line"><span class="lineno"> 1475</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; j++) {</div>
-<div class="line"><span class="lineno"> 1476</span>                    cin &gt;&gt; <a class="code hl_variable" href="../../df/d3b/a00728.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[4][i][j];</div>
+<div class="line"><span class="lineno"> 1476</span>                    cin &gt;&gt; <a class="code hl_variable" href="../../d8/d52/a00729.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[4][i][j];</div>
 <div class="line"><span class="lineno"> 1477</span>                }</div>
 <div class="line"><span class="lineno"> 1478</span>            }</div>
 <div class="line"><span class="lineno"> 1479</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">true</span>;</div>
@@ -196,7 +196,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno"> 1501</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno"> 1502</span>        }</div>
 <div class="ttc" id="aa00576_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
-<div class="ttc" id="aa00728_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../df/d3b/a00728.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>定义</b> <a href="../../d1/d09/a00077_source.html#l05095">pat.cpp:5095</a></div></div>
+<div class="ttc" id="aa00729_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d8/d52/a00729.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>定义</b> <a href="../../d1/d09/a00077_source.html#l05095">pat.cpp:5095</a></div></div>
 </div><!-- fragment -->
 <p class="reference">被这些函数引用 <a class="el" href="../../da/d24/a00068_source.html#l01754">TEST()</a> , 以及 <a class="el" href="../../da/d24/a00068_source.html#l01769">TEST()</a>.</p>
 

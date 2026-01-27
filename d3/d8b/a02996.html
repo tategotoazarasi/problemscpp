@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: 成员列表</title>
+<title>problemscpp: leetcode::partition_equal_subset_sum::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,19 +84,95 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d6/d22/a00245.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d1/d0b/a00529.html">minimum_cost_for_tickets</a></li><li class="navelem"><a class="el" href="../../dc/d94/a02999.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d6/d22/a00245.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d5/d81/a00528.html">partition_equal_subset_sum</a></li><li class="navelem"><a class="el" href="../../d3/d8b/a02996.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">leetcode::minimum_cost_for_tickets::Solution 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d6/d58/a02993.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">leetcode::partition_equal_subset_sum::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="../../dc/d94/a02999.html">leetcode::minimum_cost_for_tickets::Solution</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../dc/d94/a02999.html#a16fdd3130840abd20a20ca153a813145">mincostTickets</a>(vector&lt; int &gt; &amp;days, vector&lt; int &gt; &amp;costs)</td><td class="entry"><a class="el" href="../../dc/d94/a02999.html">leetcode::minimum_cost_for_tickets::Solution</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a6e59161978e1dcf8b0239a9e80319458" id="r_a6e59161978e1dcf8b0239a9e80319458"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e59161978e1dcf8b0239a9e80319458">canPartition</a> (vector&lt; int &gt; &amp;nums)</td></tr>
+<tr class="separator:a6e59161978e1dcf8b0239a9e80319458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a> 第 <a class="el" href="../../dd/d32/a00041_source.html#l03136">3136</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a6e59161978e1dcf8b0239a9e80319458" name="a6e59161978e1dcf8b0239a9e80319458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e59161978e1dcf8b0239a9e80319458">&#9670;&#160;</a></span>canPartition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool leetcode::partition_equal_subset_sum::Solution::canPartition </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>nums</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a> 第 <a class="el" href="../../da/d45/a00011_source.html#l08909">8909</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 8909</span>                                                     {</div>
+<div class="line"><span class="lineno"> 8910</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> = nums.size();</div>
+<div class="line"><span class="lineno"> 8911</span>            <span class="keywordflow">if</span>(n &lt; 2) {</div>
+<div class="line"><span class="lineno"> 8912</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 8913</span>            }</div>
+<div class="line"><span class="lineno"> 8914</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> sum    = accumulate(nums.begin(), nums.end(), 0);</div>
+<div class="line"><span class="lineno"> 8915</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> maxNum = *max_element(nums.begin(), nums.end());</div>
+<div class="line"><span class="lineno"> 8916</span>            <span class="keywordflow">if</span>(sum &amp; 1) {</div>
+<div class="line"><span class="lineno"> 8917</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 8918</span>            }</div>
+<div class="line"><span class="lineno"> 8919</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> target = sum / 2;</div>
+<div class="line"><span class="lineno"> 8920</span>            <span class="keywordflow">if</span>(maxNum &gt; target) {</div>
+<div class="line"><span class="lineno"> 8921</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 8922</span>            }</div>
+<div class="line"><span class="lineno"> 8923</span>            vector dp(n, vector(target + 1, 0));</div>
+<div class="line"><span class="lineno"> 8924</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno"> 8925</span>                dp[i][0] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 8926</span>            }</div>
+<div class="line"><span class="lineno"> 8927</span>            dp[0][nums[0]] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 8928</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; <a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno"> 8929</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> num = nums[i];</div>
+<div class="line"><span class="lineno"> 8930</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt;= target; j++) {</div>
+<div class="line"><span class="lineno"> 8931</span>                    <span class="keywordflow">if</span>(j &gt;= num) {</div>
+<div class="line"><span class="lineno"> 8932</span>                        dp[i][j] = dp[i - 1][j] | dp[i - 1][j - num];</div>
+<div class="line"><span class="lineno"> 8933</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 8934</span>                        dp[i][j] = dp[i - 1][j];</div>
+<div class="line"><span class="lineno"> 8935</span>                    }</div>
+<div class="line"><span class="lineno"> 8936</span>                }</div>
+<div class="line"><span class="lineno"> 8937</span>            }</div>
+<div class="line"><span class="lineno"> 8938</span>            <span class="keywordflow">return</span> dp[<a class="code hl_variable" href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> - 1][target];</div>
+<div class="line"><span class="lineno"> 8939</span>        }</div>
+<div class="ttc" id="aa00576_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../de/d7c/a00576.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
+</div><!-- fragment -->
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l04130">leetcode::partition_equal_subset_sum::TEST()</a> , 以及 <a class="el" href="../../d4/d51/a00017_source.html#l04135">leetcode::partition_equal_subset_sum::TEST()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../dd/d32/a00041_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../da/d45/a00011_source.html">leetcode.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
