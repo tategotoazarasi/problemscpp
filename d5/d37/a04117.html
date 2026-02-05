@@ -89,7 +89,52 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
-<p><img src="https://img.shields.io/github/license/tategotoazarasi/problemscpp" alt="" class="inline"/> <img src="https://img.shields.io/github/languages/code-size/tategotoazarasi/problemscpp" alt="" class="inline"/> <img src="https://img.shields.io/github/commit-activity/w/tategotoazarasi/problemscpp/main" alt="" class="inline"/> </p>
+<p>A collection of competitive programming solutions written in C++. This repository serves as a personal log of solved problems from various platforms like LeetCode, LintCode, and AcWing.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Project Structure</h1>
+<p>The project is organized by platform, with source and header files for each.</p>
+<ul>
+<li><code>CMakeLists.txt</code>: The main build configuration file for the project.</li>
+<li><code>Doxyfile</code>: The configuration file for the Doxygen documentation generator.</li>
+<li><code><a class="el" href="../../da/d2a/a00086.html">main.cpp</a></code>: The entry point for running the Google Test suite.</li>
+<li><code><a class="el" href="../../d8/d41/a00038.html">acwing.cpp</a></code>, <code><a class="el" href="../../da/d45/a00011.html">leetcode.cpp</a></code>, etc.: Implementation files containing solutions for problems from the respective platforms.</li>
+<li><code><a class="el" href="../../d5/de0/a00050.html">acwing.h</a></code>, <code><a class="el" href="../../dd/d32/a00041.html">leetcode.h</a></code>, etc.: Header files declaring the classes and functions for each platform's solutions.</li>
+<li><code>*_test.cpp</code>: Test files containing unit tests for the solutions, organized by platform.</li>
+<li><code>templates/</code>: Contains reusable code and data structures, such as a <code><a class="el" href="../../dd/d5a/a03780.html" title="高精度整数">BigInt</a></code> class.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Getting Started</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Prerequisites</h2>
+<ul>
+<li>A C++20 compatible compiler (e.g., GCC, Clang, MSVC).</li>
+<li>CMake (version 3.21 or newer).</li>
+<li>Doxygen (for generating documentation).</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Build</h2>
+<p>This project uses CMake for building. Google Test is managed via <code>FetchContent</code> and will be downloaded automatically if not found on your system.</p>
+<ol type="1">
+<li><b>Clone the repository:</b> <code>bash git clone <a href="https://github.com/tategotoazarasi/problemscpp.git">https://github.com/tategotoazarasi/problemscpp.git</a> cd problemscpp </code></li>
+<li><b>Configure the build using CMake:</b> <code>bash cmake -B build </code></li>
+<li><b>Build the project:</b> <code>bash cmake --build build </code> This will compile the source code and create an executable in the <code>build</code> directory.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Testing</h1>
+<p>The project uses Google Test for unit testing. The tests are discovered automatically by CMake.</p>
+<p>To run all tests, execute the binary built in the previous step:</p>
+<div class="fragment"><div class="line">./build/problemscpp</div>
+</div><!-- fragment --><p>Alternatively, you can use <code>ctest</code> from within the build directory:</p>
+<div class="fragment"><div class="line">cd build</div>
+<div class="line">ctest</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
+Documentation</h1>
+<p>The project uses Doxygen to automatically generate API documentation from the comments in the source code.</p>
+<ol type="1">
+<li><b>Install Doxygen:</b> Ensure you have Doxygen installed. You can typically install it through your system's package manager (e.g., <code>sudo apt-get install doxygen</code>) or from the <a href="https://www.doxygen.nl/download.html">official website</a>.</li>
+<li><b>Generate the documentation:</b> Navigate to the project's root directory and run Doxygen: <code>bash doxygen Doxyfile </code></li>
+<li><b>View the documentation:</b> The documentation will be generated in the directory specified by <code>OUTPUT_DIRECTORY</code> and <code>HTML_OUTPUT</code> in the <code>Doxyfile</code> (currently <code>./</code>). Open the <code>index.html</code> file in your web browser to view the documentation. </li>
+</ol>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

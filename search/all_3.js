@@ -35,11 +35,12 @@ var searchData=
   ['distributecandies_32',['distributeCandies',['../db/d6b/a03128.html#adfb5613a5114d683f053b012f8757d66',1,'lintcode::distribute_candies::Solution']]],
   ['distribution_33',['distribution',['../d1/df5/a02592.html#ab0f799f6cfce9ee75ffb74fa8e17432b',1,'leetcode::insert_delete_getrandom_o1::RandomizedSet']]],
   ['dividestring_34',['divideString',['../dc/d31/a01892.html#acf96624da9a5cfcef11059ba8a842f40',1,'leetcode::divide_a_string_into_groups_of_size_k::Solution']]],
-  ['dominantindex_35',['dominantIndex',['../dd/de7/a01868.html#af5954b955d9ffa9e9c1e846aa4ce36d5',1,'leetcode::largest_number_at_least_twice_of_others::Solution']]],
-  ['down_36',['down',['../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3',1,'acwing::acwing1929']]],
-  ['down_5fmap_37',['down_map',['../d4/dc5/a01024.html#a88fd6ba7c4e7464c78ef223a637ec30a',1,'acwing::acwing1929::Solution']]],
-  ['dp_38',['dp',['../d7/d02/a01808.html#a271ac4951a9bae83045b907d0f8ac9fa',1,'leetcode::cat_and_mouse::Solution']]],
-  ['draw_39',['DRAW',['../dd/dd7/a00260.html#afbb37e8f376cda021e541e6d79a7b101',1,'leetcode::cat_and_mouse']]],
-  ['draw_40',['draw',['../dc/d9a/a00218.html#a7fca55d5b49d89c1c03c2f36cf5eb81f',1,'acwing::acwing3441']]],
-  ['duration_41',['duration',['../dc/d3e/a01712.html#a44bfae890cb8ff6857311134734fff9e',1,'acwing::acwing3406::task']]]
+  ['documentation_35',['Documentation',['../d5/d37/a04117.html#autotoc_md6',1,'']]],
+  ['dominantindex_36',['dominantIndex',['../dd/de7/a01868.html#af5954b955d9ffa9e9c1e846aa4ce36d5',1,'leetcode::largest_number_at_least_twice_of_others::Solution']]],
+  ['down_37',['down',['../d1/d84/a00097.html#af40e9f5142818f91d8f7b2e795f35df5a0287ba66e77547e665ebc216ae10b1b3',1,'acwing::acwing1929']]],
+  ['down_5fmap_38',['down_map',['../d4/dc5/a01024.html#a88fd6ba7c4e7464c78ef223a637ec30a',1,'acwing::acwing1929::Solution']]],
+  ['dp_39',['dp',['../d7/d02/a01808.html#a271ac4951a9bae83045b907d0f8ac9fa',1,'leetcode::cat_and_mouse::Solution']]],
+  ['draw_40',['DRAW',['../dd/dd7/a00260.html#afbb37e8f376cda021e541e6d79a7b101',1,'leetcode::cat_and_mouse']]],
+  ['draw_41',['draw',['../dc/d9a/a00218.html#a7fca55d5b49d89c1c03c2f36cf5eb81f',1,'acwing::acwing3441']]],
+  ['duration_42',['duration',['../dc/d3e/a01712.html#a44bfae890cb8ff6857311134734fff9e',1,'acwing::acwing3406::task']]]
 ];

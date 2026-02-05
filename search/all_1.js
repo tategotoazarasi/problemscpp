@@ -17,7 +17,8 @@ var searchData=
   ['bitset_14',['Bitset',['../d7/db5/a02088.html',1,'leetcode::design_bitset::Bitset'],['../d7/db5/a02088.html#a5007777079d091302c1e7f94a5466f67',1,'leetcode::design_bitset::Bitset::Bitset()']]],
   ['bubble_5fdown_15',['bubble_down',['../d8/dc8/a00581.html#a85e72ea5b82422e8fedcd0653724ff23',1,'liverpool::doctorkattis']]],
   ['bubble_5fup_16',['bubble_up',['../d8/dc8/a00581.html#ad89cf291b96a5267e657a03c03bceed9',1,'liverpool::doctorkattis']]],
-  ['buildtree_17',['buildTree',['../de/df3/a00185.html#af08c1cb323232e1529c36975c80f7c4a',1,'acwing::acwing18']]],
-  ['busiestservers_18',['busiestServers',['../d4/dad/a02500.html#ad5fcbfafc848edf43f81f4f7c29634cc',1,'leetcode::find_servers_that_handled_most_number_of_requests::Solution']]],
-  ['bwt_19',['bwt',['../dc/d85/a00736.html',1,'']]]
+  ['build_17',['Build',['../d5/d37/a04117.html#autotoc_md4',1,'']]],
+  ['buildtree_18',['buildTree',['../de/df3/a00185.html#af08c1cb323232e1529c36975c80f7c4a',1,'acwing::acwing18']]],
+  ['busiestservers_19',['busiestServers',['../d4/dad/a02500.html#ad5fcbfafc848edf43f81f4f7c29634cc',1,'leetcode::find_servers_that_handled_most_number_of_requests::Solution']]],
+  ['bwt_20',['bwt',['../dc/d85/a00736.html',1,'']]]
 ];
