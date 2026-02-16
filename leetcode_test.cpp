@@ -4502,4 +4502,22 @@ namespace leetcode {
 			ASSERT_EQ(-1, Solution::minCost(4, edges));
 		}
 	}// namespace minimum_cost_path_with_edge_reversals
+
+	namespace reverse_bits {
+		TEST(reverse_bits, case1) {
+			ASSERT_EQ(964176192, Solution::reverseBits(43261596));
+		}
+
+		TEST(reverse_bits, case2) {
+			ASSERT_EQ(2147483644, Solution::reverseBits(1073741822));
+		}
+
+		TEST(reverse_bits, case3) {
+			ASSERT_EQ(43261596, Solution::reverseBits(964176192));
+		}
+
+		TEST(reverse_bits, case4) {
+			ASSERT_EQ(1073741822, Solution::reverseBits(2147483644));
+		}
+	}// namespace reverse_bits
 }// namespace leetcode

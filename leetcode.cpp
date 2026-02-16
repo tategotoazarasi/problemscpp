@@ -9691,4 +9691,22 @@ namespace leetcode {
 			return -1;
 		}
 	}// namespace minimum_cost_path_with_edge_reversals
+
+	namespace reverse_bits {
+		int Solution::reverseBits(int n) {
+			int res = 0;
+			for(int i = 0; i < 32; i++) {
+				int target = 31 - i;
+				int diff   = target - i;
+				int mask   = (n & (1u << target));
+				if(diff > 0) {
+					mask >>= diff;
+				} else {
+					mask <<= -diff;
+				}
+				res |= mask;
+			}
+			return res;
+		}
+	}// namespace reverse_bits
 }// namespace leetcode

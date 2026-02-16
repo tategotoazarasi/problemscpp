@@ -3456,6 +3456,13 @@ namespace leetcode {
 			static int minCost(int n, vector<vector<int>> &edges);
 		};
 	}// namespace minimum_cost_path_with_edge_reversals
+
+	namespace reverse_bits {
+		class Solution {
+		public:
+			static int reverseBits(int n);
+		};
+	}// namespace reverse_bits
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H
