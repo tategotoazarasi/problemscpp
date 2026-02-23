@@ -3463,6 +3463,13 @@ namespace leetcode {
 			static int reverseBits(int n);
 		};
 	}// namespace reverse_bits
+
+	namespace check_if_a_string_contains_all_binary_codes_of_size_k {
+		class Solution {
+		public:
+			static bool hasAllCodes(string s, int k);
+		};
+	}// namespace check_if_a_string_contains_all_binary_codes_of_size_k
 }// namespace leetcode
 
 #endif//PROBLEMSCPP_LEETCODE_H

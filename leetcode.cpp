@@ -9709,4 +9709,33 @@ namespace leetcode {
 			return res;
 		}
 	}// namespace reverse_bits
+
+	namespace check_if_a_string_contains_all_binary_codes_of_size_k {
+		bool Solution::hasAllCodes(string s, int k) {
+			if(k > s.length()) {
+				return false;
+			}
+			bitset<2 << 20> exist = {};
+			unsigned int v        = 0;
+			unsigned int mask     = 0;
+			for(int i = 0; i < k; i++) {
+				v <<= 1;
+				v |= s[i] == '1' ? 1u : 0u;
+				mask |= 1 << i;
+			}
+			exist.set(v);
+			for(int i = k; i < s.length(); i++) {
+				v <<= 1;
+				v |= s[i] == '1' ? 1u : 0u;
+				v &= mask;
+				exist.set(v);
+			}
+			for(unsigned int i = 0; i < 1 << k; i++) {
+				if(!exist.test(i)) {
+					return false;
+				}
+			}
+			return true;
+		}
+	}// namespace check_if_a_string_contains_all_binary_codes_of_size_k
 }// namespace leetcode

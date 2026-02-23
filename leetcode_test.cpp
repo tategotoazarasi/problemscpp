@@ -4520,4 +4520,21 @@ namespace leetcode {
 			ASSERT_EQ(1073741822, Solution::reverseBits(2147483644));
 		}
 	}// namespace reverse_bits
+
+	namespace check_if_a_string_contains_all_binary_codes_of_size_k {
+		TEST(check_if_a_string_contains_all_binary_codes_of_size_k, case1) {
+			ASSERT_TRUE(Solution::hasAllCodes("00110110", 2));
+		}
+		TEST(check_if_a_string_contains_all_binary_codes_of_size_k, case2) {
+			ASSERT_TRUE(Solution::hasAllCodes("0110", 1));
+		}
+		TEST(check_if_a_string_contains_all_binary_codes_of_size_k, case3) {
+			ASSERT_FALSE(Solution::hasAllCodes("0110", 2));
+		}
+
+		TEST(check_if_a_string_contains_all_binary_codes_of_size_k, case4) {
+			ASSERT_FALSE(Solution::hasAllCodes("0", 20));
+		}
+
+	}// namespace check_if_a_string_contains_all_binary_codes_of_size_k
 }// namespace leetcode
