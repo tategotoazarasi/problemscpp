@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: dfa 命名空间参考</title>
+<title>problemscpp: bwt 命名空间参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -86,117 +86,134 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">类</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">dfa 命名空间参考</div></div>
+  <div class="headertitle"><div class="title">bwt 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/a03782.html">node</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a15b400023f9f4dcd2fedbd4afba37203" id="r_a15b400023f9f4dcd2fedbd4afba37203"><td class="memItemLeft" align="right" valign="top">vector&lt; unordered_map&lt; char, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15b400023f9f4dcd2fedbd4afba37203">construct_dfa</a> (string pattern)</td></tr>
-<tr class="separator:a15b400023f9f4dcd2fedbd4afba37203"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9143b5c908364aa7a99af981c61c66cf" id="r_a9143b5c908364aa7a99af981c61c66cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9143b5c908364aa7a99af981c61c66cf">str_match</a> (string str, string pattern)</td></tr>
-<tr class="separator:a9143b5c908364aa7a99af981c61c66cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d359175f5337f444bee835591e5e787" id="r_a4d359175f5337f444bee835591e5e787"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d359175f5337f444bee835591e5e787">TEST</a> (dfa, case_rand)</td></tr>
-<tr class="separator:a4d359175f5337f444bee835591e5e787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a47ad6ea2426c58fac42892623f570" id="r_a06a47ad6ea2426c58fac42892623f570"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06a47ad6ea2426c58fac42892623f570">decode</a> (string input)</td></tr>
+<tr class="separator:a06a47ad6ea2426c58fac42892623f570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a904686784d2643486f6e40767027b9ac" id="r_a904686784d2643486f6e40767027b9ac"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a904686784d2643486f6e40767027b9ac">encode</a> (string input)</td></tr>
+<tr class="separator:a904686784d2643486f6e40767027b9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8958294c3952917fecc75088643a3fc3" id="r_a8958294c3952917fecc75088643a3fc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8958294c3952917fecc75088643a3fc3">TEST</a> (bwt, case_rand)</td></tr>
+<tr class="separator:a8958294c3952917fecc75088643a3fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
-<a id="a15b400023f9f4dcd2fedbd4afba37203" name="a15b400023f9f4dcd2fedbd4afba37203"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15b400023f9f4dcd2fedbd4afba37203">&#9670;&#160;</a></span>construct_dfa()</h2>
+<a id="a06a47ad6ea2426c58fac42892623f570" name="a06a47ad6ea2426c58fac42892623f570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a47ad6ea2426c58fac42892623f570">&#9670;&#160;</a></span>decode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt; unordered_map&lt; char, int &gt; &gt; dfa::construct_dfa </td>
+          <td class="memname">string bwt::decode </td>
           <td>(</td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span></td><td>)</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00892">892</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  892</span>                                                                   {</div>
-<div class="line"><span class="lineno">  893</span>        <span class="keywordtype">int</span> m = pattern.size();</div>
-<div class="line"><span class="lineno">  894</span>        <span class="keywordflow">if</span>(m == 0)</div>
-<div class="line"><span class="lineno">  895</span>            <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">  896</span>        vector&lt;unordered_map&lt;char, int&gt;&gt; lut(m, unordered_map&lt;char, int&gt;());</div>
-<div class="line"><span class="lineno">  897</span>        lut[0][pattern[0]] = 1;</div>
-<div class="line"><span class="lineno">  898</span>        <span class="keywordtype">int</span> x              = 0;</div>
-<div class="line"><span class="lineno">  899</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt; m; j++) {</div>
-<div class="line"><span class="lineno">  900</span>            lut[j]             = lut[x];</div>
-<div class="line"><span class="lineno">  901</span>            lut[j][pattern[j]] = j + 1;</div>
-<div class="line"><span class="lineno">  902</span>            x                  = lut[x][pattern[j]];</div>
-<div class="line"><span class="lineno">  903</span>        }</div>
-<div class="line"><span class="lineno">  904</span>        <span class="keywordflow">return</span> lut;</div>
-<div class="line"><span class="lineno">  905</span>    }</div>
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00820">820</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  820</span>                                {</div>
+<div class="line"><span class="lineno">  821</span>        vector&lt;node&gt; l               = {};</div>
+<div class="line"><span class="lineno">  822</span>        unordered_map&lt;char, int&gt; cnt = {};</div>
+<div class="line"><span class="lineno">  823</span>        <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: input) {</div>
+<div class="line"><span class="lineno">  824</span>            l.push_back(<a class="code hl_struct" href="../../d9/df0/a03782.html">node</a>{c, cnt[c]});</div>
+<div class="line"><span class="lineno">  825</span>            cnt[c]++;</div>
+<div class="line"><span class="lineno">  826</span>        }</div>
+<div class="line"><span class="lineno">  827</span>        vector&lt;node&gt; f = l;</div>
+<div class="line"><span class="lineno">  828</span>        sort(f.begin(), f.end(), [](<span class="keyword">const</span> <a class="code hl_struct" href="../../d9/df0/a03782.html">node</a> &amp;a, <span class="keyword">const</span> <a class="code hl_struct" href="../../d9/df0/a03782.html">node</a> &amp;b) {</div>
+<div class="line"><span class="lineno">  829</span>            if(a.c != b.c) {</div>
+<div class="line"><span class="lineno">  830</span>                return a.c &lt; b.c;</div>
+<div class="line"><span class="lineno">  831</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  832</span>                return a.order &lt; b.order;</div>
+<div class="line"><span class="lineno">  833</span>            }</div>
+<div class="line"><span class="lineno">  834</span>        });</div>
+<div class="line"><span class="lineno">  835</span>        deque&lt;char&gt; deq;</div>
+<div class="line"><span class="lineno">  836</span>        <span class="keywordtype">int</span> cur = 0;</div>
+<div class="line"><span class="lineno">  837</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; f.size() - 1; j++) {</div>
+<div class="line"><span class="lineno">  838</span>            deq.push_front(l[cur].c);</div>
+<div class="line"><span class="lineno">  839</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; f.size(); i++) {</div>
+<div class="line"><span class="lineno">  840</span>                <span class="keywordflow">if</span>(f[i] == l[cur]) {</div>
+<div class="line"><span class="lineno">  841</span>                    cur = i;</div>
+<div class="line"><span class="lineno">  842</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  843</span>                }</div>
+<div class="line"><span class="lineno">  844</span>            }</div>
+<div class="line"><span class="lineno">  845</span>        }</div>
+<div class="line"><span class="lineno">  846</span>        ostringstream oss = {};</div>
+<div class="line"><span class="lineno">  847</span>        <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: deq) {</div>
+<div class="line"><span class="lineno">  848</span>            oss &lt;&lt; c;</div>
+<div class="line"><span class="lineno">  849</span>        }</div>
+<div class="line"><span class="lineno">  850</span>        <span class="keywordflow">return</span> oss.str();</div>
+<div class="line"><span class="lineno">  851</span>    }</div>
+<div class="ttc" id="aa03782_html"><div class="ttname"><a href="../../d9/df0/a03782.html">bwt::node</a></div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00815">templates.cpp:815</a></div></div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../dd/dad/a00005_source.html#l00907">str_match()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../db/dab/a00089_source.html#l00417">TEST()</a>.</p>
 
 </div>
 </div>
-<a id="a9143b5c908364aa7a99af981c61c66cf" name="a9143b5c908364aa7a99af981c61c66cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9143b5c908364aa7a99af981c61c66cf">&#9670;&#160;</a></span>str_match()</h2>
+<a id="a904686784d2643486f6e40767027b9ac" name="a904686784d2643486f6e40767027b9ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a904686784d2643486f6e40767027b9ac">&#9670;&#160;</a></span>encode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int dfa::str_match </td>
+          <td class="memname">string bwt::encode </td>
           <td>(</td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00907">907</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  907</span>                                              {</div>
-<div class="line"><span class="lineno">  908</span>        <span class="keywordflow">if</span>(pattern.empty())</div>
-<div class="line"><span class="lineno">  909</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  910</span> </div>
-<div class="line"><span class="lineno">  911</span>        <span class="keyword">auto</span> <a class="code hl_namespace" href="../../d1/da6/a00738.html">dfa</a> = <a class="code hl_function" href="#a15b400023f9f4dcd2fedbd4afba37203">construct_dfa</a>(pattern);</div>
-<div class="line"><span class="lineno">  912</span>        <span class="keywordtype">int</span> m    = pattern.size();</div>
-<div class="line"><span class="lineno">  913</span>        <span class="keywordtype">int</span> n    = str.size();</div>
-<div class="line"><span class="lineno">  914</span>        <span class="keywordtype">int</span> q    = 0;</div>
-<div class="line"><span class="lineno">  915</span> </div>
-<div class="line"><span class="lineno">  916</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><span class="lineno">  917</span>            <span class="keywordflow">if</span>(<a class="code hl_namespace" href="../../d1/da6/a00738.html">dfa</a>[q].count(str[i])) {</div>
-<div class="line"><span class="lineno">  918</span>                q = <a class="code hl_namespace" href="../../d1/da6/a00738.html">dfa</a>[q][str[i]];</div>
-<div class="line"><span class="lineno">  919</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  920</span>                q = 0;</div>
-<div class="line"><span class="lineno">  921</span>            }</div>
-<div class="line"><span class="lineno">  922</span>            <span class="keywordflow">if</span>(q == m) {</div>
-<div class="line"><span class="lineno">  923</span>                <span class="keywordflow">return</span> i - <a class="code hl_variable" href="../../de/d7c/a00576.html#ab2991a035ec7c05bca06cda958a3e50c">m</a> + 1;</div>
-<div class="line"><span class="lineno">  924</span>            }</div>
-<div class="line"><span class="lineno">  925</span>        }</div>
-<div class="line"><span class="lineno">  926</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  927</span>    }</div>
-<div class="ttc" id="aa00576_html_ab2991a035ec7c05bca06cda958a3e50c"><div class="ttname"><a href="../../de/d7c/a00576.html#ab2991a035ec7c05bca06cda958a3e50c">liverpool::grid::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
-<div class="ttc" id="aa00738_html"><div class="ttname"><a href="../../d1/da6/a00738.html">dfa</a></div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00891">templates.cpp:891</a></div></div>
-<div class="ttc" id="aa00738_html_a15b400023f9f4dcd2fedbd4afba37203"><div class="ttname"><a href="#a15b400023f9f4dcd2fedbd4afba37203">dfa::construct_dfa</a></div><div class="ttdeci">vector&lt; unordered_map&lt; char, int &gt; &gt; construct_dfa(string pattern)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00892">templates.cpp:892</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">templates.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00794">794</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  794</span>                                {</div>
+<div class="line"><span class="lineno">  795</span>        deque&lt;char&gt; deq(input.begin(), input.end());</div>
+<div class="line"><span class="lineno">  796</span>        deq.push_back(<span class="charliteral">&#39;$&#39;</span>);</div>
+<div class="line"><span class="lineno">  797</span>        ostringstream oss = {};</div>
+<div class="line"><span class="lineno">  798</span>        vector&lt;string&gt; vec(deq.size());</div>
+<div class="line"><span class="lineno">  799</span> </div>
+<div class="line"><span class="lineno">  800</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; deq.size(); i++) {</div>
+<div class="line"><span class="lineno">  801</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> c: deq) {</div>
+<div class="line"><span class="lineno">  802</span>                oss &lt;&lt; c;</div>
+<div class="line"><span class="lineno">  803</span>            }</div>
+<div class="line"><span class="lineno">  804</span>            deq.push_back(deq.front());</div>
+<div class="line"><span class="lineno">  805</span>            deq.pop_front();</div>
+<div class="line"><span class="lineno">  806</span>            <a class="code hl_variable" href="../../df/df7/a00731.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>[i] = oss.str();</div>
+<div class="line"><span class="lineno">  807</span>            oss    = ostringstream();</div>
+<div class="line"><span class="lineno">  808</span>        }</div>
+<div class="line"><span class="lineno">  809</span>        ranges::sort(<a class="code hl_variable" href="../../df/df7/a00731.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.begin(), <a class="code hl_variable" href="../../df/df7/a00731.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>.end());</div>
+<div class="line"><span class="lineno">  810</span>        <span class="keywordflow">for</span>(<span class="keywordtype">string</span> str: vec) {</div>
+<div class="line"><span class="lineno">  811</span>            oss &lt;&lt; str.back();</div>
+<div class="line"><span class="lineno">  812</span>        }</div>
+<div class="line"><span class="lineno">  813</span>        <span class="keywordflow">return</span> oss.str();</div>
+<div class="line"><span class="lineno">  814</span>    }</div>
+<div class="ttc" id="aa00731_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../df/df7/a00731.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>定义</b> <a href="../../d1/d09/a00077_source.html#l05095">pat.cpp:5095</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00892">construct_dfa()</a>.</p>
-
-<p class="reference">被这些函数引用 <a class="el" href="../../db/dab/a00089_source.html#l00456">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../db/dab/a00089_source.html#l00417">TEST()</a>.</p>
 
 </div>
 </div>
-<a id="a4d359175f5337f444bee835591e5e787" name="a4d359175f5337f444bee835591e5e787"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d359175f5337f444bee835591e5e787">&#9670;&#160;</a></span>TEST()</h2>
+<a id="a8958294c3952917fecc75088643a3fc3" name="a8958294c3952917fecc75088643a3fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8958294c3952917fecc75088643a3fc3">&#9670;&#160;</a></span>TEST()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">dfa::TEST </td>
+          <td class="memname">bwt::TEST </td>
           <td>(</td>
-          <td class="paramtype">dfa</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">bwt</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -206,34 +223,27 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00456">456</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  456</span>                         {</div>
-<div class="line"><span class="lineno">  457</span>        std::random_device rd;</div>
-<div class="line"><span class="lineno">  458</span>        std::mt19937 gen(rd());</div>
-<div class="line"><span class="lineno">  459</span>        std::uniform_int_distribution&lt;&gt; dis_word(0, 25);</div>
-<div class="line"><span class="lineno">  460</span>        std::uniform_int_distribution&lt;&gt; dis_len(64, 128);</div>
-<div class="line"><span class="lineno">  461</span>        ostringstream oss = {};</div>
-<div class="line"><span class="lineno">  462</span>        <span class="keywordtype">int</span> len           = dis_len(gen);</div>
-<div class="line"><span class="lineno">  463</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; len; i++) {</div>
-<div class="line"><span class="lineno">  464</span>            <span class="keywordtype">char</span> c = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(dis_word(gen) + <span class="charliteral">&#39;a&#39;</span>);</div>
-<div class="line"><span class="lineno">  465</span>            oss &lt;&lt; c;</div>
-<div class="line"><span class="lineno">  466</span>        }</div>
-<div class="line"><span class="lineno">  467</span>        std::uniform_int_distribution&lt;&gt; dis_i(0, len - 1);</div>
-<div class="line"><span class="lineno">  468</span>        <span class="keywordtype">int</span> i = dis_i(gen);</div>
-<div class="line"><span class="lineno">  469</span>        <span class="keywordtype">int</span> j = dis_i(gen);</div>
-<div class="line"><span class="lineno">  470</span>        <span class="keywordflow">if</span>(i &gt; j) {</div>
-<div class="line"><span class="lineno">  471</span>            swap(i, j);</div>
-<div class="line"><span class="lineno">  472</span>        }</div>
-<div class="line"><span class="lineno">  473</span>        <span class="keywordtype">string</span> input   = oss.str();</div>
-<div class="line"><span class="lineno">  474</span>        <span class="keywordtype">string</span> pattern = input.substr(i, j - i + 1);</div>
-<div class="line"><span class="lineno">  475</span>        <span class="keyword">auto</span> pos       = input.find(pattern);</div>
-<div class="line"><span class="lineno">  476</span>        <span class="keyword">auto</span> <a class="code hl_variable" href="../../d4/d9e/a00569.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>       = <a class="code hl_function" href="#a9143b5c908364aa7a99af981c61c66cf">str_match</a>(input, pattern);</div>
-<div class="line"><span class="lineno">  477</span>        ASSERT_EQ(ans, pos);</div>
-<div class="line"><span class="lineno">  478</span>    }</div>
-<div class="ttc" id="aa00569_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../d4/d9e/a00569.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00131">liverpool.cpp:131</a></div></div>
-<div class="ttc" id="aa00738_html_a9143b5c908364aa7a99af981c61c66cf"><div class="ttname"><a href="#a9143b5c908364aa7a99af981c61c66cf">dfa::str_match</a></div><div class="ttdeci">int str_match(string str, string pattern)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00907">templates.cpp:907</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../db/dab/a00089_source.html">templates_test.cpp</a> 第 <a class="el" href="../../db/dab/a00089_source.html#l00417">417</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  417</span>                         {</div>
+<div class="line"><span class="lineno">  418</span>        std::random_device rd;</div>
+<div class="line"><span class="lineno">  419</span>        std::mt19937 gen(rd());</div>
+<div class="line"><span class="lineno">  420</span>        std::uniform_int_distribution&lt;&gt; dis_word(0, 25);</div>
+<div class="line"><span class="lineno">  421</span>        std::uniform_int_distribution&lt;&gt; dis_len(64, 128);</div>
+<div class="line"><span class="lineno">  422</span>        ostringstream oss = {};</div>
+<div class="line"><span class="lineno">  423</span>        <span class="keywordtype">int</span> len           = dis_len(gen);</div>
+<div class="line"><span class="lineno">  424</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; len; i++) {</div>
+<div class="line"><span class="lineno">  425</span>            <span class="keywordtype">char</span> c = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(dis_word(gen) + <span class="charliteral">&#39;a&#39;</span>);</div>
+<div class="line"><span class="lineno">  426</span>            oss &lt;&lt; c;</div>
+<div class="line"><span class="lineno">  427</span>        }</div>
+<div class="line"><span class="lineno">  428</span>        <span class="keywordtype">string</span> input      = oss.str();</div>
+<div class="line"><span class="lineno">  429</span>        <span class="keyword">auto</span> compressed   = <a class="code hl_function" href="#a904686784d2643486f6e40767027b9ac">encode</a>(input);</div>
+<div class="line"><span class="lineno">  430</span>        <span class="keyword">auto</span> decompressed = <a class="code hl_function" href="#a06a47ad6ea2426c58fac42892623f570">decode</a>(compressed);</div>
+<div class="line"><span class="lineno">  431</span>        ASSERT_EQ(input, decompressed);</div>
+<div class="line"><span class="lineno">  432</span>    }</div>
+<div class="ttc" id="aa00738_html_a06a47ad6ea2426c58fac42892623f570"><div class="ttname"><a href="#a06a47ad6ea2426c58fac42892623f570">bwt::decode</a></div><div class="ttdeci">string decode(string input)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00820">templates.cpp:820</a></div></div>
+<div class="ttc" id="aa00738_html_a904686784d2643486f6e40767027b9ac"><div class="ttname"><a href="#a904686784d2643486f6e40767027b9ac">bwt::encode</a></div><div class="ttdeci">string encode(string input)</div><div class="ttdef"><b>定义</b> <a href="../../dd/dad/a00005_source.html#l00794">templates.cpp:794</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00907">str_match()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../dd/dad/a00005_source.html#l00820">decode()</a> , 以及 <a class="el" href="../../dd/dad/a00005_source.html#l00794">encode()</a>.</p>
 
 </div>
 </div>
