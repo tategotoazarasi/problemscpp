@@ -197,6 +197,10 @@ namespace liverpool {
 		int getScoreDifference(vector<int> numSeq);
 		int getSwapTime(string color);
 	}// namespace booking
+
+	namespace aboveaverage {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace liverpool
 
 #endif//PROBLEMSCPP_COMO526_H

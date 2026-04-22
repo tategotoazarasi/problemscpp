@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <climits>
 #include <cstring>
+#include <iomanip>
 #include <iostream>
 #include <ostream>
 #include <queue>
@@ -1507,5 +1508,30 @@ namespace liverpool {
 			return ans;
 		}
 	}// namespace booking
+
+	namespace aboveaverage {
+		int main(istream &cin, ostream &cout) {
+			int C;
+			cin >> C;
+			while(C--) {
+				int N;
+				cin >> N;
+				int sum = 0;
+				vector<int> vec(N);
+				for(int i = 0; i < N; i++) {
+					cin >> vec[i];
+					sum += vec[i];
+				}
+				int cnt = 0;
+				for(int i = 0; i < N; i++) {
+					if(vec[i] * N > sum) {
+						cnt++;
+					}
+				}
+				cout << setiosflags(ios::fixed) << setprecision(3) << (cnt * 100.0f) / N << '%' << endl;
+			}
+			return 0;
+		}
+	}// namespace aboveaverage
 
 }// namespace liverpool
