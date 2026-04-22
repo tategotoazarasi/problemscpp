@@ -1600,4 +1600,64 @@ namespace liverpool {
 		}
 	}// namespace bestrelayteam
 
+	namespace guessthedatastructure {
+		int main(istream &cin, ostream &cout) {
+			int n;
+			while(cin >> n) {
+				stack<int> stk         = {};
+				queue<int> q           = {};
+				priority_queue<int> pq = {};
+				bool is_stk            = true;
+				bool is_q              = true;
+				bool is_pq             = true;
+				while(n--) {
+					int c, x;
+					cin >> c >> x;
+					if(c == 1) {
+						stk.push(x);
+						q.push(x);
+						pq.push(x);
+					} else {
+						if(stk.empty()) {
+							is_stk = false;
+							is_q   = false;
+							is_pq  = false;
+							continue;
+						}
+
+						int v = stk.top();
+						stk.pop();
+						if(v != x) {
+							is_stk = false;
+						}
+
+						v = q.front();
+						q.pop();
+						if(v != x) {
+							is_q = false;
+						}
+
+						v = pq.top();
+						pq.pop();
+						if(v != x) {
+							is_pq = false;
+						}
+					}
+				}
+				int cnt = (is_stk ? 1 : 0) + (is_q ? 1 : 0) + (is_pq ? 1 : 0);
+				if(cnt > 1) {
+					cout << "not sure" << endl;
+				} else if(is_stk) {
+					cout << "stack" << endl;
+				} else if(is_q) {
+					cout << "queue" << endl;
+				} else if(is_pq) {
+					cout << "priority queue" << endl;
+				} else {
+					cout << "impossible" << endl;
+				}
+			}
+			return 0;
+		}
+	}// namespace guessthedatastructure
 }// namespace liverpool

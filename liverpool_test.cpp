@@ -558,4 +558,14 @@ namespace liverpool {
 			ASSERT_EQ("35.54\nCARTER\nBOLT\nPOWELL\nBLAKE\n", ans);
 		}
 	}// namespace bestrelayteam
+
+	namespace guessthedatastructure {
+		TEST(guessthedatastructure, case1) {
+			istringstream in("6\n1 1\n1 2\n1 3\n2 1\n2 2\n2 3\n6\n1 1\n1 2\n1 3\n2 3\n2 2\n2 1\n2\n1 1\n2 2\n4\n1 2\n1 1\n2 1\n2 2\n7\n1 2\n1 5\n1 1\n1 3\n2 5\n1 4\n2 4\n1\n2 1\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("queue\nnot sure\nimpossible\nstack\npriority queue\nimpossible\n", ans);
+		}
+	}// namespace guessthedatastructure
 }// namespace liverpool

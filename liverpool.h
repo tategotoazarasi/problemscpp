@@ -210,6 +210,10 @@ namespace liverpool {
 		};
 		int main(istream &cin, ostream &cout);
 	}// namespace bestrelayteam
+
+	namespace guessthedatastructure {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace liverpool
 
 #endif//PROBLEMSCPP_COMO526_H
