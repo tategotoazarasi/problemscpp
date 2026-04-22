@@ -214,6 +214,10 @@ namespace liverpool {
 	namespace guessthedatastructure {
 		int main(istream &cin, ostream &cout);
 	}
+
+	namespace torn2pieces {
+		int main(istream &cin, ostream &cout);
+	}
 }// namespace liverpool
 
 #endif//PROBLEMSCPP_COMO526_H

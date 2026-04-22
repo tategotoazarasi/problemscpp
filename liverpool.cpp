@@ -1660,4 +1660,62 @@ namespace liverpool {
 			return 0;
 		}
 	}// namespace guessthedatastructure
+
+	namespace torn2pieces {
+		bool dfs(unordered_map<string, unordered_set<string>> &m, unordered_set<string> &vis, const string &current, stack<string> &ans, const string &dst) {
+			vis.insert(current);
+			if(current == dst) {
+				ans.push(current);
+				return true;
+			}
+			for(string next: m[current]) {
+				if(!vis.contains(next)) {
+					if(dfs(m, vis, next, ans, dst)) {
+						ans.push(current);
+						return true;
+					}
+				}
+			}
+			return false;
+		}
+
+		int main(istream &cin, ostream &cout) {
+			int N;
+			cin >> N;
+			unordered_map<string, unordered_set<string>> m = {};
+			while(N--) {
+				string line;
+				getline(cin, line);
+				if(line.empty()) {
+					getline(cin, line);
+				}
+				istringstream iss(line);
+				string src;
+				iss >> src;
+				if(!m.contains(src))
+					m[src] = unordered_set<string>();
+				string next;
+				while(iss >> next) {
+					m[src].insert(next);
+					if(!m.contains(next)) {
+						m[next] = unordered_set<string>();
+					}
+					m[next].insert(src);
+				}
+			}
+			string src, dst;
+			cin >> src >> dst;
+			unordered_set<string> vis = {};
+			stack<string> ans         = {};
+			if(dfs(m, vis, src, ans, dst)) {
+				while(!ans.empty()) {
+					cout << ans.top() << ' ';
+					ans.pop();
+				}
+			} else {
+				cout << "no route found";
+			}
+			return 0;
+		}
+	}// namespace torn2pieces
 }// namespace liverpool

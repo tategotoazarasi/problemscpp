@@ -568,4 +568,30 @@ namespace liverpool {
 			ASSERT_EQ("queue\nnot sure\nimpossible\nstack\npriority queue\nimpossible\n", ans);
 		}
 	}// namespace guessthedatastructure
+
+	namespace torn2pieces {
+		TEST(torn2pieces, case1) {
+			istringstream in("3\nUptown Midtown\nMidtown Uptown Downtown\nDowntown Midtown\nUptown Downtown\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("Uptown Midtown Downtown ", ans);
+		}
+
+		TEST(torn2pieces, case2) {
+			istringstream in("6\nA B\nB A D\nC D\nE D F G\nF E\nG E\nF A\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("F E D B A ", ans);
+		}
+
+		TEST(torn2pieces, case3) {
+			istringstream in("4\nFirstStop SecondStop\nSecondStop FirstStop ThirdStop\nFifthStop FourthStop SixthStop\nSixthStop FifthStop\nFirstStop FifthStop\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("no route found", ans);
+		}
+	}// namespace torn2pieces
 }// namespace liverpool
