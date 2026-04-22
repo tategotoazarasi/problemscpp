@@ -120,47 +120,47 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l01431">1431</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1431</span>                                        {</div>
-<div class="line"><span class="lineno"> 1432</span>            <span class="keywordtype">int</span> lower_id[26] = {};</div>
-<div class="line"><span class="lineno"> 1433</span>            <span class="keywordtype">int</span> upper_id[26] = {};</div>
-<div class="line"><span class="lineno"> 1434</span>            <span class="keywordtype">bool</span> output[26]  = {};</div>
-<div class="line"><span class="lineno"> 1435</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
-<div class="line"><span class="lineno"> 1436</span>                lower_id[i] = -1;</div>
-<div class="line"><span class="lineno"> 1437</span>                upper_id[i] = -1;</div>
-<div class="line"><span class="lineno"> 1438</span>                output[i]   = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1439</span>            }</div>
-<div class="line"><span class="lineno"> 1440</span>            <span class="keywordtype">int</span> cnt = 0;</div>
-<div class="line"><span class="lineno"> 1441</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; letters.length(); i++) {</div>
-<div class="line"><span class="lineno"> 1442</span>                <span class="keywordtype">char</span> c = letters[i];</div>
-<div class="line"><span class="lineno"> 1443</span>                <span class="keywordflow">if</span>(islower(c) &amp;&amp; lower_id[c - <span class="charliteral">&#39;a&#39;</span>] == -1) {</div>
-<div class="line"><span class="lineno"> 1444</span>                    lower_id[c - <span class="charliteral">&#39;a&#39;</span>] = i;</div>
-<div class="line"><span class="lineno"> 1445</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(isupper(c)) {</div>
-<div class="line"><span class="lineno"> 1446</span>                    upper_id[c - <span class="charliteral">&#39;A&#39;</span>] = i;</div>
-<div class="line"><span class="lineno"> 1447</span>                }</div>
-<div class="line"><span class="lineno"> 1448</span>            }</div>
-<div class="line"><span class="lineno"> 1449</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
-<div class="line"><span class="lineno"> 1450</span>                <span class="keywordflow">if</span>(lower_id[i] != -1 &amp;&amp; upper_id[i] != -1 &amp;&amp; lower_id[i] &gt; upper_id[i]) {</div>
-<div class="line"><span class="lineno"> 1451</span>                    cnt++;</div>
-<div class="line"><span class="lineno"> 1452</span>                    output[i] = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1453</span>                }</div>
-<div class="line"><span class="lineno"> 1454</span>            }</div>
-<div class="line"><span class="lineno"> 1455</span>            ostringstream oss = {};</div>
-<div class="line"><span class="lineno"> 1456</span>            oss &lt;&lt; cnt;</div>
-<div class="line"><span class="lineno"> 1457</span>            <span class="keywordflow">if</span>(cnt &gt; 0) {</div>
-<div class="line"><span class="lineno"> 1458</span>                oss &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno"> 1459</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
-<div class="line"><span class="lineno"> 1460</span>                    <span class="keywordflow">if</span>(output[i]) {</div>
-<div class="line"><span class="lineno"> 1461</span>                        oss &lt;&lt; (char) (i + <span class="charliteral">&#39;A&#39;</span>) &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; (char) (i + <span class="charliteral">&#39;a&#39;</span>) &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno"> 1462</span>                    }</div>
-<div class="line"><span class="lineno"> 1463</span>                }</div>
-<div class="line"><span class="lineno"> 1464</span>            }</div>
-<div class="line"><span class="lineno"> 1465</span>            <span class="keywordflow">return</span> oss.str();</div>
-<div class="line"><span class="lineno"> 1466</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01432">1432</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1432</span>                                        {</div>
+<div class="line"><span class="lineno"> 1433</span>            <span class="keywordtype">int</span> lower_id[26] = {};</div>
+<div class="line"><span class="lineno"> 1434</span>            <span class="keywordtype">int</span> upper_id[26] = {};</div>
+<div class="line"><span class="lineno"> 1435</span>            <span class="keywordtype">bool</span> output[26]  = {};</div>
+<div class="line"><span class="lineno"> 1436</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
+<div class="line"><span class="lineno"> 1437</span>                lower_id[i] = -1;</div>
+<div class="line"><span class="lineno"> 1438</span>                upper_id[i] = -1;</div>
+<div class="line"><span class="lineno"> 1439</span>                output[i]   = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1440</span>            }</div>
+<div class="line"><span class="lineno"> 1441</span>            <span class="keywordtype">int</span> cnt = 0;</div>
+<div class="line"><span class="lineno"> 1442</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; letters.length(); i++) {</div>
+<div class="line"><span class="lineno"> 1443</span>                <span class="keywordtype">char</span> c = letters[i];</div>
+<div class="line"><span class="lineno"> 1444</span>                <span class="keywordflow">if</span>(islower(c) &amp;&amp; lower_id[c - <span class="charliteral">&#39;a&#39;</span>] == -1) {</div>
+<div class="line"><span class="lineno"> 1445</span>                    lower_id[c - <span class="charliteral">&#39;a&#39;</span>] = i;</div>
+<div class="line"><span class="lineno"> 1446</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(isupper(c)) {</div>
+<div class="line"><span class="lineno"> 1447</span>                    upper_id[c - <span class="charliteral">&#39;A&#39;</span>] = i;</div>
+<div class="line"><span class="lineno"> 1448</span>                }</div>
+<div class="line"><span class="lineno"> 1449</span>            }</div>
+<div class="line"><span class="lineno"> 1450</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
+<div class="line"><span class="lineno"> 1451</span>                <span class="keywordflow">if</span>(lower_id[i] != -1 &amp;&amp; upper_id[i] != -1 &amp;&amp; lower_id[i] &gt; upper_id[i]) {</div>
+<div class="line"><span class="lineno"> 1452</span>                    cnt++;</div>
+<div class="line"><span class="lineno"> 1453</span>                    output[i] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1454</span>                }</div>
+<div class="line"><span class="lineno"> 1455</span>            }</div>
+<div class="line"><span class="lineno"> 1456</span>            ostringstream oss = {};</div>
+<div class="line"><span class="lineno"> 1457</span>            oss &lt;&lt; cnt;</div>
+<div class="line"><span class="lineno"> 1458</span>            <span class="keywordflow">if</span>(cnt &gt; 0) {</div>
+<div class="line"><span class="lineno"> 1459</span>                oss &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno"> 1460</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 26; i++) {</div>
+<div class="line"><span class="lineno"> 1461</span>                    <span class="keywordflow">if</span>(output[i]) {</div>
+<div class="line"><span class="lineno"> 1462</span>                        oss &lt;&lt; (char) (i + <span class="charliteral">&#39;A&#39;</span>) &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; (char) (i + <span class="charliteral">&#39;a&#39;</span>) &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno"> 1463</span>                    }</div>
+<div class="line"><span class="lineno"> 1464</span>                }</div>
+<div class="line"><span class="lineno"> 1465</span>            }</div>
+<div class="line"><span class="lineno"> 1466</span>            <span class="keywordflow">return</span> oss.str();</div>
+<div class="line"><span class="lineno"> 1467</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l01431">solution()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l01432">solution()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l01431">solution()</a>, <a class="el" href="../../db/db2/a00020_source.html#l00512">TEST()</a> , 以及 <a class="el" href="../../db/db2/a00020_source.html#l00517">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01432">solution()</a>, <a class="el" href="../../db/db6/a00074_source.html#l00512">TEST()</a> , 以及 <a class="el" href="../../db/db6/a00074_source.html#l00517">TEST()</a>.</p>
 
 </div>
 </div>
@@ -183,15 +183,15 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00512">512</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../db/db6/a00074_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db6/a00074_source.html#l00512">512</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno">  512</span>                           {</div>
 <div class="line"><span class="lineno">  513</span>            <span class="keywordtype">string</span> in(<span class="stringliteral">&quot;AaCcc*zZz&quot;</span>);</div>
 <div class="line"><span class="lineno">  514</span>            <span class="keywordtype">string</span> ans = <a class="code hl_function" href="#a94965f62d9e338d158c6c9eaca9e4c94">solution</a>(in);</div>
 <div class="line"><span class="lineno">  515</span>            ASSERT_EQ(<span class="stringliteral">&quot;2 A a C c &quot;</span>, ans);</div>
 <div class="line"><span class="lineno">  516</span>        }</div>
-<div class="ttc" id="aa00593_html_a94965f62d9e338d158c6c9eaca9e4c94"><div class="ttname"><a href="#a94965f62d9e338d158c6c9eaca9e4c94">liverpool::hsbc_interview::solution</a></div><div class="ttdeci">string solution(string letters)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l01431">liverpool.cpp:1431</a></div></div>
+<div class="ttc" id="aa00593_html_a94965f62d9e338d158c6c9eaca9e4c94"><div class="ttname"><a href="#a94965f62d9e338d158c6c9eaca9e4c94">liverpool::hsbc_interview::solution</a></div><div class="ttdeci">string solution(string letters)</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l01432">liverpool.cpp:1432</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l01431">solution()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l01432">solution()</a>.</p>
 
 </div>
 </div>
@@ -214,14 +214,14 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00517">517</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../db/db6/a00074_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db6/a00074_source.html#l00517">517</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno">  517</span>                           {</div>
 <div class="line"><span class="lineno">  518</span>            <span class="keywordtype">string</span> in(<span class="stringliteral">&quot;AaCc*&quot;</span>);</div>
 <div class="line"><span class="lineno">  519</span>            <span class="keywordtype">string</span> ans = <a class="code hl_function" href="#a94965f62d9e338d158c6c9eaca9e4c94">solution</a>(in);</div>
 <div class="line"><span class="lineno">  520</span>            ASSERT_EQ(<span class="stringliteral">&quot;2 A a C c &quot;</span>, ans);</div>
 <div class="line"><span class="lineno">  521</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l01431">solution()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l01432">solution()</a>.</p>
 
 </div>
 </div>

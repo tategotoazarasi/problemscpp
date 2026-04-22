@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: liverpool.cpp 文件参考</title>
+<title>problemscpp: templates.cpp 文件参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -88,212 +88,222 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#namespaces">命名空间</a> &#124;
-<a href="#func-members">函数</a> &#124;
-<a href="#var-members">变量</a>  </div>
-  <div class="headertitle"><div class="title">liverpool.cpp 文件参考</div></div>
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">templates.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../dc/d87/a00032_source.html">liverpool.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d3/d8b/a00059_source.html">templates.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="../../db/dab/a00089_source.html">templates.h</a>&quot;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
-<code>#include &lt;climits&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;ostream&gt;</code><br />
+<code>#include &lt;list&gt;</code><br />
+<code>#include &lt;numeric&gt;</code><br />
 <code>#include &lt;queue&gt;</code><br />
-<code>#include &lt;ranges&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
-<code>#include &lt;stack&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;unordered_set&gt;</code><br />
 </div>
 <p><a href="../../d3/d52/a00023_source.html">浏览该文件的源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/a03190.html">liverpool::cafeteria::node</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d23/a03186.html">liverpool::clockpictures::subarr</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d71/a03182.html">liverpool::grid::pair_equal</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dde/a03178.html">liverpool::grid::pair_hash</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc1/a03194.html">liverpool::reactor::node</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9c/a03790.html">bwt::node</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dd7/a00567.html">liverpool</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d8f/a00742.html">bwt</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4a/a00579.html">liverpool::allpairspath</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db3/a00744.html">dfa</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dbe/a00574.html">liverpool::amalgram</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df7/a00739.html">elias_gamma</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de4/a00594.html">liverpool::booking</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d0a/a00743.html">hamming</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dde/a00587.html">liverpool::cafeteria</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d79/a00745.html">kmp</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2f/a00582.html">liverpool::ceremony</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dce/a00740.html">lzw</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc8/a00581.html">liverpool::clockpictures</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d9b/a00577.html">liverpool::countingchocolate</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html">liverpool::doctorkattis</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dad/a00591.html">liverpool::factory</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2e/a00588.html">liverpool::gift_shop</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/a00578.html">liverpool::grid</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da3/a00593.html">liverpool::hsbc_interview</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d21/a00584.html">liverpool::lobby</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html">liverpool::movie_theater</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d9e/a00569.html">liverpool::oddecho</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d7c/a00576.html">liverpool::oddities</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d06/a00572.html">liverpool::plantingtrees</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/a00585.html">liverpool::printing_department</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dec/a00592.html">liverpool::reactor</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da5/a00570.html">liverpool::recount</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html">liverpool::secret_entrance</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d3a/a00571.html">liverpool::set</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d21/a00573.html">liverpool::snowflakes</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d40/a00568.html">liverpool::stable_matching</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da3/a00589.html">liverpool::trash_compactor</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de2/a00580.html">liverpool::weakvertices</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/a00575.html">liverpool::wheresmyinternet</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da3/a00741.html">mtf</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a5a66d1d71213e4cb556ee13047c5bed0" id="r_a5a66d1d71213e4cb556ee13047c5bed0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html#a5a66d1d71213e4cb556ee13047c5bed0">liverpool::doctorkattis::arrive_at_clinic</a> (string cat_name, int infection_level)</td></tr>
-<tr class="separator:a5a66d1d71213e4cb556ee13047c5bed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85e72ea5b82422e8fedcd0653724ff23" id="r_a85e72ea5b82422e8fedcd0653724ff23"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html#a85e72ea5b82422e8fedcd0653724ff23">liverpool::doctorkattis::bubble_down</a> (int index)</td></tr>
-<tr class="separator:a85e72ea5b82422e8fedcd0653724ff23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad89cf291b96a5267e657a03c03bceed9" id="r_ad89cf291b96a5267e657a03c03bceed9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html#ad89cf291b96a5267e657a03c03bceed9">liverpool::doctorkattis::bubble_up</a> (int index)</td></tr>
-<tr class="separator:ad89cf291b96a5267e657a03c03bceed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1166a6309b2176673a4a33c15f976ff" id="r_ae1166a6309b2176673a4a33c15f976ff"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d3a/a00571.html#ae1166a6309b2176673a4a33c15f976ff">liverpool::set::calc_mask</a> (<a class="el" href="../../d7/dbe/a03210.html">card</a> *c1, <a class="el" href="../../d7/dbe/a03210.html">card</a> *c2)</td></tr>
-<tr class="separator:ae1166a6309b2176673a4a33c15f976ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a305471dcdfb22e99a428e996727a750b" id="r_a305471dcdfb22e99a428e996727a750b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d3a/a00571.html#a305471dcdfb22e99a428e996727a750b">liverpool::set::fit</a> (<a class="el" href="../../d7/dbe/a03210.html">card</a> *c, const <a class="el" href="../../d6/dd5/a03214.html">cardset</a> *s)</td></tr>
-<tr class="separator:a305471dcdfb22e99a428e996727a750b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbe7eaffb986cd507678cebdff793048" id="r_abbe7eaffb986cd507678cebdff793048"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de4/a00594.html#abbe7eaffb986cd507678cebdff793048">liverpool::booking::getScoreDifference</a> (vector&lt; int &gt; numSeq)</td></tr>
-<tr class="separator:abbe7eaffb986cd507678cebdff793048"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8b62b27d6f8a2d9f847e242ac9d2240" id="r_ac8b62b27d6f8a2d9f847e242ac9d2240"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de4/a00594.html#ac8b62b27d6f8a2d9f847e242ac9d2240">liverpool::booking::getSwapTime</a> (string color)</td></tr>
-<tr class="separator:ac8b62b27d6f8a2d9f847e242ac9d2240"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49fa080c69a6a6c217d2848079d7fb86" id="r_a49fa080c69a6a6c217d2848079d7fb86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4a/a00579.html#a49fa080c69a6a6c217d2848079d7fb86">liverpool::allpairspath::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a49fa080c69a6a6c217d2848079d7fb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47c474f272b72d6b5c7ca2b0c0540d9e" id="r_a47c474f272b72d6b5c7ca2b0c0540d9e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dbe/a00574.html#a47c474f272b72d6b5c7ca2b0c0540d9e">liverpool::amalgram::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a47c474f272b72d6b5c7ca2b0c0540d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48938bf551a68f22b4499eafa0f0fb90" id="r_a48938bf551a68f22b4499eafa0f0fb90"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2f/a00582.html#a48938bf551a68f22b4499eafa0f0fb90">liverpool::ceremony::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a48938bf551a68f22b4499eafa0f0fb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44e5f2c9ed7dbed861fa164bc167baf7" id="r_a44e5f2c9ed7dbed861fa164bc167baf7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc8/a00581.html#a44e5f2c9ed7dbed861fa164bc167baf7">liverpool::clockpictures::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a44e5f2c9ed7dbed861fa164bc167baf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7df5bc3db8e0f693b2b3635658e0ffe" id="r_ac7df5bc3db8e0f693b2b3635658e0ffe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d9b/a00577.html#ac7df5bc3db8e0f693b2b3635658e0ffe">liverpool::countingchocolate::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:ac7df5bc3db8e0f693b2b3635658e0ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0b2daf08bcc6970877802e0081234f2" id="r_aa0b2daf08bcc6970877802e0081234f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html#aa0b2daf08bcc6970877802e0081234f2">liverpool::doctorkattis::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:aa0b2daf08bcc6970877802e0081234f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab827507fa972e488bd5c55f89099b0d" id="r_aab827507fa972e488bd5c55f89099b0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/a00578.html#aab827507fa972e488bd5c55f89099b0d">liverpool::grid::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:aab827507fa972e488bd5c55f89099b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a100579b4b5453df8fc60766ff4baa66c" id="r_a100579b4b5453df8fc60766ff4baa66c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d9e/a00569.html#a100579b4b5453df8fc60766ff4baa66c">liverpool::oddecho::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a100579b4b5453df8fc60766ff4baa66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7549e40b12b9b43501e3d48e56e33ea" id="r_ae7549e40b12b9b43501e3d48e56e33ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d7c/a00576.html#ae7549e40b12b9b43501e3d48e56e33ea">liverpool::oddities::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:ae7549e40b12b9b43501e3d48e56e33ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3281bce8389211afb6c580c85153a4c7" id="r_a3281bce8389211afb6c580c85153a4c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d06/a00572.html#a3281bce8389211afb6c580c85153a4c7">liverpool::plantingtrees::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a3281bce8389211afb6c580c85153a4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa661bdc36a7302b568b7b0fc0a40329" id="r_aaa661bdc36a7302b568b7b0fc0a40329"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da5/a00570.html#aaa661bdc36a7302b568b7b0fc0a40329">liverpool::recount::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:aaa661bdc36a7302b568b7b0fc0a40329"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90b6a9743ec4a7e5fa016a37a0808f50" id="r_a90b6a9743ec4a7e5fa016a37a0808f50"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d3a/a00571.html#a90b6a9743ec4a7e5fa016a37a0808f50">liverpool::set::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a90b6a9743ec4a7e5fa016a37a0808f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82cb7b85a433686a7c04cabb16fad897" id="r_a82cb7b85a433686a7c04cabb16fad897"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d21/a00573.html#a82cb7b85a433686a7c04cabb16fad897">liverpool::snowflakes::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a82cb7b85a433686a7c04cabb16fad897"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ab5dbfc3ec0e684329293fb0ec1c24a" id="r_a5ab5dbfc3ec0e684329293fb0ec1c24a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de2/a00580.html#a5ab5dbfc3ec0e684329293fb0ec1c24a">liverpool::weakvertices::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a5ab5dbfc3ec0e684329293fb0ec1c24a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefd247d702b0e357f5c0d4ed691d986a" id="r_aefd247d702b0e357f5c0d4ed691d986a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/a00575.html#aefd247d702b0e357f5c0d4ed691d986a">liverpool::wheresmyinternet::main</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:aefd247d702b0e357f5c0d4ed691d986a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7291cefde9612a80ec68e12115cc1e1" id="r_ad7291cefde9612a80ec68e12115cc1e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dde/a00587.html#ad7291cefde9612a80ec68e12115cc1e1">liverpool::cafeteria::main_1</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:ad7291cefde9612a80ec68e12115cc1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e0d1c96b0f81d892e7f62da84c84a46" id="r_a5e0d1c96b0f81d892e7f62da84c84a46"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dad/a00591.html#a5e0d1c96b0f81d892e7f62da84c84a46">liverpool::factory::main_1</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a5e0d1c96b0f81d892e7f62da84c84a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a146c457ddc43fc1076b3a61bdd3e08ac" id="r_a146c457ddc43fc1076b3a61bdd3e08ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2e/a00588.html#a146c457ddc43fc1076b3a61bdd3e08ac">liverpool::gift_shop::main_1</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a146c457ddc43fc1076b3a61bdd3e08ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6b92e89aac59b839ede11880de01afa" id="r_aa6b92e89aac59b839ede11880de01afa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d21/a00584.html#aa6b92e89aac59b839ede11880de01afa">liverpool::lobby::main_1</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:aa6b92e89aac59b839ede11880de01afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0314dd9eb219915eb7d29bacd7d8c1b8" id="r_a0314dd9eb219915eb7d29bacd7d8c1b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a0314dd9eb219915eb7d29bacd7d8c1b8">liverpool::movie_theater::main_1</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a0314dd9eb219915eb7d29bacd7d8c1b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57e6cfa549233c27847ab097addd325f" id="r_a57e6cfa549233c27847ab097addd325f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/a00585.html#a57e6cfa549233c27847ab097addd325f">liverpool::printing_department::main_1</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a57e6cfa549233c27847ab097addd325f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a634d26982a91365e1c854fad4e783c0b" id="r_a634d26982a91365e1c854fad4e783c0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dec/a00592.html#a634d26982a91365e1c854fad4e783c0b">liverpool::reactor::main_1</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a634d26982a91365e1c854fad4e783c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a962fba1fadaa3ba4b0b13c3902a04e5c" id="r_a962fba1fadaa3ba4b0b13c3902a04e5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#a962fba1fadaa3ba4b0b13c3902a04e5c">liverpool::secret_entrance::main_1</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a962fba1fadaa3ba4b0b13c3902a04e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae388e8af9ad7f08aedef8bb13f55c71c" id="r_ae388e8af9ad7f08aedef8bb13f55c71c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da3/a00589.html#ae388e8af9ad7f08aedef8bb13f55c71c">liverpool::trash_compactor::main_1</a> (istream &amp;cin, ostream &amp;cout, int n, int nl)</td></tr>
-<tr class="separator:ae388e8af9ad7f08aedef8bb13f55c71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c2614fa2fb9810e79178a2592fcd11e" id="r_a8c2614fa2fb9810e79178a2592fcd11e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dde/a00587.html#a8c2614fa2fb9810e79178a2592fcd11e">liverpool::cafeteria::main_2</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a8c2614fa2fb9810e79178a2592fcd11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5a3c4613c4c00d6d26467f2a1536be8" id="r_ab5a3c4613c4c00d6d26467f2a1536be8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2e/a00588.html#ab5a3c4613c4c00d6d26467f2a1536be8">liverpool::gift_shop::main_2</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:ab5a3c4613c4c00d6d26467f2a1536be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9ce31ab29741499358fa52b68c729fa" id="r_af9ce31ab29741499358fa52b68c729fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d21/a00584.html#af9ce31ab29741499358fa52b68c729fa">liverpool::lobby::main_2</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:af9ce31ab29741499358fa52b68c729fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07fa277f35b3d6007c87bf9c3f730f57" id="r_a07fa277f35b3d6007c87bf9c3f730f57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/a00590.html#a07fa277f35b3d6007c87bf9c3f730f57">liverpool::movie_theater::main_2</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a07fa277f35b3d6007c87bf9c3f730f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06baa4bee45c81d1cbb96e71314d9fbd" id="r_a06baa4bee45c81d1cbb96e71314d9fbd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/a00585.html#a06baa4bee45c81d1cbb96e71314d9fbd">liverpool::printing_department::main_2</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:a06baa4bee45c81d1cbb96e71314d9fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab96c87552b4d68b1b3174a015df92c5e" id="r_ab96c87552b4d68b1b3174a015df92c5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d92/a00586.html#ab96c87552b4d68b1b3174a015df92c5e">liverpool::secret_entrance::main_2</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:ab96c87552b4d68b1b3174a015df92c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae88a0d5c79dad817eb56859edf04509c" id="r_ae88a0d5c79dad817eb56859edf04509c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da3/a00589.html#ae88a0d5c79dad817eb56859edf04509c">liverpool::trash_compactor::main_2</a> (istream &amp;cin, ostream &amp;cout)</td></tr>
-<tr class="separator:ae88a0d5c79dad817eb56859edf04509c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad02fae596b177dabdc48a1e8dd7a15f6" id="r_ad02fae596b177dabdc48a1e8dd7a15f6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html#ad02fae596b177dabdc48a1e8dd7a15f6">liverpool::doctorkattis::query</a> ()</td></tr>
-<tr class="separator:ad02fae596b177dabdc48a1e8dd7a15f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee77b9202d6483a372bcf4c3408e5f06" id="r_aee77b9202d6483a372bcf4c3408e5f06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/a00585.html#aee77b9202d6483a372bcf4c3408e5f06">liverpool::printing_department::remove</a> (vector&lt; vector&lt; int &gt; &gt; &amp;cnt, const vector&lt; string &gt; &amp;input, int x, int y, int w, int h, int &amp;ans)</td></tr>
-<tr class="separator:aee77b9202d6483a372bcf4c3408e5f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94965f62d9e338d158c6c9eaca9e4c94" id="r_a94965f62d9e338d158c6c9eaca9e4c94"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da3/a00593.html#a94965f62d9e338d158c6c9eaca9e4c94">liverpool::hsbc_interview::solution</a> (string letters)</td></tr>
-<tr class="separator:a94965f62d9e338d158c6c9eaca9e4c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35a9a0a975b7380622aa59cda74b0a31" id="r_a35a9a0a975b7380622aa59cda74b0a31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d9b/a00577.html#a35a9a0a975b7380622aa59cda74b0a31">liverpool::countingchocolate::solve</a> (const vector&lt; int &gt; &amp;a, int john, int sam, int sp, int target)</td></tr>
-<tr class="separator:a35a9a0a975b7380622aa59cda74b0a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a262add578eafc47c1c67baf9065b9c1b" id="r_a262add578eafc47c1c67baf9065b9c1b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2e/a00588.html#a262add578eafc47c1c67baf9065b9c1b">liverpool::gift_shop::test</a> (unsigned long long num)</td></tr>
-<tr class="separator:a262add578eafc47c1c67baf9065b9c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf5314fe101a4cba0e38d08473a653a0" id="r_abf5314fe101a4cba0e38d08473a653a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2e/a00588.html#abf5314fe101a4cba0e38d08473a653a0">liverpool::gift_shop::test2</a> (string num, int repeat)</td></tr>
-<tr class="separator:abf5314fe101a4cba0e38d08473a653a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ecf2b32d90a492df8ce22c523e75417" id="r_a1ecf2b32d90a492df8ce22c523e75417"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html#a1ecf2b32d90a492df8ce22c523e75417">liverpool::doctorkattis::treat</a> (string cat_name)</td></tr>
-<tr class="separator:a1ecf2b32d90a492df8ce22c523e75417"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3de86287a5447ee0b5eeec565adf86f0" id="r_a3de86287a5447ee0b5eeec565adf86f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html#a3de86287a5447ee0b5eeec565adf86f0">liverpool::doctorkattis::update_infection_level</a> (string cat_name, int increase_infection)</td></tr>
-<tr class="separator:a3de86287a5447ee0b5eeec565adf86f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-变量</h2></td></tr>
-<tr class="memitem:a7e670a763b0d81b0e538ea62467af79b" id="r_a7e670a763b0d81b0e538ea62467af79b"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a> = {}</td></tr>
-<tr class="separator:a7e670a763b0d81b0e538ea62467af79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2adaf4d89cf75414d3b25609081d7108" id="r_a2adaf4d89cf75414d3b25609081d7108"><td class="memItemLeft" align="right" valign="top">unordered_map&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html#a2adaf4d89cf75414d3b25609081d7108">liverpool::doctorkattis::cat_index</a> = {}</td></tr>
-<tr class="separator:a2adaf4d89cf75414d3b25609081d7108"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01d93c3b24a0c1a206aa4ab572c58157" id="r_a01d93c3b24a0c1a206aa4ab572c58157"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d6e/a03226.html">cat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html#a01d93c3b24a0c1a206aa4ab572c58157">liverpool::doctorkattis::heap</a> [<a class="el" href="../../d5/d80/a00583.html#a3a9f778afe91f99a70688c707d918d59">N</a>]</td></tr>
-<tr class="separator:a01d93c3b24a0c1a206aa4ab572c58157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a154ad77d5a5838fcd44b28bd9c885004" id="r_a154ad77d5a5838fcd44b28bd9c885004"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html#a154ad77d5a5838fcd44b28bd9c885004">liverpool::doctorkattis::heap_size</a> = 0</td></tr>
-<tr class="separator:a154ad77d5a5838fcd44b28bd9c885004"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2991a035ec7c05bca06cda958a3e50c" id="r_ab2991a035ec7c05bca06cda958a3e50c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/a00578.html#ab2991a035ec7c05bca06cda958a3e50c">liverpool::grid::m</a></td></tr>
-<tr class="separator:ab2991a035ec7c05bca06cda958a3e50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a9f778afe91f99a70688c707d918d59" id="r_a3a9f778afe91f99a70688c707d918d59"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html#a3a9f778afe91f99a70688c707d918d59">liverpool::doctorkattis::N</a> = 1000010</td></tr>
-<tr class="separator:a3a9f778afe91f99a70688c707d918d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af436c61fd3ce48a56c6d7719a33a8a45" id="r_af436c61fd3ce48a56c6d7719a33a8a45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></td></tr>
-<tr class="separator:af436c61fd3ce48a56c6d7719a33a8a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88136969cf46c0d3c7cc144745aaef13" id="r_a88136969cf46c0d3c7cc144745aaef13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d80/a00583.html#a88136969cf46c0d3c7cc144745aaef13">liverpool::doctorkattis::time_counter</a> = 0</td></tr>
-<tr class="separator:a88136969cf46c0d3c7cc144745aaef13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15b400023f9f4dcd2fedbd4afba37203" id="r_a15b400023f9f4dcd2fedbd4afba37203"><td class="memItemLeft" align="right" valign="top">vector&lt; unordered_map&lt; char, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db3/a00744.html#a15b400023f9f4dcd2fedbd4afba37203">dfa::construct_dfa</a> (string pattern)</td></tr>
+<tr class="separator:a15b400023f9f4dcd2fedbd4afba37203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac60fd488cb3d235072c552552976a7c8" id="r_ac60fd488cb3d235072c552552976a7c8"><td class="memItemLeft" align="right" valign="top">vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d0a/a00743.html#ac60fd488cb3d235072c552552976a7c8">hamming::correct</a> (vector&lt; bool &gt; input)</td></tr>
+<tr class="separator:ac60fd488cb3d235072c552552976a7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a47ad6ea2426c58fac42892623f570" id="r_a06a47ad6ea2426c58fac42892623f570"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d8f/a00742.html#a06a47ad6ea2426c58fac42892623f570">bwt::decode</a> (string input)</td></tr>
+<tr class="separator:a06a47ad6ea2426c58fac42892623f570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e2af63f140b5681290d048b8b06e29" id="r_a90e2af63f140b5681290d048b8b06e29"><td class="memItemLeft" align="right" valign="top">vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df7/a00739.html#a90e2af63f140b5681290d048b8b06e29">elias_gamma::decode</a> (vector&lt; bool &gt; input)</td></tr>
+<tr class="separator:a90e2af63f140b5681290d048b8b06e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a787d2d84a04ec7949f1a4db72842c18c" id="r_a787d2d84a04ec7949f1a4db72842c18c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dce/a00740.html#a787d2d84a04ec7949f1a4db72842c18c">lzw::decode</a> (vector&lt; int &gt; input, unordered_map&lt; int, string &gt; dict)</td></tr>
+<tr class="separator:a787d2d84a04ec7949f1a4db72842c18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa859a32558f21d20a9f3379cfa6f6d88" id="r_aa859a32558f21d20a9f3379cfa6f6d88"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da3/a00741.html#aa859a32558f21d20a9f3379cfa6f6d88">mtf::decode</a> (vector&lt; int &gt; input)</td></tr>
+<tr class="separator:aa859a32558f21d20a9f3379cfa6f6d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a904686784d2643486f6e40767027b9ac" id="r_a904686784d2643486f6e40767027b9ac"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d8f/a00742.html#a904686784d2643486f6e40767027b9ac">bwt::encode</a> (string input)</td></tr>
+<tr class="separator:a904686784d2643486f6e40767027b9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba99a7f51ba7dabc6c95bd5ba99ba0e" id="r_aeba99a7f51ba7dabc6c95bd5ba99ba0e"><td class="memItemLeft" align="right" valign="top">vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df7/a00739.html#aeba99a7f51ba7dabc6c95bd5ba99ba0e">elias_gamma::encode</a> (vector&lt; bool &gt; input)</td></tr>
+<tr class="separator:aeba99a7f51ba7dabc6c95bd5ba99ba0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b5c6974193e4348079921bd185fdf1e" id="r_a4b5c6974193e4348079921bd185fdf1e"><td class="memItemLeft" align="right" valign="top">vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d0a/a00743.html#a4b5c6974193e4348079921bd185fdf1e">hamming::encode</a> (vector&lt; bool &gt; input)</td></tr>
+<tr class="separator:a4b5c6974193e4348079921bd185fdf1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb44700b0407469a61ef051ec3eee510" id="r_adb44700b0407469a61ef051ec3eee510"><td class="memItemLeft" align="right" valign="top">pair&lt; vector&lt; int &gt;, unordered_map&lt; int, string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dce/a00740.html#adb44700b0407469a61ef051ec3eee510">lzw::encode</a> (string input)</td></tr>
+<tr class="separator:adb44700b0407469a61ef051ec3eee510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc38323bb696e24193f9bfc834579dda" id="r_adc38323bb696e24193f9bfc834579dda"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da3/a00741.html#adc38323bb696e24193f9bfc834579dda">mtf::encode</a> (string input)</td></tr>
+<tr class="separator:adc38323bb696e24193f9bfc834579dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744942f6b8af5096711c107c8983ad52" id="r_a744942f6b8af5096711c107c8983ad52"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d79/a00745.html#a744942f6b8af5096711c107c8983ad52">kmp::failure_link</a> (string pattern)</td></tr>
+<tr class="separator:a744942f6b8af5096711c107c8983ad52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f4832cd60e6083af3d53abb2b8349c" id="r_ab0f4832cd60e6083af3d53abb2b8349c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0f4832cd60e6083af3d53abb2b8349c">operator&lt;</a> (const <a class="el" href="../../d4/d5e/a03818.html">huffman</a> &amp;h1, const <a class="el" href="../../d4/d5e/a03818.html">huffman</a> &amp;h2)</td></tr>
+<tr class="separator:ab0f4832cd60e6083af3d53abb2b8349c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a306bf00524f91d87d511fe540d517e8f" id="r_a306bf00524f91d87d511fe540d517e8f"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a306bf00524f91d87d511fe540d517e8f">operator&lt;&lt;</a> (ostream &amp;os, const <a class="el" href="../../d3/d30/a03798.html">BigInt</a> &amp;bi)</td></tr>
+<tr class="separator:a306bf00524f91d87d511fe540d517e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9647df4ee7fe0dec2520d4a00da3363" id="r_ad9647df4ee7fe0dec2520d4a00da3363"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9647df4ee7fe0dec2520d4a00da3363">operator&lt;&lt;</a> (ostream &amp;os, const <a class="el" href="../../dc/dfc/a03802.html">Fraction</a> &amp;frac)</td></tr>
+<tr class="separator:ad9647df4ee7fe0dec2520d4a00da3363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac34f777e9f24df2612d7769e2252a065" id="r_ac34f777e9f24df2612d7769e2252a065"><td class="memItemLeft" align="right" valign="top">istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac34f777e9f24df2612d7769e2252a065">operator&gt;&gt;</a> (istream &amp;is, const <a class="el" href="../../d3/d30/a03798.html">BigInt</a> &amp;)</td></tr>
+<tr class="separator:ac34f777e9f24df2612d7769e2252a065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9143b5c908364aa7a99af981c61c66cf" id="r_a9143b5c908364aa7a99af981c61c66cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db3/a00744.html#a9143b5c908364aa7a99af981c61c66cf">dfa::str_match</a> (string str, string pattern)</td></tr>
+<tr class="separator:a9143b5c908364aa7a99af981c61c66cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a70cbb9b369bda0d1e91bbd1dd92fc" id="r_a42a70cbb9b369bda0d1e91bbd1dd92fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d79/a00745.html#a42a70cbb9b369bda0d1e91bbd1dd92fc">kmp::str_match</a> (string str, string pattern)</td></tr>
+<tr class="separator:a42a70cbb9b369bda0d1e91bbd1dd92fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">函数说明</h2>
+<a id="ab0f4832cd60e6083af3d53abb2b8349c" name="ab0f4832cd60e6083af3d53abb2b8349c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f4832cd60e6083af3d53abb2b8349c">&#9670;&#160;</a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d5e/a03818.html">huffman</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>h1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/d5e/a03818.html">huffman</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>h2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">templates.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00578">578</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  578</span>                                                     {</div>
+<div class="line"><span class="lineno">  579</span>    <span class="keywordflow">return</span> h1.<a class="code hl_function" href="../../d4/d5e/a03818.html#af1635bd3226aeaab6d43e7f55fb2a0fc">get_weight</a>() &gt; h2.<a class="code hl_function" href="../../d4/d5e/a03818.html#af1635bd3226aeaab6d43e7f55fb2a0fc">get_weight</a>();</div>
+<div class="line"><span class="lineno">  580</span>}</div>
+<div class="ttc" id="aa03818_html_af1635bd3226aeaab6d43e7f55fb2a0fc"><div class="ttname"><a href="../../d4/d5e/a03818.html#af1635bd3226aeaab6d43e7f55fb2a0fc">huffman::get_weight</a></div><div class="ttdeci">int get_weight() const</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00576">templates.cpp:576</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00576">huffman::get_weight()</a>.</p>
+
+</div>
+</div>
+<a id="a306bf00524f91d87d511fe540d517e8f" name="a306bf00524f91d87d511fe540d517e8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a306bf00524f91d87d511fe540d517e8f">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/d30/a03798.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bi</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">templates.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00354">354</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  354</span>                                                   {</div>
+<div class="line"><span class="lineno">  355</span>    <span class="keywordflow">if</span>(!bi.<a class="code hl_variable" href="../../d3/d30/a03798.html#a622851f40dd8992cc2a66a5ce83133df">positive</a>) {</div>
+<div class="line"><span class="lineno">  356</span>        os &lt;&lt; <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line"><span class="lineno">  357</span>    }</div>
+<div class="line"><span class="lineno">  358</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = bi.<a class="code hl_variable" href="../../d3/d30/a03798.html#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.rbegin(); it != bi.<a class="code hl_variable" href="../../d3/d30/a03798.html#a8ff0b8f430da59beb2b9e3d9a8f4f122">vec</a>.rend(); ++it) {</div>
+<div class="line"><span class="lineno">  359</span>        os &lt;&lt; *it;</div>
+<div class="line"><span class="lineno">  360</span>    }</div>
+<div class="line"><span class="lineno">  361</span>    <span class="keywordflow">return</span> os;</div>
+<div class="line"><span class="lineno">  362</span>}</div>
+<div class="ttc" id="aa03798_html_a622851f40dd8992cc2a66a5ce83133df"><div class="ttname"><a href="../../d3/d30/a03798.html#a622851f40dd8992cc2a66a5ce83133df">BigInt::positive</a></div><div class="ttdeci">bool positive</div><div class="ttdef"><b>定义</b> <a href="../../db/dab/a00089_source.html#l00026">templates.h:26</a></div></div>
+<div class="ttc" id="aa03798_html_a8ff0b8f430da59beb2b9e3d9a8f4f122"><div class="ttname"><a href="../../d3/d30/a03798.html#a8ff0b8f430da59beb2b9e3d9a8f4f122">BigInt::vec</a></div><div class="ttdeci">vector&lt; unsigned short &gt; vec</div><div class="ttdef"><b>定义</b> <a href="../../db/dab/a00089_source.html#l00027">templates.h:27</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad9647df4ee7fe0dec2520d4a00da3363" name="ad9647df4ee7fe0dec2520d4a00da3363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9647df4ee7fe0dec2520d4a00da3363">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/dfc/a03802.html">Fraction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>frac</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">templates.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00457">457</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  457</span>                                                       {</div>
+<div class="line"><span class="lineno">  458</span>    <span class="keywordflow">if</span>(frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#a62dd875277df5cc634ed060b93d02d28">denominator</a> == 0) {</div>
+<div class="line"><span class="lineno">  459</span>        os &lt;&lt; <span class="stringliteral">&quot;Inf&quot;</span>;</div>
+<div class="line"><span class="lineno">  460</span>        <span class="keywordflow">return</span> os;</div>
+<div class="line"><span class="lineno">  461</span>    }</div>
+<div class="line"><span class="lineno">  462</span>    <span class="keywordflow">if</span>(frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#ac5579448914d9179b1f8431216a33af7">numerator</a> == 0) {</div>
+<div class="line"><span class="lineno">  463</span>        os &lt;&lt; 0;</div>
+<div class="line"><span class="lineno">  464</span>        <span class="keywordflow">return</span> os;</div>
+<div class="line"><span class="lineno">  465</span>    }</div>
+<div class="line"><span class="lineno">  466</span>    <span class="keywordflow">if</span>(!frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#a777585f98e8e6e958c126e1474961a31">positive</a>) {</div>
+<div class="line"><span class="lineno">  467</span>        os &lt;&lt; <span class="stringliteral">&quot;(-&quot;</span>;</div>
+<div class="line"><span class="lineno">  468</span>    }</div>
+<div class="line"><span class="lineno">  469</span>    <span class="keywordflow">if</span>(frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#ac5579448914d9179b1f8431216a33af7">numerator</a> % frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#a62dd875277df5cc634ed060b93d02d28">denominator</a> == 0) {</div>
+<div class="line"><span class="lineno">  470</span>        os &lt;&lt; frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#ac5579448914d9179b1f8431216a33af7">numerator</a> / frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#a62dd875277df5cc634ed060b93d02d28">denominator</a>;</div>
+<div class="line"><span class="lineno">  471</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  472</span>        <span class="keywordflow">if</span>(frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#ac5579448914d9179b1f8431216a33af7">numerator</a> / frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#a62dd875277df5cc634ed060b93d02d28">denominator</a> != 0) {</div>
+<div class="line"><span class="lineno">  473</span>            os &lt;&lt; frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#ac5579448914d9179b1f8431216a33af7">numerator</a> / frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#a62dd875277df5cc634ed060b93d02d28">denominator</a> &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  474</span>        }</div>
+<div class="line"><span class="lineno">  475</span>        os &lt;&lt; frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#ac5579448914d9179b1f8431216a33af7">numerator</a> % frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#a62dd875277df5cc634ed060b93d02d28">denominator</a> &lt;&lt; <span class="charliteral">&#39;/&#39;</span> &lt;&lt; frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#a62dd875277df5cc634ed060b93d02d28">denominator</a>;</div>
+<div class="line"><span class="lineno">  476</span>    }</div>
+<div class="line"><span class="lineno">  477</span>    <span class="keywordflow">if</span>(!frac.<a class="code hl_variable" href="../../dc/dfc/a03802.html#a777585f98e8e6e958c126e1474961a31">positive</a>) {</div>
+<div class="line"><span class="lineno">  478</span>        os &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  479</span>    }</div>
+<div class="line"><span class="lineno">  480</span>    <span class="keywordflow">return</span> os;</div>
+<div class="line"><span class="lineno">  481</span>}</div>
+<div class="ttc" id="aa03802_html_a62dd875277df5cc634ed060b93d02d28"><div class="ttname"><a href="../../dc/dfc/a03802.html#a62dd875277df5cc634ed060b93d02d28">Fraction::denominator</a></div><div class="ttdeci">unsigned long long denominator</div><div class="ttdoc">分母</div><div class="ttdef"><b>定义</b> <a href="../../db/dab/a00089_source.html#l00076">templates.h:76</a></div></div>
+<div class="ttc" id="aa03802_html_a777585f98e8e6e958c126e1474961a31"><div class="ttname"><a href="../../dc/dfc/a03802.html#a777585f98e8e6e958c126e1474961a31">Fraction::positive</a></div><div class="ttdeci">bool positive</div><div class="ttdoc">正负</div><div class="ttdef"><b>定义</b> <a href="../../db/dab/a00089_source.html#l00074">templates.h:74</a></div></div>
+<div class="ttc" id="aa03802_html_ac5579448914d9179b1f8431216a33af7"><div class="ttname"><a href="../../dc/dfc/a03802.html#ac5579448914d9179b1f8431216a33af7">Fraction::numerator</a></div><div class="ttdeci">unsigned long long numerator</div><div class="ttdoc">分子</div><div class="ttdef"><b>定义</b> <a href="../../db/dab/a00089_source.html#l00075">templates.h:75</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac34f777e9f24df2612d7769e2252a065" name="ac34f777e9f24df2612d7769e2252a065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac34f777e9f24df2612d7769e2252a065">&#9670;&#160;</a></span>operator&gt;&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">istream &amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;</td>          <td class="paramname"><span class="paramname"><em>is</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/d30/a03798.html">BigInt</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">templates.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00364">364</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  364</span>{ <span class="keywordflow">return</span> is; }</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

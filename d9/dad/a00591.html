@@ -122,72 +122,72 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l01328">1328</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1328</span>                                                {</div>
-<div class="line"><span class="lineno"> 1329</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans = 0;</div>
-<div class="line"><span class="lineno"> 1330</span>            <span class="keywordtype">string</span> line;</div>
-<div class="line"><span class="lineno"> 1331</span>            <span class="keywordflow">while</span>(getline(cin, line)) {</div>
-<div class="line"><span class="lineno"> 1332</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> destination = 0;</div>
-<div class="line"><span class="lineno"> 1333</span>                vector&lt;unsigned long long&gt; ops = {};</div>
-<div class="line"><span class="lineno"> 1334</span>                <span class="keyword">auto</span> substrs                   = std::views::split(line, <span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><span class="lineno"> 1335</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[a, b]: substrs) {</div>
-<div class="line"><span class="lineno"> 1336</span>                    <span class="keywordtype">string</span> substr = string(a, b);</div>
-<div class="line"><span class="lineno"> 1337</span>                    istringstream iss;</div>
-<div class="line"><span class="lineno"> 1338</span>                    <span class="keywordflow">if</span>(substr[0] == <span class="charliteral">&#39;[&#39;</span>) {<span class="comment">// destination</span></div>
-<div class="line"><span class="lineno"> 1339</span>                        substr = string(a + 1, b - 1);</div>
-<div class="line"><span class="lineno"> 1340</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; substr.length(); i++) {</div>
-<div class="line"><span class="lineno"> 1341</span>                            <span class="keywordflow">if</span>(substr[i] == <span class="charliteral">&#39;#&#39;</span>) {</div>
-<div class="line"><span class="lineno"> 1342</span>                                destination |= (1ULL &lt;&lt; i);</div>
-<div class="line"><span class="lineno"> 1343</span>                            }</div>
-<div class="line"><span class="lineno"> 1344</span>                        }</div>
-<div class="line"><span class="lineno"> 1345</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(substr[0] == <span class="charliteral">&#39;(&#39;</span>) {<span class="comment">// operator</span></div>
-<div class="line"><span class="lineno"> 1346</span>                        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> op = 0;</div>
-<div class="line"><span class="lineno"> 1347</span>                        substr                = string(a + 1, b - 1);</div>
-<div class="line"><span class="lineno"> 1348</span>                        <span class="keyword">auto</span> subsubstrs       = std::views::split(substr, <span class="charliteral">&#39;,&#39;</span>);</div>
-<div class="line"><span class="lineno"> 1349</span>                        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[c, d]: subsubstrs) {</div>
-<div class="line"><span class="lineno"> 1350</span>                            <span class="keywordtype">string</span> subsubstr = string(c, d);</div>
-<div class="line"><span class="lineno"> 1351</span>                            iss              = istringstream(subsubstr);</div>
-<div class="line"><span class="lineno"> 1352</span>                            <span class="keywordtype">int</span> index;</div>
-<div class="line"><span class="lineno"> 1353</span>                            iss &gt;&gt; index;</div>
-<div class="line"><span class="lineno"> 1354</span>                            op |= (1ULL &lt;&lt; index);</div>
-<div class="line"><span class="lineno"> 1355</span>                        }</div>
-<div class="line"><span class="lineno"> 1356</span>                        ops.push_back(op);</div>
-<div class="line"><span class="lineno"> 1357</span>                    } <span class="keywordflow">else</span> {<span class="comment">// ?</span></div>
-<div class="line"><span class="lineno"> 1358</span>                        substr = string(a + 1, b - 1);</div>
-<div class="line"><span class="lineno"> 1359</span>                    }</div>
-<div class="line"><span class="lineno"> 1360</span>                }</div>
-<div class="line"><span class="lineno"> 1361</span>                unordered_set&lt;unsigned long long&gt; vis                 = {};</div>
-<div class="line"><span class="lineno"> 1362</span>                queue&lt;pair&lt;unsigned long long, unsigned long long&gt;&gt; q = {};</div>
-<div class="line"><span class="lineno"> 1363</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; ops.size(); i++) {</div>
-<div class="line"><span class="lineno"> 1364</span>                    q.push({0 ^ ops[i], 1ULL &lt;&lt; i});</div>
-<div class="line"><span class="lineno"> 1365</span>                    vis.insert(1ULL &lt;&lt; i);</div>
-<div class="line"><span class="lineno"> 1366</span>                }</div>
-<div class="line"><span class="lineno"> 1367</span>                <span class="keywordflow">while</span>(!q.empty()) {</div>
-<div class="line"><span class="lineno"> 1368</span>                    <span class="keyword">auto</span> [current, tag] = q.front();</div>
-<div class="line"><span class="lineno"> 1369</span>                    q.pop();</div>
-<div class="line"><span class="lineno"> 1370</span>                    <span class="keywordflow">if</span>(current == destination) {</div>
-<div class="line"><span class="lineno"> 1371</span>                        <span class="comment">//cout &lt;&lt; std::popcount(tag) &lt;&lt; endl;</span></div>
-<div class="line"><span class="lineno"> 1372</span>                        <a class="code hl_variable" href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> += std::popcount(tag);</div>
-<div class="line"><span class="lineno"> 1373</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1374</span>                    }</div>
-<div class="line"><span class="lineno"> 1375</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; ops.size(); i++) {</div>
-<div class="line"><span class="lineno"> 1376</span>                        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> next_tag = tag | (1ULL &lt;&lt; i);</div>
-<div class="line"><span class="lineno"> 1377</span>                        <span class="keywordflow">if</span>(!vis.contains(next_tag)) {</div>
-<div class="line"><span class="lineno"> 1378</span>                            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> next_current = current ^ ops[i];</div>
-<div class="line"><span class="lineno"> 1379</span>                            vis.insert(next_tag);</div>
-<div class="line"><span class="lineno"> 1380</span>                            q.push({next_current, next_tag});</div>
-<div class="line"><span class="lineno"> 1381</span>                        }</div>
-<div class="line"><span class="lineno"> 1382</span>                    }</div>
-<div class="line"><span class="lineno"> 1383</span>                }</div>
-<div class="line"><span class="lineno"> 1384</span>            }</div>
-<div class="line"><span class="lineno"> 1385</span>            cout &lt;&lt; <a class="code hl_variable" href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno"> 1386</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno"> 1387</span>        }</div>
-<div class="ttc" id="aa00571_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00131">liverpool.cpp:131</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01329">1329</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1329</span>                                                {</div>
+<div class="line"><span class="lineno"> 1330</span>            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> ans = 0;</div>
+<div class="line"><span class="lineno"> 1331</span>            <span class="keywordtype">string</span> line;</div>
+<div class="line"><span class="lineno"> 1332</span>            <span class="keywordflow">while</span>(getline(cin, line)) {</div>
+<div class="line"><span class="lineno"> 1333</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> destination = 0;</div>
+<div class="line"><span class="lineno"> 1334</span>                vector&lt;unsigned long long&gt; ops = {};</div>
+<div class="line"><span class="lineno"> 1335</span>                <span class="keyword">auto</span> substrs                   = std::views::split(line, <span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno"> 1336</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[a, b]: substrs) {</div>
+<div class="line"><span class="lineno"> 1337</span>                    <span class="keywordtype">string</span> substr = string(a, b);</div>
+<div class="line"><span class="lineno"> 1338</span>                    istringstream iss;</div>
+<div class="line"><span class="lineno"> 1339</span>                    <span class="keywordflow">if</span>(substr[0] == <span class="charliteral">&#39;[&#39;</span>) {<span class="comment">// destination</span></div>
+<div class="line"><span class="lineno"> 1340</span>                        substr = string(a + 1, b - 1);</div>
+<div class="line"><span class="lineno"> 1341</span>                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; substr.length(); i++) {</div>
+<div class="line"><span class="lineno"> 1342</span>                            <span class="keywordflow">if</span>(substr[i] == <span class="charliteral">&#39;#&#39;</span>) {</div>
+<div class="line"><span class="lineno"> 1343</span>                                destination |= (1ULL &lt;&lt; i);</div>
+<div class="line"><span class="lineno"> 1344</span>                            }</div>
+<div class="line"><span class="lineno"> 1345</span>                        }</div>
+<div class="line"><span class="lineno"> 1346</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(substr[0] == <span class="charliteral">&#39;(&#39;</span>) {<span class="comment">// operator</span></div>
+<div class="line"><span class="lineno"> 1347</span>                        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> op = 0;</div>
+<div class="line"><span class="lineno"> 1348</span>                        substr                = string(a + 1, b - 1);</div>
+<div class="line"><span class="lineno"> 1349</span>                        <span class="keyword">auto</span> subsubstrs       = std::views::split(substr, <span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno"> 1350</span>                        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[c, d]: subsubstrs) {</div>
+<div class="line"><span class="lineno"> 1351</span>                            <span class="keywordtype">string</span> subsubstr = string(c, d);</div>
+<div class="line"><span class="lineno"> 1352</span>                            iss              = istringstream(subsubstr);</div>
+<div class="line"><span class="lineno"> 1353</span>                            <span class="keywordtype">int</span> index;</div>
+<div class="line"><span class="lineno"> 1354</span>                            iss &gt;&gt; index;</div>
+<div class="line"><span class="lineno"> 1355</span>                            op |= (1ULL &lt;&lt; index);</div>
+<div class="line"><span class="lineno"> 1356</span>                        }</div>
+<div class="line"><span class="lineno"> 1357</span>                        ops.push_back(op);</div>
+<div class="line"><span class="lineno"> 1358</span>                    } <span class="keywordflow">else</span> {<span class="comment">// ?</span></div>
+<div class="line"><span class="lineno"> 1359</span>                        substr = string(a + 1, b - 1);</div>
+<div class="line"><span class="lineno"> 1360</span>                    }</div>
+<div class="line"><span class="lineno"> 1361</span>                }</div>
+<div class="line"><span class="lineno"> 1362</span>                unordered_set&lt;unsigned long long&gt; vis                 = {};</div>
+<div class="line"><span class="lineno"> 1363</span>                queue&lt;pair&lt;unsigned long long, unsigned long long&gt;&gt; q = {};</div>
+<div class="line"><span class="lineno"> 1364</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; ops.size(); i++) {</div>
+<div class="line"><span class="lineno"> 1365</span>                    q.push({0 ^ ops[i], 1ULL &lt;&lt; i});</div>
+<div class="line"><span class="lineno"> 1366</span>                    vis.insert(1ULL &lt;&lt; i);</div>
+<div class="line"><span class="lineno"> 1367</span>                }</div>
+<div class="line"><span class="lineno"> 1368</span>                <span class="keywordflow">while</span>(!q.empty()) {</div>
+<div class="line"><span class="lineno"> 1369</span>                    <span class="keyword">auto</span> [current, tag] = q.front();</div>
+<div class="line"><span class="lineno"> 1370</span>                    q.pop();</div>
+<div class="line"><span class="lineno"> 1371</span>                    <span class="keywordflow">if</span>(current == destination) {</div>
+<div class="line"><span class="lineno"> 1372</span>                        <span class="comment">//cout &lt;&lt; std::popcount(tag) &lt;&lt; endl;</span></div>
+<div class="line"><span class="lineno"> 1373</span>                        <a class="code hl_variable" href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> += std::popcount(tag);</div>
+<div class="line"><span class="lineno"> 1374</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1375</span>                    }</div>
+<div class="line"><span class="lineno"> 1376</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; ops.size(); i++) {</div>
+<div class="line"><span class="lineno"> 1377</span>                        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> next_tag = tag | (1ULL &lt;&lt; i);</div>
+<div class="line"><span class="lineno"> 1378</span>                        <span class="keywordflow">if</span>(!vis.contains(next_tag)) {</div>
+<div class="line"><span class="lineno"> 1379</span>                            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> next_current = current ^ ops[i];</div>
+<div class="line"><span class="lineno"> 1380</span>                            vis.insert(next_tag);</div>
+<div class="line"><span class="lineno"> 1381</span>                            q.push({next_current, next_tag});</div>
+<div class="line"><span class="lineno"> 1382</span>                        }</div>
+<div class="line"><span class="lineno"> 1383</span>                    }</div>
+<div class="line"><span class="lineno"> 1384</span>                }</div>
+<div class="line"><span class="lineno"> 1385</span>            }</div>
+<div class="line"><span class="lineno"> 1386</span>            cout &lt;&lt; <a class="code hl_variable" href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno"> 1387</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1388</span>        }</div>
+<div class="ttc" id="aa00571_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00132">liverpool.cpp:132</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l01328">main_1()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l01329">main_1()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l01328">main_1()</a> , 以及 <a class="el" href="../../db/db2/a00020_source.html#l00480">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01329">main_1()</a> , 以及 <a class="el" href="../../db/db6/a00074_source.html#l00480">TEST()</a>.</p>
 
 </div>
 </div>
@@ -210,7 +210,7 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00480">480</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../db/db6/a00074_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db6/a00074_source.html#l00480">480</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno">  480</span>                               {</div>
 <div class="line"><span class="lineno">  481</span>            istringstream in(<span class="stringliteral">&quot;[.##.] (3) (1,3) (2) (2,3) (0,2) (0,1) {3,5,4,7}\n[...#.] (0,2,3,4) (2,3) (0,4) (0,1,2) (1,2,3,4) {7,5,12,7,2}\n[.###.#] (0,1,2,3,4) (0,3,4) (0,1,2,4,5) (1,2) {10,11,11,5,10,5}&quot;</span>);</div>
 <div class="line"><span class="lineno">  482</span>            <span class="keyword">auto</span> out = ostringstream();</div>
@@ -218,9 +218,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  484</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><span class="lineno">  485</span>            ASSERT_EQ(<span class="stringliteral">&quot;7&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">  486</span>        }</div>
-<div class="ttc" id="aa00591_html_a5e0d1c96b0f81d892e7f62da84c84a46"><div class="ttname"><a href="#a5e0d1c96b0f81d892e7f62da84c84a46">liverpool::factory::main_1</a></div><div class="ttdeci">int main_1(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l01328">liverpool.cpp:1328</a></div></div>
+<div class="ttc" id="aa00591_html_a5e0d1c96b0f81d892e7f62da84c84a46"><div class="ttname"><a href="#a5e0d1c96b0f81d892e7f62da84c84a46">liverpool::factory::main_1</a></div><div class="ttdeci">int main_1(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l01329">liverpool.cpp:1329</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l01328">main_1()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l01329">main_1()</a>.</p>
 
 </div>
 </div>

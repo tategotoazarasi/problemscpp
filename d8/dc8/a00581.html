@@ -98,7 +98,7 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d23/a03186.html">subarr</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/a03190.html">subarr</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -132,87 +132,87 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l00541">541</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">  541</span>                                              {</div>
-<div class="line"><span class="lineno">  542</span>            <span class="keywordtype">int</span> n;</div>
-<div class="line"><span class="lineno">  543</span>            cin &gt;&gt; n;</div>
-<div class="line"><span class="lineno">  544</span>            vector&lt;int&gt; a1(n);</div>
-<div class="line"><span class="lineno">  545</span>            vector&lt;int&gt; a2(n);</div>
-<div class="line"><span class="lineno">  546</span>            vector&lt;int&gt; space1(n);</div>
-<div class="line"><span class="lineno">  547</span>            vector&lt;int&gt; space2(n);</div>
-<div class="line"><span class="lineno">  548</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><span class="lineno">  549</span>                cin &gt;&gt; a1[i];</div>
-<div class="line"><span class="lineno">  550</span>            }</div>
-<div class="line"><span class="lineno">  551</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><span class="lineno">  552</span>                cin &gt;&gt; a2[i];</div>
-<div class="line"><span class="lineno">  553</span>            }</div>
-<div class="line"><span class="lineno">  554</span>            sort(a1.begin(), a1.end());</div>
-<div class="line"><span class="lineno">  555</span>            sort(a2.begin(), a2.end());</div>
-<div class="line"><span class="lineno">  556</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><span class="lineno">  557</span>                space1[i] = ((i + 1 &lt; n) ? a1[i + 1] : (a1[0] + 360000)) - a1[i];</div>
-<div class="line"><span class="lineno">  558</span>                space2[i] = ((i + 1 &lt; n) ? a2[i + 1] : (a2[0] + 360000)) - a2[i];</div>
-<div class="line"><span class="lineno">  559</span>            }</div>
-<div class="line"><span class="lineno">  560</span>            <span class="keywordtype">int</span> start_1 = 0;</div>
-<div class="line"><span class="lineno">  561</span>            <span class="keywordflow">for</span>(start_1 = 1; start_1 &lt; <a class="code hl_variable" href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> &amp;&amp; space1[start_1] == space1[0]; start_1++)</div>
-<div class="line"><span class="lineno">  562</span>                ;</div>
-<div class="line"><span class="lineno">  563</span>            start_1 %= <a class="code hl_variable" href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
-<div class="line"><span class="lineno">  564</span>            <span class="keywordtype">int</span> start_2 = 0;</div>
-<div class="line"><span class="lineno">  565</span>            <span class="keywordflow">for</span>(start_2 = 1; start_2 &lt; <a class="code hl_variable" href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> &amp;&amp; space2[start_2] == space2[0]; start_2++)</div>
-<div class="line"><span class="lineno">  566</span>                ;</div>
-<div class="line"><span class="lineno">  567</span>            start_2 %= <a class="code hl_variable" href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
-<div class="line"><span class="lineno">  568</span>            vector&lt;subarr&gt; subarrs_1 = {};</div>
-<div class="line"><span class="lineno">  569</span>            vector&lt;subarr&gt; subarrs_2 = {};</div>
-<div class="line"><span class="lineno">  570</span>            <span class="keywordtype">int</span> prev                 = space1[start_1];</div>
-<div class="line"><span class="lineno">  571</span>            <span class="keywordtype">int</span> cnt                  = 0;</div>
-<div class="line"><span class="lineno">  572</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
-<div class="line"><span class="lineno">  573</span>                <span class="keywordflow">if</span>(space1[(start_1 + i) % n] != prev) {</div>
-<div class="line"><span class="lineno">  574</span>                    subarrs_1.push_back(<a class="code hl_struct" href="../../d2/d23/a03186.html">subarr</a>{prev, cnt});</div>
-<div class="line"><span class="lineno">  575</span>                    prev = space1[(start_1 + i) % n];</div>
-<div class="line"><span class="lineno">  576</span>                    cnt  = 1;</div>
-<div class="line"><span class="lineno">  577</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  578</span>                    cnt++;</div>
-<div class="line"><span class="lineno">  579</span>                }</div>
-<div class="line"><span class="lineno">  580</span>            }</div>
-<div class="line"><span class="lineno">  581</span>            subarrs_1.push_back(<a class="code hl_struct" href="../../d2/d23/a03186.html">subarr</a>{prev, cnt});</div>
-<div class="line"><span class="lineno">  582</span> </div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l00542">542</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  542</span>                                              {</div>
+<div class="line"><span class="lineno">  543</span>            <span class="keywordtype">int</span> n;</div>
+<div class="line"><span class="lineno">  544</span>            cin &gt;&gt; n;</div>
+<div class="line"><span class="lineno">  545</span>            vector&lt;int&gt; a1(n);</div>
+<div class="line"><span class="lineno">  546</span>            vector&lt;int&gt; a2(n);</div>
+<div class="line"><span class="lineno">  547</span>            vector&lt;int&gt; space1(n);</div>
+<div class="line"><span class="lineno">  548</span>            vector&lt;int&gt; space2(n);</div>
+<div class="line"><span class="lineno">  549</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><span class="lineno">  550</span>                cin &gt;&gt; a1[i];</div>
+<div class="line"><span class="lineno">  551</span>            }</div>
+<div class="line"><span class="lineno">  552</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><span class="lineno">  553</span>                cin &gt;&gt; a2[i];</div>
+<div class="line"><span class="lineno">  554</span>            }</div>
+<div class="line"><span class="lineno">  555</span>            sort(a1.begin(), a1.end());</div>
+<div class="line"><span class="lineno">  556</span>            sort(a2.begin(), a2.end());</div>
+<div class="line"><span class="lineno">  557</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><span class="lineno">  558</span>                space1[i] = ((i + 1 &lt; n) ? a1[i + 1] : (a1[0] + 360000)) - a1[i];</div>
+<div class="line"><span class="lineno">  559</span>                space2[i] = ((i + 1 &lt; n) ? a2[i + 1] : (a2[0] + 360000)) - a2[i];</div>
+<div class="line"><span class="lineno">  560</span>            }</div>
+<div class="line"><span class="lineno">  561</span>            <span class="keywordtype">int</span> start_1 = 0;</div>
+<div class="line"><span class="lineno">  562</span>            <span class="keywordflow">for</span>(start_1 = 1; start_1 &lt; <a class="code hl_variable" href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> &amp;&amp; space1[start_1] == space1[0]; start_1++)</div>
+<div class="line"><span class="lineno">  563</span>                ;</div>
+<div class="line"><span class="lineno">  564</span>            start_1 %= <a class="code hl_variable" href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
+<div class="line"><span class="lineno">  565</span>            <span class="keywordtype">int</span> start_2 = 0;</div>
+<div class="line"><span class="lineno">  566</span>            <span class="keywordflow">for</span>(start_2 = 1; start_2 &lt; <a class="code hl_variable" href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a> &amp;&amp; space2[start_2] == space2[0]; start_2++)</div>
+<div class="line"><span class="lineno">  567</span>                ;</div>
+<div class="line"><span class="lineno">  568</span>            start_2 %= <a class="code hl_variable" href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>;</div>
+<div class="line"><span class="lineno">  569</span>            vector&lt;subarr&gt; subarrs_1 = {};</div>
+<div class="line"><span class="lineno">  570</span>            vector&lt;subarr&gt; subarrs_2 = {};</div>
+<div class="line"><span class="lineno">  571</span>            <span class="keywordtype">int</span> prev                 = space1[start_1];</div>
+<div class="line"><span class="lineno">  572</span>            <span class="keywordtype">int</span> cnt                  = 0;</div>
+<div class="line"><span class="lineno">  573</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno">  574</span>                <span class="keywordflow">if</span>(space1[(start_1 + i) % n] != prev) {</div>
+<div class="line"><span class="lineno">  575</span>                    subarrs_1.push_back(<a class="code hl_struct" href="../../de/de3/a03190.html">subarr</a>{prev, cnt});</div>
+<div class="line"><span class="lineno">  576</span>                    prev = space1[(start_1 + i) % n];</div>
+<div class="line"><span class="lineno">  577</span>                    cnt  = 1;</div>
+<div class="line"><span class="lineno">  578</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  579</span>                    cnt++;</div>
+<div class="line"><span class="lineno">  580</span>                }</div>
+<div class="line"><span class="lineno">  581</span>            }</div>
+<div class="line"><span class="lineno">  582</span>            subarrs_1.push_back(<a class="code hl_struct" href="../../de/de3/a03190.html">subarr</a>{prev, cnt});</div>
 <div class="line"><span class="lineno">  583</span> </div>
-<div class="line"><span class="lineno">  584</span>            prev = space2[start_2];</div>
-<div class="line"><span class="lineno">  585</span>            cnt  = 0;</div>
-<div class="line"><span class="lineno">  586</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
-<div class="line"><span class="lineno">  587</span>                <span class="keywordflow">if</span>(space2[(start_2 + i) % n] != prev) {</div>
-<div class="line"><span class="lineno">  588</span>                    subarrs_2.push_back(<a class="code hl_struct" href="../../d2/d23/a03186.html">subarr</a>{prev, cnt});</div>
-<div class="line"><span class="lineno">  589</span>                    prev = space2[(start_2 + i) % n];</div>
-<div class="line"><span class="lineno">  590</span>                    cnt  = 1;</div>
-<div class="line"><span class="lineno">  591</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  592</span>                    cnt++;</div>
-<div class="line"><span class="lineno">  593</span>                }</div>
-<div class="line"><span class="lineno">  594</span>            }</div>
-<div class="line"><span class="lineno">  595</span>            subarrs_2.push_back(<a class="code hl_struct" href="../../d2/d23/a03186.html">subarr</a>{prev, cnt});</div>
-<div class="line"><span class="lineno">  596</span> </div>
-<div class="line"><span class="lineno">  597</span>            ostringstream oss1;</div>
-<div class="line"><span class="lineno">  598</span>            ostringstream oss2;</div>
-<div class="line"><span class="lineno">  599</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; subarrs_1.size(); i++) {</div>
-<div class="line"><span class="lineno">  600</span>                oss1 &lt;&lt; subarrs_1[i].num &lt;&lt; <span class="charliteral">&#39;*&#39;</span> &lt;&lt; subarrs_1[i].cnt &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  601</span>            }</div>
-<div class="line"><span class="lineno">  602</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; subarrs_1.size(); i++) {</div>
-<div class="line"><span class="lineno">  603</span>                oss1 &lt;&lt; subarrs_1[i].num &lt;&lt; <span class="charliteral">&#39;*&#39;</span> &lt;&lt; subarrs_1[i].cnt &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  604</span>            }</div>
-<div class="line"><span class="lineno">  605</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; subarrs_2.size(); i++) {</div>
-<div class="line"><span class="lineno">  606</span>                oss2 &lt;&lt; subarrs_2[i].num &lt;&lt; <span class="charliteral">&#39;*&#39;</span> &lt;&lt; subarrs_2[i].cnt &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  607</span>            }</div>
-<div class="line"><span class="lineno">  608</span>            <span class="keywordtype">string</span> str1 = oss1.str();</div>
-<div class="line"><span class="lineno">  609</span>            <span class="keywordtype">string</span> str2 = oss2.str();</div>
-<div class="line"><span class="lineno">  610</span>            <span class="keywordflow">if</span>(str1.find(str2) != std::string::npos) {</div>
-<div class="line"><span class="lineno">  611</span>                cout &lt;&lt; <span class="stringliteral">&quot;possible&quot;</span>;</div>
-<div class="line"><span class="lineno">  612</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  613</span>                cout &lt;&lt; <span class="stringliteral">&quot;impossible&quot;</span>;</div>
-<div class="line"><span class="lineno">  614</span>            }</div>
-<div class="line"><span class="lineno">  615</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  616</span>        }</div>
-<div class="ttc" id="aa00578_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00364">liverpool.cpp:364</a></div></div>
-<div class="ttc" id="aa03186_html"><div class="ttname"><a href="../../d2/d23/a03186.html">liverpool::clockpictures::subarr</a></div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00537">liverpool.cpp:537</a></div></div>
+<div class="line"><span class="lineno">  584</span> </div>
+<div class="line"><span class="lineno">  585</span>            prev = space2[start_2];</div>
+<div class="line"><span class="lineno">  586</span>            cnt  = 0;</div>
+<div class="line"><span class="lineno">  587</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; i++) {</div>
+<div class="line"><span class="lineno">  588</span>                <span class="keywordflow">if</span>(space2[(start_2 + i) % n] != prev) {</div>
+<div class="line"><span class="lineno">  589</span>                    subarrs_2.push_back(<a class="code hl_struct" href="../../de/de3/a03190.html">subarr</a>{prev, cnt});</div>
+<div class="line"><span class="lineno">  590</span>                    prev = space2[(start_2 + i) % n];</div>
+<div class="line"><span class="lineno">  591</span>                    cnt  = 1;</div>
+<div class="line"><span class="lineno">  592</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  593</span>                    cnt++;</div>
+<div class="line"><span class="lineno">  594</span>                }</div>
+<div class="line"><span class="lineno">  595</span>            }</div>
+<div class="line"><span class="lineno">  596</span>            subarrs_2.push_back(<a class="code hl_struct" href="../../de/de3/a03190.html">subarr</a>{prev, cnt});</div>
+<div class="line"><span class="lineno">  597</span> </div>
+<div class="line"><span class="lineno">  598</span>            ostringstream oss1;</div>
+<div class="line"><span class="lineno">  599</span>            ostringstream oss2;</div>
+<div class="line"><span class="lineno">  600</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; subarrs_1.size(); i++) {</div>
+<div class="line"><span class="lineno">  601</span>                oss1 &lt;&lt; subarrs_1[i].num &lt;&lt; <span class="charliteral">&#39;*&#39;</span> &lt;&lt; subarrs_1[i].cnt &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  602</span>            }</div>
+<div class="line"><span class="lineno">  603</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; subarrs_1.size(); i++) {</div>
+<div class="line"><span class="lineno">  604</span>                oss1 &lt;&lt; subarrs_1[i].num &lt;&lt; <span class="charliteral">&#39;*&#39;</span> &lt;&lt; subarrs_1[i].cnt &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  605</span>            }</div>
+<div class="line"><span class="lineno">  606</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; subarrs_2.size(); i++) {</div>
+<div class="line"><span class="lineno">  607</span>                oss2 &lt;&lt; subarrs_2[i].num &lt;&lt; <span class="charliteral">&#39;*&#39;</span> &lt;&lt; subarrs_2[i].cnt &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  608</span>            }</div>
+<div class="line"><span class="lineno">  609</span>            <span class="keywordtype">string</span> str1 = oss1.str();</div>
+<div class="line"><span class="lineno">  610</span>            <span class="keywordtype">string</span> str2 = oss2.str();</div>
+<div class="line"><span class="lineno">  611</span>            <span class="keywordflow">if</span>(str1.find(str2) != std::string::npos) {</div>
+<div class="line"><span class="lineno">  612</span>                cout &lt;&lt; <span class="stringliteral">&quot;possible&quot;</span>;</div>
+<div class="line"><span class="lineno">  613</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  614</span>                cout &lt;&lt; <span class="stringliteral">&quot;impossible&quot;</span>;</div>
+<div class="line"><span class="lineno">  615</span>            }</div>
+<div class="line"><span class="lineno">  616</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  617</span>        }</div>
+<div class="ttc" id="aa00578_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../dd/d5c/a00578.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00365">liverpool.cpp:365</a></div></div>
+<div class="ttc" id="aa03190_html"><div class="ttname"><a href="../../de/de3/a03190.html">liverpool::clockpictures::subarr</a></div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00538">liverpool.cpp:538</a></div></div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../db/db2/a00020_source.html#l00308">TEST()</a>, <a class="el" href="../../db/db2/a00020_source.html#l00316">TEST()</a> , 以及 <a class="el" href="../../db/db2/a00020_source.html#l00324">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../db/db6/a00074_source.html#l00308">TEST()</a>, <a class="el" href="../../db/db6/a00074_source.html#l00316">TEST()</a> , 以及 <a class="el" href="../../db/db6/a00074_source.html#l00324">TEST()</a>.</p>
 
 </div>
 </div>
@@ -235,7 +235,7 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00308">308</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../db/db6/a00074_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db6/a00074_source.html#l00308">308</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno">  308</span>                                   {</div>
 <div class="line"><span class="lineno">  309</span>            istringstream in(<span class="stringliteral">&quot;6\n1 2 3 4 5 6\n7 6 5 4 3 1\n&quot;</span>);</div>
 <div class="line"><span class="lineno">  310</span>            <span class="keyword">auto</span> out = ostringstream();</div>
@@ -243,9 +243,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  312</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ans = out.str();</div>
 <div class="line"><span class="lineno">  313</span>            ASSERT_EQ(<span class="stringliteral">&quot;impossible&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">  314</span>        }</div>
-<div class="ttc" id="aa00581_html_a44e5f2c9ed7dbed861fa164bc167baf7"><div class="ttname"><a href="#a44e5f2c9ed7dbed861fa164bc167baf7">liverpool::clockpictures::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00541">liverpool.cpp:541</a></div></div>
+<div class="ttc" id="aa00581_html_a44e5f2c9ed7dbed861fa164bc167baf7"><div class="ttname"><a href="#a44e5f2c9ed7dbed861fa164bc167baf7">liverpool::clockpictures::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00542">liverpool.cpp:542</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00541">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l00542">main()</a>.</p>
 
 </div>
 </div>
@@ -268,7 +268,7 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00316">316</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../db/db6/a00074_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db6/a00074_source.html#l00316">316</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno">  316</span>                                   {</div>
 <div class="line"><span class="lineno">  317</span>            istringstream in(<span class="stringliteral">&quot;2\n0 270000\n180000 270000\n&quot;</span>);</div>
 <div class="line"><span class="lineno">  318</span>            <span class="keyword">auto</span> out = ostringstream();</div>
@@ -277,7 +277,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  321</span>            ASSERT_EQ(<span class="stringliteral">&quot;possible&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">  322</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00541">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l00542">main()</a>.</p>
 
 </div>
 </div>
@@ -300,7 +300,7 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00324">324</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../db/db6/a00074_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db6/a00074_source.html#l00324">324</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno">  324</span>                                   {</div>
 <div class="line"><span class="lineno">  325</span>            istringstream in(<span class="stringliteral">&quot;7\n140 130 110 120 125 100 105\n235 205 215 220 225 200 240\n&quot;</span>);</div>
 <div class="line"><span class="lineno">  326</span>            <span class="keyword">auto</span> out = ostringstream();</div>
@@ -309,7 +309,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  329</span>            ASSERT_EQ(<span class="stringliteral">&quot;impossible&quot;</span>, ans);</div>
 <div class="line"><span class="lineno">  330</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l00541">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l00542">main()</a>.</p>
 
 </div>
 </div>

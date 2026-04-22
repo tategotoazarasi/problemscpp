@@ -104,9 +104,9 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da6/a01698.html">Compare</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d05/a01702.html">Compare</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d8e/a01694.html">huff_tree</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da6/a01698.html">huff_tree</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -144,14 +144,14 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../dc/dee/a00053_source.html">acwing408.cpp</a> 第 <a class="el" href="../../dc/dee/a00053_source.html#l00536">536</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d7/d46/a00002_source.html">acwing408.cpp</a> 第 <a class="el" href="../../d7/d46/a00002_source.html#l00536">536</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno">  536</span>                                              {</div>
 <div class="line"><span class="lineno">  537</span>            u_int64_t n, k, w;</div>
 <div class="line"><span class="lineno">  538</span>            cin &gt;&gt; n &gt;&gt; k;</div>
-<div class="line"><span class="lineno">  539</span>            priority_queue&lt;huff_tree *, vector&lt;huff_tree *&gt;, <a class="code hl_struct" href="../../d5/da6/a01698.html">Compare</a>&gt; pq;</div>
+<div class="line"><span class="lineno">  539</span>            priority_queue&lt;huff_tree *, vector&lt;huff_tree *&gt;, <a class="code hl_struct" href="../../de/d05/a01702.html">Compare</a>&gt; pq;</div>
 <div class="line"><span class="lineno">  540</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++) {</div>
 <div class="line"><span class="lineno">  541</span>                cin &gt;&gt; w;</div>
-<div class="line"><span class="lineno">  542</span>                pq.push(<span class="keyword">new</span> <a class="code hl_class" href="../../d4/d8e/a01694.html">huff_tree</a>(w, 1, k));</div>
+<div class="line"><span class="lineno">  542</span>                pq.push(<span class="keyword">new</span> <a class="code hl_class" href="../../d5/da6/a01698.html">huff_tree</a>(w, 1, k));</div>
 <div class="line"><span class="lineno">  543</span>            }</div>
 <div class="line"><span class="lineno">  544</span>            <span class="keywordflow">while</span>((n - 1) % (k - 1)) {</div>
 <div class="line"><span class="lineno">  545</span>                pq.push(<span class="keyword">new</span> huff_tree(0, 1, k));</div>
@@ -168,7 +168,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  556</span>                }</div>
 <div class="line"><span class="lineno">  557</span>                pq.push(ht);</div>
 <div class="line"><span class="lineno">  558</span>            }</div>
-<div class="line"><span class="lineno">  559</span>            <a class="code hl_class" href="../../d4/d8e/a01694.html">huff_tree</a> *<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a> = pq.top();</div>
+<div class="line"><span class="lineno">  559</span>            <a class="code hl_class" href="../../d5/da6/a01698.html">huff_tree</a> *<a class="code hl_variable" href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">root</a> = pq.top();</div>
 <div class="line"><span class="lineno">  560</span>            queue&lt;pair&lt;huff_tree *, u_int64_t&gt;&gt; q;</div>
 <div class="line"><span class="lineno">  561</span>            q.push(make_pair(root, 0));</div>
 <div class="line"><span class="lineno">  562</span>            u_int64_t min_level = 0;</div>
@@ -192,13 +192,13 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno">  580</span>                 &lt;&lt; min_level &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  581</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  582</span>        }</div>
-<div class="ttc" id="aa00184_html_accc0a171e77d59c74473564e308e8b08"><div class="ttname"><a href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">acwing::acwing836_408::root</a></div><div class="ttdeci">vector&lt; int &gt; root</div><div class="ttdef"><b>定义</b> <a href="../../dc/dee/a00053_source.html#l00349">acwing408.cpp:349</a></div></div>
-<div class="ttc" id="aa01694_html"><div class="ttname"><a href="../../d4/d8e/a01694.html">acwing::acwing149::huff_tree</a></div><div class="ttdef"><b>定义</b> <a href="../../d4/dee/a00008_source.html#l00105">acwing408.h:105</a></div></div>
-<div class="ttc" id="aa01698_html"><div class="ttname"><a href="../../d5/da6/a01698.html">acwing::acwing149::Compare</a></div><div class="ttdef"><b>定义</b> <a href="../../d4/dee/a00008_source.html#l00112">acwing408.h:112</a></div></div>
+<div class="ttc" id="aa00184_html_accc0a171e77d59c74473564e308e8b08"><div class="ttname"><a href="../../d2/d94/a00184.html#accc0a171e77d59c74473564e308e8b08">acwing::acwing836_408::root</a></div><div class="ttdeci">vector&lt; int &gt; root</div><div class="ttdef"><b>定义</b> <a href="../../d7/d46/a00002_source.html#l00349">acwing408.cpp:349</a></div></div>
+<div class="ttc" id="aa01698_html"><div class="ttname"><a href="../../d5/da6/a01698.html">acwing::acwing149::huff_tree</a></div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00105">acwing408.h:105</a></div></div>
+<div class="ttc" id="aa01702_html"><div class="ttname"><a href="../../de/d05/a01702.html">acwing::acwing149::Compare</a></div><div class="ttdef"><b>定义</b> <a href="../../d6/d5b/a00026_source.html#l00112">acwing408.h:112</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d4/dee/a00008_source.html#l00109">acwing::acwing149::huff_tree::children</a>, <a class="el" href="../../d4/dee/a00008_source.html#l00108">acwing::acwing149::huff_tree::height</a> , 以及 <a class="el" href="../../d4/dee/a00008_source.html#l00107">acwing::acwing149::huff_tree::val</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d6/d5b/a00026_source.html#l00109">acwing::acwing149::huff_tree::children</a>, <a class="el" href="../../d6/d5b/a00026_source.html#l00108">acwing::acwing149::huff_tree::height</a> , 以及 <a class="el" href="../../d6/d5b/a00026_source.html#l00107">acwing::acwing149::huff_tree::val</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../da/d24/a00068_source.html#l01023">TEST()</a>, <a class="el" href="../../da/d24/a00068_source.html#l01037">TEST()</a> , 以及 <a class="el" href="../../da/d24/a00068_source.html#l01050">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d9/d2e/a00056_source.html#l01023">TEST()</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l01037">TEST()</a> , 以及 <a class="el" href="../../d9/d2e/a00056_source.html#l01050">TEST()</a>.</p>
 
 </div>
 </div>
@@ -221,7 +221,7 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d24/a00068_source.html">acwing408_test.cpp</a> 第 <a class="el" href="../../da/d24/a00068_source.html#l01023">1023</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">acwing408_test.cpp</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l01023">1023</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1023</span>                               {</div>
 <div class="line"><span class="lineno"> 1024</span>            istringstream in(<span class="stringliteral">&quot;4 2\n&quot;</span></div>
 <div class="line"><span class="lineno"> 1025</span>                             <span class="stringliteral">&quot;1\n&quot;</span></div>
@@ -235,9 +235,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno"> 1033</span>                      <span class="stringliteral">&quot;2\n&quot;</span>,</div>
 <div class="line"><span class="lineno"> 1034</span>                      ans);</div>
 <div class="line"><span class="lineno"> 1035</span>        }</div>
-<div class="ttc" id="aa00187_html_a47ed7f242cd1105f247564bcf63fea5f"><div class="ttname"><a href="#a47ed7f242cd1105f247564bcf63fea5f">acwing::acwing149::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../dc/dee/a00053_source.html#l00536">acwing408.cpp:536</a></div></div>
+<div class="ttc" id="aa00187_html_a47ed7f242cd1105f247564bcf63fea5f"><div class="ttname"><a href="#a47ed7f242cd1105f247564bcf63fea5f">acwing::acwing149::main</a></div><div class="ttdeci">int main(istream &amp;cin, ostream &amp;cout)</div><div class="ttdef"><b>定义</b> <a href="../../d7/d46/a00002_source.html#l00536">acwing408.cpp:536</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l00536">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l00536">main()</a>.</p>
 
 </div>
 </div>
@@ -260,7 +260,7 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d24/a00068_source.html">acwing408_test.cpp</a> 第 <a class="el" href="../../da/d24/a00068_source.html#l01037">1037</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">acwing408_test.cpp</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l01037">1037</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1037</span>                               {</div>
 <div class="line"><span class="lineno"> 1038</span>            istringstream in(<span class="stringliteral">&quot;3 2\n&quot;</span></div>
 <div class="line"><span class="lineno"> 1039</span>                             <span class="stringliteral">&quot;1\n&quot;</span></div>
@@ -274,7 +274,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno"> 1047</span>                      ans);</div>
 <div class="line"><span class="lineno"> 1048</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l00536">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l00536">main()</a>.</p>
 
 </div>
 </div>
@@ -297,7 +297,7 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../da/d24/a00068_source.html">acwing408_test.cpp</a> 第 <a class="el" href="../../da/d24/a00068_source.html#l01050">1050</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">acwing408_test.cpp</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l01050">1050</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1050</span>                               {</div>
 <div class="line"><span class="lineno"> 1051</span>            istringstream in(<span class="stringliteral">&quot;16 3\n&quot;</span></div>
 <div class="line"><span class="lineno"> 1052</span>                             <span class="stringliteral">&quot;98\n&quot;</span></div>
@@ -324,7 +324,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="lineno"> 1073</span>                      ans);</div>
 <div class="line"><span class="lineno"> 1074</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../dc/dee/a00053_source.html#l00536">main()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d7/d46/a00002_source.html#l00536">main()</a>.</p>
 
 </div>
 </div>

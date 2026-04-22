@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['item_0',['item',['../d5/d28/a01950.html',1,'leetcode::k_highest_ranked_items_within_a_price_range']]]
+  ['item_0',['item',['../d7/d34/a01954.html',1,'leetcode::k_highest_ranked_items_within_a_price_range']]]
 ];

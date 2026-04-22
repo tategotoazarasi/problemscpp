@@ -126,37 +126,37 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l01470">1470</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1470</span>                                                   {</div>
-<div class="line"><span class="lineno"> 1471</span>            <span class="keywordtype">int</span> p1      = 0;</div>
-<div class="line"><span class="lineno"> 1472</span>            <span class="keywordtype">int</span> p2      = 0;</div>
-<div class="line"><span class="lineno"> 1473</span>            <span class="keywordtype">int</span> l       = 0;</div>
-<div class="line"><span class="lineno"> 1474</span>            <span class="keywordtype">int</span> r       = numSeq.size() - 1;</div>
-<div class="line"><span class="lineno"> 1475</span>            <span class="keywordtype">int</span> *cursor = &amp;l;</div>
-<div class="line"><span class="lineno"> 1476</span>            <span class="keywordtype">bool</span> p1turn = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1477</span>            <span class="keywordflow">while</span>(l &lt;= r) {</div>
-<div class="line"><span class="lineno"> 1478</span>                <span class="keywordtype">int</span> score = numSeq[*cursor];</div>
-<div class="line"><span class="lineno"> 1479</span>                <span class="keywordflow">if</span>(p1turn) {</div>
-<div class="line"><span class="lineno"> 1480</span>                    p1 += score;</div>
-<div class="line"><span class="lineno"> 1481</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 1482</span>                    p2 += score;</div>
-<div class="line"><span class="lineno"> 1483</span>                }</div>
-<div class="line"><span class="lineno"> 1484</span>                <span class="keywordflow">if</span>(cursor == &amp;l) {</div>
-<div class="line"><span class="lineno"> 1485</span>                    (*cursor)++;</div>
-<div class="line"><span class="lineno"> 1486</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 1487</span>                    (*cursor)--;</div>
-<div class="line"><span class="lineno"> 1488</span>                }</div>
-<div class="line"><span class="lineno"> 1489</span>                <span class="keywordflow">if</span>(score % 2 == 0) {</div>
-<div class="line"><span class="lineno"> 1490</span>                    cursor = (cursor == &amp;l) ? &amp;r : &amp;l;</div>
-<div class="line"><span class="lineno"> 1491</span>                }</div>
-<div class="line"><span class="lineno"> 1492</span>                p1turn = !p1turn;</div>
-<div class="line"><span class="lineno"> 1493</span>            }</div>
-<div class="line"><span class="lineno"> 1494</span>            <span class="keywordflow">return</span> p1 - p2;</div>
-<div class="line"><span class="lineno"> 1495</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01471">1471</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1471</span>                                                   {</div>
+<div class="line"><span class="lineno"> 1472</span>            <span class="keywordtype">int</span> p1      = 0;</div>
+<div class="line"><span class="lineno"> 1473</span>            <span class="keywordtype">int</span> p2      = 0;</div>
+<div class="line"><span class="lineno"> 1474</span>            <span class="keywordtype">int</span> l       = 0;</div>
+<div class="line"><span class="lineno"> 1475</span>            <span class="keywordtype">int</span> r       = numSeq.size() - 1;</div>
+<div class="line"><span class="lineno"> 1476</span>            <span class="keywordtype">int</span> *cursor = &amp;l;</div>
+<div class="line"><span class="lineno"> 1477</span>            <span class="keywordtype">bool</span> p1turn = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1478</span>            <span class="keywordflow">while</span>(l &lt;= r) {</div>
+<div class="line"><span class="lineno"> 1479</span>                <span class="keywordtype">int</span> score = numSeq[*cursor];</div>
+<div class="line"><span class="lineno"> 1480</span>                <span class="keywordflow">if</span>(p1turn) {</div>
+<div class="line"><span class="lineno"> 1481</span>                    p1 += score;</div>
+<div class="line"><span class="lineno"> 1482</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 1483</span>                    p2 += score;</div>
+<div class="line"><span class="lineno"> 1484</span>                }</div>
+<div class="line"><span class="lineno"> 1485</span>                <span class="keywordflow">if</span>(cursor == &amp;l) {</div>
+<div class="line"><span class="lineno"> 1486</span>                    (*cursor)++;</div>
+<div class="line"><span class="lineno"> 1487</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 1488</span>                    (*cursor)--;</div>
+<div class="line"><span class="lineno"> 1489</span>                }</div>
+<div class="line"><span class="lineno"> 1490</span>                <span class="keywordflow">if</span>(score % 2 == 0) {</div>
+<div class="line"><span class="lineno"> 1491</span>                    cursor = (cursor == &amp;l) ? &amp;r : &amp;l;</div>
+<div class="line"><span class="lineno"> 1492</span>                }</div>
+<div class="line"><span class="lineno"> 1493</span>                p1turn = !p1turn;</div>
+<div class="line"><span class="lineno"> 1494</span>            }</div>
+<div class="line"><span class="lineno"> 1495</span>            <span class="keywordflow">return</span> p1 - p2;</div>
+<div class="line"><span class="lineno"> 1496</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l01470">getScoreDifference()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l01471">getScoreDifference()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l01470">getScoreDifference()</a> , 以及 <a class="el" href="../../db/db2/a00020_source.html#l00525">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01471">getScoreDifference()</a> , 以及 <a class="el" href="../../db/db6/a00074_source.html#l00525">TEST()</a>.</p>
 
 </div>
 </div>
@@ -175,24 +175,24 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d52/a00023_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d3/d52/a00023_source.html#l01497">1497</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1497</span>                                      {</div>
-<div class="line"><span class="lineno"> 1498</span>            <span class="keywordtype">int</span> ans    = 0;</div>
-<div class="line"><span class="lineno"> 1499</span>            <span class="keywordtype">int</span> l0_cnt = 0;</div>
-<div class="line"><span class="lineno"> 1500</span>            <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: color) {</div>
-<div class="line"><span class="lineno"> 1501</span>                <span class="keywordflow">if</span>(c == <span class="charliteral">&#39;0&#39;</span>) {</div>
-<div class="line"><span class="lineno"> 1502</span>                    l0_cnt++;</div>
-<div class="line"><span class="lineno"> 1503</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(l0_cnt != 0) {</div>
-<div class="line"><span class="lineno"> 1504</span>                    ans = max(ans + 1, l0_cnt);</div>
-<div class="line"><span class="lineno"> 1505</span>                }</div>
-<div class="line"><span class="lineno"> 1506</span>            }</div>
-<div class="line"><span class="lineno"> 1507</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno"> 1508</span>        }</div>
-<div class="ttc" id="aa00571_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l00131">liverpool.cpp:131</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d4/d51/a00017_source.html">liverpool.cpp</a> 第 <a class="el" href="../../d4/d51/a00017_source.html#l01498">1498</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1498</span>                                      {</div>
+<div class="line"><span class="lineno"> 1499</span>            <span class="keywordtype">int</span> ans    = 0;</div>
+<div class="line"><span class="lineno"> 1500</span>            <span class="keywordtype">int</span> l0_cnt = 0;</div>
+<div class="line"><span class="lineno"> 1501</span>            <span class="keywordflow">for</span>(<span class="keywordtype">char</span> c: color) {</div>
+<div class="line"><span class="lineno"> 1502</span>                <span class="keywordflow">if</span>(c == <span class="charliteral">&#39;0&#39;</span>) {</div>
+<div class="line"><span class="lineno"> 1503</span>                    l0_cnt++;</div>
+<div class="line"><span class="lineno"> 1504</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(l0_cnt != 0) {</div>
+<div class="line"><span class="lineno"> 1505</span>                    ans = max(ans + 1, l0_cnt);</div>
+<div class="line"><span class="lineno"> 1506</span>                }</div>
+<div class="line"><span class="lineno"> 1507</span>            }</div>
+<div class="line"><span class="lineno"> 1508</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno"> 1509</span>        }</div>
+<div class="ttc" id="aa00571_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00132">liverpool.cpp:132</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l01497">getSwapTime()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l01498">getSwapTime()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d52/a00023_source.html#l01497">getSwapTime()</a>, <a class="el" href="../../db/db2/a00020_source.html#l00529">TEST()</a>, <a class="el" href="../../db/db2/a00020_source.html#l00533">TEST()</a> , 以及 <a class="el" href="../../db/db2/a00020_source.html#l00537">TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l01498">getSwapTime()</a>, <a class="el" href="../../db/db6/a00074_source.html#l00529">TEST()</a>, <a class="el" href="../../db/db6/a00074_source.html#l00533">TEST()</a> , 以及 <a class="el" href="../../db/db6/a00074_source.html#l00537">TEST()</a>.</p>
 
 </div>
 </div>
@@ -215,13 +215,13 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00525">525</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../db/db6/a00074_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db6/a00074_source.html#l00525">525</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno">  525</span>                               {</div>
 <div class="line"><span class="lineno">  526</span>            ASSERT_EQ(1, <a class="code hl_function" href="#abbe7eaffb986cd507678cebdff793048">getScoreDifference</a>({3, 6, 2, 3, 5}));</div>
 <div class="line"><span class="lineno">  527</span>        }</div>
-<div class="ttc" id="aa00594_html_abbe7eaffb986cd507678cebdff793048"><div class="ttname"><a href="#abbe7eaffb986cd507678cebdff793048">liverpool::booking::getScoreDifference</a></div><div class="ttdeci">int getScoreDifference(vector&lt; int &gt; numSeq)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l01470">liverpool.cpp:1470</a></div></div>
+<div class="ttc" id="aa00594_html_abbe7eaffb986cd507678cebdff793048"><div class="ttname"><a href="#abbe7eaffb986cd507678cebdff793048">liverpool::booking::getScoreDifference</a></div><div class="ttdeci">int getScoreDifference(vector&lt; int &gt; numSeq)</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l01471">liverpool.cpp:1471</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l01470">getScoreDifference()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l01471">getScoreDifference()</a>.</p>
 
 </div>
 </div>
@@ -244,13 +244,13 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00529">529</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../db/db6/a00074_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db6/a00074_source.html#l00529">529</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno">  529</span>                               {</div>
 <div class="line"><span class="lineno">  530</span>            ASSERT_EQ(4, <a class="code hl_function" href="#ac8b62b27d6f8a2d9f847e242ac9d2240">getSwapTime</a>(<span class="stringliteral">&quot;001011&quot;</span>));</div>
 <div class="line"><span class="lineno">  531</span>        }</div>
-<div class="ttc" id="aa00594_html_ac8b62b27d6f8a2d9f847e242ac9d2240"><div class="ttname"><a href="#ac8b62b27d6f8a2d9f847e242ac9d2240">liverpool::booking::getSwapTime</a></div><div class="ttdeci">int getSwapTime(string color)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d52/a00023_source.html#l01497">liverpool.cpp:1497</a></div></div>
+<div class="ttc" id="aa00594_html_ac8b62b27d6f8a2d9f847e242ac9d2240"><div class="ttname"><a href="#ac8b62b27d6f8a2d9f847e242ac9d2240">liverpool::booking::getSwapTime</a></div><div class="ttdeci">int getSwapTime(string color)</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l01498">liverpool.cpp:1498</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l01497">getSwapTime()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l01498">getSwapTime()</a>.</p>
 
 </div>
 </div>
@@ -273,12 +273,12 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00533">533</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../db/db6/a00074_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db6/a00074_source.html#l00533">533</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno">  533</span>                               {</div>
 <div class="line"><span class="lineno">  534</span>            ASSERT_EQ(2, <a class="code hl_function" href="#ac8b62b27d6f8a2d9f847e242ac9d2240">getSwapTime</a>(<span class="stringliteral">&quot;0101&quot;</span>));</div>
 <div class="line"><span class="lineno">  535</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l01497">getSwapTime()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l01498">getSwapTime()</a>.</p>
 
 </div>
 </div>
@@ -301,12 +301,12 @@ $(function(){ initResizable(false); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l00537">537</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../db/db6/a00074_source.html">liverpool_test.cpp</a> 第 <a class="el" href="../../db/db6/a00074_source.html#l00537">537</a> 行定义.</p>
 <div class="fragment"><div class="line"><span class="lineno">  537</span>                               {</div>
 <div class="line"><span class="lineno">  538</span>            ASSERT_EQ(0, <a class="code hl_function" href="#ac8b62b27d6f8a2d9f847e242ac9d2240">getSwapTime</a>(<span class="stringliteral">&quot;1111&quot;</span>));</div>
 <div class="line"><span class="lineno">  539</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d52/a00023_source.html#l01497">getSwapTime()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d4/d51/a00017_source.html#l01498">getSwapTime()</a>.</p>
 
 </div>
 </div>
