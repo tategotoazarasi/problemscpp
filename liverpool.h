@@ -201,6 +201,15 @@ namespace liverpool {
 	namespace aboveaverage {
 		int main(istream &cin, ostream &cout);
 	}
+
+	namespace bestrelayteam {
+		struct player {
+			string name;
+			float a;
+			float b;
+		};
+		int main(istream &cin, ostream &cout);
+	}// namespace bestrelayteam
 }// namespace liverpool
 
 #endif//PROBLEMSCPP_COMO526_H

@@ -548,4 +548,14 @@ namespace liverpool {
 			ASSERT_EQ("40.000%\n57.143%\n33.333%\n66.667%\n55.556%\n", ans);
 		}
 	}// namespace aboveaverage
+
+	namespace bestrelayteam {
+		TEST(bestrelayteam, case1) {
+			istringstream in("6\nASHMEADE 9.90 8.85\nBLAKE 9.69 8.72\nBOLT 9.58 8.43\nCARTER 9.78 8.93\nFRATER 9.88 8.92\nPOWELL 9.72 8.61\n");
+			auto out = ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("35.54\nCARTER\nBOLT\nPOWELL\nBLAKE\n", ans);
+		}
+	}// namespace bestrelayteam
 }// namespace liverpool

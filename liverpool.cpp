@@ -1534,4 +1534,70 @@ namespace liverpool {
 		}
 	}// namespace aboveaverage
 
+	namespace bestrelayteam {
+		int main(istream &cin, ostream &cout) {
+			int n;
+			cin >> n;
+			unordered_map<string, player *> m = {};
+			vector<player *> a_list           = {};
+			vector<player *> b_list           = {};
+			unordered_set<player *> b_set     = {};
+			while(n--) {
+				string name;
+				float a, b;
+				cin >> name >> a >> b;
+				player *pl = new player{name, a, b};
+				m[name]    = pl;
+				a_list.push_back(pl);
+				b_list.push_back(pl);
+			}
+			ranges::sort(a_list, [](const player *a, const player *b) {
+				if(a->a != b->a)
+					return a->a < b->a;
+				return a->b > b->b;
+			});
+			ranges::sort(b_list, [](const player *a, const player *b) {
+				if(a->b != b->b) {
+					return a->b < b->b;
+				}
+				return a->a > b->a;
+			});
+			b_set.insert(b_list[0]);
+			b_set.insert(b_list[1]);
+			b_set.insert(b_list[2]);
+			float best = 999999999;
+			string best_ans;
+			for(int i = 0; i < a_list.size(); i++) {
+				float current = a_list[i]->a;
+				current += b_list[0] == a_list[i] ? 0 : b_list[0]->b;
+				current += b_list[1] == a_list[i] ? 0 : b_list[1]->b;
+				current += b_list[2] == a_list[i] ? 0 : b_list[2]->b;
+				if(b_set.contains(a_list[i])) {
+					current += b_list[3]->b;
+				}
+				if(current < best) {
+					best              = current;
+					ostringstream oss = {};
+					oss << current << endl
+					    << a_list[i]->name << endl;
+					if(b_list[0] != a_list[i]) {
+						oss << b_list[0]->name << endl;
+					}
+					if(b_list[1] != a_list[i]) {
+						oss << b_list[1]->name << endl;
+					}
+					if(b_list[2] != a_list[i]) {
+						oss << b_list[2]->name << endl;
+					}
+					if(b_set.contains(a_list[i])) {
+						oss << b_list[3]->name << endl;
+					}
+					best_ans = oss.str();
+				}
+			}
+			cout << best_ans;
+			return 0;
+		}
+	}// namespace bestrelayteam
+
 }// namespace liverpool
