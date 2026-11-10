@@ -4,6 +4,7 @@
 
 #include "leetcode_hw.h"
 #include <iostream>
+#include <limits.h>
 #include <sstream>
 
 using namespace std;
@@ -40,4 +41,22 @@ namespace leetcode::hw {
 			return oss.str();
 		}
 	}// namespace maximum_binary_string_after_change
+
+	namespace climbing_stairs_ii {
+		int Solution::climbStairs(int n, vector<int> &costs) {
+			vector<int> dp(n + 1, INT_MAX);
+			vector<int> new_cost(n + 1);
+			new_cost[0] = 0;
+			for(int i = 0; i < costs.size(); i++) {
+				new_cost[i + 1] = costs[i];
+			}
+			dp[0] = 0;
+			for(int i = 0; i <= n; i++) {
+				for(int j = 1; j <= 3 && i + j < n + 1; j++) {
+					dp[i + j] = min(dp[i + j], dp[i] + new_cost[i + j] + j * j);
+				}
+			}
+			return dp[n];
+		}
+	}// namespace climbing_stairs_ii
 }// namespace leetcode::hw

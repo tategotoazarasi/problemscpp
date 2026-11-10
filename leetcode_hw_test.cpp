@@ -24,4 +24,22 @@ namespace leetcode::hw {
 			ASSERT_EQ(Solution::maximumBinaryString("101010111011001101000110010001100001111"), "111111111111111111101111111111111111111");
 		}
 	}// namespace maximum_binary_string_after_change
+
+	namespace climbing_stairs_ii {
+		TEST(climbing_stairs_ii, case1) {
+			vector costs = {1, 2, 3, 4};
+			ASSERT_EQ(13, Solution::climbStairs(4, costs));
+		}
+
+		TEST(climbing_stairs_ii, case2) {
+			vector costs = {5, 1, 6, 2};
+			ASSERT_EQ(11, Solution::climbStairs(4, costs));
+		}
+
+		TEST(climbing_stairs_ii, case3) {
+			vector costs = {9, 8, 3};
+			ASSERT_EQ(12, Solution::climbStairs(3, costs));
+		}
+
+	}// namespace climbing_stairs_ii
 }// namespace leetcode::hw
