@@ -22,4 +22,22 @@ namespace nowcoder {
 			ASSERT_EQ("1", ans);
 		}
 	}// namespace hj1
+
+	namespace realhw235 {
+		TEST(realhw235, case1) {
+			std::istringstream in("100\n10\n5\n2\n5\n1 2 5 3 4");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("11", ans);
+		}
+
+		TEST(realhw235, case2) {
+			std::istringstream in("50\n10\n10\n1\n10\n1 2 5 3 4 5 4 1 1 1");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("4", ans);
+		}
+	}// namespace realhw235
 };// namespace nowcoder

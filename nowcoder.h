@@ -5,12 +5,18 @@
 #ifndef PROBLEMSCPP_NOWCODER_H
 #define PROBLEMSCPP_NOWCODER_H
 #include <iosfwd>
-
+#include <vector>
+using namespace std;
 
 namespace nowcoder {
 	namespace hj1 {
 		int main(std::istream & /*cin*/, std::ostream & /*cout*/);
 	}
+
+	namespace realhw235 {
+		int main(std::istream & /*cin*/, std::ostream & /*cout*/);
+		unsigned long get_cost(const vector<int> &vec, int c, int f, int u, int target);
+	}// namespace realhw235
 };// namespace nowcoder
 
 
