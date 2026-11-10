@@ -38,6 +38,9 @@ add_executable(problemscpp main.cpp acwing.cpp acwing.h lintcode.cpp lintcode.h 
                nowcoder.cpp
                nowcoder.h
                nowcoder_test.cpp
+               leetcode_hw.cpp
+               leetcode_hw.h
+               leetcode_hw_test.cpp
                )
 target_link_libraries(problemscpp PRIVATE GTest::gmock GTest::gtest GTest::gmock_main GTest::gtest_main)
 gtest_discover_tests(problemscpp)
