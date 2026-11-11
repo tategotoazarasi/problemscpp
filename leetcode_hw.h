@@ -23,6 +23,13 @@ namespace leetcode::hw {
 			static int climbStairs(int n, vector<int> &costs);
 		};
 	}// namespace climbing_stairs_ii
+
+	namespace minimum_cost_to_acquire_required_items {
+		class Solution {
+		public:
+			long long static minimumCost(int cost1, int cost2, int costBoth, int need1, int need2);
+		};
+	}// namespace minimum_cost_to_acquire_required_items
 }// namespace leetcode::hw
 
 #endif//PROBLEMSCPP_LEETCODE_HW_H

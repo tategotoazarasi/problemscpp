@@ -59,4 +59,18 @@ namespace leetcode::hw {
 			return dp[n];
 		}
 	}// namespace climbing_stairs_ii
+
+	namespace minimum_cost_to_acquire_required_items {
+		long long Solution::minimumCost(int cost1, int cost2, int costBoth, int need1, int need2) {
+			long long total_cost = 0;
+			long long min_need   = 0;
+			if(cost1 + cost2 > costBoth) {
+				min_need = min(need1, need2);
+				total_cost += min_need * costBoth;
+			}
+			total_cost += (need1 - min_need) * (costBoth > cost1 ? cost1 : costBoth);
+			total_cost += (need2 - min_need) * (costBoth > cost2 ? cost2 : costBoth);
+			return total_cost;
+		}
+	}// namespace minimum_cost_to_acquire_required_items
 }// namespace leetcode::hw

@@ -40,6 +40,19 @@ namespace leetcode::hw {
 			vector costs = {9, 8, 3};
 			ASSERT_EQ(12, Solution::climbStairs(3, costs));
 		}
-
 	}// namespace climbing_stairs_ii
+
+	namespace minimum_cost_to_acquire_required_items {
+		TEST(minimum_cost_to_acquire_required_items, case1) {
+			ASSERT_EQ(3, Solution::minimumCost(3, 2, 1, 3, 2));
+		}
+
+		TEST(minimum_cost_to_acquire_required_items, case2) {
+			ASSERT_EQ(22, Solution::minimumCost(5, 4, 15, 2, 3));
+		}
+
+		TEST(minimum_cost_to_acquire_required_items, case3) {
+			ASSERT_EQ(0, Solution::minimumCost(5, 4, 15, 0, 0));
+		}
+	}// namespace minimum_cost_to_acquire_required_items
 }// namespace leetcode::hw
