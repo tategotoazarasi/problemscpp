@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::palindrome_partitioning::Solution类 参考</title>
+<title>problemscpp: leetcode::split_array_largest_sum::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,7 +84,7 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d6/d22/a00245.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d0/d35/a00526.html">palindrome_partitioning</a></li><li class="navelem"><a class="el" href="../../d3/dab/a02994.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../df/da9/a00263.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d3/d87/a00539.html">split_array_largest_sum</a></li><li class="navelem"><a class="el" href="../../d3/dab/a02994.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -92,27 +92,25 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="../../dd/d65/a02991.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::palindrome_partitioning::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::split_array_largest_sum::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../db/db2/a00020_source.html">leetcode.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../da/d24/a00068_source.html">leetcode.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:ae6d7a196b89dd3a6fd926fc171fc7cb8" id="r_ae6d7a196b89dd3a6fd926fc171fc7cb8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6d7a196b89dd3a6fd926fc171fc7cb8">dfs</a> (const vector&lt; string &gt; &amp;current, const string &amp;s, vector&lt; vector&lt; string &gt; &gt; &amp;ans, int start, int cursor)</td></tr>
-<tr class="separator:ae6d7a196b89dd3a6fd926fc171fc7cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6d1dbd31d0ebc9c6da45bcb9a2bc7dd" id="r_af6d1dbd31d0ebc9c6da45bcb9a2bc7dd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6d1dbd31d0ebc9c6da45bcb9a2bc7dd">is_palindromic</a> (const string &amp;s, int start, int end)</td></tr>
-<tr class="separator:af6d1dbd31d0ebc9c6da45bcb9a2bc7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19d213c0c2c3958530b4d292ec66714c" id="r_a19d213c0c2c3958530b4d292ec66714c"><td class="memItemLeft" align="right" valign="top">static vector&lt; vector&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19d213c0c2c3958530b4d292ec66714c">partition</a> (const string &amp;s)</td></tr>
-<tr class="separator:a19d213c0c2c3958530b4d292ec66714c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae6eff66caae7cccd362a9ac1f401b34" id="r_aae6eff66caae7cccd362a9ac1f401b34"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae6eff66caae7cccd362a9ac1f401b34">get_m</a> (const vector&lt; int &gt; &amp;nums, int msum)</td></tr>
+<tr class="separator:aae6eff66caae7cccd362a9ac1f401b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee0ec7020b6f354dcbca9b9019ff494c" id="r_aee0ec7020b6f354dcbca9b9019ff494c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee0ec7020b6f354dcbca9b9019ff494c">splitArray</a> (vector&lt; int &gt; &amp;nums, int m)</td></tr>
+<tr class="separator:aee0ec7020b6f354dcbca9b9019ff494c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode.h</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03118">3118</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../da/d24/a00068_source.html">leetcode.h</a> 第 <a class="el" href="../../da/d24/a00068_source.html#l03066">3066</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="ae6d7a196b89dd3a6fd926fc171fc7cb8" name="ae6d7a196b89dd3a6fd926fc171fc7cb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6d7a196b89dd3a6fd926fc171fc7cb8">&#9670;&#160;</a></span>dfs()</h2>
+<a id="aae6eff66caae7cccd362a9ac1f401b34" name="aae6eff66caae7cccd362a9ac1f401b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae6eff66caae7cccd362a9ac1f401b34">&#9670;&#160;</a></span>get_m()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -121,29 +119,14 @@ $(function(){ initResizable(false); });
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void leetcode::palindrome_partitioning::Solution::dfs </td>
+          <td class="memname">int leetcode::split_array_largest_sum::Solution::get_m </td>
           <td>(</td>
-          <td class="paramtype">const vector&lt; string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
+          <td class="paramtype">const vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>nums</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vector&lt; vector&lt; string &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ans</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cursor</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>msum</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -153,35 +136,30 @@ $(function(){ initResizable(false); });
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l08858">8858</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 8858</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno"> 8859</span>            <span class="keywordflow">if</span>(cursor == s.length() - 1 &amp;&amp; <a class="code hl_function" href="#af6d1dbd31d0ebc9c6da45bcb9a2bc7dd">is_palindromic</a>(s, start, cursor)) {</div>
-<div class="line"><span class="lineno"> 8860</span>                <a class="code hl_variable" href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.emplace_back(current);</div>
-<div class="line"><span class="lineno"> 8861</span>                <a class="code hl_variable" href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>.back().emplace_back(s.substr(start, cursor - start + 1));</div>
-<div class="line"><span class="lineno"> 8862</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 8863</span>            }</div>
-<div class="line"><span class="lineno"> 8864</span>            <span class="keywordflow">if</span>(cursor &gt;= s.length() - 1 || start &gt;= s.length()) {</div>
-<div class="line"><span class="lineno"> 8865</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 8866</span>            }</div>
-<div class="line"><span class="lineno"> 8867</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="#af6d1dbd31d0ebc9c6da45bcb9a2bc7dd">is_palindromic</a>(s, start, cursor)) {</div>
-<div class="line"><span class="lineno"> 8868</span>                vector next = current;</div>
-<div class="line"><span class="lineno"> 8869</span>                next.emplace_back(s.substr(start, cursor - start + 1));</div>
-<div class="line"><span class="lineno"> 8870</span>                <a class="code hl_function" href="#ae6d7a196b89dd3a6fd926fc171fc7cb8">dfs</a>(next, s, ans, cursor + 1, cursor + 1);</div>
-<div class="line"><span class="lineno"> 8871</span>            }</div>
-<div class="line"><span class="lineno"> 8872</span>            <a class="code hl_function" href="#ae6d7a196b89dd3a6fd926fc171fc7cb8">dfs</a>(current, s, ans, start, cursor + 1);</div>
-<div class="line"><span class="lineno"> 8873</span>        }</div>
-<div class="ttc" id="aa00571_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d4/d51/a00017_source.html#l00132">liverpool.cpp:132</a></div></div>
-<div class="ttc" id="aa02994_html_ae6d7a196b89dd3a6fd926fc171fc7cb8"><div class="ttname"><a href="#ae6d7a196b89dd3a6fd926fc171fc7cb8">leetcode::palindrome_partitioning::Solution::dfs</a></div><div class="ttdeci">static void dfs(const vector&lt; string &gt; &amp;current, const string &amp;s, vector&lt; vector&lt; string &gt; &gt; &amp;ans, int start, int cursor)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d8b/a00059_source.html#l08858">leetcode.cpp:8858</a></div></div>
-<div class="ttc" id="aa02994_html_af6d1dbd31d0ebc9c6da45bcb9a2bc7dd"><div class="ttname"><a href="#af6d1dbd31d0ebc9c6da45bcb9a2bc7dd">leetcode::palindrome_partitioning::Solution::is_palindromic</a></div><div class="ttdeci">static bool is_palindromic(const string &amp;s, int start, int end)</div><div class="ttdef"><b>定义</b> <a href="../../d3/d8b/a00059_source.html#l08849">leetcode.cpp:8849</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d9/d77/a00095_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d9/d77/a00095_source.html#l08686">8686</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 8686</span>                                                             {</div>
+<div class="line"><span class="lineno"> 8687</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="../../da/de4/a00594.html#a7e670a763b0d81b0e538ea62467af79b">ans</a> = 0;</div>
+<div class="line"><span class="lineno"> 8688</span>            <span class="keywordtype">int</span> c   = 0;</div>
+<div class="line"><span class="lineno"> 8689</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> num: nums) {</div>
+<div class="line"><span class="lineno"> 8690</span>                <span class="keywordflow">if</span>(c + num &gt; msum) {</div>
+<div class="line"><span class="lineno"> 8691</span>                    <a class="code hl_variable" href="../../da/de4/a00594.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>++;</div>
+<div class="line"><span class="lineno"> 8692</span>                    c = 0;</div>
+<div class="line"><span class="lineno"> 8693</span>                }</div>
+<div class="line"><span class="lineno"> 8694</span>                c += num;</div>
+<div class="line"><span class="lineno"> 8695</span>            }</div>
+<div class="line"><span class="lineno"> 8696</span>            <span class="keywordflow">if</span>(c &gt; 0) {</div>
+<div class="line"><span class="lineno"> 8697</span>                <a class="code hl_variable" href="../../da/de4/a00594.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>++;</div>
+<div class="line"><span class="lineno"> 8698</span>            }</div>
+<div class="line"><span class="lineno"> 8699</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/de4/a00594.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
+<div class="line"><span class="lineno"> 8700</span>        }</div>
+<div class="ttc" id="aa00594_html_a7e670a763b0d81b0e538ea62467af79b"><div class="ttname"><a href="../../da/de4/a00594.html#a7e670a763b0d81b0e538ea62467af79b">liverpool::set::ans</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ans</div><div class="ttdef"><b>定义</b> <a href="../../d5/d16/a00029_source.html#l00132">liverpool.cpp:132</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l08858">dfs()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l08849">is_palindromic()</a>.</p>
-
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d8b/a00059_source.html#l08858">dfs()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l08842">partition()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d9/d77/a00095_source.html#l08665">splitArray()</a>.</p>
 
 </div>
 </div>
-<a id="af6d1dbd31d0ebc9c6da45bcb9a2bc7dd" name="af6d1dbd31d0ebc9c6da45bcb9a2bc7dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6d1dbd31d0ebc9c6da45bcb9a2bc7dd">&#9670;&#160;</a></span>is_palindromic()</h2>
+<a id="aee0ec7020b6f354dcbca9b9019ff494c" name="aee0ec7020b6f354dcbca9b9019ff494c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee0ec7020b6f354dcbca9b9019ff494c">&#9670;&#160;</a></span>splitArray()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -190,19 +168,14 @@ $(function(){ initResizable(false); });
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool leetcode::palindrome_partitioning::Solution::is_palindromic </td>
+          <td class="memname">int leetcode::split_array_largest_sum::Solution::splitArray </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+          <td class="paramtype">vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>nums</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>end</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>m</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -212,61 +185,38 @@ $(function(){ initResizable(false); });
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l08849">8849</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 8849</span>                                                                         {</div>
-<div class="line"><span class="lineno"> 8850</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = start, j = end; i &lt; j; i++, j--) {</div>
-<div class="line"><span class="lineno"> 8851</span>                <span class="keywordflow">if</span>(s[i] != s[j]) {</div>
-<div class="line"><span class="lineno"> 8852</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 8853</span>                }</div>
-<div class="line"><span class="lineno"> 8854</span>            }</div>
-<div class="line"><span class="lineno"> 8855</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 8856</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../d9/d77/a00095_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d9/d77/a00095_source.html#l08665">8665</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 8665</span>                                                         {</div>
+<div class="line"><span class="lineno"> 8666</span>            <span class="keywordtype">int</span> l = 0;</div>
+<div class="line"><span class="lineno"> 8667</span>            <span class="keywordtype">int</span> r = 0;</div>
+<div class="line"><span class="lineno"> 8668</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> num: nums) {</div>
+<div class="line"><span class="lineno"> 8669</span>                r += num;</div>
+<div class="line"><span class="lineno"> 8670</span>                l = max(l, num);</div>
+<div class="line"><span class="lineno"> 8671</span>            }</div>
+<div class="line"><span class="lineno"> 8672</span>            <span class="keywordflow">while</span>(l &lt; r) {</div>
+<div class="line"><span class="lineno"> 8673</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> mid = (l + r) / 2;</div>
+<div class="line"><span class="lineno"> 8674</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> cnt = <a class="code hl_function" href="#aae6eff66caae7cccd362a9ac1f401b34">get_m</a>(nums, mid);</div>
+<div class="line"><span class="lineno"> 8675</span>                <span class="keywordflow">if</span>(cnt == m) {</div>
+<div class="line"><span class="lineno"> 8676</span>                    r = mid;</div>
+<div class="line"><span class="lineno"> 8677</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(cnt &gt; m) {</div>
+<div class="line"><span class="lineno"> 8678</span>                    l = mid + 1;</div>
+<div class="line"><span class="lineno"> 8679</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(cnt &lt; m) {</div>
+<div class="line"><span class="lineno"> 8680</span>                    r = mid - 1;</div>
+<div class="line"><span class="lineno"> 8681</span>                }</div>
+<div class="line"><span class="lineno"> 8682</span>            }</div>
+<div class="line"><span class="lineno"> 8683</span>            <span class="keywordflow">return</span> l;</div>
+<div class="line"><span class="lineno"> 8684</span>        }</div>
+<div class="ttc" id="aa02994_html_aae6eff66caae7cccd362a9ac1f401b34"><div class="ttname"><a href="#aae6eff66caae7cccd362a9ac1f401b34">leetcode::split_array_largest_sum::Solution::get_m</a></div><div class="ttdeci">static int get_m(const vector&lt; int &gt; &amp;nums, int msum)</div><div class="ttdef"><b>定义</b> <a href="../../d9/d77/a00095_source.html#l08686">leetcode.cpp:8686</a></div></div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d8b/a00059_source.html#l08858">dfs()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d9/d77/a00095_source.html#l08686">get_m()</a>.</p>
 
-</div>
-</div>
-<a id="a19d213c0c2c3958530b4d292ec66714c" name="a19d213c0c2c3958530b4d292ec66714c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19d213c0c2c3958530b4d292ec66714c">&#9670;&#160;</a></span>partition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt; vector&lt; string &gt; &gt; leetcode::palindrome_partitioning::Solution::partition </td>
-          <td>(</td>
-          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l08842">8842</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 8842</span>                                                                  {</div>
-<div class="line"><span class="lineno"> 8843</span>            <span class="keyword">const</span> vector&lt;string&gt; <a class="code hl_variable" href="../../d0/dab/a00735.html#aac2df3cab4f24d817c18fbf37673e3cb">vec</a>;</div>
-<div class="line"><span class="lineno"> 8844</span>            vector&lt;vector&lt;string&gt;&gt; <a class="code hl_variable" href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno"> 8845</span>            <a class="code hl_function" href="#ae6d7a196b89dd3a6fd926fc171fc7cb8">dfs</a>(vec, s, ans, 0, 0);</div>
-<div class="line"><span class="lineno"> 8846</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/d3a/a00571.html#a7e670a763b0d81b0e538ea62467af79b">ans</a>;</div>
-<div class="line"><span class="lineno"> 8847</span>        }</div>
-<div class="ttc" id="aa00735_html_aac2df3cab4f24d817c18fbf37673e3cb"><div class="ttname"><a href="../../d0/dab/a00735.html#aac2df3cab4f24d817c18fbf37673e3cb">pat::a::a7_2::vec</a></div><div class="ttdeci">int vec[100010]</div><div class="ttdef"><b>定义</b> <a href="../../da/dec/a00080_source.html#l05095">pat.cpp:5095</a></div></div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../d3/d8b/a00059_source.html#l08858">dfs()</a>.</p>
-
-<p class="reference">被这些函数引用 <a class="el" href="../../d1/d09/a00077_source.html#l04099">leetcode::palindrome_partitioning::TEST()</a> , 以及 <a class="el" href="../../d1/d09/a00077_source.html#l04105">leetcode::palindrome_partitioning::TEST()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l04026">leetcode::split_array_largest_sum::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l04031">leetcode::split_array_largest_sum::TEST()</a> , 以及 <a class="el" href="../../d4/d51/a00017_source.html#l04036">leetcode::split_array_largest_sum::TEST()</a>.</p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../db/db2/a00020_source.html">leetcode.h</a></li>
-<li><a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a></li>
+<li><a class="el" href="../../da/d24/a00068_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../d9/d77/a00095_source.html">leetcode.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: leetcode::range_module::RangeModule类 参考</title>
+<title>problemscpp: leetcode::shortest_path_to_get_all_keys::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,47 +84,31 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../d6/d22/a00245.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d4/d9c/a00543.html">range_module</a></li><li class="navelem"><a class="el" href="../../df/db9/a03078.html">RangeModule</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../df/da9/a00263.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d6/d95/a00556.html">shortest_path_to_get_all_keys</a></li><li class="navelem"><a class="el" href="../../df/db9/a03078.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public 成员函数</a> &#124;
-<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="../../d3/dbd/a03075.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">leetcode::range_module::RangeModule类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::shortest_path_to_get_all_keys::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../db/db2/a00020_source.html">leetcode.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../da/d24/a00068_source.html">leetcode.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public 成员函数</h2></td></tr>
-<tr class="memitem:a1b30e1cd907ad1979d04d80a22c2cc3e" id="r_a1b30e1cd907ad1979d04d80a22c2cc3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b30e1cd907ad1979d04d80a22c2cc3e">RangeModule</a> ()=default</td></tr>
-<tr class="memdesc:a1b30e1cd907ad1979d04d80a22c2cc3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化数据结构的对象。  <br /></td></tr>
-<tr class="separator:a1b30e1cd907ad1979d04d80a22c2cc3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a606f072c2df9b2ae32eaa29253323260" id="r_a606f072c2df9b2ae32eaa29253323260"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a606f072c2df9b2ae32eaa29253323260">addRange</a> (int left, int right)</td></tr>
-<tr class="memdesc:a606f072c2df9b2ae32eaa29253323260"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加 半开区间 [left, right)，跟踪该区间中的每个实数。添加与当前跟踪的数字部分重叠的区间时，应当添加在区间 [left, right) 中尚未跟踪的任何数字到该区间中。  <br /></td></tr>
-<tr class="separator:a606f072c2df9b2ae32eaa29253323260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab92361e93e64d523029985c5dcb6be13" id="r_ab92361e93e64d523029985c5dcb6be13"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab92361e93e64d523029985c5dcb6be13">queryRange</a> (int left, int right)</td></tr>
-<tr class="memdesc:ab92361e93e64d523029985c5dcb6be13"><td class="mdescLeft">&#160;</td><td class="mdescRight">只有在当前正在跟踪区间 [left, right) 中的每一个实数时，才返回 true ，否则返回 false 。  <br /></td></tr>
-<tr class="separator:ab92361e93e64d523029985c5dcb6be13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dc205545b43eda11d97d769673b6936" id="r_a4dc205545b43eda11d97d769673b6936"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dc205545b43eda11d97d769673b6936">removeRange</a> (int left, int right)</td></tr>
-<tr class="memdesc:a4dc205545b43eda11d97d769673b6936"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止跟踪 半开区间 [left, right) 中当前正在跟踪的每个实数。  <br /></td></tr>
-<tr class="separator:a4dc205545b43eda11d97d769673b6936"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private 属性</h2></td></tr>
-<tr class="memitem:ae84714c971561de384d1e431d199d7b7" id="r_ae84714c971561de384d1e431d199d7b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/df4/a03070.html">Chtholly</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae84714c971561de384d1e431d199d7b7">tree</a> {{{1, 100000000}}}</td></tr>
-<tr class="separator:ae84714c971561de384d1e431d199d7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ad078df1409ab1911e3b8adf9a1171c9b" id="r_ad078df1409ab1911e3b8adf9a1171c9b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad078df1409ab1911e3b8adf9a1171c9b">shortestPathAllKeys</a> (vector&lt; string &gt; &amp;grid)</td></tr>
+<tr class="separator:ad078df1409ab1911e3b8adf9a1171c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode.h</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03356">3356</a> 行定义.</p>
-</div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a1b30e1cd907ad1979d04d80a22c2cc3e" name="a1b30e1cd907ad1979d04d80a22c2cc3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b30e1cd907ad1979d04d80a22c2cc3e">&#9670;&#160;</a></span>RangeModule()</h2>
+<p class="definition">在文件 <a class="el" href="../../da/d24/a00068_source.html">leetcode.h</a> 第 <a class="el" href="../../da/d24/a00068_source.html#l03247">3247</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="ad078df1409ab1911e3b8adf9a1171c9b" name="ad078df1409ab1911e3b8adf9a1171c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad078df1409ab1911e3b8adf9a1171c9b">&#9670;&#160;</a></span>shortestPathAllKeys()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,140 +117,112 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">leetcode::range_module::RangeModule::RangeModule </td>
+          <td class="memname">int leetcode::shortest_path_to_get_all_keys::Solution::shortestPathAllKeys </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">vector&lt; string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>grid</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>初始化数据结构的对象。 </p>
-
-</div>
-</div>
-<h2 class="groupheader">成员函数说明</h2>
-<a id="a606f072c2df9b2ae32eaa29253323260" name="a606f072c2df9b2ae32eaa29253323260"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a606f072c2df9b2ae32eaa29253323260">&#9670;&#160;</a></span>addRange()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void leetcode::range_module::RangeModule::addRange </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>添加 半开区间 [left, right)，跟踪该区间中的每个实数。添加与当前跟踪的数字部分重叠的区间时，应当添加在区间 [left, right) 中尚未跟踪的任何数字到该区间中。 </p>
-
-<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l09426">9426</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 9426</span>{ <a class="code hl_variable" href="#ae84714c971561de384d1e431d199d7b7">tree</a>.assign(left, right - 1, <span class="keyword">true</span>); }</div>
-<div class="ttc" id="aa03078_html_ae84714c971561de384d1e431d199d7b7"><div class="ttname"><a href="#ae84714c971561de384d1e431d199d7b7">leetcode::range_module::RangeModule::tree</a></div><div class="ttdeci">Chtholly tree</div><div class="ttdef"><b>定义</b> <a href="../../db/db2/a00020_source.html#l03357">leetcode.h:3357</a></div></div>
+<p class="definition">在文件 <a class="el" href="../../d9/d77/a00095_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d9/d77/a00095_source.html#l09241">9241</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 9241</span>                                                              {</div>
+<div class="line"><span class="lineno"> 9242</span>            priority_queue&lt;frame&gt; pq;</div>
+<div class="line"><span class="lineno"> 9243</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d6/db2/a00601.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>        = grid.size();</div>
+<div class="line"><span class="lineno"> 9244</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d6/db2/a00601.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>        = grid[0].size();</div>
+<div class="line"><span class="lineno"> 9245</span>            <span class="keywordtype">int</span> start_x  = 0;</div>
+<div class="line"><span class="lineno"> 9246</span>            <span class="keywordtype">int</span> start_y  = 0;</div>
+<div class="line"><span class="lineno"> 9247</span>            <span class="keywordtype">int</span> lock_cnt = 0;</div>
+<div class="line"><span class="lineno"> 9248</span>            unordered_map&lt;unsigned, vector&lt;vector&lt;int&gt;&gt;&gt; min_step;</div>
+<div class="line"><span class="lineno"> 9249</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="../../d6/db2/a00601.html#ab2991a035ec7c05bca06cda958a3e50c">m</a>; i++) {</div>
+<div class="line"><span class="lineno"> 9250</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="../../d6/db2/a00601.html#af436c61fd3ce48a56c6d7719a33a8a45">n</a>; j++) {</div>
+<div class="line"><span class="lineno"> 9251</span>                    <span class="keywordflow">if</span>(grid[i][j] == <a class="code hl_variable" href="../../d6/d95/a00556.html#aac87a9215d8682ec70db1efe5222eae2">START</a>) {</div>
+<div class="line"><span class="lineno"> 9252</span>                        start_x = i;</div>
+<div class="line"><span class="lineno"> 9253</span>                        start_y = j;</div>
+<div class="line"><span class="lineno"> 9254</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(isupper(grid[i][j])) {</div>
+<div class="line"><span class="lineno"> 9255</span>                        lock_cnt++;</div>
+<div class="line"><span class="lineno"> 9256</span>                    }</div>
+<div class="line"><span class="lineno"> 9257</span>                }</div>
+<div class="line"><span class="lineno"> 9258</span>            }</div>
+<div class="line"><span class="lineno"> 9259</span>            frame start(start_x, start_y, lock_cnt);</div>
+<div class="line"><span class="lineno"> 9260</span>            pq.push(start);</div>
+<div class="line"><span class="lineno"> 9261</span>            <span class="keywordflow">while</span>(!pq.empty()) {</div>
+<div class="line"><span class="lineno"> 9262</span>                frame f = pq.top();</div>
+<div class="line"><span class="lineno"> 9263</span>                pq.pop();</div>
+<div class="line"><span class="lineno"> 9264</span>                <span class="keywordflow">if</span>(f.keys.size() == lock_cnt) {</div>
+<div class="line"><span class="lineno"> 9265</span>                    <span class="keywordflow">return</span> f.step;</div>
+<div class="line"><span class="lineno"> 9266</span>                }</div>
+<div class="line"><span class="lineno"> 9267</span>                <span class="keywordflow">if</span>(!min_step.contains(f.get_mask())) {</div>
+<div class="line"><span class="lineno"> 9268</span>                    min_step[f.get_mask()] = vector(m, vector(n, INT_MAX));</div>
+<div class="line"><span class="lineno"> 9269</span>                }</div>
+<div class="line"><span class="lineno"> 9270</span>                <span class="keywordflow">if</span>(min_step[f.get_mask()][f.x][f.y] &lt;= f.step) {</div>
+<div class="line"><span class="lineno"> 9271</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 9272</span>                }</div>
+<div class="line"><span class="lineno"> 9273</span>                min_step[f.get_mask()][f.x][f.y] = f.step;</div>
+<div class="line"><span class="lineno"> 9274</span>                <span class="keyword">const</span> pair&lt;int, int&gt; nexts[4]    = {{f.x + 1, f.y}, {f.x - 1, f.y}, {f.x, f.y + 1}, {f.x, f.y - 1}};</div>
+<div class="line"><span class="lineno"> 9275</span>                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[n_x, n_y]: nexts) {</div>
+<div class="line"><span class="lineno"> 9276</span>                    <span class="keywordflow">if</span>(n_x &gt;= 0 &amp;&amp; n_x &lt; m &amp;&amp; n_y &gt;= 0 &amp;&amp; n_y &lt; n &amp;&amp; grid[n_x][n_y] != <a class="code hl_variable" href="../../d6/d95/a00556.html#a7c9f51a7e49965cbf58b9ce4ce67e9a5">WALL</a>) {</div>
+<div class="line"><span class="lineno"> 9277</span>                        <span class="keywordflow">if</span>(islower(grid[n_x][n_y])) {</div>
+<div class="line"><span class="lineno"> 9278</span>                            frame next = f;</div>
+<div class="line"><span class="lineno"> 9279</span>                            next.x     = n_x;</div>
+<div class="line"><span class="lineno"> 9280</span>                            next.y     = n_y;</div>
+<div class="line"><span class="lineno"> 9281</span>                            next.step++;</div>
+<div class="line"><span class="lineno"> 9282</span>                            next.keys.insert(grid[n_x][n_y]);</div>
+<div class="line"><span class="lineno"> 9283</span>                            <span class="keywordflow">if</span>(!min_step.contains(next.get_mask())) {</div>
+<div class="line"><span class="lineno"> 9284</span>                                min_step[next.get_mask()] = vector(m, vector(n, INT_MAX));</div>
+<div class="line"><span class="lineno"> 9285</span>                            }</div>
+<div class="line"><span class="lineno"> 9286</span>                            <span class="keywordflow">if</span>(min_step[next.get_mask()][n_x][n_y] &gt; next.step) {</div>
+<div class="line"><span class="lineno"> 9287</span>                                pq.push(next);</div>
+<div class="line"><span class="lineno"> 9288</span>                            }</div>
+<div class="line"><span class="lineno"> 9289</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(isupper(grid[n_x][n_y])) {</div>
+<div class="line"><span class="lineno"> 9290</span>                            <span class="keywordflow">if</span>(f.keys.contains(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(tolower(grid[n_x][n_y])))) {</div>
+<div class="line"><span class="lineno"> 9291</span>                                frame next = f;</div>
+<div class="line"><span class="lineno"> 9292</span>                                next.x     = n_x;</div>
+<div class="line"><span class="lineno"> 9293</span>                                next.y     = n_y;</div>
+<div class="line"><span class="lineno"> 9294</span>                                next.step++;</div>
+<div class="line"><span class="lineno"> 9295</span>                                <span class="keywordflow">if</span>(!min_step.contains(next.get_mask())) {</div>
+<div class="line"><span class="lineno"> 9296</span>                                    min_step[next.get_mask()] = vector(m, vector(n, INT_MAX));</div>
+<div class="line"><span class="lineno"> 9297</span>                                }</div>
+<div class="line"><span class="lineno"> 9298</span>                                <span class="keywordflow">if</span>(min_step[next.get_mask()][n_x][n_y] &gt; next.step) {</div>
+<div class="line"><span class="lineno"> 9299</span>                                    pq.push(next);</div>
+<div class="line"><span class="lineno"> 9300</span>                                }</div>
+<div class="line"><span class="lineno"> 9301</span>                            }</div>
+<div class="line"><span class="lineno"> 9302</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 9303</span>                            frame next = f;</div>
+<div class="line"><span class="lineno"> 9304</span>                            next.x     = n_x;</div>
+<div class="line"><span class="lineno"> 9305</span>                            next.y     = n_y;</div>
+<div class="line"><span class="lineno"> 9306</span>                            next.step++;</div>
+<div class="line"><span class="lineno"> 9307</span>                            <span class="keywordflow">if</span>(!min_step.contains(next.get_mask())) {</div>
+<div class="line"><span class="lineno"> 9308</span>                                min_step[next.get_mask()] = vector(m, vector(n, INT_MAX));</div>
+<div class="line"><span class="lineno"> 9309</span>                            }</div>
+<div class="line"><span class="lineno"> 9310</span>                            <span class="keywordflow">if</span>(min_step[next.get_mask()][n_x][n_y] &gt; next.step) {</div>
+<div class="line"><span class="lineno"> 9311</span>                                pq.push(next);</div>
+<div class="line"><span class="lineno"> 9312</span>                            }</div>
+<div class="line"><span class="lineno"> 9313</span>                        }</div>
+<div class="line"><span class="lineno"> 9314</span>                    }</div>
+<div class="line"><span class="lineno"> 9315</span>                }</div>
+<div class="line"><span class="lineno"> 9316</span>            }</div>
+<div class="line"><span class="lineno"> 9317</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 9318</span>        }</div>
+<div class="ttc" id="aa00556_html_a7c9f51a7e49965cbf58b9ce4ce67e9a5"><div class="ttname"><a href="../../d6/d95/a00556.html#a7c9f51a7e49965cbf58b9ce4ce67e9a5">leetcode::shortest_path_to_get_all_keys::WALL</a></div><div class="ttdeci">constexpr char WALL</div><div class="ttdef"><b>定义</b> <a href="../../da/d24/a00068_source.html#l03230">leetcode.h:3230</a></div></div>
+<div class="ttc" id="aa00556_html_aac87a9215d8682ec70db1efe5222eae2"><div class="ttname"><a href="../../d6/d95/a00556.html#aac87a9215d8682ec70db1efe5222eae2">leetcode::shortest_path_to_get_all_keys::START</a></div><div class="ttdeci">constexpr char START</div><div class="ttdef"><b>定义</b> <a href="../../da/d24/a00068_source.html#l03231">leetcode.h:3231</a></div></div>
+<div class="ttc" id="aa00601_html_ab2991a035ec7c05bca06cda958a3e50c"><div class="ttname"><a href="../../d6/db2/a00601.html#ab2991a035ec7c05bca06cda958a3e50c">liverpool::grid::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>定义</b> <a href="../../d5/d16/a00029_source.html#l00365">liverpool.cpp:365</a></div></div>
+<div class="ttc" id="aa00601_html_af436c61fd3ce48a56c6d7719a33a8a45"><div class="ttname"><a href="../../d6/db2/a00601.html#af436c61fd3ce48a56c6d7719a33a8a45">liverpool::grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="../../d5/d16/a00029_source.html#l00365">liverpool.cpp:365</a></div></div>
 </div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../db/db2/a00020_source.html#l03357">tree</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d9/d77/a00095_source.html#l09327">leetcode::shortest_path_to_get_all_keys::frame::get_mask()</a>, <a class="el" href="../../da/d24/a00068_source.html#l03238">leetcode::shortest_path_to_get_all_keys::frame::keys</a>, <a class="el" href="../../da/d24/a00068_source.html#l03231">leetcode::shortest_path_to_get_all_keys::START</a>, <a class="el" href="../../da/d24/a00068_source.html#l03237">leetcode::shortest_path_to_get_all_keys::frame::step</a>, <a class="el" href="../../da/d24/a00068_source.html#l03230">leetcode::shortest_path_to_get_all_keys::WALL</a>, <a class="el" href="../../da/d24/a00068_source.html#l03234">leetcode::shortest_path_to_get_all_keys::frame::x</a> , 以及 <a class="el" href="../../da/d24/a00068_source.html#l03235">leetcode::shortest_path_to_get_all_keys::frame::y</a>.</p>
 
-</div>
-</div>
-<a id="ab92361e93e64d523029985c5dcb6be13" name="ab92361e93e64d523029985c5dcb6be13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab92361e93e64d523029985c5dcb6be13">&#9670;&#160;</a></span>queryRange()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool leetcode::range_module::RangeModule::queryRange </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>只有在当前正在跟踪区间 [left, right) 中的每一个实数时，才返回 true ，否则返回 false 。 </p>
-
-<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l09428">9428</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 9428</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ae84714c971561de384d1e431d199d7b7">tree</a>.check(left, right - 1); }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../db/db2/a00020_source.html#l03357">tree</a>.</p>
-
-</div>
-</div>
-<a id="a4dc205545b43eda11d97d769673b6936" name="a4dc205545b43eda11d97d769673b6936"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dc205545b43eda11d97d769673b6936">&#9670;&#160;</a></span>removeRange()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void leetcode::range_module::RangeModule::removeRange </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>停止跟踪 半开区间 [left, right) 中当前正在跟踪的每个实数。 </p>
-
-<p class="definition">在文件 <a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a> 第 <a class="el" href="../../d3/d8b/a00059_source.html#l09430">9430</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 9430</span>{ <a class="code hl_variable" href="#ae84714c971561de384d1e431d199d7b7">tree</a>.assign(left, right - 1); }</div>
-</div><!-- fragment -->
-<p class="reference">引用了 <a class="el" href="../../db/db2/a00020_source.html#l03357">tree</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">类成员变量说明</h2>
-<a id="ae84714c971561de384d1e431d199d7b7" name="ae84714c971561de384d1e431d199d7b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae84714c971561de384d1e431d199d7b7">&#9670;&#160;</a></span>tree</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d9/df4/a03070.html">Chtholly</a> leetcode::range_module::RangeModule::tree {{{1, 100000000}}}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="../../db/db2/a00020_source.html">leetcode.h</a> 第 <a class="el" href="../../db/db2/a00020_source.html#l03357">3357</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3357</span>{{{1, 100000000}}};</div>
-</div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d3/d8b/a00059_source.html#l09426">addRange()</a>, <a class="el" href="../../d3/d8b/a00059_source.html#l09428">queryRange()</a> , 以及 <a class="el" href="../../d3/d8b/a00059_source.html#l09430">removeRange()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="../../d4/d51/a00017_source.html#l04312">leetcode::shortest_path_to_get_all_keys::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l04317">leetcode::shortest_path_to_get_all_keys::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l04322">leetcode::shortest_path_to_get_all_keys::TEST()</a>, <a class="el" href="../../d4/d51/a00017_source.html#l04327">leetcode::shortest_path_to_get_all_keys::TEST()</a> , 以及 <a class="el" href="../../d4/d51/a00017_source.html#l04332">leetcode::shortest_path_to_get_all_keys::TEST()</a>.</p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../db/db2/a00020_source.html">leetcode.h</a></li>
-<li><a class="el" href="../../d3/d8b/a00059_source.html">leetcode.cpp</a></li>
+<li><a class="el" href="../../da/d24/a00068_source.html">leetcode.h</a></li>
+<li><a class="el" href="../../d9/d77/a00095_source.html">leetcode.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
