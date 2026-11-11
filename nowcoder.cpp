@@ -84,4 +84,24 @@ namespace nowcoder {
 			return 0;
 		}
 	}// namespace realhw235
+
+	namespace hj2 {
+		int main(std::istream &cin, std::ostream &cout) {
+			string str;
+			string str2;
+			getline(cin, str);
+			getline(cin, str2);
+			char c  = str2[0];
+			int ans = 0;
+			for(char cc: str) {
+				if(isdigit(c) && c == cc) {
+					ans++;
+				} else if(tolower(cc) == tolower(c)) {
+					ans++;
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace hj2
 };// namespace nowcoder
