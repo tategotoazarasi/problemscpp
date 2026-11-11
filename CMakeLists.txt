@@ -15,7 +15,7 @@ if (NOT ${GTest_FOUND})
     FetchContent_Declare(
             googletest
             # Specify the commit you depend on and update it regularly.
-            URL https://codeload.github.com/google/googletest/zip/release-1.18.0
+            URL http://github.com/google/googletest/archive/refs/tags/v1.18.0.tar.gz
             )
     # For Windows: Prevent overriding the parent project's compiler/linker settings
     set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
