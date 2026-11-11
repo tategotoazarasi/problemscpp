@@ -4,9 +4,11 @@
 
 #include "nowcoder.h"
 
+#include <algorithm>
 #include <climits>
 #include <iostream>
 #include <string>
+#include <unordered_map>
 #include <vector>
 
 using namespace std;
@@ -104,4 +106,37 @@ namespace nowcoder {
 			return 0;
 		}
 	}// namespace hj2
+
+	namespace realhw236 {
+		void dfs(int budget, int n, const vector<Product> &vec, int cur, int fulfillment, int total_price, const unordered_set<int> &categories, int discount, int *ans) {
+			total_price += vec[cur].price;
+			unordered_set<int> new_cate = categories;
+			new_cate.insert(vec[cur].category);
+			if(new_cate.size() >= 3) {
+				discount = 30;
+			}
+			int final_price = total_price - (total_price / 200) * discount;
+			fulfillment += vec[cur].fulfillment;
+			if(final_price <= budget) {
+				*ans = max(*ans, fulfillment);
+			}
+			for(int i = cur + 1; i < n; i++) {
+				dfs(budget, n, vec, i, fulfillment, total_price, new_cate, discount, ans);
+			}
+		}
+		int main(std::istream &cin, std::ostream &cout) {
+			int budget, n;
+			cin >> budget >> n;
+			vector<Product> vec(n);
+			for(int i = 0; i < n; i++) {
+				cin >> vec[i].id >> vec[i].category >> vec[i].price >> vec[i].fulfillment;
+			}
+			int ans = 0;
+			for(int i = 0; i < n; i++) {
+				dfs(budget, n, vec, i, 0, 0, unordered_set<int>(), 20, &ans);
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace realhw236
 };// namespace nowcoder

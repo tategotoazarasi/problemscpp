@@ -6,6 +6,7 @@
 #define PROBLEMSCPP_NOWCODER_H
 #include <iosfwd>
 #include <istream>
+#include <unordered_set>
 #include <vector>
 using namespace std;
 
@@ -22,6 +23,17 @@ namespace nowcoder {
 	namespace hj2 {
 		int main(std::istream &cin, std::ostream &cout);
 	}
+
+	namespace realhw236 {
+		struct Product {
+			string id;
+			int category;
+			int price;
+			int fulfillment;
+		};
+		void dfs(int budget, int n, const vector<Product> &vec, int cur, int fulfillment, int total_price, const unordered_set<int> &categories, int discount, int *ans);
+		int main(std::istream &cin, std::ostream &cout);
+	}// namespace realhw236
 };// namespace nowcoder
 
 
