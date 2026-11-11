@@ -30,6 +30,18 @@ namespace leetcode::hw {
 			long long static minimumCost(int cost1, int cost2, int costBoth, int need1, int need2);
 		};
 	}// namespace minimum_cost_to_acquire_required_items
+
+	namespace longest_valid_parentheses {
+		struct Node {
+			char c;
+			Node *lend = nullptr;
+			int pos;
+		};
+		class Solution {
+		public:
+			int static longestValidParentheses(string s);
+		};
+	}// namespace longest_valid_parentheses
 }// namespace leetcode::hw
 
 #endif//PROBLEMSCPP_LEETCODE_HW_H

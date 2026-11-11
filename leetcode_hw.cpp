@@ -73,4 +73,44 @@ namespace leetcode::hw {
 			return total_cost;
 		}
 	}// namespace minimum_cost_to_acquire_required_items
+
+	namespace longest_valid_parentheses {
+		int Solution::longestValidParentheses(string s) {
+			int ans = 0;
+			vector<Node *> vec(s.length());
+			for(int i = 0; i < s.length(); i++) {
+				vec[i]       = new Node();
+				vec[i]->c    = s[i];
+				vec[i]->pos  = i;
+				vec[i]->lend = nullptr;
+			}
+			for(int i = 1; i < vec.size(); i++) {
+				if(vec[i]->c == ')') {
+					if(vec[i - 1]->lend == nullptr && vec[i - 1]->c == '(') {
+						if(i - 2 > 0 && vec[i - 2]->lend != nullptr) {
+							vec[i]->lend     = vec[i - 2]->lend;
+							vec[i - 1]->lend = vec[i - 2]->lend;
+						} else {
+							vec[i]->lend     = vec[i - 1];
+							vec[i - 1]->lend = vec[i - 1];
+						}
+					} else if(vec[i - 1]->lend != nullptr && vec[i - 1]->lend->pos - 1 >= 0 && vec[vec[i - 1]->lend->pos - 1]->c == '(') {
+						vec[i]->lend                         = vec[vec[i - 1]->lend->pos - 1];
+						vec[vec[i - 1]->lend->pos - 1]->lend = vec[vec[i - 1]->lend->pos - 1];
+						if(vec[i - 1]->lend->pos - 2 >= 0 && vec[vec[i - 1]->lend->pos - 2]->lend != nullptr) {
+							vec[i]->lend                         = vec[vec[i - 1]->lend->pos - 2]->lend;
+							vec[vec[i - 1]->lend->pos - 1]->lend = vec[vec[i - 1]->lend->pos - 2]->lend;
+						}
+					}
+					if(vec[i]->lend != nullptr) {
+						ans = max(ans, vec[i]->pos - vec[i]->lend->pos + 1);
+					}
+				}
+			}
+			for(int i = 0; i < vec.size(); i++) {
+				delete vec[i];
+			}
+			return ans;
+		}
+	}// namespace longest_valid_parentheses
 }// namespace leetcode::hw

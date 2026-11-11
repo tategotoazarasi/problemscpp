@@ -55,4 +55,30 @@ namespace leetcode::hw {
 			ASSERT_EQ(0, Solution::minimumCost(5, 4, 15, 0, 0));
 		}
 	}// namespace minimum_cost_to_acquire_required_items
+
+	namespace longest_valid_parentheses {
+		TEST(longest_valid_parentheses, case1) {
+			ASSERT_EQ(2, Solution::longestValidParentheses("(()"));
+		}
+
+		TEST(longest_valid_parentheses, case2) {
+			ASSERT_EQ(4, Solution::longestValidParentheses(")()())"));
+		}
+
+		TEST(longest_valid_parentheses, case3) {
+			ASSERT_EQ(0, Solution::longestValidParentheses(""));
+		}
+
+		TEST(longest_valid_parentheses, case4) {
+			ASSERT_EQ(6, Solution::longestValidParentheses("()(())"));
+		}
+
+		TEST(longest_valid_parentheses, case5) {
+			ASSERT_EQ(6, Solution::longestValidParentheses("(()())"));
+		}
+
+		TEST(longest_valid_parentheses, case6) {
+			ASSERT_EQ(8, Solution::longestValidParentheses("((()))())"));
+		}
+	}// namespace longest_valid_parentheses
 }// namespace leetcode::hw
