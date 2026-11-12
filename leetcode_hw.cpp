@@ -113,4 +113,31 @@ namespace leetcode::hw {
 			return ans;
 		}
 	}// namespace longest_valid_parentheses
+
+	namespace longest_strictly_increasing_or_strictly_decreasing_subarray {
+		int Solution::longestMonotonicSubarray(vector<int> &nums) {
+			int inc     = 1;
+			int dec     = 1;
+			int current = 1;
+			for(int i = 1; i < nums.size(); i++) {
+				if(nums[i] > nums[i - 1]) {
+					current++;
+					inc = max(inc, current);
+				} else {
+					current = 1;
+				}
+			}
+			current = 1;
+			for(int i = 1; i < nums.size(); i++) {
+				if(nums[i] < nums[i - 1]) {
+					current++;
+					dec = max(dec, current);
+				} else {
+					current = 1;
+				}
+			}
+
+			return max(inc, dec);
+		}
+	}// namespace longest_strictly_increasing_or_strictly_decreasing_subarray
 }// namespace leetcode::hw

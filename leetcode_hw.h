@@ -42,6 +42,13 @@ namespace leetcode::hw {
 			int static longestValidParentheses(string s);
 		};
 	}// namespace longest_valid_parentheses
+
+	namespace longest_strictly_increasing_or_strictly_decreasing_subarray {
+		class Solution {
+		public:
+			int static longestMonotonicSubarray(vector<int> &nums);
+		};
+	}// namespace longest_strictly_increasing_or_strictly_decreasing_subarray
 }// namespace leetcode::hw
 
 #endif//PROBLEMSCPP_LEETCODE_HW_H

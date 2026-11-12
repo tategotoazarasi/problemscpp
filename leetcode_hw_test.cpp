@@ -81,4 +81,26 @@ namespace leetcode::hw {
 			ASSERT_EQ(8, Solution::longestValidParentheses("((()))())"));
 		}
 	}// namespace longest_valid_parentheses
+
+	namespace longest_strictly_increasing_or_strictly_decreasing_subarray {
+		TEST(longest_strictly_increasing_or_strictly_decreasing_subarray, case1) {
+			vector nums = {1, 4, 3, 3, 2};
+			ASSERT_EQ(2, Solution::longestMonotonicSubarray(nums));
+		}
+
+		TEST(longest_strictly_increasing_or_strictly_decreasing_subarray, case2) {
+			vector nums = {3, 3, 3, 3};
+			ASSERT_EQ(1, Solution::longestMonotonicSubarray(nums));
+		}
+
+		TEST(longest_strictly_increasing_or_strictly_decreasing_subarray, case3) {
+			vector nums = {3, 2, 1};
+			ASSERT_EQ(3, Solution::longestMonotonicSubarray(nums));
+		}
+
+		TEST(longest_strictly_increasing_or_strictly_decreasing_subarray, case4) {
+			vector nums = {2, 1, 10};
+			ASSERT_EQ(2, Solution::longestMonotonicSubarray(nums));
+		}
+	}// namespace longest_strictly_increasing_or_strictly_decreasing_subarray
 }// namespace leetcode::hw
