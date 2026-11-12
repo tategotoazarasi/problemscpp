@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <climits>
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <unordered_map>
 #include <vector>
@@ -162,4 +163,81 @@ namespace nowcoder {
 			return 0;
 		}
 	}// namespace hj3
+
+	namespace realhw167 {
+		SemVer::SemVer(string str) {
+			this->str = str;
+			int l     = 0;
+			int r     = 0;
+			while(true) {
+				if(r >= str.length() || !isdigit(str[r])) {
+					stringstream ss;
+					for(int i = l; i < r; i++) {
+						ss << str[i];
+					}
+					if(this->ver1 == -1) {
+						ss >> this->ver1;
+					} else if(this->ver2 == -1) {
+						ss >> this->ver2;
+					} else if(this->ver3 == -1) {
+						ss >> this->ver3;
+					} else if(this->ver4 == -1) {
+						ss >> this->ver4;
+					}
+					l = r + 1;
+				}
+				if(r >= str.length() || str[r] == ' ') {
+					break;
+				}
+				r++;
+			}
+			l = r;
+			while(l < str.length() && !isdigit(str[l]))
+				l++;
+			r        = l;
+			int beta = 0;
+			while(r < str.length() && isdigit(str[r])) {
+				beta *= 10;
+				beta += str[r++] - '0';
+				this->beta = beta;
+			}
+		}
+
+		bool SemVer::operator==(const SemVer &b) const {
+			return this->ver1 == b.ver1 && this->ver2 == b.ver2 && this->ver3 == b.ver3 && this->ver4 == b.ver4 && this->beta == b.beta;
+		}
+
+		bool SemVer::operator<(const SemVer &b) const {
+			if(this->ver1 != b.ver1) {
+				return this->ver1 < b.ver1;
+			}
+			if(this->ver2 != b.ver2) {
+				return this->ver2 < b.ver2;
+			}
+			if(this->ver3 != b.ver3) {
+				return this->ver3 < b.ver3;
+			}
+			if(this->ver4 != b.ver4) {
+				return this->ver4 < b.ver4;
+			}
+			return this->beta < b.beta;
+		}
+
+		int main(std::istream &cin, std::ostream &cout) {
+			int n;
+			cin >> n;
+			vector<SemVer> vec(n);
+			string str;
+			getline(cin, str);
+			for(int i = 0; i < n; i++) {
+				getline(cin, str);
+				vec[i] = SemVer(str);
+			}
+			sort(vec.begin(), vec.end());
+			for(int i = 0; i < n; i++) {
+				cout << vec[i].str << endl;
+			}
+			return 0;
+		}
+	}// namespace realhw167
 };// namespace nowcoder

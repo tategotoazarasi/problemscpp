@@ -4,6 +4,7 @@
 
 #ifndef PROBLEMSCPP_NOWCODER_H
 #define PROBLEMSCPP_NOWCODER_H
+#include <climits>
 #include <iosfwd>
 #include <istream>
 #include <unordered_set>
@@ -38,6 +39,25 @@ namespace nowcoder {
 	namespace hj3 {
 		int main(std::istream &cin, std::ostream &cout);
 	}
+
+	namespace realhw167 {
+		class SemVer {
+		private:
+			int ver1 = -1;
+			int ver2 = -1;
+			int ver3 = -1;
+			int ver4 = -1;
+			int beta = INT_MAX;
+
+		public:
+			string str = "";
+			SemVer()   = default;
+			SemVer(string str);
+			bool operator==(const SemVer &b) const;
+			bool operator<(const SemVer &b) const;
+		};
+		int main(std::istream &cin, std::ostream &cout);
+	}// namespace realhw167
 };// namespace nowcoder
 
 
