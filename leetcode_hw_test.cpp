@@ -2,7 +2,9 @@
 // Created by wangzhiheng on 10/11/2026.
 //
 #include "leetcode_hw.h"
+
 #include <gtest/gtest.h>
+#include <unordered_set>
 
 using namespace std;
 
@@ -103,4 +105,33 @@ namespace leetcode::hw {
 			ASSERT_EQ(2, Solution::longestMonotonicSubarray(nums));
 		}
 	}// namespace longest_strictly_increasing_or_strictly_decreasing_subarray
+
+	namespace restore_ip_addresses {
+		TEST(restore_ip_addresses, case1) {
+			const unordered_set<string> answer = {"255.255.11.135", "255.255.111.35"};
+			const auto res                     = Solution::restoreIpAddresses("25525511135");
+			ASSERT_EQ(answer.size(), res.size());
+			for(const auto &addr: res) {
+				ASSERT_TRUE(answer.contains(addr));
+			}
+		}
+
+		TEST(restore_ip_addresses, case2) {
+			const unordered_set<string> answer = {"0.0.0.0"};
+			const auto res                     = Solution::restoreIpAddresses("0000");
+			ASSERT_EQ(answer.size(), res.size());
+			for(const auto &addr: res) {
+				ASSERT_TRUE(answer.contains(addr));
+			}
+		}
+
+		TEST(restore_ip_addresses, case3) {
+			const unordered_set<string> answer = {"1.0.10.23", "1.0.102.3", "10.1.0.23", "10.10.2.3", "101.0.2.3"};
+			const auto res                     = Solution::restoreIpAddresses("101023");
+			ASSERT_EQ(answer.size(), res.size());
+			for(const auto &addr: res) {
+				ASSERT_TRUE(answer.contains(addr));
+			}
+		}
+	}// namespace restore_ip_addresses
 }// namespace leetcode::hw

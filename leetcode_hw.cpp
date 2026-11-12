@@ -3,6 +3,8 @@
 //
 
 #include "leetcode_hw.h"
+
+#include <array>
 #include <iostream>
 #include <limits.h>
 #include <sstream>
@@ -140,4 +142,55 @@ namespace leetcode::hw {
 			return max(inc, dec);
 		}
 	}// namespace longest_strictly_increasing_or_strictly_decreasing_subarray
+
+	namespace restore_ip_addresses {
+		bool Solution::valid(const string &s, int a, int b) {
+			a++;
+			if(b > a && s[a] == '0') {
+				return false;
+			}
+			int num = 0;
+			while(a <= b) {
+				num *= 10;
+				num += s[a] - '0';
+				a++;
+			}
+			return num <= 255;
+		}
+		void Solution::dfs(const string &s, int cur, int remain, vector<string> &res, array<int, 3> his) {
+			if(remain == 0 && valid(s, cur, s.length() - 1)) {
+				ostringstream oss;
+				int his_cur = 0;
+				for(int i = 0; i < s.size(); i++) {
+					oss << s[i];
+					if(his_cur < 3 && his[his_cur] == i) {
+						his_cur++;
+						oss << '.';
+					}
+				}
+				res.push_back(oss.str());
+			} else {
+				for(int i = cur + 1; i <= cur + 3 && i < s.length(); i++) {
+					int rest = s.length() - i - 1;
+					if((3 * remain < rest) || remain > rest) {
+						continue;
+					}
+					if(valid(s, cur, i)) {
+						array<int, 3> new_his = his;
+						new_his[3 - remain]   = i;
+						dfs(s, i, remain - 1, res, new_his);
+					}
+				}
+			}
+		}
+		vector<string> Solution::restoreIpAddresses(string s) {
+			if(s.length() > 12) {
+				return {};
+			}
+			vector<string> ans = {};
+			array<int, 3> his  = {-1, -1, -1};
+			dfs(s, -1, 3, ans, his);
+			return ans;
+		}
+	}// namespace restore_ip_addresses
 }// namespace leetcode::hw

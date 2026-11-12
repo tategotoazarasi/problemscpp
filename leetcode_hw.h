@@ -49,6 +49,15 @@ namespace leetcode::hw {
 			int static longestMonotonicSubarray(vector<int> &nums);
 		};
 	}// namespace longest_strictly_increasing_or_strictly_decreasing_subarray
+
+	namespace restore_ip_addresses {
+		class Solution {
+		public:
+			static vector<string> restoreIpAddresses(string s);
+			static bool valid(const string &s, int a, int b);
+			static void dfs(const string &s, int cur, int remain, vector<string> &res, array<int, 3> his);
+		};
+	}// namespace restore_ip_addresses
 }// namespace leetcode::hw
 
 #endif//PROBLEMSCPP_LEETCODE_HW_H
