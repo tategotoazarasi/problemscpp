@@ -139,4 +139,27 @@ namespace nowcoder {
 			return 0;
 		}
 	}// namespace realhw236
+
+	namespace hj3 {
+		int main(std::istream &cin, std::ostream &cout) {
+			int n;
+			cin >> n;
+			unordered_set<int> us = {};
+			int a;
+			while(n--) {
+				cin >> a;
+				us.insert(a);
+			}
+			vector<int> vec = vector<int>(us.size());
+			int cur         = 0;
+			for(auto i: us) {
+				vec[cur++] = i;
+			}
+			sort(vec.begin(), vec.end());
+			for(auto i: vec) {
+				cout << i << endl;
+			}
+			return 0;
+		}
+	}// namespace hj3
 };// namespace nowcoder

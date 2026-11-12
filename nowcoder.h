@@ -34,6 +34,10 @@ namespace nowcoder {
 		void dfs(int budget, int n, const vector<Product> &vec, int cur, int fulfillment, int total_price, const unordered_set<int> &categories, int discount, int *ans);
 		int main(std::istream &cin, std::ostream &cout);
 	}// namespace realhw236
+
+	namespace hj3 {
+		int main(std::istream &cin, std::ostream &cout);
+	}
 };// namespace nowcoder
 
 

@@ -76,4 +76,14 @@ namespace nowcoder {
 			ASSERT_EQ("230", ans);
 		}
 	}// namespace realhw236
+
+	namespace hj3 {
+		TEST(hj3, case1) {
+			std::istringstream in("3 2 2 1");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1\n2\n", ans);
+		}
+	}// namespace hj3
 };// namespace nowcoder
