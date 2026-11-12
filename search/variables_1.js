@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['b_0',['b',['../df/d9c/a00958.html#a567a53696628ec73eb65cabd484946a3',1,'acwing::acwing1978::path::b'],['../d8/d15/a01218.html#a7c26d176f2224e6ba3633990af031358',1,'acwing::acwing4217::b'],['../dc/ded/a01290.html#adbe67de05abc4c41c2a1f0da190a1219',1,'acwing::acwing4298::b'],['../d4/d1b/a03282.html#a0ac63f32cc8ba3b3fbd77f139d5b3b4e',1,'liverpool::bestrelayteam::player::b']]],
-  ['b_5fsum_1',['b_sum',['../d7/d4f/a03746.html#a842cf41e087a79bf1301cc2aedd2573a',1,'pat::b::b1085::school']]],
-  ['back_2',['back',['../d8/d15/a01218.html#a9f75fcdc8bb6d3c92ad13531a572f3fc',1,'acwing::acwing4217']]],
-  ['big_3',['big',['../df/d0c/a02634.html#a946b80b4797c17c4ab3ce498c536a05c',1,'leetcode::design_parking_system::ParkingSystem']]],
-  ['bikes_4',['bikes',['../d0/db2/a03822.html#a42ce29cf9e390887deaf58a151a08116',1,'pat::a::a1018::frame']]]
+  ['b_0',['b',['../df/d88/a00962.html#a567a53696628ec73eb65cabd484946a3',1,'acwing::acwing1978::path::b'],['../de/d7e/a01222.html#a7c26d176f2224e6ba3633990af031358',1,'acwing::acwing4217::b'],['../d7/d88/a01294.html#adbe67de05abc4c41c2a1f0da190a1219',1,'acwing::acwing4298::b'],['../df/d2e/a03294.html#a0ac63f32cc8ba3b3fbd77f139d5b3b4e',1,'liverpool::bestrelayteam::player::b']]],
+  ['b_5fsum_1',['b_sum',['../dc/d6d/a03762.html#a842cf41e087a79bf1301cc2aedd2573a',1,'pat::b::b1085::school']]],
+  ['back_2',['back',['../de/d7e/a01222.html#a9f75fcdc8bb6d3c92ad13531a572f3fc',1,'acwing::acwing4217']]],
+  ['beta_3',['beta',['../da/daf/a03718.html#a82bd31eaf4ddf1fadd954621cba6e385',1,'nowcoder::realhw167::SemVer']]],
+  ['big_4',['big',['../d8/dab/a02638.html#a946b80b4797c17c4ab3ce498c536a05c',1,'leetcode::design_parking_system::ParkingSystem']]],
+  ['bikes_5',['bikes',['../d1/d5c/a03838.html#a42ce29cf9e390887deaf58a151a08116',1,'pat::a::a1018::frame']]]
 ];
