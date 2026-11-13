@@ -58,6 +58,20 @@ namespace leetcode::hw {
 			static void dfs(const string &s, int cur, int remain, vector<string> &res, array<int, 3> his);
 		};
 	}// namespace restore_ip_addresses
+
+	namespace count_non_decreasing_subarrays_after_k_operations {
+		class Solution {
+		public:
+			long long static countNonDecreasingSubarrays(vector<int> &nums, int k);
+		};
+	}// namespace count_non_decreasing_subarrays_after_k_operations
+
+	namespace candy {
+		class Solution {
+		public:
+			int static candy(vector<int> &ratings);
+		};
+	}// namespace candy
 }// namespace leetcode::hw
 
 #endif//PROBLEMSCPP_LEETCODE_HW_H

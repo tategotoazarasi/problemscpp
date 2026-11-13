@@ -134,4 +134,33 @@ namespace leetcode::hw {
 			}
 		}
 	}// namespace restore_ip_addresses
+
+	namespace count_non_decreasing_subarrays_after_k_operations {
+		TEST(count_non_decreasing_subarrays_after_k_operations, case1) {
+			vector<int> nums = {6, 3, 1, 2, 4, 4};
+			ASSERT_EQ(17, Solution::countNonDecreasingSubarrays(nums, 7));
+		}
+
+		TEST(count_non_decreasing_subarrays_after_k_operations, case2) {
+			vector<int> nums = {6, 3, 1, 3, 6};
+			ASSERT_EQ(12, Solution::countNonDecreasingSubarrays(nums, 4));
+		}
+	}// namespace count_non_decreasing_subarrays_after_k_operations
+
+	namespace candy {
+		TEST(candy, case1) {
+			vector ratings = {1, 0, 2};
+			ASSERT_EQ(5, Solution::candy(ratings));
+		}
+
+		TEST(candy, case2) {
+			vector ratings = {1, 2, 2};
+			ASSERT_EQ(4, Solution::candy(ratings));
+		}
+
+		TEST(candy, case3) {
+			vector ratings = {1, 2, 87, 87, 87, 2, 1};
+			ASSERT_EQ(13, Solution::candy(ratings));
+		}
+	}// namespace candy
 }// namespace leetcode::hw

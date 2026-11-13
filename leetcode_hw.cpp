@@ -193,4 +193,36 @@ namespace leetcode::hw {
 			return ans;
 		}
 	}// namespace restore_ip_addresses
+
+	namespace count_non_decreasing_subarrays_after_k_operations {
+		long long Solution::countNonDecreasingSubarrays(vector<int> &nums, int k) {
+			return 0;
+		}
+	}// namespace count_non_decreasing_subarrays_after_k_operations
+
+	namespace candy {
+		int Solution::candy(vector<int> &ratings) {
+			vector<int> mins    = {};
+			vector<int> candies = vector<int>(ratings.size(), 0);
+			for(int i = 0; i < ratings.size(); i++) {
+				if(ratings[i] <= (i + 1 < ratings.size() ? ratings[i + 1] : INT_MAX) && ratings[i] <= (i - 1 >= 0 ? ratings[i - 1] : INT_MAX)) {
+					mins.push_back(i);
+					candies[i] = 1;
+				}
+			}
+			for(const int i: mins) {
+				for(int j = i + 1; j < ratings.size() && ratings[j] > ratings[j - 1]; j++) {
+					candies[j] = max(candies[j], candies[j - 1] + 1);
+				}
+				for(int j = i - 1; j >= 0 && ratings[j] > ratings[j + 1]; j--) {
+					candies[j] = max(candies[j], candies[j + 1] + 1);
+				}
+			}
+			int sum = 0;
+			for(const int i: candies) {
+				sum += i;
+			}
+			return sum;
+		}
+	}// namespace candy
 }// namespace leetcode::hw
