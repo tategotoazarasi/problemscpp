@@ -5,6 +5,7 @@
 #include "leetcode_hw.h"
 
 #include <array>
+#include <deque>
 #include <iostream>
 #include <limits.h>
 #include <sstream>
@@ -196,7 +197,32 @@ namespace leetcode::hw {
 
 	namespace count_non_decreasing_subarrays_after_k_operations {
 		long long Solution::countNonDecreasingSubarrays(vector<int> &nums, int k) {
-			return 0;
+			long long cost                 = 0;
+			deque<pair<int, long long>> dq = {};
+			int l                          = nums.size() - 1;
+			int r                          = nums.size() - 1;
+			long long ans                  = 0;
+			while(l >= 0) {
+				long long cnt = 1;
+				while(!dq.empty() && dq.back().first < nums[l]) {
+					auto [v, c] = dq.back();
+					dq.pop_back();
+					cost += (nums[l] - v) * c;
+					cnt += c;
+				}
+				dq.push_back(make_pair(nums[l], cnt));
+				while(cost > k) {
+					auto &[v, c] = dq.front();
+					cost -= (v - nums[r]);
+					if(--c == 0) {
+						dq.pop_front();
+					}
+					r--;
+				}
+				ans += r - l + 1;
+				l--;
+			}
+			return ans;
 		}
 	}// namespace count_non_decreasing_subarrays_after_k_operations
 
