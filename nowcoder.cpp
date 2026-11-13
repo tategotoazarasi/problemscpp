@@ -240,4 +240,23 @@ namespace nowcoder {
 			return 0;
 		}
 	}// namespace realhw167
+
+	namespace hj4 {
+		int main(std::istream &cin, std::ostream &cout) {
+			string str;
+			cin >> str;
+			int line_num = str.length() / 8;
+			if(str.length() % 8 != 0) {
+				line_num++;
+			}
+			for(int i = 0; i < line_num * 8; i++) {
+				cout << ((i < str.length()) ? str[i] : '0');
+				if(i % 8 == 7) {
+					cout << endl;
+				}
+			}
+
+			return 0;
+		}
+	}// namespace hj4
 };// namespace nowcoder

@@ -104,4 +104,22 @@ namespace nowcoder {
 			ASSERT_EQ("0 beta1\n0 beta1\n0 beta500\n0 beta1000\n0 beta1000\n0\n0\n0.0 beta1\n0.0 beta500\n0.0 beta1000\n0.0\n0.0.0 beta1\n0.0.0 beta500\n0.0.0 beta1000\n0.0.0\n0.0.0.0 beta1\n0.0.0.0 beta500\n0.0.0.0 beta1000\n0.0.0.0\n0.1000 beta1\n0.1000 beta1000\n0.1000\n0.1000.0 beta1\n0.1000.0 beta1000\n0.1000.0\n0.1000.0.1000 beta1\n0.1000.0.1000 beta1000\n0.1000.0.1000\n1000 beta1\n1000 beta37\n1000 beta500\n1000 beta542\n1000 beta607\n1000 beta790\n1000 beta808\n1000 beta923\n1000 beta985\n1000 beta1000\n1000\n1000\n1000\n1000\n1000\n1000\n1000\n1000.0 beta24\n1000.0 beta149\n1000.0 beta906\n1000.0\n1000.0\n1000.0\n1000.0\n1000.0\n1000.0\n1000.0\n1000.0\n1000.0.1000 beta56\n1000.0.1000 beta524\n1000.0.1000 beta593\n1000.0.1000 beta605\n1000.0.1000 beta707\n1000.0.1000 beta844\n1000.0.1000 beta854\n1000.0.1000 beta859\n1000.0.1000 beta985\n1000.0.1000 beta995\n1000.0.1000\n1000.0.1000\n1000.0.1000\n1000.0.1000\n1000.0.1000.0 beta114\n1000.0.1000.0 beta297\n1000.0.1000.0 beta303\n1000.0.1000.0 beta440\n1000.0.1000.0 beta572\n1000.0.1000.0 beta614\n1000.0.1000.0 beta625\n1000.0.1000.0 beta646\n1000.0.1000.0 beta712\n1000.0.1000.0 beta822\n1000.0.1000.0 beta858\n1000.0.1000.0 beta966\n1000.0.1000.0 beta977\n1000.0.1000.0\n1000.0.1000.0\n1000.0.1000.0\n1000.0.1000.0\n1000.0.1000.0\n1000.1000 beta1\n1000.1000 beta500\n1000.1000 beta1000\n1000.1000\n1000.1000.1000 beta1\n1000.1000.1000 beta500\n1000.1000.1000 beta1000\n1000.1000.1000\n1000.1000.1000.1000 beta1\n1000.1000.1000.1000 beta500\n1000.1000.1000.1000 beta1000\n1000.1000.1000.1000\n", ans);
 		}
 	}// namespace realhw167
+
+	namespace hj4 {
+		TEST(hj4, case1) {
+			std::istringstream in("hellonowcoder");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("hellonow\ncoder000\n", ans);
+		}
+
+		TEST(hj4, case2) {
+			std::istringstream in("0");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("00000000\n", ans);
+		}
+	}// namespace hj4
 };// namespace nowcoder
