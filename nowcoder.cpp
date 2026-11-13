@@ -259,4 +259,34 @@ namespace nowcoder {
 			return 0;
 		}
 	}// namespace hj4
+
+	namespace realhw168 {
+		int main(std::istream &cin, std::ostream &cout) {
+			int n, m;
+			cin >> n >> m;
+			vector<vector<int>> graph(n, vector<int>(n, 1e9));
+			for(int i = 0; i < m; i++) {
+				int a, b, c;
+				cin >> a >> b >> c;
+				graph[a][b] = min(graph[a][b], c);
+				graph[b][a] = min(graph[b][a], c);
+			}
+			for(int i = 0; i < n; i++) {
+				graph[i][i] = 0;
+			}
+			for(int k = 0; k < n; k++)
+				for(int i = 0; i < n; i++)
+					for(int j = 0; j < n; j++)
+						graph[i][j] = min(graph[i][k] + graph[k][j], graph[i][j]);
+
+			int k;
+			cin >> k;
+			while(k--) {
+				int i, j;
+				cin >> i >> j;
+				cout << (graph[i][j] == 1e9 ? 0 : graph[i][j]) << endl;
+			}
+			return 0;
+		}
+	}// namespace realhw168
 };// namespace nowcoder

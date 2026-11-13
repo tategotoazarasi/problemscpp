@@ -122,4 +122,30 @@ namespace nowcoder {
 			ASSERT_EQ("00000000\n", ans);
 		}
 	}// namespace hj4
+
+	namespace realhw168 {
+		TEST(realhw168, case1) {
+			std::istringstream in("5 3\n0 1 10\n1 2 20\n3 4 40\n3\n0 2\n0 3\n3 4");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("30\n0\n40\n", ans);
+		}
+
+		TEST(realhw168, case2) {
+			std::istringstream in("8 62\n0 1 56\n6 4 1\n0 0 67\n3 3 88\n2 1 11\n2 7 38\n1 7 86\n7 6 55\n6 2 93\n1 0 11\n2 7 99\n0 4 75\n1 2 76\n5 2 65\n4 5 14\n4 7 81\n2 3 29\n5 5 4\n7 5 83\n6 1 60\n3 1 85\n0 3 60\n2 0 79\n3 6 71\n0 3 6\n4 0 19\n4 4 4\n4 4 65\n5 2 87\n5 2 69\n1 3 34\n2 5 20\n2 5 91\n4 1 67\n5 5 92\n2 5 4\n3 0 12\n0 3 21\n4 6 19\n4 2 60\n3 3 86\n3 5 47\n5 2 16\n4 1 100\n6 3 65\n1 4 29\n4 4 78\n1 3 87\n5 3 9\n0 7 93\n1 1 16\n1 3 65\n1 5 24\n0 7 23\n6 2 29\n5 7 54\n7 0 90\n6 7 32\n1 7 86\n0 5 67\n1 5 53\n1 4 65\n1\n4 1");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("29\n", ans);
+		}
+
+		TEST(realhw168, case3) {
+			std::istringstream in("8 35\n3 0 94\n4 2 59\n0 0 35\n4 5 75\n1 5 6\n4 0 94\n2 5 3\n2 5 76\n2 0 73\n1 2 44\n0 6 68\n4 6 4\n2 1 83\n3 5 95\n6 2 65\n5 2 97\n4 7 9\n3 3 72\n7 4 59\n6 5 92\n3 4 75\n0 5 61\n7 6 64\n4 2 23\n6 7 68\n0 4 94\n0 6 9\n1 7 27\n0 0 70\n3 2 53\n6 6 82\n7 4 45\n7 4 5\n3 4 48\n6 4 93\n7\n3 6\n1 7\n5 6\n3 3\n7 7\n4 4\n2 1");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("52\n27\n30\n0\n0\n0\n9\n", ans);
+		}
+	}// namespace realhw168
 };// namespace nowcoder
