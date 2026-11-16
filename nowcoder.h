@@ -7,6 +7,7 @@
 #include <climits>
 #include <iosfwd>
 #include <istream>
+#include <unordered_map>
 #include <unordered_set>
 #include <vector>
 using namespace std;
@@ -70,6 +71,14 @@ namespace nowcoder {
 	namespace hj5 {
 		int main(std::istream &cin, std::ostream &cout);
 	}
+
+	namespace realhw169 {
+		struct PairHash {
+			std::size_t operator()(const std::pair<long long, long long> &p) const noexcept;
+		};
+		long long dfs(const vector<long long> &vec, long long b, long long i, unordered_map<pair<long long, long long>, long long, PairHash> &cache);
+		int main(std::istream &cin, std::ostream &cout);
+	}// namespace realhw169
 };// namespace nowcoder
 
 

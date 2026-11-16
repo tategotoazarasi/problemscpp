@@ -158,4 +158,22 @@ namespace nowcoder {
 			ASSERT_EQ("64147", ans);
 		}
 	}// namespace hj5
+
+	namespace realhw169 {
+		TEST(realhw169, case1) {
+			std::istringstream in("10\n1 2");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("4", ans);
+		}
+
+		TEST(realhw169, case2) {
+			std::istringstream in("100\n2 2 1 1 2 1 1 1 1");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("18808141716", ans);
+		}
+	}// namespace realhw169
 };// namespace nowcoder

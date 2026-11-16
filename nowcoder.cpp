@@ -303,4 +303,52 @@ namespace nowcoder {
 			return 0;
 		}
 	}// namespace hj5
+
+	namespace realhw169 {
+		std::size_t PairHash::operator()(const std::pair<long long, long long> &p) const noexcept {
+			std::size_t h1 = std::hash<int>{}(p.first);
+			std::size_t h2 = std::hash<int>{}(p.second);
+			h1 ^= h2 + 0x9e3779b9u + (h1 << 6) + (h1 >> 2);
+			return h1;
+		}
+		long long dfs(const vector<long long> &vec, long long b, long long i, unordered_map<pair<long long, long long>, long long, PairHash> &cache) {
+			auto pair = make_pair(b, i);
+			if(cache.contains(pair)) {
+				return cache[pair];
+			}
+			if(b < 0) {
+				cache[pair] = 0;
+				return 0;
+			}
+			if(i == 0) {
+				if(b % vec[i] == 0) {
+					cache[pair] = 1;
+					return 1;
+				} else {
+					cache[pair] = 0;
+					return 0;
+				}
+			}
+			long long ans = 0;
+			for(int j = 0; j <= b / vec[i]; j++) {
+				ans += dfs(vec, b - j * vec[i], i - 1, cache);
+			}
+			cache[pair] = ans;
+			return ans;
+		}
+		int main(std::istream &cin, std::ostream &cout) {
+			long long b;
+			cin >> b;
+			vector<long long> vec = {};
+			long long a;
+			while(cin >> a) {
+				vec.push_back(a);
+				b -= a;
+			}
+			unordered_map<pair<long long, long long>, long long, PairHash> cache = {};
+			long long ans                                                        = dfs(vec, b, static_cast<long long>(vec.size() - 1), cache);
+			cout << ans;
+			return 0;
+		}
+	}// namespace realhw169
 };// namespace nowcoder
