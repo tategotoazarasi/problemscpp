@@ -148,4 +148,14 @@ namespace nowcoder {
 			ASSERT_EQ("52\n27\n30\n0\n0\n0\n9\n", ans);
 		}
 	}// namespace realhw168
+
+	namespace hj5 {
+		TEST(hj5, case1) {
+			std::istringstream in("0xFA93");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("64147", ans);
+		}
+	}// namespace hj5
 };// namespace nowcoder

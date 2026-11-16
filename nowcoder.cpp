@@ -289,4 +289,18 @@ namespace nowcoder {
 			return 0;
 		}
 	}// namespace realhw168
+
+	namespace hj5 {
+		int main(std::istream &cin, std::ostream &cout) {
+			string input;
+			cin >> input;
+			unsigned ans = 0;
+			for(int i = 2; i < input.length(); i++) {
+				ans <<= 4;
+				ans += isalpha(input[i]) ? (input[i] - 'A' + 10) : (input[i] - '0');
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace hj5
 };// namespace nowcoder
