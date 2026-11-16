@@ -163,4 +163,14 @@ namespace leetcode::hw {
 			ASSERT_EQ(13, Solution::candy(ratings));
 		}
 	}// namespace candy
+
+	namespace calculate_digit_sum_of_a_string {
+		TEST(calculate_digit_sum_of_a_string, case1) {
+			ASSERT_EQ("135", Solution::digitSum("11111222223", 3));
+		}
+
+		TEST(calculate_digit_sum_of_a_string, case2) {
+			ASSERT_EQ("000", Solution::digitSum("00000000", 3));
+		}
+	}// namespace calculate_digit_sum_of_a_string
 }// namespace leetcode::hw

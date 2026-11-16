@@ -251,4 +251,22 @@ namespace leetcode::hw {
 			return sum;
 		}
 	}// namespace candy
+
+	namespace calculate_digit_sum_of_a_string {
+		string Solution::digitSum(string s, int k) {
+			while(s.length() > k) {
+				ostringstream oss;
+				int num = 0;
+				for(int i = 0; i < s.length(); i++) {
+					num += s[i] - '0';
+					if((i + 1) % k == 0 || i == s.length() - 1) {
+						oss << num;
+						num = 0;
+					}
+				}
+				s = oss.str();
+			}
+			return s;
+		}
+	}// namespace calculate_digit_sum_of_a_string
 }// namespace leetcode::hw
