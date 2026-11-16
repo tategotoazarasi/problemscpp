@@ -173,4 +173,26 @@ namespace leetcode::hw {
 			ASSERT_EQ("000", Solution::digitSum("00000000", 3));
 		}
 	}// namespace calculate_digit_sum_of_a_string
+
+	namespace largest_number {
+		TEST(largest_number, case1) {
+			vector nums = {10, 2};
+			ASSERT_EQ("210", Solution::largestNumber(nums));
+		}
+
+		TEST(largest_number, case2) {
+			vector nums = {3, 30, 34, 5, 9};
+			ASSERT_EQ("9534330", Solution::largestNumber(nums));
+		}
+
+		TEST(largest_number, case3) {
+			vector nums = {34323, 3432};
+			ASSERT_EQ("343234323", Solution::largestNumber(nums));
+		}
+
+		TEST(largest_number, case4) {
+			vector nums = {0, 0};
+			ASSERT_EQ("0", Solution::largestNumber(nums));
+		}
+	}// namespace largest_number
 }// namespace leetcode::hw

@@ -79,6 +79,13 @@ namespace leetcode::hw {
 			string static digitSum(string s, int k);
 		};
 	}// namespace calculate_digit_sum_of_a_string
+
+	namespace largest_number {
+		class Solution {
+		public:
+			string static largestNumber(vector<int> &nums);
+		};
+	}// namespace largest_number
 }// namespace leetcode::hw
 
 #endif//PROBLEMSCPP_LEETCODE_HW_H

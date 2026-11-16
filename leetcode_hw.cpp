@@ -4,11 +4,13 @@
 
 #include "leetcode_hw.h"
 
+#include <algorithm>
 #include <array>
 #include <deque>
 #include <iostream>
 #include <limits.h>
 #include <sstream>
+#include <stack>
 
 using namespace std;
 
@@ -269,4 +271,39 @@ namespace leetcode::hw {
 			return s;
 		}
 	}// namespace calculate_digit_sum_of_a_string
+
+	namespace largest_number {
+		string Solution::largestNumber(vector<int> &nums) {
+			ostringstream ss;
+			vector<string> strs = vector<string>(nums.size());
+			for(int i = 0; i < nums.size(); i++) {
+				ss << nums[i];
+				strs[i] = ss.str();
+				ss      = ostringstream();
+			}
+			ranges::sort(strs, [](const string &str1, const string &str2) {
+				ostringstream oss1, oss2;
+				oss1 << str1 << str2;
+				oss2 << str2 << str1;
+				return oss1.str() > oss2.str();
+			});
+			for(const auto &str: strs) {
+				ss << str;
+			}
+			string str = ss.str();
+			deque<char> stk;
+			for(char c: str) {
+				if(stk.size() == 1 && stk.back() == '0') {
+					stk.pop_back();
+				}
+				stk.push_back(c);
+			}
+			ss = ostringstream();
+			while(!stk.empty()) {
+				ss << stk.front();
+				stk.pop_front();
+			}
+			return ss.str();
+		}
+	}// namespace largest_number
 }// namespace leetcode::hw
