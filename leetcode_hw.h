@@ -86,6 +86,13 @@ namespace leetcode::hw {
 			string static largestNumber(vector<int> &nums);
 		};
 	}// namespace largest_number
+
+	namespace brick_wall {
+		class Solution {
+		public:
+			int static leastBricks(vector<vector<int>> &wall);
+		};
+	}// namespace brick_wall
 }// namespace leetcode::hw
 
 #endif//PROBLEMSCPP_LEETCODE_HW_H

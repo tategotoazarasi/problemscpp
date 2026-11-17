@@ -195,4 +195,29 @@ namespace leetcode::hw {
 			ASSERT_EQ("0", Solution::largestNumber(nums));
 		}
 	}// namespace largest_number
+
+	namespace brick_wall {
+		TEST(brick_wall, case1) {
+			vector<vector<int>> wall = {
+			        {1, 2, 2, 1},
+			        {3, 1, 2},
+			        {1, 3, 2},
+			        {2, 4},
+			        {3, 1, 2},
+			        {1, 3, 1, 1}};
+			ASSERT_EQ(2, Solution::leastBricks(wall));
+		}
+		TEST(brick_wall, case2) {
+			vector<vector<int>> wall = {
+			        {1},
+			        {1},
+			        {1}};
+			ASSERT_EQ(3, Solution::leastBricks(wall));
+		}
+		TEST(brick_wall, case3) {
+			vector<vector<int>> wall = {
+			        {2147483647, 2147483647, 2147483647, 2147483647}};
+			ASSERT_EQ(0, Solution::leastBricks(wall));
+		}
+	}// namespace brick_wall
 }// namespace leetcode::hw

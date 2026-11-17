@@ -9,8 +9,10 @@
 #include <deque>
 #include <iostream>
 #include <limits.h>
+#include <map>
 #include <sstream>
 #include <stack>
+#include <unordered_map>
 
 using namespace std;
 
@@ -306,4 +308,29 @@ namespace leetcode::hw {
 			return ss.str();
 		}
 	}// namespace largest_number
+
+	namespace brick_wall {
+		int Solution::leastBricks(vector<vector<int>> &wall) {
+			unsigned long width = 0;
+			unsigned long lines = wall.size();
+			for(const auto &w: wall[0]) {
+				width += w;
+			}
+			map<unsigned long, unsigned long> edge = {};
+			for(const auto &line: wall) {
+				unsigned long current = 0;
+				for(const auto &brick: line) {
+					edge[current + brick]++;
+					current += brick;
+				}
+			}
+			unsigned long ans = lines;
+			for(const auto &[k, v]: edge) {
+				if(k >= width)
+					break;
+				ans = min(ans, lines - v);
+			}
+			return ans;
+		}
+	}// namespace brick_wall
 }// namespace leetcode::hw
