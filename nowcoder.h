@@ -79,6 +79,10 @@ namespace nowcoder {
 		long long dfs(const vector<long long> &vec, long long b, long long i, unordered_map<pair<long long, long long>, long long, PairHash> &cache);
 		int main(std::istream &cin, std::ostream &cout);
 	}// namespace realhw169
+
+	namespace hj6 {
+		int main(std::istream &cin, std::ostream &cout);
+	}
 };// namespace nowcoder
 
 

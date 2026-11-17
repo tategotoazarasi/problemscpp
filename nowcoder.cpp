@@ -6,6 +6,7 @@
 
 #include <algorithm>
 #include <climits>
+#include <cmath>
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -351,4 +352,33 @@ namespace nowcoder {
 			return 0;
 		}
 	}// namespace realhw169
+
+	namespace hj6 {
+		int main(std::istream &cin, std::ostream &cout) {
+			unsigned long input = 0;
+			cin >> input;
+			auto r = static_cast<unsigned long>(sqrt(input));
+			while(r * r < input) {
+				r++;
+			}
+			vector<bool> is_prime(r + 1, true);
+			for(int i = 2; i <= r; i++) {
+				if(!is_prime[i])
+					continue;
+				for(int j = 2; i * j <= r; j++) {
+					is_prime[i * j] = false;
+				}
+			}
+			for(int i = 2; i <= r; i++) {
+				while(is_prime[i] && input % i == 0 && input != 1) {
+					cout << i << ' ';
+					input /= i;
+				}
+			}
+			if(input != 1) {
+				cout << input;
+			}
+			return 0;
+		}
+	}// namespace hj6
 };// namespace nowcoder
