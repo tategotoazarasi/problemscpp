@@ -8,7 +8,9 @@
 #include <climits>
 #include <cmath>
 #include <iostream>
+#include <list>
 #include <sstream>
+#include <stack>
 #include <string>
 #include <unordered_map>
 #include <vector>
@@ -381,4 +383,37 @@ namespace nowcoder {
 			return 0;
 		}
 	}// namespace hj6
+
+	namespace realhw117 {
+		int main(std::istream &cin, std::ostream &cout) {
+			int n, m;
+			cin >> n;
+			vector<pair<int, int>> vec(n);
+			for(int i = 0; i < n; i++) {
+				int in;
+				cin >> in;
+				vec[i] = make_pair(in, i - 1);
+			}
+			cin >> m;
+			for(int i = 0; i < m; i++) {
+				int u;
+				cin >> u;
+				auto &[v, next] = vec[u];
+				while(next >= 0 && v == vec[next].first) {
+					v++;
+					const int tmp   = next;
+					next            = vec[next].second;
+					vec[tmp].second = -2;
+				}
+			}
+			int ans = 0;
+			for(int i = 0; i < n; i++) {
+				if(vec[i].second != -2) {
+					ans++;
+				}
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace realhw117
 };// namespace nowcoder

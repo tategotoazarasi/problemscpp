@@ -194,4 +194,30 @@ namespace nowcoder {
 			ASSERT_EQ("47", ans);
 		}
 	}// namespace hj6
+
+	namespace realhw117 {
+		TEST(realhw117, case1) {
+			std::istringstream in("5\n2 2 2 1 1\n3\n4 1 2");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2", ans);
+		}
+
+		TEST(realhw117, case2) {
+			std::istringstream in("12\n7 5 4 3 2 1 1 9 8 7 7 10\n4\n0 10 11 6");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("3", ans);
+		}
+
+		TEST(realhw117, case3) {
+			std::istringstream in("6\n5 4 3 2 1 1\n1\n5");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("1", ans);
+		}
+	}// namespace realhw117
 };// namespace nowcoder
