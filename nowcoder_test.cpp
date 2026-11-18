@@ -220,4 +220,22 @@ namespace nowcoder {
 			ASSERT_EQ("1", ans);
 		}
 	}// namespace realhw117
+
+	namespace hj7 {
+		TEST(hj7, case1) {
+			std::istringstream in("5.5");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("6", ans);
+		}
+
+		TEST(hj7, case2) {
+			std::istringstream in("2.499");
+			auto out = std::ostringstream();
+			main(in, out);
+			const auto ans = out.str();
+			ASSERT_EQ("2", ans);
+		}
+	}// namespace hj7
 };// namespace nowcoder

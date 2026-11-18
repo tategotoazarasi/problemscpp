@@ -416,4 +416,13 @@ namespace nowcoder {
 			return 0;
 		}
 	}// namespace realhw117
+
+	namespace hj7 {
+		int main(std::istream &cin, std::ostream &cout) {
+			long double input;
+			cin >> input;
+			cout << std::round(input);
+			return 0;
+		}
+	}// namespace hj7
 };// namespace nowcoder
