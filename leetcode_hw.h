@@ -4,6 +4,7 @@
 
 #ifndef PROBLEMSCPP_LEETCODE_HW_H
 #define PROBLEMSCPP_LEETCODE_HW_H
+#include <set>
 #include <string>
 #include <vector>
 
@@ -100,6 +101,38 @@ namespace leetcode::hw {
 			static int minChanges(string s);
 		};
 	}// namespace minimum_number_of_changes_to_make_binary_string_beautiful
+
+	namespace minimum_number_of_visited_cells_in_a_grid {
+		class Frame {
+		public:
+			int i;
+			int j;
+			int steps;
+			int dist;
+			Frame(int i, int j, int steps, int dist): i(i), j(j), steps(steps), dist(dist) {};
+			bool operator==(const Frame &f) const {
+				return this->i == f.i && this->j == f.j;
+			}
+			bool operator<(const Frame &f) const {
+				if(this->steps != f.steps) {
+					return this->steps > f.steps;
+				} else {
+					return this->dist > f.dist;
+				}
+			}
+		};
+
+		class Solution {
+		private:
+			static int m;
+			static int n;
+			static vector<set<int>> cols;
+			static vector<set<int>> rows;
+
+		public:
+			int static minimumVisitedCells(vector<vector<int>> &grid);
+		};
+	}// namespace minimum_number_of_visited_cells_in_a_grid
 }// namespace leetcode::hw
 
 #endif//PROBLEMSCPP_LEETCODE_HW_H

@@ -10,6 +10,7 @@
 #include <iostream>
 #include <limits.h>
 #include <map>
+#include <queue>
 #include <sstream>
 #include <stack>
 #include <unordered_map>
@@ -362,4 +363,47 @@ namespace leetcode::hw {
 			return ans;
 		}
 	}// namespace minimum_number_of_changes_to_make_binary_string_beautiful
+
+	namespace minimum_number_of_visited_cells_in_a_grid {
+		int Solution::m;
+		int Solution::n;
+		vector<set<int>> Solution::cols;
+		vector<set<int>> Solution::rows;
+		int Solution::minimumVisitedCells(vector<vector<int>> &grid) {
+			int m        = grid.size();
+			int n        = grid[0].size();
+			set<int> tmp = {};
+			for(int i = 0; i < n; i++) {
+				tmp.insert(i);
+			};
+			rows = vector<set<int>>(m, tmp);
+			tmp.clear();
+			for(int i = 0; i < m; i++) {
+				tmp.insert(i);
+			};
+			cols                     = vector<set<int>>(n, tmp);
+			priority_queue<Frame> pq = {};
+			pq.push(Frame(0, 0, 1, m + n));
+			while(!pq.empty()) {
+				Frame frame = pq.top();
+				pq.pop();
+				if(frame.i == m - 1 && frame.j == n - 1) {
+					return frame.steps;
+				}
+				auto &row = rows[frame.i];
+				auto k    = row.lower_bound(frame.j + 1);
+				while(k != row.end() && (*k) <= grid[frame.i][frame.j] + frame.j) {
+					pq.push(Frame(frame.i, *k, frame.steps + 1, m + n - frame.i - *k));
+					k = row.erase(k);
+				}
+				auto &col = cols[frame.j];
+				k         = col.lower_bound(frame.i + 1);
+				while(k != col.end() && *k <= grid[frame.i][frame.j] + frame.i) {
+					pq.push(Frame(*k, frame.j, frame.steps + 1, m + n - *k - frame.j));
+					k = col.erase(k);
+				}
+			}
+			return -1;
+		}
+	}// namespace minimum_number_of_visited_cells_in_a_grid
 }// namespace leetcode::hw
