@@ -425,4 +425,25 @@ namespace nowcoder {
 			return 0;
 		}
 	}// namespace hj7
+
+	namespace realhw118 {
+		int main(std::istream &cin, std::ostream &cout) {
+			int n;
+			cin >> n;
+			vector<int> s(n);
+			for(int i = 0; i < n; i++) {
+				cin >> s[i];
+			}
+			int s2min = s[n - 1] * 2;
+			int ans   = 0;
+			for(int i = n - 2; i >= 0; i--) {
+				if(s[i] > s2min) {
+					ans++;
+				}
+				s2min = min(s2min, 2 * s[i]);
+			}
+			cout << ans;
+			return 0;
+		}
+	}// namespace realhw118
 };// namespace nowcoder

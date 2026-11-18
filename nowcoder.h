@@ -91,6 +91,10 @@ namespace nowcoder {
 	namespace hj7 {
 		int main(std::istream &cin, std::ostream &cout);
 	}
+
+	namespace realhw118 {
+		int main(std::istream &cin, std::ostream &cout);
+	}
 };// namespace nowcoder
 
 
