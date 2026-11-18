@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>problemscpp: lintcode::remove_extra::Solution类 参考</title>
+<title>problemscpp: leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Solution类 参考</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,31 +84,43 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dc/dac/a00585.html">lintcode</a></li><li class="navelem"><a class="el" href="../../d8/d2e/a00588.html">remove_extra</a></li><li class="navelem"><a class="el" href="../../da/d34/a03237.html">Solution</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../df/da9/a00263.html">leetcode</a></li><li class="navelem"><a class="el" href="../../d6/d21/a00573.html">hw</a></li><li class="navelem"><a class="el" href="../../d6/d92/a00586.html">minimum_number_of_visited_cells_in_a_grid</a></li><li class="navelem"><a class="el" href="../../da/d34/a03237.html">Solution</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
 <a href="../../d5/de7/a03234.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">lintcode::remove_extra::Solution类 参考</div></div>
+  <div class="headertitle"><div class="title">leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Solution类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d1/d44/a00098_source.html">lintcode.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d9/d2e/a00056_source.html">leetcode_hw.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:aa0e49e4d04ff089fe090aaf88dd3a96a" id="r_aa0e49e4d04ff089fe090aaf88dd3a96a"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0e49e4d04ff089fe090aaf88dd3a96a">removeExtra</a> (string &amp;s)</td></tr>
-<tr class="separator:aa0e49e4d04ff089fe090aaf88dd3a96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73d3e7ad1eb7f9cee7c3eb26bc7fb98d" id="r_a73d3e7ad1eb7f9cee7c3eb26bc7fb98d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73d3e7ad1eb7f9cee7c3eb26bc7fb98d">minimumVisitedCells</a> (vector&lt; vector&lt; int &gt; &gt; &amp;grid)</td></tr>
+<tr class="separator:a73d3e7ad1eb7f9cee7c3eb26bc7fb98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:ab182d1d32df788109d34493bde392b97" id="r_ab182d1d32df788109d34493bde392b97"><td class="memItemLeft" align="right" valign="top">static vector&lt; set&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab182d1d32df788109d34493bde392b97">cols</a></td></tr>
+<tr class="separator:ab182d1d32df788109d34493bde392b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf0622da818fed1595681bfcddd4e61" id="r_aebf0622da818fed1595681bfcddd4e61"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebf0622da818fed1595681bfcddd4e61">m</a></td></tr>
+<tr class="separator:aebf0622da818fed1595681bfcddd4e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7629583c89e81d31dc78b4c18db3814" id="r_ab7629583c89e81d31dc78b4c18db3814"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7629583c89e81d31dc78b4c18db3814">n</a></td></tr>
+<tr class="separator:ab7629583c89e81d31dc78b4c18db3814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed85ab1a6ca71725d3a2e235a943e705" id="r_aed85ab1a6ca71725d3a2e235a943e705"><td class="memItemLeft" align="right" valign="top">static vector&lt; set&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed85ab1a6ca71725d3a2e235a943e705">rows</a></td></tr>
+<tr class="separator:aed85ab1a6ca71725d3a2e235a943e705"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="../../d1/d44/a00098_source.html">lintcode.h</a> 第 <a class="el" href="../../d1/d44/a00098_source.html#l00043">43</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">leetcode_hw.h</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l00125">125</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="aa0e49e4d04ff089fe090aaf88dd3a96a" name="aa0e49e4d04ff089fe090aaf88dd3a96a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0e49e4d04ff089fe090aaf88dd3a96a">&#9670;&#160;</a></span>removeExtra()</h2>
+<a id="a73d3e7ad1eb7f9cee7c3eb26bc7fb98d" name="a73d3e7ad1eb7f9cee7c3eb26bc7fb98d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d3e7ad1eb7f9cee7c3eb26bc7fb98d">&#9670;&#160;</a></span>minimumVisitedCells()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -117,9 +129,9 @@ $(function(){ initResizable(false); });
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string lintcode::remove_extra::Solution::removeExtra </td>
+          <td class="memname">int leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Solution::minimumVisitedCells </td>
           <td>(</td>
-          <td class="paramtype">string &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td class="paramtype">vector&lt; vector&lt; int &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>grid</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -129,41 +141,163 @@ $(function(){ initResizable(false); });
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">s</td><td>the original string </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>: the string without arbitrary spaces </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="../../dd/dad/a00005_source.html">lintcode.cpp</a> 第 <a class="el" href="../../dd/dad/a00005_source.html#l00086">86</a> 行定义.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>                                              {</div>
-<div class="line"><span class="lineno">   87</span>            <span class="keyword">auto</span> output = ostringstream();</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordtype">bool</span> start  = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordtype">bool</span> flag   = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> c: s) {</div>
-<div class="line"><span class="lineno">   91</span>                <span class="keywordflow">if</span>(c != <span class="charliteral">&#39; &#39;</span>) {</div>
-<div class="line"><span class="lineno">   92</span>                    <span class="keywordflow">if</span>(flag &amp;&amp; !start) {</div>
-<div class="line"><span class="lineno">   93</span>                        output &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">   94</span>                    }</div>
-<div class="line"><span class="lineno">   95</span>                    output &lt;&lt; c;</div>
-<div class="line"><span class="lineno">   96</span>                    start = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   97</span>                    flag  = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   98</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   99</span>                    flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  100</span>                }</div>
-<div class="line"><span class="lineno">  101</span>            }</div>
-<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">return</span> output.str();</div>
-<div class="line"><span class="lineno">  103</span>        }</div>
+<p class="definition">在文件 <a class="el" href="../../dc/dee/a00053_source.html">leetcode_hw.cpp</a> 第 <a class="el" href="../../dc/dee/a00053_source.html#l00372">372</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  372</span>                                                                   {</div>
+<div class="line"><span class="lineno">  373</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="#aebf0622da818fed1595681bfcddd4e61">m</a>        = grid.size();</div>
+<div class="line"><span class="lineno">  374</span>            <span class="keywordtype">int</span> <a class="code hl_variable" href="#ab7629583c89e81d31dc78b4c18db3814">n</a>        = grid[0].size();</div>
+<div class="line"><span class="lineno">  375</span>            set&lt;int&gt; tmp = {};</div>
+<div class="line"><span class="lineno">  376</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="#ab7629583c89e81d31dc78b4c18db3814">n</a>; i++) {</div>
+<div class="line"><span class="lineno">  377</span>                tmp.insert(i);</div>
+<div class="line"><span class="lineno">  378</span>            };</div>
+<div class="line"><span class="lineno">  379</span>            <a class="code hl_variable" href="#aed85ab1a6ca71725d3a2e235a943e705">rows</a> = vector&lt;set&lt;int&gt;&gt;(<a class="code hl_variable" href="#aebf0622da818fed1595681bfcddd4e61">m</a>, tmp);</div>
+<div class="line"><span class="lineno">  380</span>            tmp.clear();</div>
+<div class="line"><span class="lineno">  381</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="#aebf0622da818fed1595681bfcddd4e61">m</a>; i++) {</div>
+<div class="line"><span class="lineno">  382</span>                tmp.insert(i);</div>
+<div class="line"><span class="lineno">  383</span>            };</div>
+<div class="line"><span class="lineno">  384</span>            <a class="code hl_variable" href="#ab182d1d32df788109d34493bde392b97">cols</a>                     = vector&lt;set&lt;int&gt;&gt;(<a class="code hl_variable" href="#ab7629583c89e81d31dc78b4c18db3814">n</a>, tmp);</div>
+<div class="line"><span class="lineno">  385</span>            priority_queue&lt;Frame&gt; pq = {};</div>
+<div class="line"><span class="lineno">  386</span>            pq.push(Frame(0, 0, 1, <a class="code hl_variable" href="#aebf0622da818fed1595681bfcddd4e61">m</a> + <a class="code hl_variable" href="#ab7629583c89e81d31dc78b4c18db3814">n</a>));</div>
+<div class="line"><span class="lineno">  387</span>            <span class="keywordflow">while</span>(!pq.empty()) {</div>
+<div class="line"><span class="lineno">  388</span>                Frame frame = pq.top();</div>
+<div class="line"><span class="lineno">  389</span>                pq.pop();</div>
+<div class="line"><span class="lineno">  390</span>                <span class="keywordflow">if</span>(frame.i == <a class="code hl_variable" href="#aebf0622da818fed1595681bfcddd4e61">m</a> - 1 &amp;&amp; frame.j == <a class="code hl_variable" href="#ab7629583c89e81d31dc78b4c18db3814">n</a> - 1) {</div>
+<div class="line"><span class="lineno">  391</span>                    <span class="keywordflow">return</span> frame.steps;</div>
+<div class="line"><span class="lineno">  392</span>                }</div>
+<div class="line"><span class="lineno">  393</span>                <span class="keyword">auto</span> &amp;row = <a class="code hl_variable" href="#aed85ab1a6ca71725d3a2e235a943e705">rows</a>[frame.i];</div>
+<div class="line"><span class="lineno">  394</span>                <span class="keyword">auto</span> k    = row.lower_bound(frame.j + 1);</div>
+<div class="line"><span class="lineno">  395</span>                <span class="keywordflow">while</span>(k != row.end() &amp;&amp; (*k) &lt;= grid[frame.i][frame.j] + frame.j) {</div>
+<div class="line"><span class="lineno">  396</span>                    pq.push(Frame(frame.i, *k, frame.steps + 1, <a class="code hl_variable" href="#aebf0622da818fed1595681bfcddd4e61">m</a> + <a class="code hl_variable" href="#ab7629583c89e81d31dc78b4c18db3814">n</a> - frame.i - *k));</div>
+<div class="line"><span class="lineno">  397</span>                    k = row.erase(k);</div>
+<div class="line"><span class="lineno">  398</span>                }</div>
+<div class="line"><span class="lineno">  399</span>                <span class="keyword">auto</span> &amp;col = <a class="code hl_variable" href="#ab182d1d32df788109d34493bde392b97">cols</a>[frame.j];</div>
+<div class="line"><span class="lineno">  400</span>                k         = col.lower_bound(frame.i + 1);</div>
+<div class="line"><span class="lineno">  401</span>                <span class="keywordflow">while</span>(k != col.end() &amp;&amp; *k &lt;= grid[frame.i][frame.j] + frame.i) {</div>
+<div class="line"><span class="lineno">  402</span>                    pq.push(Frame(*k, frame.j, frame.steps + 1, <a class="code hl_variable" href="#aebf0622da818fed1595681bfcddd4e61">m</a> + <a class="code hl_variable" href="#ab7629583c89e81d31dc78b4c18db3814">n</a> - *k - frame.j));</div>
+<div class="line"><span class="lineno">  403</span>                    k = col.erase(k);</div>
+<div class="line"><span class="lineno">  404</span>                }</div>
+<div class="line"><span class="lineno">  405</span>            }</div>
+<div class="line"><span class="lineno">  406</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  407</span>        }</div>
+<div class="ttc" id="aa03237_html_ab182d1d32df788109d34493bde392b97"><div class="ttname"><a href="#ab182d1d32df788109d34493bde392b97">leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Solution::cols</a></div><div class="ttdeci">static vector&lt; set&lt; int &gt; &gt; cols</div><div class="ttdef"><b>定义</b> <a href="../../d9/d2e/a00056_source.html#l00129">leetcode_hw.h:129</a></div></div>
+<div class="ttc" id="aa03237_html_ab7629583c89e81d31dc78b4c18db3814"><div class="ttname"><a href="#ab7629583c89e81d31dc78b4c18db3814">leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Solution::n</a></div><div class="ttdeci">static int n</div><div class="ttdef"><b>定义</b> <a href="../../d9/d2e/a00056_source.html#l00128">leetcode_hw.h:128</a></div></div>
+<div class="ttc" id="aa03237_html_aebf0622da818fed1595681bfcddd4e61"><div class="ttname"><a href="#aebf0622da818fed1595681bfcddd4e61">leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Solution::m</a></div><div class="ttdeci">static int m</div><div class="ttdef"><b>定义</b> <a href="../../d9/d2e/a00056_source.html#l00127">leetcode_hw.h:127</a></div></div>
+<div class="ttc" id="aa03237_html_aed85ab1a6ca71725d3a2e235a943e705"><div class="ttname"><a href="#aed85ab1a6ca71725d3a2e235a943e705">leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Solution::rows</a></div><div class="ttdeci">static vector&lt; set&lt; int &gt; &gt; rows</div><div class="ttdef"><b>定义</b> <a href="../../d9/d2e/a00056_source.html#l00130">leetcode_hw.h:130</a></div></div>
 </div><!-- fragment -->
-<p class="reference">被这些函数引用 <a class="el" href="../../d6/d5b/a00026_source.html#l00042">lintcode::remove_extra::TEST()</a> , 以及 <a class="el" href="../../d6/d5b/a00026_source.html#l00047">lintcode::remove_extra::TEST()</a>.</p>
+<p class="reference">引用了 <a class="el" href="../../d9/d2e/a00056_source.html#l00129">cols</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00108">leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Frame::i</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00109">leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Frame::j</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00127">m</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00128">n</a>, <a class="el" href="../../d9/d2e/a00056_source.html#l00130">rows</a> , 以及 <a class="el" href="../../d9/d2e/a00056_source.html#l00110">leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Frame::steps</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../de/de1/a00065_source.html#l00239">leetcode::hw::minimum_number_of_visited_cells_in_a_grid::TEST()</a>, <a class="el" href="../../de/de1/a00065_source.html#l00244">leetcode::hw::minimum_number_of_visited_cells_in_a_grid::TEST()</a>, <a class="el" href="../../de/de1/a00065_source.html#l00249">leetcode::hw::minimum_number_of_visited_cells_in_a_grid::TEST()</a> , 以及 <a class="el" href="../../de/de1/a00065_source.html#l00254">leetcode::hw::minimum_number_of_visited_cells_in_a_grid::TEST()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ab182d1d32df788109d34493bde392b97" name="ab182d1d32df788109d34493bde392b97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab182d1d32df788109d34493bde392b97">&#9670;&#160;</a></span>cols</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; set&lt; int &gt; &gt; leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Solution::cols</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">leetcode_hw.h</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l00129">129</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../dc/dee/a00053_source.html#l00372">minimumVisitedCells()</a>.</p>
+
+</div>
+</div>
+<a id="aebf0622da818fed1595681bfcddd4e61" name="aebf0622da818fed1595681bfcddd4e61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebf0622da818fed1595681bfcddd4e61">&#9670;&#160;</a></span>m</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Solution::m</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">leetcode_hw.h</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l00127">127</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../dc/dee/a00053_source.html#l00372">minimumVisitedCells()</a>.</p>
+
+</div>
+</div>
+<a id="ab7629583c89e81d31dc78b4c18db3814" name="ab7629583c89e81d31dc78b4c18db3814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7629583c89e81d31dc78b4c18db3814">&#9670;&#160;</a></span>n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Solution::n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">leetcode_hw.h</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l00128">128</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../dc/dee/a00053_source.html#l00372">minimumVisitedCells()</a>.</p>
+
+</div>
+</div>
+<a id="aed85ab1a6ca71725d3a2e235a943e705" name="aed85ab1a6ca71725d3a2e235a943e705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed85ab1a6ca71725d3a2e235a943e705">&#9670;&#160;</a></span>rows</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; set&lt; int &gt; &gt; leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Solution::rows</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="../../d9/d2e/a00056_source.html">leetcode_hw.h</a> 第 <a class="el" href="../../d9/d2e/a00056_source.html#l00130">130</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="../../dc/dee/a00053_source.html#l00372">minimumVisitedCells()</a>.</p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../d1/d44/a00098_source.html">lintcode.h</a></li>
-<li><a class="el" href="../../dd/dad/a00005_source.html">lintcode.cpp</a></li>
+<li><a class="el" href="../../d9/d2e/a00056_source.html">leetcode_hw.h</a></li>
+<li><a class="el" href="../../dc/dee/a00053_source.html">leetcode_hw.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

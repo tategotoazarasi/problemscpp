@@ -1,13 +1,23 @@
 var searchData=
 [
-  ['t_5fsum_0',['t_sum',['../d2/d11/a03797.html#a1046605e6a9e8191f6fc0d71ad62f587',1,'pat::b::b1085::school']]],
-  ['table_1',['table',['../d5/df8/a03921.html#a20c8d7428338b9b77870d201d4416730',1,'huffman']]],
-  ['tail_2',['tail',['../dd/d4f/a02845.html#ae503afd168e60471e7734f558b51f309',1,'leetcode::design_linked_list::MyLinkedList']]],
-  ['target_3',['target',['../dd/db4/a01693.html#ae83f4fb88084805a39c03af2c8fe96b9',1,'acwing::acwing1470::status::target'],['../d5/d99/a01901.html#a2dd17627992e17331faefb6e05791baa',1,'leetcode::escape_a_large_maze::point::target']]],
-  ['time_4',['time',['../d6/d94/a02033.html#a1c4fd1711dd871723b696b2a5d033781',1,'leetcode::second_minimum_time_to_reach_destination::status::time'],['../dc/de1/a02493.html#a95ae7aeaf3c1c355791e0a7f9b44db39',1,'leetcode::the_time_when_the_network_becomes_idle::Node::time'],['../de/d8b/a02545.html#a90811d8afc1a97615cf7d4d1f379b6cf',1,'leetcode::find_servers_that_handled_most_number_of_requests::event::time'],['../db/d1a/a03849.html#a9884fabcefb6771543758fb4cbb68572',1,'pat::a::a1016::record::time']]],
-  ['time_5fcounter_5',['time_counter',['../d1/d6e/a00613.html#a88136969cf46c0d3c7cc144745aaef13',1,'liverpool::doctorkattis']]],
-  ['tmp_6',['tmp',['../dc/dec/a01669.html#a7fc403e9dd0f2cb48fdfa2fb792f6842',1,'acwing::acwing20::MyQueue']]],
-  ['tnc_7',['tnc',['../dc/d0a/a03125.html#a721e912651a0f181637e5bfc248fb2d3',1,'leetcode::lfu_cache::LFUCache']]],
-  ['to_8',['to',['../d5/d27/a03157.html#ac16824847f71da0c16f8707aaf3e3f14',1,'leetcode::minimum_cost_path_with_edge_reversals::node']]],
-  ['tree_9',['tree',['../d5/dcb/a03121.html#ae84714c971561de384d1e431d199d7b7',1,'leetcode::range_module::RangeModule']]]
+  ['s_0',['s',['../d2/da6/a03117.html#abae9f024f7e7b80e67aec4f5d44edff1',1,'leetcode::range_module::Chtholly']]],
+  ['sale_1',['sale',['../d9/d94/a03837.html#aaaf8dd3b191c98718635cf5451cfea5d',1,'pat::b::b1102::paper']]],
+  ['score_2',['score',['../d8/d9c/a01733.html#a52469f0c8e33c4d550ceb54d91f077ef',1,'acwing::acwing3378::student::score'],['../df/d2e/a01737.html#a64e39aa57fb622dbe5678affb8bad787',1,'acwing::acwing3376::student::score'],['../d3/d04/a03793.html#ab5d229b3ca887e36f089f27cc5a57d7d',1,'pat::b::b1058::Problem::score'],['../d2/d11/a03797.html#a046c7a4ef444cec1d2522e9c0fbd87d3',1,'pat::b::b1073::problem::score'],['../dc/d98/a03805.html#a15d7bc8a7391a8b28773225035f60fee',1,'pat::b::b1080::student::score']]],
+  ['seat1_3',['seat1',['../d4/d08/a03785.html#a43245e7e540f39a9d9d05921775accf8',1,'pat::b::b1041::student']]],
+  ['seat2_4',['seat2',['../d4/d08/a03785.html#a538daf71b4be13c693aa601e8818ca90',1,'pat::b::b1041::student']]],
+  ['server_5findex_5',['server_index',['../d0/df5/a02549.html#a3c14f5fa2c69cabe9b2f668b25cf5dbe',1,'leetcode::find_servers_that_handled_most_number_of_requests::event']]],
+  ['siblings_6',['siblings',['../d2/d46/a02937.html#a0b9ed3f153c49be341af094518ba26f8',1,'leetcode::all_nodes_distance_k_in_binary_tree::Node::siblings'],['../dd/d72/a02953.html#a1cfadefdc8666bc99eea653d56d5b3d1',1,'leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::Node::siblings']]],
+  ['size_7',['size',['../d2/dde/a02085.html#a61f59d9b79277b52eba9a8b1203beb42',1,'leetcode::groups_of_strings::Solution::size'],['../d5/d88/a02141.html#a7201227686c664b875b0f7c416df58d1',1,'leetcode::design_bitset::Bitset::size'],['../da/d18/a02421.html#a044c57c520a9d5211affa5bb784aeb36',1,'leetcode::max_area_of_island::UnionFind::size'],['../d6/dfc/a02593.html#a1ecde9fe29734d9c12c6c06759e6ddd0',1,'leetcode::range_sum_query_mutable::NumArray::size'],['../d7/da3/a03925.html#a31c710163069c74256b4fae5d00225e4',1,'UnionFind::size']]],
+  ['size_5ftree_8',['size_tree',['../d3/da1/a01613.html#ae6d34fa49283213038a257478bf60709',1,'acwing::acwing4310::acwing4310']]],
+  ['small_9',['small',['../db/d0d/a02653.html#ac3c3bc8a2ccbd341ecaf238d3bbffd5d',1,'leetcode::design_parking_system::ParkingSystem']]],
+  ['start_10',['START',['../d6/d95/a00556.html#aac87a9215d8682ec70db1efe5222eae2',1,'leetcode::shortest_path_to_get_all_keys']]],
+  ['start_11',['start',['../d0/df5/a02549.html#a17abd98f9043aeb57ea6f45149de0587',1,'leetcode::find_servers_that_handled_most_number_of_requests::event::start'],['../d1/d24/a03301.html#a0440aa1ff7421b62a9886b5ed315b8a2',1,'liverpool::cafeteria::node::start'],['../d5/da2/a03889.html#a05ab002709af5663dec60496a3134cc7',1,'pat::a::a1018::frame::start']]],
+  ['start_5ftime_12',['start_time',['../de/d6c/a03873.html#a5bdd7ba1c55f7ee0f60f9ef1687844a4',1,'pat::a::a1017::customer::start_time'],['../d8/d46/a03881.html#aac79af40d9077f02780b8f532caac487',1,'pat::a::a1026::player::start_time']]],
+  ['step_13',['step',['../df/d41/a00881.html#a3a1e018caae3a20a5849a5fedb72e9c0',1,'acwing::acwing2019::point::step'],['../d8/d4b/a03093.html#a19efd0faf9b9d733194539480ec7d847',1,'leetcode::shortest_path_to_get_all_keys::frame::step'],['../d8/d5d/a03329.html#aefeb9c16c8bd22655d07ed5c56ff25ab',1,'liverpool::grid::state::step']]],
+  ['steps_14',['steps',['../dd/d07/a03233.html#aa3c5a32f2090a5507726ac47cd0187c3',1,'leetcode::hw::minimum_number_of_visited_cells_in_a_grid::Frame']]],
+  ['str_15',['str',['../da/d93/a03765.html#a43e0dd649f585f9974f3fd576a2f6173',1,'nowcoder::realhw167::SemVer']]],
+  ['str_5fcount_16',['str_count',['../d4/d87/a02457.html#a9deb5c1630f9f7f9cfb3a34e1190de3c',1,'leetcode::all_oone_data_structure::AllOne']]],
+  ['students_17',['students',['../d8/ddd/a03317.html#a787bc1d47896079577d70b421ad13bef',1,'liverpool::stable_matching::Solution::students'],['../df/d28/a03821.html#a8437c66bd2404f70a8d2f58479ca85ea',1,'pat::b::b1095::room::students']]],
+  ['sum_18',['sum',['../df/dee/a01825.html#a8d4ce27ae9f2b5865f1ed413b376caef',1,'leetcode::convert_bst_to_greater_tree::FriendTreeNode::sum'],['../d6/dfc/a02593.html#a1291da745b9f9d73a81bd34662d4885c',1,'leetcode::range_sum_query_mutable::NumArray::sum'],['../d3/dc0/a03733.html#a2cd9150b979b515c0d20646fccbacdf2',1,'luogu::P5742::Student::sum'],['../df/d28/a03821.html#add5c629e606d0b062685dce82eed828d',1,'pat::b::b1095::room::sum']]],
+  ['sz_19',['SZ',['../db/de9/a02821.html#a971b728c4a3fcaed0a95d8a868070628',1,'leetcode::design_hashmap::MyHashMap']]]
 ];

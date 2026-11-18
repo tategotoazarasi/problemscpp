@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['zero0_0',['zero0',['../de/d74/a02137.html#a4f78043c1ccf5612fca9a532f41b671a',1,'leetcode::design_bitset::Bitset']]],
-  ['zodiac_1',['zodiac',['../da/d20/a01689.html#abef67b35485b53a77edd0dc330bbccf1',1,'acwing::acwing3370::cow']]]
+  ['y_0',['y',['../d3/db2/a00869.html#a7cc1ae7bbad61542a27009eea419fecf',1,'acwing::acwing2060::point::y'],['../df/d41/a00881.html#a907203fb6ce188e3e52f7d22b989f832',1,'acwing::acwing2019::point::y'],['../d0/dc9/a01065.html#ada38b57197bf006a785df93abb7cb190',1,'acwing::acwing1929::step::y'],['../d9/d65/a01905.html#a8bceaeb02a938e820304bec2b44a770b',1,'leetcode::escape_a_large_maze::point::y'],['../dd/d72/a02953.html#a2fd063fb8f36b85e374b3c18511caf54',1,'leetcode::minimum_cost_to_make_at_least_one_valid_path_in_a_grid::Node::y'],['../d8/d4b/a03093.html#a4c024a93e0cf51bde075a1ee6b019c36',1,'leetcode::shortest_path_to_get_all_keys::frame::y'],['../d0/d74/a03149.html#a100a85abef7bce1d303d8c3d4276f68f',1,'leetcode::beast_reachable_tower::tower::y'],['../d8/d5d/a03329.html#abbba92485aaeda0f77c224fbba900cfb',1,'liverpool::grid::state::y'],['../d9/d79/a03809.html#aa176606bd44f02ab3a991687bef3a219',1,'pat::b::b1082::player::y']]],
+  ['year_1',['year',['../d4/d93/a03781.html#a69b428c8ab34d951a9728cb5ddb9d24a',1,'pat::b::b1028::Person']]]
 ];

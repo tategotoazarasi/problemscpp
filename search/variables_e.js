@@ -1,21 +1,9 @@
 var searchData=
 [
-  ['p_0',['p',['../d8/d11/a03789.html#aad10aebf91b5b315ea4d3615647c4053',1,'pat::b::b1080::student::p'],['../df/d44/a03857.html#afbc8935faeffa5c2c1a4567c8f3cac70',1,'pat::a::a1017::customer::p'],['../d9/da3/a03865.html#ae0643b38b79c19432202b445971fe87f',1,'pat::a::a1026::player::p']]],
-  ['parent_1',['parent',['../d9/dc5/a01705.html#ab40c36b6bf474896b3ea57880113726a',1,'acwing::acwing240::UnionFind::parent'],['../d2/d50/a02081.html#a8b8fbb4149478a627b4f1373787e8474',1,'leetcode::groups_of_strings::Solution::parent'],['../d2/d62/a02401.html#a15133d0f7bc45a4e7f4b9a79b4ea9470',1,'leetcode::count_nodes_with_the_highest_score::TreeNode::parent'],['../de/d76/a02417.html#ab9c1d82bddb398ee4d5d708ea868fe7e',1,'leetcode::max_area_of_island::UnionFind::parent'],['../d3/d32/a02665.html#ae8e182d41e4828f70da1669af846b2d6',1,'leetcode::lowest_common_ancestor_of_a_binary_search_tree::TreeNodeP::parent'],['../d7/d9a/a03909.html#a916e09e220667fb55fbf332c8852c948',1,'UnionFind::parent'],['../d6/d9d/a03917.html#ad27124df821789ff04c9e60838fffb65',1,'AVLNode::parent']]],
-  ['path_2',['path',['../de/d6c/a03873.html#a2677071bd6874319247461f5441449f9',1,'pat::a::a1018::frame']]],
-  ['patience_3',['patience',['../dc/de1/a02493.html#a5219e386c2afaa89ae5d939fb3a92b88',1,'leetcode::the_time_when_the_network_becomes_idle::Node']]],
-  ['person_4',['person',['../d8/d45/a02021.html#a4c36bc87b6ea871fc4e662922972bf06',1,'leetcode::maximum_good_people_based_on_statements::msg']]],
-  ['pos_5',['pos',['../d5/d36/a01773.html#a5137fd50fd352a7e636748e65f43f04f',1,'codeforces::the_robotic_rush::node::pos'],['../d1/d5f/a03189.html#ab4daa411da8ee77356dc5a4960cf9f19',1,'leetcode::hw::longest_valid_parentheses::Node::pos']]],
-  ['position_6',['position',['../da/d24/a01609.html#a6c128688ce7e71f96a3a0ab23a3e1290',1,'acwing::acwing4310::acwing4310::position'],['../d6/d94/a02033.html#a4d6ee48ca18dd104c6bed2c37d2a057a',1,'leetcode::second_minimum_time_to_reach_destination::status::position']]],
-  ['positive_7',['positive',['../df/dee/a03901.html#a622851f40dd8992cc2a66a5ce83133df',1,'BigInt::positive'],['../d6/de4/a03905.html#a777585f98e8e6e958c126e1474961a31',1,'Fraction::positive']]],
-  ['pred_8',['pred',['../da/d64/a03073.html#a8868786102f9305ed697ccb1e85c9f0e',1,'leetcode::parallel_courses::node']]],
-  ['pref_5fsum_9',['pref_sum',['../db/d0d/a02653.html#a90ff9708b2766d87cc5f640ae2c6a1b8',1,'leetcode::range_sum_query_immutable::NumArray']]],
-  ['prev_10',['prev',['../d5/dd2/a02849.html#a27333b110e316836ac474cf674945133',1,'leetcode::delete_node_in_a_bst::Solution::prev'],['../de/d79/a03761.html#ab0a7bb4930e4218b13762478cf914d1f',1,'pat::b::b1025::Node::prev']]],
-  ['prev_5findex_11',['prev_index',['../db/d66/a01721.html#a24c2fb7c5889f76214b83fc387f7e300',1,'acwing::acwing3874::point']]],
-  ['previous_12',['previous',['../da/d20/a01689.html#a524976d0d212f969c750e00ec2c34615',1,'acwing::acwing3370::cow']]],
-  ['price_13',['price',['../d0/d2b/a01997.html#aee320f3f7b4364d6dd47ac22541a48ad',1,'leetcode::k_highest_ranked_items_within_a_price_range::item::price'],['../d7/ded/a03745.html#a6b54945e06cf9d285e49a90c27961238',1,'nowcoder::realhw236::Product::price'],['../df/d28/a03821.html#afcdb4ca82369cbb0db332a6697001c96',1,'pat::b::b1102::paper::price']]],
-  ['primes_14',['primes',['../d0/dc1/a02277.html#aeb494f3a836c706277b2470a1789119a',1,'leetcode::the_number_of_good_subsets::Solution']]],
-  ['priority_15',['priority',['../da/d0a/a03297.html#a1011e85cfcfc7a00c8b7b7ac57c52743',1,'liverpool::stable_matching::Company']]],
-  ['priority_5fc_16',['priority_c',['../d2/d74/a03293.html#a24c8aa6d8476080301a7b104985c1a89',1,'liverpool::stable_matching::Student']]],
-  ['proposed_5fstudents_17',['proposed_students',['../da/d0a/a03297.html#a4dc07c2af4a17689450150d663600333',1,'liverpool::stable_matching::Company']]]
+  ['one1_0',['one1',['../d5/d88/a02141.html#ab30fd98a4cbeab349e350b674aecce8c',1,'leetcode::design_bitset::Bitset']]],
+  ['online_1',['online',['../d9/da3/a03865.html#a0e92c15ca80213d589ca705c5266cc75',1,'pat::a::a1016::record']]],
+  ['ops_2',['ops',['../dc/dab/a01237.html#ac20e1ee1042d8657c8812fc0bffdfc9a',1,'acwing::acwing4217']]],
+  ['order_3',['order',['../d5/d83/a03337.html#ab3f3eee03a1530e0645e54061eb74570',1,'liverpool::doctorkattis::cat::order'],['../d7/d9a/a03909.html#ac1df06b4df1f45db1e91e604b66f468c',1,'bwt::node::order']]],
+  ['origin_4',['origin',['../d1/db5/a01701.html#adf0c0e179add4c6e710bb376a87718c2',1,'acwing::acwing4398::TrieNode']]],
+  ['out_5',['out',['../d7/deb/a03077.html#ae745a658c91b75c439cb6ab6883e48a5',1,'leetcode::parallel_courses::node']]]
 ];
