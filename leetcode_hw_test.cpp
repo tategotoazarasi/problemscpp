@@ -220,4 +220,18 @@ namespace leetcode::hw {
 			ASSERT_EQ(0, Solution::leastBricks(wall));
 		}
 	}// namespace brick_wall
+
+	namespace minimum_number_of_changes_to_make_binary_string_beautiful {
+		TEST(minimum_number_of_changes_to_make_binary_string_beautiful, case1) {
+			ASSERT_EQ(2, Solution::minChanges("1001"));
+		}
+
+		TEST(minimum_number_of_changes_to_make_binary_string_beautiful, case2) {
+			ASSERT_EQ(1, Solution::minChanges("10"));
+		}
+
+		TEST(minimum_number_of_changes_to_make_binary_string_beautiful, case3) {
+			ASSERT_EQ(0, Solution::minChanges("0000"));
+		}
+	}// namespace minimum_number_of_changes_to_make_binary_string_beautiful
 }// namespace leetcode::hw

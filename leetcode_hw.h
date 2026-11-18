@@ -93,6 +93,13 @@ namespace leetcode::hw {
 			int static leastBricks(vector<vector<int>> &wall);
 		};
 	}// namespace brick_wall
+
+	namespace minimum_number_of_changes_to_make_binary_string_beautiful {
+		class Solution {
+		public:
+			static int minChanges(string s);
+		};
+	}// namespace minimum_number_of_changes_to_make_binary_string_beautiful
 }// namespace leetcode::hw
 
 #endif//PROBLEMSCPP_LEETCODE_HW_H

@@ -333,4 +333,33 @@ namespace leetcode::hw {
 			return ans;
 		}
 	}// namespace brick_wall
+
+	namespace minimum_number_of_changes_to_make_binary_string_beautiful {
+		int Solution::minChanges(string s) {
+			deque<int> deq = {};
+			char c         = s[0];
+			int cnt        = 1;
+			for(int i = 1; i < s.length(); i++) {
+				if(s[i] == c) {
+					cnt++;
+				} else {
+					deq.push_back(cnt);
+					c   = s[i];
+					cnt = 1;
+				}
+			}
+			deq.push_back(cnt);
+			int ans = 0;
+			while(!deq.empty()) {
+				if(deq.front() % 2 == 0) {
+					deq.pop_front();
+				} else {
+					deq.pop_front();
+					deq.front()--;
+					ans++;
+				}
+			}
+			return ans;
+		}
+	}// namespace minimum_number_of_changes_to_make_binary_string_beautiful
 }// namespace leetcode::hw
